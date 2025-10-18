@@ -32,21 +32,26 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* Massive headline with elegant serif */}
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-display font-bold mb-6 tracking-tighter animate-fade-in-up leading-[0.95] text-foreground">
-            Risparmia il
-          </h1>
-          
-          {/* Giant percentage in elegant serif */}
-          <div className="mb-6 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-            <span className="text-[10rem] md:text-[14rem] lg:text-[18rem] font-display font-bold text-primary leading-none inline-block">
-              25%
-            </span>
+          {/* Dual headline for students and investors */}
+          <div className="mb-16 space-y-8">
+            <div className="animate-fade-in-up">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 tracking-tight text-foreground">
+                Sei uno studente?
+              </h1>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-primary tracking-tight">
+                Risparmia il 25% per il tuo alloggio!
+              </p>
+            </div>
+            
+            <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 tracking-tight text-foreground">
+                Sei un investitore immobiliare?
+              </h2>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-primary tracking-tight">
+                Ottieni ottimi rendimenti ed investi a partire da 100€!
+              </p>
+            </div>
           </div>
-
-          <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-16 animate-fade-in-up tracking-tighter text-foreground" style={{ animationDelay: '200ms' }}>
-            sull'Affitto
-          </h2>
 
           {/* Refined subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '300ms' }}>
