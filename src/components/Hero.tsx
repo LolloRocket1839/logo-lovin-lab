@@ -49,11 +49,15 @@ export const Hero = () => {
           </h2>
 
           {/* Refined subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '300ms' }}>
-            Il modo rivoluzionario per affittare casa a Torino
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '300ms' }}>
+            Affitti Smart & Opportunità di Investimento
           </p>
           
-          <p className="text-lg md:text-xl text-primary/70 mb-16 font-light" style={{ animationDelay: '400ms' }}>
+          <p className="text-lg md:text-xl text-primary/70 mb-4 font-light" style={{ animationDelay: '350ms' }}>
+            Per studenti e investitori
+          </p>
+          
+          <p className="text-base text-muted-foreground/70 mb-16 font-light" style={{ animationDelay: '400ms' }}>
             Vicino al Politecnico e Università di Torino
           </p>
 

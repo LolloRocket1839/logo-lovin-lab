@@ -23,34 +23,71 @@ export const CTA = () => {
             Inizia Oggi
           </p>
           
-          <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-12 leading-tight tracking-tight">
-            Pronto a<br />Risparmiare?
+          <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-8 leading-tight tracking-tight">
+            Inizia Oggi
           </h2>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-16 max-w-2xl mx-auto leading-relaxed font-light">
-            Unisciti a centinaia di studenti che già risparmiano con Jungle Rent
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 max-w-2xl mx-auto leading-relaxed font-light">
+            Studenti e investitori: parliamo delle vostre esigenze
+          </p>
+          
+          <p className="text-base text-primary-foreground/70 mb-16 font-light">
+            Centinaia di studenti già risparmiano. Portfolio in crescita per investitori.
           </p>
 
-          {/* Clean CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button 
-              size="lg" 
-              variant="secondary"
-              onClick={handleWhatsAppLorenzo}
-              className="px-12 py-7 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
-            >
-              Contatta Lorenzo
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="secondary"
-              onClick={handleWhatsAppAndrea}
-              className="px-12 py-7 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
-            >
-              Contatta Andrea
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+          {/* Dual Target CTAs */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+            {/* Students CTA */}
+            <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-display font-bold text-primary-foreground mb-4">
+                Per Studenti
+              </h3>
+              <p className="text-primary-foreground/80 mb-6 font-light text-sm">
+                Risparmia il 25% sul tuo affitto. Contattaci su WhatsApp per case disponibili.
+              </p>
+              <div className="flex flex-col gap-3">
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  onClick={handleWhatsAppLorenzo}
+                  className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
+                >
+                  Contatta Lorenzo
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  onClick={handleWhatsAppAndrea}
+                  className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
+                >
+                  Contatta Andrea
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+            
+            {/* Investors CTA */}
+            <div className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-display font-bold text-primary-foreground mb-4">
+                Per Investitori
+              </h3>
+              <p className="text-primary-foreground/80 mb-6 font-light text-sm">
+                Opportunità immobiliari nel mercato universitario torinese. ROI ottimizzato.
+              </p>
+              <Button 
+                size="lg" 
+                variant="secondary"
+                onClick={() => window.open("mailto:junglerententerprise@gmail.com?subject=Opportunità Investimento", "_blank")}
+                className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
+              >
+                Richiedi Informazioni
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <p className="text-xs text-primary-foreground/60 mt-4 font-light">
+                Risposta entro 24 ore
+              </p>
+            </div>
           </div>
 
           {/* Minimal info */}

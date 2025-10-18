@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-border to-transparent" />
       
       <div className="container px-8 py-24 relative z-10">
-        <div className="grid md:grid-cols-3 gap-16 mb-20 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-16 mb-20 max-w-6xl mx-auto">
           {/* Brand */}
           <div>
             <div className="mb-6">
@@ -78,9 +78,30 @@ export const Footer = () => {
                 Università di Torino
               </li>
               <li className="text-sm font-light">
-                Risparmio garantito 25%
+                Risparmio certificato 25%
               </li>
             </ul>
+          </div>
+
+          {/* Partnership */}
+          <div>
+            <h3 className="font-display text-lg font-semibold mb-6 text-foreground">Partnership</h3>
+            <div className="space-y-3">
+              <a 
+                href="https://www.unito.it/ricerca-e-innovazione/dalle-idee-al-mercato/incubatore-dimprese-2i3t"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm font-light text-muted-foreground hover:text-primary transition-colors duration-500 link-elegant"
+              >
+                2i3T - Incubatore UniTO
+              </a>
+              <p className="text-xs text-muted-foreground/60 font-light leading-relaxed">
+                Incubati presso l'Università di Torino
+              </p>
+              <p className="text-xs text-muted-foreground/60 font-light">
+                Garanzia di professionalità
+              </p>
+            </div>
           </div>
         </div>
 
@@ -89,8 +110,11 @@ export const Footer = () => {
           <p className="text-primary/70 text-base font-accent mb-2 tracking-wide">
             Il tuo rifugio sicuro nella giungla immobiliare
           </p>
-          <p className="text-muted-foreground/60 text-xs font-light tracking-wider">
-            JUNGLE RENT — AFFITTI SMART PER STUDENTI SMART
+          <p className="text-muted-foreground/60 text-xs font-light tracking-wider mb-4">
+            JUNGLE RENT — AFFITTI SMART & OPPORTUNITÀ DI INVESTIMENTO
+          </p>
+          <p className="text-muted-foreground/70 text-xs font-light">
+            Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino
           </p>
         </div>
       </div>
