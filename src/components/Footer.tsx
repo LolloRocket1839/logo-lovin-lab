@@ -1,4 +1,4 @@
-import jungleRentLogo from "@/assets/jungle-rent-logo.png";
+import jungleRentLogo from "@/assets/jungle-rent-logo-transparent.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 
 export const Footer = () => {
