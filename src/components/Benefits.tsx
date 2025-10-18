@@ -35,8 +35,8 @@ const benefits = [
   {
     icon: HeadphonesIcon,
     title: "Gestione Completa",
-    description: "Supporto dedicato H24, manutenzione rapida e assistenza personalizzata. Zero stress per studenti e proprietari.",
-    highlight: "H24"
+    description: "Assistenza e supporto dedicata e personalizzata, manutenzione rapida. Zero stress per studenti e proprietari.",
+    highlight: "Dedicato"
   }
 ];
 
