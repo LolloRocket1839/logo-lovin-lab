@@ -5,7 +5,7 @@ const steps = [
   {
     icon: Search,
     title: "Trova l'Alloggio",
-    description: "Scegli tra le nostre case vicino al Politecnico e Università di Torino",
+    description: "Scegli tra le nostre case strategicamente posizionate vicino a tutti gli atenei torinesi",
     step: "01"
   },
   {

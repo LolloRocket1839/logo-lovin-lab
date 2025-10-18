@@ -17,7 +17,7 @@ const benefits = [
   {
     icon: MapPin,
     title: "Posizione Strategica",
-    description: "Portfolio immobiliare selezionato vicino ai poli universitari: Politecnico e Università di Torino",
+    description: "Portfolio immobiliare selezionato vicino a tutti i principali atenei: Politecnico, UniTo, ESCP, SAA, IED, IAD, IUSTO",
     highlight: "Top Location"
   },
   {

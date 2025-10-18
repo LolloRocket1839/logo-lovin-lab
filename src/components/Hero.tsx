@@ -58,7 +58,7 @@ export const Hero = () => {
           </p>
           
           <p className="text-base text-muted-foreground/70 mb-16 font-light" style={{ animationDelay: '400ms' }}>
-            Vicino al Politecnico e Università di Torino
+            Vicino a tutti i principali atenei torinesi
           </p>
 
           {/* Bonus - subtle and elegant */}

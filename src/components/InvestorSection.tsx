@@ -16,7 +16,7 @@ const investorBenefits = [
   {
     icon: PieChart,
     title: "Portfolio Strategico",
-    description: "Proprietà selezionate vicino ai poli universitari torinesi, con domanda costante tutto l'anno"
+    description: "Proprietà selezionate vicino ai 7 principali poli universitari di Torino (Politecnico, UniTo, ESCP, SAA, IED, IAD, IUSTO) con alta domanda costante"
   }
 ];
 

@@ -71,16 +71,19 @@ export const Footer = () => {
                   Come Funziona
                 </a>
               </li>
-              <li className="text-sm font-light">
-                Politecnico di Torino
-              </li>
-              <li className="text-sm font-light">
-                Università di Torino
-              </li>
-              <li className="text-sm font-light">
-                Risparmio certificato 25%
-              </li>
             </ul>
+            <div className="mt-6">
+              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground/60 mb-3 font-medium">Atenei Coperti</p>
+              <div className="grid grid-cols-1 gap-y-2">
+                <p className="text-sm text-muted-foreground font-light">Politecnico di Torino</p>
+                <p className="text-sm text-muted-foreground font-light">Università di Torino</p>
+                <p className="text-sm text-muted-foreground font-light">ESCP Business School</p>
+                <p className="text-sm text-muted-foreground font-light">SAA School of Management</p>
+                <p className="text-sm text-muted-foreground font-light">IED Torino</p>
+                <p className="text-sm text-muted-foreground font-light">IAD Torino</p>
+                <p className="text-sm text-muted-foreground font-light">IUSTO</p>
+              </div>
+            </div>
           </div>
 
           {/* Partnership */}
