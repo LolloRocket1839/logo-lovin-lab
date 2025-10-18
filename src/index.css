@@ -8,59 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 45 20% 97%;
-    --foreground: 150 45% 15%;
+    /* Luxury cream palette - Marvis inspired */
+    --background: 37 35% 98%;
+    --foreground: 28 24% 14%;
 
-    --card: 45 30% 99%;
-    --card-foreground: 150 45% 15%;
+    --card: 40 40% 99%;
+    --card-foreground: 28 24% 14%;
 
-    --popover: 45 30% 99%;
-    --popover-foreground: 150 45% 15%;
+    --popover: 40 40% 99%;
+    --popover-foreground: 28 24% 14%;
 
-    --primary: 150 55% 23%;
-    --primary-foreground: 45 20% 97%;
+    --primary: 150 45% 18%;
+    --primary-foreground: 37 35% 98%;
 
-    --secondary: 145 20% 55%;
-    --secondary-foreground: 45 20% 97%;
+    --secondary: 37 28% 85%;
+    --secondary-foreground: 28 24% 14%;
 
-    --muted: 145 15% 85%;
-    --muted-foreground: 150 20% 35%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 28 20% 45%;
 
-    --accent: 145 25% 70%;
-    --accent-foreground: 150 45% 15%;
+    --accent: 37 25% 88%;
+    --accent-foreground: 28 24% 14%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 20% 97%;
+    --destructive-foreground: 37 35% 98%;
 
-    --border: 145 20% 85%;
-    --input: 145 20% 85%;
-    --ring: 150 55% 23%;
+    --border: 37 20% 88%;
+    --input: 37 20% 90%;
+    --ring: 150 45% 18%;
 
-    --radius: 0.75rem;
+    --radius: 0.375rem;
     
-    /* Custom Jungle Rent tokens */
-    --forest-green: 150 55% 23%;
-    --sage-green: 145 20% 55%;
-    --light-sage: 145 25% 70%;
-    --cream: 45 20% 97%;
-    --warm-dark: 150 40% 8%;
+    /* Premium Jungle Rent tokens */
+    --forest-deep: 150 45% 18%;
+    --cream-base: 37 35% 98%;
+    --beige-warm: 37 28% 85%;
+    --tan-accent: 37 25% 78%;
+    --charcoal: 28 24% 14%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(150 55% 23%) 0%, hsl(145 40% 30%) 50%, hsl(145 30% 35%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(45 20% 97%) 0%, hsl(145 25% 95%) 100%);
-    --gradient-card: linear-gradient(to bottom right, hsl(45 30% 99%), hsl(145 25% 97%));
-    --gradient-glow: radial-gradient(circle at top, hsl(150 55% 23% / 0.05), transparent 70%);
+    /* Minimal gradients */
+    --gradient-subtle: linear-gradient(180deg, hsl(37 35% 98%) 0%, hsl(37 30% 96%) 100%);
+    --gradient-section: linear-gradient(to bottom, hsl(40 40% 99%), hsl(37 35% 98%));
     
-    /* Shadows - Premium depth */
-    --shadow-soft: 0 4px 20px hsla(150, 55%, 23%, 0.08);
-    --shadow-card: 0 10px 40px hsla(150, 55%, 23%, 0.06);
-    --shadow-card-hover: 0 20px 60px hsla(150, 55%, 23%, 0.12);
-    --shadow-button: 0 4px 14px hsla(150, 55%, 23%, 0.15);
-    --shadow-button-hover: 0 6px 20px hsla(150, 55%, 23%, 0.25);
+    /* Refined shadows - barely there */
+    --shadow-minimal: 0 2px 8px hsla(28, 24%, 14%, 0.04);
+    --shadow-card: 0 4px 16px hsla(28, 24%, 14%, 0.06);
+    --shadow-card-hover: 0 8px 24px hsla(28, 24%, 14%, 0.1);
+    --shadow-button: 0 2px 12px hsla(150, 45%, 18%, 0.15);
+    --shadow-button-hover: 0 4px 20px hsla(150, 45%, 18%, 0.25);
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Smooth transitions */
+    --transition-elegant: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -129,9 +128,17 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: 'cv11', 'ss01';
+    font-weight: 300;
+    letter-spacing: 0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Elegant link underline animation */
+  .link-elegant {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-500 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 }

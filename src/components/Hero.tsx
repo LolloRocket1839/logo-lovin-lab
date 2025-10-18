@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Percent, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-transparent.png";
 
 export const Hero = () => {
@@ -12,108 +12,100 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-cream/50 to-accent/10">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-[32rem] h-[32rem] bg-secondary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-primary/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-      </div>
-      
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,hsl(150_55%_23%/0.03),transparent_50%)]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-[0.015]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }} />
 
-      <div className="container relative z-10 px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Logo */}
-          <div className="mb-10 animate-fade-in">
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl scale-110" />
-              <img 
-                src={jungleRentLogo} 
-                alt="Jungle Rent Logo" 
-                className="w-36 h-36 mx-auto relative z-10 drop-shadow-2xl transition-transform hover:scale-105 duration-500"
-              />
-            </div>
-            <p className="mt-6 text-lg md:text-xl text-primary font-semibold italic tracking-wide">
+      <div className="container relative z-10 px-8 py-32">
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Logo - refined and smaller */}
+          <div className="mb-12 animate-fade-in">
+            <img 
+              src={jungleRentLogo} 
+              alt="Jungle Rent" 
+              className="w-20 h-20 mx-auto opacity-90 transition-all duration-700 hover:opacity-100 hover:scale-105"
+            />
+            <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
               Il tuo rifugio sicuro nella giungla immobiliare
             </p>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tight animate-fade-in-up leading-[1.1]">
-            Risparmia il{" "}
-            <span className="inline-block relative">
-              <span className="text-primary inline-flex items-center gap-2 relative z-10">
-                25%
-                <Percent className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
-              </span>
-              <div className="absolute inset-0 bg-primary/10 blur-2xl scale-110 animate-pulse" />
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              sull'Affitto
-            </span>
+          {/* Massive headline with elegant serif */}
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-display font-bold mb-6 tracking-tighter animate-fade-in-up leading-[0.95] text-foreground">
+            Risparmia il
           </h1>
-
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-10 max-w-3xl mx-auto animate-fade-in-up animation-delay-200 leading-relaxed font-light">
-            Il modo rivoluzionario per affittare casa a Torino.
-            <br />
-            <span className="text-primary font-semibold">Vicino al Politecnico e Università di Torino</span>
-          </p>
-
-          {/* Bonus Badge */}
-          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-2 border-primary/30 rounded-full px-8 py-4 mb-12 animate-fade-in-up animation-delay-300 shadow-lg hover:shadow-xl transition-all hover:scale-105 backdrop-blur-sm">
-            <span className="text-xl font-bold text-primary">🎉 BONUS:</span>
-            <span className="text-foreground font-medium">Possibilità di vincere 1 mese gratis!</span>
+          
+          {/* Giant percentage in elegant serif */}
+          <div className="mb-6 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <span className="text-[10rem] md:text-[14rem] lg:text-[18rem] font-display font-bold text-primary leading-none inline-block">
+              25%
+            </span>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center animate-fade-in-up animation-delay-400">
+          <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-16 animate-fade-in-up tracking-tighter text-foreground" style={{ animationDelay: '200ms' }}>
+            sull'Affitto
+          </h2>
+
+          {/* Refined subheadline */}
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '300ms' }}>
+            Il modo rivoluzionario per affittare casa a Torino
+          </p>
+          
+          <p className="text-lg md:text-xl text-primary/70 mb-16 font-light" style={{ animationDelay: '400ms' }}>
+            Vicino al Politecnico e Università di Torino
+          </p>
+
+          {/* Bonus - subtle and elegant */}
+          <div className="inline-flex items-center gap-3 border border-primary/20 bg-primary/5 rounded-full px-8 py-3 mb-20 animate-fade-in-up text-sm font-medium tracking-wide" style={{ animationDelay: '500ms' }}>
+            <span className="text-primary">✦</span>
+            <span className="text-foreground">Possibilità di vincere 1 mese gratis</span>
+          </div>
+
+          {/* Single large CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up mb-20" style={{ animationDelay: '600ms' }}>
             <Button 
               size="lg" 
-              variant="hero"
+              variant="premium"
               onClick={handleWhatsAppLorenzo}
-              className="text-lg px-10 py-7 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.20)] transition-all duration-500 hover:scale-[1.02] hover:-translate-y-0.5 group"
+              className="px-12 py-7 text-base"
             >
-              <MessageCircle className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
               Contatta Lorenzo
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
             <Button 
               size="lg" 
-              variant="hero"
+              variant="premium"
               onClick={handleWhatsAppAndrea}
-              className="text-lg px-10 py-7 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.20)] transition-all duration-500 hover:scale-[1.02] hover:-translate-y-0.5 group"
+              className="px-12 py-7 text-base"
             >
-              <MessageCircle className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
               Contatta Andrea
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
             <Button 
               size="lg" 
               variant="outline"
               onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-lg px-10 py-7 hover:shadow-lg transition-all duration-300"
+              className="px-12 py-7"
             >
               Come Funziona
             </Button>
           </div>
 
-          {/* Trust indicators */}
-          <div className="mt-20 flex flex-wrap justify-center gap-10 text-base animate-fade-in-up animation-delay-500">
-            <div className="flex items-center gap-3 group cursor-default">
-              <div className="w-2.5 h-2.5 bg-primary rounded-full group-hover:scale-125 transition-transform" />
-              <span className="text-muted-foreground group-hover:text-foreground transition-colors font-medium">Contratti sicuri</span>
+          {/* Minimal trust indicators */}
+          <div className="flex flex-wrap justify-center gap-12 text-sm animate-fade-in-up text-muted-foreground font-light tracking-wide" style={{ animationDelay: '700ms' }}>
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-1 bg-primary/40 rounded-full" />
+              <span>Contratti sicuri</span>
             </div>
-            <div className="flex items-center gap-3 group cursor-default">
-              <div className="w-2.5 h-2.5 bg-primary rounded-full group-hover:scale-125 transition-transform" />
-              <span className="text-muted-foreground group-hover:text-foreground transition-colors font-medium">Supporto dedicato</span>
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-1 bg-primary/40 rounded-full" />
+              <span>Supporto dedicato</span>
             </div>
-            <div className="flex items-center gap-3 group cursor-default">
-              <div className="w-2.5 h-2.5 bg-primary rounded-full group-hover:scale-125 transition-transform" />
-              <span className="text-muted-foreground group-hover:text-foreground transition-colors font-medium">Zero commissioni nascoste</span>
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-1 bg-primary/40 rounded-full" />
+              <span>Zero commissioni</span>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const CTA = () => {
   const handleWhatsAppLorenzo = () => {
@@ -11,79 +11,61 @@ export const CTA = () => {
   };
 
   return (
-    <section className="py-32 relative overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-secondary" />
-      
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.1),transparent_50%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,rgba(0,0,0,0.1),transparent_50%)]" />
-      </div>
-      
-      {/* Pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: '48px 48px'
-        }} />
-      </div>
+    <section className="py-40 relative overflow-hidden bg-primary">
+      {/* Subtle texture */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }} />
 
-      <div className="container px-4 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-primary-foreground font-semibold text-sm mb-6">
-              <span className="w-2 h-2 bg-primary-foreground rounded-full animate-pulse" />
-              RISPARMIA ORA
-            </div>
-          </div>
+      <div className="container px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/70 mb-8 font-medium">
+            Inizia Oggi
+          </p>
           
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-primary-foreground mb-8 leading-tight">
-            Pronto a Risparmiare?
+          <h2 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-12 leading-tight tracking-tight">
+            Pronto a<br />Risparmiare?
           </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/95 mb-14 max-w-3xl mx-auto leading-relaxed font-light">
-            Unisciti a centinaia di studenti che già risparmiano con Jungle Rent. 
-            <br />
-            <span className="font-bold">Il tuo nuovo appartamento ti aspetta!</span>
+          
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-16 max-w-2xl mx-auto leading-relaxed font-light">
+            Unisciti a centinaia di studenti che già risparmiano con Jungle Rent
           </p>
 
-          {/* Large CTA */}
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
+          {/* Clean CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button 
               size="lg" 
               variant="secondary"
               onClick={handleWhatsAppLorenzo}
-              className="text-xl px-12 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_80px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 bg-white text-primary border-4 border-white/30 font-bold group"
+              className="px-12 py-7 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
             >
-              <MessageCircle className="mr-3 w-7 h-7 group-hover:scale-110 transition-transform" />
               Contatta Lorenzo
-              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
             <Button 
               size="lg" 
               variant="secondary"
               onClick={handleWhatsAppAndrea}
-              className="text-xl px-12 py-8 shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_80px_rgba(0,0,0,0.4)] transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 bg-white text-primary border-4 border-white/30 font-bold group"
+              className="px-12 py-7 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
             >
-              <MessageCircle className="mr-3 w-7 h-7 group-hover:scale-110 transition-transform" />
               Contatta Andrea
-              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
 
-          {/* Extra info */}
-          <div className="flex flex-wrap justify-center gap-8 text-primary-foreground/90 text-lg">
+          {/* Minimal info */}
+          <div className="flex flex-wrap justify-center gap-10 text-primary-foreground/80 text-sm font-light tracking-wide">
             <div className="flex items-center gap-2">
-              <span className="text-2xl">📱</span>
-              <span className="font-medium">Risposta veloce</span>
+              <div className="w-1 h-1 bg-primary-foreground/40 rounded-full" />
+              <span>Risposta veloce</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🏠</span>
-              <span className="font-medium">Case disponibili ora</span>
+              <div className="w-1 h-1 bg-primary-foreground/40 rounded-full" />
+              <span>Case disponibili</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-2xl">💰</span>
-              <span className="font-medium">Risparmio garantito</span>
+              <div className="w-1 h-1 bg-primary-foreground/40 rounded-full" />
+              <span>Risparmio garantito</span>
             </div>
           </div>
         </div>

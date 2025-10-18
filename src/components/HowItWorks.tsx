@@ -24,45 +24,50 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-28 bg-gradient-to-b from-background via-accent/5 to-background relative overflow-hidden">
-      {/* Decorative background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(150_55%_23%/0.03),transparent_70%)]" />
+    <section id="how-it-works" className="py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden">
+      {/* Top border line */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
-      <div className="container px-4 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm tracking-wide">
-            PROCESSO SEMPLICE
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+      <div className="container px-8 relative z-10">
+        <div className="text-center mb-28 max-w-3xl mx-auto">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
+            Processo Semplice
+          </p>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             Come Funziona
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
             Tre semplici passi per iniziare a risparmiare
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto relative">
+          {/* Connecting lines between steps */}
+          <div className="hidden md:block absolute top-24 left-1/6 right-1/6 h-[1px] bg-border -z-10" />
+          
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <Card 
                 key={index}
-                className="relative p-10 border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgb(0,0,0,0.08)] bg-gradient-to-br from-card to-card/50 backdrop-blur group hover:-translate-y-2"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="relative p-12 border border-border/50 bg-card hover:border-primary/30 transition-all duration-700 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)] group hover:-translate-y-1"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                {/* Step number */}
-                <div className="absolute -top-5 -right-5 w-20 h-20 bg-gradient-to-br from-primary to-secondary text-primary-foreground rounded-2xl flex items-center justify-center text-3xl font-black shadow-xl group-hover:scale-110 transition-transform duration-300 rotate-3 group-hover:rotate-6">
-                  {step.step}
+                {/* Elegant number badge */}
+                <div className="mb-8">
+                  <div className="w-16 h-16 rounded-full border border-primary/20 flex items-center justify-center text-primary font-display text-lg font-medium group-hover:border-primary/40 transition-colors duration-700">
+                    {step.step}
+                  </div>
                 </div>
 
-                {/* Icon */}
-                <div className="mb-8 inline-flex p-5 bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-md">
-                  <Icon className="w-10 h-10 text-primary" />
+                {/* Simple line icon */}
+                <div className="mb-6">
+                  <Icon className="w-8 h-8 text-primary/60 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <h3 className="text-2xl font-display font-semibold mb-4 leading-tight text-foreground">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed font-light">
                   {step.description}
                 </p>
               </Card>
@@ -70,6 +75,9 @@ export const HowItWorks = () => {
           })}
         </div>
       </div>
+      
+      {/* Bottom border line */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
     </section>
   );
 };

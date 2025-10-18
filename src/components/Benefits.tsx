@@ -30,56 +30,87 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-28 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+    <section className="py-40 bg-background relative overflow-hidden">
+      {/* Top border line */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
-      <div className="container px-4 relative z-10">
-        <div className="text-center mb-20">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm tracking-wide">
-            I NOSTRI VANTAGGI
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Perché Scegliere Jungle Rent
+      <div className="container px-8 relative z-10">
+        <div className="text-center mb-28 max-w-3xl mx-auto">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
+            I Nostri Vantaggi
+          </p>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
+            Perché Scegliere<br />Jungle Rent
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Più di un semplice affitto, un nuovo modo di vivere da studente
+          <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
+            Più di un semplice affitto
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (
-              <Card 
-                key={index}
-                className="relative p-8 border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgb(0,0,0,0.08)] bg-gradient-to-br from-card to-card/50 group hover:-translate-y-2 overflow-hidden"
-                style={{ animationDelay: `${index * 75}ms` }}
-              >
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                {/* Highlight badge */}
-                <div className="absolute -top-3 right-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  {benefit.highlight}
-                </div>
+        {/* Asymmetric grid layout */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            {benefits.slice(0, 2).map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <Card 
+                  key={index}
+                  className="relative p-12 border border-border/50 bg-card hover:border-primary/30 transition-all duration-700 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)] group hover:-translate-y-1"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {/* Subtle highlight badge */}
+                  <div className="absolute top-8 right-8 text-xs uppercase tracking-wider text-primary/60 font-medium">
+                    {benefit.highlight}
+                  </div>
 
-                {/* Icon */}
-                <div className="relative mb-6 inline-flex p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-md">
-                  <Icon className="w-7 h-7 text-primary" />
-                </div>
+                  {/* Simple icon */}
+                  <div className="mb-8">
+                    <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
+                  </div>
 
-                {/* Content */}
-                <h3 className="relative text-xl font-bold mb-3 leading-tight">{benefit.title}</h3>
-                <p className="relative text-sm text-muted-foreground leading-relaxed">
-                  {benefit.description}
-                </p>
-              </Card>
-            );
-          })}
+                  {/* Content */}
+                  <h3 className="text-2xl font-display font-semibold mb-4 leading-tight text-foreground">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-light">
+                    {benefit.description}
+                  </p>
+                </Card>
+              );
+            })}
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.slice(2, 4).map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <Card 
+                  key={index + 2}
+                  className="relative p-12 border border-border/50 bg-card hover:border-primary/30 transition-all duration-700 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)] group hover:-translate-y-1"
+                  style={{ animationDelay: `${(index + 2) * 100}ms` }}
+                >
+                  {/* Subtle highlight badge */}
+                  <div className="absolute top-8 right-8 text-xs uppercase tracking-wider text-primary/60 font-medium">
+                    {benefit.highlight}
+                  </div>
+
+                  {/* Simple icon */}
+                  <div className="mb-8">
+                    <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-2xl font-display font-semibold mb-4 leading-tight text-foreground">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-light">
+                    {benefit.description}
+                  </p>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </div>
+      
+      {/* Bottom border line */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
     </section>
   );
 };
