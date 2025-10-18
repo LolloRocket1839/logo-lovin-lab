@@ -25,7 +25,7 @@ export const Hero = () => {
             <img 
               src={jungleRentLogo} 
               alt="Jungle Rent" 
-              className="w-20 h-20 mx-auto opacity-90 transition-all duration-700 hover:opacity-100 hover:scale-105"
+              className="w-20 h-20 mx-auto opacity-90 transition-all duration-700 hover:opacity-100 hover:scale-105 rounded-2xl"
             />
             <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
               Il tuo rifugio sicuro nella giungla immobiliare
