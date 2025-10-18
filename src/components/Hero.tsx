@@ -3,7 +3,11 @@ import { ArrowRight, Percent } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-transparent.png";
 
 export const Hero = () => {
-  const handleWhatsAppClick = () => {
+  const handleWhatsAppLorenzo = () => {
+    window.open("https://wa.me/393319053037", "_blank");
+  };
+
+  const handleWhatsAppAndrea = () => {
     window.open("https://wa.me/393920675357", "_blank");
   };
 
@@ -55,10 +59,19 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="hero"
-              onClick={handleWhatsAppClick}
+              onClick={handleWhatsAppLorenzo}
               className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              Contattaci su WhatsApp
+              Contatta Lorenzo
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="hero"
+              onClick={handleWhatsAppAndrea}
+              className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            >
+              Contatta Andrea
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button 

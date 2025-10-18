@@ -26,13 +26,22 @@ export const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Contatti</h3>
             <div className="space-y-3">
               <a 
+                href="https://wa.me/393319053037" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>Lorenzo: +39 331 905 3037</span>
+              </a>
+              <a 
                 href="https://wa.me/393920675357" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp: +39 392 067 5357</span>
+                <span>Andrea: +39 392 067 5357</span>
               </a>
               <a 
                 href="mailto:info@junglerent.com"

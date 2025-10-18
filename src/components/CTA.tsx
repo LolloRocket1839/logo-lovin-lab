@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 export const CTA = () => {
-  const handleWhatsAppClick = () => {
+  const handleWhatsAppLorenzo = () => {
+    window.open("https://wa.me/393319053037", "_blank");
+  };
+
+  const handleWhatsAppAndrea = () => {
     window.open("https://wa.me/393920675357", "_blank");
   };
 
@@ -35,11 +39,21 @@ export const CTA = () => {
             <Button 
               size="lg" 
               variant="secondary"
-              onClick={handleWhatsAppClick}
+              onClick={handleWhatsAppLorenzo}
               className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 bg-primary-foreground text-primary border-4 border-primary-foreground/20"
             >
               <MessageCircle className="mr-2 w-6 h-6" />
-              Scrivici su WhatsApp
+              Contatta Lorenzo
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="secondary"
+              onClick={handleWhatsAppAndrea}
+              className="text-lg px-10 py-7 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 bg-primary-foreground text-primary border-4 border-primary-foreground/20"
+            >
+              <MessageCircle className="mr-2 w-6 h-6" />
+              Contatta Andrea
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
