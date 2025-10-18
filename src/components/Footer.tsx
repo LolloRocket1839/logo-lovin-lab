@@ -15,7 +15,7 @@ export const Footer = () => {
               <img 
                 src={jungleRentLogo} 
                 alt="Jungle Rent" 
-                className="w-16 h-16 opacity-80 rounded-2xl"
+                className="w-16 h-16 opacity-80 rounded-3xl"
               />
             </div>
             <p className="text-muted-foreground mb-4 leading-relaxed font-light">
