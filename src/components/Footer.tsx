@@ -44,11 +44,11 @@ export const Footer = () => {
                 <span>Andrea: +39 392 067 5357</span>
               </a>
               <a 
-                href="mailto:info@junglerent.com"
+                href="mailto:junglerententerprise@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>info@junglerent.com</span>
+                <span>junglerententerprise@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-5 h-5" />
