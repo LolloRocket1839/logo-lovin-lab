@@ -30,13 +30,20 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-24 bg-primary/5">
-      <div className="container px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section className="py-28 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      
+      <div className="container px-4 relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm tracking-wide">
+            I NOSTRI VANTAGGI
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Perché Scegliere Jungle Rent
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Più di un semplice affitto, un nuovo modo di vivere da studente
           </p>
         </div>
@@ -47,21 +54,25 @@ export const Benefits = () => {
             return (
               <Card 
                 key={index}
-                className="p-6 border-2 hover:border-primary transition-all duration-300 hover:shadow-xl bg-card group hover:-translate-y-1"
+                className="relative p-8 border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgb(0,0,0,0.08)] bg-gradient-to-br from-card to-card/50 group hover:-translate-y-2 overflow-hidden"
+                style={{ animationDelay: `${index * 75}ms` }}
               >
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
                 {/* Highlight badge */}
-                <div className="absolute -top-3 right-4 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold shadow-md">
+                <div className="absolute -top-3 right-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
                   {benefit.highlight}
                 </div>
 
                 {/* Icon */}
-                <div className="mb-4 inline-flex p-3 bg-primary/10 rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <Icon className="w-6 h-6" />
+                <div className="relative mb-6 inline-flex p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-md">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <h3 className="relative text-xl font-bold mb-3 leading-tight">{benefit.title}</h3>
+                <p className="relative text-sm text-muted-foreground leading-relaxed">
                   {benefit.description}
                 </p>
               </Card>
