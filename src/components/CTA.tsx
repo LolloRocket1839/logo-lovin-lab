@@ -75,15 +75,35 @@ export const CTA = () => {
               <p className="text-primary-foreground/80 mb-6 font-light text-sm">
                 Opportunità immobiliari nel mercato universitario torinese. ROI ottimizzato.
               </p>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                onClick={() => window.open("mailto:junglerententerprise@gmail.com?subject=Opportunità Investimento", "_blank")}
-                className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
-              >
-                Richiedi Informazioni
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <div className="flex flex-col gap-3">
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  onClick={handleWhatsAppLorenzo}
+                  className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
+                >
+                  Contatta Lorenzo
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  onClick={handleWhatsAppAndrea}
+                  className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
+                >
+                  Contatta Andrea
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  onClick={() => window.open("mailto:junglerententerprise@gmail.com?subject=Opportunità Investimento", "_blank")}
+                  className="w-full px-8 py-6 bg-primary-foreground/80 text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/10 font-medium tracking-wide uppercase text-sm transition-all duration-500"
+                >
+                  Email
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </div>
               <p className="text-xs text-primary-foreground/60 mt-4 font-light">
                 Risposta entro 24 ore
               </p>
