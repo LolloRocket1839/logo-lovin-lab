@@ -35,6 +35,9 @@ export const Hero = () => {
                 className="w-36 h-36 mx-auto relative z-10 drop-shadow-2xl transition-transform hover:scale-105 duration-500"
               />
             </div>
+            <p className="mt-6 text-lg md:text-xl text-primary font-semibold italic tracking-wide">
+              Il tuo rifugio sicuro nella giungla immobiliare
+            </p>
           </div>
 
           {/* Main Headline */}

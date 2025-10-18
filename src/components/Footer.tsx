@@ -97,7 +97,10 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-primary/10 pt-10 text-center">
-          <p className="text-muted-foreground text-lg">
+          <p className="text-primary/80 text-lg italic mb-3">
+            Il tuo rifugio sicuro nella giungla immobiliare
+          </p>
+          <p className="text-muted-foreground">
             Jungle Rent - Affitti Smart per Studenti Smart 🌳
           </p>
         </div>
