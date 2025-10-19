@@ -91,7 +91,7 @@ export const Hero = () => {
                 transformOrigin: 'center',
               }}
             >
-              <div className="relative p-8 rounded-3xl overflow-visible
+              <div className="relative p-8 rounded-3xl overflow-hidden
                               border-2 border-transparent
                               hover:border-amber-400/40
                               hover:bg-gradient-to-br hover:from-blue-500/15 hover:via-purple-500/15 hover:to-pink-500/15
@@ -99,55 +99,6 @@ export const Hero = () => {
                               transition-all duration-700
                               animate-fade-in-up
                               bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5">
-                
-                {/* Emoji che spuntano da dietro - z-index basso */}
-                {/* Libro aperto - spunta da sinistra dietro */}
-                <div className="absolute top-8 left-4 text-7xl z-0
-                                transform transition-all duration-700 ease-out
-                                -translate-x-16 opacity-0
-                                group-hover:translate-x-0 group-hover:opacity-100"
-                     style={{ 
-                       filter: 'drop-shadow(0 6px 16px rgba(59,130,246,0.5))',
-                       transitionDelay: '100ms'
-                     }}>
-                  📖
-                </div>
-                
-                {/* Matita - spunta da sopra dietro */}
-                <div className="absolute top-0 right-20 text-6xl z-0
-                                transform transition-all duration-700 ease-out
-                                -translate-y-16 rotate-45 opacity-0
-                                group-hover:translate-y-0 group-hover:opacity-100 group-hover:rotate-12"
-                     style={{ 
-                       filter: 'drop-shadow(0 6px 16px rgba(168,85,247,0.5))',
-                       transitionDelay: '200ms'
-                     }}>
-                  ✏️
-                </div>
-                
-                {/* Zaino - spunta da destra dietro */}
-                <div className="absolute top-1/2 -translate-y-1/2 right-4 text-7xl z-0
-                                transform transition-all duration-700 ease-out
-                                translate-x-16 opacity-0
-                                group-hover:translate-x-0 group-hover:opacity-100"
-                     style={{ 
-                       filter: 'drop-shadow(0 6px 16px rgba(236,72,153,0.5))',
-                       transitionDelay: '300ms'
-                     }}>
-                  🎒
-                </div>
-                
-                {/* Lampadina - spunta da sotto dietro */}
-                <div className="absolute bottom-2 left-16 text-6xl z-0
-                                transform transition-all duration-700 ease-out
-                                translate-y-16 opacity-0
-                                group-hover:translate-y-0 group-hover:opacity-100"
-                     style={{ 
-                       filter: 'drop-shadow(0 6px 16px rgba(251,191,36,0.6))',
-                       transitionDelay: '150ms'
-                     }}>
-                  💡
-                </div>
                 
                 {/* Glow giocoso colorato vibrante */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-purple-400/25 to-pink-400/25
