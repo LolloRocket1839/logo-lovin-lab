@@ -72,7 +72,7 @@ export const Hero = () => {
               className="w-24 h-24 mx-auto opacity-90 transition-all duration-700 
                          hover:opacity-100 hover:scale-110 hover:rotate-6 
                          hover:drop-shadow-[0_0_20px_hsla(150,45%,18%,0.5)]
-                         animate-[logo-pulse_3s_ease-in-out_infinite]
+                         animate-[pulse_8s_ease-in-out_infinite]
                          rounded-full"
             />
             <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
