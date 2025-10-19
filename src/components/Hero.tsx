@@ -43,7 +43,7 @@ export const Hero = () => {
                 Sei uno studente?
               </h1>
               <p className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-primary tracking-tighter leading-[0.95]">
-                Risparmia il 25% per il tuo alloggio!
+                Risparmi circa il 25% per il tuo affitto!
               </p>
             </div>
             
