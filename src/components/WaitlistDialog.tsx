@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Building2, Euro, Calendar, Users, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,9 +10,15 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -21,7 +27,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast";
+import { Building2, Euro, Calendar, Users, Loader2, ArrowRight, AlertCircle } from "lucide-react";
 
 const waitlistSchema = z.object({
   name: z.string().trim().min(2, "Inserisci il tuo nome").max(100),
@@ -44,7 +51,6 @@ interface WaitlistDialogProps {
 
 export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
 
   const form = useForm<WaitlistFormData>({
     resolver: zodResolver(waitlistSchema),
@@ -88,15 +94,18 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
       toast({
         title: "✅ Perfetto!",
         description: "Sei nella waitlist! Controlla la tua email per la conferma.",
+        className: "bg-gradient-to-r from-primary/20 to-emerald-500/20 border-2 border-primary/50 backdrop-blur-xl",
       });
 
       onOpenChange(false);
       form.reset();
     } catch (error) {
+      console.error("Form submission error:", error);
       toast({
-        title: "Errore",
+        title: "❌ Errore",
         description: "Qualcosa è andato storto. Riprova tra poco.",
         variant: "destructive",
+        className: "backdrop-blur-xl border-2",
       });
     } finally {
       setIsSubmitting(false);
@@ -105,196 +114,332 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[600px] bg-black/95 backdrop-blur-xl border border-white/10 text-foreground max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-display">
-            Iscriviti alla Waitlist Jungle Rent
+      <DialogContent className="sm:max-w-[650px] 
+                               backdrop-blur-2xl bg-black/90 
+                               border-2 border-white/20 
+                               shadow-[0_24px_96px_rgba(0,0,0,0.4),0_8px_32px_rgba(139,195,74,0.15)]
+                               text-foreground 
+                               max-h-[90vh] overflow-hidden
+                               rounded-3xl
+                               animate-in fade-in-0 zoom-in-95 duration-500">
+        <DialogHeader className="pb-6 border-b border-white/10">
+          <DialogTitle className="text-3xl font-display font-bold tracking-tight 
+                                  bg-gradient-to-r from-foreground via-primary to-foreground 
+                                  bg-clip-text text-transparent">
+            🎯 Iscriviti alla Waitlist Jungle Rent
           </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
-            Compila il form in meno di 1 minuto. Riceverai accesso prioritario alle stanze disponibili!
+          <DialogDescription className="text-base text-muted-foreground font-light pt-3 leading-relaxed">
+            Compila il form in <span className="text-primary font-medium">meno di 1 minuto</span>. 
+            Riceverai <span className="font-medium text-foreground">accesso prioritario</span> alle stanze disponibili!
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Nome */}
-            <div className="space-y-2">
-              <Label htmlFor="name">Nome completo *</Label>
-              <Input
-                id="name"
-                placeholder="Mario Rossi"
-                {...form.register("name")}
-                className="bg-white/5 border-white/10"
+        <div className="overflow-y-auto max-h-[calc(90vh-180px)] px-1">
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 pt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem className="animate-in slide-in-from-left-4 duration-500">
+                      <FormLabel className="text-sm font-medium">Nome Completo *</FormLabel>
+                      <FormControl>
+                        <Input 
+                          placeholder="Mario Rossi" 
+                          {...field}
+                          className="bg-white/5 border-white/20 
+                                     focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+                                     hover:bg-white/8 hover:border-white/30
+                                     transition-all duration-300
+                                     h-12 px-4
+                                     text-foreground placeholder:text-muted-foreground/60"
+                        />
+                      </FormControl>
+                      {form.formState.errors.name && (
+                        <div className="flex items-start gap-2 text-sm text-red-400 
+                                        bg-red-500/10 border border-red-500/20 
+                                        rounded-lg px-3 py-2 mt-2
+                                        animate-in slide-in-from-top-1 duration-300">
+                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <FormMessage />
+                        </div>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "50ms" }}>
+                      <FormLabel className="text-sm font-medium">Email *</FormLabel>
+                      <FormControl>
+                        <Input 
+                          type="email" 
+                          placeholder="mario.rossi@email.com" 
+                          {...field}
+                          className="bg-white/5 border-white/20 
+                                     focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+                                     hover:bg-white/8 hover:border-white/30
+                                     transition-all duration-300
+                                     h-12 px-4
+                                     text-foreground placeholder:text-muted-foreground/60"
+                        />
+                      </FormControl>
+                      {form.formState.errors.email && (
+                        <div className="flex items-start gap-2 text-sm text-red-400 
+                                        bg-red-500/10 border border-red-500/20 
+                                        rounded-lg px-3 py-2 mt-2
+                                        animate-in slide-in-from-top-1 duration-300">
+                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <FormMessage />
+                        </div>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="university"
+                  render={({ field }) => (
+                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "100ms" }}>
+                      <FormLabel className="text-sm font-medium">Università *</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="bg-white/5 border-white/20 
+                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+                                                    hover:bg-white/8 hover:border-white/30
+                                                    transition-all duration-300
+                                                    h-12">
+                            <div className="flex items-center gap-3">
+                              <Building2 className="w-4 h-4 text-primary/70" />
+                              <SelectValue placeholder="Seleziona università" />
+                            </div>
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="polito">Politecnico di Torino</SelectItem>
+                          <SelectItem value="unito">Università di Torino</SelectItem>
+                          <SelectItem value="escp">ESCP Business School</SelectItem>
+                          <SelectItem value="ied">IED Torino</SelectItem>
+                          <SelectItem value="iaad">IAAD</SelectItem>
+                          <SelectItem value="iusto">IUSTO</SelectItem>
+                          <SelectItem value="other">Altro</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {form.formState.errors.university && (
+                        <div className="flex items-start gap-2 text-sm text-red-400 
+                                        bg-red-500/10 border border-red-500/20 
+                                        rounded-lg px-3 py-2 mt-2
+                                        animate-in slide-in-from-top-1 duration-300">
+                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <FormMessage />
+                        </div>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="budget"
+                  render={({ field }) => (
+                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "150ms" }}>
+                      <FormLabel className="text-sm font-medium">Budget Mensile *</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="bg-white/5 border-white/20 
+                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+                                                    hover:bg-white/8 hover:border-white/30
+                                                    transition-all duration-300
+                                                    h-12">
+                            <div className="flex items-center gap-3">
+                              <Euro className="w-4 h-4 text-primary/70" />
+                              <SelectValue placeholder="Seleziona budget" />
+                            </div>
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="300-400">€300-400</SelectItem>
+                          <SelectItem value="400-500">€400-500</SelectItem>
+                          <SelectItem value="500-600">€500-600</SelectItem>
+                          <SelectItem value="over-600">&gt;€600</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {form.formState.errors.budget && (
+                        <div className="flex items-start gap-2 text-sm text-red-400 
+                                        bg-red-500/10 border border-red-500/20 
+                                        rounded-lg px-3 py-2 mt-2
+                                        animate-in slide-in-from-top-1 duration-300">
+                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <FormMessage />
+                        </div>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="move_date"
+                  render={({ field }) => (
+                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "200ms" }}>
+                      <FormLabel className="text-sm font-medium">Data Trasloco Preferita *</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="bg-white/5 border-white/20 
+                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+                                                    hover:bg-white/8 hover:border-white/30
+                                                    transition-all duration-300
+                                                    h-12">
+                            <div className="flex items-center gap-3">
+                              <Calendar className="w-4 h-4 text-primary/70" />
+                              <SelectValue placeholder="Quando ti trasferisci?" />
+                            </div>
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="september-2025">Settembre 2025</SelectItem>
+                          <SelectItem value="january-2026">Gennaio 2026</SelectItem>
+                          <SelectItem value="asap">ASAP</SelectItem>
+                          <SelectItem value="other">Altro</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {form.formState.errors.move_date && (
+                        <div className="flex items-start gap-2 text-sm text-red-400 
+                                        bg-red-500/10 border border-red-500/20 
+                                        rounded-lg px-3 py-2 mt-2
+                                        animate-in slide-in-from-top-1 duration-300">
+                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <FormMessage />
+                        </div>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="referral_source"
+                  render={({ field }) => (
+                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "250ms" }}>
+                      <FormLabel className="text-sm font-medium">Come Ci Hai Conosciuto? *</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="bg-white/5 border-white/20 
+                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+                                                    hover:bg-white/8 hover:border-white/30
+                                                    transition-all duration-300
+                                                    h-12">
+                            <div className="flex items-center gap-3">
+                              <Users className="w-4 h-4 text-primary/70" />
+                              <SelectValue placeholder="Seleziona fonte" />
+                            </div>
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="friend">Amico</SelectItem>
+                          <SelectItem value="university">Università</SelectItem>
+                          <SelectItem value="instagram">Instagram</SelectItem>
+                          <SelectItem value="facebook">Facebook</SelectItem>
+                          <SelectItem value="google">Google</SelectItem>
+                          <SelectItem value="ai-assistant">AI assistant</SelectItem>
+                          <SelectItem value="other">Altro</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {form.formState.errors.referral_source && (
+                        <div className="flex items-start gap-2 text-sm text-red-400 
+                                        bg-red-500/10 border border-red-500/20 
+                                        rounded-lg px-3 py-2 mt-2
+                                        animate-in slide-in-from-top-1 duration-300">
+                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <FormMessage />
+                        </div>
+                      )}
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <FormField
+                control={form.control}
+                name="privacy_consent"
+                render={({ field }) => (
+                  <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "300ms" }}>
+                    <div className="flex items-start gap-4 p-5 rounded-xl 
+                                    bg-white/5 border border-white/10
+                                    hover:bg-white/8 hover:border-white/20
+                                    transition-all duration-300">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className="mt-0.5 border-white/30 data-[state=checked]:bg-primary 
+                                     data-[state=checked]:border-primary"
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none flex-1">
+                        <FormLabel className="text-sm font-light leading-relaxed cursor-pointer 
+                                              text-muted-foreground hover:text-foreground 
+                                              transition-colors">
+                          Acconsento a ricevere aggiornamenti sulle <span className="text-primary font-medium">offerte esclusive</span> di Jungle Rent *
+                        </FormLabel>
+                        {form.formState.errors.privacy_consent && (
+                          <div className="flex items-start gap-2 text-sm text-red-400 
+                                          bg-red-500/10 border border-red-500/20 
+                                          rounded-lg px-3 py-2 mt-2
+                                          animate-in slide-in-from-top-1 duration-300">
+                            <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                            <FormMessage />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </FormItem>
+                )}
               />
-              {form.formState.errors.name && (
-                <p className="text-sm text-destructive">
-                  {form.formState.errors.name.message}
-                </p>
-              )}
-            </div>
 
-            {/* Email */}
-            <div className="space-y-2">
-              <Label htmlFor="email">Email *</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="mario.rossi@esempio.it"
-                {...form.register("email")}
-                className="bg-white/5 border-white/10"
-              />
-              {form.formState.errors.email && (
-                <p className="text-sm text-destructive">
-                  {form.formState.errors.email.message}
-                </p>
-              )}
-            </div>
-
-            {/* Università */}
-            <div className="space-y-2">
-              <Label htmlFor="university">Università *</Label>
-              <Select
-                onValueChange={(value) => form.setValue("university", value)}
-                value={form.watch("university")}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full h-14 text-lg font-bold
+                           bg-gradient-to-r from-primary via-emerald-600 to-primary
+                           hover:from-emerald-600 hover:via-primary hover:to-emerald-600
+                           text-primary-foreground
+                           shadow-[0_8px_32px_rgba(139,195,74,0.3)]
+                           hover:shadow-[0_12px_48px_rgba(139,195,74,0.5)]
+                           hover:scale-[1.02]
+                           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
+                           transition-all duration-500
+                           group relative overflow-hidden
+                           animate-in slide-in-from-bottom-4 duration-500"
+                style={{ animationDelay: "350ms" }}
               >
-                <SelectTrigger className="bg-white/5 border-white/10">
-                  <Building2 className="w-4 h-4 mr-2" />
-                  <SelectValue placeholder="Seleziona università" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="polito">Politecnico di Torino</SelectItem>
-                  <SelectItem value="unito">Università di Torino</SelectItem>
-                  <SelectItem value="escp">ESCP Business School</SelectItem>
-                  <SelectItem value="ied">IED Torino</SelectItem>
-                  <SelectItem value="iaad">IAAD</SelectItem>
-                  <SelectItem value="iusto">IUSTO</SelectItem>
-                  <SelectItem value="other">Altro</SelectItem>
-                </SelectContent>
-              </Select>
-              {form.formState.errors.university && (
-                <p className="text-sm text-destructive">
-                  {form.formState.errors.university.message}
-                </p>
-              )}
-            </div>
-
-            {/* Budget */}
-            <div className="space-y-2">
-              <Label htmlFor="budget">Budget mensile *</Label>
-              <Select
-                onValueChange={(value) => form.setValue("budget", value)}
-                value={form.watch("budget")}
-              >
-                <SelectTrigger className="bg-white/5 border-white/10">
-                  <Euro className="w-4 h-4 mr-2" />
-                  <SelectValue placeholder="Seleziona budget" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="300-400">€300-400</SelectItem>
-                  <SelectItem value="400-500">€400-500</SelectItem>
-                  <SelectItem value="500-600">€500-600</SelectItem>
-                  <SelectItem value="over-600">&gt;€600</SelectItem>
-                </SelectContent>
-              </Select>
-              {form.formState.errors.budget && (
-                <p className="text-sm text-destructive">
-                  {form.formState.errors.budget.message}
-                </p>
-              )}
-            </div>
-
-            {/* Data trasloco */}
-            <div className="space-y-2">
-              <Label htmlFor="move_date">Data trasloco preferita *</Label>
-              <Select
-                onValueChange={(value) => form.setValue("move_date", value)}
-                value={form.watch("move_date")}
-              >
-                <SelectTrigger className="bg-white/5 border-white/10">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  <SelectValue placeholder="Seleziona data" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="september-2025">Settembre 2025</SelectItem>
-                  <SelectItem value="january-2026">Gennaio 2026</SelectItem>
-                  <SelectItem value="asap">ASAP</SelectItem>
-                  <SelectItem value="other">Altro</SelectItem>
-                </SelectContent>
-              </Select>
-              {form.formState.errors.move_date && (
-                <p className="text-sm text-destructive">
-                  {form.formState.errors.move_date.message}
-                </p>
-              )}
-            </div>
-
-            {/* Referral Source */}
-            <div className="space-y-2">
-              <Label htmlFor="referral_source">Come ci hai conosciuto? *</Label>
-              <Select
-                onValueChange={(value) => form.setValue("referral_source", value)}
-                value={form.watch("referral_source")}
-              >
-                <SelectTrigger className="bg-white/5 border-white/10">
-                  <Users className="w-4 h-4 mr-2" />
-                  <SelectValue placeholder="Seleziona fonte" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="friend">Amico</SelectItem>
-                  <SelectItem value="university">Università</SelectItem>
-                  <SelectItem value="instagram">Instagram</SelectItem>
-                  <SelectItem value="facebook">Facebook</SelectItem>
-                  <SelectItem value="google">Google</SelectItem>
-                  <SelectItem value="ai-assistant">AI assistant</SelectItem>
-                  <SelectItem value="other">Altro</SelectItem>
-                </SelectContent>
-              </Select>
-              {form.formState.errors.referral_source && (
-                <p className="text-sm text-destructive">
-                  {form.formState.errors.referral_source.message}
-                </p>
-              )}
-            </div>
-          </div>
-
-          {/* Privacy Consent */}
-          <div className="flex items-start space-x-3 pt-2">
-            <Checkbox
-              id="privacy_consent"
-              checked={form.watch("privacy_consent")}
-              onCheckedChange={(checked) =>
-                form.setValue("privacy_consent", checked as boolean)
-              }
-            />
-            <Label
-              htmlFor="privacy_consent"
-              className="text-sm font-normal leading-relaxed cursor-pointer"
-            >
-              Acconsento a ricevere aggiornamenti sulle offerte esclusive di Jungle Rent *
-            </Label>
-          </div>
-          {form.formState.errors.privacy_consent && (
-            <p className="text-sm text-destructive">
-              {form.formState.errors.privacy_consent.message}
-            </p>
-          )}
-
-          {/* Submit Button */}
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg"
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                Invio in corso...
-              </>
-            ) : (
-              "Iscriviti alla Waitlist →"
-            )}
-          </Button>
-        </form>
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full 
+                                bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                                transition-transform duration-1000" />
+                
+                <span className="relative flex items-center justify-center gap-3">
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-6 h-6 animate-spin" />
+                      Invio in corso...
+                    </>
+                  ) : (
+                    <>
+                      Iscriviti alla Waitlist
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </>
+                  )}
+                </span>
+              </Button>
+            </form>
+          </Form>
+        </div>
       </DialogContent>
     </Dialog>
   );

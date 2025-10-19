@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, UserPlus, FileCheck, HeartHandshake } from "lucide-react";
+import { MapPin, UserPlus, FileCheck, HeartHandshake, Sparkles, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
@@ -128,12 +128,39 @@ export const HowItWorks = () => {
 
                 {/* Waitlist button for Step 2 */}
                 {index === 1 && (
-                  <Button 
-                    onClick={() => setWaitlistOpen(true)}
-                    className="mt-6 w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    🎯 Iscriviti Ora alla Waitlist
-                  </Button>
+                  <div className="mt-8 relative group">
+                    {/* Glow background animato */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-emerald-500/20 to-cyan-500/20 
+                                    rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    
+                    <Button 
+                      onClick={() => setWaitlistOpen(true)}
+                      className="relative w-full 
+                                 backdrop-blur-xl bg-gradient-to-r from-primary/15 via-emerald-500/15 to-primary/15
+                                 border-2 border-white/30 hover:border-white/50
+                                 text-foreground font-bold py-7 px-10 text-lg
+                                 shadow-[0_8px_24px_rgba(0,0,0,0.2),0_4px_12px_rgba(139,195,74,0.15)]
+                                 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3),0_6px_16px_rgba(139,195,74,0.25)]
+                                 hover:scale-[1.02] hover:bg-gradient-to-r hover:from-primary/25 hover:via-emerald-500/25 hover:to-primary/25
+                                 transition-all duration-700
+                                 rounded-2xl overflow-hidden"
+                    >
+                      {/* Shimmer effect on hover */}
+                      <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full 
+                                      bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                                      transition-transform duration-1000 pointer-events-none" />
+                      
+                      <span className="relative flex items-center justify-center gap-3">
+                        <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+                        <span className="bg-gradient-to-r from-primary via-emerald-600 to-primary 
+                                         bg-clip-text text-transparent group-hover:from-emerald-600 group-hover:via-primary group-hover:to-emerald-600
+                                         transition-all duration-700">
+                          Iscriviti Ora alla Waitlist
+                        </span>
+                        <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform duration-300" />
+                      </span>
+                    </Button>
+                  </div>
                 )}
               </Card>
             );
