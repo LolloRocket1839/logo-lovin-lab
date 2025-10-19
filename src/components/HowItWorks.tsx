@@ -30,7 +30,7 @@ const steps = [
     description: "Ricevi il contratto regolare via email, firma digitalmente e paga il deposito. Zero commissioni di agenzia, zero costi nascosti.",
     step: "03",
     bullets: [
-      "Contratto registrato (legge italiana)",
+      "Contratto registrato",
       "Deposito cauzionale standard",
       "Pagamento sicuro online"
     ]
