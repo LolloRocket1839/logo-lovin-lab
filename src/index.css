@@ -78,6 +78,17 @@ All colors MUST be HSL.
     --shadow-button: 0 2px 12px hsla(150, 45%, 18%, 0.15);
     --shadow-button-hover: 0 4px 20px hsla(150, 45%, 18%, 0.25);
     
+    /* Glass morphism shadows - multi-layer depth */
+    --shadow-glass: 
+      0 8px 32px hsla(28, 24%, 14%, 0.08),
+      0 2px 8px hsla(28, 24%, 14%, 0.04),
+      inset 0 1px 0 hsla(40, 50%, 100%, 0.6);
+    --shadow-glass-hover: 
+      0 16px 48px hsla(28, 24%, 14%, 0.12),
+      0 4px 16px hsla(28, 24%, 14%, 0.06),
+      inset 0 1px 0 hsla(40, 50%, 100%, 0.8),
+      0 0 0 1px hsla(150, 45%, 18%, 0.1);
+    
     /* Smooth transitions */
     --transition-elegant: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

@@ -49,6 +49,10 @@ Cordiali saluti`);
       <div className="absolute inset-0 opacity-[0.015]" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }} />
+      
+      {/* Decorative blur circles */}
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl" />
 
       <div className="container px-8 relative z-10">
         <div className="text-center mb-28 max-w-3xl mx-auto">
@@ -69,16 +73,27 @@ Cordiali saluti`);
             return (
               <Card 
                 key={index}
-                className="p-10 border border-border/50 bg-card hover:border-primary/30 transition-all duration-700 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)] group"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:bg-white/15 hover:-translate-y-1"
+                style={{ 
+                  animationDelay: `${index * 100}ms`,
+                  boxShadow: 'var(--shadow-glass)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = 'var(--shadow-glass-hover)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'var(--shadow-glass)';
+                }}
               >
-                <div className="mb-6">
-                  <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="mb-6 relative z-10">
+                  <Icon className="w-10 h-10 text-primary/70 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-display font-semibold mb-4 leading-tight text-foreground">
+                <h3 className="text-xl font-display font-semibold mb-4 leading-tight text-foreground relative z-10">
                   {benefit.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed font-light text-sm">
+                <p className="text-muted-foreground leading-relaxed font-light text-sm relative z-10">
                   {benefit.description}
                 </p>
               </Card>

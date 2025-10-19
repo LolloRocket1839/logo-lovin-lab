@@ -46,6 +46,10 @@ export const Benefits = () => {
       {/* Top border line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
+      {/* Decorative blur circles for depth */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/30 rounded-full blur-3xl" />
+      
       <div className="container px-8 relative z-10">
         <div className="text-center mb-28 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
@@ -67,22 +71,33 @@ export const Benefits = () => {
               return (
                 <Card 
                   key={index}
-                  className="relative p-10 border border-border/50 bg-card hover:border-primary/30 transition-all duration-700 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)] group hover:-translate-y-1"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="relative p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:-translate-y-1 hover:bg-white/15"
+                  style={{ 
+                    animationDelay: `${index * 100}ms`,
+                    boxShadow: 'var(--shadow-glass)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = 'var(--shadow-glass-hover)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = 'var(--shadow-glass)';
+                  }}
                 >
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   {/* Subtle highlight badge */}
-                  <div className="absolute top-6 right-6 text-xs uppercase tracking-wider text-primary/60 font-medium">
+                  <div className="absolute top-6 right-6 text-xs uppercase tracking-wider text-primary/80 font-medium z-10">
                     {benefit.highlight}
                   </div>
 
                   {/* Simple icon */}
-                  <div className="mb-6">
-                    <Icon className="w-10 h-10 text-primary/60 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
+                  <div className="mb-6 relative z-10">
+                    <Icon className="w-10 h-10 text-primary/70 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-display font-semibold mb-4 leading-tight text-foreground">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed font-light text-sm">
+                  <h3 className="text-xl font-display font-semibold mb-4 leading-tight text-foreground relative z-10">{benefit.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed font-light text-sm relative z-10">
                     {benefit.description}
                   </p>
                 </Card>
