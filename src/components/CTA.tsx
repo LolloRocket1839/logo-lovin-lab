@@ -65,6 +65,9 @@ export const CTA = () => {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
+              <p className="text-xs text-primary-foreground/60 mt-4 font-light">
+                Risposta entro 40 minuti
+              </p>
             </div>
             
             {/* Investors CTA */}
