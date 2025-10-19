@@ -17,11 +17,13 @@ const studentBenefits = [
 
 export const StudentSection = () => {
   const handleWhatsAppLorenzo = () => {
-    window.open("https://wa.me/393207840116?text=Ciao! Sono interessato a trovare una stanza tramite JungleRent", "_blank");
+    const message = encodeURIComponent("Ciao Lorenzo! Sono uno studente interessato a trovare una stanza tramite JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e condizioni\n- Disponibilità per visitare\n\nGrazie!");
+    window.open(`https://wa.me/393207840116?text=${message}`, "_blank");
   };
 
   const handleWhatsAppAndrea = () => {
-    window.open("https://wa.me/393349340449?text=Ciao! Sono interessato a trovare una stanza tramite JungleRent", "_blank");
+    const message = encodeURIComponent("Ciao Andrea! Sono uno studente interessato a trovare una stanza tramite JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e condizioni\n- Disponibilità per visitare\n\nGrazie!");
+    window.open(`https://wa.me/393349340449?text=${message}`, "_blank");
   };
 
   return (

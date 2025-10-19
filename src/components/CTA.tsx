@@ -2,12 +2,44 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const CTA = () => {
-  const handleWhatsAppLorenzo = () => {
-    window.open("https://wa.me/393319053037", "_blank");
+  const handleWhatsAppLorenzoStudent = () => {
+    const message = encodeURIComponent("Ciao Lorenzo! Sono uno studente interessato a JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili\n- Prezzi e risparmio del 25%\n- Contratti flessibili\n\nGrazie!");
+    window.open(`https://wa.me/393319053037?text=${message}`, "_blank");
   };
 
-  const handleWhatsAppAndrea = () => {
-    window.open("https://wa.me/393920675357", "_blank");
+  const handleWhatsAppAndreaStudent = () => {
+    const message = encodeURIComponent("Ciao Andrea! Sono uno studente interessato a JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili\n- Prezzi e risparmio del 25%\n- Contratti flessibili\n\nGrazie!");
+    window.open(`https://wa.me/393920675357?text=${message}`, "_blank");
+  };
+
+  const handleWhatsAppLorenzoInvestor = () => {
+    const message = encodeURIComponent("Ciao Lorenzo! Sono interessato/a alle opportunità di investimento immobiliare con JungleRent.\n\nVorrei informazioni su:\n- ROI e rendimenti\n- Proprietà disponibili\n- Gestione del servizio\n\nGrazie!");
+    window.open(`https://wa.me/393319053037?text=${message}`, "_blank");
+  };
+
+  const handleWhatsAppAndreaInvestor = () => {
+    const message = encodeURIComponent("Ciao Andrea! Sono interessato/a alle opportunità di investimento immobiliare con JungleRent.\n\nVorrei informazioni su:\n- ROI e rendimenti\n- Proprietà disponibili\n- Gestione del servizio\n\nGrazie!");
+    window.open(`https://wa.me/393920675357?text=${message}`, "_blank");
+  };
+
+  const handleEmailInvestor = () => {
+    const subject = encodeURIComponent("Richiesta Informazioni - Investimento Immobiliare");
+    const body = encodeURIComponent(`Buongiorno,
+
+sono interessato/a a ricevere maggiori informazioni sulle opportunità di investimento immobiliare con JungleRent.
+
+Vorrei saperne di più su:
+- ROI previsto e rendimenti
+- Tipologie di proprietà disponibili
+- Gestione completa del servizio
+- Prossimi step
+
+Nome e Cognome: 
+Contatto telefonico: 
+
+Grazie,
+Cordiali saluti`);
+    window.open(`mailto:junglerententerprise@gmail.com?subject=${subject}&body=${body}`, "_blank");
   };
 
   return (
@@ -49,7 +81,7 @@ export const CTA = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  onClick={handleWhatsAppLorenzo}
+                  onClick={handleWhatsAppLorenzoStudent}
                   className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
                 >
                   Contatta Lorenzo
@@ -58,7 +90,7 @@ export const CTA = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  onClick={handleWhatsAppAndrea}
+                  onClick={handleWhatsAppAndreaStudent}
                   className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
                 >
                   Contatta Andrea
@@ -82,7 +114,7 @@ export const CTA = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  onClick={handleWhatsAppLorenzo}
+                  onClick={handleWhatsAppLorenzoInvestor}
                   className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
                 >
                   Contatta Lorenzo
@@ -91,7 +123,7 @@ export const CTA = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  onClick={handleWhatsAppAndrea}
+                  onClick={handleWhatsAppAndreaInvestor}
                   className="w-full px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/20 font-medium tracking-wide uppercase text-sm transition-all duration-500 hover:shadow-[0_8px_32px_hsla(37,35%,98%,0.3)]"
                 >
                   Contatta Andrea
@@ -100,7 +132,7 @@ export const CTA = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  onClick={() => window.open("mailto:junglerententerprise@gmail.com?subject=Opportunità Investimento", "_blank")}
+                  onClick={handleEmailInvestor}
                   className="w-full px-8 py-6 bg-primary-foreground/80 text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/10 font-medium tracking-wide uppercase text-sm transition-all duration-500"
                 >
                   Email

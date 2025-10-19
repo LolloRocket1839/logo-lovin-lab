@@ -22,7 +22,23 @@ const investorBenefits = [
 
 export const InvestorSection = () => {
   const handleInvestorContact = () => {
-    window.open("mailto:junglerententerprise@gmail.com?subject=Opportunità Investimento Immobiliare", "_blank");
+    const subject = encodeURIComponent("Richiesta Informazioni - Opportunità Investimento Immobiliare");
+    const body = encodeURIComponent(`Buongiorno,
+
+sono interessato/a a ricevere maggiori informazioni sulle opportunità di investimento immobiliare nel mercato degli affitti universitari a Torino.
+
+Vorrei saperne di più su:
+- ROI previsto e rendimenti
+- Tipologie di proprietà disponibili
+- Gestione completa del servizio
+- Prossimi step per valutare l'investimento
+
+Nome e Cognome: 
+Contatto telefonico: 
+
+Grazie,
+Cordiali saluti`);
+    window.open(`mailto:junglerententerprise@gmail.com?subject=${subject}&body=${body}`, "_blank");
   };
 
   return (
