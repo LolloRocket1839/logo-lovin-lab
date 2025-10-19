@@ -100,26 +100,58 @@ export const Hero = () => {
                               animate-fade-in-up
                               bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5">
                 
-                {/* Emoji animate rimbalzanti */}
-                <div className="absolute -top-6 -left-6 text-6xl opacity-0 group-hover:opacity-100 
-                                group-hover:animate-bounce transition-all duration-500 z-0"
-                     style={{ animationDelay: '0ms', filter: 'drop-shadow(0 4px 12px rgba(59,130,246,0.4))' }}>
-                  📚
+                {/* Emoji che spuntano da dietro - z-index basso */}
+                {/* Libro aperto - spunta da sinistra dietro */}
+                <div className="absolute top-8 left-4 text-7xl z-0
+                                transform transition-all duration-700 ease-out
+                                -translate-x-16 opacity-0
+                                group-hover:translate-x-0 group-hover:opacity-100"
+                     style={{ 
+                       filter: 'drop-shadow(0 6px 16px rgba(59,130,246,0.5))',
+                       transitionDelay: '100ms'
+                     }}>
+                  📖
                 </div>
-                <div className="absolute -top-8 right-8 text-7xl opacity-0 group-hover:opacity-100 
-                                group-hover:animate-bounce transition-all duration-500 z-0"
-                     style={{ animationDelay: '150ms', filter: 'drop-shadow(0 4px 12px rgba(168,85,247,0.4))' }}>
-                  🎓
+                
+                {/* Matita - spunta da sopra dietro */}
+                <div className="absolute top-0 right-20 text-6xl z-0
+                                transform transition-all duration-700 ease-out
+                                -translate-y-16 rotate-45 opacity-0
+                                group-hover:translate-y-0 group-hover:opacity-100 group-hover:rotate-12"
+                     style={{ 
+                       filter: 'drop-shadow(0 6px 16px rgba(168,85,247,0.5))',
+                       transitionDelay: '200ms'
+                     }}>
+                  ✏️
                 </div>
-                <div className="absolute -bottom-4 -right-4 text-6xl opacity-0 group-hover:opacity-100 
-                                group-hover:animate-bounce transition-all duration-500 z-0"
-                     style={{ animationDelay: '300ms', filter: 'drop-shadow(0 4px 12px rgba(236,72,153,0.4))' }}>
-                  🏛️
+                
+                {/* Zaino - spunta da destra dietro */}
+                <div className="absolute top-1/2 -translate-y-1/2 right-4 text-7xl z-0
+                                transform transition-all duration-700 ease-out
+                                translate-x-16 opacity-0
+                                group-hover:translate-x-0 group-hover:opacity-100"
+                     style={{ 
+                       filter: 'drop-shadow(0 6px 16px rgba(236,72,153,0.5))',
+                       transitionDelay: '300ms'
+                     }}>
+                  🎒
+                </div>
+                
+                {/* Lampadina - spunta da sotto dietro */}
+                <div className="absolute bottom-2 left-16 text-6xl z-0
+                                transform transition-all duration-700 ease-out
+                                translate-y-16 opacity-0
+                                group-hover:translate-y-0 group-hover:opacity-100"
+                     style={{ 
+                       filter: 'drop-shadow(0 6px 16px rgba(251,191,36,0.6))',
+                       transitionDelay: '150ms'
+                     }}>
+                  💡
                 </div>
                 
                 {/* Glow giocoso colorato vibrante */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-purple-400/25 to-pink-400/25
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl" />
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0" />
                 
                 <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
