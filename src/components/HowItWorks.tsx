@@ -54,7 +54,7 @@ export const HowItWorks = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   return (
-    <section id="how-it-works" className="py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden scroll-mt-[-150px]">
+    <section id="how-it-works" className="py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden scroll-mt-[-250px]">
       {/* Top border line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
