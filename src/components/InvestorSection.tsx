@@ -96,10 +96,10 @@ export const InvestorSection = () => {
             size="lg" 
             variant="premium"
             onClick={handleInvestorContact}
-            className="w-full sm:w-auto px-8 py-6 sm:px-10 sm:py-6 md:px-12 md:py-7 text-base"
+            className="w-full sm:w-auto px-6 py-5 sm:px-10 sm:py-6 md:px-12 md:py-7 text-sm sm:text-base"
           >
             Richiedi Informazioni per Investitori
-            <ArrowRight className="ml-2 w-4 h-4" />
+            <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
           </Button>
           <p className="text-xs text-muted-foreground/60 font-light">
             Risposta entro 40 minuti
