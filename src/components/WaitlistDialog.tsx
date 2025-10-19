@@ -2,33 +2,20 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
-import { toast } from "@/hooks/use-toast";
-import { Building2, Euro, Calendar, Users, Loader2, ArrowRight, AlertCircle } from "lucide-react";
 
 const waitlistSchema = z.object({
   name: z.string().trim().min(2, "Inserisci il tuo nome").max(100),
@@ -92,20 +79,16 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
       if (!response.ok) throw new Error("Submission failed");
 
       toast({
-        title: "✅ Perfetto!",
-        description: "Sei nella waitlist! Controlla la tua email per la conferma.",
-        className: "bg-gradient-to-r from-primary/20 to-emerald-500/20 border-2 border-primary/50 backdrop-blur-xl",
+        title: "Iscrizione completata",
+        description: "Controlla la tua email per la conferma.",
       });
-
-      onOpenChange(false);
       form.reset();
+      onOpenChange(false);
     } catch (error) {
-      console.error("Form submission error:", error);
       toast({
-        title: "❌ Errore",
-        description: "Qualcosa è andato storto. Riprova tra poco.",
+        title: "Errore",
+        description: "Qualcosa è andato storto. Riprova.",
         variant: "destructive",
-        className: "backdrop-blur-xl border-2",
       });
     } finally {
       setIsSubmitting(false);
@@ -114,56 +97,46 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[650px] 
-                               backdrop-blur-2xl bg-black/90 
-                               border-2 border-white/20 
-                               shadow-[0_24px_96px_rgba(0,0,0,0.4),0_8px_32px_rgba(139,195,74,0.15)]
-                               text-foreground 
-                               max-h-[90vh] overflow-hidden
-                               rounded-3xl
-                               animate-in fade-in-0 zoom-in-95 duration-500">
-        <DialogHeader className="pb-6 border-b border-white/10">
-          <DialogTitle className="text-3xl font-display font-bold tracking-tight 
-                                  bg-gradient-to-r from-foreground via-primary to-foreground 
-                                  bg-clip-text text-transparent">
-            🎯 Iscriviti alla Waitlist Jungle Rent
+      <DialogContent className="sm:max-w-[600px] 
+                                bg-background/95 backdrop-blur-md
+                                border border-border
+                                shadow-2xl
+                                max-h-[85vh] overflow-hidden
+                                rounded-xl">
+        <DialogHeader className="pb-4 border-b border-border">
+          <DialogTitle className="text-2xl font-semibold text-foreground">
+            Iscriviti alla Waitlist
           </DialogTitle>
-          <DialogDescription className="text-base text-muted-foreground font-light pt-3 leading-relaxed">
-            Compila il form in <span className="text-primary font-medium">meno di 1 minuto</span>. 
-            Riceverai <span className="font-medium text-foreground">accesso prioritario</span> alle stanze disponibili!
+          <DialogDescription className="text-sm text-muted-foreground pt-2">
+            Compila il form per ricevere accesso prioritario alle stanze disponibili.
           </DialogDescription>
         </DialogHeader>
 
         <div className="overflow-y-auto max-h-[calc(90vh-180px)] px-1">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 pt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 pt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
-                    <FormItem className="animate-in slide-in-from-left-4 duration-500">
-                      <FormLabel className="text-sm font-medium">Nome Completo *</FormLabel>
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">Nome Completo</FormLabel>
                       <FormControl>
-                        <Input 
-                          placeholder="Mario Rossi" 
+                        <Input
+                          placeholder="Mario Rossi"
                           {...field}
-                          className="bg-white/5 border-white/20 
-                                     focus:border-primary/50 focus:ring-2 focus:ring-primary/20
-                                     hover:bg-white/8 hover:border-white/30
-                                     transition-all duration-300
-                                     h-12 px-4
-                                     text-foreground placeholder:text-muted-foreground/60"
+                          className="h-10
+                                     bg-background
+                                     border-border
+                                     focus:border-primary focus:ring-1 focus:ring-primary/20
+                                     transition-colors"
                         />
                       </FormControl>
                       {form.formState.errors.name && (
-                        <div className="flex items-start gap-2 text-sm text-red-400 
-                                        bg-red-500/10 border border-red-500/20 
-                                        rounded-lg px-3 py-2 mt-2
-                                        animate-in slide-in-from-top-1 duration-300">
-                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                          <FormMessage />
-                        </div>
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.name.message}
+                        </p>
                       )}
                     </FormItem>
                   )}
@@ -173,29 +146,24 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   control={form.control}
                   name="email"
                   render={({ field }) => (
-                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "50ms" }}>
-                      <FormLabel className="text-sm font-medium">Email *</FormLabel>
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">Email</FormLabel>
                       <FormControl>
-                        <Input 
-                          type="email" 
-                          placeholder="mario.rossi@email.com" 
+                        <Input
+                          type="email"
+                          placeholder="mario.rossi@studenti.unito.it"
                           {...field}
-                          className="bg-white/5 border-white/20 
-                                     focus:border-primary/50 focus:ring-2 focus:ring-primary/20
-                                     hover:bg-white/8 hover:border-white/30
-                                     transition-all duration-300
-                                     h-12 px-4
-                                     text-foreground placeholder:text-muted-foreground/60"
+                          className="h-10
+                                     bg-background
+                                     border-border
+                                     focus:border-primary focus:ring-1 focus:ring-primary/20
+                                     transition-colors"
                         />
                       </FormControl>
                       {form.formState.errors.email && (
-                        <div className="flex items-start gap-2 text-sm text-red-400 
-                                        bg-red-500/10 border border-red-500/20 
-                                        rounded-lg px-3 py-2 mt-2
-                                        animate-in slide-in-from-top-1 duration-300">
-                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                          <FormMessage />
-                        </div>
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.email.message}
+                        </p>
                       )}
                     </FormItem>
                   )}
@@ -205,19 +173,15 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   control={form.control}
                   name="university"
                   render={({ field }) => (
-                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "100ms" }}>
-                      <FormLabel className="text-sm font-medium">Università *</FormLabel>
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">Università</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/5 border-white/20 
-                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
-                                                    hover:bg-white/8 hover:border-white/30
-                                                    transition-all duration-300
-                                                    h-12">
-                            <div className="flex items-center gap-3">
-                              <Building2 className="w-4 h-4 text-primary/70" />
-                              <SelectValue placeholder="Seleziona università" />
-                            </div>
+                          <SelectTrigger className="h-10
+                                                    bg-background
+                                                    border-border
+                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
+                            <SelectValue placeholder="Seleziona università" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -231,13 +195,9 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                         </SelectContent>
                       </Select>
                       {form.formState.errors.university && (
-                        <div className="flex items-start gap-2 text-sm text-red-400 
-                                        bg-red-500/10 border border-red-500/20 
-                                        rounded-lg px-3 py-2 mt-2
-                                        animate-in slide-in-from-top-1 duration-300">
-                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                          <FormMessage />
-                        </div>
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.university.message}
+                        </p>
                       )}
                     </FormItem>
                   )}
@@ -247,19 +207,15 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   control={form.control}
                   name="budget"
                   render={({ field }) => (
-                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "150ms" }}>
-                      <FormLabel className="text-sm font-medium">Budget Mensile *</FormLabel>
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">Budget Mensile</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/5 border-white/20 
-                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
-                                                    hover:bg-white/8 hover:border-white/30
-                                                    transition-all duration-300
-                                                    h-12">
-                            <div className="flex items-center gap-3">
-                              <Euro className="w-4 h-4 text-primary/70" />
-                              <SelectValue placeholder="Seleziona budget" />
-                            </div>
+                          <SelectTrigger className="h-10
+                                                    bg-background
+                                                    border-border
+                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
+                            <SelectValue placeholder="Seleziona budget" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -270,13 +226,9 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                         </SelectContent>
                       </Select>
                       {form.formState.errors.budget && (
-                        <div className="flex items-start gap-2 text-sm text-red-400 
-                                        bg-red-500/10 border border-red-500/20 
-                                        rounded-lg px-3 py-2 mt-2
-                                        animate-in slide-in-from-top-1 duration-300">
-                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                          <FormMessage />
-                        </div>
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.budget.message}
+                        </p>
                       )}
                     </FormItem>
                   )}
@@ -286,19 +238,15 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   control={form.control}
                   name="move_date"
                   render={({ field }) => (
-                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "200ms" }}>
-                      <FormLabel className="text-sm font-medium">Data Trasloco Preferita *</FormLabel>
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">Data Trasloco</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/5 border-white/20 
-                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
-                                                    hover:bg-white/8 hover:border-white/30
-                                                    transition-all duration-300
-                                                    h-12">
-                            <div className="flex items-center gap-3">
-                              <Calendar className="w-4 h-4 text-primary/70" />
-                              <SelectValue placeholder="Quando ti trasferisci?" />
-                            </div>
+                          <SelectTrigger className="h-10
+                                                    bg-background
+                                                    border-border
+                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
+                            <SelectValue placeholder="Quando ti trasferisci?" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -309,13 +257,9 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                         </SelectContent>
                       </Select>
                       {form.formState.errors.move_date && (
-                        <div className="flex items-start gap-2 text-sm text-red-400 
-                                        bg-red-500/10 border border-red-500/20 
-                                        rounded-lg px-3 py-2 mt-2
-                                        animate-in slide-in-from-top-1 duration-300">
-                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                          <FormMessage />
-                        </div>
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.move_date.message}
+                        </p>
                       )}
                     </FormItem>
                   )}
@@ -325,19 +269,15 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   control={form.control}
                   name="referral_source"
                   render={({ field }) => (
-                    <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "250ms" }}>
-                      <FormLabel className="text-sm font-medium">Come Ci Hai Conosciuto? *</FormLabel>
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">Come ci hai trovato?</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/5 border-white/20 
-                                                    focus:border-primary/50 focus:ring-2 focus:ring-primary/20
-                                                    hover:bg-white/8 hover:border-white/30
-                                                    transition-all duration-300
-                                                    h-12">
-                            <div className="flex items-center gap-3">
-                              <Users className="w-4 h-4 text-primary/70" />
-                              <SelectValue placeholder="Seleziona fonte" />
-                            </div>
+                          <SelectTrigger className="h-10
+                                                    bg-background
+                                                    border-border
+                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
+                            <SelectValue placeholder="Seleziona fonte" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -351,91 +291,62 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                         </SelectContent>
                       </Select>
                       {form.formState.errors.referral_source && (
-                        <div className="flex items-start gap-2 text-sm text-red-400 
-                                        bg-red-500/10 border border-red-500/20 
-                                        rounded-lg px-3 py-2 mt-2
-                                        animate-in slide-in-from-top-1 duration-300">
-                          <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                          <FormMessage />
-                        </div>
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.referral_source.message}
+                        </p>
                       )}
                     </FormItem>
                   )}
                 />
               </div>
 
-              <FormField
-                control={form.control}
-                name="privacy_consent"
-                render={({ field }) => (
-                  <FormItem className="animate-in slide-in-from-left-4 duration-500" style={{ animationDelay: "300ms" }}>
-                    <div className="flex items-start gap-4 p-5 rounded-xl 
-                                    bg-white/5 border border-white/10
-                                    hover:bg-white/8 hover:border-white/20
-                                    transition-all duration-300">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          className="mt-0.5 border-white/30 data-[state=checked]:bg-primary 
-                                     data-[state=checked]:border-primary"
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none flex-1">
-                        <FormLabel className="text-sm font-light leading-relaxed cursor-pointer 
-                                              text-muted-foreground hover:text-foreground 
-                                              transition-colors">
-                          Acconsento a ricevere aggiornamenti sulle <span className="text-primary font-medium">offerte esclusive</span> di Jungle Rent *
+              <div className="pt-2">
+                <FormField
+                  control={form.control}
+                  name="privacy_consent"
+                  render={({ field }) => (
+                    <FormItem>
+                      <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="mt-0.5"
+                          />
+                        </FormControl>
+                        <FormLabel className="text-xs text-muted-foreground leading-relaxed cursor-pointer">
+                          Acconsento a ricevere aggiornamenti sulle offerte di Jungle Rent
                         </FormLabel>
-                        {form.formState.errors.privacy_consent && (
-                          <div className="flex items-start gap-2 text-sm text-red-400 
-                                          bg-red-500/10 border border-red-500/20 
-                                          rounded-lg px-3 py-2 mt-2
-                                          animate-in slide-in-from-top-1 duration-300">
-                            <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                            <FormMessage />
-                          </div>
-                        )}
                       </div>
-                    </div>
-                  </FormItem>
-                )}
-              />
+                      {form.formState.errors.privacy_consent && (
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.privacy_consent.message}
+                        </p>
+                      )}
+                    </FormItem>
+                  )}
+                />
+              </div>
 
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-14 text-lg font-bold
-                           bg-gradient-to-r from-primary via-emerald-600 to-primary
-                           hover:from-emerald-600 hover:via-primary hover:to-emerald-600
+                className="w-full h-11
+                           bg-primary hover:bg-primary/90
                            text-primary-foreground
-                           shadow-[0_8px_32px_rgba(139,195,74,0.3)]
-                           hover:shadow-[0_12px_48px_rgba(139,195,74,0.5)]
-                           hover:scale-[1.02]
-                           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
-                           transition-all duration-500
-                           group relative overflow-hidden
-                           animate-in slide-in-from-bottom-4 duration-500"
-                style={{ animationDelay: "350ms" }}
+                           font-medium
+                           shadow-md hover:shadow-lg
+                           transition-all duration-300
+                           disabled:opacity-50"
               >
-                {/* Shimmer effect */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full 
-                                bg-gradient-to-r from-transparent via-white/20 to-transparent 
-                                transition-transform duration-1000" />
-                
-                <span className="relative flex items-center justify-center gap-3">
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-6 h-6 animate-spin" />
-                      Invio in corso...
-                    </>
-                  ) : (
-                    <>
-                      Iscriviti alla Waitlist
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </>
-                  )}
-                </span>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Invio in corso...
+                  </>
+                ) : (
+                  "Iscriviti"
+                )}
               </Button>
             </form>
           </Form>
