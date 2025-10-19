@@ -97,7 +97,7 @@ export const HowItWorks = () => {
                 }}
               >
                 {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                 {/* Elegant number badge */}
                 <div className="mb-8 relative z-10">
                   <div className="w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center text-primary font-display text-lg font-medium group-hover:border-primary/50 transition-colors duration-700 backdrop-blur-sm">
@@ -137,7 +137,8 @@ export const HowItWorks = () => {
                                border border-primary/20
                                transition-all duration-300
                                hover:shadow-lg hover:shadow-primary/20
-                               rounded-lg"
+                               rounded-lg
+                               relative z-10"
                   >
                     Iscriviti alla Waitlist
                   </Button>
