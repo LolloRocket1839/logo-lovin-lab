@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Wallet, Shield, Calendar, ArrowRight } from "lucide-react";
+import { Wallet, Calendar, ArrowRight } from "lucide-react";
 
 const studentBenefits = [
   {
@@ -9,14 +9,9 @@ const studentBenefits = [
     description: "Risparmia il 25% rispetto agli affitti tradizionali. Più soldi per studiare e vivere la città"
   },
   {
-    icon: Shield,
-    title: "Zero Deposito Cauzionale",
-    description: "Nessun deposito cauzionale richiesto. Riduci le spese iniziali al minimo"
-  },
-  {
     icon: Calendar,
     title: "Contratti Flessibili",
-    description: "Contratti da 3 a 12 mesi. Massima flessibilità per il tuo percorso universitario"
+    description: "Massima flessibilità per il tuo percorso universitario"
   }
 ];
 
@@ -51,7 +46,7 @@ export const StudentSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 mb-16">
           {studentBenefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
