@@ -113,7 +113,7 @@ Cordiali saluti`);
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
           <p className="text-xs text-muted-foreground/60 mt-6 font-light">
-            Ti risponderemo entro 24 ore con una proposta personalizzata
+            Risposta entro 40 minuti
           </p>
         </div>
 
