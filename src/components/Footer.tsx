@@ -113,9 +113,6 @@ export const Footer = () => {
           <p className="text-primary/70 text-base font-accent mb-2 tracking-wide">
             Il tuo rifugio sicuro nella giungla immobiliare
           </p>
-          <p className="text-muted-foreground/60 text-xs font-light tracking-wider mb-4">
-            JUNGLE RENT — AFFITTI SMART & OPPORTUNITÀ DI INVESTIMENTO
-          </p>
           <p className="text-muted-foreground/70 text-xs font-light">
             Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino
           </p>
