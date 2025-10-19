@@ -1,4 +1,5 @@
-import { Building2, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import logo2i3t from "@/assets/2i3t-logo.png";
 
 export const TrustBadge = () => {
   return (
@@ -14,8 +15,8 @@ export const TrustBadge = () => {
           </p>
           
           <div className="inline-flex items-center gap-6 bg-card border border-border/50 rounded-2xl px-12 py-8 mb-6 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)]">
-            <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
-              <Building2 className="w-8 h-8 text-primary" strokeWidth={1.5} />
+            <div className="w-20 h-20 flex items-center justify-center">
+              <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain" />
             </div>
             <div className="text-left">
               <h3 className="text-2xl font-display font-bold text-foreground mb-1">
