@@ -76,13 +76,13 @@ export const Footer = () => {
             <div className="mt-6">
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground/60 mb-3 font-medium">Atenei Coperti</p>
               <div className="grid grid-cols-1 gap-y-2">
-                <p className="text-sm text-muted-foreground font-light">Politecnico di Torino</p>
-                <p className="text-sm text-muted-foreground font-light">Università di Torino</p>
-                <p className="text-sm text-muted-foreground font-light">ESCP Business School</p>
-                <p className="text-sm text-muted-foreground font-light">SAA School of Management</p>
-                <p className="text-sm text-muted-foreground font-light">IED Torino</p>
-                <p className="text-sm text-muted-foreground font-light">IAD Torino</p>
-                <p className="text-sm text-muted-foreground font-light">IUSTO</p>
+                <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 link-elegant">Politecnico di Torino</a>
+                <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 link-elegant">Università di Torino</a>
+                <a href="https://www.escp.eu" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 link-elegant">ESCP Business School</a>
+                <a href="https://www.saa.unito.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 link-elegant">SAA School of Management</a>
+                <a href="https://www.ied.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 link-elegant">IED Torino</a>
+                <a href="https://www.accademiaiad.edu.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 link-elegant">IAD Torino</a>
+                <a href="https://www.iusto.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 link-elegant">IUSTO</a>
               </div>
             </div>
           </div>

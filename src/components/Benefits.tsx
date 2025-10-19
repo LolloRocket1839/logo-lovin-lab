@@ -1,4 +1,4 @@
-import { Wallet, Shield, MapPin, Gift, TrendingUp, HeadphonesIcon } from "lucide-react";
+import { Wallet, Shield, MapPin, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const benefits = [
@@ -25,18 +25,6 @@ const benefits = [
     title: "Contratti Certificati",
     description: "Contratti regolari, gestione professionale e trasparenza totale. Supportati da 2i3T - Incubatore Universitario.",
     highlight: "100% Safe"
-  },
-  {
-    icon: Gift,
-    title: "Bonus Studenti",
-    description: "Programma fedeltà con possibilità di vincere un mese di affitto completamente gratuito per studenti attivi",
-    highlight: "1 Mese"
-  },
-  {
-    icon: HeadphonesIcon,
-    title: "Gestione Completa",
-    description: "Assistenza e supporto dedicata e personalizzata, manutenzione rapida. Zero stress per studenti e proprietari.",
-    highlight: "Dedicato"
   }
 ];
 
@@ -63,9 +51,9 @@ export const Benefits = () => {
           </p>
         </div>
 
-        {/* Grid layout - 6 benefits */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid layout - 4 benefits */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
