@@ -1,8 +1,11 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
 
 export const Hero = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   const handleWhatsAppLorenzo = () => {
     window.open("https://wa.me/393319053037", "_blank");
   };
@@ -10,6 +13,41 @@ export const Hero = () => {
   const handleWhatsAppAndrea = () => {
     window.open("https://wa.me/393920675357", "_blank");
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      
+      // Calcola progress (0-1) in base alla posizione scroll
+      // Effetto inizia dopo 20vh e finisce a 60vh
+      const progress = Math.min(Math.max((scrollPosition / windowHeight - 0.2) / 0.4, 0), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToStudent = () => {
+    document.getElementById('student-section')?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  const scrollToInvestor = () => {
+    document.getElementById('investor-section')?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
+  // Scale basato su scroll progress (1.0 -> 1.1 durante scroll)
+  const studentScale = 1 + (scrollProgress * 0.1);
+  const investorScale = 1 + (scrollProgress * 0.1);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -36,24 +74,83 @@ export const Hero = () => {
             </p>
           </div>
 
-          {/* Dual headline for students and investors - BOLD & MASSIVE */}
+          {/* Dual headline for students and investors - BOLD & MASSIVE & INTERACTIVE */}
           <div className="mb-16 space-y-8">
-            <div className="animate-fade-in-up">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 tracking-tighter leading-[0.9] text-foreground">
-                Sei uno studente?
-              </h1>
-              <p className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-primary tracking-tighter leading-[0.95]">
-                Risparmi circa il 25% per il tuo affitto!
-              </p>
+            {/* STUDENTE - Clickable & Zoomable */}
+            <div 
+              onClick={scrollToStudent}
+              className="cursor-pointer transition-all duration-700 hover:scale-[1.02] group"
+              style={{
+                transform: `scale(${studentScale})`,
+                transformOrigin: 'center',
+              }}
+            >
+              <div className="relative p-8 rounded-3xl overflow-hidden
+                              border-2 border-transparent
+                              hover:border-primary/20
+                              hover:bg-primary/5
+                              transition-all duration-700
+                              animate-fade-in-up">
+                {/* Subtle glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                
+                <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
+                               tracking-tighter leading-[0.9] text-foreground
+                               group-hover:text-primary transition-colors duration-700">
+                  Sei uno studente?
+                </h1>
+                <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
+                              text-primary tracking-tighter leading-[0.95]">
+                  Risparmi circa il 25% per il tuo affitto!
+                </p>
+                
+                {/* Arrow indicator */}
+                <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-0 
+                                group-hover:opacity-100 group-hover:translate-x-2 
+                                transition-all duration-500">
+                  <ArrowRight className="w-12 h-12 text-primary" />
+                </div>
+              </div>
             </div>
             
-            <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 tracking-tighter leading-[0.9] text-foreground">
-                Sei un investitore immobiliare?
-              </h2>
-              <p className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-primary tracking-tighter leading-[0.95]">
-                Ottieni ottimi rendimenti ed investi a partire da 100€!
-              </p>
+            {/* INVESTITORE - Clickable & Zoomable */}
+            <div 
+              onClick={scrollToInvestor}
+              className="cursor-pointer transition-all duration-700 hover:scale-[1.02] group"
+              style={{
+                transform: `scale(${investorScale})`,
+                transformOrigin: 'center',
+              }}
+            >
+              <div className="relative p-8 rounded-3xl overflow-hidden
+                              border-2 border-transparent
+                              hover:border-primary/20
+                              hover:bg-primary/5
+                              transition-all duration-700
+                              animate-fade-in-up"
+                   style={{ animationDelay: '100ms' }}>
+                {/* Subtle glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent 
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                
+                <h2 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
+                               tracking-tighter leading-[0.9] text-foreground
+                               group-hover:text-primary transition-colors duration-700">
+                  Sei un investitore immobiliare?
+                </h2>
+                <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
+                              text-primary tracking-tighter leading-[0.95]">
+                  Ottieni ottimi rendimenti ed investi a partire da 100€!
+                </p>
+                
+                {/* Arrow indicator */}
+                <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-0 
+                                group-hover:opacity-100 group-hover:translate-x-2 
+                                transition-all duration-500">
+                  <ArrowRight className="w-12 h-12 text-primary" />
+                </div>
+              </div>
             </div>
           </div>
 

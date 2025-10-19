@@ -27,7 +27,7 @@ export const StudentSection = () => {
   };
 
   return (
-    <section className="py-40 bg-accent/20 relative overflow-hidden">
+    <section id="student-section" className="py-40 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
       {/* Subtle texture */}
