@@ -31,7 +31,7 @@ export const InvestorSection = () => {
   };
 
   return (
-    <section id="investor-section" className="py-40 bg-accent/20 relative overflow-hidden">
+    <section id="investor-section" className="py-20 md:py-32 lg:py-40 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
       {/* Subtle texture */}
@@ -44,11 +44,11 @@ export const InvestorSection = () => {
       <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl" />
 
       <div className="container px-8 relative z-10">
-        <div className="text-center mb-28 max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-20 lg:mb-28 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             Per Investitori
           </p>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-tight text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight text-foreground tracking-tight">
             Opportunità di<br />Investimento Immobiliare
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
@@ -56,13 +56,13 @@ export const InvestorSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-16">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
           {investorBenefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <Card 
                 key={index}
-                className="p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:bg-white/15 hover:-translate-y-1"
+                className="p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:bg-white/15 hover:-translate-y-1"
                 style={{ 
                   animationDelay: `${index * 100}ms`,
                   boxShadow: 'var(--shadow-glass)'
@@ -96,7 +96,7 @@ export const InvestorSection = () => {
             size="lg" 
             variant="premium"
             onClick={handleInvestorContact}
-            className="px-12 py-7 text-base"
+            className="w-full sm:w-auto px-8 py-6 sm:px-10 sm:py-6 md:px-12 md:py-7 text-base"
           >
             Richiedi Informazioni per Investitori
             <ArrowRight className="ml-2 w-4 h-4" />

@@ -54,7 +54,7 @@ export const HowItWorks = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   return (
-    <section id="how-it-works" className="py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden scroll-mt-[-250px]">
+    <section id="how-it-works" className="py-20 md:py-32 lg:py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden scroll-mt-[-250px]">
       {/* Top border line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
@@ -63,11 +63,11 @@ export const HowItWorks = () => {
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
       
       <div className="container px-8 relative z-10">
-        <div className="text-center mb-28 max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-20 lg:mb-28 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             Processo Semplice
           </p>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             Come Funziona
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
@@ -75,7 +75,7 @@ export const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto relative">
           {/* Connecting lines between steps */}
           <div className="hidden md:block absolute top-24 left-1/6 right-1/6 h-[1px] bg-border -z-10" />
           
@@ -84,7 +84,7 @@ export const HowItWorks = () => {
             return (
               <Card 
                 key={index}
-                className="relative p-12 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:-translate-y-1 hover:bg-white/15"
+                className="relative p-6 md:p-8 lg:p-12 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:-translate-y-1 hover:bg-white/15"
                 style={{ 
                   animationDelay: `${index * 150}ms`,
                   boxShadow: 'var(--shadow-glass)'

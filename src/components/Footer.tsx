@@ -8,15 +8,15 @@ export const Footer = () => {
       {/* Top border decoration */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-border to-transparent" />
       
-      <div className="container px-8 py-24 relative z-10">
-        <div className="grid md:grid-cols-4 gap-16 mb-20 max-w-6xl mx-auto">
+      <div className="container px-8 py-12 md:py-20 lg:py-24 relative z-10">
+        <div className="grid md:grid-cols-4 gap-8 md:gap-12 lg:gap-16 mb-10 md:mb-16 lg:mb-20 max-w-6xl mx-auto">
           {/* Brand */}
           <div>
             <div className="mb-6">
               <img 
                 src={jungleRentLogo} 
                 alt="Jungle Rent" 
-                className="w-16 h-16 opacity-80 rounded-3xl"
+                className="w-12 h-12 md:w-16 md:h-16 opacity-80 rounded-3xl"
               />
             </div>
             <p className="text-muted-foreground mb-4 leading-relaxed font-light">
@@ -76,13 +76,13 @@ export const Footer = () => {
             <div className="mt-6">
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground/60 mb-3 font-medium">Atenei Coperti</p>
               <div className="grid grid-cols-1 gap-y-2">
-                <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino</a>
-                <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino</a>
-                <a href="https://www.escp.eu" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">ESCP Business School</a>
-                <a href="https://www.saa.unito.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">SAA School of Management</a>
-                <a href="https://www.ied.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IED Torino</a>
-                <a href="https://www.accademiaiad.edu.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IAD Torino</a>
-                <a href="https://www.iusto.it" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IUSTO</a>
+                <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino</a>
+                <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino</a>
+                <a href="https://www.escp.eu" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">ESCP Business School</a>
+                <a href="https://www.saa.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">SAA School of Management</a>
+                <a href="https://www.ied.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IED Torino</a>
+                <a href="https://www.accademiaiad.edu.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IAD Torino</a>
+                <a href="https://www.iusto.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IUSTO</a>
               </div>
             </div>
           </div>

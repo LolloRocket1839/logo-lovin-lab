@@ -30,7 +30,7 @@ export const StudentSection = () => {
   };
 
   return (
-    <section id="student-section" className="py-40 bg-accent/20 relative overflow-hidden">
+    <section id="student-section" className="py-20 md:py-32 lg:py-40 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
       {/* Subtle texture */}
@@ -43,11 +43,11 @@ export const StudentSection = () => {
       <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl" />
 
       <div className="container px-8 relative z-10">
-        <div className="text-center mb-28 max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-20 lg:mb-28 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             Per Studenti
           </p>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-8 leading-tight text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight text-foreground tracking-tight">
             Affitta Smart,<br />Risparmia e Studia
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
@@ -55,13 +55,13 @@ export const StudentSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 mb-16">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
           {studentBenefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <Card 
                 key={index}
-                className="p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:bg-white/15 hover:-translate-y-1"
+                className="p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:bg-white/15 hover:-translate-y-1"
                 style={{ 
                   animationDelay: `${index * 100}ms`,
                   boxShadow: 'var(--shadow-glass)'
@@ -99,7 +99,7 @@ export const StudentSection = () => {
               size="lg" 
               variant="premium"
               onClick={handleWhatsAppLorenzo}
-              className="px-10 py-7 text-base"
+              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 text-base"
             >
               Parla con Lorenzo
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -108,7 +108,7 @@ export const StudentSection = () => {
               size="lg" 
               variant="premium"
               onClick={handleWhatsAppAndrea}
-              className="px-10 py-7 text-base"
+              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 text-base"
             >
               Parla con Andrea
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -117,7 +117,7 @@ export const StudentSection = () => {
               size="lg" 
               variant="outline"
               onClick={handleEmailContact}
-              className="px-10 py-7 text-base"
+              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 text-base"
             >
               <Mail className="mr-2 w-4 h-4" />
               Invia Email

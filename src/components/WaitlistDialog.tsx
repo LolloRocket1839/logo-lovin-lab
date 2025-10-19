@@ -102,7 +102,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[600px] 
+      <DialogContent className="sm:max-w-[600px] mx-4
                                 bg-background/95 backdrop-blur-md
                                 border border-border
                                 shadow-2xl
@@ -119,8 +119,8 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
         <div className="overflow-y-auto max-h-[calc(90vh-180px)] px-1">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 pt-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4 pt-4">
+              <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-3 sm:gap-4">
                 <FormField
                   control={form.control}
                   name="name"
@@ -319,7 +319,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                             className="mt-0.5"
                           />
                         </FormControl>
-                        <FormLabel className="text-xs text-muted-foreground leading-relaxed cursor-pointer">
+                        <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
                           Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) per la gestione della richiesta di iscrizione alla waitlist
                         </FormLabel>
                       </div>
@@ -345,7 +345,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                             className="mt-0.5"
                           />
                         </FormControl>
-                        <FormLabel className="text-xs text-muted-foreground leading-relaxed cursor-pointer">
+                        <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
                           Acconsento a ricevere aggiornamenti sulle offerte di Jungle Rent
                         </FormLabel>
                       </div>

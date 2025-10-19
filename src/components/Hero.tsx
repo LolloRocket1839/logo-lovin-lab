@@ -63,14 +63,14 @@ export const Hero = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
       }} />
 
-      <div className="container relative z-10 px-8 py-32">
+      <div className="container relative z-10 px-8 py-16 md:py-32">
         <div className="max-w-5xl mx-auto text-center">
           {/* Logo - animated and prominent */}
-          <div className="mb-12 animate-fade-in">
+          <div className="mb-6 md:mb-12 animate-fade-in">
             <img 
               src={jungleRentLogo} 
               alt="Jungle Rent" 
-              className="w-24 h-24 mx-auto opacity-90 transition-all duration-700 
+              className="w-16 h-16 md:w-24 md:h-24 mx-auto opacity-90 transition-all duration-700
                          hover:opacity-100 hover:scale-110 hover:rotate-6 
                          hover:drop-shadow-[0_0_20px_hsla(150,45%,18%,0.5)]
                          rounded-full"
@@ -105,7 +105,7 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/35 via-blue-400/30 to-indigo-400/35
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0" />
                 
-                <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
+                <h1 className="relative text-3xl md:text-6xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-transparent group-hover:bg-clip-text 
                                group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:via-blue-600 group-hover:to-indigo-600
@@ -113,7 +113,7 @@ export const Hero = () => {
                                transition-all duration-700 z-10">
                   Sei uno studente?
                 </h1>
-                <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
+                <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600
                               tracking-tighter leading-[0.95]
                               group-hover:animate-pulse z-10">
@@ -151,13 +151,13 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                 
-                <h2 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
+                <h2 className="relative text-3xl md:text-6xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-primary
                                transition-all duration-1000">
                   Sei un investitore immobiliare?
                 </h2>
-                <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
+                <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               text-primary tracking-tighter leading-[0.95]">
                   Ottieni ottimi rendimenti ed investi a partire da 100€!
                 </p>
@@ -228,7 +228,7 @@ export const Hero = () => {
               size="lg" 
               variant="hero"
               onClick={handleWhatsAppLorenzo}
-              className="px-16 py-8 text-lg group"
+              className="w-full sm:w-auto px-8 py-6 sm:px-12 sm:py-7 md:px-16 md:py-8 text-lg group"
             >
               Contatta Lorenzo
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -237,7 +237,7 @@ export const Hero = () => {
               size="lg" 
               variant="hero"
               onClick={handleWhatsAppAndrea}
-              className="px-16 py-8 text-lg group"
+              className="w-full sm:w-auto px-8 py-6 sm:px-12 sm:py-7 md:px-16 md:py-8 text-lg group"
             >
               Contatta Andrea
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -246,7 +246,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline"
               onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-12 py-7 text-base"
+              className="w-full sm:w-auto px-8 py-6 sm:px-10 sm:py-6 md:px-12 md:py-7 text-base"
             >
               Come Funziona
             </Button>

@@ -30,7 +30,7 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-40 bg-background relative overflow-hidden">
+    <section className="py-20 md:py-32 lg:py-40 bg-background relative overflow-hidden">
       {/* Top border line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
@@ -39,11 +39,11 @@ export const Benefits = () => {
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/30 rounded-full blur-3xl" />
       
       <div className="container px-8 relative z-10">
-        <div className="text-center mb-28 max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-20 lg:mb-28 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             I Nostri Vantaggi
           </p>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             Vantaggi Concreti per<br />Studenti & Investitori
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
@@ -53,13 +53,13 @@ export const Benefits = () => {
 
         {/* Grid layout - 4 benefits */}
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
                 <Card 
                   key={index}
-                  className="relative p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:-translate-y-1 hover:bg-white/15"
+                  className="relative p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:-translate-y-1 hover:bg-white/15"
                   style={{ 
                     animationDelay: `${index * 100}ms`,
                     boxShadow: 'var(--shadow-glass)'
