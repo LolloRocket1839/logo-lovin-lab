@@ -73,7 +73,7 @@ export const Hero = () => {
                          hover:opacity-100 hover:scale-110 hover:rotate-6 
                          hover:drop-shadow-[0_0_20px_hsla(150,45%,18%,0.5)]
                          animate-[logo-pulse_3s_ease-in-out_infinite]
-                         rounded-3xl"
+                         rounded-full"
             />
             <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
               Il tuo rifugio sicuro nella giungla immobiliare
