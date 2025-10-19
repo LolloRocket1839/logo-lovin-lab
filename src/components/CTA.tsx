@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 export const CTA = () => {
   const handleWhatsAppLorenzoStudent = () => {
@@ -38,6 +38,24 @@ Nome e Cognome:
 Contatto telefonico: 
 
 Grazie,
+Cordiali saluti`);
+    window.open(`mailto:junglerententerprise@gmail.com?subject=${subject}&body=${body}`, "_blank");
+  };
+
+  const handleEmailStudent = () => {
+    const subject = encodeURIComponent("Richiesta informazioni studente - JungleRent");
+    const body = encodeURIComponent(`Buongiorno,
+
+Sono uno studente interessato a trovare una stanza tramite JungleRent.
+
+Vorrei ricevere informazioni su:
+- Stanze disponibili vicino al mio ateneo
+- Prezzi e condizioni di affitto
+- Possibilità di visitare gli appartamenti
+- Tempistiche di disponibilità
+
+Grazie per la vostra disponibilità.
+
 Cordiali saluti`);
     window.open(`mailto:junglerententerprise@gmail.com?subject=${subject}&body=${body}`, "_blank");
   };
@@ -96,6 +114,15 @@ Cordiali saluti`);
                   Contatta Andrea
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  onClick={handleEmailStudent}
+                  className="w-full px-8 py-6 bg-primary-foreground/80 text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/10 font-medium tracking-wide uppercase text-sm transition-all duration-500"
+                >
+                  <Mail className="mr-2 w-4 h-4" />
+                  Email
+                </Button>
               </div>
               <p className="text-xs text-primary-foreground/60 mt-4 font-light">
                 Risposta entro 40 minuti
@@ -135,8 +162,8 @@ Cordiali saluti`);
                   onClick={handleEmailInvestor}
                   className="w-full px-8 py-6 bg-primary-foreground/80 text-primary hover:bg-primary-foreground/95 border-2 border-primary-foreground/10 font-medium tracking-wide uppercase text-sm transition-all duration-500"
                 >
+                  <Mail className="mr-2 w-4 h-4" />
                   Email
-                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </div>
               <p className="text-xs text-primary-foreground/60 mt-4 font-light">
