@@ -19,9 +19,9 @@ export const Hero = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = window.innerHeight;
       
-      // Calcola progress (0-1) in base alla posizione scroll
-      // Effetto inizia dopo 20vh e finisce a 60vh
-      const progress = Math.min(Math.max((scrollPosition / windowHeight - 0.2) / 0.4, 0), 1);
+      // Calcolo molto sensibile: inizia subito e si completa entro 1 viewport
+      // Progress va da 0 (top) a 1 (dopo 1vh)
+      const progress = Math.min(Math.max(scrollPosition / windowHeight, 0), 1);
       setScrollProgress(progress);
     };
 
@@ -45,9 +45,14 @@ export const Hero = () => {
     });
   };
 
-  // Scale basato su scroll progress (1.0 -> 1.1 durante scroll)
-  const studentScale = 1 + (scrollProgress * 0.1);
-  const investorScale = 1 + (scrollProgress * 0.1);
+  // STUDENTE: Grande all'inizio (1.15), piccolo alla fine (0.85)
+  const studentScale = 1.15 - (scrollProgress * 0.3);
+  const studentOpacity = 1 - (scrollProgress * 0.3);
+  const studentRotate = scrollProgress * -2;
+
+  // INVESTITORE: Piccolo all'inizio (0.85), grande alla fine (1.15)
+  const investorScale = 0.85 + (scrollProgress * 0.3);
+  const investorOpacity = 0.7 + (scrollProgress * 0.3);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -76,67 +81,74 @@ export const Hero = () => {
 
           {/* Dual headline for students and investors - BOLD & MASSIVE & INTERACTIVE */}
           <div className="mb-16 space-y-8">
-            {/* STUDENTE - Clickable & Zoomable */}
+            {/* STUDENTE - Clickable & Zoomable - GIOCOSO */}
             <div 
               onClick={scrollToStudent}
               className="cursor-pointer transition-all duration-700 hover:scale-[1.02] group"
               style={{
-                transform: `scale(${studentScale})`,
+                transform: `scale(${studentScale}) rotate(${studentRotate}deg)`,
+                opacity: studentOpacity,
                 transformOrigin: 'center',
               }}
             >
               <div className="relative p-8 rounded-3xl overflow-hidden
                               border-2 border-transparent
-                              hover:border-primary/20
-                              hover:bg-primary/5
+                              hover:border-primary/30
+                              hover:bg-primary/10
+                              hover:shadow-[0_8px_32px_rgba(139,195,74,0.25)]
                               transition-all duration-700
                               animate-fade-in-up">
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent 
+                {/* Glow giocoso colorato */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/10 to-pink-500/10
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 
                 <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
-                               group-hover:text-primary transition-colors duration-700">
+                               group-hover:text-primary group-hover:scale-105
+                               transition-all duration-700">
                   Sei uno studente?
                 </h1>
                 <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
-                              text-primary tracking-tighter leading-[0.95]">
+                              text-primary tracking-tighter leading-[0.95]
+                              group-hover:animate-pulse">
                   Risparmi circa il 25% per il tuo affitto!
                 </p>
                 
-                {/* Arrow indicator */}
+                {/* Arrow giocosa con bounce */}
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-0 
-                                group-hover:opacity-100 group-hover:translate-x-2 
+                                group-hover:opacity-100 group-hover:translate-x-2 group-hover:animate-bounce
                                 transition-all duration-500">
-                  <ArrowRight className="w-12 h-12 text-primary" />
+                  <ArrowRight className="w-12 h-12 text-primary drop-shadow-lg" />
                 </div>
               </div>
             </div>
             
-            {/* INVESTITORE - Clickable & Zoomable */}
+            {/* INVESTITORE - Clickable & Zoomable - ELEGANTE/SERIO */}
             <div 
               onClick={scrollToInvestor}
-              className="cursor-pointer transition-all duration-700 hover:scale-[1.02] group"
+              className="cursor-pointer transition-all duration-1000 hover:scale-[1.01] group"
               style={{
                 transform: `scale(${investorScale})`,
+                opacity: investorOpacity,
                 transformOrigin: 'center',
               }}
             >
               <div className="relative p-8 rounded-3xl overflow-hidden
                               border-2 border-transparent
                               hover:border-primary/20
-                              hover:bg-primary/5
-                              transition-all duration-700
+                              hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent
+                              hover:shadow-[0_16px_48px_rgba(139,195,74,0.15)]
+                              transition-all duration-1000
                               animate-fade-in-up"
                    style={{ animationDelay: '100ms' }}>
-                {/* Subtle glow effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent 
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                {/* Glow sottile professionale */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                 
                 <h2 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
-                               group-hover:text-primary transition-colors duration-700">
+                               group-hover:text-primary
+                               transition-all duration-1000">
                   Sei un investitore immobiliare?
                 </h2>
                 <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
@@ -144,11 +156,11 @@ export const Hero = () => {
                   Ottieni ottimi rendimenti ed investi a partire da 100€!
                 </p>
                 
-                {/* Arrow indicator */}
+                {/* Arrow elegante senza bounce */}
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-0 
-                                group-hover:opacity-100 group-hover:translate-x-2 
-                                transition-all duration-500">
-                  <ArrowRight className="w-12 h-12 text-primary" />
+                                group-hover:opacity-100 group-hover:translate-x-2
+                                transition-all duration-700">
+                  <ArrowRight className="w-12 h-12 text-primary" strokeWidth={1.5} />
                 </div>
               </div>
             </div>
