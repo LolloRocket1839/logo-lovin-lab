@@ -1,24 +1,50 @@
-import { Search, Users, Home } from "lucide-react";
+import { MapPin, UserPlus, FileCheck, HeartHandshake } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const steps = [
   {
-    icon: Search,
-    title: "Trova l'Alloggio",
-    description: "Scegli tra le nostre case strategicamente posizionate vicino a tutti gli atenei torinesi",
-    step: "01"
+    icon: MapPin,
+    title: "Esplora le Stanze Disponibili",
+    description: "Naviga le nostre 30+ stanze vicino a Politecnico, UniTo e tutti gli atenei torinesi. Ogni annuncio mostra prezzo, foto, servizi inclusi e coinquilini.",
+    step: "01",
+    bullets: [
+      "A 10-15 min a piedi dalle università",
+      "Tutte le bollette incluse (luce, gas, Wi-Fi)",
+      "Arredate e pronte da abitare"
+    ]
   },
   {
-    icon: Users,
-    title: "Forma il Team",
-    description: "Unisciti ad altri studenti o porta i tuoi amici (2 o 3 persone)",
-    step: "02"
+    icon: UserPlus,
+    title: "Prenota la Tua Stanza",
+    description: "Compila il form con le tue preferenze (budget, università, interessi). Ti abbiniamo con coinquilini compatibili o prenota con i tuoi amici.",
+    step: "02",
+    bullets: [
+      "Matching automatico con studenti affini",
+      "Puoi venire da solo o con amici",
+      "Profili verificati, zero sorprese"
+    ]
   },
   {
-    icon: Home,
-    title: "Risparmia il 25%",
-    description: "Goditi il tuo nuovo spazio risparmiando centinaia di euro ogni anno",
-    step: "03"
+    icon: FileCheck,
+    title: "Firma Contratto e Paga Online",
+    description: "Ricevi il contratto regolare via email, firma digitalmente e paga il deposito. Zero commissioni di agenzia, zero costi nascosti.",
+    step: "03",
+    bullets: [
+      "Contratto registrato (legge italiana)",
+      "Deposito cauzionale standard",
+      "Pagamento sicuro online"
+    ]
+  },
+  {
+    icon: HeartHandshake,
+    title: "Ti Seguiamo Sempre",
+    description: "Check-in assistito il giorno del trasloco. Poi assistenza WhatsApp 7/7 per manutenzione, bollette o problemi di convivenza.",
+    step: "04",
+    bullets: [
+      "Accoglienza personale e consegna chiavi",
+      "Risposta in <24h per emergenze",
+      "Community events tra coinquilini"
+    ]
   }
 ];
 
@@ -41,11 +67,11 @@ export const HowItWorks = () => {
             Come Funziona
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
-            Tre semplici passi per iniziare a risparmiare
+            Quattro semplici passi per iniziare a risparmiare
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto relative">
           {/* Connecting lines between steps */}
           <div className="hidden md:block absolute top-24 left-1/6 right-1/6 h-[1px] bg-border -z-10" />
           
@@ -81,10 +107,20 @@ export const HowItWorks = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-display font-semibold mb-4 leading-tight text-foreground relative z-10">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed font-light relative z-10">
+                <h3 className="text-xl font-display font-semibold mb-3 leading-tight text-foreground relative z-10">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light relative z-10 mb-4">
                   {step.description}
                 </p>
+                
+                {/* Bullet points */}
+                <ul className="space-y-2 relative z-10">
+                  {step.bullets.map((bullet, idx) => (
+                    <li key={idx} className="text-sm text-muted-foreground flex items-start">
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary/70 mt-1.5 mr-2 flex-shrink-0" />
+                      <span className="font-light">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </Card>
             );
           })}
