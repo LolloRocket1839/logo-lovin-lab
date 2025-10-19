@@ -1,5 +1,6 @@
 import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { CONTACTS } from "@/lib/contacts";
 
 export const Footer = () => {
   return (
@@ -31,29 +32,29 @@ export const Footer = () => {
             <h3 className="font-display text-lg font-semibold mb-6 text-foreground">Contatti</h3>
             <div className="space-y-3">
               <a 
-                href="https://wa.me/393319053037" 
+                href={`https://wa.me/${CONTACTS.lorenzo.phone}`}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
               >
                 <MessageCircle className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} />
-                <span className="text-sm font-light link-elegant">Lorenzo: +39 331 905 3037</span>
+                <span className="text-sm font-light link-elegant">Lorenzo: {CONTACTS.lorenzo.phone.replace(/(\+\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4')}</span>
               </a>
               <a 
-                href="https://wa.me/393920675357" 
+                href={`https://wa.me/${CONTACTS.andrea.phone}`}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
               >
                 <MessageCircle className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} />
-                <span className="text-sm font-light link-elegant">Andrea: +39 392 067 5357</span>
+                <span className="text-sm font-light link-elegant">Andrea: {CONTACTS.andrea.phone.replace(/(\+\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4')}</span>
               </a>
               <a 
-                href="mailto:junglerententerprise@gmail.com"
+                href={`mailto:${CONTACTS.email}`}
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
               >
                 <Mail className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} />
-                <span className="text-sm font-light link-elegant break-all">junglerententerprise@gmail.com</span>
+                <span className="text-sm font-light link-elegant break-all">{CONTACTS.email}</span>
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 opacity-60" strokeWidth={1.5} />

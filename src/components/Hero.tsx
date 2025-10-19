@@ -3,16 +3,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
 import logo2i3t from "@/assets/2i3t-logo.png";
+import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const handleWhatsAppLorenzo = () => {
-    window.open("https://wa.me/393319053037", "_blank");
+    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp(CONTACTS.lorenzo.name));
   };
 
   const handleWhatsAppAndrea = () => {
-    window.open("https://wa.me/393920675357", "_blank");
+    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp(CONTACTS.andrea.name));
   };
 
   useEffect(() => {
@@ -117,7 +118,7 @@ export const Hero = () => {
                               bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600
                               tracking-tighter leading-[0.95]
                               group-hover:animate-pulse z-10">
-                  Risparmi circa il 25% per il tuo affitto!
+                  Risparmi fino al 25% sull'affitto!
                 </p>
                 
                 {/* Arrow con bounce */}

@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 const benefits = [
   {
     icon: Wallet,
-    title: "25% di Risparmio Certificato",
-    description: "Risparmio calcolato su media mercato Torino 2024. Su €400/mese, risparmi €1.200 all'anno con contratti trasparenti.",
+    title: "Risparmi Certificati del 25%",
+    description: "Risparmi certificati del 25% rispetto alle agenzie tradizionali. Su €400/mese, risparmi €1.200 all'anno con contratti trasparenti.",
     highlight: "€1.200+"
   },
   {

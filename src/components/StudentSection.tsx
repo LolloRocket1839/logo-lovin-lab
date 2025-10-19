@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Wallet, Calendar, ArrowRight, Mail } from "lucide-react";
+import { CONTACTS, openWhatsApp, openEmail, MESSAGES } from "@/lib/contacts";
 
 const studentBenefits = [
   {
     icon: Wallet,
-    title: "Risparmio del 25%",
-    description: "Risparmia il 25% rispetto agli affitti tradizionali. Più soldi per studiare e vivere la città"
+    title: "Costi Ridotti del 25%",
+    description: "Costi ridotti del 25%: più soldi per studiare e vivere Torino"
   },
   {
     icon: Calendar,
@@ -17,29 +18,15 @@ const studentBenefits = [
 
 export const StudentSection = () => {
   const handleWhatsAppLorenzo = () => {
-    const message = encodeURIComponent("Ciao Lorenzo! Sono uno studente interessato a trovare una stanza tramite JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e condizioni\n- Disponibilità per visitare\n\nGrazie!");
-    window.open(`https://wa.me/393207840116?text=${message}`, "_blank");
+    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp(CONTACTS.lorenzo.name));
   };
 
   const handleWhatsAppAndrea = () => {
-    const message = encodeURIComponent("Ciao Andrea! Sono uno studente interessato a trovare una stanza tramite JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e condizioni\n- Disponibilità per visitare\n\nGrazie!");
-    window.open(`https://wa.me/393349340449?text=${message}`, "_blank");
+    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp(CONTACTS.andrea.name));
   };
 
   const handleEmailContact = () => {
-    const subject = encodeURIComponent("Richiesta informazioni studente - JungleRent");
-    const body = encodeURIComponent(
-      "Buongiorno,\n\n" +
-      "Sono uno studente interessato a trovare una stanza tramite JungleRent.\n\n" +
-      "Vorrei ricevere informazioni su:\n" +
-      "- Stanze disponibili vicino al mio ateneo\n" +
-      "- Prezzi e condizioni di affitto\n" +
-      "- Possibilità di visitare gli appartamenti\n" +
-      "- Tempistiche di disponibilità\n\n" +
-      "Grazie per la vostra disponibilità.\n\n" +
-      "Cordiali saluti"
-    );
-    window.location.href = `mailto:junglerententerprise@gmail.com?subject=${subject}&body=${body}`;
+    openEmail(MESSAGES.student.email.subject, MESSAGES.student.email.body);
   };
 
   return (
@@ -141,12 +128,6 @@ export const StudentSection = () => {
           </p>
         </div>
 
-        {/* Trust indicator */}
-        <div className="text-center mt-16 pt-16 border-t border-border">
-          <p className="text-sm text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
-            <span className="text-foreground font-medium">Supportati da 2i3T</span> — Incubatore d'Imprese dell'Università di Torino. Il tuo successo universitario è la nostra priorità.
-          </p>
-        </div>
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />

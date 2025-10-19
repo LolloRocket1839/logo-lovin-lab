@@ -4,7 +4,6 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { Benefits } from "@/components/Benefits";
 import { StudentSection } from "@/components/StudentSection";
 import { InvestorSection } from "@/components/InvestorSection";
-import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -16,7 +15,6 @@ const Index = () => {
       <Benefits />
       <StudentSection />
       <InvestorSection />
-      <CTA />
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TrendingUp, PieChart, BarChart3, ArrowRight } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
+import { openEmail, MESSAGES } from "@/lib/contacts";
 
 const investorBenefits = [
   {
@@ -26,23 +27,7 @@ export const InvestorSection = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   const handleInvestorContact = () => {
-    const subject = encodeURIComponent("Richiesta Informazioni - Opportunità Investimento Immobiliare");
-    const body = encodeURIComponent(`Buongiorno,
-
-sono interessato/a a ricevere maggiori informazioni sulle opportunità di investimento immobiliare nel mercato degli affitti universitari a Torino.
-
-Vorrei saperne di più su:
-- ROI previsto e rendimenti
-- Tipologie di proprietà disponibili
-- Gestione completa del servizio
-- Prossimi step per valutare l'investimento
-
-Nome e Cognome: 
-Contatto telefonico: 
-
-Grazie,
-Cordiali saluti`);
-    window.open(`mailto:junglerententerprise@gmail.com?subject=${subject}&body=${body}`, "_blank");
+    openEmail(MESSAGES.investor.email.subject, MESSAGES.investor.email.body);
   };
 
   return (
@@ -140,12 +125,6 @@ Cordiali saluti`);
         
         <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
 
-        {/* Trust indicator */}
-        <div className="text-center mt-16 pt-16 border-t border-border">
-          <p className="text-sm text-muted-foreground font-light max-w-2xl mx-auto leading-relaxed">
-            <span className="text-foreground font-medium">Supportati da 2i3T</span> — Incubatore d'Imprese dell'Università di Torino. Garanzia di professionalità e trasparenza in ogni investimento.
-          </p>
-        </div>
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
