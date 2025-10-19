@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
+import jungleRentLogo from "@/assets/jungle-rent-logo-transparent.png";
 
 export const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
