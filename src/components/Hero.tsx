@@ -216,12 +216,10 @@ export const Hero = () => {
           {/* Info aggiuntiva sul questionario */}
           <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto mb-16 animate-fade-in-up flex flex-col items-center gap-3" style={{ animationDelay: '550ms' }}>
             <span><span className="font-semibold text-foreground">30 stanze in quadrilocali</span> disponibili da settembre 2026</span>
-            <span className="flex items-center gap-2">
+            <a href="https://2i3t.it" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               Supportati da 
-              <a href="https://2i3t.it" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
-                <img src={logo2i3t} alt="2i3T Incubatore Imprese Università di Torino" className="h-8 inline-block" />
-              </a>
-            </span>
+              <img src={logo2i3t} alt="2i3T Incubatore Imprese Università di Torino" className="h-8 inline-block" />
+            </a>
           </p>
 
           {/* Hero CTAs - LARGE & PROMINENT */}
