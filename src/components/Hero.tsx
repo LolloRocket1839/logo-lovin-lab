@@ -218,7 +218,9 @@ export const Hero = () => {
             <span><span className="font-semibold text-foreground">30 stanze in quadrilocali</span> disponibili da settembre 2026</span>
             <span className="flex items-center gap-2">
               Supportati da 
-              <img src={logo2i3t} alt="2i3T Incubatore Imprese Università di Torino" className="h-8 inline-block" />
+              <a href="https://2i3t.it" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
+                <img src={logo2i3t} alt="2i3T Incubatore Imprese Università di Torino" className="h-8 inline-block" />
+              </a>
             </span>
           </p>
 
