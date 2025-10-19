@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { TrendingUp, PieChart, BarChart3, ArrowRight } from "lucide-react";
+import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 
 const investorBenefits = [
   {
@@ -21,6 +23,8 @@ const investorBenefits = [
 ];
 
 export const InvestorSection = () => {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+
   const handleInvestorContact = () => {
     const subject = encodeURIComponent("Richiesta Informazioni - Opportunità Investimento Immobiliare");
     const body = encodeURIComponent(`Buongiorno,
@@ -86,7 +90,7 @@ Cordiali saluti`);
                 }}
               >
                 {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                 <div className="mb-6 relative z-10">
                   <Icon className="w-10 h-10 text-primary/70 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
                 </div>
@@ -102,7 +106,7 @@ Cordiali saluti`);
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div className="text-center space-y-4">
           <Button 
             size="lg" 
             variant="premium"
@@ -112,10 +116,29 @@ Cordiali saluti`);
             Richiedi Informazioni per Investitori
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
-          <p className="text-xs text-muted-foreground/60 mt-6 font-light">
+          <p className="text-xs text-muted-foreground/60 font-light">
             Risposta entro 40 minuti
           </p>
+          
+          {/* Waitlist button */}
+          <div className="pt-4">
+            <Button 
+              onClick={() => setWaitlistOpen(true)}
+              className="bg-primary/90 hover:bg-primary
+                         text-primary-foreground
+                         h-11 text-sm font-medium
+                         border border-primary/20
+                         transition-all duration-300
+                         hover:shadow-lg hover:shadow-primary/20
+                         rounded-lg
+                         px-8"
+            >
+              Iscriviti alla Waitlist Investitori
+            </Button>
+          </div>
         </div>
+        
+        <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
 
         {/* Trust indicator */}
         <div className="text-center mt-16 pt-16 border-t border-border">
