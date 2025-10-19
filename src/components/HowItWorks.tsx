@@ -5,7 +5,7 @@ const steps = [
   {
     icon: MapPin,
     title: "Esplora le Stanze Disponibili",
-    description: "Naviga le nostre 30+ stanze vicino a Politecnico, UniTo e tutti gli atenei torinesi. Ogni annuncio mostra prezzo, foto, servizi inclusi e coinquilini.",
+    description: "Naviga le nostre stanze vicino a Politecnico, UniTo e tutti gli atenei torinesi. Ogni annuncio mostra prezzo, foto, servizi inclusi e coinquilini.",
     step: "01",
     bullets: [
       "A 10-15 min a piedi dalle università",
