@@ -28,7 +28,7 @@ export const TrustBadge = () => {
           </div>
           
           <a 
-            href="https://www.unito.it/ricerca-e-innovazione/dalle-idee-al-mercato/incubatore-dimprese-2i3t"
+            href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors duration-300 font-medium group"
