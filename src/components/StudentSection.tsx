@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Wallet, Calendar, ArrowRight } from "lucide-react";
+import { Wallet, Calendar, ArrowRight, Mail } from "lucide-react";
 
 const studentBenefits = [
   {
@@ -24,6 +24,22 @@ export const StudentSection = () => {
   const handleWhatsAppAndrea = () => {
     const message = encodeURIComponent("Ciao Andrea! Sono uno studente interessato a trovare una stanza tramite JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e condizioni\n- Disponibilità per visitare\n\nGrazie!");
     window.open(`https://wa.me/393349340449?text=${message}`, "_blank");
+  };
+
+  const handleEmailContact = () => {
+    const subject = encodeURIComponent("Richiesta informazioni studente - JungleRent");
+    const body = encodeURIComponent(
+      "Buongiorno,\n\n" +
+      "Sono uno studente interessato a trovare una stanza tramite JungleRent.\n\n" +
+      "Vorrei ricevere informazioni su:\n" +
+      "- Stanze disponibili vicino al mio ateneo\n" +
+      "- Prezzi e condizioni di affitto\n" +
+      "- Possibilità di visitare gli appartamenti\n" +
+      "- Tempistiche di disponibilità\n\n" +
+      "Grazie per la vostra disponibilità.\n\n" +
+      "Cordiali saluti"
+    );
+    window.location.href = `mailto:junglerententerprise@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -109,6 +125,15 @@ export const StudentSection = () => {
             >
               Parla con Andrea
               <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={handleEmailContact}
+              className="px-10 py-7 text-base"
+            >
+              <Mail className="mr-2 w-4 h-4" />
+              Invia Email
             </Button>
           </div>
           <p className="text-xs text-muted-foreground/60 mt-6 font-light">
