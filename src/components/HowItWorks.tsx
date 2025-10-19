@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { MapPin, UserPlus, FileCheck, HeartHandshake } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { WaitlistDialog } from "@/components/WaitlistDialog";
 
 const steps = [
   {
@@ -48,6 +51,8 @@ const steps = [
 ];
 
 export const HowItWorks = () => {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+
   return (
     <section id="how-it-works" className="py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden">
       {/* Top border line */}
@@ -120,10 +125,22 @@ export const HowItWorks = () => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Waitlist button for Step 2 */}
+                {index === 1 && (
+                  <Button 
+                    onClick={() => setWaitlistOpen(true)}
+                    className="mt-6 w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold py-6 text-base shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    🎯 Iscriviti Ora alla Waitlist
+                  </Button>
+                )}
               </Card>
             );
           })}
         </div>
+
+        <WaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
       </div>
       
       {/* Bottom border line */}
