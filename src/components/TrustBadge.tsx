@@ -16,7 +16,7 @@ export const TrustBadge = () => {
           
           <div className="inline-flex items-center gap-6 bg-card border border-border/50 rounded-2xl px-12 py-8 mb-6 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)]">
             <div className="w-20 h-20 flex items-center justify-center">
-              <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain" />
+              <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain rounded-xl" />
             </div>
             <div className="text-left">
               <h3 className="text-2xl font-display font-bold text-foreground mb-1">
