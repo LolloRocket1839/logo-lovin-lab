@@ -70,26 +70,39 @@ export const Hero = () => {
             Vicino a tutti i principali atenei torinesi
           </p>
 
-          {/* Bonus - animated shimmer badge */}
-          <div className="relative inline-flex items-center gap-3 border-2 border-primary/30 
-                          bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 
-                          rounded-full px-10 py-4 mb-20 
-                          overflow-hidden group
-                          hover:border-primary/50 hover:shadow-[0_0_30px_hsla(150,45%,18%,0.2)]
-                          transition-all duration-500
-                          animate-[pulse-border_3s_ease-in-out_infinite]
-                          animate-fade-in-up" 
-               style={{ animationDelay: '500ms' }}>
+          {/* Questionario 100€ Badge - clickable */}
+          <a
+            href="https://it.surveymonkey.com/r/Q27QDBG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative inline-flex items-center gap-3 border-2 border-primary/30 
+                        bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 
+                        rounded-full px-10 py-4 mb-8
+                        overflow-hidden group
+                        hover:border-primary/50 hover:shadow-[0_0_30px_hsla(150,45%,18%,0.2)]
+                        hover:scale-105
+                        transition-all duration-500 cursor-pointer
+                        animate-[pulse-border_3s_ease-in-out_infinite]
+                        animate-fade-in-up" 
+            style={{ animationDelay: '500ms' }}
+          >
             {/* Shimmer overlay */}
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full 
                             bg-gradient-to-r from-transparent via-white/20 to-transparent 
                             transition-transform duration-1000" />
             
-            <span className="relative text-primary text-xl animate-[spin_3s_linear_infinite]">✦</span>
+            <span className="relative text-primary text-xl">🎁</span>
             <span className="relative text-foreground font-semibold text-lg">
-              Possibilità di vincere 1 mese gratis
+              Vinci 100€ - Compila il questionario!
             </span>
-          </div>
+            <ArrowRight className="relative w-5 h-5 text-primary/70 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
+
+          {/* Info aggiuntiva sul questionario */}
+          <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '550ms' }}>
+            <span className="font-semibold text-foreground">30 stanze in quadrilocali</span> disponibili da settembre 2026 · 
+            Supportati da <span className="text-primary/90">2i3T</span> Università di Torino
+          </p>
 
           {/* Hero CTAs - LARGE & PROMINENT */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up mb-20" style={{ animationDelay: '600ms' }}>
