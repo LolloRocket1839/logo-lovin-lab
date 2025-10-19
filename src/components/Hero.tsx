@@ -20,34 +20,38 @@ export const Hero = () => {
 
       <div className="container relative z-10 px-8 py-32">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Logo - refined and smaller */}
+          {/* Logo - animated and prominent */}
           <div className="mb-12 animate-fade-in">
             <img 
               src={jungleRentLogo} 
               alt="Jungle Rent" 
-              className="w-20 h-20 mx-auto opacity-90 transition-all duration-700 hover:opacity-100 hover:scale-105 rounded-3xl"
+              className="w-24 h-24 mx-auto opacity-90 transition-all duration-700 
+                         hover:opacity-100 hover:scale-110 hover:rotate-6 
+                         hover:drop-shadow-[0_0_20px_hsla(150,45%,18%,0.5)]
+                         animate-[logo-pulse_3s_ease-in-out_infinite]
+                         rounded-3xl"
             />
             <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
               Il tuo rifugio sicuro nella giungla immobiliare
             </p>
           </div>
 
-          {/* Dual headline for students and investors */}
+          {/* Dual headline for students and investors - BOLD & MASSIVE */}
           <div className="mb-16 space-y-8">
             <div className="animate-fade-in-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 tracking-tight text-foreground">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 tracking-tighter leading-[0.9] text-foreground">
                 Sei uno studente?
               </h1>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-primary tracking-tight">
+              <p className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-primary tracking-tighter leading-[0.95]">
                 Risparmia il 25% per il tuo alloggio!
               </p>
             </div>
             
             <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 tracking-tight text-foreground">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 tracking-tighter leading-[0.9] text-foreground">
                 Sei un investitore immobiliare?
               </h2>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-primary tracking-tight">
+              <p className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-primary tracking-tighter leading-[0.95]">
                 Ottieni ottimi rendimenti ed investi a partire da 100€!
               </p>
             </div>
@@ -66,37 +70,52 @@ export const Hero = () => {
             Vicino a tutti i principali atenei torinesi
           </p>
 
-          {/* Bonus - subtle and elegant */}
-          <div className="inline-flex items-center gap-3 border border-primary/20 bg-primary/5 rounded-full px-8 py-3 mb-20 animate-fade-in-up text-sm font-medium tracking-wide" style={{ animationDelay: '500ms' }}>
-            <span className="text-primary">✦</span>
-            <span className="text-foreground">Possibilità di vincere 1 mese gratis</span>
+          {/* Bonus - animated shimmer badge */}
+          <div className="relative inline-flex items-center gap-3 border-2 border-primary/30 
+                          bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 
+                          rounded-full px-10 py-4 mb-20 
+                          overflow-hidden group
+                          hover:border-primary/50 hover:shadow-[0_0_30px_hsla(150,45%,18%,0.2)]
+                          transition-all duration-500
+                          animate-[pulse-border_3s_ease-in-out_infinite]
+                          animate-fade-in-up" 
+               style={{ animationDelay: '500ms' }}>
+            {/* Shimmer overlay */}
+            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full 
+                            bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                            transition-transform duration-1000" />
+            
+            <span className="relative text-primary text-xl animate-[spin_3s_linear_infinite]">✦</span>
+            <span className="relative text-foreground font-semibold text-lg">
+              Possibilità di vincere 1 mese gratis
+            </span>
           </div>
 
-          {/* Single large CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up mb-20" style={{ animationDelay: '600ms' }}>
+          {/* Hero CTAs - LARGE & PROMINENT */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up mb-20" style={{ animationDelay: '600ms' }}>
             <Button 
               size="lg" 
-              variant="premium"
+              variant="hero"
               onClick={handleWhatsAppLorenzo}
-              className="px-12 py-7 text-base"
+              className="px-16 py-8 text-lg group"
             >
               Contatta Lorenzo
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button 
               size="lg" 
-              variant="premium"
+              variant="hero"
               onClick={handleWhatsAppAndrea}
-              className="px-12 py-7 text-base"
+              className="px-16 py-8 text-lg group"
             >
               Contatta Andrea
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button 
               size="lg" 
               variant="outline"
               onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-12 py-7"
+              className="px-12 py-7 text-base"
             >
               Come Funziona
             </Button>
