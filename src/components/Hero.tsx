@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
+import logo2i3t from "@/assets/2i3t-logo.png";
 
 export const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -213,9 +214,12 @@ export const Hero = () => {
           </a>
 
           {/* Info aggiuntiva sul questionario */}
-          <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '550ms' }}>
-            <span className="font-semibold text-foreground">30 stanze in quadrilocali</span> disponibili da settembre 2026 · 
-            Supportati da <span className="text-primary/90">2i3T</span> Università di Torino
+          <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto mb-16 animate-fade-in-up flex flex-col items-center gap-3" style={{ animationDelay: '550ms' }}>
+            <span><span className="font-semibold text-foreground">30 stanze in quadrilocali</span> disponibili da settembre 2026</span>
+            <span className="flex items-center gap-2">
+              Supportati da 
+              <img src={logo2i3t} alt="2i3T Incubatore Imprese Università di Torino" className="h-8 inline-block" />
+            </span>
           </p>
 
           {/* Hero CTAs - LARGE & PROMINENT */}
