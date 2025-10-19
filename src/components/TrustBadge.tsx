@@ -14,7 +14,12 @@ export const TrustBadge = () => {
             Partnership Istituzionale
           </p>
           
-          <div className="inline-flex items-center gap-6 bg-card border border-border/50 rounded-2xl px-12 py-8 mb-6 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)]">
+          <a 
+            href="https://2i3t.it"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-6 bg-card border border-border/50 rounded-2xl px-12 py-8 mb-6 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)] cursor-pointer"
+          >
             <div className="w-20 h-20 flex items-center justify-center">
               <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain rounded-xl" />
             </div>
@@ -26,7 +31,7 @@ export const TrustBadge = () => {
                 Incubatore d'Imprese dell'Università di Torino
               </p>
             </div>
-          </div>
+          </a>
           
           <a 
             href="https://2i3t.it"
