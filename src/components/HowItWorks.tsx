@@ -38,12 +38,11 @@ const steps = [
   {
     icon: HeartHandshake,
     title: "Ti Seguiamo Sempre",
-    description: "Check-in assistito il giorno del trasloco. Poi assistenza WhatsApp 7/7 per manutenzione, bollette o problemi di convivenza.",
+    description: "Assistenza WhatsApp 7/7 per manutenzione, bollette o problemi di convivenza.",
     step: "04",
     bullets: [
       "Accoglienza personale e consegna chiavi",
-      "Risposta in <24h per emergenze",
-      "Community events tra coinquilini"
+      "Risposta in <24h per emergenze"
     ]
   }
 ];
