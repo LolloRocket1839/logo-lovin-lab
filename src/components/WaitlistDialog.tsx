@@ -24,6 +24,9 @@ const waitlistSchema = z.object({
   budget: z.string().min(1, "Seleziona il tuo budget"),
   move_date: z.string().min(1, "Seleziona quando vuoi trasferirti"),
   referral_source: z.string().min(1, "Dicci come ci hai conosciuto"),
+  gdpr_consent: z.boolean().refine((val) => val === true, {
+    message: "Devi accettare il trattamento dati per continuare",
+  }),
   privacy_consent: z.boolean().refine((val) => val === true, {
     message: "Devi accettare per continuare",
   }),
@@ -48,6 +51,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
       budget: "",
       move_date: "",
       referral_source: "",
+      gdpr_consent: false,
       privacy_consent: false,
     },
   });
@@ -69,6 +73,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
           budget: data.budget,
           move_date: data.move_date,
           referral_source: data.referral_source,
+          gdpr_consent: data.gdpr_consent,
           privacy_consent: data.privacy_consent,
           user_type: "student",
           _subject: "New Jungle Rent Waitlist - React App 🚀",
@@ -300,7 +305,33 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                 />
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 space-y-3">
+                <FormField
+                  control={form.control}
+                  name="gdpr_consent"
+                  render={({ field }) => (
+                    <FormItem>
+                      <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="mt-0.5"
+                          />
+                        </FormControl>
+                        <FormLabel className="text-xs text-muted-foreground leading-relaxed cursor-pointer">
+                          Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) per la gestione della richiesta di iscrizione alla waitlist
+                        </FormLabel>
+                      </div>
+                      {form.formState.errors.gdpr_consent && (
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.gdpr_consent.message}
+                        </p>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
                 <FormField
                   control={form.control}
                   name="privacy_consent"
