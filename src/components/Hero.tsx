@@ -91,34 +91,56 @@ export const Hero = () => {
                 transformOrigin: 'center',
               }}
             >
-              <div className="relative p-8 rounded-3xl overflow-hidden
+              <div className="relative p-8 rounded-3xl overflow-visible
                               border-2 border-transparent
-                              hover:border-primary/30
-                              hover:bg-primary/10
-                              hover:shadow-[0_8px_32px_rgba(139,195,74,0.25)]
+                              hover:border-amber-400/40
+                              hover:bg-gradient-to-br hover:from-blue-500/15 hover:via-purple-500/15 hover:to-pink-500/15
+                              hover:shadow-[0_12px_48px_rgba(59,130,246,0.3),0_8px_24px_rgba(168,85,247,0.2)]
                               transition-all duration-700
-                              animate-fade-in-up">
-                {/* Glow giocoso colorato */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-purple-500/10 to-pink-500/10
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                              animate-fade-in-up
+                              bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5">
+                
+                {/* Emoji animate rimbalzanti */}
+                <div className="absolute -top-6 -left-6 text-6xl opacity-0 group-hover:opacity-100 
+                                group-hover:animate-bounce transition-all duration-500 z-0"
+                     style={{ animationDelay: '0ms', filter: 'drop-shadow(0 4px 12px rgba(59,130,246,0.4))' }}>
+                  📚
+                </div>
+                <div className="absolute -top-8 right-8 text-7xl opacity-0 group-hover:opacity-100 
+                                group-hover:animate-bounce transition-all duration-500 z-0"
+                     style={{ animationDelay: '150ms', filter: 'drop-shadow(0 4px 12px rgba(168,85,247,0.4))' }}>
+                  🎓
+                </div>
+                <div className="absolute -bottom-4 -right-4 text-6xl opacity-0 group-hover:opacity-100 
+                                group-hover:animate-bounce transition-all duration-500 z-0"
+                     style={{ animationDelay: '300ms', filter: 'drop-shadow(0 4px 12px rgba(236,72,153,0.4))' }}>
+                  🏛️
+                </div>
+                
+                {/* Glow giocoso colorato vibrante */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-purple-400/25 to-pink-400/25
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl" />
                 
                 <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
-                               group-hover:text-primary group-hover:scale-105
-                               transition-all duration-700">
+                               group-hover:text-transparent group-hover:bg-clip-text 
+                               group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500
+                               group-hover:scale-105
+                               transition-all duration-700 z-10">
                   Sei uno studente?
                 </h1>
                 <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
-                              text-primary tracking-tighter leading-[0.95]
-                              group-hover:animate-pulse">
+                              bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600
+                              tracking-tighter leading-[0.95]
+                              group-hover:animate-pulse z-10">
                   Risparmi circa il 25% per il tuo affitto!
                 </p>
                 
                 {/* Arrow giocosa con bounce */}
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-0 
                                 group-hover:opacity-100 group-hover:translate-x-2 group-hover:animate-bounce
-                                transition-all duration-500">
-                  <ArrowRight className="w-12 h-12 text-primary drop-shadow-lg" />
+                                transition-all duration-500 z-10">
+                  <ArrowRight className="w-12 h-12 text-purple-500 drop-shadow-lg" />
                 </div>
               </div>
             </div>
