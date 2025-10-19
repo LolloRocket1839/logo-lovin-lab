@@ -5,10 +5,12 @@ import { Benefits } from "@/components/Benefits";
 import { StudentSection } from "@/components/StudentSection";
 import { InvestorSection } from "@/components/InvestorSection";
 import { Footer } from "@/components/Footer";
+import { StructuredData } from "@/components/StructuredData";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <StructuredData />
       <Hero />
       <TrustBadge />
       <HowItWorks />

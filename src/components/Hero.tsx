@@ -57,7 +57,12 @@ export const Hero = () => {
   const investorOpacity = 0.7 + (scrollProgress * 0.3);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <header role="banner" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* SEO-optimized H1 - visually hidden but accessible to search engines */}
+      <h1 className="sr-only">
+        Jungle Rent - Risparmia fino al 25% sull'Affitto a Torino | Affitti per Studenti e Investimenti Immobiliari vicino Politecnico e UniTo
+      </h1>
+      
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 opacity-[0.015]" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -69,11 +74,14 @@ export const Hero = () => {
           <div className="mb-6 md:mb-12 animate-fade-in">
             <img 
               src={jungleRentLogo} 
-              alt="Jungle Rent" 
+              alt="Jungle Rent - Logo ufficiale - Affitti ottimizzati per studenti e investitori a Torino" 
+              width="96"
+              height="96"
               className="w-16 h-16 md:w-24 md:h-24 mx-auto opacity-90 transition-all duration-700
                          hover:opacity-100 hover:scale-110 hover:rotate-6 
                          hover:drop-shadow-[0_0_20px_hsla(150,45%,18%,0.5)]
                          rounded-full"
+              loading="eager"
             />
             <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
               Il tuo rifugio sicuro nella giungla immobiliare
@@ -105,14 +113,14 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/35 via-blue-400/30 to-indigo-400/35
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0" />
                 
-                <h1 className="relative text-3xl md:text-6xl lg:text-8xl font-display font-extrabold mb-4 
+                <div className="relative text-3xl md:text-6xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-transparent group-hover:bg-clip-text 
                                group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:via-blue-600 group-hover:to-indigo-600
                                group-hover:scale-105
                                transition-all duration-700 z-10">
                   Sei uno studente?
-                </h1>
+                </div>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600
                               tracking-tighter leading-[0.95]
@@ -218,7 +226,14 @@ export const Hero = () => {
             <span><span className="font-semibold text-foreground">30 stanze in quadrilocali</span> disponibili da settembre 2026</span>
             <a href="https://2i3t.it" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               Supportati da 
-              <img src={logo2i3t} alt="2i3T Incubatore Imprese Università di Torino" className="h-8 inline-block" />
+              <img 
+                src={logo2i3t} 
+                alt="2i3T Incubatore Imprese Università di Torino - Partner ufficiale" 
+                width="120"
+                height="32"
+                className="h-8 inline-block" 
+                loading="lazy"
+              />
             </a>
           </p>
 
@@ -269,6 +284,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 };
