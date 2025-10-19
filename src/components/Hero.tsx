@@ -93,37 +93,37 @@ export const Hero = () => {
             >
               <div className="relative p-8 rounded-3xl overflow-hidden
                               border-2 border-transparent
-                              hover:border-amber-400/40
-                              hover:bg-gradient-to-br hover:from-blue-500/15 hover:via-purple-500/15 hover:to-pink-500/15
-                              hover:shadow-[0_12px_48px_rgba(59,130,246,0.3),0_8px_24px_rgba(168,85,247,0.2)]
+                              hover:border-cyan-400/50
+                              hover:bg-gradient-to-br hover:from-cyan-500/12 hover:via-blue-500/12 hover:to-indigo-500/12
+                              hover:shadow-[0_12px_48px_rgba(6,182,212,0.3),0_8px_24px_rgba(99,102,241,0.25)]
                               transition-all duration-700
                               animate-fade-in-up
-                              bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-pink-500/5">
+                              bg-gradient-to-br from-cyan-500/8 via-blue-500/8 to-indigo-500/8">
                 
-                {/* Glow giocoso colorato vibrante */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-purple-400/25 to-pink-400/25
+                {/* Glow elegante cyan/indigo */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/35 via-blue-400/30 to-indigo-400/35
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0" />
                 
                 <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-transparent group-hover:bg-clip-text 
-                               group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:via-purple-500 group-hover:to-pink-500
+                               group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:via-blue-600 group-hover:to-indigo-600
                                group-hover:scale-105
                                transition-all duration-700 z-10">
                   Sei uno studente?
                 </h1>
                 <p className="relative text-4xl md:text-6xl lg:text-7xl font-display font-extrabold 
-                              bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600
+                              bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600
                               tracking-tighter leading-[0.95]
                               group-hover:animate-pulse z-10">
                   Risparmi circa il 25% per il tuo affitto!
                 </p>
                 
-                {/* Arrow giocosa con bounce */}
+                {/* Arrow con bounce */}
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-0 
                                 group-hover:opacity-100 group-hover:translate-x-2 group-hover:animate-bounce
                                 transition-all duration-500 z-10">
-                  <ArrowRight className="w-12 h-12 text-purple-500 drop-shadow-lg" />
+                  <ArrowRight className="w-12 h-12 text-cyan-500 drop-shadow-lg" />
                 </div>
               </div>
             </div>
