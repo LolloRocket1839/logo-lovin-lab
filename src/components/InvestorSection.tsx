@@ -8,8 +8,8 @@ import { openEmail, MESSAGES } from "@/lib/contacts";
 const investorBenefits = [
   {
     icon: TrendingUp,
-    title: "ROI Ottimizzato",
-    description: "Rendimenti superiori alla media del mercato grazie alla nostra gestione professionale e pricing strategico"
+    title: "Investimento Ottimizzato",
+    description: "Opportunità nel mercato immobiliare grazie alla nostra gestione professionale e pricing strategico"
   },
   {
     icon: BarChart3,

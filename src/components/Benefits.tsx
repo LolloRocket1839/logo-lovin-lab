@@ -4,14 +4,14 @@ import { Card } from "@/components/ui/card";
 const benefits = [
   {
     icon: Wallet,
-    title: "Risparmi Certificati del 25%",
-    description: "Risparmi certificati del 25% rispetto alle agenzie tradizionali. Su €400/mese, risparmi €1.200 all'anno con contratti trasparenti.",
-    highlight: "€1.200+"
+    title: "Risparmi Certificati",
+    description: "Risparmia sui costi rispetto alle agenzie tradizionali. Affitti convenienti con contratti trasparenti.",
+    highlight: "Risparmia"
   },
   {
     icon: TrendingUp,
-    title: "ROI Ottimizzato",
-    description: "Per investitori: rendimenti superiori alla media grazie alla gestione professionale e domanda universitaria costante",
+    title: "Opportunità di Investimento",
+    description: "Per investitori: gestione professionale delle proprietà con domanda universitaria costante",
     highlight: "Investitori"
   },
   {

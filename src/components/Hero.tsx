@@ -60,7 +60,7 @@ export const Hero = () => {
     <header role="banner" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* SEO-optimized H1 - visually hidden but accessible to search engines */}
       <h1 className="sr-only">
-        Jungle Rent - Risparmia fino al 25% sull'Affitto a Torino | Affitti per Studenti e Investimenti Immobiliari vicino Politecnico e UniTo
+        Jungle Rent - Affitti Smart per Studenti a Torino | Opportunità di Investimento Immobiliare vicino Politecnico e UniTo
       </h1>
       
       {/* Subtle texture overlay */}
@@ -125,7 +125,7 @@ export const Hero = () => {
                               bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600
                               tracking-tighter leading-[0.95]
                               group-hover:animate-pulse z-10">
-                  Risparmi fino al 25% sull'affitto!
+                  Risparmia sull'affitto!
                 </p>
                 
                 {/* Arrow con bounce */}
@@ -167,7 +167,7 @@ export const Hero = () => {
                 </h2>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               text-primary tracking-tighter leading-[0.95]">
-                  Ottieni ottimi rendimenti ed investi a partire da 100€!
+                  Investi nel mercato immobiliare a partire da 100€!
                 </p>
                 
                 {/* Arrow elegante senza bounce */}

@@ -10,7 +10,7 @@ export const StructuredData = () => {
       url: "https://junglerent.it",
       logo: "https://junglerent.it/jungle-rent-logo.png",
       description:
-        "Servizio di ottimizzazione affitti per studenti e investitori a Torino. Risparmia fino al 25% sull'affitto.",
+        "Servizio di ottimizzazione affitti per studenti e investitori a Torino. Affitti convenienti e opportunità di investimento.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Torino",
@@ -66,7 +66,7 @@ export const StructuredData = () => {
       },
       offers: {
         "@type": "Offer",
-        description: "Risparmia fino al 25% sull'affitto",
+        description: "Affitti convenienti per studenti",
         priceCurrency: "EUR",
       },
     };
@@ -83,7 +83,7 @@ export const StructuredData = () => {
       areaServed: "Torino",
       offers: {
         "@type": "Offer",
-        description: "Ottieni ottimi rendimenti, investi a partire da 100€",
+        description: "Opportunità di investimento immobiliare a partire da 100€",
         priceCurrency: "EUR",
         price: "100",
         priceValidUntil: "2026-12-31",
@@ -100,7 +100,7 @@ export const StructuredData = () => {
           name: "Come funziona Jungle Rent per gli studenti?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Jungle Rent ottimizza gli affitti per gli studenti universitari a Torino, permettendo di risparmiare fino al 25% rispetto agli affitti tradizionali. Offriamo stanze in quadrilocali vicino ai principali atenei torinesi (Politecnico, UniTo) con contratti sicuri e supporto dedicato.",
+            text: "Jungle Rent ottimizza gli affitti per gli studenti universitari a Torino, offrendo affitti convenienti rispetto agli affitti tradizionali. Offriamo stanze in quadrilocali vicino ai principali atenei torinesi (Politecnico, UniTo) con contratti sicuri e supporto dedicato.",
           },
         },
         {
@@ -108,7 +108,7 @@ export const StructuredData = () => {
           name: "Quanto posso risparmiare sull'affitto?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Gli studenti possono risparmiare fino al 25% rispetto ai canoni di mercato tradizionali. Il risparmio deriva dall'ottimizzazione degli spazi e dalla gestione efficiente delle proprietà.",
+            text: "Gli studenti possono risparmiare rispetto ai canoni di mercato tradizionali. Il risparmio deriva dall'ottimizzazione degli spazi e dalla gestione efficiente delle proprietà.",
           },
         },
         {
@@ -124,7 +124,7 @@ export const StructuredData = () => {
           name: "Come funziona per gli investitori?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Jungle Rent offre opportunità di investimento immobiliare a Torino a partire da 100€. Gli investitori ottengono ottimi rendimenti grazie alla gestione ottimizzata delle proprietà nel mercato degli affitti studenteschi.",
+            text: "Jungle Rent offre opportunità di investimento immobiliare a Torino a partire da 100€. Gestiamo le proprietà nel mercato degli affitti studenteschi con servizi professionali completi.",
           },
         },
         {

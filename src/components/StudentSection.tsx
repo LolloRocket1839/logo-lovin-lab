@@ -6,8 +6,8 @@ import { CONTACTS, openWhatsApp, openEmail, MESSAGES } from "@/lib/contacts";
 const studentBenefits = [
   {
     icon: Wallet,
-    title: "Costi Ridotti del 25%",
-    description: "Costi ridotti del 25%: più soldi per studiare e vivere Torino"
+    title: "Costi Ridotti",
+    description: "Affitti convenienti: più soldi per studiare e vivere Torino"
   },
   {
     icon: Calendar,
