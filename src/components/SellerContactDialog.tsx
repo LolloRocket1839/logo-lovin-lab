@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Checkbox } from "./ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Building2 } from "lucide-react";
 
@@ -19,7 +21,13 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
     email: "",
     phone: "",
     address: "",
-    propertyType: "",
+    zone: "",
+    squareMeters: "",
+    rooms: "",
+    floor: "",
+    condition: "",
+    motivation: "",
+    urgent: false,
     message: "",
   });
 
@@ -42,7 +50,13 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
       `📧 Email: ${formData.email}\n` +
       `📱 Telefono: ${formData.phone}\n` +
       `📍 Indirizzo: ${formData.address}\n` +
-      `🏢 Tipo: ${formData.propertyType || "Non specificato"}\n` +
+      `🗺️ Zona: ${formData.zone || "Non specificata"}\n` +
+      `📐 Metratura: ${formData.squareMeters ? formData.squareMeters + " mq" : "Non specificata"}\n` +
+      `🏠 Locali: ${formData.rooms || "Non specificato"}\n` +
+      `🏢 Piano: ${formData.floor || "Non specificato"}\n` +
+      `🔧 Stato: ${formData.condition || "Non specificato"}\n` +
+      `🎯 Motivazione: ${formData.motivation || "Non specificata"}\n` +
+      `⚡ Urgente: ${formData.urgent ? "Sì" : "No"}\n` +
       `💬 Note: ${formData.message || "Nessuna nota"}`;
 
     const whatsappUrl = `https://wa.me/393453088226?text=${encodeURIComponent(message)}`;
@@ -59,7 +73,13 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
       email: "",
       phone: "",
       address: "",
-      propertyType: "",
+      zone: "",
+      squareMeters: "",
+      rooms: "",
+      floor: "",
+      condition: "",
+      motivation: "",
+      urgent: false,
       message: "",
     });
   };
@@ -124,14 +144,114 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             />
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="seller-type">Tipo di Immobile</Label>
-            <Input
-              id="seller-type"
-              value={formData.propertyType}
-              onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
-              placeholder="Es: Trilocale, Quadrilocale"
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="seller-zone">Zona</Label>
+              <Select value={formData.zone} onValueChange={(value) => setFormData({ ...formData, zone: value })}>
+                <SelectTrigger id="seller-zone">
+                  <SelectValue placeholder="Seleziona zona" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="crocetta">Crocetta</SelectItem>
+                  <SelectItem value="san-salvario">San Salvario</SelectItem>
+                  <SelectItem value="centro">Centro</SelectItem>
+                  <SelectItem value="vanchiglia">Vanchiglia</SelectItem>
+                  <SelectItem value="lingotto">Lingotto</SelectItem>
+                  <SelectItem value="santa-rita">Santa Rita</SelectItem>
+                  <SelectItem value="san-paolo">San Paolo</SelectItem>
+                  <SelectItem value="altra">Altra zona</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="seller-sqm">Metratura (mq)</Label>
+              <Input
+                id="seller-sqm"
+                type="number"
+                value={formData.squareMeters}
+                onChange={(e) => setFormData({ ...formData, squareMeters: e.target.value })}
+                placeholder="Es: 85"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="seller-rooms">Numero Locali</Label>
+              <Select value={formData.rooms} onValueChange={(value) => setFormData({ ...formData, rooms: value })}>
+                <SelectTrigger id="seller-rooms">
+                  <SelectValue placeholder="Seleziona" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="2">Bilocale (2)</SelectItem>
+                  <SelectItem value="3">Trilocale (3)</SelectItem>
+                  <SelectItem value="4">Quadrilocale (4)</SelectItem>
+                  <SelectItem value="5+">5 o più locali</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="seller-floor">Piano</Label>
+              <Select value={formData.floor} onValueChange={(value) => setFormData({ ...formData, floor: value })}>
+                <SelectTrigger id="seller-floor">
+                  <SelectValue placeholder="Seleziona" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="terra">Piano Terra</SelectItem>
+                  <SelectItem value="1">1° Piano</SelectItem>
+                  <SelectItem value="2">2° Piano</SelectItem>
+                  <SelectItem value="3">3° Piano</SelectItem>
+                  <SelectItem value="4">4° Piano</SelectItem>
+                  <SelectItem value="5">5° Piano</SelectItem>
+                  <SelectItem value="6+">6° Piano o superiore</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="seller-condition">Stato Immobile</Label>
+              <Select value={formData.condition} onValueChange={(value) => setFormData({ ...formData, condition: value })}>
+                <SelectTrigger id="seller-condition">
+                  <SelectValue placeholder="Seleziona" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="ottimo">Ottimo</SelectItem>
+                  <SelectItem value="buono">Buono</SelectItem>
+                  <SelectItem value="da-ristrutturare">Da ristrutturare</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="seller-motivation">Motivazione Vendita</Label>
+              <Select value={formData.motivation} onValueChange={(value) => setFormData({ ...formData, motivation: value })}>
+                <SelectTrigger id="seller-motivation">
+                  <SelectValue placeholder="Seleziona" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="cambio-citta">Cambio città</SelectItem>
+                  <SelectItem value="liquidita">Necessità liquidità</SelectItem>
+                  <SelectItem value="eredita">Eredità</SelectItem>
+                  <SelectItem value="investimento">Dismissione investimento</SelectItem>
+                  <SelectItem value="altro">Altro</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-2 p-4 bg-accent/10 rounded-lg">
+            <Checkbox 
+              id="seller-urgent" 
+              checked={formData.urgent}
+              onCheckedChange={(checked) => setFormData({ ...formData, urgent: checked as boolean })}
             />
+            <Label htmlFor="seller-urgent" className="cursor-pointer font-medium">
+              ⚡ Ho urgenza di vendere (priorità massima)
+            </Label>
           </div>
 
           <div className="space-y-2">
@@ -140,7 +260,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
               id="seller-message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Metratura, piano, stato, etc."
+              placeholder="Altre informazioni utili per la valutazione..."
               rows={3}
             />
           </div>
@@ -149,9 +269,16 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             Invia Richiesta
           </Button>
 
-          <p className="text-xs text-muted-foreground text-center">
-            Risposta garantita entro 48 ore • Valutazione gratuita e senza impegno
-          </p>
+          <div className="space-y-3 pt-4 border-t border-border/50">
+            <p className="text-xs text-muted-foreground text-center">
+              ✓ Risposta garantita entro 48 ore • ✓ Valutazione gratuita e senza impegno • ✓ Zero commissioni
+            </p>
+            <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground">
+              <span>🏢 48 immobili acquistati nel 2024</span>
+              <span>⏱️ 42 giorni tempo medio</span>
+              <span>⭐ 4.9/5 soddisfazione</span>
+            </div>
+          </div>
         </form>
       </DialogContent>
     </Dialog>

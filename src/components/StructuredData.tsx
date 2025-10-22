@@ -90,7 +90,31 @@ export const StructuredData = () => {
       },
     };
 
-    // FAQ Schema
+    // BuyAction Schema - Venditori
+    const buyActionSchema = {
+      "@context": "https://schema.org",
+      "@type": "BuyAction",
+      object: {
+        "@type": "RealEstateProperty",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Torino",
+          addressRegion: "Piemonte",
+          addressCountry: "IT"
+        }
+      },
+      agent: {
+        "@type": "RealEstateAgent",
+        name: "Jungle Rent",
+        url: "https://junglerent.it"
+      },
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://junglerent.it/#vendi-casa"
+      }
+    };
+
+    // FAQ Schema - Espansa con domande venditori
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -167,11 +191,99 @@ export const StructuredData = () => {
             text: "Le zone Crocetta, San Salvario e Centro sono molto richieste per affitti studenti grazie alla vicinanza a Politecnico e UniTo. Jungle Rent acquista immobili in queste aree per trasformarli in housing ottimizzato. Valutazione di mercato equa e processo veloce.",
           },
         },
+        {
+          "@type": "Question",
+          name: "Jungle Rent acquista appartamenti da ristrutturare?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sì, acquistiamo anche appartamenti da ristrutturare nelle zone universitarie di Torino. La valutazione viene fatta sullo stato attuale dell'immobile, senza richiedere lavori preventivi. Ideale per chi vuole vendere velocemente senza investire in ristrutturazione.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Quali commissioni devo pagare vendendo a Jungle Rent?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Zero commissioni per il venditore. Jungle Rent acquista direttamente senza intermediari, permettendoti di risparmiare il 3-5% di commissioni d'agenzia (€6.000-10.000 su una casa da €200.000). Processo trasparente con offerta scritta chiara.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Quanto tempo ci vuole per la valutazione immobile Torino?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Ricevi il primo contatto entro 24-48 ore dalla richiesta. Dopo il sopralluogo gratuito (entro 7 giorni), ricevi l'offerta scritta entro 48 ore. Tempo totale dalla richiesta al rogito: 30-60 giorni.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Vendere trilocale San Salvario Torino: quale prezzo?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Il prezzo dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta €180.000-220.000 in base alla vicinanza a Politecnico e UniTo. Richiedi valutazione gratuita per prezzo preciso.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Vendere casa ereditata Torino: cosa fare?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Jungle Rent acquista anche immobili ereditati nelle zone universitarie. Ti supportiamo con la parte legale e burocratica. Ideale per eredi che vogliono liquidare velocemente senza gestire affitti o ristrutturazioni. Valutazione in 48 ore, supporto notarile incluso.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Acquistiamo solo trilocali o anche appartamenti più grandi?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Acquistiamo trilocali, quadrilocali, 5 locali e appartamenti più grandi nelle zone universitarie di Torino. Più grande è l'appartamento, più camere possiamo ottimizzare per studenti. Ideali: 80-150 mq in Crocetta, San Salvario, Centro, Vanchiglia, Lingotto.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Devo fare lavori prima di vendere a Jungle Rent?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No, non è necessario fare alcun lavoro. Acquistiamo l'immobile nello stato in cui si trova (anche da ristrutturare). Ci occupiamo noi delle eventuali ristrutturazioni e ottimizzazioni. Questo ti fa risparmiare tempo e denaro.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Come viene calcolato il prezzo di vendita immobile Torino?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "La valutazione si basa su: prezzo al metro quadro della zona (aggiornato settimanalmente), vicinanza alle università (Politecnico, UniTo), stato dell'immobile, piano e caratteristiche, potenziale di ottimizzazione per mercato studenti. Analisi professionale con dati di mercato reali.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Vendita casa Torino senza agenzia: è sicuro?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sì, vendere direttamente a Jungle Rent è sicuro. Lavoriamo con notai e avvocati specializzati. Contratto trasparente, pagamento garantito, supporto legale incluso. Oltre 48 immobili acquistati nel 2024, soddisfazione media 4.9/5. Risparmio commissioni del 3-5%.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Valutazione immobile gratis Torino: come funziona?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Compila il form con dati base (indirizzo, metratura, locali). Ricevi primo contatto in 24-48h. Sopralluogo gratuito entro 7 giorni (se necessario). Offerta scritta entro 48h dal sopralluogo. Zero impegno, valutazione professionale inclusa.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Vendere quadrilocale Crocetta Torino vicino Politecnico?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Crocetta è una delle nostre zone preferite, vicinissima al Politecnico di Torino. Quadrilocali in Crocetta sono ideali per 4 studenti (4 camere singole). Alta domanda di affitti, ottimo potenziale. Valutazione competitiva basata su posizione strategica. Compila form per offerta.",
+          },
+        },
       ],
     };
 
     // Insert all schemas into head
-    const schemas = [organizationSchema, localBusinessSchema, studentServiceSchema, investorServiceSchema, faqSchema];
+    const schemas = [organizationSchema, localBusinessSchema, studentServiceSchema, investorServiceSchema, buyActionSchema, faqSchema];
 
     const scriptElements: HTMLScriptElement[] = [];
 

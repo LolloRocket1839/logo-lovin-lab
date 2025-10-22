@@ -1,6 +1,9 @@
 import { Building2, TrendingUp, Clock, Shield } from "lucide-react";
 import { Button } from "./ui/button";
 import { SellerContactDialog } from "./SellerContactDialog";
+import { HowToSellProcess } from "./HowToSellProcess";
+import { SellerComparison } from "./SellerComparison";
+import { SellerStats } from "./SellerStats";
 import { useState } from "react";
 
 export const SellerSection = () => {
@@ -36,12 +39,58 @@ export const SellerSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
             Vendi la Tua Casa a Torino
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Sei proprietario di un immobile a Torino e vuoi venderlo? Jungle Rent acquista appartamenti nelle zone universitarie 
-            di Torino per trasformarli in soluzioni abitative ottimizzate per studenti. Valutazione gratuita in 48 ore, 
-            processo trasparente e pagamento rapido.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+            Sei proprietario di un immobile a Torino e vuoi venderlo velocemente? Jungle Rent è l'acquirente diretto 
+            che stavi cercando. Acquistiamo appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, 
+            Centro, Vanchiglia, Lingotto) per trasformarli in soluzioni abitative ottimizzate per studenti e giovani 
+            professionisti. <strong>Valutazione gratuita in 48 ore</strong>, processo trasparente e <strong>zero commissioni</strong> 
+            per il venditore.
           </p>
+          
+          <div className="max-w-4xl mx-auto text-left space-y-6 bg-card/50 p-8 rounded-xl border border-border/50">
+            <h3 className="text-2xl font-bold text-center mb-4">Perché Acquistiamo Immobili a Torino</h3>
+            
+            <p className="text-muted-foreground leading-relaxed">
+              Jungle Rent nasce dalla visione di ottimizzare il mercato degli affitti studenteschi a Torino, 
+              una città universitaria in continua crescita con oltre 90.000 studenti tra Politecnico di Torino, 
+              Università degli Studi (UniTo), ESCP Business School e IED. La domanda di alloggi di qualità 
+              nelle zone universitarie è altissima, ma l'offerta è spesso frammentata e poco professionale.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              La nostra missione è acquisire appartamenti strategicamente posizionati nelle zone universitarie 
+              e trasformarli in housing moderno e ottimizzato: spazi condivisi confortevoli, camere singole 
+              ben arredate, servizi inclusi e gestione professionale. Per questo cerchiamo trilocali, quadrilocali 
+              e appartamenti più grandi in zone come <strong>Crocetta, San Salvario, Centro, Vanchiglia, Lingotto, 
+              Santa Rita e San Paolo</strong>, idealmente a 10-20 minuti a piedi o in mezzi pubblici dai principali 
+              atenei torinesi.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              Nel 2024 abbiamo acquistato 48 immobili a Torino, investendo oltre €8,7 milioni nel mercato immobiliare 
+              locale. Lavoriamo con notai e avvocati specializzati per garantire transazioni sicure e veloci, 
+              con tempi medi di 42 giorni dalla valutazione iniziale al rogito finale. La nostra valutazione si 
+              basa su analisi di mercato aggiornate settimanalmente, considerando posizione, metratura, stato 
+              dell'immobile e potenziale di ottimizzazione per il mercato degli affitti.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              <strong>Vantaggi per chi vende a Jungle Rent:</strong> nessuna commissione di agenzia (risparmi 
+              €6.000-10.000), processo rapido senza decine di visite di estranei in casa, offerta scritta chiara 
+              entro 48 ore dal sopralluogo, supporto legale incluso e pagamento garantito. Acquistiamo anche 
+              immobili da ristrutturare, valutandoli nello stato attuale senza richiedere lavori preventivi.
+            </p>
+          </div>
         </div>
+
+        {/* Stats Section */}
+        <SellerStats />
+
+        {/* How It Works Section */}
+        <HowToSellProcess />
+
+        {/* Comparison Section */}
+        <SellerComparison />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {benefits.map((benefit, index) => (
