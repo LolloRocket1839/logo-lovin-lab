@@ -135,6 +135,38 @@ export const StructuredData = () => {
             text: "No, Jungle Rent opera con zero commissioni per gli studenti, rendendo l'affitto ancora più conveniente.",
           },
         },
+        {
+          "@type": "Question",
+          name: "Come posso vendere la mia casa a Torino a Jungle Rent?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Jungle Rent acquista appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, Centro, Vanchiglia, Lingotto). Compila il form di contatto nella sezione 'Vendi la Tua Casa' per ricevere una valutazione gratuita entro 48 ore. Cerchiamo trilocali, quadrilocali e appartamenti vicini a Politecnico, UniTo, ESCP.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Quali immobili acquista Jungle Rent a Torino?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Acquistiamo appartamenti (trilocali, quadrilocali, 5 locali) nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Lingotto, Santa Rita, San Paolo. Ideali sono immobili a 10-20 minuti da Politecnico di Torino, Università di Torino, ESCP Business School. Valutazione gratuita in 48 ore.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Quanto tempo ci vuole per vendere casa a Jungle Rent?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Il processo di vendita con Jungle Rent è rapido: valutazione gratuita in 48 ore, proposta di acquisto entro 1 settimana, chiusura contratto in 30-60 giorni. Nessun intermediario, transazione diretta e trasparente per immobili a Torino zona universitaria.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Vendere casa a Torino zona Crocetta o San Salvario conviene?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Le zone Crocetta, San Salvario e Centro sono molto richieste per affitti studenti grazie alla vicinanza a Politecnico e UniTo. Jungle Rent acquista immobili in queste aree per trasformarli in housing ottimizzato. Valutazione di mercato equa e processo veloce.",
+          },
+        },
       ],
     };
 
