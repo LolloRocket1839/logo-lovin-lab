@@ -76,6 +76,36 @@ export const InvestorSection = () => {
             Perché Investire con Noi
           </h3>
           
+          {/* Visual Decoration - Investment Flow */}
+          <div className="max-w-3xl mx-auto mb-12 md:mb-16 px-4">
+            <div className="relative flex items-center justify-between py-8">
+              {/* Connection line */}
+              <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 -translate-y-1/2" />
+              
+              {/* Step indicators */}
+              <div className="relative z-10 flex flex-col items-center gap-3 bg-background px-2">
+                <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group hover:bg-primary/20 transition-colors duration-500">
+                  <TrendingUp className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                <span className="text-xs font-medium text-muted-foreground text-center">Rendimenti</span>
+              </div>
+              
+              <div className="relative z-10 flex flex-col items-center gap-3 bg-background px-2">
+                <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group hover:bg-primary/20 transition-colors duration-500">
+                  <BarChart3 className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                <span className="text-xs font-medium text-muted-foreground text-center">Gestione</span>
+              </div>
+              
+              <div className="relative z-10 flex flex-col items-center gap-3 bg-background px-2">
+                <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group hover:bg-primary/20 transition-colors duration-500">
+                  <PieChart className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                </div>
+                <span className="text-xs font-medium text-muted-foreground text-center">Portfolio</span>
+              </div>
+            </div>
+          </div>
+          
           {/* Asymmetric Bento Grid */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {investorBenefits.map((benefit, index) => {
