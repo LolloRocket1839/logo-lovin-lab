@@ -67,32 +67,6 @@ export const InvestorSection = () => {
           </p>
         </div>
 
-        {/* Hero Metrics Section */}
-        <div className="mb-24 md:mb-32 lg:mb-40">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <InvestorMetricCard
-              icon={Target}
-              value="€500"
-              suffix="k+"
-              label="Capitale Gestito"
-              delay={0}
-            />
-            <InvestorMetricCard
-              icon={Users}
-              value="95"
-              suffix="%"
-              label="Occupazione Media"
-              delay={100}
-            />
-            <InvestorMetricCard
-              icon={Building2}
-              value="7"
-              label="Proprietà Strategiche"
-              delay={200}
-            />
-          </div>
-        </div>
-
         {/* Partner Logos */}
         <PartnerLogos />
 
