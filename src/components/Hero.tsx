@@ -229,9 +229,7 @@ export const Hero = () => {
               <img 
                 src={logo2i3t} 
                 alt="2i3T Incubatore Imprese Università di Torino - Partner ufficiale" 
-                width="120"
-                height="32"
-                className="h-8 inline-block" 
+                className="h-10 w-auto object-contain inline-block" 
                 loading="lazy"
               />
             </a>
