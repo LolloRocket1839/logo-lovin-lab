@@ -7,15 +7,21 @@ export const PartnerLogos = () => {
         Powered by
       </p>
       <div className="flex items-center justify-center gap-12">
-        <div className="group relative">
+        <a 
+          href="https://www.2i3t.it" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="group relative"
+          aria-label="Visita il sito di 2i3T - Incubatore Politecnico di Torino"
+        >
           <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg" />
           <img
             src={logo2i3t}
             alt="2i3T - Incubatore Imprese Innovative Politecnico di Torino"
-            className="h-12 md:h-16 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 relative z-10"
+            className="h-12 md:h-16 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 relative z-10 cursor-pointer"
             loading="lazy"
           />
-        </div>
+        </a>
       </div>
       <p className="text-center text-xs text-muted-foreground/50 mt-6 font-light">
         Incubatore Imprese Innovative - Politecnico di Torino
