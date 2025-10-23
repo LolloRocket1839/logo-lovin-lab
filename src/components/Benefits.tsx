@@ -1,5 +1,8 @@
 import { Wallet, Shield, MapPin, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+import { openEmail, MESSAGES } from "@/lib/contacts";
 
 const benefits = [
   {
@@ -46,9 +49,30 @@ export const Benefits = () => {
           <h2 id="benefits-heading" className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             Vantaggi Concreti per<br />Studenti & Investitori
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-8">
             Gestione professionale, risparmio garantito e partnership istituzionali
           </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button
+              size="lg"
+              onClick={() => openEmail(MESSAGES.student.email.subject, MESSAGES.student.email.body)}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base group"
+            >
+              <Mail className="mr-2 w-5 h-5" />
+              Sono uno Studente
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={() => openEmail(MESSAGES.investor.email.subject, MESSAGES.investor.email.body)}
+              className="border-primary/30 hover:bg-primary/5 px-8 py-6 text-base group"
+            >
+              <Mail className="mr-2 w-5 h-5" />
+              Sono un Investitore
+            </Button>
+          </div>
         </div>
 
         {/* Grid layout - 4 benefits */}
