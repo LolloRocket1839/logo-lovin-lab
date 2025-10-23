@@ -29,6 +29,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
     motivation: "",
     urgent: false,
     message: "",
+    privacyConsent: false,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -39,6 +40,15 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
       toast({
         title: "Errore",
         description: "Compila tutti i campi obbligatori",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!formData.privacyConsent) {
+      toast({
+        title: "Consenso richiesto",
+        description: "Devi acconsentire al trattamento dei dati per continuare",
         variant: "destructive",
       });
       return;
@@ -81,12 +91,13 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
       motivation: "",
       urgent: false,
       message: "",
+      privacyConsent: false,
     });
   };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px]">
+      <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
             <Building2 className="w-6 h-6 text-primary" />
@@ -97,7 +108,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+        <form onSubmit={handleSubmit} className="space-y-4 mt-4 pb-4">
           <div className="space-y-2">
             <Label htmlFor="seller-name">Nome e Cognome *</Label>
             <Input
@@ -265,7 +276,23 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             />
           </div>
 
-          <Button type="submit" className="w-full" size="lg">
+          <div className="flex items-start space-x-2 p-4 bg-muted/50 rounded-lg border border-border">
+            <Checkbox 
+              id="seller-privacy" 
+              checked={formData.privacyConsent}
+              onCheckedChange={(checked) => setFormData({ ...formData, privacyConsent: checked as boolean })}
+              required
+            />
+            <Label htmlFor="seller-privacy" className="cursor-pointer text-sm leading-relaxed">
+              Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) 
+              e autorizzo Jungle Rent a contattarmi per la valutazione dell'immobile. 
+              <a href="/privacy" target="_blank" className="text-primary underline ml-1">
+                Leggi l'informativa privacy
+              </a>
+            </Label>
+          </div>
+
+          <Button type="submit" className="w-full" size="lg" disabled={!formData.privacyConsent}>
             Invia Richiesta
           </Button>
 
