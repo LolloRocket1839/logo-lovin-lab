@@ -1,6 +1,6 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, X, FileText } from "lucide-react";
+import { Download, FileText } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useToast } from "@/hooks/use-toast";
 import { jsPDF } from "jspdf";
@@ -163,16 +163,6 @@ export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden border-0 bg-transparent">
         <div className="relative bg-white rounded-lg p-8 md:p-12">
-          {/* Close button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute top-4 right-4 rounded-full hover:bg-muted"
-            onClick={() => onOpenChange(false)}
-          >
-            <X className="h-4 w-4" />
-          </Button>
-
           {/* Logo */}
           <div className="flex flex-col items-center justify-center space-y-8">
             <div className="relative">
