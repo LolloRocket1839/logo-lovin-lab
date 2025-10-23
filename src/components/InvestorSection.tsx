@@ -195,59 +195,33 @@ export const InvestorSection = () => {
           </div>
         </div>
 
-        {/* CTA Section - Asymmetric Layout */}
-        <div className="mt-24 md:mt-32 lg:mt-40 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12">
-            {/* Left - Main CTA */}
-            <div className="lg:col-span-3 space-y-6">
-              <div>
-                <h3 className="font-gotham text-3xl md:text-4xl font-bold mb-4 tracking-tight leading-tight">
-                  Prenota Consulenza<br />Esclusiva
-                </h3>
-                <p className="text-muted-foreground text-lg font-light leading-relaxed">
-                  Parliamo della tua strategia di investimento immobiliare
-                </p>
-              </div>
-              
+        {/* CTA Section - Centered Waitlist */}
+        <div className="mt-24 md:mt-32 lg:mt-40 max-w-3xl mx-auto">
+          <div className="p-10 md:p-14 lg:p-16 rounded-2xl border border-border bg-card/50 backdrop-blur-sm space-y-8">
+            <div className="text-center space-y-4">
+              <h3 className="font-gotham text-3xl md:text-5xl font-bold tracking-tight">
+                Iscriviti alla Waitlist Investitori
+              </h3>
+              <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mx-auto">
+                Ricevi aggiornamenti sulle opportunità di investimento immobiliare a Torino
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center gap-6">
               <Button 
-                size="lg" 
+                onClick={() => setWaitlistOpen(true)}
+                size="lg"
                 variant="premium"
-                onClick={handleInvestorContact}
-                className="w-full sm:w-auto px-10 py-7 text-base group"
+                className="w-full sm:w-auto px-12 py-7 text-base group"
               >
-                Contatta Consulente
+                Iscriviti Ora
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="font-medium">Risposta prioritaria garantita</span>
-                </div>
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <span className="font-medium">Risposta prioritaria garantita</span>
               </div>
-            </div>
-            
-            {/* Right - Waitlist */}
-            <div className="lg:col-span-2 p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm space-y-4">
-              <div className="text-center space-y-2">
-                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium">
-                  Oppure
-                </p>
-                <h4 className="font-display text-xl font-semibold">
-                  Iscriviti alla Waitlist
-                </h4>
-                <p className="text-sm text-muted-foreground font-light">
-                  Ricevi aggiornamenti sulle opportunità
-                </p>
-              </div>
-              
-              <Button 
-                onClick={() => setWaitlistOpen(true)}
-                variant="outline"
-                className="w-full h-12 border-primary/20 hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
-              >
-                Iscriviti Ora
-              </Button>
             </div>
           </div>
         </div>
