@@ -3,7 +3,6 @@ import { Button } from "./ui/button";
 import { SellerContactDialog } from "./SellerContactDialog";
 import { HowToSellProcess } from "./HowToSellProcess";
 import { SellerComparison } from "./SellerComparison";
-import { SellerStats } from "./SellerStats";
 import { useState } from "react";
 
 export const SellerSection = () => {
@@ -67,11 +66,9 @@ export const SellerSection = () => {
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              Nel 2024 abbiamo acquistato 48 immobili a Torino, investendo oltre €8,7 milioni nel mercato immobiliare 
-              locale. Lavoriamo con notai e avvocati specializzati per garantire transazioni sicure e veloci, 
-              con tempi medi di 42 giorni dalla valutazione iniziale al rogito finale. La nostra valutazione si 
-              basa su analisi di mercato aggiornate settimanalmente, considerando posizione, metratura, stato 
-              dell'immobile e potenziale di ottimizzazione per il mercato degli affitti.
+              Lavoriamo con notai e avvocati specializzati per garantire transazioni sicure e veloci. 
+              La nostra valutazione si basa su analisi di mercato aggiornate settimanalmente, considerando 
+              posizione, metratura, stato dell'immobile e potenziale di ottimizzazione per il mercato degli affitti.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
@@ -82,9 +79,6 @@ export const SellerSection = () => {
             </p>
           </div>
         </div>
-
-        {/* Stats Section */}
-        <SellerStats />
 
         {/* How It Works Section */}
         <HowToSellProcess />

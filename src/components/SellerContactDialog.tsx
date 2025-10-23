@@ -296,16 +296,9 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             Invia Richiesta
           </Button>
 
-          <div className="space-y-3 pt-4 border-t border-border/50">
-            <p className="text-xs text-muted-foreground text-center">
-              ✓ Risposta garantita entro 48 ore • ✓ Valutazione gratuita e senza impegno • ✓ Zero commissioni
-            </p>
-            <div className="flex items-center justify-center gap-6 text-xs text-muted-foreground">
-              <span>🏢 48 immobili acquistati nel 2024</span>
-              <span>⏱️ 42 giorni tempo medio</span>
-              <span>⭐ 4.9/5 soddisfazione</span>
-            </div>
-          </div>
+          <p className="text-xs text-muted-foreground text-center pt-4 border-t border-border/50">
+            ✓ Risposta garantita entro 48 ore • ✓ Valutazione gratuita e senza impegno • ✓ Zero commissioni
+          </p>
         </form>
       </DialogContent>
     </Dialog>
