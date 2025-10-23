@@ -13,150 +13,191 @@ interface LogoModalProps {
 export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
   const { toast } = useToast();
 
-  const downloadLogoPNG = () => {
-    // Create canvas to convert SVG to PNG
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    
-    img.onload = () => {
-      const canvas = document.createElement("canvas");
-      const size = 1024; // High resolution PNG
-      canvas.width = size;
-      canvas.height = size;
+  const downloadLogoPNG = async () => {
+    try {
+      console.log("Starting PNG download...");
       
-      const ctx = canvas.getContext("2d");
-      if (!ctx) {
-        toast({
-          title: "Errore",
-          description: "Impossibile generare il PNG",
-          variant: "destructive",
-        });
-        return;
-      }
-
-      // Draw white background
-      ctx.fillStyle = "#ffffff";
-      ctx.fillRect(0, 0, size, size);
+      // Fetch SVG as blob
+      const response = await fetch(jungleRentLogo);
+      if (!response.ok) throw new Error("Failed to fetch logo");
       
-      // Draw logo centered
-      ctx.drawImage(img, 0, 0, size, size);
+      const svgBlob = await response.blob();
+      const svgUrl = URL.createObjectURL(svgBlob);
       
-      // Convert to PNG and download
-      canvas.toBlob((blob) => {
-        if (!blob) {
+      const img = new Image();
+      
+      img.onload = () => {
+        console.log("Image loaded successfully");
+        const canvas = document.createElement("canvas");
+        const size = 1024;
+        canvas.width = size;
+        canvas.height = size;
+        
+        const ctx = canvas.getContext("2d");
+        if (!ctx) {
           toast({
-            title: "Errore",
-            description: "Impossibile generare il PNG",
+            title: "❌ Errore",
+            description: "Impossibile creare il canvas",
             variant: "destructive",
           });
+          URL.revokeObjectURL(svgUrl);
           return;
         }
+
+        // White background
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, size, size);
         
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "jungle-rent-logo.png";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
+        // Draw logo
+        ctx.drawImage(img, 0, 0, size, size);
+        
+        // Convert to PNG and download
+        canvas.toBlob((blob) => {
+          URL.revokeObjectURL(svgUrl);
+          
+          if (!blob) {
+            toast({
+              title: "❌ Errore",
+              description: "Impossibile generare il PNG",
+              variant: "destructive",
+            });
+            return;
+          }
+          
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = "jungle-rent-logo.png";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+          
+          toast({
+            title: "✅ Download completato!",
+            description: "Logo PNG scaricato con successo",
+          });
+        }, "image/png");
+      };
+
+      img.onerror = (error) => {
+        console.error("Image load error:", error);
+        URL.revokeObjectURL(svgUrl);
+        toast({
+          title: "❌ Errore",
+          description: "Impossibile caricare il logo",
+          variant: "destructive",
+        });
+      };
+
+      img.src = svgUrl;
+    } catch (error) {
+      console.error("PNG download error:", error);
+      toast({
+        title: "❌ Errore",
+        description: "Impossibile scaricare il logo",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const downloadLogoPDF = async () => {
+    try {
+      console.log("Starting PDF download...");
+      
+      // Fetch SVG as blob
+      const response = await fetch(jungleRentLogo);
+      if (!response.ok) throw new Error("Failed to fetch logo");
+      
+      const svgBlob = await response.blob();
+      const svgUrl = URL.createObjectURL(svgBlob);
+      
+      const img = new Image();
+      
+      img.onload = () => {
+        console.log("Image loaded successfully for PDF");
+        const canvas = document.createElement("canvas");
+        const size = 1024;
+        canvas.width = size;
+        canvas.height = size;
+        
+        const ctx = canvas.getContext("2d");
+        if (!ctx) {
+          toast({
+            title: "❌ Errore",
+            description: "Impossibile creare il canvas",
+            variant: "destructive",
+          });
+          URL.revokeObjectURL(svgUrl);
+          return;
+        }
+
+        // White background
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, size, size);
+        
+        // Draw logo
+        ctx.drawImage(img, 0, 0, size, size);
+        
+        // Convert to image data
+        const imgData = canvas.toDataURL("image/png");
+        URL.revokeObjectURL(svgUrl);
+        
+        // Create PDF
+        const pdf = new jsPDF({
+          orientation: "portrait",
+          unit: "mm",
+          format: "a4"
+        });
+        
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+        const logoSize = 150;
+        const x = (pageWidth - logoSize) / 2;
+        const y = (pageHeight - logoSize) / 2;
+        
+        pdf.addImage(imgData, "PNG", x, y, logoSize, logoSize);
+        
+        // Add text
+        pdf.setFontSize(20);
+        pdf.setTextColor(77, 142, 89);
+        const text = "Jungle Rent";
+        const textWidth = pdf.getTextWidth(text);
+        pdf.text(text, (pageWidth - textWidth) / 2, y + logoSize + 15);
+        
+        pdf.setFontSize(10);
+        pdf.setTextColor(100, 100, 100);
+        const subtitle = "Il tuo rifugio sicuro nella giungla immobiliare";
+        const subtitleWidth = pdf.getTextWidth(subtitle);
+        pdf.text(subtitle, (pageWidth - subtitleWidth) / 2, y + logoSize + 22);
+        
+        pdf.save("jungle-rent-logo.pdf");
         
         toast({
           title: "✅ Download completato!",
-          description: "Logo PNG scaricato con successo",
+          description: "Logo PDF scaricato con successo",
         });
-      }, "image/png");
-    };
+      };
 
-    img.onerror = () => {
-      toast({
-        title: "Errore",
-        description: "Impossibile caricare il logo",
-        variant: "destructive",
-      });
-    };
-
-    img.src = jungleRentLogo;
-  };
-
-  const downloadLogoPDF = () => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    
-    img.onload = () => {
-      const canvas = document.createElement("canvas");
-      const size = 1024;
-      canvas.width = size;
-      canvas.height = size;
-      
-      const ctx = canvas.getContext("2d");
-      if (!ctx) {
+      img.onerror = (error) => {
+        console.error("Image load error:", error);
+        URL.revokeObjectURL(svgUrl);
         toast({
-          title: "Errore",
-          description: "Impossibile generare il PDF",
+          title: "❌ Errore",
+          description: "Impossibile caricare il logo",
           variant: "destructive",
         });
-        return;
-      }
+      };
 
-      // Draw white background
-      ctx.fillStyle = "#ffffff";
-      ctx.fillRect(0, 0, size, size);
-      
-      // Draw logo
-      ctx.drawImage(img, 0, 0, size, size);
-      
-      // Convert canvas to image data
-      const imgData = canvas.toDataURL("image/png");
-      
-      // Create PDF (A4 format)
-      const pdf = new jsPDF({
-        orientation: "portrait",
-        unit: "mm",
-        format: "a4"
-      });
-      
-      // Calculate dimensions to center logo on A4 page
-      const pageWidth = pdf.internal.pageSize.getWidth();
-      const pageHeight = pdf.internal.pageSize.getHeight();
-      const logoSize = 150; // 150mm logo size
-      const x = (pageWidth - logoSize) / 2;
-      const y = (pageHeight - logoSize) / 2;
-      
-      // Add logo to PDF
-      pdf.addImage(imgData, "PNG", x, y, logoSize, logoSize);
-      
-      // Add text below logo
-      pdf.setFontSize(20);
-      pdf.setTextColor(77, 142, 89); // Primary green color
-      const text = "Jungle Rent";
-      const textWidth = pdf.getTextWidth(text);
-      pdf.text(text, (pageWidth - textWidth) / 2, y + logoSize + 15);
-      
-      pdf.setFontSize(10);
-      pdf.setTextColor(100, 100, 100);
-      const subtitle = "Il tuo rifugio sicuro nella giungla immobiliare";
-      const subtitleWidth = pdf.getTextWidth(subtitle);
-      pdf.text(subtitle, (pageWidth - subtitleWidth) / 2, y + logoSize + 22);
-      
-      // Save PDF
-      pdf.save("jungle-rent-logo.pdf");
-      
+      img.src = svgUrl;
+    } catch (error) {
+      console.error("PDF download error:", error);
       toast({
-        title: "✅ Download completato!",
-        description: "Logo PDF scaricato con successo",
-      });
-    };
-
-    img.onerror = () => {
-      toast({
-        title: "Errore",
-        description: "Impossibile caricare il logo",
+        title: "❌ Errore",
+        description: "Impossibile scaricare il PDF",
         variant: "destructive",
       });
-    };
-
-    img.src = jungleRentLogo;
+    }
   };
 
   return (
