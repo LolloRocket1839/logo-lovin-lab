@@ -133,12 +133,13 @@ export const Hero = () => {
                   Sei uno studente?
                 </div>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
-                              bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600
-                              tracking-tighter leading-[0.95]
+                              bg-clip-text text-transparent bg-gradient-to-r from-cyan-700 via-blue-700 to-indigo-700
+                              tracking-tighter leading-tight
                               group-hover:animate-pulse z-10
                               drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]
-                              [text-shadow:_0_2px_8px_rgb(255_255_255_/_40%)]">
-                  Risparmia sull'affitto!
+                              [text-shadow:_0_2px_8px_rgb(255_255_255_/_40%)]
+                              py-2">
+                  Risparmia sull&apos;affitto!
                 </p>
                 
                 {/* Arrow con bounce */}
