@@ -1,8 +1,12 @@
+import { useState } from "react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS } from "@/lib/contacts";
+import { LogoModal } from "@/components/LogoModal";
 
 export const Footer = () => {
+  const [logoModalOpen, setLogoModalOpen] = useState(false);
+  
   return (
     <footer className="bg-background border-t border-border relative overflow-hidden">
       {/* Top border decoration */}
@@ -16,7 +20,17 @@ export const Footer = () => {
               <img 
                 src={jungleRentLogo} 
                 alt="Jungle Rent" 
-                className="w-12 h-12 md:w-16 md:h-16 opacity-80 rounded-3xl"
+                className="w-12 h-12 md:w-16 md:h-16 opacity-80 rounded-3xl cursor-pointer 
+                           hover:opacity-100 hover:scale-105 transition-all duration-300"
+                onClick={() => setLogoModalOpen(true)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setLogoModalOpen(true);
+                  }
+                }}
               />
             </div>
             <p className="text-muted-foreground mb-4 leading-relaxed font-light">
@@ -119,6 +133,8 @@ export const Footer = () => {
           </p>
         </div>
       </div>
+      
+      <LogoModal open={logoModalOpen} onOpenChange={setLogoModalOpen} />
     </footer>
   );
 };

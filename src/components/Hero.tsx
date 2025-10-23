@@ -4,9 +4,11 @@ import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo.png";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
+import { LogoModal } from "@/components/LogoModal";
 
 export const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [logoModalOpen, setLogoModalOpen] = useState(false);
 
   const handleWhatsAppLorenzo = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp(CONTACTS.lorenzo.name));
@@ -80,8 +82,17 @@ export const Hero = () => {
               className="w-16 h-16 md:w-24 md:h-24 mx-auto opacity-90 transition-all duration-700
                          hover:opacity-100 hover:scale-110 hover:rotate-6 
                          hover:drop-shadow-[0_0_20px_hsla(150,45%,18%,0.5)]
-                         rounded-full"
+                         rounded-full cursor-pointer"
               loading="eager"
+              onClick={() => setLogoModalOpen(true)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setLogoModalOpen(true);
+                }
+              }}
             />
             <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
               Il tuo rifugio sicuro nella giungla immobiliare
@@ -282,6 +293,8 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <LogoModal open={logoModalOpen} onOpenChange={setLogoModalOpen} />
     </header>
   );
 };
