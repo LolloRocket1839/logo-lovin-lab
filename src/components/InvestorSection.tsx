@@ -71,8 +71,8 @@ export const InvestorSection = () => {
         <PartnerLogos />
 
         {/* Benefits Section - Bento Grid Layout */}
-        <div className="my-24 md:my-32 lg:my-40">
-          <h3 className="text-center text-2xl md:text-4xl font-display font-bold mb-16 md:mb-20 tracking-tight">
+        <div className="my-16 md:my-20 lg:my-24">
+          <h3 className="text-center text-2xl md:text-4xl font-display font-bold mb-10 md:mb-14 tracking-tight">
             Perché Investire con Noi
           </h3>
           
