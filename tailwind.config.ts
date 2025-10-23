@@ -18,6 +18,16 @@ export default {
         display: ['Playfair Display', 'serif'],
         accent: ['Cinzel', 'serif'],
         gotham: ['Gotham', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+      },
+      letterSpacing: {
+        'tighter': '-0.05em',
+        'wider': '0.05em',
+        'widest': '0.15em',
+      },
+      lineHeight: {
+        'tighter': '1.1',
+        'tight': '1.25',
       },
       colors: {
         border: "hsl(var(--border))",
