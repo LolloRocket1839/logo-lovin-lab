@@ -75,7 +75,7 @@ export const HowToSellProcess = () => {
                       <step.icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
-                  <div className="text-4xl font-bold text-primary/20">
+                  <div className="text-4xl font-bold text-primary/50">
                     {step.number}
                   </div>
                 </div>
