@@ -17,7 +17,7 @@ const benefits = [
   {
     icon: MapPin,
     title: "Posizione Strategica",
-    description: "Portfolio immobiliare selezionato vicino a tutti i principali atenei: Politecnico, UniTo, ESCP, SAA, IED, IAD, IUSTO",
+    description: "Portfolio immobiliare selezionato vicino a tutti i principali atenei: Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO",
     highlight: "Top Location"
   },
   {
