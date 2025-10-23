@@ -1,8 +1,9 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, X } from "lucide-react";
+import { Download, X, FileText } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useToast } from "@/hooks/use-toast";
+import { jsPDF } from "jspdf";
 
 interface LogoModalProps {
   open: boolean;
@@ -62,9 +63,89 @@ export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
         
         toast({
           title: "✅ Download completato!",
-          description: "Logo scaricato con successo",
+          description: "Logo PNG scaricato con successo",
         });
       }, "image/png");
+    };
+
+    img.onerror = () => {
+      toast({
+        title: "Errore",
+        description: "Impossibile caricare il logo",
+        variant: "destructive",
+      });
+    };
+
+    img.src = jungleRentLogo;
+  };
+
+  const downloadLogoPDF = () => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      const size = 1024;
+      canvas.width = size;
+      canvas.height = size;
+      
+      const ctx = canvas.getContext("2d");
+      if (!ctx) {
+        toast({
+          title: "Errore",
+          description: "Impossibile generare il PDF",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      // Draw white background
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, size, size);
+      
+      // Draw logo
+      ctx.drawImage(img, 0, 0, size, size);
+      
+      // Convert canvas to image data
+      const imgData = canvas.toDataURL("image/png");
+      
+      // Create PDF (A4 format)
+      const pdf = new jsPDF({
+        orientation: "portrait",
+        unit: "mm",
+        format: "a4"
+      });
+      
+      // Calculate dimensions to center logo on A4 page
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const logoSize = 150; // 150mm logo size
+      const x = (pageWidth - logoSize) / 2;
+      const y = (pageHeight - logoSize) / 2;
+      
+      // Add logo to PDF
+      pdf.addImage(imgData, "PNG", x, y, logoSize, logoSize);
+      
+      // Add text below logo
+      pdf.setFontSize(20);
+      pdf.setTextColor(77, 142, 89); // Primary green color
+      const text = "Jungle Rent";
+      const textWidth = pdf.getTextWidth(text);
+      pdf.text(text, (pageWidth - textWidth) / 2, y + logoSize + 15);
+      
+      pdf.setFontSize(10);
+      pdf.setTextColor(100, 100, 100);
+      const subtitle = "Il tuo rifugio sicuro nella giungla immobiliare";
+      const subtitleWidth = pdf.getTextWidth(subtitle);
+      pdf.text(subtitle, (pageWidth - subtitleWidth) / 2, y + logoSize + 22);
+      
+      // Save PDF
+      pdf.save("jungle-rent-logo.pdf");
+      
+      toast({
+        title: "✅ Download completato!",
+        description: "Logo PDF scaricato con successo",
+      });
     };
 
     img.onerror = () => {
@@ -112,19 +193,31 @@ export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
               </p>
             </div>
 
-            {/* Download button */}
-            <Button
-              onClick={downloadLogoPNG}
-              size="lg"
-              className="w-full sm:w-auto px-8 group"
-            >
-              <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
-              Scarica Logo PNG (1024x1024)
-            </Button>
+            {/* Download buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 w-full">
+              <Button
+                onClick={downloadLogoPNG}
+                size="lg"
+                className="flex-1 group"
+              >
+                <Download className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
+                Scarica PNG (1024x1024)
+              </Button>
+              
+              <Button
+                onClick={downloadLogoPDF}
+                size="lg"
+                variant="outline"
+                className="flex-1 group"
+              >
+                <FileText className="mr-2 h-5 w-5 transition-transform group-hover:scale-110" />
+                Scarica PDF (A4)
+              </Button>
+            </div>
 
             {/* Info */}
             <p className="text-xs text-muted-foreground text-center">
-              Logo ad alta risoluzione • Perfetto per stampa e digitale
+              Logo ad alta risoluzione • Perfetto per stampa e digitale • Formati PNG e PDF
             </p>
           </div>
         </div>
