@@ -17,6 +17,7 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Playfair Display', 'serif'],
         accent: ['Cinzel', 'serif'],
+        gotham: ['Gotham', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
