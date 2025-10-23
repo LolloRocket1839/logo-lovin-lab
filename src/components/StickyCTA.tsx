@@ -8,16 +8,24 @@ export const StickyCTA = () => {
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      // Show after scrolling 1 viewport
-      if (window.scrollY > window.innerHeight && !isDismissed) {
-        setIsVisible(true);
-      } else if (window.scrollY <= window.innerHeight) {
-        setIsVisible(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // Show after scrolling 1 viewport
+          if (window.scrollY > window.innerHeight && !isDismissed) {
+            setIsVisible(true);
+          } else if (window.scrollY <= window.innerHeight) {
+            setIsVisible(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDismissed]);
 

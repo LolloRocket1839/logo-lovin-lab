@@ -19,17 +19,25 @@ export const Hero = () => {
   };
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      
-      // Calcolo molto sensibile: inizia subito e si completa entro 1 viewport
-      // Progress va da 0 (top) a 1 (dopo 1vh)
-      const progress = Math.min(Math.max(scrollPosition / windowHeight, 0), 1);
-      setScrollProgress(progress);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollPosition = window.scrollY;
+          const windowHeight = window.innerHeight;
+          
+          // Calcolo molto sensibile: inizia subito e si completa entro 1 viewport
+          // Progress va da 0 (top) a 1 (dopo 1vh)
+          const progress = Math.min(Math.max(scrollPosition / windowHeight, 0), 1);
+          setScrollProgress(progress);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
     
     return () => window.removeEventListener('scroll', handleScroll);

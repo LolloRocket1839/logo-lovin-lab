@@ -7,15 +7,26 @@ export const StickyInvestorCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const investorSection = document.getElementById("investor-section");
-      if (!investorSection) return;
+    let ticking = false;
 
-      const rect = investorSection.getBoundingClientRect();
-      const isInView = rect.top < window.innerHeight && rect.bottom > 0;
-      const isNotAtBottom = rect.bottom > window.innerHeight * 0.8;
-      
-      setIsVisible(isInView && isNotAtBottom);
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const investorSection = document.getElementById("investor-section");
+          if (!investorSection) {
+            ticking = false;
+            return;
+          }
+
+          const rect = investorSection.getBoundingClientRect();
+          const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+          const isNotAtBottom = rect.bottom > window.innerHeight * 0.8;
+          
+          setIsVisible(isInView && isNotAtBottom);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
