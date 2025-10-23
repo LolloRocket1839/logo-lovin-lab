@@ -76,32 +76,76 @@ export const InvestorSection = () => {
             Perché Investire con Noi
           </h3>
           
-          {/* Visual Decoration - Investment Flow */}
-          <div className="max-w-3xl mx-auto mb-12 md:mb-16 px-4">
-            <div className="relative flex items-center justify-between py-8">
-              {/* Connection line */}
-              <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 -translate-y-1/2" />
-              
-              {/* Step indicators */}
-              <div className="relative z-10 flex flex-col items-center gap-3 bg-background px-2">
-                <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group hover:bg-primary/20 transition-colors duration-500">
-                  <TrendingUp className="w-7 h-7 text-primary" strokeWidth={1.5} />
-                </div>
-                <span className="text-xs font-medium text-muted-foreground text-center">Rendimenti</span>
+          {/* Visual Decoration - Investment Flow - Enhanced */}
+          <div className="max-w-4xl mx-auto mb-12 md:mb-16 px-4">
+            <div className="relative flex items-center justify-between py-12">
+              {/* Gradient connection line with pulse effect */}
+              <div className="absolute top-1/2 left-0 right-0 h-[1px] -translate-y-1/2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/60 to-primary/0 animate-pulse" 
+                     style={{ animationDuration: '3s' }} />
               </div>
               
-              <div className="relative z-10 flex flex-col items-center gap-3 bg-background px-2">
-                <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group hover:bg-primary/20 transition-colors duration-500">
-                  <BarChart3 className="w-7 h-7 text-primary" strokeWidth={1.5} />
+              {/* Enhanced step indicators */}
+              <div className="relative z-10 flex flex-col items-center gap-4 group">
+                <div className="relative">
+                  {/* Glow effect on hover */}
+                  <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-primary/5 to-primary/15 
+                                border-[3px] border-primary/30 
+                                flex items-center justify-center 
+                                group-hover:border-primary/60 
+                                group-hover:shadow-lg group-hover:shadow-primary/20
+                                transition-all duration-700 
+                                group-hover:scale-110
+                                backdrop-blur-sm">
+                    <TrendingUp className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-700" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <span className="text-xs font-medium text-muted-foreground text-center">Gestione</span>
+                <div className="text-center">
+                  <span className="text-sm font-semibold text-foreground block mb-1">Rendimenti</span>
+                  <span className="text-xs text-muted-foreground font-light">Ottimizzati</span>
+                </div>
               </div>
               
-              <div className="relative z-10 flex flex-col items-center gap-3 bg-background px-2">
-                <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center group hover:bg-primary/20 transition-colors duration-500">
-                  <PieChart className="w-7 h-7 text-primary" strokeWidth={1.5} />
+              <div className="relative z-10 flex flex-col items-center gap-4 group">
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-primary/5 to-primary/15 
+                                border-[3px] border-primary/30 
+                                flex items-center justify-center 
+                                group-hover:border-primary/60 
+                                group-hover:shadow-lg group-hover:shadow-primary/20
+                                transition-all duration-700 
+                                group-hover:scale-110
+                                backdrop-blur-sm">
+                    <BarChart3 className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-700" strokeWidth={1.5} />
+                  </div>
                 </div>
-                <span className="text-xs font-medium text-muted-foreground text-center">Portfolio</span>
+                <div className="text-center">
+                  <span className="text-sm font-semibold text-foreground block mb-1">Gestione</span>
+                  <span className="text-xs text-muted-foreground font-light">Professionale</span>
+                </div>
+              </div>
+              
+              <div className="relative z-10 flex flex-col items-center gap-4 group">
+                <div className="relative">
+                  <div className="absolute inset-0 rounded-full bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-primary/5 to-primary/15 
+                                border-[3px] border-primary/30 
+                                flex items-center justify-center 
+                                group-hover:border-primary/60 
+                                group-hover:shadow-lg group-hover:shadow-primary/20
+                                transition-all duration-700 
+                                group-hover:scale-110
+                                backdrop-blur-sm">
+                    <PieChart className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-700" strokeWidth={1.5} />
+                  </div>
+                </div>
+                <div className="text-center">
+                  <span className="text-sm font-semibold text-foreground block mb-1">Portfolio</span>
+                  <span className="text-xs text-muted-foreground font-light">Strategico</span>
+                </div>
               </div>
             </div>
           </div>
