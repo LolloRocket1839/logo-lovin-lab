@@ -133,7 +133,7 @@ export const Hero = () => {
                   Sei uno studente?
                 </div>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
-                              bg-clip-text text-transparent bg-gradient-to-r from-cyan-700 via-blue-700 to-indigo-700
+                              bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-red-600
                               tracking-tighter leading-tight
                               group-hover:animate-pulse z-10
                               drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]
