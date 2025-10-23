@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
+import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo.png";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 

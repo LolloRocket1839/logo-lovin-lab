@@ -1,4 +1,4 @@
-import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
+import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS } from "@/lib/contacts";
 

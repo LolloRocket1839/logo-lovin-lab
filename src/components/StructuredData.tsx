@@ -7,8 +7,8 @@ export const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Jungle Rent",
-      url: "https://junglerent.it",
-      logo: "https://junglerent.it/jungle-rent-logo.png",
+      url: "https://junglerent.com",
+      logo: "https://junglerent.com/jungle-rent-logo.svg",
       description:
         "Servizio di ottimizzazione affitti per studenti e investitori a Torino. Affitti convenienti e opportunità di investimento.",
       address: {
@@ -35,7 +35,7 @@ export const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
       name: "Jungle Rent",
-      image: "https://junglerent.it/jungle-rent-logo.png",
+      image: "https://junglerent.com/jungle-rent-logo.svg",
       description:
         "Il tuo rifugio sicuro nella giungla immobiliare. Affitti smart e opportunità di investimento per studenti e investitori a Torino.",
       areaServed: {
