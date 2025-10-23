@@ -6,10 +6,10 @@ export const HowToSellProcess = () => {
       icon: FileSearch,
       number: "01",
       title: "Richiedi Valutazione",
-      description: "Compila il form con i dati della tua proprietà. Ti ricontatteremo entro 24-48 ore per confermare i dettagli e fissare un eventuale sopralluogo.",
+      description: "Compila il form con i dati della tua proprietà. Ti ricontatteremo entro 3-5 giorni per confermare i dettagli e fissare un eventuale sopralluogo.",
       bullets: [
         "Valutazione gratuita e senza impegno",
-        "Risposta garantita in 24-48 ore",
+        "Risposta garantita in 3-5 giorni",
         "Zero commissioni per il venditore"
       ]
     },
@@ -17,9 +17,9 @@ export const HowToSellProcess = () => {
       icon: Clock,
       number: "02",
       title: "Sopralluogo Gratuito",
-      description: "Il nostro team visita l'immobile entro 7 giorni per valutare le condizioni reali, la posizione e il potenziale di ottimizzazione per il mercato studentesco.",
+      description: "Il nostro team visita l'immobile entro 10-14 giorni per valutare le condizioni reali, la posizione e il potenziale di ottimizzazione per il mercato studentesco.",
       bullets: [
-        "Sopralluogo entro 7 giorni dalla richiesta",
+        "Sopralluogo entro 10-14 giorni dalla richiesta",
         "Valutazione professionale sul posto",
         "Analisi del potenziale immobiliare"
       ]
@@ -28,9 +28,9 @@ export const HowToSellProcess = () => {
       icon: FileText,
       number: "03",
       title: "Offerta Scritta",
-      description: "Entro 48 ore dal sopralluogo riceverai un'offerta scritta chiara e trasparente, basata sui prezzi di mercato aggiornati della zona universitaria.",
+      description: "Entro 5-7 giorni dal sopralluogo riceverai un'offerta scritta chiara e trasparente, basata sui prezzi di mercato aggiornati della zona universitaria.",
       bullets: [
-        "Offerta scritta entro 48 ore",
+        "Offerta scritta entro 5-7 giorni",
         "Prezzo di mercato competitivo",
         "Nessuna sorpresa o costi nascosti"
       ]
@@ -39,9 +39,9 @@ export const HowToSellProcess = () => {
       icon: FileCheck,
       number: "04",
       title: "Rogito e Pagamento",
-      description: "Una volta accettata l'offerta, procediamo con il rogito notarile entro 30-60 giorni. Gestiamo tutta la burocrazia e il pagamento è rapido e sicuro.",
+      description: "Una volta accettata l'offerta, procediamo con il rogito notarile entro 60-90 giorni. Gestiamo tutta la burocrazia e il pagamento è rapido e sicuro.",
       bullets: [
-        "Rogito entro 30-60 giorni",
+        "Rogito entro 60-90 giorni",
         "Supporto legale incluso",
         "Pagamento veloce e garantito"
       ]
@@ -56,7 +56,7 @@ export const HowToSellProcess = () => {
             Come Funziona la Vendita
           </h3>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Processo semplice, veloce e trasparente in 4 step. Dal primo contatto al rogito in 30-60 giorni.
+            Processo semplice, veloce e trasparente in 4 step. Dal primo contatto al rogito in 60-90 giorni.
           </p>
         </div>
 

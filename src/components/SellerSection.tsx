@@ -41,8 +41,8 @@ export const SellerSection = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
             Sei proprietario di un immobile a Torino e vuoi venderlo velocemente? Jungle Rent è l'acquirente diretto 
             che stavi cercando. Acquistiamo appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, 
-            Centro, Vanchiglia, Lingotto) per trasformarli in soluzioni abitative ottimizzate per studenti e giovani 
-            professionisti. <strong>Valutazione gratuita in 48 ore</strong>, processo trasparente e <strong>zero commissioni</strong> 
+            Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto) per trasformarli in soluzioni abitative ottimizzate per studenti e giovani 
+            professionisti. <strong>Valutazione gratuita in 3-5 giorni</strong>, processo trasparente e <strong>zero commissioni</strong> 
             per il venditore.
           </p>
           
@@ -60,8 +60,8 @@ export const SellerSection = () => {
               La nostra missione è acquisire appartamenti strategicamente posizionati nelle zone universitarie 
               e trasformarli in housing moderno e ottimizzato: spazi condivisi confortevoli, camere singole 
               ben arredate, servizi inclusi e gestione professionale. Per questo cerchiamo trilocali, quadrilocali 
-              e appartamenti più grandi in zone come <strong>Crocetta, San Salvario, Centro, Vanchiglia, Lingotto, 
-              Santa Rita e San Paolo</strong>, idealmente a 10-20 minuti a piedi o in mezzi pubblici dai principali 
+              e appartamenti più grandi in zone come <strong>Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, 
+              Aurora, Lingotto, Santa Rita e San Paolo</strong>, idealmente a 10-20 minuti a piedi o in mezzi pubblici dai principali 
               atenei torinesi.
             </p>
 
@@ -106,13 +106,13 @@ export const SellerSection = () => {
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
               Cerchiamo appartamenti in vendita nelle seguenti zone universitarie di Torino: 
-              <strong> Crocetta, San Salvario, Centro, Vanchiglia, Lingotto, Santa Rita, San Paolo</strong>. 
+              <strong> Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto, Santa Rita, San Paolo</strong>. 
               Ideali: trilocali, quadrilocali o appartamenti più grandi vicini a Politecnico di Torino, 
               Università di Torino (UniTo), ESCP Business School, SAA, IED.
             </p>
             <p className="text-muted-foreground mb-8">
               Compiliamo il form per ricevere una valutazione gratuita della tua proprietà. 
-              Nessun impegno, risposta garantita entro 48 ore.
+              Nessun impegno, risposta garantita entro 3-5 giorni.
             </p>
           </div>
 
