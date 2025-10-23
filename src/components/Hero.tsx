@@ -133,11 +133,11 @@ export const Hero = () => {
                   Sei uno studente?
                 </div>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
-                              bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-red-600
+                              text-primary
                               tracking-tighter leading-tight
-                              group-hover:animate-pulse z-10
-                              drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]
-                              [text-shadow:_0_2px_8px_rgb(255_255_255_/_40%)]
+                              group-hover:scale-105
+                              transition-transform duration-500
+                              z-10
                               py-2">
                   Risparmia sull&apos;affitto!
                 </p>
