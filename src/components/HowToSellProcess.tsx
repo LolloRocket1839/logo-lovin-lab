@@ -43,7 +43,7 @@ export const HowToSellProcess = () => {
       bullets: [
         "Rogito entro 60-90 giorni",
         "Supporto legale incluso",
-        "Pagamento veloce e garantito"
+        "Pagamento veloce e sicuro"
       ]
     }
   ];

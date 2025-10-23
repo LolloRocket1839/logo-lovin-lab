@@ -74,7 +74,7 @@ export const SellerSection = () => {
             <p className="text-muted-foreground leading-relaxed">
               <strong>Vantaggi per chi vende a Jungle Rent:</strong> nessuna commissione di agenzia (risparmi 
               €6.000-10.000), processo rapido senza decine di visite di estranei in casa, offerta scritta chiara 
-              entro 48 ore dal sopralluogo, supporto legale incluso e pagamento garantito. Acquistiamo anche 
+              entro 48 ore dal sopralluogo, supporto legale incluso e pagamento sicuro. Acquistiamo anche 
               immobili da ristrutturare, valutandoli nello stato attuale senza richiedere lavori preventivi.
             </p>
           </div>

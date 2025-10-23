@@ -260,7 +260,7 @@ export const StructuredData = () => {
           name: "Vendita casa Torino senza agenzia: è sicuro?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sì, vendere direttamente a Jungle Rent è sicuro. Lavoriamo con notai e avvocati specializzati. Contratto trasparente, pagamento garantito, supporto legale incluso. Oltre 48 immobili acquistati nel 2024, soddisfazione media 4.9/5. Risparmio commissioni del 3-5%.",
+            text: "Sì, vendere direttamente a Jungle Rent è sicuro. Lavoriamo con notai e avvocati specializzati. Contratto trasparente, pagamento sicuro, supporto legale incluso. Risparmio commissioni del 3-5%.",
           },
         },
         {
