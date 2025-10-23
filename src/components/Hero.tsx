@@ -134,11 +134,13 @@ export const Hero = () => {
                 </div>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               text-primary
+                              hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-red-600
                               tracking-tighter leading-tight
                               group-hover:scale-105
-                              transition-transform duration-500
+                              transition-all duration-500
                               z-10
-                              py-2">
+                              py-2
+                              cursor-default">
                   Risparmia sull&apos;affitto!
                 </p>
                 
