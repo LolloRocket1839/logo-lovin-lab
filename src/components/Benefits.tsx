@@ -30,7 +30,7 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-20 md:py-32 lg:py-40 bg-background relative overflow-hidden">
+    <section id="benefits" aria-labelledby="benefits-heading" className="py-20 md:py-32 lg:py-40 bg-background relative overflow-hidden">
       {/* Top border line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
@@ -43,7 +43,7 @@ export const Benefits = () => {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             I Nostri Vantaggi
           </p>
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
+          <h2 id="benefits-heading" className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             Vantaggi Concreti per<br />Studenti & Investitori
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">

@@ -182,15 +182,15 @@ export const Hero = () => {
 
           {/* Refined subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '300ms' }}>
-            Affitti Smart & Opportunità di Investimento
+            <a href="#how-it-works" className="hover:text-primary transition-colors">Affitti Smart</a> & <a href="#investor-section" className="hover:text-primary transition-colors">Opportunità di Investimento</a>
           </p>
           
           <p className="text-lg md:text-xl text-primary/70 mb-4 font-light" style={{ animationDelay: '350ms' }}>
-            Per studenti e investitori
+            Per <a href="#student-section" className="hover:text-foreground transition-colors">studenti</a> e <a href="#investor-section" className="hover:text-foreground transition-colors">investitori</a>
           </p>
           
           <p className="text-base text-muted-foreground/70 mb-16 font-light" style={{ animationDelay: '400ms' }}>
-            Vicino a tutti i principali atenei torinesi
+            Vicino a <a href="#benefits" className="hover:text-primary transition-colors underline underline-offset-4 decoration-muted-foreground/30">Politecnico</a>, <a href="#benefits" className="hover:text-primary transition-colors underline underline-offset-4 decoration-muted-foreground/30">UniTo</a> e tutti i principali atenei torinesi
           </p>
 
           {/* Questionario 100€ Badge - clickable */}

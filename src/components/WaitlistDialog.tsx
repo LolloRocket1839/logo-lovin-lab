@@ -84,15 +84,15 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
       if (!response.ok) throw new Error("Submission failed");
 
       toast({
-        title: "Iscrizione completata",
-        description: "Controlla la tua email per la conferma.",
+        title: "✨ Iscrizione completata!",
+        description: "Controlla la tua email per la conferma. Benvenuto in Jungle Rent!",
       });
       form.reset();
       onOpenChange(false);
     } catch (error) {
       toast({
-        title: "Errore",
-        description: "Qualcosa è andato storto. Riprova.",
+        title: "❌ Errore di invio",
+        description: "Si è verificato un problema. Riprova tra qualche istante o contattaci su WhatsApp.",
         variant: "destructive",
       });
     } finally {
@@ -131,6 +131,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                         <Input
                           placeholder="Mario Rossi"
                           {...field}
+                          autoFocus
                           className="h-10
                                      bg-background
                                      border-border

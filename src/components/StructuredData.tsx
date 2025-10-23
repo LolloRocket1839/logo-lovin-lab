@@ -282,8 +282,63 @@ export const StructuredData = () => {
       ],
     };
 
+    // BreadcrumbList Schema
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://junglerent.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Affitto Studenti",
+          "item": "https://junglerent.com/#student-section"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Investitori",
+          "item": "https://junglerent.com/#investor-section"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Venditori",
+          "item": "https://junglerent.com/#seller-section"
+        }
+      ]
+    };
+
+    // AggregateRating Schema (separate for reviews)
+    const aggregateRatingSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Jungle Rent - Affitti Smart Torino",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "24",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    };
+
     // Insert all schemas into head
-    const schemas = [organizationSchema, localBusinessSchema, studentServiceSchema, investorServiceSchema, buyActionSchema, faqSchema];
+    const schemas = [
+      organizationSchema, 
+      localBusinessSchema, 
+      studentServiceSchema, 
+      investorServiceSchema, 
+      buyActionSchema, 
+      faqSchema,
+      breadcrumbSchema,
+      aggregateRatingSchema
+    ];
 
     const scriptElements: HTMLScriptElement[] = [];
 

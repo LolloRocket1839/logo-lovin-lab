@@ -54,7 +54,7 @@ export const HowItWorks = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   return (
-    <section id="how-it-works" className="py-20 md:py-32 lg:py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden scroll-mt-[-250px]">
+    <section id="how-it-works" aria-labelledby="how-it-works-heading" className="py-20 md:py-32 lg:py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden scroll-mt-[-250px]">
       {/* Top border line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
@@ -67,12 +67,20 @@ export const HowItWorks = () => {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             Processo Semplice
           </p>
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
+          <h2 id="how-it-works-heading" className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             Come Funziona
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
-            Quattro semplici passi per iniziare a risparmiare
+            <strong>Quattro semplici passi</strong> per iniziare a risparmiare
           </p>
+          
+          {/* Rich snippet structured list */}
+          <ol className="sr-only">
+            <li><strong>Step 1:</strong> Esplora le stanze disponibili vicino alle università</li>
+            <li><strong>Step 2:</strong> Prenota la tua stanza e trova coinquilini compatibili</li>
+            <li><strong>Step 3:</strong> Firma il contratto online e paga il deposito</li>
+            <li><strong>Step 4:</strong> Ricevi assistenza continua 7 giorni su 7</li>
+          </ol>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto relative">

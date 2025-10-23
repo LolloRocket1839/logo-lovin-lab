@@ -7,11 +7,15 @@ import { InvestorSection } from "@/components/InvestorSection";
 import { SellerSection } from "@/components/SellerSection";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { ScrollProgressBar } from "@/components/ScrollProgressBar";
+import { StickyCTA } from "@/components/StickyCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <main role="main" className="min-h-screen">
       <StructuredData />
+      <ScrollProgressBar />
       <Hero />
       <TrustBadge />
       <HowItWorks />
@@ -20,7 +24,9 @@ const Index = () => {
       <InvestorSection />
       <SellerSection />
       <Footer />
-    </div>
+      <ScrollToTop />
+      <StickyCTA />
+    </main>
   );
 };
 

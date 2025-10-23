@@ -7,7 +7,7 @@ import { Textarea } from "./ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Checkbox } from "./ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Building2 } from "lucide-react";
+import { Building2, Loader2 } from "lucide-react";
 
 interface SellerContactDialogProps {
   open: boolean;
@@ -31,6 +31,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
     message: "",
     privacyConsent: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,8 +39,8 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
     // Validation
     if (!formData.name || !formData.email || !formData.phone || !formData.address) {
       toast({
-        title: "Errore",
-        description: "Compila tutti i campi obbligatori",
+        title: "❌ Campi obbligatori mancanti",
+        description: "Compila Nome, Email, Telefono e Indirizzo per continuare",
         variant: "destructive",
       });
       return;
@@ -47,12 +48,14 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
 
     if (!formData.privacyConsent) {
       toast({
-        title: "Consenso richiesto",
+        title: "❌ Consenso richiesto",
         description: "Devi acconsentire al trattamento dei dati per continuare",
         variant: "destructive",
       });
       return;
     }
+
+    setIsSubmitting(true);
 
     // Create WhatsApp message
     const message = `🏠 *RICHIESTA VALUTAZIONE IMMOBILE*\n\n` +
@@ -73,8 +76,8 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
     window.open(whatsappUrl, "_blank");
 
     toast({
-      title: "Richiesta inviata!",
-      description: "Ti contatteremo entro 48 ore per la valutazione",
+      title: "✨ Richiesta inviata con successo!",
+      description: "Ti contatteremo entro 48 ore per la valutazione gratuita del tuo immobile",
     });
 
     onOpenChange(false);
@@ -93,6 +96,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
       message: "",
       privacyConsent: false,
     });
+    setIsSubmitting(false);
   };
 
   return (
@@ -116,6 +120,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder="Mario Rossi"
+              autoFocus
               required
             />
           </div>
@@ -292,8 +297,20 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             </Label>
           </div>
 
-          <Button type="submit" className="w-full" size="lg" disabled={!formData.privacyConsent}>
-            Invia Richiesta
+          <Button 
+            type="submit" 
+            className="w-full" 
+            size="lg" 
+            disabled={!formData.privacyConsent || isSubmitting}
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Invio in corso...
+              </>
+            ) : (
+              "Invia Richiesta"
+            )}
           </Button>
 
           <p className="text-xs text-muted-foreground text-center pt-4 border-t border-border/50">
