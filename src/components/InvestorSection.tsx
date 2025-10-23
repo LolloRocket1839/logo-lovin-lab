@@ -193,34 +193,34 @@ export const InvestorSection = () => {
               );
             })}
           </div>
-        </div>
-
-        {/* CTA Section - Centered Waitlist */}
-        <div className="mt-24 md:mt-32 lg:mt-40 max-w-3xl mx-auto">
-          <div className="p-10 md:p-14 lg:p-16 rounded-2xl border border-border bg-card/50 backdrop-blur-sm space-y-8">
-            <div className="text-center space-y-4">
-              <h3 className="font-gotham text-3xl md:text-5xl font-bold tracking-tight">
-                Iscriviti alla Waitlist Investitori
-              </h3>
-              <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed max-w-xl mx-auto">
-                Ricevi aggiornamenti sulle opportunità di investimento immobiliare a Torino
-              </p>
-            </div>
-            
-            <div className="flex flex-col items-center gap-6">
-              <Button 
-                onClick={() => setWaitlistOpen(true)}
-                size="lg"
-                variant="premium"
-                className="w-full sm:w-auto px-12 py-7 text-base group"
-              >
-                Iscriviti Ora
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+          
+          {/* CTA Waitlist - Integrated */}
+          <div className="mt-12 md:mt-16 max-w-6xl mx-auto">
+            <div className="p-10 md:p-14 lg:p-20 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-card/80 to-primary/5 backdrop-blur-sm space-y-8">
+              <div className="text-center space-y-4">
+                <h3 className="font-gotham text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                  Iscriviti alla Waitlist Investitori
+                </h3>
+                <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
+                  Ricevi aggiornamenti esclusivi sulle opportunità di investimento immobiliare a Torino
+                </p>
+              </div>
               
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="font-medium">Risposta prioritaria garantita</span>
+              <div className="flex flex-col items-center gap-6">
+                <Button 
+                  onClick={() => setWaitlistOpen(true)}
+                  size="lg"
+                  variant="premium"
+                  className="w-full sm:w-auto px-16 py-8 text-lg group shadow-xl"
+                >
+                  Iscriviti Ora
+                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                
+                <div className="flex items-center gap-3 text-base text-muted-foreground">
+                  <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+                  <span className="font-medium">Risposta prioritaria garantita</span>
+                </div>
               </div>
             </div>
           </div>
