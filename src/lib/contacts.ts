@@ -58,13 +58,27 @@ Cordiali saluti`
 } as const;
 
 // Helper functions
+const isMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 export const openWhatsApp = (phone: string, message: string) => {
   const encoded = encodeURIComponent(message);
-  window.open(`https://wa.me/${phone}?text=${encoded}`, '_blank');
+  const url = `https://wa.me/${phone}?text=${encoded}`;
+  
+  if (isMobile()) {
+    window.location.href = url;
+  } else {
+    window.open(url, '_blank');
+  }
 };
 
 export const openEmail = (subject: string, body: string, email: string = CONTACTS.email) => {
   const encodedSubject = encodeURIComponent(subject);
   const encodedBody = encodeURIComponent(body);
-  window.open(`mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`, '_blank');
+  const url = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+  
+  if (isMobile()) {
+    window.location.href = url;
+  } else {
+    window.open(url, '_blank');
+  }
 };
