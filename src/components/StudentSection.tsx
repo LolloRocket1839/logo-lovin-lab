@@ -44,7 +44,7 @@ export const StudentSection = () => {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             {t('student.sectionLabel')}
           </p>
-          <h2 className="text-3xl md:text-4xl font-gotham font-black mb-6 leading-tight text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             {t('student.sectionTitle')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">

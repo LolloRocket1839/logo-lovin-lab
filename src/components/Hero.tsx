@@ -128,7 +128,7 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/35 via-blue-400/30 to-indigo-400/35
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0" />
                 
-                <div className="relative text-3xl md:text-6xl lg:text-8xl font-gotham font-black mb-4 
+                <div className="relative text-3xl md:text-6xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-transparent group-hover:bg-clip-text 
                                group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:via-blue-600 group-hover:to-indigo-600
@@ -136,7 +136,7 @@ export const Hero = () => {
                                transition-all duration-700 z-10">
                   {t('hero.studentTitle')}
                 </div>
-                <p className="relative text-2xl md:text-5xl lg:text-7xl font-gotham font-black 
+                <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               text-primary
                               hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-red-600
                               tracking-tighter leading-tight
@@ -179,13 +179,13 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                 
-                <h2 className="relative text-3xl md:text-6xl lg:text-8xl font-gotham font-black mb-4 
+                <h2 className="relative text-3xl md:text-6xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-primary
                                transition-all duration-1000">
                   {t('hero.investorTitle')}
                 </h2>
-                <p className="relative text-2xl md:text-5xl lg:text-7xl font-gotham font-black 
+                <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               text-primary tracking-tighter leading-[0.95]">
                   {t('hero.investorSubtitle')}
                 </p>

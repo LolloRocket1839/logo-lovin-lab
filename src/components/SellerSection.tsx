@@ -35,7 +35,7 @@ export const SellerSection = () => {
     <section id="vendi-casa" className="py-12 md:py-20 bg-gradient-to-b from-background via-accent/5 to-background">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-gotham font-black mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
             {t('seller.sectionTitle')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
