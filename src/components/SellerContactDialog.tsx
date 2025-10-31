@@ -161,11 +161,11 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="seller-zone">Zona</Label>
-              <Select value={formData.zone} onValueChange={(value) => setFormData({ ...formData, zone: value })}>
-                <SelectTrigger id="seller-zone">
-                  <SelectValue placeholder="Seleziona zona" />
+          <div className="space-y-2">
+            <Label htmlFor="seller-zone">Zona (opzionale)</Label>
+            <Select value={formData.zone} onValueChange={(value) => setFormData({ ...formData, zone: value })}>
+              <SelectTrigger id="seller-zone">
+                <SelectValue placeholder="Es: Crocetta" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="crocetta">Crocetta</SelectItem>
@@ -180,24 +180,24 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
               </Select>
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="seller-sqm">Metratura (mq)</Label>
-              <Input
-                id="seller-sqm"
-                type="number"
-                value={formData.squareMeters}
-                onChange={(e) => setFormData({ ...formData, squareMeters: e.target.value })}
-                placeholder="Es: 85"
+          <div className="space-y-2">
+            <Label htmlFor="seller-sqm">Metratura (opzionale)</Label>
+            <Input
+              id="seller-sqm"
+              type="number"
+              value={formData.squareMeters}
+              onChange={(e) => setFormData({ ...formData, squareMeters: e.target.value })}
+              placeholder="Es: 85 mq"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="seller-rooms">Numero Locali</Label>
-              <Select value={formData.rooms} onValueChange={(value) => setFormData({ ...formData, rooms: value })}>
-                <SelectTrigger id="seller-rooms">
-                  <SelectValue placeholder="Seleziona" />
+          <div className="space-y-2">
+            <Label htmlFor="seller-rooms">Numero Locali (opzionale)</Label>
+            <Select value={formData.rooms} onValueChange={(value) => setFormData({ ...formData, rooms: value })}>
+              <SelectTrigger id="seller-rooms">
+                <SelectValue placeholder="Es: Trilocale" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="2">Bilocale (2)</SelectItem>
@@ -208,11 +208,11 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
               </Select>
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="seller-floor">Piano</Label>
-              <Select value={formData.floor} onValueChange={(value) => setFormData({ ...formData, floor: value })}>
-                <SelectTrigger id="seller-floor">
-                  <SelectValue placeholder="Seleziona" />
+          <div className="space-y-2">
+            <Label htmlFor="seller-floor">Piano (opzionale)</Label>
+            <Select value={formData.floor} onValueChange={(value) => setFormData({ ...formData, floor: value })}>
+              <SelectTrigger id="seller-floor">
+                <SelectValue placeholder="Es: 2° Piano" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="terra">Piano Terra</SelectItem>
@@ -228,11 +228,11 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="seller-condition">Stato Immobile</Label>
-              <Select value={formData.condition} onValueChange={(value) => setFormData({ ...formData, condition: value })}>
-                <SelectTrigger id="seller-condition">
-                  <SelectValue placeholder="Seleziona" />
+          <div className="space-y-2">
+            <Label htmlFor="seller-condition">Stato Immobile (opzionale)</Label>
+            <Select value={formData.condition} onValueChange={(value) => setFormData({ ...formData, condition: value })}>
+              <SelectTrigger id="seller-condition">
+                <SelectValue placeholder="Es: Buono" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="ottimo">Ottimo</SelectItem>
@@ -242,11 +242,11 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
               </Select>
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="seller-motivation">Motivazione Vendita</Label>
-              <Select value={formData.motivation} onValueChange={(value) => setFormData({ ...formData, motivation: value })}>
-                <SelectTrigger id="seller-motivation">
-                  <SelectValue placeholder="Seleziona" />
+          <div className="space-y-2">
+            <Label htmlFor="seller-motivation">Motivazione Vendita (opzionale)</Label>
+            <Select value={formData.motivation} onValueChange={(value) => setFormData({ ...formData, motivation: value })}>
+              <SelectTrigger id="seller-motivation">
+                <SelectValue placeholder="Perché vendi?" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="cambio-citta">Cambio città</SelectItem>
@@ -271,12 +271,12 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="seller-message">Note Aggiuntive</Label>
+            <Label htmlFor="seller-message">Note Aggiuntive (opzionale)</Label>
             <Textarea
               id="seller-message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Altre informazioni utili per la valutazione..."
+              placeholder="Altre informazioni utili (opzionale)..."
               rows={3}
             />
           </div>

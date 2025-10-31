@@ -20,14 +20,11 @@ import {
 const waitlistSchema = z.object({
   name: z.string().trim().min(2, "Inserisci il tuo nome").max(100),
   email: z.string().email("Inserisci un'email valida").max(255),
-  university: z.string().min(1, "Seleziona la tua università"),
-  budget: z.string().min(1, "Seleziona il tuo budget"),
-  move_date: z.string().min(1, "Seleziona quando vuoi trasferirti"),
-  referral_source: z.string().min(1, "Dicci come ci hai conosciuto"),
-  gdpr_consent: z.boolean().refine((val) => val === true, {
-    message: "Devi accettare il trattamento dati per continuare",
-  }),
-  privacy_consent: z.boolean().refine((val) => val === true, {
+  university: z.string().optional(),
+  budget: z.string().optional(),
+  move_date: z.string().optional(),
+  referral_source: z.string().optional(),
+  consent: z.boolean().refine((val) => val === true, {
     message: "Devi accettare per continuare",
   }),
 });
@@ -51,8 +48,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
       budget: "",
       move_date: "",
       referral_source: "",
-      gdpr_consent: false,
-      privacy_consent: false,
+      consent: false,
     },
   });
 
@@ -69,12 +65,11 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
         body: JSON.stringify({
           name: data.name,
           email: data.email,
-          university: data.university,
-          budget: data.budget,
-          move_date: data.move_date,
-          referral_source: data.referral_source,
-          gdpr_consent: data.gdpr_consent,
-          privacy_consent: data.privacy_consent,
+          university: data.university || "",
+          budget: data.budget || "",
+          move_date: data.move_date || "",
+          referral_source: data.referral_source || "",
+          consent: data.consent,
           user_type: "student",
           _subject: "New Jungle Rent Waitlist - React App 🚀",
           timestamp: new Date().toISOString(),
@@ -180,14 +175,14 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="university"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Università</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Università (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Seleziona università" />
+                            <SelectValue placeholder="Es: Politecnico di Torino" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -214,14 +209,14 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="budget"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Budget Mensile</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Budget Mensile (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Seleziona budget" />
+                            <SelectValue placeholder="Indica budget approssimativo" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -245,14 +240,14 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="move_date"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Data Trasloco</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Data Trasloco (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Quando ti trasferisci?" />
+                            <SelectValue placeholder="Quando vorresti trasferirti?" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -276,14 +271,14 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="referral_source"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Come ci hai trovato?</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Come ci hai trovato? (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Seleziona fonte" />
+                            <SelectValue placeholder="Aiutaci a conoscerti meglio" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -306,10 +301,10 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                 />
               </div>
 
-              <div className="pt-2 space-y-3">
+              <div className="pt-2">
                 <FormField
                   control={form.control}
-                  name="gdpr_consent"
+                  name="consent"
                   render={({ field }) => (
                     <FormItem>
                       <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30">
@@ -321,38 +316,12 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                           />
                         </FormControl>
                         <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                          Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) per la gestione della richiesta di iscrizione alla waitlist
+                          Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti da Jungle Rent
                         </FormLabel>
                       </div>
-                      {form.formState.errors.gdpr_consent && (
+                      {form.formState.errors.consent && (
                         <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.gdpr_consent.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="privacy_consent"
-                  render={({ field }) => (
-                    <FormItem>
-                      <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                            className="mt-0.5"
-                          />
-                        </FormControl>
-                        <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                          Acconsento a ricevere aggiornamenti sulle offerte di Jungle Rent
-                        </FormLabel>
-                      </div>
-                      {form.formState.errors.privacy_consent && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.privacy_consent.message}
+                          {form.formState.errors.consent.message}
                         </p>
                       )}
                     </FormItem>

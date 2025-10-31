@@ -20,15 +20,12 @@ import {
 const investorWaitlistSchema = z.object({
   name: z.string().trim().min(2, "Inserisci il tuo nome").max(100),
   email: z.string().email("Inserisci un'email valida").max(255),
-  phone: z.string().trim().min(8, "Inserisci un numero di telefono valido").max(20),
-  investment_budget: z.string().min(1, "Seleziona il budget di investimento"),
-  property_type: z.string().min(1, "Seleziona la tipologia di proprietà"),
-  investment_horizon: z.string().min(1, "Seleziona l'orizzonte temporale"),
-  referral_source: z.string().min(1, "Dicci come ci hai conosciuto"),
-  gdpr_consent: z.boolean().refine((val) => val === true, {
-    message: "Devi accettare il trattamento dati per continuare",
-  }),
-  privacy_consent: z.boolean().refine((val) => val === true, {
+  phone: z.string().trim().optional(),
+  investment_budget: z.string().optional(),
+  property_type: z.string().optional(),
+  investment_horizon: z.string().optional(),
+  referral_source: z.string().optional(),
+  consent: z.boolean().refine((val) => val === true, {
     message: "Devi accettare per continuare",
   }),
 });
@@ -53,8 +50,7 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
       property_type: "",
       investment_horizon: "",
       referral_source: "",
-      gdpr_consent: false,
-      privacy_consent: false,
+      consent: false,
     },
   });
 
@@ -71,13 +67,12 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
         body: JSON.stringify({
           name: data.name,
           email: data.email,
-          phone: data.phone,
-          investment_budget: data.investment_budget,
-          property_type: data.property_type,
-          investment_horizon: data.investment_horizon,
-          referral_source: data.referral_source,
-          gdpr_consent: data.gdpr_consent,
-          privacy_consent: data.privacy_consent,
+          phone: data.phone || "",
+          investment_budget: data.investment_budget || "",
+          property_type: data.property_type || "",
+          investment_horizon: data.investment_horizon || "",
+          referral_source: data.referral_source || "",
+          consent: data.consent,
           user_type: "investor",
           _subject: "New Jungle Rent Investor Waitlist 💼",
           timestamp: new Date().toISOString(),
@@ -182,11 +177,11 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Telefono</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Telefono (opzionale)</FormLabel>
                       <FormControl>
                         <Input
                           type="tel"
-                          placeholder="+39 333 1234567"
+                          placeholder="+39 333 1234567 (opzionale)"
                           {...field}
                           className="h-10
                                      bg-background
@@ -209,14 +204,14 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="investment_budget"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Budget Investimento</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Budget Investimento (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Seleziona budget" />
+                            <SelectValue placeholder="Indica budget approssimativo" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -240,14 +235,14 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="property_type"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Tipologia Proprietà</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Tipologia Proprietà (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Seleziona tipologia" />
+                            <SelectValue placeholder="Cosa ti interessa?" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -272,14 +267,14 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="investment_horizon"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Orizzonte Temporale</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Orizzonte Temporale (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Seleziona periodo" />
+                            <SelectValue placeholder="Quando vorresti investire?" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -303,14 +298,14 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="referral_source"
                   render={({ field }) => (
                     <FormItem className="md:col-span-2">
-                      <FormLabel className="text-sm font-medium text-foreground">Come ci hai trovato?</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">Come ci hai trovato? (opzionale)</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Seleziona fonte" />
+                            <SelectValue placeholder="Aiutaci a conoscerti meglio" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
@@ -332,10 +327,10 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                 />
               </div>
 
-              <div className="pt-2 space-y-3">
+              <div className="pt-2">
                 <FormField
                   control={form.control}
-                  name="gdpr_consent"
+                  name="consent"
                   render={({ field }) => (
                     <FormItem>
                       <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30">
@@ -347,38 +342,12 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                           />
                         </FormControl>
                         <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                          Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) per la gestione della richiesta di informazioni
+                          Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti sulle opportunità di investimento
                         </FormLabel>
                       </div>
-                      {form.formState.errors.gdpr_consent && (
+                      {form.formState.errors.consent && (
                         <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.gdpr_consent.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="privacy_consent"
-                  render={({ field }) => (
-                    <FormItem>
-                      <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/30">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                            className="mt-0.5"
-                          />
-                        </FormControl>
-                        <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                          Acconsento a ricevere aggiornamenti sulle opportunità di investimento
-                        </FormLabel>
-                      </div>
-                      {form.formState.errors.privacy_consent && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.privacy_consent.message}
+                          {form.formState.errors.consent.message}
                         </p>
                       )}
                     </FormItem>
