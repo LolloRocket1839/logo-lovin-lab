@@ -2,12 +2,18 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
-import { CONTACTS } from "@/lib/contacts";
+import { CONTACTS, openGeneralEmail } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
 
 export const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [logoModalOpen, setLogoModalOpen] = useState(false);
+  
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const language = i18n.language as 'it' | 'en';
+    openGeneralEmail(language === 'en' ? 'en' : 'it');
+  };
   
   return (
     <footer className="bg-background border-t border-border relative overflow-hidden">
@@ -66,7 +72,8 @@ export const Footer = () => {
                 <span className="text-sm font-light link-elegant">Andrea: {CONTACTS.andrea.phone.replace(/(\+\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4')}</span>
               </a>
               <a 
-                href={`mailto:${CONTACTS.email}`}
+                href="#"
+                onClick={handleEmailClick}
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
               >
                 <Mail className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} />

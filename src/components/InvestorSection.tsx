@@ -11,7 +11,7 @@ import { StickyInvestorCTA } from "@/components/investor/StickyInvestorCTA";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const InvestorSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   const investorBenefits = [
@@ -33,7 +33,9 @@ export const InvestorSection = () => {
   ];
 
   const handleInvestorContact = () => {
-    openEmail(MESSAGES.investor.email.subject, MESSAGES.investor.email.body);
+    const language = i18n.language as 'it' | 'en';
+    const emailData = MESSAGES.investor.email[language] || MESSAGES.investor.email.it;
+    openEmail(emailData.subject, emailData.body);
   };
 
   return (

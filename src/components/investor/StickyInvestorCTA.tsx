@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { openEmail, MESSAGES } from "@/lib/contacts";
 
 export const StickyInvestorCTA = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -38,7 +38,9 @@ export const StickyInvestorCTA = () => {
   }, []);
 
   const handleClick = () => {
-    openEmail(MESSAGES.investor.email.subject, MESSAGES.investor.email.body);
+    const language = i18n.language as 'it' | 'en';
+    const emailData = MESSAGES.investor.email[language] || MESSAGES.investor.email.it;
+    openEmail(emailData.subject, emailData.body);
   };
 
   if (!isVisible) return null;

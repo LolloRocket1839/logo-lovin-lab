@@ -16,8 +16,9 @@ export const MESSAGES = {
       `Ciao ${name}! Sono uno studente interessato a JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e risparmio del 25%\n- Contratti flessibili\n\nGrazie!`,
     
     email: {
-      subject: 'Richiesta informazioni studente - JungleRent',
-      body: `Buongiorno,
+      it: {
+        subject: 'Richiesta informazioni studente - JungleRent',
+        body: `Buongiorno,
 
 Sono uno studente interessato a trovare una stanza tramite JungleRent.
 
@@ -30,6 +31,23 @@ Vorrei ricevere informazioni su:
 Grazie per la vostra disponibilità.
 
 Cordiali saluti`
+      },
+      en: {
+        subject: 'Student Inquiry - JungleRent',
+        body: `Hello,
+
+I am a student interested in finding a room through JungleRent.
+
+I would like to receive information about:
+- Available rooms near my university
+- Prices and rental conditions
+- Possibility to visit the apartments
+- Availability timelines
+
+Thank you for your availability.
+
+Best regards`
+      }
     }
   },
   investor: {
@@ -37,8 +55,9 @@ Cordiali saluti`
       `Ciao ${name}! Sono interessato/a alle opportunità di investimento immobiliare con JungleRent.\n\nVorrei informazioni su:\n- ROI e rendimenti\n- Proprietà disponibili\n- Gestione del servizio\n\nGrazie!`,
     
     email: {
-      subject: 'Richiesta Informazioni - Investimento Immobiliare',
-      body: `Buongiorno,
+      it: {
+        subject: 'Richiesta Informazioni - Investimento Immobiliare',
+        body: `Buongiorno,
 
 sono interessato/a a ricevere maggiori informazioni sulle opportunità di investimento immobiliare con JungleRent.
 
@@ -53,6 +72,53 @@ Contatto telefonico:
 
 Grazie,
 Cordiali saluti`
+      },
+      en: {
+        subject: 'Investment Inquiry - Real Estate',
+        body: `Hello,
+
+I am interested in receiving more information about real estate investment opportunities with JungleRent.
+
+I would like to know more about:
+- Expected ROI and returns
+- Types of available properties
+- Complete service management
+- Next steps
+
+Full Name: 
+Phone Number: 
+
+Thank you,
+Best regards`
+      }
+    }
+  },
+  general: {
+    email: {
+      it: {
+        subject: 'Richiesta informazioni - JungleRent',
+        body: `Buongiorno,
+
+vorrei ricevere informazioni su JungleRent.
+
+[Descrivi qui la tua richiesta]
+
+Grazie per la vostra disponibilità.
+
+Cordiali saluti`
+      },
+      en: {
+        subject: 'Information Request - JungleRent',
+        body: `Hello,
+
+I would like to receive information about JungleRent.
+
+[Describe your request here]
+
+Thank you for your availability.
+
+Best regards`
+      }
     }
   }
 } as const;
@@ -81,4 +147,9 @@ export const openEmail = (subject: string, body: string, email: string = CONTACT
   } else {
     window.open(url, '_blank');
   }
+};
+
+export const openGeneralEmail = (language: 'it' | 'en' = 'it') => {
+  const emailData = MESSAGES.general.email[language];
+  openEmail(emailData.subject, emailData.body);
 };
