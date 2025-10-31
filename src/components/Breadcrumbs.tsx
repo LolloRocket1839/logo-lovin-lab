@@ -27,7 +27,7 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
           <BreadcrumbItem>
             <BreadcrumbLink
               onClick={() => scrollToSection("hero")}
-              className="flex items-center gap-1 cursor-pointer hover:text-primary transition-colors"
+              className="flex items-center gap-1 cursor-pointer hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
             >
               <Home className="h-4 w-4" />
               Home
@@ -44,7 +44,7 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
                 ) : (
                   <BreadcrumbLink
                     onClick={() => item.href && scrollToSection(item.href)}
-                    className="cursor-pointer hover:text-primary transition-colors"
+                    className="cursor-pointer hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
                   >
                     {item.label}
                   </BreadcrumbLink>

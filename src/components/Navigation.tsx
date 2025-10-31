@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const Navigation = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -31,12 +34,12 @@ export const Navigation = () => {
   };
 
   const menuItems = [
-    { label: "Home", id: "hero" },
-    { label: "Per Studenti", id: "student-section" },
-    { label: "Per Investitori", id: "investor-section" },
-    { label: "Vendi Casa", id: "seller-section" },
-    { label: "FAQ", id: "faq-section" },
-    { label: "Contatti", id: "footer" },
+    { label: t("nav.home"), id: "hero" },
+    { label: t("nav.students"), id: "student-section" },
+    { label: t("nav.investors"), id: "investor-section" },
+    { label: t("nav.sell"), id: "seller-section" },
+    { label: t("nav.faq"), id: "faq-section" },
+    { label: t("nav.contacts"), id: "footer" },
   ];
 
   return (
@@ -72,39 +75,44 @@ export const Navigation = () => {
             {menuItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50"
-              >
+              onClick={() => scrollToSection(item.id)}
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
                 {item.label}
               </button>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* Language Switcher & CTA */}
+          <div className="hidden lg:flex items-center gap-3">
+            <LanguageSwitcher />
             <Button
               variant="hero"
               size="sm"
               onClick={handleContact}
               className="px-6"
             >
-              Contattaci
+              {t("nav.contactUs")}
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:bg-accent/50 rounded-md transition-colors"
-            aria-label={isMobileMenuOpen ? "Chiudi menu" : "Apri menu"}
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+          {/* Mobile Menu & Language */}
+          <div className="lg:hidden flex items-center gap-2">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              aria-label={isMobileMenuOpen ? t("accessibility.closeMenu") : t("accessibility.openMenu")}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -115,7 +123,7 @@ export const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors"
+                  className="px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </button>
@@ -125,7 +133,7 @@ export const Navigation = () => {
                 onClick={handleContact}
                 className="mt-2 w-full"
               >
-                Contattaci
+                {t("nav.contactUs")}
               </Button>
             </div>
           </div>

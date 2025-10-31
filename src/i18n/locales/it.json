@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "students": "Per Studenti",
+    "investors": "Per Investitori",
+    "sell": "Vendi Casa",
+    "faq": "FAQ",
+    "contacts": "Contatti",
+    "contactUs": "Contattaci"
+  },
+  "hero": {
+    "tagline": "Il tuo rifugio sicuro nella giungla immobiliare",
+    "studentTitle": "Sei uno studente?",
+    "studentSubtitle": "Risparmia sull'affitto!",
+    "investorTitle": "Sei un investitore immobiliare?",
+    "investorSubtitle": "Investi nel mercato immobiliare a partire da 100€!",
+    "subheadline": "Affitti Smart & Opportunità di Investimento",
+    "targetAudience": "Per studenti e investitori",
+    "location": "Vicino a Politecnico, UniTo e tutti i principali atenei torinesi",
+    "questionnaire": "Vinci 100€ - Compila il questionario!",
+    "availableRooms": "30 stanze in quadrilocali disponibili da settembre 2026",
+    "supportedBy": "Supportati da",
+    "contactLorenzo": "Contatta Lorenzo",
+    "contactAndrea": "Contatta Andrea",
+    "howItWorks": "Come Funziona",
+    "trustSafe": "Contratti sicuri",
+    "trustSupport": "Supporto dedicato",
+    "trustNoFees": "Zero commissioni"
+  },
+  "trustBadge": {
+    "title": "La tua sicurezza è la nostra priorità",
+    "verified": "Contratti certificati",
+    "support": "Supporto 24/7",
+    "transparent": "Trasparenza totale"
+  },
+  "howItWorks": {
+    "title": "Come Funziona",
+    "subtitle": "Il tuo percorso verso la casa perfetta in 3 semplici passi",
+    "step1Title": "Registrati",
+    "step1Desc": "Crea il tuo profilo in meno di 2 minuti",
+    "step2Title": "Trova Casa",
+    "step2Desc": "Esplora le nostre soluzioni abitative su misura",
+    "step3Title": "Vivi Serenamente",
+    "step3Desc": "Goditi la tua nuova casa senza pensieri"
+  },
+  "benefits": {
+    "title": "Perché Scegliere Jungle Rent",
+    "subtitle": "Vantaggi esclusivi per la tua esperienza abitativa",
+    "savings": "Risparmio Garantito",
+    "savingsDesc": "Tariffe competitive senza costi nascosti",
+    "flexibility": "Massima Flessibilità",
+    "flexibilityDesc": "Contratti personalizzati sulle tue esigenze",
+    "support": "Assistenza Dedicata",
+    "supportDesc": "Team disponibile 7 giorni su 7",
+    "quality": "Qualità Certificata",
+    "qualityDesc": "Immobili selezionati e verificati"
+  },
+  "student": {
+    "title": "Per Studenti",
+    "subtitle": "Trova la tua casa ideale vicino all'università",
+    "cta": "Scopri le Stanze",
+    "feature1": "Vicino alle università",
+    "feature2": "Coinquilini selezionati",
+    "feature3": "All-inclusive"
+  },
+  "investor": {
+    "title": "Per Investitori",
+    "subtitle": "Investi nel mercato immobiliare studentesco",
+    "cta": "Scopri l'Opportunità",
+    "feature1": "Rendimento garantito",
+    "feature2": "Gestione completa",
+    "feature3": "Investimento da 100€"
+  },
+  "seller": {
+    "title": "Vendi la Tua Casa",
+    "subtitle": "Vendita veloce e senza commissioni",
+    "cta": "Richiedi Valutazione",
+    "feature1": "Valutazione gratuita",
+    "feature2": "Vendita in 30 giorni",
+    "feature3": "Zero commissioni"
+  },
+  "footer": {
+    "tagline": "Il tuo rifugio nella giungla immobiliare",
+    "quickLinks": "Link Rapidi",
+    "legal": "Legale",
+    "privacy": "Privacy Policy",
+    "terms": "Termini e Condizioni",
+    "contact": "Contatti",
+    "rights": "Tutti i diritti riservati",
+    "followUs": "Seguici"
+  },
+  "cta": {
+    "learnMore": "Scopri di più",
+    "getStarted": "Inizia ora",
+    "contact": "Contattaci",
+    "backToTop": "Torna su"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "retry": "Riprova",
+    "close": "Chiudi",
+    "open": "Apri",
+    "menu": "Menu"
+  },
+  "accessibility": {
+    "skipToContent": "Vai al contenuto principale",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "languageSelector": "Seleziona lingua"
+  }
+}

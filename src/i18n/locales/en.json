@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "students": "For Students",
+    "investors": "For Investors",
+    "sell": "Sell Property",
+    "faq": "FAQ",
+    "contacts": "Contacts",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "tagline": "Your safe haven in the real estate jungle",
+    "studentTitle": "Are you a student?",
+    "studentSubtitle": "Save on rent!",
+    "investorTitle": "Are you a real estate investor?",
+    "investorSubtitle": "Invest in real estate starting from €100!",
+    "subheadline": "Smart Rentals & Investment Opportunities",
+    "targetAudience": "For students and investors",
+    "location": "Near Politecnico, UniTo and all major universities in Turin",
+    "questionnaire": "Win €100 - Fill out the questionnaire!",
+    "availableRooms": "30 rooms in four-bedroom apartments available from September 2026",
+    "supportedBy": "Supported by",
+    "contactLorenzo": "Contact Lorenzo",
+    "contactAndrea": "Contact Andrea",
+    "howItWorks": "How It Works",
+    "trustSafe": "Secure contracts",
+    "trustSupport": "Dedicated support",
+    "trustNoFees": "Zero commissions"
+  },
+  "trustBadge": {
+    "title": "Your safety is our priority",
+    "verified": "Certified contracts",
+    "support": "24/7 Support",
+    "transparent": "Total transparency"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Your path to the perfect home in 3 simple steps",
+    "step1Title": "Sign Up",
+    "step1Desc": "Create your profile in less than 2 minutes",
+    "step2Title": "Find Home",
+    "step2Desc": "Explore our tailored housing solutions",
+    "step3Title": "Live Peacefully",
+    "step3Desc": "Enjoy your new home worry-free"
+  },
+  "benefits": {
+    "title": "Why Choose Jungle Rent",
+    "subtitle": "Exclusive benefits for your living experience",
+    "savings": "Guaranteed Savings",
+    "savingsDesc": "Competitive rates with no hidden costs",
+    "flexibility": "Maximum Flexibility",
+    "flexibilityDesc": "Contracts tailored to your needs",
+    "support": "Dedicated Assistance",
+    "supportDesc": "Team available 7 days a week",
+    "quality": "Certified Quality",
+    "qualityDesc": "Selected and verified properties"
+  },
+  "student": {
+    "title": "For Students",
+    "subtitle": "Find your ideal home near the university",
+    "cta": "Discover Rooms",
+    "feature1": "Near universities",
+    "feature2": "Selected roommates",
+    "feature3": "All-inclusive"
+  },
+  "investor": {
+    "title": "For Investors",
+    "subtitle": "Invest in the student real estate market",
+    "cta": "Discover Opportunity",
+    "feature1": "Guaranteed return",
+    "feature2": "Complete management",
+    "feature3": "Investment from €100"
+  },
+  "seller": {
+    "title": "Sell Your Property",
+    "subtitle": "Fast sale with no commissions",
+    "cta": "Request Valuation",
+    "feature1": "Free valuation",
+    "feature2": "Sale in 30 days",
+    "feature3": "Zero commissions"
+  },
+  "footer": {
+    "tagline": "Your haven in the real estate jungle",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "contact": "Contact",
+    "rights": "All rights reserved",
+    "followUs": "Follow Us"
+  },
+  "cta": {
+    "learnMore": "Learn more",
+    "getStarted": "Get started",
+    "contact": "Contact us",
+    "backToTop": "Back to top"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageSelector": "Select language"
+  }
+}

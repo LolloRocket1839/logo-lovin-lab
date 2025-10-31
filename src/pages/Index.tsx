@@ -14,7 +14,7 @@ import { StickyCTA } from "@/components/StickyCTA";
 
 const Index = () => {
   return (
-    <main role="main" className="min-h-screen">
+    <main role="main" className="min-h-screen" id="main-content" tabIndex={-1}>
       <StructuredData />
       <Navigation />
       <ScrollProgressBar />
