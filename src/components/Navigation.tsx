@@ -71,16 +71,16 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo - only shows when scrolled with smooth easing */}
+          {/* Logo - fades in smoothly as hero logo fades out */}
           <button
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-2 group hover:scale-105 will-change-transform"
             aria-label="Torna alla home"
             style={{
-              opacity: Math.pow(scrollProgress, 2), // Ease-in for nav logo
-              transform: `scale(${0.7 + (scrollProgress * 0.3)}) translateY(${(1 - scrollProgress) * -10}px)`,
-              transition: 'all 0.1s ease-out',
-              pointerEvents: scrollProgress < 0.5 ? 'none' : 'auto'
+              opacity: Math.pow(scrollProgress, 1.5), // Smooth fade-in
+              transform: `scale(${Math.min(scrollProgress + 0.5, 1)})`,
+              transition: 'none',
+              pointerEvents: scrollProgress < 0.6 ? 'none' : 'auto'
             }}
           >
             <img

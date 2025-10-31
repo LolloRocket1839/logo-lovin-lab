@@ -63,17 +63,30 @@ export const Hero = () => {
   const investorScale = 0.85 + (scrollProgress * 0.3);
   const investorOpacity = 0.7 + (scrollProgress * 0.3);
 
-  // Logo animation - moves from center to nav position with smooth easing
+  // Logo animation - precise trajectory from center to nav position
   const logoScrollProgress = Math.min(scrollProgress * 1.5, 1);
-  // Smooth easing function (ease-out cubic)
-  const easedProgress = 1 - Math.pow(1 - logoScrollProgress, 3);
+  // Smooth easing function (ease-in-out cubic)
+  const easedProgress = logoScrollProgress < 0.5
+    ? 4 * logoScrollProgress * logoScrollProgress * logoScrollProgress
+    : 1 - Math.pow(-2 * logoScrollProgress + 2, 3) / 2;
   
   const logoOpacity = 1 - easedProgress;
-  const logoScale = 1 - (easedProgress * 0.4);
   
-  // Calculate position to move to top-left (nav position)
-  const logoTranslateY = easedProgress * -300;
-  const logoTranslateX = easedProgress * -40; // Move left in vw units
+  // Calculate exact positions to match nav logo
+  // From center (50vw) to left nav position (~2rem from left)
+  const startX = 0; // Center position
+  const endX = -45; // Approximate % to reach left side
+  const logoTranslateX = easedProgress * (endX - startX);
+  
+  // From center vertical to nav height (top)
+  const startY = 0;
+  const endY = -380; // Move up to nav bar height
+  const logoTranslateY = easedProgress * (endY - startY);
+  
+  // Scale from large (24px in hero) to small (40px in nav)
+  const startScale = 1;
+  const endScale = 0.42; // Scale down to nav size
+  const logoScale = startScale + (easedProgress * (endScale - startScale));
 
   return (
     <header role="banner" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -88,14 +101,15 @@ export const Hero = () => {
 
       <div className="container relative z-10 px-8 py-16 md:py-32">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Logo - animated and prominent with scroll transition */}
+          {/* Logo - animated with precise trajectory to nav position */}
           <div 
-            className="mb-6 md:mb-12 animate-fade-in will-change-transform"
+            className="mb-6 md:mb-12 animate-fade-in will-change-transform fixed md:static top-[50vh] left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0"
             style={{
               opacity: logoOpacity,
-              transform: `translate(calc(${logoTranslateX}vw), ${logoTranslateY}px) scale(${logoScale}) rotate(${easedProgress * -3}deg)`,
-              transition: 'transform 0.1s ease-out, opacity 0.1s ease-out',
-              pointerEvents: logoScrollProgress > 0.7 ? 'none' : 'auto'
+              transform: `translate(calc(-50% + ${logoTranslateX}vw), calc(-50% + ${logoTranslateY}px)) scale(${logoScale})`,
+              transition: 'none',
+              pointerEvents: easedProgress > 0.7 ? 'none' : 'auto',
+              zIndex: 40
             }}
           >
             <img 
