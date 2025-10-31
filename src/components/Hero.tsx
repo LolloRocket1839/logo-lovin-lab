@@ -63,12 +63,17 @@ export const Hero = () => {
   const investorScale = 0.85 + (scrollProgress * 0.3);
   const investorOpacity = 0.7 + (scrollProgress * 0.3);
 
-  // Logo animation - moves from center to nav position
-  const logoScrollProgress = Math.min(scrollProgress * 2, 1); // Faster transition
-  const logoOpacity = 1 - logoScrollProgress;
-  const logoScale = 1 - (logoScrollProgress * 0.3);
-  const logoTranslateY = logoScrollProgress * -200; // Move up
-  const logoTranslateX = logoScrollProgress * -45; // Move left (percentage of screen)
+  // Logo animation - moves from center to nav position with smooth easing
+  const logoScrollProgress = Math.min(scrollProgress * 1.5, 1);
+  // Smooth easing function (ease-out cubic)
+  const easedProgress = 1 - Math.pow(1 - logoScrollProgress, 3);
+  
+  const logoOpacity = 1 - easedProgress;
+  const logoScale = 1 - (easedProgress * 0.4);
+  
+  // Calculate position to move to top-left (nav position)
+  const logoTranslateY = easedProgress * -300;
+  const logoTranslateX = easedProgress * -40; // Move left in vw units
 
   return (
     <header role="banner" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -85,11 +90,12 @@ export const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Logo - animated and prominent with scroll transition */}
           <div 
-            className="mb-6 md:mb-12 animate-fade-in transition-all duration-500"
+            className="mb-6 md:mb-12 animate-fade-in will-change-transform"
             style={{
               opacity: logoOpacity,
-              transform: `translate(calc(${logoTranslateX}vw), ${logoTranslateY}px) scale(${logoScale})`,
-              pointerEvents: logoScrollProgress > 0.5 ? 'none' : 'auto'
+              transform: `translate(calc(${logoTranslateX}vw), ${logoTranslateY}px) scale(${logoScale}) rotate(${easedProgress * -3}deg)`,
+              transition: 'transform 0.1s ease-out, opacity 0.1s ease-out',
+              pointerEvents: logoScrollProgress > 0.7 ? 'none' : 'auto'
             }}
           >
             <img 
