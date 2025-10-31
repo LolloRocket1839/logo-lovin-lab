@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const StickyCTA = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -13,7 +15,6 @@ export const StickyCTA = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          // Show after scrolling 1 viewport
           if (window.scrollY > window.innerHeight && !isDismissed) {
             setIsVisible(true);
           } else if (window.scrollY <= window.innerHeight) {
@@ -55,7 +56,7 @@ export const StickyCTA = () => {
             className="flex-1 h-10 text-sm group"
           >
             <MessageCircle className="mr-1.5 h-4 w-4" />
-            Lorenzo
+            {t('stickyCta.lorenzoButton')}
           </Button>
           <Button
             onClick={handleContactAndrea}
@@ -64,7 +65,7 @@ export const StickyCTA = () => {
             className="flex-1 h-10 text-sm group"
           >
             <MessageCircle className="mr-1.5 h-4 w-4" />
-            Andrea
+            {t('stickyCta.andreaButton')}
           </Button>
         </div>
         <Button
@@ -72,7 +73,7 @@ export const StickyCTA = () => {
           variant="ghost"
           size="icon"
           className="h-10 w-10 flex-shrink-0"
-          aria-label="Chiudi"
+          aria-label={t('stickyCta.closeLabel')}
         >
           <X className="h-4 w-4" />
         </Button>

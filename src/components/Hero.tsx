@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
@@ -7,6 +8,7 @@ import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
 
@@ -26,9 +28,6 @@ export const Hero = () => {
         window.requestAnimationFrame(() => {
           const scrollPosition = window.scrollY;
           const windowHeight = window.innerHeight;
-          
-          // Calcolo molto sensibile: inizia subito e si completa entro 1 viewport
-          // Progress va da 0 (top) a 1 (dopo 1vh)
           const progress = Math.min(Math.max(scrollPosition / windowHeight, 0), 1);
           setScrollProgress(progress);
           ticking = false;
@@ -38,7 +37,7 @@ export const Hero = () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Initial call
+    handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -57,20 +56,17 @@ export const Hero = () => {
     });
   };
 
-  // STUDENTE: Grande all'inizio (1.15), piccolo alla fine (0.85)
   const studentScale = 1.15 - (scrollProgress * 0.3);
   const studentOpacity = 1 - (scrollProgress * 0.3);
   const studentRotate = scrollProgress * -2;
 
-  // INVESTITORE: Piccolo all'inizio (0.85), grande alla fine (1.15)
   const investorScale = 0.85 + (scrollProgress * 0.3);
   const investorOpacity = 0.7 + (scrollProgress * 0.3);
 
   return (
     <header role="banner" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* SEO-optimized H1 - visually hidden but accessible to search engines */}
       <h1 className="sr-only">
-        Jungle Rent - Affitti Smart per Studenti a Torino | Opportunità di Investimento Immobiliare vicino Politecnico e UniTo
+        {t('hero.seoH1')}
       </h1>
       
       {/* Subtle texture overlay */}
@@ -84,7 +80,7 @@ export const Hero = () => {
           <div className="mb-6 md:mb-12 animate-fade-in">
             <img 
               src={jungleRentLogo} 
-              alt="Jungle Rent - Logo ufficiale - Affitti ottimizzati per studenti e investitori a Torino" 
+              alt={t('hero.logoAlt')}
               width="96"
               height="96"
               className="w-16 h-16 md:w-24 md:h-24 mx-auto opacity-90 transition-all duration-700
@@ -103,7 +99,7 @@ export const Hero = () => {
               }}
             />
             <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
-              Il tuo rifugio sicuro nella giungla immobiliare
+              {t('hero.tagline')}
             </p>
           </div>
 
@@ -138,7 +134,7 @@ export const Hero = () => {
                                group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:via-blue-600 group-hover:to-indigo-600
                                group-hover:scale-105
                                transition-all duration-700 z-10">
-                  Sei uno studente?
+                  {t('hero.studentTitle')}
                 </div>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               text-primary
@@ -149,7 +145,7 @@ export const Hero = () => {
                               z-10
                               py-2
                               cursor-default">
-                  Risparmia sull&apos;affitto!
+                  {t('hero.studentSubtitle')}
                 </p>
                 
                 {/* Arrow con bounce */}
@@ -187,11 +183,11 @@ export const Hero = () => {
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-primary
                                transition-all duration-1000">
-                  Sei un investitore immobiliare?
+                  {t('hero.investorTitle')}
                 </h2>
                 <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
                               text-primary tracking-tighter leading-[0.95]">
-                  Investi nel mercato immobiliare a partire da 100€!
+                  {t('hero.investorSubtitle')}
                 </p>
                 
                 {/* Arrow elegante senza bounce */}
@@ -206,15 +202,23 @@ export const Hero = () => {
 
           {/* Refined subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-2xl mx-auto animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '300ms' }}>
-            <a href="#how-it-works" className="hover:text-primary transition-colors">Affitti Smart</a> & <a href="#investor-section" className="hover:text-primary transition-colors">Opportunità di Investimento</a>
+            <a href="#how-it-works" className="hover:text-primary transition-colors">{t('hero.smartRentals')}</a> & <a href="#investor-section" className="hover:text-primary transition-colors">{t('hero.investmentOpportunities')}</a>
           </p>
           
           <p className="text-lg md:text-xl text-primary/70 mb-4 font-light" style={{ animationDelay: '350ms' }}>
-            Per <a href="#student-section" className="hover:text-foreground transition-colors">studenti</a> e <a href="#investor-section" className="hover:text-foreground transition-colors">investitori</a>
+            {t('hero.targetAudience').split(' ').map((word, index) => {
+              if (word === t('hero.students') || word === 'students') {
+                return <a key={index} href="#student-section" className="hover:text-foreground transition-colors">{word} </a>;
+              }
+              if (word === t('hero.investors') || word === 'investors') {
+                return <a key={index} href="#investor-section" className="hover:text-foreground transition-colors">{word}</a>;
+              }
+              return word + ' ';
+            })}
           </p>
           
           <p className="text-base text-muted-foreground/70 mb-16 font-light" style={{ animationDelay: '400ms' }}>
-            Vicino a <a href="#benefits" className="hover:text-primary transition-colors underline underline-offset-4 decoration-muted-foreground/30">Politecnico</a>, <a href="#benefits" className="hover:text-primary transition-colors underline underline-offset-4 decoration-muted-foreground/30">UniTo</a> e tutti i principali atenei torinesi
+            {t('hero.location')}
           </p>
 
           {/* Questionario 100€ Badge - clickable */}
@@ -240,19 +244,19 @@ export const Hero = () => {
             
             <span className="relative text-primary text-xl">🎁</span>
             <span className="relative text-foreground font-semibold text-lg">
-              Vinci 100€ - Compila il questionario!
+              {t('hero.questionnaire')}
             </span>
             <ArrowRight className="relative w-5 h-5 text-primary/70 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
 
           {/* Info aggiuntiva sul questionario */}
           <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto mb-16 animate-fade-in-up flex flex-col items-center gap-3" style={{ animationDelay: '550ms' }}>
-            <span><span className="font-semibold text-foreground">30 stanze in quadrilocali</span> disponibili da settembre 2026</span>
+            <span><span className="font-semibold text-foreground">{t('hero.availableRooms').split(' ').slice(0, 4).join(' ')}</span> {t('hero.availableRooms').split(' ').slice(4).join(' ')}</span>
             <a href="https://2i3t.it" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              Supportati da 
+              {t('hero.supportedBy')} 
               <img 
                 src={logo2i3t} 
-                alt="2i3T Incubatore Imprese Università di Torino - Partner ufficiale" 
+                alt={t('hero.logo2i3tAlt')}
                 className="h-10 w-auto object-contain inline-block" 
                 loading="lazy"
               />
@@ -267,7 +271,7 @@ export const Hero = () => {
               onClick={handleWhatsAppLorenzo}
               className="w-full sm:w-auto px-8 py-6 sm:px-12 sm:py-7 md:px-16 md:py-8 text-lg group"
             >
-              Contatta Lorenzo
+              {t('hero.contactLorenzo')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button 
@@ -276,7 +280,7 @@ export const Hero = () => {
               onClick={handleWhatsAppAndrea}
               className="w-full sm:w-auto px-8 py-6 sm:px-12 sm:py-7 md:px-16 md:py-8 text-lg group"
             >
-              Contatta Andrea
+              {t('hero.contactAndrea')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button 
@@ -285,7 +289,7 @@ export const Hero = () => {
               onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
               className="w-full sm:w-auto px-8 py-6 sm:px-10 sm:py-6 md:px-12 md:py-7 text-base"
             >
-              Come Funziona
+              {t('hero.howItWorks')}
             </Button>
           </div>
 
@@ -293,15 +297,15 @@ export const Hero = () => {
           <div className="flex flex-wrap justify-center gap-12 text-sm animate-fade-in-up text-muted-foreground font-light tracking-wide" style={{ animationDelay: '700ms' }}>
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-primary/40 rounded-full" />
-              <span>Contratti sicuri</span>
+              <span>{t('hero.trustSafe')}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-primary/40 rounded-full" />
-              <span>Supporto dedicato</span>
+              <span>{t('hero.trustSupport')}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-primary/40 rounded-full" />
-              <span>Zero commissioni</span>
+              <span>{t('hero.trustNoFees')}</span>
             </div>
           </div>
         </div>

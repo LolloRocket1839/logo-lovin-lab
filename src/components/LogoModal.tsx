@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 
@@ -7,6 +8,8 @@ interface LogoModalProps {
 }
 
 export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
+  const { t } = useTranslation();
+  
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden border-0 bg-transparent">
@@ -16,7 +19,7 @@ export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
             <div className="relative">
               <img
                 src={jungleRentLogo}
-                alt="Jungle Rent Logo"
+                alt={t('logoModal.logoAlt')}
                 className="w-64 h-64 md:w-80 md:h-80 object-contain"
               />
             </div>
@@ -24,10 +27,10 @@ export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
             {/* Brand info */}
             <div className="text-center space-y-2">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
-                Jungle Rent
+                {t('logoModal.brandName')}
               </h2>
               <p className="text-sm text-muted-foreground max-w-md">
-                Il tuo rifugio sicuro nella giungla immobiliare
+                {t('logoModal.tagline')}
               </p>
             </div>
           </div>

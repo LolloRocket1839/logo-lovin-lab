@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { ExternalLink } from "lucide-react";
 import logo2i3t from "@/assets/2i3t-logo.png";
 
 export const TrustBadge = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-accent/30 relative overflow-hidden border-b border-border">
       <div className="absolute inset-0 opacity-[0.02]" style={{
@@ -11,7 +14,7 @@ export const TrustBadge = () => {
       <div className="container px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium">
-            Partnership Istituzionale
+            {t('trustBadge.sectionLabel')}
           </p>
           
           <a 
@@ -25,10 +28,10 @@ export const TrustBadge = () => {
             </div>
             <div className="text-center sm:text-left">
               <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1">
-                Supportati da 2i3T
+                {t('trustBadge.supportedBy')}
               </h3>
               <p className="text-sm text-muted-foreground font-light">
-                Incubatore d'Imprese dell'Università di Torino
+                {t('trustBadge.incubator')}
               </p>
             </div>
           </a>
@@ -39,12 +42,12 @@ export const TrustBadge = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors duration-300 font-medium group"
           >
-            <span>Scopri di più su 2i3T</span>
+            <span>{t('trustBadge.learnMore')}</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
           </a>
           
           <p className="text-xs text-muted-foreground/60 mt-6 font-light max-w-2xl mx-auto leading-relaxed">
-            Incubati presso l'ecosistema universitario torinese, garantendo professionalità e affidabilità in ogni transazione
+            {t('trustBadge.guarantee')}
           </p>
         </div>
       </div>

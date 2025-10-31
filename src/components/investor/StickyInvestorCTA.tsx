@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { openEmail, MESSAGES } from "@/lib/contacts";
 
 export const StickyInvestorCTA = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -49,7 +51,7 @@ export const StickyInvestorCTA = () => {
         onClick={handleClick}
         className="w-full max-w-md mx-auto shadow-2xl backdrop-blur-xl"
       >
-        Contatta Consulente
+        {t('nav.contactUs')}
         <ArrowRight className="ml-2 w-5 h-5" />
       </Button>
     </div>

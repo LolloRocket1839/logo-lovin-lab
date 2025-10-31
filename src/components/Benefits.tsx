@@ -1,37 +1,40 @@
+import { useTranslation } from "react-i18next";
 import { Wallet, Shield, MapPin, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { openEmail, MESSAGES } from "@/lib/contacts";
 
-const benefits = [
-  {
-    icon: Wallet,
-    title: "Risparmi Certificati",
-    description: "Risparmia sui costi rispetto alle agenzie tradizionali. Affitti convenienti con contratti trasparenti.",
-    highlight: "Risparmia"
-  },
-  {
-    icon: TrendingUp,
-    title: "Opportunità di Investimento",
-    description: "Per investitori: gestione professionale delle proprietà con domanda universitaria costante",
-    highlight: "Investitori"
-  },
-  {
-    icon: MapPin,
-    title: "Posizione Strategica",
-    description: "Portfolio immobiliare selezionato vicino a tutti i principali atenei: Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO",
-    highlight: "Top Location"
-  },
-  {
-    icon: Shield,
-    title: "Contratti Certificati",
-    description: "Contratti regolari, gestione professionale e trasparenza totale. Supportati da 2i3T - Incubatore Universitario.",
-    highlight: "100% Safe"
-  }
-];
-
 export const Benefits = () => {
+  const { t } = useTranslation();
+
+  const benefits = [
+    {
+      icon: Wallet,
+      title: t('benefits.savings'),
+      description: t('benefits.savingsDesc'),
+      highlight: t('benefits.savingsHighlight')
+    },
+    {
+      icon: TrendingUp,
+      title: t('benefits.investment'),
+      description: t('benefits.investmentDesc'),
+      highlight: t('benefits.investmentHighlight')
+    },
+    {
+      icon: MapPin,
+      title: t('benefits.location'),
+      description: t('benefits.locationDesc'),
+      highlight: t('benefits.locationHighlight')
+    },
+    {
+      icon: Shield,
+      title: t('benefits.quality'),
+      description: t('benefits.qualityDesc'),
+      highlight: t('benefits.qualityHighlight')
+    }
+  ];
+
   return (
     <section id="benefits" aria-labelledby="benefits-heading" className="py-20 md:py-32 lg:py-40 bg-background relative overflow-hidden">
       {/* Top border line */}
@@ -44,13 +47,13 @@ export const Benefits = () => {
       <div className="container px-8 relative z-10">
         <div className="text-center mb-12 md:mb-20 lg:mb-28 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
-            I Nostri Vantaggi
+            {t('benefits.sectionLabel')}
           </p>
           <h2 id="benefits-heading" className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
-            Vantaggi Concreti per<br />Studenti & Investitori
+            {t('benefits.sectionTitle')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-8">
-            Gestione professionale, risparmio garantito e partnership istituzionali
+            {t('benefits.sectionSubtitle')}
           </p>
           
           {/* CTA Buttons */}
@@ -61,7 +64,7 @@ export const Benefits = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base group"
             >
               <Mail className="mr-2 w-5 h-5" />
-              Sono uno Studente
+              {t('benefits.studentCta')}
             </Button>
             <Button
               size="lg"
@@ -70,7 +73,7 @@ export const Benefits = () => {
               className="border-primary/30 hover:bg-primary/5 px-8 py-6 text-base group"
             >
               <Mail className="mr-2 w-5 h-5" />
-              Sono un Investitore
+              {t('benefits.investorCta')}
             </Button>
           </div>
         </div>
