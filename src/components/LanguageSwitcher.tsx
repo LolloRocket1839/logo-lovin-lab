@@ -32,8 +32,7 @@ export const LanguageSwitcher = () => {
           aria-label={t("accessibility.languageSelector")}
         >
           <Globe className="h-4 w-4" aria-hidden="true" />
-          <span className="hidden sm:inline">{currentLanguage.flag}</span>
-          <span className="font-medium">{currentLanguage.code.toUpperCase()}</span>
+          <span>{currentLanguage.flag}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent 
