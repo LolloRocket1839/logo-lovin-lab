@@ -148,9 +148,9 @@ export const Hero = () => {
                   {t('hero.studentSubtitle')}
                 </p>
                 
-                {/* Arrow con bounce */}
+                {/* Arrow elegant */}
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-0 
-                                group-hover:opacity-100 group-hover:translate-x-2 group-hover:animate-bounce
+                                group-hover:opacity-100 group-hover:translate-x-2
                                 transition-all duration-500 z-10">
                   <ArrowRight className="w-12 h-12 text-cyan-500 drop-shadow-lg" />
                 </div>
