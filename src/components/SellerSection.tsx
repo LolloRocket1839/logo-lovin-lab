@@ -47,22 +47,22 @@ export const SellerSection = () => {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-card/30 p-6 rounded-xl border border-border/50">
             <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">48h</div>
+              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineValuationTime')}</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineValuation')}</div>
             </div>
             <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0 transition-none" style={{ animation: 'none', transform: 'none' }} />
             <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">10-14gg</div>
+              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineInspectionTime')}</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineInspection')}</div>
             </div>
             <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0 transition-none" style={{ animation: 'none', transform: 'none' }} />
             <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">5-7gg</div>
+              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineOfferTime')}</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineOffer')}</div>
             </div>
             <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0 transition-none" style={{ animation: 'none', transform: 'none' }} />
             <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">60-90gg</div>
+              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineClosingTime')}</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineClosing')}</div>
             </div>
           </div>
