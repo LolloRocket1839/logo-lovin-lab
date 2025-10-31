@@ -50,17 +50,17 @@ export const SellerSection = () => {
               <div className="text-2xl font-bold text-primary mb-1">48h</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineValuation')}</div>
             </div>
-            <ArrowRight className="hidden md:block text-primary/50 w-6 h-6 flex-shrink-0" />
+            <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0" />
             <div className="flex-1 text-center">
               <div className="text-2xl font-bold text-primary mb-1">10-14gg</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineInspection')}</div>
             </div>
-            <ArrowRight className="hidden md:block text-primary/50 w-6 h-6 flex-shrink-0" />
+            <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0" />
             <div className="flex-1 text-center">
               <div className="text-2xl font-bold text-primary mb-1">5-7gg</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineOffer')}</div>
             </div>
-            <ArrowRight className="hidden md:block text-primary/50 w-6 h-6 flex-shrink-0" />
+            <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0" />
             <div className="flex-1 text-center">
               <div className="text-2xl font-bold text-primary mb-1">60-90gg</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineClosing')}</div>
