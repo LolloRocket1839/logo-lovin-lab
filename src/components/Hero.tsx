@@ -142,8 +142,8 @@ export const Hero = () => {
                               bg-gradient-to-br from-cyan-500/8 via-blue-500/8 to-indigo-500/8">
                 
                 {/* Glow elegante cyan/indigo */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/35 via-blue-400/30 to-indigo-400/35
-                                opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-xl z-0" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/25 via-blue-400/20 to-indigo-400/25
+                                opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-lg z-0" />
                 
                 <div className="relative text-3xl md:text-6xl lg:text-8xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
