@@ -17,7 +17,7 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Playfair Display', 'serif'],
         accent: ['Cinzel', 'serif'],
-        gotham: ['Gotham', 'sans-serif'],
+        gotham: ['Gotham', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       letterSpacing: {
