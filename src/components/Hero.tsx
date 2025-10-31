@@ -63,6 +63,13 @@ export const Hero = () => {
   const investorScale = 0.85 + (scrollProgress * 0.3);
   const investorOpacity = 0.7 + (scrollProgress * 0.3);
 
+  // Logo animation - moves from center to nav position
+  const logoScrollProgress = Math.min(scrollProgress * 2, 1); // Faster transition
+  const logoOpacity = 1 - logoScrollProgress;
+  const logoScale = 1 - (logoScrollProgress * 0.3);
+  const logoTranslateY = logoScrollProgress * -200; // Move up
+  const logoTranslateX = logoScrollProgress * -45; // Move left (percentage of screen)
+
   return (
     <header role="banner" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       <h1 className="sr-only">
@@ -76,8 +83,15 @@ export const Hero = () => {
 
       <div className="container relative z-10 px-8 py-16 md:py-32">
         <div className="max-w-5xl mx-auto text-center">
-          {/* Logo - animated and prominent */}
-          <div className="mb-6 md:mb-12 animate-fade-in">
+          {/* Logo - animated and prominent with scroll transition */}
+          <div 
+            className="mb-6 md:mb-12 animate-fade-in transition-all duration-500"
+            style={{
+              opacity: logoOpacity,
+              transform: `translate(calc(${logoTranslateX}vw), ${logoTranslateY}px) scale(${logoScale})`,
+              pointerEvents: logoScrollProgress > 0.5 ? 'none' : 'auto'
+            }}
+          >
             <img 
               src={jungleRentLogo} 
               alt={t('hero.logoAlt')}
@@ -98,7 +112,10 @@ export const Hero = () => {
                 }
               }}
             />
-            <p className="mt-4 text-base font-accent text-primary/80 tracking-wider">
+            <p 
+              className="mt-4 text-base font-accent text-primary/80 tracking-wider transition-opacity duration-500"
+              style={{ opacity: logoOpacity }}
+            >
               {t('hero.tagline')}
             </p>
           </div>

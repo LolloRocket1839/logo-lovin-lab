@@ -10,13 +10,21 @@ export const Navigation = () => {
   const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 50);
+      
+      // Calculate scroll progress for logo transition (0 to 1)
+      const windowHeight = window.innerHeight;
+      const progress = Math.min(Math.max(scrollY / (windowHeight * 0.5), 0), 1);
+      setScrollProgress(progress);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial call
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -54,11 +62,16 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo - only shows when scrolled */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="flex items-center gap-2 group transition-transform duration-300 hover:scale-105"
+            className="flex items-center gap-2 group transition-all duration-500 hover:scale-105"
             aria-label="Torna alla home"
+            style={{
+              opacity: scrollProgress,
+              transform: `scale(${0.8 + (scrollProgress * 0.2)})`,
+              pointerEvents: scrollProgress < 0.3 ? 'none' : 'auto'
+            }}
           >
             <img
               src={jungleRentLogo}
