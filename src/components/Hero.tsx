@@ -221,19 +221,17 @@ export const Hero = () => {
             {t('hero.location')}
           </p>
 
-          {/* Questionario 100€ Badge - clickable */}
+          {/* Questionario 100€ Badge - clickable - SMALLER */}
           <a
             href="https://it.surveymonkey.com/r/Q27QDBG"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center gap-3 border-2 border-primary/30 
+            className="relative inline-flex items-center gap-2 border border-primary/30 
                         bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 
-                        rounded-full px-10 py-4 mb-8
+                        rounded-full px-6 py-2 mb-8
                         overflow-hidden group
-                        hover:border-primary/50 hover:shadow-[0_0_30px_hsla(150,45%,18%,0.2)]
-                        hover:scale-105
-                        transition-all duration-500 cursor-pointer
-                        animate-[pulse-border_3s_ease-in-out_infinite]
+                        hover:border-primary/50 hover:shadow-[0_0_20px_hsla(150,45%,18%,0.15)]
+                        transition-all duration-300 cursor-pointer
                         animate-fade-in-up" 
             style={{ animationDelay: '500ms' }}
           >
@@ -242,71 +240,38 @@ export const Hero = () => {
                             bg-gradient-to-r from-transparent via-white/20 to-transparent 
                             transition-transform duration-1000" />
             
-            <span className="relative text-primary text-xl">🎁</span>
-            <span className="relative text-foreground font-semibold text-lg">
+            <span className="relative text-primary text-sm">🎁</span>
+            <span className="relative text-foreground font-medium text-sm">
               {t('hero.questionnaire')}
             </span>
-            <ArrowRight className="relative w-5 h-5 text-primary/70 transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="relative w-4 h-4 text-primary/70 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
 
           {/* Info aggiuntiva sul questionario */}
-          <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto mb-16 animate-fade-in-up flex flex-col items-center gap-3" style={{ animationDelay: '550ms' }}>
-            <span><span className="font-semibold text-foreground">{t('hero.availableRooms').split(' ').slice(0, 4).join(' ')}</span> {t('hero.availableRooms').split(' ').slice(4).join(' ')}</span>
-            <a href="https://2i3t.it" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              {t('hero.supportedBy')} 
-              <img 
-                src={logo2i3t} 
-                alt={t('hero.logo2i3tAlt')}
-                className="h-10 w-auto object-contain inline-block" 
-                loading="lazy"
-              />
-            </a>
+          <p className="text-sm text-muted-foreground/70 max-w-2xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '550ms' }}>
+            <span className="font-semibold text-foreground">{t('hero.availableRooms').split(' ').slice(0, 4).join(' ')}</span> {t('hero.availableRooms').split(' ').slice(4).join(' ')}
           </p>
 
-          {/* Hero CTAs - LARGE & PROMINENT */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up mb-20" style={{ animationDelay: '600ms' }}>
+          {/* Hero CTAs - SIMPLIFIED - 2 BUTTONS ONLY */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up mb-12" style={{ animationDelay: '600ms' }}>
             <Button 
               size="lg" 
               variant="hero"
-              onClick={handleWhatsAppLorenzo}
-              className="w-full sm:w-auto px-8 py-6 sm:px-12 sm:py-7 md:px-16 md:py-8 text-lg group"
+              onClick={scrollToStudent}
+              className="w-full sm:w-auto px-8 py-6 text-base group"
             >
-              {t('hero.contactLorenzo')}
+              {t('hero.iAmStudent')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button 
               size="lg" 
               variant="hero"
-              onClick={handleWhatsAppAndrea}
-              className="w-full sm:w-auto px-8 py-6 sm:px-12 sm:py-7 md:px-16 md:py-8 text-lg group"
+              onClick={scrollToInvestor}
+              className="w-full sm:w-auto px-8 py-6 text-base group"
             >
-              {t('hero.contactAndrea')}
+              {t('hero.iAmInvestor')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-auto px-8 py-6 sm:px-10 sm:py-6 md:px-12 md:py-7 text-base"
-            >
-              {t('hero.howItWorks')}
-            </Button>
-          </div>
-
-          {/* Minimal trust indicators */}
-          <div className="flex flex-wrap justify-center gap-12 text-sm animate-fade-in-up text-muted-foreground font-light tracking-wide" style={{ animationDelay: '700ms' }}>
-            <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-primary/40 rounded-full" />
-              <span>{t('hero.trustSafe')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-primary/40 rounded-full" />
-              <span>{t('hero.trustSupport')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-primary/40 rounded-full" />
-              <span>{t('hero.trustNoFees')}</span>
-            </div>
           </div>
         </div>
       </div>

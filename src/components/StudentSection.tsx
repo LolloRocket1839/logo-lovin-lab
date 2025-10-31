@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Wallet, Calendar, ArrowRight, Mail } from "lucide-react";
-import { CONTACTS, openWhatsApp, openEmail, MESSAGES } from "@/lib/contacts";
+import { Wallet, Calendar, ArrowRight } from "lucide-react";
+import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const StudentSection = () => {
   const { t } = useTranslation();
@@ -28,12 +28,8 @@ export const StudentSection = () => {
     openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp(CONTACTS.andrea.name));
   };
 
-  const handleEmailContact = () => {
-    openEmail(MESSAGES.student.email.subject, MESSAGES.student.email.body);
-  };
-
   return (
-    <section id="student-section" className="py-20 md:py-32 lg:py-40 bg-accent/20 relative overflow-hidden">
+    <section id="student-section" className="py-12 md:py-20 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
       <div className="absolute inset-0 opacity-[0.015]" style={{
@@ -44,11 +40,11 @@ export const StudentSection = () => {
       <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl" />
 
       <div className="container px-8 relative z-10">
-        <div className="text-center mb-12 md:mb-20 lg:mb-28 max-w-3xl mx-auto">
+        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             {t('student.sectionLabel')}
           </p>
-          <h2 className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-8 leading-tight text-foreground tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             {t('student.sectionTitle')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
@@ -93,12 +89,12 @@ export const StudentSection = () => {
           <p className="text-sm text-muted-foreground mb-6 font-light">
             {t('student.contactText')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
             <Button 
               size="lg" 
               variant="premium"
               onClick={handleWhatsAppLorenzo}
-              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 text-base"
+              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 text-base"
             >
               {t('student.contactLorenzo')}
               <ArrowRight className="ml-2 w-4 h-4" />
@@ -107,22 +103,13 @@ export const StudentSection = () => {
               size="lg" 
               variant="premium"
               onClick={handleWhatsAppAndrea}
-              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 text-base"
+              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 text-base"
             >
               {t('student.contactAndrea')}
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={handleEmailContact}
-              className="w-full sm:w-auto px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-7 text-base"
-            >
-              <Mail className="mr-2 w-4 h-4" />
-              {t('student.sendEmail')}
-            </Button>
           </div>
-          <p className="text-xs text-muted-foreground/60 mt-6 font-light">
+          <p className="text-xs text-muted-foreground/60 font-light">
             {t('student.responseTime')}
           </p>
         </div>
