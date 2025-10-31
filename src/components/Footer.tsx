@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const [logoModalOpen, setLogoModalOpen] = useState(false);
   
   return (
@@ -34,16 +36,16 @@ export const Footer = () => {
               />
             </div>
             <p className="text-muted-foreground mb-4 leading-relaxed font-light">
-              Il modo rivoluzionario per affittare casa a Torino
+              {t('footer.taglineAlt')}
             </p>
             <p className="text-xs text-muted-foreground/60 font-light tracking-wide">
-              © 2024 Jungle Rent
+              {t('footer.copyright')}
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-display text-lg font-semibold mb-6 text-foreground">Contatti</h3>
+            <h3 className="font-display text-lg font-semibold mb-6 text-foreground">{t('footer.contactTitle')}</h3>
             <div className="space-y-3">
               <a 
                 href={`https://wa.me/${CONTACTS.lorenzo.phone}`}
@@ -72,23 +74,23 @@ export const Footer = () => {
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 opacity-60" strokeWidth={1.5} />
-                <span className="text-sm font-light">Torino, Italia</span>
+                <span className="text-sm font-light">{t('footer.location')}</span>
               </div>
             </div>
           </div>
 
           {/* Info */}
           <div>
-            <h3 className="font-display text-lg font-semibold mb-6 text-foreground">Per Studenti</h3>
+            <h3 className="font-display text-lg font-semibold mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
             <ul className="space-y-3 text-muted-foreground">
               <li>
                 <a href="#how-it-works" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
-                  Come Funziona
+                  {t('footer.howItWorksLink')}
                 </a>
               </li>
             </ul>
             <div className="mt-6">
-              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground/60 mb-3 font-medium">Atenei Coperti</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground/60 mb-3 font-medium">{t('footer.universitiesLabel')}</p>
               <div className="grid grid-cols-1 gap-y-2">
                 <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino</a>
                 <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino</a>
@@ -103,7 +105,7 @@ export const Footer = () => {
 
           {/* Partnership */}
           <div>
-            <h3 className="font-display text-lg font-semibold mb-6 text-foreground">Partnership</h3>
+            <h3 className="font-display text-lg font-semibold mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
             <div className="space-y-3">
               <a 
                 href="https://www.unito.it/ricerca-e-innovazione/dalle-idee-al-mercato/incubatore-dimprese-2i3t"
@@ -111,13 +113,13 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="block text-sm font-light text-muted-foreground hover:text-primary transition-colors duration-500 link-elegant"
               >
-                2i3T - Incubatore UniTO
+                {t('footer.incubatorLink')}
               </a>
               <p className="text-xs text-muted-foreground/60 font-light leading-relaxed">
-                Incubati presso l'Università di Torino
+                {t('footer.incubatorDesc')}
               </p>
               <p className="text-xs text-muted-foreground/60 font-light">
-                Garanzia di professionalità
+                {t('footer.guaranteeText')}
               </p>
             </div>
           </div>
@@ -126,10 +128,10 @@ export const Footer = () => {
         {/* Bottom tagline */}
         <div className="border-t border-border pt-12 text-center">
           <p className="text-primary/70 text-base font-accent mb-2 tracking-wide">
-            Il tuo rifugio sicuro nella giungla immobiliare
+            {t('footer.bottomTagline')}
           </p>
           <p className="text-muted-foreground/70 text-xs font-light">
-            Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino
+            {t('footer.bottomText')}
           </p>
         </div>
       </div>

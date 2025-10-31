@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, PieChart, BarChart3, ArrowRight, Target, Users, Building2 } from "lucide-react";
+import { TrendingUp, PieChart, BarChart3, ArrowRight } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { openEmail, MESSAGES } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
@@ -9,26 +10,27 @@ import { PartnerLogos } from "@/components/investor/PartnerLogos";
 import { StickyInvestorCTA } from "@/components/investor/StickyInvestorCTA";
 import { Skeleton } from "@/components/ui/skeleton";
 
-const investorBenefits = [
-  {
-    icon: TrendingUp,
-    title: "Investimento Ottimizzato",
-    description: "Opportunità nel mercato immobiliare grazie alla nostra gestione professionale e pricing strategico"
-  },
-  {
-    icon: BarChart3,
-    title: "Gestione Completa",
-    description: "Ci occupiamo di tutto: contratti, manutenzione, relazioni con inquilini. Zero stress per te"
-  },
-  {
-    icon: PieChart,
-    title: "Portfolio Strategico",
-    description: "Proprietà selezionate vicino ai 7 principali poli universitari di Torino (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO) con alta domanda costante"
-  }
-];
-
 export const InvestorSection = () => {
+  const { t } = useTranslation();
   const [waitlistOpen, setWaitlistOpen] = useState(false);
+
+  const investorBenefits = [
+    {
+      icon: TrendingUp,
+      title: t('investor.benefit1Title'),
+      description: t('investor.benefit1Desc')
+    },
+    {
+      icon: BarChart3,
+      title: t('investor.benefit2Title'),
+      description: t('investor.benefit2Desc')
+    },
+    {
+      icon: PieChart,
+      title: t('investor.benefit3Title'),
+      description: t('investor.benefit3Desc')
+    }
+  ];
 
   const handleInvestorContact = () => {
     openEmail(MESSAGES.investor.email.subject, MESSAGES.investor.email.body);
@@ -54,16 +56,16 @@ export const InvestorSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <p className="text-xs uppercase tracking-widest text-primary font-semibold">
-              Premium Investors
+              {t('investor.sectionLabel')}
             </p>
           </div>
           <h2 className="font-gotham text-4xl md:text-6xl lg:text-8xl font-black mb-10 leading-tighter tracking-tighter">
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent">
-              Opportunità di<br />Investimento Immobiliare
+              {t('investor.sectionTitle')}
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed tracking-wide">
-            Partnership professionali nel mercato degli affitti universitari torinesi
+            {t('investor.sectionSubtitle')}
           </p>
         </div>
 
@@ -73,7 +75,7 @@ export const InvestorSection = () => {
         {/* Benefits Section - Bento Grid Layout */}
         <div className="my-16 md:my-20 lg:my-24">
           <h3 className="text-center text-2xl md:text-4xl font-display font-bold mb-10 md:mb-14 tracking-tight">
-            Perché Investire con Noi
+            {t('investor.whyInvestTitle')}
           </h3>
           
           {/* Visual Decoration - Investment Flow - Enhanced */}
@@ -103,8 +105,8 @@ export const InvestorSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <span className="text-sm font-semibold text-foreground block mb-1">Rendimenti</span>
-                  <span className="text-xs text-muted-foreground font-light">Ottimizzati</span>
+                  <span className="text-sm font-semibold text-foreground block mb-1">{t('investor.flowStep1')}</span>
+                  <span className="text-xs text-muted-foreground font-light">{t('investor.flowStep1Sub')}</span>
                 </div>
               </div>
               
@@ -123,8 +125,8 @@ export const InvestorSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <span className="text-sm font-semibold text-foreground block mb-1">Gestione</span>
-                  <span className="text-xs text-muted-foreground font-light">Professionale</span>
+                  <span className="text-sm font-semibold text-foreground block mb-1">{t('investor.flowStep2')}</span>
+                  <span className="text-xs text-muted-foreground font-light">{t('investor.flowStep2Sub')}</span>
                 </div>
               </div>
               
@@ -143,8 +145,8 @@ export const InvestorSection = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <span className="text-sm font-semibold text-foreground block mb-1">Portfolio</span>
-                  <span className="text-xs text-muted-foreground font-light">Strategico</span>
+                  <span className="text-sm font-semibold text-foreground block mb-1">{t('investor.flowStep3')}</span>
+                  <span className="text-xs text-muted-foreground font-light">{t('investor.flowStep3Sub')}</span>
                 </div>
               </div>
             </div>
@@ -199,10 +201,10 @@ export const InvestorSection = () => {
             <div className="p-10 md:p-14 lg:p-20 rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-card/80 to-primary/5 backdrop-blur-sm space-y-8">
               <div className="text-center space-y-4">
                 <h3 className="font-gotham text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  Iscriviti alla Waitlist Investitori
+                  {t('investor.waitlistTitle')}
                 </h3>
                 <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
-                  Ricevi aggiornamenti esclusivi sulle opportunità di investimento immobiliare a Torino
+                  {t('investor.waitlistSubtitle')}
                 </p>
               </div>
               
@@ -213,13 +215,13 @@ export const InvestorSection = () => {
                   variant="premium"
                   className="w-full sm:w-auto px-16 py-8 text-lg group shadow-xl"
                 >
-                  Iscriviti Ora
+                  {t('investor.waitlistCta')}
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
                 <div className="flex items-center gap-3 text-base text-muted-foreground">
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-                  <span className="font-medium">Risposta prioritaria garantita</span>
+                  <span className="font-medium">{t('investor.priorityResponse')}</span>
                 </div>
               </div>
             </div>

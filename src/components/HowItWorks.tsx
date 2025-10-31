@@ -1,90 +1,88 @@
 import { useState } from "react";
-import { MapPin, UserPlus, FileCheck, HeartHandshake, Sparkles, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { MapPin, UserPlus, FileCheck, HeartHandshake } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
 
-const steps = [
-  {
-    icon: MapPin,
-    title: "Esplora le Stanze Disponibili",
-    description: "Naviga le nostre stanze vicino a Politecnico, UniTo e tutti gli atenei torinesi. Ogni annuncio mostra prezzo, foto, servizi inclusi e coinquilini.",
-    step: "01",
-    bullets: [
-      "A 10-15 min a piedi dalle università",
-      "Tutte le bollette incluse (luce, gas, Wi-Fi)",
-      "Arredate e pronte da abitare"
-    ]
-  },
-  {
-    icon: UserPlus,
-    title: "Prenota la Tua Stanza",
-    description: "Compila il form con le tue preferenze (budget, università, interessi). Ti abbiniamo con coinquilini compatibili o prenota con i tuoi amici.",
-    step: "02",
-    bullets: [
-      "Matching automatico con studenti affini",
-      "Puoi venire da solo o con amici",
-      "Profili verificati, zero sorprese"
-    ]
-  },
-  {
-    icon: FileCheck,
-    title: "Firma Contratto e Paga Online",
-    description: "Ricevi il contratto regolare via email, firma digitalmente e paga il deposito. Zero commissioni di agenzia, zero costi nascosti.",
-    step: "03",
-    bullets: [
-      "Contratto registrato",
-      "Deposito cauzionale standard",
-      "Pagamento sicuro online"
-    ]
-  },
-  {
-    icon: HeartHandshake,
-    title: "Ti Seguiamo Sempre",
-    description: "Assistenza WhatsApp 7/7 per manutenzione, bollette o problemi di convivenza.",
-    step: "04",
-    bullets: [
-      "Accoglienza personale e consegna chiavi",
-      "Risposta in <24h per emergenze"
-    ]
-  }
-];
-
 export const HowItWorks = () => {
+  const { t } = useTranslation();
   const [waitlistOpen, setWaitlistOpen] = useState(false);
+
+  const steps = [
+    {
+      icon: MapPin,
+      title: t('howItWorks.step1Title'),
+      description: t('howItWorks.step1Desc'),
+      step: "01",
+      bullets: [
+        t('howItWorks.step1Bullet1'),
+        t('howItWorks.step1Bullet2'),
+        t('howItWorks.step1Bullet3')
+      ]
+    },
+    {
+      icon: UserPlus,
+      title: t('howItWorks.step2Title'),
+      description: t('howItWorks.step2Desc'),
+      step: "02",
+      bullets: [
+        t('howItWorks.step2Bullet1'),
+        t('howItWorks.step2Bullet2'),
+        t('howItWorks.step2Bullet3')
+      ]
+    },
+    {
+      icon: FileCheck,
+      title: t('howItWorks.step3Title'),
+      description: t('howItWorks.step3Desc'),
+      step: "03",
+      bullets: [
+        t('howItWorks.step3Bullet1'),
+        t('howItWorks.step3Bullet2'),
+        t('howItWorks.step3Bullet3')
+      ]
+    },
+    {
+      icon: HeartHandshake,
+      title: t('howItWorks.step4Title'),
+      description: t('howItWorks.step4Desc'),
+      step: "04",
+      bullets: [
+        t('howItWorks.step4Bullet1'),
+        t('howItWorks.step4Bullet2')
+      ]
+    }
+  ];
 
   return (
     <section id="how-it-works" aria-labelledby="how-it-works-heading" className="py-20 md:py-32 lg:py-40 bg-gradient-to-b from-background to-accent/10 relative overflow-hidden scroll-mt-[-250px]">
-      {/* Top border line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
-      {/* Decorative blur circles */}
       <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
       
       <div className="container px-8 relative z-10">
         <div className="text-center mb-12 md:mb-20 lg:mb-28 max-w-3xl mx-auto">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
-            Processo Semplice
+            {t('howItWorks.sectionLabel')}
           </p>
           <h2 id="how-it-works-heading" className="text-3xl md:text-5xl lg:text-7xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
-            Come Funziona
+            {t('howItWorks.title')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
-            <strong>Quattro semplici passi</strong> per iniziare a risparmiare
+            <strong>{t('howItWorks.sectionSubtitle')}</strong>
           </p>
           
-          {/* Rich snippet structured list */}
           <ol className="sr-only">
-            <li><strong>Step 1:</strong> Esplora le stanze disponibili vicino alle università</li>
-            <li><strong>Step 2:</strong> Prenota la tua stanza e trova coinquilini compatibili</li>
-            <li><strong>Step 3:</strong> Firma il contratto online e paga il deposito</li>
-            <li><strong>Step 4:</strong> Ricevi assistenza continua 7 giorni su 7</li>
+            <li><strong>Step 1:</strong> {t('howItWorks.step1Title')}</li>
+            <li><strong>Step 2:</strong> {t('howItWorks.step2Title')}</li>
+            <li><strong>Step 3:</strong> {t('howItWorks.step3Title')}</li>
+            <li><strong>Step 4:</strong> {t('howItWorks.step4Title')}</li>
           </ol>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto relative">
-          {/* Connecting lines between steps */}
           <div className="hidden md:block absolute top-24 left-1/6 right-1/6 h-[1px] bg-border -z-10" />
           
           {steps.map((step, index) => {
@@ -104,27 +102,22 @@ export const HowItWorks = () => {
                   e.currentTarget.style.boxShadow = 'var(--shadow-glass)';
                 }}
               >
-                {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                {/* Elegant number badge */}
                 <div className="mb-8 relative z-10">
                   <div className="w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center text-primary font-display text-lg font-medium group-hover:border-primary/50 transition-colors duration-700 backdrop-blur-sm">
                     {step.step}
                   </div>
                 </div>
 
-                {/* Simple line icon */}
                 <div className="mb-6 relative z-10">
                   <Icon className="w-8 h-8 text-primary/70 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
                 </div>
 
-                {/* Content */}
                 <h3 className="text-xl font-display font-semibold mb-3 leading-tight text-foreground relative z-10">{step.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed font-light relative z-10 mb-4">
                   {step.description}
                 </p>
                 
-                {/* Bullet points */}
                 <ul className="space-y-2 relative z-10">
                   {step.bullets.map((bullet, idx) => (
                     <li key={idx} className="text-sm text-muted-foreground flex items-start">
@@ -134,7 +127,6 @@ export const HowItWorks = () => {
                   ))}
                 </ul>
 
-                {/* Waitlist button for Step 2 */}
                 {index === 1 && (
                   <Button 
                     onClick={() => setWaitlistOpen(true)}
@@ -148,7 +140,7 @@ export const HowItWorks = () => {
                                rounded-lg
                                relative z-10"
                   >
-                    Iscriviti alla Waitlist
+                    {t('howItWorks.waitlistCta')}
                   </Button>
                 )}
               </Card>
@@ -159,7 +151,6 @@ export const HowItWorks = () => {
         <WaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
       </div>
       
-      {/* Bottom border line */}
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
     </section>
   );

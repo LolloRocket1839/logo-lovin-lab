@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,6 +14,8 @@ interface BreadcrumbsProps {
 }
 
 export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
+  const { t } = useTranslation();
+  
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -30,7 +33,7 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
               className="flex items-center gap-1 cursor-pointer hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
             >
               <Home className="h-4 w-4" />
-              Home
+              {t('breadcrumbs.home')}
             </BreadcrumbLink>
           </BreadcrumbItem>
           {items.map((item, index) => (
