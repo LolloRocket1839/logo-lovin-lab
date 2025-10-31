@@ -3,6 +3,7 @@ import { Building2, TrendingUp, Clock, Shield, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { SellerContactDialog } from "./SellerContactDialog";
 import { useState } from "react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const SellerSection = () => {
   const { t } = useTranslation();
@@ -13,21 +14,25 @@ export const SellerSection = () => {
       icon: TrendingUp,
       title: t('seller.benefit1Title'),
       description: t('seller.benefit1Desc'),
+      tooltip: t('seller.benefit1Tooltip'),
     },
     {
       icon: Clock,
       title: t('seller.benefit2Title'),
       description: t('seller.benefit2Desc'),
+      tooltip: t('seller.benefit2Tooltip'),
     },
     {
       icon: Shield,
       title: t('seller.benefit3Title'),
       description: t('seller.benefit3Desc'),
+      tooltip: t('seller.benefit3Tooltip'),
     },
     {
       icon: Building2,
       title: t('seller.benefit4Title'),
       description: t('seller.benefit4Desc'),
+      tooltip: t('seller.benefit4Tooltip'),
     },
   ];
 
@@ -69,16 +74,24 @@ export const SellerSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
-            >
-              <benefit.icon className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-            </div>
-          ))}
+          <TooltipProvider delayDuration={500}>
+            {benefits.map((benefit, index) => (
+              <Tooltip key={index}>
+                <TooltipTrigger asChild>
+                  <div
+                    className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 cursor-pointer"
+                  >
+                    <benefit.icon className="w-12 h-12 text-primary mb-4" />
+                    <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent className="hidden md:block">
+                  <p className="text-xs">{benefit.tooltip}</p>
+                </TooltipContent>
+              </Tooltip>
+            ))}
+          </TooltipProvider>
         </div>
 
         <div className="text-center mt-12">

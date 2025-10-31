@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Wallet, Calendar, ArrowRight } from "lucide-react";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const StudentSection = () => {
   const { t } = useTranslation();
@@ -11,12 +12,14 @@ export const StudentSection = () => {
     {
       icon: Wallet,
       title: t('student.benefit1Title'),
-      description: t('student.benefit1Desc')
+      description: t('student.benefit1Desc'),
+      tooltip: t('student.benefit1Tooltip')
     },
     {
       icon: Calendar,
       title: t('student.benefit2Title'),
-      description: t('student.benefit2Desc')
+      description: t('student.benefit2Desc'),
+      tooltip: t('student.benefit2Tooltip')
     }
   ];
 
@@ -53,36 +56,44 @@ export const StudentSection = () => {
         </div>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
-          {studentBenefits.map((benefit, index) => {
-            const Icon = benefit.icon;
-            return (
-              <Card 
-                key={index}
-                className="p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:bg-white/15 hover:-translate-y-1"
-                style={{ 
-                  animationDelay: `${index * 100}ms`,
-                  boxShadow: 'var(--shadow-glass)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = 'var(--shadow-glass-hover)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = 'var(--shadow-glass)';
-                }}
-              >
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <div className="mb-6 relative z-10">
-                  <Icon className="w-10 h-10 text-primary/70 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-xl font-display font-semibold mb-4 leading-tight text-foreground relative z-10">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed font-light text-sm relative z-10">
-                  {benefit.description}
-                </p>
-              </Card>
-            );
-          })}
+          <TooltipProvider delayDuration={500}>
+            {studentBenefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <Tooltip key={index}>
+                  <TooltipTrigger asChild>
+                    <Card 
+                      className="p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:bg-white/15 hover:-translate-y-1 cursor-pointer"
+                      style={{ 
+                        animationDelay: `${index * 100}ms`,
+                        boxShadow: 'var(--shadow-glass)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = 'var(--shadow-glass-hover)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = 'var(--shadow-glass)';
+                      }}
+                    >
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className="mb-6 relative z-10">
+                        <Icon className="w-10 h-10 text-primary/70 group-hover:text-primary transition-colors duration-700" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-xl font-display font-semibold mb-4 leading-tight text-foreground relative z-10">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed font-light text-sm relative z-10">
+                        {benefit.description}
+                      </p>
+                    </Card>
+                  </TooltipTrigger>
+                  <TooltipContent className="hidden md:block">
+                    <p className="text-xs">{benefit.tooltip}</p>
+                  </TooltipContent>
+                </Tooltip>
+              );
+            })}
+          </TooltipProvider>
         </div>
 
         <div className="text-center">
