@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Building2, TrendingUp, Clock, Shield } from "lucide-react";
+import { Building2, TrendingUp, Clock, Shield, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { SellerContactDialog } from "./SellerContactDialog";
 import { useState } from "react";
@@ -50,17 +50,17 @@ export const SellerSection = () => {
               <div className="text-2xl font-bold text-primary mb-1">48h</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineValuation')}</div>
             </div>
-            <div className="hidden md:block w-8 h-0.5 bg-gradient-to-r from-primary/50 to-transparent" />
+            <ArrowRight className="hidden md:block text-primary/50 w-6 h-6 flex-shrink-0" />
             <div className="flex-1 text-center">
               <div className="text-2xl font-bold text-primary mb-1">10-14gg</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineInspection')}</div>
             </div>
-            <div className="hidden md:block w-8 h-0.5 bg-gradient-to-r from-primary/50 to-transparent" />
+            <ArrowRight className="hidden md:block text-primary/50 w-6 h-6 flex-shrink-0" />
             <div className="flex-1 text-center">
               <div className="text-2xl font-bold text-primary mb-1">5-7gg</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineOffer')}</div>
             </div>
-            <div className="hidden md:block w-8 h-0.5 bg-gradient-to-r from-primary/50 to-transparent" />
+            <ArrowRight className="hidden md:block text-primary/50 w-6 h-6 flex-shrink-0" />
             <div className="flex-1 text-center">
               <div className="text-2xl font-bold text-primary mb-1">60-90gg</div>
               <div className="text-sm text-muted-foreground">{t('seller.timelineClosing')}</div>
