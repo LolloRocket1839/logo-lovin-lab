@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { TrustBadge } from "@/components/TrustBadge";
 import { HowItWorks } from "@/components/HowItWorks";
@@ -15,8 +16,11 @@ const Index = () => {
   return (
     <main role="main" className="min-h-screen">
       <StructuredData />
+      <Navigation />
       <ScrollProgressBar />
-      <Hero />
+      <div id="hero">
+        <Hero />
+      </div>
       <TrustBadge />
       <HowItWorks />
       <Benefits />

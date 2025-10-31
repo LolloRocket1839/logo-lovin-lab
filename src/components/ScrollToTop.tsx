@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,16 +41,25 @@ export const ScrollToTop = () => {
   };
 
   return (
-    <Button
-      onClick={scrollToTop}
-      variant="hero"
-      size="icon"
-      className={`fixed bottom-8 right-8 z-50 h-12 w-12 rounded-full shadow-lg
-                  transition-all duration-300 hover:shadow-xl hover:scale-110
-                  ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
-      aria-label="Torna su"
-    >
-      <ArrowUp className="h-5 w-5" />
-    </Button>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            onClick={scrollToTop}
+            variant="hero"
+            size="icon"
+            className={`fixed bottom-8 right-8 z-50 h-14 w-14 rounded-full shadow-lg
+                        transition-all duration-300 hover:shadow-xl hover:scale-110
+                        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+            aria-label="Torna su"
+          >
+            <ArrowUp className="h-6 w-6" />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent side="left" className="font-medium">
+          <p>Torna su</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 };
