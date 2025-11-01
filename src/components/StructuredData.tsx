@@ -13,7 +13,9 @@ export const StructuredData = () => {
         "Servizio di ottimizzazione affitti per studenti e investitori a Torino. Affitti convenienti e opportunità di investimento.",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "via Gioacchino Quarello 15/A",
         addressLocality: "Torino",
+        postalCode: "10135",
         addressRegion: "TO",
         addressCountry: "IT",
       },
@@ -25,7 +27,9 @@ export const StructuredData = () => {
         {
           "@type": "ContactPoint",
           contactType: "Customer Service",
-          availableLanguage: "Italian",
+          telephone: "+39-331-905-3037",
+          email: "junglerententeprise@gmail.com",
+          availableLanguage: ["Italian", "English"],
         },
       ],
     };
