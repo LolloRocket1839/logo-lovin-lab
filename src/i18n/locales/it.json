@@ -227,13 +227,16 @@
     "formError": "Errore! Riprova più tardi."
   },
   "footer": {
-    "about": "Jungle Rent è una piattaforma che facilita l'affitto di alloggi per studenti e offre opportunità di investimento immobiliare a Torino.",
-    "links": "Link Utili",
-    "contacts": "Contatti",
-    "address": "Via Pier Carlo Boggio, 59, 10138 Torino TO",
-    "email": "info@junglerent.com",
-    "phone": "+39 351 844 4444",
-    "social": "Seguici sui social",
-    "copyright": "© 2024 Jungle Rent. Tutti i diritti riservati."
+    "taglineAlt": "Il modo rivoluzionario di affittare a Torino",
+    "copyright": "© 2024 Jungle Rent. Tutti i diritti riservati.",
+    "contactTitle": "Contatti",
+    "location": "Torino, Italia",
+    "forStudentsTitle": "Per Studenti",
+    "howItWorksLink": "Come Funziona",
+    "universitiesLabel": "Università Coperte",
+    "partnershipTitle": "Partnership",
+    "incubatorDesc": "Incubati presso l'Università di Torino",
+    "bottomTagline": "Il tuo rifugio sicuro nella giungla immobiliare",
+    "bottomText": "Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino"
   }
 }
