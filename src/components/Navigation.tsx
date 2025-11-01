@@ -132,7 +132,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background backdrop-blur-xl">
             <div className="flex flex-col gap-2">
               {menuItems.map((item) => (
                 <button
