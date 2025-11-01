@@ -33,7 +33,7 @@ export const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-muted/30">
+    <section id="faq-section" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="text-primary font-semibold text-sm uppercase tracking-wide">
