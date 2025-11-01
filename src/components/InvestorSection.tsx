@@ -7,7 +7,6 @@ import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { openEmail, MESSAGES } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
 import { PartnerLogos } from "@/components/investor/PartnerLogos";
-import { StickyInvestorCTA } from "@/components/investor/StickyInvestorCTA";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const InvestorSection = () => {
@@ -39,41 +38,36 @@ export const InvestorSection = () => {
   };
 
   return (
-    <>
-      <section id="investor-section" className="py-12 md:py-16 bg-background relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
-      
-        <div className="container px-8 relative z-10">
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
-              {t('investor.sectionLabel')}
-            </p>
-            <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight">
-              {t('investor.sectionTitle')}
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
-              {t('investor.compactDesc')}
-            </p>
-            
-            <Button 
-              onClick={() => setWaitlistOpen(true)}
-              size="lg"
-              variant="premium"
-              className="w-full sm:w-auto px-8 py-6 text-base group"
-            >
-              {t('investor.waitlistCta')}
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-          
-          <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
-        </div>
-      
-        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
-      </section>
+    <section id="investor-section" className="py-12 md:py-16 bg-background relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
     
-      {/* Sticky Mobile CTA */}
-      <StickyInvestorCTA />
-    </>
+      <div className="container px-8 relative z-10">
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
+            {t('investor.sectionLabel')}
+          </p>
+          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight">
+            {t('investor.sectionTitle')}
+          </h2>
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
+            {t('investor.compactDesc')}
+          </p>
+          
+          <Button 
+            onClick={() => setWaitlistOpen(true)}
+            size="lg"
+            variant="premium"
+            className="w-full sm:w-auto px-8 py-6 text-base group"
+          >
+            {t('investor.waitlistCta')}
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
+        
+        <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
+      </div>
+    
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
+    </section>
   );
 };
