@@ -37,74 +37,44 @@ export const SellerSection = () => {
   ];
 
   return (
-    <section id="vendi-casa" className="py-12 md:py-20 bg-gradient-to-b from-background via-accent/5 to-background">
-      <div className="container px-4 mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
-            {t('seller.sectionTitle')}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            {t('seller.subtitle')}
+    <section id="vendi-casa" className="py-12 md:py-16 bg-accent/20 relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
+      
+      <div className="container px-8 mx-auto relative z-10">
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
+            {t('seller.sectionLabel')}
           </p>
-        </div>
-
-        {/* Timeline compatta */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-card/30 p-6 rounded-xl border border-border/50">
-            <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineValuationTime')}</div>
-              <div className="text-sm text-muted-foreground">{t('seller.timelineValuation')}</div>
-            </div>
-            <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0 transition-none" style={{ animation: 'none', transform: 'none' }} />
-            <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineInspectionTime')}</div>
-              <div className="text-sm text-muted-foreground">{t('seller.timelineInspection')}</div>
-            </div>
-            <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0 transition-none" style={{ animation: 'none', transform: 'none' }} />
-            <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineOfferTime')}</div>
-              <div className="text-sm text-muted-foreground">{t('seller.timelineOffer')}</div>
-            </div>
-            <ArrowRight className="hidden md:block text-muted-foreground/30 w-5 h-5 flex-shrink-0 transition-none" style={{ animation: 'none', transform: 'none' }} />
-            <div className="flex-1 text-center">
-              <div className="text-2xl font-bold text-primary mb-1">{t('seller.timelineClosingTime')}</div>
-              <div className="text-sm text-muted-foreground">{t('seller.timelineClosing')}</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <TooltipProvider delayDuration={500}>
-            {benefits.map((benefit, index) => (
-              <Tooltip key={index}>
-                <TooltipTrigger asChild>
-                  <div
-                    className="bg-card p-6 rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 cursor-pointer"
-                  >
-                    <benefit.icon className="w-12 h-12 text-primary mb-4" />
-                    <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="hidden md:block">
-                  <p className="text-xs">{benefit.tooltip}</p>
-                </TooltipContent>
-              </Tooltip>
-            ))}
-          </TooltipProvider>
-        </div>
-
-        <div className="text-center mt-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+            {t('seller.compactTitle')}
+          </h2>
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
+            {t('seller.compactDesc')}
+          </p>
+          
+          <ul className="text-left max-w-lg mx-auto space-y-2 mb-8 text-sm text-muted-foreground">
+            <li className="flex items-start gap-2">
+              <span className="text-primary mt-0.5">•</span>
+              <span>{t('seller.compactBullet1')}</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary mt-0.5">•</span>
+              <span>{t('seller.compactBullet2')}</span>
+            </li>
+          </ul>
+          
           <Button 
             size="lg" 
+            variant="premium"
             onClick={() => setIsDialogOpen(true)}
-            className="text-lg px-8 py-6 shadow-elegant hover:shadow-glow transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-6 text-base"
           >
             {t('seller.ctaButton')}
           </Button>
         </div>
       </div>
 
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
       <SellerContactDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </section>
   );

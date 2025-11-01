@@ -1,7 +1,5 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { TrustBadge } from "@/components/TrustBadge";
-import { Benefits } from "@/components/Benefits";
 import { StudentSection } from "@/components/StudentSection";
 import { InvestorSection } from "@/components/InvestorSection";
 import { SellerSection } from "@/components/SellerSection";
@@ -20,8 +18,6 @@ const Index = () => {
       <div id="hero">
         <Hero />
       </div>
-      <TrustBadge />
-      <Benefits />
       <StudentSection />
       <InvestorSection />
       <SellerSection />

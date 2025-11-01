@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
+import logo2i3t from "@/assets/2i3t-logo.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
@@ -110,23 +111,25 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Partnership */}
+          {/* Partnership con logo 2i3T */}
           <div>
             <h3 className="font-display text-lg font-semibold mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <a 
-                href="https://www.unito.it/ricerca-e-innovazione/dalle-idee-al-mercato/incubatore-dimprese-2i3t"
+                href="https://www.2i3t.it"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-sm font-light text-muted-foreground hover:text-primary transition-colors duration-500 link-elegant"
+                className="block group"
               >
-                {t('footer.incubatorLink')}
+                <img
+                  src={logo2i3t}
+                  alt="2i3T - Incubatore Imprese Innovative Politecnico di Torino"
+                  className="h-10 md:h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 mb-3"
+                  loading="lazy"
+                />
               </a>
               <p className="text-xs text-muted-foreground/60 font-light leading-relaxed">
                 {t('footer.incubatorDesc')}
-              </p>
-              <p className="text-xs text-muted-foreground/60 font-light">
-                {t('footer.guaranteeText')}
               </p>
             </div>
           </div>
