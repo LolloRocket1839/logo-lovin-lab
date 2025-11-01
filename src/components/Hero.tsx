@@ -115,7 +115,7 @@ export const Hero = () => {
             </Button>
             <Button size="lg" variant="premium" onClick={scrollToInvestor} className="w-full sm:w-auto px-10 py-6 text-base group">
               {t('hero.invest')}
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              <img src={jungleRentLogo} alt="" className="ml-2 w-4 h-4 opacity-90 group-hover:opacity-100 transition-all duration-300" />
             </Button>
           </div>
         </div>
