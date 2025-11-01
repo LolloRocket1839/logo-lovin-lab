@@ -153,7 +153,7 @@ export const Hero = () => {
                                transition-all duration-700 z-10">
                   {t('hero.studentTitle')}
                 </div>
-                <p className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold 
+                <p className="relative text-lg md:text-3xl lg:text-5xl font-display font-extrabold 
                               text-primary
                               hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-blue-600 hover:via-purple-600 hover:to-red-600
                               tracking-tighter leading-tight
