@@ -254,5 +254,10 @@
     "incubatorDesc": "Incubati presso l'Università di Torino",
     "bottomTagline": "Il tuo rifugio sicuro nella giungla immobiliare",
     "bottomText": "Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino"
+  },
+  "stickyCta": {
+    "lorenzoButton": "Lorenzo",
+    "andreaButton": "Andrea",
+    "closeLabel": "Chiudi"
   }
 }

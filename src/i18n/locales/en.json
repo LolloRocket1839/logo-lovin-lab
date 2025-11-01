@@ -480,5 +480,10 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "languageSelector": "Select language"
+  },
+  "stickyCta": {
+    "lorenzoButton": "Lorenzo",
+    "andreaButton": "Andrea",
+    "closeLabel": "Close"
   }
 }
