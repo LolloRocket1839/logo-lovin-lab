@@ -7,7 +7,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const Navigation = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -36,8 +36,10 @@ export const Navigation = () => {
     }
   };
 
+  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
+
   const handleContact = () => {
-    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp(CONTACTS.lorenzo.name));
+    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
     setIsMobileMenuOpen(false);
   };
 

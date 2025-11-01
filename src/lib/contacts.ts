@@ -12,8 +12,12 @@ export const CONTACTS = {
 
 export const MESSAGES = {
   student: {
-    whatsapp: (name: string) => 
-      `Ciao ${name}! Sono uno studente interessato a JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e risparmio del 25%\n- Contratti flessibili\n\nGrazie!`,
+    whatsapp: {
+      it: (name: string) => 
+        `Ciao ${name}! Sono uno studente interessato a JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e risparmio del 25%\n- Contratti flessibili\n\nGrazie!`,
+      en: (name: string) => 
+        `Hi ${name}! I'm a student interested in JungleRent.\n\nI would like information about:\n- Available rooms near my university\n- Prices and 25% savings\n- Flexible contracts\n\nThank you!`
+    },
     
     email: {
       it: {
@@ -51,8 +55,12 @@ Best regards`
     }
   },
   investor: {
-    whatsapp: (name: string) => 
-      `Ciao ${name}! Sono interessato/a alle opportunità di investimento immobiliare con JungleRent.\n\nVorrei informazioni su:\n- ROI e rendimenti\n- Proprietà disponibili\n- Gestione del servizio\n\nGrazie!`,
+    whatsapp: {
+      it: (name: string) => 
+        `Ciao ${name}! Sono interessato/a alle opportunità di investimento immobiliare con JungleRent.\n\nVorrei informazioni su:\n- ROI e rendimenti\n- Proprietà disponibili\n- Gestione del servizio\n\nGrazie!`,
+      en: (name: string) => 
+        `Hi ${name}! I'm interested in real estate investment opportunities with JungleRent.\n\nI would like information about:\n- ROI and returns\n- Available properties\n- Service management\n\nThank you!`
+    },
     
     email: {
       it: {

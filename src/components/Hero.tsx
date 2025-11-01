@@ -8,15 +8,17 @@ import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
 export const Hero = () => {
   const {
-    t
+    t,
+    i18n
   } = useTranslation();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
+  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
   const handleWhatsAppLorenzo = () => {
-    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp(CONTACTS.lorenzo.name));
+    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
   const handleWhatsAppAndrea = () => {
-    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp(CONTACTS.andrea.name));
+    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
   };
   useEffect(() => {
     let ticking = false;

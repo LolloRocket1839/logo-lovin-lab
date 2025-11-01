@@ -6,7 +6,7 @@ import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const StudentSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const studentBenefits = [
     {
@@ -23,12 +23,14 @@ export const StudentSection = () => {
     }
   ];
 
+  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
+
   const handleWhatsAppLorenzo = () => {
-    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp(CONTACTS.lorenzo.name));
+    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
 
   const handleWhatsAppAndrea = () => {
-    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp(CONTACTS.andrea.name));
+    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
   };
 
   return (

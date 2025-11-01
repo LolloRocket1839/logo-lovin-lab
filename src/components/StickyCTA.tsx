@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const StickyCTA = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -30,12 +30,14 @@ export const StickyCTA = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDismissed]);
 
+  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
+
   const handleContactLorenzo = () => {
-    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp(CONTACTS.lorenzo.name));
+    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
 
   const handleContactAndrea = () => {
-    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp(CONTACTS.andrea.name));
+    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
   };
 
   if (!isVisible) return null;
