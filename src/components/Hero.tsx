@@ -145,7 +145,7 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-300/15 via-blue-400/12 to-indigo-400/15
                                 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm z-0" />
                 
-                <div className="relative text-xl md:text-4xl lg:text-6xl font-display font-extrabold mb-4 
+                <div className="relative text-2xl md:text-5xl lg:text-7xl font-display font-extrabold mb-4 
                                tracking-tighter leading-[0.9] text-foreground
                                group-hover:text-transparent group-hover:bg-clip-text 
                                group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:via-blue-600 group-hover:to-indigo-600
