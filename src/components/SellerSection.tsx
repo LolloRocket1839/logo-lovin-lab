@@ -37,7 +37,7 @@ export const SellerSection = () => {
   ];
 
   return (
-    <section id="vendi-casa" className="py-12 md:py-16 bg-accent/20 relative overflow-hidden">
+    <section id="seller-section" className="py-12 md:py-16 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
       <div className="container px-8 mx-auto relative z-10">
