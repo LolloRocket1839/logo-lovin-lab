@@ -2,13 +2,15 @@ import { useEffect } from "react";
 
 export const StructuredData = () => {
   useEffect(() => {
+    const baseUrl = window.location.origin;
+    
     // Organization Schema
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Jungle Rent",
-      url: "https://junglerent.com",
-      logo: "https://junglerent.com/jungle-rent-logo.svg",
+      url: baseUrl,
+      logo: `${baseUrl}/jungle-rent-logo.svg`,
       description:
         "Servizio di ottimizzazione affitti per studenti e investitori a Torino. Affitti convenienti e opportunità di investimento.",
       address: {
@@ -39,7 +41,7 @@ export const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "RealEstateAgent",
       name: "Jungle Rent",
-      image: "https://junglerent.com/jungle-rent-logo.svg",
+      image: `${baseUrl}/jungle-rent-logo.svg`,
       description:
         "Il tuo rifugio sicuro nella giungla immobiliare. Affitti smart e opportunità di investimento per studenti e investitori a Torino.",
       areaServed: {
@@ -110,11 +112,11 @@ export const StructuredData = () => {
       agent: {
         "@type": "RealEstateAgent",
         name: "Jungle Rent",
-        url: "https://junglerent.it"
+        url: baseUrl
       },
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://junglerent.it/#vendi-casa"
+        urlTemplate: `${baseUrl}/#vendi-casa`
       }
     };
 
@@ -295,25 +297,25 @@ export const StructuredData = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://junglerent.com/"
+          "item": `${baseUrl}/`
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Affitto Studenti",
-          "item": "https://junglerent.com/#student-section"
+          "item": `${baseUrl}/#student-section`
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Investitori",
-          "item": "https://junglerent.com/#investor-section"
+          "item": `${baseUrl}/#investor-section`
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": "Venditori",
-          "item": "https://junglerent.com/#seller-section"
+          "item": `${baseUrl}/#seller-section`
         }
       ]
     };
