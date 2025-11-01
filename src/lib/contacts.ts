@@ -7,7 +7,7 @@ export const CONTACTS = {
     phone: '+393899135932',
     name: 'Andrea'
   },
-  email: 'junglerententerprise@gmail.com'
+  email: 'junglerententeprise@gmail.com'
 } as const;
 
 export const MESSAGES = {
