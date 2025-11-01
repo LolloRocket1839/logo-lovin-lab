@@ -48,7 +48,7 @@ export const ScrollToTop = () => {
         <TooltipTrigger asChild>
           <Button
             onClick={scrollToTop}
-            variant="hero"
+            variant="premium"
             size="icon"
             className={`fixed bottom-8 right-8 z-50 h-14 w-14 rounded-full shadow-lg
                         transition-all duration-300 hover:shadow-xl hover:scale-110

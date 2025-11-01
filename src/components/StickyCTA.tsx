@@ -54,7 +54,7 @@ export const StickyCTA = () => {
           <Button
             onClick={handleContactLorenzo}
             size="sm"
-            variant="hero"
+            variant="premium"
             className="flex-1 h-10 text-sm group"
           >
             <MessageCircle className="mr-1.5 h-4 w-4" />
@@ -63,7 +63,7 @@ export const StickyCTA = () => {
           <Button
             onClick={handleContactAndrea}
             size="sm"
-            variant="hero"
+            variant="premium"
             className="flex-1 h-10 text-sm group"
           >
             <MessageCircle className="mr-1.5 h-4 w-4" />

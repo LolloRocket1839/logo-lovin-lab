@@ -102,7 +102,7 @@ export const Navigation = () => {
           <div className="hidden lg:flex items-center gap-3">
             <LanguageSwitcher />
             <Button
-              variant="hero"
+              variant="premium"
               size="sm"
               onClick={handleContact}
               className="px-6"
@@ -144,7 +144,7 @@ export const Navigation = () => {
                 </button>
               ))}
               <Button
-                variant="hero"
+                variant="premium"
                 onClick={handleContact}
                 className="mt-2 w-full"
               >

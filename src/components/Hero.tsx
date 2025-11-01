@@ -109,11 +109,11 @@ export const Hero = () => {
 
           {/* 2 CTA chiarissime */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up mb-8" style={{ animationDelay: '200ms' }}>
-            <Button size="lg" variant="hero" onClick={scrollToStudent} className="w-full sm:w-auto px-10 py-6 text-base group">
+            <Button size="lg" variant="premium" onClick={scrollToStudent} className="w-full sm:w-auto px-10 py-6 text-base group">
               {t('hero.findHome')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="hero" onClick={scrollToInvestor} className="w-full sm:w-auto px-10 py-6 text-base group">
+            <Button size="lg" variant="premium" onClick={scrollToInvestor} className="w-full sm:w-auto px-10 py-6 text-base group">
               {t('hero.invest')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
