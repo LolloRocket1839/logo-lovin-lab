@@ -481,6 +481,117 @@
     "closeMenu": "Close menu",
     "languageSelector": "Select language"
   },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "description": "Fill out the form to get priority access to available rooms.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Doe",
+    "nameError": "Enter your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "john.doe@students.unito.it",
+    "emailError": "Enter a valid email",
+    "universityLabel": "University (optional)",
+    "universityPlaceholder": "E.g: Politecnico di Torino",
+    "budgetLabel": "Monthly Budget (optional)",
+    "budgetPlaceholder": "Indicate approximate budget",
+    "moveDateLabel": "Move Date (optional)",
+    "moveDatePlaceholder": "When would you like to move?",
+    "referralLabel": "How did you find us? (optional)",
+    "referralPlaceholder": "Help us get to know you better",
+    "consentLabel": "I consent to data processing (GDPR) and to receive updates from Jungle Rent",
+    "consentError": "You must accept to continue",
+    "submitButton": "Sign Up",
+    "submitting": "Submitting...",
+    "successTitle": "✨ Registration Complete!",
+    "successDescription": "Check your email for confirmation. Welcome to Jungle Rent!",
+    "errorTitle": "❌ Submission Error",
+    "errorDescription": "An error occurred. Please try again later or contact us on WhatsApp.",
+    "universities": {
+      "polito": "Politecnico di Torino",
+      "unito": "University of Turin",
+      "escp": "ESCP Business School",
+      "ied": "IED Torino",
+      "iaad": "IAAD",
+      "iusto": "IUSTO",
+      "other": "Other"
+    },
+    "budgetRanges": {
+      "300-400": "€300-400",
+      "400-500": "€400-500",
+      "500-600": "€500-600",
+      "over-600": ">€600"
+    },
+    "moveDates": {
+      "september-2025": "September 2025",
+      "january-2026": "January 2026",
+      "asap": "ASAP",
+      "other": "Other"
+    },
+    "referralSources": {
+      "friend": "Friend",
+      "university": "University",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "google": "Google",
+      "ai-assistant": "AI assistant",
+      "other": "Other"
+    }
+  },
+  "investorWaitlist": {
+    "title": "Join the Investor Waitlist",
+    "description": "Fill out the form to receive information about investment opportunities.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Doe",
+    "nameError": "Enter your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "john.doe@email.com",
+    "emailError": "Enter a valid email",
+    "phoneLabel": "Phone (optional)",
+    "phonePlaceholder": "+39 333 1234567 (optional)",
+    "investmentBudgetLabel": "Investment Budget (optional)",
+    "investmentBudgetPlaceholder": "Indicate approximate budget",
+    "propertyTypeLabel": "Property Type (optional)",
+    "propertyTypePlaceholder": "What interests you?",
+    "investmentHorizonLabel": "Time Horizon (optional)",
+    "investmentHorizonPlaceholder": "When would you like to invest?",
+    "referralLabel": "How did you find us? (optional)",
+    "referralPlaceholder": "Help us get to know you better",
+    "consentLabel": "I consent to data processing (GDPR) and to receive updates about investment opportunities",
+    "consentError": "You must accept to continue",
+    "submitButton": "Sign Up",
+    "submitting": "Submitting...",
+    "successTitle": "Registration Complete",
+    "successDescription": "Check your email for confirmation.",
+    "errorTitle": "Error",
+    "errorDescription": "Something went wrong. Please try again.",
+    "budgetRanges": {
+      "50k-100k": "€50k - €100k",
+      "100k-200k": "€100k - €200k",
+      "200k-300k": "€200k - €300k",
+      "over-300k": ">€300k"
+    },
+    "propertyTypes": {
+      "monolocale": "Studio",
+      "bilocale": "1-Bedroom",
+      "trilocale": "2-Bedroom",
+      "appartamento-completo": "Full Apartment",
+      "indeciso": "Still undecided"
+    },
+    "investmentHorizons": {
+      "short-term": "1-3 years",
+      "medium-term": "3-5 years",
+      "long-term": "5+ years",
+      "flexible": "Flexible"
+    },
+    "referralSources": {
+      "network": "Professional network",
+      "linkedin": "LinkedIn",
+      "referral": "Referral",
+      "google": "Google",
+      "ai-assistant": "AI assistant",
+      "other": "Other"
+    }
+  },
   "stickyCta": {
     "lorenzoButton": "Lorenzo",
     "andreaButton": "Andrea",

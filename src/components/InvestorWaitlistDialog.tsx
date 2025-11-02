@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,20 +18,18 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 
-const investorWaitlistSchema = z.object({
-  name: z.string().trim().min(2, "Inserisci il tuo nome").max(100),
-  email: z.string().email("Inserisci un'email valida").max(255),
+const getInvestorWaitlistSchema = (t: any) => z.object({
+  name: z.string().trim().min(2, t("investorWaitlist.nameError")).max(100),
+  email: z.string().email(t("investorWaitlist.emailError")).max(255),
   phone: z.string().trim().optional(),
   investment_budget: z.string().optional(),
   property_type: z.string().optional(),
   investment_horizon: z.string().optional(),
   referral_source: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, {
-    message: "Devi accettare per continuare",
+    message: t("investorWaitlist.consentError"),
   }),
 });
-
-type InvestorWaitlistFormData = z.infer<typeof investorWaitlistSchema>;
 
 interface InvestorWaitlistDialogProps {
   open: boolean;
@@ -38,7 +37,11 @@ interface InvestorWaitlistDialogProps {
 }
 
 export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistDialogProps) => {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const investorWaitlistSchema = getInvestorWaitlistSchema(t);
+  type InvestorWaitlistFormData = z.infer<typeof investorWaitlistSchema>;
 
   const form = useForm<InvestorWaitlistFormData>({
     resolver: zodResolver(investorWaitlistSchema),
@@ -82,15 +85,15 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
       if (!response.ok) throw new Error("Submission failed");
 
       toast({
-        title: "Iscrizione completata",
-        description: "Controlla la tua email per la conferma.",
+        title: t("investorWaitlist.successTitle"),
+        description: t("investorWaitlist.successDescription"),
       });
       form.reset();
       onOpenChange(false);
     } catch (error) {
       toast({
-        title: "Errore",
-        description: "Qualcosa è andato storto. Riprova.",
+        title: t("investorWaitlist.errorTitle"),
+        description: t("investorWaitlist.errorDescription"),
         variant: "destructive",
       });
     } finally {
@@ -108,10 +111,10 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                                 rounded-xl">
         <DialogHeader className="pb-4 border-b border-border">
           <DialogTitle className="text-2xl font-semibold text-foreground">
-            Iscriviti alla Waitlist Investitori
+            {t("investorWaitlist.title")}
           </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground pt-2">
-            Compila il form per ricevere informazioni sulle opportunità di investimento.
+            {t("investorWaitlist.description")}
           </DialogDescription>
         </DialogHeader>
 
@@ -124,10 +127,10 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Nome Completo</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.nameLabel")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Mario Rossi"
+                          placeholder={t("investorWaitlist.namePlaceholder")}
                           {...field}
                           className="h-10
                                      bg-background
@@ -150,11 +153,11 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Email</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.emailLabel")}</FormLabel>
                       <FormControl>
                         <Input
                           type="email"
-                          placeholder="mario.rossi@email.com"
+                          placeholder={t("investorWaitlist.emailPlaceholder")}
                           {...field}
                           className="h-10
                                      bg-background
@@ -177,11 +180,11 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Telefono (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.phoneLabel")}</FormLabel>
                       <FormControl>
                         <Input
                           type="tel"
-                          placeholder="+39 333 1234567 (opzionale)"
+                          placeholder={t("investorWaitlist.phonePlaceholder")}
                           {...field}
                           className="h-10
                                      bg-background
@@ -204,21 +207,21 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="investment_budget"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Budget Investimento (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.investmentBudgetLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Indica budget approssimativo" />
+                            <SelectValue placeholder={t("investorWaitlist.investmentBudgetPlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="50k-100k">€50k - €100k</SelectItem>
-                          <SelectItem value="100k-200k">€100k - €200k</SelectItem>
-                          <SelectItem value="200k-300k">€200k - €300k</SelectItem>
-                          <SelectItem value="over-300k">&gt;€300k</SelectItem>
+                          <SelectItem value="50k-100k">{t("investorWaitlist.budgetRanges.50k-100k")}</SelectItem>
+                          <SelectItem value="100k-200k">{t("investorWaitlist.budgetRanges.100k-200k")}</SelectItem>
+                          <SelectItem value="200k-300k">{t("investorWaitlist.budgetRanges.200k-300k")}</SelectItem>
+                          <SelectItem value="over-300k">{t("investorWaitlist.budgetRanges.over-300k")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.investment_budget && (
@@ -235,22 +238,22 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="property_type"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Tipologia Proprietà (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.propertyTypeLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Cosa ti interessa?" />
+                            <SelectValue placeholder={t("investorWaitlist.propertyTypePlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="monolocale">Monolocale</SelectItem>
-                          <SelectItem value="bilocale">Bilocale</SelectItem>
-                          <SelectItem value="trilocale">Trilocale</SelectItem>
-                          <SelectItem value="appartamento-completo">Appartamento completo</SelectItem>
-                          <SelectItem value="indeciso">Ancora indeciso</SelectItem>
+                          <SelectItem value="monolocale">{t("investorWaitlist.propertyTypes.monolocale")}</SelectItem>
+                          <SelectItem value="bilocale">{t("investorWaitlist.propertyTypes.bilocale")}</SelectItem>
+                          <SelectItem value="trilocale">{t("investorWaitlist.propertyTypes.trilocale")}</SelectItem>
+                          <SelectItem value="appartamento-completo">{t("investorWaitlist.propertyTypes.appartamento-completo")}</SelectItem>
+                          <SelectItem value="indeciso">{t("investorWaitlist.propertyTypes.indeciso")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.property_type && (
@@ -267,21 +270,21 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="investment_horizon"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Orizzonte Temporale (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.investmentHorizonLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Quando vorresti investire?" />
+                            <SelectValue placeholder={t("investorWaitlist.investmentHorizonPlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="short-term">1-3 anni</SelectItem>
-                          <SelectItem value="medium-term">3-5 anni</SelectItem>
-                          <SelectItem value="long-term">5+ anni</SelectItem>
-                          <SelectItem value="flexible">Flessibile</SelectItem>
+                          <SelectItem value="short-term">{t("investorWaitlist.investmentHorizons.short-term")}</SelectItem>
+                          <SelectItem value="medium-term">{t("investorWaitlist.investmentHorizons.medium-term")}</SelectItem>
+                          <SelectItem value="long-term">{t("investorWaitlist.investmentHorizons.long-term")}</SelectItem>
+                          <SelectItem value="flexible">{t("investorWaitlist.investmentHorizons.flexible")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.investment_horizon && (
@@ -298,23 +301,23 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                   name="referral_source"
                   render={({ field }) => (
                     <FormItem className="md:col-span-2">
-                      <FormLabel className="text-sm font-medium text-foreground">Come ci hai trovato? (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.referralLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Aiutaci a conoscerti meglio" />
+                            <SelectValue placeholder={t("investorWaitlist.referralPlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="network">Network professionale</SelectItem>
-                          <SelectItem value="linkedin">LinkedIn</SelectItem>
-                          <SelectItem value="referral">Segnalazione</SelectItem>
-                          <SelectItem value="google">Google</SelectItem>
-                          <SelectItem value="ai-assistant">AI assistant</SelectItem>
-                          <SelectItem value="other">Altro</SelectItem>
+                          <SelectItem value="network">{t("investorWaitlist.referralSources.network")}</SelectItem>
+                          <SelectItem value="linkedin">{t("investorWaitlist.referralSources.linkedin")}</SelectItem>
+                          <SelectItem value="referral">{t("investorWaitlist.referralSources.referral")}</SelectItem>
+                          <SelectItem value="google">{t("investorWaitlist.referralSources.google")}</SelectItem>
+                          <SelectItem value="ai-assistant">{t("investorWaitlist.referralSources.ai-assistant")}</SelectItem>
+                          <SelectItem value="other">{t("investorWaitlist.referralSources.other")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.referral_source && (
@@ -342,7 +345,7 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                           />
                         </FormControl>
                         <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                          Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti sulle opportunità di investimento
+                          {t("investorWaitlist.consentLabel")}
                         </FormLabel>
                       </div>
                       {form.formState.errors.consent && (
@@ -369,10 +372,10 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                 {isSubmitting ? (
                   <>
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Invio in corso...
+                    {t("investorWaitlist.submitting")}
                   </>
                 ) : (
-                  "Iscriviti"
+                  t("investorWaitlist.submitButton")
                 )}
               </Button>
             </form>

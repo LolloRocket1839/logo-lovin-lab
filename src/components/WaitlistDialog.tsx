@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useTranslation } from "react-i18next";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,19 +18,17 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 
-const waitlistSchema = z.object({
-  name: z.string().trim().min(2, "Inserisci il tuo nome").max(100),
-  email: z.string().email("Inserisci un'email valida").max(255),
+const getWaitlistSchema = (t: any) => z.object({
+  name: z.string().trim().min(2, t("waitlist.nameError")).max(100),
+  email: z.string().email(t("waitlist.emailError")).max(255),
   university: z.string().optional(),
   budget: z.string().optional(),
   move_date: z.string().optional(),
   referral_source: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, {
-    message: "Devi accettare per continuare",
+    message: t("waitlist.consentError"),
   }),
 });
-
-type WaitlistFormData = z.infer<typeof waitlistSchema>;
 
 interface WaitlistDialogProps {
   open: boolean;
@@ -37,7 +36,11 @@ interface WaitlistDialogProps {
 }
 
 export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const waitlistSchema = getWaitlistSchema(t);
+  type WaitlistFormData = z.infer<typeof waitlistSchema>;
 
   const form = useForm<WaitlistFormData>({
     resolver: zodResolver(waitlistSchema),
@@ -79,15 +82,15 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
       if (!response.ok) throw new Error("Submission failed");
 
       toast({
-        title: "✨ Iscrizione completata!",
-        description: "Controlla la tua email per la conferma. Benvenuto in Jungle Rent!",
+        title: t("waitlist.successTitle"),
+        description: t("waitlist.successDescription"),
       });
       form.reset();
       onOpenChange(false);
     } catch (error) {
       toast({
-        title: "❌ Errore di invio",
-        description: "Si è verificato un problema. Riprova tra qualche istante o contattaci su WhatsApp.",
+        title: t("waitlist.errorTitle"),
+        description: t("waitlist.errorDescription"),
         variant: "destructive",
       });
     } finally {
@@ -105,10 +108,10 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                                 rounded-xl">
         <DialogHeader className="pb-4 border-b border-border">
           <DialogTitle className="text-2xl font-semibold text-foreground">
-            Iscriviti alla Waitlist
+            {t("waitlist.title")}
           </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground pt-2">
-            Compila il form per ricevere accesso prioritario alle stanze disponibili.
+            {t("waitlist.description")}
           </DialogDescription>
         </DialogHeader>
 
@@ -121,10 +124,10 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Nome Completo</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.nameLabel")}</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Mario Rossi"
+                          placeholder={t("waitlist.namePlaceholder")}
                           {...field}
                           autoFocus
                           className="h-10
@@ -148,11 +151,11 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Email</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.emailLabel")}</FormLabel>
                       <FormControl>
                         <Input
                           type="email"
-                          placeholder="mario.rossi@studenti.unito.it"
+                          placeholder={t("waitlist.emailPlaceholder")}
                           {...field}
                           className="h-10
                                      bg-background
@@ -175,24 +178,24 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="university"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Università (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.universityLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Es: Politecnico di Torino" />
+                            <SelectValue placeholder={t("waitlist.universityPlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="polito">Politecnico di Torino</SelectItem>
-                          <SelectItem value="unito">Università di Torino</SelectItem>
-                          <SelectItem value="escp">ESCP Business School</SelectItem>
-                          <SelectItem value="ied">IED Torino</SelectItem>
-                          <SelectItem value="iaad">IAAD</SelectItem>
-                          <SelectItem value="iusto">IUSTO</SelectItem>
-                          <SelectItem value="other">Altro</SelectItem>
+                          <SelectItem value="polito">{t("waitlist.universities.polito")}</SelectItem>
+                          <SelectItem value="unito">{t("waitlist.universities.unito")}</SelectItem>
+                          <SelectItem value="escp">{t("waitlist.universities.escp")}</SelectItem>
+                          <SelectItem value="ied">{t("waitlist.universities.ied")}</SelectItem>
+                          <SelectItem value="iaad">{t("waitlist.universities.iaad")}</SelectItem>
+                          <SelectItem value="iusto">{t("waitlist.universities.iusto")}</SelectItem>
+                          <SelectItem value="other">{t("waitlist.universities.other")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.university && (
@@ -209,21 +212,21 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="budget"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Budget Mensile (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.budgetLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Indica budget approssimativo" />
+                            <SelectValue placeholder={t("waitlist.budgetPlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="300-400">€300-400</SelectItem>
-                          <SelectItem value="400-500">€400-500</SelectItem>
-                          <SelectItem value="500-600">€500-600</SelectItem>
-                          <SelectItem value="over-600">&gt;€600</SelectItem>
+                          <SelectItem value="300-400">{t("waitlist.budgetRanges.300-400")}</SelectItem>
+                          <SelectItem value="400-500">{t("waitlist.budgetRanges.400-500")}</SelectItem>
+                          <SelectItem value="500-600">{t("waitlist.budgetRanges.500-600")}</SelectItem>
+                          <SelectItem value="over-600">{t("waitlist.budgetRanges.over-600")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.budget && (
@@ -240,21 +243,21 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="move_date"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Data Trasloco (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.moveDateLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Quando vorresti trasferirti?" />
+                            <SelectValue placeholder={t("waitlist.moveDatePlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="september-2025">Settembre 2025</SelectItem>
-                          <SelectItem value="january-2026">Gennaio 2026</SelectItem>
-                          <SelectItem value="asap">ASAP</SelectItem>
-                          <SelectItem value="other">Altro</SelectItem>
+                          <SelectItem value="september-2025">{t("waitlist.moveDates.september-2025")}</SelectItem>
+                          <SelectItem value="january-2026">{t("waitlist.moveDates.january-2026")}</SelectItem>
+                          <SelectItem value="asap">{t("waitlist.moveDates.asap")}</SelectItem>
+                          <SelectItem value="other">{t("waitlist.moveDates.other")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.move_date && (
@@ -271,24 +274,24 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                   name="referral_source"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">Come ci hai trovato? (opzionale)</FormLabel>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.referralLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger className="h-10
                                                     bg-background
                                                     border-border
                                                     focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder="Aiutaci a conoscerti meglio" />
+                            <SelectValue placeholder={t("waitlist.referralPlaceholder")} />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="friend">Amico</SelectItem>
-                          <SelectItem value="university">Università</SelectItem>
-                          <SelectItem value="instagram">Instagram</SelectItem>
-                          <SelectItem value="facebook">Facebook</SelectItem>
-                          <SelectItem value="google">Google</SelectItem>
-                          <SelectItem value="ai-assistant">AI assistant</SelectItem>
-                          <SelectItem value="other">Altro</SelectItem>
+                          <SelectItem value="friend">{t("waitlist.referralSources.friend")}</SelectItem>
+                          <SelectItem value="university">{t("waitlist.referralSources.university")}</SelectItem>
+                          <SelectItem value="instagram">{t("waitlist.referralSources.instagram")}</SelectItem>
+                          <SelectItem value="facebook">{t("waitlist.referralSources.facebook")}</SelectItem>
+                          <SelectItem value="google">{t("waitlist.referralSources.google")}</SelectItem>
+                          <SelectItem value="ai-assistant">{t("waitlist.referralSources.ai-assistant")}</SelectItem>
+                          <SelectItem value="other">{t("waitlist.referralSources.other")}</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.referral_source && (
@@ -316,7 +319,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                           />
                         </FormControl>
                         <FormLabel className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                          Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti da Jungle Rent
+                          {t("waitlist.consentLabel")}
                         </FormLabel>
                       </div>
                       {form.formState.errors.consent && (
@@ -343,10 +346,10 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Invio in corso...
+                    {t("waitlist.submitting")}
                   </>
                 ) : (
-                  "Iscriviti"
+                  t("waitlist.submitButton")
                 )}
               </Button>
             </form>
