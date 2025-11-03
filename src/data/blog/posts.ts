@@ -2,6 +2,23 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "Dove Mangiare a Torino da Studente: Guida Completa (2025)",
+    slug: "dove-mangiare-torino-studenti",
+    category: "students",
+    date: "2025-11-03",
+    author: "Team Jungle Rent",
+    excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop",
+    readTime: 12,
+    seo: {
+      title: "Dove Mangiare a Torino da Studente: Guida Completa 2025 | Jungle Rent",
+      description: "Scopri i migliori posti dove mangiare a Torino spendendo poco: kebab, pizzerie, ristoranti etnici, mercati, mense e strategie per risparmiare. Guida completa con prezzi reali.",
+      keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino"]
+    },
+    tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"],
+    content: "dove-mangiare-torino-studenti"
+  },
+  {
     title: "San Salvario: Guida Completa per Studenti Universitari a Torino",
     slug: "san-salvario-guida-studenti",
     category: "students",
