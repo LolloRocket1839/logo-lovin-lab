@@ -113,9 +113,6 @@ export const Hero = () => {
           <div className="flex flex-col items-center gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
             <LaunchCountdown />
             <WaitlistBadge />
-            <p className="text-sm md:text-base text-primary font-medium px-4 py-2 bg-primary/5 rounded-full border border-primary/20">
-              {t('hero.earlyBirdPerk')}
-            </p>
           </div>
 
           {/* 2 CTA chiarissime */}
