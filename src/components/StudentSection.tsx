@@ -34,8 +34,7 @@ export const StudentSection = () => {
   };
 
   const handleQuizClick = () => {
-    // Replace this URL with your SurveyMonkey quiz URL
-    window.open('https://www.surveymonkey.com/r/YOUR_SURVEY_ID', '_blank');
+    window.open('https://it.surveymonkey.com/r/Q27QDBG', '_blank');
   };
 
   return (
