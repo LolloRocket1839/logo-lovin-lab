@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { useState, useEffect } from "react";
 
 const BlogPost = () => {
@@ -192,8 +193,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             </div>
 
             {/* Content */}
-            <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <div className="prose prose-xl prose-slate dark:prose-invert max-w-none blog-content-wrapper mb-12 prose-headings:scroll-mt-20 prose-a:text-primary prose-strong:font-bold">
+              <ReactMarkdown 
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+              >
                 {content}
               </ReactMarkdown>
             </div>
