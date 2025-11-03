@@ -606,5 +606,11 @@
     "lorenzoButton": "Lorenzo",
     "andreaButton": "Andrea",
     "closeLabel": "Close"
+  },
+  "pwa": {
+    "installTitle": "Install Jungle Rent",
+    "installDescription": "Quick access from the app on your phone",
+    "installButton": "Install",
+    "dismissButton": "Not now"
   }
 }
