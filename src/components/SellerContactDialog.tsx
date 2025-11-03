@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -8,6 +11,31 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Checkbox } from "./ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Building2, Loader2 } from "lucide-react";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+} from "./ui/form";
+
+const sellerSchema = z.object({
+  name: z.string().trim().min(2, "Nome richiesto").max(100),
+  email: z.string().email("Email non valida").max(255),
+  phone: z.string().trim().min(5, "Telefono richiesto").max(20),
+  address: z.string().trim().min(5, "Indirizzo richiesto").max(200),
+  zone: z.string().optional(),
+  squareMeters: z.string().optional(),
+  rooms: z.string().optional(),
+  floor: z.string().optional(),
+  condition: z.string().optional(),
+  motivation: z.string().optional(),
+  urgent: z.boolean(),
+  message: z.string().max(1000).optional(),
+  privacyConsent: z.boolean().refine((val) => val === true, {
+    message: "Devi acconsentire al trattamento dei dati",
+  }),
+});
 
 interface SellerContactDialogProps {
   open: boolean;
@@ -16,72 +44,13 @@ interface SellerContactDialogProps {
 
 export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogProps) => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    address: "",
-    zone: "",
-    squareMeters: "",
-    rooms: "",
-    floor: "",
-    condition: "",
-    motivation: "",
-    urgent: false,
-    message: "",
-    privacyConsent: false,
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validation
-    if (!formData.name || !formData.email || !formData.phone || !formData.address) {
-      toast({
-        title: "❌ Campi obbligatori mancanti",
-        description: "Compila Nome, Email, Telefono e Indirizzo per continuare",
-        variant: "destructive",
-      });
-      return;
-    }
+  type SellerFormData = z.infer<typeof sellerSchema>;
 
-    if (!formData.privacyConsent) {
-      toast({
-        title: "❌ Consenso richiesto",
-        description: "Devi acconsentire al trattamento dei dati per continuare",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    // Create WhatsApp message
-    const message = `🏠 *RICHIESTA VALUTAZIONE IMMOBILE*\n\n` +
-      `👤 Nome: ${formData.name}\n` +
-      `📧 Email: ${formData.email}\n` +
-      `📱 Telefono: ${formData.phone}\n` +
-      `📍 Indirizzo: ${formData.address}\n` +
-      `🗺️ Zona: ${formData.zone || "Non specificata"}\n` +
-      `📐 Metratura: ${formData.squareMeters ? formData.squareMeters + " mq" : "Non specificata"}\n` +
-      `🏠 Locali: ${formData.rooms || "Non specificato"}\n` +
-      `🏢 Piano: ${formData.floor || "Non specificato"}\n` +
-      `🔧 Stato: ${formData.condition || "Non specificato"}\n` +
-      `🎯 Motivazione: ${formData.motivation || "Non specificata"}\n` +
-      `⚡ Urgente: ${formData.urgent ? "Sì" : "No"}\n` +
-      `💬 Note: ${formData.message || "Nessuna nota"}`;
-
-    const whatsappUrl = `https://wa.me/393453088226?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-
-    toast({
-      title: "✨ Richiesta inviata con successo!",
-      description: "Ti contatteremo entro 48 ore per la valutazione gratuita del tuo immobile",
-    });
-
-    onOpenChange(false);
-    setFormData({
+  const form = useForm<SellerFormData>({
+    resolver: zodResolver(sellerSchema),
+    defaultValues: {
       name: "",
       email: "",
       phone: "",
@@ -95,8 +64,56 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
       urgent: false,
       message: "",
       privacyConsent: false,
-    });
-    setIsSubmitting(false);
+    },
+  });
+
+  const onSubmit = async (data: SellerFormData) => {
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xeojbzow", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          address: data.address,
+          zone: data.zone || "",
+          square_meters: data.squareMeters || "",
+          rooms: data.rooms || "",
+          floor: data.floor || "",
+          condition: data.condition || "",
+          motivation: data.motivation || "",
+          urgent: data.urgent,
+          message: data.message || "",
+          user_type: "seller",
+          _subject: "🏠 Nuova Richiesta Valutazione Immobile - Jungle Rent",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+
+      toast({
+        title: "✨ Richiesta inviata con successo!",
+        description: "Ti contatteremo entro 48 ore per la valutazione gratuita del tuo immobile",
+      });
+      
+      form.reset();
+      onOpenChange(false);
+    } catch (error) {
+      toast({
+        title: "❌ Errore nell'invio",
+        description: "Si è verificato un errore. Riprova o contattaci su WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -112,17 +129,18 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-4 mt-4 pb-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4 pb-4">
           <div className="space-y-2">
             <Label htmlFor="seller-name">Nome e Cognome *</Label>
             <Input
               id="seller-name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              {...form.register("name")}
               placeholder="Mario Rossi"
               autoFocus
-              required
             />
+            {form.formState.errors.name && (
+              <p className="text-sm text-destructive">{form.formState.errors.name.message}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -130,11 +148,12 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             <Input
               id="seller-email"
               type="email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              {...form.register("email")}
               placeholder="mario.rossi@email.com"
-              required
             />
+            {form.formState.errors.email && (
+              <p className="text-sm text-destructive">{form.formState.errors.email.message}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -142,28 +161,30 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             <Input
               id="seller-phone"
               type="tel"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              {...form.register("phone")}
               placeholder="+39 333 1234567"
-              required
             />
+            {form.formState.errors.phone && (
+              <p className="text-sm text-destructive">{form.formState.errors.phone.message}</p>
+            )}
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="seller-address">Indirizzo Immobile *</Label>
             <Input
               id="seller-address"
-              value={formData.address}
-              onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+              {...form.register("address")}
               placeholder="Via Roma 1, Torino"
-              required
             />
+            {form.formState.errors.address && (
+              <p className="text-sm text-destructive">{form.formState.errors.address.message}</p>
+            )}
           </div>
 
           <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="seller-zone">Zona (opzionale)</Label>
-            <Select value={formData.zone} onValueChange={(value) => setFormData({ ...formData, zone: value })}>
+            <Select {...form.register("zone")} onValueChange={(value) => form.setValue("zone", value)}>
               <SelectTrigger id="seller-zone">
                 <SelectValue placeholder="Es: Crocetta" />
                 </SelectTrigger>
@@ -185,8 +206,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             <Input
               id="seller-sqm"
               type="number"
-              value={formData.squareMeters}
-              onChange={(e) => setFormData({ ...formData, squareMeters: e.target.value })}
+              {...form.register("squareMeters")}
               placeholder="Es: 85 mq"
               />
             </div>
@@ -195,7 +215,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="seller-rooms">Numero Locali (opzionale)</Label>
-            <Select value={formData.rooms} onValueChange={(value) => setFormData({ ...formData, rooms: value })}>
+            <Select {...form.register("rooms")} onValueChange={(value) => form.setValue("rooms", value)}>
               <SelectTrigger id="seller-rooms">
                 <SelectValue placeholder="Es: Trilocale" />
                 </SelectTrigger>
@@ -210,7 +230,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
 
           <div className="space-y-2">
             <Label htmlFor="seller-floor">Piano (opzionale)</Label>
-            <Select value={formData.floor} onValueChange={(value) => setFormData({ ...formData, floor: value })}>
+            <Select {...form.register("floor")} onValueChange={(value) => form.setValue("floor", value)}>
               <SelectTrigger id="seller-floor">
                 <SelectValue placeholder="Es: 2° Piano" />
                 </SelectTrigger>
@@ -230,7 +250,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="seller-condition">Stato Immobile (opzionale)</Label>
-            <Select value={formData.condition} onValueChange={(value) => setFormData({ ...formData, condition: value })}>
+            <Select {...form.register("condition")} onValueChange={(value) => form.setValue("condition", value)}>
               <SelectTrigger id="seller-condition">
                 <SelectValue placeholder="Es: Buono" />
                 </SelectTrigger>
@@ -244,7 +264,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
 
           <div className="space-y-2">
             <Label htmlFor="seller-motivation">Motivazione Vendita (opzionale)</Label>
-            <Select value={formData.motivation} onValueChange={(value) => setFormData({ ...formData, motivation: value })}>
+            <Select {...form.register("motivation")} onValueChange={(value) => form.setValue("motivation", value)}>
               <SelectTrigger id="seller-motivation">
                 <SelectValue placeholder="Perché vendi?" />
                 </SelectTrigger>
@@ -262,8 +282,8 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           <div className="flex items-center space-x-2 p-4 bg-accent/10 rounded-lg">
             <Checkbox 
               id="seller-urgent" 
-              checked={formData.urgent}
-              onCheckedChange={(checked) => setFormData({ ...formData, urgent: checked as boolean })}
+              checked={form.watch("urgent")}
+              onCheckedChange={(checked) => form.setValue("urgent", checked as boolean)}
             />
             <Label htmlFor="seller-urgent" className="cursor-pointer font-medium">
               ⚡ Ho urgenza di vendere (priorità massima)
@@ -274,8 +294,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
             <Label htmlFor="seller-message">Note Aggiuntive (opzionale)</Label>
             <Textarea
               id="seller-message"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              {...form.register("message")}
               placeholder="Altre informazioni utili (opzionale)..."
               rows={3}
             />
@@ -284,9 +303,8 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
           <div className="flex items-start space-x-2 p-4 bg-muted/50 rounded-lg border border-border">
             <Checkbox 
               id="seller-privacy" 
-              checked={formData.privacyConsent}
-              onCheckedChange={(checked) => setFormData({ ...formData, privacyConsent: checked as boolean })}
-              required
+              checked={form.watch("privacyConsent")}
+              onCheckedChange={(checked) => form.setValue("privacyConsent", checked as boolean)}
             />
             <Label htmlFor="seller-privacy" className="cursor-pointer text-sm leading-relaxed">
               Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) 
@@ -295,13 +313,16 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
                 Leggi l'informativa privacy
               </a>
             </Label>
+            {form.formState.errors.privacyConsent && (
+              <p className="text-sm text-destructive">{form.formState.errors.privacyConsent.message}</p>
+            )}
           </div>
 
           <Button 
             type="submit" 
             className="w-full" 
             size="lg" 
-            disabled={!formData.privacyConsent || isSubmitting}
+            disabled={isSubmitting}
           >
             {isSubmitting ? (
               <>
