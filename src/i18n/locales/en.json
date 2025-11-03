@@ -146,7 +146,7 @@
     "feature1": "Near universities",
     "feature2": "Selected roommates",
     "feature3": "All-inclusive",
-    "separator": "and"
+    "separator": "or"
   },
   "investor": {
     "title": "For investors",
