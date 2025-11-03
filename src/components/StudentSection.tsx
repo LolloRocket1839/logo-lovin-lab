@@ -53,23 +53,36 @@ export const StudentSection = () => {
             {t('student.compactDesc')}
           </p>
           
-          {/* Quiz CTA - Prominent */}
-          <div className="mb-6 p-4 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-lg border border-primary/20">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <Gift className="w-5 h-5 text-primary" />
-              <p className="text-sm font-semibold text-primary">
-                {t('hero.questionnaire')}
-              </p>
+          {/* Quiz CTA - Premium Design */}
+          <div className="mb-6 relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+            <div className="relative p-6 bg-gradient-to-br from-background via-background to-primary/5 rounded-2xl border border-primary/20 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col items-center gap-4">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-md animate-pulse" />
+                  <div className="relative bg-primary/10 p-3 rounded-full">
+                    <Gift className="w-6 h-6 text-primary" />
+                  </div>
+                </div>
+                <div className="text-center space-y-2">
+                  <p className="text-lg font-bold text-foreground">
+                    {t('hero.questionnaire')}
+                  </p>
+                  <p className="text-sm text-muted-foreground max-w-sm">
+                    Aiutaci a capire le tue esigenze e potresti vincere €100
+                  </p>
+                </div>
+                <Button 
+                  size="lg" 
+                  variant="default"
+                  onClick={handleQuizClick}
+                  className="w-full sm:w-auto px-8 py-6 text-base bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-md hover:shadow-lg transition-all duration-300 group"
+                >
+                  {t('hero.quizCta')}
+                  <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Button>
+              </div>
             </div>
-            <Button 
-              size="lg" 
-              variant="default"
-              onClick={handleQuizClick}
-              className="w-full sm:w-auto px-8 py-6 text-base bg-primary hover:bg-primary/90"
-            >
-              {t('hero.quizCta')}
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
           </div>
           
           <div className="relative">
