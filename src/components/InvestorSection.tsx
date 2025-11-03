@@ -8,6 +8,7 @@ import { openEmail, MESSAGES } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
 import { PartnerLogos } from "@/components/investor/PartnerLogos";
 import { Skeleton } from "@/components/ui/skeleton";
+import { StyledText } from "@/components/StyledText";
 
 export const InvestorSection = () => {
   const { t, i18n } = useTranslation();
@@ -50,7 +51,7 @@ export const InvestorSection = () => {
             {t('investor.sectionTitle')}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
-            {t('investor.compactDesc')}
+            <StyledText>{t('investor.compactDesc')}</StyledText>
           </p>
           
           <Button 

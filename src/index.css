@@ -328,3 +328,10 @@ All colors MUST be HSL.
     animation: shimmer-gold 3s infinite;
   }
 }
+
+/* Elegant ampersand styling with Playfair Display */
+.ampersand-elegant {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+}

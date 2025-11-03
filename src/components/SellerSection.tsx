@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { SellerContactDialog } from "./SellerContactDialog";
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { StyledText } from "@/components/StyledText";
 
 export const SellerSection = () => {
   const { t } = useTranslation();
@@ -46,10 +47,10 @@ export const SellerSection = () => {
             {t('seller.sectionLabel')}
           </p>
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-            {t('seller.compactTitle')}
+            <StyledText>{t('seller.compactTitle')}</StyledText>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
-            {t('seller.compactDesc')}
+            <StyledText>{t('seller.compactDesc')}</StyledText>
           </p>
           
           <ul className="text-left max-w-lg mx-auto space-y-2 mb-8 text-sm text-muted-foreground">

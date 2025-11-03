@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { openEmail, MESSAGES } from "@/lib/contacts";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { StyledText } from "@/components/StyledText";
 
 export const Benefits = () => {
   const { t } = useTranslation();
@@ -74,7 +75,7 @@ export const Benefits = () => {
             {t('benefits.whyJungleRent')}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
-            {t('benefits.sectionSubtitle')}
+            <StyledText>{t('benefits.sectionSubtitle')}</StyledText>
           </p>
           
         </div>

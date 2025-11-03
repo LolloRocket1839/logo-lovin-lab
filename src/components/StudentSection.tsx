@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Wallet, Calendar, ArrowRight, Gift } from "lucide-react";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { StyledText } from "@/components/StyledText";
 
 export const StudentSection = () => {
   const { t, i18n } = useTranslation();
@@ -50,7 +51,7 @@ export const StudentSection = () => {
             {t('student.sectionTitle')}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
-            {t('student.compactDesc')}
+            <StyledText>{t('student.compactDesc')}</StyledText>
           </p>
           
           {/* Quiz CTA - Premium Design */}

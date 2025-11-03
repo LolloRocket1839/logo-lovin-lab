@@ -8,6 +8,7 @@ import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
+import { StyledText } from "@/components/StyledText";
 export const Hero = () => {
   const {
     t,
@@ -102,11 +103,11 @@ export const Hero = () => {
 
           {/* Headline unico chiaro e diretto */}
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight animate-fade-in-up">
-            {t('hero.mainHeadline')}
+            <StyledText>{t('hero.mainHeadline')}</StyledText>
           </h2>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-            {t('hero.mainSubheadline')}
+            <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
 
           {/* Urgency Elements */}
