@@ -120,7 +120,7 @@
     "feature1": "Vicino alle università",
     "feature2": "Coinquilini selezionati",
     "feature3": "All-inclusive",
-    "separator": "oppure"
+    "separator": "&"
   },
   "investor": {
     "title": "Per Investitori",
