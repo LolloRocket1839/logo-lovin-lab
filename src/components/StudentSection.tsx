@@ -77,7 +77,7 @@ export const StudentSection = () => {
               <div className="w-full border-t border-border/50" />
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-accent/20 px-3 text-muted-foreground">or</span>
+              <span className="bg-accent/20 px-3 text-muted-foreground">{t('student.separator')}</span>
             </div>
           </div>
           

@@ -118,7 +118,8 @@
     "cta": "Scopri le Stanze",
     "feature1": "Vicino alle università",
     "feature2": "Coinquilini selezionati",
-    "feature3": "All-inclusive"
+    "feature3": "All-inclusive",
+    "separator": "e"
   },
   "investor": {
     "title": "Per Investitori",

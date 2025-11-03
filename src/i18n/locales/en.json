@@ -144,7 +144,8 @@
     "cta": "Discover rooms",
     "feature1": "Near universities",
     "feature2": "Selected roommates",
-    "feature3": "All-inclusive"
+    "feature3": "All-inclusive",
+    "separator": "and"
   },
   "investor": {
     "title": "For investors",
