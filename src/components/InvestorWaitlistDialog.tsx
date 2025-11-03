@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import {
   Form,
   FormControl,
@@ -38,6 +39,7 @@ interface InvestorWaitlistDialogProps {
 
 export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistDialogProps) => {
   const { t } = useTranslation();
+  const { incrementCount } = useWaitlistCounter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const investorWaitlistSchema = getInvestorWaitlistSchema(t);
@@ -83,6 +85,9 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
       });
 
       if (!response.ok) throw new Error("Submission failed");
+
+      // Increment waitlist counter on successful submission
+      incrementCount();
 
       toast({
         title: t("investorWaitlist.successTitle"),

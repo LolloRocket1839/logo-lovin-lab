@@ -6,6 +6,8 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo.png";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
+import { LaunchCountdown } from "@/components/LaunchCountdown";
+import { WaitlistBadge } from "@/components/WaitlistBadge";
 export const Hero = () => {
   const {
     t,
@@ -103,9 +105,18 @@ export const Hero = () => {
             {t('hero.mainHeadline')}
           </h2>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             {t('hero.mainSubheadline')}
           </p>
+
+          {/* Urgency Elements */}
+          <div className="flex flex-col items-center gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+            <LaunchCountdown />
+            <WaitlistBadge />
+            <p className="text-sm md:text-base text-primary font-medium px-4 py-2 bg-primary/5 rounded-full border border-primary/20">
+              {t('hero.earlyBirdPerk')}
+            </p>
+          </div>
 
           {/* 2 CTA chiarissime */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up mb-8" style={{ animationDelay: '200ms' }}>
