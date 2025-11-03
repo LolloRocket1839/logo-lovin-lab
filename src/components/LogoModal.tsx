@@ -26,9 +26,6 @@ export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
 
             {/* Brand info */}
             <div className="text-center space-y-2">
-              <p className="text-sm text-muted-foreground max-w-md">
-                {t('logoModal.tagline')}
-              </p>
             </div>
           </div>
         </div>
