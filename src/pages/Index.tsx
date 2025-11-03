@@ -9,7 +9,6 @@ import { StructuredData } from "@/components/StructuredData";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { StickyCTA } from "@/components/StickyCTA";
-import { InstallPWA } from "@/components/InstallPWA";
 
 const Index = () => {
   return (
@@ -27,7 +26,6 @@ const Index = () => {
       <Footer />
       <ScrollToTop />
       <StickyCTA />
-      <InstallPWA />
     </main>
   );
 };
