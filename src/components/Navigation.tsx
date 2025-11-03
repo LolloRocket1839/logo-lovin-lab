@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
@@ -8,6 +9,7 @@ import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const Navigation = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -36,6 +38,21 @@ export const Navigation = () => {
     }
   };
 
+  const handleMenuClick = (item: typeof menuItems[0]) => {
+    if (item.path) {
+      navigate(item.path);
+      setIsMobileMenuOpen(false);
+    } else if (item.id) {
+      // If we're not on home page, navigate to home first
+      if (window.location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => scrollToSection(item.id!), 100);
+      } else {
+        scrollToSection(item.id);
+      }
+    }
+  };
+
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
   const handleContact = () => {
@@ -44,12 +61,13 @@ export const Navigation = () => {
   };
 
   const menuItems = [
-    { label: t("nav.home"), id: "hero" },
-    { label: t("nav.students"), id: "student-section" },
-    { label: t("nav.investors"), id: "investor-section" },
-    { label: t("nav.sell"), id: "seller-section" },
-    { label: t("nav.faq"), id: "faq-section" },
-    { label: t("nav.contacts"), id: "footer" },
+    { label: t("nav.home"), id: "hero" as string | undefined, path: undefined as string | undefined },
+    { label: t("nav.students"), id: "student-section", path: undefined },
+    { label: t("nav.investors"), id: "investor-section", path: undefined },
+    { label: t("nav.sell"), id: "seller-section", path: undefined },
+    { label: t("nav.blog"), id: undefined, path: "/blog" },
+    { label: t("nav.faq"), id: "faq-section", path: undefined },
+    { label: t("nav.contacts"), id: "footer", path: undefined },
   ];
 
   return (
@@ -87,12 +105,12 @@ export const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-1">
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <button
-                key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            >
+                key={item.id || item.path || index}
+                onClick={() => handleMenuClick(item)}
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              >
                 {item.label}
               </button>
             ))}
@@ -134,10 +152,10 @@ export const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background backdrop-blur-xl">
             <div className="flex flex-col gap-2">
-              {menuItems.map((item) => (
+              {menuItems.map((item, index) => (
                 <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  key={item.id || item.path || index}
+                  onClick={() => handleMenuClick(item)}
                   className="px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
                   {item.label}

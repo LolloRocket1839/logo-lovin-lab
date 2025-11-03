@@ -4,6 +4,7 @@
     "students": "Per Studenti",
     "investors": "Per Investitori",
     "sell": "Vendi Casa",
+    "blog": "Risorse",
     "faq": "FAQ",
     "contacts": "Contatti",
     "contactUs": "Contattaci"
@@ -380,5 +381,42 @@
     "lorenzoButton": "Lorenzo",
     "andreaButton": "Andrea",
     "closeLabel": "Chiudi"
+  },
+  "blog": {
+    "sectionLabel": "Risorse",
+    "sectionTitle": "Guide e Approfondimenti",
+    "sectionSubtitle": "Contenuti di valore per studenti, investitori e venditori",
+    "viewAll": "Scopri tutte le risorse",
+    "readMore": "Leggi l'articolo",
+    "share": "Condividi",
+    "relatedPosts": "Articoli correlati",
+    "categories": {
+      "all": "Tutti",
+      "students": "Per Studenti",
+      "investors": "Per Investitori",
+      "sellers": "Per Venditori"
+    },
+    "hero": {
+      "title": "Risorse e Guide",
+      "subtitle": "Approfondimenti, dati e consigli pratici sul mercato immobiliare torinese"
+    },
+    "cta": {
+      "students": {
+        "title": "Pronto a trovare la tua stanza ideale?",
+        "description": "Unisciti alla waitlist di Jungle Rent e ricevi aggiornamenti esclusivi"
+      },
+      "investors": {
+        "title": "Interessato a investire nel real estate?",
+        "description": "Contattaci per scoprire le opportunità di investimento disponibili"
+      },
+      "sellers": {
+        "title": "Vuoi vendere il tuo immobile?",
+        "description": "Richiedi una valutazione gratuita e senza impegno"
+      }
+    },
+    "meta": {
+      "title": "Blog Jungle Rent | Guide su Affitti, Investimenti e Vendite a Torino",
+      "description": "Scopri guide, dati e approfondimenti sul mercato immobiliare torinese per studenti, investitori e venditori."
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -28,12 +29,11 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
       <Breadcrumb>
         <BreadcrumbList className="text-sm">
           <BreadcrumbItem>
-            <BreadcrumbLink
-              onClick={() => scrollToSection("hero")}
-              className="flex items-center gap-1 cursor-pointer hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
-            >
-              <Home className="h-4 w-4" />
-              {t('breadcrumbs.home')}
+            <BreadcrumbLink asChild>
+              <Link to="/" className="flex items-center gap-1 hover:text-primary transition-colors">
+                <Home className="h-4 w-4" />
+                {t('breadcrumbs.home')}
+              </Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           {items.map((item, index) => (
@@ -44,13 +44,14 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
                   <BreadcrumbPage className="font-medium">
                     {item.label}
                   </BreadcrumbPage>
-                ) : (
-                  <BreadcrumbLink
-                    onClick={() => item.href && scrollToSection(item.href)}
-                    className="cursor-pointer hover:text-primary transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
-                  >
-                    {item.label}
+                ) : item.href ? (
+                  <BreadcrumbLink asChild>
+                    <Link to={item.href} className="hover:text-primary transition-colors">
+                      {item.label}
+                    </Link>
                   </BreadcrumbLink>
+                ) : (
+                  <span>{item.label}</span>
                 )}
               </BreadcrumbItem>
             </div>

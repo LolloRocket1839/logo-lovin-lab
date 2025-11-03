@@ -4,6 +4,7 @@
     "students": "For students",
     "investors": "For investors",
     "sell": "Sell property",
+    "blog": "Resources",
     "faq": "FAQ",
     "contacts": "Contacts",
     "contactUs": "Contact us"
@@ -606,5 +607,42 @@
     "lorenzoButton": "Lorenzo",
     "andreaButton": "Andrea",
     "closeLabel": "Close"
+  },
+  "blog": {
+    "sectionLabel": "Resources",
+    "sectionTitle": "Guides and Insights",
+    "sectionSubtitle": "Valuable content for students, investors and sellers",
+    "viewAll": "View all resources",
+    "readMore": "Read article",
+    "share": "Share",
+    "relatedPosts": "Related articles",
+    "categories": {
+      "all": "All",
+      "students": "For Students",
+      "investors": "For Investors",
+      "sellers": "For Sellers"
+    },
+    "hero": {
+      "title": "Resources and Guides",
+      "subtitle": "Insights, data and practical advice on the Turin real estate market"
+    },
+    "cta": {
+      "students": {
+        "title": "Ready to find your ideal room?",
+        "description": "Join the Jungle Rent waitlist and receive exclusive updates"
+      },
+      "investors": {
+        "title": "Interested in real estate investing?",
+        "description": "Contact us to discover available investment opportunities"
+      },
+      "sellers": {
+        "title": "Want to sell your property?",
+        "description": "Request a free valuation with no obligation"
+      }
+    },
+    "meta": {
+      "title": "Jungle Rent Blog | Guides on Rentals, Investments and Sales in Turin",
+      "description": "Discover guides, data and insights on the Turin real estate market for students, investors and sellers."
+    }
   }
 }

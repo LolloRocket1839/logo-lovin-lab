@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { StudentSection } from "@/components/StudentSection";
 import { InvestorSection } from "@/components/InvestorSection";
 import { SellerSection } from "@/components/SellerSection";
+import { BlogSection } from "@/components/blog/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
@@ -22,6 +23,7 @@ const Index = () => {
       <StudentSection />
       <InvestorSection />
       <SellerSection />
+      <BlogSection />
       <FAQSection />
       <Footer />
       <ScrollToTop />
