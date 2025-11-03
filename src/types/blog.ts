@@ -13,7 +13,7 @@ export interface BlogPost {
     keywords: string[];
   };
   tags: string[];
-  content?: string;
+  content?: string; // filename without extension in /data/blog/content/
 }
 
 export type BlogCategory = 'all' | 'students' | 'investors' | 'sellers';

@@ -2,6 +2,23 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "San Salvario: Guida Completa per Studenti Universitari a Torino",
+    slug: "san-salvario-guida-studenti",
+    category: "students",
+    date: "2025-11-03",
+    author: "Team Jungle Rent",
+    excerpt: "Tutto quello che devi sapere per vivere a San Salvario: prezzi reali, zone migliori, vita quotidiana e consigli pratici per studenti universitari.",
+    image: "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=800&h=600&fit=crop",
+    readTime: 10,
+    seo: {
+      title: "San Salvario Torino: Guida Completa per Studenti 2025 | Jungle Rent",
+      description: "Scopri quanto costa vivere a San Salvario, le zone migliori, i collegamenti universitari e tutti i consigli pratici per studenti. Guida aggiornata 2025.",
+      keywords: ["san salvario torino studenti", "affitto san salvario", "vivere san salvario", "quartiere studenti torino", "alloggio unito torino"]
+    },
+    tags: ["studenti", "san salvario", "torino", "quartieri", "guida"],
+    content: "san-salvario-guida-studenti"
+  },
+  {
     title: "Guida completa: Trovare casa a Torino come studente nel 2026",
     slug: "guida-trovare-casa-torino-studente-2026",
     category: "students",

@@ -14,10 +14,12 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { useState, useEffect } from "react";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
+  const [content, setContent] = useState<string>("");
   
   if (!slug) return <Navigate to="/blog" replace />;
   
@@ -26,6 +28,60 @@ const BlogPost = () => {
   if (!post) return <Navigate to="/blog" replace />;
   
   const relatedPosts = getRelatedPosts(post.slug, post.category);
+
+  useEffect(() => {
+    const loadContent = async () => {
+      if (post.content) {
+        try {
+          const contentModule = await import(`@/data/blog/content/${post.content}.md?raw`);
+          setContent(contentModule.default);
+        } catch (error) {
+          console.error("Error loading blog content:", error);
+          setContent(`
+## Introduzione
+
+Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
+
+### Punti Chiave
+
+- **Informazioni verificate**: Tutti i dati sono aggiornati al 2025
+- **Consigli pratici**: Suggerimenti applicabili immediatamente
+- **Risorse utili**: Link e strumenti per approfondire
+
+## Sezione Principale
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Conclusioni
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          `);
+        }
+      } else {
+        setContent(`
+## Introduzione
+
+Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
+
+### Punti Chiave
+
+- **Informazioni verificate**: Tutti i dati sono aggiornati al 2025
+- **Consigli pratici**: Suggerimenti applicabili immediatamente
+- **Risorse utili**: Link e strumenti per approfondire
+
+## Sezione Principale
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Conclusioni
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        `);
+      }
+    };
+
+    loadContent();
+  }, [post.content]);
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -54,30 +110,6 @@ const BlogPost = () => {
     }
   };
 
-  // Sample content for demonstration - in production, load from markdown files
-  const articleContent = `
-## Introduzione
-
-Questo è un articolo di esempio che dimostra il sistema di blog di Jungle Rent. Il contenuto reale verrà caricato da file Markdown.
-
-### Punti Chiave
-
-- **Informazioni verificate**: Tutti i dati sono aggiornati al 2026
-- **Consigli pratici**: Suggerimenti applicabili immediatamente
-- **Risorse utili**: Link e strumenti per approfondire
-
-## Sezione Principale
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-### Sottosezione
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-## Conclusioni
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  `;
 
   return (
     <main role="main" className="min-h-screen">
@@ -162,7 +194,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             {/* Content */}
             <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {articleContent}
+                {content}
               </ReactMarkdown>
             </div>
 
