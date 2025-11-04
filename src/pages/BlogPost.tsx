@@ -141,9 +141,8 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       <div className="pt-20">
         <Breadcrumbs
           items={[
-            { label: t('nav.home'), href: '/' },
             { label: t('nav.blog'), href: '/blog' },
-            { label: post.title, href: `/blog/${post.slug}` }
+            { label: post.title }
           ]}
         />
         
