@@ -190,11 +190,11 @@ San Salvario non è tutto uguale. Ci sono zone più tranquille, zone più rumoro
 **Aperitivi:**
 - **Caffè degli Specchi:** €8, buffet abbondante
 - **Pastis:** €9, stile francese
-- **OG Gattinara:** €10, cocktail
+- **Oinos Wine Bar:** €8-12, aperitivo con vino locale
 
 **Mangiare economico:**
-- **Kebab Artico** (Via Nizza): €4.50, punto di riferimento
-- **Pizza+**: €2.50 trancio napoletano
+- **Kebabbo** (Corso Regina Margherita): €4.50, kebab di qualità
+- **Skassapanza**: €3-4 pizza/burger componibili
 - **Da Zero**: Pizza al trancio, €3
 
 **Sera:**
