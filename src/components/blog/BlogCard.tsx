@@ -10,7 +10,7 @@ interface BlogCardProps {
 
 export const BlogCard = ({ post }: BlogCardProps) => {
   const { t, i18n } = useTranslation();
-  const currentLang = (i18n.language as 'it' | 'en') || 'it';
+  const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
   const translatedData = post.translations[currentLang];
 
   const getCategoryColor = (category: string) => {

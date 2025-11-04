@@ -22,7 +22,7 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, i18n } = useTranslation();
   const [content, setContent] = useState<string>("");
-  const currentLang = (i18n.language as 'it' | 'en') || 'it';
+  const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
   
   if (!slug) return <Navigate to="/blog" replace />;
   
