@@ -9,6 +9,9 @@
     "contacts": "Contacts",
     "contactUs": "Contact us"
   },
+  "breadcrumbs": {
+    "home": "Home"
+  },
   "hero": {
     "tagline": "Your safe haven in the real estate jungle",
     "mainHeadline": "Smart rentals for students and Real estate investments",
