@@ -324,11 +324,12 @@ La sera vuoi qualcosa di più "vero" di un kebab, ma senza spendere troppo.
 - Sempre pieno (prenota)
 - **Verdetto:** ⭐⭐⭐⭐ Solida, affidabile
 
-**Pizzeria California** (San Salvario)
-- Pizza: €6-8
-- Storica, ambiente semplice
-- Pizza classica napoletana
-- **Verdetto:** ⭐⭐⭐⭐ No fronzoli, pizza buona
+**Cecchi** (Centro)
+- Pizza al tegamino: €7-10
+- Farinata tradizionale piemontese
+- Storica pizzeria torinese
+- Ambiente autentico
+- **Verdetto:** ⭐⭐⭐⭐ Pizza al padellino d'eccellenza
 
 ### Cucina latino-americana (€8-12)
 
