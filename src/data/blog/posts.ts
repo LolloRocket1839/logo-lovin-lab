@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-11-03",
     author: "Team Jungle Rent",
     excerpt: "Tutto quello che devi sapere per vivere a San Salvario: prezzi reali, zone migliori, vita quotidiana e consigli pratici per studenti universitari.",
-    image: "/src/assets/san-salvario-night.jpeg",
+    image: "/images/san-salvario-night.jpeg",
     readTime: 10,
     seo: {
       title: "San Salvario Torino: Guida Completa per Studenti 2025 | Jungle Rent",
