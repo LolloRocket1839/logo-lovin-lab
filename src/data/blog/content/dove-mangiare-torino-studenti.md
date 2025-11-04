@@ -123,12 +123,6 @@ Se vuoi la colazione "vera" al bar:
 - Dolci artigianali eccellenti
 - Ambiente classico ed elegante
 
-**Caffè Universitario** (San Salvario)
-- Frequentatissimo da studenti UniTO
-- Cornetto + caffè: €2.80
-- Ambiente informale e veloce
-- WiFi gratis, perfetto per studiare
-
 **💡 Consiglio:** Fai colazione a casa nei giorni normali (€0.50), bar quando hai la prima ora libera o vuoi studiare fuori (€2.50-3). Risparmio: €40-60/mese.
 
 ---
@@ -143,12 +137,12 @@ La pizza al taglio è la salvezza dello studente torinese.
 
 **I migliori:**
 
-**Pizza+** (San Salvario, Via Madama Cristina)
-- Trancio: €2.50-3
-- Pizza napoletana, impasto eccellente
-- Gusti particolari, ingredienti freschi
-- Fila sempre presente = garanzia di qualità
-- **Verdetto:** ⭐⭐⭐⭐⭐ Miglior rapporto qualità/prezzo
+**Skassapanza** (Centro)
+- Trancio pizza/burger: €3-4
+- Hamburgeria con pizzeria
+- Pizza e hamburger componibili
+- Ingredienti di qualità, personalizzabile
+- **Verdetto:** ⭐⭐⭐⭐ Ottimo per personalizzazione
 
 **Da Zero** (San Salvario, Via Berthollet)
 - Trancio: €2.80-3.50
@@ -174,12 +168,12 @@ Torino ha una scena kebab eccellente. Qui la qualità varia MOLTO.
 
 **I top (testati e approvati):**
 
-**Kebab Artico** (San Salvario, Via Nizza)
-- Kebab completo: €4.50
-- Porzioni abbondanti, ingredienti freschi
-- Aperto fino a tardi
-- Punto di riferimento per studenti da 10+ anni
-- **Verdetto:** ⭐⭐⭐⭐⭐ Il migliore. Punto.
+**Kebabbo** (Corso Regina Margherita, 66)
+- Kebab completo: €4.50-6
+- Locale moderno e pulito
+- Ingredienti freschi e di qualità
+- Vicino a Porta Nuova
+- **Verdetto:** ⭐⭐⭐⭐ Kebab di qualità, ambiente curato
 
 **Aladino** (Centro, Via Carlo Alberto)
 - Kebab: €4.50
@@ -256,13 +250,13 @@ La sera vuoi qualcosa di più "vero" di un kebab, ma senza spendere troppo.
 
 ### Cucina cinese autentica (€6-10)
 
-**Dongbei Renjia** (Aurora, Via Baltea)
-- Piatto: €6-8
-- Cucina del Nord-Est cinese
-- Autentica, zero concessioni all'italiano
-- Porzioni abbondanti
-- **Menu consigliato:** Ravioli (€6) + verdure saltate (€5) = €11 per 2 persone
-- **Verdetto:** ⭐⭐⭐⭐⭐ Miglior cinese/prezzo Torino
+**Du Cheng** (Centro, vicino Piazza Castello)
+- Piatto: €8-12 (pranzo), €15-20 (cena)
+- Ristorante storico dal 1986
+- Autentica cucina cinese
+- Qualità superiore alla media
+- **Menu consigliato:** Anatra laccata + ravioli al vapore = €18 per 2 persone
+- **Verdetto:** ⭐⭐⭐⭐ Storico, qualità eccellente
 
 **Ristorante Cina** (Aurora, Via Cigna)
 - Piatto: €5-7
@@ -279,7 +273,7 @@ La sera vuoi qualcosa di più "vero" di un kebab, ma senza spendere troppo.
 
 ### Cucina indiana (€7-12)
 
-**Taj Mahal** (San Salvario, Via Belfiore)
+**Raj Mahal** (San Salvario, Via Belfiore)
 - Curry: €7-9
 - Naan: €2.50
 - Thali completo: €12
@@ -310,7 +304,7 @@ La sera vuoi qualcosa di più "vero" di un kebab, ma senza spendere troppo.
 
 ### Pizzerie economiche (€6-10)
 
-**Berberè** (San Salvario, Via Principe Tommaso)
+**Berberè** (Centro, vicino Piazza Castello)
 - Pizza: €6-9
 - Pizza napoletana DOC
 - Impasto ottimo, ingredienti freschi
@@ -399,12 +393,12 @@ L'aperitivo torinese è un'istituzione. La formula: paghi il drink (€7-12), bu
 
 ### Aperitivi super-economici (€7-8)
 
-**OG Gattinara** (San Salvario, Via Nizza)
-- Spritz/birra: €7
-- Buffet abbondante (pasta, riso, focaccia)
-- Atmosfera studenti
-- Sempre pieno = vai presto (18:30)
-- **Verdetto:** ⭐⭐⭐⭐⭐ Miglior rapporto Torino
+**Oinos Wine Bar** (San Salvario)
+- Calice di vino: €3-5
+- Aperitivo: €8-12
+- Enoteca con vini sfusi piemontesi
+- Selezione di formaggi e salumi
+- **Verdetto:** ⭐⭐⭐⭐ Perfetto per aperitivo con vino locale
 
 **Bunker** (San Salvario, Via Paganini)
 - Drink: €7
@@ -630,15 +624,14 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 ### San Salvario (Il quartiere food per eccellenza)
 
 **Top 5 imperdibili:**
-1. **Kebab Artico** - Il migliore di Torino (€4.50)
-2. **Pizza+** - Pizza napoletana perfetta (€2.50-3)
-3. **Taj Mahal** - Miglior indiano (€7-12)
-4. **OG Gattinara** - Aperitivo top (€7)
-5. **Berberè** - Pizza napoletana DOC (€6-9)
+1. **Raj Mahal** - Miglior indiano (€7-12)
+2. **Oinos Wine Bar** - Aperitivo con vino locale (€8-12)
+3. **Dama Bianca** - Cucina eritrea (€8-10)
+4. **Bar Norman** - Colazione e aperitivo (€3/€7)
+5. **Edit** - Cucina moderna e brunch (€12-18)
 
 **Colazione top:**
 - **Orso Caffè** - Specialty coffee (€3.50)
-- **Caffè Universitario** - Frequentato studenti (€2.80)
 - **Bar Norman** - Brioche artigianali (€3)
 
 **Mercato:** Piazza Madama Cristina (Mer/Sab)
@@ -646,11 +639,19 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 ### Centro
 
 **Top 5:**
-1. **Aladino** - Kebab/falafel di qualità (€4.50)
-2. **Tre Galline** - Cucina piemontese (€15-25)
-3. **Spontini** - Pizza al trancio (€3-4)
-4. **Himalaya's Kitchen** - Nepalese (€8-12)
-5. **Fratelli la Cozza** - Pizza affidabile (€7-12)
+1. **Berberè** - Pizza napoletana DOC (€6-9)
+2. **Du Cheng** - Cinese storico dal 1986 (€8-20)
+3. **Aladino** - Kebab/falafel di qualità (€4.50)
+4. **Skassapanza** - Pizza e hamburger componibili (€3-4)
+5. **Cecchi** - Pizza al tegamino tradizionale (€7-10)
+
+**Cucina piemontese:**
+- **Tre Galline** - Cucina piemontese (€15-25)
+- **Fratelli la Cozza** - Pizza affidabile (€7-12)
+
+**Altro:**
+- **Spontini** - Pizza al trancio (€3-4)
+- **Himalaya's Kitchen** - Nepalese (€8-12)
 
 **Mense:** Palazzo Nuovo, Borsellino
 
@@ -666,10 +667,10 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 
 **Top 5:**
 1. **Porta Palazzo** - Mercato gigante (risparmi 50%)
-2. **Dongbei Renjia** - Cinese autentico (€6-10)
-3. **Hong Kong** - Ravioli cinesi (€5-8)
-4. **Sahara** - Cucina magrebina (€4-8)
-5. **Ristorante Cina** - Ultra-economico (€5-7)
+2. **Hong Kong** - Ravioli cinesi (€5-8)
+3. **Sahara** - Cucina magrebina (€4-8)
+4. **Ristorante Cina** - Ultra-economico (€5-7)
+5. **Kebabbo** - Kebab di qualità (€4.50-6)
 
 **Mercato:** Porta Palazzo (Lun-Sab)
 
