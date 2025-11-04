@@ -10,10 +10,23 @@ import { StructuredData } from "@/components/StructuredData";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { StickyCTA } from "@/components/StickyCTA";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
+
   return (
     <main role="main" className="min-h-screen" id="main-content" tabIndex={-1}>
+      <Helmet>
+        <link rel="canonical" href="https://junglerent.it/" />
+        
+        {/* Hreflang for multilingual SEO */}
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/" />
+      </Helmet>
+      
       <StructuredData />
       <Navigation />
       <ScrollProgressBar />

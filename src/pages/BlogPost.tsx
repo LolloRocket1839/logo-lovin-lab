@@ -166,6 +166,61 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
   };
 
 
+  // Structured Data Schemas
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": translatedData.title,
+    "description": translatedData.excerpt,
+    "image": post.image,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jungle Rent",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://junglerent.it/jungle-rent-logo.png"
+      }
+    },
+    "datePublished": post.date,
+    "dateModified": post.date,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://junglerent.it/blog/${post.slug}`
+    },
+    "keywords": translatedData.seo.keywords.join(", "),
+    "articleSection": post.category,
+    "inLanguage": currentLang
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://junglerent.it/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://junglerent.it/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": translatedData.title,
+        "item": `https://junglerent.it/blog/${post.slug}`
+      }
+    ]
+  };
+
   return (
     <main role="main" className="min-h-screen">
       <Helmet>
@@ -174,19 +229,39 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         <meta name="keywords" content={translatedData.seo.keywords.join(', ')} />
         <link rel="canonical" href={`https://junglerent.it/blog/${post.slug}`} />
         
+        {/* Hreflang for multilingual SEO */}
+        <link rel="alternate" hrefLang="it" href={`https://junglerent.it/blog/${post.slug}`} />
+        <link rel="alternate" hrefLang="en" href={`https://junglerent.it/blog/${post.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://junglerent.it/blog/${post.slug}`} />
+        
         {/* Open Graph */}
         <meta property="og:title" content={translatedData.seo.title} />
         <meta property="og:description" content={translatedData.seo.description} />
         <meta property="og:image" content={post.image} />
+        <meta property="og:url" content={`https://junglerent.it/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={post.date} />
+        <meta property="article:modified_time" content={post.date} />
         <meta property="article:author" content={post.author} />
+        {translatedData.tags.map(tag => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={translatedData.seo.title} />
         <meta name="twitter:description" content={translatedData.seo.description} />
         <meta name="twitter:image" content={post.image} />
+        
+        {/* Structured Data - Article Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+        
+        {/* Structured Data - Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
       
       <StructuredData />

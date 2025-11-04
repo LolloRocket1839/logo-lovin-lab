@@ -24,6 +24,11 @@ const Blog = () => {
         <meta name="description" content={t('blog.meta.description')} />
         <meta name="keywords" content="blog jungle rent, immobiliare torino, studenti, investitori, venditori" />
         <link rel="canonical" href="https://junglerent.it/blog" />
+        
+        {/* Hreflang for multilingual SEO */}
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/blog" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/blog" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/blog" />
       </Helmet>
       
       <StructuredData />

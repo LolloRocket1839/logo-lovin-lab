@@ -15,8 +15,8 @@ export const blogPosts: BlogPost[] = [
         excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
         seo: {
           title: "Dove Mangiare a Torino da Studente: Guida Completa 2025 | Jungle Rent",
-          description: "Scopri i migliori posti dove mangiare a Torino spendendo poco: kebab, pizzerie, ristoranti etnici, mercati, mense e strategie per risparmiare. Guida completa con prezzi reali.",
-          keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino"]
+          description: "Dove mangiare a Torino da studente: guida 2025 ai migliori ristoranti economici vicino Politecnico e UniTo. Kebab €5, pizzerie, mercati e mense. Risparmia fino al 50% su colazione, pranzo e cena.",
+          keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino", "politecnico torino", "unito torino"]
         },
         tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"]
       },
@@ -46,8 +46,8 @@ export const blogPosts: BlogPost[] = [
         excerpt: "Tutto quello che devi sapere per vivere a San Salvario: prezzi reali, zone migliori, vita quotidiana e consigli pratici per studenti universitari.",
         seo: {
           title: "San Salvario Torino: Guida Completa per Studenti 2025 | Jungle Rent",
-          description: "Scopri quanto costa vivere a San Salvario, le zone migliori, i collegamenti universitari e tutti i consigli pratici per studenti. Guida aggiornata 2025.",
-          keywords: ["san salvario torino studenti", "affitto san salvario", "vivere san salvario", "quartiere studenti torino", "alloggio unito torino"]
+          description: "San Salvario Torino: guida completa 2025 per studenti universitari. Affitto €300-500, zone migliori, vita notturna e collegamenti con Politecnico e UniTo. Tutto quello che devi sapere prima di trasferirti.",
+          keywords: ["san salvario torino studenti", "affitto san salvario", "vivere san salvario", "quartiere studenti torino", "alloggio unito torino", "politecnico torino", "stanze san salvario"]
         },
         tags: ["studenti", "san salvario", "torino", "quartieri", "guida"]
       },

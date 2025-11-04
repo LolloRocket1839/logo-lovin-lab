@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
   <url>
     <loc>https://junglerent.it/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/" />
     <image:image>
       <image:loc>https://junglerent.it/jungle-rent-logo.png</image:loc>
       <image:title>Jungle Rent Logo</image:title>
       <image:caption>Il tuo rifugio nella giungla immobiliare</image:caption>
     </image:image>
   </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://junglerent.it/blog</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog" />
+  </url>
+
+  <!-- Blog Post: Dove mangiare a Torino da studente -->
+  <url>
+    <loc>https://junglerent.it/blog/dove-mangiare-torino-studenti</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&amp;h=600&amp;fit=crop</image:loc>
+      <image:title>Dove mangiare a Torino da studente</image:title>
+      <image:caption>Guida completa per mangiare bene a Torino spendendo poco</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog Post: San Salvario guida studenti -->
+  <url>
+    <loc>https://junglerent.it/blog/san-salvario-guida-studenti</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
+      <image:title>San Salvario guida per studenti</image:title>
+      <image:caption>Guida completa per studenti universitari a San Salvario, Torino</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
