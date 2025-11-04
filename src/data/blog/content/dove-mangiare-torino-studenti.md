@@ -200,8 +200,6 @@ Torino ha una scena kebab eccellente. Qui la qualità varia MOLTO.
 - Cous cous venerdì (€6)
 - **Verdetto:** ⭐⭐⭐⭐ Autentico, economico
 
-**🚫 Da evitare:** Kebab sotto €3.50 (qualità scadente), kebabbari senza persone dentro (mai buon segno)
-
 ### Cucina asiatica veloce (€5-8)
 
 **Nima Sushi** (San Salvario, Via Nizza)
