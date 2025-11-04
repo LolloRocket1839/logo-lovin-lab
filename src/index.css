@@ -485,6 +485,22 @@ All colors MUST be HSL.
   display: inline-block;
 }
 
+/* Table of contents clickable links */
+.blog-content-wrapper ol li a,
+.blog-content-wrapper ul li a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  border-bottom: none;
+  cursor: pointer;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.blog-content-wrapper ol li a:hover,
+.blog-content-wrapper ul li a:hover {
+  color: hsl(var(--primary) / 0.7);
+  opacity: 0.8;
+}
+
 /* Mobile optimization */
 @media (max-width: 768px) {
   .blog-content-wrapper {
