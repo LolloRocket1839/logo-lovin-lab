@@ -111,6 +111,24 @@ Se vuoi la colazione "vera" al bar:
 - Caffè + paste: €3.50
 - Perfetto per colazione "importante"
 
+**Orso Caffè** (San Salvario)
+- Specialty coffee di qualità
+- Brioche + caffè: €3.50
+- Atmosfera moderna e accogliente
+- Perfetto per studenti che amano il caffè di qualità
+
+**Maggiora** (Crimea)
+- Pasticceria storica torinese
+- Brioche + cappuccino: €3.20
+- Dolci artigianali eccellenti
+- Ambiente classico ed elegante
+
+**Caffè Universitario** (San Salvario)
+- Frequentatissimo da studenti UniTO
+- Cornetto + caffè: €2.80
+- Ambiente informale e veloce
+- WiFi gratis, perfetto per studiare
+
 **💡 Consiglio:** Fai colazione a casa nei giorni normali (€0.50), bar quando hai la prima ora libera o vuoi studiare fuori (€2.50-3). Risparmio: €40-60/mese.
 
 ---
@@ -619,6 +637,11 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 4. **OG Gattinara** - Aperitivo top (€7)
 5. **Berbè** - Pizza napoletana DOC (€6-9)
 
+**Colazione top:**
+- **Orso Caffè** - Specialty coffee (€3.50)
+- **Caffè Universitario** - Frequentato studenti (€2.80)
+- **Bar Norman** - Brioche artigianali (€3)
+
 **Mercato:** Piazza Madama Cristina (Mer/Sab)
 
 ### Centro
@@ -631,6 +654,14 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 5. **Fratelli la Cozza** - Pizza affidabile (€7-12)
 
 **Mense:** Palazzo Nuovo, Borsellino
+
+### Crimea
+
+**Colazione d'eccellenza:**
+1. **Maggiora** - Pasticceria storica (€3.20)
+- Dolci artigianali di alta qualità
+- Ambiente classico torinese
+- Perfetto per colazione tradizionale
 
 ### Aurora (Il più economico)
 
