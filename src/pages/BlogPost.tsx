@@ -16,6 +16,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { useState, useEffect } from "react";
+import type { Components } from "react-markdown";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -111,6 +112,51 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     }
   };
 
+  // Custom components for ReactMarkdown to handle IDs
+  const markdownComponents: Components = {
+    h2: ({ children, ...props }) => {
+      const text = String(children);
+      const match = text.match(/^(.*?)\s*\{#([^}]+)\}$/);
+      if (match) {
+        const [, title, id] = match;
+        return <h2 id={id} {...props}>{title}</h2>;
+      }
+      return <h2 {...props}>{children}</h2>;
+    },
+    h3: ({ children, ...props }) => {
+      const text = String(children);
+      const match = text.match(/^(.*?)\s*\{#([^}]+)\}$/);
+      if (match) {
+        const [, title, id] = match;
+        return <h3 id={id} {...props}>{title}</h3>;
+      }
+      return <h3 {...props}>{children}</h3>;
+    },
+    a: ({ href, children, ...props }) => {
+      // Handle internal anchor links
+      if (href?.startsWith('#')) {
+        return (
+          <a
+            href={href}
+            onClick={(e) => {
+              e.preventDefault();
+              const element = document.getElementById(href.slice(1));
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Update URL hash without jumping
+                window.history.pushState(null, '', href);
+              }
+            }}
+            {...props}
+          >
+            {children}
+          </a>
+        );
+      }
+      return <a href={href} {...props}>{children}</a>;
+    },
+  };
+
 
   return (
     <main role="main" className="min-h-screen">
@@ -196,6 +242,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
               <ReactMarkdown 
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
+                components={markdownComponents}
               >
                 {content}
               </ReactMarkdown>
