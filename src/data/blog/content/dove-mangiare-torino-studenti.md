@@ -13,9 +13,10 @@ In questa guida ti spiego esattamente dove mangiare a Torino in base al tuo budg
 4. [Cena economica (€5-12)](#cena-economica)
 5. [Quando vuoi spendere un po' di più (€15-25)](#cena-bella)
 6. [Aperitivo: i migliori per rapporto qualità/prezzo](#aperitivo)
-7. [Mercati: dove fare la spesa intelligente](#mercati)
-8. [Mense universitarie: come funzionano](#mense)
-9. [I 10 comandamenti dello studente che mangia bene](#comandamenti)
+7. [Gelato e dolci: le migliori gelaterie](#gelato)
+8. [Mercati: dove fare la spesa intelligente](#mercati)
+9. [Mense universitarie: come funzionano](#mense)
+10. [I 10 comandamenti dello studente che mangia bene](#comandamenti)
 
 ---
 
@@ -95,6 +96,12 @@ Se vuoi la colazione "vera" al bar:
 **Caffè Mulassano** (Centro)
 - Brioche + cappuccino: €3.80
 - Ambiente elegante
+
+**Fiorio** (Centro, Via Po)
+- Brioche + caffè: €4
+- Caffè storico dal 1780
+- Famoso per gelati e pasticceria
+- Ambiente elegante e storico
 
 **Bar Norman** (San Salvario)
 - Brioche artigianali grandi
@@ -223,6 +230,13 @@ Torino ha una scena kebab eccellente. Qui la qualità varia MOLTO.
 - **Verdetto:** ⭐⭐⭐⭐ Ottimo per vegani
 
 ### Panini e piadine (€4-6)
+
+**La Piadineria** (Varie sedi in città)
+- Piadina: €4-6
+- Catena affidabile
+- Ingredienti freschi, molte varietà
+- Veloce e conveniente
+- **Verdetto:** ⭐⭐⭐⭐ Ottimo rapporto qualità/prezzo
 
 **Muu Muuzzarella** (Vari punti)
 - Piadina: €5-6.50
@@ -370,6 +384,14 @@ Esame superato, compleanno, genitori in visita, o semplicemente ti vuoi togliere
 - **Budget 2 persone:** €45-55
 - **Verdetto:** ⭐⭐⭐⭐ Istituzione torinese
 
+**Cianci Piola** (Vanchiglia)
+- Piatto: €12-18
+- Piola non convenzionale
+- Cucina piemontese creativa
+- Ambiente informale e autentico
+- **Budget 2 persone:** €40-50
+- **Verdetto:** ⭐⭐⭐⭐ Piemontese originale
+
 ### Ristoranti fusion/moderni (€15-25)
 
 **Edit** (San Salvario, Via Belfiore)
@@ -454,6 +476,51 @@ L'aperitivo torinese è un'istituzione. La formula: paghi il drink (€7-12), bu
 - **Verdetto:** ⭐⭐⭐⭐ Aperitivo "serio"
 
 **💡 Strategia aperitivo:** Vai presto (18:30-19:00) quando il buffet è fresco e completo. Dopo le 20:00 spesso resta poco.
+
+---
+
+## Gelato e dolci: le migliori gelaterie {#gelato}
+
+Torino ha una tradizione gelatiera eccezionale. Ecco le migliori gelaterie per studenti.
+
+### Gelaterie top qualità (€2.50-4)
+
+**Mara dei Boschi** (Corso Marconi)
+- Coppetta: €3-4.50
+- Gelato contemporaneo di ricerca
+- Ingredienti selezionati e creatività
+- Gusti particolari e sperimentali
+- **Verdetto:** ⭐⭐⭐⭐⭐ Alta qualità, esperienza unica
+
+**Nivà** (Piazza Vittorio, Via Lagrange)
+- Coppetta: €3-4
+- Tradizione e qualità
+- Panna fresca, produzione artigianale
+- Più sedi in città
+- **Verdetto:** ⭐⭐⭐⭐⭐ Eccellenza torinese
+
+**Alberto Marchetti** (Varie sedi)
+- Coppetta: €3-4
+- Ingredienti selezionati (Presidi Slow Food)
+- Produzione giornaliera
+- Gusti classici e creativi
+- **Verdetto:** ⭐⭐⭐⭐⭐ Artigianato di livello
+
+**Torre Cremeria** (Aurora)
+- Coppetta/granita: €2.50-3.50
+- Famosa per granite siciliane
+- Gelato artigianale ottimo
+- Sempre affollato (segnale di qualità)
+- **Verdetto:** ⭐⭐⭐⭐⭐ Granita top
+
+**Fiorio** (Centro, Via Po)
+- Coppetta: €3.50-4.50
+- Storico dal 1780
+- Tradizione e qualità
+- Anche pasticceria
+- **Verdetto:** ⭐⭐⭐⭐ Storia e gusto
+
+**💡 Consiglio gelato:** Le gelaterie artigianali costano €1-2 in più delle industriali, ma la differenza di qualità è enorme. Vale sempre la pena.
 
 ---
 
@@ -589,6 +656,10 @@ Dedica domenica pomeriggio a cucinare per 3-4 giorni.
 Per prodotti base (pasta, riso, scatolame) sono imbattibili.  
 **Risparmio:** €30-50/mese vs supermercati normali
 
+### 3bis. Panifici artigianali per il pane
+**Ficini** (Via Foligno) - Pane con cereali antichi moliti a pietra dal 1976.  
+Pane artigianale di qualità a prezzi onesti.
+
 ### 4. Aperitivo = cena
 L'aperitivo con buffet serio (€7-9) è un pasto completo.  
 **Risparmio:** €5-8 vs ristorante
@@ -634,6 +705,11 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 - **Orso Caffè** - Specialty coffee (€3.50)
 - **Bar Norman** - Brioche artigianali (€3)
 
+**Gelato:**
+- **Mara dei Boschi** - Corso Marconi, alta qualità (€3-4.50)
+- **Nivà** - Piazza Vittorio (€3-4)
+- **Alberto Marchetti** - Varie sedi (€3-4)
+
 **Mercato:** Piazza Madama Cristina (Mer/Sab)
 
 ### Centro
@@ -652,6 +728,10 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 **Altro:**
 - **Spontini** - Pizza al trancio (€3-4)
 - **Himalaya's Kitchen** - Nepalese (€8-12)
+
+**Gelato:**
+- **Fiorio** - Storico dal 1780 (€3.50-4.50)
+- **Nivà** - Via Lagrange (€3-4)
 
 **Mense:** Palazzo Nuovo, Borsellino
 
@@ -672,6 +752,9 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 4. **Ristorante Cina** - Ultra-economico (€5-7)
 5. **Kebabbo** - Kebab di qualità (€4.50-6)
 
+**Gelato:**
+- **Torre Cremeria** - Granita e gelato top (€2.50-3.50)
+
 **Mercato:** Porta Palazzo (Lun-Sab)
 
 ### Cenisia (Zona Politecnico)
@@ -688,11 +771,11 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 ### Vanchiglia (Campus Einaudi)
 
 **Top 5:**
-1. **Pinsa al Volo** - Pinsa romana (€3-3.50)
-2. **Drogheria** - Brunch/pranzo (€8-15)
-3. **Casa Vicina** - Ristorante moderno (€15-25)
-4. **Bar Campus Einaudi** - Pranzi studenti (€4-7)
-5. **Pizzeria Cianci** - Pizza tonda (€7-10)
+1. **Cianci Piola** - Piemontese creativo (€12-18)
+2. **Pinsa al Volo** - Pinsa romana (€3-3.50)
+3. **Drogheria** - Brunch/pranzo (€8-15)
+4. **Casa Vicina** - Ristorante moderno (€15-25)
+5. **Bar Campus Einaudi** - Pranzi studenti (€4-7)
 
 **Mensa:** Campus Einaudi
 
