@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     content: "dove-mangiare-torino-studenti",
     translations: {
       it: {
-        title: "Dove Mangiare a Torino da Studente: Guida Completa (2025)",
+        title: "Dove mangiare a Torino da studente: guida completa (2025)",
         excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
         seo: {
           title: "Dove Mangiare a Torino da Studente: Guida Completa 2025 | Jungle Rent",
@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"]
       },
       en: {
-        title: "Where to Eat in Turin as a Student: Complete Guide (2025)",
+        title: "Where to eat in Turin as a student: complete guide (2025)",
         excerpt: "The ultimate guide to eating well in Turin on a budget: the best places for breakfast, lunch, dinner and aperitivo, markets, university canteens and money-saving strategies tested by students.",
         seo: {
           title: "Where to Eat in Turin as a Student: Complete Guide 2025 | Jungle Rent",
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     content: "san-salvario-guida-studenti",
     translations: {
       it: {
-        title: "San Salvario: Guida Completa per Studenti Universitari a Torino",
+        title: "San Salvario: guida completa per studenti universitari a Torino",
         excerpt: "Tutto quello che devi sapere per vivere a San Salvario: prezzi reali, zone migliori, vita quotidiana e consigli pratici per studenti universitari.",
         seo: {
           title: "San Salvario Torino: Guida Completa per Studenti 2025 | Jungle Rent",
@@ -52,7 +52,7 @@ export const blogPosts: BlogPost[] = [
         tags: ["studenti", "san salvario", "torino", "quartieri", "guida"]
       },
       en: {
-        title: "San Salvario: Complete Guide for University Students in Turin",
+        title: "San Salvario: complete guide for university students in Turin",
         excerpt: "Everything you need to know to live in San Salvario: real prices, best areas, daily life and practical tips for university students.",
         seo: {
           title: "San Salvario Turin: Complete Student Guide 2025 | Jungle Rent",
