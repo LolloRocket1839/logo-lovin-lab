@@ -9,7 +9,9 @@ interface BlogCardProps {
 }
 
 export const BlogCard = ({ post }: BlogCardProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language as 'it' | 'en') || 'it';
+  const translatedData = post.translations[currentLang];
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -30,7 +32,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
         <div className="aspect-video relative overflow-hidden">
           <img
             src={post.image}
-            alt={post.title}
+            alt={translatedData.title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
@@ -58,12 +60,12 @@ export const BlogCard = ({ post }: BlogCardProps) => {
 
         <Link to={`/blog/${post.slug}`}>
           <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-            {post.title}
+            {translatedData.title}
           </h3>
         </Link>
 
         <p className="text-muted-foreground mb-4 line-clamp-3 flex-1">
-          {post.excerpt}
+          {translatedData.excerpt}
         </p>
 
         <Link

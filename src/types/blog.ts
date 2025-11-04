@@ -1,19 +1,26 @@
-export interface BlogPost {
+export interface BlogPostTranslation {
   title: string;
-  slug: string;
-  category: 'students' | 'investors' | 'sellers';
-  date: string;
-  author: string;
   excerpt: string;
-  image: string;
-  readTime: number;
   seo: {
     title: string;
     description: string;
     keywords: string[];
   };
   tags: string[];
-  content?: string; // filename without extension in /data/blog/content/
+}
+
+export interface BlogPost {
+  slug: string;
+  category: 'students' | 'investors' | 'sellers';
+  date: string;
+  author: string;
+  image: string;
+  readTime: number;
+  content: string; // filename without extension in /data/blog/content/
+  translations: {
+    it: BlogPostTranslation;
+    en: BlogPostTranslation;
+  };
 }
 
 export type BlogCategory = 'all' | 'students' | 'investors' | 'sellers';

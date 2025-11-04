@@ -20,8 +20,9 @@ import type { Components } from "react-markdown";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [content, setContent] = useState<string>("");
+  const currentLang = (i18n.language as 'it' | 'en') || 'it';
   
   if (!slug) return <Navigate to="/blog" replace />;
   
@@ -29,17 +30,23 @@ const BlogPost = () => {
   
   if (!post) return <Navigate to="/blog" replace />;
   
+  const translatedData = post.translations[currentLang];
   const relatedPosts = getRelatedPosts(post.slug, post.category);
 
   useEffect(() => {
     const loadContent = async () => {
       if (post.content) {
         try {
-          const contentModule = await import(`@/data/blog/content/${post.content}.md?raw`);
+          const contentModule = await import(`@/data/blog/content/${currentLang}/${post.content}.md?raw`);
           setContent(contentModule.default);
         } catch (error) {
           console.error("Error loading blog content:", error);
-          setContent(`
+          // Fallback to Italian if translation not available
+          try {
+            const fallbackModule = await import(`@/data/blog/content/it/${post.content}.md?raw`);
+            setContent(fallbackModule.default);
+          } catch (fallbackError) {
+            setContent(`
 ## Introduzione
 
 Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
@@ -58,6 +65,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           `);
+          }
         }
       } else {
         setContent(`
@@ -83,14 +91,14 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     };
 
     loadContent();
-  }, [post.content]);
+  }, [post.content, currentLang]);
 
   const handleShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: post.title,
-          text: post.excerpt,
+          title: translatedData.title,
+          text: translatedData.excerpt,
           url: window.location.href,
         });
       } catch (err) {
@@ -161,14 +169,14 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
   return (
     <main role="main" className="min-h-screen">
       <Helmet>
-        <title>{post.seo.title}</title>
-        <meta name="description" content={post.seo.description} />
-        <meta name="keywords" content={post.seo.keywords.join(', ')} />
+        <title>{translatedData.seo.title}</title>
+        <meta name="description" content={translatedData.seo.description} />
+        <meta name="keywords" content={translatedData.seo.keywords.join(', ')} />
         <link rel="canonical" href={`https://junglerent.it/blog/${post.slug}`} />
         
         {/* Open Graph */}
-        <meta property="og:title" content={post.seo.title} />
-        <meta property="og:description" content={post.seo.description} />
+        <meta property="og:title" content={translatedData.seo.title} />
+        <meta property="og:description" content={translatedData.seo.description} />
         <meta property="og:image" content={post.image} />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={post.date} />
@@ -176,8 +184,8 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.seo.title} />
-        <meta name="twitter:description" content={post.seo.description} />
+        <meta name="twitter:title" content={translatedData.seo.title} />
+        <meta name="twitter:description" content={translatedData.seo.description} />
         <meta name="twitter:image" content={post.image} />
       </Helmet>
       
@@ -188,7 +196,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         <Breadcrumbs
           items={[
             { label: t('nav.blog'), href: '/blog' },
-            { label: post.title }
+            { label: translatedData.title }
           ]}
         />
         
@@ -201,7 +209,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
               </Badge>
               
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                {post.title}
+                {translatedData.title}
               </h1>
               
               <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-6">
@@ -232,7 +240,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             <div className="aspect-video rounded-lg overflow-hidden mb-12">
               <img
                 src={post.image}
-                alt={post.title}
+                alt={translatedData.title}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -253,7 +261,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 pt-8 border-t border-border">
-              {post.tags.map((tag) => (
+              {translatedData.tags.map((tag) => (
                 <Badge key={tag} variant="secondary">
                   #{tag}
                 </Badge>

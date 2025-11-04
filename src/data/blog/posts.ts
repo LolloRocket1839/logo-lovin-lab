@@ -2,38 +2,66 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "Dove Mangiare a Torino da Studente: Guida Completa (2025)",
     slug: "dove-mangiare-torino-studenti",
     category: "students",
     date: "2025-11-03",
     author: "Team Jungle Rent",
-    excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
     image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop",
     readTime: 12,
-    seo: {
-      title: "Dove Mangiare a Torino da Studente: Guida Completa 2025 | Jungle Rent",
-      description: "Scopri i migliori posti dove mangiare a Torino spendendo poco: kebab, pizzerie, ristoranti etnici, mercati, mense e strategie per risparmiare. Guida completa con prezzi reali.",
-      keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino"]
-    },
-    tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"],
-    content: "dove-mangiare-torino-studenti"
+    content: "dove-mangiare-torino-studenti",
+    translations: {
+      it: {
+        title: "Dove Mangiare a Torino da Studente: Guida Completa (2025)",
+        excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
+        seo: {
+          title: "Dove Mangiare a Torino da Studente: Guida Completa 2025 | Jungle Rent",
+          description: "Scopri i migliori posti dove mangiare a Torino spendendo poco: kebab, pizzerie, ristoranti etnici, mercati, mense e strategie per risparmiare. Guida completa con prezzi reali.",
+          keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino"]
+        },
+        tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"]
+      },
+      en: {
+        title: "Where to Eat in Turin as a Student: Complete Guide (2025)",
+        excerpt: "The ultimate guide to eating well in Turin on a budget: the best places for breakfast, lunch, dinner and aperitivo, markets, university canteens and money-saving strategies tested by students.",
+        seo: {
+          title: "Where to Eat in Turin as a Student: Complete Guide 2025 | Jungle Rent",
+          description: "Discover the best places to eat in Turin on a budget: kebab shops, pizzerias, ethnic restaurants, markets, canteens and tips to save money. Complete guide with real prices.",
+          keywords: ["where to eat turin students", "cheap restaurants turin", "budget food turin", "turin markets", "university canteens turin", "cheap aperitivo turin"]
+        },
+        tags: ["students", "food", "turin", "budget", "restaurants", "guide"]
+      }
+    }
   },
   {
-    title: "San Salvario: Guida Completa per Studenti Universitari a Torino",
     slug: "san-salvario-guida-studenti",
     category: "students",
     date: "2025-11-03",
     author: "Team Jungle Rent",
-    excerpt: "Tutto quello che devi sapere per vivere a San Salvario: prezzi reali, zone migliori, vita quotidiana e consigli pratici per studenti universitari.",
     image: "/images/san-salvario-night.jpeg",
     readTime: 10,
-    seo: {
-      title: "San Salvario Torino: Guida Completa per Studenti 2025 | Jungle Rent",
-      description: "Scopri quanto costa vivere a San Salvario, le zone migliori, i collegamenti universitari e tutti i consigli pratici per studenti. Guida aggiornata 2025.",
-      keywords: ["san salvario torino studenti", "affitto san salvario", "vivere san salvario", "quartiere studenti torino", "alloggio unito torino"]
-    },
-    tags: ["studenti", "san salvario", "torino", "quartieri", "guida"],
-    content: "san-salvario-guida-studenti"
+    content: "san-salvario-guida-studenti",
+    translations: {
+      it: {
+        title: "San Salvario: Guida Completa per Studenti Universitari a Torino",
+        excerpt: "Tutto quello che devi sapere per vivere a San Salvario: prezzi reali, zone migliori, vita quotidiana e consigli pratici per studenti universitari.",
+        seo: {
+          title: "San Salvario Torino: Guida Completa per Studenti 2025 | Jungle Rent",
+          description: "Scopri quanto costa vivere a San Salvario, le zone migliori, i collegamenti universitari e tutti i consigli pratici per studenti. Guida aggiornata 2025.",
+          keywords: ["san salvario torino studenti", "affitto san salvario", "vivere san salvario", "quartiere studenti torino", "alloggio unito torino"]
+        },
+        tags: ["studenti", "san salvario", "torino", "quartieri", "guida"]
+      },
+      en: {
+        title: "San Salvario: Complete Guide for University Students in Turin",
+        excerpt: "Everything you need to know to live in San Salvario: real prices, best areas, daily life and practical tips for university students.",
+        seo: {
+          title: "San Salvario Turin: Complete Student Guide 2025 | Jungle Rent",
+          description: "Discover how much it costs to live in San Salvario, the best areas, university connections and all practical tips for students. Updated 2025 guide.",
+          keywords: ["san salvario turin students", "rent san salvario", "living san salvario", "student neighborhood turin", "unito accommodation turin"]
+        },
+        tags: ["students", "san salvario", "turin", "neighborhoods", "guide"]
+      }
+    }
   }
 ];
 
