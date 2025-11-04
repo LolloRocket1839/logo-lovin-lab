@@ -310,7 +310,7 @@ La sera vuoi qualcosa di più "vero" di un kebab, ma senza spendere troppo.
 
 ### Pizzerie economiche (€6-10)
 
-**Berbè** (San Salvario, Via Principe Tommaso)
+**Berberè** (San Salvario, Via Principe Tommaso)
 - Pizza: €6-9
 - Pizza napoletana DOC
 - Impasto ottimo, ingredienti freschi
@@ -633,7 +633,7 @@ Sai cosa cucini = compri solo quello = zero sprechi.
 2. **Pizza+** - Pizza napoletana perfetta (€2.50-3)
 3. **Taj Mahal** - Miglior indiano (€7-12)
 4. **OG Gattinara** - Aperitivo top (€7)
-5. **Berbè** - Pizza napoletana DOC (€6-9)
+5. **Berberè** - Pizza napoletana DOC (€6-9)
 
 **Colazione top:**
 - **Orso Caffè** - Specialty coffee (€3.50)
