@@ -45,7 +45,7 @@ export const Footer = () => {
             <p className="text-muted-foreground mb-4 leading-relaxed font-light">
               {t('footer.taglineAlt')}
             </p>
-            <p className="text-xs text-muted-foreground/60 font-light tracking-wide">
+            <p className="text-xs text-muted-foreground font-light tracking-wide">
               {t('footer.copyright')}
             </p>
           </div>
@@ -98,7 +98,7 @@ export const Footer = () => {
               </li>
             </ul>
             <div className="mt-6">
-              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground/60 mb-3 font-medium">{t('footer.universitiesLabel')}</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3 font-medium">{t('footer.universitiesLabel')}</p>
               <div className="grid grid-cols-1 gap-y-2">
                 <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino</a>
                 <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino</a>
@@ -128,7 +128,7 @@ export const Footer = () => {
                   loading="lazy"
                 />
               </a>
-              <p className="text-xs text-muted-foreground/60 font-light leading-relaxed">
+              <p className="text-xs text-muted-foreground font-light leading-relaxed">
                 {t('footer.incubatorDesc')}
               </p>
             </div>
@@ -137,10 +137,10 @@ export const Footer = () => {
 
         {/* Bottom tagline */}
         <div className="border-t border-border pt-12 text-center">
-          <p className="text-primary/70 text-base font-accent mb-2 tracking-wide">
+          <p className="text-primary text-base font-accent mb-2 tracking-wide">
             {t('footer.bottomTagline')}
           </p>
-          <p className="text-muted-foreground/70 text-xs font-light">
+          <p className="text-muted-foreground text-xs font-light">
             {t('footer.bottomText')}
           </p>
         </div>
