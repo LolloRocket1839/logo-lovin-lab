@@ -37,13 +37,17 @@ export const InvestorSection = () => {
 
   const handleLorenzoWhatsApp = () => {
     const language = i18n.language as 'it' | 'en';
+    console.log('Lorenzo WhatsApp clicked', { language, phone: CONTACTS.lorenzo.phone });
     const message = MESSAGES.investor.whatsapp[language]('Lorenzo');
+    console.log('Message:', message);
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
   const handleAndreaWhatsApp = () => {
     const language = i18n.language as 'it' | 'en';
+    console.log('Andrea WhatsApp clicked', { language, phone: CONTACTS.andrea.phone });
     const message = MESSAGES.investor.whatsapp[language]('Andrea');
+    console.log('Message:', message);
     openWhatsApp(CONTACTS.andrea.phone, message);
   };
 
