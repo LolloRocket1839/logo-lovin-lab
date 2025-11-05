@@ -37,8 +37,7 @@ const Investors = () => {
   };
 
   const handleCallLorenzo = () => {
-    const message = MESSAGES.investor.whatsapp[currentLang](CONTACTS.lorenzo.name);
-    openWhatsApp(CONTACTS.lorenzo.phone, message);
+    window.location.href = `tel:${CONTACTS.lorenzo.phone}`;
   };
 
   const benefits = [

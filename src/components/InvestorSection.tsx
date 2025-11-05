@@ -42,9 +42,7 @@ export const InvestorSection = () => {
   };
 
   const handleCallLorenzo = () => {
-    const language = i18n.language as 'it' | 'en';
-    const message = MESSAGES.investor.whatsapp[language](CONTACTS.lorenzo.name);
-    openWhatsApp(CONTACTS.lorenzo.phone, message);
+    window.location.href = `tel:${CONTACTS.lorenzo.phone}`;
   };
 
   return (
