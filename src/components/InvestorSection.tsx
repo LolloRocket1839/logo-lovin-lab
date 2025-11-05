@@ -41,6 +41,12 @@ export const InvestorSection = () => {
     openWhatsApp(CONTACTS.investor.phone, message);
   };
 
+  const handleCallLorenzo = () => {
+    const language = i18n.language as 'it' | 'en';
+    const message = MESSAGES.investor.whatsapp[language](CONTACTS.lorenzo.name);
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
+
   return (
     <section id="investor-section" className="py-12 md:py-16 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
@@ -75,12 +81,12 @@ export const InvestorSection = () => {
             </Button>
             
             <Button 
-              onClick={() => setWaitlistOpen(true)}
+              onClick={handleCallLorenzo}
               size="lg"
               variant="outline"
               className="w-full sm:w-auto px-8 py-6 text-base"
             >
-              {t('investor.freeEvaluation')}
+              {t('investor.bookCall')}
             </Button>
           </div>
         </div>

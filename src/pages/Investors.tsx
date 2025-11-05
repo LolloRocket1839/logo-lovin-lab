@@ -36,6 +36,11 @@ const Investors = () => {
     openWhatsApp(CONTACTS.investor.phone, message);
   };
 
+  const handleCallLorenzo = () => {
+    const message = MESSAGES.investor.whatsapp[currentLang](CONTACTS.lorenzo.name);
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
+
   const benefits = [
     {
       icon: TrendingUp,
@@ -144,12 +149,12 @@ const Investors = () => {
               </Button>
               
               <Button 
-                onClick={() => setWaitlistOpen(true)}
+                onClick={handleCallLorenzo}
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto px-8 py-6 text-lg"
               >
-                {t('investor.freeEvaluation')}
+                {t('investor.bookCall')}
               </Button>
             </div>
           </div>
@@ -258,12 +263,12 @@ const Investors = () => {
                 </Button>
                 
                 <Button 
-                  onClick={() => setWaitlistOpen(true)}
+                  onClick={handleCallLorenzo}
                   size="lg"
                   variant="outline"
                   className="w-full sm:w-auto px-8 py-6 text-lg"
                 >
-                  {t('investor.freeEvaluation')}
+                  {t('investor.bookCall')}
                 </Button>
               </div>
             </div>
