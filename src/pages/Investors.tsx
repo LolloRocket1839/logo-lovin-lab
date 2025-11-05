@@ -31,9 +31,14 @@ const Investors = () => {
   const { count } = useWaitlistCounter();
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
-  const handleInvestorWhatsApp = () => {
-    const message = MESSAGES.investor.whatsapp[currentLang](CONTACTS.investor.name);
-    openWhatsApp(CONTACTS.investor.phone, message);
+  const handleLorenzoWhatsApp = () => {
+    const message = MESSAGES.investor.whatsapp[currentLang]('Lorenzo');
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
+
+  const handleAndreaWhatsApp = () => {
+    const message = MESSAGES.investor.whatsapp[currentLang]('Andrea');
+    openWhatsApp(CONTACTS.andrea.phone, message);
   };
 
   const handleCallLorenzo = () => {
@@ -137,13 +142,24 @@ const Investors = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
-                onClick={handleInvestorWhatsApp}
+                onClick={handleLorenzoWhatsApp}
                 size="lg"
                 variant="premium"
                 className="w-full sm:w-auto px-8 py-6 text-lg group shadow-xl"
               >
                 <MessageCircle className="mr-2 w-5 h-5" />
-                {t('investor.talkToAdvisor')}
+                {t('investor.talkToLorenzo')}
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              
+              <Button 
+                onClick={handleAndreaWhatsApp}
+                size="lg"
+                variant="premium"
+                className="w-full sm:w-auto px-8 py-6 text-lg group shadow-xl"
+              >
+                <MessageCircle className="mr-2 w-5 h-5" />
+                {t('investor.talkToAndrea')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -251,13 +267,24 @@ const Investors = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button 
-                  onClick={handleInvestorWhatsApp}
+                  onClick={handleLorenzoWhatsApp}
                   size="lg"
                   variant="premium"
                   className="w-full sm:w-auto px-8 py-6 text-lg group shadow-xl"
                 >
                   <MessageCircle className="mr-2 w-5 h-5" />
-                  {t('investor.talkToAdvisor')}
+                  {t('investor.talkToLorenzo')}
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+                
+                <Button 
+                  onClick={handleAndreaWhatsApp}
+                  size="lg"
+                  variant="premium"
+                  className="w-full sm:w-auto px-8 py-6 text-lg group shadow-xl"
+                >
+                  <MessageCircle className="mr-2 w-5 h-5" />
+                  {t('investor.talkToAndrea')}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 

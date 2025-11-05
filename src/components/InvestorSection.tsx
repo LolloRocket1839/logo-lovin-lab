@@ -35,10 +35,16 @@ export const InvestorSection = () => {
     }
   ];
 
-  const handleInvestorWhatsApp = () => {
+  const handleLorenzoWhatsApp = () => {
     const language = i18n.language as 'it' | 'en';
-    const message = MESSAGES.investor.whatsapp[language](CONTACTS.investor.name);
-    openWhatsApp(CONTACTS.investor.phone, message);
+    const message = MESSAGES.investor.whatsapp[language]('Lorenzo');
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
+
+  const handleAndreaWhatsApp = () => {
+    const language = i18n.language as 'it' | 'en';
+    const message = MESSAGES.investor.whatsapp[language]('Andrea');
+    openWhatsApp(CONTACTS.andrea.phone, message);
   };
 
   const handleCallLorenzo = () => {
@@ -68,13 +74,24 @@ export const InvestorSection = () => {
           
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Button 
-              onClick={handleInvestorWhatsApp}
+              onClick={handleLorenzoWhatsApp}
               size="lg"
               variant="premium"
               className="w-full sm:w-auto px-8 py-6 text-base group shadow-xl"
             >
               <MessageCircle className="mr-2 w-5 h-5" />
-              {t('investor.talkToAdvisor')}
+              {t('investor.talkToLorenzo')}
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <Button 
+              onClick={handleAndreaWhatsApp}
+              size="lg"
+              variant="premium"
+              className="w-full sm:w-auto px-8 py-6 text-base group shadow-xl"
+            >
+              <MessageCircle className="mr-2 w-5 h-5" />
+              {t('investor.talkToAndrea')}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             

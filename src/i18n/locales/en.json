@@ -182,6 +182,8 @@
     "feature3": "Investment from €100",
     "activeInvestors": "active investors",
     "talkToAdvisor": "Talk to Lorenzo or Andrea",
+    "talkToLorenzo": "Talk to Lorenzo",
+    "talkToAndrea": "Talk to Andrea",
     "bookCall": "Book a Call"
   },
   "investors": {

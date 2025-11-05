@@ -156,6 +156,8 @@
     "feature3": "Investimento da 100€",
     "activeInvestors": "investitori già attivi",
     "talkToAdvisor": "Parla con Lorenzo o Andrea",
+    "talkToLorenzo": "Parla con Lorenzo",
+    "talkToAndrea": "Parla con Andrea",
     "bookCall": "Prenota Chiamata"
   },
   "investors": {
