@@ -9,7 +9,7 @@ export const CONTACTS = {
   },
   investor: {
     phone: '+393319053037',
-    name: 'Advisor'
+    name: 'Lorenzo o Andrea'
   },
   email: 'junglerententeprise@gmail.com'
 } as const;
