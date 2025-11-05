@@ -29,19 +29,15 @@ const Investors = () => {
   const { t, i18n } = useTranslation();
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const { count } = useWaitlistCounter();
-  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
+  const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
 
   const handleLorenzoWhatsApp = () => {
-    console.log('Lorenzo WhatsApp clicked (Investors page)', { currentLang, phone: CONTACTS.lorenzo.phone });
     const message = MESSAGES.investor.whatsapp[currentLang]('Lorenzo');
-    console.log('Message:', message);
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
   const handleAndreaWhatsApp = () => {
-    console.log('Andrea WhatsApp clicked (Investors page)', { currentLang, phone: CONTACTS.andrea.phone });
     const message = MESSAGES.investor.whatsapp[currentLang]('Andrea');
-    console.log('Message:', message);
     openWhatsApp(CONTACTS.andrea.phone, message);
   };
 
