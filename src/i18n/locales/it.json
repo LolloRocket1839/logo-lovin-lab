@@ -29,7 +29,7 @@
     "studentSubtitle": "Risparmia sull'affitto!",
     "investorTitle": "Sei un investitore immobiliare?",
     "investorSubtitle": "Investi nel real estate di Jungle Rent a partire da 100€!",
-    "subheadline": "Affitti Smart & Opportunità di Investimento",
+    "subheadline": "Affitti Smart e Opportunità di Investimento",
     "targetAudience": "Per studenti e investitori",
     "location": "Vicino a Politecnico, UniTo e tutti i principali atenei torinesi",
     "questionnaire": "Vinci 100€ - Compila il questionario!",
@@ -72,8 +72,8 @@
     "subtitle": "Vantaggi esclusivi per la tua esperienza abitativa",
     "sectionLabel": "I Nostri Vantaggi",
     "whyJungleRent": "Perché Jungle Rent",
-    "sectionTitle": "Vantaggi Concreti per Studenti & Investitori",
-    "sectionSubtitle": "Gestione professionale, risparmio garantito & partnership istituzionali",
+    "sectionTitle": "Vantaggi Concreti per Studenti e Investitori",
+    "sectionSubtitle": "Gestione professionale, risparmio garantito e partnership istituzionali",
     "savings": "Risparmi Certificati",
     "savingsDesc": "Risparmia sui costi rispetto alle agenzie immobiliari. Affitti convenienti con contratti trasparenti.",
     "savingsHighlight": "Risparmia",
@@ -124,7 +124,7 @@
     "feature1": "Vicino alle università",
     "feature2": "Coinquilini selezionati",
     "feature3": "All-inclusive",
-    "separator": "&"
+    "separator": "e"
   },
   "investor": {
     "title": "Per Investitori",
@@ -160,7 +160,7 @@
     "subtitle": "Valutazione gratuita • Zero commissioni • Rogito in 60-90 giorni",
     "sectionLabel": "Vendi Casa",
     "compactTitle": "Valutiamo e acquistiamo in 7 giorni",
-    "compactDesc": "Vendi il tuo immobile a Jungle Rent rapidamente & senza commissioni. Acquistiamo in zone universitarie.",
+    "compactDesc": "Vendi il tuo immobile a Jungle Rent rapidamente e senza commissioni. Acquistiamo in zone universitarie.",
     "compactBullet1": "Valutazione gratuita in 48h, offerta scritta in 7 giorni",
     "compactBullet2": "Zero commissioni di agenzia - risparmi €6.000-10.000",
     "sectionTitle": "Vendi la Tua Casa a Torino",
