@@ -7,6 +7,10 @@ export const CONTACTS = {
     phone: '+393899135932',
     name: 'Andrea'
   },
+  investor: {
+    phone: '+393319053037',
+    name: 'Advisor'
+  },
   email: 'junglerententeprise@gmail.com'
 } as const;
 
@@ -57,9 +61,9 @@ Best regards`
   investor: {
     whatsapp: {
       it: (name: string) => 
-        `Ciao ${name}! Sono interessato/a alle opportunità di investimento immobiliare con JungleRent.\n\nVorrei informazioni su:\n- ROI e rendimenti\n- Proprietà disponibili\n- Gestione del servizio\n\nGrazie!`,
+        `Ciao ${name}! Sono interessato/a alle opportunità di investimento immobiliare con Jungle Rent.\n\nVorrei informazioni su:\n- Rendimenti previsti e ROI\n- Proprietà disponibili in zone universitarie\n- Gestione professionale del servizio\n- Opportunità di investimento e tempistiche\n\nGrazie!`,
       en: (name: string) => 
-        `Hi ${name}! I'm interested in real estate investment opportunities with JungleRent.\n\nI would like information about:\n- ROI and returns\n- Available properties\n- Service management\n\nThank you!`
+        `Hi ${name}! I'm interested in real estate investment opportunities with Jungle Rent.\n\nI would like information about:\n- Expected returns and ROI\n- Available properties in university areas\n- Professional service management\n- Investment opportunities and timelines\n\nThank you!`
     },
     
     email: {

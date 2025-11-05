@@ -72,9 +72,9 @@ export const StickyCTA = () => {
     openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
   };
 
-  const handleInvestorContact = () => {
-    const emailData = MESSAGES.investor.email[currentLang] || MESSAGES.investor.email.it;
-    openEmail(emailData.subject, emailData.body);
+  const handleInvestorWhatsApp = () => {
+    const message = MESSAGES.investor.whatsapp[currentLang](CONTACTS.investor.name);
+    openWhatsApp(CONTACTS.investor.phone, message);
   };
 
   if (!isVisible) return null;
@@ -89,12 +89,13 @@ export const StickyCTA = () => {
       >
         <div className="container px-4 py-4 flex items-center justify-between gap-2">
           <Button
-            onClick={handleInvestorContact}
+            onClick={handleInvestorWhatsApp}
             size="lg"
             variant="premium"
             className="flex-1 h-12 text-base group shadow-xl"
           >
-            {t('nav.contactUs')}
+            <MessageCircle className="mr-2 w-4 h-4" />
+            {t('investor.talkToAdvisor')}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button

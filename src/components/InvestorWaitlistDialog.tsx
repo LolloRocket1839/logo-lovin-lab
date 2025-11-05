@@ -22,10 +22,12 @@ import {
 const getInvestorWaitlistSchema = (t: any) => z.object({
   name: z.string().trim().min(2, t("investorWaitlist.nameError")).max(100),
   email: z.string().email(t("investorWaitlist.emailError")).max(255),
-  phone: z.string().trim().optional(),
-  investment_budget: z.string().optional(),
-  property_type: z.string().optional(),
-  investment_horizon: z.string().optional(),
+  phone: z.string().trim().min(1, t("investorWaitlist.phoneError")),
+  investment_budget: z.string().min(1, t("investorWaitlist.budgetError")),
+  property_type: z.string().min(1, t("investorWaitlist.propertyError")),
+  investment_horizon: z.string().min(1, t("investorWaitlist.horizonError")),
+  investment_timing: z.string().optional(),
+  has_rental_properties: z.string().optional(),
   referral_source: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, {
     message: t("investorWaitlist.consentError"),
@@ -54,6 +56,8 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
       investment_budget: "",
       property_type: "",
       investment_horizon: "",
+      investment_timing: "",
+      has_rental_properties: "",
       referral_source: "",
       consent: false,
     },
@@ -72,14 +76,16 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
         body: JSON.stringify({
           name: data.name,
           email: data.email,
-          phone: data.phone || "",
-          investment_budget: data.investment_budget || "",
-          property_type: data.property_type || "",
-          investment_horizon: data.investment_horizon || "",
+          phone: data.phone,
+          investment_budget: data.investment_budget,
+          property_type: data.property_type,
+          investment_horizon: data.investment_horizon,
+          investment_timing: data.investment_timing || "",
+          has_rental_properties: data.has_rental_properties || "",
           referral_source: data.referral_source || "",
           consent: data.consent,
           user_type: "investor",
-          _subject: "New Jungle Rent Investor Waitlist 💼",
+          _subject: "🔥 NEW QUALIFIED INVESTOR LEAD - Jungle Rent",
           timestamp: new Date().toISOString(),
         }),
       });
@@ -295,6 +301,67 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                       {form.formState.errors.investment_horizon && (
                         <p className="text-xs text-destructive mt-1">
                           {form.formState.errors.investment_horizon.message}
+                        </p>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="investment_timing"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.investmentTimingLabel")}</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-10
+                                                    bg-background
+                                                    border-border
+                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
+                            <SelectValue placeholder={t("investorWaitlist.investmentTimingPlaceholder")} />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="immediate">{t("investorWaitlist.investmentTimings.immediate")}</SelectItem>
+                          <SelectItem value="short">{t("investorWaitlist.investmentTimings.short")}</SelectItem>
+                          <SelectItem value="medium">{t("investorWaitlist.investmentTimings.medium")}</SelectItem>
+                          <SelectItem value="long">{t("investorWaitlist.investmentTimings.long")}</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {form.formState.errors.investment_timing && (
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.investment_timing.message}
+                        </p>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="has_rental_properties"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.hasRentalPropertiesLabel")}</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-10
+                                                    bg-background
+                                                    border-border
+                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
+                            <SelectValue placeholder={t("investorWaitlist.hasRentalPropertiesPlaceholder")} />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="yes">{t("investorWaitlist.rentalProperties.yes")}</SelectItem>
+                          <SelectItem value="no">{t("investorWaitlist.rentalProperties.no")}</SelectItem>
+                          <SelectItem value="considering">{t("investorWaitlist.rentalProperties.considering")}</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {form.formState.errors.has_rental_properties && (
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.has_rental_properties.message}
                         </p>
                       )}
                     </FormItem>

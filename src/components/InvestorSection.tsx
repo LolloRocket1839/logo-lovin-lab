@@ -2,17 +2,20 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, PieChart, BarChart3, ArrowRight } from "lucide-react";
+import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
-import { openEmail, MESSAGES } from "@/lib/contacts";
+import { openEmail, MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
 import { PartnerLogos } from "@/components/investor/PartnerLogos";
 import { Skeleton } from "@/components/ui/skeleton";
 import { StyledText } from "@/components/StyledText";
+import { Badge } from "@/components/ui/badge";
+import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 
 export const InvestorSection = () => {
   const { t, i18n } = useTranslation();
   const [waitlistOpen, setWaitlistOpen] = useState(false);
+  const { count } = useWaitlistCounter();
 
   const investorBenefits = [
     {
@@ -32,10 +35,10 @@ export const InvestorSection = () => {
     }
   ];
 
-  const handleInvestorContact = () => {
+  const handleInvestorWhatsApp = () => {
     const language = i18n.language as 'it' | 'en';
-    const emailData = MESSAGES.investor.email[language] || MESSAGES.investor.email.it;
-    openEmail(emailData.subject, emailData.body);
+    const message = MESSAGES.investor.whatsapp[language](CONTACTS.investor.name);
+    openWhatsApp(CONTACTS.investor.phone, message);
   };
 
   return (
@@ -50,19 +53,36 @@ export const InvestorSection = () => {
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight">
             {t('investor.sectionTitle')}
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
             <StyledText>{t('investor.compactDesc')}</StyledText>
           </p>
           
-          <Button 
-            onClick={() => setWaitlistOpen(true)}
-            size="lg"
-            variant="premium"
-            className="w-full sm:w-auto px-8 py-6 text-base group"
-          >
-            {t('investor.waitlistCta')}
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Badge variant="secondary" className="mb-8 px-4 py-2 text-sm font-medium">
+            <Users className="w-4 h-4 mr-2" />
+            {count}+ {t('investor.activeInvestors')}
+          </Badge>
+          
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <Button 
+              onClick={handleInvestorWhatsApp}
+              size="lg"
+              variant="premium"
+              className="w-full sm:w-auto px-8 py-6 text-base group shadow-xl"
+            >
+              <MessageCircle className="mr-2 w-5 h-5" />
+              {t('investor.talkToAdvisor')}
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            
+            <Button 
+              onClick={() => setWaitlistOpen(true)}
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto px-8 py-6 text-base"
+            >
+              {t('investor.freeEvaluation')}
+            </Button>
+          </div>
         </div>
         
         <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
