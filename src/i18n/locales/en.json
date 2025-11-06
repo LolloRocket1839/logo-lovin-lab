@@ -382,7 +382,9 @@
     "howItWorksQ4": "How are utilities and condominium fees managed?",
     "howItWorksA4": "Utilities (electricity, gas, water, internet, heating) are registered to Jungle Rent and are divided equally among all apartment tenants. Each quarter you receive a detailed report of consumption and expenses incurred, with a payment request for your share. The average estimated cost is €80-120 per month per person. Ordinary condominium fees are included in the rent.",
     "howItWorksQ5": "How does support work during your stay?",
-    "howItWorksA5": "You have access to our support service via WhatsApp 7 days a week. For emergencies (system failures, flooding, security issues) we respond within 2-4 hours and intervene the same day. For non-urgent requests (minor repairs, roommate issues, administrative questions) we respond within 24 hours. We also organize quarterly meetings with all tenants to collect feedback and improve the service."
+    "howItWorksA5": "You have access to our support service via WhatsApp 7 days a week. For emergencies (system failures, flooding, security issues) we respond within 2-4 hours and intervene the same day. For non-urgent requests (minor repairs, roommate issues, administrative questions) we respond within 24 hours. We also organize quarterly meetings with all tenants to collect feedback and improve the service.",
+    "howItWorksQ6": "How does the monthly rent payment work?",
+    "howItWorksA6": "Monthly rent must be paid by the 5th of the month via bank transfer. You receive an automatic email notification 3 days before the deadline with IBAN and payment reference. You can also set up a standing order with your bank. In case of delay exceeding 10 days, we apply a €50 late fee as per contract. To facilitate management, we also accept advance payments for multiple months."
   },
   "footer": {
     "tagline": "Your haven in the real estate jungle",

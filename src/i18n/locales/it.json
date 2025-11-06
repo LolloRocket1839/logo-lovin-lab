@@ -356,7 +356,9 @@
     "howItWorksQ4": "Come vengono gestite le utenze e le spese condominiali?",
     "howItWorksA4": "Le utenze (luce, gas, acqua, internet, riscaldamento) sono intestate a Jungle Rent e vengono suddivise equamente tra tutti gli inquilini dell'appartamento. Ogni trimestre ricevi un report dettagliato dei consumi e delle spese sostenute, con richiesta di pagamento della quota parte. Il costo medio stimato è 80-120€ al mese a persona. Le spese condominiali ordinarie sono invece incluse nel canone di affitto.",
     "howItWorksQ5": "Come funziona l'assistenza durante il soggiorno?",
-    "howItWorksA5": "Hai accesso al nostro servizio di assistenza tramite WhatsApp 7 giorni su 7. Per emergenze (guasti impianti, allagamenti, problemi di sicurezza) rispondiamo entro 2-4 ore e interveniamo in giornata. Per richieste non urgenti (piccole riparazioni, problemi con coinquilini, domande amministrative) rispondiamo entro 24 ore. Organizziamo anche incontri trimestrali con tutti gli inquilini per raccogliere feedback e migliorare il servizio."
+    "howItWorksA5": "Hai accesso al nostro servizio di assistenza tramite WhatsApp 7 giorni su 7. Per emergenze (guasti impianti, allagamenti, problemi di sicurezza) rispondiamo entro 2-4 ore e interveniamo in giornata. Per richieste non urgenti (piccole riparazioni, problemi con coinquilini, domande amministrative) rispondiamo entro 24 ore. Organizziamo anche incontri trimestrali con tutti gli inquilini per raccogliere feedback e migliorare il servizio.",
+    "howItWorksQ6": "Come funziona il pagamento mensile dell'affitto?",
+    "howItWorksA6": "Il canone mensile va pagato entro il 5 del mese tramite bonifico bancario. Ricevi una notifica automatica via email 3 giorni prima della scadenza con IBAN e causale. Puoi anche attivare un bonifico permanente dalla tua banca. In caso di ritardo superiore a 10 giorni, applichiamo una mora di €50 come da contratto. Per facilitare la gestione, accettiamo anche pagamenti anticipati per più mensilità."
   },
   "contacts": {
     "title": "Contatti",
