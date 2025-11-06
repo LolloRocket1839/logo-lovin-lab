@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Wallet, Calendar, ArrowRight, Gift } from "lucide-react";
@@ -8,6 +9,29 @@ import { StyledText } from "@/components/StyledText";
 
 export const StudentSection = () => {
   const { t, i18n } = useTranslation();
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "50px"
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const studentBenefits = [
     {
@@ -42,20 +66,40 @@ export const StudentSection = () => {
     <section id="student-section" className="py-12 md:py-16 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
-      <div className="container px-8 relative z-10">
+      <div ref={sectionRef} className="container px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
+          <p 
+            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '0ms' }}
+          >
             {t('student.sectionLabel')}
           </p>
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight">
+          <h2 
+            className={`text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '150ms' }}
+          >
             {t('student.sectionTitle')}
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
+          <p 
+            className={`text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8 transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '300ms' }}
+          >
             <StyledText>{t('student.compactDesc')}</StyledText>
           </p>
           
           {/* Quiz CTA - Premium Design */}
-          <div className="mb-6 relative">
+          <div 
+            className={`mb-6 relative transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '450ms' }}
+          >
             <div className="p-6 bg-background rounded-xl border border-primary/30 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="flex flex-col items-center gap-4">
                 <div className="relative">
@@ -84,7 +128,12 @@ export const StudentSection = () => {
             </div>
           </div>
           
-          <div className="relative">
+          <div 
+            className={`relative transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '600ms' }}
+          >
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-border/50" />
             </div>
@@ -93,7 +142,12 @@ export const StudentSection = () => {
             </div>
           </div>
           
-          <div className="mt-6">
+          <div 
+            className={`mt-6 transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '750ms' }}
+          >
             <Button 
               size="lg" 
               variant="premium"
