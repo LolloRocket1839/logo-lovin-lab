@@ -159,6 +159,41 @@ export const aiTestingQueries: AITestQuery[] = [
     query: "Student housing investment opportunities Turin Italy",
     language: "en",
     priority: "low"
+  },
+  {
+    id: "q21",
+    category: "Student Housing",
+    query: "Dove vivere studente Politecnico Torino",
+    language: "it",
+    priority: "high"
+  },
+  {
+    id: "q22",
+    category: "Student Housing",
+    query: "Migliori quartieri studenti Politecnico Torino 2025",
+    language: "it",
+    priority: "high"
+  },
+  {
+    id: "q23",
+    category: "Student Housing",
+    query: "Crocetta o Cenisia studenti Politecnico",
+    language: "it",
+    priority: "medium"
+  },
+  {
+    id: "q24",
+    category: "Student Housing",
+    query: "Quanto costa vivere vicino Politecnico Torino",
+    language: "it",
+    priority: "high"
+  },
+  {
+    id: "q25",
+    category: "Student Housing",
+    query: "Where to live Politecnico Turin student",
+    language: "en",
+    priority: "high"
   }
 ];
 

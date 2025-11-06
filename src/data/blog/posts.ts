@@ -2,6 +2,37 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "dove-vivere-torino-studenti-politecnico",
+    category: "students",
+    date: "2025-11-06",
+    author: "Team Jungle Rent",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 15,
+    content: "dove-vivere-torino-studenti-politecnico",
+    translations: {
+      it: {
+        title: "Dove vivere a Torino come studente del Politecnico: guida aggiornata 2025",
+        excerpt: "Guida completa ai migliori quartieri di Torino per studenti del Politecnico: Crocetta, Cenisia, Borgo San Paolo e altri. Prezzi reali 2025, collegamenti con i campus, servizi e consigli pratici per trovare casa.",
+        seo: {
+          title: "Dove Vivere a Torino Studenti Politecnico 2025: Guida Quartieri | Jungle Rent",
+          description: "Migliori quartieri Torino per studenti Politecnico 2025: Crocetta €500-700, Cenisia €350-500, confronto completo con prezzi, distanze e servizi. Guida aggiornata per trovare casa vicino al PoliTo.",
+          keywords: ["dove vivere torino studenti politecnico", "quartieri studenti politecnico torino", "affitti studenti politecnico", "crocetta torino affitti", "cenisia torino studenti", "stanze politecnico torino", "casa studenti polito", "quartieri universitari torino 2025"]
+        },
+        tags: ["studenti", "politecnico", "quartieri", "torino", "affitti", "guida"]
+      },
+      en: {
+        title: "Where to live in Turin as a Politecnico student: updated 2025 guide",
+        excerpt: "Complete guide to the best neighborhoods in Turin for Politecnico students: Crocetta, Cenisia, Borgo San Paolo and more. Real 2025 prices, campus connections, services and practical tips to find accommodation.",
+        seo: {
+          title: "Best Neighborhoods Turin Politecnico Students 2025 Guide | Jungle Rent",
+          description: "Best areas in Turin for Politecnico students 2025: Crocetta €500-700, Cenisia €350-500. Complete comparison with prices, distances and services. Updated guide to find housing near PoliTo.",
+          keywords: ["where to live turin politecnico students", "best neighborhoods politecnico turin", "rent politecnico students", "crocetta turin rent", "cenisia turin students", "rooms politecnico turin", "student housing polito"]
+        },
+        tags: ["students", "politecnico", "neighborhoods", "turin", "rent", "guide"]
+      }
+    }
+  },
+  {
     slug: "dove-mangiare-torino-studenti",
     category: "students",
     date: "2025-11-03",
