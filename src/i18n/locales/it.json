@@ -467,6 +467,9 @@
     "investmentTimingPlaceholder": "Tempistiche (opzionale)",
     "hasRentalPropertiesLabel": "Hai già immobili in affitto?",
     "hasRentalPropertiesPlaceholder": "Seleziona (opzionale)",
+    "preferredAreaLabel": "Zona Preferita a Torino (opzionale)",
+    "preferredAreaPlaceholder": "Seleziona una zona...",
+    "areaFlexible": "Nessuna preferenza - Sono flessibile",
     "referralLabel": "Come ci hai trovato? (opzionale)",
     "referralPlaceholder": "Aiutaci a conoscerti meglio",
     "consentLabel": "Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti sulle opportunità di investimento",
@@ -506,6 +509,16 @@
       "yes": "Sì, ho esperienza",
       "no": "No, è il primo investimento",
       "considering": "Sto valutando"
+    },
+    "areas": {
+      "san-salvario": "San Salvario",
+      "crocetta": "Crocetta",
+      "centro": "Centro Storico",
+      "vanchiglia": "Vanchiglia",
+      "aurora": "Aurora/Barriera Milano",
+      "polito": "Vicino Politecnico",
+      "lingotto": "Lingotto",
+      "san-paolo": "San Paolo/Santa Rita"
     },
     "referralSources": {
       "network": "Network professionale",

@@ -693,6 +693,9 @@
     "investmentTimingPlaceholder": "Timeline (optional)",
     "hasRentalPropertiesLabel": "Do you already have rental properties?",
     "hasRentalPropertiesPlaceholder": "Select (optional)",
+    "preferredAreaLabel": "Preferred Area in Turin (optional)",
+    "preferredAreaPlaceholder": "Select an area...",
+    "areaFlexible": "No preference - I'm flexible",
     "referralLabel": "How did you find us? (optional)",
     "referralPlaceholder": "Help us get to know you better",
     "consentLabel": "I consent to data processing (GDPR) and to receive updates about investment opportunities",
@@ -732,6 +735,16 @@
       "yes": "Yes, I have experience",
       "no": "No, first investment",
       "considering": "Considering"
+    },
+    "areas": {
+      "san-salvario": "San Salvario",
+      "crocetta": "Crocetta",
+      "centro": "City Center",
+      "vanchiglia": "Vanchiglia",
+      "aurora": "Aurora/Barriera Milano",
+      "polito": "Near Politecnico",
+      "lingotto": "Lingotto",
+      "san-paolo": "San Paolo/Santa Rita"
     },
     "referralSources": {
       "network": "Professional network",

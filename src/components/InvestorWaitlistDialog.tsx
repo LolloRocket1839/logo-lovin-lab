@@ -8,8 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Card } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
-import { Loader2 } from "lucide-react";
+import { Loader2, InfoIcon } from "lucide-react";
+import { turinAreas } from "@/data/turinAreas";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import {
   Form,
@@ -28,6 +30,7 @@ const getInvestorWaitlistSchema = (t: any) => z.object({
   investment_horizon: z.string().min(1, t("investorWaitlist.horizonError")),
   investment_timing: z.string().optional(),
   has_rental_properties: z.string().optional(),
+  preferred_area: z.string().optional(),
   referral_source: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, {
     message: t("investorWaitlist.consentError"),
@@ -40,7 +43,7 @@ interface InvestorWaitlistDialogProps {
 }
 
 export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistDialogProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { incrementCount } = useWaitlistCounter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -58,6 +61,7 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
       investment_horizon: "",
       investment_timing: "",
       has_rental_properties: "",
+      preferred_area: "",
       referral_source: "",
       consent: false,
     },
@@ -67,6 +71,10 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
     setIsSubmitting(true);
 
     try {
+      const areaLabel = data.preferred_area && data.preferred_area !== "flexible"
+        ? ` - Zona: ${t(`investorWaitlist.areas.${data.preferred_area}`)}`
+        : "";
+      
       const response = await fetch("https://formspree.io/f/xeojbzow", {
         method: "POST",
         headers: {
@@ -82,10 +90,11 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
           investment_horizon: data.investment_horizon,
           investment_timing: data.investment_timing || "",
           has_rental_properties: data.has_rental_properties || "",
+          preferred_area: data.preferred_area || "",
           referral_source: data.referral_source || "",
           consent: data.consent,
           user_type: "investor",
-          _subject: "🔥 NEW QUALIFIED INVESTOR LEAD - Jungle Rent",
+          _subject: `🔥 NEW QUALIFIED INVESTOR LEAD - Jungle Rent${areaLabel}`,
           timestamp: new Date().toISOString(),
         }),
       });
@@ -367,6 +376,76 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                     </FormItem>
                   )}
                 />
+
+                <FormField
+                  control={form.control}
+                  name="preferred_area"
+                  render={({ field }) => (
+                    <FormItem className="min-[400px]:col-span-2">
+                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.preferredAreaLabel")}</FormLabel>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger className="h-10
+                                                    bg-background
+                                                    border-border
+                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
+                            <SelectValue placeholder={t("investorWaitlist.preferredAreaPlaceholder")} />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="flexible">{t("investorWaitlist.areaFlexible")}</SelectItem>
+                          <SelectItem value="san-salvario">San Salvario</SelectItem>
+                          <SelectItem value="crocetta">Crocetta</SelectItem>
+                          <SelectItem value="centro">Centro Storico</SelectItem>
+                          <SelectItem value="vanchiglia">Vanchiglia</SelectItem>
+                          <SelectItem value="aurora">Aurora/Barriera Milano</SelectItem>
+                          <SelectItem value="polito">Vicino Politecnico</SelectItem>
+                          <SelectItem value="lingotto">Lingotto</SelectItem>
+                          <SelectItem value="san-paolo">San Paolo/Santa Rita</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      {form.formState.errors.preferred_area && (
+                        <p className="text-xs text-destructive mt-1">
+                          {form.formState.errors.preferred_area.message}
+                        </p>
+                      )}
+                    </FormItem>
+                  )}
+                />
+
+                {form.watch("preferred_area") && 
+                 form.watch("preferred_area") !== "flexible" && (
+                  <div className="min-[400px]:col-span-2">
+                    <Card className="p-4 border-primary/20 bg-primary/5">
+                      {(() => {
+                        const selectedArea = form.watch("preferred_area");
+                        const area = turinAreas.find(
+                          a => a.keywords.some(k => k.toLowerCase() === selectedArea?.toLowerCase())
+                        );
+                        if (!area) return null;
+                        
+                        return (
+                          <div className="space-y-2">
+                            <div className="flex items-start gap-2">
+                              <InfoIcon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                              <div className="flex-1">
+                                <h4 className="font-semibold text-sm text-foreground">{area.name}</h4>
+                                <p className="text-xs text-muted-foreground mt-1">
+                                  {area.description[i18n.language === 'it' ? 'it' : 'en']}
+                                </p>
+                                <div className="flex flex-wrap gap-3 mt-2 text-xs text-foreground/80">
+                                  <span>📍 Polito: {area.distance.polito}</span>
+                                  <span>💰 {area.avgRent}</span>
+                                  <span>🚌 {area.transport}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })()}
+                    </Card>
+                  </div>
+                )}
 
                 <FormField
                   control={form.control}
