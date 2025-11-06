@@ -53,7 +53,7 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-card border border-border/50 rounded-2xl px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-8 mb-6 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_8px_24px_hsla(28,24%,14%,0.1)] cursor-pointer ${
+            className={`inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-card border border-border/50 rounded-2xl px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-8 mb-6 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] hover:scale-105 cursor-pointer ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '200ms' }}
