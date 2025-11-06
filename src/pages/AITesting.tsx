@@ -10,11 +10,35 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Copy, ExternalLink, Download, TrendingUp, Mail } from "lucide-react";
+import { Copy, ExternalLink, Download, TrendingUp, Mail, AlertTriangle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 export default function AITesting() {
+  // Security check: only allow access in local development
+  const isLocalDevelopment = import.meta.env.DEV || 
+    window.location.hostname === 'localhost' || 
+    window.location.hostname === '127.0.0.1';
+
+  if (!isLocalDevelopment) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <main className="container mx-auto px-4 py-24">
+          <Alert variant="destructive" className="max-w-2xl mx-auto">
+            <AlertTriangle className="h-4 w-4" />
+            <AlertTitle>Access Restricted</AlertTitle>
+            <AlertDescription>
+              This page is only available in local development environment for security reasons.
+              Please run the application locally to access AI testing features.
+            </AlertDescription>
+          </Alert>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
   const [testResults, setTestResults] = useState<TestResult[]>([]);
   const [selectedQuery, setSelectedQuery] = useState(aiTestingQueries[0]);
   const [currentTest, setCurrentTest] = useState<Partial<TestResult>>({
