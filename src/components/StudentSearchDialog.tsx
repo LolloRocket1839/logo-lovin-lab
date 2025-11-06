@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { AlertCircle, Trash2, Cloud } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { toast as sonnerToast } from "sonner";
+import { detectArea, AreaInfo } from "@/data/turinAreas";
+import { AreaSuggestionCard } from "@/components/AreaSuggestionCard";
 import {
   Dialog,
   DialogContent,
@@ -74,13 +76,15 @@ const DRAFT_TIMESTAMP_KEY = "jungle_rent_student_search_draft_timestamp";
 const DRAFT_EXPIRY_DAYS = 7; // Draft expires after 7 days
 
 export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const { incrementCount } = useWaitlistCounter();
   const [hasDraft, setHasDraft] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const lastSaveRef = useRef<string>("");
   const toastIdRef = useRef<string | number | null>(null);
+  const [detectedArea, setDetectedArea] = useState<AreaInfo | null>(null);
+  const [dismissedArea, setDismissedArea] = useState<string | null>(null);
 
   const form = useForm<z.infer<ReturnType<typeof getStudentSearchSchema>>>({
     resolver: zodResolver(getStudentSearchSchema(t)),
@@ -255,6 +259,49 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
   const watchWhatLookingFor = form.watch("what_looking_for");
   const whatLookingForLength = watchWhatLookingFor?.length || 0;
 
+  // Detect area mentions in the description
+  useEffect(() => {
+    if (watchWhatLookingFor && watchWhatLookingFor.length > 5) {
+      const area = detectArea(watchWhatLookingFor);
+      if (area && area.name !== dismissedArea) {
+        setDetectedArea(area);
+      } else if (!area) {
+        setDetectedArea(null);
+      }
+    } else {
+      setDetectedArea(null);
+    }
+  }, [watchWhatLookingFor, dismissedArea]);
+
+  const handleAddAreaDetails = () => {
+    if (detectedArea) {
+      const currentLang = i18n.language === "en" ? "en" : "it";
+      const currentText = form.getValues("what_looking_for");
+      const additionalInfo = currentLang === "it"
+        ? `\n\nInfo zona ${detectedArea.name}:\n- Distanza Polito: ${detectedArea.distance.polito}, UniTo: ${detectedArea.distance.unito}\n- Trasporti: ${detectedArea.transport}\n- Caratteristiche: ${detectedArea.characteristics.join(", ")}\n- Budget medio: ${detectedArea.avgRent}`
+        : `\n\n${detectedArea.name} area info:\n- Distance Polito: ${detectedArea.distance.polito}, UniTo: ${detectedArea.distance.unito}\n- Transport: ${detectedArea.transport}\n- Features: ${detectedArea.characteristics.join(", ")}\n- Avg budget: ${detectedArea.avgRent}`;
+      
+      form.setValue("what_looking_for", currentText + additionalInfo);
+      setDetectedArea(null);
+      setDismissedArea(null);
+    }
+  };
+
+  const handleDismissAreaSuggestion = () => {
+    if (detectedArea) {
+      setDismissedArea(detectedArea.name);
+      setDetectedArea(null);
+    }
+  };
+
+  // Reset dismissed area when dialog closes
+  useEffect(() => {
+    if (!open) {
+      setDismissedArea(null);
+      setDetectedArea(null);
+    }
+  }, [open]);
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
@@ -356,6 +403,17 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
                       {...field}
                     />
                   </FormControl>
+                  
+                  {detectedArea && (
+                    <div className="mt-2">
+                      <AreaSuggestionCard
+                        area={detectedArea}
+                        onAddDetails={handleAddAreaDetails}
+                        onDismiss={handleDismissAreaSuggestion}
+                      />
+                    </div>
+                  )}
+                  
                   <FormMessage />
                 </FormItem>
               )}
