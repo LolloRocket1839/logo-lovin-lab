@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import logo2i3t from "@/assets/2i3t-logo-new.png";
+import logo2i3t from "@/assets/2i3t-logo-hq.png";
 
 export const PartnerLogos = () => {
   const [isVisible, setIsVisible] = useState(false);
