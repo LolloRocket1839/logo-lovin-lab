@@ -12,6 +12,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Copy, ExternalLink, Download, TrendingUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function AITesting() {
   const [testResults, setTestResults] = useState<TestResult[]>([]);
@@ -27,17 +28,88 @@ export default function AITesting() {
   const { toast } = useToast();
 
   useEffect(() => {
-    const stored = localStorage.getItem("jungleRentAITestResults");
-    if (stored) {
-      setTestResults(JSON.parse(stored));
-    }
+    loadResults();
   }, []);
 
-  const saveResults = () => {
-    const newResults = [...testResults, currentTest as TestResult];
-    localStorage.setItem("jungleRentAITestResults", JSON.stringify(newResults));
-    setTestResults(newResults);
+  const loadResults = async () => {
+    const { data, error } = await supabase
+      .from('ai_test_results')
+      .select('*')
+      .order('test_date', { ascending: false });
     
+    if (error) {
+      console.error("Error loading results:", error);
+      toast({
+        title: "Error loading results",
+        description: error.message,
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    if (data) {
+      const converted = data.map(dbResultToAppResult);
+      setTestResults(converted);
+    }
+  };
+
+  const dbResultToAppResult = (db: any): TestResult => ({
+    queryId: db.query_id,
+    date: db.test_date,
+    chatgpt: {
+      cited: db.chatgpt_cited,
+      context: db.chatgpt_context || "",
+      position: db.chatgpt_position || undefined
+    },
+    claude: {
+      cited: db.claude_cited,
+      context: db.claude_context || "",
+      position: db.claude_position || undefined
+    },
+    perplexity: {
+      cited: db.perplexity_cited,
+      context: db.perplexity_context || "",
+      position: db.perplexity_position || undefined
+    },
+    notes: db.notes || ""
+  });
+
+  const saveResults = async () => {
+    const { error } = await supabase
+      .from('ai_test_results')
+      .insert({
+        query_id: currentTest.queryId,
+        test_date: currentTest.date,
+        chatgpt_cited: currentTest.chatgpt?.cited || false,
+        chatgpt_context: currentTest.chatgpt?.context || null,
+        chatgpt_position: currentTest.chatgpt?.position || null,
+        claude_cited: currentTest.claude?.cited || false,
+        claude_context: currentTest.claude?.context || null,
+        claude_position: currentTest.claude?.position || null,
+        perplexity_cited: currentTest.perplexity?.cited || false,
+        perplexity_context: currentTest.perplexity?.context || null,
+        perplexity_position: currentTest.perplexity?.position || null,
+        notes: currentTest.notes || null
+      });
+
+    if (error) {
+      toast({
+        title: "Error saving results",
+        description: error.message,
+        variant: "destructive"
+      });
+      return;
+    }
+
+    toast({
+      title: "Results saved",
+      description: "Test results have been saved to database"
+    });
+    
+    // Reload results from database
+    await loadResults();
+    
+    // Reset form
     setCurrentTest({
       queryId: selectedQuery.id,
       date: new Date().toISOString().split('T')[0],
@@ -45,11 +117,6 @@ export default function AITesting() {
       claude: { cited: false, context: "" },
       perplexity: { cited: false, context: "" },
       notes: ""
-    });
-
-    toast({
-      title: "Results saved",
-      description: "Test results have been saved to local storage"
     });
   };
 
