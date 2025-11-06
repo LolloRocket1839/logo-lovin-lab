@@ -85,9 +85,9 @@ export const Hero = () => {
             <img 
               src={jungleRentLogo} 
               alt={t('hero.logoAlt')} 
-              width="80" 
-              height="80" 
-              className="w-16 h-16 md:w-20 md:h-20 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 rounded-full cursor-pointer" 
+              width="128" 
+              height="128" 
+              className="w-24 h-24 md:w-32 md:h-32 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 rounded-full cursor-pointer"
               loading="eager" 
               onClick={() => setLogoModalOpen(true)} 
               role="button" 
