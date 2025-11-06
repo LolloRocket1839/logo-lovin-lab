@@ -81,7 +81,7 @@ export const Hero = () => {
       <div className="container relative z-10 px-8 py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo statico */}
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-12 md:mb-16 animate-fade-in">
             <img 
               src={jungleRentLogo} 
               alt={t('hero.logoAlt')} 
