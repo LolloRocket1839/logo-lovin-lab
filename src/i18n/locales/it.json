@@ -131,7 +131,8 @@
     "draftLoadedTitle": "Bozza caricata",
     "draftLoadedDesc": "I tuoi dati precedenti sono stati ripristinati",
     "draftClearedTitle": "Bozza eliminata",
-    "draftClearedDesc": "La bozza salvata è stata rimossa"
+    "draftClearedDesc": "La bozza salvata è stata rimossa",
+    "draftAutoSaved": "Bozza salvata automaticamente"
   },
   "trustBadge": {
     "title": "La tua sicurezza è la nostra priorità",

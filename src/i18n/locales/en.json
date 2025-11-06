@@ -131,7 +131,8 @@
     "draftLoadedTitle": "Draft loaded",
     "draftLoadedDesc": "Your previous data has been restored",
     "draftClearedTitle": "Draft deleted",
-    "draftClearedDesc": "The saved draft has been removed"
+    "draftClearedDesc": "The saved draft has been removed",
+    "draftAutoSaved": "Draft saved automatically"
   },
   "trustBadge": {
     "title": "Your safety is our priority",

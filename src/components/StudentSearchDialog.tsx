@@ -2,10 +2,11 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { AlertCircle, Trash2 } from "lucide-react";
+import { AlertCircle, Trash2, Cloud } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { toast as sonnerToast } from "sonner";
 import {
   Dialog,
   DialogContent,
@@ -77,6 +78,9 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
   const { toast } = useToast();
   const { incrementCount } = useWaitlistCounter();
   const [hasDraft, setHasDraft] = useState(false);
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const lastSaveRef = useRef<string>("");
+  const toastIdRef = useRef<string | number | null>(null);
 
   const form = useForm<z.infer<ReturnType<typeof getStudentSearchSchema>>>({
     resolver: zodResolver(getStudentSearchSchema(t)),
@@ -170,7 +174,7 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
     }
   }, [open]);
 
-  // Auto-save draft to localStorage when form values change
+  // Auto-save draft to localStorage when form values change (with debounce)
   useEffect(() => {
     if (!open) return;
 
@@ -178,13 +182,44 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
       // Only save if there's meaningful data
       const hasData = values.name || values.email || values.what_looking_for;
       if (hasData) {
-        localStorage.setItem(DRAFT_KEY, JSON.stringify(values));
-        localStorage.setItem(DRAFT_TIMESTAMP_KEY, Date.now().toString());
+        // Clear previous timeout
+        if (saveTimeoutRef.current) {
+          clearTimeout(saveTimeoutRef.current);
+        }
+
+        // Debounce save by 1.5 seconds
+        saveTimeoutRef.current = setTimeout(() => {
+          const currentData = JSON.stringify(values);
+          
+          // Only save and show toast if data actually changed
+          if (currentData !== lastSaveRef.current) {
+            localStorage.setItem(DRAFT_KEY, currentData);
+            localStorage.setItem(DRAFT_TIMESTAMP_KEY, Date.now().toString());
+            lastSaveRef.current = currentData;
+            
+            // Show discrete toast notification
+            if (toastIdRef.current) {
+              sonnerToast.dismiss(toastIdRef.current);
+            }
+            
+            toastIdRef.current = sonnerToast(t("studentSearch.draftAutoSaved"), {
+              icon: <Cloud className="h-4 w-4 text-primary" />,
+              duration: 2000,
+              position: "bottom-right",
+              className: "text-sm",
+            });
+          }
+        }, 1500);
       }
     });
 
-    return () => subscription.unsubscribe();
-  }, [form, open]);
+    return () => {
+      subscription.unsubscribe();
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+    };
+  }, [form, open, t]);
 
   const loadDraft = () => {
     const savedDraft = localStorage.getItem(DRAFT_KEY);
