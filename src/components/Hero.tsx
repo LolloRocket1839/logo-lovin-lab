@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import logo2i3t from "@/assets/2i3t-logo.png";
+import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
