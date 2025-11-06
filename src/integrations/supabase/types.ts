@@ -14,7 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      ai_test_results: {
+        Row: {
+          chatgpt_cited: boolean | null
+          chatgpt_context: string | null
+          chatgpt_position: number | null
+          claude_cited: boolean | null
+          claude_context: string | null
+          claude_position: number | null
+          created_at: string | null
+          id: string
+          notes: string | null
+          perplexity_cited: boolean | null
+          perplexity_context: string | null
+          perplexity_position: number | null
+          query_id: string
+          test_date: string
+          tester_name: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          chatgpt_cited?: boolean | null
+          chatgpt_context?: string | null
+          chatgpt_position?: number | null
+          claude_cited?: boolean | null
+          claude_context?: string | null
+          claude_position?: number | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          perplexity_cited?: boolean | null
+          perplexity_context?: string | null
+          perplexity_position?: number | null
+          query_id: string
+          test_date: string
+          tester_name?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          chatgpt_cited?: boolean | null
+          chatgpt_context?: string | null
+          chatgpt_position?: number | null
+          claude_cited?: boolean | null
+          claude_context?: string | null
+          claude_position?: number | null
+          created_at?: string | null
+          id?: string
+          notes?: string | null
+          perplexity_cited?: boolean | null
+          perplexity_context?: string | null
+          perplexity_position?: number | null
+          query_id?: string
+          test_date?: string
+          tester_name?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
