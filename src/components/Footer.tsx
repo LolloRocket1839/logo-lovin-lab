@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import logo2i3t from "@/assets/2i3t-logo-hq.png";
+import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
