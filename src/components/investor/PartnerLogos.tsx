@@ -18,7 +18,7 @@ export const PartnerLogos = () => {
           <img
             src={logo2i3t}
             alt="2i3T - Incubatore Imprese Innovative Politecnico di Torino"
-            className="h-16 md:h-24 lg:h-32 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 relative z-10 cursor-pointer"
+            className="h-20 md:h-32 lg:h-40 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 relative z-10 cursor-pointer"
             loading="lazy"
           />
         </a>
