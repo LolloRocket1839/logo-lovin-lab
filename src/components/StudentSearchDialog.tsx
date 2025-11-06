@@ -2,7 +2,10 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { AlertCircle, Trash2 } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Dialog,
   DialogContent,
@@ -65,10 +68,15 @@ interface StudentSearchDialogProps {
   onOpenChange: (open: boolean) => void;
 }
 
+const DRAFT_KEY = "jungle_rent_student_search_draft";
+const DRAFT_TIMESTAMP_KEY = "jungle_rent_student_search_draft_timestamp";
+const DRAFT_EXPIRY_DAYS = 7; // Draft expires after 7 days
+
 export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogProps) => {
   const { t } = useTranslation();
   const { toast } = useToast();
   const { incrementCount } = useWaitlistCounter();
+  const [hasDraft, setHasDraft] = useState(false);
 
   const form = useForm<z.infer<ReturnType<typeof getStudentSearchSchema>>>({
     resolver: zodResolver(getStudentSearchSchema(t)),
@@ -107,6 +115,9 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
 
       if (response.ok) {
         incrementCount();
+        // Clear draft after successful submission
+        localStorage.removeItem(DRAFT_KEY);
+        localStorage.removeItem(DRAFT_TIMESTAMP_KEY);
         toast({
           title: t("studentSearch.successTitle"),
           description: t("studentSearch.successDescription"),
@@ -126,6 +137,84 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
     }
   };
 
+  // Load draft from localStorage when dialog opens
+  useEffect(() => {
+    if (open) {
+      const savedDraft = localStorage.getItem(DRAFT_KEY);
+      const savedTimestamp = localStorage.getItem(DRAFT_TIMESTAMP_KEY);
+      
+      if (savedDraft && savedTimestamp) {
+        const draftAge = Date.now() - parseInt(savedTimestamp);
+        const daysOld = draftAge / (1000 * 60 * 60 * 24);
+        
+        // Check if draft is still valid (not expired)
+        if (daysOld < DRAFT_EXPIRY_DAYS) {
+          try {
+            const draft = JSON.parse(savedDraft);
+            // Check if draft has meaningful data (not just empty strings)
+            const hasData = draft.name || draft.email || draft.what_looking_for;
+            if (hasData) {
+              setHasDraft(true);
+            }
+          } catch (error) {
+            console.error("Error loading draft:", error);
+            localStorage.removeItem(DRAFT_KEY);
+            localStorage.removeItem(DRAFT_TIMESTAMP_KEY);
+          }
+        } else {
+          // Draft expired, remove it
+          localStorage.removeItem(DRAFT_KEY);
+          localStorage.removeItem(DRAFT_TIMESTAMP_KEY);
+        }
+      }
+    }
+  }, [open]);
+
+  // Auto-save draft to localStorage when form values change
+  useEffect(() => {
+    if (!open) return;
+
+    const subscription = form.watch((values) => {
+      // Only save if there's meaningful data
+      const hasData = values.name || values.email || values.what_looking_for;
+      if (hasData) {
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(values));
+        localStorage.setItem(DRAFT_TIMESTAMP_KEY, Date.now().toString());
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, [form, open]);
+
+  const loadDraft = () => {
+    const savedDraft = localStorage.getItem(DRAFT_KEY);
+    if (savedDraft) {
+      try {
+        const draft = JSON.parse(savedDraft);
+        Object.keys(draft).forEach((key) => {
+          form.setValue(key as any, draft[key]);
+        });
+        setHasDraft(false);
+        toast({
+          title: t("studentSearch.draftLoadedTitle"),
+          description: t("studentSearch.draftLoadedDesc"),
+        });
+      } catch (error) {
+        console.error("Error loading draft:", error);
+      }
+    }
+  };
+
+  const clearDraft = () => {
+    localStorage.removeItem(DRAFT_KEY);
+    localStorage.removeItem(DRAFT_TIMESTAMP_KEY);
+    setHasDraft(false);
+    toast({
+      title: t("studentSearch.draftClearedTitle"),
+      description: t("studentSearch.draftClearedDesc"),
+    });
+  };
+
   const isSubmitting = form.formState.isSubmitting;
   const watchMoveDate = form.watch("move_date");
   const watchWhatLookingFor = form.watch("what_looking_for");
@@ -141,6 +230,35 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            {hasDraft && (
+              <Alert className="border-primary/50 bg-primary/5">
+                <AlertCircle className="h-4 w-4 text-primary" />
+                <AlertDescription className="flex items-center justify-between">
+                  <span className="text-sm">{t("studentSearch.draftFoundMessage")}</span>
+                  <div className="flex gap-2 ml-4">
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="outline"
+                      onClick={loadDraft}
+                      className="h-8"
+                    >
+                      {t("studentSearch.loadDraft")}
+                    </Button>
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="ghost"
+                      onClick={clearDraft}
+                      className="h-8"
+                    >
+                      <Trash2 className="h-3 w-3" />
+                    </Button>
+                  </div>
+                </AlertDescription>
+              </Alert>
+            )}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}

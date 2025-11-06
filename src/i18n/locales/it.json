@@ -125,7 +125,13 @@
     "successTitle": "Richiesta inviata! 🎉",
     "successDescription": "Ti contatteremo presto con le migliori opzioni per te",
     "errorTitle": "Errore nell'invio",
-    "errorDescription": "Si è verificato un errore. Riprova o contattaci su WhatsApp"
+    "errorDescription": "Si è verificato un errore. Riprova o contattaci su WhatsApp",
+    "draftFoundMessage": "Abbiamo trovato una bozza salvata automaticamente",
+    "loadDraft": "Carica bozza",
+    "draftLoadedTitle": "Bozza caricata",
+    "draftLoadedDesc": "I tuoi dati precedenti sono stati ripristinati",
+    "draftClearedTitle": "Bozza eliminata",
+    "draftClearedDesc": "La bozza salvata è stata rimossa"
   },
   "trustBadge": {
     "title": "La tua sicurezza è la nostra priorità",

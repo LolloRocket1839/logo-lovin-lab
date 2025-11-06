@@ -125,7 +125,13 @@
     "successTitle": "Request sent! 🎉",
     "successDescription": "We'll contact you soon with the best options for you",
     "errorTitle": "Submission error",
-    "errorDescription": "An error occurred. Please try again or contact us on WhatsApp"
+    "errorDescription": "An error occurred. Please try again or contact us on WhatsApp",
+    "draftFoundMessage": "We found an automatically saved draft",
+    "loadDraft": "Load draft",
+    "draftLoadedTitle": "Draft loaded",
+    "draftLoadedDesc": "Your previous data has been restored",
+    "draftClearedTitle": "Draft deleted",
+    "draftClearedDesc": "The saved draft has been removed"
   },
   "trustBadge": {
     "title": "Your safety is our priority",
