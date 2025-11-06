@@ -69,9 +69,6 @@ export const InvestorSection = () => {
     openWhatsApp(CONTACTS.andrea.phone, message);
   };
 
-  const handleCallLorenzo = () => {
-    window.location.href = `tel:${CONTACTS.lorenzo.phone}`;
-  };
 
   return (
     <section id="investor-section" className="py-12 md:py-16 bg-background relative overflow-hidden">
@@ -144,7 +141,7 @@ export const InvestorSection = () => {
             </Button>
             
             <Button 
-              onClick={handleCallLorenzo}
+              onClick={() => setWaitlistOpen(true)}
               size="lg"
               variant="outline"
               className="w-full sm:w-auto px-8 py-6 text-base"
