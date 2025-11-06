@@ -235,7 +235,10 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="500-50k">€500 - €50k</SelectItem>
+                          <SelectItem value="100-500">€100 - €500</SelectItem>
+                          <SelectItem value="500-2k">€500 - €2.000</SelectItem>
+                          <SelectItem value="2k-10k">€2.000 - €10.000</SelectItem>
+                          <SelectItem value="10k-50k">€10.000 - €50.000</SelectItem>
                           <SelectItem value="50k-100k">€50k - €100k</SelectItem>
                           <SelectItem value="100k-200k">€100k - €200k</SelectItem>
                           <SelectItem value="200k-300k">€200k - €300k</SelectItem>
