@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { ExternalLink } from "lucide-react";
-import logo2i3t from "@/assets/2i3t-logo.png";
+import logo2i3t from "@/assets/2i3t-logo-green.png";
 
 export const TrustBadge = () => {
   const { t } = useTranslation();
