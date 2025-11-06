@@ -26,7 +26,6 @@ const getInvestorWaitlistSchema = (t: any) => z.object({
   email: z.string().email(t("investorWaitlist.emailError")).max(255),
   phone: z.string().trim().min(1, t("investorWaitlist.phoneError")),
   investment_budget: z.string().min(1, t("investorWaitlist.budgetError")),
-  property_type: z.string().min(1, t("investorWaitlist.propertyError")),
   investment_horizon: z.string().min(1, t("investorWaitlist.horizonError")),
   investment_timing: z.string().optional(),
   has_rental_properties: z.string().optional(),
@@ -57,7 +56,6 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
       email: "",
       phone: "",
       investment_budget: "",
-      property_type: "",
       investment_horizon: "",
       investment_timing: "",
       has_rental_properties: "",
@@ -86,7 +84,6 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
           email: data.email,
           phone: data.phone,
           investment_budget: data.investment_budget,
-          property_type: data.property_type,
           investment_horizon: data.investment_horizon,
           investment_timing: data.investment_timing || "",
           has_rental_properties: data.has_rental_properties || "",
@@ -238,47 +235,15 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="50k-100k">{t("investorWaitlist.budgetRanges.50k-100k")}</SelectItem>
-                          <SelectItem value="100k-200k">{t("investorWaitlist.budgetRanges.100k-200k")}</SelectItem>
-                          <SelectItem value="200k-300k">{t("investorWaitlist.budgetRanges.200k-300k")}</SelectItem>
-                          <SelectItem value="over-300k">{t("investorWaitlist.budgetRanges.over-300k")}</SelectItem>
+                          <SelectItem value="500k-1M">€500k - €1M</SelectItem>
+                          <SelectItem value="1M-2M">€1M - €2M</SelectItem>
+                          <SelectItem value="2M-5M">€2M - €5M</SelectItem>
+                          <SelectItem value="over-5M">&gt; €5M</SelectItem>
                         </SelectContent>
                       </Select>
                       {form.formState.errors.investment_budget && (
                         <p className="text-xs text-destructive mt-1">
                           {form.formState.errors.investment_budget.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="property_type"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.propertyTypeLabel")}</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="h-10
-                                                    bg-background
-                                                    border-border
-                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder={t("investorWaitlist.propertyTypePlaceholder")} />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="monolocale">{t("investorWaitlist.propertyTypes.monolocale")}</SelectItem>
-                          <SelectItem value="bilocale">{t("investorWaitlist.propertyTypes.bilocale")}</SelectItem>
-                          <SelectItem value="trilocale">{t("investorWaitlist.propertyTypes.trilocale")}</SelectItem>
-                          <SelectItem value="appartamento-completo">{t("investorWaitlist.propertyTypes.appartamento-completo")}</SelectItem>
-                          <SelectItem value="indeciso">{t("investorWaitlist.propertyTypes.indeciso")}</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {form.formState.errors.property_type && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.property_type.message}
                         </p>
                       )}
                     </FormItem>
