@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import logo2i3t from "@/assets/2i3t-logo.png";
+import logo2i3t from "@/assets/2i3t-logo-hq.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
@@ -9,6 +9,29 @@ import { LogoModal } from "@/components/LogoModal";
 export const Footer = () => {
   const { t, i18n } = useTranslation();
   const [logoModalOpen, setLogoModalOpen] = useState(false);
+  const [isPartnershipVisible, setIsPartnershipVisible] = useState(false);
+  const partnershipRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsPartnershipVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "50px"
+      }
+    );
+
+    if (partnershipRef.current) {
+      observer.observe(partnershipRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -112,23 +135,32 @@ export const Footer = () => {
           </div>
 
           {/* Partnership con logo 2i3T */}
-          <div>
+          <div 
+            ref={partnershipRef}
+            className={`transition-all duration-700 ${
+              isPartnershipVisible ? "animate-fade-in" : "opacity-0"
+            }`}
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground/60 mb-3 font-medium">
+              Powered by
+            </p>
             <h3 className="font-display text-lg font-semibold mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
             <div className="space-y-4">
               <a 
                 href="https://www.2i3t.it"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group"
+                className="block group relative"
               >
+                <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg" />
                 <img
                   src={logo2i3t}
                   alt="2i3T - Incubatore Imprese Innovative Politecnico di Torino"
-                  className="h-10 md:h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 mb-3"
+                  className="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 mb-4 relative z-10"
                   loading="lazy"
                 />
               </a>
-              <p className="text-xs text-muted-foreground font-light leading-relaxed">
+              <p className="text-sm text-muted-foreground font-light leading-relaxed">
                 {t('footer.incubatorDesc')}
               </p>
             </div>

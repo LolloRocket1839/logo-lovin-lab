@@ -6,7 +6,6 @@ import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users } fro
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { openEmail, MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
-import { PartnerLogos } from "@/components/investor/PartnerLogos";
 import { Skeleton } from "@/components/ui/skeleton";
 import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
@@ -108,8 +107,6 @@ export const InvestorSection = () => {
         
         <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
       </div>
-      
-      <PartnerLogos />
     
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
     </section>
