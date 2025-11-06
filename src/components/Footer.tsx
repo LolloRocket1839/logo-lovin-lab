@@ -10,7 +10,9 @@ export const Footer = () => {
   const { t, i18n } = useTranslation();
   const [logoModalOpen, setLogoModalOpen] = useState(false);
   const [isPartnershipVisible, setIsPartnershipVisible] = useState(false);
+  const [scrollOffset, setScrollOffset] = useState(0);
   const partnershipRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,6 +33,22 @@ export const Footer = () => {
     }
 
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (logoRef.current) {
+        const rect = logoRef.current.getBoundingClientRect();
+        const scrollProgress = (window.innerHeight - rect.top) / window.innerHeight;
+        // Parallax effect: logo moves slower than scroll (0.3x speed)
+        setScrollOffset(scrollProgress * 30);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial calculation
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
   const handleEmailClick = (e: React.MouseEvent) => {
@@ -154,9 +172,14 @@ export const Footer = () => {
               >
                 <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg" />
                 <img
+                  ref={logoRef}
                   src={logo2i3t}
                   alt="2i3T - Incubatore Imprese Innovative Politecnico di Torino"
                   className="h-16 md:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 mb-4 relative z-10"
+                  style={{
+                    transform: `translateY(${scrollOffset}px)`,
+                    transition: 'transform 0.1s ease-out'
+                  }}
                   loading="lazy"
                 />
               </a>
