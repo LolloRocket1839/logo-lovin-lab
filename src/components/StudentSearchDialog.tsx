@@ -32,15 +32,29 @@ import { useToast } from "@/hooks/use-toast";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 
 const getStudentSearchSchema = (t: any) => z.object({
-  name: z.string().min(2, { message: t("studentSearch.nameError") }),
-  email: z.string().email({ message: t("studentSearch.emailError") }),
-  what_looking_for: z.string().min(10, { message: t("studentSearch.whatYouLookingForError") }),
+  name: z.string()
+    .min(2, { message: t("studentSearch.nameErrorMin") })
+    .max(100, { message: t("studentSearch.nameErrorMax") })
+    .regex(/^[a-zA-ZàèéìòùÀÈÉÌÒÙ\s'-]+$/, { message: t("studentSearch.nameErrorFormat") }),
+  email: z.string()
+    .min(1, { message: t("studentSearch.emailErrorRequired") })
+    .email({ message: t("studentSearch.emailErrorInvalid") })
+    .max(255, { message: t("studentSearch.emailErrorMax") }),
+  what_looking_for: z.string()
+    .min(20, { message: t("studentSearch.whatYouLookingForErrorMin") })
+    .max(500, { message: t("studentSearch.whatYouLookingForErrorMax") }),
   roommates: z.string().optional(),
   preferred_area: z.string().optional(),
-  study: z.string().optional(),
+  study: z.string()
+    .max(150, { message: t("studentSearch.studyErrorMax") })
+    .optional()
+    .or(z.literal("")),
   budget: z.string().optional(),
   move_date: z.string().optional(),
-  custom_move_date: z.string().optional(),
+  custom_move_date: z.string()
+    .max(100, { message: t("studentSearch.customMoveDateErrorMax") })
+    .optional()
+    .or(z.literal("")),
   consent: z.boolean().refine((val) => val === true, {
     message: t("studentSearch.consentError"),
   }),
@@ -58,6 +72,8 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
 
   const form = useForm<z.infer<ReturnType<typeof getStudentSearchSchema>>>({
     resolver: zodResolver(getStudentSearchSchema(t)),
+    mode: "onBlur", // Validate on blur for real-time feedback
+    reValidateMode: "onChange", // Re-validate on change after first validation
     defaultValues: {
       name: "",
       email: "",
@@ -112,6 +128,8 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
 
   const isSubmitting = form.formState.isSubmitting;
   const watchMoveDate = form.watch("move_date");
+  const watchWhatLookingFor = form.watch("what_looking_for");
+  const whatLookingForLength = watchWhatLookingFor?.length || 0;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -165,11 +183,23 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
               name="what_looking_for"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>{t("studentSearch.whatYouLookingForLabel")}</FormLabel>
+                  <FormLabel>
+                    <div className="flex justify-between items-center">
+                      <span>{t("studentSearch.whatYouLookingForLabel")}</span>
+                      <span className={`text-xs ${
+                        whatLookingForLength < 20 ? "text-muted-foreground" : 
+                        whatLookingForLength > 500 ? "text-destructive" : 
+                        "text-muted-foreground"
+                      }`}>
+                        {whatLookingForLength}/500
+                      </span>
+                    </div>
+                  </FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder={t("studentSearch.whatYouLookingForPlaceholder")}
                       className="min-h-[100px] resize-none"
+                      maxLength={500}
                       {...field}
                     />
                   </FormControl>
