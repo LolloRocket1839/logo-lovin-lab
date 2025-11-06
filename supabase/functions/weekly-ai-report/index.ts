@@ -24,6 +24,31 @@ serve(async (req) => {
   try {
     console.log("Starting weekly AI report generation...");
     
+    // Verify secret for authentication
+    const authHeader = req.headers.get("authorization");
+    const expectedSecret = Deno.env.get("WEEKLY_REPORT_SECRET");
+    
+    if (!expectedSecret) {
+      console.error("WEEKLY_REPORT_SECRET not configured");
+      return new Response(
+        JSON.stringify({ error: "Server configuration error" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+    
+    // Check authorization header (format: "Bearer SECRET")
+    const providedSecret = authHeader?.replace("Bearer ", "");
+    
+    if (providedSecret !== expectedSecret) {
+      console.error("Invalid or missing secret");
+      return new Response(
+        JSON.stringify({ error: "Unauthorized" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+    
+    console.log("Authentication successful");
+    
     // Initialize Supabase client
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
