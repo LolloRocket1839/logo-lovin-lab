@@ -108,8 +108,6 @@ export const InvestorSection = () => {
         
         <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
       </div>
-      
-      <PartnerLogos />
     
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
     </section>
