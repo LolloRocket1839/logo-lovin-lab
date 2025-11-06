@@ -2,14 +2,16 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Wallet, Calendar, ArrowRight, Gift } from "lucide-react";
+import { Wallet, Calendar, ArrowRight, Search } from "lucide-react";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { StyledText } from "@/components/StyledText";
+import { StudentSearchDialog } from "@/components/StudentSearchDialog";
 
 export const StudentSection = () => {
   const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
+  const [searchDialogOpen, setSearchDialogOpen] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -93,7 +95,7 @@ export const StudentSection = () => {
             <StyledText>{t('student.compactDesc')}</StyledText>
           </p>
           
-          {/* Quiz CTA - Premium Design */}
+          {/* Room Search CTA - Premium Design */}
           <div 
             className={`mb-6 relative transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
@@ -104,24 +106,24 @@ export const StudentSection = () => {
               <div className="flex flex-col items-center gap-4">
                 <div className="relative">
                   <div className="bg-primary/10 p-3 rounded-full">
-                    <Gift className="w-6 h-6 text-primary" />
+                    <Search className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 <div className="text-center space-y-2">
                   <p className="text-lg font-bold text-foreground">
-                    {t('hero.questionnaire')}
+                    {t('studentSearch.cardTitle')}
                   </p>
                   <p className="text-sm text-muted-foreground max-w-sm">
-                    Aiutaci a capire le tue esigenze e potresti vincere €100
+                    {t('studentSearch.cardDescription')}
                   </p>
                 </div>
                 <Button 
                   size="lg" 
                   variant="default"
-                  onClick={handleQuizClick}
+                  onClick={() => setSearchDialogOpen(true)}
                   className="w-full sm:w-auto px-8 py-6 text-base bg-primary hover:bg-primary/90 transition-all duration-300 group"
                 >
-                  {t('hero.quizCta')}
+                  {t('studentSearch.cardCta')}
                   <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </div>
@@ -160,6 +162,11 @@ export const StudentSection = () => {
           </div>
         </div>
       </div>
+      
+      <StudentSearchDialog 
+        open={searchDialogOpen} 
+        onOpenChange={setSearchDialogOpen} 
+      />
       
       <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
     </section>
