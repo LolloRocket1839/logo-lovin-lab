@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Copy, ExternalLink, Download, TrendingUp } from "lucide-react";
+import { Copy, ExternalLink, Download, TrendingUp, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -152,6 +152,30 @@ export default function AITesting() {
     a.click();
   };
 
+  const sendTestReport = async () => {
+    toast({
+      title: "Invio report...",
+      description: "Generazione e invio del report settimanale in corso...",
+    });
+
+    try {
+      const { data, error } = await supabase.functions.invoke('weekly-ai-report');
+      
+      if (error) throw error;
+      
+      toast({
+        title: "Report inviato!",
+        description: "Controlla la tua email per il report settimanale di test.",
+      });
+    } catch (error: any) {
+      toast({
+        title: "Errore invio report",
+        description: error.message,
+        variant: "destructive",
+      });
+    }
+  };
+
   const calculateStats = () => {
     if (testResults.length === 0) return { chatgpt: 0, claude: 0, perplexity: 0, total: 0 };
     
@@ -182,10 +206,16 @@ export default function AITesting() {
                 Weekly testing of 20 target queries across ChatGPT, Claude, and Perplexity
               </p>
             </div>
-            <Button onClick={exportResults} variant="outline">
-              <Download className="w-4 h-4 mr-2" />
-              Export Results
-            </Button>
+            <div className="flex gap-2">
+              <Button onClick={sendTestReport} variant="outline">
+                <Mail className="w-4 h-4 mr-2" />
+                Invia Report Settimanale
+              </Button>
+              <Button onClick={exportResults} variant="outline">
+                <Download className="w-4 h-4 mr-2" />
+                Export Results
+              </Button>
+            </div>
           </div>
 
           {/* Stats Overview */}
