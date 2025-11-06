@@ -1,4 +1,4 @@
-import logo2i3t from "@/assets/2i3t-logo.png";
+import logo2i3t from "@/assets/2i3t-logo-new.png";
 
 export const PartnerLogos = () => {
   return (
