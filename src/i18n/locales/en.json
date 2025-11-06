@@ -268,6 +268,7 @@
     "studentCategory": "For Students",
     "investorCategory": "For Investors",
     "generalCategory": "General",
+    "howItWorksCategory": "How It Works",
     "studentQ1": "Which areas of Turin do you cover?",
     "studentA1": "We operate in Turin's most strategic university areas: Vanchiglia, Vanchiglietta and Sassi (near Politecnico and San Salvario area), Lingotto and Ospedali (ideal for UniTo students), Aurora, Cenisia, Cit Turin and Crocetta (well connected to the city center). All our solutions are maximum 20 minutes from the main university campuses by public transport.",
     "studentQ2": "What is the average monthly price for a room?",
@@ -293,7 +294,19 @@
     "generalQ1": "Who are you and how long have you been operating?",
     "generalA1": "Jungle Rent was born from the direct experience of real estate investors and financial professionals who personally experienced the difficulties of finding housing as students away from home. We have been operating with our own investments for 2 years, and starting from February 2026 we will launch the startup to open investment opportunities to external investors as well. We are partners of 2i3T, the Politecnico di Torino incubator, which validates the solidity of our business model and supports us in strategic growth.",
     "generalQ2": "How can I contact you?",
-    "generalA2": "You can contact us in several ways: WhatsApp at +39 331 905 3037 (response within 2 hours during business hours), email at junglerententeprise@gmail.com, or by filling out the dedicated forms on the site for students, investors or sellers. Our team speaks Italian and English. The office is at via Gioacchino Quarello 15/A, Turin, and we are available for meetings by appointment."
+    "generalA2": "You can contact us in several ways: WhatsApp at +39 331 905 3037 (response within 2 hours during business hours), email at junglerententeprise@gmail.com, or by filling out the dedicated forms on the site for students, investors or sellers. Our team speaks Italian and English. The office is at via Gioacchino Quarello 15/A, Turin, and we are available for meetings by appointment.",
+    "howItWorksQ1": "How can I find and book a room?",
+    "howItWorksA1": "The process is simple in 4 steps: 1) Browse available rooms on our site filtering by university area, price and preferences. 2) Fill in the interest form indicating your needs and roommate preferences. 3) We connect you with compatible roommates or you can book directly with your friends. 4) Receive the contract via email, sign it digitally and pay the deposit. Everything online, without agency commissions.",
+    "howItWorksQ2": "How does the roommate matching system work?",
+    "howItWorksA2": "We developed an intelligent matching system that considers age, university, course of study, interests, habits (schedules, cleanliness, guests) and language preferences. After completing the questionnaire, we suggest compatible profiles and organize a video call or informal meeting before confirmation. You can always choose to rent with your friends without going through matching.",
+    "howItWorksQ3": "What are the steps to sign the contract and pay?",
+    "howItWorksA3": "Once the room is confirmed: 1) You receive the temporary contract with study motivation via email (available in Italian and English). 2) You sign digitally through a secure platform. 3) You pay the deposit (equivalent to 2 months) via bank transfer or card. 4) We handle the contract registration with the Italian Revenue Agency. Everything is completed in 3-5 business days. Zero commission costs.",
+    "howItWorksQ4": "How does the move-in and key handover work?",
+    "howItWorksA4": "We contact you 7-10 days before the agreed check-in date to organize the time. On moving day, a member of our team personally welcomes you at the apartment, hands you the keys, shows you all the spaces and explains how appliances, heating, Wi-Fi work. You sign a handover report with the apartment's condition and you're ready to settle in. The process takes about 30-45 minutes.",
+    "howItWorksQ5": "How are utilities and condominium fees managed?",
+    "howItWorksA5": "Utilities (electricity, gas, water, internet, heating) are registered to Jungle Rent and are divided equally among all apartment tenants. Each quarter you receive a detailed report of consumption and expenses incurred, with a payment request for your share. The average estimated cost is €80-120 per month per person. Ordinary condominium fees are included in the rent.",
+    "howItWorksQ6": "How does support work during the stay?",
+    "howItWorksA6": "You have access to our support service via WhatsApp 7 days a week. For emergencies (system failures, flooding, security issues) we respond within 2-4 hours and intervene the same day. For non-urgent requests (minor repairs, roommate issues, administrative questions) we respond within 24 hours. We also organize quarterly meetings with all tenants to collect feedback and improve the service."
   },
   "footer": {
     "tagline": "Your haven in the real estate jungle",
