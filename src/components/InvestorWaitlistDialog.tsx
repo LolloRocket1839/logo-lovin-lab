@@ -133,6 +133,14 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
           <DialogDescription className="text-sm text-muted-foreground pt-2">
             {t("investorWaitlist.description")}
           </DialogDescription>
+          <Card className="mt-4 p-3 bg-primary/5 border-primary/20">
+            <div className="flex gap-2 items-start">
+              <InfoIcon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+              <p className="text-xs text-foreground">
+                📥 <strong>Riceverai via email la Guida Completa per Investitori</strong> (PDF 45 pagine) con business plan dettagliato, case study reali e proiezioni finanziarie.
+              </p>
+            </div>
+          </Card>
         </DialogHeader>
 
         <div className="overflow-y-auto max-h-[calc(90vh-180px)] px-1">

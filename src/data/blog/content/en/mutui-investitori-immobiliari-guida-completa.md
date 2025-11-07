@@ -91,6 +91,48 @@ Investing in REITs in 2025 allows benefiting from a diversified real estate port
 
 To start investing in REITs, it's necessary to learn about their structure and operation, evaluate past and current performance analyzing returns and real estate market trends, understand associated risks such as market risk, interest rate risk and liquidity risk, choose the most suitable REIT type for your needs, open an investment account with a financial intermediary, and diversify the portfolio by investing in different REIT types or real estate sectors[^30].
 
+### Investment in Jungle Rent: Opportunity in Turin's Student Market
+
+For those wishing to enter the real estate market with modest capital and benefit from fully professional management, **Jungle Rent** offers a unique opportunity: participate in acquiring and managing properties for university students in Turin **starting from just €100**.
+
+#### Why the Student Market is Resilient
+
+The student housing sector represents one of the most stable segments of the Italian real estate market. Turin, with over **90,000 university students**, presents constant and growing housing demand. Unlike traditional residential or tourist markets, student rentals offer:
+
+- **Structural demand**: students must necessarily find accommodation for their entire study period
+- **High occupancy rates**: in strategic areas like Crocetta, San Salvario and Centro, occupancy exceeds 95% annually
+- **Lower volatility**: less exposed to economic crises compared to other segments
+- **Superior returns**: single room rents generate gross returns of 6-8% annually
+
+#### The Jungle Rent Model
+
+Jungle Rent operates an innovative business model combining strategic acquisition, targeted renovation and professional management of student properties in university areas of Turin.
+
+**Expected Returns**:
+- **Average gross return**: 7.2% annually on invested capital
+- **Occupancy rate**: 96% (only 14 days average vacancy between tenants)
+- **Net return** (after expenses): 4.8-5.2% annually
+
+#### Advantages for Investors
+
+✅ **Zero Management**: unlike direct real estate investment, you don't have to handle anything  
+✅ **Minimum Capital**: start with €100 and gradually increase your participation  
+✅ **Diversification**: your capital distributed across multiple properties  
+✅ **Transparent Taxation**: full tax compliance with transparent reporting  
+
+---
+
+**WANT TO LEARN MORE ABOUT INVESTING IN JUNGLE RENT?**
+
+👉 **[Request Investor Guide](/#investor-section)** - Complete the form with name, surname and email to receive the complete PDF guide
+
+Or contact us directly on WhatsApp:
+- **Lorenzo (CEO)**: +39 331 905 3037
+
+*Disclaimer: Real estate investments involve risks and do not guarantee certain returns.*
+
+---
+
 ## Tax Aspects for Real Estate Investors
 
 ### Flat Tax (Cedolare Secca)
@@ -264,7 +306,41 @@ Investing in Italian real estate in 2025 remains a valid choice for building wea
 
 The key to success lies in continuous financial education, investment diversification, professional asset management and the ability to adapt to regulatory and tax evolutions[^69]. It's essential to carefully evaluate all costs associated with investment, from mortgages to maintenance taxes, from renovation expenses to vacancy periods, to calculate realistic and sustainable returns over time.
 
-For beginners, it's advisable to start with manageable investment sizes, possibly using tools like real estate crowdfunding to familiarize with the sector without committing excessive capital, then gradually expand the portfolio as experience and competence are acquired[^70]. Finally, never underestimate the importance of relying on qualified professionals for legal, tax and management aspects, especially in the initial phases of real estate investor activity.
+For beginners, it's advisable to start with manageable investment sizes, possibly using tools like real estate crowdfunding or **co-investment opportunities like Jungle Rent** to familiarize with the sector without committing excessive capital, then gradually expand the portfolio as experience and competence are acquired[^70]. Finally, never underestimate the importance of relying on qualified professionals for legal, tax and management aspects, especially in the initial phases of real estate investor activity.
+
+---
+
+## 🎯 Start Your Real Estate Investor Journey with Jungle Rent
+
+If this guide has convinced you of real estate investment potential but you don't yet have hundreds of thousands of euros to invest, **Jungle Rent represents the ideal solution to start**.
+
+### Why Choose Jungle Rent as First Investment:
+
+✅ **Accessible Capital**: start with just €100, no mortgages or 40% down payment needed  
+✅ **Zero Management**: you don't have to handle anything - we think of everything  
+✅ **Resilient Market**: university students = constant demand and >95% occupancy rates  
+✅ **Competitive Returns**: 7.2% annual gross, above Turin market average  
+✅ **Simplified Taxation**: no IMU, TARI, unexpected maintenance - only quarterly distribution  
+✅ **Automatic Diversification**: your capital across multiple properties, reducing risk  
+✅ **Total Transparency**: real-time dashboard and detailed quarterly reporting
+
+### 📥 Download Complete Investor Guide (45-page PDF)
+
+**Receive for free**:
+- Detailed business plan with 5-year financial projections
+- Case studies of already acquired properties with real returns
+- Complete legal documentation and corporate structure
+- Participation methods and exit strategy
+- Investor FAQ and personalized simulations
+
+👉 **[Download Investor Guide Now](/#investor-section)** - Complete the form and receive the PDF via email in 2 minutes
+
+Or book a **free 30-minute call** with Lorenzo (CEO) to evaluate if Jungle Rent suits your investment profile:
+
+📱 **WhatsApp**: +39 331 905 3037  
+📧 **Email**: junglerententeprise@gmail.com
+
+*Disclaimer: Real estate investments involve risks. Past returns do not guarantee future results.*
 
 ---
 

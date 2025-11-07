@@ -91,6 +91,93 @@ Investire in REIT nel 2025 consente di beneficiare di un portafoglio diversifica
 
 Per iniziare a investire in REIT, è necessario informarsi sulla loro struttura e funzionamento, valutare le performance passate e attuali analizzando i rendimenti e gli andamenti del mercato immobiliare, comprendere i rischi associati come il rischio di mercato, di tassi di interesse e di liquidità, scegliere il tipo di REIT più adatto alle proprie esigenze, aprire un conto d'investimento con un intermediario finanziario e diversificare il portafoglio investendo in diversi tipi di REIT o settori immobiliari[^30].
 
+### Investimento in Jungle Rent: Opportunità nel Mercato Studentesco Torinese
+
+Per chi desidera entrare nel mercato immobiliare con capitali contenuti e beneficiare di una gestione completamente professionalizzata, **Jungle Rent** offre un'opportunità unica nel panorama degli investimenti immobiliari italiani: partecipare all'acquisizione e gestione di immobili destinati a studenti universitari a Torino **a partire da soli 100 euro**.
+
+#### Perché il Mercato Studentesco è Resiliente
+
+Il settore dell'housing studentesco rappresenta uno dei segmenti più stabili del mercato immobiliare italiano. Torino, con oltre **90.000 studenti universitari** tra Politecnico, Università degli Studi e altre istituzioni, presenta una domanda abitativa costante e in crescita. A differenza del mercato residenziale tradizionale o turistico, gli affitti per studenti offrono:
+
+- **Domanda strutturale**: gli studenti devono necessariamente trovare alloggio per tutta la durata degli studi
+- **Tassi di occupazione elevati**: in zone strategiche come Crocetta, San Salvario e Centro, il tasso di occupazione supera il 95% annuo
+- **Minore volatilità**: meno esposto a crisi economiche rispetto ad altri segmenti
+- **Rendimenti superiori**: canoni per camera singola generano rendimenti lordi del 6-8% annuo
+
+#### Il Modello Jungle Rent
+
+Jungle Rent opera un modello di business innovativo che combina acquisizione strategica, ristrutturazione mirata e gestione professionale:
+
+1. **Acquisizione Intelligente**: selezioniamo trilocali e quadrilocali in zone universitarie a prezzi competitivi, spesso attraverso aste immobiliari o trattative dirette con proprietari
+2. **Ottimizzazione Immobiliare**: ristrutturiamo gli appartamenti creando 3-4 camere singole moderne, con spazi comuni condivisi e tutti i comfort
+3. **Gestione Full-Service**: ci occupiamo di tutto - dalla ricerca inquilini alla manutenzione, dalla gestione contratti alla fiscalità
+4. **Tecnologia e Innovazione**: utilizziamo piattaforme digitali per massimizzare l'efficienza e garantire trasparenza agli investitori
+
+#### Rendimenti Attesi e Track Record
+
+Sulla base dei primi 12 mesi di operatività e del portfolio attuale:
+
+- **Rendimento lordo medio**: 7,2% annuo sui capitali investiti
+- **Tasso di occupazione**: 96% (solo 14 giorni medi di sfitto tra un inquilino e l'altro)
+- **Durata media contratti**: 10-11 mesi (intero anno accademico)
+- **Rendimento netto** (dopo spese): 4,8-5,2% annuo
+
+**Esempio concreto**: investimento di €5.000 in un quadrilocale in zona Crocetta genera un ritorno annuo lordo di €360, con rendimento netto di circa €250 dopo tutte le spese di gestione.
+
+#### Vantaggi per l'Investitore
+
+**Zero Gestione**: a differenza dell'investimento immobiliare diretto, non devi occuparti di nulla - né trovare inquilini, né gestire manutenzioni, né preoccuparti di morosità.
+
+**Capitale Minimo**: puoi iniziare con 100 euro e aumentare progressivamente la tua quota di partecipazione man mano che acquisisci fiducia nel modello.
+
+**Diversificazione**: il tuo capitale viene distribuito su più immobili, riducendo il rischio concentrato su una singola proprietà.
+
+**Liquidità Superiore**: pur non trattandosi di un investimento liquido come azioni, le quote possono essere cedute ad altri investitori con maggiore facilità rispetto alla vendita di un immobile intero.
+
+**Fiscalità Trasparente**: Jungle Rent opera in piena conformità fiscale, con rendicontazione trasparente e supporto nella dichiarazione dei redditi.
+
+#### Come Funziona la Partecipazione
+
+Gli investitori partecipano attraverso un **modello di co-investimento strutturato**:
+
+1. **Selezione Progetto**: Jungle Rent identifica un'opportunità di acquisizione e presenta il business plan agli investitori
+2. **Sottoscrizione Quote**: gli investitori sottoscrivono quote da minimo €100, fino al completamento del capitale necessario
+3. **Acquisizione e Setup**: Jungle Rent procede all'acquisto, ristrutturazione e messa a reddito dell'immobile
+4. **Distribuzione Rendite**: trimestralmente vengono distribuiti i proventi da locazione, proporzionalmente alle quote possedute
+5. **Reporting Trasparente**: dashboard online con dati in tempo reale su occupazione, rendimenti e stato immobili
+
+#### Garanzie e Sicurezza
+
+- **Società regolarmente costituita**: Jungle Rent è una società italiana registrata presso la Camera di Commercio di Torino
+- **Finanziamento Regione Piemonte**: nel 2024 abbiamo ricevuto un finanziamento di €20.000 dalla Regione Piemonte, validando il nostro modello di business
+- **Incubazione 2i3T**: facciamo parte dell'incubatore 2i3T del Politecnico di Torino, con supporto di mentor esperti
+- **Assicurazioni Complete**: tutti gli immobili sono assicurati contro danni, incendi e responsabilità civile
+- **Contratti Registrati**: tutti i contratti di locazione sono regolarmente registrati presso l'Agenzia delle Entrate
+
+---
+
+**VUOI SAPERNE DI PIÙ SULL'INVESTIMENTO IN JUNGLE RENT?**
+
+Se sei interessato a ricevere maggiori informazioni sulle opportunità di investimento, inclusi dettagli finanziari completi, business plan dei progetti attivi e proiezioni di rendimento:
+
+👉 **Scarica la Guida Completa per Investitori Jungle Rent** (PDF 45 pagine)
+
+La guida include:
+- Analisi dettagliata del mercato studentesco torinese
+- Case study su immobili già acquisiti e a reddito
+- Proiezioni finanziarie e scenari di rendimento
+- Documentazione legale e struttura societaria
+- FAQ per investitori e modalità di partecipazione
+
+**[→ Richiedi la Guida Investitori](/#investor-section)** (compila il form con nome, cognome ed email per ricevere il PDF completo)
+
+Oppure contattaci direttamente su WhatsApp per una consulenza personalizzata gratuita:
+- **Lorenzo (CEO)**: +39 331 905 3037
+
+*Disclaimer: Gli investimenti immobiliari comportano rischi e non garantiscono rendimenti certi. I rendimenti passati non sono indicativi di risultati futuri. Questa sezione ha scopo puramente informativo.*
+
+---
+
 ## Aspetti Fiscali per gli Investitori Immobiliari
 
 ### Cedolare Secca
@@ -264,7 +351,41 @@ Investire nel settore immobiliare in Italia nel 2025 rimane una scelta valida pe
 
 La chiave del successo risiede nell'educazione finanziaria continua, nella diversificazione degli investimenti, nella gestione professionale del patrimonio e nella capacità di adattarsi alle evoluzioni normative e fiscali[^69]. È fondamentale valutare attentamente tutti i costi associati all'investimento, dai mutui alle tasse di mantenimento, dalle spese di ristrutturazione ai periodi di sfitto, per calcolare rendimenti realistici e sostenibili nel tempo.
 
-Per chi inizia, è consigliabile partire con investimenti di dimensioni gestibili, eventualmente utilizzando strumenti come il crowdfunding immobiliare per familiarizzare con il settore senza impegnare capitali eccessivi, per poi gradualmente espandere il portafoglio man mano che si acquisisce esperienza e competenza[^70]. Infine, non sottovalutare mai l'importanza di affidarsi a professionisti qualificati per gli aspetti legali, fiscali e di gestione, specialmente nelle fasi iniziali dell'attività di investitore immobiliare.
+Per chi inizia, è consigliabile partire con investimenti di dimensioni gestibili, eventualmente utilizzando strumenti come il crowdfunding immobiliare o **opportunità di co-investimento come Jungle Rent** per familiarizzare con il settore senza impegnare capitali eccessivi, per poi gradualmente espandere il portafoglio man mano che si acquisisce esperienza e competenza[^70]. Infine, non sottovalutare mai l'importanza di affidarsi a professionisti qualificati per gli aspetti legali, fiscali e di gestione, specialmente nelle fasi iniziali dell'attività di investitore immobiliare.
+
+---
+
+## 🎯 Inizia il Tuo Percorso da Investitore Immobiliare con Jungle Rent
+
+Se questa guida ti ha convinto del potenziale degli investimenti immobiliari ma non hai ancora centinaia di migliaia di euro da investire, **Jungle Rent rappresenta la soluzione ideale per iniziare**.
+
+### Perché Scegliere Jungle Rent come Primo Investimento:
+
+✅ **Capitale Accessibile**: inizia con soli 100 euro, senza bisogno di mutui o anticipo del 40%  
+✅ **Zero Gestione**: non devi occuparti di nulla - pensiamo a tutto noi  
+✅ **Mercato Resiliente**: studenti universitari = domanda costante e tassi di occupazione >95%  
+✅ **Rendimenti Competitivi**: 7,2% lordo annuo, superiori alla media del mercato torinese  
+✅ **Fiscalità Semplificata**: niente IMU, TARI, manutenzioni impreviste - solo distribuzione trimestrale  
+✅ **Diversificazione Automatica**: il tuo capitale su più immobili, riducendo il rischio  
+✅ **Trasparenza Totale**: dashboard in tempo reale e rendicontazione trimestrale dettagliata
+
+### 📥 Scarica la Guida Completa per Investitori (PDF 45 pagine)
+
+**Ricevi gratuitamente**:
+- Business plan dettagliato con proiezioni finanziarie 5 anni
+- Case study immobili già acquisiti con rendimenti reali
+- Documentazione legale e struttura societaria completa  
+- Modalità di partecipazione e exit strategy
+- FAQ investitori e simulazioni personalizzate
+
+👉 **[Scarica Ora la Guida Investitori](/#investor-section)** - Compila il form e ricevi il PDF via email in 2 minuti
+
+Oppure prenota una **call gratuita di 30 minuti** con Lorenzo (CEO) per valutare se Jungle Rent è adatto al tuo profilo di investimento:
+
+📱 **WhatsApp**: +39 331 905 3037  
+📧 **Email**: junglerententeprise@gmail.com
+
+*Disclaimer: Investimenti immobiliari comportano rischi. Rendimenti passati non garantiscono risultati futuri.*
 
 ---
 
