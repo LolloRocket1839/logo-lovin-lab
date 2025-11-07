@@ -13,6 +13,7 @@ import { toast } from "@/hooks/use-toast";
 import { Loader2, InfoIcon } from "lucide-react";
 import { turinAreas } from "@/data/turinAreas";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
+import { supabase } from "@/integrations/supabase/client";
 import {
   Form,
   FormControl,
@@ -107,6 +108,26 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
       });
 
       if (!response.ok) throw new Error("Submission failed");
+
+      // Send PDF guide via email using edge function
+      try {
+        const guideResponse = await supabase.functions.invoke('send-investor-guide', {
+          body: {
+            name: data.name,
+            email: data.email,
+            guideType: guideType,
+            language: i18n.language,
+          },
+        });
+
+        if (guideResponse.error) {
+          console.error("Error sending guide:", guideResponse.error);
+        } else {
+          console.log("Guide sent successfully:", guideResponse.data);
+        }
+      } catch (emailError) {
+        console.error("Error sending guide email:", emailError);
+      }
 
       // Increment waitlist counter on successful submission
       incrementCount();

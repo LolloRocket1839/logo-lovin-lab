@@ -1,1 +1,4 @@
 project_id = "ekrrrlrwdshhlqnuxjbz"
+
+[functions.send-investor-guide]
+verify_jwt = false
