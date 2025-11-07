@@ -183,7 +183,7 @@ serve(async (req: Request): Promise<Response> => {
       : `📚 Your ${guideTitle} is ready!`;
 
     const { data, error } = await resend.emails.send({
-      from: "Jungle Rent <junglerenterprise@gmail.com>",
+      from: "Jungle Rent <noreply@junglerent.it>",
       to: [email],
       subject: emailSubject,
       html: htmlContent,
