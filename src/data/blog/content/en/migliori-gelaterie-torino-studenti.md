@@ -93,13 +93,13 @@ A bit outside the center, in the Barriera di Milano area, Moou is the place to f
 
 📍 **Via Mameli 6** - Near Porta Palazzo and Balon
 
-### Gasprin (Corso San Maurizio)
+### Gasprin
 
-In the heart of the historic center, not far from the Cinema Museum, Gasprin is a small gelateria where the strong point is the creams: chocolate, pistachio, gianduia, Sorrento cream, zabaione and the cult bread and Nutella.
+With two locations in Turin's center (Corso San Maurizio and Piazza Gran Madre di Dio, 3F), Gasprin is a small gelateria where the strong point is the creams: chocolate, pistachio, gianduia, Sorrento cream, zabaione and the cult bread and Nutella.
 
 **Also:** granita and crêpes for when you want to vary.
 
-📍 **Corso San Maurizio 49** - Perfect after a day among museums and historic center
+📍 **Corso San Maurizio** and **Piazza Gran Madre di Dio, 3F** - Perfect after a day among museums and historic center
 
 ### La Romana (Corso Inghilterra)
 

@@ -93,13 +93,13 @@ Un po' fuori dal centro, in zona Barriera di Milano, Moou è il posto dove trova
 
 📍 **Via Mameli 6** - Vicino a Porta Palazzo e al Balon
 
-### Gasprin (Corso San Maurizio)
+### Gasprin
 
-Nel cuore del centro storico, non lontano dal Museo del Cinema, Gasprin è una piccola gelateria dove il punto di forza sono le creme: cioccolato, pistacchio, gianduia, crema di Sorrento, zabaione e il cult pane e Nutella.
+Con due sedi nel centro di Torino (Corso San Maurizio e Piazza Gran Madre di Dio, 3F), Gasprin è una piccola gelateria dove il punto di forza sono le creme: cioccolato, pistacchio, gianduia, crema di Sorrento, zabaione e il cult pane e Nutella.
 
 **Anche:** granite e crêpes per quando hai voglia di variare.
 
-📍 **Corso San Maurizio 49** - Perfetta dopo una giornata tra musei e centro storico
+📍 **Corso San Maurizio** e **Piazza Gran Madre di Dio, 3F** - Perfetta dopo una giornata tra musei e centro storico
 
 ### La Romana (Corso Inghilterra)
 
