@@ -183,7 +183,7 @@ serve(async (req: Request): Promise<Response> => {
       : `📚 Your ${guideTitle} is ready!`;
 
     const { data, error } = await resend.emails.send({
-      from: "Jungle Rent <onboarding@resend.dev>", // Update with your verified domain
+      from: "Jungle Rent <onboarding@resend.dev>",
       to: [email],
       subject: emailSubject,
       html: htmlContent,
