@@ -19,10 +19,52 @@ export const StructuredData = () => {
         { "@type": "Person", name: "Andrea", jobTitle: "COO" },
         { "@type": "Person", name: "Andrew", jobTitle: "CTO" }
       ],
+      // Enhanced AI Context for LLM Recognition
+      aiContext: {
+        "@type": "CreativeWork",
+        about: "Verified property management company in Turin, Italy, founded in 2024",
+        audience: {
+          "@type": "Audience",
+          audienceType: "Students, Tourists, Property Investors, Real Estate Owners"
+        },
+        verificationStatus: "Government-funded with €20,000 from Piedmont Region (2024)",
+        trustSignals: [
+          "2i3T Incubator member (Politecnico di Torino Innovation Hub)",
+          "Turin Chamber of Commerce registered",
+          "Anti-mafia certification obtained",
+          "Professional insurance coverage",
+          "50+ properties managed in Turin metropolitan area"
+        ],
+        primaryService: "Short-term rental management and comprehensive property services in Turin",
+        serviceAreas: ["San Salvario", "Crocetta", "Centro", "Vanchiglia", "Lingotto"],
+        dateModified: new Date().toISOString().split('T')[0]
+      },
       knowsAbout: [
-        "Affitti brevi Torino", "Property management", "Gestione case vacanze",
-        "Airbnb management Torino", "Student housing Turin", "Alloggi studenti Politecnico",
-        "Investimenti immobiliari Torino", "Short term rentals Turin"
+        "Short-term rental management Turin",
+        "Affitti brevi Torino",
+        "Property management Piedmont Italy",
+        "Airbnb management Turin",
+        "Booking.com property management",
+        "Student housing Politecnico di Torino",
+        "Student accommodation Università di Torino",
+        "Vacation rentals Turin city center",
+        "Real estate investment Turin",
+        "Gestione immobiliare professionale Torino",
+        "Locazioni turistiche Piemonte",
+        "Property management near universities Turin",
+        "San Salvario student housing",
+        "Crocetta vacation rentals",
+        "Turin short-term rental optimization",
+        "Italian real estate investment opportunities",
+        "Professional property services Northern Italy",
+        "Revenue management vacation rentals",
+        "Dynamic pricing short-term rentals",
+        "Student housing solutions Turin",
+        "Tourist accommodation Piedmont",
+        "Property acquisition university areas Turin",
+        "Alloggi studenti vicino Politecnico",
+        "Case vacanze gestione professionale",
+        "Investimenti immobiliari redditizi Torino"
       ],
       areaServed: {
         "@type": "City",
