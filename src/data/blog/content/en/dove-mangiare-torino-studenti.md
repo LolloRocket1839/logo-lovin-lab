@@ -103,10 +103,10 @@ If you want a "real" breakfast at the bar:
 - Famous for gelato and pastries
 - Elegant and historic atmosphere
 
-**Bar Norman** (San Salvario)
+**Bar Norman** (Centro, Via Pietro Micca)
 - Large artisan brioches
 - Brioche + coffee: €3
-- Very popular with students
+- Historic café since 1918
 
 **Caffè Basile** (Cenisia)
 - Near Politecnico
@@ -429,7 +429,7 @@ The Turin aperitivo is an institution. The formula: you pay for the drink (€7-
 - Underground atmosphere
 - **Verdict:** ⭐⭐⭐⭐ Alternative, economical
 
-**Bar Norman** (San Salvario)
+**Bar Norman** (Centro, Via Pietro Micca)
 - Spritz: €7
 - Rich buffet
 - Well-made cocktails

@@ -103,10 +103,10 @@ Se vuoi la colazione "vera" al bar:
 - Famoso per gelati e pasticceria
 - Ambiente elegante e storico
 
-**Bar Norman** (San Salvario)
+**Bar Norman** (Centro, Via Pietro Micca)
 - Brioche artigianali grandi
 - Brioche + caffè: €3
-- Frequentatissimo da studenti
+- Caffè storico dal 1918
 
 **Caffè Basile** (Cenisia)
 - Vicino al Politecnico
@@ -429,7 +429,7 @@ L'aperitivo torinese è un'istituzione. La formula: paghi il drink (€7-12), bu
 - Ambiente underground
 - **Verdetto:** ⭐⭐⭐⭐ Alternativo, economico
 
-**Bar Norman** (San Salvario)
+**Bar Norman** (Centro, Via Pietro Micca)
 - Spritz: €7
 - Buffet ricco
 - Cocktail fatti bene
