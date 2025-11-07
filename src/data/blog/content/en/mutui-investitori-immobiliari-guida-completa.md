@@ -1,589 +1,340 @@
-# Complete Guide to Mortgages for Real Estate Investors in Italy: Types, Strategies and Tax Aspects 2025
+# Complete Guide for Real Estate Investors in Italy 2025
 
-**Everything a real estate investor needs to know about bank financing: from differences between first and second home mortgages to optimal leverage strategies**
+Real estate investments represent one of the most solid strategies for building long-term wealth, offering both passive income through rentals and capital appreciation over time[^1]. This guide provides an in-depth analysis of all fundamental aspects for those wishing to start or expand their real estate investment activity in Italy, from available mortgage types to operational strategies, from taxation to the best cities to invest in.
 
-Investing in the Italian real estate sector in 2025 means navigating an evolving landscape, where in-depth knowledge of available financing instruments can make the difference between a profitable investment and a missed opportunity. With interest rates finally declining after the 2022-2023 increases and a market showing signs of recovery, this is the ideal time to fully understand the leverage options available to real estate investors.
+## Who is the Real Estate Investor
 
-## The 2025 Market Context: Opportunities and Challenges
+A real estate investor is someone who purchases properties with the primary objective of generating profit through rental or resale of properties[^2]. Unlike someone buying a home to live in, the investor considers the property primarily as a financial asset capable of producing passive income and capital appreciation[^3].
 
-Before analyzing mortgage types, it's essential to understand the current scenario. After two years characterized by strong rate growth (from 1% in 2022 to 4-5% in 2023), 2025 marks a reversal thanks to the ECB's more accommodating monetary policy.
+Becoming a real estate investor doesn't necessarily require specific degrees, but requires cross-functional skills including knowledge of the local market, financial analysis capabilities, understanding of tax and administrative regulations, and skills in managing relationships with tenants and suppliers[^4].
 
-**Current rates September 2025:**
-- **Fixed rate:** 2.5-3.16% APR (depending on bank and profile)
-- **Variable rate:** 2.67-3.5% APR
-- **Green mortgages:** discounts of 0.4-1% on applied rate
+Investment methods are multiple and adapt to different budgets and strategies. You can start with small amounts through real estate crowdfunding, invest directly in purchasing properties to rent out, or use more sophisticated strategies like property flipping to generate short-term profits[^5]. The key to success lies in careful planning, investment diversification, and the ability to identify market opportunities before they become evident to the masses.
 
-This rate reduction translates into concrete savings: a €150,000 mortgage over 30 years costs about €38/month less today compared to a year ago, for total savings of over €13,000 in interest.
+## Types of Mortgages for Real Estate Investors
 
-## Macro-Categories of Mortgages for Investors
+### Traditional Mortgage Loans
 
-### 1. First Home Mortgage (Primary Residence)
+Mortgage loans represent the most common form of financing for purchasing investment properties. The purchased property is pledged as collateral through a mortgage, allowing the bank to seize the asset in case of default[^6].
 
-The first home mortgage represents the most advantageous form of financing from a tax and applied conditions perspective, but is reserved exclusively for properties designated as primary residences.
+For second homes or investment properties, conditions are generally less favorable compared to primary residence mortgages. Banks typically lend between 60% and 70% of the property value, though with strong guarantees it's possible to reach 80%[^7]. Interest rates applied are on average higher than for primary residences, with larger spreads due to higher perceived risk.
 
-#### Requirements and Characteristics
+The maximum duration for second home mortgages is generally 30 years, compared to 40 years possible for primary residences, and the monthly payment amount must not exceed 25% of declared monthly income, compared to 30-35% for primary residences[^8]. It's important to note that to obtain an investment mortgage, the bank will evaluate not only the purchaser's income capacity but also the property's rental potential, considering average rental rates in the area.
 
-**Time requirements:**
-- The property must be designated as primary residence within 12 months of purchase (for mortgages executed from 2001)
-- Purchase must occur within 12 months before or after mortgage execution
-- Primary residence requirement must be maintained for the entire tax period
+### Buy to Let Mortgages
 
-**Subjective requirements:**
-- Residency in Italy
-- Property located in municipality of residence (or commitment to transfer within 18 months)
-- Not owning other properties with first home benefits in the same municipality
+Buy to let mortgages are financial products specifically designed for rental properties, very common in the UK and other Anglo-Saxon countries but still rare in Italy[^9]. These mortgages allow paying only interest for a long period, with the possibility of repaying capital later, creating positive cash flow more easily.
 
-#### Financial Conditions
+The main characteristic is that the bank evaluates mortgage sustainability primarily based on expected rental income rather than exclusively on the investor's personal income. In Italy, this type of mortgage is offered by very few institutions and conditions vary significantly from bank to bank[^10].
 
-**Loan-to-Value (LTV):**
-- Standard: up to 80% of property value
-- With Consap guarantee (under 36): up to 100%
-- Green mortgages: possibility of increased LTV
+Investors can opt for specific buy to let mortgages that offer favorable conditions for purchasing rental properties, but it's essential to compare different offers and choose the one most suited to your financial needs[^11].
 
-**Duration:**
-- Up to 30-40 years
-- Greater flexibility compared to second home mortgages
+### Liquidity Mortgages
 
-#### Significant Tax Benefits
+Liquidity mortgages are loans secured by an already-owned property that allow obtaining immediate liquidity without having to sell the asset[^12]. This type of mortgage is particularly useful for investors who already own one or more properties and wish to finance new purchases or cover extraordinary expenses while maintaining existing assets.
 
-**1. Reduced Substitute Tax**
+The liquidity obtained can be used to diversify the real estate portfolio, carry out renovations on other properties, or seize market opportunities requiring immediate capital availability. Liquidity mortgage conditions vary based on the value of the property pledged as collateral and the loan-to-value ratio. Generally, banks are willing to grant liquidity mortgages up to 70-80% of the estimated property value, with interest rates that may be slightly higher than purchase mortgages[^13].
 
-The substitute tax is a one-time tax paid at mortgage execution, replacing registration, mortgage, and cadastral taxes:
+### Rent to Buy
 
-- **First home:** 0.25% of mortgage amount
-- **Example:** €200,000 mortgage = €500 tax
+Rent to buy is an innovative formula that combines a rental contract with a preliminary sales agreement, offering the tenant the possibility to purchase the property at the end of the rental period[^14]. During the rental phase, which can last up to a maximum of 10 years, the tenant pays a monthly rent higher than market rate (on average 1.5 times), and part of this rent is set aside as a down payment on the final purchase price.
 
-**2. Deductibility of Passive Interest**
+For the investor, rent to buy can be an interesting strategy to sell properties in difficult markets or to attract buyers who don't yet have the liquidity necessary for immediate purchase. At the end of the contract, if the tenant decides to purchase, they will only need to pay the residual property value, also being able to request a mortgage for a sum lower than the total house value, increasing the probability of obtaining financing[^15].
 
-This is the real substantial difference for investors:
+Banks consider rent to buy as a normal purchase for primary or second home, allowing the future buyer to benefit from primary residence tax breaks if they meet the requirements[^16].
 
-- **19% income tax deduction** on passive interest and ancillary charges
-- **Maximum limit:** €4,000 annual deductible interest
-- **Effective savings:** up to €760/year (19% of €4,000)
+### Bare Ownership Mortgages
 
-**How it works in practice:**
+Bare ownership mortgages allow the investor to purchase property ownership while the usufruct right remains with the seller, typically an elderly person[^17]. This form of investment allows paying a significantly reduced price compared to the full property value, with the prospect of acquiring full ownership upon termination of the usufruct.
 
-If during the year you pay €5,000 in mortgage interest, you can deduct €4,000 (the maximum limit), obtaining a tax savings of €760. This benefit gradually decreases over time as the interest portion of the payment decreases.
+Bare ownership investment requires a long-term vision, as the investor cannot use or rent the property until the usufruct ceases. From a tax perspective, bare ownership purchase presents interesting advantages, as the reduced value results in lower purchase taxes. However, it's important to carefully evaluate the expected duration of the usufruct and the property's potential appreciation during the waiting period.
 
-**Calculation on a €200,000 mortgage over 25 years (3% rate):**
-- First year interest: ~€6,000
-- Deductible: €4,000 (maximum limit)
-- Tax savings: €760
-- Year 10 interest: ~€4,800
-- Deductible: €4,000
-- Tax savings: €760
-- Year 20 interest: ~€2,000
-- Deductible: €2,000
-- Tax savings: €380
+## Real Estate Investment Strategies
 
-**Effective mortgage cost:**
+### Direct Investment with Rental Income
 
-The combined effect of interest deductibility reduces the effective financing cost:
-- Nominal rate: 3%
-- Average tax savings first 15 years: ~19% on interest
-- **Net effective cost:** ~2.4-2.6% (considering tax benefit)
+Direct purchase of rental properties represents the most traditional and established strategy for real estate investors[^18]. This method offers stability and constant passive income through monthly rental fees, which can be used to cover mortgage payments, taxes and maintenance costs, leaving net profit for the investor.
 
-### 2. Second Home Mortgage (Real Estate Investment)
+Besides rental income, real estate investments can appreciate over time, increasing overall portfolio value, especially if properties are selected in areas with economic growth potential and urban development[^19]. The strategy requires thorough analysis of the local real estate market before purchase, including evaluation of average rental rates, tenant demand, economic conditions and urban development trends to identify the best investment opportunities.
 
-When purchasing a property that will NOT be designated as primary residence - vacation homes, rental properties, buy-to-let investments - you enter the second home mortgage regime, with significantly different conditions.
+It's essential to carefully calculate expected returns considering not only annual rental income but also all associated costs such as taxes, insurance, maintenance expenses and vacancy periods[^20].
 
-#### More Restrictive Financial Conditions
+### Property Flipping
 
-**Loan-to-Value (LTV):**
-- **Standard: 60%** of property value (vs 80% first home)
-- This means 40% equity is needed as down payment
-- Some banks may reach 70% for excellent profiles
+Property flipping is an investment strategy consisting of purchasing properties at advantageous prices, followed by targeted renovation work and subsequent resale at a higher price to generate short-term capital gains[^21]. Unlike rental income investment, flipping focuses on rapid asset appreciation through structural and aesthetic improvements, also leveraging favorable market conditions.
 
-**Practical example:**
-- €300,000 property
-- Maximum mortgage: €180,000 (60%)
-- Required down payment: €120,000 (40%)
-- Vs first home: €60,000 down payment (20%)
+Key flipping elements include purchasing below market value, identifying properties requiring significant renovations or located in emerging neighborhoods, strategic renovation to increase perceived property value while maintaining balance between intervention costs and added value, and quick sale to minimize holding costs such as taxes, maintenance and mortgage payments[^22].
 
-**Duration:**
-- Generally up to 30 years (some banks limit to 25)
-- Less flexible conditions compared to first home
+Flipping works best in urban contexts with high liquidity and strong demand, such as Milan, Rome, Bologna, Turin and Florence, where end buyers are willing to pay more for turnkey properties[^23]. There are two main approaches: speculative flipping, which involves minimal and often only cosmetic interventions to quickly increase perceived value, and structural flipping, which involves deeper renovations with longer timeframes (6-12 months) but potentially more consistent profit margins.
 
-**Rates:**
-- Spread generally 0.2-0.5% higher than first home
-- Greater rigidity in access requirements
+From a tax perspective, it's important to consider that if the property is resold within 5 years of purchase, the realized profit is taxed as miscellaneous income at a 26% rate[^24].
 
-#### Fundamental Tax Disadvantage
+### Real Estate Crowdfunding
 
-**1. Increased Substitute Tax**
+Real estate crowdfunding represents an accessible alternative for those wishing to invest in real estate without having large capital[^25]. Through authorized online platforms, investors can participate in real estate projects starting from very small amounts, typically between 50 and 500 euros, diversifying investments across multiple projects to reduce risk.
 
-- **Second home:** 2% of mortgage amount (vs 0.25% first home)
-- **Example:** €200,000 mortgage = €4,000 tax (vs €500)
-- **Difference:** €3,500 more to pay at notary
+The most reliable Italian real estate crowdfunding platforms include[^26]:
 
-**2. Passive Interest NOT Deductible**
+- **Walliance** - minimum investment €500, over €63 million raised
+- **Trusters** - minimum investment €100, over €22 million raised
+- **ReLender** - minimum investment €50, approximately €25 million raised
+- **Concrete** - minimum investment €5000, approximately €14 million raised
 
-This is the crucial point that many investors underestimate:
+Real estate crowdfunding mainly divides into two categories: lending crowdfunding, where investors lend money to real estate developers receiving periodic or end-of-project interest, and equity crowdfunding, where investors become project partners participating in profits proportionally to their invested share[^27].
 
-**Passive interest on second home mortgages is NOT deductible from income tax.**
+Average returns declared by Italian platforms range between 8% and 10% annually, with some platforms offering predefined returns and others varying based on project success[^28].
 
-Italian law considers second homes as patrimonial assets or investments, not primary goods. Consequently, mortgage interest is considered a non-deductible personal cost.
+### REIT Investment
 
-**Real economic impact:**
+REITs are real estate investment companies that own and manage a diversified portfolio of properties, allowing investors to access the real estate market through purchasing publicly traded shares[^29].
 
-Returning to the previous example of a €200,000 mortgage over 25 years (3% rate):
-- First year interest: ~€6,000
-- Tax deduction: €0
-- **Real effective cost:** 3% full
+Investing in REITs in 2025 allows benefiting from a diversified real estate portfolio without direct physical property management responsibilities, with the possibility to choose between traditional REITs and those specialized in sectors with resilient demand such as logistics, data centers or social housing.
 
-The cost difference between first and second home is therefore substantial:
-- First home: net effective cost ~2.4-2.6%
-- Second home: effective cost 3%
-- **Gap:** 0.4-0.6 percentage points
+To start investing in REITs, it's necessary to learn about their structure and operation, evaluate past and current performance analyzing returns and real estate market trends, understand associated risks such as market risk, interest rate risk and liquidity risk, choose the most suitable REIT type for your needs, open an investment account with a financial intermediary, and diversify the portfolio by investing in different REIT types or real estate sectors[^30].
 
-On €200,000 over 25 years, this translates to approximately **€15,000-20,000 in additional costs** for second home.
+## Tax Aspects for Real Estate Investors
 
-#### Exceptions: When Second Home Becomes First Home
+### Flat Tax (Cedolare Secca)
 
-There are specific situations where first home benefits can be obtained even when purchasing a second property:
+The flat tax is an optional tax regime that replaces IRPEF, regional and municipal surcharges, registration tax and stamp duty on residential rental contracts[^31]. For 2025, flat tax rates are three:
 
-1. **Residence transfer for work**
-   - If you transfer residence to the property within 12 months
-   - You must meet all first home requirements
+- **21%** for standard rental contracts (4+4 contracts)
+- **10%** for agreed-rate contracts (3+2 contracts) in high housing tension municipalities
+- **26%** for short-term rentals starting from the second rented property
 
-2. **Inability to use previous property**
-   - Illegally occupied home
-   - Uninhabitable property
-   - Inadequate dimensions for expanded family
+The flat tax presents significant advantages such as administrative simplicity, exemption from registration and stamp taxes, and a fixed rate that can be convenient for those with high incomes[^32]. However, it also has some disadvantages: renunciation of ISTAT rent adjustment, tax application on 100% of rent (versus 95% or 66.5% for ordinary IRPEF), and impossibility to deduct expenses or benefit from tax deductions.
 
-3. **Sale of first home and new purchase**
-   - You can sell the previous first home within 1 year of new purchase
-   - Recover benefits on new property
+The choice between flat tax and ordinary IRPEF must be evaluated case by case based on the investor's total income, rent amount and available deductible expenses[^33].
 
-4. **First home in another Municipality**
-   - You can have benefits on a second property in different municipality
-   - As long as not already using tax benefit on first
+### Short-Term Rentals
 
-### 3. Green Mortgages: The 2025 Opportunity
+For short-term rentals, meaning contracts under 30 days duration, a differentiated flat tax rate was introduced in 2024[^34]: the first short-term rental property maintains the 21% rate, while from the second to fourth property the rate rises to 26%. Exceeding the four property limit in short-term rental, the activity is considered commercial and VAT registration with ordinary taxation becomes mandatory.
 
-Green mortgages represent one of the most interesting innovations in the Italian credit landscape and offer significant advantages for those investing in high energy efficiency properties.
+Besides increased tax rates, from 2025 short-term rentals are subject to new bureaucratic obligations: each property must be registered in the Accommodation Facility Database (BDSR) and equipped with a CIN (National Identification Code) to be displayed both outside the property and in all online listings[^35]. Penalties for failure to register range from €800 to €8,000, while for failure to display the code fines vary between €500 and €5,000.
 
-#### Requirements
+### Purchase and Maintenance Taxes
 
-**Eligible properties:**
-- Energy class A or B (some institutions also C)
-- For purchase of already certified properties
-- For renovations that improve by at least 2 energy classes
+When purchasing a second home or investment property, taxes are significantly higher than for primary residences[^36]. If the seller is a private individual, the buyer must pay:
 
-#### Concrete Advantages
+- Registration tax equal to **9%** of cadastral value (versus 2% for primary residence)
+- Mortgage tax of €50
+- Cadastral tax of €50
 
-**Reduced spreads:**
-- Discount of 30-70 basis points compared to traditional mortgages
-- Equivalent to 0.3-0.7% less on rate
-- Average savings: €16/month on €150,000 mortgage
+If instead the seller is a construction company, 10% VAT applies to the value (22% for luxury properties), plus mortgage and cadastral tax of €200 each[^37].
 
-**Practical example:**
-- Standard mortgage: 3% APR
-- Green mortgage: 2.5-2.6% APR
-- On €150,000 over 30 years: total savings ~€5,500
+For maintenance, investment properties are always subject to IMU (Municipal Property Tax), calculated on the revalued cadastral income by 5% and multiplied by specific coefficients. The IMU rate is decided by municipalities and can indicatively range between 8.6 and 10.6 per thousand[^38]. TARI (Waste Tax) is calculated based on property surface area and municipal rates for waste disposal.
 
-**Potentially increased LTV:**
-- Some banks offer LTV up to 85% even for green second homes
-- Incentive to invest in sustainable properties
+It's possible to reduce IMU by 50% by granting the property in free loan to a first-degree relative who uses it as their primary residence, submitting appropriate declaration to the municipality[^39].
 
-**Compatibility:**
-- Available for both first and second home
-- Maintain respective basic tax characteristics
+### Passive Interest Deductibility
 
-### 4. Renovation Mortgage
+An important tax advantage for real estate investors is the possibility to deduct passive interest paid on mortgages, reducing the effective financing cost[^40]. Italian regulations provide specific deductions or incentives based on property destination and investment type, making it essential to consult with professionals to evaluate the specific tax impact of your situation.
 
-When real estate investment involves purchasing a property to renovate, specific products exist.
+## Real Estate Return Calculation
 
-#### Purchase + Renovation Mortgage
+### Gross Return
 
-**Characteristics:**
-- Finances both purchase and renovation work simultaneously
-- LTV calculated on post-renovation value
-- Disbursement in SAL (Work Progress Stages)
+Gross real estate return is calculated without considering expenses associated with the property and is useful for a quick initial investment evaluation[^41]. The formula is:
 
-**Tax benefits:**
-- For first home: 19% deduction on maximum €2,585.28 annually
-- Renovation bonuses: 50% up to €96,000 (valid also for second homes)
-- Possible benefit stacking
+**Gross Return (%) = (Annual Gross Income / Purchase Price) × 100**
 
-#### Renovation Only Mortgage
+For example, if you purchase a property for €200,000 and rent it at €1,000 per month, annual gross income will be €12,000 and gross return will be approximately 6% (12,000/200,000 × 100).
 
-For those who already own the property:
-- Finances only the work
-- Requires appraisal and estimates
-- Generally shorter duration (10-20 years)
+According to Tecnocasa data, Italian cities with the highest gross rental returns in 2025 include Genoa (7.6%), Palermo (7.2%) and Verona (6.7%), followed by Bari, Naples, Bologna, Rome, Turin, Milan and Florence[^42].
 
-**Tax deductibility:**
-- Renovation mortgage interest is not deductible
-- BUT renovation expenses are deductible (building bonuses)
+### Net Return
 
-### 5. Liquidity Mortgages with Mortgage Guarantee
+Net return is much more accurate as it accounts for all real expenses associated with property maintenance and management[^43]. The formula is:
 
-Less common but potentially interesting for investors with existing real estate assets.
+**Net Return (%) = [(Annual Gross Income - Annual Expenses) / Purchase Price] × 100**
 
-#### How They Work
+Annual expenses include:
 
-- Obtain liquidity by guaranteeing an already owned property
-- Not tied to specific property purchase
-- Capital usable for any purpose (including real estate investment)
+- Property taxes (IMU, TARI)
+- Ordinary and extraordinary maintenance
+- Management and property management costs
+- Insurance
+- Any rental taxes (flat tax or IRPEF)
+- Condominium fees
+- Vacancy periods
 
-#### Characteristics
+Taking the previous example, if from annual gross income of €12,000 you subtract annual expenses of €4,500 (IMU, TARI, maintenance, insurance, management), net return will be: [(12,000 - 4,500) / 200,000] × 100 = 3.75%[^44].
 
-**LTV:** up to 60-80% of guaranteed property value
-**Rates:** generally 0.5-1% higher than purchase mortgages
-**Duration:** up to 30 years
+For even more precise analysis, some investors calculate return also considering initial capital invested for renovations or property improvements.
 
-**Substitute tax:** 0.25% (residual category)
+## Where to Invest in Italy in 2025
 
-**Strategic use:**
-For investors with already owned properties without mortgage, can be a way to extract liquidity and reinvest while maintaining deductibility (zero, as liquidity mortgage).
+### Major Northern Cities
 
-## Leverage Strategies for Real Estate Investors
+**Milan** confirms itself as the city with the best return on investment, with average prices above €3,400/m² and stable returns for both long-term rentals and short-term rentals[^45]. The Milan market offers high liquidity and constant demand from professionals, students and tourists, making it ideal for investors seeking stability and capital appreciation.
 
-### The Mathematics of Buy-to-Let in Italy
+**Rome** represents a stable market with great opportunities, especially in emerging neighborhoods like Centocelle, Pigneto, San Lorenzo and Montesacro. The 2025 Jubilee is positively influencing the market, with price growth estimates that could reach +10.2% in some strategic areas[^46].
 
-To understand whether using leverage (debt) in real estate investment makes sense, let's analyze a concrete example.
+**Turin** and **Bologna** are perfect for those wanting to invest with more modest budgets while maintaining excellent return prospects. In Turin you can still find apartments under €2,000/m² in well-served areas, while Bologna benefits from strong university and technology sector demand, proving ideal for investments aimed at both students and professionals[^47].
 
-**Scenario: Two-room apartment in Turin university area**
-- Purchase price: €150,000
-- Rental income: €750/month = €9,000/year gross
-- Management expenses: ~20% = €1,800/year
-- **Net income:** €7,200/year
+**Genoa** is returning to investor spotlight thanks to high-speed rail and redevelopment projects like Renzo Piano's Waterfront, representing an interesting medium-term bet with still accessible entry prices.
 
-#### Scenario A: Cash Purchase (Without Leverage)
+### Emerging Cities and Southern Italy
 
-- Capital invested: €150,000
-- Net income: €7,200/year
-- **ROI:** 4.8%
+**Verona** continues its steady growth with a 3.3% price increase and strong tourist appeal making it interesting for both residential rentals and short-term rentals[^48].
 
-#### Scenario B: Second Home Mortgage (60% LTV)
+**Bergamo, Brescia and Monza** represent undervalued opportunities with excellent value for money: Bergamo is lively and well-connected to Milan, Brescia offers still reasonable prices with moving market, and Monza guarantees balance between tranquility and proximity to the metropolis.
 
-- Mortgage: €90,000 over 25 years at 3.2%
-- Equity invested: €60,000 + €4,000 (notary fees and 2% tax) = €64,000
-- Annual payment: ~€5,200
-- Year 1 interest: ~€2,880
+In Southern Italy, **Naples** and **Palermo** offer accessible central solutions and good profit margins, especially in areas near universities or tourist areas. **Bari** completes the picture of interesting southern cities, with high returns for both short-term rentals and long-term leases[^49].
 
-**Cash flow:**
-- Net income: €7,200
-- Mortgage payment: -€5,200
-- **Net cash flow:** €2,000/year
+According to experts, the best opportunities for 2025 are Milan and Rome for stability and liquidity, Bologna and Genoa for medium-term investment, and Bari, Palermo and Naples for high returns[^50].
 
-**ROI on invested capital:**
-- Own capital: €64,000
-- Cash flow: €2,000
-- **ROI:** 3.1%
+## Real Estate Investment Risks
 
-**Seems worse than cash, but...**
+### Financial Risks
 
-This calculation does NOT consider:
-1. **Debt amortization:** each year you repay principal
-2. **Property appreciation:** capital gain
-3. **Financial leverage:** control €150k with only €64k
+**Illiquidity** is one of the main risks of real estate investment: unlike stocks or bonds, properties cannot be sold quickly and require time to find buyers, especially in difficult market periods[^51].
 
-#### Scenario C: "First Home" Strategy (If Possible)
+A **property price decline** can significantly erode investment value, caused by factors such as interest rate increases making mortgages more expensive, structural demand decrease, or savings reduction due to inflation effects.
 
-If you can qualify the property as first home (by transferring residence):
+The **negative return risk** occurs when properties remain vacant or rented at insufficient rates, generating losses due to taxes and maintenance costs exceeding revenues[^52]. According to statistics, in Italy about 10 million properties (30% of total) are vacant, often due to owners' fear of bad experiences with tenants or waiting for more favorable market conditions. This waiting strategy involves useless expenses for local taxes, maintenance and depreciation risk.
 
-- Mortgage: €120,000 (80% LTV) over 25 years at 2.9%
-- Equity invested: €30,000 + €500 (0.25% tax) = €30,500
-- Annual payment: ~€6,100
-- Year 1 interest: ~€3,480
-- **Tax deduction:** €760 (19% on max 4k)
+### Operational and Legal Risks
 
-**Cash flow:**
-- Net income: €7,200
-- Mortgage payment: -€6,100
-- Tax deduction: +€760
-- **Net cash flow:** €1,860/year
+**Tenant default** represents a concrete risk for every landlord: according to Nomisma, in Italy about 1 in 10 contracts experiences at least one significant payment delay, involving months of missing income, legal expenses for eviction and prolonged stress[^53]. Long eviction procedure times in Italy further aggravate the problem, during which the owner continues paying taxes on non-received income.
 
-**ROI on invested capital:**
-- Own capital: €30,500
-- Cash flow: €1,860
-- **ROI:** 6.1%
+Unexpected **extraordinary maintenance costs**, unforeseen condominium expenses and regulatory compliance works can heavily impact investment budget. From 2025, higher costs for energy compliance and new property regulations further increase the burden for owners[^54].
 
-**IMPORTANT:** This scenario only works if:
-- You actually transfer residence
-- The property becomes your primary residence
-- You maintain residence for entire tax period
+Additionally, municipalities have the power to adopt restrictive measures for short-term rentals, being able to prohibit tourist rental in certain areas, limit maximum number of available accommodations or apply additional local taxes.
 
-### Multi-Property Strategy: The Power of Leverage
+### Tax and Regulatory Risks
 
-The real advantage of leverage emerges when scaling to multiple properties.
+**Tax risk** is always present: a possible increase in property tax pressure can significantly reduce returns. 58% of Italians invest in real estate, which is why it's often said that "properties are the State's ATM"[^55].
 
-**With €150,000 capital:**
+New tax rules for 2025 include flat tax rate increase for short-term rentals from 21% to 26% for the second property onwards, renovation bonus reduction from 50% to 36% for second homes, and obligation to update cadastral income for those who benefited from the superbonus, with consequent IMU increases.
 
-**Option 1: One cash property**
-- 1 property of €150k
-- Income: €7,200/year
-- ROI: 4.8%
+For those owning a vacant second home, from 2025 double IRPEF taxation applies: income from non-rented properties located in the same municipality as the primary residence contributes to IRPEF taxable base at 50%, in addition to already due IMU[^56]. This measure was introduced to discourage vacant properties and encourage property rental.
 
-**Option 2: Two properties with leverage (second home)**
-- Property 1: €150k with €90k mortgage (€64k equity)
-- Property 2: €150k with €90k mortgage (€64k equity)
-- Total capital: €128k
-- Total income: €14,400
-- Mortgage payments: -€10,400
-- **Cash flow:** €4,000/year
-- **ROI on capital:** 3.1%
+## Real Estate Portfolio Management
 
-But after 15 years:
-- Residual debt: ~€95k (vs €180k initial)
-- Accumulated equity: €85k
-- Property value (2%/year appreciation assumption): ~€400k
-- **Total equity:** ~€305k (vs €230k cash scenario)
+### Professional Property Management
 
-### The Critical Role of Tax Deductibility
+The property manager is a key professional in the real estate market who handles strategic asset management, optimizing property value and profitability[^57]. Modern property manager tasks divide into three main areas:
 
-For professional investors or companies, the tax structure changes radically.
+1. **Administrative and accounting management** - contract preparation, rent collection, expense and tax payment
+2. **Property maintenance and preservation** - ordinary and extraordinary maintenance, timely interventions
+3. **Tenant relationship management** - reliable tenant selection, conflict resolution, customer experience
 
-#### Investment Through Company
+Relying on a property manager allows simplifying daily management, maximizing profits through efficient strategies to optimize rental rates, reducing risks by selecting reliable tenants and handling tax aspects, preserving property value with scheduled maintenance, and ensuring regulatory compliance avoiding legal and administrative problems[^58].
 
-If property is owned by a company (SRL, SNC, etc.):
+In Italy, the property manager can also act as withholding agent, calculating and paying taxes on rental income (such as flat tax) on behalf of the owner[^59].
 
-**Advantages:**
-1. Mortgage passive interest IS deductible from business income
-2. Reduction of overall tax burden
-3. Possibility to also deduct other expenses (management, maintenance)
+### Insurance for Investment Properties
 
-**Taxation:**
-- IRES: 24% on income (after deducting interest)
-- vs individual income tax: up to 43% (without interest deduction)
+To protect real estate investment, it's essential to consider various insurance coverages. **Rental risk insurance** protects both tenant and owner from accidental property damage caused by fires, explosions, bursts, system failures, rescue intervention damage and third-party liability. Not legally mandatory but highly recommended, with annual costs between €80 and €120 for apartments of 50-200 square meters[^60].
 
-**Numerical example:**
-- Rental income: €9,000
-- Mortgage interest: €2,880
-- Other expenses: €1,800
+The owner should also activate a policy to protect the building against damage from fires, water leaks, weather events, floods, earthquakes and vandalism for which the tenant is not responsible[^61]. A crucial component is civil liability coverage, which protects the owner from any compensation claims from third parties for damage arising from the property even when the property is rented.
 
-**Individual:**
-- Taxable income: €9,000 - €1,800 = €7,200
-- Income tax (35% bracket): €2,520
-- Mortgage interest: -€2,880 (non-deductible, paid with net income)
-- **Final net income:** €7,200 - €2,520 - €2,880 = €1,800
+Insurance cost depends on property surface area, chosen coverage extension and selected limit[^62].
 
-**Company:**
-- Taxable income: €9,000 - €1,800 - €2,880 = €4,320
-- IRES (24%): €1,037
-- **Final net income:** €4,320 - €1,037 = €3,283
+## First Steps to Become a Real Estate Investor
 
-**Difference:** +€1,483/year (+82% net income!)
+### Training and Planning
 
-This simplified example doesn't consider:
-- Company management costs
-- IMU and other local taxes
-- Possible additional benefits (property amortization, etc.)
+The first fundamental step is accumulating initial capital through an effective savings plan, defining clear financial goals and carefully monitoring expenses[^63]. Large sums are not necessary to start: most people begin with an apartment or small house worth around €80,000 or even less, requesting a mortgage if they meet bank requirements.
 
-But demonstrates the impact of interest deductibility.
+It's essential to acquire basic skills and knowledge through studying the local market, tax and administrative regulations, buying and selling procedures and investment strategies[^64]. You need to learn to:
 
-## Advanced Strategies for Sophisticated Investors
+- Carefully check documents (cadastral surveys, building violations, legal constraints)
+- Understand when renovation is worthwhile and which interventions actually increase value
+- Correctly interpret appraisals in property auctions
+- Quickly calculate profit margins considering all costs
 
-### 1. Recursive Leverage (With Caution)
+### Creating an Investment Plan
 
-Once the first property has generated equity (through amortization and/or appreciation), it's possible to:
+Creating a real estate investment plan requires setting a clear objective (second activity or full-time profession), deciding how much to invest establishing available budget, studying and deepening knowledge of local real estate market to identify best opportunities, and choosing the most suitable strategy for your possibilities (direct purchase, crowdfunding, flipping, REITs)[^65].
 
-1. Refinance the first property with liquidity mortgage
-2. Use liquidity as down payment for second property
-3. Repeat the process
+**Diversification** is fundamental:
 
-**Risks:**
-- High debt exposure
-- Vulnerability to price drops
-- Need for positive cash flow on all properties
+- Acquire different property types to intercept more client types
+- Alternate properties to sell quickly with those to rent out
+- Don't invest in a single area but diversify between large cities, small centers and emerging areas
 
-**When it makes sense:**
-- Growing market
-- Low rates
-- Robust rental income
+For those wishing to start with limited capital, real estate crowdfunding and real estate funds represent excellent options, allowing participation in specific projects with small amounts (from €50 to €500) and benefiting from diversification with modest initial investment[^66].
 
-### 2. Bridge Loan
+Another interesting strategy for those who already own a property is the **"One apartment leads to another"** formula: save 20% for the first purchase, rent it to generate income, reinvest profits to purchase a second property, and repeat the process to gradually build a portfolio[^67].
 
-For investors who identify an opportunity but need to sell another property:
+## Conclusions
 
-- Short-term financing (12-24 months)
-- Higher rates (4-6%)
-- Allows closing purchase before sale
+Investing in Italian real estate in 2025 remains a valid choice for building wealth and generating passive income, but requires preparation, competence and a well-defined strategy[^68]. The market offers various opportunities for investors with different budgets and objectives, from large northern cities with stability and liquidity to emerging cities and the South with potentially higher returns but also greater risks.
 
-### 3. Interest Only
+The key to success lies in continuous financial education, investment diversification, professional asset management and the ability to adapt to regulatory and tax evolutions[^69]. It's essential to carefully evaluate all costs associated with investment, from mortgages to maintenance taxes, from renovation expenses to vacancy periods, to calculate realistic and sustainable returns over time.
 
-Some institutions offer mortgages where you only pay interest for first 5-10 years:
-
-**Advantages:**
-- Better short-term cash flow
-- Greater financial flexibility
-
-**Disadvantages:**
-- Don't build equity through amortization
-- Very high payments when amortization begins
-- Risk of not having capital at maturity
-
-### 4. Fix-and-Flip with Leverage
-
-For investors who buy, renovate and resell:
-
-- Purchase + renovation mortgage
-- Short duration (12-36 months)
-- Refinancing or sale upon completion
-
-**Key to success:**
-- Significant renovation margins (30%+)
-- Clear exit strategy
-- Liquid real estate market
-
-## Practical and Operational Aspects
-
-### Required Documentation
-
-**To obtain an investment mortgage, banks require:**
-
-**Income documentation:**
-- Last 2-3 tax certificates or tax returns
-- Last 3 pay stubs
-- Bank statements last 6-12 months
-
-**Asset documentation:**
-- Cadastral surveys of owned properties
-- Investment account statements
-- List of valuable movable assets
-
-**For the property:**
-- Sales agreement
-- APE (Energy Performance Certificate)
-- Cadastral plan
-- Mortgage survey
-- Appraisal (commissioned by bank)
-
-### Disbursement Times
-
-**Typical timelines:**
-- Preliminary review: 7-15 days
-- Bank approval: 15-30 days
-- Technical appraisal: 7-10 days
-- Deed and disbursement: 30-60 days from approval
-
-**Total:** 60-90 days from first contact to signing
-
-### Ancillary Costs
-
-**At execution:**
-- Substitute tax: 0.25-2% (depending on type)
-- Technical appraisal: €200-500
-- Bank processing: 0-2% of mortgage (often free)
-- Notary fee: €1,500-3,000
-- Mortgage registration: included in substitute tax
-
-**Recurring annual costs:**
-- Property insurance (mandatory): €150-300/year
-- Life insurance (often recommended): €200-600/year
-
-### Bank Evaluation Parameters
-
-**Debt Service Coverage Ratio (DSCR):**
-
-For buy-to-let investments, many banks evaluate:
-
-DSCR = Annual rental income / Annual mortgage payment
-
-- **DSCR > 1.25:** excellent
-- **DSCR 1.1-1.25:** acceptable
-- **DSCR < 1.1:** difficult approval
-
-**Debt-to-Income (DTI):**
-
-Total mortgage payment / Monthly income ≤ 30-35%
-
-Includes all mortgages in place, not just requested one.
-
-## Common Mistakes to Avoid
-
-### 1. Underestimating Impact of Non-Deductibility
-
-Many investors compare only mortgage APRs without considering that second home interest is not deductible. The real effective cost is significantly higher.
-
-### 2. Overleverage
-
-Aiming for maximum possible LTV without considering:
-- Negative cash flow in early years
-- Tenant vacancies
-- Extraordinary maintenance expenses
-
-**Prudent rule:** ensure income covers at least 125% of mortgage payment.
-
-### 3. Not Considering Debt Costs in Business Plan
-
-A frequent error is calculating profitability without subtracting mortgage interest. This leads to dramatically overestimating returns.
-
-### 4. Ignoring Exit Strategy
-
-Before taking a 30-year mortgage, ask yourself:
-- What happens if I need to sell after 5 years?
-- What will my equity be?
-- Early repayment penalties?
-
-### 5. Not Negotiating Conditions
-
-Advertised rates are almost always negotiable, especially for:
-- Clients with significant assets
-- High income profiles
-- Large mortgage amounts
-
-Differences of 0.2-0.3% are common, and on €200k mean €8,000-12,000 saved.
-
-## Final Considerations: When Leverage Makes Sense
-
-Real estate leverage makes sense when:
-
-✅ **Net property return > debt cost**
-- If property yields 5% net and mortgage costs 3.5%, you profit on borrowed capital
-
-✅ **You have long time horizon (10+ years)**
-- Amortization and appreciation effects manifest over time
-
-✅ **You have adequate liquidity reserves**
-- At least 6-12 months of payments + extraordinary expenses
-
-✅ **Market is in growth or stability phase**
-- Avoid overleverage in contracting markets
-
-✅ **You can structure investment tax efficiently**
-- Consider corporate vehicles if volume justifies
-
-❌ **Don't use leverage if:**
-- Can't afford temporary negative cash flow
-- Debt keeps you awake at night
-- Only way to close is LTV >80% on second home
-- Rates are very high relative to expected income
-
-## Conclusions: Knowledge as Competitive Advantage
-
-The Italian real estate market still offers interesting opportunities for informed investors, but success depends on the ability to navigate a complex system of:
-
-- Banking regulation
-- Differentiated taxation
-- Local market dynamics
-- Optimal financial structures
-
-The difference between mediocre and excellent investment often lies in correct understanding and application of available financing instruments.
-
-**Key Takeaways:**
-
-1. Interest deduction (first home only) worth €15,000-20,000 on €200k/25-year mortgage
-2. Substitute tax on second home (2% vs 0.25%) costs €3,500 more on €200k mortgage
-3. Green mortgages offer concrete savings (€5,000-7,000 on standard mortgages)
-4. Leverage amplifies both returns and risks
-5. Tax structure (individual vs company) can double net return
-
-With declining rates and a market showing recovery signs, 2025 could be the right year to enter - but only with solid financial strategy and full understanding of available instruments.
-
-## Need Support for Your Real Estate Investment?
-
-Jungle Rent helps you find and evaluate real estate investment opportunities in Turin with:
-
-- **Detailed market analysis** for every city area
-- **Expected ROI calculation** for each property
-- **Buy-to-let opportunity evaluation support**
-- **Network of professionals** (accountants, notaries, financial advisors)
-
-Contact our team for personalized consultation on your real estate investment project.
+For beginners, it's advisable to start with manageable investment sizes, possibly using tools like real estate crowdfunding to familiarize with the sector without committing excessive capital, then gradually expand the portfolio as experience and competence are acquired[^70]. Finally, never underestimate the importance of relying on qualified professionals for legal, tax and management aspects, especially in the initial phases of real estate investor activity.
 
 ---
 
-**Disclaimer:** The information contained in this article is purely informational and does not constitute financial or tax advice. Before making any investment decision, it's essential to consult qualified professionals (accountant, financial advisor, notary) who can evaluate your specific situation. Mortgage conditions, rates and tax regulations are subject to change and may vary based on investor profile and lending bank.
+[^1]: Idealista - [Italian Real Estate Market Observatory 2025](https://www.idealista.it/news/)
+[^2]: Gromia.it - [Who is the Real Estate Investor](https://www.gromia.it/)
+[^3]: Gromia.it - [Real Estate Investor Skills](https://www.gromia.it/)
+[^4]: Case-Asta.it - [Investor Competencies](https://www.case-asta.it/)
+[^5]: Gromia.it - [Investment Methods](https://www.gromia.it/)
+[^6]: Idealista - [Mortgage Loans](https://www.idealista.it/mutui/)
+[^7]: Idealista - [Second Home Mortgage LTV](https://www.idealista.it/mutui/seconda-casa/)
+[^8]: Rentila.it - [Investment Mortgage Conditions](https://www.rentila.it/)
+[^9]: Joivy Invest - [Buy to Let Mortgages Italy](https://invest.joivy.com/)
+[^10]: Joivy Invest - [Buy to Let Conditions](https://invest.joivy.com/)
+[^11]: Rentila.it - [Buy to Let Guide](https://www.rentila.it/buy-to-let/)
+[^12]: MutuiOnline.it - [Liquidity Mortgages](https://www.mutuionline.it/liquidita/)
+[^13]: MutuiOnline.it - [Liquidity Mortgage Conditions](https://www.mutuionline.it/liquidita/condizioni/)
+[^14]: Immobiliare.it - [Rent to Buy](https://www.immobiliare.it/guida-rent-to-buy/)
+[^15]: Immobiliare.it - [How Rent to Buy Works](https://www.immobiliare.it/rent-to-buy-funzionamento/)
+[^16]: Altroconsumo - [Rent to Buy Taxation](https://www.altroconsumo.it/casa/comprare-casa/consigli/rent-to-buy)
+[^17]: Idealista - [Bare Ownership](https://www.idealista.it/news/immobiliare/residenziale/nuda-proprieta/)
+[^18]: AstaFox.it - [Direct Investment](https://www.astafox.it/)
+[^19]: AstaFox.it - [Capital Appreciation](https://www.astafox.it/)
+[^20]: ImmobiliareViterbo - [Return Calculation](https://www.immobiliareviterbosrl.it/)
+[^21]: Pedra.it - [Property Flipping](https://www.pedra.it/flipping/)
+[^22]: Pedra.it - [Key Flipping Elements](https://www.pedra.it/)
+[^23]: Gruppo Il Sestante - [Flipping Italian Cities](https://www.gruppoilsestante.it/)
+[^24]: Studio Costanzo - [Flipping Taxation](https://www.studiocostanzo.it/)
+[^25]: ReCrowd - [Italian Real Estate Crowdfunding](https://www.recrowd.it/)
+[^26]: ReCrowd - [CF Platforms 2025](https://www.recrowd.it/piattaforme/)
+[^27]: ReCrowd - [Lending vs Equity CF](https://www.recrowd.it/tipologie/)
+[^28]: RenditePassive.net - [CF Returns](https://www.renditepassive.net/crowdfunding-immobiliare/)
+[^29]: UpsideTown - [REITs Italy](https://www.upsidetown.it/reit/)
+[^30]: Gromia.it - [How to Invest REITs](https://www.gromia.it/reit/)
+[^31]: SoloAffittiPay - [Flat Tax 2025](https://www.soloaffittipay.com/cedolare-secca/)
+[^32]: SoloAffittiPay - [Flat Tax Benefits](https://www.soloaffittipay.com/)
+[^33]: Idealista - [Flat Tax vs IRPEF](https://www.idealista.it/news/finanza/fisco/cedolare-secca-irpef/)
+[^34]: Avvocato Ticozzi - [Short-term Rentals 2025](https://www.avvocatoticozzi.it/locazioni-brevi/)
+[^35]: SoldiExpert - [CIN and BDSR](https://www.soldiexpert.com/cin-affitti-brevi/)
+[^36]: Moneyfarm - [Purchase Taxes](https://www.moneyfarm.com/it/guida/imposte-acquisto-casa/)
+[^37]: Moneyfarm - [Property VAT](https://www.moneyfarm.com/it/iva-immobili/)
+[^38]: BorsaInside - [IMU 2025](https://www.borsainside.com/imu-2025/)
+[^39]: BorsaInside - [IMU Reductions](https://www.borsainside.com/imu-riduzioni/)
+[^40]: Impatria - [Interest Deductibility](https://www.impatria.it/deducibilita-interessi-mutuo/)
+[^41]: Immobiliare.it - [Gross Return](https://www.immobiliare.it/mercato-immobiliare/rendimenti/)
+[^42]: Case-Asta.it - [City Returns 2025](https://www.case-asta.it/rendimenti-2025/)
+[^43]: SIPA - [Net Return](https://www.sipa.it/rendimento-netto/)
+[^44]: ImmobiliareClaudio - [Detailed ROI Calculation](https://immobiliareclaudio.jimdoweb.com/)
+[^45]: AffittiBrevi RealKasa - [Milan Investments](https://affittibrevi.realkasa.com/milano/)
+[^46]: AffittiBrevi RealKasa - [Rome Jubilee](https://affittibrevi.realkasa.com/roma-giubileo/)
+[^47]: WeWealth - [Turin Bologna](https://www.we-wealth.com/investimenti-immobiliari-torino-bologna/)
+[^48]: Solutions Immobiliare - [Verona](https://www.solutionsimmobiliare.it/verona/)
+[^49]: CrowdfundMe - [Southern Italy](https://www.crowdfundme.it/investimenti-sud/)
+[^50]: CrowdfundMe - [Best Cities 2025](https://www.crowdfundme.it/dove-investire-2025/)
+[^51]: Albo degli Investitori - [Illiquidity Risk](https://www.albodeglinvestitori.it/illiquidita-immobiliare/)
+[^52]: RendimentoEtico - [Vacant Properties](https://www.rendimentoetico.it/immobili-sfitti/)
+[^53]: Reddit r/ItaliaPersonalFinance - [Tenant Default](https://www.reddit.com/r/ItaliaPersonalFinance/)
+[^54]: SoldiExpert - [Compliance Costs](https://www.soldiexpert.com/costi-ristrutturazione-2025/)
+[^55]: WeWealth - [Tax Risk](https://www.we-wealth.com/rischio-fiscale-immobili/)
+[^56]: Brocardi.it - [Double Taxation](https://www.brocardi.it/codice-civile/)
+[^57]: Gromia.it - [Property Management](https://www.gromia.it/property-management/)
+[^58]: Gromia.it - [PM Advantages](https://www.gromia.it/vantaggi-property-manager/)
+[^59]: Tubus System - [PM Software](https://www.tubussystem.it/)
+[^60]: Assicurazione.it - [Rental Risk](https://www.assicurazione.it/casa/rischio-locativo/)
+[^61]: Zurich Connect - [Building Insurance](https://www.zurich-connect.it/assicurazione-casa/)
+[^62]: Zurich Connect - [Policy Costs](https://www.zurich-connect.it/preventivi/)
+[^63]: Urbanitae - [Initial Capital](https://www.urbanitae.com/it/capitale-iniziale/)
+[^64]: Alfio Bardolla - [Basic Training](https://www.alfiobardolla.com/formazione/)
+[^65]: We Are Climb - [Investment Plan](https://www.weareclimb.it/piano-investimento/)
+[^66]: We Are Climb - [Crowdfunding Beginners](https://www.weareclimb.it/crowdfunding/)
+[^67]: Case-Asta.it - [Leverage Strategy](https://www.case-asta.it/strategia-leverage/)
+[^68]: We are Climb - [Market 2025](https://www.weareclimb.it/mercato-2025/)
+[^69]: Alfio Bardolla - [Continuous Education](https://www.alfiobardolla.com/)
+[^70]: Case-Asta.it - [Starting Investments](https://www.case-asta.it/primi-passi/)

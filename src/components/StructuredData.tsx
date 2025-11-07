@@ -434,7 +434,8 @@ export const StructuredData = () => {
       buyActionSchema, 
       faqSchema,
       breadcrumbSchema,
-      aggregateRatingSchema
+      aggregateRatingSchema,
+      blogArticleSchema
     ];
 
     const scriptElements: HTMLScriptElement[] = [];
