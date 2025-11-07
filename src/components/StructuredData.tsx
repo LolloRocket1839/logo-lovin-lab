@@ -391,6 +391,40 @@ export const StructuredData = () => {
       }
     };
 
+    // Blog Article Schema with Citations (for investor guide)
+    const blogArticleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Guida Completa per l'Investitore Immobiliare in Italia 2025",
+      "description": "Guida approfondita su investimenti immobiliari, mutui, strategie di leverage e fiscalità per investitori in Italia",
+      "image": `${baseUrl}/images/mortgage-investment.jpg`,
+      "author": {
+        "@type": "Person",
+        "name": "Lorenzo Bianchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jungle Rent",
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${baseUrl}/jungle-rent-logo.svg`
+        }
+      },
+      "datePublished": "2025-11-07",
+      "dateModified": "2025-11-07",
+      "citation": [
+        "https://www.idealista.it/news/",
+        "https://www.immobiliare.it/mercato-immobiliare/",
+        "https://www.tecnocasa.it/",
+        "https://www.mutuionline.it/",
+        "https://www.gromia.it/",
+        "https://www.recrowd.it/",
+        "https://www.agenziaentrate.gov.it/",
+        "https://www.soldiexpert.com/",
+        "https://www.alfiobardolla.com/"
+      ]
+    };
+
     // Insert all schemas into head
     const schemas = [
       organizationSchema, 
