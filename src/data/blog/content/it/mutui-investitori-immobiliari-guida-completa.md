@@ -113,16 +113,6 @@ Jungle Rent opera un modello di business innovativo che combina acquisizione str
 3. **Gestione Full-Service**: ci occupiamo di tutto - dalla ricerca inquilini alla manutenzione, dalla gestione contratti alla fiscalità
 4. **Tecnologia e Innovazione**: utilizziamo piattaforme digitali per massimizzare l'efficienza e garantire trasparenza agli investitori
 
-#### Rendimenti Attesi e Track Record
-
-Sulla base dei primi 12 mesi di operatività e del portfolio attuale:
-
-- **Rendimento lordo medio**: 7,2% annuo sui capitali investiti
-- **Tasso di occupazione**: 96% (solo 14 giorni medi di sfitto tra un inquilino e l'altro)
-- **Durata media contratti**: 10-11 mesi (intero anno accademico)
-- **Rendimento netto** (dopo spese): 4,8-5,2% annuo
-
-**Esempio concreto**: investimento di €5.000 in un quadrilocale in zona Crocetta genera un ritorno annuo lordo di €360, con rendimento netto di circa €250 dopo tutte le spese di gestione.
 
 #### Vantaggi per l'Investitore
 

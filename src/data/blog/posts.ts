@@ -5,7 +5,7 @@ export const blogPosts: BlogPost[] = [
     slug: "mutui-investitori-immobiliari-guida-completa",
     category: "investors",
     date: "2025-11-07",
-    author: "Lorenzo Bianchi & Team Jungle Rent",
+    author: "Team Jungle Rent",
     image: "/images/mortgage-investment.jpg",
     readTime: 35,
     content: "mutui-investitori-immobiliari-guida-completa",

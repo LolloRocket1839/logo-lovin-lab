@@ -108,10 +108,6 @@ The student housing sector represents one of the most stable segments of the Ita
 
 Jungle Rent operates an innovative business model combining strategic acquisition, targeted renovation and professional management of student properties in university areas of Turin.
 
-**Expected Returns**:
-- **Average gross return**: 7.2% annually on invested capital
-- **Occupancy rate**: 96% (only 14 days average vacancy between tenants)
-- **Net return** (after expenses): 4.8-5.2% annually
 
 #### Advantages for Investors
 
