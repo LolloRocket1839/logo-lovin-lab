@@ -2,6 +2,61 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "mutui-investitori-immobiliari-guida-completa",
+    category: "investors",
+    date: "2025-11-07",
+    author: "Team Jungle Rent",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 28,
+    content: "mutui-investitori-immobiliari-guida-completa",
+    translations: {
+      it: {
+        title: "Guida Completa ai Mutui per Investitori Immobiliari in Italia 2025",
+        excerpt: "Tutto quello che un investitore immobiliare deve sapere sui finanziamenti bancari: dalle differenze tra mutui prima e seconda casa alle strategie di leverage ottimali. Analisi dettagliata con calcoli, esempi pratici e aspetti fiscali.",
+        seo: {
+          title: "Mutui Investitori Immobiliari Italia 2025: Guida Completa con Strategie | Jungle Rent",
+          description: "Guida definitiva ai mutui per investitori immobiliari 2025: confronto prima vs seconda casa, detraibilità interessi, LTV, mutui green, strategie leverage. Calcoli ROI dettagliati e aspetti fiscali per buy-to-let.",
+          keywords: [
+            "mutui investimento immobiliare Italia",
+            "mutuo seconda casa investitori",
+            "buy to let Italia",
+            "leverage immobiliare",
+            "detraibilità interessi mutuo",
+            "mutui green 2025",
+            "ROI investimenti immobiliari",
+            "LTV mutui investimento",
+            "imposta sostitutiva mutuo",
+            "strategie investimento immobiliare",
+            "mutuo prima casa vs seconda casa",
+            "tassazione investimenti immobiliari"
+          ]
+        },
+        tags: ["investitori", "mutui", "finanza", "immobiliare", "buy-to-let", "leverage", "fiscalità", "ROI"]
+      },
+      en: {
+        title: "Complete Guide to Mortgages for Real Estate Investors in Italy 2025",
+        excerpt: "Everything a real estate investor needs to know about bank financing in Italy: from differences between first and second home mortgages to optimal leverage strategies. Detailed analysis with calculations, practical examples and tax aspects.",
+        seo: {
+          title: "Real Estate Investment Mortgages Italy 2025: Complete Strategy Guide | Jungle Rent",
+          description: "Definitive guide to mortgages for real estate investors 2025: first vs second home comparison, interest deductibility, LTV, green mortgages, leverage strategies. Detailed ROI calculations and tax aspects for buy-to-let.",
+          keywords: [
+            "real estate investment mortgages Italy",
+            "second home mortgage investors",
+            "buy to let Italy",
+            "real estate leverage",
+            "mortgage interest deductibility",
+            "green mortgages 2025",
+            "real estate investment ROI",
+            "LTV investment mortgages",
+            "mortgage tax implications Italy",
+            "real estate investment strategies"
+          ]
+        },
+        tags: ["investors", "mortgages", "finance", "real estate", "buy-to-let", "leverage", "taxation", "ROI"]
+      }
+    }
+  },
+  {
     slug: "migliori-gelaterie-torino-studenti",
     category: "students",
     date: "2025-11-07",
