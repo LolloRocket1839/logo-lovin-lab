@@ -39,9 +39,16 @@ const getInvestorWaitlistSchema = (t: any) => z.object({
 interface InvestorWaitlistDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  guideType?: 'general' | 'torino';
 }
 
-export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistDialogProps) => {
+interface InvestorWaitlistDialogProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  guideType?: 'general' | 'torino';
+}
+
+export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'general' }: InvestorWaitlistDialogProps) => {
   const { t, i18n } = useTranslation();
   const { incrementCount } = useWaitlistCounter();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -73,6 +80,8 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
         ? ` - Zona: ${t(`investorWaitlist.areas.${data.preferred_area}`)}`
         : "";
       
+      const guideLabel = guideType === 'torino' ? 'GUIDA TORINO 2025' : 'GUIDA GENERALE';
+      
       const response = await fetch("https://formspree.io/f/xeojbzow", {
         method: "POST",
         headers: {
@@ -91,7 +100,8 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
           referral_source: data.referral_source || "",
           consent: data.consent,
           user_type: "investor",
-          _subject: `🔥 NEW QUALIFIED INVESTOR LEAD - Jungle Rent${areaLabel}`,
+          guide_requested: guideLabel,
+          _subject: `🔥 NEW QUALIFIED INVESTOR LEAD - Jungle Rent - ${guideLabel}${areaLabel}`,
           timestamp: new Date().toISOString(),
         }),
       });
@@ -137,7 +147,10 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange }: InvestorWaitlistD
             <div className="flex gap-2 items-start">
               <InfoIcon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
               <p className="text-xs text-foreground">
-                📥 <strong>Riceverai via email la Guida Completa per Investitori</strong> (PDF 45 pagine) con business plan dettagliato, case study reali e proiezioni finanziarie.
+                {guideType === 'torino' 
+                  ? "📥 Riceverai via email la Guida ai Migliori Investimenti Immobiliari a Torino 2025 (PDF completa) con analisi dettagliata zone, prezzi al mq, rendimenti per quartiere, strategie student housing e info su mutui aggiornate."
+                  : "📥 Riceverai via email la Guida Completa per Investitori (PDF 45 pagine) con business plan dettagliato, case study reali e proiezioni finanziarie."
+                }
               </p>
             </div>
           </Card>

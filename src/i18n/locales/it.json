@@ -605,5 +605,26 @@
       "title": "Blog Jungle Rent | Guide su Affitti, Investimenti e Vendite a Torino",
       "description": "Scopri guide, dati e approfondimenti sul mercato immobiliare torinese per studenti, investitori e venditori."
     }
+  },
+  "resourceLibrary": {
+    "sectionTitle": "Risorse Gratuite per Investitori",
+    "sectionSubtitle": "Guide complete per massimizzare i tuoi investimenti immobiliari",
+    "guide1Title": "Guida Completa per Investitori",
+    "guide1Badge": "Essenziale",
+    "guide1Desc": "Tutto quello che devi sapere per iniziare a investire in immobili universitari a Torino",
+    "guide1Pages": "45 pagine",
+    "guide1Bullet1": "Modello di business Jungle Rent",
+    "guide1Bullet2": "ROI e proiezioni finanziarie dettagliate",
+    "guide1Bullet3": "Case study reali con rendimenti",
+    "guide1Bullet4": "Confronto con altre forme di investimento",
+    "guide2Title": "Migliori Investimenti Immobiliari a Torino 2025",
+    "guide2Badge": "Avanzata - Mercato Torino",
+    "guide2Desc": "Analisi approfondita delle zone più redditizie, prezzi, rendimenti e strategie per il mercato torinese",
+    "guide2Pages": "Guida completa",
+    "guide2Bullet1": "Analisi dettagliata di tutte le zone (Centro, Aurora, Lingotto, Mirafiori...)",
+    "guide2Bullet2": "Prezzi al mq e rendimenti per quartiere (dati 2025)",
+    "guide2Bullet3": "Student housing: opportunità e strategie operative",
+    "guide2Bullet4": "Mutui, tassi e agevolazioni fiscali aggiornate",
+    "downloadCta": "Scarica Guida Gratuita"
   }
 }

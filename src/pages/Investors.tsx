@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
+import { ResourceLibrary } from "@/components/investor/ResourceLibrary";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
@@ -220,6 +221,9 @@ const Investors = () => {
           </div>
         </div>
       </section>
+
+      {/* Resource Library Section */}
+      <ResourceLibrary />
 
       {/* Process Section */}
       <section className="py-16 md:py-24 bg-muted/30">

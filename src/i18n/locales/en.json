@@ -831,5 +831,26 @@
       "title": "Jungle Rent Blog | Guides on Rentals, Investments and Sales in Turin",
       "description": "Discover guides, data and insights on the Turin real estate market for students, investors and sellers."
     }
+  },
+  "resourceLibrary": {
+    "sectionTitle": "Free Resources for Investors",
+    "sectionSubtitle": "Complete guides to maximize your real estate investments",
+    "guide1Title": "Complete Investor Guide",
+    "guide1Badge": "Essential",
+    "guide1Desc": "Everything you need to know to start investing in university properties in Turin",
+    "guide1Pages": "45 pages",
+    "guide1Bullet1": "Jungle Rent business model",
+    "guide1Bullet2": "Detailed ROI and financial projections",
+    "guide1Bullet3": "Real case studies with returns",
+    "guide1Bullet4": "Comparison with other investment forms",
+    "guide2Title": "Best Real Estate Investments in Turin 2025",
+    "guide2Badge": "Advanced - Turin Market",
+    "guide2Desc": "In-depth analysis of the most profitable areas, prices, returns and strategies for the Turin market",
+    "guide2Pages": "Complete guide",
+    "guide2Bullet1": "Detailed analysis of all areas (Centro, Aurora, Lingotto, Mirafiori...)",
+    "guide2Bullet2": "Price per sqm and returns by neighborhood (2025 data)",
+    "guide2Bullet3": "Student housing: opportunities and operational strategies",
+    "guide2Bullet4": "Updated mortgages, rates and tax benefits",
+    "downloadCta": "Download Free Guide"
   }
 }
