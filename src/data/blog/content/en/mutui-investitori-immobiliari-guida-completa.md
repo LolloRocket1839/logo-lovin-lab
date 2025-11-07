@@ -315,7 +315,6 @@ If this guide has convinced you of real estate investment potential but you don'
 ✅ **Accessible Capital**: start with just €100, no mortgages or 40% down payment needed  
 ✅ **Zero Management**: you don't have to handle anything - we think of everything  
 ✅ **Resilient Market**: university students = constant demand and >95% occupancy rates  
-✅ **Competitive Returns**: 7.2% annual gross, above Turin market average  
 ✅ **Simplified Taxation**: no IMU, TARI, unexpected maintenance - only quarterly distribution  
 ✅ **Automatic Diversification**: your capital across multiple properties, reducing risk  
 ✅ **Total Transparency**: real-time dashboard and detailed quarterly reporting

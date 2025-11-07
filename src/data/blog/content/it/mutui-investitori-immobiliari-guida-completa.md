@@ -102,7 +102,6 @@ Il settore dell'housing studentesco rappresenta uno dei segmenti più stabili de
 - **Domanda strutturale**: gli studenti devono necessariamente trovare alloggio per tutta la durata degli studi
 - **Tassi di occupazione elevati**: in zone strategiche come Crocetta, San Salvario e Centro, il tasso di occupazione supera il 95% annuo
 - **Minore volatilità**: meno esposto a crisi economiche rispetto ad altri segmenti
-- **Rendimenti superiori**: canoni per camera singola generano rendimenti lordi del 6-8% annuo
 
 #### Il Modello Jungle Rent
 
