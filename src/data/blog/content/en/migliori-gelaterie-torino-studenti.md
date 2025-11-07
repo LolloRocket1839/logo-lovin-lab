@@ -12,7 +12,7 @@ Before diving into our selection, it's worth understanding what makes Turin gela
 
 ### Alberto Marchetti: The Turin Gelato Empire
 
-With **5 strategically positioned locations** in the city (Corso Vittorio Emanuele II, Via Po, Piazza CLN, Via Cernaia, Via Principi d'Acaja and Corso Galileo Ferraris), Alberto Marchetti is an institution for Torinese. The secret? Selected raw materials: fresh milk from Piedmontese valleys, hazelnuts from the Langhe, Gobino chocolate and coffee from local roasters.
+With **6 strategically positioned locations** in the city (Corso Vittorio Emanuele II, Via Po, Piazza CLN, Via Cernaia, Via Principi d'Acaja and Corso Galileo Ferraris), Alberto Marchetti is an institution for Torinese. The secret? Selected raw materials: fresh milk from Piedmontese valleys, hazelnuts from the Langhe, Gobino chocolate and coffee from local roasters.
 
 **Must try:** the zabaione (true house must), gianduia, white chocolate caramel and salt, and sorbets with Tortona strawberries and ramassin from Val Bronda.
 
@@ -22,11 +22,11 @@ With **5 strategically positioned locations** in the city (Corso Vittorio Emanue
 
 ### Mara dei Boschi: Research and Creativity Since 2005
 
-Three locations in the city (Via Berthollet, Piazza Carlo Emanuele II, Corso De Gasperi) and a presence also at Mercato Centrale in Milan testify to the success of this gelateria that has made continuous research its trademark. Awarded by Gambero Rosso, Mara dei Boschi is the perfect place for those who love to experiment.
+Three locations in the city (Via Berthollet, Piazza Carlo Emanuele II, Corso Alcide De Gasperi 57) and a presence also at Mercato Centrale in Milan testify to the success of this gelateria that has made continuous research its trademark. Awarded by Gambero Rosso, Mara dei Boschi is the perfect place for those who love to experiment.
 
 **Must try:** seasonal flavors that change frequently, always attentive to territoriality and ingredient freshness.
 
-**Ideal for:** students living in San Salvario or attending the Politecnico area.
+📍 **Via Berthollet, Piazza Carlo Emanuele II, Corso Alcide De Gasperi 57** - Ideal for students living in San Salvario or attending the Politecnico area.
 
 ### Gelati d'Antan: The Taste Laboratory
 
@@ -56,6 +56,8 @@ The true revelation of 2025: according to the prestigious Dissapore guide, Papal
 
 **Perfect for:** those seeking absolute excellence and not afraid to experiment with innovative flavors.
 
+📍 **Two locations: San Salvario and Porta Palazzo** - Check their social channels for exact addresses
+
 ### Aria: Lightness and Design in Vanchiglia
 
 Opened in May 2022 by Davide Ferrero and Roberto Speranza (both with previous experience at Mara dei Boschi, Gelati d'Antan and Alberto Marchetti), Aria quickly won over Torinese so much that it opened a second location in Santa Rita. The style is in the name: "airy," simple and light gelato.
@@ -79,7 +81,7 @@ The name says it all: Nicolò Arietti opened this welcoming pink gelateria in 20
 
 ### Nivà: River View and Quality
 
-With two locations in strategic positions (Piazza Vittorio Veneto and Corso De Gasperi), Nivà offers quality gelato in postcard locations. The Piazza Vittorio location is perfect for a break after a walk along the Po.
+With two locations in strategic positions (Piazza Vittorio Veneto 8 and Corso Alcide De Gasperi 57), Nivà offers quality gelato in postcard locations. The Piazza Vittorio location is perfect for a break after a walk along the Po.
 
 **Awarded** by Gambero Rosso with three cones, it's a guarantee of quality and research in raw materials.
 
@@ -101,11 +103,13 @@ With two locations in Turin's center (Corso San Maurizio and Piazza Gran Madre d
 
 📍 **Corso San Maurizio** and **Piazza Gran Madre di Dio, 3F** - Perfect after a day among museums and historic center
 
-### La Romana (Corso Inghilterra)
+### La Romana
 
 Born in Rimini, La Romana has also conquered Turin. Specialty: creamy and very soft creams. The cult flavor is the dark chocolate and cream pair from 1947: if after almost 80 years it's still there, there must be a reason.
 
 **For those who love:** traditional creaminess and classic flavors made to perfection.
+
+📍 **Corso Inghilterra 31/A**
 
 ## Gelato Week: The Event Not to Miss
 
@@ -134,13 +138,13 @@ Almost all modern gelaterias offer options:
 
 ### University Neighborhoods and Their Gelaterias
 
-**Politecnico/Crocetta Area:** Alberto Marchetti (Via Principi d'Acaja), Ottimo!, Mara dei Boschi (Corso De Gasperi)
+**Politecnico/Crocetta Area:** Alberto Marchetti (Via Principi d'Acaja), Ottimo!, Mara dei Boschi (Corso Alcide De Gasperi 57)
 
 **Center/Vanchiglia:** Aria, Alberto Marchetti (Via Po), Gasprin
 
 **San Salvario/Santa Rita:** Gelati d'Antan, Mara dei Boschi, Aria's second location
 
-**Along the Po Area:** Nivà (Piazza Vittorio - priceless river view)
+**Along the Po Area:** Nivà (Piazza Vittorio Veneto 8 - priceless river view)
 
 ## Iconic Flavors to Try Absolutely
 
@@ -164,7 +168,7 @@ Almost all modern gelaterias offer options:
 
 **Want excellent vegan gelato?** → Aria (dedicated line)
 
-**Looking for quality spread throughout the city?** → Mara dei Boschi (3 locations), Alberto Marchetti (5 locations)
+**Looking for quality spread throughout the city?** → Mara dei Boschi (3 locations), Alberto Marchetti (6 locations)
 
 ## Conclusion
 

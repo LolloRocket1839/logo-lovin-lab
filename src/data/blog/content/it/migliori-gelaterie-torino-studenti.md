@@ -12,7 +12,7 @@ Prima di tuffarci nella nostra selezione, vale la pena capire cosa rende il gela
 
 ### Alberto Marchetti: L'Impero del Gelato Torinese
 
-Con **5 punti vendita** strategicamente posizionati in città (Corso Vittorio Emanuele II, Via Po, Piazza CLN, Via Cernaia, Via Principi d'Acaja e Corso Galileo Ferraris), Alberto Marchetti è un'istituzione per i torinesi. Il segreto? Materie prime selezionatissime: latte fresco delle valli piemontesi, nocciole delle Langhe, cioccolato Gobino e caffè di torrefazioni locali.
+Con **6 punti vendita** strategicamente posizionati in città (Corso Vittorio Emanuele II, Via Po, Piazza CLN, Via Cernaia, Via Principi d'Acaja e Corso Galileo Ferraris), Alberto Marchetti è un'istituzione per i torinesi. Il segreto? Materie prime selezionatissime: latte fresco delle valli piemontesi, nocciole delle Langhe, cioccolato Gobino e caffè di torrefazioni locali.
 
 **Da provare:** lo zabaione (vero must della casa), il gianduia, il cioccolato bianco caramello e sale, e i sorbetti alla fragola di Tortona e ai ramassin della Val Bronda.
 
@@ -22,11 +22,11 @@ Con **5 punti vendita** strategicamente posizionati in città (Corso Vittorio Em
 
 ### Mara dei Boschi: Ricerca e Creatività dal 2005
 
-Tre sedi in città (Via Berthollet, Piazza Carlo Emanuele II, Corso De Gasperi) e una presenza anche al Mercato Centrale di Milano testimoniano il successo di questa gelateria che ha fatto della ricerca continua il suo marchio di fabbrica. Premiata dal Gambero Rosso, Mara dei Boschi è il luogo perfetto per chi ama sperimentare.
+Tre sedi in città (Via Berthollet, Piazza Carlo Emanuele II, Corso Alcide De Gasperi 57) e una presenza anche al Mercato Centrale di Milano testimoniano il successo di questa gelateria che ha fatto della ricerca continua il suo marchio di fabbrica. Premiata dal Gambero Rosso, Mara dei Boschi è il luogo perfetto per chi ama sperimentare.
 
 **Da provare:** i gusti stagionali che cambiano frequentemente, sempre attenti alla territorialità e alla freschezza degli ingredienti.
 
-**Ideale per:** studenti che abitano in San Salvario o frequentano la zona Politecnico.
+📍 **Via Berthollet, Piazza Carlo Emanuele II, Corso Alcide De Gasperi 57** - Ideale per studenti che abitano in San Salvario o frequentano la zona Politecnico.
 
 ### Gelati d'Antan: Il Laboratorio del Gusto
 
@@ -56,6 +56,8 @@ La vera rivelazione del 2025: secondo la prestigiosa guida Dissapore, Papalele d
 
 **Perfetta per:** chi cerca l'eccellenza assoluta e non ha paura di sperimentare gusti innovativi.
 
+📍 **Due sedi: San Salvario e Porta Palazzo** - Verifica gli indirizzi esatti sui loro canali social
+
 ### Aria: Leggerezza e Design a Vanchiglia
 
 Aperta a maggio 2022 da Davide Ferrero e Roberto Speranza (entrambi con esperienze pregresse da Mara dei Boschi, Gelati d'Antan e Alberto Marchetti), Aria ha conquistato rapidamente i torinesi tanto da aprire una seconda sede a Santa Rita. Lo stile è nel nome: gelato "arioso", semplice e leggero.
@@ -79,7 +81,7 @@ Il nome dice tutto: Nicolò Arietti ha aperto questa gelateria rosa accogliente 
 
 ### Nivà: Vista Fiume e Qualità
 
-Con due sedi in posizioni strategiche (Piazza Vittorio Veneto e Corso De Gasperi), Nivà offre gelato di qualità in location da cartolina. La sede di Piazza Vittorio è perfetta per una pausa dopo una passeggiata lungo il Po.
+Con due sedi in posizioni strategiche (Piazza Vittorio Veneto 8 e Corso Alcide De Gasperi 57), Nivà offre gelato di qualità in location da cartolina. La sede di Piazza Vittorio è perfetta per una pausa dopo una passeggiata lungo il Po.
 
 **Premiata** dal Gambero Rosso con tre coni, è garanzia di qualità e ricerca nelle materie prime.
 
@@ -101,11 +103,13 @@ Con due sedi nel centro di Torino (Corso San Maurizio e Piazza Gran Madre di Dio
 
 📍 **Corso San Maurizio** e **Piazza Gran Madre di Dio, 3F** - Perfetta dopo una giornata tra musei e centro storico
 
-### La Romana (Corso Inghilterra)
+### La Romana
 
 Nata a Rimini, La Romana ha conquistato anche Torino. Specialità: creme pannose e morbidissime. Il gusto cult è la coppia cioccolato fondente e crema dal 1947: se dopo quasi 80 anni è ancora lì, ci sarà un motivo.
 
 **Per chi ama:** la cremosità tradizionale e i gusti classici fatti alla perfezione.
+
+📍 **Corso Inghilterra 31/A**
 
 ## La Gelato Week: L'Evento da Non Perdere
 
@@ -134,13 +138,13 @@ Quasi tutte le gelaterie moderne offrono opzioni:
 
 ### I Quartieri Universitari e le Loro Gelaterie
 
-**Zona Politecnico/Crocetta:** Alberto Marchetti (Via Principi d'Acaja), Ottimo!, Mara dei Boschi (Corso De Gasperi)
+**Zona Politecnico/Crocetta:** Alberto Marchetti (Via Principi d'Acaja), Ottimo!, Mara dei Boschi (Corso Alcide De Gasperi 57)
 
 **Centro/Vanchiglia:** Aria, Alberto Marchetti (Via Po), Gasprin
 
 **San Salvario/Santa Rita:** Gelati d'Antan, Mara dei Boschi, seconda sede di Aria
 
-**Zona Lungo Po:** Nivà (Piazza Vittorio - vista fiume impagabile)
+**Zona Lungo Po:** Nivà (Piazza Vittorio Veneto 8 - vista fiume impagabile)
 
 ## I Gusti Iconici da Provare Assolutamente
 
@@ -164,7 +168,7 @@ Quasi tutte le gelaterie moderne offrono opzioni:
 
 **Vuoi un gelato vegano eccellente?** → Aria (linea dedicata)
 
-**Cerchi qualità diffusa in tutta la città?** → Mara dei Boschi (3 sedi), Alberto Marchetti (5 sedi)
+**Cerchi qualità diffusa in tutta la città?** → Mara dei Boschi (3 sedi), Alberto Marchetti (6 sedi)
 
 ## Conclusione
 
