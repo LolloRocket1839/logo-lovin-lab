@@ -2,6 +2,37 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "migliori-gelaterie-torino-studenti",
+    category: "students",
+    date: "2025-11-07",
+    author: "Team Jungle Rent",
+    image: "/images/gelato-italiano.jpg",
+    readTime: 18,
+    content: "migliori-gelaterie-torino-studenti",
+    translations: {
+      it: {
+        title: "Le Migliori Gelaterie di Torino per Studenti 2025: Guida Completa",
+        excerpt: "Scopri le migliori gelaterie artigianali di Torino: da Papalele (2° in Italia) ad Alberto Marchetti, Aria e Mara dei Boschi. Prezzi, indirizzi, gusti imperdibili e consigli per studenti universitari.",
+        seo: {
+          title: "Migliori Gelaterie Torino per Studenti 2025: Guida Completa | Jungle Rent",
+          description: "Scopri le migliori gelaterie di Torino per studenti 2025: da Papalele (2° in Italia) ad Alberto Marchetti, Aria e Mara dei Boschi. Prezzi €2.50-3.50, indirizzi e gusti da provare assolutamente.",
+          keywords: ["migliori gelaterie torino", "gelato artigianale torino", "gelaterie studenti torino", "papalele torino", "alberto marchetti gelato", "aria gelateria", "dove mangiare gelato torino", "gelaterie vicino politecnico", "gelato artigianale", "gelaterie centro torino"]
+        },
+        tags: ["studenti", "gelato", "torino", "food", "gelaterie", "guida"]
+      },
+      en: {
+        title: "Best Gelaterias in Turin for Students 2025: Complete Guide",
+        excerpt: "Discover the best artisan gelaterias in Turin: from Papalele (2nd in Italy) to Alberto Marchetti, Aria and Mara dei Boschi. Prices, addresses, must-try flavors and tips for university students.",
+        seo: {
+          title: "Best Gelaterias Turin for Students 2025: Complete Guide | Jungle Rent",
+          description: "Discover the best gelaterias in Turin for students 2025: from Papalele (2nd in Italy) to Alberto Marchetti, Aria and Mara dei Boschi. Prices €2.50-3.50, addresses and must-try flavors.",
+          keywords: ["best gelaterias turin", "artisan gelato turin", "gelaterias students turin", "papalele turin", "alberto marchetti gelato", "aria gelateria", "where to eat gelato turin", "gelaterias near politecnico"]
+        },
+        tags: ["students", "gelato", "turin", "food", "gelaterias", "guide"]
+      }
+    }
+  },
+  {
     slug: "dove-vivere-torino-studenti-politecnico",
     category: "students",
     date: "2025-11-06",
