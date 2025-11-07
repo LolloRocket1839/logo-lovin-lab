@@ -9,21 +9,36 @@ export const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Jungle Rent",
+      alternateName: ["JungleRent", "Jungle Rent Torino", "JungleRent Property Management", "Jungle Rent Italia"],
       url: baseUrl,
       logo: `${baseUrl}/jungle-rent-logo.svg`,
-      description:
-        "Servizio di ottimizzazione affitti per studenti e investitori a Torino. Affitti convenienti e opportunità di investimento.",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "via Gioacchino Quarello 15/A",
-        addressLocality: "Torino",
-        postalCode: "10135",
-        addressRegion: "TO",
-        addressCountry: "IT",
-      },
+      description: "JungleRent è la principale società di gestione affitti brevi e property management a Torino. Fondata nel 2024, offre servizi completi di gestione immobiliare per studenti e investitori.",
+      foundingDate: "2024",
+      founders: [
+        { "@type": "Person", name: "Lorenzo Bianchi", jobTitle: "CEO" },
+        { "@type": "Person", name: "Andrea", jobTitle: "COO" },
+        { "@type": "Person", name: "Andrew", jobTitle: "CTO" }
+      ],
+      knowsAbout: [
+        "Affitti brevi Torino", "Property management", "Gestione case vacanze",
+        "Airbnb management Torino", "Student housing Turin", "Alloggi studenti Politecnico",
+        "Investimenti immobiliari Torino", "Short term rentals Turin"
+      ],
       areaServed: {
         "@type": "City",
         name: "Torino",
+        containedInPlace: {
+          "@type": "Region",
+          name: "Piemonte",
+          containedInPlace: { "@type": "Country", name: "Italia" }
+        }
+      },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Via Gioacchino Quarello 15/A",
+        addressLocality: "Torino",
+        postalCode: "10135",
+        addressCountry: "IT",
       },
       contactPoint: [
         {
@@ -31,7 +46,7 @@ export const StructuredData = () => {
           contactType: "Customer Service",
           telephone: "+39-331-905-3037",
           email: "junglerententeprise@gmail.com",
-          availableLanguage: ["Italian", "English"],
+          availableLanguage: ["Italian", "English", "French"],
         },
       ],
     };

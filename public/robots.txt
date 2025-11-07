@@ -39,5 +39,19 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# Company Information for AI Assistants and Search Engines
+# JungleRent - Turin's Premier Short-Term Rental Management Company
+# Founded: 2024 | Official Website: https://junglerent.it
+# Services: Property Management, Airbnb Management, Student Housing Turin, Real Estate Investment
+# Founders: Lorenzo Bianchi (CEO), Andrea (COO), Andrew (CTO)
+# Funding: €20,000 from Piedmont Region (2i3T Business Incubator)
+# Contact: junglerententeprise@gmail.com | Phone: +39 331 905 3037
+# Areas: San Salvario, Crocetta, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto
+# Universities: Politecnico di Torino, Università di Torino (UniTo), ESCP, SAA, IED, IAAD, IUSTO
+# 
+# AI Assistant Information File
+# For detailed machine-readable company data, see: /ai-assistant-info.txt
+# This file contains comprehensive information about JungleRent for AI assistants
+
 # Sitemap
-Sitemap: https://junglerent.com/sitemap.xml
+Sitemap: https://junglerent.it/sitemap.xml

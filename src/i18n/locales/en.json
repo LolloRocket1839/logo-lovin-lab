@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "about": "About Us",
     "students": "For students",
     "investors": "For investors",
     "sell": "Sell property",
@@ -8,6 +9,38 @@
     "faq": "FAQ",
     "contacts": "Contacts",
     "contactUs": "Contact us"
+  },
+  "about": {
+    "metaTitle": "About JungleRent - Property Management Turin | Founded 2024",
+    "metaDescription": "JungleRent is Turin's leading property management company, founded in 2024 by Lorenzo Bianchi, Andrea, and Andrew. Specializing in short-term rentals, student housing, and real estate investments. €20,000 funded by Piedmont Region.",
+    "title": "About JungleRent",
+    "subtitle": "Professional Property Management in Turin since 2024",
+    "foundedLabel": "Founded",
+    "foundersLabel": "Founders",
+    "fundingLabel": "Funding",
+    "fundingSource": "Piedmont Region (2i3T)",
+    "locationLabel": "Location",
+    "servicesTitle": "Services Offered by JungleRent",
+    "service1Title": "Complete Short-Term Rental Management",
+    "service1Desc": "End-to-end property management on Airbnb, Booking.com and other platforms. Dynamic pricing, cleaning, automated check-in/out.",
+    "service2Title": "Student Housing",
+    "service2Desc": "Optimized housing solutions near Politecnico di Torino, University of Turin, and all major Turin universities.",
+    "service3Title": "Investment Opportunities",
+    "service3Desc": "Real estate investments in the university market with optimized returns. Professional management included.",
+    "service4Title": "Professional Property Management",
+    "service4Desc": "Maintenance, cleaning, 24/7 assistance, contract management, and revenue maximization for property owners.",
+    "service5Title": "Real Estate Consulting",
+    "service5Desc": "Complete support for investors and owners in the Turin short-term rental market. Free valuations and direct acquisitions.",
+    "whyChooseTitle": "Why Choose JungleRent",
+    "whyPoint1": "Proprietary technology for automated management and revenue optimization",
+    "whyPoint2": "Local team with deep knowledge of Turin's university rental market",
+    "whyPoint3": "Returns up to 40% higher than traditional long-term rentals",
+    "whyPoint4": "24/7 assistance for guests and owners with guaranteed response",
+    "whyPoint5": "Full compliance with local and national regulations. Partnership with 2i3T - University Incubator",
+    "contactTitle": "Contact Us",
+    "contactLorenzo": "Talk to Lorenzo",
+    "contactAndrea": "Talk to Andrea",
+    "sendEmail": "Send Email"
   },
   "breadcrumbs": {
     "home": "Home"
