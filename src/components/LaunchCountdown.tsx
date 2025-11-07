@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 export const LaunchCountdown = () => {
   const { t } = useTranslation();
-  const launchDate = new Date('2026-02-01T00:00:00');
+  const launchDate = new Date('2026-03-01T00:00:00');
   
   const calculateTimeLeft = () => {
     const difference = launchDate.getTime() - new Date().getTime();
