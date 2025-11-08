@@ -577,6 +577,11 @@
     "viewAll": "Scopri tutte le risorse",
     "readMore": "Leggi l'articolo",
     "share": "Condividi",
+    "shareVia": "Condividi tramite",
+    "shareWhatsApp": "Condividi su WhatsApp",
+    "copyLink": "Copia link",
+    "linkCopied": "Link copiato!",
+    "shareNative": "Altre opzioni...",
     "relatedPosts": "Articoli correlati",
     "categories": {
       "all": "Tutti",

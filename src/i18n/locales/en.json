@@ -803,6 +803,11 @@
     "viewAll": "View all resources",
     "readMore": "Read article",
     "share": "Share",
+    "shareVia": "Share via",
+    "shareWhatsApp": "Share on WhatsApp",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!",
+    "shareNative": "More options...",
     "relatedPosts": "Related articles",
     "categories": {
       "all": "All",

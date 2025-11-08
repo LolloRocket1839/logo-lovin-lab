@@ -6,6 +6,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCTA } from "@/components/blog/BlogCTA";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
+import { ShareButton } from "@/components/blog/ShareButton";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { Calendar, Clock, Share2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -399,12 +400,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                 <span>{post.author}</span>
               </div>
 
-              <div className="flex gap-2">
-                <Button variant="outline" size="sm" onClick={handleShare}>
-                  <Share2 className="w-4 h-4 mr-2" />
-                  {t('blog.share')}
-                </Button>
-              </div>
+              <ShareButton 
+                title={translatedData.title}
+                excerpt={translatedData.excerpt}
+                url={window.location.href}
+              />
             </header>
 
             {/* Featured Image */}
