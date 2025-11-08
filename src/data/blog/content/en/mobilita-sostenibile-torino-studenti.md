@@ -129,9 +129,10 @@ To move effectively in Turin, install these essential apps:
 
 ### Public transport apps
 
+- **[GTT - TO Move](https://www.gtt.to.it/cms/app)**: Official GTT app to buy tickets and passes directly from your smartphone. Supports credit card, Satispay and Apple Pay payments. Tickets are in QR Code format and you can validate them on the new validators. Compatible with NFC technology to read your BIP card. Download for [Android](https://play.google.com/store/apps/details?id=it.to.gtt.tomove) or [iOS](https://apps.apple.com/it/app/to-move/id1403883785)
 - **[Moovit](https://moovitapp.com)**: Real-time multimodal route planning, alerts on delays and route changes
 - **[Google Maps](https://maps.google.it)**: Integrates all means of transport, including sharing and PT, with accurate travel times
-- **[MTM Mobilità](https://www.mtm.torino.it)**: Official app for purchasing GTT tickets and passes
+- **[MTM Mobilità](https://www.mtm.torino.it)**: Information on GTT timetables and routes
 
 ### Bike sharing and e-scooter apps
 
@@ -141,6 +142,7 @@ To move effectively in Turin, install these essential apps:
 ### Information portals
 
 - **[Muoversi a Torino](https://www.muoversiatorino.it)**: Official Turin mobility portal
+- **[MaaS ToMove](https://www.muoversiatorino.it/it/maas-to-move/)**: Integrated mobility project (MaaS - Mobility as a Service) developing a "Super App" to plan, book and pay for different transport services (public transport, sharing, taxi) from a single platform
 - **[University System](https://www.suedp.it)**: Information on agreements and services for students
 
 ## Practical tips for students

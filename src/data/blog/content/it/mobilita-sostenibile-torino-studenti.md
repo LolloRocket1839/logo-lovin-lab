@@ -129,9 +129,10 @@ Per muoverti efficacemente a Torino, installa queste app indispensabili:
 
 ### App per trasporto pubblico
 
+- **[GTT - TO Move](https://www.gtt.to.it/cms/app)**: App ufficiale GTT per acquistare biglietti e abbonamenti direttamente dallo smartphone. Supporta pagamenti con carta di credito, Satispay e Apple Pay. I biglietti sono in formato QR Code e puoi validarli sulle nuove validatrici. Compatibile con tecnologia NFC per leggere la tua BIP card. Scarica per [Android](https://play.google.com/store/apps/details?id=it.to.gtt.tomove) o [iOS](https://apps.apple.com/it/app/to-move/id1403883785)
 - **[Moovit](https://moovitapp.com)**: Pianificazione percorsi multimodali in tempo reale, avvisi su ritardi e variazioni di percorso
 - **[Google Maps](https://maps.google.it)**: Integra tutti i mezzi di trasporto, inclusi sharing e TPL, con tempi di percorrenza accurati
-- **[MTM Mobilità](https://www.mtm.torino.it)**: App ufficiale per acquisto biglietti e abbonamenti GTT
+- **[MTM Mobilità](https://www.mtm.torino.it)**: Informazioni su orari e percorsi GTT
 
 ### App per bike sharing e e-scooter
 
@@ -141,6 +142,7 @@ Per muoverti efficacemente a Torino, installa queste app indispensabili:
 ### Portali informativi
 
 - **[Muoversi a Torino](https://www.muoversiatorino.it)**: Portale ufficiale della mobilità torinese
+- **[MaaS ToMove](https://www.muoversiatorino.it/it/maas-to-move/)**: Progetto di mobilità integrata (MaaS - Mobility as a Service) che sta sviluppando una "Super App" per pianificare, prenotare e pagare diversi servizi di trasporto (TPL, sharing, taxi) da un'unica piattaforma
 - **[Sistema Universitario](https://www.suedp.it)**: Informazioni su convenzioni e servizi per studenti
 
 ## Consigli pratici per studenti
