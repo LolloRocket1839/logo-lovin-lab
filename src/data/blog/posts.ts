@@ -2,6 +2,101 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "mobilita-sostenibile-torino-studenti",
+    category: "students",
+    date: "2025-11-08",
+    author: "Team Jungle Rent",
+    image: "/images/torino-transport.jpg",
+    readTime: 20,
+    content: "mobilita-sostenibile-torino-studenti",
+    translations: {
+      it: {
+        title: "Mobilità sostenibile a Torino per studenti: guida completa 2025",
+        excerpt: "Scopri come muoverti a Torino: trasporti GTT, piste ciclabili, sharing mobility, abbonamenti under 26. Guida completa con tutti i link utili e strategie per studenti universitari.",
+        seo: {
+          title: "Mobilità Torino Studenti 2025: GTT, Bici, Sharing | Guida Completa",
+          description: "Guida completa mobilità sostenibile Torino per studenti: trasporti GTT, 295km piste ciclabili, abbonamenti under 26, Piemove gratuito, sharing mobility. Tutti i link e app utili.",
+          keywords: [
+            "trasporti Torino studenti",
+            "GTT Torino abbonamenti",
+            "piste ciclabili Torino",
+            "mobilità sostenibile Torino",
+            "abbonamento under 26 Torino",
+            "Piemove trasporti gratuiti",
+            "metropolitana Torino M1",
+            "Politecnico Torino trasporti",
+            "università Torino collegamenti",
+            "bike sharing Torino",
+            "monopattini elettrici Torino",
+            "Dott Torino",
+            "Lime Torino",
+            "Moovit Torino",
+            "smart card universitaria trasporti",
+            "come muoversi Torino studenti",
+            "mezzi pubblici Torino prezzi",
+            "bici Torino studenti",
+            "zone 30 Torino",
+            "app trasporti Torino"
+          ]
+        },
+        tags: [
+          "studenti",
+          "trasporti",
+          "mobilità",
+          "GTT",
+          "biciclette",
+          "sharing mobility",
+          "abbonamenti",
+          "Politecnico",
+          "UniTo",
+          "guida pratica"
+        ]
+      },
+      en: {
+        title: "Sustainable mobility in Turin for students: complete guide 2025",
+        excerpt: "Discover how to move around Turin: GTT transport, bike lanes, sharing mobility, under 26 passes. Complete guide with all useful links and strategies for university students.",
+        seo: {
+          title: "Turin Mobility Students 2025: GTT, Bikes, Sharing | Complete Guide",
+          description: "Complete guide to sustainable mobility in Turin for students: GTT transport, 295km bike lanes, under 26 passes, free Piemove, sharing mobility. All useful links and apps.",
+          keywords: [
+            "transport Turin students",
+            "GTT Turin passes",
+            "bike lanes Turin",
+            "sustainable mobility Turin",
+            "under 26 pass Turin",
+            "Piemove free transport",
+            "metro Turin M1",
+            "Politecnico Turin transport",
+            "university Turin connections",
+            "bike sharing Turin",
+            "electric scooters Turin",
+            "Dott Turin",
+            "Lime Turin",
+            "Moovit Turin",
+            "university smart card transport",
+            "how to move Turin students",
+            "public transport Turin prices",
+            "bikes Turin students",
+            "zone 30 Turin",
+            "transport apps Turin"
+          ]
+        },
+        tags: [
+          "students",
+          "transport",
+          "mobility",
+          "GTT",
+          "bicycles",
+          "sharing mobility",
+          "passes",
+          "Politecnico",
+          "UniTo",
+          "practical guide"
+        ]
+      }
+    }
+  },
+  {
     slug: "mutui-investitori-immobiliari-guida-completa",
     category: "investors",
     date: "2025-11-07",
