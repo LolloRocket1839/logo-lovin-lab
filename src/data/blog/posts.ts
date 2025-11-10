@@ -2,6 +2,109 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "torino-novembre-turisti",
+    category: "students",
+    date: "2025-11-10",
+    author: "Team Jungle Rent",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 28,
+    content: "torino-novembre-turisti",
+    translations: {
+      it: {
+        title: "Torino a Novembre 2025: Dove Tennis, Cinema, Arte e Tartufi Convergono nel Mese d'Oro dell'Autunno",
+        excerpt: "Scopri perché novembre è il mese culturalmente più denso di Torino: ATP Finals, Film Festival, Artissima art fair, stagione del tartufo bianco e l'atmosfera unica dell'autunno piemontese.",
+        seo: {
+          title: "Torino a Novembre 2025: ATP Finals, Film Festival, Artissima | Guida Completa",
+          description: "Guida novembre Torino 2025: ATP Finals tennis (9-16 nov), Torino Film Festival 43ª edizione, Artissima contemporary art, tartufo bianco Alba. Eventi, cultura, gastronomia autunnale.",
+          keywords: [
+            "torino novembre 2025",
+            "atp finals torino 2025",
+            "torino film festival 2025",
+            "artissima torino 2025",
+            "eventi torino novembre",
+            "tartufo bianco alba novembre",
+            "cosa fare torino novembre",
+            "torino art week 2025",
+            "nitto atp finals torino",
+            "cinema torino novembre",
+            "paul newman retrospective",
+            "contemporary art turin",
+            "white truffle season",
+            "fiera tartufo alba",
+            "inalpi arena torino",
+            "teatro regio film festival",
+            "paratissima torino",
+            "ogr torino mostre",
+            "musei reali torino",
+            "november events turin",
+            "torino autunno",
+            "cultura torino novembre",
+            "tennis torino",
+            "arte contemporanea torino"
+          ]
+        },
+        tags: [
+          "torino",
+          "novembre",
+          "eventi",
+          "atp finals",
+          "film festival",
+          "artissima",
+          "arte",
+          "tartufo",
+          "cultura",
+          "turismo"
+        ]
+      },
+      en: {
+        title: "Turin in November 2025: Where Tennis, Cinema, Art, and Truffles Converge in Autumn's Golden Month",
+        excerpt: "Discover why November is Turin's most culturally dense month: ATP Finals, Film Festival, Artissima art fair, white truffle season and the unique atmosphere of Piedmontese autumn.",
+        seo: {
+          title: "Turin November 2025: ATP Finals, Film Festival, Artissima | Complete Guide",
+          description: "Turin November 2025 guide: ATP Finals tennis (Nov 9-16), Torino Film Festival 43rd edition, Artissima contemporary art, Alba white truffle. Events, culture, autumn gastronomy.",
+          keywords: [
+            "turin november 2025",
+            "atp finals turin 2025",
+            "torino film festival 2025",
+            "artissima turin 2025",
+            "events turin november",
+            "alba white truffle november",
+            "things to do turin november",
+            "turin art week 2025",
+            "nitto atp finals turin",
+            "cinema turin november",
+            "paul newman retrospective",
+            "contemporary art turin",
+            "white truffle season",
+            "alba truffle fair",
+            "inalpi arena turin",
+            "teatro regio film festival",
+            "paratissima turin",
+            "ogr turin exhibitions",
+            "musei reali turin",
+            "november events turin",
+            "turin autumn",
+            "culture turin november",
+            "tennis turin",
+            "contemporary art turin"
+          ]
+        },
+        tags: [
+          "turin",
+          "november",
+          "events",
+          "atp finals",
+          "film festival",
+          "artissima",
+          "art",
+          "truffle",
+          "culture",
+          "tourism"
+        ]
+      }
+    }
+  },
+  {
     slug: "torino-dicembre-turisti",
     category: "students",
     date: "2025-11-10",
