@@ -28,7 +28,7 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
       title: t('blog.cta.students.title'),
       description: t('blog.cta.students.description'),
       icon: Bell,
-      buttonText: t('student.joinWaitlist'),
+      buttonText: "Find a room",
       action: () => setShowWaitlist(true)
     },
     investors: {
