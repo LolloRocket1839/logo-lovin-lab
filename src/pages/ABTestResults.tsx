@@ -7,10 +7,12 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { supabase } from "@/integrations/supabase/client";
 import { Helmet } from "react-helmet";
-import { TrendingUp, Users, MousePointer, CalendarIcon } from "lucide-react";
+import { TrendingUp, Users, MousePointer, CalendarIcon, AlertCircle, CheckCircle2 } from "lucide-react";
 import { format, subDays, startOfDay, endOfDay } from "date-fns";
 import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
+import { Badge } from "@/components/ui/badge";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface ABTestResult {
   cta_type: string;
@@ -18,6 +20,13 @@ interface ABTestResult {
   impressions: number;
   clicks: number;
   ctr_percentage: number;
+}
+
+interface StatisticalSignificance {
+  isSignificant: boolean;
+  pValue: number;
+  confidenceLevel: number;
+  sampleSizeAdequate: boolean;
 }
 
 const ABTestResults = () => {
@@ -105,6 +114,76 @@ const ABTestResults = () => {
     );
   };
 
+  const calculateStatisticalSignificance = (
+    variationA: ABTestResult,
+    variationB: ABTestResult
+  ): StatisticalSignificance => {
+    const n1 = variationA.impressions;
+    const n2 = variationB.impressions;
+    const x1 = variationA.clicks;
+    const x2 = variationB.clicks;
+
+    // Check if sample sizes are adequate (at least 100 impressions per variation)
+    const sampleSizeAdequate = n1 >= 100 && n2 >= 100;
+
+    if (n1 === 0 || n2 === 0) {
+      return {
+        isSignificant: false,
+        pValue: 1,
+        confidenceLevel: 0,
+        sampleSizeAdequate: false,
+      };
+    }
+
+    // Calculate proportions
+    const p1 = x1 / n1;
+    const p2 = x2 / n2;
+
+    // Pooled proportion
+    const pPool = (x1 + x2) / (n1 + n2);
+
+    // Standard error
+    const se = Math.sqrt(pPool * (1 - pPool) * (1 / n1 + 1 / n2));
+
+    if (se === 0) {
+      return {
+        isSignificant: false,
+        pValue: 1,
+        confidenceLevel: 0,
+        sampleSizeAdequate,
+      };
+    }
+
+    // Z-score
+    const z = Math.abs((p1 - p2) / se);
+
+    // Calculate p-value (two-tailed test)
+    const pValue = 2 * (1 - normalCDF(z));
+
+    // Significant if p-value < 0.05 (95% confidence)
+    const isSignificant = pValue < 0.05 && sampleSizeAdequate;
+    const confidenceLevel = (1 - pValue) * 100;
+
+    return {
+      isSignificant,
+      pValue,
+      confidenceLevel: Math.min(confidenceLevel, 99.9),
+      sampleSizeAdequate,
+    };
+  };
+
+  // Approximate normal CDF using error function approximation
+  const normalCDF = (x: number): number => {
+    const t = 1 / (1 + 0.2316419 * Math.abs(x));
+    const d = 0.3989423 * Math.exp(-x * x / 2);
+    const prob =
+      d *
+      t *
+      (0.3193815 +
+        t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+    return x > 0 ? 1 - prob : prob;
+  };
+
   const formatCTAType = (type: string) => {
     return type.charAt(0).toUpperCase() + type.slice(1);
   };
@@ -185,16 +264,73 @@ const ABTestResults = () => {
             <div className="space-y-8">
               {Object.entries(groupedResults).map(([ctaType, variations]) => {
                 const winner = getWinner(variations);
+                const significance =
+                  variations.length === 2
+                    ? calculateStatisticalSignificance(variations[0], variations[1])
+                    : null;
                 
                 return (
                   <Card key={ctaType}>
                     <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        {formatCTAType(ctaType)} CTA
-                      </CardTitle>
-                      <CardDescription>
-                        Comparing variations A and B
-                      </CardDescription>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <CardTitle className="flex items-center gap-2">
+                            {formatCTAType(ctaType)} CTA
+                          </CardTitle>
+                          <CardDescription>
+                            Comparing variations A and B
+                          </CardDescription>
+                        </div>
+                        
+                        {significance && (
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <div>
+                                  {significance.isSignificant ? (
+                                    <Badge variant="default" className="gap-1">
+                                      <CheckCircle2 className="w-3 h-3" />
+                                      Significant
+                                    </Badge>
+                                  ) : (
+                                    <Badge variant="secondary" className="gap-1">
+                                      <AlertCircle className="w-3 h-3" />
+                                      {significance.sampleSizeAdequate
+                                        ? "Not Significant"
+                                        : "Need More Data"}
+                                    </Badge>
+                                  )}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent side="left" className="max-w-xs">
+                                <div className="space-y-1 text-sm">
+                                  <p className="font-semibold">Statistical Analysis</p>
+                                  <p>
+                                    Confidence: {significance.confidenceLevel.toFixed(1)}%
+                                  </p>
+                                  <p>P-value: {significance.pValue.toFixed(4)}</p>
+                                  {!significance.sampleSizeAdequate && (
+                                    <p className="text-muted-foreground">
+                                      At least 100 impressions per variation needed for
+                                      reliable results
+                                    </p>
+                                  )}
+                                  {significance.isSignificant ? (
+                                    <p className="text-muted-foreground">
+                                      The difference is statistically significant (p &lt;
+                                      0.05)
+                                    </p>
+                                  ) : significance.sampleSizeAdequate ? (
+                                    <p className="text-muted-foreground">
+                                      The difference may be due to random chance
+                                    </p>
+                                  ) : null}
+                                </div>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        )}
+                      </div>
                     </CardHeader>
                     <CardContent>
                       <div className="grid md:grid-cols-2 gap-6">
