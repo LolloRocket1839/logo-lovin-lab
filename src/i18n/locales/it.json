@@ -595,19 +595,40 @@
     },
     "cta": {
       "students": {
-        "title": "Inizia la Tua Ricerca Oggi",
-        "description": "Unisciti a 100+ studenti che trovano stanze convenienti vicino a Politecnico e UniTo",
-        "button": "Trova una stanza"
+        "A": {
+          "title": "Inizia la Tua Ricerca Oggi",
+          "description": "Unisciti a 100+ studenti che trovano stanze convenienti vicino a Politecnico e UniTo",
+          "button": "Trova una stanza"
+        },
+        "B": {
+          "title": "La Tua Stanza Perfetta ti Aspetta",
+          "description": "Accedi per primo alle stanze verificate vicino al campus. 100+ studenti già iscritti",
+          "button": "Iscriviti Ora - È Gratis"
+        }
       },
       "investors": {
-        "title": "Guadagna il 7-9% Annuo",
-        "description": "Investi nel mercato immobiliare universitario torinese con gestione completa inclusa",
-        "button": "Scarica la Guida"
+        "A": {
+          "title": "Guadagna il 7-9% Annuo",
+          "description": "Investi nel mercato immobiliare universitario torinese con gestione completa inclusa",
+          "button": "Scarica la Guida"
+        },
+        "B": {
+          "title": "Trasforma €100k in €7-9k di Rendita Annua",
+          "description": "Zero gestione immobiliare. Selezione inquilini completa. Rendimenti garantiti nel distretto universitario",
+          "button": "Prenota Consulenza Gratuita"
+        }
       },
       "sellers": {
-        "title": "Vendi in 60-90 Giorni, Zero Commissioni",
-        "description": "Ottieni una valutazione professionale in 48h e risparmia €6.000-10.000 di commissioni",
-        "button": "Richiedi Valutazione Gratuita"
+        "A": {
+          "title": "Vendi in 60-90 Giorni, Zero Commissioni",
+          "description": "Ottieni una valutazione professionale in 48h e risparmia €6.000-10.000 di commissioni",
+          "button": "Richiedi Valutazione Gratuita"
+        },
+        "B": {
+          "title": "Risparmia €10k di Commissioni, Vendi Più Veloce",
+          "description": "Valutazione professionale in 48h. Rete diretta di acquirenti. Media 75 giorni vs 180 del settore",
+          "button": "Ottieni Offerta in Contanti"
+        }
       }
     },
     "meta": {

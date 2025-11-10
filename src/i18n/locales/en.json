@@ -821,19 +821,40 @@
     },
     "cta": {
       "students": {
-        "title": "Start Your Search Today",
-        "description": "Join 100+ students finding affordable rooms near Politecnico and UniTo",
-        "button": "Find a room"
+        "A": {
+          "title": "Start Your Search Today",
+          "description": "Join 100+ students finding affordable rooms near Politecnico and UniTo",
+          "button": "Find a room"
+        },
+        "B": {
+          "title": "Your Perfect Room is Waiting",
+          "description": "Be first to access verified student housing near campus. Join 100+ students already signed up",
+          "button": "Join Now - It's Free"
+        }
       },
       "investors": {
-        "title": "Earn 7-9% Annual Returns",
-        "description": "Invest in Turin's university real estate market with full property management included",
-        "button": "Get Investment Guide"
+        "A": {
+          "title": "Earn 7-9% Annual Returns",
+          "description": "Invest in Turin's university real estate market with full property management included",
+          "button": "Get Investment Guide"
+        },
+        "B": {
+          "title": "Turn €100k into €7-9k Annual Income",
+          "description": "Zero property management hassle. Full tenant screening. Guaranteed yields in Turin's university district",
+          "button": "Book Free Consultation"
+        }
       },
       "sellers": {
-        "title": "Sell in 60-90 Days, Zero Commission",
-        "description": "Get a professional valuation in 48h and save €6,000-10,000 in agency fees",
-        "button": "Get Free Valuation Now"
+        "A": {
+          "title": "Sell in 60-90 Days, Zero Commission",
+          "description": "Get a professional valuation in 48h and save €6,000-10,000 in agency fees",
+          "button": "Get Free Valuation Now"
+        },
+        "B": {
+          "title": "Save €10k in Commissions, Sell Faster",
+          "description": "48-hour professional valuation. Direct buyer network. Average 75 days to close vs 180 industry average",
+          "button": "Get Your Cash Offer"
+        }
       }
     },
     "meta": {

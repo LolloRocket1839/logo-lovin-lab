@@ -1,0 +1,180 @@
+import { useEffect, useState } from "react";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
+import { Helmet } from "react-helmet";
+import { TrendingUp, Users, MousePointer } from "lucide-react";
+
+interface ABTestResult {
+  cta_type: string;
+  variation: string;
+  impressions: number;
+  clicks: number;
+  ctr_percentage: number;
+}
+
+const ABTestResults = () => {
+  const [results, setResults] = useState<ABTestResult[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchResults();
+  }, []);
+
+  const fetchResults = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('ab_test_results')
+        .select('*')
+        .order('cta_type', { ascending: true })
+        .order('variation', { ascending: true });
+
+      if (error) throw error;
+      setResults(data || []);
+    } catch (error) {
+      console.error('Error fetching A/B test results:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const groupedResults = results.reduce((acc, result) => {
+    if (!acc[result.cta_type]) {
+      acc[result.cta_type] = [];
+    }
+    acc[result.cta_type].push(result);
+    return acc;
+  }, {} as Record<string, ABTestResult[]>);
+
+  const getWinner = (variations: ABTestResult[]) => {
+    if (variations.length < 2) return null;
+    return variations.reduce((prev, current) => 
+      current.ctr_percentage > prev.ctr_percentage ? current : prev
+    );
+  };
+
+  const formatCTAType = (type: string) => {
+    return type.charAt(0).toUpperCase() + type.slice(1);
+  };
+
+  return (
+    <main className="min-h-screen bg-background">
+      <Helmet>
+        <title>A/B Test Results - Jungle Rent</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="container mx-auto px-4 pt-24 pb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold mb-2">A/B Test Results</h1>
+            <p className="text-muted-foreground">
+              Compare CTA performance across different variations
+            </p>
+          </div>
+
+          {loading ? (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">Loading results...</p>
+            </div>
+          ) : results.length === 0 ? (
+            <Card>
+              <CardContent className="py-12 text-center">
+                <p className="text-muted-foreground">
+                  No A/B test data available yet. Data will appear as users interact with CTAs.
+                </p>
+              </CardContent>
+            </Card>
+          ) : (
+            <div className="space-y-8">
+              {Object.entries(groupedResults).map(([ctaType, variations]) => {
+                const winner = getWinner(variations);
+                
+                return (
+                  <Card key={ctaType}>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        {formatCTAType(ctaType)} CTA
+                      </CardTitle>
+                      <CardDescription>
+                        Comparing variations A and B
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        {variations.map((result) => {
+                          const isWinner = winner?.variation === result.variation;
+                          
+                          return (
+                            <div
+                              key={result.variation}
+                              className={`p-6 rounded-lg border-2 ${
+                                isWinner 
+                                  ? 'border-primary bg-primary/5' 
+                                  : 'border-border'
+                              }`}
+                            >
+                              <div className="flex items-center justify-between mb-4">
+                                <h3 className="text-xl font-semibold">
+                                  Variation {result.variation}
+                                </h3>
+                                {isWinner && (
+                                  <span className="px-3 py-1 bg-primary text-primary-foreground text-sm rounded-full">
+                                    Winner
+                                  </span>
+                                )}
+                              </div>
+                              
+                              <div className="space-y-4">
+                                <div className="flex items-center gap-3">
+                                  <div className="p-2 rounded-lg bg-muted">
+                                    <Users className="w-5 h-5" />
+                                  </div>
+                                  <div>
+                                    <p className="text-sm text-muted-foreground">Impressions</p>
+                                    <p className="text-2xl font-bold">{result.impressions}</p>
+                                  </div>
+                                </div>
+                                
+                                <div className="flex items-center gap-3">
+                                  <div className="p-2 rounded-lg bg-muted">
+                                    <MousePointer className="w-5 h-5" />
+                                  </div>
+                                  <div>
+                                    <p className="text-sm text-muted-foreground">Clicks</p>
+                                    <p className="text-2xl font-bold">{result.clicks}</p>
+                                  </div>
+                                </div>
+                                
+                                <div className="flex items-center gap-3">
+                                  <div className="p-2 rounded-lg bg-muted">
+                                    <TrendingUp className="w-5 h-5" />
+                                  </div>
+                                  <div>
+                                    <p className="text-sm text-muted-foreground">CTR</p>
+                                    <p className="text-2xl font-bold">{result.ctr_percentage}%</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+      
+      <Footer />
+    </main>
+  );
+};
+
+export default ABTestResults;

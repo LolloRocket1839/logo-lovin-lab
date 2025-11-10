@@ -2,8 +2,9 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Bell, TrendingUp } from "lucide-react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CONTACTS } from "@/lib/contacts";
+import { useABTest } from "@/hooks/useABTest";
 
 interface BlogCTAProps {
   type: 'students' | 'investors' | 'sellers';
@@ -12,8 +13,14 @@ interface BlogCTAProps {
 export const BlogCTA = ({ type }: BlogCTAProps) => {
   const { t } = useTranslation();
   const [showWaitlist, setShowWaitlist] = useState(false);
+  const { variation, trackImpression, trackClick } = useABTest(type);
+
+  useEffect(() => {
+    trackImpression();
+  }, [trackImpression]);
 
   const handleWhatsApp = () => {
+    trackClick();
     const message = encodeURIComponent(
       type === 'sellers' 
         ? t('seller.contactMessage')
@@ -23,26 +30,31 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
 
+  const handleWaitlistOpen = () => {
+    trackClick();
+    setShowWaitlist(true);
+  };
+
   const ctaConfig = {
     students: {
-      title: t('blog.cta.students.title'),
-      description: t('blog.cta.students.description'),
+      title: t(`blog.cta.students.${variation}.title`),
+      description: t(`blog.cta.students.${variation}.description`),
       icon: Bell,
-      buttonText: t('blog.cta.students.button'),
-      action: () => setShowWaitlist(true)
+      buttonText: t(`blog.cta.students.${variation}.button`),
+      action: handleWaitlistOpen
     },
     investors: {
-      title: t('blog.cta.investors.title'),
-      description: t('blog.cta.investors.description'),
+      title: t(`blog.cta.investors.${variation}.title`),
+      description: t(`blog.cta.investors.${variation}.description`),
       icon: TrendingUp,
-      buttonText: t('blog.cta.investors.button'),
+      buttonText: t(`blog.cta.investors.${variation}.button`),
       action: handleWhatsApp
     },
     sellers: {
-      title: t('blog.cta.sellers.title'),
-      description: t('blog.cta.sellers.description'),
+      title: t(`blog.cta.sellers.${variation}.title`),
+      description: t(`blog.cta.sellers.${variation}.description`),
       icon: MessageCircle,
-      buttonText: t('blog.cta.sellers.button'),
+      buttonText: t(`blog.cta.sellers.${variation}.button`),
       action: handleWhatsApp
     }
   };
