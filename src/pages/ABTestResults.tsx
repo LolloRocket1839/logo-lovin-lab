@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import type { DateRange } from "react-day-picker";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface ABTestResult {
   cta_type: string;
@@ -30,12 +31,20 @@ interface StatisticalSignificance {
 }
 
 const ABTestResults = () => {
+  const isMobile = useIsMobile();
   const [results, setResults] = useState<ABTestResult[]>([]);
   const [loading, setLoading] = useState(true);
   const [dateRange, setDateRange] = useState<DateRange | undefined>({
     from: subDays(new Date(), 7),
     to: new Date(),
   });
+
+  const setQuickFilter = (days: number) => {
+    setDateRange({
+      from: subDays(new Date(), days),
+      to: new Date(),
+    });
+  };
 
   useEffect(() => {
     fetchResults();
@@ -197,71 +206,107 @@ const ABTestResults = () => {
       
       <Navigation />
       
-      <div className="container mx-auto px-4 pt-24 pb-16">
+      <div className="container mx-auto px-3 sm:px-4 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-8">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+          <div className="mb-6 sm:mb-8">
+            <div className="flex flex-col gap-4 mb-4">
               <div>
-                <h1 className="text-4xl font-bold mb-2">A/B Test Results</h1>
-                <p className="text-muted-foreground">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 leading-tight">
+                  A/B Test Results
+                </h1>
+                <p className="text-sm sm:text-base text-muted-foreground">
                   Compare CTA performance across different variations
                 </p>
               </div>
               
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button
-                    variant="outline"
-                    className={cn(
-                      "w-full sm:w-[300px] justify-start text-left font-normal",
-                      !dateRange && "text-muted-foreground"
-                    )}
-                  >
-                    <CalendarIcon className="mr-2 h-4 w-4" />
-                    {dateRange?.from ? (
-                      dateRange.to ? (
-                        <>
-                          {format(dateRange.from, "LLL dd, y")} -{" "}
-                          {format(dateRange.to, "LLL dd, y")}
-                        </>
-                      ) : (
-                        format(dateRange.from, "LLL dd, y")
-                      )
-                    ) : (
-                      <span>Pick a date range</span>
-                    )}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="end">
-                  <Calendar
-                    initialFocus
-                    mode="range"
-                    defaultMonth={dateRange?.from}
-                    selected={dateRange}
-                    onSelect={setDateRange}
-                    numberOfMonths={2}
-                    disabled={(date) => date > new Date()}
-                    className="pointer-events-auto"
-                  />
-                </PopoverContent>
-              </Popover>
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                {isMobile && (
+                  <div className="flex gap-2 overflow-x-auto pb-1">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setQuickFilter(1)}
+                      className="whitespace-nowrap flex-shrink-0"
+                    >
+                      Today
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setQuickFilter(7)}
+                      className="whitespace-nowrap flex-shrink-0"
+                    >
+                      7 Days
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setQuickFilter(30)}
+                      className="whitespace-nowrap flex-shrink-0"
+                    >
+                      30 Days
+                    </Button>
+                  </div>
+                )}
+                
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className={cn(
+                        "w-full sm:w-auto sm:min-w-[280px] justify-start text-left font-normal text-sm",
+                        !dateRange && "text-muted-foreground"
+                      )}
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4 flex-shrink-0" />
+                      <span className="truncate">
+                        {dateRange?.from ? (
+                          dateRange.to ? (
+                            <>
+                              {format(dateRange.from, isMobile ? "MMM dd" : "LLL dd, y")} -{" "}
+                              {format(dateRange.to, isMobile ? "MMM dd" : "LLL dd, y")}
+                            </>
+                          ) : (
+                            format(dateRange.from, isMobile ? "MMM dd, y" : "LLL dd, y")
+                          )
+                        ) : (
+                          <span>Pick a date range</span>
+                        )}
+                      </span>
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align={isMobile ? "center" : "end"}>
+                    <Calendar
+                      initialFocus
+                      mode="range"
+                      defaultMonth={dateRange?.from}
+                      selected={dateRange}
+                      onSelect={setDateRange}
+                      numberOfMonths={isMobile ? 1 : 2}
+                      disabled={(date) => date > new Date()}
+                      className="pointer-events-auto"
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
             </div>
           </div>
 
           {loading ? (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">Loading results...</p>
+            <div className="text-center py-12 sm:py-16">
+              <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+              <p className="text-sm sm:text-base text-muted-foreground">Loading results...</p>
             </div>
           ) : results.length === 0 ? (
             <Card>
-              <CardContent className="py-12 text-center">
-                <p className="text-muted-foreground">
+              <CardContent className="py-12 sm:py-16 px-4 sm:px-6 text-center">
+                <p className="text-sm sm:text-base text-muted-foreground max-w-md mx-auto">
                   No A/B test data available yet. Data will appear as users interact with CTAs.
                 </p>
               </CardContent>
             </Card>
           ) : (
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {Object.entries(groupedResults).map(([ctaType, variations]) => {
                 const winner = getWinner(variations);
                 const significance =
@@ -271,30 +316,30 @@ const ABTestResults = () => {
                 
                 return (
                   <Card key={ctaType}>
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
+                    <CardHeader className="p-4 sm:p-6">
+                      <div className="flex flex-col gap-3">
                         <div>
-                          <CardTitle className="flex items-center gap-2">
+                          <CardTitle className="text-lg sm:text-xl flex items-center gap-2">
                             {formatCTAType(ctaType)} CTA
                           </CardTitle>
-                          <CardDescription>
+                          <CardDescription className="text-sm mt-1">
                             Comparing variations A and B
                           </CardDescription>
                         </div>
                         
                         {significance && (
                           <TooltipProvider>
-                            <Tooltip>
+                            <Tooltip delayDuration={0}>
                               <TooltipTrigger asChild>
-                                <div>
+                                <div className="inline-flex self-start">
                                   {significance.isSignificant ? (
-                                    <Badge variant="default" className="gap-1">
-                                      <CheckCircle2 className="w-3 h-3" />
+                                    <Badge variant="default" className="gap-1.5 py-1.5 px-3 text-xs">
+                                      <CheckCircle2 className="w-3.5 h-3.5" />
                                       Significant
                                     </Badge>
                                   ) : (
-                                    <Badge variant="secondary" className="gap-1">
-                                      <AlertCircle className="w-3 h-3" />
+                                    <Badge variant="secondary" className="gap-1.5 py-1.5 px-3 text-xs">
+                                      <AlertCircle className="w-3.5 h-3.5" />
                                       {significance.sampleSizeAdequate
                                         ? "Not Significant"
                                         : "Need More Data"}
@@ -302,8 +347,8 @@ const ABTestResults = () => {
                                   )}
                                 </div>
                               </TooltipTrigger>
-                              <TooltipContent side="left" className="max-w-xs">
-                                <div className="space-y-1 text-sm">
+                              <TooltipContent side={isMobile ? "bottom" : "left"} className="max-w-xs">
+                                <div className="space-y-1.5 text-xs sm:text-sm">
                                   <p className="font-semibold">Statistical Analysis</p>
                                   <p>
                                     Confidence: {significance.confidenceLevel.toFixed(1)}%
@@ -332,59 +377,59 @@ const ABTestResults = () => {
                         )}
                       </div>
                     </CardHeader>
-                    <CardContent>
-                      <div className="grid md:grid-cols-2 gap-6">
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <div className="grid grid-cols-1 landscape:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6">
                         {variations.map((result) => {
                           const isWinner = winner?.variation === result.variation;
                           
                           return (
                             <div
                               key={result.variation}
-                              className={`p-6 rounded-lg border-2 ${
+                              className={`p-4 sm:p-6 rounded-lg border-2 transition-colors ${
                                 isWinner 
                                   ? 'border-primary bg-primary/5' 
                                   : 'border-border'
                               }`}
                             >
                               <div className="flex items-center justify-between mb-4">
-                                <h3 className="text-xl font-semibold">
+                                <h3 className="text-lg sm:text-xl font-semibold">
                                   Variation {result.variation}
                                 </h3>
                                 {isWinner && (
-                                  <span className="px-3 py-1 bg-primary text-primary-foreground text-sm rounded-full">
+                                  <span className="px-2.5 sm:px-3 py-1 bg-primary text-primary-foreground text-xs sm:text-sm rounded-full font-medium">
                                     Winner
                                   </span>
                                 )}
                               </div>
                               
-                              <div className="space-y-4">
+                              <div className="space-y-3 sm:space-y-4">
                                 <div className="flex items-center gap-3">
-                                  <div className="p-2 rounded-lg bg-muted">
-                                    <Users className="w-5 h-5" />
+                                  <div className="p-2 rounded-lg bg-muted flex-shrink-0">
+                                    <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                                   </div>
-                                  <div>
-                                    <p className="text-sm text-muted-foreground">Impressions</p>
-                                    <p className="text-2xl font-bold">{result.impressions}</p>
+                                  <div className="min-w-0">
+                                    <p className="text-xs sm:text-sm text-muted-foreground">Impressions</p>
+                                    <p className="text-xl sm:text-2xl font-bold truncate">{result.impressions.toLocaleString()}</p>
                                   </div>
                                 </div>
                                 
                                 <div className="flex items-center gap-3">
-                                  <div className="p-2 rounded-lg bg-muted">
-                                    <MousePointer className="w-5 h-5" />
+                                  <div className="p-2 rounded-lg bg-muted flex-shrink-0">
+                                    <MousePointer className="w-4 h-4 sm:w-5 sm:h-5" />
                                   </div>
-                                  <div>
-                                    <p className="text-sm text-muted-foreground">Clicks</p>
-                                    <p className="text-2xl font-bold">{result.clicks}</p>
+                                  <div className="min-w-0">
+                                    <p className="text-xs sm:text-sm text-muted-foreground">Clicks</p>
+                                    <p className="text-xl sm:text-2xl font-bold truncate">{result.clicks.toLocaleString()}</p>
                                   </div>
                                 </div>
                                 
                                 <div className="flex items-center gap-3">
-                                  <div className="p-2 rounded-lg bg-muted">
-                                    <TrendingUp className="w-5 h-5" />
+                                  <div className="p-2 rounded-lg bg-muted flex-shrink-0">
+                                    <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />
                                   </div>
-                                  <div>
-                                    <p className="text-sm text-muted-foreground">CTR</p>
-                                    <p className="text-2xl font-bold">{result.ctr_percentage}%</p>
+                                  <div className="min-w-0">
+                                    <p className="text-xs sm:text-sm text-muted-foreground">CTR</p>
+                                    <p className="text-xl sm:text-2xl font-bold">{result.ctr_percentage}%</p>
                                   </div>
                                 </div>
                               </div>
