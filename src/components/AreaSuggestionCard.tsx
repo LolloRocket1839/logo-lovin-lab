@@ -12,7 +12,7 @@ interface AreaSuggestionCardProps {
 }
 
 export const AreaSuggestionCard = ({ area, onAddDetails, onDismiss }: AreaSuggestionCardProps) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentLang = i18n.language === "en" ? "en" : "it";
 
   return (
@@ -78,7 +78,7 @@ export const AreaSuggestionCard = ({ area, onAddDetails, onDismiss }: AreaSugges
           onClick={onAddDetails}
           className="w-full h-8 text-xs"
         >
-          {currentLang === "it" ? "Aggiungi info al form" : "Add info to form"}
+          {t('areaSuggestion.addToForm')}
         </Button>
       </CardContent>
     </Card>

@@ -656,5 +656,89 @@
     "guide2Bullet3": "Student housing: opportunità e strategie operative",
     "guide2Bullet4": "Mutui, tassi e agevolazioni fiscali aggiornate",
     "downloadCta": "Scarica Guida Gratuita"
+  },
+  "accessibility": {
+    "skipToContent": "Salta al contenuto principale"
+  },
+  "areaSuggestion": {
+    "addToForm": "Aggiungi info al form"
+  },
+  "sellerContact": {
+    "title": "Vendi la Tua Casa",
+    "description": "Compila il form per ricevere una valutazione gratuita della tua proprietà a Torino",
+    "nameLabel": "Nome e Cognome *",
+    "namePlaceholder": "Mario Rossi",
+    "nameError": "Nome richiesto",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "mario.rossi@email.com",
+    "emailErrorInvalid": "Email non valida",
+    "phoneLabel": "Telefono *",
+    "phonePlaceholder": "+39 333 1234567",
+    "phoneError": "Telefono richiesto",
+    "addressLabel": "Indirizzo Immobile *",
+    "addressPlaceholder": "Via Roma 1, Torino",
+    "addressError": "Indirizzo richiesto",
+    "zoneLabel": "Zona (opzionale)",
+    "zonePlaceholder": "Es: Crocetta",
+    "squareMetersLabel": "Metratura (opzionale)",
+    "squareMetersPlaceholder": "Es: 85 mq",
+    "roomsLabel": "Numero Locali (opzionale)",
+    "roomsPlaceholder": "Es: Trilocale",
+    "floorLabel": "Piano (opzionale)",
+    "floorPlaceholder": "Es: 2° Piano",
+    "conditionLabel": "Stato Immobile (opzionale)",
+    "conditionPlaceholder": "Es: Buono",
+    "motivationLabel": "Motivazione Vendita (opzionale)",
+    "motivationPlaceholder": "Perché vendi?",
+    "urgentLabel": "⚡ Ho urgenza di vendere (priorità massima)",
+    "messageLabel": "Note Aggiuntive (opzionale)",
+    "messagePlaceholder": "Altre informazioni utili (opzionale)...",
+    "privacyLabel": "Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) e autorizzo Jungle Rent a contattarmi per la valutazione dell'immobile.",
+    "privacyLink": "Leggi l'informativa privacy",
+    "privacyError": "Devi acconsentire al trattamento dei dati",
+    "submitButton": "Invia Richiesta",
+    "submitting": "Invio in corso...",
+    "successTitle": "✨ Richiesta inviata con successo!",
+    "successDescription": "Ti contatteremo entro 48 ore per la valutazione gratuita del tuo immobile",
+    "errorTitle": "❌ Errore nell'invio",
+    "errorDescription": "Si è verificato un errore. Riprova o contattaci su WhatsApp.",
+    "footerInfo": "✓ Risposta garantita entro 48 ore • ✓ Valutazione gratuita e senza impegno • ✓ Zero commissioni",
+    "zones": {
+      "crocetta": "Crocetta",
+      "san-salvario": "San Salvario",
+      "centro": "Centro",
+      "vanchiglia": "Vanchiglia",
+      "lingotto": "Lingotto",
+      "santa-rita": "Santa Rita",
+      "san-paolo": "San Paolo",
+      "altra": "Altra zona"
+    },
+    "rooms": {
+      "2": "Bilocale (2)",
+      "3": "Trilocale (3)",
+      "4": "Quadrilocale (4)",
+      "5+": "5 o più locali"
+    },
+    "floors": {
+      "terra": "Piano Terra",
+      "1": "1° Piano",
+      "2": "2° Piano",
+      "3": "3° Piano",
+      "4": "4° Piano",
+      "5": "5° Piano",
+      "6+": "6° Piano o superiore"
+    },
+    "conditions": {
+      "ottimo": "Ottimo",
+      "buono": "Buono",
+      "da-ristrutturare": "Da ristrutturare"
+    },
+    "motivations": {
+      "cambio-citta": "Cambio città",
+      "liquidita": "Necessità liquidità",
+      "eredita": "Eredità",
+      "investimento": "Dismissione investimento",
+      "altro": "Altro"
+    }
   }
 }

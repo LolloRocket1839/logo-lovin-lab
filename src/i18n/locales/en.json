@@ -882,5 +882,89 @@
     "guide2Bullet3": "Student housing: opportunities and operational strategies",
     "guide2Bullet4": "Updated mortgages, rates and tax benefits",
     "downloadCta": "Download Free Guide"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content"
+  },
+  "areaSuggestion": {
+    "addToForm": "Add info to form"
+  },
+  "sellerContact": {
+    "title": "Sell Your Home",
+    "description": "Fill out the form to receive a free valuation of your property in Turin",
+    "nameLabel": "Full Name *",
+    "namePlaceholder": "John Smith",
+    "nameError": "Name required",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "john.smith@email.com",
+    "emailErrorInvalid": "Invalid email",
+    "phoneLabel": "Phone *",
+    "phonePlaceholder": "+39 333 1234567",
+    "phoneError": "Phone required",
+    "addressLabel": "Property Address *",
+    "addressPlaceholder": "Via Roma 1, Turin",
+    "addressError": "Address required",
+    "zoneLabel": "Area (optional)",
+    "zonePlaceholder": "E.g.: Crocetta",
+    "squareMetersLabel": "Square Meters (optional)",
+    "squareMetersPlaceholder": "E.g.: 85 sqm",
+    "roomsLabel": "Number of Rooms (optional)",
+    "roomsPlaceholder": "E.g.: 3 rooms",
+    "floorLabel": "Floor (optional)",
+    "floorPlaceholder": "E.g.: 2nd Floor",
+    "conditionLabel": "Property Condition (optional)",
+    "conditionPlaceholder": "E.g.: Good",
+    "motivationLabel": "Reason for Selling (optional)",
+    "motivationPlaceholder": "Why are you selling?",
+    "urgentLabel": "⚡ I need to sell urgently (highest priority)",
+    "messageLabel": "Additional Notes (optional)",
+    "messagePlaceholder": "Any other useful information (optional)...",
+    "privacyLabel": "I consent to the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR) and authorize Jungle Rent to contact me for property valuation.",
+    "privacyLink": "Read privacy policy",
+    "privacyError": "You must consent to data processing",
+    "submitButton": "Submit Request",
+    "submitting": "Submitting...",
+    "successTitle": "✨ Request sent successfully!",
+    "successDescription": "We will contact you within 48 hours for your free property valuation",
+    "errorTitle": "❌ Submission error",
+    "errorDescription": "An error occurred. Please try again or contact us on WhatsApp.",
+    "footerInfo": "✓ Guaranteed response within 48 hours • ✓ Free valuation with no commitment • ✓ Zero commissions",
+    "zones": {
+      "crocetta": "Crocetta",
+      "san-salvario": "San Salvario",
+      "centro": "City Center",
+      "vanchiglia": "Vanchiglia",
+      "lingotto": "Lingotto",
+      "santa-rita": "Santa Rita",
+      "san-paolo": "San Paolo",
+      "altra": "Other area"
+    },
+    "rooms": {
+      "2": "2-room apartment",
+      "3": "3-room apartment",
+      "4": "4-room apartment",
+      "5+": "5+ rooms"
+    },
+    "floors": {
+      "terra": "Ground Floor",
+      "1": "1st Floor",
+      "2": "2nd Floor",
+      "3": "3rd Floor",
+      "4": "4th Floor",
+      "5": "5th Floor",
+      "6+": "6th Floor or higher"
+    },
+    "conditions": {
+      "ottimo": "Excellent",
+      "buono": "Good",
+      "da-ristrutturare": "Needs renovation"
+    },
+    "motivations": {
+      "cambio-citta": "Moving to another city",
+      "liquidita": "Need liquidity",
+      "eredita": "Inheritance",
+      "investimento": "Divesting investment",
+      "altro": "Other"
+    }
   }
 }
