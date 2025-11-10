@@ -86,8 +86,9 @@ export const StickyCTA = () => {
         className="fixed bottom-0 left-0 right-0 z-40 md:hidden
                     backdrop-blur-xl bg-background/95 border-t border-border/50
                     transition-all duration-500 animate-fade-in"
+        style={{ transition: 'transform 0.3s ease-in-out, opacity 0.5s ease' }}
       >
-        <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
+        <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2 transition-spacing">
           <Button
             onClick={handleInvestorWhatsApp}
             size="lg"
@@ -114,12 +115,13 @@ export const StickyCTA = () => {
 
   // Render default CTA (Lorenzo & Andrea)
   return (
-    <div 
-      className="fixed bottom-0 left-0 right-0 z-40 md:hidden
-                  backdrop-blur-xl bg-background/95 border-t border-border/50
-                  transition-all duration-500 animate-fade-in"
-    >
-      <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
+      <div 
+        className="fixed bottom-0 left-0 right-0 z-40 md:hidden
+                    backdrop-blur-xl bg-background/95 border-t border-border/50
+                    transition-all duration-500 animate-fade-in"
+        style={{ transition: 'transform 0.3s ease-in-out, opacity 0.5s ease' }}
+      >
+      <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2 transition-spacing">
         <div className="flex gap-2 flex-1">
           <Button
             onClick={handleContactLorenzo}

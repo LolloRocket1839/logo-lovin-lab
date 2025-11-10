@@ -65,7 +65,7 @@ export const StudentSection = () => {
   };
 
   return (
-    <section id="student-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/20 relative overflow-hidden">
+    <section id="student-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/20 relative overflow-hidden transition-spacing">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
       <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">

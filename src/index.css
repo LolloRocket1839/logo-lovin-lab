@@ -389,6 +389,32 @@ All colors MUST be HSL.
     @apply py-8 sm:py-12 md:py-16 lg:py-20;
   }
 
+  /* Smooth responsive transitions for breakpoint changes */
+  .transition-responsive {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .transition-responsive-fast {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  .transition-responsive-slow {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  
+  /* Specific property transitions for better performance */
+  .transition-spacing {
+    transition: padding 0.3s ease-in-out, margin 0.3s ease-in-out, gap 0.3s ease-in-out;
+  }
+  
+  .transition-size {
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, font-size 0.3s ease-in-out;
+  }
+  
+  .transition-layout {
+    transition: grid-template-columns 0.3s ease-in-out, flex-direction 0.3s ease-in-out;
+  }
+
   /* Blog content mobile optimization */
   .blog-content-wrapper {
     @apply overflow-x-hidden;
