@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      ab_test_events: {
+        Row: {
+          created_at: string
+          cta_type: string
+          event_type: string
+          id: string
+          page_url: string | null
+          session_id: string
+          user_agent: string | null
+          variation: string
+        }
+        Insert: {
+          created_at?: string
+          cta_type: string
+          event_type: string
+          id?: string
+          page_url?: string | null
+          session_id: string
+          user_agent?: string | null
+          variation: string
+        }
+        Update: {
+          created_at?: string
+          cta_type?: string
+          event_type?: string
+          id?: string
+          page_url?: string | null
+          session_id?: string
+          user_agent?: string | null
+          variation?: string
+        }
+        Relationships: []
+      }
       ai_test_results: {
         Row: {
           chatgpt_cited: boolean | null
@@ -73,7 +106,16 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      ab_test_results: {
+        Row: {
+          clicks: number | null
+          cta_type: string | null
+          ctr_percentage: number | null
+          impressions: number | null
+          variation: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never
