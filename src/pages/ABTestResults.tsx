@@ -2,9 +2,15 @@ import { useEffect, useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { supabase } from "@/integrations/supabase/client";
 import { Helmet } from "react-helmet";
-import { TrendingUp, Users, MousePointer } from "lucide-react";
+import { TrendingUp, Users, MousePointer, CalendarIcon } from "lucide-react";
+import { format, subDays, startOfDay, endOfDay } from "date-fns";
+import { cn } from "@/lib/utils";
+import type { DateRange } from "react-day-picker";
 
 interface ABTestResult {
   cta_type: string;
@@ -17,21 +23,66 @@ interface ABTestResult {
 const ABTestResults = () => {
   const [results, setResults] = useState<ABTestResult[]>([]);
   const [loading, setLoading] = useState(true);
+  const [dateRange, setDateRange] = useState<DateRange | undefined>({
+    from: subDays(new Date(), 7),
+    to: new Date(),
+  });
 
   useEffect(() => {
     fetchResults();
-  }, []);
+  }, [dateRange]);
 
   const fetchResults = async () => {
     try {
-      const { data, error } = await supabase
-        .from('ab_test_results')
-        .select('*')
-        .order('cta_type', { ascending: true })
-        .order('variation', { ascending: true });
+      setLoading(true);
+      
+      let query = supabase
+        .from('ab_test_events')
+        .select('cta_type, variation, event_type');
+
+      // Apply date range filter if set
+      if (dateRange?.from) {
+        query = query.gte('created_at', startOfDay(dateRange.from).toISOString());
+      }
+      if (dateRange?.to) {
+        query = query.lte('created_at', endOfDay(dateRange.to).toISOString());
+      }
+
+      const { data, error } = await query;
 
       if (error) throw error;
-      setResults(data || []);
+
+      // Aggregate results by cta_type and variation
+      const aggregated = (data || []).reduce((acc, event) => {
+        const key = `${event.cta_type}_${event.variation}`;
+        if (!acc[key]) {
+          acc[key] = {
+            cta_type: event.cta_type,
+            variation: event.variation,
+            impressions: 0,
+            clicks: 0,
+            ctr_percentage: 0,
+          };
+        }
+        
+        if (event.event_type === 'impression') {
+          acc[key].impressions++;
+        } else if (event.event_type === 'click') {
+          acc[key].clicks++;
+        }
+        
+        return acc;
+      }, {} as Record<string, ABTestResult>);
+
+      // Calculate CTR percentages
+      const resultsArray = Object.values(aggregated).map((result) => ({
+        ...result,
+        ctr_percentage: result.impressions > 0 
+          ? parseFloat(((result.clicks / result.impressions) * 100).toFixed(2))
+          : 0,
+      }));
+
+      setResults(resultsArray);
     } catch (error) {
       console.error('Error fetching A/B test results:', error);
     } finally {
@@ -70,10 +121,52 @@ const ABTestResults = () => {
       <div className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-2">A/B Test Results</h1>
-            <p className="text-muted-foreground">
-              Compare CTA performance across different variations
-            </p>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+              <div>
+                <h1 className="text-4xl font-bold mb-2">A/B Test Results</h1>
+                <p className="text-muted-foreground">
+                  Compare CTA performance across different variations
+                </p>
+              </div>
+              
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={cn(
+                      "w-full sm:w-[300px] justify-start text-left font-normal",
+                      !dateRange && "text-muted-foreground"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {dateRange?.from ? (
+                      dateRange.to ? (
+                        <>
+                          {format(dateRange.from, "LLL dd, y")} -{" "}
+                          {format(dateRange.to, "LLL dd, y")}
+                        </>
+                      ) : (
+                        format(dateRange.from, "LLL dd, y")
+                      )
+                    ) : (
+                      <span>Pick a date range</span>
+                    )}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="end">
+                  <Calendar
+                    initialFocus
+                    mode="range"
+                    defaultMonth={dateRange?.from}
+                    selected={dateRange}
+                    onSelect={setDateRange}
+                    numberOfMonths={2}
+                    disabled={(date) => date > new Date()}
+                    className="pointer-events-auto"
+                  />
+                </PopoverContent>
+              </Popover>
+            </div>
           </div>
 
           {loading ? (
