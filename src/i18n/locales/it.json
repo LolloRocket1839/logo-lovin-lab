@@ -595,16 +595,19 @@
     },
     "cta": {
       "students": {
-        "title": "Pronto a trovare la tua stanza ideale?",
-        "description": "Unisciti alla waitlist di Jungle Rent e ricevi aggiornamenti esclusivi"
+        "title": "Inizia la Tua Ricerca Oggi",
+        "description": "Unisciti a 100+ studenti che trovano stanze convenienti vicino a Politecnico e UniTo",
+        "button": "Trova una stanza"
       },
       "investors": {
-        "title": "Interessato a investire nel real estate?",
-        "description": "Contattaci per scoprire le opportunità di investimento disponibili"
+        "title": "Guadagna il 7-9% Annuo",
+        "description": "Investi nel mercato immobiliare universitario torinese con gestione completa inclusa",
+        "button": "Scarica la Guida"
       },
       "sellers": {
-        "title": "Vuoi vendere il tuo immobile?",
-        "description": "Richiedi una valutazione gratuita e senza impegno"
+        "title": "Vendi in 60-90 Giorni, Zero Commissioni",
+        "description": "Ottieni una valutazione professionale in 48h e risparmia €6.000-10.000 di commissioni",
+        "button": "Richiedi Valutazione Gratuita"
       }
     },
     "meta": {

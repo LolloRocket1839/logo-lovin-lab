@@ -821,16 +821,19 @@
     },
     "cta": {
       "students": {
-        "title": "Ready to find your ideal room?",
-        "description": "Join the Jungle Rent waitlist and receive exclusive updates"
+        "title": "Start Your Search Today",
+        "description": "Join 100+ students finding affordable rooms near Politecnico and UniTo",
+        "button": "Find a room"
       },
       "investors": {
-        "title": "Interested in real estate investing?",
-        "description": "Contact us to discover available investment opportunities"
+        "title": "Earn 7-9% Annual Returns",
+        "description": "Invest in Turin's university real estate market with full property management included",
+        "button": "Get Investment Guide"
       },
       "sellers": {
-        "title": "Want to sell your property?",
-        "description": "Request a free valuation with no obligation"
+        "title": "Sell in 60-90 Days, Zero Commission",
+        "description": "Get a professional valuation in 48h and save €6,000-10,000 in agency fees",
+        "button": "Get Free Valuation Now"
       }
     },
     "meta": {

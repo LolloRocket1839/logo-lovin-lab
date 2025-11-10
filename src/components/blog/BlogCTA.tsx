@@ -28,21 +28,21 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
       title: t('blog.cta.students.title'),
       description: t('blog.cta.students.description'),
       icon: Bell,
-      buttonText: "Find a room",
+      buttonText: t('blog.cta.students.button'),
       action: () => setShowWaitlist(true)
     },
     investors: {
       title: t('blog.cta.investors.title'),
       description: t('blog.cta.investors.description'),
       icon: TrendingUp,
-      buttonText: t('investor.ctaButton'),
+      buttonText: t('blog.cta.investors.button'),
       action: handleWhatsApp
     },
     sellers: {
       title: t('blog.cta.sellers.title'),
       description: t('blog.cta.sellers.description'),
       icon: MessageCircle,
-      buttonText: t('seller.ctaButton'),
+      buttonText: t('blog.cta.sellers.button'),
       action: handleWhatsApp
     }
   };
