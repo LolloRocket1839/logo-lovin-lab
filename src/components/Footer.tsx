@@ -62,15 +62,15 @@ export const Footer = () => {
       {/* Top border decoration */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-border to-transparent" />
       
-      <div className="container px-4 sm:px-6 md:px-8 py-12 md:py-16 lg:py-20 xl:py-24 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 lg:gap-12 xl:gap-16 mb-10 md:mb-16 lg:mb-20 max-w-6xl mx-auto">
+      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 relative z-10">
+        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-10 md:mb-16 lg:mb-20 max-w-6xl mx-auto">
           {/* Brand */}
           <div>
             <div className="mb-6">
               <img 
                 src={jungleRentLogo} 
                 alt="Jungle Rent" 
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-80 rounded-3xl cursor-pointer 
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-80 rounded-3xl cursor-pointer 
                            hover:opacity-100 hover:scale-105 transition-all duration-300"
                 onClick={() => setLogoModalOpen(true)}
                 role="button"
@@ -175,7 +175,7 @@ export const Footer = () => {
                   ref={logoRef}
                   src={logo2i3t}
                   alt="2i3T - Incubatore Imprese Innovative Politecnico di Torino"
-                  className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 mb-4 relative z-10"
+                  className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-700 mb-4 relative z-10"
                   style={{
                     transform: `translateY(${scrollOffset}px)`,
                     transition: 'transform 0.1s ease-out'

@@ -61,10 +61,10 @@ export const SellerSection = () => {
   ];
 
   return (
-    <section id="seller-section" className="py-12 md:py-16 bg-accent/20 relative overflow-hidden">
+    <section id="seller-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
-      <div ref={sectionRef} className="container px-8 mx-auto relative z-10">
+      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto relative z-10">
         <div className="text-center max-w-2xl mx-auto">
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
@@ -75,7 +75,7 @@ export const SellerSection = () => {
             {t('seller.sectionLabel')}
           </p>
           <h2 
-            className={`text-2xl md:text-3xl font-bold mb-4 text-foreground transition-all duration-700 ${
+            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-foreground transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '150ms' }}
@@ -111,7 +111,7 @@ export const SellerSection = () => {
             size="lg" 
             variant="premium"
             onClick={() => setIsDialogOpen(true)}
-            className={`w-full sm:w-auto px-8 py-6 text-base transition-all duration-700 ${
+            className={`w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12 transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '600ms' }}

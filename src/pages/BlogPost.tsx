@@ -372,7 +372,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
           ]}
         />
         
-        <article className="py-8 sm:py-10 md:py-12 px-4 sm:px-6">
+        <article className="py-8 sm:py-10 md:py-12 px-3 sm:px-4 md:px-6">
           <div className="container mx-auto max-w-4xl">
             {/* Header */}
             <header className="mb-6 sm:mb-8">
@@ -380,11 +380,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                 {t(`blog.categories.${post.category}`)}
               </Badge>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
                 {translatedData.title}
               </h1>
               
-              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
+              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
                 <span className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   {new Date(post.date).toLocaleDateString('it-IT', {
@@ -417,7 +417,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             </div>
 
             {/* Content */}
-            <div className="prose prose-sm sm:prose-base md:prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-none blog-content-wrapper mb-12 prose-headings:scroll-mt-20 prose-a:text-primary prose-strong:font-bold overflow-x-hidden">
+            <div className="prose prose-sm sm:prose-base md:prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-none blog-content-wrapper mb-12 prose-headings:scroll-mt-20 prose-a:text-primary prose-strong:font-bold prose-table:overflow-x-auto prose-pre:overflow-x-auto overflow-x-hidden">
               <ReactMarkdown 
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}

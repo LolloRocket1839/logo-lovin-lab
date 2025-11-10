@@ -50,12 +50,12 @@ export const ScrollToTop = () => {
             onClick={scrollToTop}
             variant="premium"
             size="icon"
-            className={`fixed bottom-8 right-8 z-50 h-14 w-14 rounded-full shadow-lg
+            className={`fixed bottom-16 sm:bottom-20 md:bottom-24 right-6 sm:right-8 z-50 h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full shadow-lg
                         transition-all duration-300 hover:shadow-xl hover:scale-110
                         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
             aria-label={t('scrollToTop.tooltip')}
           >
-            <ArrowUp className="h-6 w-6" />
+            <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
           </Button>
         </TooltipTrigger>
         <TooltipContent side="left" className="font-medium">

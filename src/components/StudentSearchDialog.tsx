@@ -304,7 +304,7 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[600px] md:max-w-[680px] max-h-[90vh] overflow-y-auto mx-4 sm:mx-auto">
+      <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-[600px] md:max-w-[680px] max-h-[85vh] sm:max-h-[90vh] overflow-y-auto mx-4 sm:mx-auto p-4 sm:p-5 md:p-6">
         <DialogHeader>
           <DialogTitle className="text-2xl">{t("studentSearch.title")}</DialogTitle>
           <DialogDescription>{t("studentSearch.description")}</DialogDescription>

@@ -71,10 +71,10 @@ export const InvestorSection = () => {
 
 
   return (
-    <section id="investor-section" className="py-8 sm:py-12 md:py-16 bg-background relative overflow-hidden">
+    <section id="investor-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-background relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
     
-      <div ref={sectionRef} className="container px-4 sm:px-6 md:px-8 relative z-10">
+      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
@@ -85,7 +85,7 @@ export const InvestorSection = () => {
             {t('investor.sectionLabel')}
           </p>
           <h2 
-            className={`text-xl sm:text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
+            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '150ms' }}
@@ -122,29 +122,29 @@ export const InvestorSection = () => {
               onClick={handleLorenzoWhatsApp}
               size="lg"
               variant="premium"
-              className="w-full sm:w-auto px-8 py-6 text-base group shadow-xl"
+              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base group shadow-xl h-11 sm:h-12"
             >
-              <MessageCircle className="mr-2 w-5 h-5" />
+              <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
               {t('investor.talkToLorenzo')}
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Button 
               onClick={handleAndreaWhatsApp}
               size="lg"
               variant="premium"
-              className="w-full sm:w-auto px-8 py-6 text-base group shadow-xl"
+              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base group shadow-xl h-11 sm:h-12"
             >
-              <MessageCircle className="mr-2 w-5 h-5" />
+              <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
               {t('investor.talkToAndrea')}
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Button 
               onClick={() => setWaitlistOpen(true)}
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto px-8 py-6 text-base"
+              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12"
             >
               {t('investor.bookCall')}
             </Button>

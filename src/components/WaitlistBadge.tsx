@@ -7,9 +7,9 @@ export const WaitlistBadge = () => {
   const { count } = useWaitlistCounter();
   
   return (
-    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full border border-primary/20 animate-fade-in backdrop-blur-sm">
-      <Users className="w-4 h-4" />
-      <span className="text-sm font-medium">
+    <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-primary/20 animate-fade-in backdrop-blur-sm">
+      <Users className="w-3 h-3 sm:w-4 sm:h-4" />
+      <span className="text-xs sm:text-sm font-medium">
         {t('hero.waitlistCounter', { count })}
       </span>
     </div>

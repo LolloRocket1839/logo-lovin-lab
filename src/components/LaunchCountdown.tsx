@@ -32,7 +32,7 @@ export const LaunchCountdown = () => {
   
   return (
     <div className="flex flex-col items-center gap-3 animate-fade-in">
-      <p className="text-sm font-medium text-muted-foreground">
+      <p className="text-xs sm:text-sm md:text-base font-medium text-muted-foreground">
         {t('hero.launchCountdown')}
       </p>
       <div className="flex gap-2 md:gap-4">
@@ -46,11 +46,11 @@ export const LaunchCountdown = () => {
 };
 
 const TimeUnit = ({ value, label }: { value: number; label: string }) => (
-  <div className="flex flex-col items-center bg-card/50 backdrop-blur-sm rounded-lg px-2 md:px-4 py-2 min-w-[50px] md:min-w-[70px] border border-border/50">
-    <span className="text-xl md:text-3xl font-bold text-foreground tabular-nums">
+  <div className="flex flex-col items-center bg-card/50 backdrop-blur-sm rounded-lg px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 min-w-[50px] sm:min-w-[60px] md:min-w-[70px] border border-border/50">
+    <span className="text-lg sm:text-xl md:text-3xl font-bold text-foreground tabular-nums">
       {value.toString().padStart(2, '0')}
     </span>
-    <span className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wide">
+    <span className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wide">
       {label}
     </span>
   </div>

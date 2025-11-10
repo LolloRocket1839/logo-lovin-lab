@@ -105,12 +105,12 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-sm mx-4 sm:mx-auto
+      <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-sm md:max-w-md mx-4 sm:mx-auto
                                 bg-background/95 backdrop-blur-md
                                 border border-border
                                 shadow-2xl
-                                max-h-[85vh] overflow-hidden
-                                rounded-xl">
+                                max-h-[85vh] sm:max-h-[90vh] overflow-hidden
+                                rounded-xl p-4 sm:p-5 md:p-6">
         <DialogHeader className="pb-4 border-b border-border">
           <DialogTitle className="text-2xl font-semibold text-foreground">
             {t("waitlist.title")}
@@ -131,16 +131,16 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                     <FormItem>
                       <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.nameLabel")}</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder={t("waitlist.namePlaceholder")}
-                          {...field}
-                          autoFocus
-                          className="h-10
-                                     bg-background
-                                     border-border
-                                     focus:border-primary focus:ring-1 focus:ring-primary/20
-                                     transition-colors"
-                        />
+                          <Input
+                            placeholder={t("waitlist.namePlaceholder")}
+                            {...field}
+                            autoFocus
+                            className="h-10 sm:h-11
+                                       bg-background
+                                       border-border
+                                       focus:border-primary focus:ring-1 focus:ring-primary/20
+                                       transition-colors"
+                          />
                       </FormControl>
                       {form.formState.errors.name && (
                         <p className="text-xs text-destructive mt-1">
@@ -340,7 +340,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-11
+                className="w-full h-11 sm:h-12
                            bg-primary hover:bg-primary/90
                            text-primary-foreground
                            font-medium

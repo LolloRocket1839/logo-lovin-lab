@@ -25,9 +25,9 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
   };
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-4">
+    <div className="container mx-auto px-3 sm:px-4 pt-24 pb-3 sm:pb-4">
       <Breadcrumb>
-        <BreadcrumbList className="text-sm">
+        <BreadcrumbList className="text-xs sm:text-sm gap-1 sm:gap-2">
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
               <Link to="/" className="flex items-center gap-1 hover:text-primary transition-colors">

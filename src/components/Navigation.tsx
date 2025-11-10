@@ -81,7 +81,7 @@ export const Navigation = () => {
       role="navigation"
       aria-label="Navigazione principale"
     >
-      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo - only shows when scrolled */}
           <button
@@ -97,7 +97,7 @@ export const Navigation = () => {
             <img
               src={jungleRentLogo}
               alt="Jungle Rent Logo"
-              className="w-8 h-8 md:w-10 md:h-10 transition-transform duration-300 group-hover:rotate-6"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 transition-transform duration-300 group-hover:rotate-6"
             />
             <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:block">
               Jungle Rent
@@ -136,7 +136,7 @@ export const Navigation = () => {
             <LanguageSwitcher />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className="p-2 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               aria-label={isMobileMenuOpen ? t("accessibility.closeMenu") : t("accessibility.openMenu")}
               aria-expanded={isMobileMenuOpen}
             >

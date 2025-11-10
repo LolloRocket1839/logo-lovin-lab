@@ -118,7 +118,7 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md md:max-w-lg max-h-[90vh] overflow-y-auto mx-4 sm:mx-auto">
+      <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-md md:max-w-lg max-h-[85vh] sm:max-h-[90vh] overflow-y-auto mx-4 sm:mx-auto p-4 sm:p-5 md:p-6">
         <DialogHeader>
           <div className="flex items-center gap-2 mb-2">
             <Building2 className="w-6 h-6 text-primary" />

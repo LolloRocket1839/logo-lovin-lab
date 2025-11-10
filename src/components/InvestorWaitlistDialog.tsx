@@ -151,12 +151,12 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-sm mx-4
+      <DialogContent className="max-w-[calc(100vw-2rem)] sm:max-w-sm md:max-w-md mx-4 sm:mx-auto
                                 bg-background/95 backdrop-blur-md
                                 border border-border
                                 shadow-2xl
-                                max-h-[85vh] overflow-hidden
-                                rounded-xl">
+                                max-h-[85vh] sm:max-h-[90vh] overflow-hidden
+                                rounded-xl p-4 sm:p-5 md:p-6">
         <DialogHeader className="pb-4 border-b border-border">
           <DialogTitle className="text-2xl font-semibold text-foreground">
             {t("investorWaitlist.title")}

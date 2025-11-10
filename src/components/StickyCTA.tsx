@@ -92,7 +92,7 @@ export const StickyCTA = () => {
             onClick={handleInvestorWhatsApp}
             size="lg"
             variant="premium"
-            className="flex-1 h-11 sm:h-12 text-sm sm:text-base group shadow-xl"
+            className="flex-1 h-11 sm:h-12 text-xs sm:text-sm md:text-base group shadow-xl"
           >
             <MessageCircle className="mr-2 w-4 h-4" />
             {t('investor.talkToAdvisor')}
@@ -125,7 +125,7 @@ export const StickyCTA = () => {
             onClick={handleContactLorenzo}
             size="sm"
             variant="premium"
-            className="flex-1 h-10 sm:h-11 text-xs sm:text-sm group shadow-lg"
+            className="flex-1 h-11 sm:h-12 text-xs sm:text-sm group shadow-lg"
           >
             <MessageCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-4 sm:w-4" />
             {t('stickyCta.lorenzoButton')}
@@ -134,7 +134,7 @@ export const StickyCTA = () => {
             onClick={handleContactAndrea}
             size="sm"
             variant="premium"
-            className="flex-1 h-10 sm:h-11 text-xs sm:text-sm group shadow-lg"
+            className="flex-1 h-11 sm:h-12 text-xs sm:text-sm group shadow-lg"
           >
             <MessageCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-4 sm:w-4" />
             {t('stickyCta.andreaButton')}

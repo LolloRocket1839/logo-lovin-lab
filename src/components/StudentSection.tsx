@@ -65,10 +65,10 @@ export const StudentSection = () => {
   };
 
   return (
-    <section id="student-section" className="py-8 sm:py-12 md:py-16 bg-accent/20 relative overflow-hidden">
+    <section id="student-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
-      <div ref={sectionRef} className="container px-4 sm:px-6 md:px-8 relative z-10">
+      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
@@ -79,7 +79,7 @@ export const StudentSection = () => {
             {t('student.sectionLabel')}
           </p>
           <h2 
-            className={`text-xl sm:text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
+            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '150ms' }}
@@ -121,7 +121,7 @@ export const StudentSection = () => {
                   size="lg" 
                   variant="default"
                   onClick={() => setSearchDialogOpen(true)}
-                  className="w-full sm:w-auto px-8 py-6 text-base bg-primary hover:bg-primary/90 transition-all duration-300 group"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base bg-primary hover:bg-primary/90 transition-all duration-300 group h-11 sm:h-12"
                 >
                   {t('studentSearch.cardCta')}
                   <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -154,7 +154,7 @@ export const StudentSection = () => {
               size="lg" 
               variant="premium"
               onClick={handleWhatsAppLorenzo}
-              className="w-full sm:w-auto px-8 py-6 text-base"
+              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12"
             >
               {t('student.contactCta')}
               <ArrowRight className="ml-2 w-5 h-5" />
