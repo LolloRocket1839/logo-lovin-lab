@@ -2,6 +2,77 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "torino-dicembre-turisti",
+    category: "students",
+    date: "2025-11-10",
+    author: "Team Jungle Rent",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 25,
+    content: "torino-dicembre-turisti",
+    translations: {
+      it: {
+        title: "Torino a Dicembre 2025: Dove Storia, Arte e Celebrazioni Illuminano la Città Invernale",
+        excerpt: "Scopri perché Torino a dicembre è una delle destinazioni più incantevoli d'Europa: Luci d'Artista, mercatini di Natale, Teatro Regio, architettura barocca e tradizioni culinarie.",
+        seo: {
+          title: "Torino a Dicembre 2025: Guida Completa Eventi, Arte e Tradizioni | Jungle Rent",
+          description: "Guida completa Torino dicembre 2025: Luci d'Artista con opere di Tracey Emin, mercatini di Natale in Piazza Castello, Romeo e Giulietta al Teatro Regio, Xmas Comics. Eventi, cultura e tradizioni.",
+          keywords: [
+            "torino dicembre 2025",
+            "luci d'artista torino",
+            "mercatini natale torino",
+            "eventi torino dicembre",
+            "piazza castello torino",
+            "teatro regio torino",
+            "capodanno torino 2025",
+            "cosa fare torino dicembre",
+            "natale torino",
+            "tracey emin torino",
+            "patti smith torino",
+            "romeo giulietta teatro regio",
+            "xmas comics torino",
+            "tradizioni natale torino",
+            "gianduiotto torino",
+            "architettura barocca torino",
+            "palazzo reale torino",
+            "basilica superga",
+            "turismo torino inverno"
+          ]
+        },
+        tags: ["torino", "dicembre", "eventi", "arte", "natale", "luci d'artista", "cultura", "teatro", "mercatini", "turismo"]
+      },
+      en: {
+        title: "Turin in December 2025: Where History, Art, and Celebration Illuminate the Winter City",
+        excerpt: "Discover why Turin in December is one of Europe's most enchanting destinations: Luci d'Artista, Christmas markets, Teatro Regio, Baroque architecture and culinary traditions.",
+        seo: {
+          title: "Turin in December 2025: Complete Guide Events, Art & Traditions | Jungle Rent",
+          description: "Complete guide Turin December 2025: Luci d'Artista with Tracey Emin works, Christmas markets in Piazza Castello, Romeo & Juliet at Teatro Regio, Xmas Comics. Events, culture and traditions.",
+          keywords: [
+            "turin december 2025",
+            "luci d'artista turin",
+            "christmas markets turin",
+            "events turin december",
+            "piazza castello turin",
+            "teatro regio turin",
+            "new year's eve turin 2025",
+            "things to do turin december",
+            "christmas turin",
+            "tracey emin turin",
+            "patti smith turin",
+            "romeo juliet teatro regio",
+            "xmas comics turin",
+            "christmas traditions turin",
+            "gianduiotto turin",
+            "baroque architecture turin",
+            "palazzo reale turin",
+            "basilica superga",
+            "turin winter tourism"
+          ]
+        },
+        tags: ["turin", "december", "events", "art", "christmas", "luci d'artista", "culture", "theater", "markets", "tourism"]
+      }
+    }
+  },
+  {
     slug: "mobilita-sostenibile-torino-studenti",
     category: "students",
     date: "2025-11-08",
