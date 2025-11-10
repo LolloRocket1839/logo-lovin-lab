@@ -44,7 +44,7 @@ const Blog = () => {
         
         <BlogHero />
         
-        <section className="py-16 px-4">
+        <section className="py-12 sm:py-14 md:py-16 px-4">
           <div className="container mx-auto max-w-7xl">
             <BlogFilters 
               activeCategory={activeCategory} 

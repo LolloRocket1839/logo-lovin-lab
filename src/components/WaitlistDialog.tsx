@@ -105,7 +105,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-sm mx-4
+      <DialogContent className="sm:max-w-sm mx-4 sm:mx-auto
                                 bg-background/95 backdrop-blur-md
                                 border border-border
                                 shadow-2xl

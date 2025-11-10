@@ -379,6 +379,45 @@ All colors MUST be HSL.
     }
   }
   
+  /* Responsive container padding utility */
+  .container-responsive {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12;
+  }
+
+  /* Responsive section spacing */
+  .section-spacing {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+
+  /* Blog content mobile optimization */
+  .blog-content-wrapper {
+    @apply overflow-x-hidden;
+  }
+
+  .blog-content-wrapper table {
+    @apply block overflow-x-auto whitespace-nowrap text-xs sm:text-sm;
+    max-width: 100%;
+  }
+
+  .blog-content-wrapper pre {
+    @apply overflow-x-auto text-xs sm:text-sm;
+  }
+
+  .blog-content-wrapper img {
+    @apply max-w-full h-auto rounded-lg;
+  }
+
+  /* Mobile-first typography scale for very small screens */
+  @media (max-width: 374px) {
+    .hero-title {
+      @apply text-2xl;
+    }
+    
+    .section-title {
+      @apply text-lg;
+    }
+  }
+  
   /* Utility classes for investor section */
   .investor-metric {
     @apply font-mono text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight;

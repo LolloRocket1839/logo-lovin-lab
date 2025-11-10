@@ -68,7 +68,7 @@ export const Hero = () => {
   const logoTranslateY = logoScrollProgress * -200; // Move up
   const logoTranslateX = logoScrollProgress * -45; // Move left (percentage of screen)
 
-  return <header role="banner" className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-background">
+  return <header role="banner" className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-background">
       <h1 className="sr-only">
         {t('hero.seoH1')}
       </h1>
@@ -78,7 +78,7 @@ export const Hero = () => {
       backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
     }} />
 
-      <div className="container relative z-10 px-8 py-12">
+      <div className="container relative z-10 px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo statico */}
           <div className="mb-12 md:mb-16 animate-fade-in">
@@ -87,7 +87,7 @@ export const Hero = () => {
               alt={t('hero.logoAlt')} 
               width="128" 
               height="128" 
-              className="w-24 h-24 md:w-32 md:h-32 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 rounded-full cursor-pointer"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 rounded-full cursor-pointer"
               loading="eager" 
               onClick={() => setLogoModalOpen(true)} 
               role="button" 
@@ -102,11 +102,11 @@ export const Hero = () => {
           </div>
 
           {/* Headline unico chiaro e diretto */}
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight animate-fade-in-up">
             <StyledText>{t('hero.mainHeadline')}</StyledText>
           </h2>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
 
@@ -117,14 +117,14 @@ export const Hero = () => {
           </div>
 
           {/* 2 CTA chiarissime */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up mb-8" style={{ animationDelay: '200ms' }}>
-            <Button size="lg" variant="premium" onClick={scrollToStudent} className="w-full sm:w-auto px-10 py-6 text-base group">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center animate-fade-in-up mb-8" style={{ animationDelay: '200ms' }}>
+            <Button size="lg" variant="premium" onClick={scrollToStudent} className="w-full sm:w-auto px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base group">
               {t('hero.findHome')}
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="premium" onClick={scrollToInvestor} className="w-full sm:w-auto px-10 py-6 text-base group">
+            <Button size="lg" variant="premium" onClick={scrollToInvestor} className="w-full sm:w-auto px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base group">
               {t('hero.invest')}
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
           </div>
         </div>

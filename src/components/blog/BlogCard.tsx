@@ -42,8 +42,8 @@ export const BlogCard = ({ post }: BlogCardProps) => {
         </div>
       </Link>
 
-      <div className="flex flex-col flex-1 p-6">
-        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+      <div className="flex flex-col flex-1 p-4 sm:p-5 md:p-6">
+        <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-3">
           <span className="flex items-center gap-1">
             <Calendar className="w-4 h-4" />
             {new Date(post.date).toLocaleDateString('it-IT', {
@@ -59,7 +59,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
         </div>
 
         <Link to={`/blog/${post.slug}`}>
-          <h3 className="text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+          <h3 className="text-lg sm:text-xl font-bold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
             {translatedData.title}
           </h3>
         </Link>

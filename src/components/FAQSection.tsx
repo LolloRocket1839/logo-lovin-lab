@@ -42,36 +42,36 @@ export const FAQSection = () => {
   ];
 
   return (
-    <section id="faq-section" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wide">
+    <section id="faq-section" className="py-12 sm:py-16 md:py-20 bg-muted/30">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <span className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-wide">
             {t("faq.sectionLabel")}
           </span>
-          <h2 className="text-4xl font-bold mt-2 mb-4">{t("faq.title")}</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4">{t("faq.title")}</h2>
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
             {t("faq.subtitle")}
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-3xl lg:max-w-4xl mx-auto space-y-6 sm:space-y-8">
           {/* Studenti */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <h3 className="text-2xl font-semibold">{t("faq.studentCategory")}</h3>
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
+              <HelpCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+              <h3 className="text-xl sm:text-2xl font-semibold">{t("faq.studentCategory")}</h3>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
               {studentFAQs.map((faq, index) => (
                 <AccordionItem
                   key={`student-${index}`}
                   value={`student-${index}`}
-                  className="bg-background border rounded-lg px-6"
+                  className="bg-background border rounded-lg px-4 sm:px-6"
                 >
-                  <AccordionTrigger className="text-left hover:no-underline">
+                  <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -81,21 +81,21 @@ export const FAQSection = () => {
 
           {/* Investitori */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <h3 className="text-2xl font-semibold">{t("faq.investorCategory")}</h3>
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
+              <HelpCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+              <h3 className="text-xl sm:text-2xl font-semibold">{t("faq.investorCategory")}</h3>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
               {investorFAQs.map((faq, index) => (
                 <AccordionItem
                   key={`investor-${index}`}
                   value={`investor-${index}`}
-                  className="bg-background border rounded-lg px-6"
+                  className="bg-background border rounded-lg px-4 sm:px-6"
                 >
-                  <AccordionTrigger className="text-left hover:no-underline">
+                  <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -105,21 +105,21 @@ export const FAQSection = () => {
 
           {/* Come Funziona */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <h3 className="text-2xl font-semibold">{t("faq.howItWorksCategory")}</h3>
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
+              <HelpCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+              <h3 className="text-xl sm:text-2xl font-semibold">{t("faq.howItWorksCategory")}</h3>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
               {howItWorksFAQs.map((faq, index) => (
                 <AccordionItem
                   key={`how-it-works-${index}`}
                   value={`how-it-works-${index}`}
-                  className="bg-background border rounded-lg px-6"
+                  className="bg-background border rounded-lg px-4 sm:px-6"
                 >
-                  <AccordionTrigger className="text-left hover:no-underline">
+                  <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -129,21 +129,21 @@ export const FAQSection = () => {
 
           {/* Generale */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              <h3 className="text-2xl font-semibold">{t("faq.generalCategory")}</h3>
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
+              <HelpCircle className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+              <h3 className="text-xl sm:text-2xl font-semibold">{t("faq.generalCategory")}</h3>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
               {generalFAQs.map((faq, index) => (
                 <AccordionItem
                   key={`general-${index}`}
                   value={`general-${index}`}
-                  className="bg-background border rounded-lg px-6"
+                  className="bg-background border rounded-lg px-4 sm:px-6"
                 >
-                  <AccordionTrigger className="text-left hover:no-underline">
+                  <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>

@@ -84,15 +84,15 @@ export const StickyCTA = () => {
     return (
       <div 
         className="fixed bottom-0 left-0 right-0 z-40 md:hidden
-                    backdrop-blur-xl bg-background/80 border-t border-border/50
+                    backdrop-blur-xl bg-background/95 border-t border-border/50
                     transition-all duration-500 animate-fade-in"
       >
-        <div className="container px-4 py-4 flex items-center justify-between gap-2">
+        <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
           <Button
             onClick={handleInvestorWhatsApp}
             size="lg"
             variant="premium"
-            className="flex-1 h-12 text-base group shadow-xl"
+            className="flex-1 h-11 sm:h-12 text-sm sm:text-base group shadow-xl"
           >
             <MessageCircle className="mr-2 w-4 h-4" />
             {t('investor.talkToAdvisor')}
@@ -102,7 +102,7 @@ export const StickyCTA = () => {
             onClick={() => setIsDismissed(true)}
             variant="ghost"
             size="icon"
-            className="h-12 w-12 flex-shrink-0"
+            className="h-11 sm:h-12 w-11 sm:w-12 flex-shrink-0"
             aria-label={t('stickyCta.closeLabel')}
           >
             <X className="h-4 w-4" />
@@ -116,27 +116,27 @@ export const StickyCTA = () => {
   return (
     <div 
       className="fixed bottom-0 left-0 right-0 z-40 md:hidden
-                  backdrop-blur-xl bg-background/80 border-t border-border/50
+                  backdrop-blur-xl bg-background/95 border-t border-border/50
                   transition-all duration-500 animate-fade-in"
     >
-      <div className="container px-4 py-4 flex items-center justify-between gap-2">
+      <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
         <div className="flex gap-2 flex-1">
           <Button
             onClick={handleContactLorenzo}
             size="sm"
             variant="premium"
-            className="flex-1 h-11 text-sm group shadow-lg"
+            className="flex-1 h-10 sm:h-11 text-xs sm:text-sm group shadow-lg"
           >
-            <MessageCircle className="mr-1.5 h-4 w-4" />
+            <MessageCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-4 sm:w-4" />
             {t('stickyCta.lorenzoButton')}
           </Button>
           <Button
             onClick={handleContactAndrea}
             size="sm"
             variant="premium"
-            className="flex-1 h-11 text-sm group shadow-lg"
+            className="flex-1 h-10 sm:h-11 text-xs sm:text-sm group shadow-lg"
           >
-            <MessageCircle className="mr-1.5 h-4 w-4" />
+            <MessageCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-4 sm:w-4" />
             {t('stickyCta.andreaButton')}
           </Button>
         </div>
@@ -144,10 +144,10 @@ export const StickyCTA = () => {
           onClick={() => setIsDismissed(true)}
           variant="ghost"
           size="icon"
-          className="h-11 w-11 flex-shrink-0"
+          className="h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0"
           aria-label={t('stickyCta.closeLabel')}
         >
-          <X className="h-4 w-4" />
+          <X className="h-3 w-3 sm:h-4 sm:w-4" />
         </Button>
       </div>
     </div>

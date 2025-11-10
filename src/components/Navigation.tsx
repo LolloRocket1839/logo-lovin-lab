@@ -81,7 +81,7 @@ export const Navigation = () => {
       role="navigation"
       aria-label="Navigazione principale"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo - only shows when scrolled */}
           <button
@@ -151,7 +151,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background backdrop-blur-xl">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background/95 backdrop-blur-xl z-50">
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => (
                 <button

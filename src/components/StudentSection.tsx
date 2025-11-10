@@ -65,10 +65,10 @@ export const StudentSection = () => {
   };
 
   return (
-    <section id="student-section" className="py-12 md:py-16 bg-accent/20 relative overflow-hidden">
+    <section id="student-section" className="py-8 sm:py-12 md:py-16 bg-accent/20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
       
-      <div ref={sectionRef} className="container px-8 relative z-10">
+      <div ref={sectionRef} className="container px-4 sm:px-6 md:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
@@ -79,7 +79,7 @@ export const StudentSection = () => {
             {t('student.sectionLabel')}
           </p>
           <h2 
-            className={`text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
+            className={`text-xl sm:text-2xl md:text-3xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '150ms' }}
@@ -87,7 +87,7 @@ export const StudentSection = () => {
             {t('student.sectionTitle')}
           </h2>
           <p 
-            className={`text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8 transition-all duration-700 ${
+            className={`text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8 transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '300ms' }}
