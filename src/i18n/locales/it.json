@@ -479,8 +479,8 @@
     }
   },
   "investorWaitlist": {
-    "title": "Prenota Valutazione Gratuita",
-    "description": "Compila il form e ti ricontatteremo entro 24h per una call conoscitiva.",
+    "title": "Unisciti alla Waitlist Investitori",
+    "description": "Mostra il tuo interesse per investire in Jungle Rent. Ti contatteremo con informazioni esclusive sulle opportunità disponibili.",
     "nameLabel": "Nome Completo",
     "namePlaceholder": "Mario Rossi",
     "nameError": "Inserisci il tuo nome",
@@ -510,10 +510,10 @@
     "referralPlaceholder": "Aiutaci a conoscerti meglio",
     "consentLabel": "Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti sulle opportunità di investimento",
     "consentError": "Devi accettare per continuare",
-    "submitButton": "Prenota Valutazione",
+    "submitButton": "Mostra Interesse",
     "submitting": "Invio in corso...",
-    "successTitle": "🎉 Richiesta Inviata!",
-    "successDescription": "Ti ricontatteremo entro 24h per la tua valutazione gratuita.",
+    "successTitle": "🎉 Interesse Registrato!",
+    "successDescription": "Grazie! Riceverai presto informazioni esclusive sulle opportunità di investimento in Jungle Rent.",
     "errorTitle": "Errore",
     "errorDescription": "Qualcosa è andato storto. Riprova.",
     "budgetRanges": {
