@@ -2,6 +2,111 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "quartieri-sicuri-donne-torino",
+    category: "students",
+    date: "2025-11-11",
+    author: "Team Jungle Rent",
+    image: "/images/san-salvario-night.jpeg",
+    readTime: 32,
+    content: "quartieri-sicuri-donne-torino",
+    translations: {
+      it: {
+        title: "I Quartieri Più Sicuri per Donne Sole a Torino: Guida Completa 2025",
+        excerpt: "Guida definitiva alla sicurezza per donne sole a Torino: analisi dettagliata dei quartieri più sicuri (Crocetta, Centro), zone da evitare, trasporti pubblici, consigli pratici e risorse di emergenza per studentesse e professioniste.",
+        seo: {
+          title: "Quartieri Sicuri Torino per Donne Sole 2025: Guida Completa | Jungle Rent",
+          description: "Guida completa sicurezza donne sole Torino 2025: quartieri più sicuri (Crocetta, Centro), zone da evitare (Barriera Milano, Aurora), trasporti, consigli pratici. Crime index, statistiche, esperienze reali.",
+          keywords: [
+            "quartieri sicuri torino donne",
+            "torino sicurezza donne sole",
+            "dove vivere torino donna sola",
+            "crocetta torino sicurezza",
+            "centro torino donne",
+            "san salvario sicuro donne",
+            "barriera milano pericoloso",
+            "trasporti torino donne sicurezza",
+            "studentesse torino sicurezza",
+            "affitti sicuri donne torino",
+            "torino safe solo women",
+            "quartieri evitare torino",
+            "crime rate torino donne",
+            "violenza donne torino statistiche",
+            "pickpocketing torino",
+            "metro torino sicurezza",
+            "taxi donne torino",
+            "appartamenti sicuri studentesse",
+            "politecnico torino alloggi donne",
+            "vivere sola torino",
+            "female solo travel turin",
+            "torino quartieri pericolosi",
+            "emergency women turin",
+            "panic point torino",
+            "women safety turin neighborhoods"
+          ]
+        },
+        tags: [
+          "sicurezza",
+          "donne",
+          "quartieri",
+          "studentesse",
+          "crocetta",
+          "centro",
+          "guida pratica",
+          "alloggi",
+          "trasporti",
+          "emergenza"
+        ]
+      },
+      en: {
+        title: "The Safest Neighborhoods for Solo Women in Turin: A Comprehensive 2025 Guide",
+        excerpt: "Definitive safety guide for solo women in Turin: detailed analysis of safest neighborhoods (Crocetta, Centro), areas to avoid, public transport, practical tips and emergency resources for students and professionals.",
+        seo: {
+          title: "Safest Neighborhoods Turin Solo Women 2025: Complete Guide | Jungle Rent",
+          description: "Complete safety guide solo women Turin 2025: safest neighborhoods (Crocetta, Centro), areas to avoid (Barriera Milano, Aurora), transport, practical tips. Crime index, statistics, real experiences.",
+          keywords: [
+            "safe neighborhoods turin women",
+            "turin safety solo women",
+            "where to live turin solo female",
+            "crocetta turin safety",
+            "centro turin women",
+            "san salvario safe women",
+            "barriera milano dangerous",
+            "turin transport women safety",
+            "female students turin safety",
+            "safe accommodation women turin",
+            "is turin safe solo women",
+            "neighborhoods avoid turin",
+            "crime rate turin women",
+            "violence against women turin",
+            "pickpocketing turin",
+            "metro turin safety",
+            "taxi women turin",
+            "safe apartments female students",
+            "politecnico turin women housing",
+            "living alone turin",
+            "solo female travel turin",
+            "dangerous areas turin",
+            "emergency women turin",
+            "panic point turin",
+            "women safety turin guide"
+          ]
+        },
+        tags: [
+          "safety",
+          "women",
+          "neighborhoods",
+          "female students",
+          "crocetta",
+          "centro",
+          "practical guide",
+          "accommodation",
+          "transport",
+          "emergency"
+        ]
+      }
+    }
+  },
+  {
     slug: "torino-novembre-turisti",
     category: "students",
     date: "2025-11-10",
