@@ -1,4 +1,4 @@
-# San Salvario: Complete Guide for University Students in Turin
+# San Salvario: the ultimate guide to Turin's most vibrant neighborhood for students
 
 *Updated: November 2025 | Reading time: 10 minutes*
 

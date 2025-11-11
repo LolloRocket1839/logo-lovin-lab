@@ -1,4 +1,4 @@
-# The Safest Neighborhoods for Solo Women in Turin: A Comprehensive 2025 Guide
+# The safest neighborhoods in Turin: a comprehensive 2025 guide
 
 *Last Updated: November 2025. Safety conditions can change; always check current local advice.*
 

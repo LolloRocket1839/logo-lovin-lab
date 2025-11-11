@@ -1,4 +1,4 @@
-# Mobilità sostenibile a Torino per studenti: guida completa a mezzi pubblici e piste ciclabili
+# Mobilità sostenibile a Torino: la guida completa ai trasporti per studenti
 
 Torino si conferma come una delle città italiane più impegnate nella promozione della mobilità sostenibile, con un sistema di trasporti pubblici efficiente e una rete ciclabile in continua espansione. Per gli studenti universitari, muoversi in modo sostenibile non solo contribuisce alla tutela dell'ambiente, ma rappresenta anche una scelta economicamente vantaggiosa.
 

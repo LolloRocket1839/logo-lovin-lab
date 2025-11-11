@@ -1,4 +1,4 @@
-# Dove Mangiare a Torino da Studente: La Guida Completa ai Posti Migliori
+# Dove mangiare a Torino: la guida definitiva per studenti con budget limitato
 
 *Aggiornato: Novembre 2025 | Tempo di lettura: 12 minuti*
 

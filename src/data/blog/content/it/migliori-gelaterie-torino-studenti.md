@@ -1,4 +1,4 @@
-# Le Migliori Gelaterie di Torino: Guida Completa tra Tradizione e Innovazione
+# Le migliori gelaterie di Torino: guida definitiva per studenti golosi
 
 **Scopri dove trovare il miglior gelato artigianale a Torino: dalle insegne storiche alle nuove aperture che stanno conquistando la città**
 

@@ -11,10 +11,10 @@ export const blogPosts: BlogPost[] = [
     content: "quartieri-sicuri-donne-torino",
     translations: {
       it: {
-        title: "I Quartieri Più Sicuri per Donne Sole a Torino: Guida Completa 2025",
-        excerpt: "Guida definitiva alla sicurezza per donne sole a Torino: analisi dettagliata dei quartieri più sicuri (Crocetta, Centro), zone da evitare, trasporti pubblici, consigli pratici e risorse di emergenza per studentesse e professioniste.",
+        title: "I quartieri più sicuri a Torino: guida completa 2025",
+        excerpt: "Guida definitiva alla sicurezza a Torino: analisi dettagliata dei quartieri più sicuri (Crocetta, Centro), zone da evitare, trasporti pubblici, consigli pratici e risorse di emergenza per studentesse e professioniste.",
         seo: {
-          title: "Quartieri Sicuri Torino per Donne Sole 2025: Guida Completa | Jungle Rent",
+          title: "Quartieri più sicuri Torino 2025: guida completa | Jungle Rent",
           description: "Guida completa sicurezza donne sole Torino 2025: quartieri più sicuri (Crocetta, Centro), zone da evitare (Barriera Milano, Aurora), trasporti, consigli pratici. Crime index, statistiche, esperienze reali.",
           keywords: [
             "quartieri sicuri torino donne",
@@ -58,10 +58,10 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "The Safest Neighborhoods for Solo Women in Turin: A Comprehensive 2025 Guide",
-        excerpt: "Definitive safety guide for solo women in Turin: detailed analysis of safest neighborhoods (Crocetta, Centro), areas to avoid, public transport, practical tips and emergency resources for students and professionals.",
+        title: "The safest neighborhoods in Turin: a comprehensive 2025 guide",
+        excerpt: "Definitive safety guide for Turin: detailed analysis of safest neighborhoods (Crocetta, Centro), areas to avoid, public transport, practical tips and emergency resources for students and professionals.",
         seo: {
-          title: "Safest Neighborhoods Turin Solo Women 2025: Complete Guide | Jungle Rent",
+          title: "Safest neighborhoods Turin 2025: complete guide | Jungle Rent",
           description: "Complete safety guide solo women Turin 2025: safest neighborhoods (Crocetta, Centro), areas to avoid (Barriera Milano, Aurora), transport, practical tips. Crime index, statistics, real experiences.",
           keywords: [
             "safe neighborhoods turin women",
@@ -116,10 +116,10 @@ export const blogPosts: BlogPost[] = [
     content: "torino-novembre-turisti",
     translations: {
       it: {
-        title: "Torino a Novembre 2025: Dove Tennis, Cinema, Arte e Tartufi Convergono nel Mese d'Oro dell'Autunno",
+        title: "Torino a novembre 2025: dove tennis, cinema, arte e tartufi convergono nel mese d'oro dell'autunno",
         excerpt: "Scopri perché novembre è il mese culturalmente più denso di Torino: ATP Finals, Film Festival, Artissima art fair, stagione del tartufo bianco e l'atmosfera unica dell'autunno piemontese.",
         seo: {
-          title: "Torino a Novembre 2025: ATP Finals, Film Festival, Artissima | Guida Completa",
+          title: "Torino novembre 2025: ATP Finals, Film Festival, Artissima | Guida completa",
           description: "Guida novembre Torino 2025: ATP Finals tennis (9-16 nov), Torino Film Festival 43ª edizione, Artissima contemporary art, tartufo bianco Alba. Eventi, cultura, gastronomia autunnale.",
           keywords: [
             "torino novembre 2025",
@@ -162,10 +162,10 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Turin in November 2025: Where Tennis, Cinema, Art, and Truffles Converge in Autumn's Golden Month",
+        title: "Turin in november 2025: where tennis, cinema, art, and truffles converge in autumn's golden month",
         excerpt: "Discover why November is Turin's most culturally dense month: ATP Finals, Film Festival, Artissima art fair, white truffle season and the unique atmosphere of Piedmontese autumn.",
         seo: {
-          title: "Turin November 2025: ATP Finals, Film Festival, Artissima | Complete Guide",
+          title: "Turin november 2025: ATP Finals, Film Festival, Artissima | Complete guide",
           description: "Turin November 2025 guide: ATP Finals tennis (Nov 9-16), Torino Film Festival 43rd edition, Artissima contemporary art, Alba white truffle. Events, culture, autumn gastronomy.",
           keywords: [
             "turin november 2025",
@@ -219,10 +219,10 @@ export const blogPosts: BlogPost[] = [
     content: "torino-dicembre-turisti",
     translations: {
       it: {
-        title: "Torino a Dicembre 2025: Dove Storia, Arte e Celebrazioni Illuminano la Città Invernale",
+        title: "Torino a dicembre: dove storia, luci natalizie e cioccolata calda convergono nella capitale della magia invernale",
         excerpt: "Scopri perché Torino a dicembre è una delle destinazioni più incantevoli d'Europa: Luci d'Artista, mercatini di Natale, Teatro Regio, architettura barocca e tradizioni culinarie.",
         seo: {
-          title: "Torino a Dicembre 2025: Guida Completa Eventi, Arte e Tradizioni | Jungle Rent",
+          title: "Torino dicembre: mercatini di Natale, luci e magia | Guida completa",
           description: "Guida completa Torino dicembre 2025: Luci d'Artista con opere di Tracey Emin, mercatini di Natale in Piazza Castello, Romeo e Giulietta al Teatro Regio, Xmas Comics. Eventi, cultura e tradizioni.",
           keywords: [
             "torino dicembre 2025",
@@ -249,10 +249,10 @@ export const blogPosts: BlogPost[] = [
         tags: ["torino", "dicembre", "eventi", "arte", "natale", "luci d'artista", "cultura", "teatro", "mercatini", "turismo"]
       },
       en: {
-        title: "Turin in December 2025: Where History, Art, and Celebration Illuminate the Winter City",
+        title: "Turin in december: where history, Christmas lights and hot chocolate converge in the capital of winter magic",
         excerpt: "Discover why Turin in December is one of Europe's most enchanting destinations: Luci d'Artista, Christmas markets, Teatro Regio, Baroque architecture and culinary traditions.",
         seo: {
-          title: "Turin in December 2025: Complete Guide Events, Art & Traditions | Jungle Rent",
+          title: "Turin december: Christmas markets, lights and magic | Complete guide",
           description: "Complete guide Turin December 2025: Luci d'Artista with Tracey Emin works, Christmas markets in Piazza Castello, Romeo & Juliet at Teatro Regio, Xmas Comics. Events, culture and traditions.",
           keywords: [
             "turin december 2025",
@@ -290,10 +290,10 @@ export const blogPosts: BlogPost[] = [
     content: "mobilita-sostenibile-torino-studenti",
     translations: {
       it: {
-        title: "Mobilità sostenibile a Torino per studenti: guida completa 2025",
+        title: "Mobilità sostenibile a Torino: la guida completa ai trasporti per studenti",
         excerpt: "Scopri come muoverti a Torino: trasporti GTT, piste ciclabili, sharing mobility, abbonamenti under 26. Guida completa con tutti i link utili e strategie per studenti universitari.",
         seo: {
-          title: "Mobilità Torino Studenti 2025: GTT, Bici, Sharing | Guida Completa",
+          title: "Mobilità sostenibile Torino studenti 2025 | Guida completa GTT",
           description: "Guida completa mobilità sostenibile Torino per studenti: trasporti GTT, 295km piste ciclabili, abbonamenti under 26, Piemove gratuito, sharing mobility. Tutti i link e app utili.",
           keywords: [
             "trasporti Torino studenti",
@@ -332,10 +332,10 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Sustainable mobility in Turin for students: complete guide 2025",
+        title: "Sustainable mobility in Turin: the complete transport guide for students",
         excerpt: "Discover how to move around Turin: GTT transport, bike lanes, sharing mobility, under 26 passes. Complete guide with all useful links and strategies for university students.",
         seo: {
-          title: "Turin Mobility Students 2025: GTT, Bikes, Sharing | Complete Guide",
+          title: "Sustainable mobility Turin students 2025 | Complete GTT guide",
           description: "Complete guide to sustainable mobility in Turin for students: GTT transport, 295km bike lanes, under 26 passes, free Piemove, sharing mobility. All useful links and apps.",
           keywords: [
             "transport Turin students",
@@ -385,10 +385,10 @@ export const blogPosts: BlogPost[] = [
     content: "mutui-investitori-immobiliari-guida-completa",
     translations: {
       it: {
-        title: "Guida Completa per l'Investitore Immobiliare in Italia 2025",
+        title: "Mutui per investitori immobiliari: guida completa 2025",
         excerpt: "Dalle tipologie di mutui alle strategie operative, dalla fiscalità alle migliori città dove investire. 40+ fonti verificate per costruire ricchezza attraverso il mattone.",
         seo: {
-          title: "Investitore Immobiliare Italia 2025: Guida Completa con 40+ Fonti | Jungle Rent",
+          title: "Mutui investitori immobiliari 2025: guida completa | Jungle Rent",
           description: "Guida definitiva investitore immobiliare Italia 2025: mutui, leverage, fiscalità, rendimenti, crowdfunding, flipping. 40+ fonti verificate. Dove investire, come iniziare, strategie avanzate.",
           keywords: [
             "investitore immobiliare Italia",
@@ -440,10 +440,10 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Complete Guide for Real Estate Investors in Italy 2025",
+        title: "Mortgages for real estate investors: complete guide 2025",
         excerpt: "From mortgage types to operational strategies, from taxation to best cities to invest. 40+ verified sources to build wealth through real estate.",
         seo: {
-          title: "Real Estate Investor Italy 2025: Complete Guide with 40+ Sources | Jungle Rent",
+          title: "Real estate investor mortgages 2025: complete guide | Jungle Rent",
           description: "Definitive guide real estate investor Italy 2025: mortgages, leverage, taxation, returns, crowdfunding, flipping. 40+ verified sources. Where to invest, how to start, advanced strategies.",
           keywords: [
             "real estate investor Italy",
@@ -485,20 +485,20 @@ export const blogPosts: BlogPost[] = [
     content: "migliori-gelaterie-torino-studenti",
     translations: {
       it: {
-        title: "Le Migliori Gelaterie di Torino per Studenti 2025: Guida Completa",
+        title: "Le migliori gelaterie di Torino: guida definitiva per studenti golosi",
         excerpt: "Scopri le migliori gelaterie artigianali di Torino: da Papalele (2° in Italia) ad Alberto Marchetti, Aria e Mara dei Boschi. Prezzi, indirizzi, gusti imperdibili e consigli per studenti universitari.",
         seo: {
-          title: "Migliori Gelaterie Torino per Studenti 2025: Guida Completa | Jungle Rent",
+          title: "Migliori gelaterie Torino studenti 2025 | Guida definitiva",
           description: "Scopri le migliori gelaterie di Torino per studenti 2025: da Papalele (2° in Italia) ad Alberto Marchetti, Aria e Mara dei Boschi. Prezzi €2.50-3.50, indirizzi e gusti da provare assolutamente.",
           keywords: ["migliori gelaterie torino", "gelato artigianale torino", "gelaterie studenti torino", "papalele torino", "alberto marchetti gelato", "aria gelateria", "dove mangiare gelato torino", "gelaterie vicino politecnico", "gelato artigianale", "gelaterie centro torino"]
         },
         tags: ["studenti", "gelato", "torino", "food", "gelaterie", "guida"]
       },
       en: {
-        title: "Best Gelaterias in Turin for Students 2025: Complete Guide",
+        title: "The best gelato shops in Turin: definitive guide for gelato-loving students",
         excerpt: "Discover the best artisan gelaterias in Turin: from Papalele (2nd in Italy) to Alberto Marchetti, Aria and Mara dei Boschi. Prices, addresses, must-try flavors and tips for university students.",
         seo: {
-          title: "Best Gelaterias Turin for Students 2025: Complete Guide | Jungle Rent",
+          title: "Best gelato shops Turin students 2025 | Definitive guide",
           description: "Discover the best gelaterias in Turin for students 2025: from Papalele (2nd in Italy) to Alberto Marchetti, Aria and Mara dei Boschi. Prices €2.50-3.50, addresses and must-try flavors.",
           keywords: ["best gelaterias turin", "artisan gelato turin", "gelaterias students turin", "papalele turin", "alberto marchetti gelato", "aria gelateria", "where to eat gelato turin", "gelaterias near politecnico"]
         },
@@ -516,20 +516,20 @@ export const blogPosts: BlogPost[] = [
     content: "dove-vivere-torino-studenti-politecnico",
     translations: {
       it: {
-        title: "Dove vivere a Torino come studente del Politecnico: guida aggiornata 2025",
+        title: "Dove vivere a Torino: guida completa ai migliori quartieri per studenti del Politecnico",
         excerpt: "Guida completa ai migliori quartieri di Torino per studenti del Politecnico: Crocetta, Cenisia, Borgo San Paolo e altri. Prezzi reali 2025, collegamenti con i campus, servizi e consigli pratici per trovare casa.",
         seo: {
-          title: "Dove Vivere a Torino Studenti Politecnico 2025: Guida Quartieri | Jungle Rent",
+          title: "Dove vivere Torino studenti Politecnico 2025 | Guida quartieri",
           description: "Migliori quartieri Torino per studenti Politecnico 2025: Crocetta €500-700, Cenisia €350-500, confronto completo con prezzi, distanze e servizi. Guida aggiornata per trovare casa vicino al PoliTo.",
           keywords: ["dove vivere torino studenti politecnico", "quartieri studenti politecnico torino", "affitti studenti politecnico", "crocetta torino affitti", "cenisia torino studenti", "stanze politecnico torino", "casa studenti polito", "quartieri universitari torino 2025"]
         },
         tags: ["studenti", "politecnico", "quartieri", "torino", "affitti", "guida"]
       },
       en: {
-        title: "Where to live in Turin as a Politecnico student: updated 2025 guide",
+        title: "Where to live in Turin: complete guide to the best neighborhoods for Politecnico students",
         excerpt: "Complete guide to the best neighborhoods in Turin for Politecnico students: Crocetta, Cenisia, Borgo San Paolo and more. Real 2025 prices, campus connections, services and practical tips to find accommodation.",
         seo: {
-          title: "Best Neighborhoods Turin Politecnico Students 2025 Guide | Jungle Rent",
+          title: "Where to live Turin Politecnico students 2025 | Neighborhood guide",
           description: "Best areas in Turin for Politecnico students 2025: Crocetta €500-700, Cenisia €350-500. Complete comparison with prices, distances and services. Updated guide to find housing near PoliTo.",
           keywords: ["where to live turin politecnico students", "best neighborhoods politecnico turin", "rent politecnico students", "crocetta turin rent", "cenisia turin students", "rooms politecnico turin", "student housing polito"]
         },
@@ -547,20 +547,20 @@ export const blogPosts: BlogPost[] = [
     content: "dove-mangiare-torino-studenti",
     translations: {
       it: {
-        title: "Dove mangiare a Torino da studente: guida completa (2025)",
+        title: "Dove mangiare a Torino: la guida definitiva per studenti con budget limitato",
         excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
         seo: {
-          title: "Dove Mangiare a Torino da Studente: Guida Completa 2025 | Jungle Rent",
+          title: "Dove mangiare Torino studenti 2025 | Guida budget-friendly",
           description: "Dove mangiare a Torino da studente: guida 2025 ai migliori ristoranti economici vicino Politecnico e UniTo. Kebab €5, pizzerie, mercati e mense. Risparmia fino al 50% su colazione, pranzo e cena.",
           keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino", "politecnico torino", "unito torino"]
         },
         tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"]
       },
       en: {
-        title: "Where to eat in Turin as a student: complete guide (2025)",
+        title: "Where to eat in Turin: the definitive guide for students on a budget",
         excerpt: "The ultimate guide to eating well in Turin on a budget: the best places for breakfast, lunch, dinner and aperitivo, markets, university canteens and money-saving strategies tested by students.",
         seo: {
-          title: "Where to Eat in Turin as a Student: Complete Guide 2025 | Jungle Rent",
+          title: "Where to eat Turin students 2025 | Budget-friendly guide",
           description: "Discover the best places to eat in Turin on a budget: kebab shops, pizzerias, ethnic restaurants, markets, canteens and tips to save money. Complete guide with real prices.",
           keywords: ["where to eat turin students", "cheap restaurants turin", "budget food turin", "turin markets", "university canteens turin", "cheap aperitivo turin"]
         },
@@ -578,20 +578,20 @@ export const blogPosts: BlogPost[] = [
     content: "san-salvario-guida-studenti",
     translations: {
       it: {
-        title: "San Salvario: guida completa per studenti universitari a Torino",
+        title: "San Salvario: la guida definitiva al quartiere più vibrante di Torino per studenti",
         excerpt: "Tutto quello che devi sapere per vivere a San Salvario: prezzi reali, zone migliori, vita quotidiana e consigli pratici per studenti universitari.",
         seo: {
-          title: "San Salvario Torino: Guida Completa per Studenti 2025 | Jungle Rent",
+          title: "San Salvario Torino: guida completa studenti 2025 | Jungle Rent",
           description: "San Salvario Torino: guida completa 2025 per studenti universitari. Affitto €300-500, zone migliori, vita notturna e collegamenti con Politecnico e UniTo. Tutto quello che devi sapere prima di trasferirti.",
           keywords: ["san salvario torino studenti", "affitto san salvario", "vivere san salvario", "quartiere studenti torino", "alloggio unito torino", "politecnico torino", "stanze san salvario"]
         },
         tags: ["studenti", "san salvario", "torino", "quartieri", "guida"]
       },
       en: {
-        title: "San Salvario: complete guide for university students in Turin",
+        title: "San Salvario: the ultimate guide to Turin's most vibrant neighborhood for students",
         excerpt: "Everything you need to know to live in San Salvario: real prices, best areas, daily life and practical tips for university students.",
         seo: {
-          title: "San Salvario Turin: Complete Student Guide 2025 | Jungle Rent",
+          title: "San Salvario Turin: complete student guide 2025 | Jungle Rent",
           description: "Discover how much it costs to live in San Salvario, the best areas, university connections and all practical tips for students. Updated 2025 guide.",
           keywords: ["san salvario turin students", "rent san salvario", "living san salvario", "student neighborhood turin", "unito accommodation turin"]
         },

@@ -1,4 +1,4 @@
-# The Best Gelaterias in Turin: Complete Guide Between Tradition and Innovation
+# The best gelato shops in Turin: definitive guide for gelato-loving students
 
 **Discover where to find the best artisan gelato in Turin: from historic establishments to new openings conquering the city**
 

@@ -1,4 +1,4 @@
-# Dove vivere a Torino come studente del Politecnico: guida aggiornata 2025
+# Dove vivere a Torino: guida completa ai migliori quartieri per studenti del Politecnico
 
 *Aggiornato: Novembre 2025 | Tempo di lettura: 15 minuti*
 

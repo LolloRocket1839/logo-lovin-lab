@@ -1,4 +1,4 @@
-# Turin in December 2025: Where History, Art, and Celebration Illuminate the Winter City
+# Turin in december: where history, Christmas lights and hot chocolate converge in the capital of winter magic
 
 December transforms Turin into one of Europe's most enchanting destinations, where centuries-old Baroque architecture merges seamlessly with contemporary light art, festive traditions blend with cutting-edge cultural events, and the city's storied heritage comes alive through celebration. As the former seat of the House of Savoy and first capital of unified Italy, Turin has long been a city of architectural grandeur and cultural refinement. In December, this character is amplified—historic piazzas become stages for artistic expression and public celebration, centuries-old food traditions take center stage in festive markets, and the city's commitment to contemporary art continues to define it as a beacon of creativity in Europe. The upcoming December 2025 offers an extraordinary opportunity to explore why Turin has earned its reputation as a winter destination rivaling the most celebrated European cities.
 

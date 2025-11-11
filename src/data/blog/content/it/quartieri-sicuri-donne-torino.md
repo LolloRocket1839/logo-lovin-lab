@@ -1,4 +1,4 @@
-# I Quartieri Più Sicuri per Donne Sole a Torino: Guida Completa 2025
+# I quartieri più sicuri a Torino: guida completa 2025
 
 *Ultimo Aggiornamento: Novembre 2025. Le condizioni di sicurezza possono cambiare; verifica sempre le informazioni attuali.*
 

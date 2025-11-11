@@ -1,4 +1,4 @@
-# Sustainable mobility in Turin for students: complete guide to public transport and bike lanes
+# Sustainable mobility in Turin: the complete transport guide for students
 
 Turin stands out as one of Italy's most committed cities to promoting sustainable mobility, with an efficient public transport system and a constantly expanding cycling network. For university students, moving sustainably not only contributes to environmental protection but also represents an economically advantageous choice.
 

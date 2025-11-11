@@ -1,4 +1,4 @@
-# Complete Guide for Real Estate Investors in Italy 2025
+# Mortgages for real estate investors: complete guide 2025
 
 Real estate investments represent one of the most solid strategies for building long-term wealth, offering both passive income through rentals and capital appreciation over time[^1]. This guide provides an in-depth analysis of all fundamental aspects for those wishing to start or expand their real estate investment activity in Italy, from available mortgage types to operational strategies, from taxation to the best cities to invest in.
 

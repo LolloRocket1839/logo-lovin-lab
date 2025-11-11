@@ -1,4 +1,4 @@
-# Where to live in Turin as a Politecnico student: updated 2025 guide
+# Where to live in Turin: complete guide to the best neighborhoods for Politecnico students
 
 *Updated: November 2025 | Reading time: 15 minutes*
 

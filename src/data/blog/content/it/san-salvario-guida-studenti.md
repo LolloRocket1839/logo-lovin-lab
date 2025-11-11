@@ -1,4 +1,4 @@
-# San Salvario: Guida Completa per Studenti Universitari a Torino
+# San Salvario: la guida definitiva al quartiere più vibrante di Torino per studenti
 
 *Aggiornato: Novembre 2025 | Tempo di lettura: 10 minuti*
 

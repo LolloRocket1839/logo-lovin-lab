@@ -1,4 +1,4 @@
-# Where to Eat in Turin as a Student: The Complete Guide to the Best Places
+# Where to eat in Turin: the definitive guide for students on a budget
 
 *Updated: November 2025 | Reading time: 12 minutes*
 
