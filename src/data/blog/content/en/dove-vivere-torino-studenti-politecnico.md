@@ -226,7 +226,7 @@ If you live in Crocetta or Cenisia, reaching Politecnico on foot is convenient a
 
 ### Safety
 
-Turin is generally a safe city, but as in all big cities, it's important to use common sense:
+Turin is generally a safe city, but as in all big cities, it's important to use common sense. For a complete guide on safety in Turin with practical advice for students, detailed analysis of each neighborhood, and specific recommendations, check out our in-depth article on [Turin's safest neighborhoods](/blog/quartieri-sicuri-donne-torino).
 
 **Safer neighborhoods:**
 - Crocetta: very safe, residential neighborhood

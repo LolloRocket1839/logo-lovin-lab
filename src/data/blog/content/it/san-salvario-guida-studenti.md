@@ -310,7 +310,7 @@ San Salvario non è tutto uguale. Ci sono zone più tranquille, zone più rumoro
 ## Domande frequenti
 
 **È sicuro San Salvario?**
-Sì, è sicuro per gli standard di una grande città. Come ovunque, serve attenzione normale di notte (non mostrare oggetti di valore, tornare in gruppo se possibile). Migliaia di studenti ci vivono senza problemi.
+Sì, è sicuro per gli standard di una grande città. Come ovunque, serve attenzione normale di notte (non mostrare oggetti di valore, tornare in gruppo se possibile). Migliaia di studenti ci vivono senza problemi. Per una guida completa sulla sicurezza a Torino e consigli pratici specifici per gli studenti, leggi il nostro approfondimento sui [quartieri più sicuri di Torino](/blog/quartieri-sicuri-donne-torino).
 
 **Meglio stanza singola o doppia?**
 Dipende dal budget. La doppia costa €200-300/mese (risparmi €100-150), ma hai meno privacy. Per la maggior parte degli studenti, la singola vale la spesa extra.

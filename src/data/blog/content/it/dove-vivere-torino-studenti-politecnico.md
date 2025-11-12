@@ -226,7 +226,7 @@ Se abiti in Crocetta o Cenisia, raggiungere il Politecnico a piedi è comodo e v
 
 ### Sicurezza
 
-Torino è generalmente una città sicura, ma come in tutte le grandi città è importante usare buon senso:
+Torino è generalmente una città sicura, ma come in tutte le grandi città è importante usare buon senso. Per una guida completa sulla sicurezza a Torino con consigli pratici per studenti, analisi dettagliata di ogni quartiere e suggerimenti specifici, consulta il nostro approfondimento sui [quartieri più sicuri di Torino](/blog/quartieri-sicuri-donne-torino).
 
 **Quartieri più sicuri:**
 - Crocetta: molto sicuro, quartiere residenziale

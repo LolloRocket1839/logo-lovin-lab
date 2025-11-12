@@ -310,7 +310,7 @@ San Salvario is not all the same. There are quieter areas, noisier areas, cheape
 ## Frequently asked questions
 
 **Is San Salvario safe?**
-Yes, it's safe by big city standards. Like anywhere, normal caution at night is needed (don't show valuables, return in a group if possible). Thousands of students live there without problems.
+Yes, it's safe by big city standards. Like anywhere, normal caution at night is needed (don't show valuables, return in a group if possible). Thousands of students live there without problems. For a complete guide on safety in Turin and practical advice specifically for students, read our in-depth article on [Turin's safest neighborhoods](/blog/quartieri-sicuri-donne-torino).
 
 **Single or double room better?**
 Depends on budget. The double costs €200-300/month (save €100-150), but you have less privacy. For most students, the single is worth the extra cost.
