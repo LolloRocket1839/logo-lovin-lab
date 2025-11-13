@@ -4,6 +4,7 @@ import { TrustBadge } from "@/components/TrustBadge";
 import { StudentSection } from "@/components/StudentSection";
 import { InvestorSection } from "@/components/InvestorSection";
 import { SellerSection } from "@/components/SellerSection";
+import { TouristSection } from "@/components/TouristSection";
 import { BlogSection } from "@/components/blog/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
@@ -38,6 +39,7 @@ const Index = () => {
       <StudentSection />
       <InvestorSection />
       <SellerSection />
+      <TouristSection />
       <BlogSection />
       <FAQSection />
       <Footer />

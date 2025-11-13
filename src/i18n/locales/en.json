@@ -373,6 +373,25 @@
     "feature2": "Sale in 30 days",
     "feature3": "Zero commissions"
   },
+  "tourist": {
+    "sectionLabel": "For Tourists & Digital Nomads",
+    "sectionTitle": "Discover Turin Like a Local",
+    "sectionDesc": "Curated accommodations, exclusive guides and authentic tips to experience Turin at its best. Whether you're a tourist or digital nomad, we help you discover the city.",
+    "ctaTitle": "Complete Guides to Turin",
+    "ctaDesc": "Discover where to eat, work, explore and live in Turin",
+    "ctaButton": "Read the Guides",
+    "benefit1Title": "Curated Accommodations",
+    "benefit1Desc": "Verified apartments in Turin's best neighborhoods",
+    "benefit1Tooltip": "Quality accommodations in safe and authentic areas",
+    "benefit2Title": "Authentic Local Guides",
+    "benefit2Desc": "Insider tips on cafés, coworking spaces, restaurants and local culture",
+    "benefit2Tooltip": "Discover Turin like a resident",
+    "benefit3Title": "Personalized Support",
+    "benefit3Desc": "Dedicated assistance to make your stay unforgettable",
+    "benefit3Tooltip": "WhatsApp support in Italian and English",
+    "contactPrompt": "Need advice about Turin?",
+    "contactButton": "Contact us on WhatsApp"
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Quick answers to your questions",

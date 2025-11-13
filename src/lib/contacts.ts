@@ -132,6 +132,14 @@ Thank you for your availability.
 Best regards`
       }
     }
+  },
+  tourist: {
+    whatsapp: {
+      it: (name: string) => 
+        `Ciao ${name}! Sono interessato/a a Torino e vorrei consigli su alloggi e quartieri.\n\nSto cercando informazioni su:\n- Alloggi per turisti/digital nomad\n- Zone migliori dove soggiornare\n- Consigli locali su Torino\n\nGrazie!`,
+      en: (name: string) => 
+        `Hi ${name}! I'm interested in Turin and would like advice about accommodations and neighborhoods.\n\nI'm looking for information about:\n- Tourist/digital nomad accommodations\n- Best areas to stay\n- Local tips about Turin\n\nThank you!`
+    }
   }
 } as const;
 
