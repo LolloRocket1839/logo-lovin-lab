@@ -14,7 +14,7 @@ interface BlogFiltersProps {
 export const BlogFilters = ({ activeCategory, onCategoryChange, searchQuery, onSearchChange }: BlogFiltersProps) => {
   const { t } = useTranslation();
 
-  const categories: BlogCategory[] = ['all', 'students', 'investors', 'sellers'];
+  const categories: BlogCategory[] = ['all', 'students', 'investors', 'sellers', 'turisti'];
 
   return (
     <div className="space-y-6 mb-12">
