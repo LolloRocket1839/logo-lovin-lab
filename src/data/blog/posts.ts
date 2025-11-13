@@ -2,6 +2,101 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "torino-digital-nomads-guide",
+    category: "students",
+    date: "2025-11-13",
+    author: "Team Jungle Rent",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 15,
+    content: "torino-digital-nomads-guide",
+    translations: {
+      it: {
+        title: "Torino per Digital Nomad: la guida definitiva ai luoghi di lavoro più tranquilli d'Italia",
+        excerpt: "Torino si afferma come paradiso nascosto per digital nomad e remote worker: infrastrutture moderne, costo vita accessibile, cultura del lavoro focalizzato. Guida completa a coworking, caffè, biblioteche e quartieri ideali per lavorare.",
+        seo: {
+          title: "Torino Digital Nomad 2025: guida completa luoghi lavoro | Jungle Rent",
+          description: "Guida completa Torino digital nomad 2025: migliori coworking (OGR Tech, Talent Garden), caffè con WiFi, biblioteche, quartieri tranquilli (Crocetta, San Salvario), costi, infrastruttura internet. Città perfetta remote work Italia.",
+          keywords: [
+            "torino digital nomad",
+            "coworking torino",
+            "remote work torino",
+            "nomadi digitali torino",
+            "lavoro remoto torino",
+            "ogr tech torino",
+            "talent garden torino",
+            "caffè wifi torino",
+            "torino smart working",
+            "costo vita torino digital nomad",
+            "affitti brevi torino nomadi",
+            "internet veloce torino",
+            "vivere lavorare torino",
+            "san salvario digital nomad",
+            "crocetta coworking",
+            "biblioteche torino wifi",
+            "parco valentino lavoro",
+            "visto nomadi digitali italia",
+            "turin digital nomad visa",
+            "best coworking turin"
+          ]
+        },
+        tags: [
+          "digital nomad",
+          "coworking",
+          "remote work",
+          "smart working",
+          "quartieri",
+          "caffè",
+          "biblioteche",
+          "costi",
+          "infrastruttura",
+          "guida pratica"
+        ]
+      },
+      en: {
+        title: "Turin: The Underrated Digital Nomad Paradise - Peaceful Places to Work in Italy's Most Overlooked City",
+        excerpt: "Turin emerges as Europe's best-kept secret for digital nomads: sophisticated infrastructure, affordable living, and a culture that values focused work. Complete guide to coworking spaces, cafés, libraries, and neighborhoods ideal for remote professionals.",
+        seo: {
+          title: "Turin Digital Nomad Guide 2025: Best Working Spaces | Jungle Rent",
+          description: "Complete Turin digital nomad guide 2025: best coworking spaces (OGR Tech, Talent Garden), WiFi cafés, libraries, peaceful neighborhoods (Crocetta, San Salvario), costs, internet infrastructure. Perfect city for remote work in Italy.",
+          keywords: [
+            "turin digital nomad",
+            "coworking turin",
+            "remote work turin",
+            "digital nomads turin italy",
+            "work remotely turin",
+            "ogr tech turin coworking",
+            "talent garden turin",
+            "wifi cafes turin",
+            "turin remote work",
+            "cost of living turin digital nomad",
+            "short term rental turin nomad",
+            "fast internet turin",
+            "live work turin",
+            "san salvario digital nomad",
+            "crocetta neighborhood turin",
+            "turin libraries wifi",
+            "valentino park work",
+            "italy digital nomad visa",
+            "best city remote work italy",
+            "turin vs milan digital nomad"
+          ]
+        },
+        tags: [
+          "digital nomad",
+          "coworking",
+          "remote work",
+          "neighborhoods",
+          "cafés",
+          "libraries",
+          "cost of living",
+          "infrastructure",
+          "practical guide",
+          "work abroad"
+        ]
+      }
+    }
+  },
+  {
     slug: "quartieri-sicuri-donne-torino",
     category: "students",
     date: "2025-11-11",
