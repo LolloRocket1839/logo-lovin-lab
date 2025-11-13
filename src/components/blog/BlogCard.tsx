@@ -3,6 +3,7 @@ import { Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -10,6 +11,7 @@ interface BlogCardProps {
 
 export const BlogCard = ({ post }: BlogCardProps) => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
   const translatedData = post.translations[currentLang];
 
@@ -28,7 +30,11 @@ export const BlogCard = ({ post }: BlogCardProps) => {
 
   return (
     <article className="group h-full flex flex-col bg-card rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
-      <Link to={`/blog/${post.slug}`} className="block overflow-hidden">
+      <Link 
+        to={`/blog/${post.slug}`} 
+        className="block overflow-hidden"
+        onClick={() => trackClick('blog_card_image', { slug: post.slug, category: post.category })}
+      >
         <div className="aspect-video relative overflow-hidden">
           <img
             src={post.image}
@@ -71,6 +77,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
         <Link
           to={`/blog/${post.slug}`}
           className="inline-flex items-center text-primary font-medium hover:underline"
+          onClick={() => trackClick('blog_card_read_more', { slug: post.slug, category: post.category })}
         >
           {t('blog.readMore')}
           <span className="ml-1">→</span>

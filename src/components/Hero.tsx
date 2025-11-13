@@ -9,11 +9,13 @@ import { LogoModal } from "@/components/LogoModal";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
 import { StyledText } from "@/components/StyledText";
+import { useAnalytics } from "@/hooks/useAnalytics";
 export const Hero = () => {
   const {
     t,
     i18n
   } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
@@ -44,12 +46,14 @@ export const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const scrollToStudent = () => {
+    trackClick('hero_find_home_button');
     document.getElementById('student-section')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     });
   };
   const scrollToInvestor = () => {
+    trackClick('hero_invest_button');
     document.getElementById('investor-section')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -89,12 +93,16 @@ export const Hero = () => {
               height="128" 
               className="w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-size rounded-full cursor-pointer"
               loading="eager" 
-              onClick={() => setLogoModalOpen(true)} 
+              onClick={() => {
+                trackClick('hero_logo');
+                setLogoModalOpen(true);
+              }} 
               role="button" 
               tabIndex={0} 
               onKeyDown={e => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
+                  trackClick('hero_logo');
                   setLogoModalOpen(true);
                 }
               }} 

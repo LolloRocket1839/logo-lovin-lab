@@ -3,11 +3,13 @@ import { useTranslation } from "react-i18next";
 import { X, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACTS, openWhatsApp, MESSAGES, openEmail } from "@/lib/contacts";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 type SectionType = 'student' | 'investor' | 'seller' | 'default';
 
 export const StickyCTA = () => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [activeSection, setActiveSection] = useState<SectionType>('default');
@@ -65,14 +67,17 @@ export const StickyCTA = () => {
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
   const handleContactLorenzo = () => {
+    trackClick('sticky_cta_lorenzo', { section: activeSection });
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
 
   const handleContactAndrea = () => {
+    trackClick('sticky_cta_andrea', { section: activeSection });
     openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
   };
 
   const handleInvestorWhatsApp = () => {
+    trackClick('sticky_cta_investor', { section: activeSection });
     const message = MESSAGES.investor.whatsapp[currentLang](CONTACTS.investor.name);
     openWhatsApp(CONTACTS.investor.phone, message);
   };

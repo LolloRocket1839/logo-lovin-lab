@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 export const Navigation = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const { trackClick } = useAnalytics();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -39,6 +41,7 @@ export const Navigation = () => {
   };
 
   const handleMenuClick = (item: typeof menuItems[0]) => {
+    trackClick(`nav_menu_${item.id || item.path}`, { label: item.label });
     if (item.path) {
       navigate(item.path);
       setIsMobileMenuOpen(false);
@@ -56,6 +59,7 @@ export const Navigation = () => {
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
   const handleContact = () => {
+    trackClick('nav_contact_button');
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
     setIsMobileMenuOpen(false);
   };
@@ -85,7 +89,10 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
           {/* Logo - only shows when scrolled */}
           <button
-            onClick={() => scrollToSection("hero")}
+            onClick={() => {
+              trackClick('nav_logo');
+              scrollToSection("hero");
+            }}
             className="flex items-center gap-2 group transition-all duration-500 hover:scale-105"
             aria-label="Torna alla home"
             style={{
