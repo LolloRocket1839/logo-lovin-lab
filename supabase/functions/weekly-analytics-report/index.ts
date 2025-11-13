@@ -102,8 +102,9 @@ serve(async (req) => {
 
   } catch (error) {
     console.error("Error in weekly-analytics-report function:", error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: errorMessage }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
@@ -132,28 +133,28 @@ async function calculateWeekStats(
   console.log(`Fetched ${events?.length || 0} events for period ${start} to ${end}`);
 
   // Calculate basic metrics
-  const pageViewEvents = events?.filter(e => e.event_type === 'page_view') || [];
-  const clickEvents = events?.filter(e => e.event_type === 'click') || [];
-  const formSubmitEvents = events?.filter(e => e.event_type === 'form_submit') || [];
-  const scrollDepthEvents = events?.filter(e => e.event_type === 'scroll_depth') || [];
+  const pageViewEvents = events?.filter((e: any) => e.event_type === 'page_view') || [];
+  const clickEvents = events?.filter((e: any) => e.event_type === 'click') || [];
+  const formSubmitEvents = events?.filter((e: any) => e.event_type === 'form_submit') || [];
+  const scrollDepthEvents = events?.filter((e: any) => e.event_type === 'scroll_depth') || [];
 
   const pageViews = pageViewEvents.length;
-  const uniqueSessions = new Set(events?.map(e => e.session_id) || []).size;
+  const uniqueSessions = new Set(events?.map((e: any) => e.session_id) || []).size;
   const clicks = clickEvents.length;
   const formSubmissions = formSubmitEvents.length;
 
   // Calculate average scroll depth
   const scrollDepths = scrollDepthEvents
-    .map(e => e.metadata?.depth)
-    .filter(d => typeof d === 'number');
+    .map((e: any) => e.metadata?.depth)
+    .filter((d: any) => typeof d === 'number');
   const avgScrollDepth = scrollDepths.length > 0
-    ? scrollDepths.reduce((a, b) => a + b, 0) / scrollDepths.length
+    ? scrollDepths.reduce((a: number, b: number) => a + b, 0) / scrollDepths.length
     : 0;
 
   // Calculate top pages
   const pageViewsByUrl: { [key: string]: { views: number; sessions: Set<string>; scrolls: number[] } } = {};
   
-  pageViewEvents.forEach(e => {
+  pageViewEvents.forEach((e: any) => {
     const url = e.page_url || 'Unknown';
     if (!pageViewsByUrl[url]) {
       pageViewsByUrl[url] = { views: 0, sessions: new Set(), scrolls: [] };
@@ -162,7 +163,7 @@ async function calculateWeekStats(
     pageViewsByUrl[url].sessions.add(e.session_id);
   });
 
-  scrollDepthEvents.forEach(e => {
+  scrollDepthEvents.forEach((e: any) => {
     const url = e.page_url || 'Unknown';
     if (pageViewsByUrl[url] && typeof e.metadata?.depth === 'number') {
       pageViewsByUrl[url].scrolls.push(e.metadata.depth);
@@ -182,26 +183,26 @@ async function calculateWeekStats(
     .slice(0, 5);
 
   // Calculate conversion rates
-  const studentWaitlistSubmissions = formSubmitEvents.filter(e => 
+  const studentWaitlistSubmissions = formSubmitEvents.filter((e: any) => 
     e.metadata?.form === 'student_waitlist'
   ).length;
-  const studentSearchSubmissions = formSubmitEvents.filter(e => 
+  const studentSearchSubmissions = formSubmitEvents.filter((e: any) => 
     e.metadata?.form === 'student_search'
   ).length;
-  const investorSubmissions = formSubmitEvents.filter(e => 
+  const investorSubmissions = formSubmitEvents.filter((e: any) => 
     e.metadata?.form === 'investor_waitlist'
   ).length;
-  const sellerSubmissions = formSubmitEvents.filter(e => 
+  const sellerSubmissions = formSubmitEvents.filter((e: any) => 
     e.metadata?.form === 'seller_contact'
   ).length;
 
-  const studentPageViews = pageViewEvents.filter(e => 
+  const studentPageViews = pageViewEvents.filter((e: any) => 
     e.page_url?.includes('studenti') || e.page_url === '/' || e.page_url?.includes('localhost:8080/')
   ).length;
-  const investorPageViews = pageViewEvents.filter(e => 
+  const investorPageViews = pageViewEvents.filter((e: any) => 
     e.page_url?.includes('investor')
   ).length;
-  const sellerPageViews = pageViewEvents.filter(e => 
+  const sellerPageViews = pageViewEvents.filter((e: any) => 
     e.page_url?.includes('seller') || e.page_url?.includes('proprietari')
   ).length;
 
@@ -217,7 +218,7 @@ async function calculateWeekStats(
 
   // Calculate click breakdown
   const clickBreakdown: { [key: string]: number } = {};
-  clickEvents.forEach(e => {
+  clickEvents.forEach((e: any) => {
     const element = e.metadata?.element || 'unknown';
     let category = 'Other';
     
