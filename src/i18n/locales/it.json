@@ -587,7 +587,8 @@
       "all": "Tutti",
       "students": "Per Studenti",
       "investors": "Per Investitori",
-      "sellers": "Per Venditori"
+      "sellers": "Per Venditori",
+      "turisti": "Per Turisti"
     },
     "search": {
       "placeholder": "Cerca articoli...",
@@ -632,6 +633,18 @@
           "title": "Risparmia €10k di Commissioni, Vendi Più Veloce",
           "description": "Valutazione professionale in 48h. Rete diretta di acquirenti. Media 75 giorni vs 180 del settore",
           "button": "Ottieni Offerta in Contanti"
+        }
+      },
+      "turisti": {
+        "A": {
+          "title": "Scopri Torino come un Locale",
+          "description": "Unisciti alla nostra community per ricevere consigli esclusivi, eventi e offerte su alloggi a Torino",
+          "button": "Iscriviti alla Waitlist"
+        },
+        "B": {
+          "title": "Vivi l'Esperienza Autentica di Torino",
+          "description": "Accesso anticipato a guide esclusive, eventi locali e alloggi selezionati nel cuore di Torino",
+          "button": "Unisciti alla Community"
         }
       }
     },
