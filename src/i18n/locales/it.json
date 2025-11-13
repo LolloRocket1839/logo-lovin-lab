@@ -347,6 +347,25 @@
     "feature2": "Vendita in 30 giorni",
     "feature3": "Zero commissioni"
   },
+  "tourist": {
+    "sectionLabel": "Per Turisti & Digital Nomad",
+    "sectionTitle": "Scopri Torino come un Locale",
+    "sectionDesc": "Alloggi selezionati, guide esclusive e consigli autentici per vivere Torino al meglio. Che tu sia un turista o un digital nomad, ti aiutiamo a scoprire la città.",
+    "ctaTitle": "Guide Complete su Torino",
+    "ctaDesc": "Scopri dove mangiare, lavorare, esplorare e vivere a Torino",
+    "ctaButton": "Leggi le Guide",
+    "benefit1Title": "Alloggi Selezionati",
+    "benefit1Desc": "Appartamenti verificati nei migliori quartieri di Torino",
+    "benefit1Tooltip": "Alloggi di qualità in zone sicure e autentiche",
+    "benefit2Title": "Guide Locali Autentiche",
+    "benefit2Desc": "Consigli insider su caffè, coworking, ristoranti e cultura locale",
+    "benefit2Tooltip": "Scopri Torino come un residente",
+    "benefit3Title": "Supporto Personalizzato",
+    "benefit3Desc": "Assistenza dedicata per rendere il tuo soggiorno indimenticabile",
+    "benefit3Tooltip": "Supporto WhatsApp in italiano e inglese",
+    "contactPrompt": "Hai bisogno di consigli su Torino?",
+    "contactButton": "Contattaci su WhatsApp"
+  },
   "faq": {
     "title": "Domande Frequenti",
     "subtitle": "Risposte rapide alle tue domande",
