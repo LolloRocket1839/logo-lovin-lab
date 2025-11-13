@@ -18,7 +18,7 @@ La rete GTT è composta da:
 
 Per pianificare i tuoi spostamenti, visita il sito [Muoversi a Torino](https://www.muoversiatorino.it), la piattaforma ufficiale per informazioni su orari, percorsi e aggiornamenti in tempo reale.
 
-### Tariffe e abbonamenti per studenti Under 26
+### Tariffe e abbonamenti per studenti under 26
 
 La Regione Piemonte, attraverso il portale [Piemove](https://www.regione.piemonte.it/web/temi/mobilita-trasporti), offre diverse soluzioni tariffarie vantaggiose per gli studenti:
 
@@ -30,7 +30,7 @@ La Regione Piemonte, attraverso il portale [Piemove](https://www.regione.piemont
 **Programma Piemove - Trasporto gratuito:**
 Il programma Piemove ha registrato oltre 60.000 adesioni tra gli studenti piemontesi, offrendo la possibilità di viaggiare gratuitamente sui mezzi pubblici. Per verificare se sei idoneo e come aderire, consulta il portale della Regione Piemonte.
 
-### Smart Card universitaria integrata
+### Smart card universitaria integrata
 
 Molte università torinesi hanno integrato la smart card studenti con il sistema di trasporto pubblico. Verifica presso la tua università ([Politecnico](https://www.polito.it), [Università di Torino](https://www.unito.it), o [SUEDP](https://www.suedp.it)) se questa opzione è disponibile per te.
 

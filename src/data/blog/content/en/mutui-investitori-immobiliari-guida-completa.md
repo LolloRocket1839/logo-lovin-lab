@@ -2,7 +2,7 @@
 
 Real estate investments represent one of the most solid strategies for building long-term wealth, offering both passive income through rentals and capital appreciation over time[^1]. This guide provides an in-depth analysis of all fundamental aspects for those wishing to start or expand their real estate investment activity in Italy, from available mortgage types to operational strategies, from taxation to the best cities to invest in.
 
-## Who is the Real Estate Investor
+## Who is the real estate investor
 
 A real estate investor is someone who purchases properties with the primary objective of generating profit through rental or resale of properties[^2]. Unlike someone buying a home to live in, the investor considers the property primarily as a financial asset capable of producing passive income and capital appreciation[^3].
 
@@ -10,9 +10,9 @@ Becoming a real estate investor doesn't necessarily require specific degrees, bu
 
 Investment methods are multiple and adapt to different budgets and strategies. You can start with small amounts through real estate crowdfunding, invest directly in purchasing properties to rent out, or use more sophisticated strategies like property flipping to generate short-term profits[^5]. The key to success lies in careful planning, investment diversification, and the ability to identify market opportunities before they become evident to the masses.
 
-## Types of Mortgages for Real Estate Investors
+## Types of mortgages for real estate investors
 
-### Traditional Mortgage Loans
+### Traditional mortgage loans
 
 Mortgage loans represent the most common form of financing for purchasing investment properties. The purchased property is pledged as collateral through a mortgage, allowing the bank to seize the asset in case of default[^6].
 
@@ -20,7 +20,7 @@ For second homes or investment properties, conditions are generally less favorab
 
 The maximum duration for second home mortgages is generally 30 years, compared to 40 years possible for primary residences, and the monthly payment amount must not exceed 25% of declared monthly income, compared to 30-35% for primary residences[^8]. It's important to note that to obtain an investment mortgage, the bank will evaluate not only the purchaser's income capacity but also the property's rental potential, considering average rental rates in the area.
 
-### Buy to Let Mortgages
+### Buy to let mortgages
 
 Buy to let mortgages are financial products specifically designed for rental properties, very common in the UK and other Anglo-Saxon countries but still rare in Italy[^9]. These mortgages allow paying only interest for a long period, with the possibility of repaying capital later, creating positive cash flow more easily.
 
@@ -28,13 +28,13 @@ The main characteristic is that the bank evaluates mortgage sustainability prima
 
 Investors can opt for specific buy to let mortgages that offer favorable conditions for purchasing rental properties, but it's essential to compare different offers and choose the one most suited to your financial needs[^11].
 
-### Liquidity Mortgages
+### Liquidity mortgages
 
 Liquidity mortgages are loans secured by an already-owned property that allow obtaining immediate liquidity without having to sell the asset[^12]. This type of mortgage is particularly useful for investors who already own one or more properties and wish to finance new purchases or cover extraordinary expenses while maintaining existing assets.
 
 The liquidity obtained can be used to diversify the real estate portfolio, carry out renovations on other properties, or seize market opportunities requiring immediate capital availability. Liquidity mortgage conditions vary based on the value of the property pledged as collateral and the loan-to-value ratio. Generally, banks are willing to grant liquidity mortgages up to 70-80% of the estimated property value, with interest rates that may be slightly higher than purchase mortgages[^13].
 
-### Rent to Buy
+### Rent to buy
 
 Rent to buy is an innovative formula that combines a rental contract with a preliminary sales agreement, offering the tenant the possibility to purchase the property at the end of the rental period[^14]. During the rental phase, which can last up to a maximum of 10 years, the tenant pays a monthly rent higher than market rate (on average 1.5 times), and part of this rent is set aside as a down payment on the final purchase price.
 
@@ -42,15 +42,15 @@ For the investor, rent to buy can be an interesting strategy to sell properties 
 
 Banks consider rent to buy as a normal purchase for primary or second home, allowing the future buyer to benefit from primary residence tax breaks if they meet the requirements[^16].
 
-### Bare Ownership Mortgages
+### Bare ownership mortgages
 
 Bare ownership mortgages allow the investor to purchase property ownership while the usufruct right remains with the seller, typically an elderly person[^17]. This form of investment allows paying a significantly reduced price compared to the full property value, with the prospect of acquiring full ownership upon termination of the usufruct.
 
 Bare ownership investment requires a long-term vision, as the investor cannot use or rent the property until the usufruct ceases. From a tax perspective, bare ownership purchase presents interesting advantages, as the reduced value results in lower purchase taxes. However, it's important to carefully evaluate the expected duration of the usufruct and the property's potential appreciation during the waiting period.
 
-## Real Estate Investment Strategies
+## Real estate investment strategies
 
-### Direct Investment with Rental Income
+### Direct investment with rental income
 
 Direct purchase of rental properties represents the most traditional and established strategy for real estate investors[^18]. This method offers stability and constant passive income through monthly rental fees, which can be used to cover mortgage payments, taxes and maintenance costs, leaving net profit for the investor.
 
@@ -58,7 +58,7 @@ Besides rental income, real estate investments can appreciate over time, increas
 
 It's essential to carefully calculate expected returns considering not only annual rental income but also all associated costs such as taxes, insurance, maintenance expenses and vacancy periods[^20].
 
-### Property Flipping
+### Property flipping
 
 Property flipping is an investment strategy consisting of purchasing properties at advantageous prices, followed by targeted renovation work and subsequent resale at a higher price to generate short-term capital gains[^21]. Unlike rental income investment, flipping focuses on rapid asset appreciation through structural and aesthetic improvements, also leveraging favorable market conditions.
 
@@ -68,7 +68,7 @@ Flipping works best in urban contexts with high liquidity and strong demand, suc
 
 From a tax perspective, it's important to consider that if the property is resold within 5 years of purchase, the realized profit is taxed as miscellaneous income at a 26% rate[^24].
 
-### Real Estate Crowdfunding
+### Real estate crowdfunding
 
 Real estate crowdfunding represents an accessible alternative for those wishing to invest in real estate without having large capital[^25]. Through authorized online platforms, investors can participate in real estate projects starting from very small amounts, typically between 50 and 500 euros, diversifying investments across multiple projects to reduce risk.
 
@@ -83,7 +83,7 @@ Real estate crowdfunding mainly divides into two categories: lending crowdfundin
 
 Average returns declared by Italian platforms range between 8% and 10% annually, with some platforms offering predefined returns and others varying based on project success[^28].
 
-### REIT Investment
+### REIT investment
 
 REITs are real estate investment companies that own and manage a diversified portfolio of properties, allowing investors to access the real estate market through purchasing publicly traded shares[^29].
 
@@ -129,9 +129,9 @@ Or contact us directly on WhatsApp:
 
 ---
 
-## Tax Aspects for Real Estate Investors
+## Tax aspects for real estate investors
 
-### Flat Tax (Cedolare Secca)
+### Flat tax (cedolare secca)
 
 The flat tax is an optional tax regime that replaces IRPEF, regional and municipal surcharges, registration tax and stamp duty on residential rental contracts[^31]. For 2025, flat tax rates are three:
 

@@ -4,7 +4,7 @@ Novembre trasforma Torino in un punto di convergenza di quattro distinti fenomen
 
 *Questo articolo fa parte della nostra serie **[Torino Nel Corso dell'Anno](/blog)**, che esplora la ricchezza culturale della città mese per mese. Vedi anche: [Torino a Dicembre 2025](/blog/torino-dicembre-turisti).*
 
-## Le Nitto ATP Finals: Il Tennis d'Élite Arriva a Torino
+## Le Nitto ATP Finals: il tennis d'élite arriva a Torino
 
 Dal 9 al 16 novembre 2025, le **Nitto ATP Finals** tornano a Torino per il quinto anno consecutivo, consolidando lo status della città come sede del **campionato di fine stagione del circuito professionistico di tennis maschile**. Questo torneo rappresenta l'apice della competizione tennistica professionistica maschile, riunendo gli otto migliori giocatori di singolare e otto coppie di doppio per competere per il campionato finale dell'anno. Il formato funziona come un torneo nel torneo: i partecipanti competono in gironi round-robin (seguendo un formato simile alla storica tradizione della Masters Cup del tennis), con i migliori classificati che avanzano alle semifinali e finali ad eliminazione diretta.
 
@@ -16,7 +16,7 @@ Oltre alle partite stesse, l'ospitalità delle Nitto ATP Finals a Torino genera 
 
 La decisione di ospitare le Nitto ATP Finals consecutivamente a Torino dal 2021 al 2025 rappresenta una strategia deliberata per posizionare la città come destinazione privilegiata per eventi sportivi internazionali. A differenza dei tornei che ruotano in città diverse ogni anno, l'impegno quinquennale di Torino consente alla città di sviluppare infrastrutture, conoscenze istituzionali e coinvolgimento della comunità che sarebbero impossibili con una responsabilità di ospitalità di un solo anno. L'edizione 2025 sarà il quinto e ultimo anno dell'attuale accordo di ospitalità di Torino, rendendo il torneo di quest'anno particolarmente significativo mentre avvengono potenziali negoziazioni sul rinnovo del contratto.
 
-## Il Torino Film Festival: Il Cinema come Specchio Filosofico
+## Il Torino Film Festival: il cinema come specchio filosofico
 
 Simultaneamente alle ATP Finals, dal **21 al 29 novembre 2025**, Torino ospita la **43ª edizione del Torino Film Festival (TFF)**, uno dei due festival cinematografici più importanti d'Italia insieme al Festival di Venezia. La 43ª edizione riveste particolare significato in quanto celebra il centenario della nascita dell'attore **Paul Newman** attraverso una retrospettiva che presenta 24 film di Newman che spaziano da *Nick mano fredda* (1967) a *La stangata* (1973) a *Era mio padre* (1994). La retrospettiva traccia deliberatamente l'evoluzione di Newman dai suoi primi ruoli iconici fino al suo lavoro successivo, permettendo al pubblico di testimoniare come gli stili di recitazione e la scelta del materiale di questa emblematica figura hollywoodiana si siano evoluti nel corso dei decenni.
 
@@ -38,7 +38,7 @@ Una caratteristica distintiva del Torino Film Festival è l'impegno per il dialo
 
 Il festival si impegna anche ad affrontare questioni sociali contemporanee attraverso la sua programmazione. Un'attenzione speciale è riservata al 25 novembre, Giornata Internazionale per l'Eliminazione della Violenza contro le Donne, attraverso proiezioni dedicate e discussioni che esaminano come il cinema si confronta con la violenza di genere e le esperienze delle donne. Il festival adotta anche pratiche sostenibili attraverso la conformità alla **Guida del Festival Verde (AFIC)**, richiedendo una gestione degli eventi ecologicamente consapevole in tutte le operazioni.
 
-## Torino Art Week e Artissima: La Convergenza dell'Arte Contemporanea
+## Torino Art Week e Artissima: la convergenza dell'arte contemporanea
 
 Precedendo e sovrapponendosi al festival cinematografico di alcune settimane, la **Torino Art Week 2025** (29 ottobre - 2 novembre 2025) trasforma Torino in quella che molti descrivono come la "capitale italiana dell'arte contemporanea" per un periodo concentrato durante il quale le principali gallerie d'arte, musei, spazi indipendenti e sedi istituzionali presentano simultaneamente mostre e programmazione curate. L'epicentro della settimana è **Artissima**, la più importante fiera d'arte contemporanea d'Italia, che ha mantenuto il suo status sin dalla sua istituzione nel 1994 come principale sede nazionale per il mercato dell'arte contemporanea internazionale e la ricerca artistica.
 
@@ -69,7 +69,7 @@ I **Musei Reali di Torino** presentano due importanti retrospettive del XVII sec
 
 Questa concentrazione senza precedenti di istituzioni artistiche, gallerie e fiere che operano simultaneamente trasforma Torino in un paesaggio permeabile dove gli incontri artistici avvengono a ogni scala—dalle grandi mostre fieristiche alle presentazioni di gallerie indipendenti agli interventi artistici a livello stradale. Il coordinamento tra settori istituzionali e commerciali crea quella che equivale a una meditazione estesa sulle molteplici funzioni dell'arte contemporanea: come merce, come indagine intellettuale, come coinvolgimento della comunità e come riflessione storica.
 
-## La Stagione del Tartufo Bianco: Novembre come Apoteosi Culinaria
+## La stagione del tartufo bianco: novembre come apoteosi culinaria
 
 Mentre tennis, cinema e arte contemporanea dominano il calendario culturale di novembre, il mese porta un significato ugualmente profondo per le tradizioni gastronomiche del Piemonte attraverso la **stagione del tartufo bianco**. Il **Tartufo Bianco d'Alba** (*Tuber magnatum pico*) rappresenta uno degli ingredienti alimentari più rari e costosi al mondo, con prezzi che possono raggiungere decine di migliaia di dollari per chilogrammo per esemplari eccezionali. Mentre la stagione di caccia al tartufo si estende da settembre a dicembre, novembre rappresenta il picco stagionale sia per quantità che per qualità, quando le condizioni del suolo e l'ecologia sotterranea producono tartufi al loro sviluppo aromatico e gustativo ottimale.
 

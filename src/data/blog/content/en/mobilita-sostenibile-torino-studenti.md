@@ -18,7 +18,7 @@ The GTT network consists of:
 
 To plan your trips, visit [Muoversi a Torino](https://www.muoversiatorino.it), the official platform for information on schedules, routes, and real-time updates.
 
-### Fares and Under 26 student passes
+### Fares and under 26 student passes
 
 The Piedmont Region, through the [Piemove](https://www.regione.piemonte.it/web/temi/mobilita-trasporti) portal, offers various advantageous fare solutions for students:
 

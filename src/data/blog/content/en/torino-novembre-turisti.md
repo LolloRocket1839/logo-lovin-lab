@@ -4,7 +4,7 @@ November transforms Turin into a convergence point for four distinct cultural an
 
 *This article is part of our **[Turin Throughout the Year](/blog)** series, exploring the city's cultural richness month by month. See also: [Turin in December 2025](/blog/torino-dicembre-turisti).*
 
-## The Nitto ATP Finals: World-Class Tennis Arrives in Torino
+## The Nitto ATP Finals: world-class tennis arrives in Torino
 
 From November 9-16, 2025, the **Nitto ATP Finals** returns to Turin for its fifth consecutive year, consolidating the city's status as host to the **men's professional tennis circuit's season-ending championship**. This tournament represents the pinnacle of professional men's tennis competition, bringing together the world's eight highest-ranked singles players and eight doubles pairs to compete for the year's final major championship. The format functions as a tournament within a tournament: participants compete in round-robin play within separate groups (following a format similar to tennis' historic Masters Cup tradition), with the top finishers advancing to knockout-stage semifinals and finals.
 
@@ -16,7 +16,7 @@ Beyond the matches themselves, Turin's hosting of the Nitto ATP Finals generates
 
 The decision to host the Nitto ATP Finals consecutively in Turin from 2021 through 2025 represents a deliberate strategy to position the city as a premier destination for international sporting events. Unlike tournaments that rotate to different cities yearly, Turin's five-year hosting commitment allows the city to develop infrastructure, institutional knowledge, and community engagement that would be impossible with a single-year hosting responsibility. The 2025 edition will be the fifth and final year of Turin's current hosting agreement, making this year's tournament particularly significant as potential negotiation on contract extension occurs.
 
-## The Turin Film Festival: Cinema as Philosophical Mirror
+## The Turin Film Festival: cinema as philosophical mirror
 
 Simultaneously with the ATP Finals, from **November 21-29, 2025**, Turin hosts the **43rd edition of the Torino Film Festival (TFF)**, one of Italy's two most important film festivals alongside the Venice Film Festival. The 43rd edition carries particular significance as it honors the centennial of actor **Paul Newman's birth** through a retrospective featuring 24 of Newman's films spanning from *Cool Hand Luke* (1967) to *The Sting* (1973) to *Nobody's Fool* (1994). The retrospective deliberately traces Newman's evolution from his earliest iconic roles through his later work, allowing audiences to witness how this emblematic Hollywood figure's performance styles and choice of material evolved across decades.
 
@@ -38,7 +38,7 @@ A distinctive feature of Turin Film Festival is the commitment to interpretive d
 
 The festival also commits to addressing contemporary social issues through its programming. Special attention is reserved for November 25, the International Day for the Elimination of Violence Against Women, through dedicated screenings and discussions examining how cinema engages with gender violence and women's experiences. The festival also adopts sustainable practices through compliance with the **Green Festival Guide (AFIC)**, requiring environmentally conscious event management across all operations.
 
-## Torino Art Week and Artissima: The Contemporary Art Convergence
+## Torino Art Week and Artissima: the contemporary art convergence
 
 Preceding and overlapping with the film festival by several weeks, **Torino Art Week 2025** (October 29 - November 2, 2025) transforms Turin into what many describe as "Italy's contemporary art capital" for a concentrated period during which major art galleries, museums, independent spaces, and institutional venues simultaneously present curated exhibitions and programming. The week's epicenter is **Artissima**, Italy's most important contemporary art fair, which has maintained its status since establishment in 1994 as the nation's premier venue for international contemporary art market and artistic research.
 
@@ -69,7 +69,7 @@ The **Musei Reali di Torino** presents two major 17th-century retrospectives: **
 
 This unprecedented concentration of simultaneously operating art institutions, galleries, and fairs transforms Turin into a permeable landscape where art encounters occur at every scale—from major fair exhibitions to independent gallery presentations to street-level artistic interventions. The coordination between institutional and commercial sectors creates what amounts to an extended meditation on contemporary art's multiple functions: as commodity, as intellectual inquiry, as community engagement, and as historical reflection.
 
-## The White Truffle Season: November as Culinary Apotheosis
+## The white truffle season: november as culinary apotheosis
 
 While tennis, cinema, and contemporary art dominate November's cultural calendar, the month carries equally profound significance for Piedmont's gastronomic traditions through the **white truffle season**. The **Alba White Truffle** (*Tuber magnatum pico*) represents one of the world's rarest and most expensive food ingredients, commanding prices that can reach tens of thousands of dollars per kilogram for exceptional specimens. While the truffle hunting season extends from September through December, November represents the peak season for both quantity and quality, when the soil conditions and underground ecology produce truffles at their most aromatic and flavorful optimal development.
 

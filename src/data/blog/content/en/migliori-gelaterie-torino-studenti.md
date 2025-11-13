@@ -4,13 +4,13 @@
 
 Turin is not only the capital of chocolate and pastry: it's also a true paradise for artisan gelato lovers. Whether you're a student just arrived in the city or a true Torinese, this guide will take you to discover the unmissable gelaterias of the Piedmontese capital, from historic shops to the most recent openings that are revolutionizing the city's gelato scene.
 
-## Why Turin's Gelato is Special
+## Why Turin's gelato is special
 
 Before diving into our selection, it's worth understanding what makes Turin gelato so particular. The gelato tradition of the Piedmontese capital has its roots in the availability of excellent raw materials: fresh milk from the Alpine valleys, IGP hazelnuts from the Langhe, highest quality chocolate, and a long history of artisan mastery. Not surprisingly, in 2025, 7 Turin gelaterias won the three cones of Gambero Rosso, the highest national guide recognition.
 
-## Historic Gelaterias: The Pillars of Tradition
+## Historic gelaterias: the pillars of tradition
 
-### Alberto Marchetti: The Turin Gelato Empire
+### Alberto Marchetti: the Turin gelato empire
 
 With **6 strategically positioned locations** in the city (Corso Vittorio Emanuele II, Via Po, Piazza CLN, Via Cernaia, Via Principi d'Acaja and Corso Galileo Ferraris), Alberto Marchetti is an institution for Torinese. The secret? Selected raw materials: fresh milk from Piedmontese valleys, hazelnuts from the Langhe, Gobino chocolate and coffee from local roasters.
 
@@ -20,7 +20,7 @@ With **6 strategically positioned locations** in the city (Corso Vittorio Emanue
 
 📍 **Multiple locations** - Great for students in the Politecnico, Palazzo Nuovo and city center area
 
-### Mara dei Boschi: Research and Creativity Since 2005
+### Mara dei Boschi: research and creativity since 2005
 
 Three locations in the city (Via Berthollet, Piazza Carlo Emanuele II, Corso Alcide De Gasperi 57) and a presence also at Mercato Centrale in Milan testify to the success of this gelateria that has made continuous research its trademark. Awarded by Gambero Rosso, Mara dei Boschi is the perfect place for those who love to experiment.
 
@@ -28,7 +28,7 @@ Three locations in the city (Via Berthollet, Piazza Carlo Emanuele II, Corso Alc
 
 📍 **Via Berthollet, Piazza Carlo Emanuele II, Corso Alcide De Gasperi 57** - Ideal for students living in San Salvario or attending the Politecnico area.
 
-### Gelati d'Antan: The Taste Laboratory
+### Gelati d'Antan: the taste laboratory
 
 Born in 2012 from the intuition of Riccardo Ronchi and Edoardo Patrone, d'Antan is a true "taste laboratory" with three points of sale in Turin and locations also in Milan and Bologna. Nicolò Arietti, best emerging gelato maker 2018 according to Gambero Rosso, creates gelatos here that are true gastronomic experiments.
 
@@ -38,7 +38,7 @@ Born in 2012 from the intuition of Riccardo Ronchi and Edoardo Patrone, d'Antan 
 
 📍 **Via Nicola Fabrizi 37/c** - Perfect for those studying in the Santa Rita area
 
-### La Tosca: When Gelato Becomes Poetry
+### La Tosca: when gelato becomes poetry
 
 Located in Via Luigi Cibrario, La Tosca is where gelato meets Turin tradition and elegance. Each flavor is designed to create perfect balances, with particular attention to wine sorbets: from Moscato to Malvasia, to Primo vermouth produced from grapes planted on volcanic soils in Lanzarote.
 
@@ -46,9 +46,9 @@ Located in Via Luigi Cibrario, La Tosca is where gelato meets Turin tradition an
 
 **Atmosphere:** perfect for a relaxing and slightly vintage break.
 
-## The New Generation: Innovation and Freshness
+## The new generation: innovation and freshness
 
-### Papalele: Second Best Gelateria in Italy
+### Papalele: second best gelateria in Italy
 
 The true revelation of 2025: according to the prestigious Dissapore guide, Papalele by Emanuele Monero (aka Papà Lele) is the **second best gelateria in Italy**. An amazing result for a new establishment that immediately conquered the top thanks to the refinement of raw materials and fine gastronomic combinations.
 
@@ -58,7 +58,7 @@ The true revelation of 2025: according to the prestigious Dissapore guide, Papal
 
 📍 **Two locations: San Salvario and Porta Palazzo** - Check their social channels for exact addresses
 
-### Aria: Lightness and Design in Vanchiglia
+### Aria: lightness and design in Vanchiglia
 
 Opened in May 2022 by Davide Ferrero and Roberto Speranza (both with previous experience at Mara dei Boschi, Gelati d'Antan and Alberto Marchetti), Aria quickly won over Torinese so much that it opened a second location in Santa Rita. The style is in the name: "airy," simple and light gelato.
 
@@ -79,13 +79,13 @@ The name says it all: Nicolò Arietti opened this welcoming pink gelateria in 20
 
 📍 **Corso Stati Uniti 6/c** - Convenient for those studying at Politecnico or frequenting the Crocetta area
 
-### Nivà: River View and Quality
+### Nivà: river view and quality
 
 With two locations in strategic positions (Piazza Vittorio Veneto 8 and Corso Alcide De Gasperi 57), Nivà offers quality gelato in postcard locations. The Piazza Vittorio location is perfect for a break after a walk along the Po.
 
 **Awarded** by Gambero Rosso with three cones, it's a guarantee of quality and research in raw materials.
 
-## Neighborhood Gelaterias: Hidden Gems
+## Neighborhood gelaterias: hidden gems
 
 ### Moou (Barriera di Milano)
 
@@ -111,7 +111,7 @@ Born in Rimini, La Romana has also conquered Turin. Specialty: creamy and very s
 
 📍 **Corso Inghilterra 31/A**
 
-## Gelato Week: The Event Not to Miss
+## Gelato Week: the event not to miss
 
 From March 25 to 30, Turin hosts **Gelato Week**, an event organized by ConGelato that transforms the city into an artisan gelato capital. Ten gelaterias participate with exclusive limited edition flavors, available only during this week.
 
@@ -122,21 +122,21 @@ From March 25 to 30, Turin hosts **Gelato Week**, an event organized by ConGelat
 
 A perfect way to explore the city and discover new gelaterias with a single pass!
 
-## Practical Tips for Students
+## Practical tips for students
 
-### Budget-Friendly
+### Budget-friendly
 A small cup costs on average €2.50-3.50, perfect for a snack without emptying your wallet. Many gelaterias offer discounts or loyalty cards for regular customers.
 
-### When to Go
+### When to go
 Gelato in Turin is eaten all year round (yes, even in December!), but the high season runs from March to October. To avoid queues on summer weekends, try going on weekdays.
 
-### Options for Intolerances
+### Options for intolerances
 Almost all modern gelaterias offer options:
 - **Lactose-free**: Aria, Moou, Mara dei Boschi, Miretti
 - **Vegan**: Aria (dedicated line), many others have fruit sorbets
 - **Gluten-free**: practically everywhere (artisan gelato is naturally gluten-free, just watch out for cones and cookies)
 
-### University Neighborhoods and Their Gelaterias
+### University neighborhoods and their gelaterias
 
 **Politecnico/Crocetta Area:** Alberto Marchetti (Via Principi d'Acaja), Ottimo!, Mara dei Boschi (Corso Alcide De Gasperi 57)
 
@@ -146,7 +146,7 @@ Almost all modern gelaterias offer options:
 
 **Along the Po Area:** Nivà (Piazza Vittorio Veneto 8 - priceless river view)
 
-## Iconic Flavors to Try Absolutely
+## Iconic flavors to try absolutely
 
 1. **Zabaione** (Alberto Marchetti, Gasprin) - pure Turin tradition
 2. **Gianduia** - everywhere, but each has its version
@@ -156,7 +156,7 @@ Almost all modern gelaterias offer options:
 6. **Wine Sorbets** (La Tosca) - unique and surprising
 7. **Piedmont IGP Hazelnut** - local excellence raw material
 
-## Final Verdict: Where to Go According to Your Preferences
+## Final verdict: where to go according to your preferences
 
 **Looking for absolute excellence?** → Papalele (but prepare for queues on weekends)
 

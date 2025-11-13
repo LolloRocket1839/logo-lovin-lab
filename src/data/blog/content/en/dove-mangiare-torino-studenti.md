@@ -59,7 +59,7 @@ First of all, let's clarify the numbers.
 
 Breakfast is where you can save the most (or spend unnecessarily).
 
-### Option 1: At home (€0.50-1.50)
+### Option 1: at home (€0.50-1.50)
 
 **The most economical:**
 - Bread + jam: €0.40
