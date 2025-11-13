@@ -813,7 +813,8 @@
       "all": "All",
       "students": "For Students",
       "investors": "For Investors",
-      "sellers": "For Sellers"
+      "sellers": "For Sellers",
+      "turisti": "For Tourists"
     },
     "search": {
       "placeholder": "Search articles...",
@@ -858,6 +859,18 @@
           "title": "Save €10k in Commissions, Sell Faster",
           "description": "48-hour professional valuation. Direct buyer network. Average 75 days to close vs 180 industry average",
           "button": "Get Your Cash Offer"
+        }
+      },
+      "turisti": {
+        "A": {
+          "title": "Discover Turin Like a Local",
+          "description": "Join our community to receive exclusive tips, events, and offers on accommodations in Turin",
+          "button": "Join the Waitlist"
+        },
+        "B": {
+          "title": "Experience Authentic Turin",
+          "description": "Early access to exclusive guides, local events, and curated accommodations in the heart of Turin",
+          "button": "Join the Community"
         }
       }
     },

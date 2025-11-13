@@ -3,7 +3,7 @@ import { BlogPost } from "@/types/blog";
 export const blogPosts: BlogPost[] = [
   {
     slug: "torino-digital-nomads-guide",
-    category: "students",
+    category: "turisti",
     date: "2025-11-13",
     author: "Team Jungle Rent",
     image: "/images/mole-antonelliana-mountains.jpg",
