@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SkipToContent } from "./components/SkipToContent";
 import { usePageViewTracking } from "./hooks/useAnalytics";
+import { useScrollDepth } from "./hooks/useScrollDepth";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Investors from "./pages/Investors";
@@ -18,6 +19,7 @@ const queryClient = new QueryClient();
 
 const AppContent = () => {
   usePageViewTracking();
+  useScrollDepth();
   
   return (
     <Routes>
