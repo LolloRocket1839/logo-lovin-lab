@@ -11,6 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import {
   Form,
   FormControl,
@@ -39,6 +40,7 @@ interface WaitlistDialogProps {
 export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
   const { t } = useTranslation();
   const { incrementCount } = useWaitlistCounter();
+  const { trackFormSubmit } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const waitlistSchema = getWaitlistSchema(t);
@@ -85,6 +87,14 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
 
       // Increment waitlist counter on successful submission
       incrementCount();
+
+      // Track form submission
+      trackFormSubmit('student_waitlist', {
+        university: data.university,
+        budget: data.budget,
+        move_date: data.move_date,
+        referral_source: data.referral_source,
+      });
 
       toast({
         title: t("waitlist.successTitle"),

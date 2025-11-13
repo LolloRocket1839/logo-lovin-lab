@@ -14,6 +14,7 @@ import { Loader2, InfoIcon } from "lucide-react";
 import { turinAreas } from "@/data/turinAreas";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { supabase } from "@/integrations/supabase/client";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import {
   Form,
   FormControl,
@@ -52,6 +53,7 @@ interface InvestorWaitlistDialogProps {
 export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'general' }: InvestorWaitlistDialogProps) => {
   const { t, i18n } = useTranslation();
   const { incrementCount } = useWaitlistCounter();
+  const { trackFormSubmit } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const investorWaitlistSchema = getInvestorWaitlistSchema(t);
@@ -131,6 +133,16 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
 
       // Increment waitlist counter on successful submission
       incrementCount();
+
+      // Track form submission
+      trackFormSubmit('investor_waitlist', {
+        investment_budget: data.investment_budget,
+        investment_horizon: data.investment_horizon,
+        investment_timing: data.investment_timing,
+        has_rental_properties: data.has_rental_properties,
+        preferred_area: data.preferred_area,
+        guide_type: guideType,
+      });
 
       toast({
         title: t("investorWaitlist.successTitle"),

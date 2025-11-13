@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { Checkbox } from "./ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Building2, Loader2 } from "lucide-react";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const getSellerSchema = (t: any) => z.object({
   name: z.string().trim().min(2, t('sellerContact.nameError')).max(100),
@@ -39,6 +40,7 @@ interface SellerContactDialogProps {
 export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogProps) => {
   const { t } = useTranslation();
   const { toast } = useToast();
+  const { trackFormSubmit } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   type SellerFormData = z.infer<ReturnType<typeof getSellerSchema>>;
@@ -92,6 +94,15 @@ export const SellerContactDialog = ({ open, onOpenChange }: SellerContactDialogP
       });
 
       if (!response.ok) throw new Error("Submission failed");
+
+      // Track form submission
+      trackFormSubmit('seller_contact', {
+        zone: data.zone,
+        rooms: data.rooms,
+        condition: data.condition,
+        motivation: data.motivation,
+        urgent: data.urgent,
+      });
 
       toast({
         title: t('sellerContact.successTitle'),

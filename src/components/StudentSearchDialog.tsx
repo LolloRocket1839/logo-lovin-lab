@@ -9,6 +9,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { toast as sonnerToast } from "sonner";
 import { detectArea, AreaInfo } from "@/data/turinAreas";
 import { AreaSuggestionCard } from "@/components/AreaSuggestionCard";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import {
   Dialog,
   DialogContent,
@@ -79,6 +80,7 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const { incrementCount } = useWaitlistCounter();
+  const { trackFormSubmit } = useAnalytics();
   const [hasDraft, setHasDraft] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const lastSaveRef = useRef<string>("");
@@ -123,6 +125,15 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
 
       if (response.ok) {
         incrementCount();
+        
+        // Track form submission
+        trackFormSubmit('student_search', {
+          roommates: values.roommates,
+          preferred_area: values.preferred_area,
+          budget: values.budget,
+          move_date: values.move_date,
+        });
+        
         // Clear draft after successful submission
         localStorage.removeItem(DRAFT_KEY);
         localStorage.removeItem(DRAFT_TIMESTAMP_KEY);
