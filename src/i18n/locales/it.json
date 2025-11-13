@@ -589,6 +589,10 @@
       "investors": "Per Investitori",
       "sellers": "Per Venditori"
     },
+    "search": {
+      "placeholder": "Cerca articoli...",
+      "noResults": "Nessun articolo trovato per \"{{query}}\""
+    },
     "hero": {
       "title": "Risorse e Guide",
       "subtitle": "Approfondimenti, dati e consigli pratici sul mercato immobiliare torinese"

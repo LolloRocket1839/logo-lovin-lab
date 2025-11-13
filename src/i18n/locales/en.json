@@ -815,6 +815,10 @@
       "investors": "For Investors",
       "sellers": "For Sellers"
     },
+    "search": {
+      "placeholder": "Search articles...",
+      "noResults": "No articles found for \"{{query}}\""
+    },
     "hero": {
       "title": "Resources and Guides",
       "subtitle": "Insights, data and practical advice on the Turin real estate market"

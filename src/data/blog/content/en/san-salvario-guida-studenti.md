@@ -90,6 +90,17 @@ Here San Salvario makes a difference:
 - Social: €120
 - **Total: €745/month**
 
+> **🔒 Safety in San Salvario: everything you need to know**
+>
+> Wondering if San Salvario is safe? We wrote a **[complete safety guide for Turin](/blog/quartieri-sicuri-donne-torino)** with:
+> - Detailed safety analysis of San Salvario and other neighborhoods
+> - Official 2025 crime rate data
+> - Areas to avoid and recommended times
+> - Practical tips for night transport
+> - Emergency numbers and useful resources
+>
+> 👉 **[Read the complete safety guide →](/blog/quartieri-sicuri-donne-torino)**
+
 ## The different areas of San Salvario
 
 San Salvario is not all the same. There are quieter areas, noisier areas, cheaper areas. Here's the practical map:

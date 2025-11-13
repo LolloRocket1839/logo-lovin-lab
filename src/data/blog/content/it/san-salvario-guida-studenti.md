@@ -90,6 +90,17 @@ Qui San Salvario fa la differenza:
 - Sociale: €120
 - **Totale: €745/mese**
 
+> **🔒 Sicurezza a San Salvario: tutto quello che devi sapere**
+>
+> Ti stai chiedendo se San Salvario è sicuro? Abbiamo scritto una **[guida completa sulla sicurezza a Torino](/blog/quartieri-sicuri-donne-torino)** con:
+> - Analisi dettagliata della sicurezza di San Salvario e altri quartieri
+> - Dati ufficiali crime rate 2025
+> - Zone da evitare e orari consigliati
+> - Consigli pratici per trasporti notturni
+> - Numeri di emergenza e risorse utili
+>
+> 👉 **[Leggi la guida completa sulla sicurezza →](/blog/quartieri-sicuri-donne-torino)**
+
 ## Le diverse zone di San Salvario
 
 San Salvario non è tutto uguale. Ci sono zone più tranquille, zone più rumorose, zone più economiche. Ecco la mappa pratica:

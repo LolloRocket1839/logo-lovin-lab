@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { BlogHero } from "@/components/blog/BlogHero";
@@ -8,14 +8,19 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCategory } from "@/types/blog";
-import { getPostsByCategory } from "@/data/blog/posts";
+import { getPostsByCategory, searchPosts } from "@/data/blog/posts";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
 const Blog = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('all');
-  const posts = getPostsByCategory(activeCategory);
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  const posts = useMemo(() => {
+    const categoryPosts = getPostsByCategory(activeCategory);
+    return searchPosts(categoryPosts, searchQuery, i18n.language as 'it' | 'en');
+  }, [activeCategory, searchQuery, i18n.language]);
 
   return (
     <main role="main" className="min-h-screen">
@@ -48,8 +53,17 @@ const Blog = () => {
           <div className="container mx-auto max-w-7xl">
             <BlogFilters 
               activeCategory={activeCategory} 
-              onCategoryChange={setActiveCategory} 
+              onCategoryChange={setActiveCategory}
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
             />
+            {posts.length === 0 && searchQuery && (
+              <div className="text-center py-12">
+                <p className="text-muted-foreground text-lg">
+                  {t('blog.search.noResults', { query: searchQuery })}
+                </p>
+              </div>
+            )}
             <BlogGrid posts={posts} />
           </div>
         </section>

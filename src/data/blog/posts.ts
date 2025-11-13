@@ -619,3 +619,21 @@ export const getRelatedPosts = (currentSlug: string, category: string, limit: nu
     .filter(post => post.slug !== currentSlug && post.category === category)
     .slice(0, limit);
 };
+
+export const searchPosts = (posts: BlogPost[], searchQuery: string, lang: 'it' | 'en' = 'it'): BlogPost[] => {
+  if (!searchQuery.trim()) return posts;
+  
+  const query = searchQuery.toLowerCase().trim();
+  
+  return posts.filter(post => {
+    const translation = post.translations[lang];
+    const titleMatch = translation.title.toLowerCase().includes(query);
+    const excerptMatch = translation.excerpt.toLowerCase().includes(query);
+    const tagsMatch = translation.tags.some(tag => tag.toLowerCase().includes(query));
+    const keywordsMatch = translation.seo.keywords.some(keyword => 
+      keyword.toLowerCase().includes(query)
+    );
+    
+    return titleMatch || excerptMatch || tagsMatch || keywordsMatch;
+  });
+};
