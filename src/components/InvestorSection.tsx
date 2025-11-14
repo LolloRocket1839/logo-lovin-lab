@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users } from "lucide-react";
+import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users, FileText } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { openEmail, MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
@@ -111,8 +112,37 @@ export const InvestorSection = () => {
             <Users className="w-4 h-4 mr-2" />
             {count}+ {t('investor.activeInvestors')}
           </Badge>
+
+          <Card 
+            className={`mb-6 p-6 bg-primary/5 border-primary/20 transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '500ms' }}
+          >
+            <div className="flex items-start gap-4">
+              <FileText className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold mb-2">
+                  {i18n.language.startsWith('en') 
+                    ? "Why This is the Perfect Time to Invest in Turin" 
+                    : "Perché Questo è il Momento Perfetto per Investire a Torino"}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {i18n.language.startsWith('en')
+                    ? "Complete market analysis: stock volatility, Italian real estate recovery, and Turin's exceptional 8.34% rental yields."
+                    : "Analisi di mercato completa: volatilità borsistica, ripresa immobiliare italiana e gli eccezionali rendimenti dell'8,34% di Torino."}
+                </p>
+                <Button asChild variant="outline" size="sm" className="group">
+                  <Link to="/blog/investire-real-assets-torino-2025">
+                    {i18n.language.startsWith('en') ? "Read Full Analysis" : "Leggi l'Analisi Completa"}
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </Card>
           
-          <div 
+          <div
             className={`flex flex-col sm:flex-row gap-3 justify-center items-center transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
