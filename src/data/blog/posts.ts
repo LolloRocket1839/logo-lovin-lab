@@ -2,6 +2,37 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "investire-real-assets-torino-2025",
+    category: "investors",
+    date: "2025-11-14",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 20,
+    content: "investire-real-assets-torino-2025",
+    translations: {
+      it: {
+        title: "Perché Questo è il Momento Perfetto per Investire in Real Assets: Focus su Torino",
+        excerpt: "Analisi completa sul perché la volatilità del mercato azionario e la ripresa immobiliare italiana rendono Torino l'opportunità di investimento ottimale nel 2025.",
+        seo: {
+          title: "Investire Real Assets Torino 2025: Opportunità Immobiliare | Jungle Rent",
+          description: "Analisi mercato immobiliare Torino 2025: rendimenti 8.34%, prezzi convenienti, ripresa italiana. Perché investire in real estate durante volatilità borsistica.",
+          keywords: ["investire torino", "real assets", "immobiliare torino 2025", "rendimenti immobiliari", "mercato azionario", "investimenti immobiliari", "torino investimenti", "bce tassi", "opportunità immobiliare"]
+        },
+        tags: ["Investimenti", "Real Estate", "Mercato Immobiliare", "Torino", "Analisi"]
+      },
+      en: {
+        title: "Why This is the Perfect Time to Invest in Real Assets: Focus on Turin",
+        excerpt: "Complete analysis on why stock market volatility and Italian real estate recovery make Turin the optimal investment opportunity in 2025.",
+        seo: {
+          title: "Invest Real Assets Turin 2025: Real Estate Opportunity | Jungle Rent",
+          description: "Turin real estate market analysis 2025: 8.34% yields, affordable prices, Italian recovery. Why invest in real estate during stock market volatility.",
+          keywords: ["invest turin", "real assets", "turin real estate 2025", "rental yields", "stock market", "real estate investment", "turin investments", "ecb rates", "property opportunity"]
+        },
+        tags: ["Investments", "Real Estate", "Property Market", "Turin", "Analysis"]
+      }
+    }
+  },
+  {
     slug: "torino-nightlife-guide",
     category: "turisti",
     date: "2025-11-14",
