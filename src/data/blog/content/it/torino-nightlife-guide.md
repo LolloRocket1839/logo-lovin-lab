@@ -100,7 +100,7 @@ I quartieri **Aurora** e **Vanchiglia** rappresentano il lato più alternativo e
 
 Luoghi da non perdere: microbirrifici artigianali, cocktail bar sperimentali, gallerie d'arte con eventi serali, e negozi vintage aperti fino a tardi.
 
-## Cocktail Bar e Lounge Premium
+## Cocktail bar e lounge premium
 
 ### Lobelix Cocktail Bar: Mixology Creativa
 
@@ -114,7 +114,7 @@ Luoghi da non perdere: microbirrifici artigianali, cocktail bar sperimentali, ga
 
 **Senso Unico** (Via Cesare Battisti 3/e, Torino) combina **cocktail di qualità** con **DJ set regolari** che spaziano da house a nu-disco. Il locale offre un'esperienza energetica dove ottimi drink incontrano una grande musica, attirando una folla elegante che apprezza sia la qualità dei drink che l'atmosfera vivace.
 
-## Informazioni Pratiche per la Nightlife di Torino
+## Informazioni pratiche per la vita notturna di Torino
 
 ### Orari di Apertura e Migliori Momenti per Visitare
 

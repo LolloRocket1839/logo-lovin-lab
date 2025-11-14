@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     content: "investire-real-assets-torino-2025",
     translations: {
       it: {
-        title: "Perché Questo è il Momento Perfetto per Investire in Real Assets: Focus su Torino",
+        title: "Perché questo è il momento perfetto per investire in real assets: focus su Torino",
         excerpt: "Analisi completa sul perché la volatilità del mercato azionario e la ripresa immobiliare italiana rendono Torino l'opportunità di investimento ottimale nel 2025.",
         seo: {
           title: "Investire Real Assets Torino 2025: Opportunità Immobiliare | Jungle Rent",
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     content: "torino-nightlife-guide",
     translations: {
       it: {
-        title: "Vita Notturna di Torino: Guida Completa ai Migliori Locali e Quartieri",
+        title: "Vita notturna di Torino: guida completa ai migliori locali e quartieri",
         excerpt: "Scopri la vibrante scena notturna di Torino con club storici, cocktail bar contemporanei, locali di musica dal vivo e spazi culturali per tutti i gusti.",
         seo: {
           title: "Vita Notturna Torino: Guida ai Migliori Club, Bar e Locali | Jungle Rent",
