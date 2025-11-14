@@ -2,6 +2,37 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "torino-nightlife-guide",
+    category: "turisti",
+    date: "2025-11-14",
+    author: "Jungle Rent Team",
+    image: "/images/san-salvario-night.jpeg",
+    readTime: 15,
+    content: "torino-nightlife-guide",
+    translations: {
+      it: {
+        title: "Vita Notturna di Torino: Guida Completa ai Migliori Locali e Quartieri",
+        excerpt: "Scopri la vibrante scena notturna di Torino con club storici, cocktail bar contemporanei, locali di musica dal vivo e spazi culturali per tutti i gusti.",
+        seo: {
+          title: "Vita Notturna Torino: Guida ai Migliori Club, Bar e Locali | Jungle Rent",
+          description: "Guida completa alla nightlife di Torino: nightclub leggendari, craft beer, jazz club, cocktail bar e i quartieri della movida come San Salvario e Murazzi del Po.",
+          keywords: ["vita notturna torino", "nightclub torino", "bar torino", "movida torino", "san salvario", "murazzi del po", "hiroshima mon amour", "jazz club torino", "club torino", "discoteche torino", "cocktail bar torino", "locali musica torino"]
+        },
+        tags: ["Nightlife", "Entertainment", "Bar e Club", "Musica dal Vivo", "San Salvario", "Guide Turistiche"]
+      },
+      en: {
+        title: "Turin's Vibrant Nightlife: A Complete Guide to the Best Venues and Districts",
+        excerpt: "Discover Turin's dynamic nightlife scene with historic clubs, contemporary cocktail bars, live music venues, and cultural spaces catering to every taste.",
+        seo: {
+          title: "Turin Nightlife Guide: Best Clubs, Bars & Music Venues | Jungle Rent",
+          description: "Complete guide to Turin's nightlife: legendary nightclubs, craft beer destinations, jazz clubs, cocktail bar and vibrant districts like San Salvario and Murazzi del Po.",
+          keywords: ["turin nightlife", "torino clubs", "turin bars", "san salvario nightlife", "murazzi del po", "hiroshima mon amour", "jazz club turin", "turin nightclubs", "best clubs turin", "cocktail bars turin", "live music turin"]
+        },
+        tags: ["Nightlife", "Entertainment", "Bars & Clubs", "Live Music", "San Salvario", "Tourist Guides"]
+      }
+    }
+  },
+  {
     slug: "torino-digital-nomads-guide",
     category: "turisti",
     date: "2025-11-13",
