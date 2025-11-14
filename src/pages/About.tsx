@@ -15,9 +15,6 @@ const About = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
 
-  const handleContactAndrea = () => {
-    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
-  };
 
   const handleEmail = () => {
     openEmail(CONTACTS.email, MESSAGES.student.email[currentLang].subject, MESSAGES.student.email[currentLang].body);
@@ -33,7 +30,7 @@ const About = () => {
         {/* Structured Data Meta Tags for LLM */}
         <meta name="company" content="JungleRent" />
         <meta name="company.founded" content="2024" />
-        <meta name="company.founders" content="Lorenzo Bianchi, Andrea, Andrew" />
+        <meta name="company.founders" content="Lorenzo Oni-Joseph" />
         <meta name="company.location" content="Turin, Piedmont, Italy" />
         <meta name="company.funding" content="€20,000 Piedmont Region" />
         <meta name="company.services" content="short-term rentals, property management, student housing, real estate investment" />
@@ -89,13 +86,7 @@ const About = () => {
                 <h3 className="font-semibold text-lg">{t("about.foundersLabel")}</h3>
               </div>
               <div itemProp="founders" itemScope itemType="https://schema.org/Person">
-                <p className="font-medium" itemProp="name">Lorenzo Bianchi <span className="text-muted-foreground text-sm">(CEO)</span></p>
-              </div>
-              <div itemProp="founders" itemScope itemType="https://schema.org/Person">
-                <p className="font-medium" itemProp="name">Andrea <span className="text-muted-foreground text-sm">(COO)</span></p>
-              </div>
-              <div itemProp="founders" itemScope itemType="https://schema.org/Person">
-                <p className="font-medium" itemProp="name">Andrew <span className="text-muted-foreground text-sm">(CTO)</span></p>
+                <p className="font-medium" itemProp="name">Lorenzo Oni-Joseph <span className="text-muted-foreground text-sm">({t("about.founderLabel")})</span></p>
               </div>
             </CardContent>
           </Card>
@@ -234,9 +225,6 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button onClick={handleContactLorenzo} variant="premium" size="lg">
               {t("about.contactLorenzo")}
-            </Button>
-            <Button onClick={handleContactAndrea} variant="premium" size="lg">
-              {t("about.contactAndrea")}
             </Button>
             <Button onClick={handleEmail} variant="outline" size="lg">
               {t("about.sendEmail")}
