@@ -3,13 +3,9 @@ export const CONTACTS = {
     phone: '+393319053037',
     name: 'Lorenzo'
   },
-  andrea: {
-    phone: '+393899135932',
-    name: 'Andrea'
-  },
   investor: {
     phone: '+393319053037',
-    name: 'Lorenzo o Andrea'
+    name: 'Lorenzo'
   },
   email: 'junglerententeprise@gmail.com'
 } as const;

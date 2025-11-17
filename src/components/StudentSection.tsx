@@ -56,9 +56,6 @@ export const StudentSection = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
 
-  const handleWhatsAppAndrea = () => {
-    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
-  };
 
   const handleQuizClick = () => {
     window.open('https://it.surveymonkey.com/r/Q27QDBG', '_blank');

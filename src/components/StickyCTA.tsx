@@ -71,10 +71,6 @@ export const StickyCTA = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
 
-  const handleContactAndrea = () => {
-    trackClick('sticky_cta_andrea', { section: activeSection });
-    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
-  };
 
   const handleInvestorWhatsApp = () => {
     trackClick('sticky_cta_investor', { section: activeSection });
@@ -135,16 +131,7 @@ export const StickyCTA = () => {
             className="flex-1 h-11 sm:h-12 text-xs sm:text-sm group shadow-lg"
           >
             <MessageCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-4 sm:w-4" />
-            {t('stickyCta.lorenzoButton')}
-          </Button>
-          <Button
-            onClick={handleContactAndrea}
-            size="sm"
-            variant="premium"
-            className="flex-1 h-11 sm:h-12 text-xs sm:text-sm group shadow-lg"
-          >
-            <MessageCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-4 sm:w-4" />
-            {t('stickyCta.andreaButton')}
+            {t('hero.contactLorenzo')}
           </Button>
         </div>
         <Button

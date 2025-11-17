@@ -16,7 +16,6 @@ export const StructuredData = () => {
       foundingDate: "2024",
       founders: [
         { "@type": "Person", name: "Lorenzo Bianchi", jobTitle: "CEO" },
-        { "@type": "Person", name: "Andrea", jobTitle: "COO" },
         { "@type": "Person", name: "Andrew", jobTitle: "CTO" }
       ],
       // Enhanced AI Context for LLM Recognition

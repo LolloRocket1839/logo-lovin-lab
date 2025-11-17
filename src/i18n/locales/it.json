@@ -40,7 +40,6 @@
     "whyPoint5": "Conformità normative. Partnership con 2i3T",
     "contactTitle": "Contattaci",
     "contactLorenzo": "Parla con Lorenzo",
-    "contactAndrea": "Parla con Andrea",
     "sendEmail": "Invia Email"
   },
   "breadcrumbs": {
@@ -74,7 +73,6 @@
     "iAmStudent": "Sono uno Studente",
     "iAmInvestor": "Sono un Investitore",
     "contactLorenzo": "Contatta Lorenzo",
-    "contactAndrea": "Contatta Andrea",
     "howItWorks": "Come Funziona",
     "trustSafe": "Contratti sicuri",
     "trustSupport": "Supporto dedicato",
@@ -237,7 +235,6 @@
     "benefit2Tooltip": "Opzioni di prenotazione flessibili",
     "contactText": "Contatta direttamente i nostri student advisor:",
     "contactLorenzo": "Parla con Lorenzo",
-    "contactAndrea": "Parla con Andrea",
     "sendEmail": "Invia Email",
     "responseTime": "Risposta entro 40 minuti",
     "cta": "Scopri le Stanze",
@@ -275,9 +272,8 @@
     "feature2": "Gestione completa",
     "feature3": "Investimento da 100€",
     "activeInvestors": "investitori già attivi",
-    "talkToAdvisor": "Parla con Lorenzo o Andrea",
+    "talkToAdvisor": "Parla con Lorenzo",
     "talkToLorenzo": "Parla con Lorenzo",
-    "talkToAndrea": "Parla con Andrea",
     "bookCall": "Mostra Interesse",
     "ctaButton": "Contatta un Advisor"
   },
@@ -594,8 +590,6 @@
     }
   },
   "stickyCta": {
-    "lorenzoButton": "Lorenzo",
-    "andreaButton": "Andrea",
     "closeLabel": "Chiudi"
   },
   "blog": {
