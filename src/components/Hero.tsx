@@ -22,9 +22,6 @@ export const Hero = () => {
   const handleWhatsAppLorenzo = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
-  const handleWhatsAppAndrea = () => {
-    openWhatsApp(CONTACTS.andrea.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.andrea.name));
-  };
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {

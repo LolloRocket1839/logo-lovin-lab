@@ -105,15 +105,6 @@ export const Footer = () => {
                 <span className="text-sm font-light link-elegant">Lorenzo: {CONTACTS.lorenzo.phone.replace(/(\+\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4')}</span>
               </a>
               <a 
-                href={`https://wa.me/${CONTACTS.andrea.phone}`}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
-              >
-                <MessageCircle className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} />
-                <span className="text-sm font-light link-elegant">Andrea: {CONTACTS.andrea.phone.replace(/(\+\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4')}</span>
-              </a>
-              <a 
                 href="#"
                 onClick={handleEmailClick}
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"

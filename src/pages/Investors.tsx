@@ -37,10 +37,6 @@ const Investors = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
-  const handleAndreaWhatsApp = () => {
-    const message = MESSAGES.investor.whatsapp[currentLang]('Andrea');
-    openWhatsApp(CONTACTS.andrea.phone, message);
-  };
 
   const handleCallLorenzo = () => {
     window.location.href = `tel:${CONTACTS.lorenzo.phone}`;
@@ -150,17 +146,6 @@ const Investors = () => {
               >
                 <MessageCircle className="mr-2 w-5 h-5" />
                 {t('investor.talkToLorenzo')}
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              
-              <Button 
-                onClick={handleAndreaWhatsApp}
-                size="lg"
-                variant="premium"
-                className="w-full sm:w-auto px-8 py-6 text-lg group shadow-xl"
-              >
-                <MessageCircle className="mr-2 w-5 h-5" />
-                {t('investor.talkToAndrea')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
@@ -278,17 +263,6 @@ const Investors = () => {
                 >
                   <MessageCircle className="mr-2 w-5 h-5" />
                   {t('investor.talkToLorenzo')}
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                
-                <Button 
-                  onClick={handleAndreaWhatsApp}
-                  size="lg"
-                  variant="premium"
-                  className="w-full sm:w-auto px-8 py-6 text-lg group shadow-xl"
-                >
-                  <MessageCircle className="mr-2 w-5 h-5" />
-                  {t('investor.talkToAndrea')}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 

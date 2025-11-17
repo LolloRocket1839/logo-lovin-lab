@@ -40,7 +40,6 @@
     "whyPoint5": "Full compliance with local and national regulations. Partnership with 2i3T - University Incubator",
     "contactTitle": "Contact Us",
     "contactLorenzo": "Talk to Lorenzo",
-    "contactAndrea": "Talk to Andrea",
     "sendEmail": "Send Email"
   },
   "breadcrumbs": {
@@ -74,7 +73,6 @@
     "iAmStudent": "I'm a Student",
     "iAmInvestor": "I'm an Investor",
     "contactLorenzo": "Contact Lorenzo",
-    "contactAndrea": "Contact Andrea",
     "howItWorks": "How it works",
     "trustSafe": "Secure contracts",
     "trustSupport": "Dedicated support",
@@ -263,7 +261,6 @@
     "benefit2Tooltip": "Flexible booking options",
     "contactText": "Contact our student advisors directly:",
     "contactLorenzo": "Talk to Lorenzo",
-    "contactAndrea": "Talk to Andrea",
     "sendEmail": "Send email",
     "responseTime": "Response within 40 minutes",
     "cta": "Discover rooms",
@@ -301,9 +298,8 @@
     "feature2": "Complete management",
     "feature3": "Investment from €100",
     "activeInvestors": "active investors",
-    "talkToAdvisor": "Talk to Lorenzo or Andrea",
+    "talkToAdvisor": "Talk to Lorenzo",
     "talkToLorenzo": "Talk to Lorenzo",
-    "talkToAndrea": "Talk to Andrea",
     "bookCall": "Show Interest",
     "ctaButton": "Contact an Advisor"
   },
@@ -646,8 +642,6 @@
     "motivationOther": "Other"
   },
   "stickyCta": {
-    "lorenzoButton": "Lorenzo",
-    "andreaButton": "Andrea",
     "closeLabel": "Close"
   },
   "breadcrumbs": {

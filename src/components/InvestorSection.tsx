@@ -64,11 +64,6 @@ export const InvestorSection = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
-  const handleAndreaWhatsApp = () => {
-    const language = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
-    const message = MESSAGES.investor.whatsapp[language]('Andrea');
-    openWhatsApp(CONTACTS.andrea.phone, message);
-  };
 
 
   return (
@@ -156,17 +151,6 @@ export const InvestorSection = () => {
             >
               <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
               {t('investor.talkToLorenzo')}
-              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-            <Button 
-              onClick={handleAndreaWhatsApp}
-              size="lg"
-              variant="premium"
-              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base group shadow-xl h-11 sm:h-12"
-            >
-              <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-              {t('investor.talkToAndrea')}
               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
