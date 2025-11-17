@@ -66,31 +66,31 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "torino-nightlife-guide",
     category: "turisti",
-    date: "2025-11-14",
+    date: "2025-11-17",
     author: "Jungle Rent Team",
     image: "/images/san-salvario-night.jpeg",
-    readTime: 15,
+    readTime: 35,
     content: "torino-nightlife-guide",
     translations: {
       it: {
-        title: "Vita notturna di Torino: guida completa ai migliori locali e quartieri",
-        excerpt: "Scopri la vibrante scena notturna di Torino con club storici, cocktail bar contemporanei, locali di musica dal vivo e spazi culturali per tutti i gusti.",
+        title: "Tutte le Discoteche di Torino: Guida Completa ai Club Notturni e Serate Imperdibili",
+        excerpt: "Scopri l'intera scena notturna torinese: dalle storiche discoteche come Hiroshima e Centralino ai moderni warehouse underground, dai grandi festival come Kappa FuturFestival e Club to Club alle serate innovative nei musei. Guida definitiva con oltre 30 locali, eventi e consigli pratici.",
         seo: {
-          title: "Vita Notturna Torino: Guida ai Migliori Club, Bar e Locali | Jungle Rent",
-          description: "Guida completa alla nightlife di Torino: nightclub leggendari, craft beer, jazz club, cocktail bar e i quartieri della movida come San Salvario e Murazzi del Po.",
-          keywords: ["vita notturna torino", "nightclub torino", "bar torino", "movida torino", "san salvario", "murazzi del po", "hiroshima mon amour", "jazz club torino", "club torino", "discoteche torino", "cocktail bar torino", "locali musica torino"]
+          title: "Discoteche Torino: Guida Completa Club, Eventi e Nightlife 2025 | Jungle Rent",
+          description: "Guida definitiva alle discoteche di Torino: Hiroshima Mon Amour, Centralino, Audiodrom, Q35, Murazzi del Po, Club Silencio, Kappa FuturFestival. Oltre 30 club con orari, prezzi, generi musicali e quartieri della movida.",
+          keywords: ["discoteche torino", "club torino", "nightlife torino", "hiroshima mon amour", "centralino torino", "audiodrom", "q35 warehouse", "murazzi del po", "kappa futurfestival", "club to club", "club silencio", "the beach torino", "bunker torino", "techno torino", "vita notturna torino", "locali notturni torino", "serate torino", "eventi torino", "san salvario nightlife"]
         },
-        tags: ["Nightlife", "Entertainment", "Bar e Club", "Musica dal Vivo", "San Salvario", "Guide Turistiche"]
+        tags: ["Discoteche", "Nightlife", "Club Torino", "Eventi", "Techno", "House Music", "Festival", "Murazzi", "San Salvario", "Guide Turistiche"]
       },
       en: {
-        title: "Turin's Vibrant Nightlife: A Complete Guide to the Best Venues and Districts",
-        excerpt: "Discover Turin's dynamic nightlife scene with historic clubs, contemporary cocktail bars, live music venues, and cultural spaces catering to every taste.",
+        title: "All Turin's Nightclubs: Complete Guide to Night Clubs and Unmissable Events",
+        excerpt: "Discover the entire Turin nightlife scene: from historic clubs like Hiroshima and Centralino to modern underground warehouses, from major festivals like Kappa FuturFestival and Club to Club to innovative museum nights. Definitive guide with over 30 venues, events and practical tips.",
         seo: {
-          title: "Turin Nightlife Guide: Best Clubs, Bars & Music Venues | Jungle Rent",
-          description: "Complete guide to Turin's nightlife: legendary nightclubs, craft beer destinations, jazz clubs, cocktail bar and vibrant districts like San Salvario and Murazzi del Po.",
-          keywords: ["turin nightlife", "torino clubs", "turin bars", "san salvario nightlife", "murazzi del po", "hiroshima mon amour", "jazz club turin", "turin nightclubs", "best clubs turin", "cocktail bars turin", "live music turin"]
+          title: "Turin Nightclubs: Complete Club, Events & Nightlife Guide 2025 | Jungle Rent",
+          description: "Definitive guide to Turin's nightclubs: Hiroshima Mon Amour, Centralino, Audiodrom, Q35, Murazzi del Po, Club Silencio, Kappa FuturFestival. Over 30 clubs with hours, prices, music genres and nightlife districts.",
+          keywords: ["turin nightclubs", "torino clubs", "turin nightlife", "hiroshima mon amour", "centralino turin", "audiodrom", "q35 warehouse", "murazzi del po", "kappa futurfestival", "club to club", "club silencio", "the beach turin", "bunker turin", "techno turin", "turin nightlife", "night clubs turin", "turin events", "san salvario nightlife"]
         },
-        tags: ["Nightlife", "Entertainment", "Bars & Clubs", "Live Music", "San Salvario", "Tourist Guides"]
+        tags: ["Nightclubs", "Nightlife", "Turin Clubs", "Events", "Techno", "House Music", "Festivals", "Murazzi", "San Salvario", "Tourist Guides"]
       }
     }
   },
