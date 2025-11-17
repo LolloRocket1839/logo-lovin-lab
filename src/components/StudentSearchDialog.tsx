@@ -591,6 +591,23 @@ export const StudentSearchDialog = ({ open, onOpenChange }: StudentSearchDialogP
               )}
             />
 
+            {/* Risorse utili per studenti */}
+            <div className="p-4 bg-accent/50 rounded-lg border border-border">
+              <p className="text-sm font-medium mb-2">{t('studentSearch.resourcesTitle')}</p>
+              <p className="text-xs text-muted-foreground mb-3">
+                {t('studentSearch.resourcesDesc')}
+              </p>
+              <Button 
+                type="button" 
+                variant="link" 
+                size="sm" 
+                className="h-auto p-0 text-primary hover:text-primary/80"
+                onClick={() => window.open('/blog/aule-studio-torino-guida-completa', '_blank')}
+              >
+                {t('studentSearch.studySpacesLink')} →
+              </Button>
+            </div>
+
             <Button type="submit" className="w-full" disabled={isSubmitting}>
               {isSubmitting ? t("studentSearch.submitting") : t("studentSearch.submitButton")}
             </Button>

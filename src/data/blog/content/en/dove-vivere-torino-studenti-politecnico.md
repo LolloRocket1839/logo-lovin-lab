@@ -99,6 +99,28 @@ For those with a more limited budget, neighborhoods like Santa Rita, Pozzo Strad
 
 ---
 
+## Essential services for students in Turin
+
+In addition to finding the right house, it's essential to know the services available for students. Turin offers a widespread network of resources that make university life more productive and enjoyable.
+
+### Study spaces
+
+It's not always possible or productive to study at home. Turin offers **57 study spaces** among libraries, coworking spaces, and equipped cafes, strategically distributed throughout the city. Discover all the details in our [**complete guide to study spaces in Turin**](/blog/aule-studio-torino-guida-completa), featuring:
+
+- 📚 **15 civic libraries** scattered across all neighborhoods
+- 🎓 **7 EDISU libraries** with booking system via Campus Piemonte app
+- 🏛️ **Politecnico and UniTo libraries** dedicated to university students
+- 🌟 **Campus Diffuso Universitario** - Turin's unique network with 11 locations
+- ☕ **Equipped bars and cafes** for those who prefer studying in informal environments
+- 💼 **Professional coworking spaces** with dedicated workstations
+- 🗺️ **Interactive map** with hours, capacity, and booking information
+
+Whether you're a student seeking absolute silence in a library, prefer the atmosphere of a cafe, or need spaces open 24/7, in our guide you'll find the perfect space for you.
+
+[**→ Discover all 57 study spaces in Turin**](/blog/aule-studio-torino-guida-completa)
+
+---
+
 ## Average rental prices in Turin for students (2025)
 
 | Neighborhood    | Single room (€) | Bed in shared room (€) | Entire apartment (€) |

@@ -99,6 +99,28 @@ Per chi ha un budget più limitato, quartieri come Santa Rita, Pozzo Strada e Pa
 
 ---
 
+## Servizi essenziali per studenti a Torino
+
+Oltre a trovare la casa giusta, è fondamentale conoscere i servizi disponibili per gli studenti. Torino offre una rete capillare di risorse che rendono la vita universitaria più produttiva e piacevole.
+
+### Spazi per studiare
+
+Non sempre è possibile o produttivo studiare a casa. Torino offre **57 spazi studio** tra biblioteche, coworking e caffè attrezzati, distribuiti strategicamente in tutta la città. Scopri tutti i dettagli nella nostra [**guida completa alle aule studio a Torino**](/blog/aule-studio-torino-guida-completa), con:
+
+- 📚 **15 biblioteche civiche** sparse in tutti i quartieri
+- 🎓 **7 biblioteche EDISU** con sistema di prenotazione tramite app Campus Piemonte
+- 🏛️ **Biblioteche Politecnico e UniTo** dedicate agli studenti universitari
+- 🌟 **Campus Diffuso Universitario** - una rete unica di Torino con 11 location
+- ☕ **Bar e caffè attrezzati** per chi preferisce studiare in ambienti informali
+- 💼 **Coworking professionali** con postazioni dedicate
+- 🗺️ **Mappa interattiva** con orari, capienza e informazioni sulla prenotazione
+
+Che tu sia uno studente che cerca silenzio assoluto in biblioteca, preferisca l'atmosfera di un caffè o abbia bisogno di spazi aperti 24/7, nella nostra guida troverai lo spazio perfetto per te.
+
+[**→ Scopri tutte le 57 aule studio di Torino**](/blog/aule-studio-torino-guida-completa)
+
+---
+
 ## Prezzi medi degli affitti a Torino per studenti (2025)
 
 | Quartiere       | Stanza singola (€) | Posto letto in doppia (€) | Appartamento intero (€) |
