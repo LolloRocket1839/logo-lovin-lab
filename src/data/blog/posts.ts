@@ -2,6 +2,37 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "aule-studio-torino-guida-completa",
+    category: "students",
+    date: "2025-11-17",
+    author: "Jungle Rent Team",
+    image: "/images/torino-transport.jpg",
+    readTime: 25,
+    content: "aule-studio-torino-guida-completa",
+    translations: {
+      it: {
+        title: "Aule Studio a Torino: Guida Completa ai 57 Migliori Spazi per Studiare",
+        excerpt: "Scopri tutti i 57 migliori luoghi dove studiare a Torino: biblioteche EDISU, Politecnico, UniTo, Campus Diffuso Universitario (unico in Italia!), coworking e bar. Con mappa, orari, prenotazioni e consigli pratici.",
+        seo: {
+          title: "Aule Studio Torino: Guida Completa ai 57 Migliori Spazi | JungleRent",
+          description: "Guida completa alle aule studio a Torino: 57 spazi tra biblioteche EDISU, Politecnico, UniTo, Campus Diffuso, coworking. Orari, Wi-Fi, prenotazioni app Campus Piemonte e Affluences.",
+          keywords: ["aule studio torino", "biblioteche torino", "edisu sale studio", "politecnico biblioteche", "unito biblioteche", "campus diffuso torino", "dove studiare torino", "sala studio torino", "biblioteche civiche torino", "campus piemonte app", "studiare a torino"]
+        },
+        tags: ["Studenti", "Politecnico", "UniTo", "Aule Studio", "Biblioteche", "EDISU", "Campus Diffuso"]
+      },
+      en: {
+        title: "Study Spaces in Turin: Complete Guide to the 57 Best Places to Study",
+        excerpt: "Discover all 57 best places to study in Turin: EDISU libraries, Politecnico, UniTo, University Diffused Campus (unique in Italy!), coworking and cafés. With map, schedules, bookings and practical tips.",
+        seo: {
+          title: "Study Spaces Turin: Complete Guide to 57 Best Places | JungleRent",
+          description: "Complete guide to study spaces in Turin: 57 locations including EDISU libraries, Politecnico, UniTo, Diffused Campus, coworking. Hours, Wi-Fi, Campus Piemonte and Affluences app bookings.",
+          keywords: ["study spaces turin", "turin libraries", "edisu study halls", "politecnico libraries", "unito libraries", "diffused campus turin", "where to study turin", "study room turin", "public libraries turin", "campus piemonte app", "studying in turin"]
+        },
+        tags: ["Students", "Politecnico", "UniTo", "Study Spaces", "Libraries", "EDISU", "Diffused Campus"]
+      }
+    }
+  },
+  {
     slug: "investire-real-assets-torino-2025",
     category: "investors",
     date: "2025-11-14",
