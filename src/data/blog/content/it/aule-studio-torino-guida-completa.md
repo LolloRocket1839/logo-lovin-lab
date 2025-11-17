@@ -1,4 +1,4 @@
-# Aule Studio a Torino: Guida Completa ai 57 Migliori Spazi per Studiare
+# Aule studio a Torino: guida completa ai 57 migliori spazi per studiare
 
 **Sei uno studente del Politecnico o dell'Università di Torino alla ricerca dello spazio studio perfetto?** Abbiamo mappato per te tutti i 57 migliori luoghi dove studiare a Torino, dalle biblioteche universitarie ai caffè più accoglienti, dal Campus Diffuso Universitario (unico in Italia!) ai coworking più innovativi.
 

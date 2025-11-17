@@ -11,10 +11,10 @@ export const blogPosts: BlogPost[] = [
     content: "aule-studio-torino-guida-completa",
     translations: {
       it: {
-        title: "Aule Studio a Torino: Guida Completa ai 57 Migliori Spazi per Studiare",
+        title: "Aule studio a Torino: guida completa ai 57 migliori spazi per studiare",
         excerpt: "Scopri tutti i 57 migliori luoghi dove studiare a Torino: biblioteche EDISU, Politecnico, UniTo, Campus Diffuso Universitario (unico in Italia!), coworking e bar. Con mappa, orari, prenotazioni e consigli pratici.",
         seo: {
-          title: "Aule Studio Torino: Guida Completa ai 57 Migliori Spazi | JungleRent",
+          title: "Aule studio Torino: guida completa ai 57 migliori spazi | JungleRent",
           description: "Guida completa alle aule studio a Torino: 57 spazi tra biblioteche EDISU, Politecnico, UniTo, Campus Diffuso, coworking. Orari, Wi-Fi, prenotazioni app Campus Piemonte e Affluences.",
           keywords: ["aule studio torino", "biblioteche torino", "edisu sale studio", "politecnico biblioteche", "unito biblioteche", "campus diffuso torino", "dove studiare torino", "sala studio torino", "biblioteche civiche torino", "campus piemonte app", "studiare a torino"]
         },
@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
         title: "Perché questo è il momento perfetto per investire in real assets: focus su Torino",
         excerpt: "Analisi completa sul perché la volatilità del mercato azionario e la ripresa immobiliare italiana rendono Torino l'opportunità di investimento ottimale nel 2025.",
         seo: {
-          title: "Investire Real Assets Torino 2025: Opportunità Immobiliare | Jungle Rent",
+          title: "Investire real assets Torino 2025: opportunità immobiliare | Jungle Rent",
           description: "Analisi mercato immobiliare Torino 2025: rendimenti 8.34%, prezzi convenienti, ripresa italiana. Perché investire in real estate durante volatilità borsistica.",
           keywords: ["investire torino", "real assets", "immobiliare torino 2025", "rendimenti immobiliari", "mercato azionario", "investimenti immobiliari", "torino investimenti", "bce tassi", "opportunità immobiliare"]
         },
@@ -73,10 +73,10 @@ export const blogPosts: BlogPost[] = [
     content: "torino-nightlife-guide",
     translations: {
       it: {
-        title: "Tutte le Discoteche di Torino: Guida Completa ai Club Notturni e Serate Imperdibili",
+        title: "Tutte le discoteche di Torino: guida completa ai club notturni e serate imperdibili",
         excerpt: "Scopri l'intera scena notturna torinese: dalle storiche discoteche come Hiroshima e Centralino ai moderni warehouse underground, dai grandi festival come Kappa FuturFestival e Club to Club alle serate innovative nei musei. Guida definitiva con oltre 30 locali, eventi e consigli pratici.",
         seo: {
-          title: "Discoteche Torino: Guida Completa Club, Eventi e Nightlife 2025 | Jungle Rent",
+          title: "Discoteche Torino: guida completa club, eventi e nightlife 2025 | Jungle Rent",
           description: "Guida definitiva alle discoteche di Torino: Hiroshima Mon Amour, Centralino, Audiodrom, Q35, Murazzi del Po, Club Silencio, Kappa FuturFestival. Oltre 30 club con orari, prezzi, generi musicali e quartieri della movida.",
           keywords: ["discoteche torino", "club torino", "nightlife torino", "hiroshima mon amour", "centralino torino", "audiodrom", "q35 warehouse", "murazzi del po", "kappa futurfestival", "club to club", "club silencio", "the beach torino", "bunker torino", "techno torino", "vita notturna torino", "locali notturni torino", "serate torino", "eventi torino", "san salvario nightlife"]
         },
@@ -307,7 +307,7 @@ export const blogPosts: BlogPost[] = [
         title: "Torino a novembre 2025: dove tennis, cinema, arte e tartufi convergono nel mese d'oro dell'autunno",
         excerpt: "Scopri perché novembre è il mese culturalmente più denso di Torino: ATP Finals, Film Festival, Artissima art fair, stagione del tartufo bianco e l'atmosfera unica dell'autunno piemontese.",
         seo: {
-          title: "Torino novembre 2025: ATP Finals, Film Festival, Artissima | Guida completa",
+          title: "Torino novembre 2025: ATP Finals, Film Festival, Artissima | guida completa",
           description: "Guida novembre Torino 2025: ATP Finals tennis (9-16 nov), Torino Film Festival 43ª edizione, Artissima contemporary art, tartufo bianco Alba. Eventi, cultura, gastronomia autunnale.",
           keywords: [
             "torino novembre 2025",
@@ -410,7 +410,7 @@ export const blogPosts: BlogPost[] = [
         title: "Torino a dicembre: dove storia, luci natalizie e cioccolata calda convergono nella capitale della magia invernale",
         excerpt: "Scopri perché Torino a dicembre è una delle destinazioni più incantevoli d'Europa: Luci d'Artista, mercatini di Natale, Teatro Regio, architettura barocca e tradizioni culinarie.",
         seo: {
-          title: "Torino dicembre: mercatini di Natale, luci e magia | Guida completa",
+          title: "Torino dicembre: mercatini di Natale, luci e magia | guida completa",
           description: "Guida completa Torino dicembre 2025: Luci d'Artista con opere di Tracey Emin, mercatini di Natale in Piazza Castello, Romeo e Giulietta al Teatro Regio, Xmas Comics. Eventi, cultura e tradizioni.",
           keywords: [
             "torino dicembre 2025",
@@ -481,7 +481,7 @@ export const blogPosts: BlogPost[] = [
         title: "Mobilità sostenibile a Torino: la guida completa ai trasporti per studenti",
         excerpt: "Scopri come muoverti a Torino: trasporti GTT, piste ciclabili, sharing mobility, abbonamenti under 26. Guida completa con tutti i link utili e strategie per studenti universitari.",
         seo: {
-          title: "Mobilità sostenibile Torino studenti 2025 | Guida completa GTT",
+          title: "Mobilità sostenibile Torino studenti 2025 | guida completa GTT",
           description: "Guida completa mobilità sostenibile Torino per studenti: trasporti GTT, 295km piste ciclabili, abbonamenti under 26, Piemove gratuito, sharing mobility. Tutti i link e app utili.",
           keywords: [
             "trasporti Torino studenti",
@@ -676,7 +676,7 @@ export const blogPosts: BlogPost[] = [
         title: "Le migliori gelaterie di Torino: guida definitiva per studenti golosi",
         excerpt: "Scopri le migliori gelaterie artigianali di Torino: da Papalele (2° in Italia) ad Alberto Marchetti, Aria e Mara dei Boschi. Prezzi, indirizzi, gusti imperdibili e consigli per studenti universitari.",
         seo: {
-          title: "Migliori gelaterie Torino studenti 2025 | Guida definitiva",
+          title: "Migliori gelaterie Torino studenti 2025 | guida definitiva",
           description: "Scopri le migliori gelaterie di Torino per studenti 2025: da Papalele (2° in Italia) ad Alberto Marchetti, Aria e Mara dei Boschi. Prezzi €2.50-3.50, indirizzi e gusti da provare assolutamente.",
           keywords: ["migliori gelaterie torino", "gelato artigianale torino", "gelaterie studenti torino", "papalele torino", "alberto marchetti gelato", "aria gelateria", "dove mangiare gelato torino", "gelaterie vicino politecnico", "gelato artigianale", "gelaterie centro torino"]
         },
@@ -707,7 +707,7 @@ export const blogPosts: BlogPost[] = [
         title: "Dove vivere a Torino: guida completa ai migliori quartieri per studenti del Politecnico",
         excerpt: "Guida completa ai migliori quartieri di Torino per studenti del Politecnico: Crocetta, Cenisia, Borgo San Paolo e altri. Prezzi reali 2025, collegamenti con i campus, servizi e consigli pratici per trovare casa.",
         seo: {
-          title: "Dove vivere Torino studenti Politecnico 2025 | Guida quartieri",
+          title: "Dove vivere Torino studenti Politecnico 2025 | guida quartieri",
           description: "Migliori quartieri Torino per studenti Politecnico 2025: Crocetta €500-700, Cenisia €350-500, confronto completo con prezzi, distanze e servizi. Guida aggiornata per trovare casa vicino al PoliTo.",
           keywords: ["dove vivere torino studenti politecnico", "quartieri studenti politecnico torino", "affitti studenti politecnico", "crocetta torino affitti", "cenisia torino studenti", "stanze politecnico torino", "casa studenti polito", "quartieri universitari torino 2025"]
         },
@@ -738,7 +738,7 @@ export const blogPosts: BlogPost[] = [
         title: "Dove mangiare a Torino: la guida definitiva per studenti con budget limitato",
         excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
         seo: {
-          title: "Dove mangiare Torino studenti 2025 | Guida budget-friendly",
+          title: "Dove mangiare Torino studenti 2025 | guida budget-friendly",
           description: "Dove mangiare a Torino da studente: guida 2025 ai migliori ristoranti economici vicino Politecnico e UniTo. Kebab €5, pizzerie, mercati e mense. Risparmia fino al 50% su colazione, pranzo e cena.",
           keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino", "politecnico torino", "unito torino"]
         },
