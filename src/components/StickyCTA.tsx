@@ -114,7 +114,7 @@ export const StickyCTA = () => {
     );
   }
 
-  // Render default CTA (Lorenzo & Andrea)
+  // Render default CTA (Lorenzo)
   return (
       <div 
         className="fixed bottom-0 left-0 right-0 z-40 md:hidden
