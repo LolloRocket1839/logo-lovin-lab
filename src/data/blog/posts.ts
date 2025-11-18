@@ -2,6 +2,37 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "guida-volontariato-torino",
+    category: "students",
+    date: "2025-11-18",
+    author: "Jungle Rent Team",
+    image: "/images/san-salvario-night.jpeg",
+    readTime: 30,
+    content: "guida-volontariato-torino",
+    translations: {
+      it: {
+        title: "Guida completa alle fondazioni e organizzazioni di volontariato a Torino",
+        excerpt: "Scopri tutte le opportunità di volontariato a Torino per ogni età: dai 14 anni agli anziani. 40+ organizzazioni con info su attività, requisiti e contatti.",
+        seo: {
+          title: "Volontariato Torino: guida completa alle organizzazioni | JungleRent",
+          description: "Guida completa al volontariato a Torino: 40+ organizzazioni per bambini, studenti, adulti e anziani. ABIO, UGI, Paideia, Croce Rossa, Caritas e molte altre.",
+          keywords: ["volontariato torino", "fondazioni torino", "associazioni volontariato", "servizio civile torino", "vol.to", "abio torino", "ugi torino", "paideia", "croce rossa torino", "volontariato studenti", "volontariato giovani"]
+        },
+        tags: ["Studenti", "Volontariato", "Torino", "Servizio Civile", "Solidarietà"]
+      },
+      en: {
+        title: "Complete guide to foundations and volunteering organizations in Turin",
+        excerpt: "Discover all volunteering opportunities in Turin for all ages: from 14 years old to seniors. 40+ organizations with info on activities, requirements and contacts.",
+        seo: {
+          title: "Volunteering Turin: complete guide to organizations | JungleRent",
+          description: "Complete guide to volunteering in Turin: 40+ organizations for children, students, adults and seniors. ABIO, UGI, Paideia, Italian Red Cross, Caritas and many more.",
+          keywords: ["volunteering turin", "foundations turin", "volunteer associations", "civil service turin", "vol.to", "abio turin", "ugi turin", "paideia", "italian red cross turin", "student volunteering", "youth volunteering"]
+        },
+        tags: ["Students", "Volunteering", "Turin", "Civil Service", "Solidarity"]
+      }
+    }
+  },
+  {
     slug: "aule-studio-torino-guida-completa",
     category: "students",
     date: "2025-11-17",
