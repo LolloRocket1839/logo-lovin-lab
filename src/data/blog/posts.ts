@@ -695,6 +695,37 @@ export const blogPosts: BlogPost[] = [
     }
   },
   {
+    slug: "guida-volontariato-torino",
+    category: "students",
+    date: "2025-11-18",
+    author: "Jungle Rent Team",
+    image: "/images/san-salvario-night.jpeg",
+    readTime: 35,
+    content: "guida-volontariato-torino",
+    translations: {
+      it: {
+        title: "Mappa completa delle fondazioni e organizzazioni di volontariato a Torino",
+        excerpt: "Guida dettagliata con indirizzi, telefoni, email di 23+ organizzazioni. Include mappa per età, zone geografiche e contatti diretti.",
+        seo: {
+          title: "Mappa Volontariato Torino: Indirizzi, Telefoni e Contatti | JungleRent",
+          description: "Mappa completa del volontariato a Torino: 23+ organizzazioni con indirizzi, telefoni, email. Filtri per età e zona. ABIO, UGI, Croce Rossa, Caritas, SERMIG.",
+          keywords: ["mappa volontariato torino", "volontariato torino", "fondazioni torino", "abio torino", "ugi torino", "croce rossa torino", "sermig", "caritas torino"]
+        },
+        tags: ["Studenti", "Volontariato", "Torino", "Servizio Civile"]
+      },
+      en: {
+        title: "Complete map of foundations and volunteering organizations in Turin",
+        excerpt: "Detailed guide with addresses, phones, emails of 23+ organizations. Includes map by age, geographic areas and direct contacts.",
+        seo: {
+          title: "Turin Volunteering Map: Addresses, Phones and Contacts | JungleRent",
+          description: "Complete volunteering map in Turin: 23+ organizations with addresses, phones, emails. Age and area filters. ABIO, UGI, Red Cross, Caritas, SERMIG.",
+          keywords: ["turin volunteering map", "volunteering turin", "foundations turin", "abio turin", "ugi turin", "red cross turin", "sermig", "caritas turin"]
+        },
+        tags: ["Students", "Volunteering", "Turin", "Civil Service"]
+      }
+    }
+  },
+  {
     slug: "migliori-gelaterie-torino-studenti",
     category: "students",
     date: "2025-11-07",
