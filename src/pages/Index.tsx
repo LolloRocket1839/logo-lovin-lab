@@ -36,8 +36,8 @@ const Index = () => {
         <Hero />
       </div>
       <TrustBadge />
-      <StudentSection />
       <InvestorSection />
+      <StudentSection />
       <SellerSection />
       <TouristSection />
       <BlogSection />

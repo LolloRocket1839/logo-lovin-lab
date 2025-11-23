@@ -67,7 +67,7 @@ export const InvestorSection = () => {
 
 
   return (
-    <section id="investor-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-background relative overflow-hidden transition-spacing">
+    <section id="investor-section" className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
     
       <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
@@ -81,7 +81,7 @@ export const InvestorSection = () => {
             {t('investor.sectionLabel')}
           </p>
           <h2 
-            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '150ms' }}
@@ -109,7 +109,7 @@ export const InvestorSection = () => {
           </Badge>
 
           <Card 
-            className={`mb-6 p-6 bg-primary/5 border-primary/20 transition-all duration-700 ${
+            className={`mb-8 p-8 bg-primary/5 border-primary/30 shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '500ms' }}
@@ -147,11 +147,11 @@ export const InvestorSection = () => {
               onClick={handleLorenzoWhatsApp}
               size="lg"
               variant="premium"
-              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base group shadow-xl h-11 sm:h-12"
+              className="w-full sm:w-auto text-base sm:text-lg group"
             >
-              <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+              <MessageCircle className="mr-2 w-5 h-5" />
               {t('investor.talkToLorenzo')}
-              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Button 
