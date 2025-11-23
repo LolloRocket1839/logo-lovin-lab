@@ -67,10 +67,15 @@ export const InvestorSection = () => {
 
 
   return (
-    <section id="investor-section" className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
-    
-      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
+    <section 
+      ref={sectionRef}
+      id="investor-section" 
+      className="py-16 md:py-24 lg:py-32 relative overflow-hidden transition-spacing"
+    >
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
+      
+      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
@@ -164,11 +169,12 @@ export const InvestorSection = () => {
             </Button>
           </div>
         </div>
-        
-        <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
       </div>
-    
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
+      
+      <InvestorWaitlistDialog 
+        open={waitlistOpen} 
+        onOpenChange={setWaitlistOpen}
+      />
     </section>
   );
 };

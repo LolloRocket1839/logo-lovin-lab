@@ -19,7 +19,7 @@ const Index = () => {
   const { t } = useTranslation();
 
   return (
-    <main role="main" className="min-h-screen bg-cream/30" id="main-content" tabIndex={-1}>
+    <main role="main" className="min-h-screen gradient-jungle-vertical" id="main-content" tabIndex={-1}>
       <Helmet>
         <link rel="canonical" href="https://junglerent.it/" />
         
@@ -36,11 +36,21 @@ const Index = () => {
         <Hero />
       </div>
       <TrustBadge />
-      <InvestorSection />
-      <StudentSection />
-      <SellerSection />
-      <TouristSection />
-      <BlogSection />
+      <div className="-mt-16">
+        <InvestorSection />
+      </div>
+      <div className="-mt-12">
+        <StudentSection />
+      </div>
+      <div className="-mt-12">
+        <SellerSection />
+      </div>
+      <div className="-mt-12">
+        <TouristSection />
+      </div>
+      <div className="-mt-12">
+        <BlogSection />
+      </div>
       <FAQSection />
       <Footer />
       <ScrollToTop />

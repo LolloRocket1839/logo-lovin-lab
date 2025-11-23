@@ -62,10 +62,11 @@ export const StudentSection = () => {
   };
 
   return (
-    <section id="student-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/20 relative overflow-hidden transition-spacing">
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
+    <section id="student-section" className="py-16 md:py-24 lg:py-32 relative overflow-hidden transition-spacing">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
-      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
+      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
@@ -159,13 +160,11 @@ export const StudentSection = () => {
           </div>
         </div>
       </div>
-      
+
       <StudentSearchDialog 
         open={searchDialogOpen} 
-        onOpenChange={setSearchDialogOpen} 
+        onOpenChange={setSearchDialogOpen}
       />
-      
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
     </section>
   );
 };

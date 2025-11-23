@@ -68,7 +68,7 @@ export const Hero = () => {
   const logoTranslateY = logoScrollProgress * -200; // Move up
   const logoTranslateX = logoScrollProgress * -45; // Move left (percentage of screen)
 
-  return <header role="banner" className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-background">
+  return <header role="banner" className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden gradient-jungle-hero">
       <h1 className="sr-only">
         {t('hero.seoH1')}
       </h1>
