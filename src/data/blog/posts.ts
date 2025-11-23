@@ -1,4 +1,4 @@
-import { BlogPost } from "@/types/blog";
+import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -927,5 +927,27 @@ export const searchPosts = (posts: BlogPost[], searchQuery: string, lang: 'it' |
     );
     
     return titleMatch || excerptMatch || tagsMatch || keywordsMatch;
+  });
+};
+
+export const getAllTags = (lang: 'it' | 'en' = 'it'): string[] => {
+  const tagsSet = new Set<string>();
+  
+  blogPosts.forEach(post => {
+    const translation = post.translations[lang];
+    translation.tags.forEach(tag => tagsSet.add(tag));
+  });
+  
+  return Array.from(tagsSet).sort();
+};
+
+export const filterPostsByTags = (posts: BlogPost[], selectedTags: string[], lang: 'it' | 'en' = 'it'): BlogPost[] => {
+  if (selectedTags.length === 0) return posts;
+  
+  return posts.filter(post => {
+    const translation = post.translations[lang];
+    return selectedTags.some(selectedTag => 
+      translation.tags.includes(selectedTag)
+    );
   });
 };

@@ -841,6 +841,10 @@
       "placeholder": "Search articles...",
       "noResults": "No articles found for \"{{query}}\""
     },
+    "filters": {
+      "tags": "Filter by tag",
+      "clearAll": "Clear filters"
+    },
     "hero": {
       "title": "Resources and Guides",
       "subtitle": "Insights, data and practical advice on the Turin real estate market"
