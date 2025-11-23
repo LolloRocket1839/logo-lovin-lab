@@ -2,6 +2,79 @@ import { BlogPost } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "eventi-torino-gennaio-2026",
+    category: "turisti",
+    date: "2025-11-23",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 40,
+    content: "eventi-torino-gennaio-2026",
+    translations: {
+      it: {
+        title: "Eventi a Torino a gennaio 2026: guida completa",
+        excerpt: "Gennaio 2026 straordinario per Torino: Luci d'Artista, grandi mostre (Gentileschi, Lee Miller), concerti sold-out (Lazza, Dardust, PFM), Teatro Regio, Fiamma Olimpica Milano Cortina 2026 e molto altro.",
+        seo: {
+          title: "Eventi Torino gennaio 2026: concerti, mostre, teatro | guida completa",
+          description: "Guida completa eventi Torino gennaio 2026: Luci d'Artista fino all'11/1, mostra Gentileschi, Lazza all'Inalpi Arena, La Cenerentola al Regio, Fiamma Olimpica, saldi invernali, Antonio Albanese, derby Torino-Juve.",
+          keywords: [
+            "eventi torino gennaio 2026",
+            "cosa fare torino gennaio",
+            "concerti torino gennaio 2026",
+            "mostre torino gennaio",
+            "luci d'artista torino 2026",
+            "teatro torino gennaio",
+            "lazza torino 2026",
+            "fiamma olimpica torino",
+            "teatro regio gennaio",
+            "antonio albanese torino",
+            "orazio gentileschi mostra torino",
+            "lee miller camera torino",
+            "jeff wall torino",
+            "dardust torino 2026",
+            "pfm torino 2026",
+            "torino juventus derby gennaio",
+            "saldi torino 2026",
+            "eventi sportivi torino gennaio",
+            "capodanno torino 2026",
+            "inverno torino eventi"
+          ]
+        },
+        tags: ["Eventi", "Torino", "Gennaio", "Concerti", "Mostre", "Teatro", "Sport", "Olimpiadi", "Luci d'Artista", "Shopping"]
+      },
+      en: {
+        title: "Events in Turin in January 2026: complete guide",
+        excerpt: "Extraordinary January 2026 for Turin: Luci d'Artista, major exhibitions (Gentileschi, Lee Miller), sold-out concerts (Lazza, Dardust, PFM), Teatro Regio, Milano Cortina 2026 Olympic Flame and much more.",
+        seo: {
+          title: "Turin events January 2026: concerts, exhibitions, theater | complete guide",
+          description: "Complete guide Turin events January 2026: Luci d'Artista until Jan 11, Gentileschi exhibition, Lazza at Inalpi Arena, La Cenerentola at Regio, Olympic Flame, winter sales, Antonio Albanese, Torino-Juve derby.",
+          keywords: [
+            "events turin january 2026",
+            "things to do turin january",
+            "concerts turin january 2026",
+            "exhibitions turin january",
+            "luci d'artista turin 2026",
+            "theater turin january",
+            "lazza turin 2026",
+            "olympic flame turin",
+            "teatro regio january",
+            "antonio albanese turin",
+            "orazio gentileschi exhibition turin",
+            "lee miller camera turin",
+            "jeff wall turin",
+            "dardust turin 2026",
+            "pfm turin 2026",
+            "torino juventus derby january",
+            "sales turin 2026",
+            "sports events turin january",
+            "new year turin 2026",
+            "winter turin events"
+          ]
+        },
+        tags: ["Events", "Turin", "January", "Concerts", "Exhibitions", "Theater", "Sports", "Olympics", "Luci d'Artista", "Shopping"]
+      }
+    }
+  },
+  {
     slug: "guida-volontariato-torino",
     category: "students",
     date: "2025-11-18",
