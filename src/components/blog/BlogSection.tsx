@@ -25,8 +25,11 @@ export const BlogSection = () => {
   };
 
   return (
-    <section className="py-24 px-4 bg-cream/30 border-t border-border">
-      <div className="container mx-auto max-w-7xl">
+    <section className="py-24 px-4 relative overflow-hidden">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 gradient-jungle-blog pointer-events-none" />
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">

@@ -61,8 +61,9 @@ export const SellerSection = () => {
   ];
 
   return (
-    <section id="seller-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/20 relative overflow-hidden transition-spacing">
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-border" />
+    <section id="seller-section" className="py-8 sm:py-10 md:py-12 lg:py-16 relative overflow-hidden transition-spacing">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
       <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
@@ -121,7 +122,6 @@ export const SellerSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border" />
       <SellerContactDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </section>
   );
