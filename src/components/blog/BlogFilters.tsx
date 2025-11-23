@@ -2,19 +2,50 @@ import { BlogCategory } from "@/types/blog";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Search, X, Filter } from "lucide-react";
+import { getAllTags } from "@/data/blog/posts";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { useState } from "react";
 
 interface BlogFiltersProps {
   activeCategory: BlogCategory;
   onCategoryChange: (category: BlogCategory) => void;
   searchQuery: string;
   onSearchChange: (query: string) => void;
+  selectedTags: string[];
+  onTagsChange: (tags: string[]) => void;
 }
 
-export const BlogFilters = ({ activeCategory, onCategoryChange, searchQuery, onSearchChange }: BlogFiltersProps) => {
-  const { t } = useTranslation();
+export const BlogFilters = ({ 
+  activeCategory, 
+  onCategoryChange, 
+  searchQuery, 
+  onSearchChange,
+  selectedTags,
+  onTagsChange 
+}: BlogFiltersProps) => {
+  const { t, i18n } = useTranslation();
+  const [isTagsOpen, setIsTagsOpen] = useState(false);
 
   const categories: BlogCategory[] = ['all', 'students', 'investors', 'sellers', 'turisti'];
+  const allTags = getAllTags(i18n.language as 'it' | 'en');
+
+  const toggleTag = (tag: string) => {
+    if (selectedTags.includes(tag)) {
+      onTagsChange(selectedTags.filter(t => t !== tag));
+    } else {
+      onTagsChange([...selectedTags, tag]);
+    }
+  };
+
+  const clearAllTags = () => {
+    onTagsChange([]);
+  };
 
   return (
     <div className="space-y-6 mb-12">
@@ -43,6 +74,59 @@ export const BlogFilters = ({ activeCategory, onCategoryChange, searchQuery, onS
           </Button>
         ))}
       </div>
+
+      <Collapsible open={isTagsOpen} onOpenChange={setIsTagsOpen} className="space-y-3">
+        <div className="flex items-center justify-center gap-2">
+          <CollapsibleTrigger asChild>
+            <Button variant="outline" size="sm" className="gap-2">
+              <Filter className="h-4 w-4" />
+              {t('blog.filters.tags')} {selectedTags.length > 0 && `(${selectedTags.length})`}
+            </Button>
+          </CollapsibleTrigger>
+          {selectedTags.length > 0 && (
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={clearAllTags}
+              className="gap-2"
+            >
+              <X className="h-4 w-4" />
+              {t('blog.filters.clearAll')}
+            </Button>
+          )}
+        </div>
+
+        <CollapsibleContent className="space-y-3">
+          {selectedTags.length > 0 && (
+            <div className="flex flex-wrap gap-2 justify-center px-4">
+              {selectedTags.map((tag) => (
+                <Badge 
+                  key={tag}
+                  variant="default"
+                  className="cursor-pointer gap-1 px-3 py-1"
+                  onClick={() => toggleTag(tag)}
+                >
+                  {tag}
+                  <X className="h-3 w-3" />
+                </Badge>
+              ))}
+            </div>
+          )}
+          
+          <div className="flex flex-wrap gap-2 justify-center px-4 max-w-4xl mx-auto">
+            {allTags.map((tag) => (
+              <Badge 
+                key={tag}
+                variant={selectedTags.includes(tag) ? "default" : "outline"}
+                className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors px-3 py-1"
+                onClick={() => toggleTag(tag)}
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        </CollapsibleContent>
+      </Collapsible>
     </div>
   );
 };

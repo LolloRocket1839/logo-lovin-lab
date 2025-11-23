@@ -616,6 +616,10 @@
       "placeholder": "Cerca articoli...",
       "noResults": "Nessun articolo trovato per \"{{query}}\""
     },
+    "filters": {
+      "tags": "Filtra per tag",
+      "clearAll": "Rimuovi filtri"
+    },
     "hero": {
       "title": "Risorse e Guide",
       "subtitle": "Approfondimenti, dati e consigli pratici sul mercato immobiliare torinese"

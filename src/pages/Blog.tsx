@@ -8,7 +8,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCategory } from "@/types/blog";
-import { getPostsByCategory, searchPosts } from "@/data/blog/posts";
+import { getPostsByCategory, searchPosts, filterPostsByTags } from "@/data/blog/posts";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 
@@ -16,11 +16,13 @@ const Blog = () => {
   const { t, i18n } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   
   const posts = useMemo(() => {
-    const categoryPosts = getPostsByCategory(activeCategory);
+    let categoryPosts = getPostsByCategory(activeCategory);
+    categoryPosts = filterPostsByTags(categoryPosts, selectedTags, i18n.language as 'it' | 'en');
     return searchPosts(categoryPosts, searchQuery, i18n.language as 'it' | 'en');
-  }, [activeCategory, searchQuery, i18n.language]);
+  }, [activeCategory, searchQuery, selectedTags, i18n.language]);
 
   return (
     <main role="main" className="min-h-screen">
@@ -56,6 +58,8 @@ const Blog = () => {
               onCategoryChange={setActiveCategory}
               searchQuery={searchQuery}
               onSearchChange={setSearchQuery}
+              selectedTags={selectedTags}
+              onTagsChange={setSelectedTags}
             />
             {posts.length === 0 && searchQuery && (
               <div className="text-center py-12">
