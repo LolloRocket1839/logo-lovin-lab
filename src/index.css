@@ -17,6 +17,10 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Cream - Relaxing background */
+    --cream: 40 30% 96%;
+    /* Warm, soothing cream */
+    
     /* Clean minimal palette - Apple/Nike inspired */
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
@@ -66,6 +70,70 @@ All colors MUST be HSL.
     --shadow-focus: 0 0 0 2px hsl(28 24% 100%), 0 0 0 4px hsl(150 45% 18%);
   }
   
+  /* ============================================
+   MARVIS-STYLE FEEL GOOD CLICKS & INTERACTIONS
+   ============================================ */
+
+  /* Marvis-Inspired Feel Good Clicks */
+  .feel-good-click {
+    @apply transition-all duration-200 ease-out;
+    @apply active:scale-[0.97];
+    @apply hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .feel-good-click:active {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Blog Card Hover - Marvis Style */
+  .blog-card-marvis {
+    @apply transition-all duration-300 ease-out;
+    @apply hover:scale-[1.02] hover:shadow-2xl;
+    @apply cursor-pointer;
+    @apply border border-border/50;
+    @apply bg-background;
+  }
+
+  .blog-card-marvis:hover {
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  /* Category Badge - Distintivo e Creativo */
+  .category-badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+    @apply transition-all duration-200;
+    @apply hover:scale-105;
+  }
+
+  .category-badge.investors {
+    @apply bg-gradient-to-r from-primary/20 to-primary/10;
+    @apply text-primary border border-primary/30;
+  }
+
+  .category-badge.students {
+    @apply bg-gradient-to-r from-blue-500/20 to-blue-500/10;
+    @apply text-blue-700 dark:text-blue-400 border border-blue-500/30;
+  }
+
+  .category-badge.turisti {
+    @apply bg-gradient-to-r from-orange-500/20 to-orange-500/10;
+    @apply text-orange-700 dark:text-orange-400 border border-orange-500/30;
+  }
+
+  .category-badge.sellers {
+    @apply bg-gradient-to-r from-purple-500/20 to-purple-500/10;
+    @apply text-purple-700 dark:text-purple-400 border border-purple-500/30;
+  }
+
+  /* New Badge - Accattivante */
+  .new-badge {
+    @apply absolute top-3 right-3 z-10;
+    @apply px-2.5 py-1 rounded-full;
+    @apply bg-gradient-to-r from-green-500 to-emerald-500;
+    @apply text-white text-[10px] font-bold uppercase tracking-wide;
+    @apply shadow-lg animate-pulse;
+  }
+
   /* ============================================
    BLOG FOOTNOTES - Professional Academic Style
    ============================================ */

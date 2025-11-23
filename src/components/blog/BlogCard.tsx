@@ -2,7 +2,6 @@ import { BlogPost } from "@/types/blog";
 import { Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Badge } from "@/components/ui/badge";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface BlogCardProps {
@@ -15,21 +14,17 @@ export const BlogCard = ({ post }: BlogCardProps) => {
   const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
   const translatedData = post.translations[currentLang];
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'students':
-        return 'bg-primary/10 text-primary hover:bg-primary/20';
-      case 'investors':
-        return 'bg-secondary/10 text-secondary-foreground hover:bg-secondary/20';
-      case 'sellers':
-        return 'bg-accent/10 text-accent-foreground hover:bg-accent/20';
-      default:
-        return 'bg-muted text-muted-foreground';
-    }
+  // Helper to check if post is new (< 7 days)
+  const isNew = (dateString: string) => {
+    const postDate = new Date(dateString);
+    const daysSince = (Date.now() - postDate.getTime()) / (1000 * 60 * 60 * 24);
+    return daysSince <= 7;
   };
 
   return (
-    <article className="group h-full flex flex-col bg-card rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
+    <article className="blog-card-marvis feel-good-click group h-full flex flex-col rounded-lg overflow-hidden relative">
+      {isNew(post.date) && <div className="new-badge">Nuovo</div>}
+      
       <Link 
         to={`/blog/${post.slug}`} 
         className="block overflow-hidden"
@@ -42,9 +37,9 @@ export const BlogCard = ({ post }: BlogCardProps) => {
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
-          <Badge className={`absolute top-4 left-4 ${getCategoryColor(post.category)}`}>
+          <span className={`absolute top-4 left-4 category-badge ${post.category}`}>
             {t(`blog.categories.${post.category}`)}
-          </Badge>
+          </span>
         </div>
       </Link>
 

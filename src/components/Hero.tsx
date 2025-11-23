@@ -6,6 +6,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
+import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
 import { StyledText } from "@/components/StyledText";
@@ -18,6 +19,7 @@ export const Hero = () => {
   const { trackClick } = useAnalytics();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
+  const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
   const handleWhatsAppLorenzo = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
@@ -49,12 +51,9 @@ export const Hero = () => {
       block: 'start'
     });
   };
-  const scrollToInvestor = () => {
+  const handleInvestClick = () => {
     trackClick('hero_invest_button');
-    document.getElementById('investor-section')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+    setInvestorDialogOpen(true);
   };
   const studentScale = 1.15 - scrollProgress * 0.3;
   const studentOpacity = 1 - scrollProgress * 0.3;
@@ -121,8 +120,8 @@ export const Hero = () => {
             <Button 
               size="lg" 
               variant="premium" 
-              onClick={scrollToInvestor} 
-              className="w-full sm:w-auto text-base sm:text-lg group"
+              onClick={handleInvestClick} 
+              className="w-full sm:w-auto text-base sm:text-lg group feel-good-click"
             >
               {t('hero.invest')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -131,7 +130,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline" 
               onClick={scrollToStudent} 
-              className="w-full sm:w-auto text-sm sm:text-base group"
+              className="w-full sm:w-auto text-sm sm:text-base group feel-good-click"
             >
               {t('hero.findHome')}
               <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -141,5 +140,10 @@ export const Hero = () => {
       </div>
       
       <LogoModal open={logoModalOpen} onOpenChange={setLogoModalOpen} />
+      <InvestorWaitlistDialog 
+        open={investorDialogOpen}
+        onOpenChange={setInvestorDialogOpen}
+        guideType="general"
+      />
     </header>;
 };
