@@ -66,13 +66,9 @@ export const Navigation = () => {
 
   const menuItems = [
     { label: t("nav.home"), id: "hero" as string | undefined, path: undefined as string | undefined },
-    { label: t("nav.about"), id: undefined, path: i18n.language === 'en' ? "/about" : "/chi-siamo" },
     { label: t("nav.students"), id: "student-section", path: undefined },
     { label: t("nav.investors"), id: "investor-section", path: undefined },
-    { label: t("nav.sell"), id: "seller-section", path: undefined },
     { label: t("nav.blog"), id: undefined, path: "/blog" },
-    { label: t("nav.faq"), id: "faq-section", path: undefined },
-    { label: t("nav.contacts"), id: "footer", path: undefined },
   ];
 
   return (
@@ -130,10 +126,10 @@ export const Navigation = () => {
             <Button
               variant="premium"
               size="sm"
-              onClick={handleContact}
-              className="px-6"
+              onClick={scrollToSection.bind(null, 'investor-section')}
+              className="px-6 font-semibold"
             >
-              {t("nav.contactUs")}
+              {t('hero.invest')}
             </Button>
           </div>
 
@@ -171,10 +167,13 @@ export const Navigation = () => {
               ))}
               <Button
                 variant="premium"
-                onClick={handleContact}
-                className="mt-2 w-full"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  scrollToSection('investor-section');
+                }}
+                className="mt-2 w-full font-semibold"
               >
-                {t("nav.contactUs")}
+                {t('hero.invest')}
               </Button>
             </div>
           </div>

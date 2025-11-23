@@ -17,90 +17,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury cream palette - Marvis inspired with aurora tones */
-    --background: 40 45% 96%;
-    --foreground: 28 24% 14%;
+    /* Clean minimal palette - Apple/Nike inspired */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
-    --card: 40 50% 98%;
-    --card-foreground: 28 24% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
 
-    --popover: 40 50% 98%;
-    --popover-foreground: 28 24% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
 
     --primary: 150 45% 18%;
-    --primary-foreground: 40 45% 96%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 37 28% 85%;
-    --secondary-foreground: 28 24% 14%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 28 24% 35%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 37 25% 88%;
-    --accent-foreground: 28 24% 14%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 45% 96%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 37 20% 88%;
-    --input: 37 20% 90%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 150 45% 18%;
 
-    --radius: 0.375rem;
+    --radius: 0.5rem;
     
-    /* Premium Jungle Rent tokens with aurora */
-    --forest-deep: 150 45% 18%;
-    --cream-base: 40 50% 96%;
-    --cream-warm: 40 50% 94%;
-    --beige-warm: 37 28% 85%;
-    --tan-accent: 37 25% 78%;
-    --charcoal: 28 24% 14%;
+    /* Clean gradients */
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
     
-    /* Aurora blue tones - soft and elegant */
-    --aurora-blue-soft: 210 35% 88%;
-    --aurora-blue-mid: 205 30% 92%;
-    --aurora-cream-warm: 40 50% 94%;
-    
-    /* Aurora-inspired gradients - cream to soft blue with sinuous flow */
-    --gradient-aurora-main: 
-      radial-gradient(ellipse 120% 80% at 50% -10%, 
-        hsl(40 50% 96%) 0%, 
-        hsl(205 25% 94%) 30%, 
-        hsl(210 30% 92%) 50%, 
-        hsl(40 45% 95%) 100%);
-    
-    --gradient-aurora-overlay: 
-      radial-gradient(circle at 20% 50%, 
-        hsla(210 40% 90% / 0.3) 0%, 
-        transparent 50%),
-      radial-gradient(circle at 80% 20%, 
-        hsla(205 35% 92% / 0.25) 0%, 
-        transparent 50%);
-    
-    --gradient-subtle: linear-gradient(180deg, hsl(40 45% 96%) 0%, hsl(205 30% 94%) 100%);
-    --gradient-section: linear-gradient(to bottom, hsl(40 50% 98%), hsl(205 25% 95%));
-    
-    /* Refined shadows - barely there */
-    --shadow-minimal: 0 2px 8px hsla(28, 24%, 14%, 0.04);
-    --shadow-card: 0 4px 16px hsla(28, 24%, 14%, 0.06);
-    --shadow-card-hover: 0 8px 24px hsla(28, 24%, 14%, 0.1);
-    --shadow-button: 0 2px 12px hsla(150, 45%, 18%, 0.15);
-    --shadow-button-hover: 0 4px 20px hsla(150, 45%, 18%, 0.25);
-    
-    /* Glass morphism shadows - multi-layer depth */
-    --shadow-glass: 
-      0 8px 32px hsla(28, 24%, 14%, 0.08),
-      0 2px 8px hsla(28, 24%, 14%, 0.04),
-      inset 0 1px 0 hsla(40, 50%, 100%, 0.6);
-    --shadow-glass-hover: 
-      0 16px 48px hsla(28, 24%, 14%, 0.12),
-      0 4px 16px hsla(28, 24%, 14%, 0.06),
-      inset 0 1px 0 hsla(40, 50%, 100%, 0.8),
-      0 0 0 1px hsla(150, 45%, 18%, 0.1);
+    /* Minimal shadows - Apple style */
+    --shadow-minimal: 0 1px 3px hsla(0, 0%, 0%, 0.08);
+    --shadow-card: 0 2px 8px hsla(0, 0%, 0%, 0.08);
+    --shadow-card-hover: 0 4px 16px hsla(0, 0%, 0%, 0.12);
+    --shadow-button: 0 2px 8px hsla(150, 45%, 18%, 0.2);
+    --shadow-button-hover: 0 4px 12px hsla(150, 45%, 18%, 0.3);
     
     /* Smooth transitions */
-    --transition-elegant: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Blog-specific shadows */
     --shadow-soft: 0 2px 15px -3px hsla(37, 20%, 15%, 0.07), 0 10px 20px -2px hsla(37, 20%, 15%, 0.04);
@@ -256,35 +215,15 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground antialiased;
-    background: var(--gradient-aurora-main);
-    background-attachment: fixed;
-    position: relative;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: 'cv11', 'ss01';
-    font-weight: 300;
-    letter-spacing: 0.01em;
-  }
-  
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gradient-aurora-overlay);
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  body > * {
-    position: relative;
-    z-index: 1;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
-    letter-spacing: -0.02em;
+    @apply font-display font-bold;
+    letter-spacing: -0.03em;
   }
   
   /* Elegant link underline animation */
@@ -328,15 +267,6 @@ All colors MUST be HSL.
     }
   }
   
-  /* Shimmer effect for premium elements */
-  @keyframes shimmer-gold {
-    0% { 
-      background-position: -200% center; 
-    }
-    100% { 
-      background-position: 200% center; 
-    }
-  }
   
   /* Smooth scroll behavior */
   html {
@@ -384,9 +314,9 @@ All colors MUST be HSL.
     @apply px-4 sm:px-6 md:px-8 lg:px-12;
   }
 
-  /* Responsive section spacing */
+  /* Responsive section spacing - more generous */
   .section-spacing {
-    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+    @apply py-16 sm:py-20 md:py-24 lg:py-32;
   }
 
   /* Smooth responsive transitions for breakpoint changes */
@@ -451,33 +381,22 @@ All colors MUST be HSL.
   }
   
   .investor-card-premium {
-    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--accent) / 0.5) 100%);
-    box-shadow: var(--shadow-investor-card);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    background: hsl(var(--card));
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .investor-card-premium:hover {
-    box-shadow: var(--shadow-investor-hover);
-    transform: translateY(-8px);
-  }
-  
-  .shimmer-effect {
-    background: linear-gradient(
-      90deg,
-      hsl(var(--investor-gold) / 0) 0%,
-      hsl(var(--investor-gold) / 0.3) 50%,
-      hsl(var(--investor-gold) / 0) 100%
-    );
-    background-size: 200% 100%;
-    animation: shimmer-gold 3s infinite;
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px) scale(1.02);
   }
 }
 
-/* Elegant ampersand styling with Playfair Display */
+/* Elegant ampersand styling */
 .ampersand-elegant {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 
 /* ===== Blog Content Styles ===== */

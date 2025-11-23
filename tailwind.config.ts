@@ -20,8 +20,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
-        accent: ['Cinzel', 'serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
         gotham: ['Gotham', 'sans-serif'],
         mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
