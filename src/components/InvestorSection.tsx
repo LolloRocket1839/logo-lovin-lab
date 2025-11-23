@@ -70,7 +70,7 @@ export const InvestorSection = () => {
     <section 
       ref={sectionRef}
       id="investor-section" 
-      className="py-16 md:py-24 lg:py-32 relative overflow-hidden transition-spacing"
+      className="pt-24 pb-16 md:py-24 lg:py-32 relative overflow-hidden transition-spacing"
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
