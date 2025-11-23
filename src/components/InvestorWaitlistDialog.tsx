@@ -26,13 +26,7 @@ import {
 const getInvestorWaitlistSchema = (t: any) => z.object({
   name: z.string().trim().min(2, t("investorWaitlist.nameError")).max(100),
   email: z.string().email(t("investorWaitlist.emailError")).max(255),
-  phone: z.string().trim().min(1, t("investorWaitlist.phoneError")),
   investment_budget: z.string().min(1, t("investorWaitlist.budgetError")),
-  investment_horizon: z.string().min(1, t("investorWaitlist.horizonError")),
-  investment_timing: z.string().optional(),
-  has_rental_properties: z.string().optional(),
-  preferred_area: z.string().optional(),
-  referral_source: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, {
     message: t("investorWaitlist.consentError"),
   }),
@@ -64,13 +58,7 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
       investment_budget: "",
-      investment_horizon: "",
-      investment_timing: "",
-      has_rental_properties: "",
-      preferred_area: "",
-      referral_source: "",
       consent: false,
     },
   });
@@ -79,10 +67,6 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
     setIsSubmitting(true);
 
     try {
-      const areaLabel = data.preferred_area && data.preferred_area !== "flexible"
-        ? ` - Zona: ${t(`investorWaitlist.areas.${data.preferred_area}`)}`
-        : "";
-      
       const guideLabel = guideType === 'torino' ? 'GUIDA TORINO 2025' : 'GUIDA GENERALE';
       
       const response = await fetch("https://formspree.io/f/xeojbzow", {
@@ -94,17 +78,11 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
         body: JSON.stringify({
           name: data.name,
           email: data.email,
-          phone: data.phone,
           investment_budget: data.investment_budget,
-          investment_horizon: data.investment_horizon,
-          investment_timing: data.investment_timing || "",
-          has_rental_properties: data.has_rental_properties || "",
-          preferred_area: data.preferred_area || "",
-          referral_source: data.referral_source || "",
           consent: data.consent,
           user_type: "investor",
           guide_requested: guideLabel,
-          _subject: `🔥 NEW QUALIFIED INVESTOR LEAD - Jungle Rent - ${guideLabel}${areaLabel}`,
+          _subject: `🔥 NEW INVESTOR LEAD - Jungle Rent - ${guideLabel} - Budget: ${data.investment_budget}`,
           timestamp: new Date().toISOString(),
         }),
       });
@@ -137,10 +115,6 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
       // Track form submission
       trackFormSubmit('investor_waitlist', {
         investment_budget: data.investment_budget,
-        investment_horizon: data.investment_horizon,
-        investment_timing: data.investment_timing,
-        has_rental_properties: data.has_rental_properties,
-        preferred_area: data.preferred_area,
         guide_type: guideType,
       });
 
@@ -252,36 +226,9 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
 
                 <FormField
                   control={form.control}
-                  name="phone"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.phoneLabel")}</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          placeholder={t("investorWaitlist.phonePlaceholder")}
-                          {...field}
-                          className="h-10
-                                     bg-background
-                                     border-border
-                                     focus:border-primary focus:ring-1 focus:ring-primary/20
-                                     transition-colors"
-                        />
-                      </FormControl>
-                      {form.formState.errors.phone && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.phone.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
                   name="investment_budget"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="md:col-span-2">
                       <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.investmentBudgetLabel")}</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
@@ -306,201 +253,6 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
                       {form.formState.errors.investment_budget && (
                         <p className="text-xs text-destructive mt-1">
                           {form.formState.errors.investment_budget.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="investment_horizon"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.investmentHorizonLabel")}</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="h-10
-                                                    bg-background
-                                                    border-border
-                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder={t("investorWaitlist.investmentHorizonPlaceholder")} />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="short-term">{t("investorWaitlist.investmentHorizons.short-term")}</SelectItem>
-                          <SelectItem value="medium-term">{t("investorWaitlist.investmentHorizons.medium-term")}</SelectItem>
-                          <SelectItem value="long-term">{t("investorWaitlist.investmentHorizons.long-term")}</SelectItem>
-                          <SelectItem value="flexible">{t("investorWaitlist.investmentHorizons.flexible")}</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {form.formState.errors.investment_horizon && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.investment_horizon.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="investment_timing"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.investmentTimingLabel")}</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="h-10
-                                                    bg-background
-                                                    border-border
-                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder={t("investorWaitlist.investmentTimingPlaceholder")} />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="immediate">{t("investorWaitlist.investmentTimings.immediate")}</SelectItem>
-                          <SelectItem value="short">{t("investorWaitlist.investmentTimings.short")}</SelectItem>
-                          <SelectItem value="medium">{t("investorWaitlist.investmentTimings.medium")}</SelectItem>
-                          <SelectItem value="long">{t("investorWaitlist.investmentTimings.long")}</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {form.formState.errors.investment_timing && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.investment_timing.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="has_rental_properties"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.hasRentalPropertiesLabel")}</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="h-10
-                                                    bg-background
-                                                    border-border
-                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder={t("investorWaitlist.hasRentalPropertiesPlaceholder")} />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="yes">{t("investorWaitlist.rentalProperties.yes")}</SelectItem>
-                          <SelectItem value="no">{t("investorWaitlist.rentalProperties.no")}</SelectItem>
-                          <SelectItem value="considering">{t("investorWaitlist.rentalProperties.considering")}</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {form.formState.errors.has_rental_properties && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.has_rental_properties.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="preferred_area"
-                  render={({ field }) => (
-                    <FormItem className="min-[400px]:col-span-2">
-                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.preferredAreaLabel")}</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="h-10
-                                                    bg-background
-                                                    border-border
-                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder={t("investorWaitlist.preferredAreaPlaceholder")} />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="flexible">{t("investorWaitlist.areaFlexible")}</SelectItem>
-                          <SelectItem value="san-salvario">San Salvario</SelectItem>
-                          <SelectItem value="crocetta">Crocetta</SelectItem>
-                          <SelectItem value="centro">Centro Storico</SelectItem>
-                          <SelectItem value="vanchiglia">Vanchiglia</SelectItem>
-                          <SelectItem value="aurora">Aurora/Barriera Milano</SelectItem>
-                          <SelectItem value="polito">Vicino Politecnico</SelectItem>
-                          <SelectItem value="lingotto">Lingotto</SelectItem>
-                          <SelectItem value="san-paolo">San Paolo/Santa Rita</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {form.formState.errors.preferred_area && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.preferred_area.message}
-                        </p>
-                      )}
-                    </FormItem>
-                  )}
-                />
-
-                {form.watch("preferred_area") && 
-                 form.watch("preferred_area") !== "flexible" && (
-                  <div className="min-[400px]:col-span-2">
-                    <Card className="p-4 border-primary/20 bg-primary/5">
-                      {(() => {
-                        const selectedArea = form.watch("preferred_area");
-                        const area = turinAreas.find(
-                          a => a.keywords.some(k => k.toLowerCase() === selectedArea?.toLowerCase())
-                        );
-                        if (!area) return null;
-                        
-                        return (
-                          <div className="space-y-2">
-                            <div className="flex items-start gap-2">
-                              <InfoIcon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                              <div className="flex-1">
-                                <h4 className="font-semibold text-sm text-foreground">{area.name}</h4>
-                                <p className="text-xs text-muted-foreground mt-1">
-                                  {area.description[i18n.language === 'it' ? 'it' : 'en']}
-                                </p>
-                                <div className="flex flex-wrap gap-3 mt-2 text-xs text-foreground/80">
-                                  <span>📍 Polito: {area.distance.polito}</span>
-                                  <span>💰 {area.avgRent}</span>
-                                  <span>🚌 {area.transport}</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      })()}
-                    </Card>
-                  </div>
-                )}
-
-                <FormField
-                  control={form.control}
-                  name="referral_source"
-                  render={({ field }) => (
-                    <FormItem className="md:col-span-2">
-                      <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.referralLabel")}</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="h-10
-                                                    bg-background
-                                                    border-border
-                                                    focus:border-primary focus:ring-1 focus:ring-primary/20">
-                            <SelectValue placeholder={t("investorWaitlist.referralPlaceholder")} />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="network">{t("investorWaitlist.referralSources.network")}</SelectItem>
-                          <SelectItem value="linkedin">{t("investorWaitlist.referralSources.linkedin")}</SelectItem>
-                          <SelectItem value="referral">{t("investorWaitlist.referralSources.referral")}</SelectItem>
-                          <SelectItem value="google">{t("investorWaitlist.referralSources.google")}</SelectItem>
-                          <SelectItem value="ai-assistant">{t("investorWaitlist.referralSources.ai-assistant")}</SelectItem>
-                          <SelectItem value="other">{t("investorWaitlist.referralSources.other")}</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      {form.formState.errors.referral_source && (
-                        <p className="text-xs text-destructive mt-1">
-                          {form.formState.errors.referral_source.message}
                         </p>
                       )}
                     </FormItem>

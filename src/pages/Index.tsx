@@ -19,7 +19,7 @@ const Index = () => {
   const { t } = useTranslation();
 
   return (
-    <main role="main" className="min-h-screen" id="main-content" tabIndex={-1}>
+    <main role="main" className="min-h-screen bg-cream/30" id="main-content" tabIndex={-1}>
       <Helmet>
         <link rel="canonical" href="https://junglerent.it/" />
         
