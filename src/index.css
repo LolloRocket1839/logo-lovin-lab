@@ -52,48 +52,48 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
     
-    /* Jungle Rent Fluid Gradients - Highly Visible */
+    /* Jungle Rent Fluid Gradients - Crema e Verde */
     --gradient-jungle-vertical: linear-gradient(
       180deg,
-      hsl(0 0% 100%) 0%,
-      hsl(150 45% 18% / 0.03) 15%,
-      hsl(0 0% 100%) 35%,
-      hsl(150 45% 18% / 0.05) 50%,
-      hsl(0 0% 100%) 65%,
-      hsl(150 45% 18% / 0.03) 85%,
-      hsl(0 0% 100%) 100%
+      hsl(40 30% 96%) 0%,
+      hsl(150 45% 18% / 0.04) 15%,
+      hsl(40 30% 97%) 35%,
+      hsl(150 45% 18% / 0.06) 50%,
+      hsl(40 30% 97%) 65%,
+      hsl(150 45% 18% / 0.04) 85%,
+      hsl(40 30% 96%) 100%
     );
     
     --gradient-jungle-hero: linear-gradient(
       180deg,
       hsl(150 45% 18% / 0.07) 0%,
-      hsl(0 0% 100%) 40%,
-      hsl(150 45% 18% / 0.04) 70%,
-      hsl(0 0% 100%) 100%
+      hsl(40 30% 96%) 40%,
+      hsl(150 45% 18% / 0.05) 70%,
+      hsl(40 30% 97%) 100%
     );
     
     --gradient-jungle-section: linear-gradient(
       180deg,
       transparent 0%,
-      hsl(150 45% 18% / 0.03) 20%,
-      hsl(150 45% 18% / 0.05) 50%,
-      hsl(150 45% 18% / 0.03) 80%,
+      hsl(150 45% 18% / 0.04) 20%,
+      hsl(150 45% 18% / 0.06) 50%,
+      hsl(150 45% 18% / 0.04) 80%,
       transparent 100%
     );
     
     --gradient-jungle-blog: linear-gradient(
       180deg,
-      hsl(0 0% 100%) 0%,
-      hsl(150 45% 18% / 0.03) 30%,
-      hsl(150 45% 18% / 0.04) 50%,
-      hsl(150 45% 18% / 0.03) 70%,
-      hsl(0 0% 100%) 100%
+      hsl(40 30% 97%) 0%,
+      hsl(150 45% 18% / 0.04) 30%,
+      hsl(150 45% 18% / 0.05) 50%,
+      hsl(150 45% 18% / 0.04) 70%,
+      hsl(40 30% 97%) 100%
     );
     
     --gradient-jungle-footer: linear-gradient(
       180deg,
-      hsl(0 0% 100%) 0%,
-      hsl(150 45% 18% / 0.05) 20%,
+      hsl(40 30% 96%) 0%,
+      hsl(150 45% 18% / 0.06) 20%,
       hsl(150 45% 18% / 0.7) 70%,
       hsl(150 45% 18% / 0.95) 100%
     );

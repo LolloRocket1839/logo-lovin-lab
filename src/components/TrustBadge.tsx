@@ -61,11 +61,11 @@ export const TrustBadge = () => {
             <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
               <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain rounded-xl" />
             </div>
-            <div className="text-center sm:text-left">
-              <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1">
+            <div className="text-center sm:text-left max-w-md">
+              <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-2 leading-tight">
                 {t('trustBadge.supportedBy')}
               </h3>
-              <p className="text-sm text-muted-foreground font-light">
+              <p className="text-sm text-muted-foreground font-light leading-relaxed break-words hyphens-auto">
                 {t('trustBadge.incubator')}
               </p>
             </div>

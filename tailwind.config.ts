@@ -36,9 +36,6 @@ export default {
       colors: {
         cream: {
           DEFAULT: 'hsl(var(--cream))',
-          50: '#FDFCFB',
-          100: '#F9F6F3',
-          200: '#F5F0EB',
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
