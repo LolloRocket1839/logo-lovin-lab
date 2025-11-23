@@ -17,83 +17,83 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cream - Magnolia background */
-    --cream: 35 40% 95%;
-    /* Warm magnolia cream */
+    /* Cream - Night Mode Yellow */
+    --cream: 45 80% 88%;
+    /* Warm amber yellow for eye protection */
     
-    /* Clean minimal palette - Apple/Nike inspired */
-    --background: 35 40% 95%;
+    /* Clean minimal palette - Night Mode */
+    --background: 45 80% 88%;
     --foreground: 0 0% 9%;
 
-    --card: 0 0% 100%;
+    --card: 42 75% 90%;
     --card-foreground: 0 0% 9%;
 
-    --popover: 0 0% 100%;
+    --popover: 42 75% 90%;
     --popover-foreground: 0 0% 9%;
 
     --primary: 150 45% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
+    --secondary: 40 70% 85%;
     --secondary-foreground: 0 0% 9%;
 
-    --muted: 0 0% 96%;
+    --muted: 40 70% 85%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 96%;
+    --accent: 40 70% 85%;
     --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 40 60% 80%;
+    --input: 40 60% 80%;
     --ring: 150 45% 18%;
 
     --radius: 0.5rem;
     
-    /* Jungle Rent Fluid Gradients - Crema Magnolia e Bianco */
+    /* Jungle Rent Fluid Gradients - Night Mode Amber */
     --gradient-jungle-vertical: linear-gradient(
       180deg,
-      hsl(35 40% 95%) 0%,
-      hsl(35 30% 97%) 25%,
-      hsl(0 0% 99%) 50%,
-      hsl(35 30% 97%) 75%,
-      hsl(35 40% 95%) 100%
+      hsl(45 80% 88%) 0%,
+      hsl(42 75% 90%) 25%,
+      hsl(40 70% 92%) 50%,
+      hsl(42 75% 90%) 75%,
+      hsl(45 80% 88%) 100%
     );
     
     --gradient-jungle-hero: linear-gradient(
       180deg,
-      hsl(0 0% 99%) 0%,
-      hsl(35 40% 95%) 50%,
-      hsl(35 30% 97%) 100%
+      hsl(40 70% 92%) 0%,
+      hsl(45 80% 88%) 50%,
+      hsl(42 75% 90%) 100%
     );
     
     --gradient-jungle-section: linear-gradient(
       180deg,
       transparent 0%,
-      hsl(35 30% 97% / 0.5) 20%,
-      hsl(0 0% 99% / 0.8) 50%,
-      hsl(35 30% 97% / 0.5) 80%,
+      hsl(42 75% 90% / 0.5) 20%,
+      hsl(40 70% 92% / 0.8) 50%,
+      hsl(42 75% 90% / 0.5) 80%,
       transparent 100%
     );
     
     --gradient-jungle-blog: linear-gradient(
       180deg,
-      hsl(35 40% 95%) 0%,
-      hsl(0 0% 99%) 30%,
-      hsl(0 0% 100%) 50%,
-      hsl(0 0% 99%) 70%,
-      hsl(35 40% 95%) 100%
+      hsl(45 80% 88%) 0%,
+      hsl(40 70% 92%) 30%,
+      hsl(42 75% 90%) 50%,
+      hsl(40 70% 92%) 70%,
+      hsl(45 80% 88%) 100%
     );
     
     --gradient-jungle-footer: linear-gradient(
       180deg,
-      hsl(35 40% 95%) 0%,
-      hsl(35 30% 97%) 30%,
-      hsl(0 0% 99%) 60%,
-      hsl(35 30% 97%) 85%,
-      hsl(35 40% 95%) 100%
+      hsl(45 80% 88%) 0%,
+      hsl(42 75% 90%) 30%,
+      hsl(40 70% 92%) 60%,
+      hsl(42 75% 90%) 85%,
+      hsl(45 80% 88%) 100%
     );
     
     /* Clean gradients */
