@@ -89,7 +89,7 @@ export const Navigation = () => {
           <button
             onClick={() => {
               trackClick('nav_logo');
-              scrollToSection("hero");
+              navigate('/');
             }}
             className="flex items-center gap-2 group transition-all duration-500 hover:scale-105"
             aria-label="Torna alla home"
