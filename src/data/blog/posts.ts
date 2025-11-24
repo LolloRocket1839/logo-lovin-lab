@@ -2,6 +2,65 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "mercati-storici-torino-chiusure",
+    category: "societa",
+    date: "2025-11-24",
+    author: "Jungle Rent Team",
+    image: "/images/mercati-rionali-torino.jpg",
+    readTime: 45,
+    content: "mercati-storici-torino-chiusure",
+    translations: {
+      it: {
+        title: "I Mercati Storici di Torino: Chiusure e Impatto Sociale",
+        excerpt: "Analisi approfondita della crisi dei mercati rionali torinesi: da Piazza Crispi alla liquidazione CISM, l'impatto su anziani, ambulanti e quartieri fragili.",
+        seo: {
+          title: "Mercati Storici Torino: Chiusure e Impatto Sociale | JungleRent",
+          description: "Crisi mercati rionali Torino 2025: chiusura Piazza Crispi, liquidazione CISM, impatto anziani e ambulanti, gentrificazione. Analisi completa con dati e fonti.",
+          keywords: [
+            "mercati torino chiusure",
+            "piazza crispi torino",
+            "mercati rionali torino",
+            "cism torino liquidazione",
+            "porta palazzo torino",
+            "barriera di milano torino",
+            "mercato libero scambio torino",
+            "gentrificazione torino",
+            "ambulanti torino",
+            "crisi commercio torino",
+            "anziani isolamento sociale",
+            "desertificazione commerciale",
+            "mercati storici italia"
+          ]
+        },
+        tags: ["Mercati", "Torino", "Sociale", "Anziani", "Quartieri", "Urbanistica", "Barriera Milano", "Gentrificazione"]
+      },
+      en: {
+        title: "Turin's Historic Markets: Closures and Social Impact",
+        excerpt: "In-depth analysis of Turin's neighborhood market crisis: from Piazza Crispi to CISM liquidation, the impact on elderly, vendors and fragile communities.",
+        seo: {
+          title: "Historic Markets Turin: Closures and Social Impact | JungleRent",
+          description: "Turin neighborhood markets crisis 2025: Piazza Crispi closure, CISM liquidation, impact on elderly and vendors, gentrification. Complete analysis with data and sources.",
+          keywords: [
+            "turin markets closures",
+            "piazza crispi turin",
+            "neighborhood markets turin",
+            "cism turin liquidation",
+            "porta palazzo turin",
+            "barriera di milano turin",
+            "free market turin",
+            "gentrification turin",
+            "street vendors turin",
+            "commercial crisis turin",
+            "elderly social isolation",
+            "commercial desertification",
+            "historic markets italy"
+          ]
+        },
+        tags: ["Markets", "Turin", "Social", "Elderly", "Neighborhoods", "Urban Planning", "Barriera Milano", "Gentrification"]
+      }
+    }
+  },
+  {
     slug: "eventi-torino-gennaio-2026",
     category: "turisti",
     date: "2025-11-23",
