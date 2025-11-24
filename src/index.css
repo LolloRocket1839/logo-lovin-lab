@@ -169,6 +169,11 @@ All colors MUST be HSL.
     @apply text-purple-700 dark:text-purple-400 border border-purple-500/30;
   }
 
+  .category-badge.societa {
+    @apply bg-gradient-to-r from-rose-500/20 to-rose-500/10;
+    @apply text-rose-700 dark:text-rose-400 border border-rose-500/30;
+  }
+
   /* New Badge - Accattivante */
   .new-badge {
     @apply absolute top-3 right-3 z-10;

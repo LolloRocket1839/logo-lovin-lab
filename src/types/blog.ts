@@ -11,7 +11,7 @@ export interface BlogPostTranslation {
 
 export interface BlogPost {
   slug: string;
-  category: 'students' | 'investors' | 'sellers' | 'turisti';
+  category: 'students' | 'investors' | 'sellers' | 'turisti' | 'societa';
   date: string;
   author: string;
   image: string;
@@ -23,4 +23,4 @@ export interface BlogPost {
   };
 }
 
-export type BlogCategory = 'all' | 'students' | 'investors' | 'sellers' | 'turisti';
+export type BlogCategory = 'all' | 'students' | 'investors' | 'sellers' | 'turisti' | 'societa';

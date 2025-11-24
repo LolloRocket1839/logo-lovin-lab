@@ -7,7 +7,7 @@ import { CONTACTS } from "@/lib/contacts";
 import { useABTest } from "@/hooks/useABTest";
 
 interface BlogCTAProps {
-  type: 'students' | 'investors' | 'sellers' | 'turisti';
+  type: 'students' | 'investors' | 'sellers' | 'turisti' | 'societa';
 }
 
 export const BlogCTA = ({ type }: BlogCTAProps) => {
@@ -62,6 +62,13 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
       description: t(`blog.cta.turisti.${variation}.description`),
       icon: Bell,
       buttonText: t(`blog.cta.turisti.${variation}.button`),
+      action: handleWaitlistOpen
+    },
+    societa: {
+      title: t(`blog.cta.students.${variation}.title`),
+      description: t(`blog.cta.students.${variation}.description`),
+      icon: Bell,
+      buttonText: t(`blog.cta.students.${variation}.button`),
       action: handleWaitlistOpen
     }
   };
