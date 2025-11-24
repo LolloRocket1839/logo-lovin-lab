@@ -32,7 +32,7 @@ export const BlogFilters = ({
   const { t, i18n } = useTranslation();
   const [isTagsOpen, setIsTagsOpen] = useState(false);
 
-  const categories: BlogCategory[] = ['all', 'students', 'investors', 'sellers', 'turisti'];
+  const categories: BlogCategory[] = ['all', 'students', 'investors', 'sellers', 'turisti', 'societa'];
   const allTags = getAllTags(i18n.language as 'it' | 'en');
 
   const toggleTag = (tag: string) => {
