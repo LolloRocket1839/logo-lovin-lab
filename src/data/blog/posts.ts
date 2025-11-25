@@ -2,6 +2,63 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "raccolta-differenziata-torino-guida",
+    category: "societa",
+    date: "2025-11-25",
+    author: "Jungle Rent Team",
+    image: "/images/torino-transport.jpg",
+    readTime: 50,
+    content: "raccolta-differenziata-torino-guida",
+    translations: {
+      it: {
+        title: "Come Fare la Raccolta Differenziata a Torino: Guida Completa",
+        excerpt: "Guida pratica alla raccolta differenziata a Torino: porta a porta, ecoisole smart, frazioni di rifiuto, centri di raccolta, sanzioni e consigli per differenziare correttamente.",
+        seo: {
+          title: "Raccolta Differenziata Torino 2025: Guida Completa | JungleRent",
+          description: "Come fare la raccolta differenziata a Torino: porta a porta, ecoisole, 5 frazioni principali, centri di raccolta Amiat, sanzioni, app Iren Ambiente. Guida aggiornata 2025.",
+          keywords: [
+            "raccolta differenziata torino",
+            "amiat torino",
+            "porta a porta torino",
+            "ecoisole torino",
+            "rifiuti torino",
+            "ecocentri torino",
+            "app iren ambiente",
+            "cassonetti torino",
+            "plastica torino",
+            "organico torino",
+            "sanzioni rifiuti torino",
+            "compostaggio domestico"
+          ]
+        },
+        tags: ["Ambiente", "Rifiuti", "Torino", "Sostenibilità", "Amiat", "Ecologia", "Guida Pratica"]
+      },
+      en: {
+        title: "Waste Sorting in Turin: Complete Practical Guide",
+        excerpt: "Practical guide to waste sorting in Turin: door-to-door collection, smart eco-islands, waste fractions, recycling centers, fines and tips for proper recycling.",
+        seo: {
+          title: "Waste Sorting Turin 2025: Complete Guide | JungleRent",
+          description: "How to sort waste in Turin: door-to-door, eco-islands, 5 main fractions, Amiat collection centers, penalties, Iren Ambiente app. Updated 2025 guide.",
+          keywords: [
+            "waste sorting turin",
+            "amiat turin",
+            "door to door turin",
+            "eco islands turin",
+            "waste turin",
+            "recycling centers turin",
+            "iren ambiente app",
+            "bins turin",
+            "plastic recycling turin",
+            "organic waste turin",
+            "waste penalties turin",
+            "home composting"
+          ]
+        },
+        tags: ["Environment", "Waste", "Turin", "Sustainability", "Recycling", "Ecology", "Practical Guide"]
+      }
+    }
+  },
+  {
     slug: "mercati-storici-torino-chiusure",
     category: "societa",
     date: "2025-11-24",
