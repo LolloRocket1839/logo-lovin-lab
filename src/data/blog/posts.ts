@@ -2,6 +2,63 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "politecnico-torino-guida-completa",
+    category: "students",
+    date: "2025-11-27",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 45,
+    content: "politecnico-torino-guida-completa",
+    translations: {
+      it: {
+        title: "Il Politecnico di Torino: Guida Completa per Studenti",
+        excerpt: "Guida completa al Politecnico di Torino: storia, corsi di laurea, test TIL, tasse, residenze, Erasmus, sbocchi lavorativi e classifiche internazionali.",
+        seo: {
+          title: "Politecnico di Torino 2025: Guida Completa | JungleRent",
+          description: "Guida al Politecnico di Torino: ammissione TIL, tasse universitarie, borse di studio, residenze, Erasmus+, occupazione 96%, stipendi, classifiche QS 2025.",
+          keywords: [
+            "politecnico torino",
+            "polito",
+            "test til politecnico",
+            "ammissione politecnico torino",
+            "tasse politecnico torino",
+            "residenze universitarie torino",
+            "ingegneria torino",
+            "architettura torino",
+            "erasmus politecnico",
+            "lavoro laureati politecnico",
+            "classifiche università torino",
+            "borse studio politecnico"
+          ]
+        },
+        tags: ["Politecnico", "Università", "Torino", "Studenti", "Ingegneria", "Architettura", "Guida"]
+      },
+      en: {
+        title: "Polytechnic University of Turin: Complete Guide for Students",
+        excerpt: "Complete guide to Politecnico di Torino: history, degree programs, TIL admission test, fees, housing, Erasmus, career outcomes and international rankings.",
+        seo: {
+          title: "Politecnico di Torino 2025: Complete Guide | JungleRent",
+          description: "Guide to Polytechnic University of Turin: TIL admission, tuition fees, scholarships, housing, Erasmus+, 96% employment rate, salaries, QS rankings 2025.",
+          keywords: [
+            "politecnico torino",
+            "polito",
+            "til test politecnico",
+            "polytechnic university turin",
+            "tuition fees polito",
+            "student housing turin",
+            "engineering turin",
+            "architecture turin",
+            "erasmus politecnico",
+            "polito graduates employment",
+            "university rankings turin",
+            "scholarships politecnico"
+          ]
+        },
+        tags: ["Politecnico", "University", "Turin", "Students", "Engineering", "Architecture", "Guide"]
+      }
+    }
+  },
+  {
     slug: "raccolta-differenziata-torino-guida",
     category: "societa",
     date: "2025-11-25",
