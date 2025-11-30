@@ -51,21 +51,35 @@ export const Navigation = () => {
     // Otherwise, Link handles client-side navigation to '/'
   };
 
-  const handleMenuClick = (item: typeof menuItems[0]) => {
+  const handleMenuClick = (e: React.MouseEvent, item: typeof menuItems[0]) => {
     trackClick(`nav_menu_${item.id || item.path}`, { label: item.label });
-    if (item.path) {
-      navigate(item.path);
-      setIsMobileMenuOpen(false);
-    } else if (item.id) {
-      // If we're not on home page, navigate to home first
-      if (window.location.pathname !== '/') {
-        navigate('/');
-        setTimeout(() => scrollToSection(item.id!), 100);
-      } else {
+    
+    if (item.id) {
+      // If already on home page, prevent default and scroll smoothly
+      if (window.location.pathname === '/') {
+        e.preventDefault();
         scrollToSection(item.id);
       }
+      // Otherwise, Link navigates to /#section-id and useEffect handles scroll
     }
+    // For path items (like /blog), Link handles navigation normally
+    setIsMobileMenuOpen(false);
   };
+
+  // Handle hash-based navigation after route change (e.g., navigating to /#student-section)
+  useEffect(() => {
+    if (window.location.pathname === '/' && window.location.hash) {
+      const id = window.location.hash.slice(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Clean up the hash from URL
+          window.history.replaceState(null, '', '/');
+        }
+      }, 100);
+    }
+  }, []);
 
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
@@ -118,15 +132,19 @@ export const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-1">
-            {menuItems.map((item, index) => (
-              <button
-                key={item.id || item.path || index}
-                onClick={() => handleMenuClick(item)}
-                className="px-4 py-2 text-sm font-normal text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              >
-                {item.label}
-              </button>
-            ))}
+            {menuItems.map((item, index) => {
+              const href = item.path || (item.id ? `/#${item.id}` : '/');
+              return (
+                <Link
+                  key={item.id || item.path || index}
+                  to={href}
+                  onClick={(e) => handleMenuClick(e, item)}
+                  className="px-4 py-2 text-sm font-normal text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
@@ -167,15 +185,19 @@ export const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background/95 backdrop-blur-xl z-50">
             <div className="flex flex-col gap-2">
-              {menuItems.map((item, index) => (
-                <button
-                  key={item.id || item.path || index}
-                  onClick={() => handleMenuClick(item)}
-                  className="px-4 py-3 text-left text-sm font-normal text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                >
-                  {item.label}
-                </button>
-              ))}
+              {menuItems.map((item, index) => {
+                const href = item.path || (item.id ? `/#${item.id}` : '/');
+                return (
+                  <Link
+                    key={item.id || item.path || index}
+                    to={href}
+                    onClick={(e) => handleMenuClick(e, item)}
+                    className="px-4 py-3 text-left text-sm font-normal text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <Button
                 variant="premium"
                 onClick={() => {
