@@ -1,0 +1,126 @@
+{
+  "header": {
+    "title": "Jungle Rent",
+    "subtitle": "Investissez dans l'Avenir du Logement Étudiant",
+    "backToWebsite": "Aller au Site"
+  },
+  "autoSave": {
+    "saved": "Sauvegardé automatiquement",
+    "restored": "Votre progression a été restaurée"
+  },
+  "navigation": {
+    "continue": "Continuer",
+    "back": "Retour",
+    "submit": "Soumettre la Candidature",
+    "halfway": "À mi-chemin!"
+  },
+  "questions": {
+    "welcome": "👋 Bienvenue! Faisons connaissance...",
+    "fullName": "Commençons par votre nom complet",
+    "email": "Quelle est votre adresse e-mail?",
+    "phone": "Et votre numéro de téléphone?",
+    "country": "Dans quel pays résidez-vous?",
+    "investorType": "Quel type d'investisseur êtes-vous?",
+    "investmentGoals": "💰 Super! Parlons maintenant de vos objectifs d'investissement...",
+    "investmentRange": "Quelle est votre fourchette d'investissement?",
+    "investmentTimeline": "Quel est votre délai préféré?",
+    "heardAbout": "Comment avez-vous entendu parler de Jungle Rent?",
+    "almostThere": "📊 Presque terminé! Juste quelques questions de plus...",
+    "investmentExperience": "Parlez-nous de votre expérience d'investissement (optionnel)",
+    "accreditedInvestor": "Êtes-vous un investisseur accrédité/qualifié?",
+    "areasOfInterest": "Quels domaines vous intéressent? (Sélectionnez tous ceux qui s'appliquent)",
+    "finalStep": "✅ Dernière étape : Reconnaissances légales",
+    "consentsLabel": "Veuillez examiner et accepter ce qui suit :",
+    "gdprConsent": "Je consens au traitement de mes données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) de l'UE. Je comprends que mes données seront utilisées pour évaluer mon intérêt d'investissement et que je peux retirer mon consentement à tout moment.",
+    "fadpConsent": "Je consens au traitement et au transfert international potentiel de mes données conformément à la Loi Fédérale Suisse sur la Protection des Données (FADP).",
+    "consentContact": "Je consens à être contacté au sujet des opportunités d'investissement",
+    "understandNoCommitment": "Je comprends que ce formulaire est une expression d'intérêt uniquement et ne constitue aucun engagement d'investissement"
+  },
+  "placeholders": {
+    "fullName": "Entrez votre nom complet",
+    "email": "votre.email@exemple.fr",
+    "phone": "+33 1 23 45 67 89",
+    "investmentExperience": "Partagez votre expérience d'investissement...",
+    "additionalComments": "Commentaires supplémentaires..."
+  },
+  "countries": {
+    "italy": "Italie",
+    "france": "France",
+    "germany": "Allemagne",
+    "spain": "Espagne",
+    "uk": "Royaume-Uni",
+    "usa": "États-Unis",
+    "other": "Autre"
+  },
+  "investorTypes": {
+    "individual": "Individuel",
+    "company": "Entreprise",
+    "familyOffice": "Family Office",
+    "other": "Autre"
+  },
+  "investmentRanges": {
+    "5000-10000": "5 000 € - 10 000 €",
+    "10000-25000": "10 000 € - 25 000 €",
+    "25000-50000": "25 000 € - 50 000 €",
+    "50000-100000": "50 000 € - 100 000 €",
+    "100000+": "100 000 €+"
+  },
+  "timelines": {
+    "immediate": "Immédiat",
+    "3months": "Dans les 3 mois",
+    "6months": "Dans les 6 mois",
+    "exploratory": "Exploratoire"
+  },
+  "sources": {
+    "linkedin": "LinkedIn",
+    "referral": "Référence",
+    "news": "Actualités/Médias",
+    "website": "Site Web",
+    "event": "Événement/Conférence",
+    "other": "Autre"
+  },
+  "accredited": {
+    "yes": "Oui",
+    "no": "Non",
+    "unsure": "Incertain"
+  },
+  "interests": {
+    "equity": "Investissement en actions",
+    "convertible": "Note convertible",
+    "revenue": "Partage des revenus",
+    "advisory": "Rôle consultatif"
+  },
+  "footer": {
+    "visitWebsite": "Visitez junglerent.it"
+  },
+  "success": {
+    "title": "Merci de votre intérêt!",
+    "message": "Nous avons reçu votre candidature et vous contacterons bientôt."
+  },
+  "errors": {
+    "submitFailed": "Échec de l'envoi du formulaire. Veuillez réessayer.",
+    "fullNameMin": "Le nom complet doit comporter au moins 2 caractères",
+    "fullNameMax": "Le nom complet doit comporter moins de 100 caractères",
+    "fullNamePattern": "Le nom complet ne peut contenir que des lettres, des espaces, des traits d'union et des apostrophes",
+    "invalidEmail": "Adresse e-mail invalide",
+    "emailMax": "L'e-mail doit comporter moins de 255 caractères",
+    "emailTypo": "Veuillez vérifier votre adresse e-mail pour les fautes de frappe",
+    "emailFake": "Veuillez utiliser une adresse e-mail valide",
+    "phoneRequired": "Le numéro de téléphone est requis",
+    "countryRequired": "Veuillez sélectionner un pays",
+    "invalidPhone": "Numéro de téléphone invalide pour le pays sélectionné",
+    "selectCountryFirst": "Veuillez d'abord sélectionner votre pays",
+    "investorTypeRequired": "Veuillez sélectionner le type d'investisseur",
+    "investmentRangeRequired": "Veuillez sélectionner une fourchette d'investissement",
+    "timelineRequired": "Veuillez sélectionner un délai",
+    "heardAboutRequired": "Veuillez nous dire comment vous avez entendu parler de nous",
+    "experienceMax": "L'expérience d'investissement doit comporter moins de 1000 caractères",
+    "accreditedRequired": "Veuillez sélectionner une option",
+    "interestsRequired": "Veuillez sélectionner au moins un domaine d'intérêt",
+    "commentsMax": "Les commentaires supplémentaires doivent contenir moins de 1000 caractères",
+    "gdprRequired": "Vous devez consentir au traitement des données RGPD",
+    "fadpRequired": "Vous devez consentir au traitement des données FADP",
+    "consentRequired": "Vous devez consentir à être contacté",
+    "commitmentRequired": "Vous devez reconnaître qu'il ne s'agit pas d'un engagement"
+  }
+}
