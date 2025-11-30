@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
         title: "L'Università di Torino: guida completa per studenti",
         excerpt: "Guida completa all'Università di Torino: storia dal 1404, classifiche internazionali, 3 premi Nobel, vita studentesca, programmi Erasmus e innovazione.",
         seo: {
-          title: "Università di Torino 2025: Guida Completa | JungleRent",
+          title: "Università di Torino 2025: guida completa | JungleRent",
           description: "Guida all'Università di Torino: 83.000 studenti, 27 dipartimenti, 3 premi Nobel, UNITA Alliance, costo vita €700/mese, Capitale Innovazione Europea 2024-25.",
           keywords: [
             "università torino",
@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
         title: "Il Politecnico di Torino: guida completa per studenti",
         excerpt: "Guida completa al Politecnico di Torino: storia, corsi di laurea, test TIL, tasse, residenze, Erasmus, sbocchi lavorativi e classifiche internazionali.",
         seo: {
-          title: "Politecnico di Torino 2025: Guida Completa | JungleRent",
+          title: "Politecnico di Torino 2025: guida completa | JungleRent",
           description: "Guida al Politecnico di Torino: ammissione TIL, tasse universitarie, borse di studio, residenze, Erasmus+, occupazione 96%, stipendi, classifiche QS 2025.",
           keywords: [
             "politecnico torino",
@@ -128,7 +128,7 @@ export const blogPosts: BlogPost[] = [
         title: "Come fare la raccolta differenziata a Torino: guida completa",
         excerpt: "Guida pratica alla raccolta differenziata a Torino: porta a porta, ecoisole smart, frazioni di rifiuto, centri di raccolta, sanzioni e consigli per differenziare correttamente.",
         seo: {
-          title: "Raccolta Differenziata Torino 2025: Guida Completa | JungleRent",
+          title: "Raccolta differenziata Torino 2025: guida completa | JungleRent",
           description: "Come fare la raccolta differenziata a Torino: porta a porta, ecoisole, 5 frazioni principali, centri di raccolta Amiat, sanzioni, app Iren Ambiente. Guida aggiornata 2025.",
           keywords: [
             "raccolta differenziata torino",
@@ -185,7 +185,7 @@ export const blogPosts: BlogPost[] = [
         title: "I mercati storici di Torino: chiusure e impatto sociale",
         excerpt: "Analisi approfondita della crisi dei mercati rionali torinesi: da Piazza Crispi alla liquidazione CISM, l'impatto su anziani, ambulanti e quartieri fragili.",
         seo: {
-          title: "Mercati Storici Torino: Chiusure e Impatto Sociale | JungleRent",
+          title: "Mercati storici Torino: chiusure e impatto sociale | JungleRent",
           description: "Crisi mercati rionali Torino 2025: chiusura Piazza Crispi, liquidazione CISM, impatto anziani e ambulanti, gentrificazione. Analisi completa con dati e fonti.",
           keywords: [
             "mercati torino chiusure",
