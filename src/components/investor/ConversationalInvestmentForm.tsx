@@ -242,13 +242,14 @@ const ConversationalInvestmentForm = () => {
     },
   });
 
-  // Check if language was previously selected
+  // Check if language was previously selected and sync with main page
   useEffect(() => {
     const savedLanguage = localStorage.getItem('i18nextLng');
     if (savedLanguage && savedLanguage !== 'cimode') {
+      i18n.changeLanguage(savedLanguage); // Sync investor form language with main page
       setLanguageSelected(true);
     }
-  }, []);
+  }, [i18n]);
 
   // Restore current step and completed steps if data was saved
   useEffect(() => {
@@ -964,14 +965,12 @@ const ConversationalInvestmentForm = () => {
       {/* Footer */}
       <footer className="relative py-6 px-4 text-center">
         <p className="text-sm" style={{ color: headerSubtleTextColor }}>
-          <a 
-            href="https://junglerent.it" 
-            target="_blank" 
-            rel="noopener noreferrer"
+          <Link 
+            to="/"
             className="underline hover:opacity-80 transition-opacity font-medium"
           >
             {t("footer.visitWebsite")}
-          </a>
+          </Link>
         </p>
       </footer>
     </div>

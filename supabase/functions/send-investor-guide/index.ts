@@ -88,7 +88,7 @@ serve(async (req: Request): Promise<Response> => {
               </div>
 
               <p style="text-align: center;">
-                <a href="#" class="button">📥 Scarica la Guida PDF</a>
+                <a href="${isGeneral ? 'https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa' : 'https://junglerent.it/blog/investire-real-assets-torino-2025'}" class="button">📥 Leggi la Guida Completa</a>
               </p>
 
               <p><strong>Prossimi passi:</strong></p>
@@ -155,7 +155,7 @@ serve(async (req: Request): Promise<Response> => {
               </div>
 
               <p style="text-align: center;">
-                <a href="#" class="button">📥 Download PDF Guide</a>
+                <a href="${isGeneral ? 'https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa' : 'https://junglerent.it/blog/investire-real-assets-torino-2025'}" class="button">📥 Read the Complete Guide</a>
               </p>
 
               <p><strong>Next steps:</strong></p>
