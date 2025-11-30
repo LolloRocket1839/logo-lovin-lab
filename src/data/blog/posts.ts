@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     content: "universita-torino-guida-completa",
     translations: {
       it: {
-        title: "L'Università di Torino: Guida Completa per Studenti",
+        title: "L'Università di Torino: guida completa per studenti",
         excerpt: "Guida completa all'Università di Torino: storia dal 1404, classifiche internazionali, 3 premi Nobel, vita studentesca, programmi Erasmus e innovazione.",
         seo: {
           title: "Università di Torino 2025: Guida Completa | JungleRent",
@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
     content: "politecnico-torino-guida-completa",
     translations: {
       it: {
-        title: "Il Politecnico di Torino: Guida Completa per Studenti",
+        title: "Il Politecnico di Torino: guida completa per studenti",
         excerpt: "Guida completa al Politecnico di Torino: storia, corsi di laurea, test TIL, tasse, residenze, Erasmus, sbocchi lavorativi e classifiche internazionali.",
         seo: {
           title: "Politecnico di Torino 2025: Guida Completa | JungleRent",
@@ -125,7 +125,7 @@ export const blogPosts: BlogPost[] = [
     content: "raccolta-differenziata-torino-guida",
     translations: {
       it: {
-        title: "Come Fare la Raccolta Differenziata a Torino: Guida Completa",
+        title: "Come fare la raccolta differenziata a Torino: guida completa",
         excerpt: "Guida pratica alla raccolta differenziata a Torino: porta a porta, ecoisole smart, frazioni di rifiuto, centri di raccolta, sanzioni e consigli per differenziare correttamente.",
         seo: {
           title: "Raccolta Differenziata Torino 2025: Guida Completa | JungleRent",
@@ -182,7 +182,7 @@ export const blogPosts: BlogPost[] = [
     content: "mercati-storici-torino-chiusure",
     translations: {
       it: {
-        title: "I Mercati Storici di Torino: Chiusure e Impatto Sociale",
+        title: "I mercati storici di Torino: chiusure e impatto sociale",
         excerpt: "Analisi approfondita della crisi dei mercati rionali torinesi: da Piazza Crispi alla liquidazione CISM, l'impatto su anziani, ambulanti e quartieri fragili.",
         seo: {
           title: "Mercati Storici Torino: Chiusure e Impatto Sociale | JungleRent",
