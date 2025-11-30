@@ -182,7 +182,7 @@ const ConversationalInvestmentForm = () => {
     { id: "investment_timeline", labelKey: "questions.investmentTimeline", type: "select", optionsKey: "timelines" },
     { id: "accredited_investor", labelKey: "questions.accreditedInvestor", type: "select", optionsKey: "accredited" },
     { id: "areas_of_interest", labelKey: "questions.areasOfInterest", type: "multi-checkbox", optionsKey: "interests" },
-    { id: "consents", labelKey: "questions.consentsLabel", type: "consents", sectionTitleKey: "questions.finalStep" },
+    { id: "consents_to_data_processing", labelKey: "questions.consentsLabel", type: "consents", sectionTitleKey: "questions.finalStep" },
   ];
 
   const getOptionsForQuestion = (optionsKey?: string) => {
@@ -317,13 +317,17 @@ const ConversationalInvestmentForm = () => {
 
   const gradientProgress = (currentStep / questions.length) * 100;
   
-  // Dynamic text color based on background gradient
-  const textColor = gradientProgress > 50 
+  // Dynamic text color for header/footer (on gradient background)
+  const headerTextColor = gradientProgress > 50 
     ? 'hsl(var(--primary-foreground))' 
     : 'hsl(var(--foreground))';
-  const subtleTextColor = gradientProgress > 50 
+  const headerSubtleTextColor = gradientProgress > 50 
     ? 'hsl(var(--primary-foreground) / 0.75)' 
     : 'hsl(var(--muted-foreground))';
+  
+  // Static dark text for card content (always readable on card backgrounds)
+  const cardTextColor = 'hsl(var(--foreground))';
+  const cardSubtleTextColor = 'hsl(var(--muted-foreground))';
 
   const handleNext = () => {
     if (isValid) {
@@ -463,23 +467,23 @@ const ConversationalInvestmentForm = () => {
               className="flex items-center gap-4 hover:opacity-80 transition-opacity"
             >
               <img src={logo} alt="Jungle Rent" className="h-28 w-auto drop-shadow-lg" />
-              <h1 className="text-3xl font-extrabold transition-colors duration-700 tracking-tight" style={{ color: textColor }}>{t("header.title")}</h1>
+              <h1 className="text-3xl font-extrabold transition-colors duration-700 tracking-tight" style={{ color: headerTextColor }}>{t("header.title")}</h1>
             </a>
             <div className="flex items-center gap-4">
-              <LanguageSelector textColor={textColor} />
+              <LanguageSelector textColor={headerTextColor} />
               <a 
                 href="https://junglerent.it" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm font-normal hover:opacity-80 transition-all"
-                style={{ color: subtleTextColor }}
+                style={{ color: headerSubtleTextColor }}
               >
                 <ChevronLeft className="w-4 h-4" />
                 {t("header.backToWebsite")}
               </a>
             </div>
           </div>
-          <p className="text-lg transition-colors duration-700 font-light" style={{ color: subtleTextColor }}>
+          <p className="text-lg transition-colors duration-700 font-light" style={{ color: headerSubtleTextColor }}>
             {t("header.subtitle")}
           </p>
         </div>
@@ -524,7 +528,7 @@ const ConversationalInvestmentForm = () => {
             className="fixed top-4 right-4 z-50 flex items-center gap-2 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-border/50"
           >
             <Save className="w-4 h-4 text-accent" />
-            <span className="text-xs font-normal transition-colors duration-700" style={{ color: textColor }}>
+            <span className="text-xs font-normal transition-colors duration-700" style={{ color: cardTextColor }}>
               {t("autoSave.saved")}
             </span>
           </motion.div>
@@ -570,8 +574,8 @@ const ConversationalInvestmentForm = () => {
                   <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-1 opacity-60" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs mb-0.5 transition-colors duration-700" style={{ color: subtleTextColor }}>{t(q.labelKey)}</p>
-                    <p className="text-sm font-medium truncate transition-colors duration-700" style={{ color: textColor }}>{displayValue}</p>
+                    <p className="text-xs mb-0.5 transition-colors duration-700" style={{ color: cardSubtleTextColor }}>{t(q.labelKey)}</p>
+                    <p className="text-sm font-medium truncate transition-colors duration-700" style={{ color: cardTextColor }}>{displayValue}</p>
                   </div>
                 </div>
               </motion.button>
@@ -602,7 +606,7 @@ const ConversationalInvestmentForm = () => {
                   {currentQuestion.sectionTitleKey && (
                     <motion.h2 
                       className="text-2xl font-extrabold mb-8 transition-colors duration-700 tracking-tight"
-                      style={{ color: textColor }}
+                      style={{ color: cardTextColor }}
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 }}
@@ -616,7 +620,7 @@ const ConversationalInvestmentForm = () => {
                     name={currentQuestion.id as keyof FormData}
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-2xl font-extrabold mb-6 block leading-relaxed transition-colors duration-700" style={{ color: textColor }}>
+                        <FormLabel className="text-2xl font-extrabold mb-6 block leading-relaxed transition-colors duration-700" style={{ color: cardTextColor }}>
                           {t(currentQuestion.labelKey)}
                         </FormLabel>
                         {currentQuestion.descriptionKey && (
@@ -961,7 +965,7 @@ const ConversationalInvestmentForm = () => {
 
       {/* Footer */}
       <footer className="relative py-6 px-4 text-center">
-        <p className="text-sm" style={{ color: subtleTextColor }}>
+        <p className="text-sm" style={{ color: headerSubtleTextColor }}>
           <a 
             href="https://junglerent.it" 
             target="_blank" 
