@@ -316,19 +316,8 @@ const ConversationalInvestmentForm = () => {
     return value;
   };
 
-  const gradientProgress = (currentStep / questions.length) * 100;
-  
-  // Dynamic text color for header/footer (on gradient background)
-  const headerTextColor = gradientProgress > 50 
-    ? 'hsl(var(--primary-foreground))' 
-    : 'hsl(var(--foreground))';
-  const headerSubtleTextColor = gradientProgress > 50 
-    ? 'hsl(var(--primary-foreground) / 0.75)' 
-    : 'hsl(var(--muted-foreground))';
-  
-  // Static dark text for card content (always readable on card backgrounds)
-  const cardTextColor = 'hsl(var(--foreground))';
-  const cardSubtleTextColor = 'hsl(var(--muted-foreground))';
+  // Progress percentage for progress bar only
+  const progressPercentage = (currentStep / questions.length) * 100;
 
   const handleNext = () => {
     if (isValid) {
@@ -429,7 +418,7 @@ const ConversationalInvestmentForm = () => {
   if (!languageSelected) {
     return (
       <div className="min-h-screen relative overflow-hidden flex items-center justify-center px-4">
-        <div className="fixed inset-0 bg-gradient-to-br from-[hsl(38,45%,89%)] via-[hsl(38,35%,82%)] to-[hsl(92,40%,28%)]" />
+        <div className="fixed inset-0 gradient-jungle-vertical" />
         <div className="relative z-10">
           <LanguageSelectionCard onLanguageSelect={handleLanguageSelect} />
         </div>
@@ -439,17 +428,8 @@ const ConversationalInvestmentForm = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div 
-        className="fixed inset-0 transition-all duration-1000 ease-in-out"
-        style={{
-          background: `linear-gradient(135deg, 
-            hsl(38, 45%, 89%) 0%, 
-            hsl(38, 45%, 89%) ${Math.max(0, 100 - gradientProgress - 20)}%,
-            hsl(92, 40%, 28%) ${Math.min(100, 100 - gradientProgress + 20)}%, 
-            hsl(92, 40%, 28%) 100%)`
-        }}
-      />
+      {/* Static Warm Background */}
+      <div className="fixed inset-0 gradient-jungle-vertical" />
       
 
       {/* Hero Section */}
@@ -468,21 +448,20 @@ const ConversationalInvestmentForm = () => {
               className="flex items-center gap-2 md:gap-4 hover:opacity-80 transition-opacity"
             >
               <img src={logo} alt="Jungle Rent" className="h-12 md:h-28 w-auto drop-shadow-lg" />
-              <h1 className="text-lg md:text-3xl font-extrabold transition-colors duration-700 tracking-tight" style={{ color: headerTextColor }}>{t("header.title")}</h1>
+              <h1 className="text-lg md:text-3xl font-extrabold tracking-tight text-foreground">{t("header.title")}</h1>
             </a>
             <div className="flex items-center gap-3 md:gap-4">
-              <LanguageSelector textColor={headerTextColor} />
+              <LanguageSelector textColor="hsl(var(--foreground))" />
               <Link 
                 to="/"
-                className="hidden md:flex items-center gap-2 text-sm font-normal hover:opacity-80 transition-all"
-                style={{ color: headerSubtleTextColor }}
+                className="hidden md:flex items-center gap-2 text-sm font-normal hover:opacity-80 transition-all text-muted-foreground"
               >
                 <ChevronLeft className="w-4 h-4" />
                 {t("header.backToWebsite")}
               </Link>
             </div>
           </div>
-          <p className="text-sm md:text-lg transition-colors duration-700 font-light" style={{ color: headerSubtleTextColor }}>
+          <p className="text-sm md:text-lg font-light text-muted-foreground">
             {t("header.subtitle")}
           </p>
         </div>
@@ -527,7 +506,7 @@ const ConversationalInvestmentForm = () => {
             className="fixed top-4 right-2 md:right-4 z-50 flex items-center gap-1.5 md:gap-2 bg-card/90 backdrop-blur-sm px-2.5 md:px-4 py-1.5 md:py-2 rounded-full shadow-lg border border-border/50"
           >
             <Save className="w-3 h-3 md:w-4 md:h-4 text-accent" />
-            <span className="text-[10px] md:text-xs font-normal transition-colors duration-700" style={{ color: cardTextColor }}>
+            <span className="text-[10px] md:text-xs font-normal text-foreground">
               {t("autoSave.saved")}
             </span>
           </motion.div>
@@ -573,8 +552,8 @@ const ConversationalInvestmentForm = () => {
                   <div className="flex items-start gap-2 md:gap-3">
                   <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent shrink-0 mt-0.5 md:mt-1 opacity-60" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-[10px] md:text-xs mb-0.5 transition-colors duration-700" style={{ color: cardSubtleTextColor }}>{t(q.labelKey)}</p>
-                    <p className="text-xs md:text-sm font-medium truncate transition-colors duration-700" style={{ color: cardTextColor }}>{displayValue}</p>
+                    <p className="text-[10px] md:text-xs mb-0.5 text-muted-foreground">{t(q.labelKey)}</p>
+                    <p className="text-xs md:text-sm font-medium truncate text-foreground">{displayValue}</p>
                   </div>
                 </div>
               </motion.button>
@@ -604,8 +583,7 @@ const ConversationalInvestmentForm = () => {
                 >
                   {currentQuestion.sectionTitleKey && (
                     <motion.h2 
-                      className="text-lg md:text-2xl font-extrabold mb-4 md:mb-8 transition-colors duration-700 tracking-tight"
-                      style={{ color: cardTextColor }}
+                      className="text-lg md:text-2xl font-extrabold mb-4 md:mb-8 tracking-tight text-foreground"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 }}
@@ -619,7 +597,7 @@ const ConversationalInvestmentForm = () => {
                     name={currentQuestion.id as keyof FormData}
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-base md:text-2xl font-extrabold mb-3 md:mb-6 block leading-relaxed transition-colors duration-700" style={{ color: cardTextColor }}>
+                        <FormLabel className="text-base md:text-2xl font-extrabold mb-3 md:mb-6 block leading-relaxed text-foreground">
                           {t(currentQuestion.labelKey)}
                         </FormLabel>
                         {currentQuestion.descriptionKey && (
@@ -964,7 +942,7 @@ const ConversationalInvestmentForm = () => {
 
       {/* Footer */}
       <footer className="relative py-6 px-4 text-center">
-        <p className="text-sm" style={{ color: headerSubtleTextColor }}>
+        <p className="text-sm text-muted-foreground">
           <Link 
             to="/"
             className="underline hover:opacity-80 transition-opacity font-medium"
