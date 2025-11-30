@@ -924,7 +924,16 @@
     "guide2Bullet2": "Price per sqm and returns by neighborhood (2025 data)",
     "guide2Bullet3": "Student housing: opportunities and operational strategies",
     "guide2Bullet4": "Updated mortgages, rates and tax benefits",
-    "downloadCta": "Download Free Guide"
+    "guide3Title": "Turin University Real Estate Market",
+    "guide3Badge": "Report 2025",
+    "guide3Desc": "Complete analysis of Turin's student housing market with data on demand, supply, prices and returns",
+    "guide3Pages": "18 pages",
+    "guide3Bullet1": "120,000 students and 50,000 off-site: demand size",
+    "guide3Bullet2": "Supply-demand gap: 42,500 missing beds",
+    "guide3Bullet3": "7-9% returns vs Milan's 4-5%",
+    "guide3Bullet4": "Prices by area and national comparison",
+    "downloadCta": "Download Free Guide",
+    "downloadDirectCta": "Download PDF"
   },
   "accessibility": {
     "skipToContent": "Skip to main content"

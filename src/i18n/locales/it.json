@@ -699,7 +699,16 @@
     "guide2Bullet2": "Prezzi al mq e rendimenti per quartiere (dati 2025)",
     "guide2Bullet3": "Student housing: opportunità e strategie operative",
     "guide2Bullet4": "Mutui, tassi e agevolazioni fiscali aggiornate",
-    "downloadCta": "Scarica Guida Gratuita"
+    "guide3Title": "Mercato Immobiliare Universitario Torino",
+    "guide3Badge": "Report 2025",
+    "guide3Desc": "Analisi completa del mercato student housing torinese con dati su domanda, offerta, prezzi e rendimenti",
+    "guide3Pages": "18 pagine",
+    "guide3Bullet1": "120.000 studenti e 50.000 fuorisede: dimensioni della domanda",
+    "guide3Bullet2": "Gap domanda-offerta: 42.500 posti letto mancanti",
+    "guide3Bullet3": "Rendimenti 7-9% vs 4-5% di Milano",
+    "guide3Bullet4": "Prezzi per zona e confronto nazionale",
+    "downloadCta": "Scarica Guida Gratuita",
+    "downloadDirectCta": "Scarica PDF"
   },
   "accessibility": {
     "skipToContent": "Salta al contenuto principale"
