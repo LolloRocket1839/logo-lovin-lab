@@ -500,13 +500,20 @@ const ConversationalInvestmentForm = () => {
       <AnimatePresence>
         {lastSaved && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed top-4 right-2 md:right-4 z-50 flex items-center gap-1.5 md:gap-2 bg-card/90 backdrop-blur-sm px-2.5 md:px-4 py-1.5 md:py-2 rounded-full shadow-lg border border-border/50"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            className="fixed top-3 right-3 md:top-4 md:right-4 z-50 flex items-center gap-1.5 bg-accent/10 backdrop-blur-sm px-3 py-1.5 rounded-full border border-accent/20"
           >
-            <Save className="w-3 h-3 md:w-4 md:h-4 text-accent" />
-            <span className="text-[10px] md:text-xs font-normal text-foreground">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.1, type: "spring", stiffness: 500 }}
+            >
+              <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+            </motion.div>
+            <span className="text-[11px] font-medium text-accent">
               {t("autoSave.saved")}
             </span>
           </motion.div>
