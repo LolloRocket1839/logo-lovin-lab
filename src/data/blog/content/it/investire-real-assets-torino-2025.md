@@ -1,5 +1,7 @@
 # Perché questo è il momento perfetto per investire in real assets: focus sull'opportunità eccezionale di Torino
 
+> 📥 **Scarica il report completo:** [Mercato Immobiliare Universitario Torino - 45 pagine di dati e analisi](/resources/mercato-immobiliare-universitario-torino.pdf)
+
 L'attuale volatilità del mercato azionario rappresenta un punto di svolta critico per gli investitori sofisticati. Mentre i principali indici scendono con l'S&P 500 in calo dell'1,66% e il Nasdaq in diminuzione del 2,29% a novembre 2025 il playbook storico è chiaro: le flessioni nei mercati azionari creano opportunità eccezionali per gli investimenti in asset reali. Questo momento è particolarmente interessante per il mercato immobiliare italiano, con **Torino che rappresenta una destinazione particolarmente vantaggiosa** per l'allocazione di capitale. La convergenza di venti favorevoli macroeconomici, condizioni di finanziamento favorevoli e fondamentali di mercato crea una finestra di opportunità che gli investitori accorti non possono permettersi di perdere.
 
 ## Il caso economico per gli asset reali durante le flessioni del mercato azionario

@@ -1,5 +1,7 @@
 # Why This is the Perfect Time to Invest in Real Assets: A Focus on Turin's Exceptional Opportunity
 
+> 📥 **Download the full report:** [Turin University Real Estate Market - 45 pages of data and analysis](/resources/mercato-immobiliare-universitario-torino.pdf)
+
 The current stock market volatility presents a critical inflection point for sophisticated investors. As major indices decline with the S&P 500 falling 1.66% and the Nasdaq dropping 2.29% in November 2025 the historical playbook is clear: downturns in equity markets create exceptional opportunities for real asset investment. This moment is particularly compelling for Italian real estate, with **Turin representing a uniquely advantageous destination** for capital deployment. The convergence of macroeconomic tailwinds, favorable financing conditions, and market fundamentals creates a window of opportunity that savvy investors cannot afford to miss.
 
 ## The Economic Case for Real Assets During Stock Market Downturns
