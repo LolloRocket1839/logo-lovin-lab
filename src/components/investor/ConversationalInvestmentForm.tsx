@@ -319,11 +319,11 @@ const ConversationalInvestmentForm = () => {
   
   // Dynamic text color based on background gradient
   const textColor = gradientProgress > 50 
-    ? 'rgba(255, 255, 255, 0.95)' 
-    : 'rgba(0, 0, 0, 0.85)';
+    ? 'hsl(var(--primary-foreground))' 
+    : 'hsl(var(--foreground))';
   const subtleTextColor = gradientProgress > 50 
-    ? 'rgba(255, 255, 255, 0.75)' 
-    : 'rgba(0, 0, 0, 0.65)';
+    ? 'hsl(var(--primary-foreground) / 0.75)' 
+    : 'hsl(var(--muted-foreground))';
 
   const handleNext = () => {
     if (isValid) {

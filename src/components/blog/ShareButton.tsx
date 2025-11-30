@@ -66,7 +66,7 @@ export const ShareButton = ({ title, excerpt, url }: ShareButtonProps) => {
             className="justify-start w-full"
             onClick={handleWhatsAppShare}
           >
-            <MessageCircle className="w-4 h-4 mr-2 text-green-600" />
+            <MessageCircle className="w-4 h-4 mr-2 text-primary" />
             {t('blog.shareWhatsApp')}
           </Button>
           

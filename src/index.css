@@ -171,8 +171,8 @@ All colors MUST be HSL.
   .new-badge {
     @apply absolute top-3 right-3 z-10;
     @apply px-2.5 py-1 rounded-full;
-    @apply bg-gradient-to-r from-green-500 to-emerald-500;
-    @apply text-white text-[10px] font-bold uppercase tracking-wide;
+    @apply bg-primary;
+    @apply text-primary-foreground text-[10px] font-bold uppercase tracking-wide;
     @apply shadow-lg animate-pulse;
   }
 

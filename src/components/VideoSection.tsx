@@ -87,10 +87,10 @@ export const VideoSection = () => {
             }`}
             style={{ animationDelay: '400ms' }}
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.3)] hover:shadow-[0_25px_70px_rgba(0,0,0,0.4)] transition-shadow duration-500 bg-card border border-border/50">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500 bg-card border border-border/50">
               <AspectRatio ratio={16 / 9}>
                 {!isPlaying && (
-                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/40 backdrop-blur-sm group cursor-pointer" onClick={handlePlayClick}>
+                  <div className="absolute inset-0 z-10 flex items-center justify-center bg-foreground/40 backdrop-blur-sm group cursor-pointer" onClick={handlePlayClick}>
                     <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/90 group-hover:bg-primary flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg">
                       <Play className="w-10 h-10 md:w-12 md:h-12 text-primary-foreground ml-1" fill="currentColor" />
                     </div>
