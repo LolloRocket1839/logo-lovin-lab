@@ -37,7 +37,7 @@ export const LanguageSelector = ({ textColor }: LanguageSelectorProps) => {
         <Button
           variant="ghost"
           size="sm"
-          className="flex items-center gap-2 hover:bg-white/10 transition-all"
+          className="flex items-center gap-2 hover:bg-background/10 transition-all"
           style={{ color: textColor }}
         >
           <span className="text-lg">{currentLanguage.flag}</span>

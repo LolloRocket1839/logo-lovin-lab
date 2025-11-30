@@ -13,7 +13,7 @@ export const LogoModal = ({ open, onOpenChange }: LogoModalProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px] p-0 overflow-hidden border-0 bg-transparent">
-        <div className="relative bg-white rounded-lg p-8 md:p-12">
+        <div className="relative bg-card rounded-lg p-8 md:p-12">
           {/* Logo */}
           <div className="flex flex-col items-center justify-center space-y-8">
             <div className="relative">

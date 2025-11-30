@@ -90,7 +90,7 @@ export const Benefits = () => {
                   <Tooltip key={index}>
                     <TooltipTrigger asChild>
                       <Card 
-                        className="relative p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-700 group hover:-translate-y-1 hover:bg-white/15 cursor-pointer"
+                        className="relative p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-card/50 border border-border hover:border-primary/30 transition-all duration-700 group hover:-translate-y-1 hover:bg-card/70 cursor-pointer"
                         style={{ 
                           animationDelay: `${index * 100}ms`,
                           boxShadow: 'var(--shadow-glass)'
