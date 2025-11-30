@@ -269,10 +269,10 @@ In November 2024, Turin was awarded the title of **European Capital of Innovatio
 
 Turin hosts numerous incubators and accelerators connected to its universities:
 
-- **I3P** (Politecnico Incubator) - among Europe's best university incubators
-- **2i3T** (University of Turin Incubator) - specialized in academic spin-offs
-- Numerous accelerators and coworking spaces
-- Industry-university collaborations
+1. **2i3T** (University of Turin Incubator) - specialized in academic spin-offs
+2. **I3P** (Politecnico Incubator) - among Europe's best university incubators
+3. Accelerators and coworking spaces
+4. Industry-university collaborations
 
 ### 2i3T: UniTo's business incubator
 

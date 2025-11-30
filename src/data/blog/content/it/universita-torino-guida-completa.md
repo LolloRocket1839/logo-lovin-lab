@@ -269,10 +269,10 @@ Nel novembre 2024, Torino è stata insignita del titolo di **Capitale Europea de
 
 Torino ospita numerosi incubatori e acceleratori collegati alle università:
 
-- **I3P** (Incubatore del Politecnico) - tra i migliori incubatori universitari in Europa
-- **2i3T** (Incubatore dell'Università di Torino) - specializzato in spin-off accademici
-- Numerosi acceleratori e spazi di coworking
-- Collaborazioni industria-università
+1. **2i3T** (Incubatore dell'Università di Torino) - specializzato in spin-off accademici
+2. **I3P** (Incubatore del Politecnico) - tra i migliori incubatori universitari in Europa
+3. Acceleratori e spazi di coworking
+4. Collaborazioni industria-università
 
 ### 2i3T: l'incubatore d'imprese di UniTo
 
