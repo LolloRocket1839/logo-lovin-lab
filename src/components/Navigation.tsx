@@ -40,6 +40,17 @@ export const Navigation = () => {
     }
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    trackClick('nav_logo');
+    
+    // If already on home page, just scroll to top smoothly
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    // Otherwise, Link handles client-side navigation to '/'
+  };
+
   const handleMenuClick = (item: typeof menuItems[0]) => {
     trackClick(`nav_menu_${item.id || item.path}`, { label: item.label });
     if (item.path) {
@@ -84,11 +95,9 @@ export const Navigation = () => {
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 transition-spacing">
         <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
           {/* Logo - only shows when scrolled */}
-          <button
-            onClick={() => {
-              trackClick('nav_logo');
-              navigate('/');
-            }}
+          <Link
+            to="/"
+            onClick={handleLogoClick}
             className="flex items-center gap-2 group transition-all duration-500 hover:scale-105"
             aria-label="Torna alla home"
             style={{
@@ -105,7 +114,7 @@ export const Navigation = () => {
             <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:block">
               Jungle Rent
             </span>
-          </button>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-1">
