@@ -2,6 +2,63 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "universita-torino-guida-completa",
+    category: "students",
+    date: "2025-11-30",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 55,
+    content: "universita-torino-guida-completa",
+    translations: {
+      it: {
+        title: "L'Università di Torino: Guida Completa per Studenti",
+        excerpt: "Guida completa all'Università di Torino: storia dal 1404, classifiche internazionali, 3 premi Nobel, vita studentesca, programmi Erasmus e innovazione.",
+        seo: {
+          title: "Università di Torino 2025: Guida Completa | JungleRent",
+          description: "Guida all'Università di Torino: 83.000 studenti, 27 dipartimenti, 3 premi Nobel, UNITA Alliance, costo vita €700/mese, Capitale Innovazione Europea 2024-25.",
+          keywords: [
+            "università torino",
+            "unito",
+            "erasmus torino",
+            "nobel torino",
+            "levi montalcini",
+            "vita studentesca torino",
+            "costo vita torino studenti",
+            "unita alliance",
+            "laurea torino",
+            "facoltà torino",
+            "medicina torino",
+            "ricerca torino"
+          ]
+        },
+        tags: ["Università", "UniTo", "Torino", "Studenti", "Nobel", "Ricerca", "Erasmus"]
+      },
+      en: {
+        title: "The University of Turin: A Legacy of Excellence and Innovation",
+        excerpt: "Complete guide to University of Turin: history since 1404, international rankings, 3 Nobel Prize winners, student life, Erasmus programs and innovation achievements.",
+        seo: {
+          title: "University of Turin 2025: Complete Guide | JungleRent",
+          description: "Guide to University of Turin: 83,000 students, 27 departments, 3 Nobel laureates, UNITA Alliance, €700/month living costs, European Innovation Capital 2024-25.",
+          keywords: [
+            "university of turin",
+            "unito",
+            "erasmus turin",
+            "nobel prize turin",
+            "levi montalcini",
+            "student life turin",
+            "cost of living turin students",
+            "unita alliance",
+            "degree turin",
+            "faculties turin",
+            "medicine turin",
+            "research turin"
+          ]
+        },
+        tags: ["University", "UniTo", "Turin", "Students", "Nobel", "Research", "Erasmus"]
+      }
+    }
+  },
+  {
     slug: "politecnico-torino-guida-completa",
     category: "students",
     date: "2025-11-27",
