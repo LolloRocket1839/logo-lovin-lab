@@ -48,7 +48,7 @@ const staggerItem = {
 // ConsentCheckbox component for reusability with animations
 const ConsentCheckbox = ({ checked, onToggle, label }: { checked: boolean; onToggle: () => void; label: string }) => (
   <motion.div 
-    className={`flex items-start space-x-3 p-4 rounded-lg cursor-pointer transition-all duration-200 ${
+    className={`flex items-start space-x-2.5 md:space-x-3 p-3 md:p-4 rounded-lg cursor-pointer transition-all duration-200 ${
       checked ? 'bg-accent/10 ring-2 ring-accent/30' : 'bg-muted/50 hover:bg-muted/70'
     }`}
     variants={staggerItem}
@@ -63,10 +63,10 @@ const ConsentCheckbox = ({ checked, onToggle, label }: { checked: boolean; onTog
       <Checkbox
         checked={checked}
         onCheckedChange={() => onToggle()}
-        className="mt-1"
+        className="mt-0.5 md:mt-1"
       />
     </motion.div>
-    <label className="text-sm leading-relaxed cursor-pointer flex-1">
+    <label className="text-xs md:text-sm leading-relaxed cursor-pointer flex-1">
       {label}
     </label>
     <AnimatePresence>
@@ -76,7 +76,7 @@ const ConsentCheckbox = ({ checked, onToggle, label }: { checked: boolean; onTog
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0, opacity: 0 }}
         >
-          <CheckCircle2 className="w-5 h-5 text-accent" />
+          <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent" />
         </motion.div>
       )}
     </AnimatePresence>
@@ -454,27 +454,27 @@ const ConversationalInvestmentForm = () => {
 
       {/* Hero Section */}
       <motion.header 
-        className="relative py-8 px-4"
+        className="relative py-4 md:py-8 px-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto max-w-4xl">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 mb-3 md:mb-4">
             <a 
               href="https://junglerent.it" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-2 md:gap-4 hover:opacity-80 transition-opacity"
             >
-              <img src={logo} alt="Jungle Rent" className="h-28 w-auto drop-shadow-lg" />
-              <h1 className="text-3xl font-extrabold transition-colors duration-700 tracking-tight" style={{ color: headerTextColor }}>{t("header.title")}</h1>
+              <img src={logo} alt="Jungle Rent" className="h-12 md:h-28 w-auto drop-shadow-lg" />
+              <h1 className="text-lg md:text-3xl font-extrabold transition-colors duration-700 tracking-tight" style={{ color: headerTextColor }}>{t("header.title")}</h1>
             </a>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 md:gap-4">
               <LanguageSelector textColor={headerTextColor} />
               <Link 
                 to="/"
-                className="flex items-center gap-2 text-sm font-normal hover:opacity-80 transition-all"
+                className="hidden md:flex items-center gap-2 text-sm font-normal hover:opacity-80 transition-all"
                 style={{ color: headerSubtleTextColor }}
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -482,7 +482,7 @@ const ConversationalInvestmentForm = () => {
               </Link>
             </div>
           </div>
-          <p className="text-lg transition-colors duration-700 font-light" style={{ color: headerSubtleTextColor }}>
+          <p className="text-sm md:text-lg transition-colors duration-700 font-light" style={{ color: headerSubtleTextColor }}>
             {t("header.subtitle")}
           </p>
         </div>
@@ -524,10 +524,10 @@ const ConversationalInvestmentForm = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-4 right-4 z-50 flex items-center gap-2 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-border/50"
+            className="fixed top-4 right-2 md:right-4 z-50 flex items-center gap-1.5 md:gap-2 bg-card/90 backdrop-blur-sm px-2.5 md:px-4 py-1.5 md:py-2 rounded-full shadow-lg border border-border/50"
           >
-            <Save className="w-4 h-4 text-accent" />
-            <span className="text-xs font-normal transition-colors duration-700" style={{ color: cardTextColor }}>
+            <Save className="w-3 h-3 md:w-4 md:h-4 text-accent" />
+            <span className="text-[10px] md:text-xs font-normal transition-colors duration-700" style={{ color: cardTextColor }}>
               {t("autoSave.saved")}
             </span>
           </motion.div>
@@ -535,8 +535,8 @@ const ConversationalInvestmentForm = () => {
       </AnimatePresence>
 
       {/* Chat History - Show last 2-3 completed answers */}
-      <div className="relative px-4 mb-8">
-        <div className="container mx-auto max-w-2xl space-y-3">
+      <div className="relative px-4 mb-4 md:mb-8">
+        <div className="container mx-auto max-w-2xl space-y-2 md:space-y-3">
           {questions.slice(Math.max(0, currentStep - 3), currentStep).map((q, index) => {
             const actualIndex = Math.max(0, currentStep - 3) + index;
             const value = form.getValues(q.id as keyof FormData);
@@ -563,18 +563,18 @@ const ConversationalInvestmentForm = () => {
             return (
               <motion.button
                 key={actualIndex}
-                className="w-full text-left p-4 bg-card/60 backdrop-blur-sm rounded-2xl hover:bg-card/70 transition-all cursor-pointer"
+                className="w-full text-left p-3 md:p-4 bg-card/60 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-card/70 transition-all cursor-pointer"
                 onClick={() => handleStepClick(actualIndex)}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
               >
-                  <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-1 opacity-60" />
+                  <div className="flex items-start gap-2 md:gap-3">
+                  <CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-accent shrink-0 mt-0.5 md:mt-1 opacity-60" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs mb-0.5 transition-colors duration-700" style={{ color: cardSubtleTextColor }}>{t(q.labelKey)}</p>
-                    <p className="text-sm font-medium truncate transition-colors duration-700" style={{ color: cardTextColor }}>{displayValue}</p>
+                    <p className="text-[10px] md:text-xs mb-0.5 transition-colors duration-700" style={{ color: cardSubtleTextColor }}>{t(q.labelKey)}</p>
+                    <p className="text-xs md:text-sm font-medium truncate transition-colors duration-700" style={{ color: cardTextColor }}>{displayValue}</p>
                   </div>
                 </div>
               </motion.button>
@@ -584,7 +584,7 @@ const ConversationalInvestmentForm = () => {
       </div>
 
       {/* Current Question */}
-      <main className="relative px-4 pb-20">
+      <main className="relative px-4 pb-16 md:pb-20">
         <div className="container mx-auto max-w-2xl">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -600,11 +600,11 @@ const ConversationalInvestmentForm = () => {
                     stiffness: 300,
                     damping: 30
                   }}
-                  className="bg-card/80 backdrop-blur-xl p-12 rounded-3xl shadow-2xl shadow-primary/5"
+                  className="bg-card/80 backdrop-blur-xl p-5 md:p-12 rounded-2xl md:rounded-3xl shadow-2xl shadow-primary/5"
                 >
                   {currentQuestion.sectionTitleKey && (
                     <motion.h2 
-                      className="text-2xl font-extrabold mb-8 transition-colors duration-700 tracking-tight"
+                      className="text-lg md:text-2xl font-extrabold mb-4 md:mb-8 transition-colors duration-700 tracking-tight"
                       style={{ color: cardTextColor }}
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -619,11 +619,11 @@ const ConversationalInvestmentForm = () => {
                     name={currentQuestion.id as keyof FormData}
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-2xl font-extrabold mb-6 block leading-relaxed transition-colors duration-700" style={{ color: cardTextColor }}>
+                        <FormLabel className="text-base md:text-2xl font-extrabold mb-3 md:mb-6 block leading-relaxed transition-colors duration-700" style={{ color: cardTextColor }}>
                           {t(currentQuestion.labelKey)}
                         </FormLabel>
                         {currentQuestion.descriptionKey && (
-                          <FormDescription className="text-base mb-4">
+                          <FormDescription className="text-sm md:text-base mb-3 md:mb-4">
                             {t(currentQuestion.descriptionKey)}
                           </FormDescription>
                         )}
@@ -639,7 +639,7 @@ const ConversationalInvestmentForm = () => {
                               <Input
                                 type={currentQuestion.type}
                                 placeholder={currentQuestion.placeholderKey ? t(currentQuestion.placeholderKey) : ""}
-                                className={`text-lg py-6 pr-12 transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
+                                className={`text-base md:text-lg py-4 md:py-6 pr-10 md:pr-12 transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
                                 {...field}
                                 value={field.value as string}
                                 onChange={(e) => {
@@ -689,9 +689,9 @@ const ConversationalInvestmentForm = () => {
                                       stiffness: 500,
                                       damping: 15
                                     }}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2"
+                                    className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2"
                                   >
-                                    <CheckCircle2 className="w-6 h-6 text-accent" />
+                                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-accent" />
                                   </motion.div>
                                 )}
                               </AnimatePresence>
@@ -699,7 +699,7 @@ const ConversationalInvestmentForm = () => {
                                 <motion.p 
                                   initial={{ opacity: 0, y: -5 }}
                                   animate={{ opacity: 1, y: 0 }}
-                                  className="text-sm text-muted-foreground mt-2"
+                                  className="text-xs md:text-sm text-muted-foreground mt-2"
                                 >
                                   {t("errors.selectCountryFirst")}
                                 </motion.p>
@@ -713,7 +713,7 @@ const ConversationalInvestmentForm = () => {
                             >
                               <Textarea
                                 placeholder={currentQuestion.placeholderKey ? t(currentQuestion.placeholderKey) : ""}
-                                className={`text-lg min-h-[120px] transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
+                                className={`text-base md:text-lg min-h-[100px] md:min-h-[120px] transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
                                 {...field}
                                 value={field.value as string}
                                 onFocus={() => setInputFocused(true)}
@@ -729,7 +729,7 @@ const ConversationalInvestmentForm = () => {
                               <Select onValueChange={(value) => {
                                 field.onChange(value);
                               }} value={field.value as string}>
-                                <SelectTrigger className={`text-lg py-6 transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}>
+                                <SelectTrigger className={`text-base md:text-lg py-4 md:py-6 transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}>
                                   <SelectValue placeholder={t("navigation.continue") + "..."} />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -740,7 +740,7 @@ const ConversationalInvestmentForm = () => {
                                   >
                                     {getOptionsForQuestion(currentQuestion.optionsKey).map((option) => (
                                       <motion.div key={option.value} variants={staggerItem}>
-                                        <SelectItem value={option.value} className="text-lg py-3 cursor-pointer">
+                                        <SelectItem value={option.value} className="text-base md:text-lg py-2.5 md:py-3 cursor-pointer">
                                           {option.label}
                                         </SelectItem>
                                       </motion.div>
@@ -751,7 +751,7 @@ const ConversationalInvestmentForm = () => {
                             </motion.div>
                           ) : currentQuestion.type === "checkbox" ? (
                             <motion.div 
-                              className="flex items-start space-x-3 p-4 bg-muted/50 rounded-lg cursor-pointer"
+                              className="flex items-start space-x-2.5 md:space-x-3 p-3 md:p-4 bg-muted/50 rounded-lg cursor-pointer"
                               whileHover={{ scale: 1.02, backgroundColor: "hsla(var(--muted), 0.7)" }}
                               whileTap={{ scale: 0.98 }}
                               onClick={() => field.onChange(!field.value)}
@@ -763,16 +763,16 @@ const ConversationalInvestmentForm = () => {
                                 <Checkbox
                                   checked={field.value as boolean}
                                   onCheckedChange={field.onChange}
-                                  className="mt-1"
+                                  className="mt-0.5 md:mt-1"
                                 />
                               </motion.div>
-                              <label className="text-base leading-relaxed cursor-pointer font-medium">
+                              <label className="text-sm md:text-base leading-relaxed cursor-pointer font-medium">
                                 {t(currentQuestion.labelKey)}
                               </label>
                             </motion.div>
                           ) : currentQuestion.type === "multi-checkbox" ? (
                             <motion.div 
-                              className="space-y-3"
+                              className="space-y-2 md:space-y-3"
                               variants={staggerContainer}
                               initial="hidden"
                               animate="show"
@@ -783,7 +783,7 @@ const ConversationalInvestmentForm = () => {
                                   <motion.div 
                                     key={option.value} 
                                     variants={staggerItem}
-                                    className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 cursor-pointer ${
+                                    className={`flex items-center space-x-2.5 md:space-x-3 p-2.5 md:p-3 rounded-lg transition-all duration-200 cursor-pointer ${
                                       isChecked ? 'bg-accent/10 ring-2 ring-accent/30' : 'bg-muted/30 hover:bg-muted/50'
                                     }`}
                                     whileHover={{ scale: 1.02 }}
@@ -813,7 +813,7 @@ const ConversationalInvestmentForm = () => {
                                         }}
                                       />
                                     </motion.div>
-                                    <label className="text-base cursor-pointer flex-1 font-medium">
+                                    <label className="text-sm md:text-base cursor-pointer flex-1 font-medium">
                                       {option.label}
                                     </label>
                                     {isChecked && (
@@ -822,7 +822,7 @@ const ConversationalInvestmentForm = () => {
                                         animate={{ scale: 1 }}
                                         exit={{ scale: 0 }}
                                       >
-                                        <CheckCircle2 className="w-5 h-5 text-accent" />
+                                        <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent" />
                                       </motion.div>
                                     )}
                                   </motion.div>
@@ -831,7 +831,7 @@ const ConversationalInvestmentForm = () => {
                             </motion.div>
                           ) : currentQuestion.type === "consents" ? (
                             <motion.div 
-                              className="space-y-4"
+                              className="space-y-3 md:space-y-4"
                               variants={staggerContainer}
                               initial="hidden"
                               animate="show"
@@ -866,13 +866,13 @@ const ConversationalInvestmentForm = () => {
                             </motion.div>
                           ) : null}
                         </FormControl>
-                        <FormMessage className="text-base mt-2" />
+                        <FormMessage className="text-sm md:text-base mt-2" />
                       </FormItem>
                     )}
                   />
 
                   {/* Navigation Buttons */}
-                  <div className="flex items-center gap-4 mt-10">
+                  <div className="flex items-center gap-3 md:gap-4 mt-6 md:mt-10">
                     {currentStep > 0 && (
                       <motion.div
                         initial={{ opacity: 0, x: -10 }}
@@ -883,10 +883,10 @@ const ConversationalInvestmentForm = () => {
                           type="button"
                           variant="ghost"
                           onClick={handleBack}
-                          className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
+                          className="flex items-center gap-1.5 md:gap-2 text-muted-foreground hover:text-foreground px-3 md:px-4"
                         >
                           <ChevronLeft className="w-4 h-4" />
-                          <span className="text-sm">{t("navigation.back")}</span>
+                          <span className="text-xs md:text-sm">{t("navigation.back")}</span>
                         </Button>
                       </motion.div>
                     )}
@@ -904,10 +904,10 @@ const ConversationalInvestmentForm = () => {
                           type="button"
                           onClick={handleNext}
                           disabled={!isValid}
-                          className="flex items-center gap-2 text-lg px-10 py-7 rounded-full shadow-lg relative overflow-hidden group"
+                          className="flex items-center gap-1.5 md:gap-2 text-sm md:text-lg px-5 py-4 md:px-10 md:py-7 rounded-full shadow-lg relative overflow-hidden group"
                         >
                           <span className="relative z-10">{t("navigation.continue")}</span>
-                          <ChevronRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                          <ChevronRight className="w-4 h-4 md:w-5 md:h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                           {isValid && (
                             <motion.div
                               className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
@@ -930,17 +930,17 @@ const ConversationalInvestmentForm = () => {
                         <Button
                           type="submit"
                           disabled={!isValid || isSubmitting}
-                          className="flex items-center gap-2 text-lg px-10 py-7 rounded-full shadow-lg relative overflow-hidden group"
+                          className="flex items-center gap-1.5 md:gap-2 text-sm md:text-lg px-5 py-4 md:px-10 md:py-7 rounded-full shadow-lg relative overflow-hidden group"
                         >
                           {isSubmitting ? (
                             <>
-                              <Loader2 className="w-5 h-5 animate-spin" />
+                              <Loader2 className="w-4 h-4 md:w-5 md:h-5 animate-spin" />
                               {t("navigation.submit")}...
                             </>
                           ) : (
                             <>
                               <span className="relative z-10">{t("navigation.submit")}</span>
-                              <CheckCircle2 className="w-5 h-5 relative z-10" />
+                              <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 relative z-10" />
                               {isValid && (
                                 <motion.div
                                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
