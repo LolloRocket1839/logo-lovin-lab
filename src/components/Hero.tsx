@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
-import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
 import { StyledText } from "@/components/StyledText";
@@ -16,10 +16,10 @@ export const Hero = () => {
     t,
     i18n
   } = useTranslation();
+  const navigate = useNavigate();
   const { trackClick } = useAnalytics();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
-  const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
   const handleWhatsAppLorenzo = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
@@ -53,7 +53,7 @@ export const Hero = () => {
   };
   const handleInvestClick = () => {
     trackClick('hero_invest_button');
-    setInvestorDialogOpen(true);
+    navigate('/invest');
   };
   const studentScale = 1.15 - scrollProgress * 0.3;
   const studentOpacity = 1 - scrollProgress * 0.3;
@@ -140,10 +140,5 @@ export const Hero = () => {
       </div>
       
       <LogoModal open={logoModalOpen} onOpenChange={setLogoModalOpen} />
-      <InvestorWaitlistDialog 
-        open={investorDialogOpen}
-        onOpenChange={setInvestorDialogOpen}
-        guideType="general"
-      />
     </header>;
 };
