@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -15,7 +14,6 @@ export const Navigation = () => {
   const { trackClick } = useAnalytics();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
@@ -122,7 +120,6 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Language Switcher & CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <LanguageSwitcher />
             <Button
@@ -130,7 +127,7 @@ export const Navigation = () => {
               size="sm"
               onClick={() => {
                 trackClick('nav_invest_button');
-                setInvestorDialogOpen(true);
+                navigate('/invest');
               }}
               className="px-6 font-semibold feel-good-click"
             >
@@ -175,7 +172,7 @@ export const Navigation = () => {
                 onClick={() => {
                   trackClick('nav_mobile_invest_button');
                   setIsMobileMenuOpen(false);
-                  setInvestorDialogOpen(true);
+                  navigate('/invest');
                 }}
                 className="mt-2 w-full font-semibold feel-good-click"
               >
@@ -185,12 +182,6 @@ export const Navigation = () => {
           </div>
         )}
       </div>
-      
-      <InvestorWaitlistDialog 
-        open={investorDialogOpen}
-        onOpenChange={setInvestorDialogOpen}
-        guideType="general"
-      />
     </nav>
   );
 };
