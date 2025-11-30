@@ -813,29 +813,41 @@ const ConversationalInvestmentForm = () => {
                             >
                               {/* GDPR Consent */}
                               <ConsentCheckbox
-                                checked={form.watch("consents_to_data_processing")}
-                                onToggle={() => form.setValue("consents_to_data_processing", !form.watch("consents_to_data_processing"))}
+                                checked={!!form.getValues("consents_to_data_processing")}
+                                onToggle={() => {
+                                  const current = form.getValues("consents_to_data_processing");
+                                  form.setValue("consents_to_data_processing", !current, { shouldValidate: true });
+                                }}
                                 label={t("questions.gdprConsent")}
                               />
                               
                               {/* FADP Consent */}
                               <ConsentCheckbox
-                                checked={form.watch("consents_to_fadp")}
-                                onToggle={() => form.setValue("consents_to_fadp", !form.watch("consents_to_fadp"))}
+                                checked={!!form.getValues("consents_to_fadp")}
+                                onToggle={() => {
+                                  const current = form.getValues("consents_to_fadp");
+                                  form.setValue("consents_to_fadp", !current, { shouldValidate: true });
+                                }}
                                 label={t("questions.fadpConsent")}
                               />
                               
                               {/* Contact Consent */}
                               <ConsentCheckbox
-                                checked={form.watch("consents_to_contact")}
-                                onToggle={() => form.setValue("consents_to_contact", !form.watch("consents_to_contact"))}
+                                checked={!!form.getValues("consents_to_contact")}
+                                onToggle={() => {
+                                  const current = form.getValues("consents_to_contact");
+                                  form.setValue("consents_to_contact", !current, { shouldValidate: true });
+                                }}
                                 label={t("questions.consentContact")}
                               />
                               
                               {/* No Commitment */}
                               <ConsentCheckbox
-                                checked={form.watch("understands_no_commitment")}
-                                onToggle={() => form.setValue("understands_no_commitment", !form.watch("understands_no_commitment"))}
+                                checked={!!form.getValues("understands_no_commitment")}
+                                onToggle={() => {
+                                  const current = form.getValues("understands_no_commitment");
+                                  form.setValue("understands_no_commitment", !current, { shouldValidate: true });
+                                }}
                                 label={t("questions.understandNoCommitment")}
                               />
                             </motion.div>
@@ -869,8 +881,6 @@ const ConversationalInvestmentForm = () => {
                     {currentStep < questions.length - 1 ? (
                       <motion.div 
                         className="ml-auto relative overflow-hidden"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
@@ -896,8 +906,6 @@ const ConversationalInvestmentForm = () => {
                     ) : (
                       <motion.div 
                         className="ml-auto"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}

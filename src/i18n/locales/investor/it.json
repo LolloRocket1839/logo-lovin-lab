@@ -119,6 +119,8 @@
     "interestsRequired": "Seleziona almeno un'area di interesse",
     "commentsMax": "I commenti aggiuntivi devono contenere meno di 1000 caratteri",
     "consentRequired": "Devi acconsentire di essere contattato",
-    "commitmentRequired": "Devi confermare che questo non è un impegno"
+    "commitmentRequired": "Devi confermare che questo non è un impegno",
+    "gdprRequired": "Devi acconsentire al trattamento dei dati GDPR",
+    "fadpRequired": "Devi acconsentire al trattamento dei dati FADP"
   }
 }
