@@ -267,11 +267,30 @@ In November 2024, Turin was awarded the title of **European Capital of Innovatio
 
 ### Innovation Hubs
 
-Turin hosts numerous incubators and accelerators connected to the university:
+Turin hosts numerous incubators and accelerators connected to its universities:
 
-- **I3P** (Politecnico Incubator) - among Europe's best
+- **I3P** (Politecnico Incubator) - among Europe's best university incubators
+- **2i3T** (University of Turin Incubator) - specialized in academic spin-offs
 - Numerous accelerators and coworking spaces
 - Industry-university collaborations
+
+### 2i3T: UniTo's business incubator
+
+**[2i3T](https://2i3t.it)** is the University of Turin's business incubator, dedicated to commercially valorizing the results of academic research. The name "2i3T" represents the three pillars of its mission: **Incubator**, **Enterprises** (Imprese), and **Technology Transfer**.
+
+**Services offered:**
+- Support for creating **academic spin-offs**
+- **Incubation programs** for innovative startups
+- **Technology transfer** and patent support
+- Mentorship and investor networking
+- Shared workspaces and laboratories
+
+2i3T has contributed to the creation of numerous successful startups in biotechnology, life sciences, agritech, and social innovation sectors. In 2025, the startup **NanoMuG**, incubated at 2i3T, won the 21st edition of the **Start Cup Piemonte Valle d'Aosta**.
+
+> 💡 **Fun fact**: **Jungle Rent**, the platform you're reading, is also incubated at 2i3T as an innovative spin-off in the proptech sector dedicated to student rentals in Turin!
+
+**Useful links:**
+- 🔗 [2i3t.it](https://2i3t.it) - Official website
 
 ### Key Innovation Sectors
 
