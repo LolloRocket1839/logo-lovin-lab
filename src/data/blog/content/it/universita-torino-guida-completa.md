@@ -287,7 +287,7 @@ Torino ospita numerosi incubatori e acceleratori collegati alle università:
 
 2i3T ha contribuito alla nascita di numerose startup di successo nei settori delle biotecnologie, scienze della vita, agrotech e innovazione sociale. Nel 2025, la startup **NanoMuG**, incubata in 2i3T, ha vinto la XXI edizione della **Start Cup Piemonte Valle d'Aosta**.
 
-> 💡 **Fun fact**: Anche **Jungle Rent**, la piattaforma che stai leggendo, è incubata presso 2i3T come spin-off innovativo nel settore proptech dedicato agli affitti per studenti a Torino!
+> 💡 **Fun fact**: Anche **Jungle Rent** è incubata presso 2i3T come spin-off innovativo nel settore proptech dedicato agli affitti per studenti a Torino!
 
 **Link utili:**
 - 🔗 [2i3t.it](https://2i3t.it) - Sito ufficiale

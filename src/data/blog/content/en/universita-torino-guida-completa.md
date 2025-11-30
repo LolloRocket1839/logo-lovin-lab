@@ -287,7 +287,7 @@ Turin hosts numerous incubators and accelerators connected to its universities:
 
 2i3T has contributed to the creation of numerous successful startups in biotechnology, life sciences, agritech, and social innovation sectors. In 2025, the startup **NanoMuG**, incubated at 2i3T, won the 21st edition of the **Start Cup Piemonte Valle d'Aosta**.
 
-> 💡 **Fun fact**: **Jungle Rent**, the platform you're reading, is also incubated at 2i3T as an innovative spin-off in the proptech sector dedicated to student rentals in Turin!
+> 💡 **Fun fact**: **Jungle Rent** is also incubated at 2i3T as an innovative spin-off in the proptech sector dedicated to student rentals in Turin!
 
 **Useful links:**
 - 🔗 [2i3t.it](https://2i3t.it) - Official website
