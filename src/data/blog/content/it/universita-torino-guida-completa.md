@@ -267,11 +267,30 @@ Nel novembre 2024, Torino è stata insignita del titolo di **Capitale Europea de
 
 ### Hub di innovazione
 
-Torino ospita numerosi incubatori e acceleratori collegati all'università:
+Torino ospita numerosi incubatori e acceleratori collegati alle università:
 
-- **I3P** (Incubatore del Politecnico) - tra i migliori in Europa
+- **I3P** (Incubatore del Politecnico) - tra i migliori incubatori universitari in Europa
+- **2i3T** (Incubatore dell'Università di Torino) - specializzato in spin-off accademici
 - Numerosi acceleratori e spazi di coworking
 - Collaborazioni industria-università
+
+### 2i3T: l'incubatore d'imprese di UniTo
+
+**[2i3T](https://2i3t.it)** è l'incubatore d'imprese dell'Università di Torino, dedicato alla valorizzazione commerciale dei risultati della ricerca accademica. Il nome "2i3T" rappresenta i tre pilastri della sua missione: **Incubatore**, **Imprese** e **Trasferimento Tecnologico**.
+
+**Servizi offerti:**
+- Supporto alla creazione di **spin-off accademici**
+- Programmi di **incubazione** per startup innovative
+- **Trasferimento tecnologico** e brevetti
+- Mentorship e networking con investitori
+- Spazi di lavoro e laboratori condivisi
+
+2i3T ha contribuito alla nascita di numerose startup di successo nei settori delle biotecnologie, scienze della vita, agrotech e innovazione sociale. Nel 2025, la startup **NanoMuG**, incubata in 2i3T, ha vinto la XXI edizione della **Start Cup Piemonte Valle d'Aosta**.
+
+> 💡 **Fun fact**: Anche **Jungle Rent**, la piattaforma che stai leggendo, è incubata presso 2i3T come spin-off innovativo nel settore proptech dedicato agli affitti per studenti a Torino!
+
+**Link utili:**
+- 🔗 [2i3t.it](https://2i3t.it) - Sito ufficiale
 
 ### Settori di innovazione chiave
 
