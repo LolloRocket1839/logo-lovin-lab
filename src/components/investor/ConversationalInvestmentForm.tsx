@@ -440,28 +440,29 @@ const ConversationalInvestmentForm = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto max-w-4xl">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 mb-3 md:mb-4">
+          <div className="relative flex items-center justify-center mb-3 md:mb-4">
+            <div className="absolute left-0 flex items-center">
+              <Link 
+                to="/"
+                className="flex items-center gap-1.5 text-sm font-normal hover:opacity-80 transition-all text-muted-foreground"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span className="hidden md:inline">{t("header.backToWebsite")}</span>
+              </Link>
+            </div>
             <a 
               href="https://junglerent.it" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 md:gap-4 hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity"
             >
-              <img src={logo} alt="Jungle Rent" className="h-12 md:h-28 w-auto drop-shadow-lg" />
-              <h1 className="text-lg md:text-3xl font-extrabold tracking-tight text-foreground">{t("header.title")}</h1>
+              <img src={logo} alt="Jungle Rent" className="h-10 md:h-20 w-auto drop-shadow-lg" />
             </a>
-            <div className="flex items-center gap-3 md:gap-4">
+            <div className="absolute right-0">
               <LanguageSelector textColor="hsl(var(--foreground))" />
-              <Link 
-                to="/"
-                className="hidden md:flex items-center gap-2 text-sm font-normal hover:opacity-80 transition-all text-muted-foreground"
-              >
-                <ChevronLeft className="w-4 h-4" />
-                {t("header.backToWebsite")}
-              </Link>
             </div>
           </div>
-          <p className="text-sm md:text-lg font-light text-muted-foreground">
+          <p className="text-sm md:text-base font-light text-muted-foreground text-center">
             {t("header.subtitle")}
           </p>
         </div>
