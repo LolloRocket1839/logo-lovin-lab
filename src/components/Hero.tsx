@@ -121,7 +121,7 @@ export const Hero = () => {
               size="lg" 
               variant="premium" 
               onClick={handleInvestClick} 
-              className="w-full sm:w-auto text-base sm:text-lg group feel-good-click"
+              className="w-full sm:w-auto text-base sm:text-lg group"
             >
               {t('hero.invest')}
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -130,7 +130,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline" 
               onClick={scrollToStudent} 
-              className="w-full sm:w-auto text-sm sm:text-base group feel-good-click"
+              className="w-full sm:w-auto text-sm sm:text-base group"
             >
               {t('hero.findHome')}
               <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

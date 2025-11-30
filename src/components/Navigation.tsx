@@ -129,7 +129,7 @@ export const Navigation = () => {
                 trackClick('nav_invest_button');
                 navigate('/invest');
               }}
-              className="px-6 font-semibold feel-good-click"
+              className="px-6 font-semibold"
             >
               {t('hero.invest')}
             </Button>
@@ -174,7 +174,7 @@ export const Navigation = () => {
                   setIsMobileMenuOpen(false);
                   navigate('/invest');
                 }}
-                className="mt-2 w-full font-semibold feel-good-click"
+                className="mt-2 w-full font-semibold"
               >
                 {t('hero.invest')}
               </Button>
