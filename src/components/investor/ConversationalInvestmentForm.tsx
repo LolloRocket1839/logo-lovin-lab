@@ -13,7 +13,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { CheckCircle2, Loader2, ChevronRight, ChevronLeft, Save, Sparkles } from "lucide-react";
-import logo from "@/assets/jungle-rent-logo.svg";
+import logo from "@/assets/jungle-rent-logo-new.svg";
 import { parsePhoneNumber, isValidPhoneNumber, CountryCode } from "libphonenumber-js";
 import { useTranslation } from "react-i18next";
 import { LanguageSelector } from "@/components/investor/LanguageSelector";

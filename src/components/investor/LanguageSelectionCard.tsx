@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logo from "@/assets/jungle-rent-logo.svg";
+import logo from "@/assets/jungle-rent-logo-new.svg";
 
 interface LanguageSelectionCardProps {
   onLanguageSelect: (languageCode: string) => void;
