@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -471,16 +471,14 @@ const ConversationalInvestmentForm = () => {
             </a>
             <div className="flex items-center gap-4">
               <LanguageSelector textColor={headerTextColor} />
-              <a 
-                href="https://junglerent.it" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link 
+                to="/"
                 className="flex items-center gap-2 text-sm font-normal hover:opacity-80 transition-all"
                 style={{ color: headerSubtleTextColor }}
               >
                 <ChevronLeft className="w-4 h-4" />
                 {t("header.backToWebsite")}
-              </a>
+              </Link>
             </div>
           </div>
           <p className="text-lg transition-colors duration-700 font-light" style={{ color: headerSubtleTextColor }}>
