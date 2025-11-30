@@ -6,7 +6,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-27",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/politecnico-torino.avif",
     readTime: 45,
     content: "politecnico-torino-guida-completa",
     translations: {
