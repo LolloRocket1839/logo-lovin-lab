@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CheckCircle2, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/jungle-rent-logo.svg";
+import logo from "@/assets/jungle-rent-logo-new.svg";
 
 const Success = () => {
   const navigate = useNavigate();
