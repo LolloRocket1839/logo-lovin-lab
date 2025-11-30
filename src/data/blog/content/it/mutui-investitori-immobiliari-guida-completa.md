@@ -149,7 +149,7 @@ Gli investitori partecipano attraverso un **modello di co-investimento struttura
 
 Se sei interessato a ricevere maggiori informazioni sulle opportunità di investimento, inclusi dettagli finanziari completi, business plan dei progetti attivi e proiezioni di rendimento:
 
-👉 **Scarica la Guida Completa per Investitori Jungle Rent** (PDF 45 pagine)
+👉 **Scarica la Guida Completa per Investitori Jungle Rent** (PDF 23 pagine)
 
 La guida include:
 - Analisi dettagliata del mercato studentesco torinese
@@ -358,7 +358,7 @@ Se questa guida ti ha convinto del potenziale degli investimenti immobiliari ma 
 ✅ **Diversificazione Automatica**: il tuo capitale su più immobili, riducendo il rischio  
 ✅ **Trasparenza Totale**: dashboard in tempo reale e rendicontazione trimestrale dettagliata
 
-### 📥 Scarica la guida completa per investitori (PDF 45 pagine)
+### 📥 Scarica la guida completa per investitori (PDF 23 pagine)
 
 **Ricevi gratuitamente**:
 - Business plan dettagliato con proiezioni finanziarie 5 anni

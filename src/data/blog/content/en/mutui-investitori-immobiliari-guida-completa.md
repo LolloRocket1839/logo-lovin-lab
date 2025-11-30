@@ -319,7 +319,7 @@ If this guide has convinced you of real estate investment potential but you don'
 ✅ **Automatic Diversification**: your capital across multiple properties, reducing risk  
 ✅ **Total Transparency**: real-time dashboard and detailed quarterly reporting
 
-### 📥 Download Complete Investor Guide (45-page PDF)
+### 📥 Download Complete Investor Guide (23-page PDF)
 
 **Receive for free**:
 - Detailed business plan with 5-year financial projections
