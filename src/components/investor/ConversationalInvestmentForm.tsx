@@ -48,7 +48,7 @@ const staggerItem = {
 // ConsentCheckbox component for reusability with animations
 const ConsentCheckbox = ({ checked, onToggle, label }: { checked: boolean; onToggle: () => void; label: string }) => (
   <motion.div 
-    className={`flex items-start space-x-2.5 md:space-x-3 p-3 md:p-4 rounded-lg cursor-pointer transition-all duration-200 ${
+    className={`flex items-start space-x-2.5 md:space-x-3 p-2.5 md:p-4 rounded-lg cursor-pointer transition-all duration-200 ${
       checked ? 'bg-accent/10 ring-2 ring-accent/30' : 'bg-muted/50 hover:bg-muted/70'
     }`}
     variants={staggerItem}
@@ -446,7 +446,7 @@ const ConversationalInvestmentForm = () => {
 
       {/* Hero Section */}
       <motion.header 
-        className="relative py-4 md:py-8 px-4"
+        className="relative py-3 md:py-8 px-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -468,7 +468,7 @@ const ConversationalInvestmentForm = () => {
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
-              <img src={logo} alt="Jungle Rent" className="h-10 md:h-20 w-auto drop-shadow-lg" />
+              <img src={logo} alt="Jungle Rent" className="h-8 md:h-20 w-auto drop-shadow-lg" />
             </a>
             <div className="absolute right-0">
               <LanguageSelector textColor="hsl(var(--foreground))" />
@@ -528,8 +528,8 @@ const ConversationalInvestmentForm = () => {
       </AnimatePresence>
 
       {/* Chat History - Show last 2-3 completed answers */}
-      <div className="relative px-4 mb-4 md:mb-8">
-        <div className="container mx-auto max-w-2xl space-y-2 md:space-y-3">
+      <div className="relative px-4 mb-3 md:mb-8">
+        <div className="container mx-auto max-w-2xl space-y-1.5 md:space-y-3">
           {questions.slice(Math.max(0, currentStep - 3), currentStep).map((q, index) => {
             const actualIndex = Math.max(0, currentStep - 3) + index;
             const value = form.getValues(q.id as keyof FormData);
@@ -556,7 +556,7 @@ const ConversationalInvestmentForm = () => {
             return (
               <motion.button
                 key={actualIndex}
-                className="w-full text-left p-3 md:p-4 bg-card/60 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-card/70 transition-all cursor-pointer"
+                className="w-full text-left p-2.5 md:p-4 bg-card/60 backdrop-blur-sm rounded-xl md:rounded-2xl hover:bg-card/70 transition-all cursor-pointer"
                 onClick={() => handleStepClick(actualIndex)}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -577,7 +577,7 @@ const ConversationalInvestmentForm = () => {
       </div>
 
       {/* Current Question */}
-      <main className="relative px-4 pb-16 md:pb-20">
+      <main className="relative px-4 pb-12 md:pb-20">
         <div className="container mx-auto max-w-2xl">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -593,7 +593,7 @@ const ConversationalInvestmentForm = () => {
                     stiffness: 300,
                     damping: 30
                   }}
-                  className="bg-card/80 backdrop-blur-xl p-5 md:p-12 rounded-2xl md:rounded-3xl shadow-2xl shadow-primary/5"
+                  className="bg-card/80 backdrop-blur-xl p-4 md:p-12 rounded-2xl md:rounded-3xl shadow-2xl shadow-primary/5"
                 >
                   {currentQuestion.sectionTitleKey && (
                     <motion.h2 
@@ -823,7 +823,7 @@ const ConversationalInvestmentForm = () => {
                             </motion.div>
                           ) : currentQuestion.type === "consents" ? (
                             <motion.div 
-                              className="space-y-3 md:space-y-4"
+                              className="space-y-2.5 md:space-y-4"
                               variants={staggerContainer}
                               initial="hidden"
                               animate="show"
@@ -864,7 +864,7 @@ const ConversationalInvestmentForm = () => {
                   />
 
                   {/* Navigation Buttons */}
-                  <div className="flex items-center gap-3 md:gap-4 mt-6 md:mt-10">
+                  <div className="flex items-center gap-2.5 md:gap-4 mt-5 md:mt-10">
                     {currentStep > 0 && (
                       <motion.div
                         initial={{ opacity: 0, x: -10 }}
@@ -896,7 +896,7 @@ const ConversationalInvestmentForm = () => {
                           type="button"
                           onClick={handleNext}
                           disabled={!isValid}
-                          className="flex items-center gap-1.5 md:gap-2 text-sm md:text-lg px-5 py-4 md:px-10 md:py-7 rounded-full shadow-lg relative overflow-hidden group"
+                          className="flex items-center gap-1.5 md:gap-2 text-sm md:text-lg px-4 py-3 md:px-10 md:py-7 rounded-full shadow-lg relative overflow-hidden group"
                         >
                           <span className="relative z-10">{t("navigation.continue")}</span>
                           <ChevronRight className="w-4 h-4 md:w-5 md:h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -922,7 +922,7 @@ const ConversationalInvestmentForm = () => {
                         <Button
                           type="submit"
                           disabled={!isValid || isSubmitting}
-                          className="flex items-center gap-1.5 md:gap-2 text-sm md:text-lg px-5 py-4 md:px-10 md:py-7 rounded-full shadow-lg relative overflow-hidden group"
+                          className="flex items-center gap-1.5 md:gap-2 text-sm md:text-lg px-4 py-3 md:px-10 md:py-7 rounded-full shadow-lg relative overflow-hidden group"
                         >
                           {isSubmitting ? (
                             <>
