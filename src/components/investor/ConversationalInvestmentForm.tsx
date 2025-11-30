@@ -13,11 +13,11 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { CheckCircle2, Loader2, ChevronRight, ChevronLeft, Save, Sparkles } from "lucide-react";
-import logo from "@/assets/junglerent-logo.svg";
+import logo from "@/assets/jungle-rent-logo.svg";
 import { parsePhoneNumber, isValidPhoneNumber, CountryCode } from "libphonenumber-js";
 import { useTranslation } from "react-i18next";
-import { LanguageSelector } from "@/components/LanguageSelector";
-import { LanguageSelectionCard } from "@/components/LanguageSelectionCard";
+import { LanguageSelector } from "@/components/investor/LanguageSelector";
+import { LanguageSelectionCard } from "@/components/investor/LanguageSelectionCard";
 
 // Animation variants
 const inputFocusVariants = {
@@ -411,7 +411,7 @@ const ConversationalInvestmentForm = () => {
       localStorage.removeItem(`${STORAGE_KEY}_step`);
 
       toast.success(t("success.title"));
-      navigate("/success");
+      navigate("/invest/success");
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error(t("errors.submitFailed"));
@@ -589,7 +589,7 @@ const ConversationalInvestmentForm = () => {
                 <motion.div
                   key={currentStep}
                   initial={{ opacity: 0, y: 20, scale: 0.96 }}
-                  animate={shakeControls}
+                  animate={{ opacity: 1, y: 0, scale: 1, x: 0 }}
                   exit={{ opacity: 0, y: -20, scale: 0.96 }}
                   transition={{ 
                     duration: 0.4,

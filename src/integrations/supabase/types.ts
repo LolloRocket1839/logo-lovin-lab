@@ -140,6 +140,69 @@ export type Database = {
         }
         Relationships: []
       }
+      investor_interest: {
+        Row: {
+          accredited_investor: string
+          additional_comments: string | null
+          areas_of_interest: string[]
+          consents_to_contact: boolean | null
+          consents_to_data_processing: boolean | null
+          consents_to_fadp: boolean | null
+          country: string
+          created_at: string | null
+          email: string
+          full_name: string
+          heard_about: string | null
+          id: string
+          investment_amount_range: string
+          investment_experience: string | null
+          investment_timeline: string
+          investor_type: string
+          phone: string
+          understands_no_commitment: boolean | null
+        }
+        Insert: {
+          accredited_investor: string
+          additional_comments?: string | null
+          areas_of_interest: string[]
+          consents_to_contact?: boolean | null
+          consents_to_data_processing?: boolean | null
+          consents_to_fadp?: boolean | null
+          country: string
+          created_at?: string | null
+          email: string
+          full_name: string
+          heard_about?: string | null
+          id?: string
+          investment_amount_range: string
+          investment_experience?: string | null
+          investment_timeline: string
+          investor_type: string
+          phone: string
+          understands_no_commitment?: boolean | null
+        }
+        Update: {
+          accredited_investor?: string
+          additional_comments?: string | null
+          areas_of_interest?: string[]
+          consents_to_contact?: boolean | null
+          consents_to_data_processing?: boolean | null
+          consents_to_fadp?: boolean | null
+          country?: string
+          created_at?: string | null
+          email?: string
+          full_name?: string
+          heard_about?: string | null
+          id?: string
+          investment_amount_range?: string
+          investment_experience?: string | null
+          investment_timeline?: string
+          investor_type?: string
+          phone?: string
+          understands_no_commitment?: boolean | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       ab_test_results: {
