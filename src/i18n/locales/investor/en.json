@@ -1,0 +1,126 @@
+{
+  "header": {
+    "title": "Jungle Rent",
+    "subtitle": "Invest in the Future of Student Housing",
+    "backToWebsite": "Go to Website"
+  },
+  "autoSave": {
+    "saved": "Auto-saved",
+    "restored": "Your progress has been restored"
+  },
+  "navigation": {
+    "continue": "Continue",
+    "back": "Back",
+    "submit": "Submit Application",
+    "halfway": "Halfway there!"
+  },
+  "questions": {
+    "welcome": "👋 Welcome! Let's get to know you...",
+    "fullName": "Let's start with your full legal name",
+    "email": "What's your email address?",
+    "phone": "And your phone number?",
+    "country": "Which country do you reside in?",
+    "investorType": "What type of investor are you?",
+    "investmentGoals": "💰 Great! Now let's talk about your investment goals...",
+    "investmentRange": "What's your investment range?",
+    "investmentTimeline": "What's your preferred timeline?",
+    "heardAbout": "How did you hear about Jungle Rent?",
+    "almostThere": "📊 Almost there! Just a few more questions...",
+    "investmentExperience": "Tell us about your investment experience (optional)",
+    "accreditedInvestor": "Are you an accredited/qualified investor?",
+    "areasOfInterest": "What areas interest you? (Select all that apply)",
+    "finalStep": "✅ Final step: Legal Acknowledgments",
+    "consentsLabel": "Please review and accept the following:",
+    "gdprConsent": "I consent to the processing of my personal data in accordance with the EU General Data Protection Regulation (GDPR). I understand that my data will be used to evaluate my investment interest and that I can withdraw my consent at any time.",
+    "fadpConsent": "I consent to the processing and potential international transfer of my data in accordance with the Swiss Federal Act on Data Protection (FADP).",
+    "consentContact": "I consent to being contacted about investment opportunities",
+    "understandNoCommitment": "I understand this form is an expression of interest only and does not constitute any investment commitment"
+  },
+  "placeholders": {
+    "fullName": "Enter your full name",
+    "email": "your.email@example.com",
+    "phone": "+39 123 456 7890",
+    "investmentExperience": "Share your investment background...",
+    "additionalComments": "Additional comments..."
+  },
+  "countries": {
+    "italy": "Italy",
+    "france": "France",
+    "germany": "Germany",
+    "spain": "Spain",
+    "uk": "United Kingdom",
+    "usa": "United States",
+    "other": "Other"
+  },
+  "investorTypes": {
+    "individual": "Individual",
+    "company": "Company",
+    "familyOffice": "Family Office",
+    "other": "Other"
+  },
+  "investmentRanges": {
+    "5000-10000": "€5,000 - €10,000",
+    "10000-25000": "€10,000 - €25,000",
+    "25000-50000": "€25,000 - €50,000",
+    "50000-100000": "€50,000 - €100,000",
+    "100000+": "€100,000+"
+  },
+  "timelines": {
+    "immediate": "Immediate",
+    "3months": "Within 3 months",
+    "6months": "Within 6 months",
+    "exploratory": "Exploratory"
+  },
+  "sources": {
+    "linkedin": "LinkedIn",
+    "referral": "Referral",
+    "news": "News/Media",
+    "website": "Website",
+    "event": "Event/Conference",
+    "other": "Other"
+  },
+  "accredited": {
+    "yes": "Yes",
+    "no": "No",
+    "unsure": "Unsure"
+  },
+  "interests": {
+    "equity": "Equity investment",
+    "convertible": "Convertible note",
+    "revenue": "Revenue share",
+    "advisory": "Advisory role"
+  },
+  "footer": {
+    "visitWebsite": "Visit junglerent.it"
+  },
+  "success": {
+    "title": "Thank you for your interest!",
+    "message": "We've received your application and will be in touch soon."
+  },
+  "errors": {
+    "submitFailed": "Failed to submit form. Please try again.",
+    "fullNameMin": "Full name must be at least 2 characters",
+    "fullNameMax": "Full name must be less than 100 characters",
+    "fullNamePattern": "Full name can only contain letters, spaces, hyphens, and apostrophes",
+    "invalidEmail": "Invalid email address",
+    "emailMax": "Email must be less than 255 characters",
+    "emailTypo": "Please check your email address for typos",
+    "emailFake": "Please use a valid email address",
+    "phoneRequired": "Phone number is required",
+    "countryRequired": "Please select a country",
+    "invalidPhone": "Invalid phone number for selected country",
+    "selectCountryFirst": "Please select your country first",
+    "investorTypeRequired": "Please select investor type",
+    "investmentRangeRequired": "Please select an investment range",
+    "timelineRequired": "Please select a timeline",
+    "heardAboutRequired": "Please tell us how you heard about us",
+    "experienceMax": "Investment experience must be less than 1000 characters",
+    "accreditedRequired": "Please select an option",
+    "interestsRequired": "Please select at least one area of interest",
+    "commentsMax": "Additional comments must be less than 1000 characters",
+    "gdprRequired": "You must consent to GDPR data processing",
+    "fadpRequired": "You must consent to FADP data processing",
+    "consentRequired": "You must consent to be contacted",
+    "commitmentRequired": "You must acknowledge this is not a commitment"
+  }
+}
