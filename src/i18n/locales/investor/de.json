@@ -119,6 +119,8 @@
     "interestsRequired": "Bitte wählen Sie mindestens einen Interessensbereich",
     "commentsMax": "Zusätzliche Kommentare müssen weniger als 1000 Zeichen enthalten",
     "consentRequired": "Sie müssen der Kontaktaufnahme zustimmen",
-    "commitmentRequired": "Sie müssen bestätigen, dass dies keine Verpflichtung darstellt"
+    "commitmentRequired": "Sie müssen bestätigen, dass dies keine Verpflichtung darstellt",
+    "gdprRequired": "Sie müssen der DSGVO-Datenverarbeitung zustimmen",
+    "fadpRequired": "Sie müssen der FADP-Datenverarbeitung zustimmen"
   }
 }
