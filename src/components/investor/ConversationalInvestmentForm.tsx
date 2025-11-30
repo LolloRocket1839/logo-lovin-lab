@@ -463,7 +463,7 @@ const ConversationalInvestmentForm = () => {
               className="flex items-center gap-4 hover:opacity-80 transition-opacity"
             >
               <img src={logo} alt="Jungle Rent" className="h-28 w-auto drop-shadow-lg" />
-              <h1 className="text-3xl font-extrabold transition-colors duration-700 tracking-gotham" style={{ color: textColor }}>{t("header.title")}</h1>
+              <h1 className="text-3xl font-bold transition-colors duration-700 tracking-tight" style={{ color: textColor }}>{t("header.title")}</h1>
             </a>
             <div className="flex items-center gap-4">
               <LanguageSelector textColor={textColor} />
@@ -471,7 +471,7 @@ const ConversationalInvestmentForm = () => {
                 href="https://junglerent.it" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-all tracking-gotham"
+                className="flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-all"
                 style={{ color: subtleTextColor }}
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -508,7 +508,7 @@ const ConversationalInvestmentForm = () => {
             className="fixed top-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full shadow-xl"
           >
             <Sparkles className="w-5 h-5" />
-            <span className="font-semibold tracking-gotham">{t("navigation.halfway") || "Halfway there!"}</span>
+            <span className="font-semibold">{t("navigation.halfway") || "Halfway there!"}</span>
             <Sparkles className="w-5 h-5" />
           </motion.div>
         )}
@@ -524,7 +524,7 @@ const ConversationalInvestmentForm = () => {
             className="fixed top-4 right-4 z-50 flex items-center gap-2 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-border/50"
           >
             <Save className="w-4 h-4 text-accent" />
-            <span className="text-xs font-semibold transition-colors duration-700 tracking-gotham" style={{ color: textColor }}>
+            <span className="text-xs font-medium transition-colors duration-700" style={{ color: textColor }}>
               {t("autoSave.saved")}
             </span>
           </motion.div>
@@ -616,7 +616,7 @@ const ConversationalInvestmentForm = () => {
                     name={currentQuestion.id as keyof FormData}
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-2xl font-bold mb-6 block leading-relaxed transition-colors duration-700 tracking-gotham" style={{ color: textColor }}>
+                        <FormLabel className="text-2xl font-bold mb-6 block leading-relaxed transition-colors duration-700" style={{ color: textColor }}>
                           {t(currentQuestion.labelKey)}
                         </FormLabel>
                         {currentQuestion.descriptionKey && (
@@ -966,7 +966,7 @@ const ConversationalInvestmentForm = () => {
             href="https://junglerent.it" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="underline hover:opacity-80 transition-opacity font-semibold tracking-gotham"
+            className="underline hover:opacity-80 transition-opacity font-medium"
           >
             {t("footer.visitWebsite")}
           </a>
