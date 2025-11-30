@@ -1,28 +1,28 @@
-# L'Università di Torino: Una Storia di Eccellenza e Innovazione
+# L'Università di Torino: una storia di eccellenza e innovazione
 
 L'Università di Torino (Università degli Studi di Torino, o UniTo) rappresenta una delle istituzioni accademiche più prestigiose d'Italia, combinando oltre sei secoli di tradizione accademica con un impegno dinamico verso la ricerca moderna e l'innovazione. Fondata nel **1404** e attualmente frequentata da circa **83.000 studenti** distribuiti in **27 dipartimenti**, l'università si è affermata come pilastro dell'accademia italiana e un contribuente significativo alla vita intellettuale europea.
 
 Nel novembre 2024, Torino è stata insignita del titolo di **Capitale Europea dell'Innovazione 2024-25**, un riconoscimento che riflette non solo l'ecosistema dinamico della città ma anche il ruolo integrale dell'università nel promuovere ricerca all'avanguardia, avanzamento tecnologico e soluzioni urbane sostenibili.
 
-## Fondamenti Storici e Evoluzione
+## Fondamenti storici e evoluzione
 
-### Gli Anni delle Origini
+### Gli anni delle origini
 
 L'Università di Torino emerse dal turbolento panorama politico dell'Italia del primo Quattrocento. Nel **1404**, il Principe Ludovico di Savoia-Acaja, desideroso di stabilire un centro di apprendimento nei suoi territori, ottenne con successo da Papa Benedetto XIII l'istituzione di uno *studium generale*. La bolla papale che creò formalmente l'università segnò l'inizio di un'istituzione strategicamente posizionata al crocevia tra le Alpi, la Liguria e la Lombardia.
 
 I primi anni dell'università furono caratterizzati da sfide significative. Tra il 1420 e il 1430, epidemie e crisi politiche interruppero ripetutamente le operazioni, costringendo l'istituzione a trasferirsi temporaneamente a **Chieri** (1427-1434) e **Savigliano** (1434). Quando l'università tornò finalmente a Torino nel 1436, furono stabilite tre facoltà fondamentali: **Teologia**, **Arti e Medicina**, e **Giurisprudenza**.
 
-### Connessioni Rinascimentali
+### Connessioni rinascimentali
 
 Il prestigio iniziale dell'università attirò alcuni degli studiosi più notevoli d'Europa. Nel **1506**, il celebre umanista **Erasmo da Rotterdam** ottenne la sua laurea presso l'Università di Torino, consolidando la reputazione dell'istituzione come centro significativo dell'apprendimento rinascimentale.
 
-### Le Riforme di Vittorio Amedeo II
+### Le riforme di Vittorio Amedeo II
 
 Un momento trasformativo nella storia dell'università avvenne nel **1720-1721**, quando Vittorio Amedeo II avviò riforme complete che avrebbero stabilito Torino come modello per altre università europee. L'inaugurazione di un prestigioso nuovo edificio in **Via Po**, vicino a Piazza Castello, simboleggiò l'elevato status dell'università.
 
-## Struttura Contemporanea e Organizzazione Accademica
+## Struttura contemporanea e organizzazione accademica
 
-### Framework Dipartimentale e Scuole
+### Framework dipartimentale e scuole
 
 Oggi, l'Università di Torino opera attraverso una sofisticata struttura organizzativa che comprende **27 dipartimenti** che abbracciano virtualmente tutte le discipline accademiche eccetto ingegneria e architettura. Questi dipartimenti sono organizzati in **sei scuole**:
 
@@ -37,7 +37,7 @@ Oggi, l'Università di Torino opera attraverso una sofisticata struttura organiz
 
 L'università offre circa **160 programmi di laurea triennale e magistrale**, servendo un corpo studentesco diversificato.
 
-### Programmi in Lingua Inglese
+### Programmi in lingua inglese
 
 L'impegno dell'università verso l'internazionalizzazione è evidente nel suo crescente portfolio di programmi in inglese. Attualmente, UniTo offre **24 lauree triennali e magistrali interamente in inglese**, coprendo campi diversi come:
 
@@ -47,9 +47,9 @@ L'impegno dell'università verso l'internazionalizzazione è evidente nel suo cr
 - Finanza Quantitativa
 - Gestione dei Beni Culturali
 
-## Classifiche e Riconoscimento Globale
+## Classifiche e riconoscimento globale
 
-### Posizionamento Internazionale
+### Posizionamento internazionale
 
 L'Università di Torino dimostra costantemente la sua qualità accademica attraverso forti performance nelle principali classifiche internazionali:
 
@@ -61,7 +61,7 @@ L'Università di Torino dimostra costantemente la sua qualità accademica attrav
 | US News Global | 221 | 7° |
 | Nature Index | 190 | 1° (Top 200 ricerca cancro) |
 
-### Eccellenza per Materia
+### Eccellenza per materia
 
 L'università dimostra particolare forza in specifici campi accademici secondo le Shanghai Rankings per materia:
 
@@ -70,9 +70,9 @@ L'università dimostra particolare forza in specifici campi accademici secondo l
 - **Scienze Veterinarie**: 51-75° a livello globale
 - **Scienze della Vita e Medicina**: 189° a livello globale
 
-## Eccellenza nella Ricerca e Innovazione
+## Eccellenza nella ricerca e innovazione
 
-### Produzione di Ricerca
+### Produzione di ricerca
 
 L'Università di Torino mantiene un impressionante profilo di ricerca:
 
@@ -80,7 +80,7 @@ L'Università di Torino mantiene un impressionante profilo di ricerca:
 - **500 progetti di ricerca** gestiti ogni anno
 - **7.735 pubblicazioni principali** nel 2022
 
-### Partecipazione ai Programmi UE
+### Partecipazione ai programmi UE
 
 | Programma | Progetti | Coordinati da UniTo |
 |-----------|----------|---------------------|
@@ -89,15 +89,15 @@ L'Università di Torino mantiene un impressionante profilo di ricerca:
 | ERC Grants | 13 | - |
 | Horizon Europe | 45 | 10 |
 
-### Leadership nella Ricerca sul Cancro
+### Leadership nella ricerca sul cancro
 
 Il Nature Index 2020 ha identificato UniTo come la **176ª istituzione a livello globale** per la ricerca sul cancro e l'**unica università italiana nella top 200**. Nella categoria "Share", UniTo si è classificata un impressionante **25° a livello globale**.
 
-### Brevetti e Trasferimento di Conoscenza
+### Brevetti e trasferimento di conoscenza
 
 Tra il 2020 e il 2022, l'università ha depositato più di **38 brevetti**, dimostrando il suo impegno nel tradurre la ricerca fondamentale in applicazioni pratiche.
 
-## Alumni Illustri e Premi Nobel
+## Alumni illustri e Premi Nobel
 
 ### Vincitori del Premio Nobel
 
@@ -112,7 +112,7 @@ Premiato per il suo lavoro pionieristico sui **virus tumorali** e le loro intera
 #### Salvador Luria (Nobel 1969)
 Onorato per le scoperte concernenti il **meccanismo di replicazione e la struttura genetica dei virus**.
 
-### Luminari Culturali e Intellettuali
+### Luminari culturali e intellettuali
 
 - **Umberto Eco** (1954) - Filosofo, semiologo, romanziere ("Il Nome della Rosa")
 - **Cesare Pavese** - Poeta e romanziere del XX secolo
@@ -120,14 +120,14 @@ Onorato per le scoperte concernenti il **meccanismo di replicazione e la struttu
 - **Primo Levi** - Chimico e scrittore ("Se questo è un uomo")
 - **Erasmo da Rotterdam** (1506) - Umanista rinascimentale
 
-### Alumni Contemporanei Notevoli
+### Alumni contemporanei notevoli
 
 - **Giorgio Chiellini** - Calciatore, leggenda della Juventus e della Nazionale
 - **Gianni Agnelli** - Ex capo della FIAT
 
-## Vita nel Campus e Esperienza Studentesca
+## Vita nel campus e esperienza studentesca
 
-### Strutture e Infrastrutture
+### Strutture e infrastrutture
 
 La presenza fisica dell'Università di Torino si estende su **oltre 120 edifici** distribuiti in tutta Torino e in posizioni chiave della regione Piemonte. Questo modello di campus distribuito crea quella che è stata descritta come una "città nella città".
 
@@ -142,7 +142,7 @@ La presenza fisica dell'Università di Torino si estende su **oltre 120 edifici*
 - Museo di Antropologia Criminale Cesare Lombroso
 - Museo della Frutta Francesco Garnier Valletti
 
-### Demografica Studentesca
+### Demografica studentesca
 
 Per l'anno accademico 2024-25:
 
@@ -157,7 +157,7 @@ Per l'anno accademico 2024-25:
 
 L'università dedica circa **€648.000** annualmente per supportare studenti con disabilità e differenze di apprendimento.
 
-### Costo della Vita e Accessibilità Finanziaria
+### Costo della vita e accessibilità finanziaria
 
 **Tasse universitarie (studenti internazionali):**
 - Laurea triennale: €1.100 - €2.800/anno
@@ -172,7 +172,7 @@ L'università dedica circa **€648.000** annualmente per supportare studenti co
 - Museum Pass con ingressi ridotti
 - Mense universitarie a prezzi agevolati
 
-### Vita Studentesca e Attività Culturali
+### Vita studentesca e attività culturali
 
 **Quartieri popolari tra gli studenti:**
 - **San Salvario** - Vita notturna vivace, bar, ristoranti
@@ -189,7 +189,7 @@ L'università dedica circa **€648.000** annualmente per supportare studenti co
 - Accesso facilitato alle Alpi per sci e trekking
 - Piste di pattinaggio temporanee in inverno
 
-## Partnership Internazionali e Impegno Globale
+## Partnership internazionali e impegno globale
 
 ### L'Alleanza UNITA
 
@@ -204,27 +204,27 @@ L'Università di Torino svolge un ruolo di leadership in una delle collaborazion
 5. Transizione digitale
 6. Società inclusive
 
-### Rete di Partnership Globale
+### Rete di partnership globale
 
 - **~500 accordi di cooperazione** con istituzioni in tutto il mondo
 - Partecipazione attiva ai programmi **Erasmus+**
 - Programmi di doppia laurea
 - Sviluppo curricolare collaborativo
 
-## Iniziative di Sostenibilità
+## Iniziative di sostenibilità
 
 ### UniToGO (UniTo Green Office)
 
 L'Università di Torino ha istituito **UniToGO** come hub centrale per coordinare e promuovere iniziative di sostenibilità ambientale.
 
-### Riconoscimenti per la Sostenibilità
+### Riconoscimenti per la sostenibilità
 
 | Classifica | Posizione |
 |------------|-----------|
 | THE Impact Rankings 2024 | 15° globale, 3° Italia |
 | UI GreenMetric | Tra le migliori in Italia |
 
-### Pratiche Sostenibili nel Campus
+### Pratiche sostenibili nel campus
 
 - Pannelli solari
 - Programmi di riciclaggio e compostaggio
@@ -233,9 +233,9 @@ L'Università di Torino ha istituito **UniToGO** come hub centrale per coordinar
 - Rimborso abbonamenti trasporto pubblico
 - Procurement etico e sostenibile
 
-## Educazione Medica e Partnership Sanitarie
+## Educazione medica e partnership sanitarie
 
-### Struttura del Programma di Medicina
+### Struttura del programma di Medicina
 
 Il programma di Medicina e Chirurgia dell'Università di Torino dura **6 anni**:
 
@@ -249,14 +249,14 @@ Il programma di Medicina e Chirurgia dell'Università di Torino dura **6 anni**:
 - Ostetricia e ginecologia, medicina d'emergenza
 - Formazione presso l'Ospedale Universitario di Torino
 
-### Partnership Cliniche
+### Partnership cliniche
 
 L'università mantiene stretti rapporti con importanti strutture sanitarie:
 
 - **Città della Salute e della Scienza** - il terzo ospedale pubblico più grande d'Europa
 - **Ospedale San Luigi Gonzaga**
 
-### Centri di Ricerca Specializzati
+### Centri di ricerca specializzati
 
 - **Centro SLA di Torino (CRESLA)** - Centro Regionale di Riferimento per il Piemonte
 - Centri di Diagnostica Medica, Biosensoristica e Nanotecnologie
@@ -265,7 +265,7 @@ L'università mantiene stretti rapporti con importanti strutture sanitarie:
 
 Nel novembre 2024, Torino è stata insignita del titolo di **Capitale Europea dell'Innovazione 2024-25** dalla Commissione Europea, vincendo un premio di **€1 milione** per continuare a sviluppare il suo ecosistema di innovazione.
 
-### Hub di Innovazione
+### Hub di innovazione
 
 Torino ospita numerosi incubatori e acceleratori collegati all'università:
 
@@ -273,7 +273,7 @@ Torino ospita numerosi incubatori e acceleratori collegati all'università:
 - Numerosi acceleratori e spazi di coworking
 - Collaborazioni industria-università
 
-### Settori di Innovazione Chiave
+### Settori di innovazione chiave
 
 - Tecnologia automobilistica ed elettrificazione
 - Aerospazio e tecnologia spaziale
