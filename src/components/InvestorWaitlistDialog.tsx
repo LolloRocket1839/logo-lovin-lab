@@ -159,8 +159,8 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
                     ? "📥 You will receive via email the Complete Guide to the Best Real Estate Investments in Turin 2025 (full PDF) with detailed area analysis, prices per sqm, returns by neighborhood, student housing strategies and updated mortgage information."
                     : "📥 Riceverai via email la Guida ai Migliori Investimenti Immobiliari a Torino 2025 (PDF completa) con analisi dettagliata zone, prezzi al mq, rendimenti per quartiere, strategie student housing e info su mutui aggiornate.")
                   : (i18n.language === 'en'
-                    ? "📥 You will receive via email the Complete Investor Guide (45-page PDF) with detailed business plan, real case studies and financial projections."
-                    : "📥 Riceverai via email la Guida Completa per Investitori (PDF 45 pagine) con business plan dettagliato, case study reali e proiezioni finanziarie.")
+                    ? "📥 You will receive via email the Complete Investor Guide (23-page PDF) with detailed business plan, real case studies and financial projections."
+                    : "📥 Riceverai via email la Guida Completa per Investitori (PDF 23 pagine) con business plan dettagliato, case study reali e proiezioni finanziarie.")
                 }
               </p>
             </div>

@@ -145,7 +145,7 @@ const Success = () => {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-foreground mb-2 tracking-gotham">Your Free Resource</h3>
                   <p className="text-sm text-muted-foreground mb-4 font-medium">
-                    Download our exclusive report on Turin's university real estate market: 45 pages of data, analysis, and investment opportunities.
+                    Download our exclusive report on Turin's university real estate market: 23 pages of data, analysis, and investment opportunities.
                   </p>
                   <Button 
                     onClick={() => window.open('/resources/mercato-immobiliare-universitario-torino.pdf', '_blank')}
