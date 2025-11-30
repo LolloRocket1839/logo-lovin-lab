@@ -583,7 +583,7 @@ const ConversationalInvestmentForm = () => {
                 >
                   {currentQuestion.sectionTitleKey && (
                     <motion.h2 
-                      className="text-lg md:text-2xl font-extrabold mb-4 md:mb-8 tracking-tight text-foreground"
+                      className="text-lg md:text-2xl font-extrabold mb-3 md:mb-8 tracking-tight text-foreground"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1 }}
@@ -597,7 +597,7 @@ const ConversationalInvestmentForm = () => {
                     name={currentQuestion.id as keyof FormData}
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-base md:text-2xl font-extrabold mb-3 md:mb-6 block leading-relaxed text-foreground">
+                        <FormLabel className="text-base md:text-2xl font-extrabold mb-2 md:mb-6 block leading-relaxed text-foreground">
                           {t(currentQuestion.labelKey)}
                         </FormLabel>
                         {currentQuestion.descriptionKey && (
@@ -617,7 +617,7 @@ const ConversationalInvestmentForm = () => {
                               <Input
                                 type={currentQuestion.type}
                                 placeholder={currentQuestion.placeholderKey ? t(currentQuestion.placeholderKey) : ""}
-                                className={`text-base md:text-lg py-4 md:py-6 pr-10 md:pr-12 transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
+                                className={`text-base md:text-lg py-3 md:py-6 pr-10 md:pr-12 h-auto transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
                                 {...field}
                                 value={field.value as string}
                                 onChange={(e) => {
@@ -691,7 +691,7 @@ const ConversationalInvestmentForm = () => {
                             >
                               <Textarea
                                 placeholder={currentQuestion.placeholderKey ? t(currentQuestion.placeholderKey) : ""}
-                                className={`text-base md:text-lg min-h-[100px] md:min-h-[120px] transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
+                                className={`text-base md:text-lg min-h-[80px] md:min-h-[120px] transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}
                                 {...field}
                                 value={field.value as string}
                                 onFocus={() => setInputFocused(true)}
@@ -707,7 +707,7 @@ const ConversationalInvestmentForm = () => {
                               <Select onValueChange={(value) => {
                                 field.onChange(value);
                               }} value={field.value as string}>
-                                <SelectTrigger className={`text-base md:text-lg py-4 md:py-6 transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}>
+                                <SelectTrigger className={`text-base md:text-lg py-3 md:py-6 h-auto transition-all duration-300 ${isValid ? 'border-accent ring-2 ring-accent/20' : ''}`}>
                                   <SelectValue placeholder={t("navigation.continue") + "..."} />
                                 </SelectTrigger>
                                 <SelectContent>
