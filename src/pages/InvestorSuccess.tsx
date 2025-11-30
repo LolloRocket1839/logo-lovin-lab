@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CheckCircle2, Home } from "lucide-react";
+import { CheckCircle2, Home, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/jungle-rent-logo-new.svg";
 
@@ -131,11 +131,40 @@ const Success = () => {
               </div>
             </motion.div>
 
+            {/* Bonus Resource */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="bg-primary/10 rounded-xl p-6 mb-8 border border-primary/20"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <FileText className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-foreground mb-2 tracking-gotham">Your Free Resource</h3>
+                  <p className="text-sm text-muted-foreground mb-4 font-medium">
+                    Download our exclusive report on Turin's university real estate market: 45 pages of data, analysis, and investment opportunities.
+                  </p>
+                  <Button 
+                    onClick={() => window.open('/resources/mercato-immobiliare-universitario-torino.pdf', '_blank')}
+                    variant="premium"
+                    size="sm"
+                    className="group"
+                  >
+                    <Download className="mr-2 w-4 h-4" />
+                    Download Report PDF
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.6 }}
               className="text-center mb-8"
             >
               <p className="text-muted-foreground mb-2 font-medium">
@@ -153,7 +182,7 @@ const Success = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.7 }}
               className="flex justify-center"
             >
               <Button

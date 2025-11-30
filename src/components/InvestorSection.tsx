@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users, FileText } from "lucide-react";
+import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users, FileText, Download } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { openEmail, MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
@@ -132,12 +132,23 @@ export const InvestorSection = () => {
                     ? "Complete market analysis: stock volatility, Italian real estate recovery, and Turin's exceptional 8.34% rental yields."
                     : "Analisi di mercato completa: volatilità borsistica, ripresa immobiliare italiana e gli eccezionali rendimenti dell'8,34% di Torino."}
                 </p>
-                <Button asChild variant="outline" size="sm" className="group">
-                  <Link to="/blog/investire-real-assets-torino-2025">
-                    {i18n.language.startsWith('en') ? "Read Full Analysis" : "Leggi l'Analisi Completa"}
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
+                <div className="flex flex-wrap gap-2">
+                  <Button asChild variant="outline" size="sm" className="group">
+                    <Link to="/blog/investire-real-assets-torino-2025">
+                      {i18n.language.startsWith('en') ? "Read Full Analysis" : "Leggi l'Analisi Completa"}
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                  <Button 
+                    variant="secondary" 
+                    size="sm" 
+                    className="group"
+                    onClick={() => window.open('/resources/mercato-immobiliare-universitario-torino.pdf', '_blank')}
+                  >
+                    <Download className="mr-2 w-4 h-4" />
+                    {i18n.language.startsWith('en') ? "Download Report" : "Scarica Report"}
+                  </Button>
+                </div>
               </div>
             </div>
           </Card>

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Bell, TrendingUp } from "lucide-react";
+import { MessageCircle, Bell, TrendingUp, Download } from "lucide-react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
 import { useState, useEffect } from "react";
 import { CONTACTS } from "@/lib/contacts";
@@ -76,6 +76,10 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
   const config = ctaConfig[type];
   const Icon = config.icon;
 
+  const handleDownloadReport = () => {
+    window.open('/resources/mercato-immobiliare-universitario-torino.pdf', '_blank');
+  };
+
   return (
     <>
       <div className="my-12 p-8 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20">
@@ -89,9 +93,17 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
             <h3 className="text-2xl font-bold mb-2">{config.title}</h3>
             <p className="text-muted-foreground">{config.description}</p>
           </div>
-          <Button size="lg" onClick={config.action} className="flex-shrink-0">
-            {config.buttonText}
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+            <Button size="lg" onClick={config.action}>
+              {config.buttonText}
+            </Button>
+            {type === 'investors' && (
+              <Button size="lg" variant="outline" onClick={handleDownloadReport} className="group">
+                <Download className="mr-2 w-4 h-4" />
+                {t('blog.cta.downloadReport')}
+              </Button>
+            )}
+          </div>
         </div>
       </div>
 
