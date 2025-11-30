@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Building2, ArrowRight, CheckCircle } from "lucide-react";
+import { FileText, Building2, TrendingUp, ArrowRight, CheckCircle, Download } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
@@ -14,6 +14,10 @@ export const ResourceLibrary = () => {
   const handleGuideRequest = (guideType: 'general' | 'torino') => {
     setSelectedGuide(guideType);
     setIsDialogOpen(true);
+  };
+
+  const handleDirectDownload = () => {
+    window.open('/resources/mercato-immobiliare-universitario-torino.pdf', '_blank');
   };
 
   const guides = [
@@ -30,7 +34,8 @@ export const ResourceLibrary = () => {
         t("resourceLibrary.guide1Bullet2"),
         t("resourceLibrary.guide1Bullet3"),
         t("resourceLibrary.guide1Bullet4"),
-      ]
+      ],
+      directDownload: false
     },
     {
       id: 'torino' as const,
@@ -45,7 +50,24 @@ export const ResourceLibrary = () => {
         t("resourceLibrary.guide2Bullet2"),
         t("resourceLibrary.guide2Bullet3"),
         t("resourceLibrary.guide2Bullet4"),
-      ]
+      ],
+      directDownload: false
+    },
+    {
+      id: 'student-housing' as const,
+      icon: TrendingUp,
+      badge: t("resourceLibrary.guide3Badge"),
+      badgeColor: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20",
+      title: t("resourceLibrary.guide3Title"),
+      description: t("resourceLibrary.guide3Desc"),
+      pages: t("resourceLibrary.guide3Pages"),
+      bullets: [
+        t("resourceLibrary.guide3Bullet1"),
+        t("resourceLibrary.guide3Bullet2"),
+        t("resourceLibrary.guide3Bullet3"),
+        t("resourceLibrary.guide3Bullet4"),
+      ],
+      directDownload: true
     }
   ];
 
@@ -62,7 +84,7 @@ export const ResourceLibrary = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {guides.map((guide, index) => {
               const Icon = guide.icon;
               return (
@@ -104,10 +126,14 @@ export const ResourceLibrary = () => {
                       <Button 
                         className="w-full group mt-6"
                         size="lg"
-                        onClick={() => handleGuideRequest(guide.id)}
+                        onClick={() => guide.directDownload ? handleDirectDownload() : handleGuideRequest(guide.id as 'general' | 'torino')}
                       >
-                        {t("resourceLibrary.downloadCta")}
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        {guide.directDownload ? t("resourceLibrary.downloadDirectCta") : t("resourceLibrary.downloadCta")}
+                        {guide.directDownload ? (
+                          <Download className="ml-2 h-4 w-4" />
+                        ) : (
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        )}
                       </Button>
                     </div>
                   </CardContent>
