@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Fonts */
-@font-face {
-  font-family: 'Gotham';
-  src: url('/fonts/Gotham-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+/* All fonts use Inter from Google Fonts for consistency */
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
@@ -239,7 +232,7 @@ All colors MUST be HSL.
     font-weight: 700;
     color: hsl(28 24% 14%);
     margin-bottom: 1.5rem;
-    font-family: "Gotham", system-ui, -apple-system, sans-serif;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
   }
 
   /* Footnote list items */
