@@ -6,7 +6,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-30",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/unito-campus-torino.jpg",
     readTime: 55,
     content: "universita-torino-guida-completa",
     translations: {
