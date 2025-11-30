@@ -1,12 +1,12 @@
-# I Mercati Storici di Torino: Chiusure e Impatto Sociale Non Analizzato
+# I mercati storici di Torino: chiusure e impatto sociale non analizzato
 
-## Una Crisi Senza Precedenti nel Cuore della Città Operaia
+## Una crisi senza precedenti nel cuore della città operaia
 
 Torino sta vivendo un momento cruciale e misconosciuto della sua storia urbana: la crisi sistemica dei mercati rionali, spazi che hanno rappresentato per oltre un secolo il cuore pulsante della socialità di quartiere, la memoria collettiva, il luogo dove le comunità si incontravano quotidianamente e trasmettevano valori, tradizioni e relazioni. Questa crisi non è una semplice questione commerciale, ma rappresenta un vero terremoto antropologico che colpisce decine di migliaia di persone, in particolare gli anziani, le famiglie povere e le comunità più fragili. Eppure, nonostante l'entità dei fenomeni che caratterizzano questa trasformazione, la narrazione pubblica online rimane straordinariamente superficiale, frammentaria e incapace di cogliere la profondità dell'impatto sociale di queste chiusure.[^1][^2][^3][^4][^5]
 
 Il mercato di Piazza Crispi, simbolo vivente del quartiere Barriera di Milano e della memoria operaia di Torino, è stato definitivamente soppresso dal Comune nel 2023, dopo anni di lenta agonia. Ma Piazza Crispi è soltanto la manifestazione più evidente di una crisi molto più ampia e sistemica: circa 30 mercati cittadini sono ora a rischio, migliaia di ambulanti e loro famiglie stanno perdendo il reddito principale, e il Consorzio CISM (Consorzio Infrastrutture Servizi Mercati) è entrato in liquidazione giudiziaria nel gennaio 2025 con un debito di 900.000 euro accumulato per le bollette non pagate, rischiando di lasciare centinaia di banchi senza luce e acqua.[^2][^3][^4][^5]
 
-## La Storia dei Mercati Torinesi: Dall'Industrializzazione alla Deindustrializzazione
+## La storia dei mercati torinesi: dall'industrializzazione alla deindustrializzazione
 
 Per comprendere pienamente la portata della crisi odierna, occorre fare un passo indietro e ripercorrere la storia dei quartieri che hanno visto nascere e prosperare i mercati storici di Torino. Il mercato di Piazza Crispi era sorto nel quartiere della **Barriera di Milano**, un'area che affonda le radici nel 1853, quando venne creata la prima cinta daziaria per controllare le merci in entrata da nord. Proprio in questa zona, il **varco daziario più importante era quello rivolto verso Milano**, da cui il quartiere prese il suo nome evocativo: Barriera di Milano.[^6][^7][^8]
 
@@ -22,7 +22,7 @@ Tuttavia, a partire dagli anni '70-'80 del Novecento, tutto questo ha iniziato a
 
 È in questo contesto di trasformazione urbana senza programmazione che il mercato di Piazza Crispi è entrato in un'agonia che ha caratterizzato i decenni 2010-2020. Nel 2022-2023, la media di ambulanti presenti scese a livelli drammatici: **solo due banchi il mercoledì, sei il venerdì**, con i clienti sempre meno numerosi e sempre più anziani. Le cause erano molteplici: il decadimento del quartiere, l'aumento della popolazione straniera (fino al 40-42% in alcune zone) che aveva modificato i consumi e le abitudini commerciali, la concorrenza della grande distribuzione, la perdita della massa critica di residenti che garantiva la vitalità del mercato.[^14][^15][^1][^10][^6]
 
-## Piazza Crispi: La Fine di un'Epoca e l'Inizio di una Domanda Mai Posta
+## Piazza Crispi: la fine di un'epoca e l'inizio di una domanda mai posta
 
 Quando il Comune di Torino deliberò nel 2023 la soppressione definitiva del mercato di Piazza Crispi, nessuno si fermò a chiedersi: **come cambierà la vita delle persone che vivono in questo quartiere?**. La delibera amministrativa parlava di "riqualificazione dell'area" e di "creazione di un nuovo punto di aggregazione sociale e culturale", ma nessun progetto specifico venne mai presentato pubblicamente, nessun processo partecipativo coinvolse i residenti, nessuna analisi degli effetti sociali precedette la decisione.[^1][^10][^16]
 
@@ -30,7 +30,7 @@ L'ironia storica è feroce: il mercato di Piazza Crispi, che era nato come spazi
 
 Durante gli anni di agonia del mercato, circolarono diverse proposte per un rilancio: si parlava di estendere gli orari di apertura al pomeriggio (come tentato in altre piazze torinesi), di creare aree protette con nuove tecnologie per incrementare la sicurezza percepita, di diversificare l'offerta inserendo elementi culturali e di intrattenimento. Ma nessuna di queste proposte ricevette risorse, visibilità o spinta amministrativa.[^10][^20][^21][^1]
 
-## La Cascata di Chiusure: Da Piazza Crispi a un Intero Sistema in Collasso
+## La cascata di chiusure: da Piazza Crispi a un intero sistema in collasso
 
 Se Piazza Crispi è stata la chiusura più eclatante, essa rappresenta soltanto il capitolo più noto di un processo molto più ampio di desertificazione commerciale. Diversi altri mercati storici stanno attraversando situazioni critiche:[^2][^3][^5][^20]
 
@@ -49,11 +49,11 @@ Il debito accumulato ammontava a 900.000 euro, dovuti principalmente alle bollet
 
 Il dramma di questa situazione è che i 900.000 euro di debito del CISM rappresentavano servizi già pagati parzialmente dai mercati stessi e dai Comuni, ma che non erano stati sufficienti a coprire i costi effettivi. In altre parole, il collasso era stato strutturale e inevitabile, frutto di anni di gestione inadeguata, di investimenti insufficienti e di una progressiva perdita di viabilità commerciale dei mercati stessi.[^4][^5][^2][^3]
 
-## L'Impatto Sociale Non Raccontato: Gli Anziani, gli Ambulanti, le Comunità Fragili
+## L'impatto sociale non raccontato: gli anziani, gli ambulanti, le comunità fragili
 
 Ed è qui che emerge il **vuoto informativo più grave**: nessuna analisi online affrontava seriamente la domanda cruciale: **chi viene colpito da queste chiusure?**. La risposta è complessa e interesserebbe decine di migliaia di persone.[^1][^2][^4][^10]
 
-### Gli Anziani: Dalla Marginalità Urbana all'Isolamento Totale
+### Gli anziani: dalla marginalità urbana all'isolamento totale
 
 Una ricerca del dipartimento di Sociologia dell'Università Bicocca di Milano (ma i dati sono facilmente generalizzabili a Torino) evidenziava che **per un anziano su cinque vivente in quartieri senza negozi di prossimità, la qualità della vita peggiora drasticamente**. Nel territorio torinese del nord, dove si concentrano i quartieri con popolazione anziana più fragile e con maggiore isolamento urbano (Aurora, Barriera di Milano, Regio Parco), gli anziani si appoggiavano regolarmente ai mercati rionali per almeno tre motivazioni fondamentali:[^25]
 
@@ -69,7 +69,7 @@ Quando il mercato rionale chiude, per l'anziano non chiude solo "un negozio": ch
 
 *Mercato Nitti - MuseoTorino*
 
-### Gli Ambulanti: La Perdita del Reddito e della Dignità
+### Gli ambulanti: la perdita del reddito e della dignità
 
 Parallelamente alla sofferenza degli anziani-clienti, gli ambulanti stessi dei mercati torinesi vivevano un dramma economico e psicologico non meno grave. Le testimonianze raccolte durante le proteste degli ambulanti nel 2021 (quando il mercato di Porta Palazzo fu chiuso durante i lockdown) sono eloquenti e rimangono straordinariamente significative ancora oggi.[^14][^28]
 
@@ -88,7 +88,7 @@ Le conseguenze della chiusura erano devastanti:
 
 *Mercati di Torino: guida completa ai mercati rionali*
 
-## Impoverimento Urbano e Gentrificazione Paradossale
+## Impoverimento urbano e gentrificazione paradossale
 
 Un ulteriore aspetto del fenomeno che rimane sostanzialmente inesplorato online è la **relazione tra chiusura dei mercati e trasformazione urbana**: come cambiano i quartieri quando perdono i loro mercati?
 
@@ -98,7 +98,7 @@ Nel caso specifico di Piazza Crispi, il fenomeno si era manifestato già chiaram
 
 Allo stesso tempo, ironicamente, in alcuni quartieri come San Salvario o Porta Palazzo, si assiste al fenomeno opposto: la gentrificazione. I mercati vengono "riscoperti" come attrazioni turistiche e culturali, aumentano gli affitti per i banchi rimasti, vengono regolamentati più rigidamente, si installano arredi "design", si introduce la "atmosfera bohemian". Paradossalmente, questo "rilancio" spesso comporta l'espulsione proprio di quegli ambulanti storici che caratterizzavano il mercato, rimpiazzati da venditori di souvenirs o di prodotti "curati" per il consumo turistico.[^11][^12][^13]
 
-## Il Caso Spettacolare del Mercato del Libero Scambio: Quando il Mercato Diventa Lotta Sociale
+## Il caso spettacolare del Mercato del Libero Scambio: quando il mercato diventa lotta sociale
 
 Un episodio emblematico che illustra quanto i mercati rappresentino qualcosa di profondamente diverso dal semplice commercio è rappresentato dalla vicenda del **Mercato del Libero Scambio** (noto come "suk degli stracci") di Torino.[^31]
 
@@ -110,7 +110,7 @@ Luca Deri, presidente della Circoscrizione 7, sottolineava: "A prescindere dalle
 
 Questo caso evidenzia come i mercati continuino a essere **luoghi di sopravvivenza urbana**, vere e proprie reti di protezione sociale "dal basso", completamente ignorate dalle narrazioni convenzionali della città e dalle politiche pubbliche.[^31]
 
-## La Questione della "Movida" e della Sicurezza Percepita: Un Falso Dibattito
+## La questione della "movida" e della sicurezza percepita: un falso dibattito
 
 Uno degli argomenti ricorrenti che compare nella cronaca quotidiana torinese riguarda la "malamovida" nei quartieri dove insistono i mercati, in particolare a San Salvario, Porta Palazzo e altre aree. Gli articoli e le comunicazioni amministrative spesso collegano la "degradazione" della piazza alla presenza del mercato, suggerendo implicitamente che la sua chiusura contribuirebbe a "pulire" e "ricondizionare" lo spazio.[^1][^4][^10][^32][^33][^34][^35][^36]
 
@@ -120,7 +120,7 @@ Quando i mercati chiudono, questo vuoto si approfondisce ulteriormente. L'assenz
 
 La ricerca su San Salvario e sui mercati di "malamovida" torinese non è mai stata affrontata in modo approfondito online: mancano analisi qualitative che si chiedano davvero cosa significhi vivere in questi quartieri, come residenti non marginali si orientano, quali strategie di sicurezza sviluppano, come percepiscono il rapporto tra mercato e spazio pubblico, cosa vorrebbero per il futuro dei loro quartieri.[^15][^32][^34][^35]
 
-## La Liquidazione Giudiziaria del CISM: Il Culmine della Crisi e le Minacce Incombenti
+## La liquidazione giudiziaria del CISM: il culmine della crisi e le minacce incombenti
 
 Torniamo al presente, al momento acuto della crisi. Nel **gennaio 2025**, il Consorzio CISM è entrato formalmente in liquidazione giudiziaria, un evento apparentemente tecnico e amministrativo che in realtà rappresentava una **minaccia concreta e immediata** alla continuità di circa **30 mercati cittadini** che servono l'80% degli operatori torinesi.[^2][^3][^4][^5]
 
@@ -135,7 +135,7 @@ Le conseguenze sarebbero state:
 
 Eppure, il dibattito pubblico online su questo evento era **straordinariamente minimo e frammentario**: i comunicati stampa tecnici, gli appelli dei sindacati dei commercianti, qualche articolo di cronaca locale, ma **nessuna narrazione che mettesse davvero a fuoco l'impatto umano e sociale** di una possibile paralisi del sistema mercatale torinese.[^2][^3][^4][^5]
 
-## Porta Palazzo: Il Mercato All'Aperto più Grande d'Europa e la sua Vulnerabilità
+## Porta Palazzo: il mercato all'aperto più grande d'Europa e la sua vulnerabilità
 
 Un caso di studio particolarmente rilevante, che emerge dagli articoli ma che non riceve quasi mai un'analisi approfondita, è rappresentato dal **Mercato di Porta Palazzo**, il mercato all'aperto più grande d'Europa, che serve circa **40.000 residenti** dei quartieri Aurora, Borgo Dora e parte del centro città.[^14]
 
@@ -143,31 +143,31 @@ Durante i lockdown Covid nel 2020-2021, questo mercato fu chiuso per lunghi peri
 
 Questa testimonianza mette in luce un fatto elementare spesso dimenticato: **la funzione di accesso al cibo di qualità a prezzi accessibili** è una funzione cruciale dei mercati rionali, specialmente per le popolazioni povere. Con il paradosso che negli ultimi anni il discorso pubblico su Porta Palazzo si è concentrato quasi esclusivamente su aspetti di "ordine pubblico" e "sicurezza", mentre la dimensione cruciale del diritto al cibo accessibile rimane invisibile.[^28][^14][^6]
 
-## Cosa Manca da Questa Narrazione? Un'Analisi dei Vuoti
+## Cosa manca da questa narrazione? Un'analisi dei vuoti
 
 Concludendo questo articolo, è utile fare un inventario di cosa manca completamente dal dibattito pubblico online sulla crisi dei mercati torinesi:
 
-### Mancano le Storie Personali
+### Mancano le storie personali
 
 Non esiste **nessuna raccolta sistematica di testimonianze orali** di ambulanti che hanno chiuso per sempre i loro banchi. Non ci sono reportage fotografici che documentino l'impatto emotivo sulle persone. Non ci sono video dove anziani descrivono cosa significa per loro aver perso il loro mercato di riferimento.[^1][^2][^4][^10]
 
-### Mancano le Analisi Comparate
+### Mancano le analisi comparate
 
 Non esiste alcun **confronto sistematico tra quanto accade a Torino e come altre città europee** (Milano, Barcellona, Berlino, Parigi) stanno reinventando i loro mercati storici come patrimonio culturale, come motore di rigenerazione urbana, come luoghi di resistenza alla gentrificazione.[^17][^18][^19][^41]
 
-### Manca l'Analisi Della Disuguaglianza
+### Manca l'analisi della disuguaglianza
 
 Nessuno ha mai affrontato seriamente la **dimensione di ingiustizia urbana** insita nella chiusura progressiva dei mercati: i quartieri ricchi di Torino mantengono intatti i loro spazi pubblici e i loro servizi commerciali, mentre i quartieri poveri li perdono. Non esiste una mappatura di questa disuguaglianza geografica.[^6][^15][^1][^4][^10][^13][^30][^36]
 
-### Manca l'Analisi della Memoria
+### Manca l'analisi della memoria
 
 Nessun progetto di **archivio digitale accessibile** documenta la storia, la memoria, i saperi legati ai mercati storici torinesi prima che scompaiano completamente. Non ci sono ricerche etnografiche sulla cultura materiale e immateriale dei mercati.[^1][^8][^10][^42][^43][^44]
 
-### Mancano le Proposte Alternative
+### Mancano le proposte alternative
 
 Mentre città come Firenze candidano i loro mercati storici all'UNESCO e li reinventano come attrazioni culturali, Torino non ha mai posto in modo serio la domanda: **è davvero inevitabile la chiusura di Piazza Crispi? Quali modelli alternativi potrebbero funzionare?**. Mancano interamente proposte di rigenerazione creativa, di nuovi modelli gestionali, di innovazione mantenendo la funzione sociale.[^17][^18][^19][^41]
 
-## Verso una Riscrittura Possibile della Narrativa
+## Verso una riscrittura possibile della narrativa
 
 La crisi dei mercati torinesi rappresenta un momento cruciale di possibile **rottura definitiva di legami sociali, di memoria urbana, di coesione comunitaria**. Ma rappresenta anche un'opportunità: l'opportunità di riconoscere il valore straordinario di questi spazi, di documentarne la memoria, di inventare nuove forme di rigenerazione che mantengano la loro funzione sociale ed economica anziché cancellarli.
 
