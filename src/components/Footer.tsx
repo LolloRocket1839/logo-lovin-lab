@@ -93,7 +93,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-foreground">{t('footer.contactTitle')}</h3>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-4 sm:mb-6 text-foreground">{t('footer.contactTitle')}</h3>
             <div className="space-y-3">
               <a 
                 href={`https://wa.me/${CONTACTS.lorenzo.phone}`}
@@ -121,7 +121,7 @@ export const Footer = () => {
 
           {/* Info */}
           <div>
-            <h3 className="font-display text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-4 sm:mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
             <ul className="space-y-3 text-muted-foreground">
               <li>
                 <a href="#how-it-works" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
@@ -153,7 +153,7 @@ export const Footer = () => {
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground/60 mb-3 font-medium">
               Powered by
             </p>
-            <h3 className="font-display text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-4 sm:mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
             <div className="space-y-4">
               <a 
                 href="https://www.2i3t.it"

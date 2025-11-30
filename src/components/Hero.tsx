@@ -101,11 +101,11 @@ export const Hero = () => {
           </div>
 
           {/* Headline principale */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight text-foreground tracking-tight animate-fade-in-up">
             <StyledText>{t('hero.mainHeadline')}</StyledText>
           </h2>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 font-normal leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
 
