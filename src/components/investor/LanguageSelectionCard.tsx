@@ -41,7 +41,7 @@ export const LanguageSelectionCard = ({ onLanguageSelect }: LanguageSelectionCar
         {/* Logo */}
         <div className="flex flex-col items-center gap-4 mb-8">
           <img src={logo} alt="Jungle Rent" className="h-20 w-auto drop-shadow-lg" />
-          <h1 className="text-2xl font-bold text-foreground tracking-tight">Jungle Rent</h1>
+          <h1 className="text-2xl font-extrabold text-foreground tracking-tight">Jungle Rent</h1>
         </div>
 
         {/* Title */}
@@ -51,10 +51,10 @@ export const LanguageSelectionCard = ({ onLanguageSelect }: LanguageSelectionCar
           transition={{ delay: 0.2 }}
           className="text-center mb-8"
         >
-          <h2 className="text-xl font-semibold text-foreground mb-2">
+          <h2 className="text-xl font-bold text-foreground mb-2">
             Select Your Language
           </h2>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-sm font-light">
             Choose a language to continue
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ export const LanguageSelectionCard = ({ onLanguageSelect }: LanguageSelectionCar
               className="flex items-center gap-3 p-4 rounded-xl bg-muted/50 hover:bg-accent/10 border border-border/30 hover:border-accent/50 transition-all duration-200"
             >
               <span className="text-2xl">{lang.flag}</span>
-              <span className="font-medium text-foreground">{lang.name}</span>
+              <span className="font-normal text-foreground">{lang.name}</span>
             </motion.button>
           ))}
         </motion.div>

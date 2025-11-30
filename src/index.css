@@ -397,7 +397,7 @@ All colors MUST be HSL.
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold;
+    @apply font-display font-extrabold;
     letter-spacing: -0.03em;
   }
   
@@ -588,7 +588,7 @@ All colors MUST be HSL.
 
 .blog-content-wrapper h2 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   padding-left: 1rem;

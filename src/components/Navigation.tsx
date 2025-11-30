@@ -113,7 +113,7 @@ export const Navigation = () => {
               <button
                 key={item.id || item.path || index}
                 onClick={() => handleMenuClick(item)}
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                className="px-4 py-2 text-sm font-normal text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {item.label}
               </button>
@@ -162,7 +162,7 @@ export const Navigation = () => {
                 <button
                   key={item.id || item.path || index}
                   onClick={() => handleMenuClick(item)}
-                  className="px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  className="px-4 py-3 text-left text-sm font-normal text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </button>
