@@ -19,15 +19,15 @@ import { useTranslation } from "react-i18next";
 import { LanguageSelector } from "@/components/investor/LanguageSelector";
 import { LanguageSelectionCard } from "@/components/investor/LanguageSelectionCard";
 
-// Animation variants
+// Animation variants - no scale to prevent layout shifts
 const inputFocusVariants = {
-  idle: { scale: 1, boxShadow: "0 0 0 0 rgba(var(--accent), 0)" },
-  focus: { scale: 1.01, boxShadow: "0 0 20px 2px hsla(var(--accent), 0.15)" },
+  idle: { boxShadow: "0 0 0 0 rgba(var(--accent), 0)" },
+  focus: { boxShadow: "0 0 20px 2px hsla(var(--accent), 0.15)" },
 };
 
 const checkboxVariants = {
-  unchecked: { scale: 1 },
-  checked: { scale: [1, 1.2, 1] },
+  unchecked: { opacity: 1 },
+  checked: { opacity: 1 },
 };
 
 const staggerContainer = {
@@ -45,36 +45,30 @@ const staggerItem = {
   show: { opacity: 1, y: 0 },
 };
 
-// ConsentCheckbox component for reusability with animations
+// ConsentCheckbox component for reusability - no scale animations to prevent jumping
 const ConsentCheckbox = ({ checked, onToggle, label }: { checked: boolean; onToggle: () => void; label: string }) => (
   <motion.div 
     className={`flex items-start space-x-2.5 md:space-x-3 p-2.5 md:p-4 rounded-lg cursor-pointer transition-all duration-200 ${
       checked ? 'bg-accent/10 ring-2 ring-accent/30' : 'bg-muted/50 hover:bg-muted/70'
     }`}
     variants={staggerItem}
-    whileHover={{ scale: 1.01 }}
-    whileTap={{ scale: 0.99 }}
     onClick={onToggle}
   >
-    <motion.div
-      animate={checked ? { scale: [1, 1.2, 1] } : { scale: 1 }}
-      transition={{ duration: 0.3 }}
-    >
-      <Checkbox
-        checked={checked}
-        onCheckedChange={() => onToggle()}
-        className="mt-0.5 md:mt-1"
-      />
-    </motion.div>
+    <Checkbox
+      checked={checked}
+      onCheckedChange={() => onToggle()}
+      className="mt-0.5 md:mt-1"
+    />
     <label className="text-xs md:text-sm leading-relaxed cursor-pointer flex-1">
       {label}
     </label>
     <AnimatePresence>
       {checked && (
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0, opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
         >
           <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-accent" />
         </motion.div>
@@ -584,14 +578,12 @@ const ConversationalInvestmentForm = () => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentStep}
-                  initial={{ opacity: 0, y: 20, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1, x: 0 }}
-                  exit={{ opacity: 0, y: -20, scale: 0.96 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   transition={{ 
-                    duration: 0.4,
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 30
+                    duration: 0.3,
+                    ease: "easeOut"
                   }}
                   className="bg-card/80 backdrop-blur-xl p-4 md:p-12 rounded-2xl md:rounded-3xl shadow-2xl shadow-primary/5"
                 >
@@ -742,26 +734,19 @@ const ConversationalInvestmentForm = () => {
                               </Select>
                             </motion.div>
                           ) : currentQuestion.type === "checkbox" ? (
-                            <motion.div 
-                              className="flex items-start space-x-2.5 md:space-x-3 p-3 md:p-4 bg-muted/50 rounded-lg cursor-pointer"
-                              whileHover={{ scale: 1.02, backgroundColor: "hsla(var(--muted), 0.7)" }}
-                              whileTap={{ scale: 0.98 }}
+                            <div 
+                              className="flex items-start space-x-2.5 md:space-x-3 p-3 md:p-4 bg-muted/50 hover:bg-muted/70 rounded-lg cursor-pointer transition-colors duration-200"
                               onClick={() => field.onChange(!field.value)}
                             >
-                              <motion.div
-                                variants={checkboxVariants}
-                                animate={field.value ? "checked" : "unchecked"}
-                              >
-                                <Checkbox
-                                  checked={field.value as boolean}
-                                  onCheckedChange={field.onChange}
-                                  className="mt-0.5 md:mt-1"
-                                />
-                              </motion.div>
+                              <Checkbox
+                                checked={field.value as boolean}
+                                onCheckedChange={field.onChange}
+                                className="mt-0.5 md:mt-1"
+                              />
                               <label className="text-sm md:text-base leading-relaxed cursor-pointer font-medium">
                                 {t(currentQuestion.labelKey)}
                               </label>
-                            </motion.div>
+                            </div>
                           ) : currentQuestion.type === "multi-checkbox" ? (
                             <motion.div 
                               className="space-y-2 md:space-y-3"
@@ -775,11 +760,9 @@ const ConversationalInvestmentForm = () => {
                                   <motion.div 
                                     key={option.value} 
                                     variants={staggerItem}
-                                    className={`flex items-center space-x-2.5 md:space-x-3 p-2.5 md:p-3 rounded-lg transition-all duration-200 cursor-pointer ${
+                                    className={`flex items-center space-x-2.5 md:space-x-3 p-2.5 md:p-3 rounded-lg transition-colors duration-200 cursor-pointer ${
                                       isChecked ? 'bg-accent/10 ring-2 ring-accent/30' : 'bg-muted/30 hover:bg-muted/50'
                                     }`}
-                                    whileHover={{ scale: 1.02 }}
-                                    whileTap={{ scale: 0.98 }}
                                     onClick={() => {
                                       const current = field.value as string[] || [];
                                       field.onChange(
