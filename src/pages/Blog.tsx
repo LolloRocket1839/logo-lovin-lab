@@ -17,6 +17,7 @@ const Blog = () => {
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const isItalian = i18n.language.startsWith('it');
   
   const posts = useMemo(() => {
     let categoryPosts = getPostsByCategory(activeCategory);
@@ -24,18 +25,48 @@ const Blog = () => {
     return searchPosts(categoryPosts, searchQuery, i18n.language as 'it' | 'en');
   }, [activeCategory, searchQuery, selectedTags, i18n.language]);
 
+  const title = isItalian 
+    ? "Blog Jungle Rent - Guide Torino per Studenti, Investitori e Turisti"
+    : "Jungle Rent Blog - Turin Guides for Students, Investors and Tourists";
+  
+  const description = isItalian
+    ? "Guide complete su Torino: quartieri, affitti, università, eventi, vita notturna, investimenti immobiliari. Articoli aggiornati per studenti Politecnico e UniTo, investitori e turisti."
+    : "Complete Turin guides: neighborhoods, rentals, universities, events, nightlife, real estate investments. Updated articles for Politecnico and UniTo students, investors and tourists.";
+
+  const keywords = "blog torino, guida studenti torino, affitti torino, politecnico torino, università torino, quartieri torino, san salvario, crocetta, investimenti immobiliari torino, eventi torino, vita notturna torino, raccolta differenziata torino, mercati torino, volontariato torino, aule studio torino, digital nomad torino, gelaterie torino, mobilità sostenibile torino";
+
   return (
     <main role="main" className="min-h-screen">
       <Helmet>
-        <title>{t('blog.meta.title')}</title>
-        <meta name="description" content={t('blog.meta.description')} />
-        <meta name="keywords" content="blog jungle rent, immobiliare torino, studenti, investitori, venditori" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <link rel="canonical" href="https://junglerent.it/blog" />
         
         {/* Hreflang for multilingual SEO */}
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/blog" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/blog" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/blog" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://junglerent.it/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://junglerent.it/jungle-rent-logo.svg" />
+        <meta property="og:site_name" content="Jungle Rent" />
+        <meta property="og:locale" content={isItalian ? "it_IT" : "en_US"} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://junglerent.it/jungle-rent-logo.svg" />
+
+        {/* Article section for active category */}
+        {activeCategory !== 'all' && (
+          <meta property="article:section" content={activeCategory} />
+        )}
       </Helmet>
       
       <StructuredData />

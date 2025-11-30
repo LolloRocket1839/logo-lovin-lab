@@ -166,6 +166,13 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     },
   };
 
+  // Helper function to get absolute image URL
+  const getAbsoluteImageUrl = (imageUrl: string) => {
+    if (imageUrl.startsWith('http')) return imageUrl;
+    return `https://junglerent.it${imageUrl}`;
+  };
+
+  const absoluteImageUrl = getAbsoluteImageUrl(post.image);
 
   // Structured Data Schemas
   const articleSchema = {
@@ -173,7 +180,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     "@type": "BlogPosting",
     "headline": translatedData.title,
     "description": translatedData.excerpt,
-    "image": post.image,
+    "image": absoluteImageUrl,
     "author": {
       "@type": "Person",
       "name": post.author
@@ -183,7 +190,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       "name": "Jungle Rent",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://junglerent.it/jungle-rent-logo.png"
+        "url": "https://junglerent.it/jungle-rent-logo.svg"
       }
     },
     "datePublished": post.date,
@@ -327,22 +334,29 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         {/* Open Graph */}
         <meta property="og:title" content={translatedData.seo.title} />
         <meta property="og:description" content={translatedData.seo.description} />
-        <meta property="og:image" content={post.image} />
+        <meta property="og:image" content={absoluteImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:url" content={`https://junglerent.it/blog/${post.slug}`} />
         <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Jungle Rent" />
+        <meta property="og:locale" content={currentLang === 'it' ? "it_IT" : "en_US"} />
         <meta property="article:published_time" content={post.date} />
         <meta property="article:modified_time" content={post.date} />
         <meta property="article:author" content={post.author} />
+        <meta property="article:section" content={post.category} />
         {translatedData.tags.map(tag => (
           <meta key={tag} property="article:tag" content={tag} />
         ))}
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@junglerent" />
         <meta name="twitter:title" content={translatedData.seo.title} />
         <meta name="twitter:description" content={translatedData.seo.description} />
-        <meta name="twitter:image" content={post.image} />
-        
+        <meta name="twitter:image" content={absoluteImageUrl} />
+        <meta name="twitter:image:alt" content={translatedData.title} />
+
         {/* Structured Data - Article Schema */}
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}
