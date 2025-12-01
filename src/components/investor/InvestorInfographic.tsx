@@ -452,7 +452,7 @@ const InvestorInfographic: React.FC = () => {
   ];
 
   const metrics = [
-    { value: 8, suffix: '.34%', label: 'Rental Yield', description: 'Rendimento medio annuo', isEstimate: true },
+    { value: 8, suffix: '.34%', label: 'Rental yield', description: 'Rendimento medio annuo', isEstimate: true },
     { value: 95, suffix: '%', label: 'Occupazione', description: 'Tasso di occupazione', isEstimate: true },
     { value: 90, suffix: 'k+', label: 'Studenti', description: 'Universitari a Torino', isEstimate: false },
     { value: 7, suffix: '', label: 'Università', description: 'Atenei nel territorio', isEstimate: false }
@@ -475,10 +475,10 @@ const InvestorInfographic: React.FC = () => {
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-semibold text-primary">Come Funziona</span>
+          <span className="text-sm font-semibold text-primary">Come funziona</span>
         </div>
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-3">
-          Il Modello Jungle Rent
+          Il modello Jungle Rent
         </h2>
         <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
           Investimenti immobiliari semplificati
