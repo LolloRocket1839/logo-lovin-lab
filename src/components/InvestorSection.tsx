@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users, FileText, Download } from "lucide-react";
+import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users, FileText, Download, Mail } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { openEmail, MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { InvestorMetricCard } from "@/components/investor/InvestorMetricCard";
@@ -11,13 +11,19 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 export const InvestorSection = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const { count } = useWaitlistCounter();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -64,7 +70,41 @@ export const InvestorSection = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
+  const handleQuickSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.error(i18n.language.startsWith('en') ? "Please enter a valid email" : "Inserisci un'email valida");
+      return;
+    }
 
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.from("investor_interest").insert([{
+        full_name: "Quick Lead",
+        email: email.toLowerCase().trim(),
+        phone: "+39 000 000 0000",
+        country: "italy",
+        investor_type: "individual",
+        investment_amount_range: "5000-10000",
+        investment_timeline: "exploratory",
+        accredited_investor: "unsure",
+        areas_of_interest: ["equity"],
+        consents_to_data_processing: true,
+        consents_to_fadp: true,
+        consents_to_contact: true,
+        understands_no_commitment: true,
+      }]);
+      
+      if (error) throw error;
+      toast.success(i18n.language.startsWith('en') ? "Thank you! We'll be in touch." : "Grazie! Ti contatteremo presto.");
+      navigate('/invest');
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error(i18n.language.startsWith('en') ? "Something went wrong" : "Qualcosa è andato storto");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section 
@@ -153,6 +193,40 @@ export const InvestorSection = () => {
             </div>
           </Card>
           
+          {/* Mini Email Form */}
+          <form 
+            onSubmit={handleQuickSubmit}
+            className={`flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-6 transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '550ms' }}
+          >
+            <div className="relative flex-1">
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+              <Input
+                type="email"
+                placeholder={i18n.language.startsWith('en') ? "Your email" : "La tua email"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="pl-10 h-14 text-base bg-background/80"
+                required
+              />
+            </div>
+            <Button 
+              type="submit" 
+              variant="premium"
+              disabled={isSubmitting}
+              className="h-14 px-8 text-base font-semibold group"
+            >
+              {isSubmitting ? "..." : (
+                <>
+                  {i18n.language.startsWith('en') ? "Get Started" : "Inizia"}
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
+            </Button>
+          </form>
+
           <div
             className={`flex flex-col sm:flex-row gap-3 justify-center items-center transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
@@ -162,21 +236,21 @@ export const InvestorSection = () => {
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
-              variant="premium"
-              className="w-full sm:w-auto text-base sm:text-lg group"
+              variant="outline"
+              className="w-full sm:w-auto text-base group"
             >
               <MessageCircle className="mr-2 w-5 h-5" />
               {t('investor.talkToLorenzo')}
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Button 
-              onClick={() => setWaitlistOpen(true)}
+              onClick={() => navigate('/invest')}
               size="lg"
-              variant="outline"
-              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12"
+              variant="ghost"
+              className="w-full sm:w-auto text-sm"
             >
-              {t('investor.bookCall')}
+              {i18n.language.startsWith('en') ? "Complete application" : "Compila tutto il form"}
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
         </div>
