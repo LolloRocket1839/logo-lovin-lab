@@ -386,7 +386,7 @@ const InvestorInfographic: React.FC = () => {
       id: 0,
       variant: 'invest' as const,
       title: 'Investi',
-      description: 'Da €5.000',
+      description: 'Da €100',
       detail: 'Investimento minimo accessibile'
     },
     {
