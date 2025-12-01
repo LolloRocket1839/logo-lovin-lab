@@ -47,7 +47,19 @@ const Blog = () => {
         {/* Hreflang for multilingual SEO */}
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/blog" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/blog" />
+        <link rel="alternate" hrefLang="de-CH" href="https://junglerent.it/blog" />
+        <link rel="alternate" hrefLang="fr-CH" href="https://junglerent.it/blog" />
+        <link rel="alternate" hrefLang="it-CH" href="https://junglerent.it/blog" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/blog" />
+        
+        {/* Geo Targeting */}
+        <meta name="geo.region" content="IT-21" />
+        <meta name="geo.placename" content="Torino" />
+        <meta name="geo.position" content="45.0703;7.6869" />
+        <meta name="ICBM" content="45.0703, 7.6869" />
+        
+        {/* Content Language */}
+        <meta httpEquiv="content-language" content="it-IT, en-US" />
 
         {/* Open Graph */}
         <meta property="og:title" content={title} />
