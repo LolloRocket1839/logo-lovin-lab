@@ -14,6 +14,7 @@ import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+import InvestorInfographic from "@/components/investor/InvestorInfographic";
 
 export const InvestorSection = () => {
   const { t, i18n } = useTranslation();
@@ -253,6 +254,11 @@ export const InvestorSection = () => {
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
+        </div>
+
+        {/* Infografica Interattiva */}
+        <div className="mt-16 md:mt-20">
+          <InvestorInfographic />
         </div>
       </div>
       
