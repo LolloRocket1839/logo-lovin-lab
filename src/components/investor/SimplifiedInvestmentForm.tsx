@@ -133,6 +133,16 @@ const SimplifiedInvestmentForm = () => {
     }
   }, [languageSelected]);
 
+  // Pre-fill email from mini-form
+  useEffect(() => {
+    if (!languageSelected) return;
+    const prefillEmail = localStorage.getItem('junglerent_prefill_email');
+    if (prefillEmail && !form.getValues('email')) {
+      form.setValue('email', prefillEmail);
+      localStorage.removeItem('junglerent_prefill_email');
+    }
+  }, [languageSelected, form]);
+
   // Auto-save form data
   useEffect(() => {
     if (!languageSelected) return;
