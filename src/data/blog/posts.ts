@@ -630,7 +630,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "torino-novembre-turisti",
-    category: "students",
+    category: "turisti",
     date: "2025-11-10",
     author: "Team Jungle Rent",
     image: "/images/mole-antonelliana-mountains.jpg",
@@ -733,7 +733,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "torino-dicembre-turisti",
-    category: "students",
+    category: "turisti",
     date: "2025-11-10",
     author: "Team Jungle Rent",
     image: "/images/mole-antonelliana-mountains.jpg",
