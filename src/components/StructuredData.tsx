@@ -63,17 +63,29 @@ export const StructuredData = () => {
         "Property acquisition university areas Turin",
         "Alloggi studenti vicino Politecnico",
         "Case vacanze gestione professionale",
-        "Investimenti immobiliari redditizi Torino"
+        "Investimenti immobiliari redditizi Torino",
+        "Immobilieninvestition Schweiz Italien",
+        "Investissement immobilier Suisse Italie",
+        "Student housing investment Europe Switzerland",
+        "Swiss investor real estate Italy Turin",
+        "Real estate Torino Swiss investors",
+        "Immobilien Turin Schweizer Investoren"
       ],
-      areaServed: {
-        "@type": "City",
-        name: "Torino",
-        containedInPlace: {
-          "@type": "Region",
-          name: "Piemonte",
-          containedInPlace: { "@type": "Country", name: "Italia" }
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Torino",
+          containedInPlace: {
+            "@type": "Region",
+            name: "Piemonte",
+            containedInPlace: { "@type": "Country", name: "Italia" }
+          }
+        },
+        {
+          "@type": "Country",
+          name: "Switzerland"
         }
-      },
+      ],
       address: {
         "@type": "PostalAddress",
         streetAddress: "Via Gioacchino Quarello 15/A",
@@ -87,7 +99,7 @@ export const StructuredData = () => {
           contactType: "Customer Service",
           telephone: "+39-331-905-3037",
           email: "junglerententeprise@gmail.com",
-          availableLanguage: ["Italian", "English", "French"],
+          availableLanguage: ["Italian", "English", "French", "German"],
         },
       ],
     };
