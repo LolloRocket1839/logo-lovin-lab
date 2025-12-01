@@ -2,284 +2,323 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Sparkles, CheckCircle2 } from 'lucide-react';
 
-// SVG House Component with lights effect
-interface HouseProps {
+// Premium SVG House Component with shadows and gradients
+interface PremiumHouseProps {
   isActive: boolean;
   variant: 'invest' | 'acquire' | 'manage' | 'earn';
-  onClick?: () => void;
+  size?: 'sm' | 'md' | 'lg';
 }
 
-const House: React.FC<HouseProps> = ({ isActive, variant, onClick }) => {
-  const getHouseStyle = () => {
+const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = 'md' }) => {
+  const sizeClasses = {
+    sm: 'w-14 h-14',
+    md: 'w-20 h-20',
+    lg: 'w-24 h-24'
+  };
+
+  const getVariantIcon = () => {
     switch (variant) {
       case 'invest':
-        return { hasCoins: true, hasGear: false, hasChart: false };
+        return (
+          <g transform="translate(34, 4)">
+            <motion.circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="url(#coinGradient)"
+              stroke="hsl(40 90% 40%)"
+              strokeWidth="1.5"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: isActive ? 1.1 : 1, opacity: 1 }}
+              transition={{ delay: 0.3, type: "spring" }}
+            />
+            <text x="12" y="16" fontSize="12" fill="hsl(40 90% 25%)" textAnchor="middle" fontWeight="bold">€</text>
+          </g>
+        );
       case 'acquire':
-        return { hasCoins: false, hasGear: false, hasChart: false };
+        return (
+          <motion.g transform="translate(36, 6)">
+            <motion.path
+              d="M8 4 L16 12 M16 4 L8 12"
+              stroke="hsl(var(--primary))"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            />
+            <motion.circle
+              cx="12"
+              cy="8"
+              r="10"
+              fill="none"
+              stroke="hsl(var(--primary))"
+              strokeWidth="2"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2 }}
+            />
+          </motion.g>
+        );
       case 'manage':
-        return { hasCoins: false, hasGear: true, hasChart: false };
+        return (
+          <motion.g
+            transform="translate(36, 6)"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: isActive ? 360 : 0 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          >
+            <circle cx="10" cy="10" r="7" fill="none" stroke="hsl(var(--primary))" strokeWidth="2.5" />
+            <circle cx="10" cy="10" r="3" fill="hsl(var(--primary))" />
+            {[0, 60, 120, 180, 240, 300].map((angle, i) => (
+              <rect
+                key={i}
+                x="8"
+                y="0"
+                width="4"
+                height="4"
+                rx="1"
+                fill="hsl(var(--primary))"
+                transform={`rotate(${angle} 10 10)`}
+              />
+            ))}
+          </motion.g>
+        );
       case 'earn':
-        return { hasCoins: false, hasGear: false, hasChart: true };
+        return (
+          <g transform="translate(30, 2)">
+            <motion.path
+              d="M4 18 L12 10 L20 14 L28 4"
+              fill="none"
+              stroke="hsl(142 70% 45%)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            />
+            <motion.circle
+              cx="28"
+              cy="4"
+              r="4"
+              fill="hsl(142 70% 45%)"
+              initial={{ scale: 0 }}
+              animate={{ scale: [0, 1.3, 1] }}
+              transition={{ delay: 1.2, duration: 0.4 }}
+            />
+          </g>
+        );
       default:
-        return { hasCoins: false, hasGear: false, hasChart: false };
+        return null;
     }
   };
 
-  const style = getHouseStyle();
-
   return (
     <motion.svg
-      viewBox="0 0 80 80"
-      className="w-16 h-16 md:w-20 md:h-20 cursor-pointer"
-      onClick={onClick}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      viewBox="0 0 100 100"
+      className={sizeClasses[size]}
+      initial={{ opacity: 0.6 }}
+      animate={{ opacity: isActive ? 1 : 0.7 }}
+      transition={{ duration: 0.3 }}
     >
-      {/* House Body */}
-      <motion.rect
-        x="15"
-        y="35"
-        width="50"
-        height="40"
-        rx="2"
-        fill="hsl(var(--card))"
-        stroke="hsl(var(--primary))"
-        strokeWidth="2"
-        initial={{ opacity: 0.7 }}
-        animate={{ opacity: isActive ? 1 : 0.7 }}
-      />
-      
-      {/* Roof */}
-      <motion.path
-        d="M10 38 L40 12 L70 38"
-        fill="none"
-        stroke="hsl(var(--primary))"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <motion.path
-        d="M10 38 L40 12 L70 38 Z"
+      <defs>
+        {/* House body gradient */}
+        <linearGradient id="houseBodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="hsl(var(--card))" />
+          <stop offset="100%" stopColor="hsl(var(--muted))" stopOpacity="0.5" />
+        </linearGradient>
+        
+        {/* Roof gradient */}
+        <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="hsl(var(--primary))" />
+          <stop offset="100%" stopColor="hsl(150 45% 12%)" />
+        </linearGradient>
+        
+        {/* Window glow */}
+        <radialGradient id="windowGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="hsl(48 100% 80%)" />
+          <stop offset="100%" stopColor="hsl(48 100% 60%)" />
+        </radialGradient>
+        
+        {/* Coin gradient */}
+        <linearGradient id="coinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="hsl(48 100% 65%)" />
+          <stop offset="100%" stopColor="hsl(40 90% 50%)" />
+        </linearGradient>
+        
+        {/* Shadow filter */}
+        <filter id="houseShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="4" floodColor="hsl(var(--primary))" floodOpacity="0.15" />
+        </filter>
+        
+        {/* Active glow filter */}
+        <filter id="activeGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+
+      {/* House shadow/glow */}
+      <motion.ellipse
+        cx="50"
+        cy="92"
+        rx="32"
+        ry="6"
         fill="hsl(var(--primary))"
-        initial={{ opacity: 0.8 }}
-        animate={{ opacity: isActive ? 1 : 0.8 }}
-      />
-      
-      {/* Chimney */}
-      <rect x="52" y="18" width="8" height="14" fill="hsl(var(--primary))" rx="1" />
-      
-      {/* Door */}
-      <rect
-        x="33"
-        y="52"
-        width="14"
-        height="23"
-        rx="1"
-        fill="hsl(var(--primary))"
-        opacity={0.6}
-      />
-      <circle cx="44" cy="64" r="1.5" fill="hsl(var(--primary-foreground))" />
-      
-      {/* Windows with light effect */}
-      <motion.rect
-        x="20"
-        y="44"
-        width="10"
-        height="10"
-        rx="1"
-        fill={isActive ? "hsl(48 100% 70%)" : "hsl(var(--muted))"}
-        initial={{ opacity: 0.5 }}
-        animate={{ 
-          opacity: isActive ? 1 : 0.5,
-          fill: isActive ? "hsl(48 100% 70%)" : "hsl(var(--muted))"
-        }}
+        initial={{ opacity: 0.1 }}
+        animate={{ opacity: isActive ? 0.25 : 0.1 }}
         transition={{ duration: 0.3 }}
       />
-      <motion.rect
-        x="50"
-        y="44"
-        width="10"
-        height="10"
-        rx="1"
-        fill={isActive ? "hsl(48 100% 70%)" : "hsl(var(--muted))"}
-        initial={{ opacity: 0.5 }}
-        animate={{ 
-          opacity: isActive ? 1 : 0.5,
-          fill: isActive ? "hsl(48 100% 70%)" : "hsl(var(--muted))"
-        }}
-        transition={{ duration: 0.3, delay: 0.1 }}
-      />
+
+      {/* Main house group with shadow */}
+      <g filter={isActive ? "url(#activeGlow)" : "url(#houseShadow)"}>
+        {/* House body */}
+        <motion.rect
+          x="20"
+          y="45"
+          width="60"
+          height="45"
+          rx="3"
+          fill="url(#houseBodyGradient)"
+          stroke="hsl(var(--border))"
+          strokeWidth="1.5"
+          initial={{ y: 50 }}
+          animate={{ y: 45 }}
+          transition={{ duration: 0.5 }}
+        />
+        
+        {/* Roof */}
+        <motion.path
+          d="M12 48 L50 18 L88 48"
+          fill="url(#roofGradient)"
+          stroke="hsl(var(--primary))"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        
+        {/* Roof detail line */}
+        <path
+          d="M18 46 L50 22 L82 46"
+          fill="none"
+          stroke="hsl(var(--primary-foreground))"
+          strokeWidth="0.5"
+          strokeOpacity="0.3"
+        />
+        
+        {/* Chimney */}
+        <rect x="65" y="24" width="10" height="18" rx="1" fill="hsl(var(--primary))" />
+        <rect x="64" y="22" width="12" height="4" rx="1" fill="hsl(150 45% 25%)" />
+        
+        {/* Door */}
+        <rect x="42" y="62" width="16" height="28" rx="2" fill="hsl(var(--primary))" opacity="0.7" />
+        <rect x="44" y="64" width="12" height="4" rx="1" fill="hsl(var(--primary-foreground))" opacity="0.2" />
+        <circle cx="54" cy="78" r="2" fill="hsl(var(--primary-foreground))" opacity="0.6" />
+        
+        {/* Left window */}
+        <rect x="26" y="54" width="12" height="14" rx="1.5" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="1" />
+        <motion.rect
+          x="27"
+          y="55"
+          width="10"
+          height="12"
+          rx="1"
+          fill={isActive ? "url(#windowGlow)" : "hsl(var(--muted))"}
+          initial={{ opacity: 0.4 }}
+          animate={{ opacity: isActive ? 1 : 0.4 }}
+          transition={{ duration: 0.4 }}
+        />
+        {/* Window cross */}
+        <line x1="32" y1="55" x2="32" y2="67" stroke="hsl(var(--border))" strokeWidth="1" />
+        <line x1="27" y1="61" x2="37" y2="61" stroke="hsl(var(--border))" strokeWidth="1" />
+        
+        {/* Right window */}
+        <rect x="62" y="54" width="12" height="14" rx="1.5" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="1" />
+        <motion.rect
+          x="63"
+          y="55"
+          width="10"
+          height="12"
+          rx="1"
+          fill={isActive ? "url(#windowGlow)" : "hsl(var(--muted))"}
+          initial={{ opacity: 0.4 }}
+          animate={{ opacity: isActive ? 1 : 0.4 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        />
+        {/* Window cross */}
+        <line x1="68" y1="55" x2="68" y2="67" stroke="hsl(var(--border))" strokeWidth="1" />
+        <line x1="63" y1="61" x2="73" y2="61" stroke="hsl(var(--border))" strokeWidth="1" />
+      </g>
       
-      {/* Light glow effect */}
+      {/* Window light glow effect */}
       {isActive && (
         <>
           <motion.ellipse
-            cx="25"
-            cy="49"
-            rx="8"
-            ry="6"
+            cx="32"
+            cy="61"
+            rx="10"
+            ry="8"
             fill="hsl(48 100% 70%)"
-            opacity={0.3}
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0.2, 0.4, 0.2] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={{ opacity: [0.15, 0.3, 0.15] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.ellipse
-            cx="55"
-            cy="49"
-            rx="8"
-            ry="6"
+            cx="68"
+            cy="61"
+            rx="10"
+            ry="8"
             fill="hsl(48 100% 70%)"
-            opacity={0.3}
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0.2, 0.4, 0.2] }}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+            animate={{ opacity: [0.15, 0.3, 0.15] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
           />
         </>
       )}
 
       {/* Variant-specific icons */}
-      {style.hasCoins && (
-        <g transform="translate(32, 2)">
-          <motion.circle
-            cx="8"
-            cy="8"
-            r="7"
-            fill="hsl(48 90% 55%)"
-            stroke="hsl(40 90% 45%)"
-            strokeWidth="1.5"
-            initial={{ y: -10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          />
-          <text x="8" y="11" fontSize="8" fill="hsl(40 90% 35%)" textAnchor="middle" fontWeight="bold">€</text>
-        </g>
-      )}
-
-      {style.hasGear && (
-        <motion.g
-          transform="translate(32, 2)"
-          initial={{ rotate: 0, opacity: 0 }}
-          animate={{ rotate: isActive ? 360 : 0, opacity: 1 }}
-          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-        >
-          <circle cx="8" cy="8" r="5" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" />
-          <circle cx="8" cy="8" r="2" fill="hsl(var(--primary))" />
-          {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-            <rect
-              key={i}
-              x="6.5"
-              y="1"
-              width="3"
-              height="3"
-              fill="hsl(var(--primary))"
-              transform={`rotate(${angle} 8 8)`}
-            />
-          ))}
-        </motion.g>
-      )}
-
-      {style.hasChart && (
-        <g transform="translate(28, 0)">
-          <motion.path
-            d="M4 14 L10 8 L16 10 L22 4"
-            fill="none"
-            stroke="hsl(142 70% 45%)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          />
-          <motion.circle
-            cx="22"
-            cy="4"
-            r="3"
-            fill="hsl(142 70% 45%)"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 1.2 }}
-          />
-        </g>
-      )}
+      {getVariantIcon()}
     </motion.svg>
   );
 };
 
-// Animated Arrow Component
-interface AnimatedArrowProps {
-  direction: 'horizontal' | 'vertical';
+// Timeline Node Component
+interface TimelineNodeProps {
+  index: number;
   isActive: boolean;
+  isCompleted: boolean;
 }
 
-const AnimatedArrow: React.FC<AnimatedArrowProps> = ({ direction, isActive }) => {
-  const isHorizontal = direction === 'horizontal';
-  
+const TimelineNode: React.FC<TimelineNodeProps> = ({ index, isActive, isCompleted }) => {
   return (
-    <svg
-      className={isHorizontal ? "w-12 h-8 md:w-16 md:h-10" : "w-8 h-12 md:w-10 md:h-16"}
-      viewBox={isHorizontal ? "0 0 60 30" : "0 0 30 60"}
+    <motion.div
+      className={`relative z-10 flex items-center justify-center w-10 h-10 rounded-full border-2 font-bold text-sm transition-all duration-300 ${
+        isActive 
+          ? 'bg-primary border-primary text-primary-foreground shadow-lg shadow-primary/30' 
+          : isCompleted 
+            ? 'bg-primary/20 border-primary text-primary'
+            : 'bg-card border-border text-muted-foreground'
+      }`}
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ delay: index * 0.1, type: "spring" }}
     >
-      <defs>
-        <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
-          <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="1" />
-          <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
-        </linearGradient>
-      </defs>
-      
-      {isHorizontal ? (
-        <>
-          {/* Horizontal arrow line with flow animation */}
-          <motion.path
-            d="M5 15 L45 15"
-            fill="none"
-            stroke="url(#arrowGradient)"
-            strokeWidth="2"
-            strokeDasharray="4 4"
-            initial={{ strokeDashoffset: 0 }}
-            animate={{ strokeDashoffset: isActive ? -20 : 0 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          />
-          {/* Arrow head */}
-          <motion.path
-            d="M40 8 L52 15 L40 22"
-            fill="none"
-            stroke="hsl(var(--primary))"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: isActive ? 1 : 0.5 }}
-          />
-        </>
+      {isCompleted && !isActive ? (
+        <CheckCircle2 className="w-5 h-5" />
       ) : (
-        <>
-          {/* Vertical arrow line with flow animation */}
-          <motion.path
-            d="M15 5 L15 45"
-            fill="none"
-            stroke="url(#arrowGradient)"
-            strokeWidth="2"
-            strokeDasharray="4 4"
-            initial={{ strokeDashoffset: 0 }}
-            animate={{ strokeDashoffset: isActive ? -20 : 0 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          />
-          {/* Arrow head */}
-          <motion.path
-            d="M8 40 L15 52 L22 40"
-            fill="none"
-            stroke="hsl(var(--primary))"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: isActive ? 1 : 0.5 }}
-          />
-        </>
+        index + 1
       )}
-    </svg>
+      
+      {/* Active pulse ring */}
+      {isActive && (
+        <motion.div
+          className="absolute inset-0 rounded-full border-2 border-primary"
+          initial={{ scale: 1, opacity: 1 }}
+          animate={{ scale: 1.8, opacity: 0 }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }}
+        />
+      )}
+    </motion.div>
   );
 };
 
@@ -387,28 +426,28 @@ const InvestorInfographic: React.FC = () => {
       variant: 'invest' as const,
       title: 'Investi',
       description: 'Da €100',
-      detail: 'Investimento minimo accessibile'
+      detail: 'Investimento minimo accessibile per tutti'
     },
     {
       id: 1,
       variant: 'acquire' as const,
       title: 'Acquistiamo',
       description: 'Immobili strategici',
-      detail: 'Vicino alle università'
+      detail: 'Vicino alle università di Torino'
     },
     {
       id: 2,
       variant: 'manage' as const,
       title: 'Gestiamo',
       description: 'Tutto incluso',
-      detail: 'Contratti e manutenzione'
+      detail: 'Contratti, inquilini e manutenzione'
     },
     {
       id: 3,
       variant: 'earn' as const,
       title: 'Guadagni',
       description: '7-9% annuo',
-      detail: 'Report trimestrali'
+      detail: 'Report trimestrali trasparenti'
     }
   ];
 
@@ -446,134 +485,163 @@ const InvestorInfographic: React.FC = () => {
         </p>
       </motion.div>
 
-      {/* Desktop: Horizontal Flow */}
+      {/* Desktop: Horizontal Flow with Premium Design */}
       <div className="hidden md:block mb-12">
-        <div className="flex items-center justify-center gap-2 lg:gap-4">
-          {steps.map((step, index) => (
-            <React.Fragment key={step.id}>
-              {/* Step */}
+        <div className="relative">
+          {/* Connecting line */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-border -translate-y-1/2 z-0 mx-16">
+            <motion.div
+              className="h-full bg-gradient-to-r from-primary via-primary to-primary/50 rounded-full"
+              initial={{ width: "0%" }}
+              animate={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          </div>
+          
+          <div className="relative z-10 flex items-start justify-between">
+            {steps.map((step, index) => (
               <motion.div
-                className="flex flex-col items-center text-center"
+                key={step.id}
+                className="flex flex-col items-center text-center w-1/4 px-2"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
-                <House
-                  isActive={activeStep === index}
-                  variant={step.variant}
-                  onClick={() => setActiveStep(index)}
-                />
+                {/* Card container */}
                 <motion.div
-                  className={`mt-3 px-3 py-1 rounded-full text-xs font-bold transition-colors ${
+                  className={`p-4 lg:p-6 rounded-2xl border-2 bg-card transition-all duration-300 cursor-pointer ${
+                    activeStep === index 
+                      ? 'border-primary shadow-lg shadow-primary/10' 
+                      : 'border-border hover:border-primary/50'
+                  }`}
+                  onClick={() => setActiveStep(index)}
+                  whileHover={{ y: -4 }}
+                >
+                  <PremiumHouse
+                    isActive={activeStep === index}
+                    variant={step.variant}
+                    size="lg"
+                  />
+                </motion.div>
+                
+                {/* Step number badge */}
+                <motion.div
+                  className={`mt-4 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
                     activeStep === index 
                       ? 'bg-primary text-primary-foreground' 
-                      : 'bg-muted text-muted-foreground'
+                      : activeStep > index
+                        ? 'bg-primary/20 text-primary'
+                        : 'bg-muted text-muted-foreground'
                   }`}
                 >
-                  {index + 1}
+                  {activeStep > index ? <CheckCircle2 className="w-4 h-4" /> : index + 1}
                 </motion.div>
-                <h3 className={`mt-2 text-lg font-bold transition-colors ${
+                
+                {/* Text content */}
+                <h3 className={`mt-3 text-lg font-bold transition-colors ${
                   activeStep === index ? 'text-primary' : 'text-foreground'
                 }`}>
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted-foreground max-w-[120px]">
+                <p className="text-sm text-muted-foreground mt-1">
                   {step.description}
                 </p>
                 <motion.p
-                  className="text-xs text-muted-foreground/70 max-w-[120px] mt-1"
+                  className="text-xs text-muted-foreground/70 mt-2 max-w-[140px]"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ 
                     opacity: activeStep === index ? 1 : 0, 
                     height: activeStep === index ? 'auto' : 0 
                   }}
+                  transition={{ duration: 0.3 }}
                 >
                   {step.detail}
                 </motion.p>
               </motion.div>
-
-              {/* Arrow between steps */}
-              {index < steps.length - 1 && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.8 }}
-                  transition={{ duration: 0.5, delay: index * 0.15 + 0.1 }}
-                >
-                  <AnimatedArrow 
-                    direction="horizontal" 
-                    isActive={activeStep >= index} 
-                  />
-                </motion.div>
-              )}
-            </React.Fragment>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Mobile: Vertical Flow */}
+      {/* Mobile: Vertical Timeline with Cards */}
       <div className="md:hidden mb-10">
-        <div className="flex flex-col items-center gap-2">
-          {steps.map((step, index) => (
-            <React.Fragment key={step.id}>
-              {/* Step */}
+        <div className="relative pl-14">
+          {/* Timeline line */}
+          <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-border">
+            <motion.div
+              className="w-full bg-primary rounded-full origin-top"
+              initial={{ height: "0%" }}
+              animate={{ height: `${((activeStep + 1) / steps.length) * 100}%` }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          </div>
+          
+          {/* Steps */}
+          <div className="space-y-6">
+            {steps.map((step, index) => (
               <motion.div
-                className="flex items-center gap-4 w-full max-w-xs"
+                key={step.id}
+                className="relative"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
-                <House
-                  isActive={activeStep === index}
-                  variant={step.variant}
-                  onClick={() => setActiveStep(index)}
-                />
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className={`px-2 py-0.5 rounded-full text-xs font-bold transition-colors ${
-                      activeStep === index 
-                        ? 'bg-primary text-primary-foreground' 
-                        : 'bg-muted text-muted-foreground'
-                    }`}>
-                      {index + 1}
-                    </span>
-                    <h3 className={`text-base font-bold transition-colors ${
-                      activeStep === index ? 'text-primary' : 'text-foreground'
-                    }`}>
-                      {step.title}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    {step.description}
-                  </p>
-                  <motion.p
-                    className="text-xs text-muted-foreground/70 mt-0.5"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ 
-                      opacity: activeStep === index ? 1 : 0, 
-                      height: activeStep === index ? 'auto' : 0 
-                    }}
-                  >
-                    {step.detail}
-                  </motion.p>
-                </div>
-              </motion.div>
-
-              {/* Arrow between steps */}
-              {index < steps.length - 1 && (
-                <motion.div
-                  className="my-1"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: isInView ? 1 : 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.15 + 0.1 }}
-                >
-                  <AnimatedArrow 
-                    direction="vertical" 
-                    isActive={activeStep >= index} 
+                {/* Timeline node */}
+                <div className="absolute -left-14 top-4">
+                  <TimelineNode 
+                    index={index} 
+                    isActive={activeStep === index}
+                    isCompleted={activeStep > index}
                   />
+                </div>
+                
+                {/* Step card */}
+                <motion.div
+                  className={`p-4 rounded-2xl border-2 bg-card transition-all duration-300 ${
+                    activeStep === index 
+                      ? 'border-primary shadow-lg shadow-primary/10' 
+                      : 'border-border'
+                  }`}
+                  onClick={() => setActiveStep(index)}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="flex items-start gap-4">
+                    {/* House */}
+                    <div className="flex-shrink-0">
+                      <PremiumHouse
+                        isActive={activeStep === index}
+                        variant={step.variant}
+                        size="md"
+                      />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1 min-w-0 pt-1">
+                      <h3 className={`text-lg font-bold transition-colors ${
+                        activeStep === index ? 'text-primary' : 'text-foreground'
+                      }`}>
+                        {step.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {step.description}
+                      </p>
+                      <motion.p
+                        className="text-xs text-muted-foreground/70 mt-2"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ 
+                          opacity: activeStep === index ? 1 : 0, 
+                          height: activeStep === index ? 'auto' : 0 
+                        }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {step.detail}
+                      </motion.p>
+                    </div>
+                  </div>
                 </motion.div>
-              )}
-            </React.Fragment>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
