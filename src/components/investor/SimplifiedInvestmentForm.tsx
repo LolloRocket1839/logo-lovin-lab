@@ -97,7 +97,19 @@ const SimplifiedInvestmentForm = () => {
     return {};
   };
 
+  // Get prefill email BEFORE form initialization (from mini-form)
+  const getPrefillEmail = (): string => {
+    const prefillEmail = localStorage.getItem('junglerent_prefill_email');
+    if (prefillEmail) {
+      // Remove immediately to prevent duplicates
+      localStorage.removeItem('junglerent_prefill_email');
+      return prefillEmail;
+    }
+    return '';
+  };
+
   const savedData = getSavedFormData();
+  const prefillEmail = getPrefillEmail();
   const savedStep = parseInt(localStorage.getItem(`${STORAGE_KEY}_step`) || "0");
 
   const form = useForm<FormData>({
@@ -105,7 +117,8 @@ const SimplifiedInvestmentForm = () => {
     mode: "onChange",
     defaultValues: {
       full_name: savedData.full_name || "",
-      email: savedData.email || "",
+      // Priority: prefillEmail > savedData.email > empty string
+      email: prefillEmail || savedData.email || "",
       phone: savedData.phone || "+39 ",
       investor_type: savedData.investor_type || "",
       investment_amount_range: savedData.investment_amount_range || "",
@@ -133,15 +146,6 @@ const SimplifiedInvestmentForm = () => {
     }
   }, [languageSelected]);
 
-  // Pre-fill email from mini-form
-  useEffect(() => {
-    if (!languageSelected) return;
-    const prefillEmail = localStorage.getItem('junglerent_prefill_email');
-    if (prefillEmail && !form.getValues('email')) {
-      form.setValue('email', prefillEmail);
-      localStorage.removeItem('junglerent_prefill_email');
-    }
-  }, [languageSelected, form]);
 
   // Auto-save form data
   useEffect(() => {
