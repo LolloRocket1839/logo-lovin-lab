@@ -33,8 +33,17 @@ const Index = () => {
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content="affitti torino, studenti torino, investimenti immobiliari, property management, politecnico torino, università torino, san salvario, crocetta, affitti studenti, rental management turin, immobilien investment italien, investissement immobilier italie, student housing turin switzerland investors, real estate torino svizzera, immobilieninvestition schweiz italien" />
+        <meta name="keywords" content="affitti torino, affitti studenti torino, investimenti immobiliari piemonte, property management italia, gestione affitti brevi italia, student housing italia nord, politecnico torino alloggi, università torino stanze, affitti san salvario, affitti crocetta torino, case studenti piemonte, rendita immobiliare torino, immobilien investment italien, investissement immobilier italie, student housing turin switzerland investors, real estate torino svizzera, immobilieninvestition schweiz italien" />
         <link rel="canonical" href="https://junglerent.it/" />
+        
+        {/* Geo Targeting */}
+        <meta name="geo.region" content="IT-21" />
+        <meta name="geo.placename" content="Torino" />
+        <meta name="geo.position" content="45.0703;7.6869" />
+        <meta name="ICBM" content="45.0703, 7.6869" />
+        
+        {/* Content Language */}
+        <meta httpEquiv="content-language" content="it-IT, en-US" />
         
         {/* Hreflang for multilingual SEO */}
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/" />
