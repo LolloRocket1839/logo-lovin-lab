@@ -33,12 +33,15 @@ const Index = () => {
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content="affitti torino, studenti torino, investimenti immobiliari, property management, politecnico torino, università torino, san salvario, crocetta, affitti studenti, rental management turin" />
+        <meta name="keywords" content="affitti torino, studenti torino, investimenti immobiliari, property management, politecnico torino, università torino, san salvario, crocetta, affitti studenti, rental management turin, immobilien investment italien, investissement immobilier italie, student housing turin switzerland investors, real estate torino svizzera, immobilieninvestition schweiz italien" />
         <link rel="canonical" href="https://junglerent.it/" />
         
         {/* Hreflang for multilingual SEO */}
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/" />
+        <link rel="alternate" hrefLang="de-CH" href="https://junglerent.it/" />
+        <link rel="alternate" hrefLang="fr-CH" href="https://junglerent.it/" />
+        <link rel="alternate" hrefLang="it-CH" href="https://junglerent.it/" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/" />
 
         {/* Open Graph */}
