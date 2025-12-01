@@ -73,7 +73,7 @@
     "iAmStudent": "Sono uno Studente",
     "iAmInvestor": "Sono un Investitore",
     "contactLorenzo": "Contatta Lorenzo",
-    "howItWorks": "Come Funziona",
+    "howItWorks": "Come funziona",
     "trustSafe": "Contratti sicuri",
     "trustSupport": "Supporto dedicato",
     "trustNoFees": "Zero commissioni",
@@ -276,6 +276,53 @@
     "talkToLorenzo": "Parla con Lorenzo",
     "bookCall": "Mostra Interesse",
     "ctaButton": "Contatta un Advisor"
+  },
+  "infographic": {
+    "badge": "Come funziona",
+    "title": "Il modello Jungle Rent",
+    "subtitle": "Investimenti immobiliari semplificati",
+    "steps": {
+      "invest": {
+        "title": "Investi",
+        "description": "Da €100",
+        "detail": "Investimento minimo accessibile per tutti"
+      },
+      "acquire": {
+        "title": "Acquistiamo",
+        "description": "Immobili strategici",
+        "detail": "Vicino alle università di Torino"
+      },
+      "manage": {
+        "title": "Gestiamo",
+        "description": "Tutto incluso",
+        "detail": "Contratti, inquilini e manutenzione"
+      },
+      "earn": {
+        "title": "Guadagni",
+        "description": "7-9% annuo",
+        "detail": "Report trimestrali trasparenti"
+      }
+    },
+    "metrics": {
+      "yield": {
+        "label": "Rental yield",
+        "description": "Rendimento medio annuo"
+      },
+      "occupancy": {
+        "label": "Occupazione",
+        "description": "Tasso di occupazione"
+      },
+      "students": {
+        "label": "Studenti",
+        "description": "Universitari a Torino"
+      },
+      "universities": {
+        "label": "Università",
+        "description": "Atenei nel territorio"
+      }
+    },
+    "disclaimer": "*Valori stimati basati su analisi di mercato",
+    "cta": "Zero stress. Gestione completa inclusa."
   },
   "investors": {
     "metaTitle": "Investimenti Immobiliari Torino - Rendimenti Sopra Mercato | Jungle Rent",

@@ -303,6 +303,53 @@
     "bookCall": "Show Interest",
     "ctaButton": "Contact an Advisor"
   },
+  "infographic": {
+    "badge": "How it works",
+    "title": "The Jungle Rent model",
+    "subtitle": "Simplified real estate investments",
+    "steps": {
+      "invest": {
+        "title": "Invest",
+        "description": "From €100",
+        "detail": "Accessible minimum investment for everyone"
+      },
+      "acquire": {
+        "title": "We acquire",
+        "description": "Strategic properties",
+        "detail": "Near Turin universities"
+      },
+      "manage": {
+        "title": "We manage",
+        "description": "All-inclusive",
+        "detail": "Contracts, tenants and maintenance"
+      },
+      "earn": {
+        "title": "You earn",
+        "description": "7-9% annual",
+        "detail": "Transparent quarterly reports"
+      }
+    },
+    "metrics": {
+      "yield": {
+        "label": "Rental yield",
+        "description": "Average annual return"
+      },
+      "occupancy": {
+        "label": "Occupancy",
+        "description": "Occupancy rate"
+      },
+      "students": {
+        "label": "Students",
+        "description": "University students in Turin"
+      },
+      "universities": {
+        "label": "Universities",
+        "description": "Universities in the area"
+      }
+    },
+    "disclaimer": "*Estimated values based on market analysis",
+    "cta": "Zero stress. Full management included."
+  },
   "investors": {
     "metaTitle": "Real Estate Investments Turin - Above-Market Returns | Jungle Rent",
     "metaDescription": "Invest in university properties in Turin with above-market returns. Full management included: contracts, maintenance, tenants. Zero stress for you.",
