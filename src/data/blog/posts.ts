@@ -1148,13 +1148,15 @@ export const searchPosts = (posts: BlogPost[], searchQuery: string, lang: 'it' |
   const query = searchQuery.toLowerCase().trim();
   
   return posts.filter(post => {
-    const translation = post.translations[lang];
-    const titleMatch = translation.title.toLowerCase().includes(query);
-    const excerptMatch = translation.excerpt.toLowerCase().includes(query);
-    const tagsMatch = translation.tags.some(tag => tag.toLowerCase().includes(query));
-    const keywordsMatch = translation.seo.keywords.some(keyword => 
+    const translation = post.translations?.[lang] || post.translations?.it;
+    if (!translation) return false;
+    
+    const titleMatch = translation.title?.toLowerCase().includes(query) || false;
+    const excerptMatch = translation.excerpt?.toLowerCase().includes(query) || false;
+    const tagsMatch = translation.tags?.some(tag => tag.toLowerCase().includes(query)) || false;
+    const keywordsMatch = translation.seo?.keywords?.some(keyword => 
       keyword.toLowerCase().includes(query)
-    );
+    ) || false;
     
     return titleMatch || excerptMatch || tagsMatch || keywordsMatch;
   });
@@ -1164,8 +1166,10 @@ export const getAllTags = (lang: 'it' | 'en' = 'it'): string[] => {
   const tagsSet = new Set<string>();
   
   blogPosts.forEach(post => {
-    const translation = post.translations[lang];
-    translation.tags.forEach(tag => tagsSet.add(tag));
+    const translation = post.translations?.[lang] || post.translations?.it;
+    if (translation?.tags) {
+      translation.tags.forEach(tag => tagsSet.add(tag));
+    }
   });
   
   return Array.from(tagsSet).sort();
@@ -1175,7 +1179,9 @@ export const filterPostsByTags = (posts: BlogPost[], selectedTags: string[], lan
   if (selectedTags.length === 0) return posts;
   
   return posts.filter(post => {
-    const translation = post.translations[lang];
+    const translation = post.translations?.[lang] || post.translations?.it;
+    if (!translation?.tags) return false;
+    
     return selectedTags.some(selectedTag => 
       translation.tags.includes(selectedTag)
     );
