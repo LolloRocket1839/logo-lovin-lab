@@ -49,6 +49,9 @@ export const MiniInvestorForm = () => {
       
       if (error) throw error;
 
+      // Save email for pre-filling the full form
+      localStorage.setItem('junglerent_prefill_email', email.toLowerCase().trim());
+      
       toast.success(i18n.language.startsWith('en') ? "Thank you! We'll be in touch." : "Grazie! Ti contatteremo presto.");
       
       // Redirect to full form to complete profile

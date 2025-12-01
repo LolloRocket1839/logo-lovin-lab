@@ -312,9 +312,10 @@ interface CounterMetricProps {
   label: string;
   description: string;
   isInView: boolean;
+  isEstimate?: boolean;
 }
 
-const CounterMetric: React.FC<CounterMetricProps> = ({ value, suffix, label, description, isInView }) => {
+const CounterMetric: React.FC<CounterMetricProps> = ({ value, suffix, label, description, isInView, isEstimate = false }) => {
   const count = useCounter(value, 2000, isInView);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -343,7 +344,7 @@ const CounterMetric: React.FC<CounterMetricProps> = ({ value, suffix, label, des
           animate={{ scale: isHovered ? 1.05 : 1 }}
           transition={{ duration: 0.2 }}
         >
-          {count}{suffix}
+          {count}{suffix}{isEstimate && <span className="text-lg md:text-xl align-top text-muted-foreground/70">*</span>}
         </motion.div>
         
         <div className="text-sm md:text-base font-semibold text-foreground mb-1">
@@ -412,10 +413,10 @@ const InvestorInfographic: React.FC = () => {
   ];
 
   const metrics = [
-    { value: 8, suffix: '.34%', label: 'Rental Yield', description: 'Rendimento medio annuo' },
-    { value: 95, suffix: '%', label: 'Occupazione', description: 'Tasso di occupazione' },
-    { value: 90, suffix: 'k+', label: 'Studenti', description: 'Universitari a Torino' },
-    { value: 7, suffix: '', label: 'Università', description: 'Atenei nel territorio' }
+    { value: 8, suffix: '.34%', label: 'Rental Yield', description: 'Rendimento medio annuo', isEstimate: true },
+    { value: 95, suffix: '%', label: 'Occupazione', description: 'Tasso di occupazione', isEstimate: true },
+    { value: 90, suffix: 'k+', label: 'Studenti', description: 'Universitari a Torino', isEstimate: false },
+    { value: 7, suffix: '', label: 'Università', description: 'Atenei nel territorio', isEstimate: false }
   ];
 
   return (
@@ -591,13 +592,24 @@ const InvestorInfographic: React.FC = () => {
             label={metric.label}
             description={metric.description}
             isInView={isInView}
+            isEstimate={metric.isEstimate}
           />
         ))}
       </motion.div>
 
+      {/* Estimate Disclaimer */}
+      <motion.p
+        className="text-center text-xs text-muted-foreground/60 mt-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isInView ? 1 : 0 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
+        *Valori stimati basati su analisi di mercato
+      </motion.p>
+
       {/* Bottom CTA */}
       <motion.div 
-        className="mt-8 md:mt-10 text-center"
+        className="mt-6 md:mt-8 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: isInView ? 1 : 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
