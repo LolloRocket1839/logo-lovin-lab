@@ -565,6 +565,25 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-2px) scale(1.02);
   }
+  
+  /* Touch-friendly targets - minimum 48x48px for mobile accessibility */
+  .touch-target {
+    min-width: 48px;
+    min-height: 48px;
+    @apply flex items-center justify-center;
+  }
+  
+  /* Optimized animations for mobile - use opacity and transform only */
+  .animate-optimized {
+    will-change: transform, opacity;
+  }
+  
+  /* Remove scale animations on mobile for better performance */
+  @media (max-width: 768px) {
+    .hover\:scale-\[1\.02\]:hover {
+      transform: translateY(-2px);
+    }
+  }
 }
 
 /* Elegant ampersand styling */

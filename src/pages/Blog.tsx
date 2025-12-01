@@ -7,6 +7,7 @@ import { BlogGrid } from "@/components/blog/BlogGrid";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BottomNav } from "@/components/BottomNav";
 import { BlogCategory } from "@/types/blog";
 import { getPostsByCategory, searchPosts, filterPostsByTags } from "@/data/blog/posts";
 import { useTranslation } from "react-i18next";
@@ -104,8 +105,11 @@ const Blog = () => {
         </section>
       </div>
       
-      <Footer />
+      <div className="pb-16 lg:pb-0">
+        <Footer />
+      </div>
       <ScrollToTop />
+      <BottomNav />
     </main>
   );
 };

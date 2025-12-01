@@ -20,9 +20,11 @@ export const StickyCTA = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          if (window.scrollY > window.innerHeight && !isDismissed) {
+          // Show earlier - after 50vh instead of 100vh
+          const threshold = window.innerHeight * 0.5;
+          if (window.scrollY > threshold && !isDismissed) {
             setIsVisible(true);
-          } else if (window.scrollY <= window.innerHeight) {
+          } else if (window.scrollY <= threshold) {
             setIsVisible(false);
           }
 
@@ -80,23 +82,22 @@ export const StickyCTA = () => {
 
   if (!isVisible) return null;
 
-  // Render investor CTA
+  // Render investor CTA - positioned above BottomNav
   if (activeSection === 'investor') {
     return (
       <div 
-        className="fixed bottom-0 left-0 right-0 z-40 md:hidden
-                    backdrop-blur-xl bg-background/95 border-t border-border/50
-                    transition-all duration-500 animate-fade-in"
-        style={{ transition: 'transform 0.3s ease-in-out, opacity 0.5s ease' }}
+        className="fixed bottom-16 left-0 right-0 z-40 md:hidden
+                    backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
+                    transition-all duration-300 animate-fade-in shadow-lg"
       >
-        <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2 transition-spacing">
+        <div className="container px-3 py-3 flex items-center justify-between gap-2">
           <Button
             onClick={handleInvestorWhatsApp}
             size="lg"
-            variant="premium"
-            className="flex-1 h-11 sm:h-12 text-xs sm:text-sm md:text-base group shadow-xl"
+            variant="secondary"
+            className="flex-1 h-14 text-sm font-semibold group shadow-xl touch-target"
           >
-            <MessageCircle className="mr-2 w-4 h-4" />
+            <MessageCircle className="mr-2 w-5 h-5" />
             {t('investor.talkToAdvisor')}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
@@ -104,44 +105,41 @@ export const StickyCTA = () => {
             onClick={() => setIsDismissed(true)}
             variant="ghost"
             size="icon"
-            className="h-11 sm:h-12 w-11 sm:w-12 flex-shrink-0"
+            className="h-14 w-14 flex-shrink-0 text-primary-foreground hover:bg-primary-foreground/10 touch-target"
             aria-label={t('stickyCta.closeLabel')}
           >
-            <X className="h-4 w-4" />
+            <X className="h-5 w-5" />
           </Button>
         </div>
       </div>
     );
   }
 
-  // Render default CTA (Lorenzo)
+  // Render default CTA (Lorenzo) - positioned above BottomNav
   return (
-      <div 
-        className="fixed bottom-0 left-0 right-0 z-40 md:hidden
-                    backdrop-blur-xl bg-background/95 border-t border-border/50
-                    transition-all duration-500 animate-fade-in"
-        style={{ transition: 'transform 0.3s ease-in-out, opacity 0.5s ease' }}
-      >
-      <div className="container px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2 transition-spacing">
-        <div className="flex gap-2 flex-1">
-          <Button
-            onClick={handleContactLorenzo}
-            size="sm"
-            variant="premium"
-            className="flex-1 h-11 sm:h-12 text-xs sm:text-sm group shadow-lg"
-          >
-            <MessageCircle className="mr-1 sm:mr-1.5 h-3 w-3 sm:h-4 sm:w-4" />
-            {t('hero.contactLorenzo')}
-          </Button>
-        </div>
+    <div 
+      className="fixed bottom-16 left-0 right-0 z-40 md:hidden
+                  backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
+                  transition-all duration-300 animate-fade-in shadow-lg"
+    >
+      <div className="container px-3 py-3 flex items-center justify-between gap-2">
+        <Button
+          onClick={handleContactLorenzo}
+          size="lg"
+          variant="secondary"
+          className="flex-1 h-14 text-sm font-semibold group shadow-xl touch-target"
+        >
+          <MessageCircle className="mr-2 w-5 h-5" />
+          {t('hero.contactLorenzo')}
+        </Button>
         <Button
           onClick={() => setIsDismissed(true)}
           variant="ghost"
           size="icon"
-          className="h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0"
+          className="h-14 w-14 flex-shrink-0 text-primary-foreground hover:bg-primary-foreground/10 touch-target"
           aria-label={t('stickyCta.closeLabel')}
         >
-          <X className="h-3 w-3 sm:h-4 sm:w-4" />
+          <X className="h-5 w-5" />
         </Button>
       </div>
     </div>

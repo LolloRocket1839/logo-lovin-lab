@@ -12,6 +12,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { StickyCTA } from "@/components/StickyCTA";
+import { BottomNav } from "@/components/BottomNav";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 
@@ -82,9 +83,12 @@ const Index = () => {
         <BlogSection />
       </div>
       <FAQSection />
-      <Footer />
+      <div className="pb-16 lg:pb-0">
+        <Footer />
+      </div>
       <ScrollToTop />
       <StickyCTA />
+      <BottomNav />
     </main>
   );
 };
