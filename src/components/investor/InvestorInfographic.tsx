@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Sparkles, CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Premium SVG House Component with refined architecture
 interface PremiumHouseProps {
@@ -651,6 +652,7 @@ const CounterMetric: React.FC<CounterMetricProps> = ({ value, suffix, label, des
 
 // Main Infographic Component
 const InvestorInfographic: React.FC = () => {
+  const { t } = useTranslation();
   const [activeStep, setActiveStep] = useState<number>(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -670,38 +672,38 @@ const InvestorInfographic: React.FC = () => {
     {
       id: 0,
       variant: 'invest' as const,
-      title: 'Investi',
-      description: 'Da €100',
-      detail: 'Investimento minimo accessibile per tutti'
+      title: t('infographic.steps.invest.title'),
+      description: t('infographic.steps.invest.description'),
+      detail: t('infographic.steps.invest.detail')
     },
     {
       id: 1,
       variant: 'acquire' as const,
-      title: 'Acquistiamo',
-      description: 'Immobili strategici',
-      detail: 'Vicino alle università di Torino'
+      title: t('infographic.steps.acquire.title'),
+      description: t('infographic.steps.acquire.description'),
+      detail: t('infographic.steps.acquire.detail')
     },
     {
       id: 2,
       variant: 'manage' as const,
-      title: 'Gestiamo',
-      description: 'Tutto incluso',
-      detail: 'Contratti, inquilini e manutenzione'
+      title: t('infographic.steps.manage.title'),
+      description: t('infographic.steps.manage.description'),
+      detail: t('infographic.steps.manage.detail')
     },
     {
       id: 3,
       variant: 'earn' as const,
-      title: 'Guadagni',
-      description: '7-9% annuo',
-      detail: 'Report trimestrali trasparenti'
+      title: t('infographic.steps.earn.title'),
+      description: t('infographic.steps.earn.description'),
+      detail: t('infographic.steps.earn.detail')
     }
   ];
 
   const metrics = [
-    { value: 8, suffix: '.34%', label: 'Rental yield', description: 'Rendimento medio annuo', isEstimate: true },
-    { value: 95, suffix: '%', label: 'Occupazione', description: 'Tasso di occupazione', isEstimate: true },
-    { value: 90, suffix: 'k+', label: 'Studenti', description: 'Universitari a Torino', isEstimate: false },
-    { value: 7, suffix: '', label: 'Università', description: 'Atenei nel territorio', isEstimate: false }
+    { value: 8, suffix: '.34%', label: t('infographic.metrics.yield.label'), description: t('infographic.metrics.yield.description'), isEstimate: true },
+    { value: 95, suffix: '%', label: t('infographic.metrics.occupancy.label'), description: t('infographic.metrics.occupancy.description'), isEstimate: true },
+    { value: 90, suffix: 'k+', label: t('infographic.metrics.students.label'), description: t('infographic.metrics.students.description'), isEstimate: false },
+    { value: 7, suffix: '', label: t('infographic.metrics.universities.label'), description: t('infographic.metrics.universities.description'), isEstimate: false }
   ];
 
   return (
@@ -721,13 +723,13 @@ const InvestorInfographic: React.FC = () => {
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-semibold text-primary">Come funziona</span>
+          <span className="text-sm font-semibold text-primary">{t('infographic.badge')}</span>
         </div>
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-3">
-          Il modello Jungle Rent
+          {t('infographic.title')}
         </h2>
         <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-          Investimenti immobiliari semplificati
+          {t('infographic.subtitle')}
         </p>
       </motion.div>
 
@@ -918,7 +920,7 @@ const InvestorInfographic: React.FC = () => {
         animate={{ opacity: isInView ? 1 : 0 }}
         transition={{ duration: 0.5, delay: 0.7 }}
       >
-        *Valori stimati basati su analisi di mercato
+        {t('infographic.disclaimer')}
       </motion.p>
 
       {/* Bottom CTA */}
@@ -931,7 +933,7 @@ const InvestorInfographic: React.FC = () => {
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full">
           <CheckCircle2 className="w-4 h-4 text-primary" />
           <span className="text-sm text-muted-foreground">
-            Zero stress. Gestione completa inclusa.
+            {t('infographic.cta')}
           </span>
         </div>
       </motion.div>
