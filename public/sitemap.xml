@@ -6,7 +6,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://junglerent.it/</loc>
-    <lastmod>2025-11-30</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/" />
@@ -22,7 +22,7 @@
   <!-- About Page -->
   <url>
     <loc>https://junglerent.it/chi-siamo</loc>
-    <lastmod>2025-11-30</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
@@ -33,7 +33,7 @@
   <!-- Investors Page -->
   <url>
     <loc>https://junglerent.it/investitori</loc>
-    <lastmod>2025-11-30</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
@@ -44,7 +44,7 @@
   <!-- Investor Form Page -->
   <url>
     <loc>https://junglerent.it/invest</loc>
-    <lastmod>2025-11-30</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/invest" />
@@ -55,7 +55,7 @@
   <!-- Blog Page -->
   <url>
     <loc>https://junglerent.it/blog</loc>
-    <lastmod>2025-11-30</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />

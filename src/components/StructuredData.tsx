@@ -410,7 +410,7 @@ export const StructuredData = () => {
         }
       },
       "datePublished": "2025-11-07",
-      "dateModified": "2025-11-07",
+      "dateModified": "2025-12-01",
       "citation": [
         "https://www.idealista.it/news/",
         "https://www.immobiliare.it/mercato-immobiliare/",
