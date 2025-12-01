@@ -259,6 +259,7 @@ const SimplifiedInvestmentForm = () => {
   ];
 
   const investmentRanges = [
+    { value: "100-5000", label: t("investmentRanges.100-5000") },
     { value: "5000-10000", label: t("investmentRanges.5000-10000") },
     { value: "10000-25000", label: t("investmentRanges.10000-25000") },
     { value: "25000-50000", label: t("investmentRanges.25000-50000") },
