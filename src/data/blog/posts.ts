@@ -2,6 +2,59 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "carnevale-ivrea-battaglia-arance-2025",
+    category: "turisti",
+    date: "2025-12-03",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 65,
+    content: "carnevale-ivrea-battaglia-arance-2025",
+    translations: {
+      it: {
+        title: "Lo storico carnevale di Ivrea: guida completa alla battaglia delle arance da Torino",
+        excerpt: "Guida completa al Carnevale di Ivrea 2025 (1-5 marzo): storia della Mugnaia, battaglia delle arance, programma, biglietti, come arrivare da Torino e cosa mangiare.",
+        seo: {
+          title: "Carnevale Ivrea 2025: guida completa battaglia arance | JungleRent",
+          description: "Carnevale di Ivrea 2025 (1-5 marzo): battaglia delle arance, storia Mugnaia Violetta, programma completo, biglietti €15, treno da Torino 40min, faseuj grass.",
+          keywords: [
+            "carnevale ivrea 2025",
+            "battaglia arance ivrea",
+            "mugnaia violetta",
+            "torino ivrea treno",
+            "faseuj grass",
+            "storico carnevale ivrea",
+            "aranceri ivrea",
+            "piemove studenti",
+            "eventi piemonte marzo",
+            "tradizioni piemontesi"
+          ]
+        },
+        tags: ["Carnevale", "Ivrea", "Eventi", "Torino", "Tradizioni", "Turismo", "Piemonte"]
+      },
+      en: {
+        title: "The historic Ivrea carnival: complete guide to the Battle of Oranges from Turin",
+        excerpt: "Complete guide to Ivrea Carnival 2025 (March 1-5): history of the Mugnaia, Battle of Oranges, schedule, tickets, how to get there from Turin and what to eat.",
+        seo: {
+          title: "Ivrea Carnival 2025: Complete Guide Battle of Oranges | JungleRent",
+          description: "Ivrea Carnival 2025 (March 1-5): Battle of Oranges, Mugnaia Violetta legend, full program, €15 tickets, 40min train from Turin, traditional food guide.",
+          keywords: [
+            "ivrea carnival 2025",
+            "battle of oranges italy",
+            "mugnaia violetta legend",
+            "turin to ivrea train",
+            "faseuj grass recipe",
+            "historic ivrea carnival",
+            "orange throwers ivrea",
+            "piedmont traditions",
+            "italy march events",
+            "italian carnival festivals"
+          ]
+        },
+        tags: ["Carnival", "Ivrea", "Events", "Turin", "Traditions", "Tourism", "Piedmont"]
+      }
+    }
+  },
+  {
     slug: "universita-torino-guida-completa",
     category: "students",
     date: "2025-11-30",
