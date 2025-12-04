@@ -67,6 +67,23 @@ export const StudentSection = () => {
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
       <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
+        {/* Investor-focused market proof header */}
+        <div 
+          className={`text-center mb-8 transition-all duration-700 ${
+            isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+          }`}
+        >
+          <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-2">
+            {t('student.marketProofLabel')}
+          </p>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-foreground">
+            {t('student.marketProofTitle')}
+          </h3>
+          <p className="text-sm text-muted-foreground mt-2 max-w-lg mx-auto">
+            {t('student.marketProofDesc')}
+          </p>
+        </div>
+
         <div className="text-center max-w-2xl mx-auto">
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
