@@ -4,7 +4,6 @@ import { TrustBadge } from "@/components/TrustBadge";
 import { StudentSection } from "@/components/StudentSection";
 import { InvestorSection } from "@/components/InvestorSection";
 import { SellerSection } from "@/components/SellerSection";
-import { TouristSection } from "@/components/TouristSection";
 import { BlogSection } from "@/components/blog/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
@@ -25,8 +24,8 @@ const Index = () => {
     : "Jungle Rent - Smart Rentals and Real Estate Investment in Turin";
   
   const description = isItalian
-    ? "Il tuo rifugio nella giungla immobiliare. Affitti per studenti, gestione immobili e investimenti a Torino. Servizi professionali per studenti, investitori e proprietari."
-    : "Your shelter in the real estate jungle. Student rentals, property management and investments in Turin. Professional services for students, investors and property owners.";
+    ? "Investimenti immobiliari nel mercato universitario di Torino. Rendimenti sopra mercato, gestione professionale completa. 90.000+ studenti, 7 università."
+    : "Real estate investments in Turin's university market. Above-market returns, full professional management. 90,000+ students, 7 universities.";
 
   return (
     <main role="main" className="min-h-screen gradient-jungle-vertical" id="main-content" tabIndex={-1}>
@@ -87,9 +86,6 @@ const Index = () => {
       </div>
       <div className="-mt-12">
         <SellerSection />
-      </div>
-      <div className="-mt-12">
-        <TouristSection />
       </div>
       <div className="-mt-12">
         <BlogSection />
