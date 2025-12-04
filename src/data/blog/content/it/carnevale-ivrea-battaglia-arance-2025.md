@@ -213,11 +213,13 @@ Il **treno è il mezzo più veloce, efficiente e affidabile** per raggiungere Iv
 - **Stazioni di partenza a Torino**: Torino Porta Susa o Torino Porta Nuova (entrambe centrali e facilmente raggiungibili[22][21]
 - **Stazione di arrivo**: Ivrea (stazione centrale, a pochi minuti a piedi dal centro storico)[21]
 
-Per gli **studenti universitari under 26** dell'Università di Torino, del Politecnico di Torino o dell'Università del Piemonte Orientale, è disponibile l'abbonamento gratuito **Piemove - Piemonte Viaggia Studia**, che consente di viaggiare gratuitamente su tutta la rete urbana e suburbana di Torino, sui tram, sulla metropolitana e sui treni del servizio ferroviario urbano (SFM e Servizio Ferroviario Regionale) tra le stazioni cittadine di Torino, incluso il collegamento con Grugliasco.[23][24][16]
+Per gli **studenti universitari under 26** dell'Università di Torino, del Politecnico di Torino o dell'Università del Piemonte Orientale, è disponibile l'abbonamento gratuito **Piemove - Piemonte Viaggia Studia**, che consente di viaggiare gratuitamente su tutta la rete urbana e suburbana di Torino, sui tram, sulla metropolitana e sui treni del servizio ferroviario urbano (SFM e Servizio Ferroviario Regionale) tra le stazioni cittadine di Torino, incluso il collegamento con Grugliasco.[23][24][16] Per una guida completa sulle opzioni di mobilità sostenibile per studenti a Torino, consulta la nostra [guida alla mobilità sostenibile](/blog/mobilita-sostenibile-torino-studenti).
 
 **Importante**: L'abbonamento **Piemove copre solo i trasporti urbani e suburbani entro il territorio di Torino e non estende la copertura fino a Ivrea**, che si trova al di fuori dell'area urbana di Torino. Pertanto, gli studenti dovranno comunque acquistare un biglietto separato per il tratto Torino-Ivrea. Tuttavia, il titolo di viaggio consente di raggiungere gratuitamente la stazione di Torino, contribuendo così al risparmio complessivo del viaggio.[24][23]
 
 **Come accedere al programma Piemove**: Gli studenti devono registrarsi sulla piattaforma **bip.piemonte.it** utilizzando le credenziali SPID o CIE, accedere all'area riservata e selezionare "Richiedi Titolo di Viaggio gratuito per studenti Under 26". L'abbonamento ha validità annuale con verifica automatica semestrale dei requisiti (età e iscrizione attiva). Per i nuovi immatricolati, è necessario attendere almeno 24 ore dall'immatricolazione per l'allineamento dei sistemi informatici.[25][23]
+
+> **Scopri altri eventi a Torino**: Se ti è piaciuta questa guida al Carnevale di Ivrea, potrebbe interessarti anche la nostra [guida agli eventi di Torino a gennaio 2026](/blog/eventi-torino-gennaio-2026) con concerti, mostre e Luci d'Artista.
 
 ### In autobus
 

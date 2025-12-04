@@ -67,7 +67,7 @@
   <!-- Blog Page -->
   <url>
     <loc>https://junglerent.it/blog</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
@@ -76,6 +76,25 @@
     <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog" />
     <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog" />
+  </url>
+
+  <!-- Blog Post: Carnevale Ivrea Battaglia Arance 2025 -->
+  <url>
+    <loc>https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025</loc>
+    <lastmod>2025-12-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mole-antonelliana-mountains.jpg</image:loc>
+      <image:title>Carnevale di Ivrea 2025 Battaglia delle Arance</image:title>
+      <image:caption>Guida completa al Carnevale di Ivrea: storia della Mugnaia, battaglia delle arance, come arrivare da Torino</image:caption>
+    </image:image>
   </url>
 
   <!-- Blog Post: Università di Torino guida completa -->
