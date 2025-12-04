@@ -213,11 +213,13 @@ The **train is the fastest, most efficient, and most reliable** way to reach Ivr
 - **Departure stations in Turin**: Torino Porta Susa or Torino Porta Nuova (both central and easily accessible)[22][21]
 - **Arrival station**: Ivrea (central station, a few minutes' walk from the historic center)[21]
 
-For **university students under 26** from the University of Turin, Polytechnic University of Turin, or University of Eastern Piedmont, the free **Piemove - Piedmont Travel Study** subscription is available, which allows free travel on the entire urban and suburban network of Turin, on trams, metro, and urban railway service (SFM and Regional Railway Service) trains between Turin city stations, including the connection with Grugliasco.[23][24][16]
+For **university students under 26** from the University of Turin, Polytechnic University of Turin, or University of Eastern Piedmont, the free **Piemove - Piedmont Travel Study** subscription is available, which allows free travel on the entire urban and suburban network of Turin, on trams, metro, and urban railway service (SFM and Regional Railway Service) trains between Turin city stations, including the connection with Grugliasco.[23][24][16] For a complete guide to sustainable mobility options for students in Turin, check out our [sustainable mobility guide](/blog/mobilita-sostenibile-torino-studenti).
 
 **Important**: The **Piemove subscription only covers urban and suburban transport within the Turin territory and does not extend coverage to Ivrea**, which is outside Turin's urban area. Therefore, students will still need to purchase a separate ticket for the Turin-Ivrea section. However, the travel pass allows free access to Turin's station, thus contributing to overall travel savings.[24][23]
 
 **How to access the Piemove program**: Students must register on the **bip.piemonte.it** platform using SPID or CIE credentials, access the reserved area, and select "Request Free Travel Pass for Under 26 Students". The subscription is valid annually with automatic semi-annual verification of requirements (age and active enrollment). For new enrollees, it is necessary to wait at least 24 hours after enrollment for the IT systems to align.[25][23]
+
+> **Discover more Turin events**: If you enjoyed this Ivrea Carnival guide, you might also be interested in our [Turin events guide for January 2026](/blog/eventi-torino-gennaio-2026) featuring concerts, exhibitions, and Luci d'Artista.
 
 ### By bus
 
