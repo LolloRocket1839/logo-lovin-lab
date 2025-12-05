@@ -10,17 +10,19 @@
     "contacts": "Contacts",
     "contactUs": "Contact us"
   },
-  "about": {
-    "metaTitle": "About JungleRent - Property Management Turin | Founded 2024",
-    "metaDescription": "JungleRent buys and manages properties in Turin through an innovative platform. Founded in 2024 by Lorenzo Oni-Joseph. Short-term rentals, student housing, and real estate investments. €20,000 funded by Piedmont Region.",
+"about": {
+    "metaTitle": "About JungleRent - Innovative Startup Property Management Turin | Founded 2025",
+    "metaDescription": "JUNGLE RENT S.R.L. is an Innovative Startup that buys and manages properties in Turin. Founded on October 24, 2025 by Lorenzo Oni-Joseph and Andrea Niccolaini. Incubated by 2i3T - University of Turin. VAT ID IT13333450016.",
     "title": "About JungleRent",
-    "subtitle": "We buy and manage properties in Turin through our innovative platform",
-    "foundedLabel": "Founded",
-    "foundersLabel": "Founders",
+    "subtitle": "Innovative Startup that buys and manages properties in Turin through our technology platform",
+    "foundedLabel": "Date of Incorporation",
+    "foundedDate": "October 2025",
+    "legalForm": "Innovative Startup S.r.l.",
+    "foundersLabel": "Co-Founders",
     "founderLabel": "Founder",
-    "fundingLabel": "Funding",
-    "fundingSource": "Piedmont Region (2i3T)",
-    "locationLabel": "Location",
+    "capitalLabel": "Share Capital",
+    "capitalDesc": "Fully paid up",
+    "locationLabel": "Registered Office",
     "servicesTitle": "Services Offered by JungleRent",
     "service1Title": "Innovative property management platform",
     "service1Desc": "We buy and manage properties through our technology platform. Complete management on Airbnb, Booking.com with dynamic pricing, cleaning, and automated check-in/out.",
@@ -497,7 +499,7 @@
   "footer": {
     "tagline": "Your haven in the real estate jungle",
     "taglineAlt": "The revolutionary way to rent in Turin",
-    "copyright": "© 2024 Jungle Rent",
+    "copyright": "© 2025 JUNGLE RENT S.R.L.",
     "quickLinks": "Quick links",
     "legal": "Legal",
     "privacy": "Privacy policy",
@@ -515,7 +517,8 @@
     "bottomTagline": "Your safe haven in the real estate jungle",
     "bottomText": "Supported by 2i3T - Business Incubator of the University of Turin",
     "rights": "All rights reserved",
-    "followUs": "Follow us"
+    "followUs": "Follow us",
+    "legalAddress": "Via Gioacchino Quarello 15/A, 10135 Turin"
   },
   "logoModal": {
     "logoAlt": "Jungle Rent logo",

@@ -10,17 +10,19 @@
     "contacts": "Contatti",
     "contactUs": "Contattaci"
   },
-  "about": {
-    "metaTitle": "Chi è JungleRent - Property Management Torino | Fondata 2024",
-    "metaDescription": "JungleRent compra e gestisce immobili a Torino tramite una piattaforma innovativa. Fondata nel 2024 da Lorenzo Oni-Joseph. Affitti brevi, alloggi studenti e investimenti immobiliari. €20.000 finanziati dalla Regione Piemonte.",
+"about": {
+    "metaTitle": "Chi è JungleRent - Start-up Innovativa Property Management Torino | Fondata 2025",
+    "metaDescription": "JUNGLE RENT S.R.L. è una Start-up Innovativa che compra e gestisce immobili a Torino. Fondata il 24 ottobre 2025 da Lorenzo Oni-Joseph e Andrea Niccolaini. Incubata da 2i3T - Università di Torino. P.IVA 13333450016.",
     "title": "Chi è JungleRent",
-    "subtitle": "Compriamo e gestiamo immobili a Torino tramite la nostra piattaforma innovativa",
-    "foundedLabel": "Anno di Fondazione",
-    "foundersLabel": "Fondatori",
+    "subtitle": "Start-up Innovativa che compra e gestisce immobili a Torino tramite la nostra piattaforma tecnologica",
+    "foundedLabel": "Data di Costituzione",
+    "foundedDate": "Ottobre 2025",
+    "legalForm": "Start-up Innovativa S.r.l.",
+    "foundersLabel": "Soci Fondatori",
     "founderLabel": "Fondatore",
-    "fundingLabel": "Finanziamento",
-    "fundingSource": "Regione Piemonte (2i3T)",
-    "locationLabel": "Sede",
+    "capitalLabel": "Capitale Sociale",
+    "capitalDesc": "Interamente versato",
+    "locationLabel": "Sede Legale",
     "servicesTitle": "Servizi Offerti da JungleRent",
     "service1Title": "Piattaforma innovativa di gestione immobili",
     "service1Desc": "Compriamo e gestiamo immobili tramite la nostra piattaforma tecnologica. Gestione completa su Airbnb, Booking.com con ottimizzazione prezzi, pulizie e check-in/out automatizzati.",
@@ -485,7 +487,7 @@
   },
   "footer": {
     "taglineAlt": "Il modo rivoluzionario di affittare a Torino",
-    "copyright": "© 2024 Jungle Rent. Tutti i diritti riservati.",
+    "copyright": "© 2025 JUNGLE RENT S.R.L. Tutti i diritti riservati.",
     "contactTitle": "Contatti",
     "location": "Torino, Italia",
     "forStudentsTitle": "Per Studenti",
@@ -494,7 +496,8 @@
     "partnershipTitle": "Partnership",
     "incubatorDesc": "Incubati presso l'Università di Torino",
     "bottomTagline": "Il tuo rifugio sicuro nella giungla immobiliare",
-    "bottomText": "Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino"
+    "bottomText": "Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino",
+    "legalAddress": "Via Gioacchino Quarello 15/A, 10135 Torino"
   },
   "waitlist": {
     "title": "Iscriviti alla Waitlist",
