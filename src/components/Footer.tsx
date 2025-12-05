@@ -199,12 +199,19 @@ export const Footer = () => {
             <p className="text-muted-foreground/60 text-xs font-light mt-1">
               {t('footer.legalAddress')} | PEC: junglerent@legalmail.it
             </p>
-            <div className="mt-3">
+            <div className="mt-3 flex items-center justify-center gap-4">
               <Link 
                 to="/privacy" 
                 className="text-muted-foreground/60 text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
               >
-                {i18n.language === 'it' || i18n.language.startsWith('it') ? 'Privacy Policy' : 'Privacy Policy'}
+                Privacy Policy
+              </Link>
+              <span className="text-muted-foreground/40">|</span>
+              <Link 
+                to="/termini-e-condizioni" 
+                className="text-muted-foreground/60 text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
+              >
+                {i18n.language === 'it' || i18n.language.startsWith('it') ? 'Termini e Condizioni' : 'Terms & Conditions'}
               </Link>
             </div>
           </div>
