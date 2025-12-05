@@ -189,6 +189,16 @@ export const Footer = () => {
           <p className="text-muted-foreground text-xs font-light">
             {t('footer.bottomText')}
           </p>
+          
+          {/* Legal Information */}
+          <div className="mt-6 pt-6 border-t border-border/50">
+            <p className="text-muted-foreground/70 text-xs font-light">
+              JUNGLE RENT S.R.L. - Start-up Innovativa | P.IVA 13333450016 | REA TO-1355899
+            </p>
+            <p className="text-muted-foreground/60 text-xs font-light mt-1">
+              {t('footer.legalAddress')} | PEC: junglerent@legalmail.it
+            </p>
+          </div>
         </div>
       </div>
       

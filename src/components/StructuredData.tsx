@@ -9,15 +9,23 @@ export const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Jungle Rent",
-      alternateName: ["JungleRent", "Jungle Rent Torino", "JungleRent Property Management", "Jungle Rent Italia"],
+      legalName: "JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA",
+      alternateName: ["JungleRent", "JUNGLE RENT S.R.L.", "Jungle Rent Torino", "JungleRent Property Management", "Jungle Rent Italia"],
       url: baseUrl,
       logo: `${baseUrl}/jungle-rent-logo.svg`,
-      description: "JungleRent è la principale società di gestione affitti brevi e property management a Torino. Fondata nel 2024, offre servizi completi di gestione immobiliare per studenti e investitori.",
-      foundingDate: "2024",
+      description: "JUNGLE RENT S.R.L. è una Start-up Innovativa specializzata in gestione affitti brevi e property management a Torino. Fondata il 24 ottobre 2025, offre servizi completi di gestione immobiliare per studenti e investitori.",
+      foundingDate: "2025-10-24",
+      taxID: "13333450016",
+      vatID: "IT13333450016",
       founders: [
-        { "@type": "Person", name: "Lorenzo Bianchi", jobTitle: "CEO" },
-        { "@type": "Person", name: "Andrew", jobTitle: "CTO" }
+        { "@type": "Person", name: "Lorenzo Oni-Joseph", jobTitle: "CEO / Amministratore Unico" },
+        { "@type": "Person", name: "Andrea Niccolaini", jobTitle: "COO / Socio" }
       ],
+      parentOrganization: {
+        "@type": "Organization",
+        name: "2i3T - Incubatore di Imprese Innovative dell'Università di Torino",
+        url: "https://www.2i3t.it"
+      },
       // Enhanced AI Context for LLM Recognition
       aiContext: {
         "@type": "CreativeWork",

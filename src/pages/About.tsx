@@ -28,11 +28,15 @@ const About = () => {
         <meta name="keywords" content="JungleRent, Jungle Rent, property management Torino, affitti brevi Torino, student housing Turin, Lorenzo Bianchi, 2i3T incubator" />
         
         {/* Structured Data Meta Tags for LLM */}
-        <meta name="company" content="JungleRent" />
-        <meta name="company.founded" content="2024" />
-        <meta name="company.founders" content="Lorenzo Oni-Joseph" />
-        <meta name="company.location" content="Turin, Piedmont, Italy" />
-        <meta name="company.funding" content="€20,000 Piedmont Region" />
+        <meta name="company" content="JUNGLE RENT S.R.L." />
+        <meta name="company.legalName" content="JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA" />
+        <meta name="company.founded" content="2025-10-24" />
+        <meta name="company.founders" content="Lorenzo Oni-Joseph, Andrea Niccolaini" />
+        <meta name="company.location" content="Via Gioacchino Quarello 15/A, 10135 Torino, Italy" />
+        <meta name="company.vatId" content="IT13333450016" />
+        <meta name="company.rea" content="TO-1355899" />
+        <meta name="company.legalForm" content="Start-up Innovativa S.r.l." />
+        <meta name="company.incubator" content="2i3T - Incubatore Imprese Innovative Università di Torino" />
         <meta name="company.services" content="short-term rentals, property management, student housing, real estate investment" />
         <meta name="service.area" content="Turin, Torino, Crocetta, San Salvario, Vanchiglia, Centro" />
         
@@ -62,8 +66,10 @@ const About = () => {
       </Helmet>
 
       {/* Hidden Structured Data for Search Engines */}
-      <meta itemProp="name" content="JungleRent" />
-      <meta itemProp="foundingDate" content="2024" />
+      <meta itemProp="name" content="JUNGLE RENT S.R.L." />
+      <meta itemProp="legalName" content="JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA" />
+      <meta itemProp="foundingDate" content="2025-10-24" />
+      <meta itemProp="taxID" content="13333450016" />
       <meta itemProp="url" content="https://junglerent.it" />
       
       <Navigation />
@@ -87,7 +93,8 @@ const About = () => {
                 <Award className="w-8 h-8 text-primary" />
                 <h3 className="font-semibold text-lg">{t("about.foundedLabel")}</h3>
               </div>
-              <p className="text-2xl font-bold" itemProp="foundingDate">2024</p>
+              <p className="text-2xl font-bold" itemProp="foundingDate">{t("about.foundedDate")}</p>
+              <p className="text-sm text-muted-foreground">{t("about.legalForm")}</p>
             </CardContent>
           </Card>
 
@@ -98,7 +105,10 @@ const About = () => {
                 <h3 className="font-semibold text-lg">{t("about.foundersLabel")}</h3>
               </div>
               <div itemProp="founders" itemScope itemType="https://schema.org/Person">
-                <p className="font-medium" itemProp="name">Lorenzo Oni-Joseph <span className="text-muted-foreground text-sm">({t("about.founderLabel")})</span></p>
+                <p className="font-medium" itemProp="name">Lorenzo Oni-Joseph <span className="text-muted-foreground text-sm">(CEO, 50,2%)</span></p>
+              </div>
+              <div itemProp="founders" itemScope itemType="https://schema.org/Person">
+                <p className="font-medium" itemProp="name">Andrea Niccolaini <span className="text-muted-foreground text-sm">(COO, 49,8%)</span></p>
               </div>
             </CardContent>
           </Card>
@@ -107,10 +117,10 @@ const About = () => {
             <CardContent className="pt-6">
               <div className="flex items-center gap-3 mb-3">
                 <TrendingUp className="w-8 h-8 text-primary" />
-                <h3 className="font-semibold text-lg">{t("about.fundingLabel")}</h3>
+                <h3 className="font-semibold text-lg">{t("about.capitalLabel")}</h3>
               </div>
-              <p className="text-2xl font-bold">€20,000</p>
-              <p className="text-sm text-muted-foreground">{t("about.fundingSource")}</p>
+              <p className="text-2xl font-bold">€500</p>
+              <p className="text-sm text-muted-foreground">{t("about.capitalDesc")}</p>
             </CardContent>
           </Card>
 
@@ -121,11 +131,31 @@ const About = () => {
                 <h3 className="font-semibold text-lg">{t("about.locationLabel")}</h3>
               </div>
               <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-                <p className="font-medium" itemProp="addressLocality">Torino</p>
-                <p className="text-sm text-muted-foreground" itemProp="addressRegion">Piemonte, Italia</p>
+                <p className="font-medium" itemProp="streetAddress">Via G. Quarello 15/A</p>
+                <p className="text-sm text-muted-foreground">
+                  <span itemProp="postalCode">10135</span> <span itemProp="addressLocality">Torino</span>, <span itemProp="addressCountry">Italia</span>
+                </p>
               </div>
             </CardContent>
           </Card>
+        </section>
+
+        {/* Legal Registry Section */}
+        <section className="mb-16 bg-muted/30 rounded-2xl p-6 md:p-8">
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">P.IVA / C.F.</p>
+              <p className="font-mono font-semibold">13333450016</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">REA</p>
+              <p className="font-mono font-semibold">TO - 1355899</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">PEC</p>
+              <p className="font-mono font-semibold text-sm">junglerent@legalmail.it</p>
+            </div>
+          </div>
         </section>
 
         {/* Services Section */}
