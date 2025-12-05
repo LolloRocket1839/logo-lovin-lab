@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
@@ -198,6 +199,14 @@ export const Footer = () => {
             <p className="text-muted-foreground/60 text-xs font-light mt-1">
               {t('footer.legalAddress')} | PEC: junglerent@legalmail.it
             </p>
+            <div className="mt-3">
+              <Link 
+                to="/privacy" 
+                className="text-muted-foreground/60 text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
+              >
+                {i18n.language === 'it' || i18n.language.startsWith('it') ? 'Privacy Policy' : 'Privacy Policy'}
+              </Link>
+            </div>
           </div>
         </div>
       </div>
