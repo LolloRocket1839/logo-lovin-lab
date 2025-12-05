@@ -18,6 +18,7 @@ import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 import InvestorForm from "./pages/InvestorForm";
 import InvestorSuccess from "./pages/InvestorSuccess";
 import Privacy from "./pages/Privacy";
+import TerminiCondizioni from "./pages/TerminiCondizioni";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,8 @@ const AppContent = () => {
       <Route path="/invest" element={<InvestorForm />} />
       <Route path="/invest/success" element={<InvestorSuccess />} />
       <Route path="/privacy" element={<Privacy />} />
+      <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
+      <Route path="/terms" element={<TerminiCondizioni />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/ai-testing" element={<AITesting />} />

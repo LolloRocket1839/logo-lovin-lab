@@ -18,8 +18,8 @@ export const StructuredData = () => {
       taxID: "13333450016",
       vatID: "IT13333450016",
       founders: [
-        { "@type": "Person", name: "Lorenzo Oni-Joseph", jobTitle: "CEO / Amministratore Unico" },
-        { "@type": "Person", name: "Andrea Niccolaini", jobTitle: "COO / Socio" }
+        { "@type": "Person", name: "Lorenzo Oni-Joseph" },
+        { "@type": "Person", name: "Andrea Niccolaini" }
       ],
       parentOrganization: {
         "@type": "Organization",

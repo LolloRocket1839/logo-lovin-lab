@@ -105,10 +105,10 @@ const About = () => {
                 <h3 className="font-semibold text-lg">{t("about.foundersLabel")}</h3>
               </div>
               <div itemProp="founders" itemScope itemType="https://schema.org/Person">
-                <p className="font-medium" itemProp="name">Lorenzo Oni-Joseph <span className="text-muted-foreground text-sm">(CEO, 50,2%)</span></p>
+                <p className="font-medium" itemProp="name">Lorenzo Oni-Joseph</p>
               </div>
               <div itemProp="founders" itemScope itemType="https://schema.org/Person">
-                <p className="font-medium" itemProp="name">Andrea Niccolaini <span className="text-muted-foreground text-sm">(COO, 49,8%)</span></p>
+                <p className="font-medium" itemProp="name">Andrea Niccolaini</p>
               </div>
             </CardContent>
           </Card>
