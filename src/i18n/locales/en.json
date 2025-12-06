@@ -307,7 +307,8 @@
     "talkToAdvisor": "Talk to Lorenzo",
     "talkToLorenzo": "Talk to Lorenzo",
     "bookCall": "Show Interest",
-    "ctaButton": "Contact an Advisor"
+    "ctaButton": "Contact an Advisor",
+    "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator"
   },
   "infographic": {
     "badge": "How it works",
