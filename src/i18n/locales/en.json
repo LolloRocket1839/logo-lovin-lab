@@ -1,4 +1,12 @@
 {
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageSelector": "Select language",
+    "startupInnovativaLink": "Certified Innovative Startup - Verify in official registry (opens in new window)",
+    "opensNewWindow": "(opens in new window)"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",

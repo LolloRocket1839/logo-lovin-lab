@@ -65,29 +65,33 @@ export const InvestorSection = () => {
             }`}
             style={{ animationDelay: '0ms' }}
           >
-            <a
-              href="https://startup.registroimprese.it/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 px-5 py-2.5 
-                         bg-white/90 dark:bg-card/90 backdrop-blur-md 
-                         border border-primary/20 rounded-full
-                         shadow-[0_4px_20px_hsla(142,76%,36%,0.15)]
-                         hover:shadow-[0_8px_30px_hsla(142,76%,36%,0.25)]
-                         hover:border-primary/40
-                         transition-all duration-500"
-            >
-              {/* Animated gradient border effect */}
-              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 
-                               animate-[pulse-border_3s_ease-in-out_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <Award className="w-4 h-4 text-primary relative z-10" />
-              <span className="text-xs uppercase tracking-wider font-semibold text-foreground relative z-10">
-                {t('investor.startupInnovativaBadge')}
-              </span>
-              <ExternalLink className="w-3 h-3 text-primary/60 group-hover:text-primary relative z-10 
-                                      group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
-            </a>
+          <a
+            href="https://startup.registroimprese.it/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t('accessibility.startupInnovativaLink')}
+            className="group relative inline-flex items-center gap-2 px-5 py-2.5 
+                       bg-white/90 dark:bg-card/90 backdrop-blur-md 
+                       border border-primary/20 rounded-full
+                       shadow-[0_4px_20px_hsla(142,76%,36%,0.15)]
+                       hover:shadow-[0_8px_30px_hsla(142,76%,36%,0.25)]
+                       hover:border-primary/40
+                       focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
+                       transition-all duration-500"
+          >
+            {/* Animated gradient border effect - respects reduced motion */}
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 
+                             motion-safe:animate-[pulse-border_3s_ease-in-out_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            <Award className="w-4 h-4 text-primary relative z-10" aria-hidden="true" />
+            <span className="text-xs uppercase tracking-wider font-semibold text-foreground relative z-10">
+              {t('investor.startupInnovativaBadge')}
+            </span>
+            <ExternalLink className="w-3 h-3 text-primary/60 group-hover:text-primary relative z-10 
+                                    group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" 
+                          aria-hidden="true" />
+            <span className="sr-only">{t('accessibility.opensNewWindow')}</span>
+          </a>
           </div>
           
           <p 
@@ -167,13 +171,16 @@ export const InvestorSection = () => {
                     href="https://2i3t.it" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"
+                    aria-label={t('investor.incubatorTooltip')}
+                    className="inline-flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity
+                               focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
                   >
                     <img 
                       src={logo2i3t} 
-                      alt={t('investor.incubatorTooltip')} 
+                      alt="" 
                       className="w-12 md:w-16 h-auto"
                     />
+                    <span className="sr-only">{t('accessibility.opensNewWindow')}</span>
                   </a>
                 </TooltipTrigger>
                 <TooltipContent>

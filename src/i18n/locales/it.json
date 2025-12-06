@@ -1,4 +1,12 @@
 {
+  "accessibility": {
+    "skipToContent": "Salta al contenuto principale",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "languageSelector": "Seleziona lingua",
+    "startupInnovativaLink": "Start-up Innovativa Certificata - Verifica nel registro ufficiale (si apre in una nuova finestra)",
+    "opensNewWindow": "(si apre in una nuova finestra)"
+  },
   "nav": {
     "home": "Home",
     "about": "Chi Siamo",
