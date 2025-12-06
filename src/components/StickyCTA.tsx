@@ -86,6 +86,9 @@ export const StickyCTA = () => {
   if (activeSection === 'investor') {
     return (
       <div 
+        role="region"
+        aria-live="polite"
+        aria-label={t('investor.talkToAdvisor')}
         className="fixed bottom-16 left-0 right-0 z-40 md:hidden
                     backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
                     transition-all duration-300 animate-fade-in shadow-lg"
@@ -97,9 +100,9 @@ export const StickyCTA = () => {
             variant="secondary"
             className="flex-1 h-14 text-sm font-semibold group shadow-xl touch-target"
           >
-            <MessageCircle className="mr-2 w-5 h-5" />
+            <MessageCircle className="mr-2 w-5 h-5" aria-hidden="true" />
             {t('investor.talkToAdvisor')}
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </Button>
           <Button
             onClick={() => setIsDismissed(true)}
@@ -118,6 +121,9 @@ export const StickyCTA = () => {
   // Render default CTA (Lorenzo) - positioned above BottomNav
   return (
     <div 
+      role="region"
+      aria-live="polite"
+      aria-label={t('hero.contactLorenzo')}
       className="fixed bottom-16 left-0 right-0 z-40 md:hidden
                   backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
                   transition-all duration-300 animate-fade-in shadow-lg"
@@ -129,7 +135,7 @@ export const StickyCTA = () => {
           variant="secondary"
           className="flex-1 h-14 text-sm font-semibold group shadow-xl touch-target"
         >
-          <MessageCircle className="mr-2 w-5 h-5" />
+          <MessageCircle className="mr-2 w-5 h-5" aria-hidden="true" />
           {t('hero.contactLorenzo')}
         </Button>
         <Button

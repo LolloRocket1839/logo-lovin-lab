@@ -82,14 +82,15 @@ export const Hero = () => {
               alt={t('hero.logoAlt')} 
               width="128" 
               height="128" 
-              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 rounded-full cursor-pointer"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 rounded-full cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               loading="eager" 
               onClick={() => {
                 trackClick('hero_logo');
                 setLogoModalOpen(true);
               }} 
               role="button" 
-              tabIndex={0} 
+              tabIndex={0}
+              aria-label={t('accessibility.openLogoModal')}
               onKeyDown={e => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
@@ -124,7 +125,7 @@ export const Hero = () => {
               className="w-full sm:w-auto text-base sm:text-lg group"
             >
               {t('hero.invest')}
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
             </Button>
             <Button 
               size="lg" 
@@ -133,7 +134,7 @@ export const Hero = () => {
               className="w-full sm:w-auto text-sm sm:text-base group"
             >
               {t('hero.findHome')}
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
             </Button>
           </div>
         </div>

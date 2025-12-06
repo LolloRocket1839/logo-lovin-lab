@@ -72,10 +72,11 @@ export const Footer = () => {
                 src={jungleRentLogo} 
                 alt="Jungle Rent" 
                 className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-80 rounded-3xl cursor-pointer 
-                           hover:opacity-100 hover:scale-105 transition-size"
+                           hover:opacity-100 hover:scale-105 transition-size focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 onClick={() => setLogoModalOpen(true)}
                 role="button"
                 tabIndex={0}
+                aria-label={t('accessibility.openLogoModal')}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -102,19 +103,20 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
               >
-                <MessageCircle className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} />
+                <MessageCircle className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} aria-hidden="true" />
                 <span className="text-sm font-light link-elegant">Lorenzo: {CONTACTS.lorenzo.phone.replace(/(\+\d{2})(\d{3})(\d{3})(\d{4})/, '$1 $2 $3 $4')}</span>
+                <span className="sr-only">{t('accessibility.opensNewWindow')}</span>
               </a>
               <a 
                 href="#"
                 onClick={handleEmailClick}
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
               >
-                <Mail className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} />
+                <Mail className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} aria-hidden="true" />
                 <span className="text-sm font-light link-elegant break-all">{CONTACTS.email}</span>
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="w-4 h-4 mt-0.5 opacity-60" strokeWidth={1.5} />
+                <MapPin className="w-4 h-4 mt-0.5 opacity-60" strokeWidth={1.5} aria-hidden="true" />
                 <span className="text-sm font-light">{t('footer.location')}</span>
               </div>
             </div>
@@ -133,13 +135,13 @@ export const Footer = () => {
             <div className="mt-6">
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3 font-medium">{t('footer.universitiesLabel')}</p>
               <div className="grid grid-cols-1 gap-y-2">
-                <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino</a>
-                <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino</a>
-                <a href="https://www.escp.eu" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">ESCP Business School</a>
-                <a href="https://www.saamanagement.com/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">SAA School of Management</a>
-                <a href="https://www.ied.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IED Torino</a>
-                <a href="https://www.iaad.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IAAD</a>
-                <a href="https://www.ius.to/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IUSTO</a>
+                <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
+                <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
+                <a href="https://www.escp.eu" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">ESCP Business School<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
+                <a href="https://www.saamanagement.com/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">SAA School of Management<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
+                <a href="https://www.ied.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IED Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
+                <a href="https://www.iaad.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IAAD<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
+                <a href="https://www.ius.to/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IUSTO<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
               </div>
             </div>
           </div>
@@ -160,13 +162,14 @@ export const Footer = () => {
                 href="https://www.2i3t.it"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group relative"
+                aria-label={t('investor.incubatorTooltip')}
+                className="block group relative focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
               >
-                <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg" />
+                <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg" aria-hidden="true" />
                 <img
                   ref={logoRef}
                   src={logo2i3t}
-                  alt="2i3T - Incubatore Imprese Innovative Politecnico di Torino"
+                  alt=""
                   className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-size mb-4 relative z-10"
                   style={{
                     transform: `translateY(${scrollOffset}px)`,
@@ -174,6 +177,7 @@ export const Footer = () => {
                   }}
                   loading="lazy"
                 />
+                <span className="sr-only">{t('accessibility.opensNewWindow')}</span>
               </a>
               <p className="text-sm text-muted-foreground font-light leading-relaxed">
                 {t('footer.incubatorDesc')}

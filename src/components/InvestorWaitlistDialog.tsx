@@ -152,7 +152,7 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
           </DialogDescription>
           <Card className="mt-4 p-3 bg-primary/5 border-primary/20">
             <div className="flex gap-2 items-start">
-              <InfoIcon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+              <InfoIcon className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
               <p className="text-xs text-foreground">
                 {guideType === 'torino' 
                   ? (i18n.language === 'en' 
@@ -299,10 +299,11 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
                            transition-all duration-300
                            disabled:opacity-50"
               >
-                {isSubmitting ? (
+              {isSubmitting ? (
                   <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    {t("investorWaitlist.submitting")}
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" aria-hidden="true" />
+                    <span>{t("investorWaitlist.submitting")}</span>
+                    <span className="sr-only">{t("accessibility.loading")}</span>
                   </>
                 ) : (
                   t("investorWaitlist.submitButton")

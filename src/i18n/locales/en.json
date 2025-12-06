@@ -5,7 +5,10 @@
     "closeMenu": "Close menu",
     "languageSelector": "Select language",
     "startupInnovativaLink": "Certified Innovative Startup - Verify in official registry (opens in new window)",
-    "opensNewWindow": "(opens in new window)"
+    "opensNewWindow": "(opens in new window)",
+    "openLogoModal": "Open Jungle Rent logo information",
+    "loading": "Loading...",
+    "currentPage": "Current page"
   },
   "nav": {
     "home": "Home",

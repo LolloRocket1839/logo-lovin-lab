@@ -360,8 +360,9 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    {t("waitlist.submitting")}
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" aria-hidden="true" />
+                    <span>{t("waitlist.submitting")}</span>
+                    <span className="sr-only">{t("accessibility.loading")}</span>
                   </>
                 ) : (
                   t("waitlist.submitButton")
