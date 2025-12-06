@@ -137,3 +137,11 @@ Il **14 gennaio** si festeggia il **Capodanno russo-ortodosso**, una delle più 
 Gennaio 2026 si presenta come un mese eccezionale per vivere Torino in tutte le sue sfaccettature culturali, artistiche e sportive. Dalle ultime giornate delle Luci d'Artista che trasformano la città in un museo luminoso a cielo aperto, alle grandi mostre internazionali che ospitano capolavori provenienti dai più prestigiosi musei del mondo, fino ai concerti sold-out e agli spettacoli teatrali di alta qualità, il capoluogo piemontese conferma la sua vocazione di polo culturale di primo piano.
 
 L'arrivo della Fiamma Olimpica, i saldi invernali, gli eventi sportivi e le numerose iniziative nei teatri e nei musei rendono questo mese un periodo ideale per visitare Torino o per riscoprirla da residenti. Con temperature invernali che invitano a rifugiarsi nei teatri riscaldati, nelle sale espositive e nei caffè storici, gennaio offre il perfetto equilibrio tra cultura alta e intrattenimento popolare, tra tradizione e contemporaneità, confermando Torino come una delle città italiane più vivaci e culturalmente stimolanti.
+
+---
+
+## Articoli correlati
+
+- [Come raggiungere Torino in modo sostenibile: guida completa ai viaggi eco-friendly](/blog/viaggiare-sostenibile-torino-guida) - Treni Frecciarossa, FlixBus, aeroporto carbon-neutral e Torino+Piemonte Card
+- [Mobilità sostenibile a Torino: guida completa ai trasporti per studenti](/blog/mobilita-sostenibile-torino-studenti)
+- [Lo storico carnevale di Ivrea: guida completa alla battaglia delle arance](/blog/carnevale-ivrea-battaglia-arance-2025)
