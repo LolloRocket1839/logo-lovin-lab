@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, PieChart, BarChart3, ArrowRight, MessageCircle, Users, Award, Sparkles } from "lucide-react";
+import { ArrowRight, MessageCircle, Users, Award, ExternalLink } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { StyledText } from "@/components/StyledText";
@@ -58,21 +58,36 @@ export const InvestorSection = () => {
       
       <div className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
-          {/* Start-up Innovativa Badge */}
+          {/* Start-up Innovativa Badge - Premium Floating */}
           <div
             className={`flex justify-center mb-6 transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
             }`}
             style={{ animationDelay: '0ms' }}
           >
-            <Badge 
-              variant="outline" 
-              className="px-4 py-2 text-xs uppercase tracking-wider border-primary/30 bg-primary/5 text-primary font-semibold"
+            <a
+              href="https://startup.registroimprese.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center gap-2 px-5 py-2.5 
+                         bg-white/90 dark:bg-card/90 backdrop-blur-md 
+                         border border-primary/20 rounded-full
+                         shadow-[0_4px_20px_hsla(142,76%,36%,0.15)]
+                         hover:shadow-[0_8px_30px_hsla(142,76%,36%,0.25)]
+                         hover:border-primary/40
+                         transition-all duration-500"
             >
-              <Award className="w-4 h-4 mr-2" />
-              {t('investor.startupInnovativaBadge')}
-              <Sparkles className="w-3 h-3 ml-2 text-primary/70" />
-            </Badge>
+              {/* Animated gradient border effect */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 
+                               animate-[pulse-border_3s_ease-in-out_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <Award className="w-4 h-4 text-primary relative z-10" />
+              <span className="text-xs uppercase tracking-wider font-semibold text-foreground relative z-10">
+                {t('investor.startupInnovativaBadge')}
+              </span>
+              <ExternalLink className="w-3 h-3 text-primary/60 group-hover:text-primary relative z-10 
+                                      group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+            </a>
           </div>
           
           <p 
