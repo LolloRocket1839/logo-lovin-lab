@@ -376,3 +376,11 @@ A livello regionale, il Piemonte ha raggiunto il **67,9% di raccolta differenzia
 ---
 
 La raccolta differenziata a Torino è un sistema complesso ma ben organizzato che richiede consapevolezza e impegno da parte di tutti i cittadini. Conoscere le regole specifiche della tua zona, utilizzare correttamente l'app Iren Ambiente e mantenere una pratica consapevole del differenziamento sono i passi fondamentali per contribuire a un **futuro più sostenibile** per il capoluogo piemontese. Ricorda: **ogni rifiuto al suo posto è una scelta per l'ambiente**.
+
+---
+
+## Articoli correlati
+
+- [Come raggiungere Torino in modo sostenibile: guida completa ai viaggi eco-friendly](/blog/viaggiare-sostenibile-torino-guida)
+- [Mobilità sostenibile a Torino: la guida completa ai trasporti per studenti](/blog/mobilita-sostenibile-torino-studenti)
+- [Eventi a Torino gennaio 2026](/blog/eventi-torino-gennaio-2026)

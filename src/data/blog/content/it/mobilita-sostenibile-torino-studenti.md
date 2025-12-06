@@ -203,6 +203,14 @@ La combinazione di **abbonamento Under 26 + bicicletta** rappresenta la soluzion
 
 ---
 
+## Articoli correlati
+
+- [Come raggiungere Torino in modo sostenibile: guida completa ai viaggi eco-friendly](/blog/viaggiare-sostenibile-torino-guida) - Treni Frecciarossa, FlixBus, aeroporto carbon-neutral e Torino+Piemonte Card
+- [Guida completa alla raccolta differenziata a Torino](/blog/raccolta-differenziata-torino-guida)
+- [Eventi a Torino gennaio 2026](/blog/eventi-torino-gennaio-2026)
+
+---
+
 ## Risorse scaricabili
 
 📄 **[Scarica la guida completa in PDF](/resources/Mobilita_studenti_Torino.pdf)** - Documento completo con mappe, tabelle e tutti i dettagli sulla mobilità sostenibile a Torino.

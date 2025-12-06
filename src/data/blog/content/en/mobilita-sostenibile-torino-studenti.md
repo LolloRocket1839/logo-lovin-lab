@@ -203,6 +203,14 @@ The combination of **Under 26 pass + bicycle** represents the ideal solution for
 
 ---
 
+## Related Articles
+
+- [How to Get Sustainably to Turin: A Comprehensive Travel Guide](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, carbon-neutral airport and Torino+Piemonte Card
+- [Complete Guide to Waste Sorting in Turin](/blog/raccolta-differenziata-torino-guida)
+- [Turin Events January 2026](/blog/eventi-torino-gennaio-2026)
+
+---
+
 ## Downloadable resources
 
 📄 **[Download the complete PDF guide](/resources/Mobilita_studenti_Torino.pdf)** - Complete document with maps, tables, and all details on sustainable mobility in Turin.
