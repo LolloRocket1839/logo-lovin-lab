@@ -2,6 +2,59 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "viaggiare-sostenibile-torino-guida",
+    category: "turisti",
+    date: "2025-12-06",
+    author: "Jungle Rent Team",
+    image: "/images/torino-transport.jpg",
+    readTime: 45,
+    content: "viaggiare-sostenibile-torino-guida",
+    translations: {
+      it: {
+        title: "Come raggiungere Torino in modo sostenibile: guida completa ai viaggi eco-friendly",
+        excerpt: "Guida completa ai viaggi sostenibili verso Torino: treni Frecciarossa, FlixBus, aeroporto carbon-neutral, trasporti pubblici, bike-sharing e micro-mobilità.",
+        seo: {
+          title: "Viaggiare sostenibile a Torino: guida completa treni, bus e bici | JungleRent",
+          description: "Come raggiungere Torino in modo sostenibile: Frecciarossa 97% meno CO2, FlixBus economico, aeroporto Level 3+ Neutrality, 258km piste ciclabili, Torino+Piemonte Card.",
+          keywords: [
+            "viaggiare sostenibile torino",
+            "treno roma torino",
+            "frecciarossa 1000 emissioni",
+            "flixbus torino",
+            "aeroporto torino sostenibile",
+            "torino piemonte card",
+            "bike sharing torino",
+            "monopattini elettrici torino",
+            "trasporti pubblici torino",
+            "turismo sostenibile piemonte"
+          ]
+        },
+        tags: ["Sostenibilità", "Trasporti", "Treno", "Turismo", "Torino", "Bicicletta", "Ambiente"]
+      },
+      en: {
+        title: "How to Get Sustainably to Turin: A Comprehensive Travel Guide",
+        excerpt: "Complete guide to sustainable travel to Turin: Frecciarossa trains, FlixBus, carbon-neutral airport, public transport, bike-sharing and micro-mobility options.",
+        seo: {
+          title: "Sustainable Travel to Turin: Complete Guide Trains, Buses & Bikes | JungleRent",
+          description: "How to reach Turin sustainably: Frecciarossa 97% less CO2, budget FlixBus, Level 3+ Neutrality airport, 258km bike paths, Torino+Piemonte Card value.",
+          keywords: [
+            "sustainable travel turin",
+            "train rome to turin",
+            "frecciarossa 1000 emissions",
+            "flixbus turin italy",
+            "turin airport sustainable",
+            "torino piemonte card",
+            "bike sharing turin",
+            "electric scooters turin",
+            "public transport turin",
+            "eco tourism piedmont"
+          ]
+        },
+        tags: ["Sustainability", "Transport", "Train", "Tourism", "Turin", "Cycling", "Environment"]
+      }
+    }
+  },
+  {
     slug: "carnevale-ivrea-battaglia-arance-2025",
     category: "turisti",
     date: "2025-12-03",
