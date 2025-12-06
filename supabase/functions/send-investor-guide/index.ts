@@ -16,6 +16,37 @@ interface InvestorGuideRequest {
   language?: string;
 }
 
+// HTML escape function to prevent XSS/injection attacks
+const escapeHtml = (str: string): string => {
+  if (!str || typeof str !== 'string') return '';
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+};
+
+// Validate email format
+const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email) && email.length <= 255;
+};
+
+// Validate name - alphanumeric, spaces, hyphens, apostrophes only
+const isValidName = (name: string): boolean => {
+  if (!name || typeof name !== 'string') return false;
+  if (name.length < 1 || name.length > 100) return false;
+  // Allow letters (including accented), spaces, hyphens, apostrophes
+  const nameRegex = /^[\p{L}\s\-']+$/u;
+  return nameRegex.test(name);
+};
+
+// Validate guideType
+const isValidGuideType = (guideType: string): guideType is 'general' | 'turin' => {
+  return guideType === 'general' || guideType === 'turin';
+};
+
 serve(async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -23,23 +54,63 @@ serve(async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, guideType, language = 'it' }: InvestorGuideRequest = await req.json();
+    const body = await req.json();
+    const { name, email, guideType, language = 'it' } = body as InvestorGuideRequest;
 
-    console.log(`Sending ${guideType} guide to ${email} (${name})`);
+    // Server-side input validation
+    if (!name || !isValidName(name)) {
+      console.error("Invalid name provided:", name);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "Invalid name. Must be 1-100 characters, letters only." 
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    if (!email || !isValidEmail(email)) {
+      console.error("Invalid email provided:", email);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "Invalid email address." 
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    if (!guideType || !isValidGuideType(guideType)) {
+      console.error("Invalid guideType provided:", guideType);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "Invalid guide type. Must be 'general' or 'turin'." 
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Sanitize name for HTML output
+    const safeName = escapeHtml(name.trim());
+    const safeEmail = email.toLowerCase().trim();
+
+    console.log(`Sending ${guideType} guide to ${safeEmail} (${safeName})`);
 
     // Determine guide content based on type
     const isGeneral = guideType === 'general';
     const guideTitle = isGeneral 
       ? (language === 'it' ? 'Guida Completa per Investitori Immobiliari' : 'Complete Guide for Real Estate Investors')
       : (language === 'it' ? 'Guida Investimenti Immobiliari a Torino' : 'Real Estate Investment Guide - Turin');
-
-    const guideDescription = isGeneral
-      ? (language === 'it' 
-          ? 'tutto quello che devi sapere su mutui, finanziamenti e strategie di investimento'
-          : 'everything you need to know about mortgages, financing and investment strategies')
-      : (language === 'it'
-          ? 'analisi dettagliata del mercato torinese, zone ad alto rendimento e opportunità'
-          : 'detailed analysis of the Turin market, high-yield areas and opportunities');
 
     // Email content in Italian
     const htmlContent = language === 'it' ? `
@@ -60,12 +131,12 @@ serve(async (req: Request): Promise<Response> => {
         <body>
           <div class="container">
             <div class="header">
-              <h1 style="margin: 0;">🎉 Grazie ${name}!</h1>
+              <h1 style="margin: 0;">🎉 Grazie ${safeName}!</h1>
               <p style="margin: 10px 0 0 0; opacity: 0.9;">La tua guida è pronta</p>
             </div>
             <div class="content">
               <h2 style="color: #10b981;">📚 ${guideTitle}</h2>
-              <p>Ciao ${name},</p>
+              <p>Ciao ${safeName},</p>
               <p>Grazie per il tuo interesse in Jungle Rent! Siamo entusiasti di condividere con te la nostra esperienza nel settore degli investimenti immobiliari.</p>
               
               <div class="highlight">
@@ -127,12 +198,12 @@ serve(async (req: Request): Promise<Response> => {
         <body>
           <div class="container">
             <div class="header">
-              <h1 style="margin: 0;">🎉 Thank you ${name}!</h1>
+              <h1 style="margin: 0;">🎉 Thank you ${safeName}!</h1>
               <p style="margin: 10px 0 0 0; opacity: 0.9;">Your guide is ready</p>
             </div>
             <div class="content">
               <h2 style="color: #10b981;">📚 ${guideTitle}</h2>
-              <p>Hello ${name},</p>
+              <p>Hello ${safeName},</p>
               <p>Thank you for your interest in Jungle Rent! We're excited to share our experience in real estate investments with you.</p>
               
               <div class="highlight">
@@ -184,7 +255,7 @@ serve(async (req: Request): Promise<Response> => {
 
     const { data, error } = await resend.emails.send({
       from: "Jungle Rent <noreply@junglerent.it>",
-      to: [email],
+      to: [safeEmail],
       subject: emailSubject,
       html: htmlContent,
     });
