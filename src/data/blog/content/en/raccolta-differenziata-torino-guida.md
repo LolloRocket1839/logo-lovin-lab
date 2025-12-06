@@ -376,3 +376,11 @@ At regional level, Piedmont reached **67.9% waste sorting in 2023**, exceeding t
 ---
 
 Waste sorting in Turin is a complex but well-organized system that requires awareness and commitment from all citizens. Knowing the specific rules for your area, correctly using the Iren Ambiente app, and maintaining a conscious sorting practice are the fundamental steps to contribute to a **more sustainable future** for the Piedmont capital. Remember: **every waste in its place is a choice for the environment**.
+
+---
+
+## Related Articles
+
+- [How to Get Sustainably to Turin: A Comprehensive Travel Guide](/blog/viaggiare-sostenibile-torino-guida)
+- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti)
+- [Turin Events January 2026](/blog/eventi-torino-gennaio-2026)
