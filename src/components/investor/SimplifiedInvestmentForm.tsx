@@ -222,25 +222,29 @@ const SimplifiedInvestmentForm = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const insertData = {
-        full_name: data.full_name,
-        email: data.email,
-        phone: data.phone,
-        country: "italy", // Default since we removed country selection
-        investor_type: data.investor_type,
-        investment_amount_range: data.investment_amount_range,
-        investment_timeline: data.investment_timeline,
-        accredited_investor: "unsure", // Default since we removed this
-        areas_of_interest: data.areas_of_interest,
-        consents_to_data_processing: data.consents_to_data_processing,
-        consents_to_fadp: data.consents_to_data_processing, // Same as GDPR for simplicity
-        consents_to_contact: data.consents_to_contact,
-        understands_no_commitment: true, // Implied by form submission
-      };
+      // Use edge function with rate limiting and validation
+      const response = await supabase.functions.invoke('submit-investor-interest', {
+        body: {
+          full_name: data.full_name,
+          email: data.email,
+          phone: data.phone,
+          investor_type: data.investor_type,
+          investment_amount_range: data.investment_amount_range,
+          investment_timeline: data.investment_timeline,
+          areas_of_interest: data.areas_of_interest,
+          consents_to_data_processing: data.consents_to_data_processing,
+          consents_to_contact: data.consents_to_contact,
+        },
+      });
       
-      const { error } = await supabase.from("investor_interest").insert([insertData]);
-      
-      if (error) throw error;
+      if (response.error) {
+        // Handle rate limiting
+        if (response.error.message?.includes('429') || response.error.message?.includes('Too many')) {
+          toast.error(t("errors.rateLimited") || "Too many requests. Please try again later.");
+          return;
+        }
+        throw response.error;
+      }
 
       localStorage.removeItem(STORAGE_KEY);
       localStorage.removeItem(`${STORAGE_KEY}_step`);
