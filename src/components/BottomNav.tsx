@@ -48,7 +48,10 @@ export const BottomNav = () => {
   if (!shouldShow) return null;
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border shadow-lg">
+    <nav 
+      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border shadow-lg"
+      aria-label={t('nav.home')}
+    >
       <div className="flex items-center justify-around h-16">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -65,11 +68,12 @@ export const BottomNav = () => {
               key={item.id}
               to={item.path}
               onClick={(e) => handleClick(e, item)}
+              aria-current={isActive ? 'page' : undefined}
               className={`flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target ${
                 isActive ? 'text-primary' : 'text-muted-foreground'
               }`}
             >
-              <Icon className="w-5 h-5" />
+              <Icon className="w-5 h-5" aria-hidden="true" />
               <span className="text-[10px] font-medium">{item.label}</span>
             </Link>
           );
