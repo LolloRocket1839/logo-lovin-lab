@@ -281,7 +281,8 @@
     "talkToAdvisor": "Parla con Lorenzo",
     "talkToLorenzo": "Parla con Lorenzo",
     "bookCall": "Mostra Interesse",
-    "ctaButton": "Contatta un Advisor"
+    "ctaButton": "Contatta un Advisor",
+    "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino"
   },
   "infographic": {
     "badge": "Come funziona",
