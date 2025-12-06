@@ -722,7 +722,7 @@ const InvestorInfographic: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-          <Sparkles className="w-4 h-4 text-primary" />
+          <Sparkles className="w-4 h-4 text-primary" aria-hidden="true" />
           <span className="text-sm font-semibold text-primary">{t('infographic.badge')}</span>
         </div>
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-3">
@@ -746,7 +746,11 @@ const InvestorInfographic: React.FC = () => {
             />
           </div>
           
-          <div className="relative z-10 flex items-start justify-between">
+          <div 
+            className="relative z-10 flex items-start justify-between"
+            role="tablist"
+            aria-label={t('infographic.badge')}
+          >
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
@@ -757,12 +761,34 @@ const InvestorInfographic: React.FC = () => {
               >
                 {/* Card container */}
                 <motion.div
-                  className={`p-4 lg:p-6 rounded-2xl border-2 bg-card transition-all duration-300 cursor-pointer ${
+                  role="tab"
+                  tabIndex={0}
+                  aria-selected={activeStep === index}
+                  aria-label={`${t('infographic.badge')} ${index + 1}: ${step.title} - ${step.description}`}
+                  className={`p-4 lg:p-6 rounded-2xl border-2 bg-card transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                     activeStep === index 
                       ? 'border-primary shadow-lg shadow-primary/10' 
                       : 'border-border hover:border-primary/50'
                   }`}
                   onClick={() => setActiveStep(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActiveStep(index);
+                    } else if (e.key === 'ArrowRight') {
+                      e.preventDefault();
+                      setActiveStep((prev) => Math.min(prev + 1, steps.length - 1));
+                    } else if (e.key === 'ArrowLeft') {
+                      e.preventDefault();
+                      setActiveStep((prev) => Math.max(prev - 1, 0));
+                    } else if (e.key === 'Home') {
+                      e.preventDefault();
+                      setActiveStep(0);
+                    } else if (e.key === 'End') {
+                      e.preventDefault();
+                      setActiveStep(steps.length - 1);
+                    }
+                  }}
                   whileHover={{ y: -4 }}
                 >
                   <PremiumHouse
@@ -781,6 +807,7 @@ const InvestorInfographic: React.FC = () => {
                         ? 'bg-primary/20 text-primary'
                         : 'bg-muted text-muted-foreground'
                   }`}
+                  aria-hidden="true"
                 >
                   {activeStep > index ? <CheckCircle2 className="w-4 h-4" /> : index + 1}
                 </motion.div>
@@ -802,6 +829,7 @@ const InvestorInfographic: React.FC = () => {
                     height: activeStep === index ? 'auto' : 0 
                   }}
                   transition={{ duration: 0.3 }}
+                  aria-hidden={activeStep !== index}
                 >
                   {step.detail}
                 </motion.p>
@@ -825,7 +853,7 @@ const InvestorInfographic: React.FC = () => {
           </div>
           
           {/* Steps */}
-          <div className="space-y-6">
+          <div className="space-y-6" role="tablist" aria-label={t('infographic.badge')}>
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
@@ -835,7 +863,7 @@ const InvestorInfographic: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
                 {/* Timeline node */}
-                <div className="absolute -left-14 top-4">
+                <div className="absolute -left-14 top-4" aria-hidden="true">
                   <TimelineNode 
                     index={index} 
                     isActive={activeStep === index}
@@ -845,17 +873,39 @@ const InvestorInfographic: React.FC = () => {
                 
                 {/* Step card */}
                 <motion.div
-                  className={`p-4 rounded-2xl border-2 bg-card transition-all duration-300 ${
+                  role="tab"
+                  tabIndex={0}
+                  aria-selected={activeStep === index}
+                  aria-label={`${t('infographic.badge')} ${index + 1}: ${step.title} - ${step.description}`}
+                  className={`p-4 rounded-2xl border-2 bg-card transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                     activeStep === index 
                       ? 'border-primary shadow-lg shadow-primary/10' 
                       : 'border-border'
                   }`}
                   onClick={() => setActiveStep(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActiveStep(index);
+                    } else if (e.key === 'ArrowDown') {
+                      e.preventDefault();
+                      setActiveStep((prev) => Math.min(prev + 1, steps.length - 1));
+                    } else if (e.key === 'ArrowUp') {
+                      e.preventDefault();
+                      setActiveStep((prev) => Math.max(prev - 1, 0));
+                    } else if (e.key === 'Home') {
+                      e.preventDefault();
+                      setActiveStep(0);
+                    } else if (e.key === 'End') {
+                      e.preventDefault();
+                      setActiveStep(steps.length - 1);
+                    }
+                  }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-start gap-4">
                     {/* House */}
-                    <div className="flex-shrink-0">
+                    <div className="flex-shrink-0" aria-hidden="true">
                       <PremiumHouse
                         isActive={activeStep === index}
                         variant={step.variant}
@@ -881,6 +931,7 @@ const InvestorInfographic: React.FC = () => {
                           height: activeStep === index ? 'auto' : 0 
                         }}
                         transition={{ duration: 0.3 }}
+                        aria-hidden={activeStep !== index}
                       >
                         {step.detail}
                       </motion.p>
@@ -931,7 +982,7 @@ const InvestorInfographic: React.FC = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full">
-          <CheckCircle2 className="w-4 h-4 text-primary" />
+          <CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" />
           <span className="text-sm text-muted-foreground">
             {t('infographic.cta')}
           </span>
