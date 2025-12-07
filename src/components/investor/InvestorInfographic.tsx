@@ -539,30 +539,30 @@ interface TimelineNodeProps {
 const TimelineNode: React.FC<TimelineNodeProps> = ({ index, isActive, isCompleted }) => {
   return (
     <motion.div
-      className={`relative z-10 flex items-center justify-center w-10 h-10 rounded-full border-2 font-bold text-sm transition-all duration-300 ${
+      className={`relative z-10 flex items-center justify-center w-8 h-8 rounded-full font-medium text-xs transition-all duration-300 ${
         isActive 
-          ? 'bg-primary border-primary text-primary-foreground shadow-lg shadow-primary/30' 
+          ? 'bg-primary/10 border border-primary text-primary' 
           : isCompleted 
-            ? 'bg-primary/20 border-primary text-primary'
-            : 'bg-card border-border text-muted-foreground'
+            ? 'bg-transparent border border-primary/40 text-primary/70'
+            : 'bg-transparent border border-border text-muted-foreground/60'
       }`}
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: index * 0.1, type: "spring" }}
     >
       {isCompleted && !isActive ? (
-        <CheckCircle2 className="w-5 h-5" />
+        <CheckCircle2 className="w-3.5 h-3.5" />
       ) : (
         index + 1
       )}
       
-      {/* Active pulse ring */}
+      {/* Active subtle glow */}
       {isActive && (
         <motion.div
-          className="absolute inset-0 rounded-full border-2 border-primary"
-          initial={{ scale: 1, opacity: 1 }}
-          animate={{ scale: 1.8, opacity: 0 }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }}
+          className="absolute inset-0 rounded-full border border-primary/50"
+          initial={{ scale: 1, opacity: 0.5 }}
+          animate={{ scale: 1.4, opacity: 0 }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
         />
       )}
     </motion.div>
@@ -607,38 +607,30 @@ const CounterMetric: React.FC<CounterMetricProps> = ({ value, suffix, label, des
 
   return (
     <motion.div
-      className="relative p-4 md:p-6 rounded-2xl bg-card border-2 border-border cursor-pointer overflow-hidden group"
+      className="relative p-4 md:p-5 rounded-3xl bg-card border border-border/50 cursor-pointer overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      whileHover={{ y: -4, borderColor: 'hsl(var(--primary))' }}
+      whileHover={{ y: -2, borderColor: 'hsl(var(--primary) / 0.3)' }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Background glow on hover */}
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-      />
-      
       <div className="relative z-10">
         <motion.div
-          className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary mb-1"
+          className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-1"
           initial={{ scale: 1 }}
-          animate={{ scale: isHovered ? 1.05 : 1 }}
+          animate={{ scale: isHovered ? 1.02 : 1 }}
           transition={{ duration: 0.2 }}
         >
-          {count}{suffix}{isEstimate && <span className="text-lg md:text-xl align-top text-muted-foreground/70">*</span>}
+          {count}{suffix}{isEstimate && <span className="text-sm md:text-base align-top text-muted-foreground/50 ml-0.5">*</span>}
         </motion.div>
         
-        <div className="text-sm md:text-base font-semibold text-foreground mb-1">
+        <div className="text-sm font-medium text-foreground/80 mb-1">
           {label}
         </div>
         
         <motion.div
-          className="text-xs md:text-sm text-muted-foreground"
+          className="text-xs text-muted-foreground/70 font-light"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: isHovered ? 1 : 0, height: isHovered ? 'auto' : 0 }}
           transition={{ duration: 0.2 }}
@@ -735,10 +727,10 @@ const InvestorInfographic: React.FC = () => {
       {/* Desktop: Horizontal Flow with Premium Design */}
       <div className="hidden md:block mb-12">
         <div className="relative">
-          {/* Connecting line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-border -translate-y-1/2 z-0 mx-16">
+          {/* Connecting line - thinner */}
+          <div className="absolute top-1/2 left-0 right-0 h-px bg-border/50 -translate-y-1/2 z-0 mx-16">
             <motion.div
-              className="h-full bg-gradient-to-r from-primary via-primary to-primary/50 rounded-full"
+              className="h-full bg-primary/60 rounded-full"
               initial={{ width: "0%" }}
               animate={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -758,16 +750,16 @@ const InvestorInfographic: React.FC = () => {
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
-                {/* Card container */}
+                {/* Card container - refined */}
                 <motion.div
                   role="tab"
                   tabIndex={0}
                   aria-selected={activeStep === index}
                   aria-label={`${t('infographic.badge')} ${index + 1}: ${step.title} - ${step.description}`}
-                  className={`p-4 lg:p-6 rounded-2xl border-2 bg-card transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+                  className={`p-4 lg:p-5 rounded-3xl border bg-card transition-all duration-300 cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                     activeStep === index 
-                      ? 'border-primary shadow-lg shadow-primary/10' 
-                      : 'border-border hover:border-primary/50'
+                      ? 'border-primary/40 shadow-sm' 
+                      : 'border-border/40 hover:border-primary/30'
                   }`}
                   onClick={() => setActiveStep(index)}
                   onKeyDown={(e) => {
@@ -788,7 +780,7 @@ const InvestorInfographic: React.FC = () => {
                       setActiveStep(steps.length - 1);
                     }
                   }}
-                  whileHover={{ y: -4 }}
+                  whileHover={{ y: -2 }}
                 >
                   <PremiumHouse
                     isActive={activeStep === index}
@@ -797,31 +789,31 @@ const InvestorInfographic: React.FC = () => {
                   />
                 </motion.div>
                 
-                {/* Step number badge */}
+                {/* Step number badge - refined */}
                 <motion.div
-                  className={`mt-4 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
+                  className={`mt-4 w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium transition-colors ${
                     activeStep === index 
-                      ? 'bg-primary text-primary-foreground' 
+                      ? 'bg-primary/10 text-primary border border-primary/30' 
                       : activeStep > index
-                        ? 'bg-primary/20 text-primary'
-                        : 'bg-muted text-muted-foreground'
+                        ? 'bg-transparent text-primary/60 border border-primary/30'
+                        : 'bg-transparent text-muted-foreground/50 border border-border/50'
                   }`}
                   aria-hidden="true"
                 >
-                  {activeStep > index ? <CheckCircle2 className="w-4 h-4" /> : index + 1}
+                  {activeStep > index ? <CheckCircle2 className="w-3 h-3" /> : index + 1}
                 </motion.div>
                 
-                {/* Text content */}
-                <h3 className={`mt-3 text-lg font-bold transition-colors ${
-                  activeStep === index ? 'text-primary' : 'text-foreground'
+                {/* Text content - lighter typography */}
+                <h3 className={`mt-3 text-base font-semibold transition-colors ${
+                  activeStep === index ? 'text-primary' : 'text-foreground/80'
                 }`}>
                   {step.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-1">
+                <p className="text-sm text-muted-foreground/70 mt-1 font-light">
                   {step.description}
                 </p>
                 <motion.p
-                  className="text-xs text-muted-foreground/70 mt-2 max-w-[140px]"
+                  className="text-xs text-muted-foreground/50 mt-2 max-w-[140px] font-light"
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ 
                     opacity: activeStep === index ? 1 : 0, 
@@ -840,11 +832,11 @@ const InvestorInfographic: React.FC = () => {
 
       {/* Mobile: Vertical Timeline with Cards */}
       <div className="md:hidden mb-10">
-        <div className="relative pl-14">
-          {/* Timeline line */}
-          <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-border">
+        <div className="relative pl-12">
+          {/* Timeline line - thinner, dotted */}
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-border/30 border-l border-dashed border-border/40">
             <motion.div
-              className="w-full bg-primary rounded-full origin-top"
+              className="w-px bg-primary/50 origin-top absolute left-0"
               initial={{ height: "0%" }}
               animate={{ height: `${((activeStep + 1) / steps.length) * 100}%` }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -852,7 +844,7 @@ const InvestorInfographic: React.FC = () => {
           </div>
           
           {/* Steps */}
-          <div className="space-y-6" role="tablist" aria-label={t('infographic.badge')}>
+          <div className="space-y-5" role="tablist" aria-label={t('infographic.badge')}>
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
@@ -862,7 +854,7 @@ const InvestorInfographic: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
                 {/* Timeline node */}
-                <div className="absolute -left-14 top-4" aria-hidden="true">
+                <div className="absolute -left-12 top-5" aria-hidden="true">
                   <TimelineNode 
                     index={index} 
                     isActive={activeStep === index}
@@ -870,16 +862,16 @@ const InvestorInfographic: React.FC = () => {
                   />
                 </div>
                 
-                {/* Step card */}
+                {/* Step card - refined */}
                 <motion.div
                   role="tab"
                   tabIndex={0}
                   aria-selected={activeStep === index}
                   aria-label={`${t('infographic.badge')} ${index + 1}: ${step.title} - ${step.description}`}
-                  className={`p-4 rounded-2xl border-2 bg-card transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+                  className={`p-5 rounded-3xl border bg-card transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                     activeStep === index 
-                      ? 'border-primary shadow-lg shadow-primary/10' 
-                      : 'border-border'
+                      ? 'border-primary/30 shadow-sm' 
+                      : 'border-border/30'
                   }`}
                   onClick={() => setActiveStep(index)}
                   onKeyDown={(e) => {
@@ -900,7 +892,7 @@ const InvestorInfographic: React.FC = () => {
                       setActiveStep(steps.length - 1);
                     }
                   }}
-                  whileTap={{ scale: 0.98 }}
+                  whileTap={{ scale: 0.99 }}
                 >
                   <div className="flex items-start gap-4">
                     {/* House */}
@@ -912,18 +904,18 @@ const InvestorInfographic: React.FC = () => {
                       />
                     </div>
                     
-                    {/* Content */}
+                    {/* Content - lighter typography */}
                     <div className="flex-1 min-w-0 pt-1">
-                      <h3 className={`text-lg font-bold transition-colors ${
-                        activeStep === index ? 'text-primary' : 'text-foreground'
+                      <h3 className={`text-base font-semibold transition-colors ${
+                        activeStep === index ? 'text-primary' : 'text-foreground/80'
                       }`}>
                         {step.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <p className="text-sm text-muted-foreground/70 mt-1 font-light">
                         {step.description}
                       </p>
                       <motion.p
-                        className="text-xs text-muted-foreground/70 mt-2"
+                        className="text-xs text-muted-foreground/50 mt-2 font-light"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ 
                           opacity: activeStep === index ? 1 : 0, 
