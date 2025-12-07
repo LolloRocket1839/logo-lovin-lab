@@ -721,10 +721,9 @@ const InvestorInfographic: React.FC = () => {
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-          <Sparkles className="w-4 h-4 text-primary" aria-hidden="true" />
-          <span className="text-sm font-semibold text-primary">{t('infographic.badge')}</span>
-        </div>
+        <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground font-medium mb-4 inline-block border-b border-primary/30 pb-1">
+          {t('infographic.badge')}
+        </span>
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-3">
           {t('infographic.title')}
         </h2>
