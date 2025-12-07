@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Users } from "lucide-react";
+import { ArrowRight, MessageCircle, Users, Award } from "lucide-react";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { StyledText } from "@/components/StyledText";
@@ -58,7 +58,26 @@ export const InvestorSection = () => {
       
       <div className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
-          
+          {/* Start-up Innovativa Badge - Static */}
+          <div
+            className={`flex justify-center mb-6 transition-all duration-700 ${
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ animationDelay: '0ms' }}
+          >
+            <div
+              className="inline-flex items-center gap-2 px-5 py-2.5 
+                         bg-white/90 dark:bg-card/90 backdrop-blur-md 
+                         border border-primary/20 rounded-full
+                         shadow-[0_4px_20px_hsla(142,76%,36%,0.15)]"
+            >
+              <Award className="w-4 h-4 text-primary" aria-hidden="true" />
+              <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+                {t('investor.startupInnovativaBadge')}
+              </span>
+            </div>
+          </div>
+
           <p 
             className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
               isVisible ? "animate-fade-in opacity-100" : "opacity-0"
