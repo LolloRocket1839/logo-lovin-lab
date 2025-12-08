@@ -66,11 +66,46 @@ interface StepConfig {
 
 const SimplifiedInvestmentForm = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  // Read all initial data ONCE using lazy initializers
+  const [initialData] = useState(() => {
+    let savedFormData: Partial<FormData> = {};
+    let prefillEmail = '';
+    let savedStep = 0;
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        savedFormData = parsed.formData || {};
+      }
+    } catch (error) {
+      console.error("Error loading saved form data:", error);
+    }
+
+    // Get prefill email (read and remove only once)
+    const prefill = localStorage.getItem('junglerent_prefill_email');
+    if (prefill) {
+      localStorage.removeItem('junglerent_prefill_email');
+      prefillEmail = prefill;
+    }
+
+    // Get saved step
+    try {
+      savedStep = parseInt(localStorage.getItem(`${STORAGE_KEY}_step`) || "0");
+    } catch {
+      savedStep = 0;
+    }
+
+    return { savedFormData, prefillEmail, savedStep };
+  });
+
   const [languageSelected, setLanguageSelected] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSaveIndicator, setShowSaveIndicator] = useState(false);
-  const navigate = useNavigate();
+  const [hasRestoredStep, setHasRestoredStep] = useState(false);
 
   const formSchema = createFormSchema(t);
 
@@ -80,46 +115,17 @@ const SimplifiedInvestmentForm = () => {
     { id: 2, title: t("questions.finalStep"), fields: ["consents_to_data_processing", "consents_to_contact"] },
   ];
 
-  const getSavedFormData = (): Partial<FormData> => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        return parsed.formData || {};
-      }
-    } catch (error) {
-      console.error("Error loading saved form data:", error);
-    }
-    return {};
-  };
-
-  // Get prefill email BEFORE form initialization (from mini-form)
-  const getPrefillEmail = (): string => {
-    const prefillEmail = localStorage.getItem('junglerent_prefill_email');
-    if (prefillEmail) {
-      // Remove immediately to prevent duplicates
-      localStorage.removeItem('junglerent_prefill_email');
-      return prefillEmail;
-    }
-    return '';
-  };
-
-  const savedData = getSavedFormData();
-  const prefillEmail = getPrefillEmail();
-  const savedStep = parseInt(localStorage.getItem(`${STORAGE_KEY}_step`) || "0");
-
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     mode: "onChange",
     defaultValues: {
-      full_name: savedData.full_name || "",
-      // Priority: prefillEmail > savedData.email > empty string
-      email: prefillEmail || savedData.email || "",
-      phone: savedData.phone || "+39 ",
-      investor_type: savedData.investor_type || "",
-      investment_amount_range: savedData.investment_amount_range || "",
-      consents_to_data_processing: savedData.consents_to_data_processing || false,
-      consents_to_contact: savedData.consents_to_contact || false,
+      full_name: initialData.savedFormData.full_name || "",
+      email: initialData.prefillEmail || initialData.savedFormData.email || "",
+      phone: initialData.savedFormData.phone || "+39 ",
+      investor_type: initialData.savedFormData.investor_type || "",
+      investment_amount_range: initialData.savedFormData.investment_amount_range || "",
+      consents_to_data_processing: initialData.savedFormData.consents_to_data_processing || false,
+      consents_to_contact: initialData.savedFormData.consents_to_contact || false,
     },
   });
 
@@ -132,13 +138,15 @@ const SimplifiedInvestmentForm = () => {
     }
   }, [i18n]);
 
-  // Restore saved step
+  // Restore saved step (only once)
   useEffect(() => {
-    if (languageSelected && savedStep > 0) {
-      setCurrentStep(Math.min(savedStep, steps.length - 1));
+    if (languageSelected && !hasRestoredStep && initialData.savedStep > 0) {
+      const targetStep = Math.min(initialData.savedStep, steps.length - 1);
+      setCurrentStep(targetStep);
+      setHasRestoredStep(true);
       toast.info(t("autoSave.restored"));
     }
-  }, [languageSelected]);
+  }, [languageSelected, hasRestoredStep, initialData.savedStep, steps.length, t]);
 
 
   // Auto-save form data
