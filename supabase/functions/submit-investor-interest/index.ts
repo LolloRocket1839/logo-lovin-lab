@@ -54,18 +54,6 @@ function isValidInvestmentRange(range: string): boolean {
   return validRanges.includes(range);
 }
 
-function isValidTimeline(timeline: string): boolean {
-  const validTimelines = ["immediate", "3_months", "6_months", "exploratory"];
-  return validTimelines.includes(timeline);
-}
-
-function isValidInterests(interests: unknown): interests is string[] {
-  if (!Array.isArray(interests)) return false;
-  const validInterests = ["equity", "convertible", "revenue", "advisory"];
-  return interests.length >= 1 && 
-         interests.length <= 4 && 
-         interests.every(i => typeof i === "string" && validInterests.includes(i));
-}
 
 Deno.serve(async (req) => {
   // Handle CORS preflight
@@ -116,14 +104,6 @@ Deno.serve(async (req) => {
       errors.push("Invalid investment range");
     }
     
-    if (!body.investment_timeline || !isValidTimeline(body.investment_timeline)) {
-      errors.push("Invalid timeline");
-    }
-    
-    if (!isValidInterests(body.areas_of_interest)) {
-      errors.push("Invalid areas of interest");
-    }
-    
     if (body.consents_to_data_processing !== true) {
       errors.push("Data processing consent required");
     }
@@ -155,9 +135,9 @@ Deno.serve(async (req) => {
       country: "italy",
       investor_type: body.investor_type,
       investment_amount_range: body.investment_amount_range,
-      investment_timeline: body.investment_timeline,
+      investment_timeline: "exploratory", // Default value since field removed from form
       accredited_investor: "unsure",
-      areas_of_interest: body.areas_of_interest,
+      areas_of_interest: ["equity"], // Default value since field removed from form
       consents_to_data_processing: true,
       consents_to_fadp: true,
       consents_to_contact: true,
