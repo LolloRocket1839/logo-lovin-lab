@@ -7,7 +7,7 @@ import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { StyledText } from "@/components/StyledText";
 import { StudentSearchDialog } from "@/components/StudentSearchDialog";
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const StudentSection = () => {
   const { t, i18n } = useTranslation();

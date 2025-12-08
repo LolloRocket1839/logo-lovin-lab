@@ -2,7 +2,7 @@ import { BlogPost } from "@/types/blog";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface BlogCardMarvisProps {
   post: BlogPost;
