@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { X, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CONTACTS, openWhatsApp, MESSAGES, openEmail } from "@/lib/contacts";
+import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 type SectionType = 'student' | 'investor' | 'seller' | 'default';
@@ -91,7 +91,7 @@ export const StickyCTA = () => {
         aria-label={t('investor.talkToAdvisor')}
         className="fixed bottom-16 left-0 right-0 z-40 md:hidden
                     backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
-                    transition-all duration-300 animate-fade-in shadow-lg"
+                    transition-all duration-300 shadow-lg"
       >
         <div className="container px-3 py-3 flex items-center justify-between gap-2">
           <Button
@@ -126,7 +126,7 @@ export const StickyCTA = () => {
       aria-label={t('hero.contactLorenzo')}
       className="fixed bottom-16 left-0 right-0 z-40 md:hidden
                   backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
-                  transition-all duration-300 animate-fade-in shadow-lg"
+                  transition-all duration-300 shadow-lg"
     >
       <div className="container px-3 py-3 flex items-center justify-between gap-2">
         <Button

@@ -284,12 +284,7 @@ const SimplifiedInvestmentForm = () => {
       <div className="fixed inset-0 gradient-jungle-vertical" />
       
       {/* Header */}
-      <motion.header 
-        className="relative py-4 md:py-8 px-4"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
+      <header className="relative py-4 md:py-8 px-4">
         <div className="container mx-auto max-w-2xl">
           <div className="relative flex items-center justify-center mb-4">
             <div className="absolute left-0">
@@ -312,7 +307,7 @@ const SimplifiedInvestmentForm = () => {
             {t("header.subtitle")}
           </p>
         </div>
-      </motion.header>
+      </header>
 
       {/* Progress Bar */}
       <div className="fixed top-0 left-0 right-0 z-50">

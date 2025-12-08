@@ -1,38 +1,8 @@
-import { useEffect, useRef, useState } from "react";
 import logo2i3t from "@/assets/2i3t-logo-hq.png";
 
 export const PartnerLogos = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px"
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div 
-      ref={sectionRef}
-      className={`py-12 md:py-16 border-t border-b border-border/50 transition-all duration-700 ${
-        isVisible ? "animate-fade-in" : "opacity-0"
-      }`}
-    >
+    <div className="py-12 md:py-16 border-t border-b border-border/50">
       <p className="text-center text-xs uppercase tracking-widest text-muted-foreground/60 mb-8 font-medium">
         Powered by
       </p>

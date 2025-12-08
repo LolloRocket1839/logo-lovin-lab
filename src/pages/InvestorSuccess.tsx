@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import { CheckCircle2, Home, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/jungle-rent-logo-new.svg";
@@ -9,7 +8,7 @@ const Success = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Animated Gradient Background */}
+      {/* Gradient Background */}
       <div 
         className="fixed inset-0"
         style={{
@@ -19,41 +18,14 @@ const Success = () => {
         }}
       />
 
-      {/* Floating shapes */}
+      {/* Static decorative shapes */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
       </div>
 
       <div className="relative min-h-screen flex items-center justify-center px-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full max-w-2xl"
-        >
+        <div className="w-full max-w-2xl">
           <div className="backdrop-blur-md p-8 md:p-12 rounded-2xl border border-border/50 shadow-2xl" style={{ backgroundColor: 'hsl(45, 65%, 92%)' }}>
             {/* Logo */}
             <div className="flex items-center justify-center gap-3 mb-8">
@@ -62,37 +34,22 @@ const Success = () => {
             </div>
 
             {/* Success Icon */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="flex justify-center mb-8"
-            >
+            <div className="flex justify-center mb-8">
               <CheckCircle2 className="w-24 h-24 text-primary/70" strokeWidth={2} />
-            </motion.div>
+            </div>
 
             {/* Success Message */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-center mb-8"
-            >
+            <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-extrabold text-primary/70 mb-4 tracking-tighter">
                 Thank You for Your Interest!
               </h2>
               <p className="text-lg mb-6 font-medium" style={{ color: 'hsl(92, 49%, 14%, 0.7)' }}>
                 We've received your investment interest form and appreciate you taking the time to share your information with us.
               </p>
-            </motion.div>
+            </div>
 
             {/* Next Steps */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-muted/50 rounded-xl p-6 mb-8"
-            >
+            <div className="bg-muted/50 rounded-xl p-6 mb-8">
               <h3 className="text-xl font-bold text-foreground mb-4 tracking-gotham">What Happens Next?</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -129,15 +86,10 @@ const Success = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Bonus Resource */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="bg-primary/10 rounded-xl p-6 mb-8 border border-primary/20"
-            >
+            <div className="bg-primary/10 rounded-xl p-6 mb-8 border border-primary/20">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                   <FileText className="w-6 h-6 text-primary" />
@@ -158,15 +110,10 @@ const Success = () => {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="text-center mb-8"
-            >
+            <div className="text-center mb-8">
               <p className="text-muted-foreground mb-2 font-medium">
                 Questions in the meantime?
               </p>
@@ -176,15 +123,10 @@ const Success = () => {
               >
                 investments@junglerent.com
               </a>
-            </motion.div>
+            </div>
 
             {/* Back Button */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.7 }}
-              className="flex justify-center"
-            >
+            <div className="flex justify-center">
               <Button
                 onClick={() => navigate("/")}
                 variant="outline"
@@ -194,9 +136,9 @@ const Success = () => {
                 <Home className="w-4 h-4" />
                 Back to Home
               </Button>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

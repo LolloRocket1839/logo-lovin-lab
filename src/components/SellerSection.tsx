@@ -1,37 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
-import { Building2, TrendingUp, Clock, Shield, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { Building2, TrendingUp, Clock, Shield } from "lucide-react";
 import { Button } from "./ui/button";
 import { SellerContactDialog } from "./SellerContactDialog";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { StyledText } from "@/components/StyledText";
 
 export const SellerSection = () => {
   const { t } = useTranslation();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px"
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const benefits = [
     {
@@ -65,39 +41,19 @@ export const SellerSection = () => {
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
-      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto relative z-10 transition-spacing">
+      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
-          <p 
-            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '0ms' }}
-          >
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
             {t('seller.sectionLabel')}
           </p>
-          <h2 
-            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-foreground transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '150ms' }}
-          >
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-foreground">
             <StyledText>{t('seller.compactTitle')}</StyledText>
           </h2>
-          <p 
-            className={`text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6 transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '300ms' }}
-          >
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
             <StyledText>{t('seller.compactDesc')}</StyledText>
           </p>
           
-          <ul 
-            className={`text-left max-w-lg mx-auto space-y-2 mb-8 text-sm text-muted-foreground transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '450ms' }}
-          >
+          <ul className="text-left max-w-lg mx-auto space-y-2 mb-8 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <span className="text-primary mt-0.5">•</span>
               <span>{t('seller.compactBullet1')}</span>
@@ -112,10 +68,7 @@ export const SellerSection = () => {
             size="lg" 
             variant="premium"
             onClick={() => setIsDialogOpen(true)}
-            className={`w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12 transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '600ms' }}
+            className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12"
           >
             {t('seller.ctaButton')}
           </Button>
