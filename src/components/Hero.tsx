@@ -4,13 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
 import { StyledText } from "@/components/StyledText";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useReducedMotion } from "framer-motion";
+
 export const Hero = () => {
   const {
     t,
@@ -21,6 +22,7 @@ export const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
+  const prefersReducedMotion = useReducedMotion();
   const handleWhatsAppLorenzo = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
@@ -76,13 +78,17 @@ export const Hero = () => {
       <div className="container relative z-10 px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo statico */}
-          <div className="mb-16 md:mb-20 animate-fade-in">
+          <div className={prefersReducedMotion ? "mb-16 md:mb-20" : "mb-16 md:mb-20 animate-fade-in"}>
             <img 
               src={jungleRentLogo} 
               alt={t('hero.logoAlt')} 
               width="128" 
               height="128" 
-              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300 rounded-full cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className={`w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto opacity-90 rounded-full cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+                prefersReducedMotion 
+                  ? "hover:opacity-100" 
+                  : "hover:opacity-100 hover:scale-105 transition-all duration-300"
+              }`}
               loading="eager" 
               onClick={() => {
                 trackClick('hero_logo');
@@ -102,22 +108,22 @@ export const Hero = () => {
           </div>
 
           {/* Headline principale */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight text-foreground tracking-tight animate-fade-in-up">
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight text-foreground tracking-tight ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`}>
             <StyledText>{t('hero.mainHeadline')}</StyledText>
           </h2>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <p className={`text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 font-light leading-relaxed ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`} style={prefersReducedMotion ? {} : { animationDelay: '100ms' }}>
             <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
 
           {/* Urgency Elements */}
-          <div className="flex flex-col items-center gap-6 mb-10 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+          <div className={`flex flex-col items-center gap-6 mb-10 ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`} style={prefersReducedMotion ? {} : { animationDelay: '150ms' }}>
             <LaunchCountdown />
             <WaitlistBadge />
           </div>
 
           {/* 2 CTA con focus su Investi */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center animate-fade-in-up mb-8" style={{ animationDelay: '200ms' }}>
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-8 ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`} style={prefersReducedMotion ? {} : { animationDelay: '200ms' }}>
             <Button 
               size="lg" 
               variant="premium" 
@@ -125,7 +131,7 @@ export const Hero = () => {
               className="w-full sm:w-auto text-base sm:text-lg group"
             >
               {t('hero.invest')}
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+              <ArrowRight className={`ml-2 w-5 h-5 ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:translate-x-1'}`} aria-hidden="true" />
             </Button>
             <Button 
               size="lg" 
@@ -134,7 +140,7 @@ export const Hero = () => {
               className="w-full sm:w-auto text-sm sm:text-base group"
             >
               {t('hero.findHome')}
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+              <ArrowRight className={`ml-2 w-4 h-4 ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:translate-x-1'}`} aria-hidden="true" />
             </Button>
           </div>
         </div>

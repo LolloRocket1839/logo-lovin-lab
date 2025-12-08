@@ -2,6 +2,7 @@ import { BlogPost } from "@/types/blog";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useReducedMotion } from "framer-motion";
 
 interface BlogCardMarvisProps {
   post: BlogPost;
@@ -11,6 +12,7 @@ interface BlogCardMarvisProps {
 export const BlogCardMarvis = ({ post, isNew }: BlogCardMarvisProps) => {
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
+  const prefersReducedMotion = useReducedMotion();
   const translatedData = post.translations[currentLang];
 
   return (
@@ -23,7 +25,7 @@ export const BlogCardMarvis = ({ post, isNew }: BlogCardMarvisProps) => {
           <img 
             src={post.image}
             alt={translatedData.title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
             loading="lazy"
           />
         </div>
@@ -49,7 +51,7 @@ export const BlogCardMarvis = ({ post, isNew }: BlogCardMarvisProps) => {
           
           <div className="flex items-center justify-between text-xs text-muted-foreground">
             <span>{new Date(post.date).toLocaleDateString(currentLang)}</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className={`w-4 h-4 ${prefersReducedMotion ? '' : 'transition-transform group-hover:translate-x-1'}`} />
           </div>
         </div>
       </article>

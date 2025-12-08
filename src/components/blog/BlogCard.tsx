@@ -3,6 +3,7 @@ import { Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useReducedMotion } from "framer-motion";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -12,6 +13,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
   const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
   const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
+  const prefersReducedMotion = useReducedMotion();
   const translatedData = post.translations[currentLang];
 
   // Helper to check if post is new (< 7 days)
@@ -34,7 +36,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
           <img
             src={post.image}
             alt={translatedData.title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
             loading="lazy"
           />
           <span className={`absolute top-4 left-4 category-badge ${post.category}`}>

@@ -122,6 +122,17 @@ All colors MUST be HSL.
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
+  /* Reduced motion: disable scale/transform animations */
+  @media (prefers-reduced-motion: reduce) {
+    .feel-good-click {
+      @apply hover:translate-y-0 active:scale-100;
+    }
+    
+    .feel-good-click:active {
+      box-shadow: none;
+    }
+  }
+
   /* Blog Card Hover - Marvis Style */
   .blog-card-marvis {
     @apply transition-all duration-300 ease-out;
@@ -133,6 +144,13 @@ All colors MUST be HSL.
 
   .blog-card-marvis:hover {
     border-color: hsl(var(--primary) / 0.3);
+  }
+
+  /* Reduced motion: disable scale animations on blog cards */
+  @media (prefers-reduced-motion: reduce) {
+    .blog-card-marvis {
+      @apply hover:scale-100;
+    }
   }
 
   /* Category Badge - Distintivo e Creativo */
@@ -173,7 +191,14 @@ All colors MUST be HSL.
     @apply px-2.5 py-1 rounded-full;
     @apply bg-primary;
     @apply text-primary-foreground text-[10px] font-bold uppercase tracking-wide;
-    @apply shadow-lg animate-pulse;
+    @apply shadow-lg;
+  }
+
+  /* Pulse animation only when reduced motion is not preferred */
+  @media (prefers-reduced-motion: no-preference) {
+    .new-badge {
+      @apply animate-pulse;
+    }
   }
 
   /* Jungle Gradient Utilities */
