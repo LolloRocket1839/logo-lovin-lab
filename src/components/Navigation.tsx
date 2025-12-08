@@ -7,6 +7,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useReducedMotion } from "framer-motion";
 
 export const Navigation = () => {
   const { t, i18n } = useTranslation();
@@ -15,6 +16,7 @@ export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +37,7 @@ export const Navigation = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      element.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
       setIsMobileMenuOpen(false);
     }
   };
@@ -46,7 +48,7 @@ export const Navigation = () => {
     // If already on home page, just scroll to top smoothly
     if (window.location.pathname === '/') {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     }
     // Otherwise, Link handles client-side navigation to '/'
   };
@@ -73,7 +75,7 @@ export const Navigation = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
           // Clean up the hash from URL
           window.history.replaceState(null, '', '/');
         }
@@ -98,7 +100,9 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 ${
+        prefersReducedMotion ? '' : 'transition-all duration-500'
+      } ${
         isScrolled
           ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-minimal"
           : "bg-transparent"
@@ -112,18 +116,18 @@ export const Navigation = () => {
           <Link
             to="/"
             onClick={handleLogoClick}
-            className="flex items-center gap-2 group transition-all duration-500 hover:scale-105"
+            className={`flex items-center gap-2 group ${prefersReducedMotion ? '' : 'transition-all duration-500 hover:scale-105'}`}
             aria-label="Torna alla home"
             style={{
               opacity: scrollProgress,
-              transform: `scale(${0.8 + (scrollProgress * 0.2)})`,
+              transform: prefersReducedMotion ? undefined : `scale(${0.8 + (scrollProgress * 0.2)})`,
               pointerEvents: scrollProgress < 0.3 ? 'none' : 'auto'
             }}
           >
             <img
               src={jungleRentLogo}
               alt="Jungle Rent Logo"
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 transition-size group-hover:rotate-6"
+              className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 ${prefersReducedMotion ? '' : 'transition-size group-hover:rotate-6'}`}
             />
             <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:block">
               Jungle Rent
@@ -183,7 +187,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background/95 backdrop-blur-xl z-50">
+          <div className={`lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-xl z-50 ${prefersReducedMotion ? '' : 'animate-fade-in'}`}>
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => {
                 const href = item.path || (item.id ? `/#${item.id}` : '/');
