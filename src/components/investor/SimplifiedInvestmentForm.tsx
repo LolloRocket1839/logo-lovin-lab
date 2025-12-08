@@ -23,7 +23,7 @@ const STORAGE_KEY = "junglerent_investment_form_v3";
 // Default country code for phone validation
 const DEFAULT_COUNTRY: CountryCode = "IT";
 
-// Simplified 4-step schema
+// Simplified 3-step schema (removed timeline and interests)
 const createFormSchema = (t: (key: string) => string) => z.object({
   // Step 1: Contact Info
   full_name: z.string()
@@ -42,10 +42,7 @@ const createFormSchema = (t: (key: string) => string) => z.object({
   // Step 2: Investor Profile
   investor_type: z.string().min(1, t("errors.investorTypeRequired")),
   investment_amount_range: z.string().min(1, t("errors.investmentRangeRequired")),
-  // Step 3: Goals
-  investment_timeline: z.string().min(1, t("errors.timelineRequired")),
-  areas_of_interest: z.array(z.string()).min(1, t("errors.interestsRequired")),
-  // Step 4: Consents (simplified)
+  // Step 3: Consents
   consents_to_data_processing: z.boolean().refine((val) => val === true, t("errors.gdprRequired")),
   consents_to_contact: z.boolean().refine((val) => val === true, t("errors.consentRequired")),
 }).refine((data) => {
@@ -80,8 +77,7 @@ const SimplifiedInvestmentForm = () => {
   const steps: StepConfig[] = [
     { id: 0, title: t("questions.welcome"), fields: ["full_name", "email", "phone"] },
     { id: 1, title: t("questions.investmentGoals"), fields: ["investor_type", "investment_amount_range"] },
-    { id: 2, title: t("questions.almostThere"), fields: ["investment_timeline", "areas_of_interest"] },
-    { id: 3, title: t("questions.finalStep"), fields: ["consents_to_data_processing", "consents_to_contact"] },
+    { id: 2, title: t("questions.finalStep"), fields: ["consents_to_data_processing", "consents_to_contact"] },
   ];
 
   const getSavedFormData = (): Partial<FormData> => {
@@ -122,8 +118,6 @@ const SimplifiedInvestmentForm = () => {
       phone: savedData.phone || "+39 ",
       investor_type: savedData.investor_type || "",
       investment_amount_range: savedData.investment_amount_range || "",
-      investment_timeline: savedData.investment_timeline || "",
-      areas_of_interest: savedData.areas_of_interest || [],
       consents_to_data_processing: savedData.consents_to_data_processing || false,
       consents_to_contact: savedData.consents_to_contact || false,
     },
@@ -179,9 +173,6 @@ const SimplifiedInvestmentForm = () => {
       const value = form.getValues(field);
       const error = form.getFieldState(field).error;
       
-      if (field === "areas_of_interest") {
-        return Array.isArray(value) && value.length > 0 && !error;
-      }
       if (field === "consents_to_data_processing" || field === "consents_to_contact") {
         return value === true;
       }
@@ -230,8 +221,6 @@ const SimplifiedInvestmentForm = () => {
           phone: data.phone,
           investor_type: data.investor_type,
           investment_amount_range: data.investment_amount_range,
-          investment_timeline: data.investment_timeline,
-          areas_of_interest: data.areas_of_interest,
           consents_to_data_processing: data.consents_to_data_processing,
           consents_to_contact: data.consents_to_contact,
         },
@@ -275,19 +264,6 @@ const SimplifiedInvestmentForm = () => {
     { value: "100000+", label: t("investmentRanges.100000+") },
   ];
 
-  const timelines = [
-    { value: "immediate", label: t("timelines.immediate") },
-    { value: "3_months", label: t("timelines.3months") },
-    { value: "6_months", label: t("timelines.6months") },
-    { value: "exploratory", label: t("timelines.exploratory") },
-  ];
-
-  const interests = [
-    { value: "equity", label: t("interests.equity") },
-    { value: "convertible", label: t("interests.convertible") },
-    { value: "revenue", label: t("interests.revenue") },
-    { value: "advisory", label: t("interests.advisory") },
-  ];
 
   // Show language selection
   if (!languageSelected) {
@@ -530,77 +506,8 @@ const SimplifiedInvestmentForm = () => {
                     </div>
                   )}
 
-                  {/* Step 3: Goals */}
+                  {/* Step 3: Consents */}
                   {currentStep === 2 && (
-                    <div className="space-y-5">
-                      <FormField
-                        control={form.control}
-                        name="investment_timeline"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-base font-semibold">{t("questions.investmentTimeline")}</FormLabel>
-                            <div className="grid grid-cols-2 gap-3">
-                              {timelines.map((timeline) => (
-                                <motion.button
-                                  key={timeline.value}
-                                  type="button"
-                                  onClick={() => field.onChange(timeline.value)}
-                                  className={`p-4 rounded-xl text-sm font-medium transition-all ${
-                                    field.value === timeline.value
-                                      ? 'bg-primary text-primary-foreground shadow-lg'
-                                      : 'bg-muted/50 text-foreground hover:bg-muted'
-                                  }`}
-                                  whileTap={{ scale: 0.98 }}
-                                >
-                                  {timeline.label}
-                                </motion.button>
-                              ))}
-                            </div>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                      <FormField
-                        control={form.control}
-                        name="areas_of_interest"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-base font-semibold">{t("questions.areasOfInterest")}</FormLabel>
-                            <div className="space-y-2">
-                              {interests.map((interest) => {
-                                const isChecked = field.value?.includes(interest.value);
-                                return (
-                                  <motion.div
-                                    key={interest.value}
-                                    onClick={() => {
-                                      const current = field.value || [];
-                                      field.onChange(
-                                        isChecked
-                                          ? current.filter((v) => v !== interest.value)
-                                          : [...current, interest.value]
-                                      );
-                                    }}
-                                    className={`flex items-center gap-3 p-4 rounded-xl cursor-pointer transition-all ${
-                                      isChecked ? 'bg-primary/10 ring-2 ring-primary/30' : 'bg-muted/30 hover:bg-muted/50'
-                                    }`}
-                                    whileTap={{ scale: 0.98 }}
-                                  >
-                                    <Checkbox checked={isChecked} />
-                                    <span className="text-sm font-medium">{interest.label}</span>
-                                    {isChecked && <CheckCircle2 className="w-4 h-4 text-primary ml-auto" />}
-                                  </motion.div>
-                                );
-                              })}
-                            </div>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                    </div>
-                  )}
-
-                  {/* Step 4: Consents */}
-                  {currentStep === 3 && (
                     <div className="space-y-4">
                       <p className="text-sm text-muted-foreground mb-4">{t("questions.consentsLabel")}</p>
                       <FormField
