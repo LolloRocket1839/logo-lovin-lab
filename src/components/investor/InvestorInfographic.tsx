@@ -1,7 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+
+// Hook to detect mobile devices
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
+  return isMobile;
+};
 
 // Premium SVG House Component with refined architecture
 interface PremiumHouseProps {
@@ -11,6 +25,10 @@ interface PremiumHouseProps {
 }
 
 const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = 'md' }) => {
+  const shouldReduceMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const simplifyAnimations = shouldReduceMotion || isMobile;
+  
   const sizeClasses = {
     sm: 'w-16 h-16',
     md: 'w-24 h-24',
@@ -20,43 +38,34 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
   const getVariantIcon = () => {
     switch (variant) {
       case 'invest':
-        // Premium 3D Coin with € symbol
+        // Premium 3D Coin with € symbol - simplified on mobile
         return (
           <g transform="translate(32, 0)">
             {/* Coin shadow */}
-            <motion.ellipse
+            <ellipse
               cx="16"
               cy="20"
               rx="13"
               ry="4"
               fill="hsl(40 70% 30%)"
-              opacity="0.3"
-              initial={{ scale: 0 }}
-              animate={{ scale: isActive ? 1 : 0.8 }}
-              transition={{ delay: 0.2 }}
+              opacity={isActive ? 0.3 : 0.2}
             />
             {/* Coin back (3D effect) */}
-            <motion.ellipse
+            <ellipse
               cx="16"
               cy="16"
               rx="12"
               ry="12"
               fill="url(#coinEdgeGradient)"
-              initial={{ scale: 0 }}
-              animate={{ scale: isActive ? 1.05 : 1 }}
-              transition={{ delay: 0.2, type: "spring" }}
             />
             {/* Coin front */}
-            <motion.circle
+            <circle
               cx="16"
               cy="14"
               r="11"
               fill="url(#coinGradientPremium)"
               stroke="url(#coinRimGradient)"
               strokeWidth="1.5"
-              initial={{ scale: 0 }}
-              animate={{ scale: isActive ? 1.05 : 1 }}
-              transition={{ delay: 0.25, type: "spring" }}
             />
             {/* Inner ring detail */}
             <circle cx="16" cy="14" r="8" fill="none" stroke="hsl(45 80% 55%)" strokeWidth="0.5" opacity="0.6" />
@@ -77,14 +86,9 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
           </g>
         );
       case 'acquire':
-        // Elegant key icon (represents ownership/acquisition)
+        // Elegant key icon - static on mobile
         return (
-          <motion.g 
-            transform="translate(32, 2)"
-            initial={{ opacity: 0, rotate: -20 }}
-            animate={{ opacity: 1, rotate: isActive ? 0 : -10 }}
-            transition={{ delay: 0.3, type: "spring" }}
-          >
+          <g transform="translate(32, 2)">
             {/* Key shadow */}
             <ellipse cx="18" cy="24" rx="10" ry="3" fill="hsl(var(--primary))" opacity="0.2" />
             {/* Key head (bow) */}
@@ -97,17 +101,12 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
             <rect x="29" y="12" width="2" height="4" rx="0.5" fill="url(#keyGradient)" />
             {/* Key shine */}
             <ellipse cx="8" cy="8" rx="2" ry="1.5" fill="white" opacity="0.3" />
-          </motion.g>
+          </g>
         );
       case 'manage':
-        // Elegant clipboard with checklist
+        // Elegant clipboard with checklist - static checkmarks on mobile
         return (
-          <motion.g 
-            transform="translate(32, 0)"
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
+          <g transform="translate(32, 0)">
             {/* Clipboard shadow */}
             <rect x="6" y="24" width="22" height="4" rx="2" fill="hsl(var(--primary))" opacity="0.15" />
             {/* Clipboard body */}
@@ -115,90 +114,64 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
             {/* Clipboard clip */}
             <rect x="11" y="3" width="12" height="6" rx="2" fill="hsl(var(--primary))" />
             <rect x="14" y="5" width="6" height="2" rx="1" fill="hsl(var(--primary-foreground))" opacity="0.8" />
-            {/* Checklist lines */}
-            <motion.g
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, staggerChildren: 0.1 }}
-            >
+            {/* Checklist lines - static */}
+            <g>
               {/* Check mark 1 */}
-              <motion.path
+              <path
                 d="M8 12 L10 14 L14 10"
                 stroke="hsl(142 70% 45%)"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: isActive ? 1 : 0.7 }}
-                transition={{ duration: 0.4, delay: 0.5 }}
               />
               <rect x="16" y="11" width="10" height="2" rx="1" fill="hsl(var(--muted-foreground))" opacity="0.5" />
               {/* Check mark 2 */}
-              <motion.path
+              <path
                 d="M8 18 L10 20 L14 16"
                 stroke="hsl(142 70% 45%)"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 fill="none"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: isActive ? 1 : 0.5 }}
-                transition={{ duration: 0.4, delay: 0.7 }}
               />
               <rect x="16" y="17" width="8" height="2" rx="1" fill="hsl(var(--muted-foreground))" opacity="0.5" />
-            </motion.g>
-          </motion.g>
+            </g>
+          </g>
         );
       case 'earn':
-        // Elegant growing bar chart with upward arrow
+        // Elegant growing bar chart with upward arrow - static on mobile
         return (
           <g transform="translate(28, -2)">
             {/* Chart shadow */}
             <rect x="2" y="26" width="32" height="3" rx="1.5" fill="hsl(142 50% 30%)" opacity="0.15" />
-            {/* Chart bars */}
-            <motion.rect
+            {/* Chart bars - static */}
+            <rect
               x="4"
               y="18"
               width="6"
               height="8"
               rx="1.5"
               fill="url(#chartBarGradient1)"
-              initial={{ scaleY: 0 }}
-              animate={{ scaleY: 1 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              style={{ transformOrigin: 'bottom' }}
             />
-            <motion.rect
+            <rect
               x="13"
               y="12"
               width="6"
               height="14"
               rx="1.5"
               fill="url(#chartBarGradient2)"
-              initial={{ scaleY: 0 }}
-              animate={{ scaleY: 1 }}
-              transition={{ delay: 0.45, duration: 0.4 }}
-              style={{ transformOrigin: 'bottom' }}
             />
-            <motion.rect
+            <rect
               x="22"
               y="4"
               width="6"
               height="22"
               rx="1.5"
               fill="url(#chartBarGradient3)"
-              initial={{ scaleY: 0 }}
-              animate={{ scaleY: 1 }}
-              transition={{ delay: 0.6, duration: 0.4 }}
-              style={{ transformOrigin: 'bottom' }}
             />
-            {/* Upward arrow */}
-            <motion.g
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: isActive ? 1 : 0.7, y: 0 }}
-              transition={{ delay: 0.8 }}
-            >
+            {/* Upward arrow - static */}
+            <g opacity={isActive ? 1 : 0.7}>
               <path
                 d="M30 8 L34 2 L38 8"
                 fill="none"
@@ -208,7 +181,7 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
                 strokeLinejoin="round"
               />
               <line x1="34" y1="2" x2="34" y2="12" stroke="hsl(142 70% 40%)" strokeWidth="2" strokeLinecap="round" />
-            </motion.g>
+            </g>
             {/* € symbol on tallest bar */}
             <text x="25" y="18" fontSize="8" fill="white" fontWeight="bold" textAnchor="middle">€</text>
           </g>
@@ -219,12 +192,10 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
   };
 
   return (
-    <motion.svg
+    <svg
       viewBox="0 0 100 100"
-      className={sizeClasses[size]}
-      initial={{ opacity: 0.6 }}
-      animate={{ opacity: isActive ? 1 : 0.75 }}
-      transition={{ duration: 0.4 }}
+      className={`${sizeClasses[size]} transition-opacity duration-300`}
+      style={{ opacity: isActive ? 1 : 0.75 }}
     >
       <defs>
         {/* Premium house body gradient with texture hint */}
@@ -331,16 +302,15 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
         </filter>
       </defs>
 
-      {/* Ground shadow */}
-      <motion.ellipse
+      {/* Ground shadow - static */}
+      <ellipse
         cx="50"
         cy="94"
         rx="35"
         ry="5"
         fill="hsl(var(--primary))"
-        initial={{ opacity: 0.08 }}
-        animate={{ opacity: isActive ? 0.18 : 0.08, scale: isActive ? 1.05 : 1 }}
-        transition={{ duration: 0.4 }}
+        opacity={isActive ? 0.18 : 0.08}
+        className="transition-opacity duration-300"
       />
 
       {/* Main house group */}
@@ -350,8 +320,8 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
         <rect x="18" y="86" width="64" height="6" rx="1" fill="hsl(30 15% 75%)" />
         <rect x="20" y="88" width="60" height="2" fill="hsl(30 10% 65%)" />
         
-        {/* House body with subtle brick texture hint */}
-        <motion.rect
+        {/* House body with subtle brick texture hint - static */}
+        <rect
           x="20"
           y="48"
           width="60"
@@ -360,17 +330,14 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
           fill="url(#houseBodyGradientPremium)"
           stroke="hsl(35 20% 80%)"
           strokeWidth="1"
-          initial={{ y: 52 }}
-          animate={{ y: 48 }}
-          transition={{ duration: 0.5 }}
         />
         
         {/* Decorative cornice under roof */}
         <rect x="16" y="46" width="68" height="4" rx="1" fill="hsl(40 25% 90%)" />
         <rect x="18" y="48" width="64" height="2" fill="hsl(35 20% 85%)" />
         
-        {/* Roof with tile pattern */}
-        <motion.path
+        {/* Roof with tile pattern - static */}
+        <path
           d="M10 50 L50 20 L90 50 Z"
           fill="url(#roofGradientPremium)"
           stroke="hsl(150 40% 18%)"
@@ -497,35 +464,31 @@ const PremiumHouse: React.FC<PremiumHouseProps> = ({ isActive, variant, size = '
         </g>
       </g>
       
-      {/* Window light glow effect (ambient) */}
-      {isActive && (
+      {/* Window light glow effect - only on desktop, removed infinite animations */}
+      {isActive && !simplifyAnimations && (
         <>
-          <motion.ellipse
+          <ellipse
             cx="33"
             cy="63"
             rx="12"
             ry="10"
             fill="hsl(45 100% 75%)"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            opacity="0.15"
           />
-          <motion.ellipse
+          <ellipse
             cx="67"
             cy="63"
             rx="12"
             ry="10"
             fill="hsl(45 100% 75%)"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            opacity="0.15"
           />
         </>
       )}
 
       {/* Variant-specific icons */}
       {getVariantIcon()}
-    </motion.svg>
+    </svg>
   );
 };
 
@@ -537,8 +500,12 @@ interface TimelineNodeProps {
 }
 
 const TimelineNode: React.FC<TimelineNodeProps> = ({ index, isActive, isCompleted }) => {
+  const shouldReduceMotion = useReducedMotion();
+  const isMobile = useIsMobile();
+  const simplifyAnimations = shouldReduceMotion || isMobile;
+
   return (
-    <motion.div
+    <div
       className={`relative z-10 flex items-center justify-center w-8 h-8 rounded-full font-medium text-xs transition-all duration-300 ${
         isActive 
           ? 'bg-primary/10 border border-primary text-primary' 
@@ -546,9 +513,6 @@ const TimelineNode: React.FC<TimelineNodeProps> = ({ index, isActive, isComplete
             ? 'bg-transparent border border-primary/40 text-primary/70'
             : 'bg-transparent border border-border text-muted-foreground/60'
       }`}
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ delay: index * 0.1, type: "spring" }}
     >
       {isCompleted && !isActive ? (
         <CheckCircle2 className="w-3.5 h-3.5" />
@@ -556,8 +520,8 @@ const TimelineNode: React.FC<TimelineNodeProps> = ({ index, isActive, isComplete
         index + 1
       )}
       
-      {/* Active subtle glow */}
-      {isActive && (
+      {/* Active subtle glow - only on desktop */}
+      {isActive && !simplifyAnimations && (
         <motion.div
           className="absolute inset-0 rounded-full border border-primary/50"
           initial={{ scale: 1, opacity: 0.5 }}
@@ -565,7 +529,7 @@ const TimelineNode: React.FC<TimelineNodeProps> = ({ index, isActive, isComplete
           transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
         />
       )}
-    </motion.div>
+    </div>
   );
 };
 
@@ -603,42 +567,37 @@ interface CounterMetricProps {
 
 const CounterMetric: React.FC<CounterMetricProps> = ({ value, suffix, label, description, isInView, isEstimate = false }) => {
   const count = useCounter(value, 2000, isInView);
+  const isMobile = useIsMobile();
   const [isHovered, setIsHovered] = useState(false);
 
+  // On mobile, don't use hover states - show description always
+  const showDescription = isMobile || isHovered;
+
   return (
-    <motion.div
-      className="relative p-4 md:p-5 rounded-3xl bg-card border border-border/50 cursor-pointer overflow-hidden"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      whileHover={{ y: -2, borderColor: 'hsl(var(--primary) / 0.3)' }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <div
+      className="relative p-4 md:p-5 rounded-3xl bg-card border border-border/50 cursor-pointer overflow-hidden transition-all duration-200 hover:border-primary/30 hover:-translate-y-0.5"
+      onMouseEnter={() => !isMobile && setIsHovered(true)}
+      onMouseLeave={() => !isMobile && setIsHovered(false)}
     >
       <div className="relative z-10">
-        <motion.div
-          className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-1"
-          initial={{ scale: 1 }}
-          animate={{ scale: isHovered ? 1.02 : 1 }}
-          transition={{ duration: 0.2 }}
-        >
+        <div className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary mb-1">
           {count}{suffix}{isEstimate && <span className="text-sm md:text-base align-top text-muted-foreground/50 ml-0.5">*</span>}
-        </motion.div>
+        </div>
         
         <div className="text-sm font-medium text-foreground/80 mb-1">
           {label}
         </div>
         
-        <motion.div
-          className="text-xs text-muted-foreground/70 font-light"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: isHovered ? 1 : 0, height: isHovered ? 'auto' : 0 }}
-          transition={{ duration: 0.2 }}
+        {/* Description - always visible on mobile, hover only on desktop */}
+        <div
+          className={`text-xs text-muted-foreground/70 font-light transition-opacity duration-200 ${
+            showDescription ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
+          }`}
         >
           {description}
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -843,15 +802,12 @@ const InvestorInfographic: React.FC = () => {
             />
           </div>
           
-          {/* Steps */}
+          {/* Steps - no staggered delays on mobile */}
           <div className="space-y-5" role="tablist" aria-label={t('infographic.badge')}>
             {steps.map((step, index) => (
-              <motion.div
+              <div
                 key={step.id}
                 className="relative"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
               >
                 {/* Timeline node */}
                 <div className="absolute -left-12 top-5" aria-hidden="true">
@@ -862,13 +818,13 @@ const InvestorInfographic: React.FC = () => {
                   />
                 </div>
                 
-                {/* Step card - refined */}
-                <motion.div
+                {/* Step card - simplified, no whileTap on mobile */}
+                <div
                   role="tab"
                   tabIndex={0}
                   aria-selected={activeStep === index}
                   aria-label={`${t('infographic.badge')} ${index + 1}: ${step.title} - ${step.description}`}
-                  className={`p-5 rounded-3xl border bg-card transition-all duration-300 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+                  className={`p-5 rounded-3xl border bg-card transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-[0.99] ${
                     activeStep === index 
                       ? 'border-primary/30 shadow-sm' 
                       : 'border-border/30'
@@ -892,7 +848,6 @@ const InvestorInfographic: React.FC = () => {
                       setActiveStep(steps.length - 1);
                     }
                   }}
-                  whileTap={{ scale: 0.99 }}
                 >
                   <div className="flex items-start gap-4">
                     {/* House */}
@@ -914,33 +869,29 @@ const InvestorInfographic: React.FC = () => {
                       <p className="text-sm text-muted-foreground/70 mt-1 font-light">
                         {step.description}
                       </p>
-                      <motion.p
-                        className="text-xs text-muted-foreground/50 mt-2 font-light"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ 
-                          opacity: activeStep === index ? 1 : 0, 
-                          height: activeStep === index ? 'auto' : 0 
-                        }}
-                        transition={{ duration: 0.3 }}
+                      {/* Detail - CSS transition instead of framer-motion */}
+                      <p
+                        className={`text-xs text-muted-foreground/50 mt-2 font-light transition-opacity duration-200 ${
+                          activeStep === index ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
+                        }`}
                         aria-hidden={activeStep !== index}
                       >
                         {step.detail}
-                      </motion.p>
+                      </p>
                     </div>
                   </div>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Metrics Grid with Animated Counters */}
-      <motion.div 
-        className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
+      {/* Metrics Grid - CSS fade instead of framer-motion */}
+      <div 
+        className={`grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 transition-opacity duration-500 ${
+          isInView ? 'opacity-100' : 'opacity-0'
+        }`}
       >
         {metrics.map((metric, index) => (
           <CounterMetric
@@ -953,24 +904,22 @@ const InvestorInfographic: React.FC = () => {
             isEstimate={metric.isEstimate}
           />
         ))}
-      </motion.div>
+      </div>
 
-      {/* Estimate Disclaimer */}
-      <motion.p
-        className="text-center text-xs text-muted-foreground/60 mt-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isInView ? 1 : 0 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
+      {/* Estimate Disclaimer - CSS transition */}
+      <p
+        className={`text-center text-xs text-muted-foreground/60 mt-4 transition-opacity duration-500 ${
+          isInView ? 'opacity-100' : 'opacity-0'
+        }`}
       >
         {t('infographic.disclaimer')}
-      </motion.p>
+      </p>
 
-      {/* Bottom CTA */}
-      <motion.div 
-        className="mt-6 md:mt-8 text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isInView ? 1 : 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
+      {/* Bottom CTA - CSS transition */}
+      <div 
+        className={`mt-6 md:mt-8 text-center transition-opacity duration-500 ${
+          isInView ? 'opacity-100' : 'opacity-0'
+        }`}
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full">
           <CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" />
@@ -978,7 +927,7 @@ const InvestorInfographic: React.FC = () => {
             {t('infographic.cta')}
           </span>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 };
