@@ -7,7 +7,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Navigation = () => {
   const { t, i18n } = useTranslation();

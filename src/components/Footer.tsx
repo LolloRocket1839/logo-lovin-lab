@@ -6,7 +6,7 @@ import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Footer = () => {
   const { t, i18n } = useTranslation();

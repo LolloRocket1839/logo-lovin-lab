@@ -11,7 +11,7 @@ import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import InvestorInfographic from "@/components/investor/InvestorInfographic";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const InvestorSection = () => {
   const { t, i18n } = useTranslation();

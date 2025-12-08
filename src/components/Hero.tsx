@@ -10,7 +10,7 @@ import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
 import { StyledText } from "@/components/StyledText";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Hero = () => {
   const {
