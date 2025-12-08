@@ -1,63 +1,22 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Wallet, Calendar, ArrowRight, Search } from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { StyledText } from "@/components/StyledText";
 import { StudentSearchDialog } from "@/components/StudentSearchDialog";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const StudentSection = () => {
   const { t, i18n } = useTranslation();
-  const [isVisible, setIsVisible] = useState(false);
   const [searchDialogOpen, setSearchDialogOpen] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px"
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const studentBenefits = [
-    {
-      icon: Wallet,
-      title: t('student.benefit1Title'),
-      description: t('student.benefit1Desc'),
-      tooltip: t('student.benefit1Tooltip')
-    },
-    {
-      icon: Calendar,
-      title: t('student.benefit2Title'),
-      description: t('student.benefit2Desc'),
-      tooltip: t('student.benefit2Tooltip')
-    }
-  ];
 
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
   const handleWhatsAppLorenzo = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
-
 
   const handleQuizClick = () => {
     window.open('https://it.surveymonkey.com/r/Q27QDBG', '_blank');
@@ -68,15 +27,9 @@ export const StudentSection = () => {
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
-      <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
+      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         {/* Investor-focused market proof header */}
-        <div 
-          className={`text-center mb-8 ${
-            prefersReducedMotion 
-              ? (isVisible ? "opacity-100" : "opacity-0")
-              : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-          }`}
-        >
+        <div className="text-center mb-8">
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-2">
             {t('student.marketProofLabel')}
           </p>
@@ -89,46 +42,18 @@ export const StudentSection = () => {
         </div>
 
         <div className="text-center max-w-2xl mx-auto">
-          <p 
-            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '0ms' }}
-          >
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
             {t('student.sectionLabel')}
           </p>
-          <h2 
-            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '150ms' }}
-          >
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight">
             {t('student.sectionTitle')}
           </h2>
-          <p 
-            className={`text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8 ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '300ms' }}
-          >
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
             <StyledText>{t('student.compactDesc')}</StyledText>
           </p>
           
           {/* Room Search CTA - Premium Design */}
-          <div 
-            className={`mb-6 relative ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '450ms' }}
-          >
+          <div className="mb-6 relative">
             <div className={`p-6 bg-background rounded-xl border border-primary/30 shadow-sm ${prefersReducedMotion ? '' : 'hover:shadow-md transition-all duration-300'}`}>
               <div className="flex flex-col items-center gap-4">
                 <div className="relative">
@@ -157,14 +82,7 @@ export const StudentSection = () => {
             </div>
           </div>
           
-          <div 
-            className={`relative ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '600ms' }}
-          >
+          <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-border/50" />
             </div>
@@ -173,14 +91,7 @@ export const StudentSection = () => {
             </div>
           </div>
           
-          <div 
-            className={`mt-6 ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '750ms' }}
-          >
+          <div className="mt-6">
             <Button 
               size="lg" 
               variant="premium"

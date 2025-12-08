@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -18,30 +18,7 @@ export const InvestorSection = () => {
   const navigate = useNavigate();
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const { count } = useWaitlistCounter();
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px"
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   const handleLorenzoWhatsApp = () => {
     const language = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
@@ -51,7 +28,6 @@ export const InvestorSection = () => {
 
   return (
     <section 
-      ref={sectionRef}
       id="investor-section" 
       className="pt-24 pb-16 md:py-24 lg:py-32 relative overflow-hidden transition-spacing"
     >
@@ -61,14 +37,7 @@ export const InvestorSection = () => {
       <div className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
           {/* Start-up Innovativa Badge - Static */}
-          <div
-            className={`flex justify-center mb-6 ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '0ms' }}
-          >
+          <div className="flex justify-center mb-6">
             <div
               className="inline-flex items-center gap-2 px-5 py-2.5 
                          bg-white/90 dark:bg-card/90 backdrop-blur-md 
@@ -82,59 +51,26 @@ export const InvestorSection = () => {
             </div>
           </div>
 
-          <p 
-            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '100ms' }}
-          >
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
             {t('investor.sectionLabel')}
           </p>
-          <h2 
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '150ms' }}
-          >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
             {t('investor.sectionTitle')}
           </h2>
-          <p 
-            className={`text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6 ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '300ms' }}
-          >
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
             <StyledText>{t('investor.compactDesc')}</StyledText>
           </p>
           
           <Badge 
             variant="secondary" 
-            className={`mb-8 px-4 py-2 text-sm font-medium ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '450ms' }}
+            className="mb-8 px-4 py-2 text-sm font-medium"
           >
             <Users className="w-4 h-4 mr-2" />
             {count}+ {t('investor.activeInvestors')}
           </Badge>
 
           {/* 2 CTA Semplificati */}
-          <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '500ms' }}
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
@@ -156,14 +92,7 @@ export const InvestorSection = () => {
           </div>
 
           {/* 2i3T Trust Signal */}
-          <div
-            className={`mt-8 ${
-              prefersReducedMotion 
-                ? (isVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
-            }`}
-            style={prefersReducedMotion ? {} : { animationDelay: '600ms' }}
-          >
+          <div className="mt-8">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>

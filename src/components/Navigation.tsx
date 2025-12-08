@@ -81,7 +81,7 @@ export const Navigation = () => {
         }
       }, 100);
     }
-  }, []);
+  }, [prefersReducedMotion]);
 
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
@@ -187,7 +187,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className={`lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-xl z-50 ${prefersReducedMotion ? '' : 'animate-fade-in'}`}>
+          <div className="lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-xl z-50">
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => {
                 const href = item.path || (item.id ? `/#${item.id}` : '/');

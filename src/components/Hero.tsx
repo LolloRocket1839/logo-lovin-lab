@@ -57,18 +57,6 @@ export const Hero = () => {
     trackClick('hero_invest_button');
     navigate('/invest');
   };
-  const studentScale = 1.15 - scrollProgress * 0.3;
-  const studentOpacity = 1 - scrollProgress * 0.3;
-  const studentRotate = scrollProgress * -2;
-  const investorScale = 0.85 + scrollProgress * 0.3;
-  const investorOpacity = 0.7 + scrollProgress * 0.3;
-
-  // Logo animation - moves from center to nav position
-  const logoScrollProgress = Math.min(scrollProgress * 2, 1); // Faster transition
-  const logoOpacity = 1 - logoScrollProgress;
-  const logoScale = 1 - logoScrollProgress * 0.3;
-  const logoTranslateY = logoScrollProgress * -200; // Move up
-  const logoTranslateX = logoScrollProgress * -45; // Move left (percentage of screen)
 
   return <header role="banner" className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden gradient-jungle-hero">
       <h1 className="sr-only">
@@ -78,7 +66,7 @@ export const Hero = () => {
       <div className="container relative z-10 px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo statico */}
-          <div className={prefersReducedMotion ? "mb-16 md:mb-20" : "mb-16 md:mb-20 animate-fade-in"}>
+          <div className="mb-16 md:mb-20">
             <img 
               src={jungleRentLogo} 
               alt={t('hero.logoAlt')} 
@@ -108,22 +96,22 @@ export const Hero = () => {
           </div>
 
           {/* Headline principale */}
-          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight text-foreground tracking-tight ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight text-foreground tracking-tight">
             <StyledText>{t('hero.mainHeadline')}</StyledText>
           </h2>
           
-          <p className={`text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 font-light leading-relaxed ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`} style={prefersReducedMotion ? {} : { animationDelay: '100ms' }}>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 font-light leading-relaxed">
             <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
 
           {/* Urgency Elements */}
-          <div className={`flex flex-col items-center gap-6 mb-10 ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`} style={prefersReducedMotion ? {} : { animationDelay: '150ms' }}>
+          <div className="flex flex-col items-center gap-6 mb-10">
             <LaunchCountdown />
             <WaitlistBadge />
           </div>
 
           {/* 2 CTA con focus su Investi */}
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-8 ${prefersReducedMotion ? '' : 'animate-fade-in-up'}`} style={prefersReducedMotion ? {} : { animationDelay: '200ms' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-8">
             <Button 
               size="lg" 
               variant="premium" 

@@ -11,32 +11,9 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 export const Footer = () => {
   const { t, i18n } = useTranslation();
   const [logoModalOpen, setLogoModalOpen] = useState(false);
-  const [isPartnershipVisible, setIsPartnershipVisible] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
-  const partnershipRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLImageElement>(null);
   const prefersReducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsPartnershipVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px"
-      }
-    );
-
-    if (partnershipRef.current) {
-      observer.observe(partnershipRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     // Skip parallax effect if user prefers reduced motion
@@ -154,14 +131,7 @@ export const Footer = () => {
           </div>
 
           {/* Partnership con logo 2i3T */}
-          <div 
-            ref={partnershipRef}
-            className={`${
-              prefersReducedMotion 
-                ? (isPartnershipVisible ? "opacity-100" : "opacity-0")
-                : `transition-all duration-700 ${isPartnershipVisible ? "animate-fade-in" : "opacity-0"}`
-            }`}
-          >
+          <div>
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground/60 mb-3 font-medium">
               Powered by
             </p>

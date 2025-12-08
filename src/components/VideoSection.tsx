@@ -1,40 +1,15 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Play } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const VideoSection = () => {
   const { t } = useTranslation();
-  const [isVisible, setIsVisible] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px"
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const iframeRef = { current: null as HTMLIFrameElement | null };
 
   const handlePlayClick = () => {
     setIsPlaying(true);
-    // For YouTube: append ?autoplay=1
-    // For Vimeo: append ?autoplay=1
     if (iframeRef.current) {
       const currentSrc = iframeRef.current.src;
       if (!currentSrc.includes('autoplay=1')) {
@@ -44,13 +19,10 @@ export const VideoSection = () => {
   };
 
   // PLACEHOLDER - Replace with actual video URL
-  // YouTube format: https://www.youtube.com/embed/VIDEO_ID
-  // Vimeo format: https://player.vimeo.com/video/VIDEO_ID
   const videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ";
   
   return (
     <section 
-      ref={sectionRef}
       className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-accent/20 to-background relative overflow-hidden"
     >
       {/* Subtle pattern overlay */}
@@ -62,31 +34,16 @@ export const VideoSection = () => {
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 md:mb-16">
-            <h2 
-              className={`text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 transition-all duration-700 ${
-                isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-              }`}
-              style={{ animationDelay: '0ms' }}
-            >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
               {t('video.title')}
             </h2>
-            <p 
-              className={`text-base md:text-lg text-muted-foreground max-w-2xl mx-auto transition-all duration-700 ${
-                isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-              }`}
-              style={{ animationDelay: '200ms' }}
-            >
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {t('video.subtitle')}
             </p>
           </div>
 
           {/* Video Container */}
-          <div 
-            className={`relative transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '400ms' }}
-          >
+          <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-500 bg-card border border-border/50">
               <AspectRatio ratio={16 / 9}>
                 {!isPlaying && (
@@ -97,7 +54,7 @@ export const VideoSection = () => {
                   </div>
                 )}
                 <iframe
-                  ref={iframeRef}
+                  ref={(el) => { iframeRef.current = el; }}
                   src={videoUrl}
                   title={t('video.title')}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -128,12 +85,7 @@ export const VideoSection = () => {
 
           {/* Optional CTA Below Video */}
           {t('video.cta') && (
-            <div 
-              className={`text-center mt-8 transition-all duration-700 ${
-                isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-              }`}
-              style={{ animationDelay: '600ms' }}
-            >
+            <div className="text-center mt-8">
               <p className="text-sm text-muted-foreground">
                 {t('video.cta')}
               </p>

@@ -1,9 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Wallet, Shield, MapPin, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
-import { openEmail, MESSAGES } from "@/lib/contacts";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { StyledText } from "@/components/StyledText";
 
@@ -92,7 +89,6 @@ export const Benefits = () => {
                       <Card 
                         className="relative p-6 md:p-8 lg:p-10 backdrop-blur-xl bg-card/50 border border-border hover:border-primary/30 transition-all duration-700 group hover:-translate-y-1 hover:bg-card/70 cursor-pointer"
                         style={{ 
-                          animationDelay: `${index * 100}ms`,
                           boxShadow: 'var(--shadow-glass)'
                         }}
                         onMouseEnter={(e) => {

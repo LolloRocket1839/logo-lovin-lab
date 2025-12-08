@@ -1,37 +1,12 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useRef, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 
 export const TrustBadge = () => {
   const { t } = useTranslation();
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "50px"
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
   
   return (
     <section 
-      ref={sectionRef}
       className="py-12 md:py-16 lg:py-20 bg-accent/30 relative overflow-hidden border-b border-border"
     >
       <div className="absolute inset-0 opacity-[0.02]" style={{
@@ -40,12 +15,7 @@ export const TrustBadge = () => {
       
       <div className="container px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <p 
-            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '0ms' }}
-          >
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium">
             {t('trustBadge.sectionLabel')}
           </p>
           
@@ -53,10 +23,7 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-card border border-border/50 rounded-2xl px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-8 mb-6 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] hover:scale-105 cursor-pointer ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '200ms' }}
+            className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-card border border-border/50 rounded-2xl px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-8 mb-6 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] hover:scale-105 cursor-pointer"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
               <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain rounded-xl" />
@@ -75,21 +42,13 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-all duration-500 font-medium group ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '400ms' }}
+            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-all duration-500 font-medium group"
           >
             <span>{t('trustBadge.learnMore')}</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
           </a>
           
-          <p 
-            className={`text-xs text-muted-foreground/60 mt-6 font-light max-w-2xl mx-auto leading-relaxed transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
-            }`}
-            style={{ animationDelay: '600ms' }}
-          >
+          <p className="text-xs text-muted-foreground/60 mt-6 font-light max-w-2xl mx-auto leading-relaxed">
             {t('trustBadge.guarantee')}
           </p>
         </div>
