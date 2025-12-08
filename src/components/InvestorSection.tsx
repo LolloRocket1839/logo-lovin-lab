@@ -11,6 +11,7 @@ import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import InvestorInfographic from "@/components/investor/InvestorInfographic";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
+import { useReducedMotion } from "framer-motion";
 
 export const InvestorSection = () => {
   const { t, i18n } = useTranslation();
@@ -19,6 +20,7 @@ export const InvestorSection = () => {
   const { count } = useWaitlistCounter();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -60,10 +62,12 @@ export const InvestorSection = () => {
         <div className="text-center max-w-2xl mx-auto">
           {/* Start-up Innovativa Badge - Static */}
           <div
-            className={`flex justify-center mb-6 transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`flex justify-center mb-6 ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '0ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '0ms' }}
           >
             <div
               className="inline-flex items-center gap-2 px-5 py-2.5 
@@ -79,36 +83,44 @@ export const InvestorSection = () => {
           </div>
 
           <p 
-            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '100ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '100ms' }}
           >
             {t('investor.sectionLabel')}
           </p>
           <h2 
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '150ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '150ms' }}
           >
             {t('investor.sectionTitle')}
           </h2>
           <p 
-            className={`text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6 transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6 ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '300ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '300ms' }}
           >
             <StyledText>{t('investor.compactDesc')}</StyledText>
           </p>
           
           <Badge 
             variant="secondary" 
-            className={`mb-8 px-4 py-2 text-sm font-medium transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`mb-8 px-4 py-2 text-sm font-medium ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '450ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '450ms' }}
           >
             <Users className="w-4 h-4 mr-2" />
             {count}+ {t('investor.activeInvestors')}
@@ -116,10 +128,12 @@ export const InvestorSection = () => {
 
           {/* 2 CTA Semplificati */}
           <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '500ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '500ms' }}
           >
             <Button 
               onClick={handleLorenzoWhatsApp}
@@ -137,16 +151,18 @@ export const InvestorSection = () => {
               className="w-full sm:w-auto text-base group"
             >
               {t('investor.cta')}
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className={`ml-2 w-4 h-4 ${prefersReducedMotion ? '' : 'group-hover:translate-x-1 transition-transform'}`} />
             </Button>
           </div>
 
           {/* 2i3T Trust Signal */}
           <div
-            className={`mt-8 transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`mt-8 ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '600ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '600ms' }}
           >
             <TooltipProvider>
               <Tooltip>

@@ -6,6 +6,7 @@ import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/lib/contacts";
 import { LogoModal } from "@/components/LogoModal";
+import { useReducedMotion } from "framer-motion";
 
 export const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,7 @@ export const Footer = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
   const partnershipRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLImageElement>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,6 +39,9 @@ export const Footer = () => {
   }, []);
 
   useEffect(() => {
+    // Skip parallax effect if user prefers reduced motion
+    if (prefersReducedMotion) return;
+
     const handleScroll = () => {
       if (logoRef.current) {
         const rect = logoRef.current.getBoundingClientRect();
@@ -50,7 +55,7 @@ export const Footer = () => {
     handleScroll(); // Initial calculation
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [prefersReducedMotion]);
   
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -71,8 +76,10 @@ export const Footer = () => {
               <img 
                 src={jungleRentLogo} 
                 alt="Jungle Rent" 
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-80 rounded-3xl cursor-pointer 
-                           hover:opacity-100 hover:scale-105 transition-size focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 opacity-80 rounded-3xl cursor-pointer 
+                           focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+                  prefersReducedMotion ? 'hover:opacity-100' : 'hover:opacity-100 hover:scale-105 transition-size'
+                }`}
                 onClick={() => setLogoModalOpen(true)}
                 role="button"
                 tabIndex={0}
@@ -149,8 +156,10 @@ export const Footer = () => {
           {/* Partnership con logo 2i3T */}
           <div 
             ref={partnershipRef}
-            className={`transition-all duration-700 ${
-              isPartnershipVisible ? "animate-fade-in" : "opacity-0"
+            className={`${
+              prefersReducedMotion 
+                ? (isPartnershipVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isPartnershipVisible ? "animate-fade-in" : "opacity-0"}`
             }`}
           >
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground/60 mb-3 font-medium">
@@ -165,13 +174,13 @@ export const Footer = () => {
                 aria-label={t('investor.incubatorTooltip')}
                 className="block group relative focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
               >
-                <div className="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg" aria-hidden="true" />
+                <div className={`absolute inset-0 shimmer-effect rounded-lg ${prefersReducedMotion ? 'hidden' : 'opacity-0 group-hover:opacity-100 transition-opacity duration-700'}`} aria-hidden="true" />
                 <img
                   ref={logoRef}
                   src={logo2i3t}
                   alt=""
-                  className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-size mb-4 relative z-10"
-                  style={{
+                  className={`h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto object-contain mb-4 relative z-10 ${prefersReducedMotion ? '' : 'grayscale hover:grayscale-0 transition-size'}`}
+                  style={prefersReducedMotion ? {} : {
                     transform: `translateY(${scrollOffset}px)`,
                     transition: 'transform 0.1s ease-out'
                   }}

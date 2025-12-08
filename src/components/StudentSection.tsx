@@ -7,12 +7,14 @@ import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { StyledText } from "@/components/StyledText";
 import { StudentSearchDialog } from "@/components/StudentSearchDialog";
+import { useReducedMotion } from "framer-motion";
 
 export const StudentSection = () => {
   const { t, i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [searchDialogOpen, setSearchDialogOpen] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -69,8 +71,10 @@ export const StudentSection = () => {
       <div ref={sectionRef} className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         {/* Investor-focused market proof header */}
         <div 
-          className={`text-center mb-8 transition-all duration-700 ${
-            isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+          className={`text-center mb-8 ${
+            prefersReducedMotion 
+              ? (isVisible ? "opacity-100" : "opacity-0")
+              : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
           }`}
         >
           <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-2">
@@ -86,38 +90,46 @@ export const StudentSection = () => {
 
         <div className="text-center max-w-2xl mx-auto">
           <p 
-            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '0ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '0ms' }}
           >
             {t('student.sectionLabel')}
           </p>
           <h2 
-            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 leading-tight text-foreground tracking-tight ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '150ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '150ms' }}
           >
             {t('student.sectionTitle')}
           </h2>
           <p 
-            className={`text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8 transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8 ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '300ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '300ms' }}
           >
             <StyledText>{t('student.compactDesc')}</StyledText>
           </p>
           
           {/* Room Search CTA - Premium Design */}
           <div 
-            className={`mb-6 relative transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`mb-6 relative ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '450ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '450ms' }}
           >
-            <div className="p-6 bg-background rounded-xl border border-primary/30 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className={`p-6 bg-background rounded-xl border border-primary/30 shadow-sm ${prefersReducedMotion ? '' : 'hover:shadow-md transition-all duration-300'}`}>
               <div className="flex flex-col items-center gap-4">
                 <div className="relative">
                   <div className="bg-primary/10 p-3 rounded-full">
@@ -136,20 +148,22 @@ export const StudentSection = () => {
                   size="lg" 
                   variant="default"
                   onClick={() => setSearchDialogOpen(true)}
-                  className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base bg-primary hover:bg-primary/90 transition-all duration-300 group h-11 sm:h-12"
+                  className={`w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base bg-primary hover:bg-primary/90 group h-11 sm:h-12 ${prefersReducedMotion ? '' : 'transition-all duration-300'}`}
                 >
                   {t('studentSearch.cardCta')}
-                  <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className={`ml-2 w-5 h-5 ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:translate-x-1'}`} />
                 </Button>
               </div>
             </div>
           </div>
           
           <div 
-            className={`relative transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`relative ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '600ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '600ms' }}
           >
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-border/50" />
@@ -160,10 +174,12 @@ export const StudentSection = () => {
           </div>
           
           <div 
-            className={`mt-6 transition-all duration-700 ${
-              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            className={`mt-6 ${
+              prefersReducedMotion 
+                ? (isVisible ? "opacity-100" : "opacity-0")
+                : `transition-all duration-700 ${isVisible ? "animate-fade-in opacity-100" : "opacity-0"}`
             }`}
-            style={{ animationDelay: '750ms' }}
+            style={prefersReducedMotion ? {} : { animationDelay: '750ms' }}
           >
             <Button 
               size="lg" 
