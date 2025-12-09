@@ -219,7 +219,7 @@ For **university students under 26** from the University of Turin, Polytechnic U
 
 **How to access the Piemove program**: Students must register on the **bip.piemonte.it** platform using SPID or CIE credentials, access the reserved area, and select "Request Free Travel Pass for Under 26 Students". The subscription is valid annually with automatic semi-annual verification of requirements (age and active enrollment). For new enrollees, it is necessary to wait at least 24 hours after enrollment for the IT systems to align.[25][23]
 
-> **Discover more Turin events**: If you enjoyed this Ivrea Carnival guide, you might also be interested in our [Turin events guide for January 2026](/blog/eventi-torino-gennaio-2026) featuring concerts, exhibitions, and Luci d'Artista.
+> **Discover more Turin events**: If you enjoyed this Ivrea Carnival guide, you might also be interested in our [Turin events guide for March 2026](/blog/eventi-torino-marzo-2026) featuring Chiharu Shiota at MAO, Mika, Renato Zero, Subsonica 30 years and Rocky Musical, or the [January 2026 events guide](/blog/eventi-torino-gennaio-2026) with concerts, exhibitions, and Luci d'Artista.
 
 ### By bus
 
