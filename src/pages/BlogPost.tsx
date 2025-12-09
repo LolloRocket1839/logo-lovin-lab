@@ -357,6 +357,20 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         <meta name="twitter:image" content={absoluteImageUrl} />
         <meta name="twitter:image:alt" content={translatedData.title} />
 
+        {/* AI Crawlers - Citation & Attribution for Articles */}
+        <meta name="citation_title" content={translatedData.seo.title} />
+        <meta name="citation_author" content={post.author} />
+        <meta name="citation_publication_date" content={post.date} />
+        <meta name="citation_online_date" content={post.date} />
+        <meta name="citation_publisher" content="Jungle Rent S.r.l." />
+        <meta name="citation_language" content={currentLang} />
+        <meta name="citation_keywords" content={translatedData.seo.keywords.join('; ')} />
+        <meta name="citation_abstract" content={translatedData.excerpt} />
+        <meta name="citation_fulltext_html_url" content={`https://junglerent.it/blog/${post.slug}`} />
+        
+        {/* AI Knowledge Base Links */}
+        <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />
+
         {/* Structured Data - Article Schema */}
         <script type="application/ld+json">
           {JSON.stringify(articleSchema)}

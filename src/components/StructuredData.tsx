@@ -444,6 +444,28 @@ export const StructuredData = () => {
       ]
     };
 
+    // SpeakableSpecification Schema for Voice AI (Alexa, Google Assistant, Siri)
+    const speakableSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Jungle Rent - Turin Student Housing & Real Estate Investment",
+      "url": baseUrl,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".hero-description",
+          ".faq-answer",
+          "[data-speakable='true']"
+        ]
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Jungle Rent S.r.l.",
+        "description": "Jungle Rent is a certified Start-up Innovativa specializing in student housing and real estate investment in Turin, Italy. Founded October 2025, serving 90,000+ university students across 7 institutions."
+      }
+    };
+
     // Insert all schemas into head
     const schemas = [
       organizationSchema, 
@@ -454,7 +476,8 @@ export const StructuredData = () => {
       faqSchema,
       breadcrumbSchema,
       aggregateRatingSchema,
-      blogArticleSchema
+      blogArticleSchema,
+      speakableSchema
     ];
 
     const scriptElements: HTMLScriptElement[] = [];
