@@ -261,7 +261,14 @@ export const blogPosts: BlogPost[] = [
             "ricerca torino"
           ]
         },
-        tags: ["Università", "UniTo", "Torino", "Studenti", "Nobel", "Ricerca", "Erasmus"]
+        tags: ["Università", "UniTo", "Torino", "Studenti", "Nobel", "Ricerca", "Erasmus"],
+        faqs: [
+          { question: "Quanti studenti ha l'Università di Torino?", answer: "L'Università di Torino conta circa 83.000 studenti iscritti, distribuiti in 27 dipartimenti e 6 scuole." },
+          { question: "Quanto costa vivere a Torino da studente UniTo?", answer: "Il costo medio mensile per uno studente è di circa €700, inclusi affitto (€300-500), vitto (€150-200) e trasporti (€25-50)." },
+          { question: "Quali premi Nobel sono legati all'Università di Torino?", answer: "Tre premi Nobel: Rita Levi-Montalcini (Medicina 1986), Renato Dulbecco (Medicina 1975) e Salvador Luria (Medicina 1969)." },
+          { question: "Cos'è l'alleanza UNITA?", answer: "UNITA (Universitas Montium) è un'alleanza europea di 12 università che offre mobilità, doppi titoli e progetti di ricerca congiunti." },
+          { question: "L'Università di Torino offre corsi in inglese?", answer: "Sì, UniTo offre oltre 40 corsi di laurea magistrale interamente in inglese, principalmente in economia, scienze e medicina." }
+        ]
       },
       en: {
         title: "The University of Turin: A Legacy of Excellence and Innovation",
@@ -284,7 +291,14 @@ export const blogPosts: BlogPost[] = [
             "research turin"
           ]
         },
-        tags: ["University", "UniTo", "Turin", "Students", "Nobel", "Research", "Erasmus"]
+        tags: ["University", "UniTo", "Turin", "Students", "Nobel", "Research", "Erasmus"],
+        faqs: [
+          { question: "How many students does the University of Turin have?", answer: "The University of Turin has approximately 83,000 enrolled students, distributed across 27 departments and 6 schools." },
+          { question: "How much does it cost to live in Turin as a UniTo student?", answer: "The average monthly cost for a student is around €700, including rent (€300-500), food (€150-200) and transport (€25-50)." },
+          { question: "Which Nobel Prize winners are connected to the University of Turin?", answer: "Three Nobel laureates: Rita Levi-Montalcini (Medicine 1986), Renato Dulbecco (Medicine 1975) and Salvador Luria (Medicine 1969)." },
+          { question: "What is the UNITA alliance?", answer: "UNITA (Universitas Montium) is a European alliance of 12 universities offering mobility, double degrees and joint research projects." },
+          { question: "Does the University of Turin offer courses in English?", answer: "Yes, UniTo offers over 40 master's degree programs entirely in English, mainly in economics, sciences and medicine." }
+        ]
       }
     }
   },
@@ -318,7 +332,14 @@ export const blogPosts: BlogPost[] = [
             "borse studio politecnico"
           ]
         },
-        tags: ["Politecnico", "Università", "Torino", "Studenti", "Ingegneria", "Architettura", "Guida"]
+        tags: ["Politecnico", "Università", "Torino", "Studenti", "Ingegneria", "Architettura", "Guida"],
+        faqs: [
+          { question: "Cos'è il test TIL per il Politecnico?", answer: "Il TIL (Test In Laib) è il test di ammissione obbligatorio per le lauree triennali. Si svolge online, dura 1h30 e verifica competenze in matematica, logica e comprensione del testo." },
+          { question: "Quanto costano le tasse al Politecnico di Torino?", answer: "Le tasse variano da €0 a €2.800/anno in base all'ISEE. Studenti con ISEE sotto €23.000 sono esenti. Borse di studio EDISU coprono vitto e alloggio per idonei." },
+          { question: "Qual è il tasso di occupazione dei laureati PoliTo?", answer: "Il 96% dei laureati PoliTo trova lavoro entro un anno dalla laurea, con stipendi medi di €1.500-2.000/mese per i neolaureati." },
+          { question: "Quali sono i migliori quartieri per studenti del Politecnico?", answer: "Crocetta (vicino al campus, €400-600), Cenisia (economico, €300-450), San Salvario (vita notturna, €350-500) e Borgo San Paolo (tranquillo, €300-400)." },
+          { question: "Il Politecnico offre residenze universitarie?", answer: "Sì, EDISU gestisce diverse residenze (Borsellino, Olimpia, Verdi). I posti sono assegnati per bando in base a ISEE e merito. Costi €150-350/mese." }
+        ]
       },
       en: {
         title: "Polytechnic University of Turin: Complete Guide for Students",
@@ -341,7 +362,14 @@ export const blogPosts: BlogPost[] = [
             "scholarships politecnico"
           ]
         },
-        tags: ["Politecnico", "University", "Turin", "Students", "Engineering", "Architecture", "Guide"]
+        tags: ["Politecnico", "University", "Turin", "Students", "Engineering", "Architecture", "Guide"],
+        faqs: [
+          { question: "What is the TIL test for Politecnico?", answer: "TIL (Test In Laib) is the mandatory admission test for bachelor's degrees. It's online, lasts 1h30 and tests math, logic and reading comprehension skills." },
+          { question: "How much are tuition fees at Politecnico di Torino?", answer: "Fees range from €0 to €2,800/year based on ISEE. Students with ISEE below €23,000 are exempt. EDISU scholarships cover food and housing for eligible students." },
+          { question: "What is the employment rate for PoliTo graduates?", answer: "96% of PoliTo graduates find employment within one year of graduation, with average salaries of €1,500-2,000/month for new graduates." },
+          { question: "Which are the best neighborhoods for Politecnico students?", answer: "Crocetta (near campus, €400-600), Cenisia (affordable, €300-450), San Salvario (nightlife, €350-500) and Borgo San Paolo (quiet, €300-400)." },
+          { question: "Does Politecnico offer student residences?", answer: "Yes, EDISU manages several residences (Borsellino, Olimpia, Verdi). Places are assigned by application based on ISEE and merit. Costs €150-350/month." }
+        ]
       }
     }
   },
@@ -1293,7 +1321,14 @@ export const blogPosts: BlogPost[] = [
           description: "Migliori quartieri Torino per studenti Politecnico 2025: Crocetta €500-700, Cenisia €350-500, confronto completo con prezzi, distanze e servizi. Guida aggiornata per trovare casa vicino al PoliTo.",
           keywords: ["dove vivere torino studenti politecnico", "quartieri studenti politecnico torino", "affitti studenti politecnico", "crocetta torino affitti", "cenisia torino studenti", "stanze politecnico torino", "casa studenti polito", "quartieri universitari torino 2025"]
         },
-        tags: ["studenti", "politecnico", "quartieri", "torino", "affitti", "guida"]
+        tags: ["studenti", "politecnico", "quartieri", "torino", "affitti", "guida"],
+        faqs: [
+          { question: "Qual è il quartiere più vicino al Politecnico?", answer: "Crocetta è il quartiere più vicino, a 5-10 minuti a piedi dal campus principale. Prezzi: €400-600/mese per una stanza singola." },
+          { question: "Qual è il quartiere più economico per studenti PoliTo?", answer: "Borgo San Paolo e Cenisia offrono i prezzi migliori (€300-450/mese) con buoni collegamenti metro verso il Politecnico." },
+          { question: "Conviene vivere a San Salvario per il Politecnico?", answer: "San Salvario è ottimo per la vita sociale ma più lontano dal PoliTo (20-25 min in metro). Prezzi €350-500/mese, ideale se cerchi vita notturna." },
+          { question: "Quando iniziare a cercare casa a Torino?", answer: "Inizia a cercare 2-3 mesi prima dell'inizio dei corsi (giugno-luglio per settembre). A settembre la disponibilità cala drasticamente." },
+          { question: "Quali documenti servono per affittare a Torino?", answer: "Documento d'identità, codice fiscale, certificato di iscrizione universitaria. Per contratti regolari serve anche un garante o deposito cauzionale (2-3 mensilità)." }
+        ]
       },
       en: {
         title: "Where to live in Turin: complete guide to the best neighborhoods for Politecnico students",
@@ -1303,7 +1338,14 @@ export const blogPosts: BlogPost[] = [
           description: "Best areas in Turin for Politecnico students 2025: Crocetta €500-700, Cenisia €350-500. Complete comparison with prices, distances and services. Updated guide to find housing near PoliTo.",
           keywords: ["where to live turin politecnico students", "best neighborhoods politecnico turin", "rent politecnico students", "crocetta turin rent", "cenisia turin students", "rooms politecnico turin", "student housing polito"]
         },
-        tags: ["students", "politecnico", "neighborhoods", "turin", "rent", "guide"]
+        tags: ["students", "politecnico", "neighborhoods", "turin", "rent", "guide"],
+        faqs: [
+          { question: "Which neighborhood is closest to Politecnico?", answer: "Crocetta is the closest neighborhood, 5-10 minutes walk from the main campus. Prices: €400-600/month for a single room." },
+          { question: "Which is the cheapest neighborhood for PoliTo students?", answer: "Borgo San Paolo and Cenisia offer the best prices (€300-450/month) with good metro connections to Politecnico." },
+          { question: "Is San Salvario good for Politecnico students?", answer: "San Salvario is great for social life but further from PoliTo (20-25 min by metro). Prices €350-500/month, ideal if you want nightlife." },
+          { question: "When should I start looking for housing in Turin?", answer: "Start searching 2-3 months before courses begin (June-July for September). By September availability drops drastically." },
+          { question: "What documents do I need to rent in Turin?", answer: "ID document, tax code, university enrollment certificate. For regular contracts you also need a guarantor or security deposit (2-3 months rent)." }
+        ]
       }
     }
   },
