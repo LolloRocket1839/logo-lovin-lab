@@ -69,6 +69,18 @@ const Index = () => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content="https://junglerent.it/jungle-rent-logo.svg" />
+
+        {/* AI Crawlers - Citation & Attribution */}
+        <meta name="citation_title" content={title} />
+        <meta name="citation_author" content="Jungle Rent S.r.l." />
+        <meta name="citation_publication_date" content="2025-12-09" />
+        <meta name="citation_online_date" content="2025-12-09" />
+        <meta name="citation_publisher" content="Jungle Rent S.r.l." />
+        <meta name="citation_language" content={isItalian ? "it" : "en"} />
+        
+        {/* AI Knowledge Base Links */}
+        <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />
+        <link rel="author" href="https://junglerent.it/ai-assistant-info.txt" title="Company Information" />
       </Helmet>
       
       <StructuredData />

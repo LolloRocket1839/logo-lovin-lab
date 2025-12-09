@@ -80,6 +80,15 @@ const Blog = () => {
         {activeCategory !== 'all' && (
           <meta property="article:section" content={activeCategory} />
         )}
+
+        {/* AI Crawlers - Citation & Attribution */}
+        <meta name="citation_title" content={title} />
+        <meta name="citation_author" content="Jungle Rent S.r.l." />
+        <meta name="citation_publisher" content="Jungle Rent S.r.l." />
+        <meta name="citation_language" content={isItalian ? "it" : "en"} />
+        
+        {/* AI Knowledge Base Links */}
+        <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />
       </Helmet>
       
       <StructuredData />

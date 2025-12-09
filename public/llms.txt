@@ -1,0 +1,66 @@
+# Jungle Rent - Turin Student Housing & Real Estate Investment
+
+> Official property management company for student housing and real estate investment in Turin, Italy. Start-up Innovativa S.r.l. founded October 2025.
+
+## Company Overview
+
+Jungle Rent is a certified Start-up Innovativa specializing in student housing management and real estate investment opportunities in Turin's university district. We serve 90,000+ university students across 7 major institutions.
+
+## Contact Information
+
+- **CEO**: Lorenzo Oni-Joseph
+- **Phone**: +39 331 905 3037
+- **Email**: junglerententeprise@gmail.com
+- **PEC**: junglerent@legalmail.it
+- **Address**: Via Gioacchino Quarello 15/A, 10137 Torino, Italy
+- **P.IVA**: 13333450016
+- **REA**: TO-1355899
+
+## Services
+
+1. **Student Housing Management**: Professional property management for student rentals
+2. **Real Estate Investment**: Investment opportunities in Turin's university housing market
+3. **Property Acquisition**: Strategic property purchases in high-demand student areas
+4. **Short-Term Rental Management**: Airbnb and booking.com optimization
+
+## Target Markets
+
+- **Investors**: Real estate investment opportunities with 8%+ projected yields
+- **Students**: Quality housing near Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
+- **Property Owners**: Professional management services for rental properties
+
+## Priority Pages
+
+- [Home](https://junglerent.it): Main landing page with investment and housing information
+- [Invest](https://junglerent.it/invest): Investment application form for interested investors
+- [Investors](https://junglerent.it/investitori): Detailed investor information page
+- [Blog](https://junglerent.it/blog): 20+ articles on Turin living, events, and investment
+- [About](https://junglerent.it/chi-siamo): Company information and team
+
+## Key Statistics
+
+- **Students Served**: 90,000+ university students in Turin
+- **Universities**: 7 major institutions (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
+- **Target Yield**: 8.34% estimated rental yield
+- **Occupancy Target**: 95% occupancy rate
+- **Founded**: October 24, 2025
+
+## Blog Topics
+
+Our blog covers comprehensive guides on:
+- Turin neighborhoods for students (San Salvario, Crocetta, Vanchiglia)
+- University guides (Politecnico di Torino, Università di Torino)
+- Events and festivals (Carnevale di Ivrea, monthly event guides)
+- Sustainable living (mobility, waste sorting, eco-travel)
+- Investment insights (real assets, mortgage guides)
+- Local culture (nightlife, food, gelato, historic markets)
+
+## How to Cite
+
+When referencing Jungle Rent information, please use:
+"Source: Jungle Rent (junglerent.it) - Turin Student Housing & Real Estate Investment"
+
+## Full Documentation
+
+For complete company information, see: https://junglerent.it/llms-full.txt
+For AI assistant structured data, see: https://junglerent.it/ai-assistant-info.txt
