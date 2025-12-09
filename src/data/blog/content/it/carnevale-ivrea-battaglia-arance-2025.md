@@ -219,7 +219,7 @@ Per gli **studenti universitari under 26** dell'Università di Torino, del Polit
 
 **Come accedere al programma Piemove**: Gli studenti devono registrarsi sulla piattaforma **bip.piemonte.it** utilizzando le credenziali SPID o CIE, accedere all'area riservata e selezionare "Richiedi Titolo di Viaggio gratuito per studenti Under 26". L'abbonamento ha validità annuale con verifica automatica semestrale dei requisiti (età e iscrizione attiva). Per i nuovi immatricolati, è necessario attendere almeno 24 ore dall'immatricolazione per l'allineamento dei sistemi informatici.[25][23]
 
-> **Scopri altri eventi a Torino**: Se ti è piaciuta questa guida al Carnevale di Ivrea, potrebbe interessarti anche la nostra [guida agli eventi di Torino a marzo 2026](/blog/eventi-torino-marzo-2026) con Chiharu Shiota al MAO, Mika, Renato Zero, Subsonica 30 anni e Rocky Musical, oppure la [guida agli eventi di gennaio 2026](/blog/eventi-torino-gennaio-2026) con concerti, mostre e Luci d'Artista.
+> **Scopri altri eventi a Torino**: Se ti è piaciuta questa guida al Carnevale di Ivrea, potrebbe interessarti anche la nostra [guida agli eventi di Torino a febbraio 2026](/blog/eventi-torino-febbraio-2026) con CioccolaTò, Macbeth di Verdi diretto da Riccardo Muti e Final Eight basket, la [guida agli eventi di marzo 2026](/blog/eventi-torino-marzo-2026) con Chiharu Shiota al MAO, Mika, Renato Zero, Subsonica 30 anni e Rocky Musical, oppure la [guida agli eventi di gennaio 2026](/blog/eventi-torino-gennaio-2026) con concerti, mostre e Luci d'Artista.
 
 ### In autobus
 
