@@ -2,6 +2,69 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "eventi-torino-marzo-2026",
+    category: "turisti",
+    date: "2025-12-09",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 35,
+    content: "eventi-torino-marzo-2026",
+    translations: {
+      it: {
+        title: "Marzo 2026 a Torino: un mese di scoperte tra arte, musica e spettacolo",
+        excerpt: "Marzo 2026 straordinario per Torino: retrospettiva Chiharu Shiota al MAO, mostra Gentileschi, Mika e Renato Zero, Subsonica 30 anni, Rocky Musical, conferenze con Galimberti e Crepet.",
+        seo: {
+          title: "Eventi Torino marzo 2026: concerti, mostre, teatro | guida completa",
+          description: "Guida completa eventi Torino marzo 2026: Chiharu Shiota al MAO, Gentileschi ai Musei Reali, Mika OGR, Renato Zero Inalpi Arena, Subsonica 30 anni, Rocky Musical Teatro Alfieri.",
+          keywords: [
+            "eventi torino marzo 2026",
+            "cosa fare torino marzo",
+            "concerti torino marzo 2026",
+            "mostre torino marzo",
+            "chiharu shiota mao torino",
+            "orazio gentileschi mostra torino",
+            "mika torino ogr 2026",
+            "renato zero torino 2026",
+            "subsonica 30 anni torino",
+            "rocky musical torino",
+            "teatro alfieri marzo",
+            "umberto galimberti torino",
+            "paolo crepet conferenza",
+            "ogr torino eventi",
+            "musei reali torino 2026"
+          ]
+        },
+        tags: ["Eventi", "Torino", "Marzo", "Concerti", "Mostre", "Teatro", "Arte", "Musica", "Subsonica", "Olimpiadi"]
+      },
+      en: {
+        title: "March 2026 in Turin: A Month of Discovery Through Art, Music and Entertainment",
+        excerpt: "Extraordinary March 2026 for Turin: Chiharu Shiota retrospective at MAO, Gentileschi exhibition, Mika and Renato Zero concerts, Subsonica 30th anniversary, Rocky Musical, conferences with Galimberti and Crepet.",
+        seo: {
+          title: "Turin events March 2026: concerts, exhibitions, theater | complete guide",
+          description: "Complete guide Turin events March 2026: Chiharu Shiota at MAO, Gentileschi at Royal Museums, Mika OGR, Renato Zero Inalpi Arena, Subsonica 30 years, Rocky Musical Teatro Alfieri.",
+          keywords: [
+            "events turin march 2026",
+            "things to do turin march",
+            "concerts turin march 2026",
+            "exhibitions turin march",
+            "chiharu shiota mao turin",
+            "orazio gentileschi exhibition turin",
+            "mika turin ogr 2026",
+            "renato zero turin 2026",
+            "subsonica 30 years turin",
+            "rocky musical turin",
+            "teatro alfieri march",
+            "umberto galimberti turin",
+            "paolo crepet conference",
+            "ogr turin events",
+            "royal museums turin 2026"
+          ]
+        },
+        tags: ["Events", "Turin", "March", "Concerts", "Exhibitions", "Theater", "Art", "Music", "Subsonica", "Olympics"]
+      }
+    }
+  },
+  {
     slug: "viaggiare-sostenibile-torino-guida",
     category: "turisti",
     date: "2025-12-06",
