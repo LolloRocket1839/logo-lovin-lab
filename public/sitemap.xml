@@ -78,6 +78,25 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog" />
   </url>
 
+  <!-- Blog Post: Eventi Torino febbraio 2026 -->
+  <url>
+    <loc>https://junglerent.it/blog/eventi-torino-febbraio-2026</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mole-antonelliana-mountains.jpg</image:loc>
+      <image:title>Eventi Torino febbraio 2026</image:title>
+      <image:caption>Guida completa agli eventi a Torino a febbraio 2026: CioccolaTò, Macbeth, Lee Miller, Jeff Wall, Carnevale di Ivrea</image:caption>
+    </image:image>
+  </url>
+
   <!-- Blog Post: Eventi Torino marzo 2026 -->
   <url>
     <loc>https://junglerent.it/blog/eventi-torino-marzo-2026</loc>
