@@ -2,6 +2,67 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "eventi-torino-febbraio-2026",
+    category: "turisti",
+    date: "2025-12-09",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 25,
+    content: "eventi-torino-febbraio-2026",
+    translations: {
+      it: {
+        title: "Febbraio 2026 a Torino: tra amore, cioccolato, arte e palco lirico",
+        excerpt: "Febbraio 2026 a Torino: CioccolaTò in Piazza Vittorio, Macbeth di Verdi diretto da Riccardo Muti, mostre Lee Miller e Jeff Wall, Battaglia delle Arance a Ivrea, Final Eight basket.",
+        seo: {
+          title: "Eventi Torino febbraio 2026: CioccolaTò, Macbeth, mostre, basket | guida completa",
+          description: "Guida completa eventi Torino febbraio 2026: CioccolaTò 13-17 febbraio, Macbeth con Riccardo Muti al Teatro Regio, mostre Lee Miller e Jeff Wall, Carnevale di Ivrea, Final Eight basket.",
+          keywords: [
+            "eventi torino febbraio 2026",
+            "cosa fare torino febbraio",
+            "cioccolato torino 2026",
+            "macbeth teatro regio torino",
+            "riccardo muti torino",
+            "lee miller mostra torino",
+            "jeff wall gallerie italia",
+            "carnevale ivrea 2026",
+            "battaglia arance febbraio",
+            "final eight basket torino",
+            "san valentino torino",
+            "inalpi arena basket",
+            "camera centro fotografia torino",
+            "teatro regio verdi"
+          ]
+        },
+        tags: ["Eventi", "Torino", "Febbraio", "Cioccolato", "Opera", "Mostre", "Basket", "Carnevale", "San Valentino"]
+      },
+      en: {
+        title: "February 2026 in Turin: Love, Chocolate, Art and Opera",
+        excerpt: "February 2026 in Turin: CioccolaTò chocolate festival, Verdi's Macbeth conducted by Riccardo Muti, Lee Miller and Jeff Wall exhibitions, Ivrea Battle of the Oranges, Final Eight basketball.",
+        seo: {
+          title: "Turin events February 2026: CioccolaTò, Macbeth, exhibitions, basketball | complete guide",
+          description: "Complete guide Turin events February 2026: CioccolaTò Feb 13-17, Macbeth with Riccardo Muti at Teatro Regio, Lee Miller and Jeff Wall exhibitions, Ivrea Carnival, Final Eight basketball.",
+          keywords: [
+            "events turin february 2026",
+            "things to do turin february",
+            "chocolate festival turin 2026",
+            "macbeth teatro regio turin",
+            "riccardo muti turin",
+            "lee miller exhibition turin",
+            "jeff wall gallerie italia",
+            "ivrea carnival 2026",
+            "battle oranges february",
+            "final eight basketball turin",
+            "valentine day turin",
+            "inalpi arena basketball",
+            "camera photography center turin",
+            "teatro regio verdi"
+          ]
+        },
+        tags: ["Events", "Turin", "February", "Chocolate", "Opera", "Exhibitions", "Basketball", "Carnival", "Valentine's Day"]
+      }
+    }
+  },
+  {
     slug: "eventi-torino-marzo-2026",
     category: "turisti",
     date: "2025-12-09",
