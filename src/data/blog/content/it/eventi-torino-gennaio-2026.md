@@ -142,6 +142,7 @@ L'arrivo della Fiamma Olimpica, i saldi invernali, gli eventi sportivi e le nume
 
 ## Articoli correlati
 
+- [Eventi a Torino a marzo 2026: arte, musica e spettacolo](/blog/eventi-torino-marzo-2026) - Chiharu Shiota al MAO, Mika, Renato Zero, Subsonica 30 anni, Rocky Musical
 - [Come raggiungere Torino in modo sostenibile: guida completa ai viaggi eco-friendly](/blog/viaggiare-sostenibile-torino-guida) - Treni Frecciarossa, FlixBus, aeroporto carbon-neutral e Torino+Piemonte Card
 - [Mobilità sostenibile a Torino: guida completa ai trasporti per studenti](/blog/mobilita-sostenibile-torino-studenti)
 - [Lo storico carnevale di Ivrea: guida completa alla battaglia delle arance](/blog/carnevale-ivrea-battaglia-arance-2025)
