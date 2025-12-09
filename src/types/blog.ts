@@ -1,3 +1,8 @@
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface BlogPostTranslation {
   title: string;
   excerpt: string;
@@ -7,6 +12,7 @@ export interface BlogPostTranslation {
     keywords: string[];
   };
   tags: string[];
+  faqs?: FAQ[];
 }
 
 export interface BlogPost {

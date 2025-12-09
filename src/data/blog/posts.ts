@@ -582,7 +582,16 @@ export const blogPosts: BlogPost[] = [
           description: "Guida completa alle aule studio a Torino: 57 spazi tra biblioteche EDISU, Politecnico, UniTo, Campus Diffuso, coworking. Orari, Wi-Fi, prenotazioni app Campus Piemonte e Affluences.",
           keywords: ["aule studio torino", "biblioteche torino", "edisu sale studio", "politecnico biblioteche", "unito biblioteche", "campus diffuso torino", "dove studiare torino", "sala studio torino", "biblioteche civiche torino", "campus piemonte app", "studiare a torino"]
         },
-        tags: ["Studenti", "Politecnico", "UniTo", "Aule Studio", "Biblioteche", "EDISU", "Campus Diffuso"]
+        tags: ["Studenti", "Politecnico", "UniTo", "Aule Studio", "Biblioteche", "EDISU", "Campus Diffuso"],
+        faqs: [
+          { question: "Quale app devo scaricare per prenotare le sale EDISU?", answer: "Scarica Campus Piemonte per prenotare le sale studio EDISU. Disponibile su iOS e Android, richiede login con credenziali universitarie." },
+          { question: "Le biblioteche civiche sono gratuite?", answer: "Sì, tutte le biblioteche civiche di Torino sono gratuite e aperte a tutti. Non serve tessera universitaria." },
+          { question: "Posso studiare in gruppo nelle biblioteche universitarie?", answer: "Dipende dalla biblioteca. Alcune hanno sale dedicate al lavoro di gruppo prenotabili tramite app Affluences o Campus Piemonte." },
+          { question: "Dove posso studiare gratis fino a tardi?", answer: "Le sale EDISU offrono orari estesi durante le sessioni d'esame. Il Campus Diffuso Universitario include spazi aperti fino a mezzanotte in periodo esami." },
+          { question: "Cos'è il Campus Diffuso Universitario?", answer: "È un'iniziativa unica in Italia che trasforma bar e locali di Torino in spazi studio temporanei con Wi-Fi gratuito e sconti per studenti." },
+          { question: "Dove posso studiare all'aperto?", answer: "Il Parco del Valentino e i giardini Ginzburg offrono spazi verdi ideali per studiare nella bella stagione. Alcuni bar del Campus Diffuso hanno anche dehors." },
+          { question: "Serve la tessera universitaria per accedere alle biblioteche?", answer: "Per le biblioteche universitarie (Politecnico, UniTo) sì. Per le biblioteche civiche e il Campus Diffuso no, sono aperte a tutti." }
+        ]
       },
       en: {
         title: "Study Spaces in Turin: Complete Guide to the 57 Best Places to Study",
@@ -592,7 +601,16 @@ export const blogPosts: BlogPost[] = [
           description: "Complete guide to study spaces in Turin: 57 locations including EDISU libraries, Politecnico, UniTo, Diffused Campus, coworking. Hours, Wi-Fi, Campus Piemonte and Affluences app bookings.",
           keywords: ["study spaces turin", "turin libraries", "edisu study halls", "politecnico libraries", "unito libraries", "diffused campus turin", "where to study turin", "study room turin", "public libraries turin", "campus piemonte app", "studying in turin"]
         },
-        tags: ["Students", "Politecnico", "UniTo", "Study Spaces", "Libraries", "EDISU", "Diffused Campus"]
+        tags: ["Students", "Politecnico", "UniTo", "Study Spaces", "Libraries", "EDISU", "Diffused Campus"],
+        faqs: [
+          { question: "Which app do I need to book EDISU study rooms?", answer: "Download Campus Piemonte to book EDISU study halls. Available on iOS and Android, requires login with university credentials." },
+          { question: "Are public libraries free?", answer: "Yes, all Turin civic libraries are free and open to everyone. No university card required." },
+          { question: "Can I study in groups in university libraries?", answer: "It depends on the library. Some have dedicated group work rooms bookable via Affluences or Campus Piemonte app." },
+          { question: "Where can I study for free until late?", answer: "EDISU study halls offer extended hours during exam sessions. The University Diffused Campus includes spaces open until midnight during exams." },
+          { question: "What is the University Diffused Campus?", answer: "It's a unique initiative in Italy that transforms Turin bars and venues into temporary study spaces with free Wi-Fi and student discounts." },
+          { question: "Where can I study outdoors?", answer: "Parco del Valentino and Ginzburg gardens offer green spaces ideal for studying in good weather. Some Diffused Campus cafés also have outdoor seating." },
+          { question: "Do I need a university card to access libraries?", answer: "For university libraries (Politecnico, UniTo) yes. For civic libraries and the Diffused Campus no, they're open to everyone." }
+        ]
       }
     }
   },
@@ -1337,7 +1355,14 @@ export const blogPosts: BlogPost[] = [
           description: "San Salvario Torino: guida completa 2025 per studenti universitari. Affitto €300-500, zone migliori, vita notturna e collegamenti con Politecnico e UniTo. Tutto quello che devi sapere prima di trasferirti.",
           keywords: ["san salvario torino studenti", "affitto san salvario", "vivere san salvario", "quartiere studenti torino", "alloggio unito torino", "politecnico torino", "stanze san salvario"]
         },
-        tags: ["studenti", "san salvario", "torino", "quartieri", "guida"]
+        tags: ["studenti", "san salvario", "torino", "quartieri", "guida"],
+        faqs: [
+          { question: "È sicuro San Salvario?", answer: "Sì, è sicuro per gli standard di una grande città. Come ovunque, serve attenzione normale di notte (non mostrare oggetti di valore, tornare in gruppo se possibile). Migliaia di studenti ci vivono senza problemi." },
+          { question: "Meglio stanza singola o doppia?", answer: "Dipende dal budget. La doppia costa €200-300/mese (risparmi €100-150), ma hai meno privacy. Per la maggior parte degli studenti, la singola vale la spesa extra." },
+          { question: "Quanto costa l'abbonamento GTT?", answer: "€25/mese (under 26) o €255/anno. Include metro, tram e bus illimitati." },
+          { question: "C'è la lavanderia?", answer: "I lavanderia a gettoni sono comuni. Costo: €3-4 lavaggio, €3-4 asciugatura. Ci sono diverse lavanderie self-service in zona." },
+          { question: "Serve la macchina?", answer: "No, anzi è scomoda. San Salvario è ben connesso con i mezzi e il parcheggio è difficile/costoso. La maggior parte degli studenti usa metro, bici o monopattino." }
+        ]
       },
       en: {
         title: "San Salvario: the ultimate guide to Turin's most vibrant neighborhood for students",
@@ -1347,7 +1372,14 @@ export const blogPosts: BlogPost[] = [
           description: "Discover how much it costs to live in San Salvario, the best areas, university connections and all practical tips for students. Updated 2025 guide.",
           keywords: ["san salvario turin students", "rent san salvario", "living san salvario", "student neighborhood turin", "unito accommodation turin"]
         },
-        tags: ["students", "san salvario", "turin", "neighborhoods", "guide"]
+        tags: ["students", "san salvario", "turin", "neighborhoods", "guide"],
+        faqs: [
+          { question: "Is San Salvario safe?", answer: "Yes, it's safe by big city standards. Like anywhere, normal caution at night is needed (don't show valuables, return in a group if possible). Thousands of students live there without problems." },
+          { question: "Single or double room better?", answer: "Depends on budget. The double costs €200-300/month (save €100-150), but you have less privacy. For most students, the single is worth the extra cost." },
+          { question: "How much is the GTT subscription?", answer: "€25/month (under 26) or €255/year. Includes unlimited metro, tram and bus." },
+          { question: "Is there a laundromat?", answer: "Coin-operated laundromats are common. Cost: €3-4 wash, €3-4 dry. There are several self-service laundromats in the area." },
+          { question: "Do I need a car?", answer: "No, actually it's inconvenient. San Salvario is well connected by public transport and parking is difficult/expensive. Most students use metro, bike or scooter." }
+        ]
       }
     }
   }

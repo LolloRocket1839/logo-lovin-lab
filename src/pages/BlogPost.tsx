@@ -229,93 +229,18 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     ]
   };
 
-  // FAQPage schema for posts with FAQ sections
-  const faqSchema = post.slug === "san-salvario-guida-studenti" ? {
+  // FAQPage schema - dynamically generated from post.translations[lang].faqs
+  const faqSchema = translatedData.faqs && translatedData.faqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": currentLang === 'it' ? [
-      {
-        "@type": "Question",
-        "name": "È sicuro San Salvario?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sì, è sicuro per gli standard di una grande città. Come ovunque, serve attenzione normale di notte (non mostrare oggetti di valore, tornare in gruppo se possibile). Migliaia di studenti ci vivono senza problemi."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Meglio stanza singola o doppia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dipende dal budget. La doppia costa €200-300/mese (risparmi €100-150), ma hai meno privacy. Per la maggior parte degli studenti, la singola vale la spesa extra."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Quanto costa l'abbonamento GTT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "€25/mese (under 26) o €255/anno. Include metro, tram e bus illimitati."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "C'è la lavanderia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I lavanderia a gettoni sono comuni. Costo: €3-4 lavaggio, €3-4 asciugatura. Ci sono diverse lavanderie self-service in zona."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Serve la macchina?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, anzi è scomoda. San Salvario è ben connesso con i mezzi e il parcheggio è difficile/costoso. La maggior parte degli studenti usa metro, bici o monopattino."
-        }
+    "mainEntity": translatedData.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
-    ] : [
-      {
-        "@type": "Question",
-        "name": "Is San Salvario safe?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, it's safe by big city standards. Like anywhere, normal caution at night is needed (don't show valuables, return in a group if possible). Thousands of students live there without problems."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Single or double room better?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depends on budget. The double costs €200-300/month (save €100-150), but you have less privacy. For most students, the single is worth the extra cost."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much is the GTT subscription?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "€25/month (under 26) or €255/year. Includes unlimited metro, tram and bus."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a laundromat?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Coin-operated laundromats are common. Cost: €3-4 wash, €3-4 dry. There are several self-service laundromats in the area."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need a car?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, actually it's inconvenient. San Salvario is well connected by public transport and parking is difficult/expensive. Most students use metro, bike or scooter."
-        }
-      }
-    ]
+    }))
   } : null;
 
   return (
