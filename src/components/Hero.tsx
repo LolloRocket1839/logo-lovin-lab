@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
+
 import { LogoModal } from "@/components/LogoModal";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
@@ -21,11 +21,7 @@ export const Hero = () => {
   const { trackClick } = useAnalytics();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
-  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
   const prefersReducedMotion = useReducedMotion();
-  const handleWhatsAppLorenzo = () => {
-    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
-  };
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
@@ -46,13 +42,6 @@ export const Hero = () => {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const scrollToStudent = () => {
-    trackClick('hero_find_home_button');
-    document.getElementById('student-section')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  };
   const handleInvestClick = () => {
     trackClick('hero_invest_button');
     navigate('/invest');
@@ -110,25 +99,16 @@ export const Hero = () => {
             <WaitlistBadge />
           </div>
 
-          {/* 2 CTA con focus su Investi */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-8">
+          {/* CTA primaria investitori */}
+          <div className="flex justify-center mb-8">
             <Button 
               size="lg" 
               variant="premium" 
               onClick={handleInvestClick} 
-              className="w-full sm:w-auto text-base sm:text-lg group"
+              className="text-base sm:text-lg group"
             >
               {t('hero.invest')}
               <ArrowRight className={`ml-2 w-5 h-5 ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:translate-x-1'}`} aria-hidden="true" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={scrollToStudent} 
-              className="w-full sm:w-auto text-sm sm:text-base group"
-            >
-              {t('hero.findHome')}
-              <ArrowRight className={`ml-2 w-4 h-4 ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:translate-x-1'}`} aria-hidden="true" />
             </Button>
           </div>
         </div>
