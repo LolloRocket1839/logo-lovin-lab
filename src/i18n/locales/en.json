@@ -22,10 +22,10 @@
     "contactUs": "Contact us"
   },
 "about": {
-    "metaTitle": "About JungleRent - Innovative Startup Property Management Turin | Founded 2025",
-    "metaDescription": "JUNGLE RENT S.R.L. is an Innovative Startup that buys and manages properties in Turin. Founded on October 24, 2025 by Lorenzo Oni-Joseph and Andrea Niccolaini. Incubated by 2i3T - University of Turin. VAT ID IT13333450016.",
-    "title": "About JungleRent",
-    "subtitle": "Innovative Startup that buys and manages properties in Turin through our technology platform",
+    "metaTitle": "Jungle Rent - Democratizing Access to Real Estate | Turin",
+    "metaDescription": "Real estate startup with a dual mission: solving the student housing crisis and democratizing access to real estate, a historically safe asset class now inaccessible to many. We acquire and manage properties in Turin.",
+    "title": "About Jungle Rent",
+    "subtitle": "Dual mission: solving the student housing crisis and democratizing access to real estate",
     "foundedLabel": "Date of Incorporation",
     "foundedDate": "October 2025",
     "legalForm": "Innovative Startup S.r.l.",
@@ -369,10 +369,10 @@
     "cta": "Zero stress. Full management included."
   },
   "investors": {
-    "metaTitle": "Real Estate Investments Turin - Above-Market Returns | Jungle Rent",
-    "metaDescription": "Invest in university properties in Turin with above-market returns. Full management included: contracts, maintenance, tenants. Zero stress for you.",
-    "heroTitle": "Invest in Turin University Real Estate",
-    "heroSubtitle": "Above-market returns with complete professional management. Selected properties near major Turin universities.",
+    "metaTitle": "Accessible Real Estate Investments Turin - Democratizing Real Estate | Jungle Rent",
+    "metaDescription": "Democratizing access to real estate, a historically safe asset class now inaccessible to many. Invest in university properties in Turin with complete management.",
+    "heroTitle": "Democratizing Access to Real Estate",
+    "heroSubtitle": "A historically safe asset class, now inaccessible to many. Invest in university properties in Turin with professional management.",
     "metricReturn": "Annual return",
     "metricOccupancy": "Occupancy rate",
     "metricManagement": "Management included",
