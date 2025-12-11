@@ -317,6 +317,7 @@
     "activeInvestors": "active investors",
     "talkToAdvisor": "Talk to Lorenzo",
     "talkToLorenzo": "Talk to Lorenzo",
+    "scheduleCall": "Schedule a Call",
     "bookCall": "Show Interest",
     "ctaButton": "Contact an Advisor",
     "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator"
@@ -719,6 +720,9 @@
     "sending": "Sending...",
     "successTitle": "Thank you!",
     "successDescription": "We'll contact you soon to discuss investment opportunities.",
+    "successMessage": "We'll contact you soon to discuss investment opportunities.",
+    "scheduleCall": "Schedule a Call",
+    "close": "Close",
     "errorTitle": "Error",
     "errorDescription": "Something went wrong. Please try again later.",
     "emailRequired": "Please enter your email",

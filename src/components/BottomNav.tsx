@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Home, TrendingUp, MessageCircle, BookOpen } from "lucide-react";
+import { Home, TrendingUp, MessageCircle, BookOpen, Calendar } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
+import { openCalendly } from "@/lib/calendly";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 
 export const BottomNav = () => {
@@ -34,6 +35,11 @@ export const BottomNav = () => {
   const handleInvestClick = () => {
     trackClick('bottom_nav_invest');
     setInvestDialogOpen(true);
+  };
+
+  const handleCalendlyClick = () => {
+    trackClick('bottom_nav_calendly');
+    openCalendly();
   };
 
   // Show on all pages
@@ -73,6 +79,15 @@ export const BottomNav = () => {
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-primary rounded-full animate-pulse" />
             </div>
             <span className="text-[10px] font-medium">{t("nav.investors")}</span>
+          </button>
+
+          {/* Calendly - Schedule call */}
+          <button
+            onClick={handleCalendlyClick}
+            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+          >
+            <Calendar className="w-5 h-5" aria-hidden="true" />
+            <span className="text-[10px] font-medium">{t("nav.call")}</span>
           </button>
 
           {/* Blog */}

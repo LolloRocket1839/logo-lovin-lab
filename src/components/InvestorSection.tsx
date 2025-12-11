@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Users, Award } from "lucide-react";
+import { ArrowRight, MessageCircle, Users, Award, Calendar } from "lucide-react";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
+import { openCalendly } from "@/lib/calendly";
 import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
@@ -65,8 +66,8 @@ export const InvestorSection = () => {
             {count}+ {t('investor.activeInvestors')}
           </Badge>
 
-          {/* 2 CTA Semplificati */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* 3 CTA: WhatsApp, Calendly, Quick Lead */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
@@ -74,6 +75,16 @@ export const InvestorSection = () => {
             >
               <MessageCircle className="mr-2 w-5 h-5" />
               {t('investor.talkToLorenzo')}
+            </Button>
+            
+            <Button 
+              onClick={() => openCalendly()}
+              size="lg"
+              variant="secondary"
+              className="w-full sm:w-auto text-base group"
+            >
+              <Calendar className="mr-2 w-5 h-5" />
+              {t('investor.scheduleCall')}
             </Button>
             
             <Button 

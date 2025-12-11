@@ -291,8 +291,8 @@
     "activeInvestors": "investitori già attivi",
     "talkToAdvisor": "Parla con Lorenzo",
     "talkToLorenzo": "Parla con Lorenzo",
+    "scheduleCall": "Prenota una Call",
     "bookCall": "Mostra Interesse",
-    "ctaButton": "Contatta un Advisor",
     "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino"
   },
   "infographic": {
@@ -667,6 +667,9 @@
     "sending": "Invio in corso...",
     "successTitle": "Grazie!",
     "successDescription": "Ti contatteremo presto per discutere le opportunità di investimento.",
+    "successMessage": "Ti contatteremo presto per discutere le opportunità di investimento.",
+    "scheduleCall": "Prenota una Call",
+    "close": "Chiudi",
     "errorTitle": "Errore",
     "errorDescription": "Si è verificato un errore. Riprova più tardi.",
     "emailRequired": "Inserisci la tua email",
