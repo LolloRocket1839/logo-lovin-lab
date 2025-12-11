@@ -518,19 +518,25 @@ const SimplifiedInvestmentForm = () => {
                         name="consents_to_data_processing"
                         render={({ field }) => (
                           <FormItem>
-                            <motion.div
-                              onClick={() => field.onChange(!field.value)}
+                            <div
                               className={`flex items-start gap-3 p-4 rounded-xl cursor-pointer transition-all ${
                                 field.value ? 'bg-primary/10 ring-2 ring-primary/30' : 'bg-muted/30 hover:bg-muted/50'
                               }`}
-                              whileTap={{ scale: 0.98 }}
                             >
-                              <Checkbox checked={field.value} className="mt-0.5" />
-                              <label className="text-sm leading-relaxed cursor-pointer flex-1">
+                              <Checkbox 
+                                id="consents_to_data_processing"
+                                checked={field.value} 
+                                onCheckedChange={field.onChange}
+                                className="mt-0.5" 
+                              />
+                              <label 
+                                htmlFor="consents_to_data_processing"
+                                className="text-sm leading-relaxed cursor-pointer flex-1"
+                              >
                                 {t("questions.gdprConsent")}
                               </label>
                               {field.value && <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />}
-                            </motion.div>
+                            </div>
                             <FormMessage />
                           </FormItem>
                         )}
@@ -540,19 +546,25 @@ const SimplifiedInvestmentForm = () => {
                         name="consents_to_contact"
                         render={({ field }) => (
                           <FormItem>
-                            <motion.div
-                              onClick={() => field.onChange(!field.value)}
+                            <div
                               className={`flex items-start gap-3 p-4 rounded-xl cursor-pointer transition-all ${
                                 field.value ? 'bg-primary/10 ring-2 ring-primary/30' : 'bg-muted/30 hover:bg-muted/50'
                               }`}
-                              whileTap={{ scale: 0.98 }}
                             >
-                              <Checkbox checked={field.value} className="mt-0.5" />
-                              <label className="text-sm leading-relaxed cursor-pointer flex-1">
+                              <Checkbox 
+                                id="consents_to_contact"
+                                checked={field.value} 
+                                onCheckedChange={field.onChange}
+                                className="mt-0.5" 
+                              />
+                              <label 
+                                htmlFor="consents_to_contact"
+                                className="text-sm leading-relaxed cursor-pointer flex-1"
+                              >
                                 {t("questions.consentContact")}
                               </label>
                               {field.value && <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />}
-                            </motion.div>
+                            </div>
                             <FormMessage />
                           </FormItem>
                         )}
