@@ -50,8 +50,8 @@ export const ScrollToTop = () => {
             onClick={scrollToTop}
             variant="premium"
             size="icon"
-            className={`fixed bottom-16 sm:bottom-20 md:bottom-24 right-6 sm:right-8 z-50 h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full shadow-lg
-                        transition-all duration-300 hover:shadow-xl hover:scale-110
+            className={`fixed bottom-20 md:bottom-24 right-6 sm:right-8 z-50 h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full shadow-lg
+                        transition-all duration-300 hover:shadow-xl hover:scale-110 hidden lg:flex
                         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
             aria-label={t('scrollToTop.tooltip')}
           >
