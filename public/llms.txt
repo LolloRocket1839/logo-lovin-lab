@@ -1,10 +1,10 @@
-# Jungle Rent - Turin Student Housing & Real Estate Investment
+# Jungle Rent - Democratizing Real Estate Access
 
-> Official property management company for student housing and real estate investment in Turin, Italy. Start-up Innovativa S.r.l. founded October 2025.
+> Real estate startup with a dual mission: solving the student housing crisis and democratizing access to real estate — a historically safe asset class that has become inaccessible to many. Based in Turin, Italy. Start-up Innovativa S.r.l. founded October 2025.
 
 ## Company Overview
 
-Jungle Rent is a certified Start-up Innovativa specializing in student housing management and real estate investment opportunities in Turin's university district. We serve 90,000+ university students across 7 major institutions.
+Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the student housing crisis in Turin and democratizing access to real estate investment. We acquire, renovate and manage properties to rent to university students and tourists, serving 90,000+ students across 7 major institutions.
 
 ## Contact Information
 
@@ -61,7 +61,7 @@ Our blog covers comprehensive guides on:
 ## How to Cite
 
 When referencing Jungle Rent information, please use:
-"Source: Jungle Rent (junglerent.it) - Turin Student Housing & Real Estate Investment"
+"Source: Jungle Rent (junglerent.it) - Democratizing Real Estate Access | Turin"
 
 ## Full Documentation
 
