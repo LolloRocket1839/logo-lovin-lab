@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Users, Award } from "lucide-react";
-import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import InvestorInfographic from "@/components/investor/InvestorInfographic";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 
 export const InvestorSection = () => {
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
-  const [waitlistOpen, setWaitlistOpen] = useState(false);
+  const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const { count } = useWaitlistCounter();
   const prefersReducedMotion = useReducedMotion();
 
@@ -79,7 +77,7 @@ export const InvestorSection = () => {
             </Button>
             
             <Button 
-              onClick={() => navigate('/invest')}
+              onClick={() => setInvestDialogOpen(true)}
               size="lg"
               variant="outline"
               className="w-full sm:w-auto text-base group"
@@ -96,9 +94,10 @@ export const InvestorSection = () => {
         </div>
       </div>
       
-      <InvestorWaitlistDialog 
-        open={waitlistOpen} 
-        onOpenChange={setWaitlistOpen}
+      <QuickInvestorLeadDialog 
+        open={investDialogOpen} 
+        onOpenChange={setInvestDialogOpen}
+        source="investor_section"
       />
     </section>
   );

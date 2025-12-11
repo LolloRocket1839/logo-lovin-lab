@@ -8,6 +8,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 
 export const Navigation = () => {
   const { t, i18n } = useTranslation();
@@ -16,6 +17,7 @@ export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
@@ -158,7 +160,7 @@ export const Navigation = () => {
               size="sm"
               onClick={() => {
                 trackClick('nav_invest_button');
-                navigate('/invest');
+                setInvestDialogOpen(true);
               }}
               className="px-6 font-semibold"
             >
@@ -207,7 +209,7 @@ export const Navigation = () => {
                 onClick={() => {
                   trackClick('nav_mobile_invest_button');
                   setIsMobileMenuOpen(false);
-                  navigate('/invest');
+                  setInvestDialogOpen(true);
                 }}
                 className="mt-2 w-full font-semibold"
               >
@@ -217,6 +219,12 @@ export const Navigation = () => {
           </div>
         )}
       </div>
+
+      <QuickInvestorLeadDialog 
+        open={investDialogOpen} 
+        onOpenChange={setInvestDialogOpen}
+        source="navigation"
+      />
     </nav>
   );
 };

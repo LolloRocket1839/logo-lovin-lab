@@ -1,80 +1,97 @@
-import { Home, TrendingUp, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { Home, TrendingUp, MessageCircle, BookOpen } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
+import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 
 export const BottomNav = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const { trackClick } = useAnalytics();
+  const [investDialogOpen, setInvestDialogOpen] = useState(false);
 
   const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
-  const handleNavClick = (e: React.MouseEvent, itemId: string, path: string) => {
-    trackClick(`bottom_nav_${itemId}`, { label: itemId });
-    
+  const handleHomeClick = (e: React.MouseEvent) => {
+    trackClick('bottom_nav_home');
     e.preventDefault();
     
     if (location.pathname === '/') {
-      const element = document.getElementById(itemId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else if (itemId === 'hero') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      navigate(path);
+      navigate('/');
     }
   };
 
-  const handleWhatsAppClick = () => {
-    trackClick('bottom_nav_whatsapp', { contact: 'lorenzo' });
+  const handleStudentWhatsApp = () => {
+    trackClick('bottom_nav_student_whatsapp');
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
   };
 
-  // Don't show on non-main pages
-  if (location.pathname !== '/') return null;
+  const handleInvestClick = () => {
+    trackClick('bottom_nav_invest');
+    setInvestDialogOpen(true);
+  };
 
+  // Show on all pages
   return (
-    <nav 
-      className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border shadow-lg"
-      aria-label={t('nav.home')}
-    >
-      <div className="flex items-center justify-around h-16">
-        {/* Home */}
-        <Link
-          to="/"
-          onClick={(e) => handleNavClick(e, 'hero', '/')}
-          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
-        >
-          <Home className="w-5 h-5" aria-hidden="true" />
-          <span className="text-[10px] font-medium">{t("nav.home")}</span>
-        </Link>
+    <>
+      <nav 
+        className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border shadow-lg"
+        aria-label={t('nav.home')}
+      >
+        <div className="flex items-center justify-around h-16">
+          {/* Home */}
+          <Link
+            to="/"
+            onClick={handleHomeClick}
+            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+          >
+            <Home className="w-5 h-5" aria-hidden="true" />
+            <span className="text-[10px] font-medium">{t("nav.home")}</span>
+          </Link>
 
-        {/* WhatsApp Lorenzo - Primary CTA with pulse indicator */}
-        <button
-          onClick={handleWhatsAppClick}
-          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-primary relative"
-        >
-          <div className="relative">
+          {/* Studenti - WhatsApp */}
+          <button
+            onClick={handleStudentWhatsApp}
+            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+          >
             <MessageCircle className="w-5 h-5" aria-hidden="true" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-primary rounded-full animate-pulse" />
-          </div>
-          <span className="text-[10px] font-medium">WhatsApp</span>
-        </button>
+            <span className="text-[10px] font-medium">{t("nav.students")}</span>
+          </button>
 
-        {/* Investors */}
-        <Link
-          to="/#investor-section"
-          onClick={(e) => handleNavClick(e, 'investor-section', '/#investor-section')}
-          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
-        >
-          <TrendingUp className="w-5 h-5" aria-hidden="true" />
-          <span className="text-[10px] font-medium">{t("nav.investors")}</span>
-        </Link>
-      </div>
-    </nav>
+          {/* Investi - Primary CTA with pulse */}
+          <button
+            onClick={handleInvestClick}
+            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-primary relative"
+          >
+            <div className="relative">
+              <TrendingUp className="w-5 h-5" aria-hidden="true" />
+              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-primary rounded-full animate-pulse" />
+            </div>
+            <span className="text-[10px] font-medium">{t("nav.investors")}</span>
+          </button>
+
+          {/* Blog */}
+          <Link
+            to="/blog"
+            onClick={() => trackClick('bottom_nav_blog')}
+            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+          >
+            <BookOpen className="w-5 h-5" aria-hidden="true" />
+            <span className="text-[10px] font-medium">{t("nav.blog")}</span>
+          </Link>
+        </div>
+      </nav>
+
+      <QuickInvestorLeadDialog 
+        open={investDialogOpen} 
+        onOpenChange={setInvestDialogOpen}
+        source="bottom_nav"
+      />
+    </>
   );
 };
