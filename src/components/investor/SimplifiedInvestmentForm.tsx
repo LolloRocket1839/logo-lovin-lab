@@ -519,19 +519,21 @@ const SimplifiedInvestmentForm = () => {
                         render={({ field }) => (
                           <FormItem>
                             <div
-                              className={`flex items-start gap-3 p-4 rounded-xl cursor-pointer transition-all ${
+                              onClick={() => field.onChange(!field.value)}
+                              className={`flex items-start gap-3 p-4 rounded-xl cursor-pointer transition-all touch-action-manipulation select-none ${
                                 field.value ? 'bg-primary/10 ring-2 ring-primary/30' : 'bg-muted/30 hover:bg-muted/50'
                               }`}
+                              style={{ touchAction: 'manipulation' }}
                             >
                               <Checkbox 
                                 id="consents_to_data_processing"
                                 checked={field.value} 
                                 onCheckedChange={field.onChange}
-                                className="mt-0.5" 
+                                className="h-6 w-6 min-h-[24px] min-w-[24px] pointer-events-auto" 
                               />
                               <label 
                                 htmlFor="consents_to_data_processing"
-                                className="text-sm leading-relaxed cursor-pointer flex-1"
+                                className="text-sm leading-relaxed cursor-pointer flex-1 select-none"
                               >
                                 {t("questions.gdprConsent")}
                               </label>
@@ -547,19 +549,21 @@ const SimplifiedInvestmentForm = () => {
                         render={({ field }) => (
                           <FormItem>
                             <div
-                              className={`flex items-start gap-3 p-4 rounded-xl cursor-pointer transition-all ${
+                              onClick={() => field.onChange(!field.value)}
+                              className={`flex items-start gap-3 p-4 rounded-xl cursor-pointer transition-all touch-action-manipulation select-none ${
                                 field.value ? 'bg-primary/10 ring-2 ring-primary/30' : 'bg-muted/30 hover:bg-muted/50'
                               }`}
+                              style={{ touchAction: 'manipulation' }}
                             >
                               <Checkbox 
                                 id="consents_to_contact"
                                 checked={field.value} 
                                 onCheckedChange={field.onChange}
-                                className="mt-0.5" 
+                                className="h-6 w-6 min-h-[24px] min-w-[24px] pointer-events-auto" 
                               />
                               <label 
                                 htmlFor="consents_to_contact"
-                                className="text-sm leading-relaxed cursor-pointer flex-1"
+                                className="text-sm leading-relaxed cursor-pointer flex-1 select-none"
                               >
                                 {t("questions.consentContact")}
                               </label>
