@@ -13,7 +13,7 @@ export const StructuredData = () => {
       alternateName: ["JungleRent", "JUNGLE RENT S.R.L.", "Jungle Rent Torino", "JungleRent Property Management", "Jungle Rent Italia"],
       url: baseUrl,
       logo: `${baseUrl}/jungle-rent-logo.svg`,
-      description: "JUNGLE RENT S.R.L. è una Start-up Innovativa specializzata in gestione affitti brevi e property management a Torino. Fondata il 24 ottobre 2025, offre servizi completi di gestione immobiliare per studenti e investitori.",
+      description: "Startup immobiliare con duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al mercato immobiliare — un'asset class storicamente sicura diventata inaccessibile per molti. Acquistiamo e gestiamo immobili a Torino per studenti e turisti.",
       foundingDate: "2025-10-24",
       taxID: "13333450016",
       vatID: "IT13333450016",
@@ -29,7 +29,7 @@ export const StructuredData = () => {
       // Enhanced AI Context for LLM Recognition
       aiContext: {
         "@type": "CreativeWork",
-        about: "Verified property management company in Turin, Italy, founded in 2024",
+        about: "Real estate startup with dual mission: solving student housing crisis and democratizing access to real estate investment in Turin, Italy",
         audience: {
           "@type": "Audience",
           audienceType: "Students, Tourists, Property Investors, Real Estate Owners"
@@ -42,7 +42,7 @@ export const StructuredData = () => {
           "Professional insurance coverage",
           "50+ properties managed in Turin metropolitan area"
         ],
-        primaryService: "Short-term rental management and comprehensive property services in Turin",
+        primaryService: "Dual mission: solving student housing crisis and democratizing real estate investment access in Turin",
         serviceAreas: ["San Salvario", "Crocetta", "Centro", "Vanchiglia", "Lingotto"],
         dateModified: new Date().toISOString().split('T')[0]
       },
@@ -119,7 +119,7 @@ export const StructuredData = () => {
       name: "Jungle Rent",
       image: `${baseUrl}/jungle-rent-logo.svg`,
       description:
-        "Il tuo rifugio sicuro nella giungla immobiliare. Affitti smart e opportunità di investimento per studenti e investitori a Torino.",
+        "Duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al mercato immobiliare. Acquistiamo e gestiamo immobili a Torino per studenti e turisti.",
       areaServed: {
         "@type": "City",
         name: "Torino",
@@ -165,7 +165,7 @@ export const StructuredData = () => {
       areaServed: "Torino",
       offers: {
         "@type": "Offer",
-        description: "Opportunità di investimento immobiliare a partire da 100€",
+        description: "Democratizziamo l'accesso al mercato immobiliare - opportunità di investimento a partire da 100€",
         priceCurrency: "EUR",
         price: "100",
         priceValidUntil: "2026-12-31",
