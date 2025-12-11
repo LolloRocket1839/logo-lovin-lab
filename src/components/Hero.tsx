@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
@@ -9,19 +8,18 @@ import { LogoModal } from "@/components/LogoModal";
 import { LaunchCountdown } from "@/components/LaunchCountdown";
 import { WaitlistBadge } from "@/components/WaitlistBadge";
 import { StyledText } from "@/components/StyledText";
+import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Hero = () => {
-  const {
-    t,
-    i18n
-  } = useTranslation();
-  const navigate = useNavigate();
+  const { t } = useTranslation();
   const { trackClick } = useAnalytics();
   const [scrollProgress, setScrollProgress] = useState(0);
   const [logoModalOpen, setLogoModalOpen] = useState(false);
+  const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
@@ -42,9 +40,10 @@ export const Hero = () => {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
   const handleInvestClick = () => {
     trackClick('hero_invest_button');
-    navigate('/invest');
+    setInvestDialogOpen(true);
   };
 
   return <header role="banner" className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden gradient-jungle-hero">
@@ -115,5 +114,6 @@ export const Hero = () => {
       </div>
       
       <LogoModal open={logoModalOpen} onOpenChange={setLogoModalOpen} />
+      <QuickInvestorLeadDialog open={investDialogOpen} onOpenChange={setInvestDialogOpen} />
     </header>;
 };
