@@ -16,7 +16,7 @@ import AITesting from "./pages/AITesting";
 import ABTestResults from "./pages/ABTestResults";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 
-import InvestorSuccess from "./pages/InvestorSuccess";
+
 import Privacy from "./pages/Privacy";
 import TerminiCondizioni from "./pages/TerminiCondizioni";
 import NotFound from "./pages/NotFound";
@@ -35,7 +35,7 @@ const AppContent = () => {
       <Route path="/investitori" element={<Investors />} />
       <Route path="/investors" element={<Investors />} />
       <Route path="/invest" element={<Index />} />
-      <Route path="/invest/success" element={<InvestorSuccess />} />
+      
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
       <Route path="/terms" element={<TerminiCondizioni />} />
