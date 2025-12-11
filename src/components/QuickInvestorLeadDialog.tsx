@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { TrendingUp, Send, Loader2 } from "lucide-react";
+import { TrendingUp, Send, Loader2, CheckCircle, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { openCalendly } from "@/lib/calendly";
 
 interface QuickInvestorLeadDialogProps {
   open: boolean;
@@ -31,6 +32,7 @@ export const QuickInvestorLeadDialog = ({
   const { toast } = useToast();
   const { trackClick } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
 
@@ -77,13 +79,13 @@ export const QuickInvestorLeadDialog = ({
       });
 
       if (response.ok) {
+        setIsSubmitted(true);
+        setEmail("");
+        setName("");
         toast({
           title: t('quickLead.successTitle'),
           description: t('quickLead.successDescription'),
         });
-        setEmail("");
-        setName("");
-        onOpenChange(false);
       } else {
         throw new Error("Form submission failed");
       }
@@ -99,76 +101,127 @@ export const QuickInvestorLeadDialog = ({
     }
   };
 
+  const handleOpenChange = (newOpen: boolean) => {
+    if (!newOpen) {
+      // Reset state when closing
+      setIsSubmitted(false);
+    }
+    onOpenChange(newOpen);
+  };
+
+  const handleCalendlyClick = () => {
+    trackClick('quick_lead_calendly', { source });
+    openCalendly();
+    onOpenChange(false);
+  };
+
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-md bg-gradient-to-br from-background via-background to-primary/5 border-primary/20">
-        <DialogHeader className="text-center">
-          <div className="mx-auto mb-4 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-            <TrendingUp className="w-6 h-6 text-primary" />
+        {isSubmitted ? (
+          // Success State with Calendly CTA
+          <div className="text-center py-6 space-y-6">
+            <div className="w-16 h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center">
+              <CheckCircle className="w-8 h-8 text-green-600" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground">
+                {t('quickLead.successTitle')}
+              </h3>
+              <p className="text-muted-foreground mt-2">
+                {t('quickLead.successMessage')}
+              </p>
+            </div>
+            <div className="space-y-3">
+              <Button
+                onClick={handleCalendlyClick}
+                className="w-full h-12 font-semibold"
+                variant="default"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                {t('quickLead.scheduleCall')}
+              </Button>
+              <Button
+                onClick={() => onOpenChange(false)}
+                variant="ghost"
+                className="w-full"
+              >
+                {t('quickLead.close')}
+              </Button>
+            </div>
           </div>
-          <DialogTitle className="text-xl font-bold text-foreground">
-            {t('quickLead.title')}
-          </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
-            {t('quickLead.description')}
-          </DialogDescription>
-        </DialogHeader>
+        ) : (
+          // Form State
+          <>
+            <DialogHeader className="text-center">
+              <div className="mx-auto mb-4 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <DialogTitle className="text-xl font-bold text-foreground">
+                {t('quickLead.title')}
+              </DialogTitle>
+              <DialogDescription className="text-muted-foreground">
+                {t('quickLead.description')}
+              </DialogDescription>
+            </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-          <div className="space-y-2">
-            <Label htmlFor="quick-email" className="text-sm font-medium">
-              Email *
-            </Label>
-            <Input
-              id="quick-email"
-              type="email"
-              placeholder="tuo@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="h-12"
-              autoFocus
-            />
-          </div>
+            <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+              <div className="space-y-2">
+                <Label htmlFor="quick-email" className="text-sm font-medium">
+                  Email *
+                </Label>
+                <Input
+                  id="quick-email"
+                  type="email"
+                  placeholder="tuo@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="h-12"
+                  autoFocus
+                />
+              </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="quick-name" className="text-sm font-medium text-muted-foreground">
-              {t('quickLead.namePlaceholder')} ({t('quickLead.optional')})
-            </Label>
-            <Input
-              id="quick-name"
-              type="text"
-              placeholder={t('quickLead.namePlaceholder')}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="h-12"
-            />
-          </div>
+              <div className="space-y-2">
+                <Label htmlFor="quick-name" className="text-sm font-medium text-muted-foreground">
+                  {t('quickLead.namePlaceholder')} ({t('quickLead.optional')})
+                </Label>
+                <Input
+                  id="quick-name"
+                  type="text"
+                  placeholder={t('quickLead.namePlaceholder')}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="h-12"
+                />
+              </div>
 
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            variant="premium"
-            size="lg"
-            className="w-full h-14 text-base font-semibold"
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                {t('quickLead.sending')}
-              </>
-            ) : (
-              <>
-                <Send className="mr-2 h-5 w-5" />
-                {t('quickLead.submit')}
-              </>
-            )}
-          </Button>
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                variant="premium"
+                size="lg"
+                className="w-full h-14 text-base font-semibold"
+              >
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    {t('quickLead.sending')}
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 h-5 w-5" />
+                    {t('quickLead.submit')}
+                  </>
+                )}
+              </Button>
 
-          <p className="text-xs text-center text-muted-foreground">
-            {t('quickLead.privacy')}
-          </p>
-        </form>
+              <p className="text-xs text-center text-muted-foreground">
+                {t('quickLead.privacy')}
+              </p>
+            </form>
+          </>
+        )}
       </DialogContent>
     </Dialog>
   );
