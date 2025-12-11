@@ -681,7 +681,29 @@ export const blogPosts: BlogPost[] = [
             "mercati storici italia"
           ]
         },
-        tags: ["Mercati", "Torino", "Sociale", "Anziani", "Quartieri", "Urbanistica", "Barriera Milano", "Gentrificazione"]
+        tags: ["Mercati", "Torino", "Sociale", "Anziani", "Quartieri", "Urbanistica", "Barriera Milano", "Gentrificazione"],
+        faqs: [
+          {
+            question: "Perché stanno chiudendo i mercati rionali a Torino?",
+            answer: "La crisi è multifattoriale: cambio abitudini di consumo (supermercati, e-commerce), gentrificazione dei quartieri, invecchiamento dei venditori senza ricambio generazionale, e la liquidazione del CISM che gestiva 30 mercati con un debito di €900.000."
+          },
+          {
+            question: "Qual è la situazione del mercato di Piazza Crispi a Torino?",
+            answer: "Il mercato di Piazza Crispi è stato chiuso definitivamente. Era uno dei mercati storici della Barriera di Milano, frequentato principalmente da anziani e residenti a basso reddito. La chiusura ha lasciato il quartiere senza un punto di aggregazione sociale."
+          },
+          {
+            question: "Cosa succede agli ambulanti dei mercati chiusi?",
+            answer: "Gli ambulanti affrontano perdita immediata del reddito, rischio di passaggio all'economia sommersa, perdita di identità professionale e isolamento sociale. Molti non hanno alternative lavorative concrete date l'età e la specializzazione."
+          },
+          {
+            question: "Porta Palazzo è a rischio chiusura?",
+            answer: "Porta Palazzo, il più grande mercato all'aperto d'Europa, non è a rischio chiusura immediato ma vive tensioni strutturali. Resta fondamentale per l'accesso alimentare di migliaia di residenti a basso reddito e comunità immigrate."
+          },
+          {
+            question: "Come impatta la chiusura dei mercati sugli anziani?",
+            answer: "Gli anziani perdono accessibilità economica (prezzi più bassi), prossimità geografica (non tutti possono raggiungere supermercati lontani), e interazione sociale quotidiana che previene l'isolamento. Per molti il mercato era l'unico momento di contatto umano."
+          }
+        ]
       },
       en: {
         title: "Turin's Historic Markets: Closures and Social Impact",
@@ -705,7 +727,29 @@ export const blogPosts: BlogPost[] = [
             "historic markets italy"
           ]
         },
-        tags: ["Markets", "Turin", "Social", "Elderly", "Neighborhoods", "Urban Planning", "Barriera Milano", "Gentrification"]
+        tags: ["Markets", "Turin", "Social", "Elderly", "Neighborhoods", "Urban Planning", "Barriera Milano", "Gentrification"],
+        faqs: [
+          {
+            question: "Why are neighborhood markets closing in Turin?",
+            answer: "The crisis is multifactorial: changing consumption habits (supermarkets, e-commerce), neighborhood gentrification, aging vendors without generational turnover, and CISM liquidation which managed 30 markets with €900,000 debt."
+          },
+          {
+            question: "What is the situation of the Piazza Crispi market in Turin?",
+            answer: "The Piazza Crispi market has been permanently closed. It was one of the historic markets of Barriera di Milano, frequented mainly by elderly and low-income residents. The closure left the neighborhood without a social gathering point."
+          },
+          {
+            question: "What happens to vendors from closed markets?",
+            answer: "Vendors face immediate income loss, risk of moving to the underground economy, loss of professional identity and social isolation. Many have no viable work alternatives given their age and specialization."
+          },
+          {
+            question: "Is Porta Palazzo at risk of closing?",
+            answer: "Porta Palazzo, Europe's largest open-air market, is not at immediate risk of closure but faces structural tensions. It remains essential for food access for thousands of low-income residents and immigrant communities."
+          },
+          {
+            question: "How does market closure impact the elderly?",
+            answer: "The elderly lose economic accessibility (lower prices), geographic proximity (not everyone can reach distant supermarkets), and daily social interaction that prevents isolation. For many, the market was their only moment of human contact."
+          }
+        ]
       }
     }
   },
@@ -968,7 +1012,29 @@ export const blogPosts: BlogPost[] = [
           description: "Guida definitiva alle discoteche di Torino: Hiroshima Mon Amour, Centralino, Audiodrom, Q35, Murazzi del Po, Club Silencio, Kappa FuturFestival. Oltre 30 club con orari, prezzi, generi musicali e quartieri della movida.",
           keywords: ["discoteche torino", "club torino", "nightlife torino", "hiroshima mon amour", "centralino torino", "audiodrom", "q35 warehouse", "murazzi del po", "kappa futurfestival", "club to club", "club silencio", "the beach torino", "bunker torino", "techno torino", "vita notturna torino", "locali notturni torino", "serate torino", "eventi torino", "san salvario nightlife"]
         },
-        tags: ["Discoteche", "Nightlife", "Club Torino", "Eventi", "Techno", "House Music", "Festival", "Murazzi", "San Salvario", "Guide Turistiche"]
+        tags: ["Discoteche", "Nightlife", "Club Torino", "Eventi", "Techno", "House Music", "Festival", "Murazzi", "San Salvario", "Guide Turistiche"],
+        faqs: [
+          {
+            question: "Quali sono le migliori discoteche a Torino?",
+            answer: "Le migliori discoteche sono Hiroshima Mon Amour (indie/elettronica), Centralino Club (techno), Audiodrome (concerti/elettronica), Q35 Warehouse (underground) e Club Silencio (house). Ogni locale ha un genere musicale specifico."
+          },
+          {
+            question: "Dove si trova la movida a Torino?",
+            answer: "Le zone principali sono San Salvario (via Baretti, via Saluzzo), Quadrilatero Romano (centro storico), Murazzi del Po (lungo fiume) e Vanchiglia (alternativa). Ogni quartiere ha una vibe diversa: San Salvario è giovane e multiculturale, il Quadrilatero è più commerciale."
+          },
+          {
+            question: "Quanto costa l'ingresso nelle discoteche a Torino?",
+            answer: "L'ingresso varia da €10 a €20 per eventi normali, €15-30 per DJ internazionali. Molti locali offrono ingresso ridotto prima di mezzanotte o con prenotazione lista. I Murazzi spesso hanno locali gratuiti."
+          },
+          {
+            question: "Qual è l'orario di apertura dei locali notturni a Torino?",
+            answer: "Bar e pub chiudono alle 2:00-3:00. Le discoteche aprono alle 23:00-00:00 e chiudono alle 4:00-5:00. I locali dei Murazzi spesso restano aperti fino all'alba nei weekend. Dopo le 2:00 si va nei club."
+          },
+          {
+            question: "Ci sono festival di musica elettronica a Torino?",
+            answer: "Sì, i principali sono Kappa FuturFestival (luglio, techno internazionale al Parco Dora) e Club to Club (novembre, elettronica sperimentale). Movement Torino è un altro evento importante. Torino è una capitale europea della musica elettronica."
+          }
+        ]
       },
       en: {
         title: "All Turin's Nightclubs: Complete Guide to Night Clubs and Unmissable Events",
@@ -978,7 +1044,29 @@ export const blogPosts: BlogPost[] = [
           description: "Definitive guide to Turin's nightclubs: Hiroshima Mon Amour, Centralino, Audiodrom, Q35, Murazzi del Po, Club Silencio, Kappa FuturFestival. Over 30 clubs with hours, prices, music genres and nightlife districts.",
           keywords: ["turin nightclubs", "torino clubs", "turin nightlife", "hiroshima mon amour", "centralino turin", "audiodrom", "q35 warehouse", "murazzi del po", "kappa futurfestival", "club to club", "club silencio", "the beach turin", "bunker turin", "techno turin", "turin nightlife", "night clubs turin", "turin events", "san salvario nightlife"]
         },
-        tags: ["Nightclubs", "Nightlife", "Turin Clubs", "Events", "Techno", "House Music", "Festivals", "Murazzi", "San Salvario", "Tourist Guides"]
+        tags: ["Nightclubs", "Nightlife", "Turin Clubs", "Events", "Techno", "House Music", "Festivals", "Murazzi", "San Salvario", "Tourist Guides"],
+        faqs: [
+          {
+            question: "What are the best nightclubs in Turin?",
+            answer: "The best nightclubs are Hiroshima Mon Amour (indie/electronic), Centralino Club (techno), Audiodrome (concerts/electronic), Q35 Warehouse (underground) and Club Silencio (house). Each venue has a specific music genre."
+          },
+          {
+            question: "Where is the nightlife in Turin?",
+            answer: "Main areas are San Salvario (via Baretti, via Saluzzo), Quadrilatero Romano (historic center), Murazzi del Po (riverside) and Vanchiglia (alternative). Each neighborhood has a different vibe: San Salvario is young and multicultural, Quadrilatero is more commercial."
+          },
+          {
+            question: "How much is club entry in Turin?",
+            answer: "Entry ranges from €10 to €20 for normal events, €15-30 for international DJs. Many clubs offer reduced entry before midnight or with list reservations. Murazzi venues often have free entry."
+          },
+          {
+            question: "What are the opening hours of Turin nightclubs?",
+            answer: "Bars and pubs close at 2:00-3:00am. Clubs open at 11pm-midnight and close at 4:00-5:00am. Murazzi venues often stay open until dawn on weekends. After 2am people move to clubs."
+          },
+          {
+            question: "Are there electronic music festivals in Turin?",
+            answer: "Yes, the main ones are Kappa FuturFestival (July, international techno at Parco Dora) and Club to Club (November, experimental electronic). Movement Torino is another important event. Turin is a European capital of electronic music."
+          }
+        ]
       }
     }
   },
@@ -1758,7 +1846,29 @@ export const blogPosts: BlogPost[] = [
           description: "Scopri le migliori gelaterie di Torino per studenti 2025: da Papalele (2° in Italia) ad Alberto Marchetti, Aria e Mara dei Boschi. Prezzi €2.50-3.50, indirizzi e gusti da provare assolutamente.",
           keywords: ["migliori gelaterie torino", "gelato artigianale torino", "gelaterie studenti torino", "papalele torino", "alberto marchetti gelato", "aria gelateria", "dove mangiare gelato torino", "gelaterie vicino politecnico", "gelato artigianale", "gelaterie centro torino"]
         },
-        tags: ["studenti", "gelato", "torino", "food", "gelaterie", "guida"]
+        tags: ["studenti", "gelato", "torino", "food", "gelaterie", "guida"],
+        faqs: [
+          {
+            question: "Qual è la migliore gelateria di Torino?",
+            answer: "Papalele è stata classificata 2ª migliore gelateria d'Italia dal Gambero Rosso. Altre eccellenze sono Alberto Marchetti (pluripremiato), Aria (ingredienti d'eccellenza) e Mara dei Boschi (frutti di bosco piemontesi). La scelta dipende dai gusti personali."
+          },
+          {
+            question: "Quanto costa un gelato artigianale a Torino?",
+            answer: "Un cono piccolo (2 gusti) costa €2.50-3.50 nelle gelaterie artigianali. Un cono medio (3 gusti) €3.50-4.50. Le gelaterie più rinomate come Alberto Marchetti o Papalele sono nella fascia alta, le gelaterie di quartiere più economiche."
+          },
+          {
+            question: "Quali sono i gusti tipici torinesi da provare?",
+            answer: "I gusti iconici torinesi sono: gianduia (cioccolato-nocciola inventato a Torino), crema del Valentino, bonet (budino piemontese), nocciola Piemonte IGP, zabaione e marron glacé. Ogni gelateria ha le sue specialità uniche."
+          },
+          {
+            question: "Ci sono gelaterie senza lattosio a Torino?",
+            answer: "Sì, molte gelaterie offrono opzioni senza lattosio e vegane. Ottimo! Buono Non Basta ha sorbetti eccellenti, La Romana offre linea senza lattosio, e gelaterie come Nivà propongono alternative vegetali. Chiedere sempre al personale."
+          },
+          {
+            question: "Quali gelaterie sono vicine al Politecnico di Torino?",
+            answer: "Vicino al Politecnico: Alberto Marchetti (Corso Vittorio), Gasprin (via Madama Cristina), Ottimo! (via Pietro Micca). In zona San Salvario: Mara dei Boschi, Moou. Tutte raggiungibili in 10-15 minuti a piedi dai campus."
+          }
+        ]
       },
       en: {
         title: "The best gelato shops in Turin: definitive guide for gelato-loving students",
@@ -1768,7 +1878,29 @@ export const blogPosts: BlogPost[] = [
           description: "Discover the best gelaterias in Turin for students 2025: from Papalele (2nd in Italy) to Alberto Marchetti, Aria and Mara dei Boschi. Prices €2.50-3.50, addresses and must-try flavors.",
           keywords: ["best gelaterias turin", "artisan gelato turin", "gelaterias students turin", "papalele turin", "alberto marchetti gelato", "aria gelateria", "where to eat gelato turin", "gelaterias near politecnico"]
         },
-        tags: ["students", "gelato", "turin", "food", "gelaterias", "guide"]
+        tags: ["students", "gelato", "turin", "food", "gelaterias", "guide"],
+        faqs: [
+          {
+            question: "What is the best gelato shop in Turin?",
+            answer: "Papalele was ranked 2nd best gelateria in Italy by Gambero Rosso. Other excellences are Alberto Marchetti (multi-awarded), Aria (premium ingredients) and Mara dei Boschi (Piedmontese berries). The choice depends on personal taste."
+          },
+          {
+            question: "How much does artisan gelato cost in Turin?",
+            answer: "A small cone (2 flavors) costs €2.50-3.50 at artisan gelaterias. A medium cone (3 flavors) €3.50-4.50. Renowned shops like Alberto Marchetti or Papalele are at the higher end, neighborhood gelaterias more affordable."
+          },
+          {
+            question: "What are the typical Turin flavors to try?",
+            answer: "Iconic Turin flavors are: gianduia (chocolate-hazelnut invented in Turin), crema del Valentino, bonet (Piedmontese pudding), Piedmont IGP hazelnut, zabaione and marron glacé. Each gelateria has its unique specialties."
+          },
+          {
+            question: "Are there lactose-free gelaterias in Turin?",
+            answer: "Yes, many gelaterias offer lactose-free and vegan options. Ottimo! Buono Non Basta has excellent sorbets, La Romana offers a lactose-free line, and shops like Nivà propose plant-based alternatives. Always ask staff."
+          },
+          {
+            question: "Which gelaterias are near Politecnico di Torino?",
+            answer: "Near Politecnico: Alberto Marchetti (Corso Vittorio), Gasprin (via Madama Cristina), Ottimo! (via Pietro Micca). In San Salvario area: Mara dei Boschi, Moou. All reachable in 10-15 minutes walk from campuses."
+          }
+        ]
       }
     }
   },
@@ -1834,7 +1966,29 @@ export const blogPosts: BlogPost[] = [
           description: "Dove mangiare a Torino da studente: guida 2025 ai migliori ristoranti economici vicino Politecnico e UniTo. Kebab €5, pizzerie, mercati e mense. Risparmia fino al 50% su colazione, pranzo e cena.",
           keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino", "politecnico torino", "unito torino"]
         },
-        tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"]
+        tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"],
+        faqs: [
+          {
+            question: "Quanto spende uno studente al mese per mangiare a Torino?",
+            answer: "Budget realistico: €200-300/mese cucinando spesso a casa, €350-450/mese mangiando fuori regolarmente. La mensa universitaria costa €2-4 a pasto (con ISEE basso), i mercati rionali permettono risparmi del 30-40% rispetto ai supermercati."
+          },
+          {
+            question: "Dove trovare pranzo economico vicino al Politecnico?",
+            answer: "Mensa del Politecnico (€2-4), kebab in Corso Vittorio (€5), pizzerie al trancio in zona Crocetta (€3-5), rosticcerie in via Sacchi. Anche Too Good To Go offre box sorpresa a €3-5 da bar e ristoranti della zona."
+          },
+          {
+            question: "Quali sono i migliori mercati per fare la spesa a Torino?",
+            answer: "Porta Palazzo (il più grande ed economico), Mercato di Piazza Madama Cristina (San Salvario), Mercato Crocetta (qualità alta). Prezzi: frutta/verdura 30-40% meno del supermercato. Andare a fine mattinata per sconti maggiori."
+          },
+          {
+            question: "Come funziona la mensa universitaria a Torino?",
+            answer: "Le mense EDISU offrono pasti da €2.50 (fascia ISEE bassa) a €7 (senza agevolazioni). Serve la tessera EDISU attivabile online. Menù completo: primo, secondo, contorno, pane, frutta. Orari: 12:00-14:30 pranzo, 19:00-21:00 cena."
+          },
+          {
+            question: "Dove fare aperitivo economico a Torino?",
+            answer: "San Salvario: Pastis, Birrificio Torino (€6-8 con buffet). Quadrilatero Romano: locali con stuzzichini inclusi. L'aperitivo \"all'italiana\" con buffet è tradizione torinese. Evitare Piazza Vittorio se cerchi prezzi bassi. Orario classico: 18:00-21:00."
+          }
+        ]
       },
       en: {
         title: "Where to eat in Turin: the definitive guide for students on a budget",
@@ -1844,7 +1998,29 @@ export const blogPosts: BlogPost[] = [
           description: "Discover the best places to eat in Turin on a budget: kebab shops, pizzerias, ethnic restaurants, markets, canteens and tips to save money. Complete guide with real prices.",
           keywords: ["where to eat turin students", "cheap restaurants turin", "budget food turin", "turin markets", "university canteens turin", "cheap aperitivo turin"]
         },
-        tags: ["students", "food", "turin", "budget", "restaurants", "guide"]
+        tags: ["students", "food", "turin", "budget", "restaurants", "guide"],
+        faqs: [
+          {
+            question: "How much does a student spend on food per month in Turin?",
+            answer: "Realistic budget: €200-300/month cooking often at home, €350-450/month eating out regularly. University canteen costs €2-4 per meal (with low income), neighborhood markets save 30-40% compared to supermarkets."
+          },
+          {
+            question: "Where to find cheap lunch near Politecnico?",
+            answer: "Politecnico canteen (€2-4), kebab on Corso Vittorio (€5), slice pizzerias in Crocetta area (€3-5), rotisseries on via Sacchi. Too Good To Go also offers surprise boxes at €3-5 from local bars and restaurants."
+          },
+          {
+            question: "What are the best markets for grocery shopping in Turin?",
+            answer: "Porta Palazzo (largest and cheapest), Piazza Madama Cristina Market (San Salvario), Crocetta Market (high quality). Prices: fruit/vegetables 30-40% less than supermarkets. Go late morning for bigger discounts."
+          },
+          {
+            question: "How does the university canteen work in Turin?",
+            answer: "EDISU canteens offer meals from €2.50 (low income bracket) to €7 (no benefits). Requires EDISU card activated online. Full menu: first course, main, side, bread, fruit. Hours: 12:00-14:30 lunch, 19:00-21:00 dinner."
+          },
+          {
+            question: "Where to have cheap aperitivo in Turin?",
+            answer: "San Salvario: Pastis, Birrificio Torino (€6-8 with buffet). Quadrilatero Romano: venues with included snacks. 'Italian-style' aperitivo with buffet is a Turin tradition. Avoid Piazza Vittorio for low prices. Classic time: 6pm-9pm."
+          }
+        ]
       }
     }
   },
