@@ -1,51 +1,41 @@
-import { Home, TrendingUp, BookOpen } from "lucide-react";
+import { Home, TrendingUp, MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 
 export const BottomNav = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
   const { trackClick } = useAnalytics();
 
-  // Simplified to 3 essential items: Home, Investors (primary CTA), Blog
-  const navItems = [
-    { id: "hero", icon: Home, label: t("nav.home"), path: "/" },
-    { id: "investor-section", icon: TrendingUp, label: t("nav.investors"), path: "/#investor-section" },
-    { id: "blog", icon: BookOpen, label: t("nav.blog"), path: "/blog" },
-  ];
+  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
 
-  const handleClick = (e: React.MouseEvent, item: typeof navItems[0]) => {
-    trackClick(`bottom_nav_${item.id}`, { label: item.label });
+  const handleNavClick = (e: React.MouseEvent, itemId: string, path: string) => {
+    trackClick(`bottom_nav_${itemId}`, { label: itemId });
     
-    if (item.id === "blog") {
-      return; // Let Link handle navigation
-    }
-
     e.preventDefault();
     
     if (location.pathname === '/') {
-      // Already on home, scroll to section
-      const element = document.getElementById(item.id);
+      const element = document.getElementById(itemId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else if (item.id === 'hero') {
+      } else if (itemId === 'hero') {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     } else {
-      // Navigate to home then scroll
-      navigate(item.path);
+      navigate(path);
     }
   };
 
-  // Don't show on non-main pages except blog
-  const showOnPaths = ['/', '/blog'];
-  const shouldShow = showOnPaths.some(p => 
-    p === '/' ? location.pathname === '/' : location.pathname.startsWith(p)
-  );
+  const handleWhatsAppClick = () => {
+    trackClick('bottom_nav_whatsapp', { contact: 'lorenzo' });
+    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
+  };
 
-  if (!shouldShow) return null;
+  // Don't show on non-main pages
+  if (location.pathname !== '/') return null;
 
   return (
     <nav 
@@ -53,31 +43,34 @@ export const BottomNav = () => {
       aria-label={t('nav.home')}
     >
       <div className="flex items-center justify-around h-16">
-        {navItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = item.id === 'blog' 
-            ? location.pathname.startsWith('/blog')
-            : location.pathname === '/' && (
-                item.id === 'hero' 
-                  ? true 
-                  : false
-              );
-          
-          return (
-            <Link
-              key={item.id}
-              to={item.path}
-              onClick={(e) => handleClick(e, item)}
-              aria-current={isActive ? 'page' : undefined}
-              className={`flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target ${
-                isActive ? 'text-primary' : 'text-muted-foreground'
-              }`}
-            >
-              <Icon className="w-5 h-5" aria-hidden="true" />
-              <span className="text-[10px] font-medium">{item.label}</span>
-            </Link>
-          );
-        })}
+        {/* Home */}
+        <Link
+          to="/"
+          onClick={(e) => handleNavClick(e, 'hero', '/')}
+          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+        >
+          <Home className="w-5 h-5" aria-hidden="true" />
+          <span className="text-[10px] font-medium">{t("nav.home")}</span>
+        </Link>
+
+        {/* WhatsApp Lorenzo - Primary CTA */}
+        <button
+          onClick={handleWhatsAppClick}
+          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-primary"
+        >
+          <MessageCircle className="w-5 h-5" aria-hidden="true" />
+          <span className="text-[10px] font-medium">WhatsApp</span>
+        </button>
+
+        {/* Investors */}
+        <Link
+          to="/#investor-section"
+          onClick={(e) => handleNavClick(e, 'investor-section', '/#investor-section')}
+          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+        >
+          <TrendingUp className="w-5 h-5" aria-hidden="true" />
+          <span className="text-[10px] font-medium">{t("nav.investors")}</span>
+        </Link>
       </div>
     </nav>
   );
