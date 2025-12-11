@@ -30,10 +30,32 @@ export const MiniInvestorForm = () => {
     setIsLoading(true);
     
     try {
+      const sanitizedEmail = email.toLowerCase().trim();
+      
+      // Send Formspree notification for quick lead
+      try {
+        await fetch("https://formspree.io/f/xeojbzow", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: "Quick Lead (Email Only)",
+            email: sanitizedEmail,
+            user_type: "investor_mini_form",
+            _subject: `⚡ QUICK INVESTOR LEAD - Jungle Rent - ${sanitizedEmail}`,
+            timestamp: new Date().toISOString(),
+          }),
+        });
+      } catch (formspreeError) {
+        console.error("Formspree error:", formspreeError);
+      }
+
       // Store minimal lead data
       const { error } = await supabase.from("investor_interest").insert([{
         full_name: "Quick Lead",
-        email: email.toLowerCase().trim(),
+        email: sanitizedEmail,
         phone: "+39 000 000 0000",
         country: "italy",
         investor_type: "individual",
