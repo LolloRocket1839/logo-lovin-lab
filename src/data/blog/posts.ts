@@ -403,7 +403,29 @@ export const blogPosts: BlogPost[] = [
             "compostaggio domestico"
           ]
         },
-        tags: ["Ambiente", "Rifiuti", "Torino", "Sostenibilità", "Amiat", "Ecologia", "Guida Pratica"]
+        tags: ["Ambiente", "Rifiuti", "Torino", "Sostenibilità", "Amiat", "Ecologia", "Guida Pratica"],
+        faqs: [
+          {
+            question: "Come funziona il sistema porta a porta a Torino?",
+            answer: "Il sistema porta a porta di Torino prevede la raccolta dei rifiuti direttamente presso le abitazioni in giorni specifici. Ogni zona ha un calendario diverso consultabile sull'app Iren Ambiente o sul sito Amiat. I contenitori devono essere esposti la sera prima del giorno di raccolta."
+          },
+          {
+            question: "Quali sono le 5 frazioni principali di rifiuti a Torino?",
+            answer: "Le 5 frazioni sono: carta e cartone (contenitore giallo), vetro e lattine (blu/marrone), plastica (azzurro/giallo), organico (marrone/verde) e indifferenziato (nero/grigio). Ogni frazione ha regole specifiche per cosa inserire e cosa escludere."
+          },
+          {
+            question: "Cosa sono le ecoisole smart e come si usano?",
+            answer: "Le ecoisole smart sono isole ecologiche automatizzate con accesso tramite tessera elettronica. Sono attive 24/7 e permettono di conferire rifiuti in qualsiasi momento. Si trovano principalmente nelle zone non coperte dal porta a porta."
+          },
+          {
+            question: "Dove posso portare rifiuti speciali come RAEE, pile e medicinali?",
+            answer: "I RAEE vanno portati agli 8 ecocentri Amiat o consegnati al rivenditore al momento dell'acquisto di un nuovo apparecchio. Le pile si conferiscono nei contenitori dedicati nei supermercati. I medicinali scaduti vanno nelle farmacie. L'olio esausto nei contenitori stradali gialli."
+          },
+          {
+            question: "Quali sono le sanzioni per lo smaltimento errato dei rifiuti a Torino?",
+            answer: "Le sanzioni vanno da €25 a €155 per conferimento errato nei contenitori, da €50 a €310 per abbandono rifiuti su suolo pubblico, fino a €620 per abbandono di rifiuti speciali. Esiste anche responsabilità penale per smaltimento illegale."
+          }
+        ]
       },
       en: {
         title: "Waste Sorting in Turin: Complete Practical Guide",
@@ -426,7 +448,29 @@ export const blogPosts: BlogPost[] = [
             "home composting"
           ]
         },
-        tags: ["Environment", "Waste", "Turin", "Sustainability", "Recycling", "Ecology", "Practical Guide"]
+        tags: ["Environment", "Waste", "Turin", "Sustainability", "Recycling", "Ecology", "Practical Guide"],
+        faqs: [
+          {
+            question: "How does the door-to-door waste collection system work in Turin?",
+            answer: "Turin's door-to-door system collects waste directly from homes on specific days. Each zone has a different schedule available on the Iren Ambiente app or Amiat website. Bins must be placed outside the evening before collection day."
+          },
+          {
+            question: "What are the 5 main waste fractions in Turin?",
+            answer: "The 5 fractions are: paper and cardboard (yellow bin), glass and cans (blue/brown), plastic packaging (light blue/yellow), organic waste (brown/green), and non-recyclable (black/grey). Each fraction has specific rules for what to include and exclude."
+          },
+          {
+            question: "What are smart eco-islands and how do you use them?",
+            answer: "Smart eco-islands are automated recycling stations accessed via electronic card. They operate 24/7 and allow waste disposal at any time. They're mainly located in areas not covered by door-to-door collection."
+          },
+          {
+            question: "Where can I dispose of special waste like electronics, batteries and medicines?",
+            answer: "Electronics (WEEE) go to the 8 Amiat recycling centers or can be returned to retailers when purchasing new appliances. Batteries go in dedicated bins at supermarkets. Expired medicines go to pharmacies. Used cooking oil goes in yellow street containers."
+          },
+          {
+            question: "What are the penalties for incorrect waste disposal in Turin?",
+            answer: "Penalties range from €25-155 for incorrect bin disposal, €50-310 for littering on public land, up to €620 for abandoning special waste. Criminal liability applies for illegal disposal of hazardous materials."
+          }
+        ]
       }
     }
   },
@@ -1141,6 +1185,28 @@ export const blogPosts: BlogPost[] = [
           "Politecnico",
           "UniTo",
           "guida pratica"
+        ],
+        faqs: [
+          {
+            question: "Quanto costa l'abbonamento GTT under 26 a Torino?",
+            answer: "L'abbonamento annuale under 26 di GTT costa circa €310 e permette viaggi illimitati su metro, tram e bus nell'area urbana di Torino. È il miglior rapporto qualità-prezzo per studenti universitari che usano i mezzi quotidianamente."
+          },
+          {
+            question: "Come funziona il programma Piemove per gli studenti?",
+            answer: "Piemove è un programma regionale che offre trasporto pubblico gratuito agli studenti con ISEE sotto €26.000. Copre abbonamenti GTT e Trenitalia per spostamenti casa-università. La richiesta si fa online sul portale Piemonte."
+          },
+          {
+            question: "Quali app sono utili per muoversi a Torino?",
+            answer: "Le app essenziali sono: GTT - TO Move per orari e biglietti, Moovit per pianificare percorsi multimodali, Google Maps per navigazione, Dott e Lime per monopattini e bici sharing. MTM Mobilità integra tutti i servizi regionali."
+          },
+          {
+            question: "Come raggiungere il Politecnico di Torino con i mezzi pubblici?",
+            answer: "Campus Lingotto: Metro M1 fermata Lingotto + 5 min a piedi. Campus Valentino: tram 16 o bus 42. Campus Verrès: bus 68 da Porta Nuova. La smart card universitaria può essere integrata con l'abbonamento GTT."
+          },
+          {
+            question: "Quali sono i servizi di sharing mobility disponibili a Torino?",
+            answer: "A Torino sono attivi Dott (monopattini e bici elettriche) e Lime (monopattini). Le tariffe partono da €1 sblocco + €0,20-0,25/minuto. Alcuni servizi offrono sconti con la tessera universitaria. Esistono anche rastrelliere dedicate ai campus."
+          }
         ]
       },
       en: {
@@ -1183,6 +1249,28 @@ export const blogPosts: BlogPost[] = [
           "Politecnico",
           "UniTo",
           "practical guide"
+        ],
+        faqs: [
+          {
+            question: "How much does the GTT under 26 pass cost in Turin?",
+            answer: "The GTT annual under 26 pass costs around €310 and allows unlimited travel on metro, trams and buses in Turin's urban area. It offers the best value for students who use public transport daily."
+          },
+          {
+            question: "How does the Piemove program work for students?",
+            answer: "Piemove is a regional program offering free public transport to students with household income (ISEE) below €26,000. It covers GTT and Trenitalia passes for home-university travel. Applications are made online via the Piemonte portal."
+          },
+          {
+            question: "What apps are useful for getting around Turin?",
+            answer: "Essential apps are: GTT - TO Move for schedules and tickets, Moovit for multimodal route planning, Google Maps for navigation, Dott and Lime for scooter and bike sharing. MTM Mobilità integrates all regional services."
+          },
+          {
+            question: "How do I reach Politecnico di Torino by public transport?",
+            answer: "Lingotto Campus: Metro M1 Lingotto stop + 5 min walk. Valentino Campus: tram 16 or bus 42. Verrès Campus: bus 68 from Porta Nuova. The university smart card can be integrated with your GTT pass."
+          },
+          {
+            question: "What sharing mobility services are available in Turin?",
+            answer: "Turin has Dott (e-scooters and e-bikes) and Lime (e-scooters). Rates start at €1 unlock + €0.20-0.25/minute. Some services offer discounts with university cards. There are also dedicated parking racks at campuses."
+          }
         ]
       }
     }
