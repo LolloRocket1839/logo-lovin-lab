@@ -15,7 +15,7 @@ import BlogPost from "./pages/BlogPost";
 import AITesting from "./pages/AITesting";
 import ABTestResults from "./pages/ABTestResults";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
-import InvestorForm from "./pages/InvestorForm";
+
 import InvestorSuccess from "./pages/InvestorSuccess";
 import Privacy from "./pages/Privacy";
 import TerminiCondizioni from "./pages/TerminiCondizioni";
