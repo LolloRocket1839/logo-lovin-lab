@@ -1,4 +1,4 @@
-import { Home, GraduationCap, TrendingUp, BookOpen } from "lucide-react";
+import { Home, TrendingUp, BookOpen } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -9,9 +9,9 @@ export const BottomNav = () => {
   const navigate = useNavigate();
   const { trackClick } = useAnalytics();
 
+  // Simplified to 3 essential items: Home, Investors (primary CTA), Blog
   const navItems = [
     { id: "hero", icon: Home, label: t("nav.home"), path: "/" },
-    { id: "student-section", icon: GraduationCap, label: t("nav.students"), path: "/#student-section" },
     { id: "investor-section", icon: TrendingUp, label: t("nav.investors"), path: "/#investor-section" },
     { id: "blog", icon: BookOpen, label: t("nav.blog"), path: "/blog" },
   ];
