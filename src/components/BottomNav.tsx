@@ -53,12 +53,15 @@ export const BottomNav = () => {
           <span className="text-[10px] font-medium">{t("nav.home")}</span>
         </Link>
 
-        {/* WhatsApp Lorenzo - Primary CTA */}
+        {/* WhatsApp Lorenzo - Primary CTA with pulse indicator */}
         <button
           onClick={handleWhatsAppClick}
-          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-primary"
+          className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-primary relative"
         >
-          <MessageCircle className="w-5 h-5" aria-hidden="true" />
+          <div className="relative">
+            <MessageCircle className="w-5 h-5" aria-hidden="true" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-primary rounded-full animate-pulse" />
+          </div>
           <span className="text-[10px] font-medium">WhatsApp</span>
         </button>
 
