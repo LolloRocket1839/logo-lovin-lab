@@ -241,7 +241,29 @@ export const blogPosts: BlogPost[] = [
             "turismo sostenibile piemonte"
           ]
         },
-        tags: ["Sostenibilità", "Trasporti", "Treno", "Turismo", "Torino", "Bicicletta", "Ambiente"]
+        tags: ["Sostenibilità", "Trasporti", "Treno", "Turismo", "Torino", "Bicicletta", "Ambiente"],
+        faqs: [
+          {
+            question: "Quanto costa il treno da Roma a Torino?",
+            answer: "Il Frecciarossa Roma-Torino costa da €39 (Tariffa Economy) a €120+ (Business). Il viaggio dura circa 4 ore e 15 minuti. I biglietti Smart sono i più economici prenotando con anticipo sul sito Trenitalia."
+          },
+          {
+            question: "Il Frecciarossa 1000 è davvero ecologico?",
+            answer: "Sì, il Frecciarossa 1000 produce solo 28 microgrammi di CO2 per chilometro, il 97% in meno rispetto all'aereo. È costruito con il 97.1% di materiali riciclabili e alimentato al 100% da energia rinnovabile certificata."
+          },
+          {
+            question: "Come funziona FlixBus per Torino?",
+            answer: "FlixBus collega Torino con tutta Europa a prezzi da €9.99. I bus partono da Corso Vittorio Emanuele II e producono 5 volte meno CO2 delle auto e 10 volte meno degli aerei. WiFi e prese USB a bordo."
+          },
+          {
+            question: "L'aeroporto di Torino è sostenibile?",
+            answer: "Sì, Torino Caselle ha certificazione ACI Level 3+ Neutrality con 80% di riduzione emissioni dal 2019. Ha veicoli elettrici, pannelli solari e compensazione carbonio. È raggiungibile con bus Sadem o treno SFM dal centro."
+          },
+          {
+            question: "Cos'è la Torino+Piemonte Card e conviene?",
+            answer: "È una city card turistica che include trasporti GTT illimitati, accesso a 200+ musei e attrazioni. Costa da €29 (1 giorno) a €51 (5 giorni). Conviene se visiti almeno 2-3 musei e usi i mezzi frequentemente."
+          }
+        ]
       },
       en: {
         title: "How to Get Sustainably to Turin: A Comprehensive Travel Guide",
@@ -262,7 +284,29 @@ export const blogPosts: BlogPost[] = [
             "eco tourism piedmont"
           ]
         },
-        tags: ["Sustainability", "Transport", "Train", "Tourism", "Turin", "Cycling", "Environment"]
+        tags: ["Sustainability", "Transport", "Train", "Tourism", "Turin", "Cycling", "Environment"],
+        faqs: [
+          {
+            question: "How much does the train from Rome to Turin cost?",
+            answer: "Frecciarossa Rome-Turin costs from €39 (Economy fare) to €120+ (Business). The journey takes about 4 hours 15 minutes. Smart tickets are cheapest when booking in advance on the Trenitalia website."
+          },
+          {
+            question: "Is Frecciarossa 1000 really eco-friendly?",
+            answer: "Yes, Frecciarossa 1000 produces only 28 micrograms of CO2 per kilometer, 97% less than planes. It's built with 97.1% recyclable materials and powered by 100% certified renewable energy."
+          },
+          {
+            question: "How does FlixBus work for Turin?",
+            answer: "FlixBus connects Turin with all of Europe from €9.99. Buses depart from Corso Vittorio Emanuele II and produce 5 times less CO2 than cars and 10 times less than planes. WiFi and USB ports onboard."
+          },
+          {
+            question: "Is Turin airport sustainable?",
+            answer: "Yes, Turin Caselle has ACI Level 3+ Neutrality certification with 80% emissions reduction since 2019. It features electric vehicles, solar panels and carbon offsetting. Reachable by Sadem bus or SFM train from the center."
+          },
+          {
+            question: "What is the Torino+Piemonte Card and is it worth it?",
+            answer: "It's a tourist city card including unlimited GTT transport, access to 200+ museums and attractions. Costs from €29 (1 day) to €51 (5 days). Worth it if visiting at least 2-3 museums and using public transport frequently."
+          }
+        ]
       }
     }
   },
