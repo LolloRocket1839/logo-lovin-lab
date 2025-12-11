@@ -710,6 +710,21 @@
   "stickyCta": {
     "closeLabel": "Close"
   },
+  "quickLead": {
+    "title": "Invest in Jungle Rent",
+    "description": "Leave your email and we'll contact you to discuss investment opportunities.",
+    "namePlaceholder": "What's your name?",
+    "optional": "optional",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "successTitle": "Thank you!",
+    "successDescription": "We'll contact you soon to discuss investment opportunities.",
+    "errorTitle": "Error",
+    "errorDescription": "Something went wrong. Please try again later.",
+    "emailRequired": "Please enter your email",
+    "invalidEmail": "Please enter a valid email",
+    "privacy": "Your data is safe. We'll never share it with third parties."
+  },
   "breadcrumbs": {
     "home": "Home"
   },

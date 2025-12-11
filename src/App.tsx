@@ -34,7 +34,7 @@ const AppContent = () => {
       <Route path="/about" element={<About />} />
       <Route path="/investitori" element={<Investors />} />
       <Route path="/investors" element={<Investors />} />
-      <Route path="/invest" element={<InvestorForm />} />
+      <Route path="/invest" element={<Index />} />
       <Route path="/invest/success" element={<InvestorSuccess />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
