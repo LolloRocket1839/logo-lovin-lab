@@ -33,7 +33,29 @@ export const blogPosts: BlogPost[] = [
             "teatro regio verdi"
           ]
         },
-        tags: ["Eventi", "Torino", "Febbraio", "Cioccolato", "Opera", "Mostre", "Basket", "Carnevale", "San Valentino"]
+        tags: ["Eventi", "Torino", "Febbraio", "Cioccolato", "Opera", "Mostre", "Basket", "Carnevale", "San Valentino"],
+        faqs: [
+          {
+            question: "Quando si svolge CioccolaTò 2026 a Torino?",
+            answer: "CioccolaTò 2026 si svolge dal 13 al 17 febbraio in Piazza Vittorio Veneto. È il festival del cioccolato più grande d'Italia con oltre 100 espositori, laboratori e degustazioni."
+          },
+          {
+            question: "Come acquistare biglietti per il Macbeth al Teatro Regio?",
+            answer: "I biglietti per Macbeth di Verdi diretto da Riccardo Muti sono disponibili sul sito teatroregio.torino.it. Prezzi da €30 a €250. È consigliato prenotare in anticipo per questo evento eccezionale."
+          },
+          {
+            question: "Dove vedere la mostra Lee Miller a Torino?",
+            answer: "La mostra Lee Miller è ospitata al CAMERA - Centro Italiano per la Fotografia in Via delle Rosine 18. Aperta da martedì a domenica, biglietto €12 intero, €8 ridotto studenti."
+          },
+          {
+            question: "Cosa fare a Torino per San Valentino 2026?",
+            answer: "Per San Valentino: cena romantica nei ristoranti stellati (Del Cambio, Piano 35), passeggiata al Parco del Valentino, visita al Museo del Cinema con vista Mole, cioccolateria storica Baratti & Milano."
+          },
+          {
+            question: "Come raggiungere il Carnevale di Ivrea da Torino a febbraio?",
+            answer: "Il Carnevale di Ivrea 2026 culmina il 24-25 febbraio con la Battaglia delle Arance. Treno regionale da Porta Nuova (40min, €5-7), studenti Piemove gratis. Biglietto battaglia €15 con berretto rosso."
+          }
+        ]
       },
       en: {
         title: "February 2026 in Turin: Love, Chocolate, Art and Opera",
@@ -58,7 +80,29 @@ export const blogPosts: BlogPost[] = [
             "teatro regio verdi"
           ]
         },
-        tags: ["Events", "Turin", "February", "Chocolate", "Opera", "Exhibitions", "Basketball", "Carnival", "Valentine's Day"]
+        tags: ["Events", "Turin", "February", "Chocolate", "Opera", "Exhibitions", "Basketball", "Carnival", "Valentine's Day"],
+        faqs: [
+          {
+            question: "When does CioccolaTò 2026 take place in Turin?",
+            answer: "CioccolaTò 2026 runs February 13-17 in Piazza Vittorio Veneto. It's Italy's largest chocolate festival with over 100 exhibitors, workshops and tastings."
+          },
+          {
+            question: "How to buy tickets for Macbeth at Teatro Regio?",
+            answer: "Tickets for Verdi's Macbeth conducted by Riccardo Muti are available at teatroregio.torino.it. Prices from €30 to €250. Advance booking recommended for this exceptional event."
+          },
+          {
+            question: "Where to see the Lee Miller exhibition in Turin?",
+            answer: "The Lee Miller exhibition is at CAMERA - Italian Center for Photography, Via delle Rosine 18. Open Tuesday to Sunday, €12 full price, €8 reduced for students."
+          },
+          {
+            question: "What to do in Turin for Valentine's Day 2026?",
+            answer: "For Valentine's Day: romantic dinner at starred restaurants (Del Cambio, Piano 35), stroll in Valentino Park, Cinema Museum visit with Mole views, historic Baratti & Milano chocolatier."
+          },
+          {
+            question: "How to reach Ivrea Carnival from Turin in February?",
+            answer: "Ivrea Carnival 2026 culminates February 24-25 with the Battle of Oranges. Regional train from Porta Nuova (40min, €5-7), Piemove students free. Battle ticket €15 includes red cap."
+          }
+        ]
       }
     }
   },
@@ -95,7 +139,29 @@ export const blogPosts: BlogPost[] = [
             "musei reali torino 2026"
           ]
         },
-        tags: ["Eventi", "Torino", "Marzo", "Concerti", "Mostre", "Teatro", "Arte", "Musica", "Subsonica", "Olimpiadi"]
+        tags: ["Eventi", "Torino", "Marzo", "Concerti", "Mostre", "Teatro", "Arte", "Musica", "Subsonica", "Olimpiadi"],
+        faqs: [
+          {
+            question: "Quali concerti ci sono a Torino a marzo 2026?",
+            answer: "Marzo 2026 offre concerti straordinari: Mika all'OGR (8 marzo), Renato Zero all'Inalpi Arena (14-15 marzo), Subsonica 30° anniversario (28 marzo). Biglietti su TicketOne e Ticketmaster."
+          },
+          {
+            question: "Dove vedere la mostra Chiharu Shiota a Torino?",
+            answer: "La retrospettiva di Chiharu Shiota è al MAO - Museo d'Arte Orientale in Via San Domenico 11. L'artista giapponese è famosa per le sue installazioni di fili rossi che avvolgono gli spazi."
+          },
+          {
+            question: "Quanto costano i biglietti per Rocky Musical a Torino?",
+            answer: "Rocky il Musical al Teatro Alfieri costa da €35 a €89. Le date sono dal 12 al 22 marzo 2026. È la produzione italiana del celebre musical di Broadway basato sul film con Stallone."
+          },
+          {
+            question: "Ci sono eventi gratuiti a Torino a marzo 2026?",
+            answer: "Sì: musei gratuiti la prima domenica del mese (2 marzo), conferenze all'OGR e al Circolo dei Lettori, eventi all'aperto ai Murazzi, aperture serali straordinarie di alcune mostre."
+          },
+          {
+            question: "Dove vedere la mostra Gentileschi a Torino?",
+            answer: "La mostra su Orazio Gentileschi è ai Musei Reali di Torino in Piazzetta Reale 1. Aperta da martedì a domenica 9:00-19:00. Biglietto combinato con Galleria Sabauda disponibile a €15."
+          }
+        ]
       },
       en: {
         title: "March 2026 in Turin: A Month of Discovery Through Art, Music and Entertainment",
@@ -121,7 +187,29 @@ export const blogPosts: BlogPost[] = [
             "royal museums turin 2026"
           ]
         },
-        tags: ["Events", "Turin", "March", "Concerts", "Exhibitions", "Theater", "Art", "Music", "Subsonica", "Olympics"]
+        tags: ["Events", "Turin", "March", "Concerts", "Exhibitions", "Theater", "Art", "Music", "Subsonica", "Olympics"],
+        faqs: [
+          {
+            question: "What concerts are in Turin in March 2026?",
+            answer: "March 2026 offers extraordinary concerts: Mika at OGR (March 8), Renato Zero at Inalpi Arena (March 14-15), Subsonica 30th anniversary (March 28). Tickets on TicketOne and Ticketmaster."
+          },
+          {
+            question: "Where to see the Chiharu Shiota exhibition in Turin?",
+            answer: "The Chiharu Shiota retrospective is at MAO - Museum of Oriental Art, Via San Domenico 11. The Japanese artist is famous for her red thread installations that envelop spaces."
+          },
+          {
+            question: "How much are Rocky Musical tickets in Turin?",
+            answer: "Rocky the Musical at Teatro Alfieri costs €35 to €89. Dates are March 12-22, 2026. It's the Italian production of the famous Broadway musical based on the Stallone film."
+          },
+          {
+            question: "Are there free events in Turin in March 2026?",
+            answer: "Yes: free museums on the first Sunday (March 2), conferences at OGR and Circolo dei Lettori, outdoor events at Murazzi, special evening openings of some exhibitions."
+          },
+          {
+            question: "Where to see the Gentileschi exhibition in Turin?",
+            answer: "The Orazio Gentileschi exhibition is at the Royal Museums of Turin, Piazzetta Reale 1. Open Tuesday-Sunday 9am-7pm. Combined ticket with Galleria Sabauda available at €15."
+          }
+        ]
       }
     }
   },
@@ -615,7 +703,29 @@ export const blogPosts: BlogPost[] = [
             "inverno torino eventi"
           ]
         },
-        tags: ["Eventi", "Torino", "Gennaio", "Concerti", "Mostre", "Teatro", "Sport", "Olimpiadi", "Luci d'Artista", "Shopping"]
+        tags: ["Eventi", "Torino", "Gennaio", "Concerti", "Mostre", "Teatro", "Sport", "Olimpiadi", "Luci d'Artista", "Shopping"],
+        faqs: [
+          {
+            question: "Quando finiscono le Luci d'Artista a Torino?",
+            answer: "Le Luci d'Artista 2025-2026 terminano l'11 gennaio 2026. Sono installazioni luminose di artisti contemporanei in tutto il centro storico, visibili gratuitamente ogni sera dal tramonto."
+          },
+          {
+            question: "Quando passa la Fiamma Olimpica a Torino?",
+            answer: "La Fiamma Olimpica di Milano Cortina 2026 attraversa Torino il 26 gennaio 2026. Il percorso tocca i luoghi simbolo della città che ha ospitato le Olimpiadi Invernali 2006."
+          },
+          {
+            question: "Quali concerti ci sono a Torino a gennaio 2026?",
+            answer: "Gennaio 2026 offre: Lazza all'Inalpi Arena (18 gennaio), Dardust al Teatro Regio (24 gennaio), PFM al Teatro Colosseo (31 gennaio). Biglietti su TicketOne."
+          },
+          {
+            question: "Quando iniziano i saldi invernali a Torino 2026?",
+            answer: "I saldi invernali 2026 iniziano il 4 gennaio in Piemonte e durano fino al 1° marzo. Le migliori zone shopping sono Via Roma, Via Garibaldi, Quadrilatero Romano e outlet di Serravalle."
+          },
+          {
+            question: "Cosa vedere al Teatro Regio a gennaio 2026?",
+            answer: "A gennaio 2026 il Teatro Regio presenta La Cenerentola di Rossini (10-22 gennaio) e il Concerto di Capodanno. Biglietti da €25 su teatroregio.torino.it."
+          }
+        ]
       },
       en: {
         title: "Events in Turin in January 2026: complete guide",
@@ -646,7 +756,29 @@ export const blogPosts: BlogPost[] = [
             "winter turin events"
           ]
         },
-        tags: ["Events", "Turin", "January", "Concerts", "Exhibitions", "Theater", "Sports", "Olympics", "Luci d'Artista", "Shopping"]
+        tags: ["Events", "Turin", "January", "Concerts", "Exhibitions", "Theater", "Sports", "Olympics", "Luci d'Artista", "Shopping"],
+        faqs: [
+          {
+            question: "When do Luci d'Artista end in Turin?",
+            answer: "Luci d'Artista 2025-2026 ends January 11, 2026. These are light installations by contemporary artists throughout the historic center, visible free every evening from sunset."
+          },
+          {
+            question: "When does the Olympic Flame pass through Turin?",
+            answer: "The Milano Cortina 2026 Olympic Flame passes through Turin on January 26, 2026. The route touches symbolic locations of the city that hosted the 2006 Winter Olympics."
+          },
+          {
+            question: "What concerts are in Turin in January 2026?",
+            answer: "January 2026 offers: Lazza at Inalpi Arena (January 18), Dardust at Teatro Regio (January 24), PFM at Teatro Colosseo (January 31). Tickets on TicketOne."
+          },
+          {
+            question: "When do winter sales start in Turin 2026?",
+            answer: "Winter sales 2026 start January 4 in Piedmont and run until March 1. Best shopping areas are Via Roma, Via Garibaldi, Quadrilatero Romano, and Serravalle outlet."
+          },
+          {
+            question: "What to see at Teatro Regio in January 2026?",
+            answer: "In January 2026 Teatro Regio presents Rossini's La Cenerentola (January 10-22) and the New Year's Concert. Tickets from €25 at teatroregio.torino.it."
+          }
+        ]
       }
     }
   },
