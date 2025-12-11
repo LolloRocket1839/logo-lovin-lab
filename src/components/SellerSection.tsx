@@ -1,40 +1,21 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { Building2, TrendingUp, Clock, Shield } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Button } from "./ui/button";
-import { SellerContactDialog } from "./SellerContactDialog";
+import { QuickSellerLeadDialog } from "./QuickSellerLeadDialog";
 import { StyledText } from "@/components/StyledText";
+import { openCalendly } from "@/lib/calendly";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 export const SellerSection = () => {
   const { t } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: t('seller.benefit1Title'),
-      description: t('seller.benefit1Desc'),
-      tooltip: t('seller.benefit1Tooltip'),
-    },
-    {
-      icon: Clock,
-      title: t('seller.benefit2Title'),
-      description: t('seller.benefit2Desc'),
-      tooltip: t('seller.benefit2Tooltip'),
-    },
-    {
-      icon: Shield,
-      title: t('seller.benefit3Title'),
-      description: t('seller.benefit3Desc'),
-      tooltip: t('seller.benefit3Tooltip'),
-    },
-    {
-      icon: Building2,
-      title: t('seller.benefit4Title'),
-      description: t('seller.benefit4Desc'),
-      tooltip: t('seller.benefit4Tooltip'),
-    },
-  ];
+  const handleCalendlyClick = () => {
+    trackClick('seller_section_calendly');
+    openCalendly();
+  };
 
   return (
     <section id="seller-section" className="py-8 sm:py-10 md:py-12 lg:py-16 relative overflow-hidden transition-spacing">
@@ -64,18 +45,29 @@ export const SellerSection = () => {
             </li>
           </ul>
           
-          <Button 
-            size="lg" 
-            variant="premium"
-            onClick={() => setIsDialogOpen(true)}
-            className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12"
-          >
-            {t('seller.ctaButton')}
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button 
+              size="lg" 
+              variant="premium"
+              onClick={() => setIsDialogOpen(true)}
+              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12"
+            >
+              {t('seller.ctaButton')}
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              onClick={handleCalendlyClick}
+              className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base h-11 sm:h-12"
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+              {t('seller.scheduleCall')}
+            </Button>
+          </div>
         </div>
       </div>
 
-      <SellerContactDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
+      <QuickSellerLeadDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} source="seller_section" />
     </section>
   );
 };
