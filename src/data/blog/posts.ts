@@ -659,7 +659,14 @@ export const blogPosts: BlogPost[] = [
           description: "Analisi mercato immobiliare Torino 2025: rendimenti 8.34%, prezzi convenienti, ripresa italiana. Perché investire in real estate durante volatilità borsistica.",
           keywords: ["investire torino", "real assets", "immobiliare torino 2025", "rendimenti immobiliari", "mercato azionario", "investimenti immobiliari", "torino investimenti", "bce tassi", "opportunità immobiliare"]
         },
-        tags: ["Investimenti", "Real Estate", "Mercato Immobiliare", "Torino", "Analisi"]
+        tags: ["Investimenti", "Real Estate", "Mercato Immobiliare", "Torino", "Analisi"],
+        faqs: [
+          { question: "Perché gli asset reali performano meglio delle azioni durante la volatilità?", answer: "Gli asset reali hanno valore intrinseco tangibile e generano reddito locativo indipendente dal sentiment di mercato. Storicamente mostrano volatilità 30-40% inferiore alle azioni." },
+          { question: "Quali sono i rendimenti da locazione a Torino rispetto a Milano?", answer: "Torino offre rendimenti dell'8,34% vs 4,5% di Milano. Su un immobile da €300.000, questo significa €12.600 annui a Torino con capitale 4 volte inferiore a Milano." },
+          { question: "Come la politica BCE sta influenzando il mercato immobiliare italiano?", answer: "La BCE ha tagliato i tassi di 1 punto percentuale nel 2025, portando i mutui al 3,18%. Le transazioni sono cresciute del 9,5% a livello nazionale." },
+          { question: "Perché Torino è il momento giusto per investire nel 2025?", answer: "Torino ha prezzi scontati del 75% rispetto a Milano, rendimenti dell'8,34%, ed è stata nominata Capitale Europea dell'Innovazione 2024-2025. Le transazioni Q1 2025 sono cresciute del 12,2%." },
+          { question: "Quali progetti di rigenerazione urbana aumenteranno i valori immobiliari a Torino?", answer: "Conversione Lingotto, riqualificazione Quartiere Lancia, e completamento Metro Linea 2 (2028). Le proprietà in quartieri rigenerati apprezzano 15-25% in 3-5 anni." }
+        ]
       },
       en: {
         title: "Why This is the Perfect Time to Invest in Real Assets: Focus on Turin",
@@ -669,7 +676,14 @@ export const blogPosts: BlogPost[] = [
           description: "Turin real estate market analysis 2025: 8.34% yields, affordable prices, Italian recovery. Why invest in real estate during stock market volatility.",
           keywords: ["invest turin", "real assets", "turin real estate 2025", "rental yields", "stock market", "real estate investment", "turin investments", "ecb rates", "property opportunity"]
         },
-        tags: ["Investments", "Real Estate", "Property Market", "Turin", "Analysis"]
+        tags: ["Investments", "Real Estate", "Property Market", "Turin", "Analysis"],
+        faqs: [
+          { question: "Why do real assets outperform stocks during volatility?", answer: "Real assets have tangible intrinsic value and generate rental income independent of market sentiment. Historically they show 30-40% lower volatility than stocks." },
+          { question: "What are rental yields in Turin compared to Milan?", answer: "Turin offers yields of 8.34% vs 4.5% in Milan. On a €300,000 property, this means €12,600 annually in Turin with 4x less capital than Milan." },
+          { question: "How is ECB policy affecting the Italian real estate market?", answer: "The ECB has cut rates by 1 percentage point in 2025, bringing mortgages to 3.18%. Transactions have grown 9.5% nationally." },
+          { question: "Why is Turin the right time to invest in 2025?", answer: "Turin has prices 75% lower than Milan, 8.34% yields, and was named European Capital of Innovation 2024-2025. Q1 2025 transactions grew 12.2%." },
+          { question: "Which urban regeneration projects will increase property values in Turin?", answer: "Lingotto conversion, Quartiere Lancia redevelopment, and Metro Line 2 completion (2028). Properties in regenerated neighborhoods appreciate 15-25% in 3-5 years." }
+        ]
       }
     }
   },
@@ -1235,6 +1249,13 @@ export const blogPosts: BlogPost[] = [
           "crowdfunding",
           "flipping",
           "guida completa"
+        ],
+        faqs: [
+          { question: "Qual è la differenza tra mutuo prima casa e seconda casa per investimento?", answer: "Per la seconda casa le banche erogano il 60-70% del valore (vs 80% prima casa), con tassi più alti e durata massima 30 anni. La rata non può superare il 25% del reddito." },
+          { question: "Quanto capitale serve per iniziare a investire in immobiliare?", answer: "Si può iniziare con €50-500 tramite crowdfunding immobiliare, o con €100 con Jungle Rent. L'acquisto diretto richiede tipicamente €30.000-50.000 di anticipo." },
+          { question: "Cos'è la cedolare secca e quando conviene?", answer: "Regime fiscale opzionale con aliquota fissa del 21% (10% canone concordato). Conviene se hai reddito alto e poche spese deducibili." },
+          { question: "Come si calcola il rendimento netto di un immobile?", answer: "Rendimento netto = [(Reddito annuo - Spese) / Prezzo acquisto] × 100. Le spese includono IMU, TARI, manutenzione, assicurazione, gestione e sfitti." },
+          { question: "Quali sono le migliori città italiane per investire nel 2025?", answer: "Genova (7,6% rendimento), Palermo (7,2%), Verona (6,7%). Torino offre 8,34% nel segmento studentesco con gestione professionale." }
         ]
       },
       en: {
@@ -1269,6 +1290,13 @@ export const blogPosts: BlogPost[] = [
           "crowdfunding",
           "flipping",
           "complete guide"
+        ],
+        faqs: [
+          { question: "What's the difference between primary residence and investment property mortgages?", answer: "For investment properties, banks lend 60-70% of value (vs 80% for primary), with higher rates and max 30-year terms. Monthly payments can't exceed 25% of income." },
+          { question: "How much capital do you need to start investing in real estate?", answer: "You can start with €50-500 through real estate crowdfunding, or €100 with Jungle Rent. Direct purchase typically requires €30,000-50,000 down payment." },
+          { question: "What is cedolare secca and when is it advantageous?", answer: "Optional flat tax regime at 21% (10% for regulated rent contracts). Advantageous if you have high income and few deductible expenses." },
+          { question: "How do you calculate net rental yield?", answer: "Net yield = [(Annual Income - Expenses) / Purchase Price] × 100. Expenses include property tax, waste tax, maintenance, insurance, management and vacancies." },
+          { question: "What are the best Italian cities to invest in 2025?", answer: "Genoa (7.6% yield), Palermo (7.2%), Verona (6.7%). Turin offers 8.34% in the student segment with professional management." }
         ]
       }
     }
