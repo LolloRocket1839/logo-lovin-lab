@@ -1235,6 +1235,28 @@ export const blogPosts: BlogPost[] = [
           "tartufo",
           "cultura",
           "turismo"
+        ],
+        faqs: [
+          {
+            question: "Quando si giocano le ATP Finals a Torino nel 2025?",
+            answer: "Le Nitto ATP Finals 2025 si tengono dal 9 al 16 novembre all'Inalpi Arena. Il montepremi per il vincitore imbattuto è di 5 milioni di dollari. È il quinto e ultimo anno dell'accordo di hosting di Torino."
+          },
+          {
+            question: "Quali sono le date del Torino Film Festival 2025?",
+            answer: "La 43ª edizione del TFF si tiene dal 21 al 29 novembre. Include una retrospettiva su Paul Newman con 24 film e 120 pellicole selezionate tra 5.500 candidature internazionali."
+          },
+          {
+            question: "Cos'è Artissima e quando si svolge?",
+            answer: "Artissima è la principale fiera d'arte contemporanea italiana, dal 31 ottobre al 2 novembre 2025. Presenta 176 gallerie internazionali con 62 progetti monografici in 7 sezioni curatoriali all'Oval Lingotto."
+          },
+          {
+            question: "Quando è il periodo migliore per il tartufo bianco d'Alba?",
+            answer: "Novembre è il picco della stagione del tartufo bianco. La Fiera Internazionale del Tartufo Bianco d'Alba dura da metà ottobre a fine novembre, con i migliori esemplari disponibili in novembre."
+          },
+          {
+            question: "Che tempo fa a Torino a novembre?",
+            answer: "A novembre Torino ha temperature di 10-15°C con possibili nebbie e piogge autunnali. I portici storici (18km) offrono riparo ideale per passeggiare e l'atmosfera è perfetta per musei e caffè storici."
+          }
         ]
       },
       en: {
@@ -1281,6 +1303,28 @@ export const blogPosts: BlogPost[] = [
           "truffle",
           "culture",
           "tourism"
+        ],
+        faqs: [
+          {
+            question: "When are the ATP Finals in Turin in 2025?",
+            answer: "The Nitto ATP Finals 2025 take place November 9-16 at Inalpi Arena. The undefeated champion's prize is $5 million. This is the fifth and final year of Turin's hosting agreement."
+          },
+          {
+            question: "What are the dates of the Torino Film Festival 2025?",
+            answer: "The 43rd edition of TFF runs November 21-29. It features a Paul Newman retrospective with 24 films and 120 films selected from 5,500 international submissions."
+          },
+          {
+            question: "What is Artissima and when does it take place?",
+            answer: "Artissima is Italy's leading contemporary art fair, October 31 to November 2, 2025. It presents 176 international galleries with 62 monographic projects across 7 curated sections at Oval Lingotto."
+          },
+          {
+            question: "When is the best time for Alba white truffle?",
+            answer: "November is peak white truffle season. The International Alba White Truffle Fair runs mid-October through late November, with the finest specimens available in November."
+          },
+          {
+            question: "What's the weather like in Turin in November?",
+            answer: "November in Turin sees temperatures of 10-15°C with possible fog and autumn rain. The historic porticoes (18km) provide ideal shelter for strolling and the atmosphere is perfect for museums and historic cafés."
+          }
         ]
       }
     }
@@ -1322,7 +1366,29 @@ export const blogPosts: BlogPost[] = [
             "turismo torino inverno"
           ]
         },
-        tags: ["torino", "dicembre", "eventi", "arte", "natale", "luci d'artista", "cultura", "teatro", "mercatini", "turismo"]
+        tags: ["torino", "dicembre", "eventi", "arte", "natale", "luci d'artista", "cultura", "teatro", "mercatini", "turismo"],
+        faqs: [
+          {
+            question: "Cos'è Luci d'Artista e quanto dura?",
+            answer: "Luci d'Artista è un festival di installazioni luminose artistiche, giunto alla 28ª edizione. Dal 24 ottobre 2025 all'11 gennaio 2026, presenta 32 opere incluse creazioni di Tracey Emin ('Sex and Solitude') e Patti Smith."
+          },
+          {
+            question: "Dove sono i mercatini di Natale a Torino?",
+            answer: "Il principale mercatino è in Piazza Castello con artigianato e gastronomia piemontese. Il Villaggio di Natale vicino a Palazzo Madama offre pista di pattinaggio, musica dal vivo e incontro con Babbo Natale."
+          },
+          {
+            question: "Cosa fare a Torino per Capodanno 2025?",
+            answer: "Il concerto gratuito 'Torino Wasn't Built in a Day' in Piazza Castello presenta Morcheeba, Rose Villain e Malika Ayane. Tradizione vuole cotechino con lenticchie a mezzanotte nei ristoranti tipici."
+          },
+          {
+            question: "Quali spettacoli ci sono al Teatro Regio a dicembre?",
+            answer: "Dal 5 al 14 dicembre il Balletto del Teatro Nazionale di Praga presenta 'Romeo e Giulietta' con la celebre partitura di Prokofiev e coreografia di John Cranko. Biglietti da €30 a €150."
+          },
+          {
+            question: "Quali sono i dolci tipici torinesi da provare a dicembre?",
+            answer: "Il Gianduiotto (cioccolato alla nocciola inventato a Torino nel XVII secolo), il bicerin (bevanda cioccolato-caffè-panna), le caldarroste con vin brulé e i classici panettone e pandoro piemontesi."
+          }
+        ]
       },
       en: {
         title: "Turin in december: where history, Christmas lights and hot chocolate converge in the capital of winter magic",
@@ -1352,7 +1418,29 @@ export const blogPosts: BlogPost[] = [
             "turin winter tourism"
           ]
         },
-        tags: ["turin", "december", "events", "art", "christmas", "luci d'artista", "culture", "theater", "markets", "tourism"]
+        tags: ["turin", "december", "events", "art", "christmas", "luci d'artista", "culture", "theater", "markets", "tourism"],
+        faqs: [
+          {
+            question: "What is Luci d'Artista and how long does it last?",
+            answer: "Luci d'Artista is a festival of artistic light installations, now in its 28th edition. From October 24, 2025 to January 11, 2026, it presents 32 works including creations by Tracey Emin ('Sex and Solitude') and Patti Smith."
+          },
+          {
+            question: "Where are the Christmas markets in Turin?",
+            answer: "The main market is in Piazza Castello with Piedmontese crafts and gastronomy. The Christmas Village near Palazzo Madama offers an ice-skating rink, live music and Santa meet-and-greet."
+          },
+          {
+            question: "What to do in Turin for New Year's Eve 2025?",
+            answer: "The free 'Torino Wasn't Built in a Day' concert in Piazza Castello features Morcheeba, Rose Villain and Malika Ayane. Traditional midnight meal includes cotechino sausage with lentils at local restaurants."
+          },
+          {
+            question: "What shows are at Teatro Regio in December?",
+            answer: "December 5-14 the Prague National Theatre Ballet presents 'Romeo and Juliet' with Prokofiev's celebrated score and John Cranko's choreography. Tickets from €30 to €150."
+          },
+          {
+            question: "What are the typical Turin sweets to try in December?",
+            answer: "Gianduiotto (hazelnut chocolate invented in Turin in the 17th century), bicerin (chocolate-coffee-cream drink), roasted chestnuts with mulled wine, and classic Piedmontese panettone and pandoro."
+          }
+        ]
       }
     }
   },
