@@ -887,7 +887,14 @@ export const blogPosts: BlogPost[] = [
           description: "Guida completa al volontariato a Torino: 40+ organizzazioni per bambini, studenti, adulti e anziani. ABIO, UGI, Paideia, Croce Rossa, Caritas e molte altre.",
           keywords: ["volontariato torino", "fondazioni torino", "associazioni volontariato", "servizio civile torino", "vol.to", "abio torino", "ugi torino", "paideia", "croce rossa torino", "volontariato studenti", "volontariato giovani"]
         },
-        tags: ["Studenti", "Volontariato", "Torino", "Servizio Civile", "Solidarietà"]
+        tags: ["Studenti", "Volontariato", "Torino", "Servizio Civile", "Solidarietà"],
+        faqs: [
+          { question: "A che età si può fare volontariato a Torino?", answer: "Si può iniziare dai 14 anni con organizzazioni come Vol.To Junior. La maggior parte delle associazioni accetta volontari dai 18 anni, ma ci sono programmi specifici per adolescenti in ospedali, mense e centri culturali." },
+          { question: "Quanto tempo devo dedicare al volontariato?", answer: "Dipende dall'organizzazione. Si va da 2-4 ore settimanali (ABIO, Telefono Amico) a impegni più strutturati come il Servizio Civile (25 ore settimanali per 12 mesi). Molte associazioni offrono flessibilità per studenti." },
+          { question: "Serve formazione per fare volontariato?", answer: "La maggior parte delle organizzazioni offre formazione gratuita. Per settori specifici (sanitario, legale, psicologico) sono previsti corsi obbligatori. Vol.To coordina percorsi formativi riconosciuti a livello regionale." },
+          { question: "Cos'è il Servizio Civile e come candidarsi?", answer: "È un'opportunità per giovani 18-28 anni: 12 mesi di impegno con rimborso €507/mese. I bandi escono annualmente (solitamente dicembre). Candidature su scelgoilserviziocivile.gov.it. A Torino ci sono 200+ progetti disponibili." },
+          { question: "Il volontariato vale crediti universitari?", answer: "Sì, UniTo e PoliTo riconoscono crediti formativi per attività di volontariato certificate. Generalmente 1-3 CFU per 50-100 ore di attività. Verifica con la segreteria del tuo corso per le convenzioni attive." }
+        ]
       },
       en: {
         title: "Complete guide to foundations and volunteering organizations in Turin",
@@ -897,7 +904,14 @@ export const blogPosts: BlogPost[] = [
           description: "Complete guide to volunteering in Turin: 40+ organizations for children, students, adults and seniors. ABIO, UGI, Paideia, Italian Red Cross, Caritas and many more.",
           keywords: ["volunteering turin", "foundations turin", "volunteer associations", "civil service turin", "vol.to", "abio turin", "ugi turin", "paideia", "italian red cross turin", "student volunteering", "youth volunteering"]
         },
-        tags: ["Students", "Volunteering", "Turin", "Civil Service", "Solidarity"]
+        tags: ["Students", "Volunteering", "Turin", "Civil Service", "Solidarity"],
+        faqs: [
+          { question: "At what age can you volunteer in Turin?", answer: "You can start from 14 years old with organizations like Vol.To Junior. Most associations accept volunteers from 18, but there are specific programs for teenagers in hospitals, soup kitchens and cultural centers." },
+          { question: "How much time do I need to dedicate to volunteering?", answer: "It depends on the organization. It ranges from 2-4 hours weekly (ABIO, Telefono Amico) to more structured commitments like Civil Service (25 hours weekly for 12 months). Many associations offer flexibility for students." },
+          { question: "Is training required for volunteering?", answer: "Most organizations offer free training. For specific sectors (healthcare, legal, psychological) mandatory courses are required. Vol.To coordinates regionally recognized training programs." },
+          { question: "What is Civil Service and how to apply?", answer: "It's an opportunity for young people 18-28: 12 months commitment with €507/month stipend. Calls are published annually (usually December). Apply at scelgoilserviziocivile.gov.it. Turin has 200+ available projects." },
+          { question: "Does volunteering count for university credits?", answer: "Yes, UniTo and PoliTo recognize academic credits for certified volunteering. Generally 1-3 ECTS for 50-100 hours of activity. Check with your course secretary for active agreements." }
+        ]
       }
     }
   },
