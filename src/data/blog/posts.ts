@@ -206,7 +206,29 @@ export const blogPosts: BlogPost[] = [
             "tradizioni piemontesi"
           ]
         },
-        tags: ["Carnevale", "Ivrea", "Eventi", "Torino", "Tradizioni", "Turismo", "Piemonte"]
+        tags: ["Carnevale", "Ivrea", "Eventi", "Torino", "Tradizioni", "Turismo", "Piemonte"],
+        faqs: [
+          {
+            question: "Quando si svolge il Carnevale di Ivrea 2025?",
+            answer: "Il Carnevale di Ivrea 2025 si svolge dal 1 al 5 marzo. La battaglia delle arance avviene domenica 2, lunedì 3 e martedì 4 marzo, con il momento clou il Martedì Grasso."
+          },
+          {
+            question: "Quanto costa il biglietto per la battaglia delle arance?",
+            answer: "Il biglietto d'ingresso costa €15 e include il berretto frigio rosso che protegge gli spettatori dai lanci. Senza berretto si rischia di essere colpiti dalle arance."
+          },
+          {
+            question: "Come arrivare a Ivrea da Torino?",
+            answer: "Il treno regionale da Torino Porta Nuova impiega circa 40 minuti e costa €5-7. Gli studenti con Piemove viaggiano gratis. In auto sono circa 50km via A5."
+          },
+          {
+            question: "Chi è la Mugnaia e cosa rappresenta?",
+            answer: "La Mugnaia (Violetta) è l'eroina del Carnevale che simboleggia la ribellione popolare contro la tirannia. Secondo la leggenda, decapitò il tiranno che esigeva lo ius primae noctis."
+          },
+          {
+            question: "Cosa mangiare durante il Carnevale di Ivrea?",
+            answer: "I piatti tipici sono i faseuj grass (fagioli grassi con cotiche di maiale), la polenta concia, i frìtole (frittelle dolci) e la torta 900. Molti ristoranti propongono menu speciali."
+          }
+        ]
       },
       en: {
         title: "The historic Ivrea carnival: complete guide to the Battle of Oranges from Turin",
@@ -227,7 +249,29 @@ export const blogPosts: BlogPost[] = [
             "italian carnival festivals"
           ]
         },
-        tags: ["Carnival", "Ivrea", "Events", "Turin", "Traditions", "Tourism", "Piedmont"]
+        tags: ["Carnival", "Ivrea", "Events", "Turin", "Traditions", "Tourism", "Piedmont"],
+        faqs: [
+          {
+            question: "When does Ivrea Carnival 2025 take place?",
+            answer: "Ivrea Carnival 2025 runs from March 1-5. The Battle of Oranges takes place on Sunday March 2, Monday March 3, and Tuesday March 4, with the climax on Shrove Tuesday."
+          },
+          {
+            question: "How much does a ticket for the Battle of Oranges cost?",
+            answer: "Entry tickets cost €15 and include a red Phrygian cap that protects spectators from being targeted. Without the cap, you risk being hit by oranges."
+          },
+          {
+            question: "How do I get to Ivrea from Turin?",
+            answer: "Regional trains from Turin Porta Nuova take about 40 minutes and cost €5-7. Students with Piemove travel free. By car it's about 50km via the A5 motorway."
+          },
+          {
+            question: "Who is the Mugnaia and what does she represent?",
+            answer: "The Mugnaia (Violetta) is the carnival's heroine symbolizing popular rebellion against tyranny. Legend says she beheaded the tyrant who demanded the right of prima noctis."
+          },
+          {
+            question: "What should I eat during Ivrea Carnival?",
+            answer: "Traditional dishes include faseuj grass (fat beans with pork rinds), polenta concia, frìtole (sweet fritters), and torta 900 cake. Many restaurants offer special carnival menus."
+          }
+        ]
       }
     }
   },
@@ -811,6 +855,28 @@ export const blogPosts: BlogPost[] = [
           "costi",
           "infrastruttura",
           "guida pratica"
+        ],
+        faqs: [
+          {
+            question: "Quanto costa vivere a Torino da digital nomad?",
+            answer: "Il costo medio mensile è €1.200-1.500: affitto €500-700 (monolocale), coworking €150-250, vitto €300-400, trasporti €50. Circa 40% in meno rispetto a Milano."
+          },
+          {
+            question: "Quali sono i migliori coworking a Torino?",
+            answer: "I top coworking sono OGR Tech (innovazione tech), Talent Garden (community startup), Toolbox (design/creativi) e Impact Hub (impatto sociale). Prezzi da €150 a €350/mese per postazione fissa."
+          },
+          {
+            question: "Torino ha buona connessione internet per lavorare da remoto?",
+            answer: "Sì, Torino ha eccellente infrastruttura internet con fibra ottica diffusa (fino a 1Gbps). La maggior parte dei coworking e caffè offre WiFi veloce (50-200 Mbps). 5G disponibile in centro."
+          },
+          {
+            question: "Quali quartieri sono migliori per digital nomad a Torino?",
+            answer: "San Salvario (vivace, caffè, giovani), Crocetta (tranquillo, verde, residenziale), Vanchiglia (artisti, alternativo) e Centro (servizi, monumenti). Ogni zona ha carattere diverso."
+          },
+          {
+            question: "Esiste un visto per digital nomad in Italia?",
+            answer: "L'Italia ha introdotto il visto per nomadi digitali nel 2024. Richiede reddito minimo di €28.000/anno, assicurazione sanitaria e contratto di lavoro remoto. Durata fino a 1 anno, rinnovabile."
+          }
         ]
       },
       en: {
@@ -853,6 +919,28 @@ export const blogPosts: BlogPost[] = [
           "infrastructure",
           "practical guide",
           "work abroad"
+        ],
+        faqs: [
+          {
+            question: "How much does it cost to live in Turin as a digital nomad?",
+            answer: "Average monthly cost is €1,200-1,500: rent €500-700 (studio), coworking €150-250, food €300-400, transport €50. About 40% cheaper than Milan."
+          },
+          {
+            question: "What are the best coworking spaces in Turin?",
+            answer: "Top coworking spaces are OGR Tech (tech innovation), Talent Garden (startup community), Toolbox (design/creatives), and Impact Hub (social impact). Prices range from €150-350/month for a fixed desk."
+          },
+          {
+            question: "Does Turin have good internet for remote work?",
+            answer: "Yes, Turin has excellent internet infrastructure with widespread fiber optic (up to 1Gbps). Most coworking spaces and cafés offer fast WiFi (50-200 Mbps). 5G is available downtown."
+          },
+          {
+            question: "Which neighborhoods are best for digital nomads in Turin?",
+            answer: "San Salvario (lively, cafés, young), Crocetta (quiet, green, residential), Vanchiglia (artistic, alternative), and Centro (services, monuments). Each area has its own character."
+          },
+          {
+            question: "Is there a digital nomad visa for Italy?",
+            answer: "Italy introduced a digital nomad visa in 2024. It requires minimum income of €28,000/year, health insurance, and proof of remote work contract. Valid for up to 1 year, renewable."
+          }
         ]
       }
     }
