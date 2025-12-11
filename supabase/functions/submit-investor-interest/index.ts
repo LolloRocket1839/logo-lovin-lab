@@ -160,6 +160,36 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Send email notification via Formspree
+    try {
+      const formspreeResponse = await fetch("https://formspree.io/f/xeojbzow", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: insertData.full_name,
+          email: insertData.email,
+          phone: insertData.phone,
+          investor_type: insertData.investor_type,
+          investment_amount_range: insertData.investment_amount_range,
+          user_type: "investor_full_form",
+          _subject: `🔥 NEW INVESTOR LEAD - Jungle Rent - ${insertData.full_name} - Budget: ${insertData.investment_amount_range}`,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      if (!formspreeResponse.ok) {
+        console.error("Formspree notification failed:", await formspreeResponse.text());
+      } else {
+        console.log("Formspree notification sent successfully");
+      }
+    } catch (formspreeError) {
+      // Log but don't fail the request if Formspree fails
+      console.error("Formspree notification error:", formspreeError);
+    }
+
     return new Response(
       JSON.stringify({ success: true }),
       { 
