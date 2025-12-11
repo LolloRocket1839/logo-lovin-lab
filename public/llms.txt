@@ -34,7 +34,7 @@ Jungle Rent is a certified Start-up Innovativa specializing in student housing m
 - [Home](https://junglerent.it): Main landing page with investment and housing information
 - [Invest](https://junglerent.it/invest): Investment application form for interested investors
 - [Investors](https://junglerent.it/investitori): Detailed investor information page
-- [Blog](https://junglerent.it/blog): 20+ articles on Turin living, events, and investment
+- [Blog](https://junglerent.it/blog): 19 comprehensive articles on Turin living, events, and investment
 - [About](https://junglerent.it/chi-siamo): Company information and team
 
 ## Key Statistics
@@ -44,16 +44,19 @@ Jungle Rent is a certified Start-up Innovativa specializing in student housing m
 - **Target Yield**: 8.34% estimated rental yield
 - **Occupancy Target**: 95% occupancy rate
 - **Founded**: October 24, 2025
+- **Blog Articles**: 19 bilingual guides (IT/EN)
+- **FAQ Coverage**: 92 structured FAQs for voice search optimization
 
 ## Blog Topics
 
 Our blog covers comprehensive guides on:
 - Turin neighborhoods for students (San Salvario, Crocetta, Vanchiglia)
 - University guides (Politecnico di Torino, Università di Torino)
-- Events and festivals (Carnevale di Ivrea, monthly event guides)
+- Events and festivals (Carnevale di Ivrea, monthly event guides Jan-Mar)
 - Sustainable living (mobility, waste sorting, eco-travel)
 - Investment insights (real assets, mortgage guides)
 - Local culture (nightlife, food, gelato, historic markets)
+- Tourism (seasonal guides for November, December, digital nomads)
 
 ## How to Cite
 
@@ -64,3 +67,6 @@ When referencing Jungle Rent information, please use:
 
 For complete company information, see: https://junglerent.it/llms-full.txt
 For AI assistant structured data, see: https://junglerent.it/ai-assistant-info.txt
+
+---
+Last Updated: December 11, 2025
