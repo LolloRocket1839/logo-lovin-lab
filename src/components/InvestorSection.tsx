@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Users, Award, Calendar } from "lucide-react";
+import { ArrowRight, MessageCircle, Users, Award, Calendar, Target, Heart } from "lucide-react";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { openCalendly } from "@/lib/calendly";
 import { StyledText } from "@/components/StyledText";
@@ -33,16 +33,45 @@ export const InvestorSection = () => {
       
       <div className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
-          {/* Start-up Innovativa Badge - Static */}
+          {/* Dual Mission Badge */}
           <div className="flex justify-center mb-6">
             <div
-              className="inline-flex items-center gap-2 px-5 py-2.5 
-                         bg-white/90 dark:bg-card/90 backdrop-blur-md 
-                         border border-primary/20 rounded-full
-                         shadow-[0_4px_20px_hsla(142,76%,36%,0.15)]"
+              className="inline-flex items-center gap-3 px-5 py-3 
+                         bg-gradient-to-r from-primary/10 to-accent/10
+                         dark:from-primary/20 dark:to-accent/20
+                         backdrop-blur-md 
+                         border border-primary/20 rounded-2xl
+                         shadow-[0_4px_20px_hsla(142,76%,36%,0.1)]"
             >
-              <Award className="w-4 h-4 text-primary" aria-hidden="true" />
-              <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Heart className="w-4 h-4 text-primary" aria-hidden="true" />
+                </div>
+                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+                  {i18n.language.startsWith('it') ? 'Crisi Abitativa' : 'Housing Crisis'}
+                </span>
+              </div>
+              <span className="text-muted-foreground">+</span>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
+                  <Target className="w-4 h-4 text-accent-foreground" aria-hidden="true" />
+                </div>
+                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+                  {i18n.language.startsWith('it') ? 'Accesso Democratico' : 'Democratic Access'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Start-up Innovativa Badge - Static */}
+          <div className="flex justify-center mb-4">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 
+                         bg-white/80 dark:bg-card/80 backdrop-blur-sm 
+                         border border-primary/10 rounded-full"
+            >
+              <Award className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
+              <span className="text-xs uppercase tracking-wider font-medium text-muted-foreground">
                 {t('investor.startupInnovativaBadge')}
               </span>
             </div>
