@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { X, MessageCircle, ArrowRight } from "lucide-react";
+import { X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -80,43 +80,8 @@ export const StickyCTA = () => {
     openWhatsApp(CONTACTS.investor.phone, message);
   };
 
-  if (!isVisible) return null;
-
-  // Render investor CTA - positioned above BottomNav
-  if (activeSection === 'investor') {
-    return (
-      <div 
-        role="region"
-        aria-live="polite"
-        aria-label={t('investor.talkToAdvisor')}
-        className="fixed bottom-16 left-0 right-0 z-40 md:hidden
-                    backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
-                    transition-all duration-300 shadow-lg"
-      >
-        <div className="container px-3 py-3 flex items-center justify-between gap-2">
-          <Button
-            onClick={handleInvestorWhatsApp}
-            size="lg"
-            variant="secondary"
-            className="flex-1 h-14 text-sm font-semibold group shadow-xl touch-target"
-          >
-            <MessageCircle className="mr-2 w-5 h-5" aria-hidden="true" />
-            {t('investor.talkToAdvisor')}
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-          </Button>
-          <Button
-            onClick={() => setIsDismissed(true)}
-            variant="ghost"
-            size="icon"
-            className="h-14 w-14 flex-shrink-0 text-primary-foreground hover:bg-primary-foreground/10 touch-target"
-            aria-label={t('stickyCta.closeLabel')}
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        </div>
-      </div>
-    );
-  }
+  // Hide completely when investor section is visible (CTAs already visible there)
+  if (!isVisible || activeSection === 'investor') return null;
 
   // Render default CTA (Lorenzo) - positioned above BottomNav
   return (

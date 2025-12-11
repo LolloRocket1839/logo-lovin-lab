@@ -9,8 +9,6 @@ import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import InvestorInfographic from "@/components/investor/InvestorInfographic";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const InvestorSection = () => {
@@ -89,34 +87,6 @@ export const InvestorSection = () => {
               {t('investor.cta')}
               <ArrowRight className={`ml-2 w-4 h-4 ${prefersReducedMotion ? '' : 'group-hover:translate-x-1 transition-transform'}`} />
             </Button>
-          </div>
-
-          {/* 2i3T Trust Signal */}
-          <div className="mt-8">
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a 
-                    href="https://2i3t.it" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label={t('investor.incubatorTooltip')}
-                    className="inline-flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity
-                               focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-lg"
-                  >
-                    <img 
-                      src={logo2i3t} 
-                      alt="" 
-                      className="w-12 md:w-16 h-auto"
-                    />
-                    <span className="sr-only">{t('accessibility.opensNewWindow')}</span>
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p className="text-sm">{t('investor.incubatorTooltip')}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
           </div>
         </div>
 
