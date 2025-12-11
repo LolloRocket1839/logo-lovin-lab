@@ -523,8 +523,8 @@
     "aboutA3": "No. Jungle Rent is a real estate startup with a dual mission: to solve the student housing crisis and democratize access to real estate — a historically safe asset class that, unlike in the past, has become inaccessible to many. We acquire, renovate and manage properties to rent to university students and tourists."
   },
   "footer": {
-    "tagline": "Your haven in the real estate jungle",
-    "taglineAlt": "The revolutionary way to rent in Turin",
+    "tagline": "Democratizing access to real estate",
+    "taglineAlt": "Democratizing access to real estate",
     "copyright": "© 2025 JUNGLE RENT S.R.L.",
     "quickLinks": "Quick links",
     "legal": "Legal",
@@ -540,7 +540,7 @@
     "incubatorLink": "2i3T - UniTO Incubator",
     "incubatorDesc": "Incubated at the University of Turin",
     "guaranteeText": "Guarantee of professionalism",
-    "bottomTagline": "Your safe haven in the real estate jungle",
+    "bottomTagline": "Dual mission: student housing crisis and real estate access",
     "bottomText": "Supported by 2i3T - Business Incubator of the University of Turin",
     "rights": "All rights reserved",
     "followUs": "Follow us",
@@ -549,7 +549,7 @@
   "logoModal": {
     "logoAlt": "Jungle Rent logo",
     "brandName": "Jungle Rent",
-    "tagline": "Your safe haven in the real estate jungle"
+    "tagline": "Democratizing access to real estate"
   },
   "waitlistDialog": {
     "title": "Join waitlist",
