@@ -1,19 +1,22 @@
+import { Suspense, lazy } from "react";
 import { Navigation } from "@/components/Navigation";
 import { MobileHeader } from "@/components/MobileHeader";
 import { Hero } from "@/components/Hero";
 import { TrustBadge } from "@/components/TrustBadge";
-import { InvestorSection } from "@/components/InvestorSection";
-import { SellerSection } from "@/components/SellerSection";
-import { BlogSection } from "@/components/blog/BlogSection";
-import { FAQSection } from "@/components/FAQSection";
-import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
-import { ScrollToTop } from "@/components/ScrollToTop";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
-import { StickyCTA } from "@/components/StickyCTA";
-import { BottomNav } from "@/components/BottomNav";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+
+// Lazy load below-the-fold components
+const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
+const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
+const BlogSection = lazy(() => import("@/components/blog/BlogSection").then(m => ({ default: m.BlogSection })));
+const FAQSection = lazy(() => import("@/components/FAQSection").then(m => ({ default: m.FAQSection })));
+const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
+const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
+const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
+const BottomNav = lazy(() => import("@/components/BottomNav").then(m => ({ default: m.BottomNav })));
 
 const Index = () => {
   const { t, i18n } = useTranslation();
@@ -91,22 +94,24 @@ const Index = () => {
         <Hero />
       </div>
       <TrustBadge />
-      <div className="-mt-8 md:-mt-16">
-        <InvestorSection />
-      </div>
-      <div className="-mt-6 md:-mt-12">
-        <SellerSection />
-      </div>
-      <div className="-mt-6 md:-mt-12">
-        <BlogSection />
-      </div>
-      <FAQSection />
-      <div className="pb-16 lg:pb-0">
-        <Footer />
-      </div>
-      <ScrollToTop />
-      <StickyCTA />
-      <BottomNav />
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <div className="-mt-8 md:-mt-16">
+          <InvestorSection />
+        </div>
+        <div className="-mt-6 md:-mt-12">
+          <SellerSection />
+        </div>
+        <div className="-mt-6 md:-mt-12">
+          <BlogSection />
+        </div>
+        <FAQSection />
+        <div className="pb-16 lg:pb-0">
+          <Footer />
+        </div>
+        <ScrollToTop />
+        <StickyCTA />
+        <BottomNav />
+      </Suspense>
     </main>
   );
 };
