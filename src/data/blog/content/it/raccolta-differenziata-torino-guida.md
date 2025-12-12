@@ -383,4 +383,5 @@ La raccolta differenziata a Torino è un sistema complesso ma ben organizzato ch
 
 - [Come raggiungere Torino in modo sostenibile: guida completa ai viaggi eco-friendly](/blog/viaggiare-sostenibile-torino-guida)
 - [Mobilità sostenibile a Torino: la guida completa ai trasporti per studenti](/blog/mobilita-sostenibile-torino-studenti)
+- [San Salvario: guida completa per studenti](/blog/san-salvario-guida-studenti)
 - [Eventi a Torino gennaio 2026](/blog/eventi-torino-gennaio-2026)

@@ -107,4 +107,10 @@ Jungle Rent ti offre l'accesso diretto a questo mercato eccezionale attraverso i
 - **Portfolio Diversificato** attraverso molteplici segmenti di inquilini (studenti, professionisti, turisti)
 - **Posizionamento Strategico** in quartieri in trasformazione con forte potenziale di apprezzamento
 
+> **📚 Approfondimenti correlati**
+> - [Mutui per investitori immobiliari: guida completa 2025](/blog/mutui-investitori-immobiliari-guida-completa) - Tipologie di finanziamento e strategie
+> - [Student housing in Italia: report Savills 2025](/blog/student-housing-italia-savills-2025) - Dati dettagliati sul mercato studentesco
+> - [Il Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa) - Il principale driver della domanda studentesca
+> - [L'Università di Torino: storia e innovazione](/blog/universita-torino-guida-completa) - 83.000 studenti e 27 dipartimenti
+
 **Unisciti agli investitori che stanno già cogliendo questa opportunità unica.**

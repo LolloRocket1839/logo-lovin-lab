@@ -423,3 +423,12 @@ Scegliere il Politecnico di Torino significa intraprendere un percorso di cresci
 70. [UniTo - Corsi di laurea magistrale interateneo](https://www.unito.it/didattica/offerta-formativa/corsi-di-studio/corsi-di-laurea-magistrale-interateneo)
 71. [UniTo - Collaborazioni innovative](https://www.unito.it/ricerca-e-innovazione/dalle-idee-al-mercato/collaborazioni-innovative)
 72. [UniTo - Centro di Ricerca Interuniversitario Scienza Nuova](https://www.interathenaeum.unito.it/it/content/centro-di-ricerca-interuniversitario-scienza-nuova)
+
+---
+
+> **📚 Guide correlate per studenti del Politecnico**
+> - [Dove vivere a Torino: guida ai migliori quartieri per studenti](/blog/dove-vivere-torino-studenti-politecnico) - Prezzi, zone e consigli pratici
+> - [L'Università di Torino: guida completa](/blog/universita-torino-guida-completa) - L'altro grande ateneo torinese
+> - [Aule studio a Torino: i 57 migliori spazi](/blog/aule-studio-torino-guida-completa) - Biblioteche, coworking e caffè
+> - [Mobilità sostenibile a Torino per studenti](/blog/mobilita-sostenibile-torino-studenti) - Trasporti, abbonamenti e piste ciclabili
+> - [San Salvario: guida completa per studenti](/blog/san-salvario-guida-studenti) - Il quartiere più amato dagli universitari

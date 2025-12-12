@@ -446,5 +446,9 @@ Torino offre un panorama ricchissimo di opportunità per fare volontariato, adat
 
 ---
 
+> **📚 Guide correlate per studenti a Torino**
+> - [L'Università di Torino: guida completa](/blog/universita-torino-guida-completa) - 83.000 studenti e opportunità
+> - [Il Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa) - L'ateneo tecnico-scientifico
+
 _Mappa aggiornata: Novembre 2025_  
 _Per informazioni aggiornate, contatta le fondazioni direttamente tramite i link e telefoni indicati._

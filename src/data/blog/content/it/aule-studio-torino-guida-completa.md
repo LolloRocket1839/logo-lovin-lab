@@ -563,6 +563,11 @@ Torino offre **57 spazi studio** diversificati per ogni esigenza: dalle bibliote
 
 **Consiglio finale:** Sperimenta diversi spazi nelle prime settimane e crea il tuo "circuito studio" personale alternando ambienti in base alle tue esigenze giornaliere.
 
+> **📚 Guide correlate per studenti a Torino**
+> - [Il Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa) - Storia, corsi e servizi
+> - [L'Università di Torino: guida completa](/blog/universita-torino-guida-completa) - 600 anni di eccellenza accademica
+> - [Mobilità sostenibile a Torino per studenti](/blog/mobilita-sostenibile-torino-studenti) - Come muoversi in città
+
 📍 **Scarica il CSV completo:** [Aule Studio Torino](/resources/aule_studio_torino.csv)
 
 ---
