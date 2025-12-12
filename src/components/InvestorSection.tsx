@@ -123,16 +123,7 @@ export const InvestorSection = () => {
           </div>
 
           {/* Market Numbers - Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8 max-w-2xl mx-auto">
-            <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
-              <div className="flex items-center justify-center mb-1">
-                <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-              </div>
-              <p className="text-lg md:text-2xl font-bold text-primary">7,6%</p>
-              <p className="text-[10px] md:text-xs text-muted-foreground font-light">
-                {t('investor.marketStats.targetReturn')}
-              </p>
-            </div>
+          <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8 max-w-xl mx-auto">
             <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
               <div className="flex items-center justify-center mb-1">
                 <PiggyBank className="w-4 h-4 md:w-5 md:h-5 text-primary" />
