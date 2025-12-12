@@ -43,16 +43,19 @@ export const useABTest = (ctaType: CTAType): ABTestHook => {
 
   const trackEvent = async (eventType: 'impression' | 'click') => {
     try {
-      await supabase.from('ab_test_events').insert({
-        cta_type: ctaType,
-        variation,
-        event_type: eventType,
-        session_id: getSessionId(),
-        user_agent: navigator.userAgent,
-        page_url: window.location.href
+      // Use edge function with rate limiting instead of direct insert
+      await supabase.functions.invoke('track-ab-test', {
+        body: {
+          cta_type: ctaType,
+          variation,
+          event_type: eventType,
+          session_id: getSessionId(),
+          user_agent: navigator.userAgent,
+          page_url: window.location.href
+        }
       });
     } catch (error) {
-      console.error('Error tracking A/B test event:', error);
+      console.debug('Error tracking A/B test event:', error);
     }
   };
 
