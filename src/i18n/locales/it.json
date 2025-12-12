@@ -65,8 +65,7 @@
     "mainSubheadline": "Investi da €100 in immobili universitari. Noi acquistiamo e gestiamo, tu guadagni.",
     "miniSteps": {
       "step1": "Da €100",
-      "step2": "Gestiamo noi",
-      "step3": "Zero stress"
+      "step2": "Gestiamo noi"
     },
     "invest": "Investi in Jungle Rent",
     "launchCountdown": "Lancio tra",
@@ -328,7 +327,7 @@
       "manage": {
         "title": "Gestiamo",
         "description": "Modello ibrido studenti/turisti",
-        "detail": "9 mesi studenti + 3 mesi turisti. Giorni ospite gratuiti per esami estivi. Contratti, manutenzione e fiscalità inclusi."
+        "detail": "9 mesi studenti + 3 mesi turisti. Giorni ospite gratuiti per esami estivi. Contratti e manutenzione inclusi."
       },
       "earn": {
         "title": "Partecipi",

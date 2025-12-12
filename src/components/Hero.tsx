@@ -92,21 +92,16 @@ export const Hero = () => {
             <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
 
-          {/* Mini How It Works - 3 steps */}
+          {/* Mini How It Works - 2 steps */}
           <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mb-6 md:mb-8 text-xs md:text-sm">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-card/60 border border-border/50">
               <Euro className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
               <span className="text-foreground font-medium">{t('hero.miniSteps.step1')}</span>
             </div>
             <span className="text-muted-foreground hidden sm:inline">→</span>
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-card/60 border border-border/50">
-              <Building2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
-              <span className="text-foreground font-medium">{t('hero.miniSteps.step2')}</span>
-            </div>
-            <span className="text-muted-foreground hidden sm:inline">→</span>
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30">
-              <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
-              <span className="text-primary font-semibold">{t('hero.miniSteps.step3')}</span>
+              <Building2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+              <span className="text-primary font-semibold">{t('hero.miniSteps.step2')}</span>
             </div>
           </div>
 
