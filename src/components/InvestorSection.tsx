@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Users, Award, Calendar, Target, Heart, Euro, TrendingUp, Building2, GraduationCap } from "lucide-react";
+import { ArrowRight, MessageCircle, Users, Award, Calendar, Target, Heart, Euro, TrendingUp, Building2, GraduationCap, Coins, PiggyBank } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { openCalendly } from "@/lib/calendly";
 import { StyledText } from "@/components/StyledText";
@@ -88,7 +89,7 @@ export const InvestorSection = () => {
             <StyledText>{t('investor.compactDesc')}</StyledText>
           </p>
           
-          {/* Badge "Da €100" prominente */}
+          {/* Badge "Da €100" + SFP prominente */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
             <Badge 
               className="px-4 py-2 md:px-5 md:py-2.5 text-sm md:text-base font-bold bg-primary text-primary-foreground shadow-lg"
@@ -96,6 +97,22 @@ export const InvestorSection = () => {
               <Euro className="w-4 h-4 md:w-5 md:h-5 mr-1.5" />
               {t('investor.minInvestmentBadge')}
             </Badge>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Badge 
+                    variant="outline" 
+                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium cursor-help border-primary/30"
+                  >
+                    <Coins className="w-3 h-3 md:w-4 md:h-4 mr-1.5 text-primary" />
+                    {t('investor.sfpBadge')}
+                  </Badge>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs">
+                  <p className="text-xs">{t('investor.sfpTooltip')}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
             <Badge 
               variant="secondary" 
               className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium"
@@ -106,7 +123,25 @@ export const InvestorSection = () => {
           </div>
 
           {/* Market Numbers - Key Stats */}
-          <div className="grid grid-cols-3 gap-3 md:gap-6 mb-6 md:mb-8 max-w-xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-6 md:mb-8 max-w-2xl mx-auto">
+            <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
+              <div className="flex items-center justify-center mb-1">
+                <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+              </div>
+              <p className="text-lg md:text-2xl font-bold text-primary">7,6%</p>
+              <p className="text-[10px] md:text-xs text-muted-foreground font-light">
+                {t('investor.marketStats.targetReturn')}
+              </p>
+            </div>
+            <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
+              <div className="flex items-center justify-center mb-1">
+                <PiggyBank className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+              </div>
+              <p className="text-lg md:text-2xl font-bold text-foreground">25%</p>
+              <p className="text-[10px] md:text-xs text-muted-foreground font-light">
+                {t('investor.marketStats.studentSavings')}
+              </p>
+            </div>
             <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
               <div className="flex items-center justify-center mb-1">
                 <GraduationCap className="w-4 h-4 md:w-5 md:h-5 text-primary" />
@@ -119,15 +154,6 @@ export const InvestorSection = () => {
             <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
               <div className="flex items-center justify-center mb-1">
                 <Building2 className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-              </div>
-              <p className="text-lg md:text-2xl font-bold text-foreground">~87%</p>
-              <p className="text-[10px] md:text-xs text-muted-foreground font-light">
-                {t('investor.marketStats.demandCovered')}
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
-              <div className="flex items-center justify-center mb-1">
-                <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </div>
               <p className="text-lg md:text-2xl font-bold text-foreground">~€4B</p>
               <p className="text-[10px] md:text-xs text-muted-foreground font-light">

@@ -19,6 +19,9 @@ export const FAQSection = () => {
     { q: t("faq.investorQ6"), a: t("faq.investorA6") },
     { q: t("faq.investorQ7"), a: t("faq.investorA7") },
     { q: t("faq.investorQ8"), a: t("faq.investorA8") },
+    { q: t("faq.investorQ9"), a: t("faq.investorA9") },
+    { q: t("faq.investorQ10"), a: t("faq.investorA10") },
+    { q: t("faq.investorQ11"), a: t("faq.investorA11") },
   ];
 
   const sellerFAQs = [

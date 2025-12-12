@@ -60,8 +60,13 @@
   },
   "hero": {
     "tagline": "Democratizing access to real estate",
-    "mainHeadline": "Accessible Real Estate Investments and Housing Crisis Solutions",
-    "mainSubheadline": "Dual mission: making real estate accessible to everyone and solving the student housing crisis in Turin",
+    "mainHeadline": "7.6% target returns on Turin student housing",
+    "mainSubheadline": "Invest from €100 in university properties. We acquire and manage, you earn.",
+    "miniSteps": {
+      "step1": "From €100",
+      "step2": "We manage",
+      "step3": "7.6% target"
+    },
     "invest": "Invest in Jungle Rent",
     "launchCountdown": "Launch in",
     "days": "days",
@@ -90,7 +95,7 @@
     "trustSupport": "Dedicated support",
     "trustNoFees": "Zero commissions",
     "logoAlt": "Jungle Rent - Official logo - Optimized rentals for students and investors in Turin",
-    "seoH1": "Jungle Rent - Smart rentals for students in Turin | Real estate investment opportunities near Politecnico and UniTo",
+    "seoH1": "Jungle Rent - Student housing real estate investments Turin | 7.6% target returns",
     "smartRentals": "Smart rentals",
     "investmentOpportunities": "Investment opportunities",
     "students": "students",
@@ -288,10 +293,12 @@
     "title": "For Investors",
     "subtitle": "Democratizing access to real estate",
     "sectionLabel": "For Investors",
-    "sectionTitle": "Democratizing Access to Real Estate",
-    "compactDesc": "A historically safe asset class, now inaccessible to many. Invest in university properties in Turin with complete professional management.",
+    "sectionTitle": "7.6% Target Returns with SFPs",
+    "compactDesc": "Invest in Turin university properties via SFPs (Participatory Financial Instruments). Full management, hybrid student/tourist model.",
     "sectionSubtitle": "Dual mission: student housing crisis and democratizing real estate access",
     "startupInnovativaBadge": "Certified Innovative Startup",
+    "sfpBadge": "SFP",
+    "sfpTooltip": "Participatory Financial Instruments: invest in property shares without managing the property. You invest, we handle everything.",
     "whyInvestTitle": "Why invest with us",
     "benefit1Title": "Optimized investment",
     "benefit1Desc": "Opportunities in the real estate market thanks to our professional management and strategic pricing",
@@ -322,8 +329,9 @@
     "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator",
     "minInvestmentBadge": "Invest from €100",
     "marketStats": {
+      "targetReturn": "target return*",
+      "studentSavings": "student savings",
       "studentsOffsite": "off-campus students in Italy",
-      "demandCovered": "seeking housing",
       "marketPotential": "market potential",
       "disclaimer": "2025 estimates - Source: Savills Research"
     }
@@ -331,11 +339,11 @@
   "infographic": {
     "badge": "Our model",
     "title": "The Jungle Rent model",
-    "subtitle": "Simplified real estate investments",
+    "subtitle": "Simplified real estate investments via SFPs",
     "steps": {
       "invest": {
         "title": "Invest",
-        "description": "Join from €100",
+        "description": "Join from €100 via SFPs",
         "detail": "No property to manage, no paperwork. You invest, we handle everything."
       },
       "acquire": {
@@ -345,23 +353,23 @@
       },
       "manage": {
         "title": "We manage",
-        "description": "Complete management",
-        "detail": "Contracts, tenants, maintenance and taxes. Zero hassle for you."
+        "description": "Hybrid student/tourist model",
+        "detail": "9 months students + 3 months tourists. Contracts, maintenance and taxes included."
       },
       "earn": {
         "title": "You earn",
-        "description": "7-9% annual return*",
+        "description": "7.6% target return*",
         "detail": "Quarterly returns with transparent reports. Access to personal dashboard."
       }
     },
     "metrics": {
       "yield": {
-        "label": "Rental yield",
-        "description": "Average annual return"
+        "label": "Target return",
+        "description": "Annual target return SFP"
       },
-      "occupancy": {
-        "label": "Occupancy",
-        "description": "Occupancy rate"
+      "savings": {
+        "label": "Student savings",
+        "description": "vs 12-month contracts"
       },
       "students": {
         "label": "Students",
@@ -372,8 +380,8 @@
         "description": "Universities in the area"
       }
     },
-    "disclaimer": "*Estimated values based on market analysis",
-    "cta": "Zero stress. Full management included."
+    "disclaimer": "*Target return based on hybrid student/tourist model. Not guaranteed.",
+    "cta": "Zero hassle. Full management included."
   },
   "investors": {
     "metaTitle": "Accessible Real Estate Investments Turin - Democratizing Real Estate | Jungle Rent",
@@ -513,6 +521,12 @@
     "investorA7": "You receive a detailed quarterly report that includes: property status, occupancy rate, generated returns, expenses incurred and forecasts for the next quarter. You also have access to an online dashboard to monitor your investment in real-time.",
     "investorQ8": "Can I visit the properties before investing?",
     "investorA8": "Yes, we organize property visits by appointment for interested investors. You can see the properties in person, evaluate the quality of the renovations and speak directly with our management team.",
+    "investorQ9": "What are SFPs (Participatory Financial Instruments)?",
+    "investorA9": "SFPs are financial instruments that allow you to invest in real estate shares without directly owning the property. In practice, you buy a fraction of the property and participate in returns generated by rentals, proportionally to your share. It's a way to access the real estate market with reduced capital (from €100) without having to deal with management, maintenance or paperwork.",
+    "investorQ10": "How is the 7.6% target return calculated?",
+    "investorA10": "The 7.6% return is calculated based on our hybrid model: renting to university students for 9 months (September-June) and short-term tourist rentals for the 3 summer months. This model maximizes occupancy and optimizes revenue compared to traditional fixed-rent contracts. The return is net of management costs but gross of personal taxes. NOTE: this is a target return, not guaranteed.",
+    "investorQ11": "What is the hybrid student/tourist model?",
+    "investorA11": "Our hybrid model combines: (1) Rentals to university students with transitional contracts of 9-10 months during the academic year, ensuring stability and reliable tenants; (2) Short-term tourist rentals in summer months (June-August) when students are on vacation, maximizing seasonal revenue. Students save about 25% compared to traditional 12-month contracts, paying only for the months they actually stay.",
     "sellerQ1": "What properties do you buy?",
     "sellerA1": "We buy apartments in Turin and surrounding areas, preferably in university zones: Vanchiglia, San Salvario, Cenisia, Crocetta, Lingotto, Aurora. We're interested in properties with 2 to 5 rooms, even those needing renovation. We evaluate every proposal without obligation.",
     "sellerQ2": "How does the free valuation work?",
