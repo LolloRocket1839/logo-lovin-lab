@@ -25,7 +25,7 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 
 ## Target Markets
 
-- **Investors**: Real estate investment opportunities with 8%+ projected yields
+- **Investors**: Real estate investment opportunities with above-market returns
 - **Students**: Quality housing near Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
 - **Property Owners**: Professional management services for rental properties
 
@@ -41,8 +41,7 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 
 - **Students Served**: 90,000+ university students in Turin
 - **Universities**: 7 major institutions (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
-- **Target Yield**: 8.34% estimated rental yield
-- **Occupancy Target**: 95% occupancy rate
+- **Returns**: Above-market rental yields (compared to traditional rentals)
 - **Founded**: October 24, 2025
 - **Blog Articles**: 20 bilingual guides (IT/EN)
 - **FAQ Coverage**: 142+ structured FAQs for voice search optimization
