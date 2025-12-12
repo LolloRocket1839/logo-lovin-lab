@@ -38,6 +38,8 @@ export const BlogCard = ({ post }: BlogCardProps) => {
             alt={translatedData.title}
             className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
             loading="lazy"
+            decoding="async"
+            fetchPriority="low"
           />
           <span className={`absolute top-4 left-4 category-badge ${post.category}`}>
             {t(`blog.categories.${post.category}`)}

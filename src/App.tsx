@@ -1,3 +1,4 @@
+import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,19 +8,22 @@ import { SkipToContent } from "./components/SkipToContent";
 import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
 import { usePageViewTracking } from "./hooks/useAnalytics";
 import { useScrollDepth } from "./hooks/useScrollDepth";
+import { LoadingSpinner } from "./components/LoadingSpinner";
+
+// Eager load - homepage
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Investors from "./pages/Investors";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import AITesting from "./pages/AITesting";
-import ABTestResults from "./pages/ABTestResults";
-import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 
-
-import Privacy from "./pages/Privacy";
-import TerminiCondizioni from "./pages/TerminiCondizioni";
-import NotFound from "./pages/NotFound";
+// Lazy load - secondary pages
+const About = lazy(() => import("./pages/About"));
+const Investors = lazy(() => import("./pages/Investors"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const AITesting = lazy(() => import("./pages/AITesting"));
+const ABTestResults = lazy(() => import("./pages/ABTestResults"));
+const AnalyticsDashboard = lazy(() => import("./pages/AnalyticsDashboard"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const TerminiCondizioni = lazy(() => import("./pages/TerminiCondizioni"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -28,24 +32,26 @@ const AppContent = () => {
   useScrollDepth();
   
   return (
-    <Routes>
-      <Route path="/" element={<Index />} />
-      <Route path="/chi-siamo" element={<About />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/investitori" element={<Investors />} />
-      <Route path="/investors" element={<Investors />} />
-      
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
-      <Route path="/terms" element={<TerminiCondizioni />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:slug" element={<BlogPost />} />
-      <Route path="/ai-testing" element={<AITesting />} />
-      <Route path="/ab-test-results" element={<ABTestResults />} />
-      <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
-      {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <Suspense fallback={<LoadingSpinner />}>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/chi-siamo" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/investitori" element={<Investors />} />
+        <Route path="/investors" element={<Investors />} />
+        
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
+        <Route path="/terms" element={<TerminiCondizioni />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/ai-testing" element={<AITesting />} />
+        <Route path="/ab-test-results" element={<ABTestResults />} />
+        <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
+        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 };
 

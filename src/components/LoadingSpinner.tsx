@@ -14,7 +14,7 @@ export const LoadingSpinner = ({ className, size = "md" }: LoadingSpinnerProps) 
   };
 
   return (
-    <div className="flex items-center justify-center min-h-[200px]">
+    <div className="flex items-center justify-center min-h-[100px]" role="status" aria-label="Caricamento">
       <Loader2 className={cn("animate-spin text-primary", sizeClasses[size], className)} />
     </div>
   );
