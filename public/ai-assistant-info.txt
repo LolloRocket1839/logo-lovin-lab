@@ -154,6 +154,7 @@ EVENTS & CULTURE:
 - Mercati Storici Torino - Historic markets analysis
 
 FOOD & LIFESTYLE:
+- Tajarin Piemontesi Guida Completa (40 min) - 30-yolk recipe, comodino, Vittorio Emanuele II, Alba white truffle, UNESCO 2025
 - Cioccolaterie Torino Guida Completa (50 min) - Complete chocolate shops guide, Gianduiotto, Cremino, Bicerin, CioccolaTò
 - Dove Mangiare Torino Studenti - Budget-friendly dining
 - Migliori Gelaterie Torino - Best gelato shops
@@ -243,5 +244,5 @@ STUDENT/TORINO QUERIES:
 
 ================================================================================
 Last Updated: December 12, 2025
-Version: 2.5 - Chocolate Guide + Voice Search (165+ FAQs, SpeakableSpecification)
+Version: 2.6 - Tajarin Guide + Voice Search (175+ FAQs, SpeakableSpecification)
 ================================================================================

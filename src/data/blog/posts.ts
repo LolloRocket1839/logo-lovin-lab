@@ -2,6 +2,61 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "tajarin-piemontesi-guida-completa",
+    category: "turisti",
+    date: "2025-12-12",
+    author: "Jungle Rent Team",
+    image: "/images/tajarin-tartufo-torino.jpg",
+    readTime: 40,
+    content: "tajarin-piemontesi-guida-completa",
+    translations: {
+      it: {
+        title: "I tajarin piemontesi: la pasta all'uovo che racchiude secoli di tradizione",
+        excerpt: "Storia dal Quattrocento, ricetta 30 tuorli, comodino, Vittorio Emanuele II, tartufo bianco d'Alba, UNESCO 2025. 18 fonti.",
+        seo: {
+          title: "Tajarin piemontesi: storia, ricetta tradizionale e dove mangiarli a Torino",
+          description: "Guida completa ai tajarin: origini nelle Langhe, ricetta con 30 tuorli, comodino, tartufo bianco d'Alba, tecnica di taglio manuale. Patrimonio UNESCO 2025.",
+          keywords: ["tajarin", "pasta piemontese", "langhe", "tartufo bianco alba", "comodino", "torino", "pasta fresca", "cucina piemontese"]
+        },
+        tags: ["Turisti", "Gastronomia", "Torino", "Tradizioni", "Piemonte", "Pasta"],
+        faqs: [
+          { question: "Cosa sono i tajarin piemontesi?", answer: "I tajarin sono una pasta fresca all'uovo sottilissima tipica delle Langhe e del Monferrato, con 30 tuorli per kg di farina, caratterizzati da un colore giallo intenso e una cottura di soli 2-3 minuti." },
+          { question: "Perché i tajarin sono così gialli?", answer: "L'uso abbondante di tuorli d'uovo (30 per kg di farina nella ricetta tradizionale) conferisce ai tajarin il caratteristico colore giallo intenso e carico che li rende immediatamente riconoscibili." },
+          { question: "Qual è la differenza tra tajarin e tagliatelle?", answer: "I tajarin sono più sottili (3-4mm di larghezza vs 6-8mm delle tagliatelle), usano solo tuorli invece di uova intere, e cuociono in soli 2-3 minuti rispetto ai 4-5 minuti delle tagliatelle." },
+          { question: "Cos'è il comodino piemontese?", answer: "Il comodino è il ragù tradizionale per i tajarin, composto da frattaglie (fegatini, creste, cuori di pollo e coniglio), lardo, salvia, rosmarino, funghi secchi e salsiccia, cotto per almeno 2 ore." },
+          { question: "Perché Vittorio Emanuele II amava i tajarin?", answer: "Re Vittorio Emanuele II adorava i tajarin con il comodino, tanto che la contessa di Mirafiori Rosa Vercellana li preparava personalmente per lui. Si dice che usasse un tovagliolo speciale per non sporcarsi la divisa." },
+          { question: "Come si tagliano i tajarin a mano?", answer: "La sfoglia viene arrotolata su sé stessa e tagliata con un coltello affilato in fili da 3-4mm. Tradizionalmente il taglio era affidato agli uomini mentre le donne preparavano l'impasto." },
+          { question: "Quanto tempo cuociono i tajarin?", answer: "I tajarin cuociono in soli 2-3 minuti in acqua bollente salata. Sono pronti quando galleggiano in superficie. La cottura veloce preserva il sapore dell'uovo e la consistenza delicata." },
+          { question: "I tajarin si abbinano al tartufo bianco d'Alba?", answer: "Sì, l'abbinamento tajarin-tartufo bianco d'Alba è un classico della cucina piemontese. Si condiscono con burro fuso, Parmigiano grattugiato e sottili scaglie di tartufo." },
+          { question: "Quanti tuorli servono per i tajarin tradizionali?", answer: "La ricetta autentica piemontese prevede 30 tuorli per 1 kg di farina. Per 4 persone (500g di farina) si usano 15 tuorli, una proporzione che garantisce ricchezza e colore intenso." },
+          { question: "I tajarin sono Patrimonio UNESCO?", answer: "La cucina italiana, inclusi i tajarin e le paste piemontesi, è stata riconosciuta Patrimonio UNESCO nel dicembre 2025, celebrando la tradizione gastronomica italiana nel contesto globale." }
+        ]
+      },
+      en: {
+        title: "Piedmontese tajarin: the egg pasta that embodies centuries of tradition",
+        excerpt: "History from the 15th century, 30-yolk recipe, comodino, Vittorio Emanuele II, Alba white truffle, UNESCO 2025. 18 sources.",
+        seo: {
+          title: "Piedmontese tajarin: history, traditional recipe and where to eat them in Turin",
+          description: "Complete guide to tajarin: Langhe origins, 30-yolk recipe, comodino, Alba white truffle, hand-cutting technique. UNESCO Heritage 2025.",
+          keywords: ["tajarin", "piedmontese pasta", "langhe", "alba white truffle", "comodino", "turin", "fresh pasta", "piedmontese cuisine"]
+        },
+        tags: ["Tourists", "Gastronomy", "Turin", "Traditions", "Piedmont", "Pasta"],
+        faqs: [
+          { question: "What are Piedmontese tajarin?", answer: "Tajarin are an ultra-thin fresh egg pasta typical of the Langhe and Monferrato regions, made with 30 yolks per kg of flour, characterized by an intense yellow color and a cooking time of just 2-3 minutes." },
+          { question: "Why are tajarin so yellow?", answer: "The abundant use of egg yolks (30 per kg of flour in the traditional recipe) gives tajarin their characteristic intense yellow color that makes them immediately recognizable." },
+          { question: "What is the difference between tajarin and tagliatelle?", answer: "Tajarin are thinner (3-4mm width vs 6-8mm for tagliatelle), use only yolks instead of whole eggs, and cook in just 2-3 minutes compared to 4-5 minutes for tagliatelle." },
+          { question: "What is Piedmontese comodino?", answer: "Comodino is the traditional ragù for tajarin, made from offal (livers, combs, hearts of chicken and rabbit), lard, sage, rosemary, dried mushrooms and sausage, cooked for at least 2 hours." },
+          { question: "Why did Vittorio Emanuele II love tajarin?", answer: "King Vittorio Emanuele II adored tajarin with comodino, so much that the Countess of Mirafiori Rosa Vercellana prepared them personally for him. Legend has it he used a special napkin to avoid staining his uniform." },
+          { question: "How are tajarin cut by hand?", answer: "The sheet is rolled onto itself and cut with a sharp knife into 3-4mm threads. Traditionally cutting was entrusted to men while women prepared the dough." },
+          { question: "How long do tajarin take to cook?", answer: "Tajarin cook in just 2-3 minutes in boiling salted water. They're ready when they float to the surface. Quick cooking preserves the egg flavor and delicate texture." },
+          { question: "Do tajarin pair with Alba white truffle?", answer: "Yes, the tajarin-Alba white truffle pairing is a classic of Piedmontese cuisine. They're dressed with melted butter, grated Parmigiano and thin truffle shavings." },
+          { question: "How many yolks for traditional tajarin?", answer: "The authentic Piedmontese recipe calls for 30 yolks per 1 kg of flour. For 4 people (500g flour) you use 15 yolks, a proportion that guarantees richness and intense color." },
+          { question: "Are tajarin UNESCO Heritage?", answer: "Italian cuisine, including tajarin and Piedmontese pastas, was recognized as UNESCO Heritage in December 2025, celebrating Italian gastronomic tradition in the global context." }
+        ]
+      }
+    }
+  },
+  {
     slug: "cioccolaterie-torino-guida-completa",
     category: "turisti",
     date: "2025-12-12",

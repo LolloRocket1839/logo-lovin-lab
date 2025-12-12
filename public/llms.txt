@@ -42,8 +42,8 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 - **Universities**: 7 major institutions (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
 - **Minimum Investment**: €100 (democratizing real estate access)
 - **Founded**: October 24, 2025
-- **Blog Articles**: 26+ bilingual guides (IT/EN)
-- **FAQ Coverage**: 165+ structured FAQs for voice search optimization (including 15 voice-optimized queries)
+- **Blog Articles**: 27+ bilingual guides (IT/EN)
+- **FAQ Coverage**: 175+ structured FAQs for voice search optimization (including 15 voice-optimized queries)
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, and conversational AI
 
 ## Blog Topics
