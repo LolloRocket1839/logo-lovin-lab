@@ -101,14 +101,17 @@ const trackEvent = async (event: AnalyticsEvent) => {
   try {
     const sessionId = await getAnonymizedSessionId();
     
-    await supabase.from('analytics_events').insert({
-      session_id: sessionId,
-      event_type: event.event_type,
-      page_url: getAnonymizedPageUrl(),
-      page_title: event.page_title || document.title,
-      referrer: getAnonymizedReferrer(),
-      user_agent: getAnonymizedUserAgent(),
-      metadata: event.metadata,
+    // Use edge function with rate limiting instead of direct insert
+    await supabase.functions.invoke('track-analytics', {
+      body: {
+        session_id: sessionId,
+        event_type: event.event_type,
+        page_url: getAnonymizedPageUrl(),
+        page_title: event.page_title || document.title,
+        referrer: getAnonymizedReferrer(),
+        user_agent: getAnonymizedUserAgent(),
+        metadata: event.metadata,
+      }
     });
   } catch (error) {
     // Silently fail - don't break user experience for analytics
