@@ -26,15 +26,15 @@ export const InvestorSection = () => {
   return (
     <section 
       id="investor-section" 
-      className="pt-24 pb-16 md:py-24 lg:py-32 relative overflow-hidden transition-spacing"
+      className="pt-16 pb-12 md:py-20 lg:py-28 relative overflow-hidden transition-spacing"
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
-      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 transition-spacing">
+      <div className="container px-4 sm:px-6 md:px-8 relative z-10 transition-spacing">
         <div className="text-center max-w-2xl mx-auto">
-          {/* Dual Mission Badge */}
-          <div className="flex justify-center mb-6">
+          {/* Dual Mission Badge - Hidden on mobile */}
+          <div className="hidden md:flex justify-center mb-6">
             <div
               className="inline-flex items-center gap-3 px-5 py-3 
                          bg-gradient-to-r from-primary/10 to-accent/10
@@ -63,8 +63,8 @@ export const InvestorSection = () => {
             </div>
           </div>
 
-          {/* Start-up Innovativa Badge - Static */}
-          <div className="flex justify-center mb-4">
+          {/* Start-up Innovativa Badge - Hidden on mobile */}
+          <div className="hidden md:flex justify-center mb-4">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 
                          bg-white/80 dark:bg-card/80 backdrop-blur-sm 
@@ -77,59 +77,60 @@ export const InvestorSection = () => {
             </div>
           </div>
 
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
+          <p className="hidden md:block text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
             {t('investor.sectionLabel')}
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 leading-tight text-foreground tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 md:mb-6 leading-tight text-foreground tracking-tight">
             {t('investor.sectionTitle')}
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
+          <p className="hidden sm:block text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-4 md:mb-6">
             <StyledText>{t('investor.compactDesc')}</StyledText>
           </p>
           
           <Badge 
             variant="secondary" 
-            className="mb-8 px-4 py-2 text-sm font-medium"
+            className="mb-6 md:mb-8 px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium"
           >
-            <Users className="w-4 h-4 mr-2" />
+            <Users className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2" />
             {count}+ {t('investor.activeInvestors')}
           </Badge>
 
-          {/* 3 CTA: WhatsApp, Calendly, Quick Lead */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
+          {/* 2 CTA on mobile, 3 on desktop */}
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center flex-wrap">
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
-              className="w-full sm:w-auto text-base group"
+              className="w-full sm:w-auto text-sm md:text-base group"
             >
-              <MessageCircle className="mr-2 w-5 h-5" />
+              <MessageCircle className="mr-2 w-4 h-4 md:w-5 md:h-5" />
               {t('investor.talkToLorenzo')}
-            </Button>
-            
-            <Button 
-              onClick={() => openCalendly()}
-              size="lg"
-              variant="secondary"
-              className="w-full sm:w-auto text-base group"
-            >
-              <Calendar className="mr-2 w-5 h-5" />
-              {t('investor.scheduleCall')}
             </Button>
             
             <Button 
               onClick={() => setInvestDialogOpen(true)}
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto text-base group"
+              className="w-full sm:w-auto text-sm md:text-base group"
             >
               {t('investor.cta')}
               <ArrowRight className={`ml-2 w-4 h-4 ${prefersReducedMotion ? '' : 'group-hover:translate-x-1 transition-transform'}`} />
+            </Button>
+            
+            {/* Calendly only on desktop */}
+            <Button 
+              onClick={() => openCalendly()}
+              size="lg"
+              variant="secondary"
+              className="hidden md:inline-flex w-auto text-base group"
+            >
+              <Calendar className="mr-2 w-5 h-5" />
+              {t('investor.scheduleCall')}
             </Button>
           </div>
         </div>
 
         {/* Infografica Interattiva */}
-        <div className="mt-16 md:mt-20">
+        <div className="mt-10 md:mt-16">
           <InvestorInfographic />
         </div>
       </div>
