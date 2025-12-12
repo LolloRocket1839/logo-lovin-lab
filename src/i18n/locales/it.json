@@ -689,9 +689,12 @@
     "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi."
   },
   "blog": {
-    "sectionLabel": "Risorse",
-    "sectionTitle": "Guide e approfondimenti",
-    "sectionSubtitle": "Contenuti di valore per studenti, investitori e venditori",
+    "sectionLabel": "City Living",
+    "sectionTitle": "City Living",
+    "sectionSubtitle": "Scopri la città attraverso le nostre guide autentiche",
+    "readGuide": "Leggi la guida",
+    "exploreAll": "Esplora tutte le guide",
+    "newBadge": "Nuovo",
     "viewAll": "Scopri tutte le risorse",
     "readMore": "Leggi l'articolo",
     "share": "Condividi",

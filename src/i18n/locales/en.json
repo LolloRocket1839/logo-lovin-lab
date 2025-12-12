@@ -915,9 +915,12 @@
     "closeLabel": "Close"
   },
   "blog": {
-    "sectionLabel": "Resources",
-    "sectionTitle": "Guides and Insights",
-    "sectionSubtitle": "Valuable content for students, investors and sellers",
+    "sectionLabel": "City Living",
+    "sectionTitle": "City Living",
+    "sectionSubtitle": "Discover the city through our authentic guides",
+    "readGuide": "Read the guide",
+    "exploreAll": "Explore all guides",
+    "newBadge": "New",
     "viewAll": "View all resources",
     "readMore": "Read article",
     "share": "Share",
