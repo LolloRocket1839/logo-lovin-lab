@@ -358,15 +358,15 @@
         "detail": "9 months students + 3 months tourists. Free guest days for summer exams. Contracts, maintenance and taxes included."
       },
       "earn": {
-        "title": "You earn",
-        "description": "Guaranteed quarterly returns",
-        "detail": "Quarterly returns with transparent reports. Access to personal dashboard."
+        "title": "You participate",
+        "description": "Access the real estate market",
+        "detail": "You participate in portfolio results. Transparent quarterly reports and personal dashboard."
       }
     },
     "metrics": {
       "yield": {
-        "label": "Returns",
-        "description": "Above market"
+        "label": "Minimum investment",
+        "description": "From €100"
       },
       "savings": {
         "label": "Student savings",
@@ -381,7 +381,7 @@
         "description": "Universities in the area"
       }
     },
-    "disclaimer": "*Returns are indicative estimates and are not guaranteed in any way. Investments involve risks, including possible loss of capital.",
+    "disclaimer": "*Investments involve risks, including possible loss of capital. Results depend on market performance.",
     "cta": "Zero hassle. Full management included."
   },
   "investors": {
