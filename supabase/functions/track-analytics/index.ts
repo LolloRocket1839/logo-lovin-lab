@@ -43,7 +43,7 @@ const isValidSessionId = (sessionId: string): boolean => {
 };
 
 const isValidEventType = (eventType: string): boolean => {
-  const allowedTypes = ['page_view', 'click', 'form_submit', 'scroll', 'engagement'];
+  const allowedTypes = ['page_view', 'click', 'form_submit', 'scroll', 'scroll_depth', 'engagement'];
   return allowedTypes.includes(eventType);
 };
 
