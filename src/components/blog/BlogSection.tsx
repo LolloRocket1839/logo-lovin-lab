@@ -53,12 +53,16 @@ export const BlogSection = () => {
               
               <div className="grid md:grid-cols-2 gap-0">
                 {/* Image */}
-                <div className="relative h-64 md:h-full">
+                <div className="relative h-64 md:h-full overflow-hidden">
                   <img 
                     src={featuredPost.image}
                     alt={featuredPost.translations[currentLang].title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="eager"
+                    width={800}
+                    height={450}
+                    decoding="async"
+                    fetchPriority="high"
                   />
                 </div>
                 

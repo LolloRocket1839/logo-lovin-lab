@@ -29,6 +29,8 @@ export const BlogCardMarvis = ({ post, isNew }: BlogCardMarvisProps) => {
             loading="lazy"
             decoding="async"
             fetchPriority="low"
+            width={400}
+            height={225}
           />
         </div>
         

@@ -155,6 +155,9 @@ export const Footer = () => {
                     transition: 'transform 0.1s ease-out'
                   }}
                   loading="lazy"
+                  width={140}
+                  height={96}
+                  decoding="async"
                 />
                 <span className="sr-only">{t('accessibility.opensNewWindow')}</span>
               </a>
