@@ -106,6 +106,7 @@ const About = () => {
               </div>
               <div itemProp="founders" itemScope itemType="https://schema.org/Person">
                 <p className="font-medium" itemProp="name">Lorenzo Oni-Joseph</p>
+                <p className="text-xs text-muted-foreground">{t('about.lorenzoRole')}</p>
               </div>
               <div itemProp="founders" itemScope itemType="https://schema.org/Person">
                 <p className="font-medium" itemProp="name">Andrea Niccolaini</p>
