@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { MobileHeader } from "@/components/MobileHeader";
 import { Hero } from "@/components/Hero";
 import { TrustBadge } from "@/components/TrustBadge";
 import { InvestorSection } from "@/components/InvestorSection";
@@ -28,6 +29,7 @@ const Index = () => {
 
   return (
     <main role="main" className="min-h-screen gradient-jungle-vertical" id="main-content" tabIndex={-1}>
+      <MobileHeader />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
