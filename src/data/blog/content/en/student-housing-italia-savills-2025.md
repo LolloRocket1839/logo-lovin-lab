@@ -141,6 +141,13 @@ The Savills report confirms that **Italian student housing represents an investm
 
 For those wishing to learn more, the full report is available for download in our [Investor Resource Library](/investitori).
 
+## Related Articles
+
+- [Investing in Real Assets in Turin 2025](/blog/investire-real-assets-torino-2025) - Strategies, returns, and market opportunities
+- [Polytechnic University of Turin: Complete Guide](/blog/politecnico-torino-guida-completa) - 38,000 students, programs, campus, and services
+- [University of Turin: Complete Guide](/blog/universita-torino-guida-completa) - 83,000 students, history, faculties, and opportunities
+- [San Salvario: Student Neighborhood Guide](/blog/san-salvario-guida-studenti) - Turin's most student-friendly neighborhood
+
 ---
 
 *Source: Savills Research, Italian Student Housing Spotlight, June 2025*

@@ -141,6 +141,13 @@ Il report Savills conferma che lo **student housing italiano rappresenta un'oppo
 
 Per chi desidera approfondire, il report completo è disponibile per il download nella nostra [Libreria Risorse per Investitori](/investitori).
 
+## Articoli correlati
+
+- [Investire in real assets a Torino nel 2025](/blog/investire-real-assets-torino-2025) - Strategie, rendimenti e opportunità nel mercato immobiliare torinese
+- [Guida completa al Politecnico di Torino](/blog/politecnico-torino-guida-completa) - 36.000 studenti, programmi, campus e servizi
+- [Guida completa all'Università di Torino](/blog/universita-torino-guida-completa) - 83.000 studenti, storia, facoltà e opportunità
+- [San Salvario: guida al quartiere per studenti](/blog/san-salvario-guida-studenti) - Il quartiere più studentesco di Torino
+
 ---
 
 *Fonte: Savills Research, Italian Student Housing Spotlight, Giugno 2025*

@@ -337,4 +337,14 @@ It's difficult and expensive. San Salvario is almost all blue stripes (€1.50/h
 
 ---
 
+## Related Articles
+
+- [Sustainable Mobility in Turin: Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti) - GTT subscriptions, bike paths, and university connections
+- [Where to Eat in Turin on a Budget: Student Guide](/blog/dove-mangiare-torino-studenti) - Restaurants, pizzerias, and affordable spots near universities
+- [Best Gelato in Turin: Student Guide](/blog/migliori-gelaterie-torino-studenti) - Alberto Marchetti, Mara dei Boschi, Papalele and more
+- [Study Spaces in Turin: Complete Guide](/blog/aule-studio-torino-guida-completa) - Libraries, free study areas, and opening hours
+- [Turin Nightlife Guide](/blog/torino-nightlife-guide) - Clubs, bars, aperitivo spots, and where to go out
+
+---
+
 *This guide was written by the Jungle Rent team, students and ex-students in Turin, based on real market data and testimonies from those who live in San Salvario.*

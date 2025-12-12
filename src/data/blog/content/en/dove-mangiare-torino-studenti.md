@@ -698,6 +698,16 @@ EDISU canteens are reserved for students with low ISEE, but anyone can access by
 
 **The golden rule:** Cook 60% of the time, eat out strategically 40%. High quality of life, sustainable costs.
 
+---
+
+## Related Articles
+
+- [San Salvario: Student Neighborhood Guide](/blog/san-salvario-guida-studenti) - Turin's most vibrant student neighborhood
+- [Best Gelato in Turin: Student Guide](/blog/migliori-gelaterie-torino-studenti) - Top gelaterie for students
+- [Historic Markets of Turin](/blog/mercati-storici-torino-chiusure) - Piazza Madama Cristina and other neighborhood markets
+
+---
+
 *This guide was written by students for students, based on real prices and tested places. All prices are updated to November 2025.*
 
 **Questions or suggestions?** Write us! We update this guide regularly with student feedback.

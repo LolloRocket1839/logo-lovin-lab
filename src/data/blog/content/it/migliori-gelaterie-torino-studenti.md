@@ -178,6 +178,14 @@ Il consiglio? Fai il tuo tour personale: prova diverse gelaterie, confronta lo s
 
 ---
 
+## Articoli correlati
+
+- [Dove mangiare a Torino spendendo poco: guida per studenti](/blog/dove-mangiare-torino-studenti) - Ristoranti, pizzerie e locali economici
+- [San Salvario: guida al quartiere per studenti](/blog/san-salvario-guida-studenti) - Il quartiere più studentesco di Torino
+- [I mercati storici di Torino: tradizione e crisi](/blog/mercati-storici-torino-chiusure) - Piazza Madama Cristina e altri mercati rionali
+
+---
+
 **Hai scoperto una gelateria imperdibile che non abbiamo menzionato?** Raccontacelo! Torino è piena di piccole gemme artigianali che aspettano solo di essere scoperte.
 
 ---

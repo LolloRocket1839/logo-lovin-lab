@@ -68,4 +68,9 @@ Per coloro interessati alla cultura urbana, storia architettonica, arte contempo
 
 ---
 
-*Cerchi alloggio durante la tua visita di dicembre a Torino? [Jungle Rent](/) aiuta studenti e giovani professionisti a trovare alloggi di qualità nei quartieri più vivaci di Torino, tra cui lo storico [quartiere di San Salvario](/blog/san-salvario-guida-studenti).*
+## Articoli correlati
+
+- [Torino a novembre: tennis, cinema, arte e tartufi](/blog/torino-novembre-turisti) - ATP Finals, Torino Film Festival, Artissima e tartufo bianco
+- [Eventi a Torino a gennaio 2026: guida completa](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, mostre, concerti e Fiamma Olimpica
+- [I mercati storici di Torino](/blog/mercati-storici-torino-chiusure) - Mercatini tradizionali e crisi dei mercati rionali
+- [San Salvario: guida al quartiere per studenti](/blog/san-salvario-guida-studenti) - Il quartiere più vivace di Torino

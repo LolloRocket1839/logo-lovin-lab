@@ -567,6 +567,14 @@ Turin offers **57 diversified study spaces** for every need: from historic libra
 
 ---
 
+## Related Articles
+
+- [Polytechnic University of Turin: Complete Guide](/blog/politecnico-torino-guida-completa) - 38,000 students, programs, and campus life
+- [University of Turin: Complete Guide](/blog/universita-torino-guida-completa) - 83,000 students and 600 years of history
+- [Sustainable Mobility in Turin: Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti) - GTT subscriptions and bike paths
+
+---
+
 **JungleRent** - Your guide to living and studying in Turin like a local 🦁
 
 _Last update: November 2024_
