@@ -295,8 +295,8 @@
     "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino",
     "minInvestmentBadge": "Investi da €100",
     "marketStats": {
-      "studentsOffsite": "studenti fuori sede",
-      "demandCovered": "domanda coperta",
+      "studentsOffsite": "studenti fuori sede in Italia",
+      "demandCovered": "cerca alloggio",
       "marketPotential": "mercato potenziale"
     }
   },

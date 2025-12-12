@@ -110,7 +110,7 @@ export const InvestorSection = () => {
               <div className="flex items-center justify-center mb-1">
                 <GraduationCap className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </div>
-              <p className="text-lg md:text-2xl font-bold text-foreground">589K</p>
+              <p className="text-lg md:text-2xl font-bold text-foreground">~589K</p>
               <p className="text-[10px] md:text-xs text-muted-foreground font-light">
                 {t('investor.marketStats.studentsOffsite')}
               </p>
@@ -119,7 +119,7 @@ export const InvestorSection = () => {
               <div className="flex items-center justify-center mb-1">
                 <Building2 className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </div>
-              <p className="text-lg md:text-2xl font-bold text-foreground">12.6%</p>
+              <p className="text-lg md:text-2xl font-bold text-foreground">~87%</p>
               <p className="text-[10px] md:text-xs text-muted-foreground font-light">
                 {t('investor.marketStats.demandCovered')}
               </p>
@@ -128,7 +128,7 @@ export const InvestorSection = () => {
               <div className="flex items-center justify-center mb-1">
                 <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </div>
-              <p className="text-lg md:text-2xl font-bold text-foreground">€4B</p>
+              <p className="text-lg md:text-2xl font-bold text-foreground">~€4B</p>
               <p className="text-[10px] md:text-xs text-muted-foreground font-light">
                 {t('investor.marketStats.marketPotential')}
               </p>

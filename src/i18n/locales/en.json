@@ -322,8 +322,8 @@
     "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator",
     "minInvestmentBadge": "Invest from €100",
     "marketStats": {
-      "studentsOffsite": "students off-site",
-      "demandCovered": "demand covered",
+      "studentsOffsite": "off-campus students in Italy",
+      "demandCovered": "seeking housing",
       "marketPotential": "market potential"
     }
   },
