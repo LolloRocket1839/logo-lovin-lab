@@ -89,7 +89,7 @@ export const InvestorSection = () => {
             <StyledText>{t('investor.compactDesc')}</StyledText>
           </p>
           
-          {/* Badge "Da €100" + SFP prominente */}
+          {/* Badge "Da €100" + Active Investors */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
             <Badge 
               className="px-4 py-2 md:px-5 md:py-2.5 text-sm md:text-base font-bold bg-primary text-primary-foreground shadow-lg"
@@ -97,22 +97,6 @@ export const InvestorSection = () => {
               <Euro className="w-4 h-4 md:w-5 md:h-5 mr-1.5" />
               {t('investor.minInvestmentBadge')}
             </Badge>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Badge 
-                    variant="outline" 
-                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium cursor-help border-primary/30"
-                  >
-                    <Coins className="w-3 h-3 md:w-4 md:h-4 mr-1.5 text-primary" />
-                    {t('investor.sfpBadge')}
-                  </Badge>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <p className="text-xs">{t('investor.sfpTooltip')}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
             <Badge 
               variant="secondary" 
               className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium"
