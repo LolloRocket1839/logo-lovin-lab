@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { visualizer } from "rollup-plugin-visualizer";
+import { imagetools } from "vite-imagetools";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -12,6 +13,17 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(), 
+    imagetools({
+      defaultDirectives: (url) => {
+        if (url.searchParams.has('optimized')) {
+          return new URLSearchParams({
+            format: 'webp',
+            quality: '80',
+          });
+        }
+        return new URLSearchParams();
+      },
+    }),
     mode === "development" && componentTagger(),
     mode === "production" && visualizer({
       filename: "dist/stats.html",
