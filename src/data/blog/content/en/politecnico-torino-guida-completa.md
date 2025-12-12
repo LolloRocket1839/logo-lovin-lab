@@ -423,3 +423,13 @@ Choosing the Polytechnic University of Turin means embarking on a path of person
 70. [UniTo - Interuniversity master's degrees](https://www.unito.it/didattica/offerta-formativa/corsi-di-studio/corsi-di-laurea-magistrale-interateneo)
 71. [UniTo - Innovative collaborations](https://www.unito.it/ricerca-e-innovazione/dalle-idee-al-mercato/collaborazioni-innovative)
 72. [UniTo - Interuniversity Research Center Scienza Nuova](https://www.interathenaeum.unito.it/it/content/centro-di-ricerca-interuniversitario-scienza-nuova)
+
+---
+
+## Related Articles
+
+- [University of Turin: Complete Guide](/blog/universita-torino-guida-completa) - 83,000 students, 600+ years of history, research excellence
+- [Sustainable Mobility in Turin: Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti) - GTT subscriptions, bike paths, and university connections
+- [Study Spaces in Turin: Complete Guide](/blog/aule-studio-torino-guida-completa) - Libraries, free study areas, and opening hours
+- [Where to Live in Turin: Guide for Politecnico Students](/blog/dove-vivere-torino-studenti-politecnico) - Best neighborhoods and housing options
+- [San Salvario: Student Neighborhood Guide](/blog/san-salvario-guida-studenti) - Turin's most vibrant student neighborhood

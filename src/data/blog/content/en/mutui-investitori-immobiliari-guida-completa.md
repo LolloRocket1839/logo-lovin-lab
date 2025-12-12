@@ -409,3 +409,11 @@ Or book a **free 30-minute call** with Lorenzo (CEO) to evaluate if Jungle Rent 
 [^68]: We are Climb - [Market 2025](https://www.weareclimb.it/mercato-2025/)
 [^69]: Alfio Bardolla - [Continuous Education](https://www.alfiobardolla.com/)
 [^70]: Case-Asta.it - [Starting Investments](https://www.case-asta.it/primi-passi/)
+
+---
+
+## Related Articles
+
+- [Selling Property in Turin: Complete 2025 Guide](/blog/vendere-casa-torino-guida-completa-2025) - Risks, taxes, and real estate agencies
+- [Investing in Real Assets in Turin 2025](/blog/investire-real-assets-torino-2025) - Market analysis and investment opportunities
+- [Student Housing in Italy: Savills Report 2025](/blog/student-housing-italia-savills-2025) - Demand, supply, and investment data

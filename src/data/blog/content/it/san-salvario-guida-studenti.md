@@ -337,4 +337,14 @@ Molti appartamenti hanno lavatrice. Altrimenti ci sono 3 lavanderie self-service
 
 ---
 
+## Articoli correlati
+
+- [Mobilità sostenibile a Torino: guida completa ai trasporti per studenti](/blog/mobilita-sostenibile-torino-studenti) - Abbonamenti GTT, piste ciclabili, app e collegamenti universitari
+- [Dove mangiare a Torino spendendo poco: guida per studenti](/blog/dove-mangiare-torino-studenti) - Ristoranti, pizzerie e locali economici vicino alle università
+- [Le migliori gelaterie di Torino: guida per studenti golosi](/blog/migliori-gelaterie-torino-studenti) - Alberto Marchetti, Mara dei Boschi, Papalele e altre eccellenze
+- [Aule studio a Torino: guida completa per studenti](/blog/aule-studio-torino-guida-completa) - Biblioteche, spazi studio gratuiti e orari
+- [Vita notturna a Torino: guida completa](/blog/torino-nightlife-guide) - Locali, club, aperitivi e dove uscire la sera
+
+---
+
 *Questa guida è stata scritta dal team Jungle Rent, studenti ed ex-studenti a Torino, basandosi sui dati reali del mercato e sulle testimonianze di chi vive a San Salvario.*

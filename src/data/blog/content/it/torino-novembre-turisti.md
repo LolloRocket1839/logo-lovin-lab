@@ -99,4 +99,11 @@ Novembre a Torino rappresenta molto più di una concatenazione di eventi stagion
 
 Per i visitatori che pianificano viaggi a Torino, novembre offre un'opportunità straordinaria di incontrare la città non come monumento storico o destinazione turistica ma come centro urbano vivente dove cultura, sport e gastronomia raggiungono espressione simultanea. La convergenza di questi flussi di programmazione di novembre—la precisione e l'atletismo del tennis professionistico, l'intensità narrativa del cinema internazionale, l'indagine estetica dell'arte contemporanea e la ricchezza sensoriale della gastronomia del tartufo—crea una totalità esperienziale probabilmente ineguagliata da qualsiasi altra città europea durante qualsiasi altro mese. Comprendere Torino richiede comprendere novembre.
 
-*Continua a esplorare Torino durante tutto l'anno: [Le luci festive e le celebrazioni invernali di dicembre](/blog/torino-dicembre-turisti), o scopri di più sulla [vita da studente a Torino](/blog).*
+---
+
+## Articoli correlati
+
+- [Torino a dicembre: luci natalizie e cioccolata calda](/blog/torino-dicembre-turisti) - Luci d'Artista, mercatini, Teatro Regio e tradizioni festive
+- [Eventi a Torino a gennaio 2026: guida completa](/blog/eventi-torino-gennaio-2026) - Mostre, concerti, teatro e Fiamma Olimpica
+- [Vita notturna a Torino: guida completa](/blog/torino-nightlife-guide) - Locali, club, aperitivi e dove uscire la sera
+- [I mercati storici di Torino](/blog/mercati-storici-torino-chiusure) - Tradizione e crisi dei mercati rionali

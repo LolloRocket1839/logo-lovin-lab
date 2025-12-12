@@ -229,3 +229,11 @@ In Turin's specific context, market dynamism in 2025 creates both significant op
 [8] [How much do you pay a real estate agency?](https://www.nextcasa.it/quanto-si-paga-a-unagenzia-immobiliare-tutto-quello-che-devi-sapere-sulle-commissioni/)
 
 [9] [Risks for property sellers in transactions](https://www.expertisere.it/n-134-i-rischi-per-il-venditore-di-immobili-nelle-compravendite-/)
+
+---
+
+## Related Articles
+
+- [Mortgages for Real Estate Investors: Complete Guide 2025](/blog/mutui-investitori-immobiliari-guida-completa) - Mortgage types, strategies, and best practices
+- [Investing in Real Assets in Turin 2025](/blog/investire-real-assets-torino-2025) - Why Turin is the perfect market for real estate investment
+- [Student Housing in Italy: Savills Report 2025](/blog/student-housing-italia-savills-2025) - Market analysis and investment opportunities
