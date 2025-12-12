@@ -2,6 +2,147 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cioccolaterie-torino-guida-completa",
+    category: "turisti",
+    date: "2025-12-12",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 50,
+    content: "cioccolaterie-torino-guida-completa",
+    translations: {
+      it: {
+        title: "Le cioccolaterie a Torino: guida completa alla capitale mondiale del cioccolato",
+        excerpt: "Storia dal 1560 ad oggi, Caffarel, Venchi, Guido Gobino, Baratti & Milano, Gianduiotto, Cremino, Bicerin, CioccolaTò 2025-2026. 35 fonti.",
+        seo: {
+          title: "Cioccolaterie Torino: guida completa alla capitale del cioccolato | storia, negozi, specialità",
+          description: "Guida completa alle cioccolaterie di Torino: storia dal 1560, Caffarel, Venchi, Guido Gobino, Baratti & Milano, Gianduiotto, Cremino, Bicerin, CioccolaTò 2025-2026. 35 fonti.",
+          keywords: [
+            "cioccolaterie torino",
+            "cioccolato torino",
+            "gianduiotto",
+            "cremino torino",
+            "bicerin torino",
+            "cioccolato 2025",
+            "guido gobino",
+            "caffarel",
+            "venchi torino",
+            "baratti milano",
+            "migliori cioccolaterie torino",
+            "dove comprare cioccolato torino"
+          ]
+        },
+        tags: ["Turisti", "Cioccolato", "Torino", "Gastronomia", "Tradizioni", "CioccolaTò"],
+        faqs: [
+          {
+            question: "Qual è la storia del cioccolato a Torino?",
+            answer: "La storia del cioccolato a Torino inizia nel 1560, quando il Duca Emanuele Filiberto di Savoia festeggiò il trasferimento della capitale da Chambéry con una tazza di cioccolata calda. Da allora, la città ha sviluppato una tradizione cioccolatiera unica che include invenzioni come il Gianduiotto (1865), il Bicerin (1763) e il Cremino."
+          },
+          {
+            question: "Cos'è il Gianduiotto e dove è stato inventato?",
+            answer: "Il Gianduiotto è un cioccolatino a forma di prisma triangolare inventato a Torino nel 1865 da Caffarel. È composto da cacao, zucchero e Nocciola Tonda Gentile del Piemonte. È incluso tra i prodotti agroalimentari tradizionali piemontesi ed è candidato all'IGP."
+          },
+          {
+            question: "Cos'è il Bicerin torinese?",
+            answer: "Il Bicerin è una bevanda torinese creata nel 1763 nel caffè omonimo in Piazza della Consolata. Composta da tre strati (caffè, cioccolata fusa e fior di latte), è riconosciuta come prodotto tradizionale piemontese. Ha affascinato personalità come Cavour, Hemingway e Umberto Eco."
+          },
+          {
+            question: "Quali sono le cioccolaterie storiche più famose di Torino?",
+            answer: "Le cioccolaterie storiche più famose di Torino sono: Caffarel (1826, inventore del Gianduiotto), Venchi (1878), Baratti & Milano (1875, inventore del Cremino), Stratta (1836, la più antica), Peyrano (1915, fornitore della Real Casa) e Pfatisch (1915)."
+          },
+          {
+            question: "Quando si svolge CioccolaTò a Torino?",
+            answer: "CioccolaTò si svolge ogni anno a Torino. L'edizione 2025 è dal 27 febbraio al 2 marzo in Piazza Vittorio Veneto. L'edizione 2026 sarà dal 13 al 17 febbraio, coincidendo con San Valentino e Carnevale. Include degustazioni, laboratori e la caccia al gianduiotto."
+          },
+          {
+            question: "Cos'è il Cremino e chi l'ha inventato?",
+            answer: "Il Cremino è un cioccolatino a tre strati inventato da Ferdinando Baratti nella seconda metà dell'Ottocento presso la Galleria Subalpina. È composto da due strati di cioccolato gianduja e uno strato interno di crema alle nocciole Tonda Gentile."
+          },
+          {
+            question: "Dove comprare il miglior Gianduiotto a Torino?",
+            answer: "I migliori Gianduiotti a Torino si trovano da: Guido Gobino (Via Cagliari 15, famoso per il Tourinot), Guido Castagna (Via Maria Vittoria 27), Caffarel (Via Gioberti 23, inventore originale), Peyrano (Corso Moncalieri 47) e La Perla di Torino."
+          },
+          {
+            question: "Qual è la relazione tra Nutella e Torino?",
+            answer: "La Nutella fu inventata nel 1946 da Pietro Ferrero ad Alba (provincia di Cuneo, Piemonte). Il primo vasetto fu prodotto il 20 aprile 1964. Pur non essendo di Torino, Ferrero fa parte della tradizione cioccolatiera piemontese che include l'uso della Nocciola Tonda Gentile."
+          },
+          {
+            question: "Qual è la cioccolateria più antica di Torino?",
+            answer: "La cioccolateria più antica di Torino è Stratta, fondata nel 1836 in Piazza San Carlo. È stata dichiarata Locale Storico d'Italia. Altre cioccolaterie storiche includono Baratti & Milano (1875), Caffarel (1826) e Venchi (1878)."
+          },
+          {
+            question: "Cosa sono i Boeri torinesi?",
+            answer: "I Boeri sono cioccolatini classici con guscio di cioccolato fondente e cuore di crema liquorosa, spesso con una ciliegia intera sommersa in maraschino o cherry brandy. Furono ideati da un pasticciere svizzero all'inizio del Novecento e sono diventati specialità torinese."
+          }
+        ]
+      },
+      en: {
+        title: "Turin chocolate shops: complete guide to the world capital of chocolate",
+        excerpt: "History from 1560 to today, Caffarel, Venchi, Guido Gobino, Baratti & Milano, Gianduiotto, Cremino, Bicerin, CioccolaTò 2025-2026. 35 sources.",
+        seo: {
+          title: "Turin chocolate shops: complete guide to the world capital of chocolate | history, shops, specialties",
+          description: "Complete guide to Turin chocolate shops: history from 1560, Caffarel, Venchi, Guido Gobino, Baratti & Milano, Gianduiotto, Cremino, Bicerin, CioccolaTò 2025-2026. 35 sources.",
+          keywords: [
+            "turin chocolate shops",
+            "chocolate turin",
+            "gianduiotto",
+            "cremino turin",
+            "bicerin turin",
+            "cioccolato 2025",
+            "guido gobino",
+            "caffarel",
+            "venchi turin",
+            "baratti milano",
+            "best chocolate shops turin",
+            "where to buy chocolate turin"
+          ]
+        },
+        tags: ["Tourists", "Chocolate", "Turin", "Gastronomy", "Traditions", "CioccolaTò"],
+        faqs: [
+          {
+            question: "What is the history of chocolate in Turin?",
+            answer: "Turin's chocolate history began in 1560, when Duke Emanuele Filiberto of Savoy celebrated the capital's transfer from Chambéry with a cup of hot chocolate. Since then, the city has developed a unique chocolate tradition including inventions like the Gianduiotto (1865), Bicerin (1763) and Cremino."
+          },
+          {
+            question: "What is Gianduiotto and where was it invented?",
+            answer: "Gianduiotto is a triangular prism-shaped chocolate invented in Turin in 1865 by Caffarel. It's made from cocoa, sugar and Piedmont Tonda Gentile Hazelnut. It's included among traditional Piedmontese food products and is a candidate for PGI status."
+          },
+          {
+            question: "What is Turin's Bicerin?",
+            answer: "Bicerin is a Turin beverage created in 1763 at the eponymous café in Piazza della Consolata. Made of three layers (coffee, melted chocolate and cream), it's recognized as a traditional Piedmontese product. It fascinated personalities like Cavour, Hemingway and Umberto Eco."
+          },
+          {
+            question: "What are the most famous historic chocolate shops in Turin?",
+            answer: "The most famous historic chocolate shops in Turin are: Caffarel (1826, inventor of Gianduiotto), Venchi (1878), Baratti & Milano (1875, inventor of Cremino), Stratta (1836, the oldest), Peyrano (1915, Royal House supplier) and Pfatisch (1915)."
+          },
+          {
+            question: "When is CioccolaTò in Turin?",
+            answer: "CioccolaTò takes place annually in Turin. The 2025 edition runs February 27 to March 2 in Piazza Vittorio Veneto. The 2026 edition will be February 13-17, coinciding with Valentine's Day and Carnival. It includes tastings, workshops and the Gianduiotto hunt."
+          },
+          {
+            question: "What is Cremino and who invented it?",
+            answer: "Cremino is a three-layer chocolate invented by Ferdinando Baratti in the second half of the 19th century at Galleria Subalpina. It consists of two layers of gianduja chocolate and an inner layer of Tonda Gentile hazelnut cream."
+          },
+          {
+            question: "Where to buy the best Gianduiotto in Turin?",
+            answer: "The best Gianduiotti in Turin are found at: Guido Gobino (Via Cagliari 15, famous for Tourinot), Guido Castagna (Via Maria Vittoria 27), Caffarel (Via Gioberti 23, original inventor), Peyrano (Corso Moncalieri 47) and La Perla di Torino."
+          },
+          {
+            question: "What is the relationship between Nutella and Turin?",
+            answer: "Nutella was invented in 1946 by Pietro Ferrero in Alba (Cuneo province, Piedmont). The first jar was produced on April 20, 1964. Although not from Turin, Ferrero is part of the Piedmontese chocolate tradition that includes using Tonda Gentile Hazelnut."
+          },
+          {
+            question: "What is the oldest chocolate shop in Turin?",
+            answer: "The oldest chocolate shop in Turin is Stratta, founded in 1836 in Piazza San Carlo. It has been declared a Historic Venue of Italy. Other historic chocolate shops include Baratti & Milano (1875), Caffarel (1826) and Venchi (1878)."
+          },
+          {
+            question: "What are Turin's Boeri chocolates?",
+            answer: "Boeri are classic chocolates with a dark chocolate shell and liqueur cream heart, often with a whole cherry submerged in maraschino or cherry brandy. They were created by a Swiss confectioner in the early 20th century and became a Turin specialty."
+          }
+        ]
+      }
+    }
+  },
+  {
     slug: "vendere-casa-torino-guida-completa-2025",
     category: "sellers",
     date: "2025-12-12",
