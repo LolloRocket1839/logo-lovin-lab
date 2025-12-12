@@ -369,7 +369,8 @@
     "step4Title": "Rendimenti passivi",
     "step4Desc": "Ricevi rendite trimestrali e report dettagliati. Noi gestiamo tutto",
     "ctaTitle": "Pronto a investire?",
-    "ctaSubtitle": "Parla con un nostro advisor e scopri le opportunità disponibili oggi"
+    "ctaSubtitle": "Parla con un nostro advisor e scopri le opportunità disponibili oggi",
+    "readSavillsAnalysis": "Leggi l'analisi completa del mercato"
   },
   "seller": {
     "title": "Vendi la tua casa a Torino",
@@ -780,7 +781,8 @@
           "button": "Unisciti alla community"
         }
       },
-      "downloadReport": "Scarica report"
+      "downloadReport": "Scarica report",
+      "readSavillsReport": "Report Savills 2025"
     },
     "meta": {
       "title": "Blog Jungle Rent | Guide su Affitti, Investimenti e Vendite a Torino",
@@ -823,7 +825,8 @@
     "guide4Bullet3": "€4 miliardi di potenziale di mercato",
     "guide4Bullet4": "Analisi città universitarie e rendimenti",
     "downloadCta": "Scarica Guida Gratuita",
-    "downloadDirectCta": "Scarica PDF"
+    "downloadDirectCta": "Scarica PDF",
+    "readAnalysis": "Leggi l'analisi del report"
   },
   "accessibility": {
     "skipToContent": "Salta al contenuto principale"

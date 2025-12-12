@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { FileText, Building2, TrendingUp, ArrowRight, CheckCircle, Download } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
 
 export const ResourceLibrary = () => {
@@ -153,6 +154,14 @@ export const ResourceLibrary = () => {
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         )}
                       </Button>
+                      {guide.id === 'savills' && (
+                        <Link 
+                          to="/blog/student-housing-italia-savills-2025"
+                          className="block text-center text-sm text-primary hover:underline mt-3 underline-offset-2"
+                        >
+                          {t('resourceLibrary.readAnalysis')} →
+                        </Link>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

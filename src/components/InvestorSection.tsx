@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Users, Award, Calendar, Target, Heart, Euro, TrendingUp, Building2, GraduationCap } from "lucide-react";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
@@ -134,9 +135,12 @@ export const InvestorSection = () => {
               </p>
             </div>
           </div>
-          <p className="text-[9px] md:text-[10px] text-muted-foreground/60 font-light mt-2">
-            *{t('investor.marketStats.disclaimer')}
-          </p>
+          <Link 
+            to="/blog/student-housing-italia-savills-2025" 
+            className="block text-[9px] md:text-[10px] text-muted-foreground/60 font-light mt-2 hover:text-primary transition-colors underline-offset-2 hover:underline"
+          >
+            *{t('investor.marketStats.disclaimer')} →
+          </Link>
 
           {/* 2 CTA on mobile, 3 on desktop */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center flex-wrap">

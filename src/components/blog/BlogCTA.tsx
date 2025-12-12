@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Bell, TrendingUp, Download } from "lucide-react";
+import { MessageCircle, Bell, TrendingUp, Download, FileText } from "lucide-react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
 import { useState, useEffect } from "react";
 import { CONTACTS } from "@/lib/contacts";
@@ -98,10 +99,18 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
               {config.buttonText}
             </Button>
             {type === 'investors' && (
-              <Button size="lg" variant="outline" onClick={handleDownloadReport} className="group">
-                <Download className="mr-2 w-4 h-4" />
-                {t('blog.cta.downloadReport')}
-              </Button>
+              <>
+                <Button size="lg" variant="outline" onClick={handleDownloadReport} className="group">
+                  <Download className="mr-2 w-4 h-4" />
+                  {t('blog.cta.downloadReport')}
+                </Button>
+                <Link to="/blog/student-housing-italia-savills-2025">
+                  <Button size="lg" variant="ghost" className="group">
+                    <FileText className="mr-2 w-4 h-4" />
+                    {t('blog.cta.readSavillsReport')}
+                  </Button>
+                </Link>
+              </>
             )}
           </div>
         </div>

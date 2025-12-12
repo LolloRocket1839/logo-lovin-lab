@@ -396,7 +396,8 @@
     "step4Title": "Passive Returns",
     "step4Desc": "Receive quarterly returns and detailed reports. We manage everything",
     "ctaTitle": "Ready to Invest?",
-    "ctaSubtitle": "Talk to our advisor and discover opportunities available today"
+    "ctaSubtitle": "Talk to our advisor and discover opportunities available today",
+    "readSavillsAnalysis": "Read the full market analysis"
   },
   "seller": {
     "title": "Sell your property in Turin",
@@ -1006,7 +1007,8 @@
           "button": "Join the Community"
         }
       },
-      "downloadReport": "Download Report"
+      "downloadReport": "Download Report",
+      "readSavillsReport": "Savills Report 2025"
     },
     "meta": {
       "title": "Jungle Rent Blog | Guides on Rentals, Investments and Sales in Turin",
@@ -1049,7 +1051,8 @@
     "guide4Bullet3": "€4 billion market potential",
     "guide4Bullet4": "University cities analysis and returns",
     "downloadCta": "Download Free Guide",
-    "downloadDirectCta": "Download PDF"
+    "downloadDirectCta": "Download PDF",
+    "readAnalysis": "Read the report analysis"
   },
   "accessibility": {
     "skipToContent": "Skip to main content"
