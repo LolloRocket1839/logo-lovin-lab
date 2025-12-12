@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { Calendar } from "lucide-react";
+import { Calendar, Building2, Banknote, Clock, Check, X, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import { QuickSellerLeadDialog } from "./QuickSellerLeadDialog";
 import { StyledText } from "@/components/StyledText";
 import { openCalendly } from "@/lib/calendly";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { Badge } from "./ui/badge";
 
 export const SellerSection = () => {
   const { t } = useTranslation();
@@ -23,27 +24,71 @@ export const SellerSection = () => {
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
       <div className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto relative z-10 transition-spacing">
-        <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
-            {t('seller.sectionLabel')}
-          </p>
-          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-foreground">
-            <StyledText>{t('seller.compactTitle')}</StyledText>
+        <div className="text-center max-w-3xl mx-auto">
+          {/* Urgency badge */}
+          <div className="flex justify-center mb-4">
+            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 px-3 py-1.5 text-xs font-medium">
+              <MapPin className="w-3 h-3 mr-1.5" />
+              {t('seller.urgencyBadge')}
+            </Badge>
+          </div>
+          
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
+            <StyledText>{t('seller.newTitle')}</StyledText>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
-            <StyledText>{t('seller.compactDesc')}</StyledText>
+            <StyledText>{t('seller.newSubtitle')}</StyledText>
           </p>
           
-          <ul className="text-left max-w-lg mx-auto space-y-2 mb-8 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-0.5">•</span>
-              <span>{t('seller.compactBullet1')}</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary mt-0.5">•</span>
-              <span>{t('seller.compactBullet2')}</span>
-            </li>
-          </ul>
+          {/* Comparison table */}
+          <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-4 sm:p-6 mb-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 text-xs sm:text-sm">
+              {/* Header row */}
+              <div className="text-left font-medium text-muted-foreground"></div>
+              <div className="text-center font-semibold text-muted-foreground">{t('seller.comparison.agency')}</div>
+              <div className="text-center font-semibold text-primary">{t('seller.comparison.jungleRent')}</div>
+              
+              {/* Role row */}
+              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.roleLabel')}</div>
+              <div className="text-center py-2 border-t border-border/30 text-muted-foreground">{t('seller.comparison.roleAgency')}</div>
+              <div className="text-center py-2 border-t border-border/30 font-medium text-foreground flex items-center justify-center gap-1">
+                <Building2 className="w-3 h-3 text-primary" />
+                {t('seller.comparison.roleJR')}
+              </div>
+              
+              {/* Commissions row */}
+              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.commissionsLabel')}</div>
+              <div className="text-center py-2 border-t border-border/30 text-destructive flex items-center justify-center gap-1">
+                <X className="w-3 h-3" />
+                3-4%
+              </div>
+              <div className="text-center py-2 border-t border-border/30 text-primary font-semibold flex items-center justify-center gap-1">
+                <Check className="w-3 h-3" />
+                {t('seller.comparison.commissionsJR')}
+              </div>
+              
+              {/* Time row */}
+              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.timeLabel')}</div>
+              <div className="text-center py-2 border-t border-border/30 text-muted-foreground flex items-center justify-center gap-1">
+                <Clock className="w-3 h-3" />
+                6-12 {t('seller.comparison.months')}
+              </div>
+              <div className="text-center py-2 border-t border-border/30 text-primary font-medium flex items-center justify-center gap-1">
+                <Clock className="w-3 h-3" />
+                60-90 {t('seller.comparison.days')}
+              </div>
+              
+              {/* Visits row */}
+              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.visitsLabel')}</div>
+              <div className="text-center py-2 border-t border-border/30 text-muted-foreground">{t('seller.comparison.visitsAgency')}</div>
+              <div className="text-center py-2 border-t border-border/30 text-primary font-medium">{t('seller.comparison.visitsJR')}</div>
+            </div>
+          </div>
+          
+          {/* Mission statement */}
+          <p className="text-xs sm:text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
+            {t('seller.missionStatement')}
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button 
