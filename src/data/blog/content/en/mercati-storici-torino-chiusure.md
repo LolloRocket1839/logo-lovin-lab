@@ -63,3 +63,13 @@ The consequences of closure were devastating:
 The crisis of Turin's markets represents a crucial moment of possible **definitive rupture of social ties, urban memory, community cohesion**. But it also represents an opportunity: the opportunity to recognize the extraordinary value of these spaces, to document their memory, to invent new forms of regeneration that maintain their social and economic function rather than canceling them.
 
 This doesn't require enormous investments, but essentially requires a **rewriting of the narrative** about the city: moving from a vision of Turin that celebrates the "new" and "urban transformation" to one that values resilience, continuity, memory, community cohesion.
+
+---
+
+## Related Articles
+
+- [San Salvario Neighborhood Guide](/blog/san-salvario-guida-studenti) - A neighborhood that maintains its community character and street-level commerce
+- [Waste Sorting in Turin: Complete Guide](/blog/raccolta-differenziata-torino-guida) - Understanding the city's environmental infrastructure
+- [Safe Neighborhoods for Women in Turin](/blog/quartieri-sicuri-donne-torino) - Analyzing neighborhood safety and community cohesion
+- [Where to Eat in Turin: Best Spots for Students](/blog/dove-mangiare-torino-studenti) - Supporting local trattorias and neighborhood restaurants
+- [Turin Events January 2026](/blog/eventi-torino-gennaio-2026) - Discovering the city's cultural programming

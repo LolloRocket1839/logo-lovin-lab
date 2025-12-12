@@ -140,3 +140,13 @@ When exploring Turin's nightlife, locals recommend arriving early to avoid lengt
 - **Payment:** Most venues accept both cash and card payments
 
 Turin's nightlife reflects the city's sophisticated character—a balance between **historic elegance and contemporary creativity**, where aperitivo culture transitions seamlessly into midnight adventures, and centuries-old venues continue to define the city's vibrant after-dark identity.
+
+---
+
+## Related Articles
+
+- [San Salvario Neighborhood Guide](/blog/san-salvario-guida-studenti) - Where to live, eat, and study in Turin's most vibrant nightlife district
+- [Where to Eat in Turin: Best Spots for Students](/blog/dove-mangiare-torino-studenti) - From cheap eats to aperitivo culture
+- [The Best Gelato Shops in Turin](/blog/migliori-gelaterie-torino-studenti) - Where to find the finest artisan gelato after a night out
+- [Turin for Digital Nomads: Peaceful Places to Work](/blog/torino-digital-nomads-guide) - Cafés, coworking, and quiet neighborhoods
+- [Sustainable Mobility in Turin](/blog/mobilita-sostenibile-torino-studenti) - Night buses, metro, and how to get home safely

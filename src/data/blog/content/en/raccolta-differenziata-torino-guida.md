@@ -381,6 +381,8 @@ Waste sorting in Turin is a complex but well-organized system that requires awar
 
 ## Related Articles
 
-- [How to Get Sustainably to Turin: A Comprehensive Travel Guide](/blog/viaggiare-sostenibile-torino-guida)
-- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti)
-- [Turin Events January 2026](/blog/eventi-torino-gennaio-2026)
+- [How to Get Sustainably to Turin: A Comprehensive Travel Guide](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, carbon-neutral airport and Torino+Piemonte Card
+- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti) - GTT, bike paths, e-scooters, student passes
+- [San Salvario Neighborhood Guide](/blog/san-salvario-guida-studenti) - Where to live, eat, and study in Turin's most vibrant district
+- [Where to Live in Turin: Complete Guide for Students](/blog/dove-vivere-torino-studenti-politecnico) - Best neighborhoods near Politecnico and UniTo
+- [Turin Events January 2026](/blog/eventi-torino-gennaio-2026) - Art exhibitions, concerts, theater, and sports

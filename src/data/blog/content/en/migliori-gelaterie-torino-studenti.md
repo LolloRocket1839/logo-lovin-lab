@@ -183,3 +183,13 @@ The advice? Do your personal tour: try different gelaterias, compare the same fl
 ---
 
 *Article updated November 2025. Prices and locations may vary. We recommend checking opening hours and active locations by consulting the social media pages of individual gelaterias.*
+
+---
+
+## Related Articles
+
+- [San Salvario Neighborhood Guide](/blog/san-salvario-guida-studenti) - Home to many of Turin's best gelaterias including Mara dei Boschi
+- [Where to Eat in Turin: Best Spots for Students](/blog/dove-mangiare-torino-studenti) - From trattorias to aperitivo, the complete guide
+- [Turin Nightlife Guide](/blog/torino-nightlife-guide) - Best bars, clubs, and where to go after gelato
+- [Where to Live in Turin: Complete Guide for Students](/blog/dove-vivere-torino-studenti-politecnico) - Neighborhoods with the best food scene
+- [Sustainable Mobility in Turin](/blog/mobilita-sostenibile-torino-studenti) - How to reach gelaterias across the city

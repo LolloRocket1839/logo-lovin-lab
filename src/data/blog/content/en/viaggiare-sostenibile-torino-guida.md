@@ -94,9 +94,11 @@ Reaching Turin sustainably and exploring the city through eco-conscious transpor
 
 ## Related Articles
 
-- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti)
-- [Turin Events January 2026](/blog/eventi-torino-gennaio-2026)
-- [Complete Guide to Waste Sorting in Turin](/blog/raccolta-differenziata-torino-guida)
+- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti) - GTT, bike paths, e-scooters, and student passes
+- [Complete Guide to Waste Sorting in Turin](/blog/raccolta-differenziata-torino-guida) - Environmental responsibility in the city
+- [Events in Turin in January 2026](/blog/eventi-torino-gennaio-2026) - Art, concerts, theater, and the Olympic Flame
+- [Politecnico di Torino: Complete Guide](/blog/politecnico-torino-guida-completa) - Campus locations and how to reach them
+- [Where to Live in Turin: Complete Guide for Students](/blog/dove-vivere-torino-studenti-politecnico) - Best connected neighborhoods
 
 ---
 

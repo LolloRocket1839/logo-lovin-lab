@@ -69,3 +69,13 @@ For those interested in urban culture, architectural history, contemporary art, 
 ---
 
 *Looking for accommodation during your December visit to Turin? [Jungle Rent](/) helps students and young professionals find quality housing in Turin's most vibrant neighborhoods, including the historic [San Salvario district](/blog/san-salvario-guida-studenti).*
+
+---
+
+## Related Articles
+
+- [Turin in November 2025: Tennis, Cinema, Art, and Truffles](/blog/torino-novembre-turisti) - ATP Finals, Turin Film Festival, Artissima, and white truffle season
+- [Events in Turin in January 2026](/blog/eventi-torino-gennaio-2026) - Luci d'Artista final days, Orazio Gentileschi, concerts
+- [How to Get Sustainably to Turin](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, and eco-friendly travel
+- [Where to Eat in Turin: Best Spots for Students](/blog/dove-mangiare-torino-studenti) - Bicerin, gianduiotto, and traditional Piedmontese cuisine
+- [The Best Gelato Shops in Turin](/blog/migliori-gelaterie-torino-studenti) - Artisan gelato even in winter
