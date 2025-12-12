@@ -771,18 +771,9 @@ const InvestorInfographic: React.FC = () => {
                 <p className="text-sm text-muted-foreground/70 mt-1 font-light">
                   {step.description}
                 </p>
-                <motion.p
-                  className="text-xs text-muted-foreground/50 mt-2 max-w-[140px] font-light"
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ 
-                    opacity: activeStep === index ? 1 : 0, 
-                    height: activeStep === index ? 'auto' : 0 
-                  }}
-                  transition={{ duration: 0.3 }}
-                  aria-hidden={activeStep !== index}
-                >
+                <p className="text-xs text-muted-foreground/60 mt-2 max-w-[160px] font-light leading-relaxed">
                   {step.detail}
-                </motion.p>
+                </p>
               </motion.div>
             ))}
           </div>
@@ -869,13 +860,8 @@ const InvestorInfographic: React.FC = () => {
                       <p className="text-sm text-muted-foreground/70 mt-1 font-light">
                         {step.description}
                       </p>
-                      {/* Detail - CSS transition instead of framer-motion */}
-                      <p
-                        className={`text-xs text-muted-foreground/50 mt-2 font-light transition-opacity duration-200 ${
-                          activeStep === index ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'
-                        }`}
-                        aria-hidden={activeStep !== index}
-                      >
+                      {/* Detail - always visible on mobile */}
+                      <p className="text-xs text-muted-foreground/60 mt-2 font-light leading-relaxed">
                         {step.detail}
                       </p>
                     </div>

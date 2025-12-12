@@ -301,23 +301,23 @@
     "steps": {
       "invest": {
         "title": "Investi",
-        "description": "Da €100",
-        "detail": "Investimento minimo accessibile per tutti"
+        "description": "Partecipa da €100",
+        "detail": "Nessun immobile da gestire, nessuna burocrazia. Tu investi, noi facciamo il resto."
       },
       "acquire": {
         "title": "Acquistiamo",
-        "description": "Immobili strategici",
-        "detail": "Vicino alle università di Torino"
+        "description": "Immobili selezionati",
+        "detail": "Acquistiamo immobili vicino a Politecnico, UniTo e i 7 atenei torinesi. Zone ad alta domanda studentesca."
       },
       "manage": {
         "title": "Gestiamo",
-        "description": "Tutto incluso",
-        "detail": "Contratti, inquilini e manutenzione"
+        "description": "Gestione completa",
+        "detail": "Contratti, inquilini, manutenzione e fiscalità. Zero pensieri per te."
       },
       "earn": {
         "title": "Guadagni",
-        "description": "7-9% annuo",
-        "detail": "Report trimestrali trasparenti"
+        "description": "7-9% rendimento annuo*",
+        "detail": "Rendite trimestrali con report trasparenti. Accesso a dashboard personale."
       }
     },
     "metrics": {
