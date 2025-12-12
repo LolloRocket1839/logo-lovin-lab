@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Euro, Key, ClipboardCheck, TrendingUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 // Hook to detect mobile devices
@@ -624,6 +624,7 @@ const InvestorInfographic: React.FC = () => {
     {
       id: 0,
       variant: 'invest' as const,
+      icon: Euro,
       title: t('infographic.steps.invest.title'),
       description: t('infographic.steps.invest.description'),
       detail: t('infographic.steps.invest.detail')
@@ -631,6 +632,7 @@ const InvestorInfographic: React.FC = () => {
     {
       id: 1,
       variant: 'acquire' as const,
+      icon: Key,
       title: t('infographic.steps.acquire.title'),
       description: t('infographic.steps.acquire.description'),
       detail: t('infographic.steps.acquire.detail')
@@ -638,6 +640,7 @@ const InvestorInfographic: React.FC = () => {
     {
       id: 2,
       variant: 'manage' as const,
+      icon: ClipboardCheck,
       title: t('infographic.steps.manage.title'),
       description: t('infographic.steps.manage.description'),
       detail: t('infographic.steps.manage.detail')
@@ -645,6 +648,7 @@ const InvestorInfographic: React.FC = () => {
     {
       id: 3,
       variant: 'earn' as const,
+      icon: TrendingUp,
       title: t('infographic.steps.earn.title'),
       description: t('infographic.steps.earn.description'),
       detail: t('infographic.steps.earn.detail')
@@ -783,30 +787,36 @@ const InvestorInfographic: React.FC = () => {
 
       {/* Mobile: Compact Vertical List - All steps visible */}
       <div className="md:hidden mb-6 space-y-2">
-        {steps.map((step, index) => (
-          <div
-            key={step.id}
-            className="flex items-start gap-3 p-3 rounded-xl bg-card/50 border border-border/30"
-          >
-            {/* Step number */}
-            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
-              <span className="text-xs font-semibold text-primary">{index + 1}</span>
+        {steps.map((step, index) => {
+          const IconComponent = step.icon;
+          return (
+            <div
+              key={step.id}
+              className="flex items-start gap-3 p-3 rounded-xl bg-card/50 border border-border/30"
+            >
+              {/* Icon + Step number */}
+              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <IconComponent className="w-5 h-5 text-primary" strokeWidth={1.5} />
+              </div>
+              
+              {/* Content */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-primary/70 font-medium">{index + 1}.</span>
+                  <h3 className="text-sm font-semibold text-foreground">
+                    {step.title}
+                  </h3>
+                </div>
+                <p className="text-xs text-muted-foreground/80 mt-0.5 font-light">
+                  {step.description}
+                </p>
+                <p className="text-xs text-muted-foreground/60 mt-1 font-light leading-relaxed">
+                  {step.detail}
+                </p>
+              </div>
             </div>
-            
-            {/* Content */}
-            <div className="flex-1 min-w-0">
-              <h3 className="text-sm font-semibold text-foreground">
-                {step.title}
-              </h3>
-              <p className="text-xs text-muted-foreground/80 mt-0.5 font-light">
-                {step.description}
-              </p>
-              <p className="text-xs text-muted-foreground/60 mt-1 font-light leading-relaxed">
-                {step.detail}
-              </p>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Metrics Grid - 2x2 on mobile, compact */}
