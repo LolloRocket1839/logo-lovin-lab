@@ -36,10 +36,10 @@ export const BlogSection = () => {
             {t('blog.sectionLabel')}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Guide Complete su Torino
+            {t('blog.sectionTitle')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Scopri la città attraverso le nostre guide autentiche
+            {t('blog.sectionSubtitle')}
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export const BlogSection = () => {
           <Link to={`/blog/${featuredPost.slug}`}>
             <div className="blog-card-marvis feel-good-click mb-12 rounded-2xl overflow-hidden bg-cream/50 backdrop-blur-sm relative group">
               {isNew(featuredPost.date) && (
-                <div className="new-badge">Nuovo</div>
+                <div className="new-badge">{t('blog.newBadge')}</div>
               )}
               
               <div className="grid md:grid-cols-2 gap-0">
@@ -82,7 +82,7 @@ export const BlogSection = () => {
                   </p>
                   
                   <Button variant="premium" className="feel-good-click w-fit">
-                    Leggi la Guida
+                    {t('blog.readGuide')}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
@@ -102,7 +102,7 @@ export const BlogSection = () => {
         <div className="text-center">
           <Button asChild size="lg" className="group feel-good-click" variant="premium">
             <Link to="/blog">
-              Esplora Tutte le Guide
+              {t('blog.exploreAll')}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
