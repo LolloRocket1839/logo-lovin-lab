@@ -51,16 +51,16 @@ export const Hero = () => {
         {t('hero.seoH1')}
       </h1>
 
-      <div className="container relative z-10 px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 lg:py-32">
+      <div className="container relative z-10 px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 lg:py-28">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo statico */}
-          <div className="mb-16 md:mb-20">
+          <div className="mb-8 md:mb-16">
             <img 
               src={jungleRentLogo} 
               alt={t('hero.logoAlt')} 
               width="128" 
               height="128" 
-              className={`w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto opacity-90 rounded-full cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
+              className={`w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 mx-auto opacity-90 rounded-full cursor-pointer focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${
                 prefersReducedMotion 
                   ? "hover:opacity-100" 
                   : "hover:opacity-100 hover:scale-105 transition-all duration-300"
@@ -84,17 +84,19 @@ export const Hero = () => {
           </div>
 
           {/* Headline principale */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight text-foreground tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight">
             <StyledText>{t('hero.mainHeadline')}</StyledText>
           </h2>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 font-light leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-10 font-light leading-relaxed">
             <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
 
-          {/* Urgency Elements */}
-          <div className="flex flex-col items-center gap-6 mb-10">
-            <LaunchCountdown />
+          {/* Urgency Elements - Hidden countdown on mobile */}
+          <div className="flex flex-col items-center gap-4 md:gap-6 mb-6 md:mb-10">
+            <div className="hidden sm:block">
+              <LaunchCountdown />
+            </div>
             <WaitlistBadge />
           </div>
 

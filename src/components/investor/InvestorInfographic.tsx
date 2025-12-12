@@ -660,14 +660,14 @@ const InvestorInfographic: React.FC = () => {
   return (
     <motion.div 
       ref={ref}
-      className="w-full max-w-5xl mx-auto px-4 py-8 md:py-12"
+      className="w-full max-w-5xl mx-auto px-2 sm:px-4 py-4 md:py-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: isInView ? 1 : 0 }}
       transition={{ duration: 0.6 }}
     >
-      {/* Header */}
+      {/* Header - Hidden on mobile */}
       <motion.div 
-        className="text-center mb-8 md:mb-12"
+        className="hidden md:block text-center mb-8 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
         transition={{ duration: 0.5 }}
@@ -780,102 +780,63 @@ const InvestorInfographic: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile: Vertical Timeline with Cards */}
-      <div className="md:hidden mb-10">
-        <div className="relative pl-12">
-          {/* Timeline line - thinner, dotted */}
-          <div className="absolute left-4 top-0 bottom-0 w-px bg-border/30 border-l border-dashed border-border/40">
-            <motion.div
-              className="w-px bg-primary/50 origin-top absolute left-0"
-              initial={{ height: "0%" }}
-              animate={{ height: `${((activeStep + 1) / steps.length) * 100}%` }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            />
-          </div>
-          
-          {/* Steps - no staggered delays on mobile */}
-          <div className="space-y-5" role="tablist" aria-label={t('infographic.badge')}>
-            {steps.map((step, index) => (
-              <div
-                key={step.id}
-                className="relative"
-              >
-                {/* Timeline node */}
-                <div className="absolute -left-12 top-5" aria-hidden="true">
-                  <TimelineNode 
-                    index={index} 
+      {/* Mobile: Compact Horizontal Scroll */}
+      <div className="md:hidden mb-6">
+        <div className="flex overflow-x-auto gap-3 pb-3 -mx-2 px-2 snap-x snap-mandatory scrollbar-hide">
+          {steps.map((step, index) => (
+            <div
+              key={step.id}
+              role="tab"
+              tabIndex={0}
+              aria-selected={activeStep === index}
+              aria-label={`${step.title}`}
+              className={`flex-shrink-0 w-[75%] snap-center p-4 rounded-2xl border bg-card transition-all duration-200 ${
+                activeStep === index 
+                  ? 'border-primary/30' 
+                  : 'border-border/30'
+              }`}
+              onClick={() => setActiveStep(index)}
+            >
+              <div className="flex items-center gap-3">
+                <div className="flex-shrink-0 w-12 h-12">
+                  <PremiumHouse
                     isActive={activeStep === index}
-                    isCompleted={activeStep > index}
+                    variant={step.variant}
+                    size="sm"
                   />
                 </div>
-                
-                {/* Step card - simplified, no whileTap on mobile */}
-                <div
-                  role="tab"
-                  tabIndex={0}
-                  aria-selected={activeStep === index}
-                  aria-label={`${t('infographic.badge')} ${index + 1}: ${step.title} - ${step.description}`}
-                  className={`p-5 rounded-3xl border bg-card transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-[0.99] ${
-                    activeStep === index 
-                      ? 'border-primary/30 shadow-sm' 
-                      : 'border-border/30'
-                  }`}
-                  onClick={() => setActiveStep(index)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      setActiveStep(index);
-                    } else if (e.key === 'ArrowDown') {
-                      e.preventDefault();
-                      setActiveStep((prev) => Math.min(prev + 1, steps.length - 1));
-                    } else if (e.key === 'ArrowUp') {
-                      e.preventDefault();
-                      setActiveStep((prev) => Math.max(prev - 1, 0));
-                    } else if (e.key === 'Home') {
-                      e.preventDefault();
-                      setActiveStep(0);
-                    } else if (e.key === 'End') {
-                      e.preventDefault();
-                      setActiveStep(steps.length - 1);
-                    }
-                  }}
-                >
-                  <div className="flex items-start gap-4">
-                    {/* House */}
-                    <div className="flex-shrink-0" aria-hidden="true">
-                      <PremiumHouse
-                        isActive={activeStep === index}
-                        variant={step.variant}
-                        size="md"
-                      />
-                    </div>
-                    
-                    {/* Content - lighter typography */}
-                    <div className="flex-1 min-w-0 pt-1">
-                      <h3 className={`text-base font-semibold transition-colors ${
-                        activeStep === index ? 'text-primary' : 'text-foreground/80'
-                      }`}>
-                        {step.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground/70 mt-1 font-light">
-                        {step.description}
-                      </p>
-                      {/* Detail - always visible on mobile */}
-                      <p className="text-xs text-muted-foreground/60 mt-2 font-light leading-relaxed">
-                        {step.detail}
-                      </p>
-                    </div>
-                  </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className={`text-sm font-semibold ${
+                    activeStep === index ? 'text-primary' : 'text-foreground/80'
+                  }`}>
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground/70 mt-0.5 font-light line-clamp-2">
+                    {step.description}
+                  </p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+        {/* Scroll indicator dots */}
+        <div className="flex justify-center gap-1.5 mt-2">
+          {steps.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveStep(index)}
+              className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                activeStep === index ? 'bg-primary' : 'bg-border'
+              }`}
+              aria-label={`Step ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Metrics Grid - CSS fade instead of framer-motion */}
+      {/* Metrics Grid - 2x2 on mobile, compact */}
       <div 
-        className={`grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 transition-opacity duration-500 ${
+        className={`grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 transition-opacity duration-500 ${
           isInView ? 'opacity-100' : 'opacity-0'
         }`}
       >

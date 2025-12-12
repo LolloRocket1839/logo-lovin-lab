@@ -89,13 +89,13 @@ const Index = () => {
         <Hero />
       </div>
       <TrustBadge />
-      <div className="-mt-16">
+      <div className="-mt-8 md:-mt-16">
         <InvestorSection />
       </div>
-      <div className="-mt-12">
+      <div className="-mt-6 md:-mt-12">
         <SellerSection />
       </div>
-      <div className="-mt-12">
+      <div className="-mt-6 md:-mt-12">
         <BlogSection />
       </div>
       <FAQSection />

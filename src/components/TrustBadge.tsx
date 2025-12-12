@@ -7,15 +7,12 @@ export const TrustBadge = () => {
   
   return (
     <section 
-      className="py-12 md:py-16 lg:py-20 bg-accent/30 relative overflow-hidden border-b border-border"
+      className="py-8 md:py-12 lg:py-16 bg-accent/30 relative overflow-hidden border-b border-border"
     >
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }} />
       
       <div className="container px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8 font-medium">
+      <div className="max-w-4xl mx-auto text-center">
+          <p className="hidden md:block text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             {t('trustBadge.sectionLabel')}
           </p>
           
@@ -23,16 +20,16 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-card border border-border/50 rounded-2xl px-6 py-6 sm:px-8 sm:py-6 md:px-12 md:py-8 mb-6 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] hover:scale-105 cursor-pointer"
+            className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-5 bg-card border border-border/50 rounded-xl sm:rounded-2xl px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6 mb-4 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] cursor-pointer"
           >
-            <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
-              <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain rounded-xl" />
+            <div className="w-20 h-20 sm:w-32 sm:h-32 md:w-48 md:h-48 flex items-center justify-center flex-shrink-0">
+              <img src={logo2i3t} alt="2i3T Logo" className="w-full h-full object-contain rounded-lg" />
             </div>
-            <div className="text-center sm:text-left max-w-md">
-              <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-2 leading-tight">
+            <div className="text-center sm:text-left max-w-sm">
+              <h3 className="text-base sm:text-lg md:text-xl font-display font-bold text-foreground mb-1 leading-tight">
                 {t('trustBadge.supportedBy')}
               </h3>
-              <p className="text-sm text-muted-foreground font-light leading-relaxed break-words hyphens-auto">
+              <p className="hidden sm:block text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
                 {t('trustBadge.incubator')}
               </p>
             </div>
@@ -42,13 +39,13 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-all duration-500 font-medium group"
+            className="hidden sm:inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-all duration-500 font-medium group"
           >
             <span>{t('trustBadge.learnMore')}</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
           </a>
           
-          <p className="text-xs text-muted-foreground/60 mt-6 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="hidden md:block text-xs text-muted-foreground/60 mt-4 font-light max-w-2xl mx-auto leading-relaxed">
             {t('trustBadge.guarantee')}
           </p>
         </div>
