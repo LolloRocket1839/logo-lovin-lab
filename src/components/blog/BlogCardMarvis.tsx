@@ -27,6 +27,8 @@ export const BlogCardMarvis = ({ post, isNew }: BlogCardMarvisProps) => {
             alt={translatedData.title}
             className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
             loading="lazy"
+            decoding="async"
+            fetchPriority="low"
           />
         </div>
         
