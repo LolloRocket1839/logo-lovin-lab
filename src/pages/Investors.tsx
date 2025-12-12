@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
@@ -189,6 +190,11 @@ const Investors = () => {
               );
             })}
           </div>
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            <Link to="/blog/student-housing-italia-savills-2025" className="hover:text-primary underline underline-offset-2 transition-colors">
+              {t('investors.readSavillsAnalysis')} →
+            </Link>
+          </p>
         </div>
       </section>
 
