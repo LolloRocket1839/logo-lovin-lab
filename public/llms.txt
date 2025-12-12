@@ -4,7 +4,7 @@
 
 ## Company Overview
 
-Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the student housing crisis in Turin and democratizing access to real estate investment. We acquire, renovate and manage properties to rent to university students and tourists, serving 90,000+ students across 7 major institutions.
+Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the student housing crisis in Turin and democratizing access to real estate investment. We acquire, renovate and manage properties to rent to university students and tourists, serving 90,000+ students across 7 major institutions. Invest from €100 and participate in portfolio results.
 
 ## Contact Information
 
@@ -19,13 +19,13 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 ## Services
 
 1. **Student Housing Management**: Professional property management for student rentals
-2. **Real Estate Investment**: Investment opportunities in Turin's university housing market
+2. **Real Estate Investment**: Accessible investment opportunities from €100 in Turin's university housing market
 3. **Property Acquisition**: Strategic property purchases in high-demand student areas
 4. **Short-Term Rental Management**: Airbnb and booking.com optimization
 
 ## Target Markets
 
-- **Investors**: Real estate investment opportunities with above-market returns
+- **Investors**: Accessible real estate investment opportunities starting from €100 with professional management
 - **Students**: Quality housing near Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
 - **Property Owners**: Professional management services for rental properties
 
@@ -41,7 +41,7 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 
 - **Students Served**: 90,000+ university students in Turin
 - **Universities**: 7 major institutions (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
-- **Returns**: Above-market rental yields (compared to traditional rentals)
+- **Minimum Investment**: €100 (democratizing real estate access)
 - **Founded**: October 24, 2025
 - **Blog Articles**: 20 bilingual guides (IT/EN)
 - **FAQ Coverage**: 142+ structured FAQs for voice search optimization
