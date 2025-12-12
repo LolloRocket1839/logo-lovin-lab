@@ -34,7 +34,7 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 - [Home](https://junglerent.it): Main landing page with investment and housing information
 - [Invest](https://junglerent.it/invest): Investment application form for interested investors
 - [Investors](https://junglerent.it/investitori): Detailed investor information page
-- [Blog](https://junglerent.it/blog): 19 comprehensive articles on Turin living, events, and investment
+- [Blog](https://junglerent.it/blog): 20 comprehensive articles on Turin living, events, and investment
 - [About](https://junglerent.it/chi-siamo): Company information and team
 
 ## Key Statistics
@@ -44,8 +44,8 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 - **Target Yield**: 8.34% estimated rental yield
 - **Occupancy Target**: 95% occupancy rate
 - **Founded**: October 24, 2025
-- **Blog Articles**: 19 bilingual guides (IT/EN)
-- **FAQ Coverage**: 142 structured FAQs for voice search optimization
+- **Blog Articles**: 20 bilingual guides (IT/EN)
+- **FAQ Coverage**: 142+ structured FAQs for voice search optimization
 
 ## Blog Topics
 
@@ -54,7 +54,7 @@ Our blog covers comprehensive guides on:
 - University guides (Politecnico di Torino, Università di Torino)
 - Events and festivals (Carnevale di Ivrea, monthly event guides Jan-Mar)
 - Sustainable living (mobility, waste sorting, eco-travel)
-- Investment insights (real assets, mortgage guides)
+- Investment insights (real assets, mortgage guides, Savills student housing report analysis)
 - Local culture (nightlife, food, gelato, historic markets)
 - Tourism (seasonal guides for November, December, digital nomads)
 
@@ -69,4 +69,4 @@ For complete company information, see: https://junglerent.it/llms-full.txt
 For AI assistant structured data, see: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: December 11, 2025
+Last Updated: December 12, 2025
