@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-12",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/cioccolato-gianduiotti-torino.jpg",
     readTime: 50,
     content: "cioccolaterie-torino-guida-completa",
     translations: {
@@ -202,7 +202,7 @@ export const blogPosts: BlogPost[] = [
     category: "sellers",
     date: "2025-12-12",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/vendere-casa-torino.jpg",
     readTime: 45,
     content: "vendere-casa-torino-guida-completa-2025",
     translations: {
@@ -412,7 +412,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-09",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/cioccolato-festival-torino.jpg",
     readTime: 25,
     content: "eventi-torino-febbraio-2026",
     translations: {
@@ -517,7 +517,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-09",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/torino-primavera-marzo.jpg",
     readTime: 35,
     content: "eventi-torino-marzo-2026",
     translations: {
@@ -721,7 +721,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-03",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/battaglia-arance-ivrea.jpg",
     readTime: 65,
     content: "carnevale-ivrea-battaglia-arance-2025",
     translations: {
@@ -1164,7 +1164,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-23",
     author: "Jungle Rent Team",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/torino-gennaio-luci.jpg",
     readTime: 40,
     content: "eventi-torino-gennaio-2026",
     translations: {
@@ -1739,7 +1739,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-10",
     author: "Team Jungle Rent",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/torino-autunno-novembre.jpg",
     readTime: 28,
     content: "torino-novembre-turisti",
     translations: {
@@ -1886,7 +1886,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-10",
     author: "Team Jungle Rent",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/torino-natale-luci-artista.jpg",
     readTime: 25,
     content: "torino-dicembre-turisti",
     translations: {
@@ -2329,7 +2329,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-06",
     author: "Team Jungle Rent",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/quartieri-studenti-torino.jpg",
     readTime: 15,
     content: "dove-vivere-torino-studenti-politecnico",
     translations: {
