@@ -2,6 +2,119 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vendere-casa-torino-guida-completa-2025",
+    category: "sellers",
+    date: "2025-12-12",
+    author: "Jungle Rent Team",
+    image: "/images/mole-antonelliana-mountains.jpg",
+    readTime: 45,
+    content: "vendere-casa-torino-guida-completa-2025",
+    translations: {
+      it: {
+        title: "Vendere casa a Torino: guida completa 2025 a rischi, tasse e agenzie",
+        excerpt: "Guida definitiva alla vendita immobiliare a Torino: vizi occulti, conformità catastale, commissioni agenzie 2-4%, prezzi per quartiere 1.300-3.900€/mq, come evitare truffe. 9 fonti.",
+        seo: {
+          title: "Vendere casa a Torino 2025: guida completa rischi, tasse, agenzie",
+          description: "Guida alla vendita immobiliare a Torino: vizi occulti art. 1490 CC, commissioni agenzie 2-4%, prezzi quartieri 1.300-3.900€/mq, truffe, mandato esclusiva vs non esclusiva.",
+          keywords: [
+            "vendere casa torino",
+            "commissioni agenzia immobiliare",
+            "rischi compravendita immobiliare",
+            "vizi occulti immobile",
+            "prezzi case torino 2025",
+            "imposta registro seconda casa",
+            "mandato esclusiva agenzia",
+            "conformità catastale",
+            "truffe immobiliari",
+            "vendere senza agenzia"
+          ]
+        },
+        tags: ["Venditori", "Immobiliare", "Torino", "Agenzie", "Tasse", "Compravendita"],
+        faqs: [
+          {
+            question: "Quali sono i rischi principali nel vendere casa in Italia?",
+            answer: "I rischi principali includono: vizi occulti (art. 1490 CC, denuncia entro 8 giorni), non conformità catastale che può annullare il rogito, abusi edilizi non sanati, ipoteche non dichiarate, e truffe immobiliari. Per difetti strutturali gravi la responsabilità si estende a 10 anni (art. 1669 CC)."
+          },
+          {
+            question: "Quanto costa la commissione di un'agenzia immobiliare a Torino?",
+            answer: "Le commissioni variano dal 2% al 4% del prezzo di vendita per ciascuna parte. In Piemonte la media è del 4%. Per immobili sotto 130.000€ possono applicarsi spese forfettarie di circa 4.000€ + IVA. Una vendita da 200.000€ comporta quindi 8.000-16.000€ di commissioni totali."
+          },
+          {
+            question: "Cosa sono i vizi occulti e come tutelarsi?",
+            answer: "I vizi occulti sono difetti non evidenti al momento dell'acquisto: infiltrazioni, crepe strutturali, impianti non a norma, amianto non dichiarato. La denuncia deve avvenire entro 8 giorni dalla scoperta, l'azione legale entro 1 anno dal rogito. Per difetti strutturali gravi, la tutela si estende a 10 anni."
+          },
+          {
+            question: "Qual è la differenza tra mandato in esclusiva e non esclusivo?",
+            answer: "Con il mandato in esclusiva, l'agenzia ha l'esclusiva sulla vendita e riceve la commissione anche se vendi privatamente. Con il mandato non esclusivo puoi affidare l'immobile a più agenzie, ma nessuna investirà significativamente nella promozione. Entrambi hanno vantaggi e rischi specifici."
+          },
+          {
+            question: "Come verificare se un agente immobiliare è regolarmente iscritto?",
+            answer: "Puoi consultare gratuitamente gli elenchi pubblici della Camera di Commercio competente, richiedendo nome, cognome, numero di iscrizione e denominazione dell'agenzia. L'iscrizione al REA (Repertorio Economico Amministrativo) è obbligatoria per legge (L. 39/1989). Un agente non iscritto non può legalmente mediare."
+          },
+          {
+            question: "Quali documenti servono per vendere casa?",
+            answer: "Documenti obbligatori: APE (Attestato Prestazione Energetica, sanzioni 3.000-18.000€ se mancante), atti di provenienza, certificato conformità urbanistica, certificato agibilità, ricevute tasse comunali, visure ipotecarie, e rendiconti condominiali. Il notaio verifica la conformità catastale."
+          },
+          {
+            question: "Quali sono i tempi medi di vendita a Torino nel 2025?",
+            answer: "I tempi medi si attestano intorno ai 75-90 giorni per immobili sotto 250.000€, in netto miglioramento rispetto ai 100-120 giorni del 2023. La domanda è cresciuta del 32% nel primo trimestre 2025, mentre l'offerta solo del 4%, favorendo i venditori."
+          }
+        ]
+      },
+      en: {
+        title: "Selling property in Turin: complete 2025 guide to risks, taxes, and agencies",
+        excerpt: "Definitive guide to selling real estate in Turin: hidden defects, cadastral compliance, agency commissions 2-4%, prices by neighborhood €1,300-3,900/sqm, how to avoid scams. 9 sources.",
+        seo: {
+          title: "Selling property in Turin 2025: complete guide to risks, taxes, agencies",
+          description: "Guide to selling real estate in Turin: hidden defects art. 1490 CC, agency commissions 2-4%, neighborhood prices €1,300-3,900/sqm, scams, exclusive vs non-exclusive mandate.",
+          keywords: [
+            "sell property turin",
+            "real estate agency commission",
+            "property sale risks italy",
+            "hidden defects property",
+            "turin house prices 2025",
+            "registration tax second home italy",
+            "exclusive mandate agency",
+            "cadastral compliance",
+            "real estate scams italy",
+            "sell without agency"
+          ]
+        },
+        tags: ["Sellers", "Real Estate", "Turin", "Agencies", "Taxes", "Transactions"],
+        faqs: [
+          {
+            question: "What are the main risks when selling a house in Italy?",
+            answer: "Main risks include: hidden defects (art. 1490 CC, report within 8 days), cadastral non-compliance that can annul the deed, unresolved building abuses, undeclared mortgages, and real estate scams. For serious structural defects, liability extends to 10 years (art. 1669 CC)."
+          },
+          {
+            question: "How much does a real estate agency commission cost in Turin?",
+            answer: "Commissions range from 2% to 4% of the sale price for each party. In Piedmont the average is 4%. For properties under €130,000, flat-rate fees of around €4,000 + VAT may apply. A €200,000 sale therefore involves €8,000-16,000 in total commissions."
+          },
+          {
+            question: "What are hidden defects and how to protect yourself?",
+            answer: "Hidden defects are issues not evident at purchase: infiltrations, structural cracks, non-compliant systems, undeclared asbestos. The report must be made within 8 days of discovery, legal action within 1 year of the deed. For serious structural defects, protection extends to 10 years."
+          },
+          {
+            question: "What is the difference between exclusive and non-exclusive mandate?",
+            answer: "With an exclusive mandate, the agency has exclusivity on the sale and receives commission even if you sell privately. With a non-exclusive mandate you can entrust the property to multiple agencies, but none will invest significantly in promotion. Both have specific advantages and risks."
+          },
+          {
+            question: "How to verify if a real estate agent is properly registered?",
+            answer: "You can freely consult the public lists of the competent Chamber of Commerce, requesting name, surname, registration number and agency name. Registration with REA (Administrative Economic Repertoire) is mandatory by law (L. 39/1989). An unregistered agent cannot legally broker."
+          },
+          {
+            question: "What documents are needed to sell a house?",
+            answer: "Mandatory documents: APE (Energy Performance Certificate, penalties €3,000-18,000 if missing), provenance deeds, urban planning compliance certificate, habitability certificate, municipal tax receipts, mortgage searches, and condominium statements. The notary verifies cadastral compliance."
+          },
+          {
+            question: "What are the average sale times in Turin in 2025?",
+            answer: "Average times are around 75-90 days for properties under €250,000, a marked improvement from the 100-120 days of 2023. Demand grew 32% in Q1 2025, while supply only 4%, favoring sellers."
+          }
+        ]
+      }
+    }
+  },
+  {
     slug: "student-housing-italia-savills-2025",
     category: "investors",
     date: "2025-12-12",

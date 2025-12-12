@@ -86,9 +86,17 @@ export const SellerSection = () => {
           </div>
           
           {/* Mission statement */}
-          <p className="text-xs sm:text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-muted-foreground mb-4 max-w-xl mx-auto">
             {t('seller.missionStatement')}
           </p>
+          
+          {/* Blog article link */}
+          <a 
+            href="/blog/vendere-casa-torino-guida-completa-2025" 
+            className="inline-flex items-center text-xs sm:text-sm text-primary hover:underline mb-6"
+          >
+            {t('seller.readGuide')} →
+          </a>
           
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button 
