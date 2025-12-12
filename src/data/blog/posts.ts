@@ -2,6 +2,103 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "student-housing-italia-savills-2025",
+    category: "investors",
+    date: "2025-12-12",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 20,
+    content: "student-housing-italia-savills-2025",
+    translations: {
+      it: {
+        title: "Student housing in Italia: analisi del report Savills Research 2025",
+        excerpt: "Dati esclusivi Savills: 1,96M studenti, 589K fuori sede, solo 12,6% copertura alloggi, €270M investiti nel 2024, rendimenti 7% netti. Torino con 113K studenti e gap di 45.000 posti.",
+        seo: {
+          title: "Student Housing Italia 2025: analisi report Savills | dati investimento",
+          description: "Analisi completa report Savills 2025 su student housing italiano: 1,96M studenti, gap 45.000 posti a Torino, rendimenti 7% PBSA, €270M investiti nel 2024, pipeline 25.000 letti.",
+          keywords: [
+            "student housing italia",
+            "report savills 2025",
+            "investimento student housing",
+            "pbsa italia",
+            "mercato universitario torino",
+            "rendimenti student housing",
+            "gap alloggi studenti",
+            "purpose built student accommodation",
+            "investimento immobiliare studenti",
+            "offerta posti letto universitari"
+          ]
+        },
+        tags: ["Investimenti", "Student Housing", "Savills", "Torino", "PBSA", "Mercato Immobiliare"],
+        faqs: [
+          {
+            question: "Quanti studenti universitari ci sono in Italia?",
+            answer: "Secondo il report Savills 2025, l'Italia conta 1,96 milioni di studenti universitari, con un incremento del 3% rispetto all'anno precedente. Di questi, circa 589.000 sono studenti fuori sede che necessitano di alloggio."
+          },
+          {
+            question: "Qual è il gap di alloggi studenteschi in Italia?",
+            answer: "L'offerta di alloggi dedicati copre solo il 12,6% della domanda. Lo stock totale è di 83.000 posti letto, di cui 31% privati. A Torino il gap è di circa 45.000 posti letto mancanti."
+          },
+          {
+            question: "Quali sono i rendimenti degli investimenti in student housing?",
+            answer: "Il settore PBSA (Purpose-Built Student Accommodation) offre rendimenti prime netti del 7%, superiori al multifamily (6%) e agli uffici (5%). A Torino i rendimenti possono raggiungere il 7-9%."
+          },
+          {
+            question: "Quanto si è investito in student housing in Italia nel 2024?",
+            answer: "Nel 2024, gli investimenti in student housing in Italia hanno raggiunto €270 milioni attraverso 12 operazioni. L'80% delle transazioni ha riguardato riconversioni di asset esistenti."
+          },
+          {
+            question: "Perché Torino è interessante per investitori student housing?",
+            answer: "Torino è la 3° città universitaria italiana con 113.000 studenti, 9% internazionali, gap di 45.000 posti. Offre costi di acquisizione inferiori a Milano, rendimenti 7-9%, e pipeline di 2.600 nuovi posti entro 2027."
+          }
+        ]
+      },
+      en: {
+        title: "Student Housing in Italy: Analysis of Savills Research Report 2025",
+        excerpt: "Exclusive Savills data: 1.96M students, 589K off-campus, only 12.6% housing coverage, €270M invested in 2024, 7% net yields. Turin with 113K students and 45,000 bed gap.",
+        seo: {
+          title: "Student Housing Italy 2025: Savills report analysis | investment data",
+          description: "Complete analysis of Savills 2025 report on Italian student housing: 1.96M students, 45,000 bed gap in Turin, 7% PBSA yields, €270M invested in 2024, 25,000 bed pipeline.",
+          keywords: [
+            "student housing italy",
+            "savills report 2025",
+            "student housing investment",
+            "pbsa italy",
+            "turin university market",
+            "student housing yields",
+            "student accommodation gap",
+            "purpose built student accommodation",
+            "student real estate investment",
+            "university bed supply"
+          ]
+        },
+        tags: ["Investments", "Student Housing", "Savills", "Turin", "PBSA", "Real Estate Market"],
+        faqs: [
+          {
+            question: "How many university students are there in Italy?",
+            answer: "According to the Savills 2025 report, Italy has 1.96 million university students, a 3% increase from the previous year. Of these, approximately 589,000 are off-campus students who need accommodation."
+          },
+          {
+            question: "What is the student housing gap in Italy?",
+            answer: "Dedicated housing supply covers only 12.6% of demand. Total stock is 83,000 beds, of which 31% are private. In Turin, the gap is approximately 45,000 missing beds."
+          },
+          {
+            question: "What are the returns on student housing investments?",
+            answer: "The PBSA (Purpose-Built Student Accommodation) sector offers prime net yields of 7%, higher than multifamily (6%) and offices (5%). In Turin, yields can reach 7-9%."
+          },
+          {
+            question: "How much was invested in student housing in Italy in 2024?",
+            answer: "In 2024, student housing investments in Italy reached €270 million across 12 transactions. 80% of transactions involved conversions of existing assets."
+          },
+          {
+            question: "Why is Turin interesting for student housing investors?",
+            answer: "Turin is Italy's 3rd largest university city with 113,000 students, 9% international, 45,000 bed gap. It offers lower acquisition costs than Milan, 7-9% yields, and a pipeline of 2,600 new beds by 2027."
+          }
+        ]
+      }
+    }
+  },
+  {
     slug: "eventi-torino-febbraio-2026",
     category: "turisti",
     date: "2025-12-09",
