@@ -196,11 +196,12 @@ export const StructuredData = () => {
       }
     };
 
-    // FAQ Schema - Espansa con domande venditori
+    // FAQ Schema - Expanded with voice-optimized questions
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: [
+        // Investor FAQs
         {
           "@type": "Question",
           name: "Come funziona Jungle Rent per gli studenti?",
@@ -241,12 +242,13 @@ export const StructuredData = () => {
             text: "No, Jungle Rent opera con zero commissioni per gli studenti, rendendo l'affitto ancora più conveniente.",
           },
         },
+        // Seller FAQs
         {
           "@type": "Question",
           name: "Come posso vendere la mia casa a Torino a Jungle Rent?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Jungle Rent acquista appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, Centro, Vanchiglia, Lingotto). Compila il form di contatto nella sezione 'Vendi la Tua Casa' per ricevere una valutazione gratuita entro 48 ore. Cerchiamo trilocali, quadrilocali e appartamenti vicini a Politecnico, UniTo, ESCP.",
+            text: "Jungle Rent acquista appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, Centro, Vanchiglia, Lingotto). Compila il form di contatto nella sezione 'Vendi la Tua Casa' per ricevere una valutazione gratuita entro 48 ore.",
           },
         },
         {
@@ -254,7 +256,7 @@ export const StructuredData = () => {
           name: "Quali immobili acquista Jungle Rent a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Acquistiamo appartamenti (trilocali, quadrilocali, 5 locali) nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Lingotto, Santa Rita, San Paolo. Ideali sono immobili a 10-20 minuti da Politecnico di Torino, Università di Torino, ESCP Business School. Valutazione gratuita in 48 ore.",
+            text: "Acquistiamo appartamenti (trilocali, quadrilocali, 5 locali) nelle zone universitarie di Torino. Valutazione gratuita in 48 ore.",
           },
         },
         {
@@ -262,103 +264,112 @@ export const StructuredData = () => {
           name: "Quanto tempo ci vuole per vendere casa a Jungle Rent?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Il processo di vendita con Jungle Rent è rapido: valutazione gratuita in 48 ore, proposta di acquisto entro 1 settimana, chiusura contratto in 30-60 giorni. Nessun intermediario, transazione diretta e trasparente per immobili a Torino zona universitaria.",
+            text: "Il processo di vendita con Jungle Rent è rapido: valutazione gratuita in 48 ore, proposta di acquisto entro 1 settimana, chiusura contratto in 30-60 giorni.",
+          },
+        },
+        // Voice-Optimized FAQs
+        {
+          "@type": "Question",
+          name: "Come posso investire in immobili a Torino con pochi soldi?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Con Jungle Rent puoi investire nel mercato immobiliare torinese a partire da soli 100 euro. Acquisti una quota del portafoglio immobiliare e partecipi ai risultati della gestione. È il modo più accessibile per entrare nel real estate senza comprare un intero appartamento.",
           },
         },
         {
           "@type": "Question",
-          name: "Vendere casa a Torino zona Crocetta o San Salvario conviene?",
+          name: "È sicuro investire in Jungle Rent?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Le zone Crocetta, San Salvario e Centro sono molto richieste per affitti studenti grazie alla vicinanza a Politecnico e UniTo. Jungle Rent acquista immobili in queste aree per trasformarli in housing ottimizzato. Valutazione di mercato equa e processo veloce.",
+            text: "Jungle Rent è una startup innovativa certificata, registrata alla Camera di Commercio di Torino con P.IVA 13333450016. Siamo incubati da 2i3T, l'incubatore dell'Università di Torino. Tuttavia, come ogni investimento, comporta rischi inclusa la possibile perdita del capitale.",
           },
         },
         {
           "@type": "Question",
-          name: "Jungle Rent acquista appartamenti da ristrutturare?",
+          name: "Quanto si guadagna investendo in appartamenti per studenti a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sì, acquistiamo anche appartamenti da ristrutturare nelle zone universitarie di Torino. La valutazione viene fatta sullo stato attuale dell'immobile, senza richiedere lavori preventivi. Ideale per chi vuole vendere velocemente senza investire in ristrutturazione.",
+            text: "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione: 9 mesi di affitti studenteschi più 3 mesi estivi di affitti turistici. Ricevi report trimestrali dettagliati.",
           },
         },
         {
           "@type": "Question",
-          name: "Quali commissioni devo pagare vendendo a Jungle Rent?",
+          name: "Come faccio a vendere casa velocemente a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Zero commissioni per il venditore. Jungle Rent acquista direttamente senza intermediari, permettendoti di risparmiare il 3-5% di commissioni d'agenzia (€6.000-10.000 su una casa da €200.000). Processo trasparente con offerta scritta chiara.",
+            text: "Jungle Rent acquista direttamente la tua casa senza intermediari. Compili il form, ricevi valutazione gratuita in 48 ore, sopralluogo entro 7 giorni, offerta scritta entro 48 ore dal sopralluogo, e rogito in 60-90 giorni. Zero commissioni.",
           },
         },
         {
           "@type": "Question",
-          name: "Quanto tempo ci vuole per la valutazione immobile Torino?",
+          name: "Chi compra appartamenti vicino al Politecnico di Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Ricevi il primo contatto entro 24-48 ore dalla richiesta. Dopo il sopralluogo gratuito (entro 7 giorni), ricevi l'offerta scritta entro 48 ore. Tempo totale dalla richiesta al rogito: 30-60 giorni.",
+            text: "Jungle Rent acquista appartamenti nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Aurora, Lingotto, vicinissime a Politecnico e UniTo. Compriamo trilocali, quadrilocali e appartamenti più grandi, anche da ristrutturare.",
           },
         },
         {
           "@type": "Question",
-          name: "Vendere trilocale San Salvario Torino: quale prezzo?",
+          name: "Quanto vale il mio appartamento a San Salvario?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Il prezzo dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta €180.000-220.000 in base alla vicinanza a Politecnico e UniTo. Richiedi valutazione gratuita per prezzo preciso.",
+            text: "Il valore dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta circa €180.000-220.000. Richiedi una valutazione gratuita a Jungle Rent per un prezzo preciso.",
           },
         },
         {
           "@type": "Question",
-          name: "Vendere casa ereditata Torino: cosa fare?",
+          name: "Dove vivono gli studenti universitari a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Jungle Rent acquista anche immobili ereditati nelle zone universitarie. Ti supportiamo con la parte legale e burocratica. Ideale per eredi che vogliono liquidare velocemente senza gestire affitti o ristrutturazioni. Valutazione in 48 ore, supporto notarile incluso.",
+            text: "Gli studenti universitari a Torino preferiscono i quartieri vicini alle università: San Salvario e Crocetta per il Politecnico, Centro e Vanchiglia per UniTo, Aurora per i prezzi accessibili.",
           },
         },
         {
           "@type": "Question",
-          name: "Acquistiamo solo trilocali o anche appartamenti più grandi?",
+          name: "Qual è la migliore zona per studenti vicino al Politecnico?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Acquistiamo trilocali, quadrilocali, 5 locali e appartamenti più grandi nelle zone universitarie di Torino. Più grande è l'appartamento, più camere possiamo ottimizzare per studenti. Ideali: 80-150 mq in Crocetta, San Salvario, Centro, Vanchiglia, Lingotto.",
+            text: "Le migliori zone per studenti vicino al Politecnico di Torino sono Crocetta (elegante, tranquilla, 5-10 minuti a piedi), San Salvario (vivace, multiculturale, economica) e Cenisia/San Paolo (più tranquilla, ottimi prezzi).",
           },
         },
         {
           "@type": "Question",
-          name: "Devo fare lavori prima di vendere a Jungle Rent?",
+          name: "Come funziona il mercato degli affitti studenteschi a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No, non è necessario fare alcun lavoro. Acquistiamo l'immobile nello stato in cui si trova (anche da ristrutturare). Ci occupiamo noi delle eventuali ristrutturazioni e ottimizzazioni. Questo ti fa risparmiare tempo e denaro.",
+            text: "Torino ha oltre 90.000 studenti universitari e forte domanda di alloggi. I contratti sono tipicamente di 9-12 mesi, i prezzi variano da €300-600 per stanza singola a seconda della zona. Jungle Rent offre contratti 9 mesi con risparmio del 25%.",
           },
         },
         {
           "@type": "Question",
-          name: "Come viene calcolato il prezzo di vendita immobile Torino?",
+          name: "Quanto costa affittare una stanza a Torino per studenti?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "La valutazione si basa su: prezzo al metro quadro della zona (aggiornato settimanalmente), vicinanza alle università (Politecnico, UniTo), stato dell'immobile, piano e caratteristiche, potenziale di ottimizzazione per mercato studenti. Analisi professionale con dati di mercato reali.",
+            text: "Una stanza singola per studenti a Torino costa mediamente €350-500 al mese in zone come San Salvario, €400-550 in Crocetta, €300-400 in Aurora. I prezzi includono spese condominiali ma non utenze.",
           },
         },
         {
           "@type": "Question",
-          name: "Vendita casa Torino senza agenzia: è sicuro?",
+          name: "Jungle Rent è affidabile per investire?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sì, vendere direttamente a Jungle Rent è sicuro. Lavoriamo con notai e avvocati specializzati. Contratto trasparente, pagamento sicuro, supporto legale incluso. Risparmio commissioni del 3-5%.",
+            text: "Jungle Rent è una società a responsabilità limitata registrata in Italia (P.IVA 13333450016, REA TO-1355899), certificata come startup innovativa. Siamo incubati da 2i3T, partner del Politecnico di Torino. Offriamo contratti trasparenti e report trimestrali.",
           },
         },
         {
           "@type": "Question",
-          name: "Valutazione immobile gratis Torino: come funziona?",
+          name: "Jungle Rent compra case da ristrutturare?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Compila il form con dati base (indirizzo, metratura, locali). Ricevi primo contatto in 24-48h. Sopralluogo gratuito entro 7 giorni (se necessario). Offerta scritta entro 48h dal sopralluogo. Zero impegno, valutazione professionale inclusa.",
+            text: "Sì, Jungle Rent acquista anche appartamenti da ristrutturare nelle zone universitarie di Torino. Anzi, spesso preferiamo immobili che necessitano di lavori perché possiamo adattarli alle esigenze degli studenti.",
           },
         },
         {
           "@type": "Question",
-          name: "Vendere quadrilocale Crocetta Torino vicino Politecnico?",
+          name: "Come contatto Jungle Rent per investire?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Crocetta è una delle nostre zone preferite, vicinissima al Politecnico di Torino. Quadrilocali in Crocetta sono ideali per 4 studenti (4 camere singole). Alta domanda di affitti, ottimo potenziale. Valutazione competitiva basata su posizione strategica. Compila form per offerta.",
+            text: "Puoi contattare Jungle Rent su WhatsApp al +39 331 905 3037 (risposta entro 2 ore), email junglerententeprise@gmail.com, oppure compilando il form sul sito junglerent.it. Lorenzo Oni-Joseph, il fondatore, ti risponderà personalmente.",
           },
         },
       ],
@@ -444,25 +455,61 @@ export const StructuredData = () => {
       ]
     };
 
-    // SpeakableSpecification Schema for Voice AI (Alexa, Google Assistant, Siri)
+    // Enhanced SpeakableSpecification Schema for Voice AI (Alexa, Google Assistant, Siri)
     const speakableSchema = {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Jungle Rent - Turin Student Housing & Real Estate Investment",
       "url": baseUrl,
+      "inLanguage": ["it-IT", "en-US"],
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
           "h1",
+          ".hero-headline",
           ".hero-description",
+          ".faq-question",
           ".faq-answer",
           "[data-speakable='true']"
+        ],
+        "xpath": [
+          "/html/head/title",
+          "/html/head/meta[@name='description']/@content"
         ]
       },
       "mainEntity": {
         "@type": "Organization",
         "name": "Jungle Rent S.r.l.",
-        "description": "Jungle Rent is a certified Start-up Innovativa specializing in student housing and real estate investment in Turin, Italy. Founded October 2025, serving 90,000+ university students across 7 institutions."
+        "description": "Jungle Rent is a certified Start-up Innovativa specializing in student housing and real estate investment in Turin, Italy. Founded October 2025, serving 90,000+ university students across 7 institutions. Invest from €100.",
+        "telephone": "+39-331-905-3037",
+        "email": "junglerententeprise@gmail.com"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${baseUrl}/blog?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    };
+
+    // VoiceSearch optimization metadata
+    const voiceSearchSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Jungle Rent",
+      "url": baseUrl,
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": `${baseUrl}/blog?q={search_term_string}`
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".faq-question", ".faq-answer"]
       }
     };
 
@@ -477,7 +524,8 @@ export const StructuredData = () => {
       breadcrumbSchema,
       aggregateRatingSchema,
       blogArticleSchema,
-      speakableSchema
+      speakableSchema,
+      voiceSearchSchema
     ];
 
     const scriptElements: HTMLScriptElement[] = [];
