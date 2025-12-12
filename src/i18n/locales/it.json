@@ -338,8 +338,8 @@
     },
     "metrics": {
       "yield": {
-        "label": "Rendimento target",
-        "description": "Rendimento annuo target SFP"
+        "label": "Rendimenti",
+        "description": "Sopra mercato"
       },
       "savings": {
         "label": "Risparmio studenti",
@@ -354,7 +354,7 @@
         "description": "Atenei nel territorio"
       }
     },
-    "disclaimer": "*Rendimento target basato su modello ibrido studenti/turisti. Non garantito.",
+    "disclaimer": "*I rendimenti sono stime indicative e non sono in alcun modo garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita del capitale.",
     "cta": "Zero stress. Gestione completa inclusa."
   },
   "investors": {
