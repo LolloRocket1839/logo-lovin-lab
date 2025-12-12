@@ -160,14 +160,36 @@ export const QuickSellerLeadDialog = ({
                 <Building2 className="w-6 h-6 text-primary" />
               </div>
               <DialogTitle className="text-xl font-bold text-foreground">
-                {t('quickSellerLead.title')}
+                {t('quickSellerLead.newTitle')}
               </DialogTitle>
               <DialogDescription className="text-muted-foreground">
-                {t('quickSellerLead.description')}
+                {t('quickSellerLead.notAgency')}
               </DialogDescription>
             </DialogHeader>
 
-            <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+            {/* Advantages icons */}
+            <div className="grid grid-cols-3 gap-2 mt-4 mb-2">
+              <div className="flex flex-col items-center text-center p-2">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-1">
+                  <Building2 className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-[10px] text-muted-foreground leading-tight">{t('quickSellerLead.advantage1')}</span>
+              </div>
+              <div className="flex flex-col items-center text-center p-2">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-1">
+                  <Send className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-[10px] text-muted-foreground leading-tight">{t('quickSellerLead.advantage2')}</span>
+              </div>
+              <div className="flex flex-col items-center text-center p-2">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-1">
+                  <CheckCircle className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-[10px] text-muted-foreground leading-tight">{t('quickSellerLead.advantage3')}</span>
+              </div>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="seller-email" className="text-sm font-medium">
                   Email *

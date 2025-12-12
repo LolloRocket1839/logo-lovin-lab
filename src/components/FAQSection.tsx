@@ -25,10 +25,11 @@ export const FAQSection = () => {
   ];
 
   const sellerFAQs = [
+    { q: t("faq.sellerQ6"), a: t("faq.sellerA6") },
+    { q: t("faq.sellerQ7"), a: t("faq.sellerA7") },
     { q: t("faq.sellerQ1"), a: t("faq.sellerA1") },
     { q: t("faq.sellerQ2"), a: t("faq.sellerA2") },
     { q: t("faq.sellerQ3"), a: t("faq.sellerA3") },
-    { q: t("faq.sellerQ4"), a: t("faq.sellerA4") },
     { q: t("faq.sellerQ5"), a: t("faq.sellerA5") },
   ];
 
