@@ -16,8 +16,8 @@ export const ResourceLibrary = () => {
     setIsDialogOpen(true);
   };
 
-  const handleDirectDownload = () => {
-    window.open('/resources/mercato-immobiliare-universitario-torino.pdf', '_blank');
+  const handleDirectDownload = (pdfPath: string) => {
+    window.open(pdfPath, '_blank');
   };
 
   const guides = [
@@ -67,7 +67,25 @@ export const ResourceLibrary = () => {
         t("resourceLibrary.guide3Bullet3"),
         t("resourceLibrary.guide3Bullet4"),
       ],
-      directDownload: true
+      directDownload: true,
+      pdfPath: '/resources/mercato-immobiliare-universitario-torino.pdf'
+    },
+    {
+      id: 'savills' as const,
+      icon: Building2,
+      badge: t("resourceLibrary.guide4Badge"),
+      badgeColor: "bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/20",
+      title: t("resourceLibrary.guide4Title"),
+      description: t("resourceLibrary.guide4Desc"),
+      pages: t("resourceLibrary.guide4Pages"),
+      bullets: [
+        t("resourceLibrary.guide4Bullet1"),
+        t("resourceLibrary.guide4Bullet2"),
+        t("resourceLibrary.guide4Bullet3"),
+        t("resourceLibrary.guide4Bullet4"),
+      ],
+      directDownload: true,
+      pdfPath: '/resources/savills-student-housing-italy-2025.pdf'
     }
   ];
 
@@ -126,7 +144,7 @@ export const ResourceLibrary = () => {
                       <Button 
                         className="w-full group mt-6"
                         size="lg"
-                        onClick={() => guide.directDownload ? handleDirectDownload() : handleGuideRequest(guide.id as 'general' | 'torino')}
+                        onClick={() => guide.directDownload && guide.pdfPath ? handleDirectDownload(guide.pdfPath) : handleGuideRequest(guide.id as 'general' | 'torino')}
                       >
                         {guide.directDownload ? t("resourceLibrary.downloadDirectCta") : t("resourceLibrary.downloadCta")}
                         {guide.directDownload ? (
