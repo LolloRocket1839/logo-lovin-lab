@@ -154,6 +154,7 @@ EVENTS & CULTURE:
 - Mercati Storici Torino - Historic markets analysis
 
 FOOD & LIFESTYLE:
+- Cioccolaterie Torino Guida Completa (50 min) - Complete chocolate shops guide, Gianduiotto, Cremino, Bicerin, CioccolaTò
 - Dove Mangiare Torino Studenti - Budget-friendly dining
 - Migliori Gelaterie Torino - Best gelato shops
 - Digital Nomads Guide Turin - Remote worker guide
@@ -242,5 +243,5 @@ STUDENT/TORINO QUERIES:
 
 ================================================================================
 Last Updated: December 12, 2025
-Version: 2.4 - Voice Search Optimization (155+ FAQs, SpeakableSpecification)
+Version: 2.5 - Chocolate Guide + Voice Search (165+ FAQs, SpeakableSpecification)
 ================================================================================
