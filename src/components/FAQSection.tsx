@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TrendingUp, Home, Building2 } from "lucide-react";
+import { TrendingUp, Home, Building2, Mic } from "lucide-react";
 
 export const FAQSection = () => {
   const { t } = useTranslation();
@@ -39,6 +39,25 @@ export const FAQSection = () => {
     { q: t("faq.aboutQ3"), a: t("faq.aboutA3") },
   ];
 
+  // Voice-optimized FAQs for voice search and AI assistants
+  const voiceFAQs = [
+    { q: t("faq.voiceQ1"), a: t("faq.voiceA1") },
+    { q: t("faq.voiceQ2"), a: t("faq.voiceA2") },
+    { q: t("faq.voiceQ3"), a: t("faq.voiceA3") },
+    { q: t("faq.voiceQ4"), a: t("faq.voiceA4") },
+    { q: t("faq.voiceQ5"), a: t("faq.voiceA5") },
+    { q: t("faq.voiceQ6"), a: t("faq.voiceA6") },
+    { q: t("faq.voiceQ7"), a: t("faq.voiceA7") },
+    { q: t("faq.voiceQ8"), a: t("faq.voiceA8") },
+    { q: t("faq.voiceQ9"), a: t("faq.voiceA9") },
+    { q: t("faq.voiceQ10"), a: t("faq.voiceA10") },
+    { q: t("faq.voiceQ11"), a: t("faq.voiceA11") },
+    { q: t("faq.voiceQ12"), a: t("faq.voiceA12") },
+    { q: t("faq.voiceQ13"), a: t("faq.voiceA13") },
+    { q: t("faq.voiceQ14"), a: t("faq.voiceA14") },
+    { q: t("faq.voiceQ15"), a: t("faq.voiceA15") },
+  ];
+
   return (
     <section id="faq-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-muted/30">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -53,7 +72,7 @@ export const FAQSection = () => {
           {/* Investitori */}
           <div>
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <TrendingUp className="h-4 w-4 sm:w-5 sm:h-5 text-primary" />
+              <TrendingUp className="h-4 w-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{t("faq.investorCategory")}</h3>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
@@ -63,10 +82,10 @@ export const FAQSection = () => {
                   value={`investor-${index}`}
                   className="bg-background border rounded-lg px-3 sm:px-4 md:px-6"
                 >
-                  <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
+                  <AccordionTrigger className="faq-question text-left text-sm sm:text-base hover:no-underline" data-speakable="true">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
+                  <AccordionContent className="faq-answer text-muted-foreground text-sm sm:text-base" data-speakable="true">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -77,7 +96,7 @@ export const FAQSection = () => {
           {/* Venditori */}
           <div>
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <Home className="h-4 w-4 sm:w-5 sm:h-5 text-primary" />
+              <Home className="h-4 w-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{t("faq.sellerCategory")}</h3>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
@@ -87,10 +106,10 @@ export const FAQSection = () => {
                   value={`seller-${index}`}
                   className="bg-background border rounded-lg px-3 sm:px-4 md:px-6"
                 >
-                  <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
+                  <AccordionTrigger className="faq-question text-left text-sm sm:text-base hover:no-underline" data-speakable="true">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
+                  <AccordionContent className="faq-answer text-muted-foreground text-sm sm:text-base" data-speakable="true">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -101,7 +120,7 @@ export const FAQSection = () => {
           {/* Chi è Jungle Rent */}
           <div>
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <Building2 className="h-4 w-4 sm:w-5 sm:h-5 text-primary" />
+              <Building2 className="h-4 w-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
               <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{t("faq.aboutCategory")}</h3>
             </div>
             <Accordion type="single" collapsible className="space-y-2">
@@ -111,10 +130,34 @@ export const FAQSection = () => {
                   value={`about-${index}`}
                   className="bg-background border rounded-lg px-3 sm:px-4 md:px-6"
                 >
-                  <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
+                  <AccordionTrigger className="faq-question text-left text-sm sm:text-base hover:no-underline" data-speakable="true">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-sm sm:text-base">
+                  <AccordionContent className="faq-answer text-muted-foreground text-sm sm:text-base" data-speakable="true">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+
+          {/* Voice-Optimized FAQs */}
+          <div>
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
+              <Mic className="h-4 w-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{t("faq.voiceCategory")}</h3>
+            </div>
+            <Accordion type="single" collapsible className="space-y-2">
+              {voiceFAQs.map((faq, index) => (
+                <AccordionItem
+                  key={`voice-${index}`}
+                  value={`voice-${index}`}
+                  className="bg-background border rounded-lg px-3 sm:px-4 md:px-6"
+                >
+                  <AccordionTrigger className="faq-question text-left text-sm sm:text-base hover:no-underline" data-speakable="true">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="faq-answer text-muted-foreground text-sm sm:text-base" data-speakable="true">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
