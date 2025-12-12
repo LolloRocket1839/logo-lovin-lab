@@ -32,7 +32,8 @@ const BlogPost = () => {
   if (!post) return <Navigate to="/blog" replace />;
   
   const translatedData = post.translations[currentLang];
-  const relatedPosts = getRelatedPosts(post.slug, post.category);
+  const currentTags = translatedData?.tags || [];
+  const relatedPosts = getRelatedPosts(post.slug, post.category, currentTags, currentLang);
 
   useEffect(() => {
     const loadContent = async () => {
@@ -395,7 +396,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         </article>
 
         {/* Related Posts */}
-        <RelatedPosts posts={relatedPosts} />
+        <RelatedPosts posts={relatedPosts} currentTags={currentTags} />
       </div>
       
       <Footer />
