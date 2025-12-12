@@ -328,23 +328,23 @@
     "steps": {
       "invest": {
         "title": "Invest",
-        "description": "From €100",
-        "detail": "Accessible minimum investment for everyone"
+        "description": "Join from €100",
+        "detail": "No property to manage, no paperwork. You invest, we handle everything."
       },
       "acquire": {
         "title": "We acquire",
-        "description": "Strategic properties",
-        "detail": "Near Turin universities"
+        "description": "Selected properties",
+        "detail": "We acquire properties near Politecnico, UniTo and Turin's 7 universities. High student demand areas."
       },
       "manage": {
         "title": "We manage",
-        "description": "All-inclusive",
-        "detail": "Contracts, tenants and maintenance"
+        "description": "Complete management",
+        "detail": "Contracts, tenants, maintenance and taxes. Zero hassle for you."
       },
       "earn": {
         "title": "You earn",
-        "description": "7-9% annual",
-        "detail": "Transparent quarterly reports"
+        "description": "7-9% annual return*",
+        "detail": "Quarterly returns with transparent reports. Access to personal dashboard."
       }
     },
     "metrics": {
