@@ -624,7 +624,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-06",
     author: "Jungle Rent Team",
-    image: "/images/torino-transport.jpg",
+    image: "/images/viaggiare-sostenibile-torino.jpg",
     readTime: 45,
     content: "viaggiare-sostenibile-torino-guida",
     translations: {
@@ -960,7 +960,7 @@ export const blogPosts: BlogPost[] = [
     category: "societa",
     date: "2025-11-25",
     author: "Jungle Rent Team",
-    image: "/images/torino-transport.jpg",
+    image: "/images/raccolta-differenziata-torino.jpg",
     readTime: 50,
     content: "raccolta-differenziata-torino-guida",
     translations: {
@@ -1326,7 +1326,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-17",
     author: "Jungle Rent Team",
-    image: "/images/torino-transport.jpg",
+    image: "/images/aule-studio-torino.jpg",
     readTime: 25,
     content: "aule-studio-torino-guida-completa",
     translations: {
@@ -1420,7 +1420,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-17",
     author: "Jungle Rent Team",
-    image: "/images/san-salvario-night.jpeg",
+    image: "/images/torino-nightlife.jpg",
     readTime: 35,
     content: "torino-nightlife-guide",
     translations: {
@@ -1495,7 +1495,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-13",
     author: "Team Jungle Rent",
-    image: "/images/mole-antonelliana-mountains.jpg",
+    image: "/images/digital-nomad-torino.jpg",
     readTime: 15,
     content: "torino-digital-nomads-guide",
     translations: {
