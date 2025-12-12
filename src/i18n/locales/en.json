@@ -365,8 +365,8 @@
     },
     "metrics": {
       "yield": {
-        "label": "Target return",
-        "description": "Annual target return SFP"
+        "label": "Returns",
+        "description": "Above market"
       },
       "savings": {
         "label": "Student savings",
@@ -381,7 +381,7 @@
         "description": "Universities in the area"
       }
     },
-    "disclaimer": "*Target return based on hybrid student/tourist model. Not guaranteed.",
+    "disclaimer": "*Returns are indicative estimates and are not guaranteed in any way. Investments involve risks, including possible loss of capital.",
     "cta": "Zero hassle. Full management included."
   },
   "investors": {
