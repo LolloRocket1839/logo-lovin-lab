@@ -331,15 +331,15 @@
         "detail": "9 mesi studenti + 3 mesi turisti. Giorni ospite gratuiti per esami estivi. Contratti, manutenzione e fiscalità inclusi."
       },
       "earn": {
-        "title": "Guadagni",
-        "description": "Rendite trimestrali garantite",
-        "detail": "Rendite trimestrali con report trasparenti. Accesso a dashboard personale."
+        "title": "Partecipi",
+        "description": "Accedi al mercato immobiliare",
+        "detail": "Partecipi ai risultati del portafoglio. Report trimestrali trasparenti e dashboard personale."
       }
     },
     "metrics": {
       "yield": {
-        "label": "Rendimenti",
-        "description": "Sopra mercato"
+        "label": "Investimento minimo",
+        "description": "Da €100"
       },
       "savings": {
         "label": "Risparmio studenti",
@@ -354,7 +354,7 @@
         "description": "Atenei nel territorio"
       }
     },
-    "disclaimer": "*I rendimenti sono stime indicative e non sono in alcun modo garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita del capitale.",
+    "disclaimer": "*Gli investimenti comportano rischi, inclusa la possibile perdita del capitale. I risultati dipendono dall'andamento del mercato.",
     "cta": "Zero stress. Gestione completa inclusa."
   },
   "investors": {
