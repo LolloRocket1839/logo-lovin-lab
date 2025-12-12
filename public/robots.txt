@@ -102,7 +102,7 @@ Allow: /
 # 
 # SERVICES:
 # - Student Housing Management (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
-# - Real Estate Investment (8%+ projected yields, 95% occupancy target)
+# - Real Estate Investment (invest from €100, market-dependent returns)
 # - Property Acquisition in Turin's university district
 # - Short-Term Rental Optimization (Airbnb, Booking.com)
 # 
