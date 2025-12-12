@@ -65,8 +65,7 @@
     "mainSubheadline": "Invest from €100 in university properties. We acquire and manage, you earn.",
     "miniSteps": {
       "step1": "From €100",
-      "step2": "We manage",
-      "step3": "Zero stress"
+      "step2": "We manage"
     },
     "invest": "Invest in Jungle Rent",
     "launchCountdown": "Launch in",
@@ -355,7 +354,7 @@
       "manage": {
         "title": "We manage",
         "description": "Hybrid student/tourist model",
-        "detail": "9 months students + 3 months tourists. Free guest days for summer exams. Contracts, maintenance and taxes included."
+        "detail": "9 months students + 3 months tourists. Free guest days for summer exams. Contracts and maintenance included."
       },
       "earn": {
         "title": "You participate",
