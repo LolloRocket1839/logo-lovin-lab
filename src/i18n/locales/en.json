@@ -277,7 +277,7 @@
     "benefit1Desc": "Affordable rents: more money to study and live Turin",
     "benefit1Tooltip": "Affordable quality rooms",
     "benefit2Title": "Flexible contracts",
-    "benefit2Desc": "Maximum flexibility for your university path",
+    "benefit2Desc": "9-month contracts with free guest days for summer exams: save 25%",
     "benefit2Tooltip": "Flexible booking options",
     "contactText": "Contact our student advisors directly:",
     "contactLorenzo": "Talk to Lorenzo",
@@ -354,7 +354,7 @@
       "manage": {
         "title": "We manage",
         "description": "Hybrid student/tourist model",
-        "detail": "9 months students + 3 months tourists. Contracts, maintenance and taxes included."
+        "detail": "9 months students + 3 months tourists. Free guest days for summer exams. Contracts, maintenance and taxes included."
       },
       "earn": {
         "title": "You earn",
@@ -526,7 +526,7 @@
     "investorQ10": "How is the 7.6% target return calculated?",
     "investorA10": "The 7.6% return is calculated based on our hybrid model: renting to university students for 9 months (September-June) and short-term tourist rentals for the 3 summer months. This model maximizes occupancy and optimizes revenue compared to traditional fixed-rent contracts. The return is net of management costs but gross of personal taxes. NOTE: this is a target return, not guaranteed.",
     "investorQ11": "What is the hybrid student/tourist model?",
-    "investorA11": "Our hybrid model combines: (1) Rentals to university students with transitional contracts of 9-10 months during the academic year, ensuring stability and reliable tenants; (2) Short-term tourist rentals in summer months (June-August) when students are on vacation, maximizing seasonal revenue. Students save about 25% compared to traditional 12-month contracts, paying only for the months they actually stay.",
+    "investorA11": "Our hybrid model combines: (1) Rentals to university students with transitional contracts of 9-10 months during the academic year, ensuring stability and reliable tenants; (2) Short-term tourist rentals in summer months (June-August) when students are on vacation, maximizing seasonal revenue. Students save about 25% compared to traditional 12-month contracts, paying only for the months they actually stay. Additionally, we offer free guest days during summer months so students can return to Turin for exams at no extra cost.",
     "sellerQ1": "What properties do you buy?",
     "sellerA1": "We buy apartments in Turin and surrounding areas, preferably in university zones: Vanchiglia, San Salvario, Cenisia, Crocetta, Lingotto, Aurora. We're interested in properties with 2 to 5 rooms, even those needing renovation. We evaluate every proposal without obligation.",
     "sellerQ2": "How does the free valuation work?",

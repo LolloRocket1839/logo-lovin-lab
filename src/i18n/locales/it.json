@@ -251,7 +251,7 @@
     "benefit1Desc": "Affitti convenienti: più soldi per studiare e vivere Torino",
     "benefit1Tooltip": "Stanze di qualità convenienti",
     "benefit2Title": "Contratti flessibili",
-    "benefit2Desc": "Massima flessibilità per il tuo percorso universitario",
+    "benefit2Desc": "Contratti 9 mesi con giorni ospite gratuiti per esami estivi: risparmia il 25%",
     "benefit2Tooltip": "Opzioni di prenotazione flessibili",
     "contactText": "Contatta direttamente i nostri student advisor:",
     "contactLorenzo": "Parla con Lorenzo",
@@ -327,7 +327,7 @@
       "manage": {
         "title": "Gestiamo",
         "description": "Modello ibrido studenti/turisti",
-        "detail": "9 mesi studenti + 3 mesi turisti. Contratti, manutenzione e fiscalità inclusi."
+        "detail": "9 mesi studenti + 3 mesi turisti. Giorni ospite gratuiti per esami estivi. Contratti, manutenzione e fiscalità inclusi."
       },
       "earn": {
         "title": "Guadagni",
@@ -499,7 +499,7 @@
     "investorQ10": "Come viene calcolato il rendimento target del 7,6%?",
     "investorA10": "Il rendimento del 7,6% è calcolato sulla base del nostro modello ibrido: affitto a studenti universitari per 9 mesi (settembre-giugno) e affitti brevi turistici per i 3 mesi estivi. Questo modello massimizza l'occupazione e ottimizza i ricavi rispetto agli affitti tradizionali a canone fisso. Il rendimento è al netto delle spese di gestione ma lordo di imposte personali. NOTA: è un rendimento target, non garantito.",
     "investorQ11": "Cos'è il modello ibrido studenti/turisti?",
-    "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori 9-10 mesi durante l'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi (giugno-agosto) quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano circa il 25% rispetto ai contratti tradizionali 12 mesi, pagando solo i mesi di effettiva permanenza.",
+    "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori 9-10 mesi durante l'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi (giugno-agosto) quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano circa il 25% rispetto ai contratti tradizionali 12 mesi, pagando solo i mesi di effettiva permanenza. Inoltre, offriamo giorni ospite gratuiti durante i mesi estivi per permettere agli studenti di tornare a Torino per gli esami senza costi aggiuntivi.",
     "sellerQ1": "Quali immobili acquistate?",
     "sellerA1": "Acquistiamo appartamenti a Torino e prima cintura, preferibilmente nelle zone universitarie: Vanchiglia, San Salvario, Cenisia, Crocetta, Lingotto, Aurora. Siamo interessati a immobili da 2 a 5 locali, anche da ristrutturare. Valutiamo ogni proposta senza impegno.",
     "sellerQ2": "Come funziona la valutazione gratuita?",
