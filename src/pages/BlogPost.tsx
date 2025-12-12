@@ -205,6 +205,8 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
     "inLanguage": currentLang
   };
 
+  const categoryName = t(`blog.categories.${post.category}`);
+  
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -224,6 +226,12 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       {
         "@type": "ListItem",
         "position": 3,
+        "name": categoryName,
+        "item": `https://junglerent.it/blog?category=${post.category}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
         "name": translatedData.title,
         "item": `https://junglerent.it/blog/${post.slug}`
       }
@@ -322,6 +330,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         <Breadcrumbs
           items={[
             { label: t('nav.blog'), href: '/blog' },
+            { label: t(`blog.categories.${post.category}`), href: `/blog?category=${post.category}` },
             { label: translatedData.title }
           ]}
         />

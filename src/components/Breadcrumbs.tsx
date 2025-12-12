@@ -24,40 +24,63 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
     }
   };
 
+  // Truncate long titles for mobile
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '...';
+  };
+
   return (
-    <div className="container mx-auto px-3 sm:px-4 pt-24 pb-3 sm:pb-4">
+    <nav aria-label="Breadcrumb" className="container mx-auto px-3 sm:px-4 pt-24 pb-3 sm:pb-4">
       <Breadcrumb>
-        <BreadcrumbList className="text-xs sm:text-sm gap-1 sm:gap-2">
+        <BreadcrumbList className="text-xs sm:text-sm gap-1.5 sm:gap-2 flex-wrap">
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link to="/" className="flex items-center gap-1 hover:text-primary transition-colors">
-                <Home className="h-4 w-4" />
-                {t('breadcrumbs.home')}
+              <Link 
+                to="/" 
+                className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
+                aria-label={t('breadcrumbs.home')}
+              >
+                <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
+                <span className="hidden sm:inline">{t('breadcrumbs.home')}</span>
               </Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
-          {items.map((item, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                {index === items.length - 1 ? (
-                  <BreadcrumbPage className="font-medium">
-                    {item.label}
-                  </BreadcrumbPage>
-                ) : item.href ? (
-                  <BreadcrumbLink asChild>
-                    <Link to={item.href} className="hover:text-primary transition-colors">
-                      {item.label}
-                    </Link>
-                  </BreadcrumbLink>
-                ) : (
-                  <span>{item.label}</span>
-                )}
-              </BreadcrumbItem>
-            </div>
-          ))}
+          {items.map((item, index) => {
+            const isLast = index === items.length - 1;
+            const displayLabel = isLast 
+              ? truncateText(item.label, 40)
+              : item.label;
+            
+            return (
+              <div key={index} className="flex items-center gap-1.5 sm:gap-2">
+                <BreadcrumbSeparator className="text-muted-foreground/50" />
+                <BreadcrumbItem>
+                  {isLast ? (
+                    <BreadcrumbPage 
+                      className="font-medium text-foreground max-w-[200px] sm:max-w-none truncate"
+                      title={item.label}
+                    >
+                      {displayLabel}
+                    </BreadcrumbPage>
+                  ) : item.href ? (
+                    <BreadcrumbLink asChild>
+                      <Link 
+                        to={item.href} 
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    </BreadcrumbLink>
+                  ) : (
+                    <span className="text-muted-foreground">{item.label}</span>
+                  )}
+                </BreadcrumbItem>
+              </div>
+            );
+          })}
         </BreadcrumbList>
       </Breadcrumb>
-    </div>
+    </nav>
   );
 };
