@@ -319,7 +319,13 @@
     "scheduleCall": "Schedule a Call",
     "bookCall": "Show Interest",
     "ctaButton": "Contact an Advisor",
-    "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator"
+    "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator",
+    "minInvestmentBadge": "Invest from €100",
+    "marketStats": {
+      "studentsOffsite": "students off-site",
+      "demandCovered": "demand covered",
+      "marketPotential": "market potential"
+    }
   },
   "infographic": {
     "badge": "Our model",

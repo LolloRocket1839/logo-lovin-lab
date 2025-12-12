@@ -292,7 +292,13 @@
     "talkToLorenzo": "Parla con Lorenzo",
     "scheduleCall": "Prenota una call",
     "bookCall": "Mostra interesse",
-    "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino"
+    "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino",
+    "minInvestmentBadge": "Investi da €100",
+    "marketStats": {
+      "studentsOffsite": "studenti fuori sede",
+      "demandCovered": "domanda coperta",
+      "marketPotential": "mercato potenziale"
+    }
   },
   "infographic": {
     "badge": "Il nostro modello",
