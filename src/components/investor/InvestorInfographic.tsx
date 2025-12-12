@@ -785,34 +785,41 @@ const InvestorInfographic: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile: Compact Vertical List - All steps visible */}
-      <div className="md:hidden mb-6 space-y-2">
+      {/* Mobile: Compact Vertical List with Timeline */}
+      <div className="md:hidden mb-6">
         {steps.map((step, index) => {
           const IconComponent = step.icon;
+          const isLast = index === steps.length - 1;
           return (
-            <div
-              key={step.id}
-              className="flex items-start gap-3 p-3 rounded-xl bg-card/50 border border-border/30"
-            >
-              {/* Icon + Step number */}
-              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
-                <IconComponent className="w-5 h-5 text-primary" strokeWidth={1.5} />
+            <div key={step.id} className="flex">
+              {/* Timeline column */}
+              <div className="flex flex-col items-center mr-3">
+                {/* Icon node */}
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center z-10">
+                  <IconComponent className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                </div>
+                {/* Connecting line */}
+                {!isLast && (
+                  <div className="w-px flex-1 bg-gradient-to-b from-primary/30 to-primary/10 min-h-[16px]" />
+                )}
               </div>
               
               {/* Content */}
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-primary/70 font-medium">{index + 1}.</span>
-                  <h3 className="text-sm font-semibold text-foreground">
-                    {step.title}
-                  </h3>
+              <div className={`flex-1 min-w-0 pb-4 ${isLast ? '' : 'pb-4'}`}>
+                <div className="p-3 rounded-xl bg-card/50 border border-border/30">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-primary/70 font-medium">{index + 1}.</span>
+                    <h3 className="text-sm font-semibold text-foreground">
+                      {step.title}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-muted-foreground/80 mt-0.5 font-light">
+                    {step.description}
+                  </p>
+                  <p className="text-xs text-muted-foreground/60 mt-1 font-light leading-relaxed">
+                    {step.detail}
+                  </p>
                 </div>
-                <p className="text-xs text-muted-foreground/80 mt-0.5 font-light">
-                  {step.description}
-                </p>
-                <p className="text-xs text-muted-foreground/60 mt-1 font-light leading-relaxed">
-                  {step.detail}
-                </p>
               </div>
             </div>
           );
