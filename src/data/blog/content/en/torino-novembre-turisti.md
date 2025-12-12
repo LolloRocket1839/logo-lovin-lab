@@ -99,4 +99,12 @@ November in Turin represents far more than a concatenation of distinct seasonal 
 
 For visitors planning trips to Turin, November offers an extraordinary opportunity to encounter the city not as historical monument or tourist destination but as a living urban center where culture, sport, and gastronomy achieve simultaneous expression. The convergence of these November programming streams—the precision and athleticism of professional tennis, the narrative intensity of international cinema, the aesthetic inquiry of contemporary art, and the sensory richness of truffle gastronomy—creates an experiential totality arguably unmatched by any other European city during any other month. Understanding Turin requires understanding November.
 
-*Continue exploring Turin throughout the year: [December's festive lights and winter celebrations](/blog/torino-dicembre-turisti), or discover more about [life as a student in Turin](/blog).*
+---
+
+## Related Articles
+
+- [Turin in December 2025: Christmas Lights and Winter Magic](/blog/torino-dicembre-turisti) - Luci d'Artista, Christmas markets, Teatro Regio
+- [Events in Turin in January 2026](/blog/eventi-torino-gennaio-2026) - Art exhibitions, concerts, theater, and the Olympic Flame
+- [How to Get Sustainably to Turin](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, and carbon-neutral airport
+- [Where to Eat in Turin: Best Spots for Students](/blog/dove-mangiare-torino-studenti) - From truffle dishes to affordable trattorias
+- [San Salvario Neighborhood Guide](/blog/san-salvario-guida-studenti) - The heart of Turin's cultural and nightlife scene

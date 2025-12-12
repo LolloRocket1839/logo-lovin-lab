@@ -64,6 +64,8 @@ February 2026 offers Turin an extraordinary opportunity to experience the Piedmo
 - [Turin events March 2026: art, music and entertainment](/blog/eventi-torino-marzo-2026) - Chiharu Shiota at MAO, Mika, Renato Zero, Subsonica 30 years, Rocky Musical
 - [The Historic Ivrea Carnival: Guide to the Battle of the Oranges](/blog/carnevale-ivrea-battaglia-arance-2025) - Story of the Mugnaia, complete program, how to get there from Turin
 - [How to Get Sustainably to Turin: Complete Guide](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, carbon-neutral airport
+- [Turin in November 2025: Tennis, Cinema, Art, and Truffles](/blog/torino-novembre-turisti) - ATP Finals, Film Festival, and Artissima
+- [The Best Gelato Shops in Turin](/blog/migliori-gelaterie-torino-studenti) - Perfect after CioccolaTò for more sweet treats
 
 ---
 

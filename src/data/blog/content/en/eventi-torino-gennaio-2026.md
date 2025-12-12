@@ -145,5 +145,6 @@ The arrival of the Olympic Flame, winter sales, sporting events and numerous ini
 - [Events in Turin in February 2026: Love, Chocolate, Art and Opera](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth with Riccardo Muti, Lee Miller and Jeff Wall exhibitions, Ivrea Carnival, Final Eight basketball
 - [Events in Turin in March 2026: Art, Music and Entertainment](/blog/eventi-torino-marzo-2026) - Chiharu Shiota at MAO, Mika, Renato Zero, Subsonica 30 years, Rocky Musical
 - [How to Get Sustainably to Turin: A Comprehensive Travel Guide](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, carbon-neutral airport and Torino+Piemonte Card
-- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti)
-- [The Historic Ivrea Carnival: Complete Guide to the Battle of Oranges](/blog/carnevale-ivrea-battaglia-arance-2025)
+- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti) - GTT, metro, bus, and student passes
+- [The Historic Ivrea Carnival: Complete Guide to the Battle of Oranges](/blog/carnevale-ivrea-battaglia-arance-2025) - How to get there from Turin, program, and history
+- [Turin in December 2025: Christmas Lights and Winter Magic](/blog/torino-dicembre-turisti) - Luci d'Artista, markets, and festive traditions
