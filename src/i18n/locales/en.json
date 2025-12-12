@@ -49,7 +49,7 @@
     "whyChooseTitle": "Why Choose JungleRent",
     "whyPoint1": "Proprietary technology for automated management and revenue optimization",
     "whyPoint2": "Local team with deep knowledge of Turin's university rental market",
-    "whyPoint3": "Access the real estate market from €100 via SFPs",
+    "whyPoint3": "Access the real estate market from €100",
     "whyPoint4": "24/7 assistance for guests and owners with guaranteed response",
     "whyPoint5": "Full compliance with local and national regulations. Partnership with 2i3T - University Incubator",
     "contactTitle": "Contact Us",
@@ -294,7 +294,7 @@
     "subtitle": "Democratizing access to real estate",
     "sectionLabel": "For Investors",
     "sectionTitle": "Access real estate from €100",
-    "compactDesc": "Invest in Turin university properties via SFPs (Participatory Financial Instruments). Full management, hybrid student/tourist model.",
+    "compactDesc": "Invest in Turin university properties. Full management, hybrid student/tourist model.",
     "sectionSubtitle": "Dual mission: student housing crisis and democratizing real estate access",
     "startupInnovativaBadge": "Certified Innovative Startup",
     "sfpBadge": "SFP",
@@ -303,7 +303,7 @@
     "benefit1Title": "Optimized investment",
     "benefit1Desc": "Opportunities in the real estate market thanks to our professional management and strategic pricing",
     "benefit2Title": "Complete management",
-    "benefit2Desc": "We take care of everything: contracts, maintenance, tenant relations. Zero stress for you",
+    "benefit2Desc": "We take care of everything: contracts, maintenance, tenant relations. You focus only on investing",
     "benefit3Title": "Strategic portfolio",
     "benefit3Desc": "Selected properties near Turin's 7 main university hubs (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO) with high constant demand",
     "flowStep1": "Accessibility",
@@ -339,11 +339,11 @@
   "infographic": {
     "badge": "Our model",
     "title": "The Jungle Rent model",
-    "subtitle": "Simplified real estate investments via SFPs",
+    "subtitle": "Simplified real estate investments",
     "steps": {
       "invest": {
         "title": "Invest",
-        "description": "Join from €100 via SFPs",
+        "description": "Join from €100",
         "detail": "No property to manage, no paperwork. You invest, we handle everything."
       },
       "acquire": {
@@ -381,7 +381,7 @@
       }
     },
     "disclaimer": "*Investments involve risks, including possible loss of capital. Results depend on market performance.",
-    "cta": "Zero hassle. Full management included."
+    "cta": "Full management included."
   },
   "investors": {
     "metaTitle": "Accessible Real Estate Investments Turin - Democratizing Real Estate | Jungle Rent",
@@ -508,7 +508,7 @@
     "investorQ1": "What is the minimum investment required?",
     "investorA1": "The minimum investment in Jungle Rent starts from €100, allowing access to the Turin real estate market even with limited capital. For those wanting to invest more, opportunities depend on the properties we have available and that we want to acquire.",
     "investorQ2": "How does the investment work?",
-    "investorA2": "You invest in shares of Jungle Rent's real estate portfolio via SFPs (Participatory Financial Instruments). You participate in the management results proportionally to your share. WARNING: investments involve risks, including possible partial or total loss of invested capital. Results depend on market performance.",
+    "investorA2": "You invest in shares of Jungle Rent's real estate portfolio. You participate in the management results proportionally to your share. WARNING: investments involve risks, including possible partial or total loss of invested capital. Results depend on market performance.",
     "investorQ3": "Does Jungle Rent manage the property completely?",
     "investorA3": "Yes, we offer a full-service management service that includes: tenant search and selection, contract management and registrations, ordinary and extraordinary maintenance, rent collection, arrears management, legal assistance, and detailed quarterly reporting. The investor participates in results without having to worry about anything.",
     "investorQ4": "How long does it take to see the first results?",
@@ -521,8 +521,8 @@
     "investorA7": "You receive a detailed quarterly report that includes: property status, occupancy rate, portfolio results, expenses incurred and forecasts for the next quarter. You also have access to an online dashboard to monitor your investment in real-time.",
     "investorQ8": "Can I visit the properties before investing?",
     "investorA8": "Yes, we organize property visits by appointment for interested investors. You can see the properties in person, evaluate the quality of the renovations and speak directly with our management team.",
-    "investorQ9": "What are SFPs (Participatory Financial Instruments)?",
-    "investorA9": "SFPs are financial instruments that allow you to invest in real estate shares without directly owning the property. In practice, you buy a fraction of the portfolio and participate in results generated by rentals, proportionally to your share. It's a way to access the real estate market with reduced capital (from €100) without having to deal with management, maintenance or paperwork.",
+    "investorQ9": "How can I invest with Jungle Rent?",
+    "investorA9": "You can invest in Jungle Rent's real estate portfolio starting from €100. You buy a share of the portfolio and participate in results generated by rentals, proportionally to your share. It's a way to access the real estate market with reduced capital without having to deal with management, maintenance or paperwork.",
     "investorQ10": "How are results calculated?",
     "investorA10": "Results are calculated based on our hybrid model: renting to university students for 9 months (September-June) and short-term tourist rentals for the 3 summer months. This model optimizes occupancy compared to traditional fixed-rent contracts. Results are net of management costs but gross of personal taxes. WARNING: results depend on market performance and are not guaranteed. Investments involve risks, including possible partial or total loss of capital.",
     "investorQ11": "What is the hybrid student/tourist model?",

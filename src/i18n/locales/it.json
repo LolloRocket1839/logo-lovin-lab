@@ -49,7 +49,7 @@
     "whyChooseTitle": "Perché scegliere JungleRent",
     "whyPoint1": "Tecnologia proprietaria per gestione automatizzata",
     "whyPoint2": "Team locale con conoscenza del mercato torinese",
-    "whyPoint3": "Accesso al mercato immobiliare da €100 tramite SFP",
+    "whyPoint3": "Accesso al mercato immobiliare da €100",
     "whyPoint4": "Assistenza 24/7 con risposta garantita",
     "whyPoint5": "Conformità normative. Partnership con 2i3T",
     "contactTitle": "Contattaci",
@@ -268,7 +268,7 @@
     "subtitle": "Democratizziamo l'accesso al mercato immobiliare",
     "sectionLabel": "Per investitori",
     "sectionTitle": "Accedi al mercato immobiliare da €100",
-    "compactDesc": "Investi in immobili universitari a Torino tramite SFP (Strumenti Finanziari Partecipativi). Gestione completa, modello ibrido studenti/turisti.",
+    "compactDesc": "Investi in immobili universitari a Torino. Gestione completa, modello ibrido studenti/turisti.",
     "sectionSubtitle": "Duplice missione: crisi abitativa studentesca e accesso democratico al mercato immobiliare",
     "startupInnovativaBadge": "Start-up innovativa certificata",
     "sfpBadge": "SFP",
@@ -277,7 +277,7 @@
     "benefit1Title": "Investimento ottimizzato",
     "benefit1Desc": "Opportunità nel mercato immobiliare grazie alla nostra gestione professionale e pricing strategico",
     "benefit2Title": "Gestione completa",
-    "benefit2Desc": "Ci occupiamo di tutto: contratti, manutenzione, relazioni con inquilini. Zero stress per te",
+    "benefit2Desc": "Ci occupiamo di tutto: contratti, manutenzione, relazioni con inquilini. Tu pensi solo all'investimento",
     "benefit3Title": "Portfolio strategico",
     "benefit3Desc": "Proprietà selezionate vicino ai 7 principali poli universitari di Torino (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO) con alta domanda costante",
     "flowStep1": "Accessibilità",
@@ -312,11 +312,11 @@
   "infographic": {
     "badge": "Il nostro modello",
     "title": "Il modello Jungle Rent",
-    "subtitle": "Investimenti immobiliari semplificati tramite SFP",
+    "subtitle": "Investimenti immobiliari semplificati",
     "steps": {
       "invest": {
         "title": "Investi",
-        "description": "Partecipa da €100 tramite SFP",
+        "description": "Partecipa da €100",
         "detail": "Nessun immobile da gestire, nessuna burocrazia. Tu investi, noi facciamo il resto."
       },
       "acquire": {
@@ -354,7 +354,7 @@
       }
     },
     "disclaimer": "*Gli investimenti comportano rischi, inclusa la possibile perdita del capitale. I risultati dipendono dall'andamento del mercato.",
-    "cta": "Zero stress. Gestione completa inclusa."
+    "cta": "Gestione completa inclusa."
   },
   "investors": {
     "metaTitle": "Investimenti immobiliari accessibili Torino - Democratizziamo il real estate | Jungle Rent",
@@ -481,7 +481,7 @@
     "investorQ1": "Qual è l'investimento minimo richiesto?",
     "investorA1": "L'investimento minimo in Jungle Rent parte da €100, permettendo di accedere al mercato immobiliare torinese anche con capitali limitati. Per chi vuole investire di più, le opportunità dipendono dagli immobili che abbiamo a disposizione e che vogliamo acquisire.",
     "investorQ2": "Come funziona l'investimento?",
-    "investorA2": "Investi in quote del portafoglio immobiliare di Jungle Rent tramite SFP (Strumenti Finanziari Partecipativi). Partecipi ai risultati della gestione proporzionalmente alla tua quota. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito. I risultati dipendono dall'andamento del mercato.",
+    "investorA2": "Investi in quote del portafoglio immobiliare di Jungle Rent. Partecipi ai risultati della gestione proporzionalmente alla tua quota. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito. I risultati dipendono dall'andamento del mercato.",
     "investorQ3": "Jungle Rent gestisce completamente l'immobile?",
     "investorA3": "Sì, offriamo un servizio di gestione full-service che include: ricerca e selezione inquilini, gestione contratti e registrazioni, manutenzione ordinaria e straordinaria, riscossione affitti, gestione morosità, assistenza legale e reportistica trimestrale dettagliata. L'investitore partecipa ai risultati senza doversi preoccupare di nulla.",
     "investorQ4": "Quanto tempo ci vuole per vedere i primi risultati?",
@@ -494,8 +494,8 @@
     "investorA7": "Ricevi un report trimestrale dettagliato che include: stato dell'immobile, tasso di occupazione, risultati del portafoglio, spese sostenute e previsioni per il trimestre successivo. Hai anche accesso a un dashboard online per monitorare il tuo investimento in tempo reale.",
     "investorQ8": "Posso visitare le proprietà prima di investire?",
     "investorA8": "Sì, organizziamo visite agli immobili su appuntamento per gli investitori interessati. Puoi vedere di persona le proprietà, valutare la qualità delle ristrutturazioni e parlare direttamente con il nostro team di gestione.",
-    "investorQ9": "Cosa sono gli SFP (Strumenti Finanziari Partecipativi)?",
-    "investorA9": "Gli SFP sono strumenti finanziari che permettono di investire in quote di proprietà immobiliare senza possedere direttamente l'immobile. In pratica, acquisti una frazione del portafoglio e partecipi ai risultati generati dagli affitti, proporzionalmente alla tua quota. È un modo per accedere al mercato immobiliare con capitali ridotti (da €100) senza doverti occupare di gestione, manutenzione o burocrazia.",
+    "investorQ9": "Come posso investire con Jungle Rent?",
+    "investorA9": "Puoi investire nel portafoglio immobiliare di Jungle Rent a partire da €100. Acquisti una quota del portafoglio e partecipi ai risultati generati dagli affitti, proporzionalmente alla tua quota. È un modo per accedere al mercato immobiliare con capitali ridotti senza doverti occupare di gestione, manutenzione o burocrazia.",
     "investorQ10": "Come vengono calcolati i risultati?",
     "investorA10": "I risultati sono calcolati sulla base del nostro modello ibrido: affitto a studenti universitari per 9 mesi (settembre-giugno) e affitti brevi turistici per i 3 mesi estivi. Questo modello ottimizza l'occupazione rispetto agli affitti tradizionali a canone fisso. I risultati sono al netto delle spese di gestione ma lordi di imposte personali. ATTENZIONE: i risultati dipendono dall'andamento del mercato e non sono garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale.",
     "investorQ11": "Cos'è il modello ibrido studenti/turisti?",
