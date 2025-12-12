@@ -2308,10 +2308,35 @@ export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return blogPosts.find(post => post.slug === slug);
 };
 
-export const getRelatedPosts = (currentSlug: string, category: string, limit: number = 3): BlogPost[] => {
-  return blogPosts
-    .filter(post => post.slug !== currentSlug && post.category === category)
-    .slice(0, limit);
+export const getRelatedPosts = (currentSlug: string, category: string, currentTags: string[] = [], lang: 'it' | 'en' = 'it', limit: number = 3): BlogPost[] => {
+  // Calculate relevance score based on category and shared tags
+  const scoredPosts = blogPosts
+    .filter(post => post.slug !== currentSlug)
+    .map(post => {
+      let score = 0;
+      
+      // Same category = +10 points
+      if (post.category === category) {
+        score += 10;
+      }
+      
+      // Shared tags = +2 points each
+      const postTags = post.translations?.[lang]?.tags || post.translations?.it?.tags || [];
+      const sharedTags = currentTags.filter(tag => 
+        postTags.some(postTag => postTag.toLowerCase() === tag.toLowerCase())
+      );
+      score += sharedTags.length * 2;
+      
+      return { post, score, sharedTags: sharedTags.length };
+    })
+    .filter(item => item.score > 0) // Only include posts with some relevance
+    .sort((a, b) => {
+      // Sort by score first, then by date (most recent)
+      if (b.score !== a.score) return b.score - a.score;
+      return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
+    });
+  
+  return scoredPosts.slice(0, limit).map(item => item.post);
 };
 
 export const searchPosts = (posts: BlogPost[], searchQuery: string, lang: 'it' | 'en' = 'it'): BlogPost[] => {
