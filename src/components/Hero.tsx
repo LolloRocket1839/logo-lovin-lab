@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Euro, Building2, TrendingUp } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 
 import { LogoModal } from "@/components/LogoModal";
@@ -91,6 +91,24 @@ export const Hero = () => {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-10 font-light leading-relaxed">
             <StyledText>{t('hero.mainSubheadline')}</StyledText>
           </p>
+
+          {/* Mini How It Works - 3 steps */}
+          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4 mb-6 md:mb-8 text-xs md:text-sm">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-card/60 border border-border/50">
+              <Euro className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+              <span className="text-foreground font-medium">{t('hero.miniSteps.step1')}</span>
+            </div>
+            <span className="text-muted-foreground hidden sm:inline">→</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-card/60 border border-border/50">
+              <Building2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+              <span className="text-foreground font-medium">{t('hero.miniSteps.step2')}</span>
+            </div>
+            <span className="text-muted-foreground hidden sm:inline">→</span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30">
+              <TrendingUp className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
+              <span className="text-primary font-semibold">{t('hero.miniSteps.step3')}</span>
+            </div>
+          </div>
 
           {/* Urgency Elements - Hidden countdown on mobile */}
           <div className="flex flex-col items-center gap-4 md:gap-6 mb-6 md:mb-10">

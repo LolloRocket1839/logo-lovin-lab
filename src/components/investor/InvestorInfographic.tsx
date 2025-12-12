@@ -656,8 +656,8 @@ const InvestorInfographic: React.FC = () => {
   ];
 
   const metrics = [
-    { value: 8, suffix: '.34%', label: t('infographic.metrics.yield.label'), description: t('infographic.metrics.yield.description'), isEstimate: true },
-    { value: 95, suffix: '%', label: t('infographic.metrics.occupancy.label'), description: t('infographic.metrics.occupancy.description'), isEstimate: true },
+    { value: 7, suffix: '.6%', label: t('infographic.metrics.yield.label'), description: t('infographic.metrics.yield.description'), isEstimate: true },
+    { value: 25, suffix: '%', label: t('infographic.metrics.savings.label'), description: t('infographic.metrics.savings.description'), isEstimate: false },
     { value: 90, suffix: 'k+', label: t('infographic.metrics.students.label'), description: t('infographic.metrics.students.description'), isEstimate: false },
     { value: 7, suffix: '', label: t('infographic.metrics.universities.label'), description: t('infographic.metrics.universities.description'), isEstimate: false }
   ];

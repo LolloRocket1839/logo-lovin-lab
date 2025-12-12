@@ -60,8 +60,13 @@
   },
   "hero": {
     "tagline": "Democratizziamo l'accesso al mercato immobiliare",
-    "mainHeadline": "Investimenti immobiliari accessibili e soluzioni alla crisi abitativa",
-    "mainSubheadline": "Duplice missione: rendere il real estate accessibile a tutti e risolvere la crisi abitativa studentesca a Torino",
+    "mainHeadline": "7,6% rendimento target su student housing a Torino",
+    "mainSubheadline": "Investi da €100 in immobili universitari. Noi acquistiamo e gestiamo, tu guadagni.",
+    "miniSteps": {
+      "step1": "Da €100",
+      "step2": "Gestiamo noi",
+      "step3": "7,6% target"
+    },
     "invest": "Investi in Jungle Rent",
     "launchCountdown": "Lancio tra",
     "days": "giorni",
@@ -90,7 +95,7 @@
     "trustSupport": "Supporto dedicato",
     "trustNoFees": "Zero commissioni",
     "logoAlt": "Jungle Rent - Logo ufficiale - Affitti ottimizzati per studenti e investitori a Torino",
-    "seoH1": "Jungle Rent - Affitti Smart per Studenti a Torino | Opportunità di Investimento Immobiliare vicino Politecnico e UniTo",
+    "seoH1": "Jungle Rent - Investimenti immobiliari student housing Torino | 7,6% rendimento target",
     "smartRentals": "Affitti smart",
     "investmentOpportunities": "Opportunità di investimento",
     "students": "studenti",
@@ -262,10 +267,12 @@
     "title": "Per investitori",
     "subtitle": "Democratizziamo l'accesso al mercato immobiliare",
     "sectionLabel": "Per investitori",
-    "sectionTitle": "Democratizziamo l'accesso al real estate",
-    "compactDesc": "Un'asset class storicamente sicura, oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione professionale completa.",
+    "sectionTitle": "7,6% rendimento target con SFP",
+    "compactDesc": "Investi in immobili universitari a Torino tramite SFP (Strumenti Finanziari Partecipativi). Gestione completa, modello ibrido studenti/turisti.",
     "sectionSubtitle": "Duplice missione: crisi abitativa studentesca e accesso democratico al mercato immobiliare",
     "startupInnovativaBadge": "Start-up innovativa certificata",
+    "sfpBadge": "SFP",
+    "sfpTooltip": "Strumenti Finanziari Partecipativi: investi in quote di proprietà immobiliare senza gestire l'immobile. Tu investi, noi gestiamo tutto.",
     "whyInvestTitle": "Perché investire con noi",
     "benefit1Title": "Investimento ottimizzato",
     "benefit1Desc": "Opportunità nel mercato immobiliare grazie alla nostra gestione professionale e pricing strategico",
@@ -295,8 +302,9 @@
     "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino",
     "minInvestmentBadge": "Investi da €100",
     "marketStats": {
+      "targetReturn": "rendimento target*",
+      "studentSavings": "risparmio studenti",
       "studentsOffsite": "studenti fuori sede in Italia",
-      "demandCovered": "cerca alloggio",
       "marketPotential": "mercato potenziale",
       "disclaimer": "Stime 2025 - Fonte: Savills Research"
     }
@@ -304,11 +312,11 @@
   "infographic": {
     "badge": "Il nostro modello",
     "title": "Il modello Jungle Rent",
-    "subtitle": "Investimenti immobiliari semplificati",
+    "subtitle": "Investimenti immobiliari semplificati tramite SFP",
     "steps": {
       "invest": {
         "title": "Investi",
-        "description": "Partecipa da €100",
+        "description": "Partecipa da €100 tramite SFP",
         "detail": "Nessun immobile da gestire, nessuna burocrazia. Tu investi, noi facciamo il resto."
       },
       "acquire": {
@@ -318,23 +326,23 @@
       },
       "manage": {
         "title": "Gestiamo",
-        "description": "Gestione completa",
-        "detail": "Contratti, inquilini, manutenzione e fiscalità. Zero pensieri per te."
+        "description": "Modello ibrido studenti/turisti",
+        "detail": "9 mesi studenti + 3 mesi turisti. Contratti, manutenzione e fiscalità inclusi."
       },
       "earn": {
         "title": "Guadagni",
-        "description": "7-9% rendimento annuo*",
+        "description": "7,6% rendimento target*",
         "detail": "Rendite trimestrali con report trasparenti. Accesso a dashboard personale."
       }
     },
     "metrics": {
       "yield": {
-        "label": "Rental yield",
-        "description": "Rendimento medio annuo"
+        "label": "Rendimento target",
+        "description": "Rendimento annuo target SFP"
       },
-      "occupancy": {
-        "label": "Occupazione",
-        "description": "Tasso di occupazione"
+      "savings": {
+        "label": "Risparmio studenti",
+        "description": "vs contratti 12 mesi"
       },
       "students": {
         "label": "Studenti",
@@ -345,7 +353,7 @@
         "description": "Atenei nel territorio"
       }
     },
-    "disclaimer": "*Valori stimati basati su analisi di mercato",
+    "disclaimer": "*Rendimento target basato su modello ibrido studenti/turisti. Non garantito.",
     "cta": "Zero stress. Gestione completa inclusa."
   },
   "investors": {
@@ -486,6 +494,12 @@
     "investorA7": "Ricevi un report trimestrale dettagliato che include: stato dell'immobile, tasso di occupazione, rendimenti generati, spese sostenute e previsioni per il trimestre successivo. Hai anche accesso a un dashboard online per monitorare il tuo investimento in tempo reale.",
     "investorQ8": "Posso visitare le proprietà prima di investire?",
     "investorA8": "Sì, organizziamo visite agli immobili su appuntamento per gli investitori interessati. Puoi vedere di persona le proprietà, valutare la qualità delle ristrutturazioni e parlare direttamente con il nostro team di gestione.",
+    "investorQ9": "Cosa sono gli SFP (Strumenti Finanziari Partecipativi)?",
+    "investorA9": "Gli SFP sono strumenti finanziari che permettono di investire in quote di proprietà immobiliare senza possedere direttamente l'immobile. In pratica, acquisti una frazione della proprietà e partecipi ai rendimenti generati dagli affitti, proporzionalmente alla tua quota. È un modo per accedere al mercato immobiliare con capitali ridotti (da €100) senza doverti occupare di gestione, manutenzione o burocrazia.",
+    "investorQ10": "Come viene calcolato il rendimento target del 7,6%?",
+    "investorA10": "Il rendimento del 7,6% è calcolato sulla base del nostro modello ibrido: affitto a studenti universitari per 9 mesi (settembre-giugno) e affitti brevi turistici per i 3 mesi estivi. Questo modello massimizza l'occupazione e ottimizza i ricavi rispetto agli affitti tradizionali a canone fisso. Il rendimento è al netto delle spese di gestione ma lordo di imposte personali. NOTA: è un rendimento target, non garantito.",
+    "investorQ11": "Cos'è il modello ibrido studenti/turisti?",
+    "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori 9-10 mesi durante l'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi (giugno-agosto) quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano circa il 25% rispetto ai contratti tradizionali 12 mesi, pagando solo i mesi di effettiva permanenza.",
     "sellerQ1": "Quali immobili acquistate?",
     "sellerA1": "Acquistiamo appartamenti a Torino e prima cintura, preferibilmente nelle zone universitarie: Vanchiglia, San Salvario, Cenisia, Crocetta, Lingotto, Aurora. Siamo interessati a immobili da 2 a 5 locali, anche da ristrutturare. Valutiamo ogni proposta senza impegno.",
     "sellerQ2": "Come funziona la valutazione gratuita?",
