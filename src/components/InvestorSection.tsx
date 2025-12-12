@@ -134,6 +134,9 @@ export const InvestorSection = () => {
               </p>
             </div>
           </div>
+          <p className="text-[9px] md:text-[10px] text-muted-foreground/60 font-light mt-2">
+            *{t('investor.marketStats.disclaimer')}
+          </p>
 
           {/* 2 CTA on mobile, 3 on desktop */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center flex-wrap">
