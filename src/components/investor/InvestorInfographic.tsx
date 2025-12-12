@@ -607,17 +607,18 @@ const InvestorInfographic: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isMobile = useIsMobile();
 
-  // Auto-advance steps for visual effect
+  // Auto-advance steps only on desktop
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || isMobile) return;
     
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % 4);
     }, 3000);
     
     return () => clearInterval(interval);
-  }, [isInView]);
+  }, [isInView, isMobile]);
 
   const steps = [
     {
@@ -780,58 +781,32 @@ const InvestorInfographic: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile: Compact Horizontal Scroll */}
-      <div className="md:hidden mb-6">
-        <div className="flex overflow-x-auto gap-3 pb-3 -mx-2 px-2 snap-x snap-mandatory scrollbar-hide">
-          {steps.map((step, index) => (
-            <div
-              key={step.id}
-              role="tab"
-              tabIndex={0}
-              aria-selected={activeStep === index}
-              aria-label={`${step.title}`}
-              className={`flex-shrink-0 w-[75%] snap-center p-4 rounded-2xl border bg-card transition-all duration-200 ${
-                activeStep === index 
-                  ? 'border-primary/30' 
-                  : 'border-border/30'
-              }`}
-              onClick={() => setActiveStep(index)}
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex-shrink-0 w-12 h-12">
-                  <PremiumHouse
-                    isActive={activeStep === index}
-                    variant={step.variant}
-                    size="sm"
-                  />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`text-sm font-semibold ${
-                    activeStep === index ? 'text-primary' : 'text-foreground/80'
-                  }`}>
-                    {step.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground/70 mt-0.5 font-light line-clamp-2">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
+      {/* Mobile: Compact Vertical List - All steps visible */}
+      <div className="md:hidden mb-6 space-y-2">
+        {steps.map((step, index) => (
+          <div
+            key={step.id}
+            className="flex items-start gap-3 p-3 rounded-xl bg-card/50 border border-border/30"
+          >
+            {/* Step number */}
+            <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+              <span className="text-xs font-semibold text-primary">{index + 1}</span>
             </div>
-          ))}
-        </div>
-        {/* Scroll indicator dots */}
-        <div className="flex justify-center gap-1.5 mt-2">
-          {steps.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveStep(index)}
-              className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                activeStep === index ? 'bg-primary' : 'bg-border'
-              }`}
-              aria-label={`Step ${index + 1}`}
-            />
-          ))}
-        </div>
+            
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <h3 className="text-sm font-semibold text-foreground">
+                {step.title}
+              </h3>
+              <p className="text-xs text-muted-foreground/80 mt-0.5 font-light">
+                {step.description}
+              </p>
+              <p className="text-xs text-muted-foreground/60 mt-1 font-light leading-relaxed">
+                {step.detail}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Metrics Grid - 2x2 on mobile, compact */}
