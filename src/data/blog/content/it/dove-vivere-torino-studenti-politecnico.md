@@ -387,6 +387,12 @@ La chiave è visitare diverse opzioni, parlare con altri studenti già sul posto
 
 Con questa guida aggiornata al 2025, ogni studente del Politecnico potrà orientarsi e trovare la sistemazione perfetta per vivere al meglio l'esperienza universitaria a Torino.
 
+> **📚 Guide correlate**
+> - [San Salvario: guida completa per studenti](/blog/san-salvario-guida-studenti) - Il quartiere più amato dagli universitari
+> - [Il Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa) - Storia, corsi e ammissione
+> - [L'Università di Torino: guida completa](/blog/universita-torino-guida-completa) - L'altro grande ateneo
+> - [I quartieri più sicuri a Torino](/blog/quartieri-sicuri-donne-torino) - Analisi dettagliata della sicurezza
+
 ---
 
 ## Trova la tua casa ideale con Jungle Rent

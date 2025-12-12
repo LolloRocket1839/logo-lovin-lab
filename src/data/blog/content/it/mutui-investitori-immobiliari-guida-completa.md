@@ -538,4 +538,9 @@ Questo articolo è stato redatto attraverso:
 
 Le informazioni contenute in questo articolo hanno scopo esclusivamente informativo e didattico. Non costituiscono consulenza finanziaria, fiscale, legale o di investimento personalizzata. Prima di prendere qualsiasi decisione di investimento immobiliare, è fortemente consigliato consultare professionisti qualificati (consulente finanziario indipendente, commercialista, avvocato) che possano valutare la vostra situazione specifica. Gli investimenti immobiliari comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito.
 
+> **📚 Approfondimenti correlati**
+> - [La vendita di immobili in Italia: insidie normative e fiscali](/blog/vendere-casa-torino-guida-completa-2025) - Guida completa ai rischi della compravendita
+> - [Perché investire in real assets a Torino](/blog/investire-real-assets-torino-2025) - Analisi macroeconomica e opportunità
+> - [Student housing in Italia: report Savills 2025](/blog/student-housing-italia-savills-2025) - Dati sul mercato studentesco
+
 **Aggiornamento**: Articolo aggiornato al 7 novembre 2025. Il mercato immobiliare e la normativa fiscale sono in continua evoluzione. Verifica sempre le informazioni più recenti prima di procedere con investimenti.

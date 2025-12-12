@@ -306,6 +306,12 @@ L'Università di Torino rappresenta un caso straordinario di istituzione accadem
 
 Per gli studenti che considerano l'istruzione superiore in Italia, l'Università di Torino offre una combinazione convincente: prestigio storico supportato da eccellenza di ricerca contemporanea, costi di vita accessibili in una delle città più vivibili d'Europa, e connessioni globali che aprono porte alle carriere in tutto il mondo.
 
+> **📚 Guide correlate per studenti UniTo**
+> - [Il Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa) - L'altro grande ateneo torinese
+> - [Dove vivere a Torino: guida ai migliori quartieri](/blog/dove-vivere-torino-studenti-politecnico) - Prezzi, zone e consigli pratici
+> - [Aule studio a Torino: i 57 migliori spazi](/blog/aule-studio-torino-guida-completa) - Biblioteche, coworking e caffè
+> - [Mobilità sostenibile a Torino per studenti](/blog/mobilita-sostenibile-torino-studenti) - Trasporti pubblici e piste ciclabili
+
 ---
 
 *Stai cercando alloggio studentesco a Torino? Jungle Rent ti aiuta a trovare la sistemazione perfetta vicino all'Università di Torino. Contattaci per scoprire le migliori offerte nei quartieri universitari.*

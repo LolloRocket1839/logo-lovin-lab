@@ -157,4 +157,9 @@ La scena notturna di Torino offre qualcosa per ogni gusto e preferenza, da club 
 
 Il carattere multiculturale della città—particolarmente evidente in quartieri come San Salvario—crea un'atmosfera accogliente e inclusiva dove visitatori internazionali si sentono immediatamente a casa. La combinazione di patrimonio storico, creatività contemporanea e spirito giovanile rende la nightlife di Torino un'esperienza autentica e indimenticabile.
 
+> **📚 Guide correlate**
+> - [San Salvario: guida completa per studenti](/blog/san-salvario-guida-studenti) - Il cuore della nightlife torinese
+> - [I quartieri più sicuri a Torino](/blog/quartieri-sicuri-donne-torino) - Consigli per uscire in sicurezza
+> - [Dove mangiare a Torino: guida per studenti](/blog/dove-mangiare-torino-studenti) - Aperitivi e cene prima della serata
+
 **Inizia la tua esplorazione in uno dei quartieri evidenziati, abbraccia l'atmosfera locale e lascia che la vibrante nightlife di Torino ti sorprenda!**
