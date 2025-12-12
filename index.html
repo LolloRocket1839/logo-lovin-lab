@@ -3,16 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Load Inter font for consistent typography -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="preconnect" href="https://ekrrrlrwdshhlqnuxjbz.supabase.co" crossorigin>
     
     <!-- DNS Prefetch for external resources -->
     <link rel="dns-prefetch" href="https://maps.googleapis.com">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://calendly.com">
+    <link rel="dns-prefetch" href="https://formspree.io">
+    <link rel="dns-prefetch" href="https://wa.me">
+    
+    <!-- Load Inter font with optimal loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Prefetch likely next navigations -->
+    <link rel="prefetch" href="/blog" as="document">
+    <link rel="prefetch" href="/investitori" as="document">
     <title>Jungle Rent - Risparmia il 25% sull&#39;Affitto | Investi nel settore Immobiliare |Studenti Torino</title>
     <meta name="description" content="Jungle Rent - Il tuo rifugio nella giungla immobiliare. Per studenti, per turisti e per investitori. Il posto giusto per ottimizzare, risparmiare e guadagnare sugli affitti.">
     <meta name="author" content="Jungle Rent" />
