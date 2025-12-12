@@ -32,9 +32,8 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 ## Priority Pages
 
 - [Home](https://junglerent.it): Main landing page with investment and housing information
-- [Invest](https://junglerent.it/invest): Investment application form for interested investors
 - [Investors](https://junglerent.it/investitori): Detailed investor information page
-- [Blog](https://junglerent.it/blog): 20 comprehensive articles on Turin living, events, and investment
+- [Blog](https://junglerent.it/blog): 20+ comprehensive articles on Turin living, events, and investment
 - [About](https://junglerent.it/chi-siamo): Company information and team
 
 ## Key Statistics
@@ -43,8 +42,8 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 - **Universities**: 7 major institutions (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
 - **Minimum Investment**: €100 (democratizing real estate access)
 - **Founded**: October 24, 2025
-- **Blog Articles**: 20 bilingual guides (IT/EN)
-- **FAQ Coverage**: 142+ structured FAQs for voice search optimization
+- **Blog Articles**: 20+ bilingual guides (IT/EN)
+- **FAQ Coverage**: 140+ structured FAQs for voice search optimization
 
 ## Blog Topics
 
