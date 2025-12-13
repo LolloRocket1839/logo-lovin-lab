@@ -13,12 +13,9 @@ import { FloatingElements } from "@/components/innovative/FloatingElements";
 
 // Lazy load below-the-fold components
 const HorizontalValueJourney = lazy(() => import("@/components/innovative/HorizontalValueJourney").then(m => ({ default: m.HorizontalValueJourney })));
-const BentoStatsGrid = lazy(() => import("@/components/innovative/BentoStatsGrid").then(m => ({ default: m.BentoStatsGrid })));
 const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
-const StudentSection = lazy(() => import("@/components/StudentSection").then(m => ({ default: m.StudentSection })));
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
-const BlogSection = lazy(() => import("@/components/blog/BlogSection").then(m => ({ default: m.BlogSection })));
-const FAQSection = lazy(() => import("@/components/FAQSection").then(m => ({ default: m.FAQSection })));
+const BlogBanner = lazy(() => import("@/components/blog/BlogBanner").then(m => ({ default: m.BlogBanner })));
 const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
 const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
@@ -113,23 +110,15 @@ const Index = () => {
           <HorizontalValueJourney />
         </div>
         
-        {/* Bento Grid Stats */}
-        <BentoStatsGrid />
-        
-        {/* Original sections with updated styling */}
-        <div id="investor-section" className="-mt-8 md:-mt-16">
+        {/* Main conversion sections */}
+        <div id="investor-section">
           <InvestorSection />
         </div>
-        <div className="-mt-6 md:-mt-12">
-          <StudentSection />
-        </div>
-        <div className="-mt-6 md:-mt-12">
-          <SellerSection />
-        </div>
-        <div className="-mt-6 md:-mt-12">
-          <BlogSection />
-        </div>
-        <FAQSection />
+        <SellerSection />
+        
+        {/* Compact blog banner */}
+        <BlogBanner />
+        
         <div className="pb-16 lg:pb-0">
           <Footer />
         </div>

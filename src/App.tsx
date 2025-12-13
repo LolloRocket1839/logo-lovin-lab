@@ -19,6 +19,7 @@ const About = lazy(() => import("./pages/About"));
 const Investors = lazy(() => import("./pages/Investors"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
+const FAQ = lazy(() => import("./pages/FAQ"));
 const AITesting = lazy(() => import("./pages/AITesting"));
 const ABTestResults = lazy(() => import("./pages/ABTestResults"));
 const AnalyticsDashboard = lazy(() => import("./pages/AnalyticsDashboard"));
@@ -47,6 +48,7 @@ const AppContent = () => {
         <Route path="/terms" element={<TerminiCondizioni />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/ai-testing" element={<AITesting />} />
         <Route path="/ab-test-results" element={<ABTestResults />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
