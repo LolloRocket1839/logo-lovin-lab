@@ -9,7 +9,7 @@ import investImage from "@/assets/journey-step-invest.png";
 import acquireImage from "@/assets/journey-step-acquire.jpg";
 import manageImage from "@/assets/journey-step-manage.jpg";
 import earnImage from "@/assets/journey-step-earn.jpg";
-import jungleRentLogo from "@/assets/jungle-rent-logo-transparent.png";
+import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
 
 interface JourneyStep {
   id: string;
