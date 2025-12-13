@@ -87,24 +87,53 @@ export const HorizontalValueJourney = () => {
           </h2>
           
           <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-border" />
-            
             {steps.map((step, index) => (
-              <div key={step.id} className="relative flex gap-6 mb-12 last:mb-0">
-                {/* Step number */}
-                <div className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-card border-2 border-current ${step.iconColor} flex items-center justify-center`}>
-                  <step.icon className={`w-7 h-7 ${step.iconColor}`} strokeWidth={1.5} />
-                </div>
+              <div key={step.id} className="relative">
+                {/* Animated connecting line */}
+                {index < steps.length - 1 && (
+                  <motion.div 
+                    className="absolute left-8 top-16 w-px h-12 overflow-hidden"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                  >
+                    <motion.div
+                      className={`w-full h-full bg-gradient-to-b ${step.iconColor.replace('text-', 'from-')} to-transparent`}
+                      initial={{ y: "-100%" }}
+                      whileInView={{ y: "0%" }}
+                      transition={{ duration: 0.6, delay: index * 0.2 }}
+                      viewport={{ once: true }}
+                    />
+                  </motion.div>
+                )}
                 
-                {/* Content */}
-                <div className="flex-1 pt-2">
-                  <h3 className="text-lg font-semibold mb-2">
-                    {t(step.titleKey)}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t(step.descriptionKey)}
-                  </p>
+                <div className="flex gap-6 mb-12 last:mb-0">
+                  {/* Step icon */}
+                  <motion.div 
+                    className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-card border-2 border-current ${step.iconColor} flex items-center justify-center shadow-lg`}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ type: "spring", stiffness: 200, delay: index * 0.15 }}
+                    viewport={{ once: true }}
+                  >
+                    <step.icon className={`w-7 h-7 ${step.iconColor}`} strokeWidth={1.5} />
+                  </motion.div>
+                  
+                  {/* Content */}
+                  <motion.div 
+                    className="flex-1 pt-2"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.15 + 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <h3 className="text-lg font-semibold mb-2">
+                      {t(step.titleKey)}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {t(step.descriptionKey)}
+                    </p>
+                  </motion.div>
                 </div>
               </div>
             ))}
