@@ -14,6 +14,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { openCalendly } from "@/lib/calendly";
+import { getUTMParams } from "@/hooks/useUTMTracking";
 
 interface QuickSellerLeadDialogProps {
   open: boolean;
@@ -64,19 +65,26 @@ export const QuickSellerLeadDialog = ({
     trackClick('quick_seller_lead_submit', { source, email: email.trim() });
 
     try {
+      const utmParams = getUTMParams();
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          _subject: `🏠 SELLER LEAD - Jungle Rent - ${email.trim()}`,
+          _subject: `🏠 SELLER LEAD - Jungle Rent - ${email.trim()}${utmParams.utm_source ? ` [${utmParams.utm_source}]` : ''}`,
           email: email.trim(),
           name: name.trim() || "Non specificato",
           address: address.trim() || "Non specificato",
           source,
           timestamp: new Date().toISOString(),
           type: "quick_seller_lead",
+          // UTM tracking
+          utm_source: utmParams.utm_source || "",
+          utm_medium: utmParams.utm_medium || "",
+          utm_campaign: utmParams.utm_campaign || "",
+          utm_content: utmParams.utm_content || "",
+          utm_term: utmParams.utm_term || "",
         }),
       });
 
