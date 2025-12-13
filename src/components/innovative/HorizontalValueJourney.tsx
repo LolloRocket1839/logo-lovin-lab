@@ -6,7 +6,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 // Import generated images
 import investImage from "@/assets/journey-step-invest.png";
-import acquireImage from "@/assets/journey-step-acquire.jpg";
+import acquireImage from "@/assets/journey-step-acquire.png";
 import manageImage from "@/assets/journey-step-manage.jpg";
 import earnImage from "@/assets/journey-step-earn.jpg";
 import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
