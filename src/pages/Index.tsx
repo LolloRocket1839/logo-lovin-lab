@@ -1,14 +1,19 @@
 import { Suspense, lazy } from "react";
 import { Navigation } from "@/components/Navigation";
 import { MobileHeader } from "@/components/MobileHeader";
-import { Hero } from "@/components/Hero";
 import { TrustBadge } from "@/components/TrustBadge";
 import { StructuredData } from "@/components/StructuredData";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 
+// Innovative components - loaded immediately for impact
+import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
+import { FloatingElements } from "@/components/innovative/FloatingElements";
+
 // Lazy load below-the-fold components
+const HorizontalValueJourney = lazy(() => import("@/components/innovative/HorizontalValueJourney").then(m => ({ default: m.HorizontalValueJourney })));
+const BentoStatsGrid = lazy(() => import("@/components/innovative/BentoStatsGrid").then(m => ({ default: m.BentoStatsGrid })));
 const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
 const StudentSection = lazy(() => import("@/components/StudentSection").then(m => ({ default: m.StudentSection })));
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
@@ -32,7 +37,10 @@ const Index = () => {
     : "Real estate investments in Turin's university market. Above-market returns, full professional management. 90,000+ students, 7 universities.";
 
   return (
-    <main role="main" className="min-h-screen gradient-jungle-vertical" id="main-content" tabIndex={-1}>
+    <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
+      {/* Floating parallax elements */}
+      <FloatingElements />
+      
       <MobileHeader />
       <Helmet>
         <title>{title}</title>
@@ -91,12 +99,25 @@ const Index = () => {
       <StructuredData />
       <Navigation />
       <ScrollProgressBar />
+      
+      {/* Immersive Hero with Parallax */}
       <div id="hero">
-        <Hero />
+        <ImmersiveHero />
       </div>
+      
       <TrustBadge />
+      
       <Suspense fallback={<div className="min-h-[200px]" />}>
-        <div className="-mt-8 md:-mt-16">
+        {/* Horizontal Value Journey - Desktop only */}
+        <div className="hidden md:block">
+          <HorizontalValueJourney />
+        </div>
+        
+        {/* Bento Grid Stats */}
+        <BentoStatsGrid />
+        
+        {/* Original sections with updated styling */}
+        <div id="investor-section" className="-mt-8 md:-mt-16">
           <InvestorSection />
         </div>
         <div className="-mt-6 md:-mt-12">
