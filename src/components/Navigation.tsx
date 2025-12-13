@@ -121,48 +121,51 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 transition-spacing">
         <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
-          {/* Mobile Back Button - shown on non-home pages */}
-          {showBackButton && (
-            <button
-              onClick={() => {
-                trackClick('nav_back_button');
-                if (isBlogPost) {
-                  navigate('/blog');
-                } else {
-                  navigate('/');
-                }
-              }}
-              className="lg:hidden flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 rounded-md hover:bg-accent/50"
-              aria-label={t('nav.back') || 'Indietro'}
-            >
-              <ChevronLeft className="w-5 h-5" />
-              <span className="text-sm font-medium">
-                {isBlogPost ? 'Blog' : 'Home'}
-              </span>
-            </button>
-          )}
+          {/* Mobile: Back Button + Logo | Desktop: Logo only */}
+          <div className="flex items-center gap-2">
+            {/* Mobile Back Button - shown on non-home pages */}
+            {showBackButton && (
+              <button
+                onClick={() => {
+                  trackClick('nav_back_button');
+                  if (isBlogPost) {
+                    navigate('/blog');
+                  } else {
+                    navigate('/');
+                  }
+                }}
+                className="lg:hidden flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 rounded-md hover:bg-accent/50"
+                aria-label={t('nav.back') || 'Indietro'}
+              >
+                <ChevronLeft className="w-5 h-5" />
+                <span className="text-sm font-medium">
+                  {isBlogPost ? 'Blog' : 'Home'}
+                </span>
+              </button>
+            )}
 
-          {/* Logo - always visible on non-home pages, scroll-based opacity on home */}
-          <Link
-            to="/"
-            onClick={handleLogoClick}
-            className={`flex items-center gap-2 group ${prefersReducedMotion ? '' : 'transition-all duration-500 hover:scale-105'} ${showBackButton ? 'lg:flex' : ''}`}
-            aria-label="Torna alla home"
-            style={{
-              opacity: isHomePage ? scrollProgress : 1,
-              transform: prefersReducedMotion ? undefined : `scale(${isHomePage ? (0.8 + (scrollProgress * 0.2)) : 1})`,
-              pointerEvents: isHomePage && scrollProgress < 0.3 ? 'none' : 'auto'
-            }}
-          >
-            <img
-              src={jungleRentLogo}
-              alt="Jungle Rent Logo"
-              className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 ${prefersReducedMotion ? '' : 'transition-size group-hover:rotate-6'} ${showBackButton ? 'hidden lg:block' : ''}`}
-            />
-            <span className={`font-display font-bold text-lg md:text-xl text-foreground hidden sm:block ${showBackButton ? 'lg:block hidden' : ''}`}>
-              Jungle Rent
-            </span>
-          </Link>
+            {/* Logo - always visible, clickable to go home */}
+            <Link
+              to="/"
+              onClick={handleLogoClick}
+              className={`flex items-center gap-2 group ${prefersReducedMotion ? '' : 'transition-all duration-500 hover:scale-105'}`}
+              aria-label="Torna alla home"
+              style={{
+                opacity: isHomePage ? scrollProgress : 1,
+                transform: prefersReducedMotion ? undefined : `scale(${isHomePage ? (0.8 + (scrollProgress * 0.2)) : 1})`,
+                pointerEvents: isHomePage && scrollProgress < 0.3 ? 'none' : 'auto'
+              }}
+            >
+              <img
+                src={jungleRentLogo}
+                alt="Jungle Rent Logo"
+                className={`w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 ${prefersReducedMotion ? '' : 'transition-size group-hover:rotate-6'}`}
+              />
+              <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:block">
+                Jungle Rent
+              </span>
+            </Link>
+          </div>
 
 
           {/* Desktop Menu */}
