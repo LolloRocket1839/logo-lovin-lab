@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Euro, Key, ClipboardCheck, TrendingUp } from "lucide-react";
+import { Coins, Building2, Users, BarChart3 } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -11,36 +11,41 @@ interface JourneyStep {
   titleKey: string;
   descriptionKey: string;
   color: string;
+  iconColor: string;
 }
 
 const steps: JourneyStep[] = [
   {
     id: "invest",
-    icon: Euro,
+    icon: Coins,
     titleKey: "infographic.steps.invest.title",
     descriptionKey: "infographic.steps.invest.detail",
-    color: "from-primary/20 to-primary/5"
+    color: "from-emerald-500/20 to-emerald-500/5",
+    iconColor: "text-emerald-600"
   },
   {
     id: "acquire",
-    icon: Key,
+    icon: Building2,
     titleKey: "infographic.steps.acquire.title",
     descriptionKey: "infographic.steps.acquire.detail",
-    color: "from-blue-500/20 to-blue-500/5"
+    color: "from-sky-500/20 to-sky-500/5",
+    iconColor: "text-sky-600"
   },
   {
     id: "manage",
-    icon: ClipboardCheck,
+    icon: Users,
     titleKey: "infographic.steps.manage.title",
     descriptionKey: "infographic.steps.manage.detail",
-    color: "from-amber-500/20 to-amber-500/5"
+    color: "from-amber-500/20 to-amber-500/5",
+    iconColor: "text-amber-600"
   },
   {
     id: "earn",
-    icon: TrendingUp,
+    icon: BarChart3,
     titleKey: "infographic.steps.earn.title",
     descriptionKey: "infographic.steps.earn.detail",
-    color: "from-green-500/20 to-green-500/5"
+    color: "from-violet-500/20 to-violet-500/5",
+    iconColor: "text-violet-600"
   }
 ];
 
@@ -88,8 +93,8 @@ export const HorizontalValueJourney = () => {
             {steps.map((step, index) => (
               <div key={step.id} className="relative flex gap-6 mb-12 last:mb-0">
                 {/* Step number */}
-                <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-card border-2 border-primary flex items-center justify-center">
-                  <step.icon className="w-7 h-7 text-primary" />
+                <div className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-card border-2 border-current ${step.iconColor} flex items-center justify-center`}>
+                  <step.icon className={`w-7 h-7 ${step.iconColor}`} strokeWidth={1.5} />
                 </div>
                 
                 {/* Content */}
@@ -171,7 +176,7 @@ export const HorizontalValueJourney = () => {
                     >
                       <div className="relative">
                         <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-card shadow-xl flex items-center justify-center">
-                          <Icon className="w-12 h-12 md:w-16 md:h-16 text-primary" strokeWidth={1.5} />
+                          <Icon className={`w-12 h-12 md:w-16 md:h-16 ${step.iconColor}`} strokeWidth={1.5} />
                         </div>
                         <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
                           {index + 1}
