@@ -7,15 +7,15 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCTA } from "@/components/blog/BlogCTA";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { ShareButton } from "@/components/blog/ShareButton";
+import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
+import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
+import { BlogProgressBar } from "@/components/blog/BlogProgressBar";
+import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
-import { Calendar, Clock, Share2 } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
 import { useState, useEffect } from "react";
 import type { Components } from "react-markdown";
 
@@ -325,6 +325,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       
       <StructuredData />
       <Navigation />
+      <BlogProgressBar />
       
       <div className="pt-20">
         <Breadcrumbs
@@ -370,25 +371,14 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
               />
             </header>
 
-            {/* Featured Image */}
-            <div className="aspect-video rounded-lg overflow-hidden mb-12">
-              <img
-                src={post.image}
-                alt={translatedData.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            {/* Featured Image with Parallax */}
+            <ParallaxHeroImage src={post.image} alt={translatedData.title} />
 
-            {/* Content */}
-            <div className="prose prose-sm sm:prose-base md:prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-none blog-content-wrapper mb-12 prose-headings:scroll-mt-20 prose-a:text-primary prose-strong:font-bold prose-table:overflow-x-auto prose-pre:overflow-x-auto overflow-x-hidden">
-              <ReactMarkdown 
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeRaw]}
-                components={markdownComponents}
-              >
-                {content}
-              </ReactMarkdown>
-            </div>
+            {/* Animated Content */}
+            <AnimatedBlogContent content={content} markdownComponents={markdownComponents} />
+
+            {/* Floating Table of Contents (Desktop) */}
+            <FloatingTableOfContents content={content} />
 
             {/* CTA */}
             <BlogCTA type={post.category} />
