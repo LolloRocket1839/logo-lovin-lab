@@ -157,8 +157,7 @@ export const ImmersiveHero = () => {
             transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 0.8 }}
             className="flex justify-center mb-8"
           >
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-primary" />
+            <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
               <span className="text-sm md:text-base font-medium text-primary">
                 {t('investor.minInvestment', 'Investi da €100')}
               </span>
