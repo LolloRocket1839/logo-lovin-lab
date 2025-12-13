@@ -316,22 +316,22 @@
       "invest": {
         "title": "Investi",
         "description": "Partecipa da €100",
-        "detail": "Nessun immobile da gestire, nessuna burocrazia. Tu investi, noi facciamo il resto."
+        "detail": "Accedi al mercato immobiliare senza comprare un intero immobile. Zero burocrazia, zero gestione diretta."
       },
       "acquire": {
         "title": "Acquistiamo",
-        "description": "Immobili selezionati",
-        "detail": "Acquistiamo immobili vicino a Politecnico, UniTo e i 7 atenei torinesi. Zone ad alta domanda studentesca."
+        "description": "Immobili in zone universitarie",
+        "detail": "Selezioniamo e acquistiamo immobili in zone ad alta domanda vicino a Politecnico, UniTo e le università torinesi."
       },
       "manage": {
         "title": "Gestiamo",
-        "description": "Modello ibrido studenti/turisti",
-        "detail": "9 mesi studenti + 3 mesi turisti. Giorni ospite gratuiti per esami estivi. Contratti e manutenzione inclusi."
+        "description": "Modello ibrido studenti + turisti",
+        "detail": "Affitti a studenti durante l'anno accademico, ospiti turistici nei periodi di vacanza. Massimizzazione dell'occupazione tutto l'anno."
       },
       "earn": {
         "title": "Partecipi",
-        "description": "Accedi al mercato immobiliare",
-        "detail": "Partecipi ai risultati del portafoglio. Report trimestrali trasparenti e dashboard personale."
+        "description": "Ai risultati del portafoglio",
+        "detail": "Partecipi ai risultati degli immobili gestiti. Report trasparenti e dashboard personale per monitorare il tuo investimento."
       }
     },
     "metrics": {
