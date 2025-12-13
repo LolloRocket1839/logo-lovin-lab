@@ -33,7 +33,7 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
   return (
     <nav aria-label="Breadcrumb" className="container mx-auto px-3 sm:px-4 pt-24 pb-3 sm:pb-4">
       <Breadcrumb>
-        <BreadcrumbList className="text-xs sm:text-sm gap-0.5 sm:gap-1 flex-wrap">
+        <BreadcrumbList className="text-xs sm:text-sm gap-0 flex-wrap">
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
               <Link 
@@ -53,7 +53,7 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
               : item.label;
             
             return (
-              <div key={index} className="flex items-center gap-0.5 sm:gap-1">
+              <div key={index} className="flex items-center gap-0">
                 <BreadcrumbSeparator className="text-muted-foreground/50" />
                 <BreadcrumbItem>
                   {isLast ? (
