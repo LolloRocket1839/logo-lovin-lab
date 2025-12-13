@@ -522,14 +522,14 @@
     "investorQ10": "Come vengono calcolati i risultati?",
     "investorA10": "I risultati sono calcolati sulla base del nostro modello ibrido: affitto a studenti universitari per 9 mesi (settembre-giugno) e affitti brevi turistici per i 3 mesi estivi. Questo modello ottimizza l'occupazione rispetto agli affitti tradizionali a canone fisso. I risultati sono al netto delle spese di gestione ma lordi di imposte personali. ATTENZIONE: i risultati dipendono dall'andamento del mercato e non sono garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale.",
     "investorQ11": "Cos'è il modello ibrido studenti/turisti?",
-    "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori 9-10 mesi durante l'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi (giugno-agosto) quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano circa il 25% rispetto ai contratti tradizionali 12 mesi, pagando solo i mesi di effettiva permanenza. Inoltre, offriamo giorni ospite gratuiti durante i mesi estivi per permettere agli studenti di tornare a Torino per gli esami senza costi aggiuntivi.",
+    "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori allineati all'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano significativamente rispetto ai contratti tradizionali, pagando solo i mesi di effettiva permanenza. Inoltre, offriamo giorni ospite gratuiti durante l'estate per permettere agli studenti di tornare a Torino per gli esami senza costi aggiuntivi.",
     "studentCategory": "Per studenti",
-    "studentQ1": "Come funziona il contratto di 9 mesi?",
-    "studentA1": "Il contratto transitorio per motivi di studio dura 9-10 mesi (settembre-giugno), coprendo esattamente l'anno accademico. Paghi solo i mesi in cui sei effettivamente a Torino, risparmiando circa il 25% rispetto ai contratti tradizionali di 12 mesi. Il contratto è rinnovabile annualmente.",
+    "studentQ1": "Come funziona il contratto flessibile?",
+    "studentA1": "Il contratto transitorio per motivi di studio copre l'anno accademico (settembre-giugno), permettendoti di pagare solo i mesi in cui sei effettivamente a Torino. Risparmi significativamente rispetto ai contratti tradizionali. Il contratto è rinnovabile annualmente.",
     "studentQ2": "E se devo tornare a Torino per gli esami estivi?",
-    "studentA2": "Offriamo giorni ospite gratuiti durante i mesi estivi (giugno-agosto). Questo significa che puoi tornare a Torino per sostenere gli esami della sessione estiva senza pagare affitto aggiuntivo. È incluso nel tuo contratto.",
+    "studentA2": "Offriamo giorni ospite gratuiti durante i mesi estivi. Questo significa che puoi tornare a Torino per sostenere gli esami della sessione estiva senza pagare affitto aggiuntivo. È incluso nel tuo contratto.",
     "studentQ3": "Quanto risparmio rispetto a un affitto tradizionale?",
-    "studentA3": "Con il nostro modello risparmi circa il 25% rispetto a un contratto 4+4 o un transitorio di 12 mesi. Se una stanza costa €400/mese, con un contratto 12 mesi paghi €4.800/anno. Con noi paghi solo 9 mesi: €3.600/anno, risparmiando €1.200.",
+    "studentA3": "Con il nostro modello risparmi significativamente rispetto a un contratto tradizionale di 12 mesi. Paghi solo i mesi dell'anno accademico, evitando l'affitto estivo quando non sei a Torino.",
     "studentQ4": "In quali zone di Torino avete alloggi?",
     "studentA4": "I nostri alloggi sono nelle zone universitarie più richieste: San Salvario, Crocetta, Vanchiglia, Centro, Aurora, Cenisia. Tutte a pochi minuti a piedi o in bici dal Politecnico, UniTo e dalle altre università torinesi.",
     "studentQ5": "Cosa è incluso nell'affitto?",
@@ -996,22 +996,22 @@
     }
   },
   "studentInfographic": {
-    "badge": "Come funziona per studenti",
-    "title": "Trova casa, risparmia il 25%",
-    "subtitle": "Contratti 9 mesi pensati per studenti universitari",
+    "badge": "Come funziona",
+    "title": "Trova il tuo alloggio ideale",
+    "subtitle": "Il nostro modello ibrido ti fa risparmiare",
     "steps": {
       "search": {
         "title": "Cerca alloggio",
         "description": "Trova stanze vicino al Politecnico, UniTo e tutti gli atenei torinesi"
       },
       "save": {
-        "title": "Risparmia 25%",
-        "description": "Paghi solo 9 mesi invece di 12. Niente affitto estivo inutile"
+        "title": "Risparmia",
+        "description": "Contratti flessibili allineati all'anno accademico"
       }
     },
     "benefits": {
-      "contract": "Contratto 9 mesi",
-      "savings": "Risparmio 25%",
+      "contract": "Contratto flessibile",
+      "savings": "Risparmio garantito",
       "examDays": "Giorni esame gratis"
     },
     "cta": "Presto disponibile: alloggi da settembre 2026"
