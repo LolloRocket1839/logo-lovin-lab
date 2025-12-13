@@ -549,14 +549,14 @@
     "investorQ10": "How are results calculated?",
     "investorA10": "Results are calculated based on our hybrid model: renting to university students for 9 months (September-June) and short-term tourist rentals for the 3 summer months. This model optimizes occupancy compared to traditional fixed-rent contracts. Results are net of management costs but gross of personal taxes. WARNING: results depend on market performance and are not guaranteed. Investments involve risks, including possible partial or total loss of capital.",
     "investorQ11": "What is the hybrid student/tourist model?",
-    "investorA11": "Our hybrid model combines: (1) Rentals to university students with transitional contracts of 9-10 months during the academic year, ensuring stability and reliable tenants; (2) Short-term tourist rentals in summer months (June-August) when students are on vacation, maximizing seasonal revenue. Students save about 25% compared to traditional 12-month contracts, paying only for the months they actually stay. Additionally, we offer free guest days during summer months so students can return to Turin for exams at no extra cost.",
+    "investorA11": "Our hybrid model combines: (1) Rentals to university students with transitional contracts aligned with the academic year, ensuring stability and reliable tenants; (2) Short-term tourist rentals in summer months when students are on vacation, maximizing seasonal revenue. Students save significantly compared to traditional contracts, paying only for the months they actually stay. Additionally, we offer free guest days during summer so students can return to Turin for exams at no extra cost.",
     "studentCategory": "For Students",
-    "studentQ1": "How does the 9-month contract work?",
-    "studentA1": "The transitional study contract lasts 9-10 months (September-June), covering exactly the academic year. You only pay for the months you're actually in Turin, saving about 25% compared to traditional 12-month contracts. The contract is renewable annually.",
+    "studentQ1": "How does the flexible contract work?",
+    "studentA1": "The transitional study contract covers the academic year (September-June), allowing you to pay only for the months you're actually in Turin. You save significantly compared to traditional contracts. The contract is renewable annually.",
     "studentQ2": "What if I need to come back to Turin for summer exams?",
-    "studentA2": "We offer free guest days during summer months (June-August). This means you can return to Turin for summer session exams without paying additional rent. It's included in your contract.",
+    "studentA2": "We offer free guest days during summer months. This means you can return to Turin for summer session exams without paying additional rent. It's included in your contract.",
     "studentQ3": "How much do I save compared to traditional rent?",
-    "studentA3": "With our model, you save about 25% compared to a 4+4 contract or a 12-month transitional. If a room costs €400/month, with a 12-month contract you pay €4,800/year. With us you pay only 9 months: €3,600/year, saving €1,200.",
+    "studentA3": "With our model, you save significantly compared to a traditional 12-month contract. You only pay for the academic year months, avoiding summer rent when you're not in Turin.",
     "studentQ4": "In which areas of Turin do you have housing?",
     "studentA4": "Our accommodations are in the most sought-after university areas: San Salvario, Crocetta, Vanchiglia, Centro, Aurora, Cenisia. All within minutes walking or cycling from Politecnico, UniTo and other Turin universities.",
     "studentQ5": "What's included in the rent?",
@@ -1222,22 +1222,22 @@
     }
   },
   "studentInfographic": {
-    "badge": "How it works for students",
-    "title": "Find housing, save 25%",
-    "subtitle": "9-month contracts designed for university students",
+    "badge": "How it works",
+    "title": "Find your ideal housing",
+    "subtitle": "Our hybrid model saves you money",
     "steps": {
       "search": {
         "title": "Search housing",
         "description": "Find rooms near Politecnico, UniTo and all Turin universities"
       },
       "save": {
-        "title": "Save 25%",
-        "description": "Pay only 9 months instead of 12. No wasted summer rent"
+        "title": "Save",
+        "description": "Flexible contracts aligned with the academic year"
       }
     },
     "benefits": {
-      "contract": "9-month contract",
-      "savings": "25% savings",
+      "contract": "Flexible contract",
+      "savings": "Guaranteed savings",
       "examDays": "Free exam days"
     },
     "cta": "Coming soon: housing from September 2026"
