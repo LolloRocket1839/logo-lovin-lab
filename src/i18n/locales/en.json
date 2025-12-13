@@ -1220,5 +1220,26 @@
       "investimento": "Divesting investment",
       "altro": "Other"
     }
+  },
+  "studentInfographic": {
+    "badge": "How it works for students",
+    "title": "Find housing, save 25%",
+    "subtitle": "9-month contracts designed for university students",
+    "steps": {
+      "search": {
+        "title": "Search housing",
+        "description": "Find rooms near Politecnico, UniTo and all Turin universities"
+      },
+      "save": {
+        "title": "Save 25%",
+        "description": "Pay only 9 months instead of 12. No wasted summer rent"
+      }
+    },
+    "benefits": {
+      "contract": "9-month contract",
+      "savings": "25% savings",
+      "examDays": "Free exam days"
+    },
+    "cta": "Coming soon: housing from September 2026"
   }
 }

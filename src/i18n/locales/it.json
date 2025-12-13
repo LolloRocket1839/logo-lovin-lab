@@ -994,5 +994,26 @@
       "investimento": "Dismissione investimento",
       "altro": "Altro"
     }
+  },
+  "studentInfographic": {
+    "badge": "Come funziona per studenti",
+    "title": "Trova casa, risparmia il 25%",
+    "subtitle": "Contratti 9 mesi pensati per studenti universitari",
+    "steps": {
+      "search": {
+        "title": "Cerca alloggio",
+        "description": "Trova stanze vicino al Politecnico, UniTo e tutti gli atenei torinesi"
+      },
+      "save": {
+        "title": "Risparmia 25%",
+        "description": "Paghi solo 9 mesi invece di 12. Niente affitto estivo inutile"
+      }
+    },
+    "benefits": {
+      "contract": "Contratto 9 mesi",
+      "savings": "Risparmio 25%",
+      "examDays": "Giorni esame gratis"
+    },
+    "cta": "Presto disponibile: alloggi da settembre 2026"
   }
 }

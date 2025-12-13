@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 
 // Lazy load below-the-fold components
 const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
+const StudentSection = lazy(() => import("@/components/StudentSection").then(m => ({ default: m.StudentSection })));
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
 const BlogSection = lazy(() => import("@/components/blog/BlogSection").then(m => ({ default: m.BlogSection })));
 const FAQSection = lazy(() => import("@/components/FAQSection").then(m => ({ default: m.FAQSection })));
@@ -97,6 +98,9 @@ const Index = () => {
       <Suspense fallback={<div className="min-h-[200px]" />}>
         <div className="-mt-8 md:-mt-16">
           <InvestorSection />
+        </div>
+        <div className="-mt-6 md:-mt-12">
+          <StudentSection />
         </div>
         <div className="-mt-6 md:-mt-12">
           <SellerSection />
