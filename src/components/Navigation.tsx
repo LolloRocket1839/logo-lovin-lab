@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
@@ -13,12 +13,19 @@ import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 export const Navigation = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const { trackClick } = useAnalytics();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+
+  // Check if we're on a non-home page (show back button)
+  const isHomePage = location.pathname === '/';
+  const isBlogPost = location.pathname.startsWith('/blog/');
+  const isBlogPage = location.pathname === '/blog';
+  const showBackButton = !isHomePage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,9 +50,6 @@ export const Navigation = () => {
       setIsMobileMenuOpen(false);
     }
   };
-
-  // Check if we're on a non-home page (logo should always be visible)
-  const isHomePage = window.location.pathname === '/';
 
   const handleLogoClick = (e: React.MouseEvent) => {
     trackClick('nav_logo');
@@ -117,11 +121,32 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 transition-spacing">
         <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
+          {/* Mobile Back Button - shown on non-home pages */}
+          {showBackButton && (
+            <button
+              onClick={() => {
+                trackClick('nav_back_button');
+                if (isBlogPost) {
+                  navigate('/blog');
+                } else {
+                  navigate('/');
+                }
+              }}
+              className="lg:hidden flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 rounded-md hover:bg-accent/50"
+              aria-label={t('nav.back') || 'Indietro'}
+            >
+              <ChevronLeft className="w-5 h-5" />
+              <span className="text-sm font-medium">
+                {isBlogPost ? 'Blog' : 'Home'}
+              </span>
+            </button>
+          )}
+
           {/* Logo - always visible on non-home pages, scroll-based opacity on home */}
           <Link
             to="/"
             onClick={handleLogoClick}
-            className={`flex items-center gap-2 group ${prefersReducedMotion ? '' : 'transition-all duration-500 hover:scale-105'}`}
+            className={`flex items-center gap-2 group ${prefersReducedMotion ? '' : 'transition-all duration-500 hover:scale-105'} ${showBackButton ? 'lg:flex' : ''}`}
             aria-label="Torna alla home"
             style={{
               opacity: isHomePage ? scrollProgress : 1,
@@ -132,12 +157,13 @@ export const Navigation = () => {
             <img
               src={jungleRentLogo}
               alt="Jungle Rent Logo"
-              className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 ${prefersReducedMotion ? '' : 'transition-size group-hover:rotate-6'}`}
+              className={`w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 ${prefersReducedMotion ? '' : 'transition-size group-hover:rotate-6'} ${showBackButton ? 'hidden lg:block' : ''}`}
             />
-            <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:block">
+            <span className={`font-display font-bold text-lg md:text-xl text-foreground hidden sm:block ${showBackButton ? 'lg:block hidden' : ''}`}>
               Jungle Rent
             </span>
           </Link>
+
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-1">
