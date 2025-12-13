@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ArrowUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const ScrollToTop = () => {
   const { t } = useTranslation();
@@ -35,33 +29,37 @@ export const ScrollToTop = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  const scrollToJourney = () => {
+    const journeySection = document.getElementById('value-journey');
+    if (journeySection) {
+      journeySection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Button
-            onClick={scrollToTop}
-            variant="premium"
-            size="icon"
-            className={`fixed bottom-20 md:bottom-24 right-6 sm:right-8 z-50 h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 rounded-full shadow-lg
-                        transition-all duration-300 hover:shadow-xl hover:scale-110 hidden lg:flex
-                        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
-            aria-label={t('scrollToTop.tooltip')}
-          >
-            <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-          </Button>
-        </TooltipTrigger>
-        <TooltipContent side="left" className="font-medium">
-          <p>{t('scrollToTop.tooltip')}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.button
+          initial={{ opacity: 0, y: 20, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 20, scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 300, damping: 25 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={scrollToJourney}
+          className="fixed bottom-20 md:bottom-24 right-6 z-50 hidden lg:flex items-center gap-2 
+                     px-4 py-2.5 rounded-full bg-primary text-primary-foreground shadow-lg
+                     hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+          aria-label={t('scrollToTop.tooltip')}
+        >
+          <ArrowUp className="h-4 w-4" />
+          <span className="text-sm font-medium whitespace-nowrap">
+            {t('scrollToTop.label', 'Rivedi il modello')}
+          </span>
+        </motion.button>
+      )}
+    </AnimatePresence>
   );
 };
