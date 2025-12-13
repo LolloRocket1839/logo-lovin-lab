@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Search, PiggyBank, CheckCircle2, Home, Calendar, Gift } from 'lucide-react';
+import { Search, PiggyBank, CheckCircle2, Home, Calendar } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const StudentInfographic: React.FC = () => {
@@ -26,7 +26,6 @@ const StudentInfographic: React.FC = () => {
   const benefits = [
     { icon: Calendar, label: t('studentInfographic.benefits.contract') },
     { icon: PiggyBank, label: t('studentInfographic.benefits.savings') },
-    { icon: Gift, label: t('studentInfographic.benefits.examDays') },
   ];
 
   return (
@@ -106,7 +105,7 @@ const StudentInfographic: React.FC = () => {
 
       {/* Benefits grid */}
       <motion.div
-        className="grid grid-cols-3 gap-3 md:gap-4"
+        className="grid grid-cols-2 gap-3 md:gap-4 max-w-sm mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
         transition={{ duration: 0.4, delay: 0.5 }}
