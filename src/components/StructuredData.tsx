@@ -201,21 +201,29 @@ export const StructuredData = () => {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: [
-        // Investor FAQs
+        // Student FAQs - Hybrid Model
         {
           "@type": "Question",
           name: "Come funziona Jungle Rent per gli studenti?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Jungle Rent ottimizza gli affitti per gli studenti universitari a Torino, offrendo affitti convenienti rispetto agli affitti tradizionali. Offriamo stanze in quadrilocali vicino ai principali atenei torinesi (Politecnico, UniTo) con contratti sicuri e supporto dedicato.",
+            text: "Jungle Rent offre contratti flessibili allineati all'anno accademico. Paghi solo per i mesi in cui studi, con un risparmio significativo rispetto ai contratti tradizionali. Alloggi vicino a Politecnico, UniTo e tutti i principali atenei torinesi.",
           },
         },
         {
           "@type": "Question",
-          name: "Quanto posso risparmiare sull'affitto?",
+          name: "Quanto posso risparmiare sull'affitto con Jungle Rent?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Gli studenti possono risparmiare rispetto ai canoni di mercato tradizionali. Il risparmio deriva dall'ottimizzazione degli spazi e dalla gestione efficiente delle proprietà.",
+            text: "Il risparmio è garantito grazie ai nostri contratti flessibili allineati all'anno accademico. Invece di pagare 12 mesi, paghi solo i mesi che ti servono, senza sprechi durante le vacanze estive.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Cosa succede se devo tornare a Torino per gli esami estivi?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Il nostro modello ibrido include giorni esame gratuiti durante l'estate. Puoi tornare per le sessioni d'esame senza costi aggiuntivi, mantenendo la flessibilità del contratto accademico.",
           },
         },
         {
@@ -224,6 +232,14 @@ export const StructuredData = () => {
           acceptedAnswer: {
             "@type": "Answer",
             text: "Jungle Rent offre alloggi vicini a tutti i principali atenei torinesi: Politecnico di Torino, Università degli Studi di Torino (UniTo), e altre istituzioni universitarie della città.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Perché scegliere un contratto flessibile invece di uno annuale?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Con un contratto flessibile paghi solo i mesi che ti servono, risparmi significativamente rispetto agli affitti tradizionali, e mantieni la libertà di tornare per gli esami estivi con giorni gratuiti inclusi.",
           },
         },
         {
