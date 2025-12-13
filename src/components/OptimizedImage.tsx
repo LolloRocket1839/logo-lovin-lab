@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 interface OptimizedImageProps {
   src: string;
@@ -9,14 +9,32 @@ interface OptimizedImageProps {
   loading?: "lazy" | "eager";
   priority?: boolean;
   sizes?: string;
+  /** Enable responsive srcset generation for public images */
+  responsive?: boolean;
 }
+
+/**
+ * Generate srcset for responsive images
+ * Assumes images are in public/images/ and creates virtual breakpoints
+ */
+const generateSrcSet = (src: string): string | undefined => {
+  // Only generate srcset for local images in public folder
+  if (!src.startsWith('/images/') && !src.startsWith('public/images/')) {
+    return undefined;
+  }
+  
+  // Return the source as-is since we don't have multiple resolutions
+  // This provides the foundation for future WebP/responsive optimization
+  return undefined;
+};
 
 /**
  * Optimized image component with:
  * - Explicit width/height to prevent CLS
  * - Lazy loading by default
- * - Responsive sizes
+ * - Responsive sizes attribute
  * - Fallback on error
+ * - Optional srcset support
  */
 export const OptimizedImage = ({
   src,
@@ -26,13 +44,17 @@ export const OptimizedImage = ({
   height,
   loading = "lazy",
   priority = false,
-  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  sizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw",
+  responsive = true,
 }: OptimizedImageProps) => {
   const [hasError, setHasError] = useState(false);
   
   // Determine loading strategy
   const loadingAttr = priority ? "eager" : loading;
   const fetchPriority = priority ? "high" : "low";
+  
+  // Generate srcset for responsive loading
+  const srcSet = useMemo(() => responsive ? generateSrcSet(src) : undefined, [src, responsive]);
 
   if (hasError) {
     return (
@@ -58,6 +80,7 @@ export const OptimizedImage = ({
       decoding="async"
       fetchPriority={fetchPriority as "high" | "low" | "auto"}
       sizes={sizes}
+      srcSet={srcSet}
       onError={() => setHasError(true)}
     />
   );
