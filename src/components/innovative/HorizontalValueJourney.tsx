@@ -1,8 +1,9 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Euro, Key, ClipboardCheck, TrendingUp, Check } from "lucide-react";
 
 // Import generated images
 import investImage from "@/assets/journey-step-invest.png";
@@ -10,6 +11,9 @@ import acquireImage from "@/assets/journey-step-acquire.png";
 import manageImage from "@/assets/journey-step-manage.png";
 import earnImage from "@/assets/journey-step-earn.png";
 import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
+
+// Step icons mapping
+const stepIcons = [Euro, Key, ClipboardCheck, TrendingUp];
 
 interface JourneyStep {
   id: string;
@@ -82,6 +86,20 @@ export const HorizontalValueJourney = () => {
     });
     return unsubscribe;
   }, [scrollYProgress]);
+
+  // Handle click on step indicator to jump to that step
+  const handleStepClick = useCallback((stepIndex: number) => {
+    if (!containerRef.current) return;
+    
+    const containerTop = containerRef.current.offsetTop;
+    const containerHeight = containerRef.current.offsetHeight - window.innerHeight;
+    const targetScroll = containerTop + (stepIndex / 3) * containerHeight;
+    
+    window.scrollTo({
+      top: targetScroll,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth'
+    });
+  }, [prefersReducedMotion]);
 
   // Mobile fallback - vertical layout with images
   if (isMobile) {
@@ -281,22 +299,93 @@ export const HorizontalValueJourney = () => {
           </motion.div>
         </div>
 
-        {/* Step indicators */}
-        <div className="pb-12 flex justify-center gap-3">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className={`
-                h-3 rounded-full transition-all duration-300
-                ${index === activeStep 
-                  ? `${step.accentColor} w-8` 
-                  : index < activeStep 
-                    ? `${step.accentColor} opacity-50 w-3` 
-                    : 'bg-muted-foreground/20 w-3'
-                }
-              `}
-            />
-          ))}
+        {/* Interactive Step Indicators with Numbers & Titles */}
+        <div className="pb-8 px-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Connected steps visualization */}
+            <div className="flex items-center justify-between relative">
+              {/* Progress line background */}
+              <div className="absolute top-5 left-0 right-0 h-0.5 bg-muted-foreground/20" />
+              
+              {/* Progress line filled */}
+              <motion.div 
+                className="absolute top-5 left-0 h-0.5 bg-primary origin-left"
+                style={{ width: progressWidth }}
+              />
+              
+              {steps.map((step, index) => {
+                const Icon = stepIcons[index];
+                const isActive = index === activeStep;
+                const isCompleted = index < activeStep;
+                const isFuture = index > activeStep;
+                
+                return (
+                  <button
+                    key={step.id}
+                    onClick={() => handleStepClick(index)}
+                    className="relative z-10 flex flex-col items-center gap-2 group cursor-pointer transition-transform duration-200 hover:scale-105"
+                    aria-label={`${t(step.titleKey)} - Step ${index + 1}`}
+                  >
+                    {/* Step circle with number/icon */}
+                    <motion.div
+                      className={`
+                        w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm
+                        transition-all duration-300 shadow-md
+                        ${isActive 
+                          ? `${step.accentColor} text-white ring-4 ring-offset-2 ring-offset-background` 
+                          : isCompleted 
+                            ? `${step.accentColor} text-white` 
+                            : 'bg-muted text-muted-foreground'
+                        }
+                        ${isActive ? 'ring-primary/30' : ''}
+                      `}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {isCompleted ? (
+                        <Check className="w-5 h-5" />
+                      ) : (
+                        <span>{index + 1}</span>
+                      )}
+                    </motion.div>
+                    
+                    {/* Step title - always visible */}
+                    <motion.div
+                      className={`
+                        flex flex-col items-center gap-1
+                        transition-all duration-300
+                        ${isActive ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}
+                      `}
+                    >
+                      <span className={`
+                        text-xs font-semibold uppercase tracking-wide
+                        ${isActive ? 'text-foreground' : 'text-muted-foreground'}
+                      `}>
+                        {t(step.titleKey)}
+                      </span>
+                      
+                      {/* Icon indicator */}
+                      <Icon className={`
+                        w-4 h-4 transition-colors
+                        ${isActive ? 'text-primary' : 'text-muted-foreground/50'}
+                      `} />
+                    </motion.div>
+                    
+                    {/* Active indicator pill */}
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeIndicator"
+                        className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary"
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>
