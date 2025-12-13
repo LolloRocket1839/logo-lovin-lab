@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TrendingUp, Home, Building2, Mic } from "lucide-react";
+import { TrendingUp, Home, Building2, Mic, GraduationCap } from "lucide-react";
 
 export const FAQSection = () => {
   const { t } = useTranslation();
@@ -22,6 +22,14 @@ export const FAQSection = () => {
     { q: t("faq.investorQ9"), a: t("faq.investorA9") },
     { q: t("faq.investorQ10"), a: t("faq.investorA10") },
     { q: t("faq.investorQ11"), a: t("faq.investorA11") },
+  ];
+
+  const studentFAQs = [
+    { q: t("faq.studentQ1"), a: t("faq.studentA1") },
+    { q: t("faq.studentQ2"), a: t("faq.studentA2") },
+    { q: t("faq.studentQ3"), a: t("faq.studentA3") },
+    { q: t("faq.studentQ4"), a: t("faq.studentA4") },
+    { q: t("faq.studentQ5"), a: t("faq.studentA5") },
   ];
 
   const sellerFAQs = [
@@ -80,6 +88,30 @@ export const FAQSection = () => {
                 <AccordionItem
                   key={`investor-${index}`}
                   value={`investor-${index}`}
+                  className="bg-background border rounded-lg px-3 sm:px-4 md:px-6"
+                >
+                  <AccordionTrigger className="faq-question text-left text-sm sm:text-base hover:no-underline" data-speakable="true">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="faq-answer text-muted-foreground text-sm sm:text-base" data-speakable="true">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+
+          {/* Studenti */}
+          <div>
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
+              <GraduationCap className="h-4 w-4 sm:w-5 sm:h-5 text-primary" aria-hidden="true" />
+              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold">{t("faq.studentCategory")}</h3>
+            </div>
+            <Accordion type="single" collapsible className="space-y-2">
+              {studentFAQs.map((faq, index) => (
+                <AccordionItem
+                  key={`student-${index}`}
+                  value={`student-${index}`}
                   className="bg-background border rounded-lg px-3 sm:px-4 md:px-6"
                 >
                   <AccordionTrigger className="faq-question text-left text-sm sm:text-base hover:no-underline" data-speakable="true">
