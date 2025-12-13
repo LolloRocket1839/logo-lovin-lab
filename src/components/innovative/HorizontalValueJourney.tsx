@@ -146,6 +146,47 @@ export const HorizontalValueJourney = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activeStep, isMobile, isInViewport, handleStepClick]);
 
+  // Wheel/trackpad scroll snapping - one gesture = one step
+  useEffect(() => {
+    if (isMobile || !isInViewport) return;
+    
+    const container = containerRef.current;
+    if (!container) return;
+    
+    let isScrolling = false;
+    let scrollTimeout: ReturnType<typeof setTimeout>;
+    
+    const handleWheel = (e: WheelEvent) => {
+      // Allow normal scroll at boundaries to exit section
+      if (activeStep === 0 && e.deltaY < 0) return;
+      if (activeStep === 3 && e.deltaY > 0) return;
+      
+      e.preventDefault();
+      
+      if (isScrolling) return;
+      
+      isScrolling = true;
+      
+      // Scroll down = next step, scroll up = previous step
+      if (e.deltaY > 0 && activeStep < 3) {
+        handleStepClick(activeStep + 1);
+      } else if (e.deltaY < 0 && activeStep > 0) {
+        handleStepClick(activeStep - 1);
+      }
+      
+      // Cooldown to prevent multi-trigger from single gesture
+      scrollTimeout = setTimeout(() => {
+        isScrolling = false;
+      }, 800);
+    };
+    
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+      clearTimeout(scrollTimeout);
+    };
+  }, [activeStep, isMobile, isInViewport, handleStepClick]);
+
   // Mobile fallback - vertical layout with images
   if (isMobile) {
     return (
