@@ -125,23 +125,28 @@ export const Navigation = () => {
           <div className="flex items-center gap-2">
             {/* Mobile Back Button - shown on non-home pages */}
             {showBackButton && (
-              <button
-                onClick={() => {
-                  trackClick('nav_back_button');
-                  if (isBlogPost) {
-                    navigate('/blog');
-                  } else {
-                    navigate('/');
-                  }
-                }}
-                className="lg:hidden flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 rounded-md hover:bg-accent/50"
-                aria-label={t('nav.back') || 'Indietro'}
-              >
-                <ChevronLeft className="w-5 h-5" />
-                <span className="text-sm font-medium">
-                  {isBlogPost ? 'Blog' : 'Home'}
-                </span>
-              </button>
+              <>
+                <button
+                  onClick={() => {
+                    trackClick('nav_back_button');
+                    if (isBlogPost) {
+                      navigate('/blog');
+                    } else {
+                      navigate('/');
+                    }
+                  }}
+                  className="lg:hidden flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 rounded-md hover:bg-accent/50"
+                  aria-label={t('nav.back') || 'Indietro'}
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                  <span className="text-sm font-medium">
+                    {isBlogPost ? 'Blog' : 'Home'}
+                  </span>
+                </button>
+
+                {/* Vertical separator */}
+                <div className="lg:hidden h-6 w-px bg-border/60" aria-hidden="true" />
+              </>
             )}
 
             {/* Logo - always visible, clickable to go home */}
