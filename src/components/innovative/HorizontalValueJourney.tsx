@@ -65,6 +65,7 @@ export const HorizontalValueJourney = () => {
   const prefersReducedMotion = useReducedMotion();
   const isMobile = useIsMobile();
   const [activeStep, setActiveStep] = useState(0);
+  const [isInViewport, setIsInViewport] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -87,6 +88,19 @@ export const HorizontalValueJourney = () => {
     return unsubscribe;
   }, [scrollYProgress]);
 
+  // Track if section is in viewport for keyboard navigation
+  useEffect(() => {
+    if (!containerRef.current || isMobile) return;
+    
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInViewport(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [isMobile]);
+
   // Handle click on step indicator to jump to that step
   const handleStepClick = useCallback((stepIndex: number) => {
     if (!containerRef.current) return;
@@ -100,6 +114,37 @@ export const HorizontalValueJourney = () => {
       behavior: prefersReducedMotion ? 'auto' : 'smooth'
     });
   }, [prefersReducedMotion]);
+
+  // Keyboard navigation for desktop
+  useEffect(() => {
+    if (isMobile || !isInViewport) return;
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't intercept if user is typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      
+      switch (e.key) {
+        case 'ArrowRight':
+        case 'ArrowDown':
+        case 'Enter':
+          e.preventDefault();
+          if (activeStep < 3) {
+            handleStepClick(activeStep + 1);
+          }
+          break;
+        case 'ArrowLeft':
+        case 'ArrowUp':
+          e.preventDefault();
+          if (activeStep > 0) {
+            handleStepClick(activeStep - 1);
+          }
+          break;
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [activeStep, isMobile, isInViewport, handleStepClick]);
 
   // Mobile fallback - vertical layout with images
   if (isMobile) {
