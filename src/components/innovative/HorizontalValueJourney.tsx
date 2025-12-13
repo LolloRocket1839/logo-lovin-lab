@@ -9,7 +9,7 @@ import investImage from "@/assets/journey-step-invest.png";
 import acquireImage from "@/assets/journey-step-acquire.jpg";
 import manageImage from "@/assets/journey-step-manage.jpg";
 import earnImage from "@/assets/journey-step-earn.jpg";
-import jungleRentLogo from "@/assets/jungle-rent-logo-transparent.png";
+import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
 
 interface JourneyStep {
   id: string;
@@ -142,7 +142,7 @@ export const HorizontalValueJourney = () => {
                       <img 
                         src={jungleRentLogo} 
                         alt="Jungle Rent" 
-                        className="absolute bottom-4 right-4 w-10 h-10 object-contain opacity-80"
+                        className="absolute bottom-4 right-4 w-10 h-10 object-contain mix-blend-multiply"
                       />
                     </div>
                     
@@ -237,7 +237,7 @@ export const HorizontalValueJourney = () => {
                       <img 
                         src={jungleRentLogo} 
                         alt="Jungle Rent" 
-                        className="absolute bottom-6 right-6 w-12 h-12 object-contain opacity-80"
+                        className="absolute bottom-6 right-6 w-12 h-12 object-contain mix-blend-multiply"
                       />
                     </div>
                     
