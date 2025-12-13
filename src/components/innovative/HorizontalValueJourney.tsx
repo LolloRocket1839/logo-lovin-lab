@@ -9,6 +9,7 @@ import investImage from "@/assets/journey-step-invest.png";
 import acquireImage from "@/assets/journey-step-acquire.jpg";
 import manageImage from "@/assets/journey-step-manage.jpg";
 import earnImage from "@/assets/journey-step-earn.jpg";
+import jungleRentLogo from "@/assets/jungle-rent-logo-transparent.png";
 
 interface JourneyStep {
   id: string;
@@ -137,6 +138,12 @@ export const HorizontalValueJourney = () => {
                       />
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                      {/* Logo Jungle Rent */}
+                      <img 
+                        src={jungleRentLogo} 
+                        alt="Jungle Rent" 
+                        className="absolute bottom-4 right-4 w-10 h-10 object-contain opacity-80"
+                      />
                     </div>
                     
                     {/* Content */}
@@ -226,6 +233,12 @@ export const HorizontalValueJourney = () => {
                           {index + 1}
                         </div>
                       </div>
+                      {/* Logo Jungle Rent */}
+                      <img 
+                        src={jungleRentLogo} 
+                        alt="Jungle Rent" 
+                        className="absolute bottom-6 right-6 w-12 h-12 object-contain opacity-80"
+                      />
                     </div>
                     
                     {/* Content side */}
