@@ -1,51 +1,56 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Coins, Building2, Users, BarChart3 } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
 
+// Import generated images
+import investImage from "@/assets/journey-step-invest.jpg";
+import acquireImage from "@/assets/journey-step-acquire.jpg";
+import manageImage from "@/assets/journey-step-manage.jpg";
+import earnImage from "@/assets/journey-step-earn.jpg";
+
 interface JourneyStep {
   id: string;
-  icon: React.ElementType;
+  image: string;
   titleKey: string;
   descriptionKey: string;
   color: string;
-  iconColor: string;
+  accentColor: string;
 }
 
 const steps: JourneyStep[] = [
   {
     id: "invest",
-    icon: Coins,
+    image: investImage,
     titleKey: "infographic.steps.invest.title",
     descriptionKey: "infographic.steps.invest.detail",
     color: "from-emerald-500/20 to-emerald-500/5",
-    iconColor: "text-emerald-600"
+    accentColor: "bg-emerald-500"
   },
   {
     id: "acquire",
-    icon: Building2,
+    image: acquireImage,
     titleKey: "infographic.steps.acquire.title",
     descriptionKey: "infographic.steps.acquire.detail",
     color: "from-sky-500/20 to-sky-500/5",
-    iconColor: "text-sky-600"
+    accentColor: "bg-sky-500"
   },
   {
     id: "manage",
-    icon: Users,
+    image: manageImage,
     titleKey: "infographic.steps.manage.title",
     descriptionKey: "infographic.steps.manage.detail",
     color: "from-amber-500/20 to-amber-500/5",
-    iconColor: "text-amber-600"
+    accentColor: "bg-amber-500"
   },
   {
     id: "earn",
-    icon: BarChart3,
+    image: earnImage,
     titleKey: "infographic.steps.earn.title",
     descriptionKey: "infographic.steps.earn.detail",
     color: "from-violet-500/20 to-violet-500/5",
-    iconColor: "text-violet-600"
+    accentColor: "bg-violet-500"
   }
 ];
 
@@ -77,7 +82,7 @@ export const HorizontalValueJourney = () => {
     return unsubscribe;
   }, [scrollYProgress]);
 
-  // Mobile fallback - vertical layout
+  // Mobile fallback - vertical layout with images
   if (isMobile) {
     return (
       <section className="py-16 px-4 gradient-jungle-section" id="value-journey">
@@ -92,13 +97,13 @@ export const HorizontalValueJourney = () => {
                 {/* Animated connecting line */}
                 {index < steps.length - 1 && (
                   <motion.div 
-                    className="absolute left-8 top-16 w-px h-12 overflow-hidden"
+                    className="absolute left-1/2 -translate-x-1/2 top-full w-px h-8 overflow-hidden z-0"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                   >
                     <motion.div
-                      className={`w-full h-full bg-gradient-to-b ${step.iconColor.replace('text-', 'from-')} to-transparent`}
+                      className={`w-full h-full ${step.accentColor}`}
                       initial={{ y: "-100%" }}
                       whileInView={{ y: "0%" }}
                       transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -107,34 +112,44 @@ export const HorizontalValueJourney = () => {
                   </motion.div>
                 )}
                 
-                <div className="flex gap-6 mb-12 last:mb-0">
-                  {/* Step icon */}
-                  <motion.div 
-                    className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-card border-2 border-current ${step.iconColor} flex items-center justify-center shadow-lg`}
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ type: "spring", stiffness: 200, delay: index * 0.15 }}
-                    viewport={{ once: true }}
-                  >
-                    <step.icon className={`w-7 h-7 ${step.iconColor}`} strokeWidth={1.5} />
-                  </motion.div>
-                  
-                  {/* Content */}
-                  <motion.div 
-                    className="flex-1 pt-2"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.15 + 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <h3 className="text-lg font-semibold mb-2">
-                      {t(step.titleKey)}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {t(step.descriptionKey)}
-                    </p>
-                  </motion.div>
-                </div>
+                <motion.div 
+                  className="mb-12 last:mb-0"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  {/* Card with image */}
+                  <div className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${step.color} border border-border/50 shadow-lg`}>
+                    {/* Step number badge */}
+                    <div className={`absolute top-4 left-4 w-10 h-10 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-lg z-10`}>
+                      {index + 1}
+                    </div>
+                    
+                    {/* Image */}
+                    <div className="aspect-square relative overflow-hidden">
+                      <img 
+                        src={step.image} 
+                        alt={t(step.titleKey)}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="p-6 -mt-24 relative z-10">
+                      <h3 className="text-xl font-bold mb-2">
+                        {t(step.titleKey)}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {t(step.descriptionKey)}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             ))}
           </div>
@@ -180,7 +195,6 @@ export const HorizontalValueJourney = () => {
             className="flex gap-0"
           >
             {steps.map((step, index) => {
-              const Icon = step.icon;
               const isActive = index === activeStep;
               
               return (
@@ -189,49 +203,53 @@ export const HorizontalValueJourney = () => {
                   className="w-screen flex-shrink-0 px-8 md:px-16 lg:px-24"
                 >
                   <div className={`
-                    max-w-4xl mx-auto h-[60vh] rounded-3xl p-8 md:p-12 lg:p-16
+                    max-w-5xl mx-auto h-[60vh] rounded-3xl overflow-hidden
                     bg-gradient-to-br ${step.color}
                     border border-border/50
-                    flex flex-col justify-center items-center text-center
+                    flex items-center
                     transition-all duration-500
                     ${isActive ? 'scale-100 opacity-100' : 'scale-95 opacity-60'}
                   `}>
-                    {/* Step number */}
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
-                      className="mb-8"
-                    >
-                      <div className="relative">
-                        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-card shadow-xl flex items-center justify-center">
-                          <Icon className={`w-12 h-12 md:w-16 md:h-16 ${step.iconColor}`} strokeWidth={1.5} />
-                        </div>
-                        <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
+                    {/* Image side */}
+                    <div className="w-1/2 h-full relative overflow-hidden">
+                      <motion.img
+                        src={step.image}
+                        alt={t(step.titleKey)}
+                        className="w-full h-full object-cover"
+                        initial={{ scale: 1.1 }}
+                        animate={{ scale: isActive ? 1 : 1.1 }}
+                        transition={{ duration: 0.7 }}
+                      />
+                      {/* Step number overlay */}
+                      <div className="absolute top-8 left-8">
+                        <div className={`w-16 h-16 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-2xl shadow-lg`}>
                           {index + 1}
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
+                    
+                    {/* Content side */}
+                    <div className="w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+                      {/* Title */}
+                      <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-2xl md:text-4xl lg:text-5xl font-display font-extrabold mb-6"
+                      >
+                        {t(step.titleKey)}
+                      </motion.h3>
 
-                    {/* Title */}
-                    <motion.h3
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                      className="text-2xl md:text-4xl lg:text-5xl font-display font-extrabold mb-6"
-                    >
-                      {t(step.titleKey)}
-                    </motion.h3>
-
-                    {/* Description */}
-                    <motion.p
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                      className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
-                    >
-                      {t(step.descriptionKey)}
-                    </motion.p>
+                      {/* Description */}
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                        className="text-lg md:text-xl text-muted-foreground leading-relaxed"
+                      >
+                        {t(step.descriptionKey)}
+                      </motion.p>
+                    </div>
 
                     {/* Arrow to next */}
                     {index < steps.length - 1 && (
@@ -252,16 +270,16 @@ export const HorizontalValueJourney = () => {
 
         {/* Step indicators */}
         <div className="pb-12 flex justify-center gap-3">
-          {steps.map((_, index) => (
+          {steps.map((step, index) => (
             <div
               key={index}
               className={`
-                w-3 h-3 rounded-full transition-all duration-300
+                h-3 rounded-full transition-all duration-300
                 ${index === activeStep 
-                  ? 'bg-primary w-8' 
+                  ? `${step.accentColor} w-8` 
                   : index < activeStep 
-                    ? 'bg-primary/50' 
-                    : 'bg-muted-foreground/20'
+                    ? `${step.accentColor} opacity-50 w-3` 
+                    : 'bg-muted-foreground/20 w-3'
                 }
               `}
             />
