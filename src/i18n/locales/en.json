@@ -343,22 +343,22 @@
       "invest": {
         "title": "Invest",
         "description": "Join from €100",
-        "detail": "No property to manage, no paperwork. You invest, we handle everything."
+        "detail": "Access real estate without buying an entire property. Zero paperwork, zero direct management."
       },
       "acquire": {
         "title": "We acquire",
-        "description": "Selected properties",
-        "detail": "We acquire properties near Politecnico, UniTo and Turin's 7 universities. High student demand areas."
+        "description": "Properties in university areas",
+        "detail": "We select and acquire properties in high-demand areas near Politecnico, UniTo and Turin universities."
       },
       "manage": {
         "title": "We manage",
-        "description": "Hybrid student/tourist model",
-        "detail": "9 months students + 3 months tourists. Free guest days for summer exams. Contracts and maintenance included."
+        "description": "Hybrid student + tourist model",
+        "detail": "Student rentals during academic year, tourist guests during vacation periods. Maximizing occupancy all year round."
       },
       "earn": {
         "title": "You participate",
-        "description": "Access the real estate market",
-        "detail": "You participate in portfolio results. Transparent quarterly reports and personal dashboard."
+        "description": "In portfolio results",
+        "detail": "You participate in managed property results. Transparent reports and personal dashboard to monitor your investment."
       }
     },
     "metrics": {

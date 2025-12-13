@@ -17,29 +17,29 @@ const steps: JourneyStep[] = [
   {
     id: "invest",
     icon: Euro,
-    titleKey: "infographic.step1.title",
-    descriptionKey: "infographic.step1.description",
+    titleKey: "infographic.steps.invest.title",
+    descriptionKey: "infographic.steps.invest.detail",
     color: "from-primary/20 to-primary/5"
   },
   {
     id: "acquire",
     icon: Key,
-    titleKey: "infographic.step2.title",
-    descriptionKey: "infographic.step2.description",
+    titleKey: "infographic.steps.acquire.title",
+    descriptionKey: "infographic.steps.acquire.detail",
     color: "from-blue-500/20 to-blue-500/5"
   },
   {
     id: "manage",
     icon: ClipboardCheck,
-    titleKey: "infographic.step3.title",
-    descriptionKey: "infographic.step3.description",
+    titleKey: "infographic.steps.manage.title",
+    descriptionKey: "infographic.steps.manage.detail",
     color: "from-amber-500/20 to-amber-500/5"
   },
   {
     id: "earn",
     icon: TrendingUp,
-    titleKey: "infographic.step4.title",
-    descriptionKey: "infographic.step4.description",
+    titleKey: "infographic.steps.earn.title",
+    descriptionKey: "infographic.steps.earn.detail",
     color: "from-green-500/20 to-green-500/5"
   }
 ];
