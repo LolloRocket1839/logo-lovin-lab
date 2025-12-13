@@ -20,7 +20,7 @@ export const StickyCTA = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const threshold = window.innerHeight * 0.5;
+          const threshold = window.innerHeight * 1.0;
           if (window.scrollY > threshold && !isDismissed) {
             setIsVisible(true);
           } else if (window.scrollY <= threshold) {

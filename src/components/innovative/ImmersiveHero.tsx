@@ -169,7 +169,7 @@ export const ImmersiveHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={textRevealed ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 1 }}
-            className="flex justify-center"
+            className="flex justify-center mb-24"
           >
             <Button
               size="lg"
@@ -194,7 +194,7 @@ export const ImmersiveHero = () => {
       {/* Scroll indicator */}
       <motion.button
         onClick={scrollToContent}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
