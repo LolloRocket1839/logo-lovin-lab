@@ -97,8 +97,7 @@ const Blog = () => {
       <div className="pt-20">
         <Breadcrumbs
           items={[
-            { label: t('nav.home'), href: '/' },
-            { label: t('nav.blog'), href: '/blog' }
+            { label: isItalian ? 'Risorse' : 'Resources' }
           ]}
         />
         

@@ -122,7 +122,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 transition-spacing">
         <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
           {/* Mobile: Back Button + Logo | Desktop: Logo only */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             {/* Mobile Back Button - shown on non-home pages */}
             {showBackButton && (
               <>
@@ -135,7 +135,7 @@ export const Navigation = () => {
                       navigate('/');
                     }
                   }}
-                  className="lg:hidden flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors p-2 -ml-2 rounded-md hover:bg-accent/50"
+                  className="lg:hidden flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent/50"
                   aria-label={t('nav.back') || 'Indietro'}
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -145,7 +145,7 @@ export const Navigation = () => {
                 </button>
 
                 {/* Vertical separator */}
-                <div className="lg:hidden h-6 w-px bg-border/60" aria-hidden="true" />
+                <div className="lg:hidden h-5 w-px bg-border mx-1" aria-hidden="true" />
               </>
             )}
 
