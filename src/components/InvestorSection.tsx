@@ -177,10 +177,6 @@ export const InvestorSection = () => {
           </div>
         </div>
 
-        {/* Infografica Interattiva */}
-        <div className="mt-10 md:mt-16">
-          <InvestorInfographic />
-        </div>
       </div>
       
       <QuickInvestorLeadDialog 
