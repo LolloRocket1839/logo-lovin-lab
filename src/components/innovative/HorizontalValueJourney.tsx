@@ -5,7 +5,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 // Import generated images
-import investImage from "@/assets/journey-step-invest.jpg";
+import investImage from "@/assets/journey-step-invest.png";
 import acquireImage from "@/assets/journey-step-acquire.jpg";
 import manageImage from "@/assets/journey-step-manage.jpg";
 import earnImage from "@/assets/journey-step-earn.jpg";
