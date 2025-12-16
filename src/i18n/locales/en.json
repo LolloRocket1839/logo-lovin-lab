@@ -11,9 +11,13 @@
     "currentPage": "Current page"
   },
   "video": {
-    "title": "How Jungle Rent Works",
-    "subtitle": "Watch the video to understand our model in 2 minutes",
-    "cta": "Ready to invest? Find out how to participate",
+    "title": "Understand our model in 2 minutes",
+    "subtitle": "A short video explaining how to invest in student properties in Turin with Jungle Rent.",
+    "badge": "2 minutes",
+    "point1": "How the model works",
+    "point2": "Expected returns",
+    "point3": "Zero management for you",
+    "cta": "Talk to Lorenzo",
     "play": "Play video"
   },
   "nav": {
