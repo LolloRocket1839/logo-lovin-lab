@@ -4,20 +4,13 @@ import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Euro, Key, ClipboardCheck, TrendingUp, Check } from "lucide-react";
-
-// Import generated images
-import investImage from "@/assets/journey-step-invest.jpg";
-import acquireImage from "@/assets/journey-step-acquire.jpg";
-import manageImage from "@/assets/journey-step-manage.png";
-import earnImage from "@/assets/journey-step-earn.png";
-import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
+import { AnimatedStepInfographic } from "./AnimatedStepInfographic";
 
 // Step icons mapping
 const stepIcons = [Euro, Key, ClipboardCheck, TrendingUp];
 
 interface JourneyStep {
   id: string;
-  image: string;
   titleKey: string;
   descriptionKey: string;
   color: string;
@@ -27,7 +20,6 @@ interface JourneyStep {
 const steps: JourneyStep[] = [
   {
     id: "invest",
-    image: investImage,
     titleKey: "infographic.steps.invest.title",
     descriptionKey: "infographic.steps.invest.detail",
     color: "from-emerald-500/20 to-emerald-500/5",
@@ -35,7 +27,6 @@ const steps: JourneyStep[] = [
   },
   {
     id: "acquire",
-    image: acquireImage,
     titleKey: "infographic.steps.acquire.title",
     descriptionKey: "infographic.steps.acquire.detail",
     color: "from-sky-500/20 to-sky-500/5",
@@ -43,7 +34,6 @@ const steps: JourneyStep[] = [
   },
   {
     id: "manage",
-    image: manageImage,
     titleKey: "infographic.steps.manage.title",
     descriptionKey: "infographic.steps.manage.detail",
     color: "from-amber-500/20 to-amber-500/5",
@@ -51,7 +41,6 @@ const steps: JourneyStep[] = [
   },
   {
     id: "earn",
-    image: earnImage,
     titleKey: "infographic.steps.earn.title",
     descriptionKey: "infographic.steps.earn.detail",
     color: "from-violet-500/20 to-violet-500/5",
@@ -237,40 +226,23 @@ export const HorizontalValueJourney = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  {/* Card with image */}
+                  {/* Card with animated infographic */}
                   <div className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${step.color} border border-border/50 shadow-lg`}>
                     {/* Step number badge */}
                     <div className={`absolute top-4 left-4 w-10 h-10 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-lg z-10`}>
                       {index + 1}
                     </div>
                     
-                    {/* Image */}
-                    <div className="aspect-square relative overflow-hidden">
-                      <img 
-                        src={step.image} 
-                        alt={t(step.titleKey)}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-                      {/* Logo Jungle Rent */}
-                      <img 
-                        src={jungleRentLogo} 
-                        alt="Jungle Rent" 
-                        className="absolute bottom-4 right-4 w-10 h-10 object-contain mix-blend-multiply"
-                      />
+                    {/* Animated Infographic */}
+                    <div className="aspect-square relative overflow-hidden bg-background/50">
+                      <AnimatedStepInfographic stepId={step.id} isActive={true} />
                     </div>
                     
                     {/* Content */}
-                    <div className="p-6 -mt-24 relative z-10">
+                    <div className="p-6 relative z-10">
                       <h3 className="text-xl font-bold mb-2">
                         {t(step.titleKey)}
                       </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {t(step.descriptionKey)}
-                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -334,57 +306,30 @@ export const HorizontalValueJourney = () => {
                     transition-all duration-500
                     ${isActive ? 'scale-100 opacity-100' : 'scale-95 opacity-60'}
                   `}>
-                    {/* Image side */}
-                    <div className="w-1/2 h-full relative overflow-hidden">
-                      <motion.img
-                        src={step.image}
-                        alt={t(step.titleKey)}
-                        className="w-full h-full object-cover"
-                        initial={{ scale: 1.1 }}
-                        animate={{ scale: isActive ? 1 : 1.1 }}
-                        transition={{ duration: 0.7 }}
-                      />
+                    {/* Full-width animated infographic */}
+                    <div className="w-full h-full relative">
                       {/* Step number overlay */}
-                      <div className="absolute top-8 left-8">
+                      <div className="absolute top-8 left-8 z-10">
                         <div className={`w-16 h-16 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-2xl shadow-lg`}>
                           {index + 1}
                         </div>
                       </div>
-                      {/* Logo Jungle Rent */}
-                      <img 
-                        src={jungleRentLogo} 
-                        alt="Jungle Rent" 
-                        className="absolute bottom-6 right-6 w-12 h-12 object-contain mix-blend-multiply"
-                      />
-                    </div>
-                    
-                    {/* Content side */}
-                    <div className="w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-                      {/* Title */}
-                      <motion.h3
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="text-2xl md:text-4xl lg:text-5xl font-display font-extrabold mb-6"
-                      >
-                        {t(step.titleKey)}
-                      </motion.h3>
-
-                      {/* Description */}
-                      <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        className="text-lg md:text-xl text-muted-foreground leading-relaxed"
-                      >
-                        {t(step.descriptionKey)}
-                      </motion.p>
+                      
+                      {/* Step title overlay */}
+                      <div className="absolute top-8 left-28 z-10">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold">
+                          {t(step.titleKey)}
+                        </h3>
+                      </div>
+                      
+                      {/* Animated Infographic - takes full space */}
+                      <AnimatedStepInfographic stepId={step.id} isActive={isActive} />
                     </div>
 
                     {/* Arrow to next */}
                     {index < steps.length - 1 && (
                       <motion.div
-                        className="absolute right-12 top-1/2 -translate-y-1/2 text-muted-foreground/30"
+                        className="absolute right-8 top-1/2 -translate-y-1/2 text-muted-foreground/30"
                         animate={prefersReducedMotion ? {} : { x: [0, 10, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       >
