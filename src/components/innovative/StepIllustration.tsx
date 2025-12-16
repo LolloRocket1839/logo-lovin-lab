@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import investIllustration from "@/assets/invest-illustration.jpg";
+import acquireIllustration from "@/assets/journey-step-acquire.jpg";
 import manageIllustration from "@/assets/journey-step-manage.jpg";
 
 interface StepIllustrationProps {
@@ -250,202 +251,23 @@ const InvestIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
   </motion.div>
 );
 
-// Step 2: ACQUISTIAMO - Premium University with connected houses
-const AcquireIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => (
-  <motion.svg
-    viewBox="0 0 300 250"
-    className="w-full h-full max-w-[340px]"
-    initial={{ opacity: 0 }}
-    animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
-    transition={{ duration: 0.4 }}
-  >
-    <PremiumDefs />
-    
-    {/* University Building - Politecnico inspired */}
-    <motion.g
-      initial={{ y: -15, opacity: 0 }}
-      animate={isActive ? { y: 0, opacity: 1 } : {}}
-      transition={{ duration: 0.5 }}
-      filter="url(#mediumShadow)"
+// Step 2: ACQUISTIAMO - Premium image illustration
+const AcquireIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => {
+  return (
+    <motion.div
+      className="w-full h-full flex items-center justify-center"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0.5, scale: 0.95 }}
+      transition={{ duration: 0.4 }}
     >
-      {/* Main building base */}
-      <rect x="80" y="30" width="140" height="60" rx="2" fill="url(#cardGradient)" stroke="hsl(var(--border))" strokeWidth="1.5" />
-      
-      {/* Central tower/cupola */}
-      <rect x="130" y="8" width="40" height="22" rx="1" fill="hsl(var(--card))" stroke="hsl(var(--border))" strokeWidth="1" />
-      <path d="M 130 8 Q 150 -5 170 8" fill="hsl(var(--primary))" opacity="0.8" />
-      <circle cx="150" cy="5" r="4" fill="hsl(var(--primary))" />
-      
-      {/* Pediment */}
-      <polygon points="150,18 195,32 105,32" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="1" />
-      
-      {/* Columns with details */}
-      {[0, 1, 2, 3, 4].map((i) => (
-        <g key={i}>
-          <rect x={95 + i * 25} y="45" width="10" height="45" fill="hsl(var(--background))" stroke="hsl(var(--border))" rx="1" />
-          {/* Column capital */}
-          <rect x={93 + i * 25} y="43" width="14" height="4" fill="hsl(var(--muted))" rx="1" />
-          {/* Column base */}
-          <rect x={93 + i * 25} y="88" width="14" height="4" fill="hsl(var(--muted))" rx="1" />
-        </g>
-      ))}
-      
-      {/* Windows on upper floor */}
-      {[0, 1, 2].map((i) => (
-        <rect key={`window-${i}`} x={100 + i * 40} y="35" width="20" height="8" fill="hsl(var(--background))" opacity="0.5" rx="1" />
-      ))}
-      
-      {/* Graduation cap */}
-      <motion.g
-        initial={{ scale: 0, rotate: -20 }}
-        animate={isActive ? { scale: 1, rotate: 0 } : {}}
-        transition={{ delay: 0.3, type: "spring" }}
-      >
-        <rect x="138" y="-2" width="24" height="4" fill="hsl(var(--primary))" />
-        <polygon points="150,-8 165,-2 135,-2" fill="hsl(var(--primary))" />
-        <circle cx="165" cy="2" r="2.5" fill="hsl(var(--primary))" />
-        <path d="M 165 2 Q 170 8 168 14" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" />
-        {/* Tassel end */}
-        <circle cx="168" cy="14" r="1.5" fill="hsl(var(--primary))" />
-      </motion.g>
-      
-      {/* University label */}
-      <rect x="115" y="75" width="70" height="14" rx="7" fill="hsl(var(--primary))" opacity="0.1" />
-      <text x="150" y="85" textAnchor="middle" fill="hsl(var(--primary))" fontSize="8" fontWeight="bold">7 ATENEI TORINESI</text>
-    </motion.g>
-
-    {/* Pulsing radar effect from university */}
-    {!prefersReducedMotion && isActive && (
-      <motion.circle
-        cx="150"
-        cy="60"
-        r="30"
-        fill="none"
-        stroke="hsl(var(--primary))"
-        strokeWidth="1"
-        initial={{ r: 30, opacity: 0.6 }}
-        animate={{ r: 80, opacity: 0 }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+      <img 
+        src={acquireIllustration} 
+        alt="Acquistiamo immobili vicino ai 7 atenei torinesi" 
+        className="w-full h-full object-contain max-w-[500px] rounded-xl"
       />
-    )}
-
-    {/* Connection lines with animated dots */}
-    <motion.g initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ delay: 0.3 }}>
-      {[
-        { x1: 95, x2: 55, house: 0 },
-        { x1: 150, x2: 150, house: 1 },
-        { x1: 205, x2: 245, house: 2 }
-      ].map((line, i) => (
-        <g key={i}>
-          <motion.line
-            x1={line.x1} y1="95" x2={line.x2} y2="120"
-            stroke="hsl(var(--primary))"
-            strokeWidth="2"
-            strokeOpacity="0.4"
-            strokeDasharray="6 4"
-            initial={{ pathLength: 0 }}
-            animate={isActive ? { pathLength: 1 } : {}}
-            transition={{ delay: 0.4 + i * 0.15, duration: 0.4 }}
-          />
-          {/* Moving dot along line */}
-          {!prefersReducedMotion && isActive && (
-            <motion.circle
-              r="3"
-              fill="hsl(var(--primary))"
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: [0, 1, 0],
-                cx: [line.x1, line.x2],
-                cy: [95, 120]
-              }}
-              transition={{
-                delay: 0.6 + i * 0.15,
-                duration: 1,
-                repeat: Infinity,
-                repeatDelay: 2
-              }}
-            />
-          )}
-          {/* Pin icon at connection point */}
-          <motion.g
-            initial={{ scale: 0 }}
-            animate={isActive ? { scale: 1 } : {}}
-            transition={{ delay: 0.5 + i * 0.1, type: "spring" }}
-          >
-            <circle cx={line.x1} cy="95" r="6" fill="hsl(var(--primary))" opacity="0.2" />
-            <circle cx={line.x1} cy="95" r="3" fill="hsl(var(--primary))" />
-          </motion.g>
-        </g>
-      ))}
-    </motion.g>
-
-    {/* Three premium houses with checkmarks */}
-    {[
-      { x: 20, delay: 0.5 },
-      { x: 120, delay: 0.65 },
-      { x: 215, delay: 0.8 }
-    ].map((house, i) => (
-      <motion.g key={i}>
-        <PremiumHouse 
-          x={house.x} 
-          y={i === 1 ? 125 : 130} 
-          variant={i === 1 ? "main" : "medium"} 
-          scale={i === 1 ? 0.9 : 0.85}
-          isActive={isActive} 
-          delay={house.delay} 
-        />
-        
-        {/* Premium checkmark badge */}
-        <motion.g
-          initial={{ scale: 0 }}
-          animate={isActive ? { scale: 1 } : {}}
-          transition={{ delay: house.delay + 0.3, type: "spring", stiffness: 300 }}
-        >
-          <circle 
-            cx={house.x + (i === 1 ? 50 : 35)} 
-            cy={i === 1 ? 130 : 135} 
-            r="14" 
-            fill="hsl(var(--primary))" 
-            filter="url(#softShadow)"
-          />
-          <circle 
-            cx={house.x + (i === 1 ? 50 : 35)} 
-            cy={i === 1 ? 130 : 135} 
-            r="12" 
-            fill="none" 
-            stroke="white" 
-            strokeWidth="1" 
-            opacity="0.3"
-          />
-          <motion.path
-            d={`M ${house.x + (i === 1 ? 44 : 29)} ${i === 1 ? 130 : 135} L ${house.x + (i === 1 ? 48 : 33)} ${i === 1 ? 134 : 139} L ${house.x + (i === 1 ? 56 : 41)} ${i === 1 ? 126 : 131}`}
-            stroke="white"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-            initial={{ pathLength: 0 }}
-            animate={isActive && !prefersReducedMotion ? { pathLength: 1 } : { pathLength: 1 }}
-            transition={{ delay: house.delay + 0.45, duration: 0.25 }}
-          />
-        </motion.g>
-      </motion.g>
-    ))}
-
-    {/* Label */}
-    <motion.text
-      x="150" y="225"
-      textAnchor="middle"
-      fill="hsl(var(--muted-foreground))"
-      fontSize="11"
-      initial={{ opacity: 0 }}
-      animate={isActive ? { opacity: 1 } : {}}
-      transition={{ delay: 1 }}
-    >
-      Acquistiamo immobili vicino agli atenei
-    </motion.text>
-  </motion.svg>
-);
+    </motion.div>
+  );
+};
 
 // Step 3: GESTIAMO - Premium image illustration
 const ManageIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => {
