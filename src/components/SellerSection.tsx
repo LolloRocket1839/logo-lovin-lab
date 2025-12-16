@@ -25,6 +25,11 @@ export const SellerSection = () => {
       
       <div className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto relative z-10 transition-spacing">
         <div className="text-center max-w-3xl mx-auto">
+          {/* Section title */}
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary font-semibold mb-3">
+            {t('seller.sectionTitle')}
+          </p>
+          
           {/* Urgency badge */}
           <div className="flex justify-center mb-4">
             <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 px-3 py-1.5 text-xs font-medium">
