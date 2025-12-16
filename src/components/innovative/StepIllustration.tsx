@@ -3,6 +3,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import investIllustration from "@/assets/invest-illustration.jpg";
 import acquireIllustration from "@/assets/journey-step-acquire.jpg";
 import manageIllustration from "@/assets/journey-step-manage.jpg";
+import earnIllustration from "@/assets/journey-step-earn.jpg";
 
 interface StepIllustrationProps {
   step: "invest" | "acquire" | "manage" | "earn";
@@ -289,205 +290,18 @@ const ManageIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
 
 // Step 4: GUADAGNI - Premium dashboard with timeline
 const EarnIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => {
-  const quarters = ["Q1", "Q2", "Q3", "Q4"];
-  
   return (
-    <motion.svg
-      viewBox="0 0 300 250"
-      className="w-full h-full max-w-[340px]"
-      initial={{ opacity: 0 }}
-      animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
+    <motion.div
+      className="w-full h-full flex items-center justify-center"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0.5, scale: 0.95 }}
       transition={{ duration: 0.4 }}
     >
-      <PremiumDefs />
-      
-      {/* Timeline with premium styling */}
-      <motion.g>
-        {/* Base line with gradient */}
-        <motion.line
-          x1="25" y1="50" x2="275" y2="50"
-          stroke="hsl(var(--border))"
-          strokeWidth="3"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          animate={isActive ? { pathLength: 1 } : {}}
-          transition={{ duration: 0.5 }}
-        />
-        
-        {/* Progress fill */}
-        <motion.line
-          x1="25" y1="50" x2="275" y2="50"
-          stroke="hsl(var(--primary))"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeOpacity="0.3"
-          initial={{ pathLength: 0 }}
-          animate={isActive ? { pathLength: 1 } : {}}
-          transition={{ duration: 1.2, delay: 0.3 }}
-        />
-      </motion.g>
-
-      {/* Quarter markers with coins */}
-      {quarters.map((q, i) => {
-        const x = 45 + i * 65;
-        const coinSize = 10 + i * 2; // Growing coins
-        
-        return (
-          <motion.g key={q}>
-            {/* Quarter circle with gradient */}
-            <motion.g
-              initial={{ scale: 0 }}
-              animate={isActive ? { scale: 1 } : {}}
-              transition={{ delay: 0.2 + i * 0.1, type: "spring", stiffness: 200 }}
-            >
-              <circle cx={x} cy="50" r="20" fill="hsl(var(--card))" filter="url(#softShadow)" />
-              <circle cx={x} cy="50" r="18" fill="hsl(var(--primary))" opacity="0.1" />
-              <circle cx={x} cy="50" r="16" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" />
-              <text x={x} y="55" textAnchor="middle" fill="hsl(var(--primary))" fontSize="12" fontWeight="bold">{q}</text>
-            </motion.g>
-            
-            {/* Dropping premium coin */}
-            <motion.g
-              initial={{ y: 0, opacity: 0, scale: 0.5 }}
-              animate={isActive && !prefersReducedMotion ? {
-                y: [0, 35],
-                opacity: [0, 1, 1],
-                scale: [0.5, 1]
-              } : { y: 35, opacity: 0.8, scale: 1 }}
-              transition={{ delay: 0.5 + i * 0.12, duration: 0.4, ease: "easeIn" }}
-            >
-              <PremiumCoin 
-                cx={x} 
-                cy={75} 
-                r={coinSize} 
-                delay={0}
-                isActive={isActive}
-                prefersReducedMotion={prefersReducedMotion}
-              />
-            </motion.g>
-            
-            {/* Dashed arrow to dashboard */}
-            <motion.path
-              d={`M ${x} ${90 + i * 2} L ${x} 118`}
-              stroke="hsl(var(--primary))"
-              strokeWidth="2"
-              strokeOpacity="0.3"
-              strokeDasharray="5 4"
-              fill="none"
-              initial={{ pathLength: 0 }}
-              animate={isActive ? { pathLength: 1 } : {}}
-              transition={{ delay: 0.7 + i * 0.1, duration: 0.3 }}
-            />
-          </motion.g>
-        );
-      })}
-
-      {/* Premium Dashboard */}
-      <motion.g
-        initial={{ y: 20, opacity: 0 }}
-        animate={isActive ? { y: 0, opacity: 1 } : {}}
-        transition={{ delay: 0.8, duration: 0.4 }}
-      >
-        {/* Dashboard container */}
-        <rect x="30" y="125" width="240" height="75" rx="12" 
-          fill="hsl(var(--card))" filter="url(#mediumShadow)" />
-        
-        {/* Header bar */}
-        <rect x="30" y="125" width="240" height="24" rx="12" 
-          fill="hsl(var(--muted))" />
-        <rect x="30" y="137" width="240" height="12" 
-          fill="hsl(var(--muted))" />
-        
-        {/* Window controls */}
-        <circle cx="44" cy="137" r="4" fill="hsl(var(--destructive))" opacity="0.6" />
-        <circle cx="56" cy="137" r="4" fill="hsl(45, 90%, 50%)" opacity="0.6" />
-        <circle cx="68" cy="137" r="4" fill="hsl(var(--primary))" opacity="0.6" />
-        
-        {/* Dashboard title */}
-        <text x="150" y="141" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10" fontWeight="bold">
-          💰 IL TUO DASHBOARD
-        </text>
-        
-        {/* Chart area background */}
-        <rect x="40" y="155" width="160" height="38" rx="4" fill="hsl(var(--background))" opacity="0.5" />
-        
-        {/* Area chart fill */}
-        <motion.path
-          d="M 45 190 L 60 182 L 90 175 L 120 168 L 150 158 L 180 152 L 195 148 L 195 193 L 45 193 Z"
-          fill="url(#trendGradient)"
-          initial={{ opacity: 0 }}
-          animate={isActive ? { opacity: 1 } : {}}
-          transition={{ delay: 1.2, duration: 0.4 }}
-        />
-        
-        {/* Growing bars with gradient */}
-        {[0, 1, 2, 3].map((i) => (
-          <motion.rect
-            key={i}
-            x={50 + i * 38}
-            y={190 - (20 + i * 12)}
-            width="28"
-            height={20 + i * 12}
-            rx="4"
-            fill="url(#chartGradient)"
-            initial={{ scaleY: 0 }}
-            animate={isActive ? { scaleY: 1 } : {}}
-            transition={{ delay: 1 + i * 0.08, duration: 0.3 }}
-            style={{ transformOrigin: "bottom" }}
-          />
-        ))}
-        
-        {/* Trend line */}
-        <motion.path
-          d="M 64 180 Q 100 170 135 162 Q 170 154 188 148"
-          stroke="hsl(var(--chart-4))"
-          strokeWidth="3"
-          strokeLinecap="round"
-          fill="none"
-          initial={{ pathLength: 0 }}
-          animate={isActive && !prefersReducedMotion ? { pathLength: 1 } : { pathLength: 1 }}
-          transition={{ delay: 1.3, duration: 0.5 }}
-        />
-        
-        {/* Trend arrow */}
-        <motion.polygon
-          points="185,143 195,148 185,153"
-          fill="hsl(var(--chart-4))"
-          initial={{ opacity: 0, x: -10 }}
-          animate={isActive ? { opacity: 1, x: 0 } : {}}
-          transition={{ delay: 1.7 }}
-        />
-        
-        {/* Stats panel */}
-        <rect x="210" y="155" width="55" height="38" rx="6" fill="hsl(var(--primary))" opacity="0.1" />
-        <text x="237" y="170" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="8">RENDITA</text>
-        <motion.text 
-          x="237" 
-          y="186" 
-          textAnchor="middle" 
-          fill="hsl(var(--primary))" 
-          fontSize="14" 
-          fontWeight="bold"
-          initial={{ opacity: 0 }}
-          animate={isActive ? { opacity: 1 } : {}}
-          transition={{ delay: 1.5 }}
-        >
-          +7.6%
-        </motion.text>
-      </motion.g>
-
-      {/* Label */}
-      <motion.text
-        x="150" y="225"
-        textAnchor="middle"
-        fill="hsl(var(--muted-foreground))"
-        fontSize="11"
-        initial={{ opacity: 0 }}
-        animate={isActive ? { opacity: 1 } : {}}
-        transition={{ delay: 1.6 }}
-      >
-        Rendite trimestrali con report trasparenti
-      </motion.text>
-    </motion.svg>
+      <img 
+        src={earnIllustration} 
+        alt="Dashboard rendite trimestrali" 
+        className="w-full h-auto max-w-[600px] rounded-2xl shadow-lg"
+      />
+    </motion.div>
   );
 };
