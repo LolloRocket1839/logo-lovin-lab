@@ -9,7 +9,6 @@ import { useTranslation } from "react-i18next";
 
 // Innovative components - loaded immediately for impact
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
-import { FloatingElements } from "@/components/innovative/FloatingElements";
 
 // Lazy load below-the-fold components
 const HorizontalValueJourney = lazy(() => import("@/components/innovative/HorizontalValueJourney").then(m => ({ default: m.HorizontalValueJourney })));
@@ -35,9 +34,6 @@ const Index = () => {
 
   return (
     <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
-      {/* Floating parallax elements */}
-      <FloatingElements />
-      
       <MobileHeader />
       <Helmet>
         <title>{title}</title>
