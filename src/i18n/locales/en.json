@@ -368,22 +368,42 @@
       "invest": {
         "title": "Invest",
         "description": "Join from €100",
-        "detail": "Access real estate without buying an entire property. Zero paperwork, zero direct management."
+        "detail": "Access real estate without buying an entire property. Zero paperwork, zero direct management.",
+        "keyPoints": [
+          "Invest from just €100",
+          "No property to manage",
+          "Zero paperwork and hidden costs"
+        ]
       },
       "acquire": {
         "title": "We acquire",
         "description": "Properties in university areas",
-        "detail": "We select and acquire properties in high-demand areas near Politecnico, UniTo and Turin universities."
+        "detail": "We select and acquire properties in high-demand areas near Politecnico, UniTo and Turin universities.",
+        "keyPoints": [
+          "Complete due diligence",
+          "Strategic high-demand locations",
+          "7 universities served"
+        ]
       },
       "manage": {
         "title": "We manage",
         "description": "Hybrid student + tourist model",
-        "detail": "Student rentals during academic year, tourist guests during vacation periods. Maximizing occupancy all year round."
+        "detail": "Student rentals during academic year, tourist guests during vacation periods. Maximizing occupancy all year round.",
+        "keyPoints": [
+          "Contract and tenant management",
+          "Maintenance included",
+          "Tax handling by us"
+        ]
       },
       "earn": {
         "title": "You participate",
         "description": "In portfolio results",
-        "detail": "You participate in managed property results. Transparent reports and personal dashboard to monitor your investment."
+        "detail": "You participate in managed property results. Transparent reports and personal dashboard to monitor your investment.",
+        "keyPoints": [
+          "Transparent quarterly reports",
+          "Personal dashboard",
+          "Dividends distributed"
+        ]
       }
     },
     "metrics": {

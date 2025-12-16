@@ -341,22 +341,42 @@
       "invest": {
         "title": "Investi",
         "description": "Partecipa da €100",
-        "detail": "Accedi al mercato immobiliare senza comprare un intero immobile. Zero burocrazia, zero gestione diretta."
+        "detail": "Accedi al mercato immobiliare senza comprare un intero immobile. Zero burocrazia, zero gestione diretta.",
+        "keyPoints": [
+          "Investi da soli €100",
+          "Nessun immobile da gestire",
+          "Zero burocrazia e costi nascosti"
+        ]
       },
       "acquire": {
         "title": "Acquistiamo",
         "description": "Immobili in zone universitarie",
-        "detail": "Selezioniamo e acquistiamo immobili in zone ad alta domanda vicino a Politecnico, UniTo e le università torinesi."
+        "detail": "Selezioniamo e acquistiamo immobili in zone ad alta domanda vicino a Politecnico, UniTo e le università torinesi.",
+        "keyPoints": [
+          "Due diligence completa",
+          "Zone strategiche ad alta domanda",
+          "7 università servite"
+        ]
       },
       "manage": {
         "title": "Gestiamo",
         "description": "Modello ibrido studenti + turisti",
-        "detail": "Affitti a studenti durante l'anno accademico, ospiti turistici nei periodi di vacanza. Massimizzazione dell'occupazione tutto l'anno."
+        "detail": "Affitti a studenti durante l'anno accademico, ospiti turistici nei periodi di vacanza. Massimizzazione dell'occupazione tutto l'anno.",
+        "keyPoints": [
+          "Gestione contratti e inquilini",
+          "Manutenzione inclusa",
+          "Fiscalità gestita da noi"
+        ]
       },
       "earn": {
         "title": "Partecipi",
         "description": "Ai risultati del portafoglio",
-        "detail": "Partecipi ai risultati degli immobili gestiti. Report trasparenti e dashboard personale per monitorare il tuo investimento."
+        "detail": "Partecipi ai risultati degli immobili gestiti. Report trasparenti e dashboard personale per monitorare il tuo investimento.",
+        "keyPoints": [
+          "Report trimestrali trasparenti",
+          "Dashboard personale",
+          "Dividendi distribuiti"
+        ]
       }
     },
     "metrics": {
