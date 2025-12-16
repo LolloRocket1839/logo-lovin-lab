@@ -72,12 +72,17 @@ export const VideoSection = () => {
             </div>
 
             {/* Content Column */}
-            <div className="order-2 space-y-6">
+            <div className="order-2 space-y-6 text-center lg:text-left">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
                 <Clock className="w-4 h-4" />
                 <span>{t('video.badge', '2 minuti')}</span>
               </div>
+
+              {/* Intro Text */}
+              <p className="text-lg md:text-xl text-muted-foreground font-light">
+                {t('video.intro', 'Te lo spieghiamo in un video illustrativo...')}
+              </p>
 
               {/* Title */}
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground leading-tight">
