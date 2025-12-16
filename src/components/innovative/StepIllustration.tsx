@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import investIllustration from "@/assets/invest-illustration.jpg";
+import investIllustration from "@/assets/journey-step-invest.jpg";
 import acquireIllustration from "@/assets/journey-step-acquire.jpg";
 import manageIllustration from "@/assets/journey-step-manage.jpg";
 import earnIllustration from "@/assets/journey-step-earn.jpg";
