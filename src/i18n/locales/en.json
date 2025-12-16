@@ -10,6 +10,12 @@
     "loading": "Loading...",
     "currentPage": "Current page"
   },
+  "video": {
+    "title": "How Jungle Rent Works",
+    "subtitle": "Watch the video to understand our model in 2 minutes",
+    "cta": "Ready to invest? Find out how to participate",
+    "play": "Play video"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",

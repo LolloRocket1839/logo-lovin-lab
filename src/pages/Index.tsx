@@ -12,6 +12,7 @@ import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 
 // Lazy load below-the-fold components
 const HorizontalValueJourney = lazy(() => import("@/components/innovative/HorizontalValueJourney").then(m => ({ default: m.HorizontalValueJourney })));
+const VideoSection = lazy(() => import("@/components/VideoSection").then(m => ({ default: m.VideoSection })));
 const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
 const BlogBanner = lazy(() => import("@/components/blog/BlogBanner").then(m => ({ default: m.BlogBanner })));
@@ -105,6 +106,9 @@ const Index = () => {
         <div className="hidden md:block">
           <HorizontalValueJourney />
         </div>
+        
+        {/* Video Explainer Section */}
+        <VideoSection />
         
         {/* Main conversion sections */}
         <div id="investor-section">

@@ -10,6 +10,12 @@
     "loading": "Caricamento in corso...",
     "currentPage": "Pagina corrente"
   },
+  "video": {
+    "title": "Come funziona Jungle Rent",
+    "subtitle": "Guarda il video per capire il nostro modello in 2 minuti",
+    "cta": "Pronto a investire? Scopri come partecipare",
+    "play": "Riproduci video"
+  },
   "nav": {
     "home": "Home",
     "about": "Chi siamo",
