@@ -11,9 +11,13 @@
     "currentPage": "Pagina corrente"
   },
   "video": {
-    "title": "Come funziona Jungle Rent",
-    "subtitle": "Guarda il video per capire il nostro modello in 2 minuti",
-    "cta": "Pronto a investire? Scopri come partecipare",
+    "title": "Capire il nostro modello in 2 minuti",
+    "subtitle": "Un breve video che spiega come investire in immobili studenteschi a Torino con Jungle Rent.",
+    "badge": "2 minuti",
+    "point1": "Come funziona il modello",
+    "point2": "Rendimenti attesi",
+    "point3": "Zero gestione per te",
+    "cta": "Parla con Lorenzo",
     "play": "Riproduci video"
   },
   "nav": {
