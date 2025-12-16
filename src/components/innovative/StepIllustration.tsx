@@ -351,26 +351,66 @@ const ManageIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
         <rect x="155" y="20" width="110" height="24" rx="12" className="fill-muted/50" />
         <text x="210" y="36" textAnchor="middle" className="fill-muted-foreground font-bold" fontSize="11">TU</text>
         
-        {/* Zero pensieri circle */}
+        {/* Person relaxing on sofa illustration */}
+        <motion.g
+          initial={{ opacity: 0, y: 10 }}
+          animate={isActive ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          {/* Sofa base */}
+          <rect x="158" y="130" width="104" height="45" rx="8" className="fill-primary/20" />
+          {/* Sofa back */}
+          <rect x="158" y="95" width="104" height="40" rx="8" className="fill-primary/30" />
+          {/* Sofa arm left */}
+          <rect x="152" y="100" width="18" height="70" rx="6" className="fill-primary/25" />
+          {/* Sofa arm right */}
+          <rect x="250" y="100" width="18" height="70" rx="6" className="fill-primary/25" />
+          {/* Sofa cushions */}
+          <rect x="165" y="133" width="38" height="12" rx="4" className="fill-primary/15" />
+          <rect x="208" y="133" width="38" height="12" rx="4" className="fill-primary/15" />
+          
+          {/* Person body - relaxed pose */}
+          <motion.g
+            animate={isActive && !prefersReducedMotion ? { y: [0, -2, 0] } : {}}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          >
+            {/* Legs on sofa */}
+            <ellipse cx="235" cy="125" rx="25" ry="8" className="fill-muted-foreground/60" />
+            {/* Torso leaning */}
+            <ellipse cx="188" cy="115" rx="16" ry="22" className="fill-muted-foreground/60" />
+            {/* Head */}
+            <circle cx="185" cy="85" r="14" className="fill-muted-foreground/70" />
+            {/* Hair */}
+            <ellipse cx="185" cy="78" rx="12" ry="8" className="fill-foreground/40" />
+            {/* Face - closed eyes (relaxed) */}
+            <path d="M 180 84 Q 182 86 184 84" className="stroke-background fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 186 84 Q 188 86 190 84" className="stroke-background fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            {/* Smile */}
+            <path d="M 182 90 Q 185 93 188 90" className="stroke-background fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            {/* Arm resting */}
+            <ellipse cx="205" cy="115" rx="12" ry="6" className="fill-muted-foreground/60" />
+          </motion.g>
+          
+          {/* Pillow */}
+          <ellipse cx="175" cy="105" rx="12" ry="8" className="fill-accent/30" />
+          
+          {/* Small plant decoration */}
+          <g transform="translate(255, 70)">
+            <rect x="0" y="15" width="10" height="12" rx="2" className="fill-primary/40" />
+            <ellipse cx="5" cy="12" rx="8" ry="10" className="fill-primary/30" />
+            <ellipse cx="5" cy="8" rx="6" ry="7" className="fill-primary/40" />
+          </g>
+        </motion.g>
+
+        {/* Zero pensieri badge - small */}
         <motion.g
           initial={{ scale: 0 }}
           animate={isActive ? { scale: 1 } : {}}
-          transition={{ delay: 0.6, type: "spring", stiffness: 120 }}
+          transition={{ delay: 0.8, type: "spring", stiffness: 150 }}
         >
-          <circle cx="210" cy="105" r="45" className="fill-primary/8 stroke-primary/30" strokeWidth="2" />
-          <text x="210" y="95" textAnchor="middle" className="fill-primary font-bold" fontSize="36">0</text>
-          <text x="210" y="118" textAnchor="middle" className="fill-primary font-semibold" fontSize="10">PENSIERI</text>
+          <rect x="175" y="52" width="70" height="22" rx="11" className="fill-primary" />
+          <text x="210" y="67" textAnchor="middle" className="fill-primary-foreground font-bold" fontSize="10">0 PENSIERI</text>
         </motion.g>
-
-        {/* Relaxed emoji */}
-        <motion.text
-          x="210" y="175"
-          textAnchor="middle"
-          fontSize="28"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={isActive ? { opacity: 1, scale: 1 } : {}}
-          transition={{ delay: 0.9, type: "spring" }}
-        >😌</motion.text>
       </motion.g>
 
       {/* Label */}
