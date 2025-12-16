@@ -5,7 +5,7 @@ export const BlogHero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
+    <section className="relative py-8 md:py-12 lg:py-16 px-4 bg-gradient-to-b from-primary/5 to-background">
       <div className="container mx-auto max-w-4xl text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
           <BookOpen className="w-8 h-8 text-primary" />
