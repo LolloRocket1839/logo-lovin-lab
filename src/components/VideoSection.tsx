@@ -9,10 +9,18 @@ export const VideoSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const handlePlayClick = () => {
+  const handlePlayClick = async () => {
     setIsPlaying(true);
     if (videoRef.current) {
-      videoRef.current.play();
+      try {
+        videoRef.current.muted = false;
+        await videoRef.current.play();
+      } catch (error) {
+        console.error('Errore riproduzione video:', error);
+        // Fallback: riprova con muted se il browser blocca
+        videoRef.current.muted = true;
+        await videoRef.current.play();
+      }
     }
   };
 
@@ -52,7 +60,9 @@ export const VideoSection = () => {
                     src="/videos/jungle-rent-explainer.mp4"
                     controls={isPlaying}
                     preload="metadata"
-                    className="w-full h-full object-cover"
+                    playsInline
+                    muted
+                    className="absolute inset-0 w-full h-full object-cover"
                     onEnded={() => setIsPlaying(false)}
                   >
                     Your browser does not support the video tag.
