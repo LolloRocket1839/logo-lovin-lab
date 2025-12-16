@@ -356,6 +356,26 @@
     "cta": "Gestione completa inclusa.",
     "scrollHint": "Attendi per continuare"
   },
+  "slideOverlays": {
+    "invest": {
+      "minInvestment": "Da €100",
+      "caption": "Tu investi, noi facciamo il resto. Zero burocrazia."
+    },
+    "acquire": {
+      "university": "Zone universitarie",
+      "caption": "Acquistiamo vicino a Politecnico, UniTo e i 7 atenei torinesi."
+    },
+    "manage": {
+      "students": "Studenti Set-Giu",
+      "tourists": "Turisti Lug-Ago",
+      "caption": "Occupazione 365 giorni. Contratti, manutenzione, fiscalità inclusi."
+    },
+    "earn": {
+      "quarterly": "Report trimestrali",
+      "dashboard": "Dashboard personale",
+      "caption": "Partecipi ai risultati con trasparenza totale."
+    }
+  },
   "investors": {
     "metaTitle": "Investimenti immobiliari accessibili Torino - Democratizziamo il real estate | Jungle Rent",
     "metaDescription": "Democratizziamo l'accesso al mercato immobiliare, un'asset class storicamente sicura oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione completa.",
