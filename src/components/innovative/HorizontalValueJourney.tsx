@@ -6,8 +6,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Euro, Key, ClipboardCheck, TrendingUp, Check } from "lucide-react";
 
 // Import generated images
-import investImage from "@/assets/journey-step-invest.png";
-import acquireImage from "@/assets/journey-step-acquire.png";
+import investImage from "@/assets/journey-step-invest.jpg";
+import acquireImage from "@/assets/journey-step-acquire.jpg";
 import manageImage from "@/assets/journey-step-manage.png";
 import earnImage from "@/assets/journey-step-earn.png";
 import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
