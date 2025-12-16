@@ -351,65 +351,111 @@ const ManageIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
         <rect x="155" y="20" width="110" height="24" rx="12" className="fill-muted/50" />
         <text x="210" y="36" textAnchor="middle" className="fill-muted-foreground font-bold" fontSize="11">TU</text>
         
-        {/* Person relaxing on sofa illustration */}
+        {/* Person relaxing on sofa - complete illustration */}
         <motion.g
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={isActive ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
         >
-          {/* Sofa base */}
-          <rect x="158" y="130" width="104" height="45" rx="8" className="fill-primary/20" />
-          {/* Sofa back */}
-          <rect x="158" y="95" width="104" height="40" rx="8" className="fill-primary/30" />
-          {/* Sofa arm left */}
-          <rect x="152" y="100" width="18" height="70" rx="6" className="fill-primary/25" />
-          {/* Sofa arm right */}
-          <rect x="250" y="100" width="18" height="70" rx="6" className="fill-primary/25" />
-          {/* Sofa cushions */}
-          <rect x="165" y="133" width="38" height="12" rx="4" className="fill-primary/15" />
-          <rect x="208" y="133" width="38" height="12" rx="4" className="fill-primary/15" />
+          {/* Side table with cup */}
+          <g transform="translate(248, 120)">
+            {/* Table */}
+            <rect x="0" y="30" width="22" height="3" rx="1" className="fill-muted-foreground/40" />
+            <rect x="8" y="33" width="6" height="18" rx="1" className="fill-muted-foreground/30" />
+            {/* Cup */}
+            <rect x="4" y="20" width="14" height="12" rx="2" className="fill-accent/50" />
+            <rect x="3" y="18" width="16" height="4" rx="2" className="fill-accent/60" />
+            {/* Cup handle */}
+            <path d="M 18 23 Q 23 23 23 28 Q 23 32 18 32" className="stroke-accent/50 fill-none" strokeWidth="2" />
+            {/* Steam animation */}
+            <motion.g
+              animate={isActive && !prefersReducedMotion ? { 
+                y: [0, -6, 0],
+                opacity: [0.6, 0.2, 0.6]
+              } : {}}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <path d="M 8 14 Q 10 10 8 6" className="stroke-muted-foreground/30 fill-none" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M 12 15 Q 14 11 12 7" className="stroke-muted-foreground/30 fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            </motion.g>
+          </g>
+
+          {/* Sofa - curved realistic shape */}
+          {/* Sofa back (curved) */}
+          <path 
+            d="M 162 95 Q 162 75 185 75 L 235 75 Q 258 75 258 95 L 258 130 L 162 130 Z" 
+            className="fill-primary/25"
+          />
+          {/* Sofa seat */}
+          <rect x="158" y="130" width="104" height="35" rx="4" className="fill-primary/20" />
+          {/* Sofa arm left - curved */}
+          <path 
+            d="M 148 90 Q 148 75 158 75 L 162 75 L 162 165 L 158 165 Q 148 165 148 155 Z" 
+            className="fill-primary/30"
+          />
+          {/* Sofa arm right - curved */}
+          <path 
+            d="M 262 90 Q 262 75 252 75 L 248 75 L 248 165 L 252 165 Q 262 165 262 155 Z" 
+            className="fill-primary/30"
+          />
+          {/* Cushion details */}
+          <rect x="168" y="135" width="35" height="8" rx="3" className="fill-primary/15" />
+          <rect x="208" y="135" width="35" height="8" rx="3" className="fill-primary/15" />
           
-          {/* Person body - relaxed pose */}
+          {/* Person relaxing - clear silhouette */}
           <motion.g
-            animate={isActive && !prefersReducedMotion ? { y: [0, -2, 0] } : {}}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            animate={isActive && !prefersReducedMotion ? { y: [0, -1.5, 0] } : {}}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            {/* Legs on sofa */}
-            <ellipse cx="235" cy="125" rx="25" ry="8" className="fill-muted-foreground/60" />
-            {/* Torso leaning */}
-            <ellipse cx="188" cy="115" rx="16" ry="22" className="fill-muted-foreground/60" />
-            {/* Head */}
-            <circle cx="185" cy="85" r="14" className="fill-muted-foreground/70" />
+            {/* Legs stretched out */}
+            <ellipse cx="230" cy="128" rx="22" ry="7" className="fill-muted-foreground/55" />
+            <ellipse cx="218" cy="130" rx="8" ry="6" className="fill-muted-foreground/55" />
+            {/* Body/torso leaning back */}
+            <ellipse cx="185" cy="115" rx="14" ry="25" className="fill-muted-foreground/55" />
+            {/* Arm behind head */}
+            <ellipse cx="175" cy="88" rx="15" ry="5" transform="rotate(-25, 175, 88)" className="fill-muted-foreground/50" />
+            {/* Other arm resting on body */}
+            <ellipse cx="198" cy="118" rx="10" ry="5" className="fill-muted-foreground/50" />
+            
+            {/* Head - tilted back relaxed */}
+            <circle cx="180" cy="78" r="15" className="fill-muted-foreground/60" />
             {/* Hair */}
-            <ellipse cx="185" cy="78" rx="12" ry="8" className="fill-foreground/40" />
-            {/* Face - closed eyes (relaxed) */}
-            <path d="M 180 84 Q 182 86 184 84" className="stroke-background fill-none" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M 186 84 Q 188 86 190 84" className="stroke-background fill-none" strokeWidth="1.5" strokeLinecap="round" />
-            {/* Smile */}
-            <path d="M 182 90 Q 185 93 188 90" className="stroke-background fill-none" strokeWidth="1.5" strokeLinecap="round" />
-            {/* Arm resting */}
-            <ellipse cx="205" cy="115" rx="12" ry="6" className="fill-muted-foreground/60" />
+            <ellipse cx="180" cy="68" rx="13" ry="8" className="fill-foreground/35" />
+            {/* Face details */}
+            {/* Closed eyes - curved lines showing relaxation */}
+            <path d="M 173 77 Q 175 79 177 77" className="stroke-background/80 fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 183 77 Q 185 79 187 77" className="stroke-background/80 fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            {/* Relaxed smile */}
+            <path d="M 176 84 Q 180 87 184 84" className="stroke-background/80 fill-none" strokeWidth="1.5" strokeLinecap="round" />
           </motion.g>
           
-          {/* Pillow */}
-          <ellipse cx="175" cy="105" rx="12" ry="8" className="fill-accent/30" />
+          {/* Pillow behind person */}
+          <ellipse cx="172" cy="100" rx="14" ry="10" className="fill-accent/25" />
           
-          {/* Small plant decoration */}
-          <g transform="translate(255, 70)">
-            <rect x="0" y="15" width="10" height="12" rx="2" className="fill-primary/40" />
-            <ellipse cx="5" cy="12" rx="8" ry="10" className="fill-primary/30" />
-            <ellipse cx="5" cy="8" rx="6" ry="7" className="fill-primary/40" />
-          </g>
+          {/* Zzz floating animation */}
+          <motion.g
+            initial={{ opacity: 0 }}
+            animate={isActive && !prefersReducedMotion ? { 
+              opacity: [0, 1, 1, 0],
+              y: [0, -8, -16, -24],
+              x: [0, 3, 6, 9]
+            } : { opacity: 0.7 }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
+          >
+            <text x="195" y="58" className="fill-primary/60 font-bold" fontSize="10">Z</text>
+            <text x="202" y="52" className="fill-primary/50 font-bold" fontSize="8">z</text>
+            <text x="208" y="48" className="fill-primary/40 font-bold" fontSize="6">z</text>
+          </motion.g>
         </motion.g>
 
-        {/* Zero pensieri badge - small */}
+        {/* Zero pensieri badge - prominent */}
         <motion.g
-          initial={{ scale: 0 }}
-          animate={isActive ? { scale: 1 } : {}}
-          transition={{ delay: 0.8, type: "spring", stiffness: 150 }}
+          initial={{ scale: 0, y: 10 }}
+          animate={isActive ? { scale: 1, y: 0 } : {}}
+          transition={{ delay: 0.7, type: "spring", stiffness: 140 }}
         >
-          <rect x="175" y="52" width="70" height="22" rx="11" className="fill-primary" />
-          <text x="210" y="67" textAnchor="middle" className="fill-primary-foreground font-bold" fontSize="10">0 PENSIERI</text>
+          <rect x="170" y="48" width="80" height="24" rx="12" className="fill-primary" />
+          <text x="210" y="65" textAnchor="middle" className="fill-primary-foreground font-bold" fontSize="11">0 PENSIERI</text>
         </motion.g>
       </motion.g>
 
