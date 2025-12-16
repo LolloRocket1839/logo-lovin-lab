@@ -3,10 +3,11 @@ import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "fra
 import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Euro, Key, ClipboardCheck, TrendingUp, Check } from "lucide-react";
+import { Euro, Key, ClipboardCheck, TrendingUp, Check, CheckCircle2 } from "lucide-react";
 import { SlideWithOverlays, OverlayConfig } from "./SlideWithOverlays";
+import { StepIllustration } from "./StepIllustration";
 
-// PDF slide images
+// PDF slide images (kept for mobile)
 import slideInvest from "@/assets/journey-step-invest.jpg";
 import slideAcquire from "@/assets/journey-step-acquire.jpg";
 import slideManage from "@/assets/journey-step-manage.jpg";
@@ -23,7 +24,7 @@ const stepColors = {
   earn: "#8b5cf6"      // violet
 };
 
-// Overlay configurations for each step
+// Overlay configurations for each step (mobile only now)
 const stepOverlays: Record<string, OverlayConfig[]> = {
   invest: [
     { id: 'inv-1', type: 'highlight', position: { x: '15%', y: '30%', width: '25%', height: '20%' }, delay: 0 },
@@ -59,11 +60,14 @@ const stepOverlays: Record<string, OverlayConfig[]> = {
 };
 
 interface JourneyStep {
-  id: string;
+  id: "invest" | "acquire" | "manage" | "earn";
   titleKey: string;
   descriptionKey: string;
+  detailKey: string;
+  keyPointsKey: string;
   color: string;
   accentColor: string;
+  bgGradient: string;
   slideImage: string;
 }
 
@@ -71,33 +75,45 @@ const steps: JourneyStep[] = [
   {
     id: "invest",
     titleKey: "infographic.steps.invest.title",
-    descriptionKey: "infographic.steps.invest.detail",
+    descriptionKey: "infographic.steps.invest.description",
+    detailKey: "infographic.steps.invest.detail",
+    keyPointsKey: "infographic.steps.invest.keyPoints",
     color: "from-emerald-500/20 to-emerald-500/5",
     accentColor: "bg-emerald-500",
+    bgGradient: "from-emerald-500/10 via-transparent to-transparent",
     slideImage: slideInvest
   },
   {
     id: "acquire",
     titleKey: "infographic.steps.acquire.title",
-    descriptionKey: "infographic.steps.acquire.detail",
+    descriptionKey: "infographic.steps.acquire.description",
+    detailKey: "infographic.steps.acquire.detail",
+    keyPointsKey: "infographic.steps.acquire.keyPoints",
     color: "from-sky-500/20 to-sky-500/5",
     accentColor: "bg-sky-500",
+    bgGradient: "from-sky-500/10 via-transparent to-transparent",
     slideImage: slideAcquire
   },
   {
     id: "manage",
     titleKey: "infographic.steps.manage.title",
-    descriptionKey: "infographic.steps.manage.detail",
+    descriptionKey: "infographic.steps.manage.description",
+    detailKey: "infographic.steps.manage.detail",
+    keyPointsKey: "infographic.steps.manage.keyPoints",
     color: "from-amber-500/20 to-amber-500/5",
     accentColor: "bg-amber-500",
+    bgGradient: "from-amber-500/10 via-transparent to-transparent",
     slideImage: slideManage
   },
   {
     id: "earn",
     titleKey: "infographic.steps.earn.title",
-    descriptionKey: "infographic.steps.earn.detail",
+    descriptionKey: "infographic.steps.earn.description",
+    detailKey: "infographic.steps.earn.detail",
+    keyPointsKey: "infographic.steps.earn.keyPoints",
     color: "from-violet-500/20 to-violet-500/5",
     accentColor: "bg-violet-500",
+    bgGradient: "from-violet-500/10 via-transparent to-transparent",
     slideImage: slideEarn
   }
 ];
@@ -351,55 +367,88 @@ export const HorizontalValueJourney = () => {
           >
             {steps.map((step, index) => {
               const isActive = index === activeStep;
+              const keyPoints = t(step.keyPointsKey, { returnObjects: true }) as string[];
               
               return (
                 <motion.div
                   key={step.id}
-                  className="w-screen flex-shrink-0 px-8 md:px-16 lg:px-24"
+                  className="w-screen flex-shrink-0 px-8 md:px-12 lg:px-16"
                 >
                   <div className={`
-                    max-w-5xl mx-auto h-[60vh] rounded-3xl overflow-hidden
+                    max-w-6xl mx-auto h-[60vh] rounded-3xl overflow-hidden
                     bg-gradient-to-br ${step.color}
-                    border border-border/50
-                    flex items-center
+                    border border-border/50 shadow-lg
                     transition-all duration-500
                     ${isActive ? 'scale-100 opacity-100' : 'scale-95 opacity-60'}
                   `}>
-                    {/* Full-width PDF slide with animated overlays */}
-                    <div className="w-full h-full relative">
-                      {/* Step number overlay */}
-                      <div className="absolute top-8 left-8 z-20">
-                        <div className={`w-16 h-16 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-2xl shadow-lg`}>
-                          {index + 1}
+                    {/* Two-column layout */}
+                    <div className="grid grid-cols-2 h-full">
+                      {/* Left: Illustration */}
+                      <div className={`relative flex items-center justify-center bg-gradient-to-br ${step.bgGradient}`}>
+                        {/* Step number badge */}
+                        <div className="absolute top-6 left-6 z-20">
+                          <div className={`w-12 h-12 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-xl shadow-lg`}>
+                            {index + 1}
+                          </div>
                         </div>
+                        
+                        <StepIllustration step={step.id} isActive={isActive} />
                       </div>
                       
-                      {/* Step title overlay */}
-                      <div className="absolute top-8 left-28 z-20">
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold text-foreground drop-shadow-md">
+                      {/* Right: Content */}
+                      <div className="flex flex-col justify-center p-8 lg:p-12 space-y-6">
+                        {/* Badge */}
+                        <motion.span
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.3, delay: 0.1 }}
+                          className={`inline-block self-start px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide text-white ${step.accentColor}`}
+                        >
+                          {t(step.descriptionKey)}
+                        </motion.span>
+                        
+                        {/* Title */}
+                        <motion.h3
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.3, delay: 0.2 }}
+                          className="text-3xl lg:text-4xl font-display font-extrabold text-foreground"
+                        >
                           {t(step.titleKey)}
-                        </h3>
+                        </motion.h3>
+                        
+                        {/* Description */}
+                        <motion.p
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                          transition={{ duration: 0.3, delay: 0.3 }}
+                          className="text-lg text-muted-foreground leading-relaxed"
+                        >
+                          {t(step.detailKey)}
+                        </motion.p>
+                        
+                        {/* Key Points */}
+                        <motion.ul
+                          initial={{ opacity: 0 }}
+                          animate={isActive ? { opacity: 1 } : { opacity: 0 }}
+                          transition={{ duration: 0.3, delay: 0.4 }}
+                          className="space-y-3"
+                        >
+                          {Array.isArray(keyPoints) && keyPoints.map((point, i) => (
+                            <motion.li
+                              key={i}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                              transition={{ duration: 0.3, delay: 0.5 + i * 0.1 }}
+                              className="flex items-center gap-3 text-foreground"
+                            >
+                              <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
+                              <span className="text-base font-medium">{point}</span>
+                            </motion.li>
+                          ))}
+                        </motion.ul>
                       </div>
-                      
-                      {/* PDF Slide with Animated Overlays */}
-                      <SlideWithOverlays
-                        slideImage={step.slideImage}
-                        overlays={stepOverlays[step.id] || []}
-                        isActive={isActive}
-                        stepColor={stepColors[step.id as keyof typeof stepColors]}
-                      />
                     </div>
-
-                    {/* Arrow to next */}
-                    {index < steps.length - 1 && (
-                      <motion.div
-                        className="absolute right-8 top-1/2 -translate-y-1/2 text-muted-foreground/30"
-                        animate={prefersReducedMotion ? {} : { x: [0, 10, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <span className="text-6xl font-light">→</span>
-                      </motion.div>
-                    )}
                   </div>
                 </motion.div>
               );
