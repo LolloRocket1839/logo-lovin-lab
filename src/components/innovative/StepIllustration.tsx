@@ -228,27 +228,16 @@ const PremiumHouse = ({ x, y, scale = 1, variant = "main", delay = 0, isActive }
 // Step 1: INVESTI - Premium Image Illustration
 const InvestIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => (
   <motion.div
-    className="w-full h-full flex flex-col items-center justify-center"
+    className="w-full h-full flex items-center justify-center"
     initial={{ opacity: 0, scale: 0.95 }}
     animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0.5, scale: 0.95 }}
     transition={{ duration: 0.4 }}
   >
-    <motion.img
+    <img 
       src={investIllustration}
       alt="Investi da €100 in immobili - smartphone con monete che fluiscono verso case"
-      className="w-full max-w-[400px] h-auto rounded-xl"
-      initial={{ y: 10 }}
-      animate={isActive ? { y: 0 } : {}}
-      transition={{ duration: 0.5 }}
+      className="w-full h-auto max-w-[500px] object-contain rounded-2xl shadow-md"
     />
-    <motion.p
-      className="mt-4 text-muted-foreground text-sm text-center"
-      initial={{ opacity: 0 }}
-      animate={isActive ? { opacity: 1 } : {}}
-      transition={{ delay: 0.3 }}
-    >
-      Tu investi da €100, noi facciamo il resto
-    </motion.p>
   </motion.div>
 );
 
@@ -264,7 +253,7 @@ const AcquireIllustration = ({ isActive, prefersReducedMotion }: { isActive: boo
       <img 
         src={acquireIllustration} 
         alt="Acquistiamo immobili vicino ai 7 atenei torinesi" 
-        className="w-full h-full object-contain max-w-[500px] rounded-xl"
+        className="w-full h-auto max-w-[500px] object-contain rounded-2xl shadow-md"
       />
     </motion.div>
   );
@@ -282,7 +271,7 @@ const ManageIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
       <img 
         src={manageIllustration} 
         alt="Jungle Rent gestisce tutto - Tu riposi" 
-        className="w-full h-full object-contain max-w-[500px] rounded-xl"
+        className="w-full h-auto max-w-[500px] object-contain rounded-2xl shadow-md"
       />
     </motion.div>
   );
@@ -300,7 +289,7 @@ const EarnIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolea
       <img 
         src={earnIllustration} 
         alt="Dashboard rendite trimestrali" 
-        className="w-full h-auto max-w-[600px] rounded-2xl shadow-lg"
+        className="w-full h-auto max-w-[500px] object-contain rounded-2xl shadow-md"
       />
     </motion.div>
   );
