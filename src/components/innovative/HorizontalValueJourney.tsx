@@ -167,11 +167,20 @@ export const HorizontalValueJourney = () => {
       
       isScrolling = true;
       
-      // Scroll down = next step, scroll up = previous step
-      if (e.deltaY > 0 && activeStep < 3) {
-        handleStepClick(activeStep + 1);
-      } else if (e.deltaY < 0 && activeStep > 0) {
-        handleStepClick(activeStep - 1);
+      // Calculate steps based on scroll intensity
+      const absDeltaY = Math.abs(e.deltaY);
+      const stepsToMove = absDeltaY >= 150 ? 2 : 1;
+      
+      // Calculate new step with bounds checking
+      let newStep = activeStep;
+      if (e.deltaY > 0) {
+        newStep = Math.min(activeStep + stepsToMove, 3);
+      } else if (e.deltaY < 0) {
+        newStep = Math.max(activeStep - stepsToMove, 0);
+      }
+      
+      if (newStep !== activeStep) {
+        handleStepClick(newStep);
       }
       
       // Cooldown to prevent multi-trigger from single gesture
