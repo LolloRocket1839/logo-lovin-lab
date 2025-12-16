@@ -120,14 +120,21 @@ const InvestIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
         <rect x="13" y="24" width="10" height="15" className="fill-primary/20" />
       </g>
 
-      {/* JR Badge */}
+      {/* JR Logo Badge */}
       <motion.g
         initial={{ scale: 0 }}
         animate={isActive ? { scale: 1 } : {}}
         transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
       >
-        <circle cx="250" cy="60" r="14" className="fill-primary" />
-        <text x="250" y="65" textAnchor="middle" className="fill-primary-foreground font-bold" fontSize="9">JR</text>
+        <circle cx="250" cy="60" r="16" className="fill-card stroke-border" strokeWidth="1" />
+        <image 
+          href="/jungle-rent-logo.svg" 
+          x="236" 
+          y="46" 
+          width="28" 
+          height="28"
+          preserveAspectRatio="xMidYMid meet"
+        />
       </motion.g>
     </motion.g>
 
