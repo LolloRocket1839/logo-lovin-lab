@@ -20,6 +20,21 @@
     "cta": "Parla con Lorenzo",
     "play": "Riproduci video"
   },
+  "problem": {
+    "badge": "Il problema",
+    "title": "La crisi degli alloggi studenteschi in Italia",
+    "subtitle": "Quasi 600.000 studenti cercano casa ogni anno, ma l'offerta di alloggi dedicati copre solo il 12,6% della domanda. Una crisi che rappresenta un'opportunità.",
+    "stat1Label": "studenti fuori sede",
+    "stat1Sub": "in Italia",
+    "stat2Label": "cerca alloggio",
+    "stat2Sub": "nel privato",
+    "stat3Label": "domanda coperta",
+    "stat3Sub": "da housing dedicato",
+    "stat4Label": "mercato potenziale",
+    "stat4Sub": "in Italia",
+    "source": "Dati 2025 - Fonte: Savills Research, Student Housing Italy Spotlight",
+    "cta": "Leggi il report completo"
+  },
   "nav": {
     "home": "Home",
     "about": "Chi siamo",

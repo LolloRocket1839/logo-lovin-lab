@@ -20,6 +20,21 @@
     "cta": "Talk to Lorenzo",
     "play": "Play video"
   },
+  "problem": {
+    "badge": "The problem",
+    "title": "The student housing crisis in Italy",
+    "subtitle": "Nearly 600,000 students seek housing each year, but dedicated student housing covers only 12.6% of demand. A crisis that represents an opportunity.",
+    "stat1Label": "off-campus students",
+    "stat1Sub": "in Italy",
+    "stat2Label": "seeking housing",
+    "stat2Sub": "in private market",
+    "stat3Label": "demand covered",
+    "stat3Sub": "by dedicated housing",
+    "stat4Label": "market potential",
+    "stat4Sub": "in Italy",
+    "source": "2025 data - Source: Savills Research, Student Housing Italy Spotlight",
+    "cta": "Read the full report"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",
