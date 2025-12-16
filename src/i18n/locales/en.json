@@ -383,6 +383,26 @@
     "cta": "Full management included.",
     "scrollHint": "Wait to continue"
   },
+  "slideOverlays": {
+    "invest": {
+      "minInvestment": "From €100",
+      "caption": "You invest, we do the rest. Zero paperwork."
+    },
+    "acquire": {
+      "university": "University zones",
+      "caption": "We acquire near Politecnico, UniTo and 7 Turin universities."
+    },
+    "manage": {
+      "students": "Students Sep-Jun",
+      "tourists": "Tourists Jul-Aug",
+      "caption": "365-day occupancy. Contracts, maintenance, taxes included."
+    },
+    "earn": {
+      "quarterly": "Quarterly reports",
+      "dashboard": "Personal dashboard",
+      "caption": "Participate in results with full transparency."
+    }
+  },
   "investors": {
     "metaTitle": "Accessible Real Estate Investments Turin - Democratizing Real Estate | Jungle Rent",
     "metaDescription": "Democratizing access to real estate, a historically safe asset class now inaccessible to many. Invest in university properties in Turin with complete management.",

@@ -4,10 +4,59 @@ import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Euro, Key, ClipboardCheck, TrendingUp, Check } from "lucide-react";
-import { AnimatedStepInfographic } from "./AnimatedStepInfographic";
+import { SlideWithOverlays, OverlayConfig } from "./SlideWithOverlays";
+
+// PDF slide images
+import slideInvest from "@/assets/journey-step-invest.jpg";
+import slideAcquire from "@/assets/journey-step-acquire.jpg";
+import slideManage from "@/assets/journey-step-manage.jpg";
+import slideEarn from "@/assets/journey-step-earn.jpg";
 
 // Step icons mapping
 const stepIcons = [Euro, Key, ClipboardCheck, TrendingUp];
+
+// Color values for overlays (hex)
+const stepColors = {
+  invest: "#10b981",   // emerald
+  acquire: "#0ea5e9",  // sky
+  manage: "#f59e0b",   // amber
+  earn: "#8b5cf6"      // violet
+};
+
+// Overlay configurations for each step
+const stepOverlays: Record<string, OverlayConfig[]> = {
+  invest: [
+    { id: 'inv-1', type: 'highlight', position: { x: '15%', y: '30%', width: '25%', height: '20%' }, delay: 0 },
+    { id: 'inv-2', type: 'arrow', position: { x: '42%', y: '38%' }, delay: 600, arrowDirection: 'right' },
+    { id: 'inv-3', type: 'highlight', position: { x: '55%', y: '30%', width: '30%', height: '25%' }, delay: 1200 },
+    { id: 'inv-4', type: 'callout', position: { x: '20%', y: '55%' }, delay: 1800, content: 'slideOverlays.invest.minInvestment' },
+    { id: 'inv-5', type: 'caption', position: { x: '10%', y: '80%', width: '80%' }, delay: 2400, content: 'slideOverlays.invest.caption' },
+  ],
+  acquire: [
+    { id: 'acq-1', type: 'highlight', position: { x: '10%', y: '25%', width: '20%', height: '18%' }, delay: 0 },
+    { id: 'acq-2', type: 'highlight', position: { x: '10%', y: '50%', width: '20%', height: '18%' }, delay: 500 },
+    { id: 'acq-3', type: 'arrow', position: { x: '32%', y: '40%' }, delay: 1000, arrowDirection: 'right' },
+    { id: 'acq-4', type: 'highlight', position: { x: '55%', y: '35%', width: '30%', height: '30%' }, delay: 1500 },
+    { id: 'acq-5', type: 'callout', position: { x: '60%', y: '70%' }, delay: 2000, content: 'slideOverlays.acquire.university' },
+    { id: 'acq-6', type: 'caption', position: { x: '10%', y: '85%', width: '80%' }, delay: 2500, content: 'slideOverlays.acquire.caption' },
+  ],
+  manage: [
+    { id: 'man-1', type: 'highlight', position: { x: '20%', y: '25%', width: '25%', height: '20%' }, delay: 0 },
+    { id: 'man-2', type: 'callout', position: { x: '22%', y: '48%' }, delay: 500, content: 'slideOverlays.manage.students' },
+    { id: 'man-3', type: 'highlight', position: { x: '55%', y: '25%', width: '25%', height: '20%' }, delay: 1000 },
+    { id: 'man-4', type: 'callout', position: { x: '57%', y: '48%' }, delay: 1500, content: 'slideOverlays.manage.tourists' },
+    { id: 'man-5', type: 'arrow', position: { x: '47%', y: '32%', width: '40px', height: '40px' }, delay: 2000, arrowDirection: 'down' },
+    { id: 'man-6', type: 'caption', position: { x: '15%', y: '80%', width: '70%' }, delay: 2500, content: 'slideOverlays.manage.caption' },
+  ],
+  earn: [
+    { id: 'ear-1', type: 'highlight', position: { x: '15%', y: '30%', width: '30%', height: '25%' }, delay: 0 },
+    { id: 'ear-2', type: 'arrow', position: { x: '47%', y: '40%' }, delay: 600, arrowDirection: 'right' },
+    { id: 'ear-3', type: 'highlight', position: { x: '55%', y: '30%', width: '30%', height: '25%' }, delay: 1200 },
+    { id: 'ear-4', type: 'callout', position: { x: '60%', y: '58%' }, delay: 1800, content: 'slideOverlays.earn.quarterly' },
+    { id: 'ear-5', type: 'callout', position: { x: '20%', y: '60%' }, delay: 2200, content: 'slideOverlays.earn.dashboard' },
+    { id: 'ear-6', type: 'caption', position: { x: '10%', y: '82%', width: '80%' }, delay: 2800, content: 'slideOverlays.earn.caption' },
+  ],
+};
 
 interface JourneyStep {
   id: string;
@@ -15,6 +64,7 @@ interface JourneyStep {
   descriptionKey: string;
   color: string;
   accentColor: string;
+  slideImage: string;
 }
 
 const steps: JourneyStep[] = [
@@ -23,28 +73,32 @@ const steps: JourneyStep[] = [
     titleKey: "infographic.steps.invest.title",
     descriptionKey: "infographic.steps.invest.detail",
     color: "from-emerald-500/20 to-emerald-500/5",
-    accentColor: "bg-emerald-500"
+    accentColor: "bg-emerald-500",
+    slideImage: slideInvest
   },
   {
     id: "acquire",
     titleKey: "infographic.steps.acquire.title",
     descriptionKey: "infographic.steps.acquire.detail",
     color: "from-sky-500/20 to-sky-500/5",
-    accentColor: "bg-sky-500"
+    accentColor: "bg-sky-500",
+    slideImage: slideAcquire
   },
   {
     id: "manage",
     titleKey: "infographic.steps.manage.title",
     descriptionKey: "infographic.steps.manage.detail",
     color: "from-amber-500/20 to-amber-500/5",
-    accentColor: "bg-amber-500"
+    accentColor: "bg-amber-500",
+    slideImage: slideManage
   },
   {
     id: "earn",
     titleKey: "infographic.steps.earn.title",
     descriptionKey: "infographic.steps.earn.detail",
     color: "from-violet-500/20 to-violet-500/5",
-    accentColor: "bg-violet-500"
+    accentColor: "bg-violet-500",
+    slideImage: slideEarn
   }
 ];
 
@@ -226,16 +280,21 @@ export const HorizontalValueJourney = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  {/* Card with animated infographic */}
+                  {/* Card with PDF slide and overlays */}
                   <div className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${step.color} border border-border/50 shadow-lg`}>
                     {/* Step number badge */}
-                    <div className={`absolute top-4 left-4 w-10 h-10 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-lg z-10`}>
+                    <div className={`absolute top-4 left-4 w-10 h-10 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-lg z-20`}>
                       {index + 1}
                     </div>
                     
-                    {/* Animated Infographic */}
-                    <div className="aspect-square relative overflow-hidden bg-background/50">
-                      <AnimatedStepInfographic stepId={step.id} isActive={true} />
+                    {/* PDF Slide with Animated Overlays */}
+                    <div className="aspect-[4/3] relative overflow-hidden">
+                      <SlideWithOverlays
+                        slideImage={step.slideImage}
+                        overlays={stepOverlays[step.id] || []}
+                        isActive={true}
+                        stepColor={stepColors[step.id as keyof typeof stepColors]}
+                      />
                     </div>
                     
                     {/* Content */}
@@ -306,24 +365,29 @@ export const HorizontalValueJourney = () => {
                     transition-all duration-500
                     ${isActive ? 'scale-100 opacity-100' : 'scale-95 opacity-60'}
                   `}>
-                    {/* Full-width animated infographic */}
+                    {/* Full-width PDF slide with animated overlays */}
                     <div className="w-full h-full relative">
                       {/* Step number overlay */}
-                      <div className="absolute top-8 left-8 z-10">
+                      <div className="absolute top-8 left-8 z-20">
                         <div className={`w-16 h-16 rounded-full ${step.accentColor} text-white flex items-center justify-center font-bold text-2xl shadow-lg`}>
                           {index + 1}
                         </div>
                       </div>
                       
                       {/* Step title overlay */}
-                      <div className="absolute top-8 left-28 z-10">
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold">
+                      <div className="absolute top-8 left-28 z-20">
+                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold text-foreground drop-shadow-md">
                           {t(step.titleKey)}
                         </h3>
                       </div>
                       
-                      {/* Animated Infographic - takes full space */}
-                      <AnimatedStepInfographic stepId={step.id} isActive={isActive} />
+                      {/* PDF Slide with Animated Overlays */}
+                      <SlideWithOverlays
+                        slideImage={step.slideImage}
+                        overlays={stepOverlays[step.id] || []}
+                        isActive={isActive}
+                        stepColor={stepColors[step.id as keyof typeof stepColors]}
+                      />
                     </div>
 
                     {/* Arrow to next */}
