@@ -31,7 +31,7 @@ export const Breadcrumbs = ({ items = [] }: BreadcrumbsProps) => {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="container mx-auto px-3 sm:px-4 pt-24 pb-3 sm:pb-4">
+    <nav aria-label="Breadcrumb" className="container mx-auto px-3 sm:px-4 pt-2 pb-2">
       <Breadcrumb>
         <BreadcrumbList className="text-xs sm:text-sm gap-0 flex-wrap">
           <BreadcrumbItem>

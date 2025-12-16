@@ -94,7 +94,7 @@ const Blog = () => {
       <StructuredData />
       <Navigation />
       
-      <div className="pt-20">
+      <div className="pt-16">
         <Breadcrumbs
           items={[
             { label: isItalian ? 'Risorse' : 'Resources' }
