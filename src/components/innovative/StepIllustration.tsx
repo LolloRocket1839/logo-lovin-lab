@@ -23,116 +23,338 @@ export const StepIllustration = ({ step, isActive }: StepIllustrationProps) => {
   );
 };
 
-// Step 1: INVESTI - Smartphone con €100 che fluisce verso portafoglio case
+// Shared SVG Definitions for Premium Effects
+const PremiumDefs = () => (
+  <defs>
+    {/* Gradients */}
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="hsl(45, 93%, 58%)" />
+      <stop offset="50%" stopColor="hsl(42, 87%, 55%)" />
+      <stop offset="100%" stopColor="hsl(38, 90%, 50%)" />
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="hsl(45, 95%, 75%)" />
+      <stop offset="100%" stopColor="hsl(42, 90%, 60%)" />
+    </linearGradient>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="1" />
+      <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.7" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="hsl(var(--card))" />
+      <stop offset="100%" stopColor="hsl(var(--muted))" stopOpacity="0.3" />
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="hsl(var(--background))" stopOpacity="0.9" />
+      <stop offset="100%" stopColor="hsl(var(--background))" stopOpacity="0.6" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="hsl(220, 15%, 20%)" />
+      <stop offset="100%" stopColor="hsl(220, 15%, 12%)" />
+    </linearGradient>
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="hsl(var(--primary))" />
+      <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.75" />
+    </linearGradient>
+    <linearGradient id="sofaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.35" />
+      <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="hsl(var(--primary))" />
+      <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
+    </linearGradient>
+    <linearGradient id="trendGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="hsl(var(--chart-4))" stopOpacity="0.1" />
+      <stop offset="100%" stopColor="hsl(var(--chart-4))" stopOpacity="0.4" />
+    </linearGradient>
+    
+    {/* Shadows */}
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.15" />
+    </filter>
+    <filter id="mediumShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" floodOpacity="0.2" />
+    </filter>
+    <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="coinShine" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+);
+
+// Premium Coin Component
+const PremiumCoin = ({ cx, cy, r, delay = 0, isActive, prefersReducedMotion }: { 
+  cx: number; cy: number; r: number; delay?: number; isActive: boolean; prefersReducedMotion: boolean 
+}) => (
+  <motion.g
+    initial={{ scale: 0, opacity: 0 }}
+    animate={isActive ? { scale: 1, opacity: 1 } : {}}
+    transition={{ delay, type: "spring", stiffness: 200 }}
+  >
+    {/* Coin base with gradient */}
+    <circle cx={cx} cy={cy} r={r} fill="url(#goldGradient)" filter="url(#coinShine)" />
+    {/* Inner ring */}
+    <circle cx={cx} cy={cy} r={r * 0.85} fill="none" stroke="hsl(38, 90%, 45%)" strokeWidth="1" opacity="0.5" />
+    {/* Highlight arc */}
+    <path 
+      d={`M ${cx - r * 0.5} ${cy - r * 0.3} Q ${cx} ${cy - r * 0.8} ${cx + r * 0.5} ${cy - r * 0.3}`}
+      fill="none" 
+      stroke="url(#goldShine)" 
+      strokeWidth="2" 
+      strokeLinecap="round"
+      opacity="0.7"
+    />
+    {/* Euro symbol */}
+    <text 
+      x={cx} 
+      y={cy + r * 0.35} 
+      textAnchor="middle" 
+      fontSize={r * 1.2} 
+      fontWeight="bold"
+      fill="hsl(38, 80%, 25%)"
+    >€</text>
+    {/* Sparkle animation */}
+    {!prefersReducedMotion && isActive && (
+      <motion.circle
+        cx={cx + r * 0.4}
+        cy={cy - r * 0.4}
+        r="2"
+        fill="white"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ 
+          opacity: [0, 1, 0],
+          scale: [0, 1, 0]
+        }}
+        transition={{ 
+          delay: delay + 0.5, 
+          duration: 1.5, 
+          repeat: Infinity,
+          repeatDelay: 2
+        }}
+      />
+    )}
+  </motion.g>
+);
+
+// Premium House Component
+const PremiumHouse = ({ x, y, scale = 1, variant = "main", delay = 0, isActive }: {
+  x: number; y: number; scale?: number; variant?: "main" | "small" | "medium"; delay?: number; isActive: boolean
+}) => {
+  const baseWidth = variant === "main" ? 55 : variant === "medium" ? 40 : 32;
+  const baseHeight = variant === "main" ? 45 : variant === "medium" ? 35 : 28;
+  const roofHeight = variant === "main" ? 22 : variant === "medium" ? 16 : 12;
+  
+  return (
+    <motion.g
+      transform={`translate(${x}, ${y}) scale(${scale})`}
+      initial={{ opacity: 0, y: 10 }}
+      animate={isActive ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay, duration: 0.4 }}
+      filter="url(#softShadow)"
+    >
+      {/* Roof with tiles effect */}
+      <polygon 
+        points={`${baseWidth/2},0 ${baseWidth + 5},${roofHeight} -5,${roofHeight}`} 
+        fill="url(#roofGradient)"
+      />
+      {/* Roof detail lines (tile effect) */}
+      {variant === "main" && (
+        <>
+          <line x1="10" y1={roofHeight - 4} x2={baseWidth - 10} y2={roofHeight - 4} stroke="hsl(var(--primary))" strokeOpacity="0.3" strokeWidth="1" />
+          <line x1="15" y1={roofHeight - 8} x2={baseWidth - 15} y2={roofHeight - 8} stroke="hsl(var(--primary))" strokeOpacity="0.3" strokeWidth="1" />
+        </>
+      )}
+      
+      {/* Main building */}
+      <rect x="0" y={roofHeight} width={baseWidth} height={baseHeight} fill="url(#cardGradient)" stroke="hsl(var(--border))" strokeWidth="1.5" rx="1" />
+      
+      {/* Windows with shutters (main house only) */}
+      {variant === "main" ? (
+        <>
+          {/* Left window */}
+          <rect x="6" y={roofHeight + 8} width="14" height="14" fill="hsl(var(--background))" stroke="hsl(var(--border))" rx="1" />
+          <line x1="13" y1={roofHeight + 8} x2="13" y2={roofHeight + 22} stroke="hsl(var(--border))" strokeWidth="0.5" />
+          <line x1="6" y1={roofHeight + 15} x2="20" y2={roofHeight + 15} stroke="hsl(var(--border))" strokeWidth="0.5" />
+          {/* Shutters left */}
+          <rect x="2" y={roofHeight + 7} width="3" height="16" fill="hsl(var(--primary))" opacity="0.5" rx="0.5" />
+          <rect x="21" y={roofHeight + 7} width="3" height="16" fill="hsl(var(--primary))" opacity="0.5" rx="0.5" />
+          
+          {/* Right window */}
+          <rect x="35" y={roofHeight + 8} width="14" height="14" fill="hsl(var(--background))" stroke="hsl(var(--border))" rx="1" />
+          <line x1="42" y1={roofHeight + 8} x2="42" y2={roofHeight + 22} stroke="hsl(var(--border))" strokeWidth="0.5" />
+          <line x1="35" y1={roofHeight + 15} x2="49" y2={roofHeight + 15} stroke="hsl(var(--border))" strokeWidth="0.5" />
+          {/* Shutters right */}
+          <rect x="31" y={roofHeight + 7} width="3" height="16" fill="hsl(var(--primary))" opacity="0.5" rx="0.5" />
+          <rect x="50" y={roofHeight + 7} width="3" height="16" fill="hsl(var(--primary))" opacity="0.5" rx="0.5" />
+          
+          {/* Door */}
+          <rect x="19" y={roofHeight + 25} width="17" height="20" fill="hsl(var(--primary))" opacity="0.2" rx="1" />
+          <rect x="20" y={roofHeight + 26} width="15" height="19" fill="hsl(var(--primary))" opacity="0.15" rx="1" />
+          {/* Door handle */}
+          <circle cx="32" cy={roofHeight + 36} r="1.5" fill="hsl(var(--primary))" opacity="0.6" />
+        </>
+      ) : (
+        <>
+          {/* Simple window for smaller houses */}
+          <rect x={(baseWidth - 12) / 2} y={roofHeight + 6} width="12" height="10" fill="hsl(var(--background))" stroke="hsl(var(--border))" rx="1" />
+          {/* Simple door */}
+          <rect x={(baseWidth - 10) / 2} y={roofHeight + baseHeight - 15} width="10" height="15" fill="hsl(var(--primary))" opacity="0.2" rx="1" />
+        </>
+      )}
+      
+      {/* Chimney for main house */}
+      {variant === "main" && (
+        <rect x={baseWidth - 12} y="-8" width="8" height="16" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="1" rx="1" />
+      )}
+    </motion.g>
+  );
+};
+
+// Step 1: INVESTI - Premium Smartphone with flowing coins
 const InvestIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => (
   <motion.svg
-    viewBox="0 0 280 240"
-    className="w-full h-full max-w-[320px]"
+    viewBox="0 0 300 250"
+    className="w-full h-full max-w-[340px]"
     initial={{ opacity: 0 }}
     animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
     transition={{ duration: 0.4 }}
   >
-    {/* Smartphone */}
+    <PremiumDefs />
+    
+    {/* Modern Smartphone */}
     <motion.g
       initial={{ x: -20, opacity: 0 }}
       animate={isActive ? { x: 0, opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
+      filter="url(#mediumShadow)"
     >
-      <rect x="20" y="50" width="70" height="120" rx="10" 
-        className="fill-card stroke-border" strokeWidth="2" />
-      <rect x="28" y="62" width="54" height="88" rx="4" 
-        className="fill-background" />
-      {/* €100 on screen */}
-      <text x="55" y="100" textAnchor="middle" 
-        className="fill-primary font-bold" fontSize="20">€100</text>
-      {/* Send button */}
-      <rect x="38" y="125" width="34" height="16" rx="8" 
-        className="fill-primary" />
-      <text x="55" y="137" textAnchor="middle" 
-        className="fill-primary-foreground" fontSize="8">INVESTI</text>
-      {/* Phone notch */}
-      <rect x="45" y="55" width="20" height="4" rx="2" className="fill-muted" />
+      {/* Phone body with rounded corners */}
+      <rect x="15" y="40" width="75" height="140" rx="12" 
+        fill="hsl(var(--foreground))" opacity="0.9" />
+      {/* Screen bezel */}
+      <rect x="18" y="43" width="69" height="134" rx="10" 
+        fill="hsl(220, 15%, 15%)" />
+      {/* Screen */}
+      <rect x="20" y="52" width="65" height="115" rx="6" 
+        fill="url(#screenGradient)" />
+      {/* Dynamic Island / Notch */}
+      <rect x="38" y="45" width="28" height="5" rx="2.5" fill="hsl(220, 15%, 10%)" />
+      
+      {/* Screen content */}
+      {/* App header */}
+      <rect x="24" y="58" width="57" height="18" rx="4" fill="hsl(var(--primary))" opacity="0.2" />
+      <text x="52.5" y="70" textAnchor="middle" fill="hsl(var(--primary))" fontSize="8" fontWeight="bold">JUNGLE RENT</text>
+      
+      {/* Amount display */}
+      <text x="52.5" y="100" textAnchor="middle" fill="white" fontSize="22" fontWeight="bold">€100</text>
+      <text x="52.5" y="112" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="7">Investimento minimo</text>
+      
+      {/* Invest button */}
+      <motion.rect 
+        x="28" y="125" width="48" height="20" rx="10" 
+        fill="url(#primaryGradient)"
+        whileHover={!prefersReducedMotion ? { scale: 1.05 } : {}}
+      />
+      <text x="52" y="139" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">INVESTI</text>
+      
+      {/* Home indicator */}
+      <rect x="40" y="157" width="25" height="4" rx="2" fill="hsl(var(--muted))" opacity="0.5" />
+      
+      {/* Screen reflection */}
+      <rect x="20" y="52" width="65" height="115" rx="6" fill="url(#glassGradient)" opacity="0.1" />
     </motion.g>
 
-    {/* Animated flow - coins flying */}
-    <motion.g>
-      {[0, 1, 2].map((i) => (
-        <motion.g key={i}>
-          <motion.circle
-            cx={100 + i * 15}
-            cy={110 - i * 5}
-            r="10"
-            className="fill-primary"
-            initial={{ x: 0, opacity: 0 }}
-            animate={isActive && !prefersReducedMotion ? {
-              x: [0, 60 + i * 10],
-              opacity: [0, 1, 1, 0.6]
-            } : { x: 60 + i * 10, opacity: 0.6 }}
-            transition={{ duration: 1.2, delay: 0.4 + i * 0.2, ease: "easeOut" }}
+    {/* Animated coin flow */}
+    <g>
+      {[0, 1, 2, 3].map((i) => (
+        <motion.g
+          key={i}
+          initial={{ x: 0, y: 0, opacity: 0 }}
+          animate={isActive && !prefersReducedMotion ? {
+            x: [0, 30 + i * 8, 60 + i * 12],
+            y: [0, -15 - i * 5, -5 + i * 3],
+            opacity: [0, 1, 0.8]
+          } : { x: 60 + i * 12, y: -5 + i * 3, opacity: 0.6 }}
+          transition={{ duration: 1.5, delay: 0.3 + i * 0.15, ease: "easeOut" }}
+        >
+          <PremiumCoin 
+            cx={95 + i * 5} 
+            cy={95 + i * 8} 
+            r={9 - i * 0.5} 
+            delay={0}
+            isActive={isActive}
+            prefersReducedMotion={prefersReducedMotion}
           />
-          <motion.text
-            x={100 + i * 15}
-            y={114 - i * 5}
-            textAnchor="middle"
-            className="fill-primary-foreground font-bold"
-            fontSize="10"
-            initial={{ x: 0, opacity: 0 }}
-            animate={isActive && !prefersReducedMotion ? {
-              x: [0, 60 + i * 10],
-              opacity: [0, 1, 1, 0.6]
-            } : { x: 60 + i * 10, opacity: 0.6 }}
-            transition={{ duration: 1.2, delay: 0.4 + i * 0.2, ease: "easeOut" }}
-          >€</motion.text>
         </motion.g>
       ))}
-    </motion.g>
+      
+      {/* Sparkle particles */}
+      {!prefersReducedMotion && isActive && [0, 1, 2].map((i) => (
+        <motion.circle
+          key={`sparkle-${i}`}
+          cx={110 + i * 20}
+          cy={85 + i * 10}
+          r="2"
+          fill="hsl(45, 90%, 65%)"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ 
+            opacity: [0, 0.8, 0],
+            scale: [0, 1, 0],
+            y: [0, -10]
+          }}
+          transition={{ 
+            delay: 0.8 + i * 0.2, 
+            duration: 1,
+            repeat: Infinity,
+            repeatDelay: 2
+          }}
+        />
+      ))}
+    </g>
 
-    {/* Portfolio of houses with JR branding */}
+    {/* Premium Portfolio Container */}
     <motion.g
       initial={{ scale: 0.8, opacity: 0 }}
       animate={isActive ? { scale: 1, opacity: 1 } : {}}
       transition={{ delay: 0.3, duration: 0.5 }}
     >
-      {/* Background container */}
-      <rect x="160" y="45" width="105" height="130" rx="12" 
-        className="fill-primary/5 stroke-primary/20" strokeWidth="1" />
+      {/* Background card with subtle gradient */}
+      <rect x="165" y="35" width="120" height="145" rx="14" 
+        fill="hsl(var(--card))" filter="url(#mediumShadow)" />
+      <rect x="165" y="35" width="120" height="145" rx="14" 
+        fill="url(#primaryGradient)" opacity="0.05" />
       
-      {/* House 1 - main */}
-      <g transform="translate(175, 55)">
-        <polygon points="30,0 60,22 0,22" className="fill-primary" />
-        <rect x="5" y="22" width="50" height="42" className="fill-card stroke-border" strokeWidth="1.5" />
-        <rect x="20" y="38" width="18" height="26" className="fill-primary/20" />
-        <rect x="10" y="30" width="12" height="12" className="fill-background stroke-border" />
-        <rect x="36" y="30" width="12" height="12" className="fill-background stroke-border" />
-      </g>
+      {/* Portfolio label */}
+      <rect x="175" y="42" width="100" height="20" rx="10" fill="hsl(var(--primary))" opacity="0.1" />
+      <text x="225" y="56" textAnchor="middle" fill="hsl(var(--primary))" fontSize="9" fontWeight="bold">IL TUO PORTAFOGLIO</text>
       
-      {/* House 2 - small left */}
-      <g transform="translate(165, 115)">
-        <polygon points="18,0 36,14 0,14" className="fill-primary/70" />
-        <rect x="3" y="14" width="30" height="28" className="fill-card stroke-border" strokeWidth="1" />
-        <rect x="13" y="26" width="10" height="16" className="fill-primary/20" />
-      </g>
-      
-      {/* House 3 - small right */}
-      <g transform="translate(210, 118)">
-        <polygon points="18,0 36,14 0,14" className="fill-primary/60" />
-        <rect x="3" y="14" width="30" height="25" className="fill-card stroke-border" strokeWidth="1" />
-        <rect x="13" y="24" width="10" height="15" className="fill-primary/20" />
-      </g>
+      {/* Houses */}
+      <PremiumHouse x={180} y={68} variant="main" isActive={isActive} delay={0.5} />
+      <PremiumHouse x={172} y={138} variant="small" isActive={isActive} delay={0.6} />
+      <PremiumHouse x={220} y={135} variant="medium" isActive={isActive} delay={0.7} />
 
-      {/* JR Logo Badge */}
+      {/* JR Logo Badge with glow */}
       <motion.g
         initial={{ scale: 0 }}
         animate={isActive ? { scale: 1 } : {}}
-        transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
+        transition={{ delay: 0.9, type: "spring", stiffness: 200 }}
       >
-        <circle cx="250" cy="60" r="16" className="fill-card stroke-border" strokeWidth="1" />
+        <circle cx="270" cy="50" r="18" fill="hsl(var(--card))" filter="url(#softShadow)" />
+        <circle cx="270" cy="50" r="16" fill="hsl(var(--primary))" opacity="0.1" />
         <image 
           href="/jungle-rent-logo.svg" 
-          x="236" 
-          y="46" 
-          width="28" 
-          height="28"
+          x="254" y="34" width="32" height="32"
           preserveAspectRatio="xMidYMid meet"
         />
       </motion.g>
@@ -140,115 +362,196 @@ const InvestIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
 
     {/* Label */}
     <motion.text
-      x="140" y="220"
+      x="150" y="225"
       textAnchor="middle"
-      className="fill-muted-foreground"
+      fill="hsl(var(--muted-foreground))"
       fontSize="11"
       initial={{ opacity: 0 }}
       animate={isActive ? { opacity: 1 } : {}}
-      transition={{ delay: 0.6 }}
+      transition={{ delay: 0.8 }}
     >
       Tu investi da €100, noi facciamo il resto
     </motion.text>
   </motion.svg>
 );
 
-// Step 2: ACQUISTIAMO - Università con case selezionate vicine
+// Step 2: ACQUISTIAMO - Premium University with connected houses
 const AcquireIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => (
   <motion.svg
-    viewBox="0 0 280 240"
-    className="w-full h-full max-w-[320px]"
+    viewBox="0 0 300 250"
+    className="w-full h-full max-w-[340px]"
     initial={{ opacity: 0 }}
     animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
     transition={{ duration: 0.4 }}
   >
-    {/* University Building */}
+    <PremiumDefs />
+    
+    {/* University Building - Politecnico inspired */}
     <motion.g
       initial={{ y: -15, opacity: 0 }}
       animate={isActive ? { y: 0, opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
+      filter="url(#mediumShadow)"
     >
-      {/* Main building */}
-      <rect x="90" y="25" width="100" height="55" className="fill-card stroke-border" strokeWidth="2" />
+      {/* Main building base */}
+      <rect x="80" y="30" width="140" height="60" rx="2" fill="url(#cardGradient)" stroke="hsl(var(--border))" strokeWidth="1.5" />
+      
+      {/* Central tower/cupola */}
+      <rect x="130" y="8" width="40" height="22" rx="1" fill="hsl(var(--card))" stroke="hsl(var(--border))" strokeWidth="1" />
+      <path d="M 130 8 Q 150 -5 170 8" fill="hsl(var(--primary))" opacity="0.8" />
+      <circle cx="150" cy="5" r="4" fill="hsl(var(--primary))" />
+      
       {/* Pediment */}
-      <polygon points="140,8 195,28 85,28" className="fill-muted stroke-border" strokeWidth="2" />
-      {/* Columns */}
-      {[0, 1, 2, 3].map((i) => (
-        <rect key={i} x={100 + i * 22} y="42" width="10" height="38" className="fill-background stroke-border" />
+      <polygon points="150,18 195,32 105,32" fill="hsl(var(--muted))" stroke="hsl(var(--border))" strokeWidth="1" />
+      
+      {/* Columns with details */}
+      {[0, 1, 2, 3, 4].map((i) => (
+        <g key={i}>
+          <rect x={95 + i * 25} y="45" width="10" height="45" fill="hsl(var(--background))" stroke="hsl(var(--border))" rx="1" />
+          {/* Column capital */}
+          <rect x={93 + i * 25} y="43" width="14" height="4" fill="hsl(var(--muted))" rx="1" />
+          {/* Column base */}
+          <rect x={93 + i * 25} y="88" width="14" height="4" fill="hsl(var(--muted))" rx="1" />
+        </g>
       ))}
+      
+      {/* Windows on upper floor */}
+      {[0, 1, 2].map((i) => (
+        <rect key={`window-${i}`} x={100 + i * 40} y="35" width="20" height="8" fill="hsl(var(--background))" opacity="0.5" rx="1" />
+      ))}
+      
       {/* Graduation cap */}
       <motion.g
-        initial={{ scale: 0 }}
-        animate={isActive ? { scale: 1 } : {}}
-        transition={{ delay: 0.2, type: "spring" }}
+        initial={{ scale: 0, rotate: -20 }}
+        animate={isActive ? { scale: 1, rotate: 0 } : {}}
+        transition={{ delay: 0.3, type: "spring" }}
       >
-        <rect x="127" y="14" width="26" height="5" className="fill-primary" />
-        <polygon points="140,6 155,14 125,14" className="fill-primary" />
-        <circle cx="155" cy="20" r="2" className="fill-primary" />
-        <line x1="155" y1="20" x2="160" y2="28" className="stroke-primary" strokeWidth="1.5" />
+        <rect x="138" y="-2" width="24" height="4" fill="hsl(var(--primary))" />
+        <polygon points="150,-8 165,-2 135,-2" fill="hsl(var(--primary))" />
+        <circle cx="165" cy="2" r="2.5" fill="hsl(var(--primary))" />
+        <path d="M 165 2 Q 170 8 168 14" stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none" />
+        {/* Tassel end */}
+        <circle cx="168" cy="14" r="1.5" fill="hsl(var(--primary))" />
       </motion.g>
       
       {/* University label */}
-      <text x="140" y="70" textAnchor="middle" className="fill-muted-foreground" fontSize="8">UNIVERSITÀ</text>
+      <rect x="115" y="75" width="70" height="14" rx="7" fill="hsl(var(--primary))" opacity="0.1" />
+      <text x="150" y="85" textAnchor="middle" fill="hsl(var(--primary))" fontSize="8" fontWeight="bold">7 ATENEI TORINESI</text>
     </motion.g>
 
-    {/* Connection lines from university to houses */}
-    <motion.g
-      initial={{ opacity: 0 }}
-      animate={isActive ? { opacity: 1 } : {}}
-      transition={{ delay: 0.3 }}
-    >
-      {[{ x1: 100, x2: 55 }, { x1: 140, x2: 140 }, { x1: 180, x2: 225 }].map((line, i) => (
-        <motion.line
-          key={i}
-          x1={line.x1} y1="85" x2={line.x2} y2="115"
-          className="stroke-primary/30"
-          strokeWidth="2"
-          strokeDasharray="5 5"
-          initial={{ pathLength: 0 }}
-          animate={isActive && !prefersReducedMotion ? { pathLength: 1 } : { pathLength: 1 }}
-          transition={{ delay: 0.4 + i * 0.12, duration: 0.4 }}
-        />
+    {/* Pulsing radar effect from university */}
+    {!prefersReducedMotion && isActive && (
+      <motion.circle
+        cx="150"
+        cy="60"
+        r="30"
+        fill="none"
+        stroke="hsl(var(--primary))"
+        strokeWidth="1"
+        initial={{ r: 30, opacity: 0.6 }}
+        animate={{ r: 80, opacity: 0 }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+      />
+    )}
+
+    {/* Connection lines with animated dots */}
+    <motion.g initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ delay: 0.3 }}>
+      {[
+        { x1: 95, x2: 55, house: 0 },
+        { x1: 150, x2: 150, house: 1 },
+        { x1: 205, x2: 245, house: 2 }
+      ].map((line, i) => (
+        <g key={i}>
+          <motion.line
+            x1={line.x1} y1="95" x2={line.x2} y2="120"
+            stroke="hsl(var(--primary))"
+            strokeWidth="2"
+            strokeOpacity="0.4"
+            strokeDasharray="6 4"
+            initial={{ pathLength: 0 }}
+            animate={isActive ? { pathLength: 1 } : {}}
+            transition={{ delay: 0.4 + i * 0.15, duration: 0.4 }}
+          />
+          {/* Moving dot along line */}
+          {!prefersReducedMotion && isActive && (
+            <motion.circle
+              r="3"
+              fill="hsl(var(--primary))"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: [0, 1, 0],
+                cx: [line.x1, line.x2],
+                cy: [95, 120]
+              }}
+              transition={{
+                delay: 0.6 + i * 0.15,
+                duration: 1,
+                repeat: Infinity,
+                repeatDelay: 2
+              }}
+            />
+          )}
+          {/* Pin icon at connection point */}
+          <motion.g
+            initial={{ scale: 0 }}
+            animate={isActive ? { scale: 1 } : {}}
+            transition={{ delay: 0.5 + i * 0.1, type: "spring" }}
+          >
+            <circle cx={line.x1} cy="95" r="6" fill="hsl(var(--primary))" opacity="0.2" />
+            <circle cx={line.x1} cy="95" r="3" fill="hsl(var(--primary))" />
+          </motion.g>
+        </g>
       ))}
     </motion.g>
 
-    {/* Three houses with checkmarks */}
+    {/* Three premium houses with checkmarks */}
     {[
       { x: 20, delay: 0.5 },
-      { x: 110, delay: 0.65 },
-      { x: 200, delay: 0.8 }
+      { x: 120, delay: 0.65 },
+      { x: 215, delay: 0.8 }
     ].map((house, i) => (
-      <motion.g
-        key={i}
-        initial={{ y: 15, opacity: 0 }}
-        animate={isActive ? { y: 0, opacity: 1 } : {}}
-        transition={{ delay: house.delay, duration: 0.4 }}
-      >
-        {/* House */}
-        <g transform={`translate(${house.x}, 120)`}>
-          <polygon points="30,0 60,18 0,18" className="fill-primary" />
-          <rect x="5" y="18" width="50" height="38" className="fill-card stroke-border" strokeWidth="1.5" />
-          <rect x="20" y="32" width="18" height="24" className="fill-primary/15" />
-          <rect x="9" y="25" width="12" height="10" className="fill-background stroke-border" />
-          <rect x="37" y="25" width="12" height="10" className="fill-background stroke-border" />
-        </g>
+      <motion.g key={i}>
+        <PremiumHouse 
+          x={house.x} 
+          y={i === 1 ? 125 : 130} 
+          variant={i === 1 ? "main" : "medium"} 
+          scale={i === 1 ? 0.9 : 0.85}
+          isActive={isActive} 
+          delay={house.delay} 
+        />
         
-        {/* Green checkmark badge */}
+        {/* Premium checkmark badge */}
         <motion.g
           initial={{ scale: 0 }}
           animate={isActive ? { scale: 1 } : {}}
-          transition={{ delay: house.delay + 0.25, type: "spring", stiffness: 300 }}
+          transition={{ delay: house.delay + 0.3, type: "spring", stiffness: 300 }}
         >
-          <circle cx={house.x + 52} cy="128" r="12" className="fill-primary" />
+          <circle 
+            cx={house.x + (i === 1 ? 50 : 35)} 
+            cy={i === 1 ? 130 : 135} 
+            r="14" 
+            fill="hsl(var(--primary))" 
+            filter="url(#softShadow)"
+          />
+          <circle 
+            cx={house.x + (i === 1 ? 50 : 35)} 
+            cy={i === 1 ? 130 : 135} 
+            r="12" 
+            fill="none" 
+            stroke="white" 
+            strokeWidth="1" 
+            opacity="0.3"
+          />
           <motion.path
-            d={`M ${house.x + 46} 128 L ${house.x + 50} 132 L ${house.x + 58} 124`}
-            className="stroke-primary-foreground fill-none"
+            d={`M ${house.x + (i === 1 ? 44 : 29)} ${i === 1 ? 130 : 135} L ${house.x + (i === 1 ? 48 : 33)} ${i === 1 ? 134 : 139} L ${house.x + (i === 1 ? 56 : 41)} ${i === 1 ? 126 : 131}`}
+            stroke="white"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
+            fill="none"
             initial={{ pathLength: 0 }}
             animate={isActive && !prefersReducedMotion ? { pathLength: 1 } : { pathLength: 1 }}
-            transition={{ delay: house.delay + 0.4, duration: 0.25 }}
+            transition={{ delay: house.delay + 0.45, duration: 0.25 }}
           />
         </motion.g>
       </motion.g>
@@ -256,9 +559,9 @@ const AcquireIllustration = ({ isActive, prefersReducedMotion }: { isActive: boo
 
     {/* Label */}
     <motion.text
-      x="140" y="220"
+      x="150" y="225"
       textAnchor="middle"
-      className="fill-muted-foreground"
+      fill="hsl(var(--muted-foreground))"
       fontSize="11"
       initial={{ opacity: 0 }}
       animate={isActive ? { opacity: 1 } : {}}
@@ -269,201 +572,290 @@ const AcquireIllustration = ({ isActive, prefersReducedMotion }: { isActive: boo
   </motion.svg>
 );
 
-// Step 3: GESTIAMO - Split: JR gestisce tutto, tu zero pensieri
+// Step 3: GESTIAMO - Premium split view with relaxed person
 const ManageIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => {
   const tasks = [
-    { emoji: "📝", label: "Contratti" },
-    { emoji: "👥", label: "Inquilini" },
-    { emoji: "🔧", label: "Manutenzione" },
-    { emoji: "📊", label: "Fiscalità" }
+    { icon: "contract", label: "Contratti" },
+    { icon: "users", label: "Inquilini" },
+    { icon: "wrench", label: "Manutenzione" },
+    { icon: "chart", label: "Fiscalità" }
   ];
+
+  // Custom SVG icons for tasks
+  const TaskIcon = ({ type, x, y }: { type: string; x: number; y: number }) => {
+    switch (type) {
+      case "contract":
+        return (
+          <g transform={`translate(${x}, ${y})`}>
+            <rect x={0} y={0} width={12} height={15} rx={1} fill="none" stroke="hsl(var(--primary))" strokeWidth={1.5} />
+            <line x1={3} y1={4} x2={9} y2={4} stroke="hsl(var(--primary))" strokeWidth={1} />
+            <line x1={3} y1={7} x2={9} y2={7} stroke="hsl(var(--primary))" strokeWidth={1} />
+            <line x1={3} y1={10} x2={7} y2={10} stroke="hsl(var(--primary))" strokeWidth={1} />
+          </g>
+        );
+      case "users":
+        return (
+          <g transform={`translate(${x}, ${y})`}>
+            <circle cx={6} cy={4} r={3} fill="none" stroke="hsl(var(--primary))" strokeWidth={1.5} />
+            <path d="M 0 14 Q 0 8 6 8 Q 12 8 12 14" fill="none" stroke="hsl(var(--primary))" strokeWidth={1.5} />
+          </g>
+        );
+      case "wrench":
+        return (
+          <g transform={`translate(${x}, ${y})`}>
+            <path d="M 2 2 L 10 10 M 8 2 Q 12 4 10 10 L 2 10 Q 0 4 4 0 Z" fill="none" stroke="hsl(var(--primary))" strokeWidth={1.5} strokeLinecap="round" />
+          </g>
+        );
+      case "chart":
+        return (
+          <g transform={`translate(${x}, ${y})`}>
+            <rect x={0} y={8} width={3} height={6} fill="hsl(var(--primary))" rx={0.5} />
+            <rect x={4.5} y={4} width={3} height={10} fill="hsl(var(--primary))" rx={0.5} />
+            <rect x={9} y={0} width={3} height={14} fill="hsl(var(--primary))" rx={0.5} />
+          </g>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <motion.svg
-      viewBox="0 0 280 240"
-      className="w-full h-full max-w-[320px]"
+      viewBox="0 0 300 250"
+      className="w-full h-full max-w-[340px]"
       initial={{ opacity: 0 }}
       animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
       transition={{ duration: 0.4 }}
     >
-      {/* Divider line */}
-      <motion.line
-        x1="140" y1="25" x2="140" y2="185"
-        className="stroke-border"
-        strokeWidth="2"
-        strokeDasharray="6 4"
-        initial={{ pathLength: 0 }}
-        animate={isActive ? { pathLength: 1 } : {}}
-        transition={{ duration: 0.5 }}
-      />
-
-      {/* LEFT SIDE: JUNGLE RENT */}
+      <PremiumDefs />
+      
+      {/* Elegant divider */}
       <motion.g
-        initial={{ opacity: 0, x: -10 }}
+        initial={{ opacity: 0 }}
+        animate={isActive ? { opacity: 1 } : {}}
+        transition={{ duration: 0.5 }}
+      >
+        <line x1="150" y1="20" x2="150" y2="190" stroke="hsl(var(--border))" strokeWidth="1" strokeDasharray="8 6" />
+        <circle cx="150" cy="20" r="3" fill="hsl(var(--border))" />
+        <circle cx="150" cy="190" r="3" fill="hsl(var(--border))" />
+      </motion.g>
+
+      {/* LEFT SIDE: JUNGLE RENT Tasks */}
+      <motion.g
+        initial={{ opacity: 0, x: -15 }}
         animate={isActive ? { opacity: 1, x: 0 } : {}}
         transition={{ delay: 0.2 }}
       >
-        {/* Header */}
-        <rect x="15" y="20" width="110" height="24" rx="12" className="fill-primary/10" />
-        <text x="70" y="36" textAnchor="middle" className="fill-primary font-bold" fontSize="11">JUNGLE RENT</text>
+        {/* Header badge */}
+        <rect x="10" y="18" width="120" height="26" rx="13" fill="hsl(var(--primary))" opacity="0.1" filter="url(#softShadow)" />
+        <rect x="12" y="20" width="116" height="22" rx="11" fill="hsl(var(--primary))" opacity="0.05" />
+        <text x="70" y="36" textAnchor="middle" fill="hsl(var(--primary))" fontSize="11" fontWeight="bold">JUNGLE RENT</text>
         
-        {/* Task list */}
+        {/* Task cards */}
         {tasks.map((task, i) => (
           <motion.g
             key={i}
-            initial={{ opacity: 0, x: -15 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={isActive ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.3 + i * 0.12 }}
+            transition={{ delay: 0.3 + i * 0.1 }}
           >
-            <rect x="18" y={55 + i * 32} width="105" height="26" rx="6" 
-              className="fill-card stroke-border" strokeWidth="1" />
-            <text x="32" y={72 + i * 32} fontSize="14">{task.emoji}</text>
-            <text x="50" y={72 + i * 32} className="fill-foreground" fontSize="11">{task.label}</text>
+            {/* Card background */}
+            <rect 
+              x="12" y={52 + i * 35} 
+              width="118" height="30" 
+              rx="8" 
+              fill="hsl(var(--card))" 
+              filter="url(#softShadow)"
+            />
+            <rect 
+              x="12" y={52 + i * 35} 
+              width="118" height="30" 
+              rx="8" 
+              fill="hsl(var(--primary))" 
+              opacity="0.02"
+            />
             
-            {/* Animated check */}
+            {/* Icon */}
+            <TaskIcon type={task.icon} x={22} y={59 + i * 35} />
+            
+            {/* Label */}
+            <text x="50" y={71 + i * 35} fill="hsl(var(--foreground))" fontSize="11" fontWeight="500">{task.label}</text>
+            
+            {/* Animated checkmark circle */}
             <motion.g
               initial={{ scale: 0 }}
               animate={isActive ? { scale: 1 } : {}}
-              transition={{ delay: 0.5 + i * 0.15, type: "spring" }}
+              transition={{ delay: 0.5 + i * 0.12, type: "spring", stiffness: 200 }}
             >
-              <circle cx="110" cy={68 + i * 32} r="9" className="fill-primary/15" />
+              <circle cx="115" cy={67 + i * 35} r="10" fill="hsl(var(--primary))" opacity="0.15" />
               <motion.path
-                d={`M 104 ${68 + i * 32} L 108 ${72 + i * 32} L 116 ${64 + i * 32}`}
-                className="stroke-primary fill-none"
+                d={`M 109 ${67 + i * 35} L 113 ${71 + i * 35} L 121 ${63 + i * 35}`}
+                stroke="hsl(var(--primary))"
                 strokeWidth="2"
                 strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
                 initial={{ pathLength: 0 }}
                 animate={isActive && !prefersReducedMotion ? { pathLength: 1 } : { pathLength: 1 }}
-                transition={{ delay: 0.7 + i * 0.15, duration: 0.25 }}
+                transition={{ delay: 0.65 + i * 0.12, duration: 0.2 }}
               />
             </motion.g>
           </motion.g>
         ))}
       </motion.g>
 
-      {/* RIGHT SIDE: TU = ZERO PENSIERI */}
+      {/* RIGHT SIDE: TU - Relaxing person */}
       <motion.g
-        initial={{ opacity: 0, x: 10 }}
+        initial={{ opacity: 0, x: 15 }}
         animate={isActive ? { opacity: 1, x: 0 } : {}}
         transition={{ delay: 0.3 }}
       >
-        {/* Header */}
-        <rect x="155" y="20" width="110" height="24" rx="12" className="fill-muted/50" />
-        <text x="210" y="36" textAnchor="middle" className="fill-muted-foreground font-bold" fontSize="11">TU</text>
+        {/* Header badge */}
+        <rect x="170" y="18" width="70" height="26" rx="13" fill="hsl(var(--muted))" opacity="0.5" filter="url(#softShadow)" />
+        <text x="205" y="36" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="11" fontWeight="bold">TU</text>
         
-        {/* Person relaxing on sofa - complete illustration */}
+        {/* Premium Sofa Scene */}
         <motion.g
           initial={{ opacity: 0, y: 15 }}
           animate={isActive ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.4, duration: 0.6 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
         >
-          {/* Side table with cup */}
-          <g transform="translate(248, 120)">
-            {/* Table */}
-            <rect x="0" y="30" width="22" height="3" rx="1" className="fill-muted-foreground/40" />
-            <rect x="8" y="33" width="6" height="18" rx="1" className="fill-muted-foreground/30" />
-            {/* Cup */}
-            <rect x="4" y="20" width="14" height="12" rx="2" className="fill-accent/50" />
-            <rect x="3" y="18" width="16" height="4" rx="2" className="fill-accent/60" />
-            {/* Cup handle */}
-            <path d="M 18 23 Q 23 23 23 28 Q 23 32 18 32" className="stroke-accent/50 fill-none" strokeWidth="2" />
-            {/* Steam animation */}
+          {/* Floor/shadow */}
+          <ellipse cx="210" cy="185" rx="55" ry="6" fill="hsl(var(--foreground))" opacity="0.05" />
+          
+          {/* Side table */}
+          <g transform="translate(260, 125)">
+            <rect x="0" y="35" width="24" height="3" rx="1.5" fill="hsl(var(--muted-foreground))" opacity="0.4" />
+            <rect x="2" y="38" width="4" height="20" rx="1" fill="hsl(var(--muted-foreground))" opacity="0.3" />
+            <rect x="18" y="38" width="4" height="20" rx="1" fill="hsl(var(--muted-foreground))" opacity="0.3" />
+            
+            {/* Cup with steam */}
+            <rect x="5" y="23" width="14" height="14" rx="2" fill="hsl(var(--accent))" opacity="0.6" />
+            <rect x="4" y="21" width="16" height="4" rx="2" fill="hsl(var(--accent))" opacity="0.7" />
+            <path d="M 19 26 Q 25 26 25 32 Q 25 38 19 38" stroke="hsl(var(--accent))" fill="none" strokeWidth="2" opacity="0.5" />
+            
+            {/* Steam */}
             <motion.g
               animate={isActive && !prefersReducedMotion ? { 
-                y: [0, -6, 0],
-                opacity: [0.6, 0.2, 0.6]
+                y: [0, -8, 0],
+                opacity: [0.5, 0.2, 0.5]
               } : {}}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             >
-              <path d="M 8 14 Q 10 10 8 6" className="stroke-muted-foreground/30 fill-none" strokeWidth="1.5" strokeLinecap="round" />
-              <path d="M 12 15 Q 14 11 12 7" className="stroke-muted-foreground/30 fill-none" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M 9 17 Q 11 12 9 7" stroke="hsl(var(--muted-foreground))" fill="none" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+              <path d="M 14 18 Q 16 13 14 8" stroke="hsl(var(--muted-foreground))" fill="none" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
             </motion.g>
           </g>
 
-          {/* Sofa - curved realistic shape */}
-          {/* Sofa back (curved) */}
+          {/* Decorative plant */}
+          <g transform="translate(155, 140)">
+            <rect x="0" y="30" width="14" height="18" rx="2" fill="hsl(var(--muted))" opacity="0.4" />
+            <ellipse cx="7" cy="25" rx="10" ry="12" fill="hsl(var(--primary))" opacity="0.3" />
+            <ellipse cx="7" cy="22" rx="7" ry="8" fill="hsl(var(--primary))" opacity="0.4" />
+          </g>
+          
+          {/* Premium curved sofa */}
+          {/* Back rest */}
           <path 
-            d="M 162 95 Q 162 75 185 75 L 235 75 Q 258 75 258 95 L 258 130 L 162 130 Z" 
-            className="fill-primary/25"
+            d="M 165 95 Q 165 70 195 70 L 250 70 Q 280 70 280 95 L 280 145 L 165 145 Z" 
+            fill="url(#sofaGradient)"
           />
-          {/* Sofa seat */}
-          <rect x="158" y="130" width="104" height="35" rx="4" className="fill-primary/20" />
-          {/* Sofa arm left - curved */}
+          {/* Seat cushion */}
+          <rect x="160" y="145" width="125" height="35" rx="5" fill="hsl(var(--primary))" opacity="0.25" />
+          {/* Left armrest */}
           <path 
-            d="M 148 90 Q 148 75 158 75 L 162 75 L 162 165 L 158 165 Q 148 165 148 155 Z" 
-            className="fill-primary/30"
+            d="M 150 90 Q 150 70 162 70 L 168 70 L 168 180 L 162 180 Q 150 180 150 165 Z" 
+            fill="hsl(var(--primary))" opacity="0.35"
           />
-          {/* Sofa arm right - curved */}
+          {/* Right armrest */}
           <path 
-            d="M 262 90 Q 262 75 252 75 L 248 75 L 248 165 L 252 165 Q 262 165 262 155 Z" 
-            className="fill-primary/30"
+            d="M 290 90 Q 290 70 278 70 L 272 70 L 272 180 L 278 180 Q 290 180 290 165 Z" 
+            fill="hsl(var(--primary))" opacity="0.35"
           />
-          {/* Cushion details */}
-          <rect x="168" y="135" width="35" height="8" rx="3" className="fill-primary/15" />
-          <rect x="208" y="135" width="35" height="8" rx="3" className="fill-primary/15" />
+          {/* Cushion lines */}
+          <rect x="172" y="150" width="40" height="6" rx="3" fill="hsl(var(--primary))" opacity="0.15" />
+          <rect x="220" y="150" width="40" height="6" rx="3" fill="hsl(var(--primary))" opacity="0.15" />
+          
+          {/* Pillow */}
+          <ellipse cx="175" cy="105" rx="18" ry="14" fill="hsl(var(--accent))" opacity="0.3" />
           
           {/* Person relaxing - clear silhouette */}
           <motion.g
-            animate={isActive && !prefersReducedMotion ? { y: [0, -1.5, 0] } : {}}
+            animate={isActive && !prefersReducedMotion ? { y: [0, -2, 0] } : {}}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            {/* Legs stretched out */}
-            <ellipse cx="230" cy="128" rx="22" ry="7" className="fill-muted-foreground/55" />
-            <ellipse cx="218" cy="130" rx="8" ry="6" className="fill-muted-foreground/55" />
-            {/* Body/torso leaning back */}
-            <ellipse cx="185" cy="115" rx="14" ry="25" className="fill-muted-foreground/55" />
-            {/* Arm behind head */}
-            <ellipse cx="175" cy="88" rx="15" ry="5" transform="rotate(-25, 175, 88)" className="fill-muted-foreground/50" />
-            {/* Other arm resting on body */}
-            <ellipse cx="198" cy="118" rx="10" ry="5" className="fill-muted-foreground/50" />
+            {/* Legs stretched */}
+            <path d="M 200 140 Q 235 135 265 140 Q 275 142 275 148 L 200 148 Z" fill="hsl(var(--muted-foreground))" opacity="0.5" />
+            <ellipse cx="270" cy="145" rx="8" ry="5" fill="hsl(var(--muted-foreground))" opacity="0.55" />
             
-            {/* Head - tilted back relaxed */}
-            <circle cx="180" cy="78" r="15" className="fill-muted-foreground/60" />
+            {/* Body/torso */}
+            <ellipse cx="195" cy="120" rx="18" ry="30" fill="hsl(var(--muted-foreground))" opacity="0.5" />
+            
+            {/* Arm behind head */}
+            <path d="M 180 85 Q 165 80 160 95" stroke="hsl(var(--muted-foreground))" strokeWidth="8" strokeLinecap="round" opacity="0.45" />
+            
+            {/* Other arm on body */}
+            <ellipse cx="210" cy="125" rx="12" ry="5" transform="rotate(-10, 210, 125)" fill="hsl(var(--muted-foreground))" opacity="0.45" />
+            
+            {/* Head */}
+            <circle cx="188" cy="78" r="18" fill="hsl(var(--muted-foreground))" opacity="0.55" />
+            
             {/* Hair */}
-            <ellipse cx="180" cy="68" rx="13" ry="8" className="fill-foreground/35" />
-            {/* Face details */}
-            {/* Closed eyes - curved lines showing relaxation */}
-            <path d="M 173 77 Q 175 79 177 77" className="stroke-background/80 fill-none" strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M 183 77 Q 185 79 187 77" className="stroke-background/80 fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            <ellipse cx="188" cy="66" rx="15" ry="10" fill="hsl(var(--foreground))" opacity="0.3" />
+            
+            {/* Face - closed eyes showing relaxation */}
+            <path d="M 180 77 Q 183 80 186 77" stroke="hsl(var(--background))" fill="none" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
+            <path d="M 190 77 Q 193 80 196 77" stroke="hsl(var(--background))" fill="none" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
+            
             {/* Relaxed smile */}
-            <path d="M 176 84 Q 180 87 184 84" className="stroke-background/80 fill-none" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 183 86 Q 188 90 193 86" stroke="hsl(var(--background))" fill="none" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
           </motion.g>
           
-          {/* Pillow behind person */}
-          <ellipse cx="172" cy="100" rx="14" ry="10" className="fill-accent/25" />
-          
-          {/* Zzz floating animation */}
+          {/* Floating Zzz */}
           <motion.g
             initial={{ opacity: 0 }}
             animate={isActive && !prefersReducedMotion ? { 
               opacity: [0, 1, 1, 0],
-              y: [0, -8, -16, -24],
-              x: [0, 3, 6, 9]
-            } : { opacity: 0.7 }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
+              y: [0, -10, -20, -30],
+              x: [0, 4, 8, 12]
+            } : { opacity: 0.6 }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeOut" }}
           >
-            <text x="195" y="58" className="fill-primary/60 font-bold" fontSize="10">Z</text>
-            <text x="202" y="52" className="fill-primary/50 font-bold" fontSize="8">z</text>
-            <text x="208" y="48" className="fill-primary/40 font-bold" fontSize="6">z</text>
+            <text x="208" y="55" fill="hsl(var(--primary))" fontSize="14" fontWeight="bold" opacity="0.7">Z</text>
+            <text x="218" y="48" fill="hsl(var(--primary))" fontSize="11" fontWeight="bold" opacity="0.5">z</text>
+            <text x="226" y="43" fill="hsl(var(--primary))" fontSize="8" fontWeight="bold" opacity="0.4">z</text>
           </motion.g>
         </motion.g>
 
-        {/* Zero pensieri badge - prominent */}
+        {/* Zero pensieri badge with glow */}
         <motion.g
           initial={{ scale: 0, y: 10 }}
           animate={isActive ? { scale: 1, y: 0 } : {}}
-          transition={{ delay: 0.7, type: "spring", stiffness: 140 }}
+          transition={{ delay: 0.8, type: "spring", stiffness: 150 }}
         >
-          <rect x="170" y="48" width="80" height="24" rx="12" className="fill-primary" />
-          <text x="210" y="65" textAnchor="middle" className="fill-primary-foreground font-bold" fontSize="11">0 PENSIERI</text>
+          {/* Glow effect */}
+          {!prefersReducedMotion && isActive && (
+            <motion.rect
+              x="172" y="46"
+              width="85" height="28"
+              rx="14"
+              fill="hsl(var(--primary))"
+              initial={{ opacity: 0.3 }}
+              animate={{ opacity: [0.3, 0.5, 0.3] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              filter="url(#glowEffect)"
+            />
+          )}
+          <rect x="175" y="48" width="80" height="26" rx="13" fill="hsl(var(--primary))" filter="url(#softShadow)" />
+          <text x="215" y="66" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">0 PENSIERI</text>
         </motion.g>
       </motion.g>
 
       {/* Label */}
       <motion.text
-        x="140" y="220"
+        x="150" y="225"
         textAnchor="middle"
-        className="fill-muted-foreground"
+        fill="hsl(var(--muted-foreground))"
         fontSize="11"
         initial={{ opacity: 0 }}
         animate={isActive ? { opacity: 1 } : {}}
@@ -475,128 +867,200 @@ const ManageIllustration = ({ isActive, prefersReducedMotion }: { isActive: bool
   );
 };
 
-// Step 4: GUADAGNI - Timeline Q1-Q4 con rendite
+// Step 4: GUADAGNI - Premium dashboard with timeline
 const EarnIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => {
   const quarters = ["Q1", "Q2", "Q3", "Q4"];
   
   return (
     <motion.svg
-      viewBox="0 0 280 240"
-      className="w-full h-full max-w-[320px]"
+      viewBox="0 0 300 250"
+      className="w-full h-full max-w-[340px]"
       initial={{ opacity: 0 }}
       animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
       transition={{ duration: 0.4 }}
     >
-      {/* Timeline base */}
-      <motion.line
-        x1="30" y1="50" x2="250" y2="50"
-        className="stroke-border"
-        strokeWidth="2"
-        initial={{ pathLength: 0 }}
-        animate={isActive ? { pathLength: 1 } : {}}
-        transition={{ duration: 0.4 }}
-      />
+      <PremiumDefs />
+      
+      {/* Timeline with premium styling */}
+      <motion.g>
+        {/* Base line with gradient */}
+        <motion.line
+          x1="25" y1="50" x2="275" y2="50"
+          stroke="hsl(var(--border))"
+          strokeWidth="3"
+          strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          animate={isActive ? { pathLength: 1 } : {}}
+          transition={{ duration: 0.5 }}
+        />
+        
+        {/* Progress fill */}
+        <motion.line
+          x1="25" y1="50" x2="275" y2="50"
+          stroke="hsl(var(--primary))"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeOpacity="0.3"
+          initial={{ pathLength: 0 }}
+          animate={isActive ? { pathLength: 1 } : {}}
+          transition={{ duration: 1.2, delay: 0.3 }}
+        />
+      </motion.g>
 
-      {/* Quarter markers with coins dropping */}
+      {/* Quarter markers with coins */}
       {quarters.map((q, i) => {
-        const x = 50 + i * 55;
+        const x = 45 + i * 65;
+        const coinSize = 10 + i * 2; // Growing coins
+        
         return (
           <motion.g key={q}>
-            {/* Quarter circle */}
+            {/* Quarter circle with gradient */}
             <motion.g
               initial={{ scale: 0 }}
               animate={isActive ? { scale: 1 } : {}}
-              transition={{ delay: 0.2 + i * 0.1, type: "spring" }}
+              transition={{ delay: 0.2 + i * 0.1, type: "spring", stiffness: 200 }}
             >
-              <circle cx={x} cy="50" r="18" className="fill-card stroke-primary" strokeWidth="2" />
-              <text x={x} y="55" textAnchor="middle" className="fill-primary font-bold" fontSize="12">{q}</text>
+              <circle cx={x} cy="50" r="20" fill="hsl(var(--card))" filter="url(#softShadow)" />
+              <circle cx={x} cy="50" r="18" fill="hsl(var(--primary))" opacity="0.1" />
+              <circle cx={x} cy="50" r="16" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" />
+              <text x={x} y="55" textAnchor="middle" fill="hsl(var(--primary))" fontSize="12" fontWeight="bold">{q}</text>
             </motion.g>
             
-            {/* Dropping coin */}
+            {/* Dropping premium coin */}
             <motion.g
-              initial={{ y: 0, opacity: 0 }}
+              initial={{ y: 0, opacity: 0, scale: 0.5 }}
               animate={isActive && !prefersReducedMotion ? {
-                y: [0, 45],
-                opacity: [0, 1, 1, 0.7]
-              } : { y: 45, opacity: 0.7 }}
-              transition={{ delay: 0.6 + i * 0.15, duration: 0.5, ease: "easeIn" }}
+                y: [0, 35],
+                opacity: [0, 1, 1],
+                scale: [0.5, 1]
+              } : { y: 35, opacity: 0.8, scale: 1 }}
+              transition={{ delay: 0.5 + i * 0.12, duration: 0.4, ease: "easeIn" }}
             >
-              <circle cx={x} cy="75" r="11" className="fill-primary" />
-              <text x={x} y="80" textAnchor="middle" className="fill-primary-foreground font-bold" fontSize="11">€</text>
+              <PremiumCoin 
+                cx={x} 
+                cy={75} 
+                r={coinSize} 
+                delay={0}
+                isActive={isActive}
+                prefersReducedMotion={prefersReducedMotion}
+              />
             </motion.g>
             
-            {/* Arrow down */}
+            {/* Dashed arrow to dashboard */}
             <motion.path
-              d={`M ${x} 88 L ${x} 118`}
-              className="stroke-primary/30 fill-none"
+              d={`M ${x} ${90 + i * 2} L ${x} 118`}
+              stroke="hsl(var(--primary))"
               strokeWidth="2"
-              strokeDasharray="4 3"
+              strokeOpacity="0.3"
+              strokeDasharray="5 4"
+              fill="none"
               initial={{ pathLength: 0 }}
               animate={isActive ? { pathLength: 1 } : {}}
-              transition={{ delay: 0.8 + i * 0.1, duration: 0.3 }}
+              transition={{ delay: 0.7 + i * 0.1, duration: 0.3 }}
             />
           </motion.g>
         );
       })}
 
-      {/* Dashboard / Your Account */}
+      {/* Premium Dashboard */}
       <motion.g
-        initial={{ y: 15, opacity: 0 }}
+        initial={{ y: 20, opacity: 0 }}
         animate={isActive ? { y: 0, opacity: 1 } : {}}
-        transition={{ delay: 0.9, duration: 0.4 }}
+        transition={{ delay: 0.8, duration: 0.4 }}
       >
-        {/* Container */}
-        <rect x="35" y="125" width="210" height="70" rx="10" 
-          className="fill-card stroke-border" strokeWidth="2" />
+        {/* Dashboard container */}
+        <rect x="30" y="125" width="240" height="75" rx="12" 
+          fill="hsl(var(--card))" filter="url(#mediumShadow)" />
         
         {/* Header bar */}
-        <rect x="35" y="125" width="210" height="22" rx="10" 
-          className="fill-muted" />
-        <text x="140" y="140" textAnchor="middle" className="fill-muted-foreground" fontSize="9">
+        <rect x="30" y="125" width="240" height="24" rx="12" 
+          fill="hsl(var(--muted))" />
+        <rect x="30" y="137" width="240" height="12" 
+          fill="hsl(var(--muted))" />
+        
+        {/* Window controls */}
+        <circle cx="44" cy="137" r="4" fill="hsl(var(--destructive))" opacity="0.6" />
+        <circle cx="56" cy="137" r="4" fill="hsl(45, 90%, 50%)" opacity="0.6" />
+        <circle cx="68" cy="137" r="4" fill="hsl(var(--primary))" opacity="0.6" />
+        
+        {/* Dashboard title */}
+        <text x="150" y="141" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="10" fontWeight="bold">
           💰 IL TUO DASHBOARD
         </text>
         
-        {/* Growing bars */}
+        {/* Chart area background */}
+        <rect x="40" y="155" width="160" height="38" rx="4" fill="hsl(var(--background))" opacity="0.5" />
+        
+        {/* Area chart fill */}
+        <motion.path
+          d="M 45 190 L 60 182 L 90 175 L 120 168 L 150 158 L 180 152 L 195 148 L 195 193 L 45 193 Z"
+          fill="url(#trendGradient)"
+          initial={{ opacity: 0 }}
+          animate={isActive ? { opacity: 1 } : {}}
+          transition={{ delay: 1.2, duration: 0.4 }}
+        />
+        
+        {/* Growing bars with gradient */}
         {[0, 1, 2, 3].map((i) => (
           <motion.rect
             key={i}
-            x={55 + i * 48}
-            y={180 - (18 + i * 10)}
-            width="32"
-            height={18 + i * 10}
-            rx="3"
-            className="fill-primary"
+            x={50 + i * 38}
+            y={190 - (20 + i * 12)}
+            width="28"
+            height={20 + i * 12}
+            rx="4"
+            fill="url(#chartGradient)"
             initial={{ scaleY: 0 }}
             animate={isActive ? { scaleY: 1 } : {}}
-            transition={{ delay: 1.1 + i * 0.08, duration: 0.3 }}
+            transition={{ delay: 1 + i * 0.08, duration: 0.3 }}
             style={{ transformOrigin: "bottom" }}
           />
         ))}
         
-        {/* Trend arrow */}
+        {/* Trend line */}
         <motion.path
-          d="M 70 168 Q 110 158 150 150 Q 190 142 220 132"
-          className="stroke-chart-4 fill-none"
-          strokeWidth="2.5"
+          d="M 64 180 Q 100 170 135 162 Q 170 154 188 148"
+          stroke="hsl(var(--chart-4))"
+          strokeWidth="3"
           strokeLinecap="round"
+          fill="none"
           initial={{ pathLength: 0 }}
           animate={isActive && !prefersReducedMotion ? { pathLength: 1 } : { pathLength: 1 }}
-          transition={{ delay: 1.4, duration: 0.5 }}
+          transition={{ delay: 1.3, duration: 0.5 }}
         />
+        
+        {/* Trend arrow */}
         <motion.polygon
-          points="215,127 225,132 215,137"
-          className="fill-chart-4"
+          points="185,143 195,148 185,153"
+          fill="hsl(var(--chart-4))"
+          initial={{ opacity: 0, x: -10 }}
+          animate={isActive ? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 1.7 }}
+        />
+        
+        {/* Stats panel */}
+        <rect x="210" y="155" width="55" height="38" rx="6" fill="hsl(var(--primary))" opacity="0.1" />
+        <text x="237" y="170" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="8">RENDITA</text>
+        <motion.text 
+          x="237" 
+          y="186" 
+          textAnchor="middle" 
+          fill="hsl(var(--primary))" 
+          fontSize="14" 
+          fontWeight="bold"
           initial={{ opacity: 0 }}
           animate={isActive ? { opacity: 1 } : {}}
-          transition={{ delay: 1.8 }}
-        />
+          transition={{ delay: 1.5 }}
+        >
+          +7.6%
+        </motion.text>
       </motion.g>
 
       {/* Label */}
       <motion.text
-        x="140" y="220"
+        x="150" y="225"
         textAnchor="middle"
-        className="fill-muted-foreground"
+        fill="hsl(var(--muted-foreground))"
         fontSize="11"
         initial={{ opacity: 0 }}
         animate={isActive ? { opacity: 1 } : {}}
