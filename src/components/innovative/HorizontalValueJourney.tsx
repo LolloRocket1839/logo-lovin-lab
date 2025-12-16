@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState, useCallback } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -66,6 +66,7 @@ export const HorizontalValueJourney = () => {
   const isMobile = useIsMobile();
   const [activeStep, setActiveStep] = useState(0);
   const [isInViewport, setIsInViewport] = useState(false);
+  const [showScrollBlockedFeedback, setShowScrollBlockedFeedback] = useState(false);
 
   // Persist wheel-gesture lock across re-renders/effect re-runs
   const wheelLockRef = useRef(false);
@@ -165,7 +166,12 @@ export const HorizontalValueJourney = () => {
       e.preventDefault();
 
       // IMPORTANT: use refs so the lock doesn't reset when activeStep updates
-      if (wheelLockRef.current) return;
+      if (wheelLockRef.current) {
+        // Show visual feedback that scroll is blocked
+        setShowScrollBlockedFeedback(true);
+        setTimeout(() => setShowScrollBlockedFeedback(false), 300);
+        return;
+      }
       wheelLockRef.current = true;
 
       // Always move exactly 1 step, regardless of scroll intensity
@@ -431,9 +437,12 @@ export const HorizontalValueJourney = () => {
                             : 'bg-muted text-muted-foreground'
                         }
                         ${isActive ? 'ring-primary/30' : ''}
+                        ${showScrollBlockedFeedback && isActive ? 'animate-pulse ring-white/60' : ''}
                       `}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
+                      animate={showScrollBlockedFeedback && isActive ? { scale: [1, 1.15, 1] } : {}}
+                      transition={{ duration: 0.3 }}
                     >
                       {isCompleted ? (
                         <Check className="w-5 h-5" />
@@ -481,6 +490,22 @@ export const HorizontalValueJourney = () => {
           </div>
         </div>
       </div>
+      
+      {/* Scroll blocked micro-feedback */}
+      <AnimatePresence>
+        {showScrollBlockedFeedback && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            className="fixed bottom-24 left-1/2 -translate-x-1/2 
+                       bg-foreground/80 text-background text-xs px-3 py-1.5 rounded-full
+                       backdrop-blur-sm z-50 pointer-events-none"
+          >
+            {t('infographic.scrollHint', 'Attendi per continuare')}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
