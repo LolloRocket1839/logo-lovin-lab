@@ -67,6 +67,10 @@ export const HorizontalValueJourney = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [isInViewport, setIsInViewport] = useState(false);
 
+  // Persist wheel-gesture lock across re-renders/effect re-runs
+  const wheelLockRef = useRef(false);
+  const wheelTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
@@ -149,41 +153,44 @@ export const HorizontalValueJourney = () => {
   // Wheel/trackpad scroll snapping - one gesture = one step
   useEffect(() => {
     if (isMobile || !isInViewport) return;
-    
+
     const container = containerRef.current;
     if (!container) return;
-    
-    let isScrolling = false;
-    let scrollTimeout: ReturnType<typeof setTimeout>;
-    
+
     const handleWheel = (e: WheelEvent) => {
       // Allow normal scroll at boundaries to exit section
       if (activeStep === 0 && e.deltaY < 0) return;
       if (activeStep === 3 && e.deltaY > 0) return;
-      
+
       e.preventDefault();
-      
-      if (isScrolling) return;
-      
-      isScrolling = true;
-      
+
+      // IMPORTANT: use refs so the lock doesn't reset when activeStep updates
+      if (wheelLockRef.current) return;
+      wheelLockRef.current = true;
+
       // Always move exactly 1 step, regardless of scroll intensity
       if (e.deltaY > 0 && activeStep < 3) {
         handleStepClick(activeStep + 1);
       } else if (e.deltaY < 0 && activeStep > 0) {
         handleStepClick(activeStep - 1);
       }
-      
+
       // Cooldown to prevent multi-trigger from single gesture
-      scrollTimeout = setTimeout(() => {
-        isScrolling = false;
+      if (wheelTimeoutRef.current) clearTimeout(wheelTimeoutRef.current);
+      wheelTimeoutRef.current = setTimeout(() => {
+        wheelLockRef.current = false;
+        wheelTimeoutRef.current = null;
       }, 800);
     };
-    
+
     container.addEventListener('wheel', handleWheel, { passive: false });
     return () => {
       container.removeEventListener('wheel', handleWheel);
-      clearTimeout(scrollTimeout);
+      if (wheelTimeoutRef.current) {
+        clearTimeout(wheelTimeoutRef.current);
+        wheelTimeoutRef.current = null;
+      }
+      wheelLockRef.current = false;
     };
   }, [activeStep, isMobile, isInViewport, handleStepClick]);
 
