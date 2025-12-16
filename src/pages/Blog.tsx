@@ -103,7 +103,7 @@ const Blog = () => {
         
         <BlogHero />
         
-        <section className="py-8 sm:py-10 md:py-12 lg:py-16 px-3 sm:px-4 md:px-6 lg:px-8">
+        <section className="py-4 sm:py-6 md:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
             <BlogFilters 
               activeCategory={activeCategory} 
