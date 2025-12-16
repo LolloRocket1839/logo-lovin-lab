@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import investIllustration from "@/assets/invest-illustration.jpg";
 
 interface StepIllustrationProps {
   step: "invest" | "acquire" | "manage" | "earn";
@@ -221,158 +222,31 @@ const PremiumHouse = ({ x, y, scale = 1, variant = "main", delay = 0, isActive }
   );
 };
 
-// Step 1: INVESTI - Premium Smartphone with flowing coins
+// Step 1: INVESTI - Premium Image Illustration
 const InvestIllustration = ({ isActive, prefersReducedMotion }: { isActive: boolean; prefersReducedMotion: boolean }) => (
-  <motion.svg
-    viewBox="0 0 300 250"
-    className="w-full h-full max-w-[340px]"
-    initial={{ opacity: 0 }}
-    animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
+  <motion.div
+    className="w-full h-full flex flex-col items-center justify-center"
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0.5, scale: 0.95 }}
     transition={{ duration: 0.4 }}
   >
-    <PremiumDefs />
-    
-    {/* Modern Smartphone */}
-    <motion.g
-      initial={{ x: -20, opacity: 0 }}
-      animate={isActive ? { x: 0, opacity: 1 } : {}}
+    <motion.img
+      src={investIllustration}
+      alt="Investi da €100 in immobili - smartphone con monete che fluiscono verso case"
+      className="w-full max-w-[400px] h-auto rounded-xl"
+      initial={{ y: 10 }}
+      animate={isActive ? { y: 0 } : {}}
       transition={{ duration: 0.5 }}
-      filter="url(#mediumShadow)"
-    >
-      {/* Phone body with rounded corners */}
-      <rect x="15" y="40" width="75" height="140" rx="12" 
-        fill="hsl(var(--foreground))" opacity="0.9" />
-      {/* Screen bezel */}
-      <rect x="18" y="43" width="69" height="134" rx="10" 
-        fill="hsl(220, 15%, 15%)" />
-      {/* Screen */}
-      <rect x="20" y="52" width="65" height="115" rx="6" 
-        fill="url(#screenGradient)" />
-      {/* Dynamic Island / Notch */}
-      <rect x="38" y="45" width="28" height="5" rx="2.5" fill="hsl(220, 15%, 10%)" />
-      
-      {/* Screen content */}
-      {/* App header */}
-      <rect x="24" y="58" width="57" height="18" rx="4" fill="hsl(var(--primary))" opacity="0.2" />
-      <text x="52.5" y="70" textAnchor="middle" fill="hsl(var(--primary))" fontSize="8" fontWeight="bold">JUNGLE RENT</text>
-      
-      {/* Amount display */}
-      <text x="52.5" y="100" textAnchor="middle" fill="white" fontSize="22" fontWeight="bold">€100</text>
-      <text x="52.5" y="112" textAnchor="middle" fill="hsl(var(--muted-foreground))" fontSize="7">Investimento minimo</text>
-      
-      {/* Invest button */}
-      <motion.rect 
-        x="28" y="125" width="48" height="20" rx="10" 
-        fill="url(#primaryGradient)"
-        whileHover={!prefersReducedMotion ? { scale: 1.05 } : {}}
-      />
-      <text x="52" y="139" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">INVESTI</text>
-      
-      {/* Home indicator */}
-      <rect x="40" y="157" width="25" height="4" rx="2" fill="hsl(var(--muted))" opacity="0.5" />
-      
-      {/* Screen reflection */}
-      <rect x="20" y="52" width="65" height="115" rx="6" fill="url(#glassGradient)" opacity="0.1" />
-    </motion.g>
-
-    {/* Animated coin flow */}
-    <g>
-      {[0, 1, 2, 3].map((i) => (
-        <motion.g
-          key={i}
-          initial={{ x: 0, y: 0, opacity: 0 }}
-          animate={isActive && !prefersReducedMotion ? {
-            x: [0, 30 + i * 8, 60 + i * 12],
-            y: [0, -15 - i * 5, -5 + i * 3],
-            opacity: [0, 1, 0.8]
-          } : { x: 60 + i * 12, y: -5 + i * 3, opacity: 0.6 }}
-          transition={{ duration: 1.5, delay: 0.3 + i * 0.15, ease: "easeOut" }}
-        >
-          <PremiumCoin 
-            cx={95 + i * 5} 
-            cy={95 + i * 8} 
-            r={9 - i * 0.5} 
-            delay={0}
-            isActive={isActive}
-            prefersReducedMotion={prefersReducedMotion}
-          />
-        </motion.g>
-      ))}
-      
-      {/* Sparkle particles */}
-      {!prefersReducedMotion && isActive && [0, 1, 2].map((i) => (
-        <motion.circle
-          key={`sparkle-${i}`}
-          cx={110 + i * 20}
-          cy={85 + i * 10}
-          r="2"
-          fill="hsl(45, 90%, 65%)"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ 
-            opacity: [0, 0.8, 0],
-            scale: [0, 1, 0],
-            y: [0, -10]
-          }}
-          transition={{ 
-            delay: 0.8 + i * 0.2, 
-            duration: 1,
-            repeat: Infinity,
-            repeatDelay: 2
-          }}
-        />
-      ))}
-    </g>
-
-    {/* Premium Portfolio Container */}
-    <motion.g
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={isActive ? { scale: 1, opacity: 1 } : {}}
-      transition={{ delay: 0.3, duration: 0.5 }}
-    >
-      {/* Background card with subtle gradient */}
-      <rect x="165" y="35" width="120" height="145" rx="14" 
-        fill="hsl(var(--card))" filter="url(#mediumShadow)" />
-      <rect x="165" y="35" width="120" height="145" rx="14" 
-        fill="url(#primaryGradient)" opacity="0.05" />
-      
-      {/* Portfolio label */}
-      <rect x="175" y="42" width="100" height="20" rx="10" fill="hsl(var(--primary))" opacity="0.1" />
-      <text x="225" y="56" textAnchor="middle" fill="hsl(var(--primary))" fontSize="9" fontWeight="bold">IL TUO PORTAFOGLIO</text>
-      
-      {/* Houses */}
-      <PremiumHouse x={180} y={68} variant="main" isActive={isActive} delay={0.5} />
-      <PremiumHouse x={172} y={138} variant="small" isActive={isActive} delay={0.6} />
-      <PremiumHouse x={220} y={135} variant="medium" isActive={isActive} delay={0.7} />
-
-      {/* JR Logo Badge with glow */}
-      <motion.g
-        initial={{ scale: 0 }}
-        animate={isActive ? { scale: 1 } : {}}
-        transition={{ delay: 0.9, type: "spring", stiffness: 200 }}
-      >
-        <circle cx="270" cy="50" r="18" fill="hsl(var(--card))" filter="url(#softShadow)" />
-        <circle cx="270" cy="50" r="16" fill="hsl(var(--primary))" opacity="0.1" />
-        <image 
-          href="/jungle-rent-logo.svg" 
-          x="254" y="34" width="32" height="32"
-          preserveAspectRatio="xMidYMid meet"
-        />
-      </motion.g>
-    </motion.g>
-
-    {/* Label */}
-    <motion.text
-      x="150" y="225"
-      textAnchor="middle"
-      fill="hsl(var(--muted-foreground))"
-      fontSize="11"
+    />
+    <motion.p
+      className="mt-4 text-muted-foreground text-sm text-center"
       initial={{ opacity: 0 }}
       animate={isActive ? { opacity: 1 } : {}}
-      transition={{ delay: 0.8 }}
+      transition={{ delay: 0.3 }}
     >
       Tu investi da €100, noi facciamo il resto
-    </motion.text>
-  </motion.svg>
+    </motion.p>
+  </motion.div>
 );
 
 // Step 2: ACQUISTIAMO - Premium University with connected houses
