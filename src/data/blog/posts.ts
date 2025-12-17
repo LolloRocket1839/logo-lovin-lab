@@ -2494,7 +2494,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-17",
     author: "Jungle Rent Team",
-    image: "/images/torino-primavera-marzo.jpg",
+    image: "/images/torino-ogni-stagione-collage.jpg",
     readTime: 35,
     content: "torino-ogni-stagione-turisti",
     translations: {
