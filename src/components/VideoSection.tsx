@@ -1,11 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { useState, useRef } from "react";
-import { Play, CheckCircle2, ArrowRight, Clock } from "lucide-react";
+import { Play, CheckCircle2, ArrowRight, Clock, Calendar, Loader2 } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
+
 export const VideoSection = () => {
   const { t } = useTranslation();
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlayClick = async () => {
@@ -43,29 +46,63 @@ export const VideoSection = () => {
             <div className="order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-card border border-border/50 group">
                 <AspectRatio ratio={16 / 9}>
-                  {!isPlaying && (
-                    <button
-                      onClick={handlePlayClick}
-                      className="absolute inset-0 z-10 flex items-center justify-center bg-foreground/30 backdrop-blur-[2px] cursor-pointer transition-all duration-300 group-hover:bg-foreground/20"
-                      aria-label={t('video.play', 'Play video')}
-                    >
-                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-primary/30">
-                        <Play className="w-10 h-10 md:w-12 md:h-12 text-primary-foreground ml-1" fill="currentColor" />
-                      </div>
-                    </button>
+                  {/* Loading spinner */}
+                  {isLoading && !hasError && (
+                    <div className="absolute inset-0 z-20 flex items-center justify-center bg-muted">
+                      <Loader2 className="w-12 h-12 text-primary animate-spin" />
+                    </div>
                   )}
-                  <video
-                    ref={videoRef}
-                    src="/videos/jungle-rent-explainer.mp4"
-                    controls={isPlaying}
-                    preload="metadata"
-                    playsInline
-                    muted
-                    className="absolute inset-0 w-full h-full object-cover"
-                    onEnded={() => setIsPlaying(false)}
-                  >
-                    Your browser does not support the video tag.
-                  </video>
+                  
+                  {/* Error fallback */}
+                  {hasError ? (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-muted p-6 text-center">
+                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <Play className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">
+                        {t('video.comingSoon', 'Video in preparazione')}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-4 max-w-xs">
+                        {t('video.comingSoonDescription', 'Nel frattempo, prenota una call con Lorenzo per scoprire Jungle Rent')}
+                      </p>
+                      <Button 
+                        onClick={() => window.open('https://calendly.com/lorenzo-onijoseph/jungle-rent', '_blank')}
+                        className="gap-2"
+                      >
+                        <Calendar className="w-4 h-4" />
+                        {t('video.bookCall', 'Prenota una call')}
+                      </Button>
+                    </div>
+                  ) : (
+                    <>
+                      {/* Play button overlay */}
+                      {!isPlaying && !isLoading && (
+                        <button
+                          onClick={handlePlayClick}
+                          className="absolute inset-0 z-10 flex items-center justify-center bg-foreground/30 backdrop-blur-[2px] cursor-pointer transition-all duration-300 group-hover:bg-foreground/20"
+                          aria-label={t('video.play', 'Play video')}
+                        >
+                          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-primary/30">
+                            <Play className="w-10 h-10 md:w-12 md:h-12 text-primary-foreground ml-1" fill="currentColor" />
+                          </div>
+                        </button>
+                      )}
+                      <video
+                        ref={videoRef}
+                        controls={isPlaying}
+                        preload="metadata"
+                        playsInline
+                        muted
+                        className="absolute inset-0 w-full h-full object-cover"
+                        onEnded={() => setIsPlaying(false)}
+                        onError={() => setHasError(true)}
+                        onLoadedData={() => setIsLoading(false)}
+                      >
+                        <source src="/videos/jungle-rent-explainer.mp4" type="video/mp4" />
+                        {t('video.notSupported', 'Your browser does not support the video tag.')}
+                      </video>
+                    </>
+                  )}
                 </AspectRatio>
               </div>
             </div>
