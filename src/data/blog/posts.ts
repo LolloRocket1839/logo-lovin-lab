@@ -2551,8 +2551,9 @@ export const getFeaturedPosts = (limit: number = 3): BlogPost[] => {
 };
 
 export const getPostsByCategory = (category: string): BlogPost[] => {
-  if (category === 'all') return blogPosts;
-  return blogPosts.filter(post => post.category === category);
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  if (category === 'all') return sortedPosts;
+  return sortedPosts.filter(post => post.category === category);
 };
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {
