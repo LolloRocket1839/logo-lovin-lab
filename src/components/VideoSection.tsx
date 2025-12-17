@@ -25,8 +25,8 @@ const MobileSteps = () => {
     {
       icon: Home,
       number: "3",
-      title: t('infographic.steps.manage.title', 'Gestiamo'),
-      description: t('video.mobileStep3', 'Affittiamo a studenti, facendoli risparmiare'),
+      title: 'Gestiamo',
+      description: 'Affittiamo a studenti, facendoli risparmiare',
     },
     {
       icon: TrendingUp,
