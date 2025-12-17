@@ -176,26 +176,6 @@ export const InvestorSection = () => {
             </Button>
           </div>
 
-          {/* Testimonials */}
-          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-border/30">
-            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4 font-medium">
-              {t('investor.testimonials.title', 'Cosa dicono gli investitori')}
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {[
-                { quote: t('investor.testimonials.quote1'), author: t('investor.testimonials.author1') },
-                { quote: t('investor.testimonials.quote2'), author: t('investor.testimonials.author2') },
-              ].map((testimonial, i) => (
-                <div 
-                  key={i}
-                  className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-4 text-left"
-                >
-                  <p className="text-sm text-foreground italic mb-2">"{testimonial.quote}"</p>
-                  <p className="text-xs text-muted-foreground font-medium">— {testimonial.author}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
       </div>
