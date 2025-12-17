@@ -123,9 +123,7 @@ export const VideoSection = () => {
               </div>
               
               {/* Steps */}
-              <div className="bg-card rounded-2xl p-5 border border-border/50 shadow-sm">
-                <MobileSteps />
-              </div>
+              <MobileSteps />
               
               {/* CTA */}
               <div className="text-center">
