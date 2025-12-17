@@ -3,8 +3,6 @@ import { useState, useRef } from "react";
 import { Play, CheckCircle2, ArrowRight, Clock } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
-import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
-
 export const VideoSection = () => {
   const { t } = useTranslation();
   const [isPlaying, setIsPlaying] = useState(false);
@@ -121,12 +119,6 @@ export const VideoSection = () => {
         </div>
       </div>
 
-      {/* Logo in basso a destra */}
-      <img 
-        src={jungleRentLogo} 
-        alt="Jungle Rent" 
-        className="absolute bottom-6 right-6 md:bottom-8 md:right-8 w-20 md:w-28 opacity-80"
-      />
       {/* Structured Data for SEO */}
       <script
         type="application/ld+json"
