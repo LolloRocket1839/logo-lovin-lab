@@ -360,10 +360,10 @@
       },
       "manage": {
         "title": "Gestiamo",
-        "description": "Modello ibrido studenti + turisti",
-        "detail": "Affitti a studenti durante l'anno accademico, ospiti turistici nei periodi di vacanza. Massimizzazione dell'occupazione tutto l'anno.",
+        "description": "Affitti flessibili",
+        "detail": "Affitti flessibili per studenti e turisti. Studenti durante l'anno accademico, turisti nei periodi di vacanza. Massimizzazione dell'occupazione tutto l'anno.",
         "keyPoints": [
-          "Gestione contratti e inquilini",
+          "Affitti flessibili studenti e turisti",
           "Manutenzione inclusa",
           "Fiscalità gestita da noi"
         ]
