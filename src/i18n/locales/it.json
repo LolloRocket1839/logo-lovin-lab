@@ -343,6 +343,13 @@
       "studentsOffsite": "studenti fuori sede in Italia",
       "marketPotential": "mercato potenziale",
       "disclaimer": "Stime 2025 - Fonte: Savills Research"
+    },
+    "testimonials": {
+      "title": "Cosa dicono gli investitori",
+      "quote1": "Ho investito €500 e ricevo report trimestrali trasparenti. Finalmente posso accedere al mercato immobiliare.",
+      "author1": "Marco, 32 anni",
+      "quote2": "Zero gestione, tutto è curato dal team. Posso concentrarmi sul mio lavoro mentre l'investimento lavora per me.",
+      "author2": "Giulia, 28 anni"
     }
   },
   "infographic": {

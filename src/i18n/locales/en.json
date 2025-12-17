@@ -370,6 +370,13 @@
       "studentsOffsite": "off-campus students in Italy",
       "marketPotential": "market potential",
       "disclaimer": "2025 estimates - Source: Savills Research"
+    },
+    "testimonials": {
+      "title": "What investors say",
+      "quote1": "I invested €500 and receive transparent quarterly reports. Finally I can access the real estate market.",
+      "author1": "Marco, 32 years old",
+      "quote2": "Zero management, everything is handled by the team. I can focus on my work while my investment works for me.",
+      "author2": "Giulia, 28 years old"
     }
   },
   "infographic": {
