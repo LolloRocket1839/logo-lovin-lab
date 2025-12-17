@@ -111,6 +111,11 @@ export const Footer = () => {
             <h3 className="font-display text-base sm:text-lg font-bold mb-4 sm:mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
             <ul className="space-y-3 text-muted-foreground">
               <li>
+                <Link to="/studenti" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {t('nav.students')}
+                </Link>
+              </li>
+              <li>
                 <a href="#how-it-works" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
                   {t('footer.howItWorksLink')}
                 </a>

@@ -25,6 +25,7 @@ const ABTestResults = lazy(() => import("./pages/ABTestResults"));
 const AnalyticsDashboard = lazy(() => import("./pages/AnalyticsDashboard"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const TerminiCondizioni = lazy(() => import("./pages/TerminiCondizioni"));
+const Students = lazy(() => import("./pages/Students"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -49,6 +50,8 @@ const AppContent = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/studenti" element={<Students />} />
+        <Route path="/students" element={<Students />} />
         <Route path="/ai-testing" element={<AITesting />} />
         <Route path="/ab-test-results" element={<ABTestResults />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
