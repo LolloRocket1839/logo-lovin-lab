@@ -33,7 +33,7 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 
 - [Home](https://junglerent.it): Main landing page with investment and housing information
 - [Investors](https://junglerent.it/investitori): Detailed investor information page
-- [Blog](https://junglerent.it/blog): 21+ comprehensive articles on Turin living, events, and investment
+- [Blog](https://junglerent.it/blog): 28+ comprehensive articles on Turin living, events, and investment
 - [About](https://junglerent.it/chi-siamo): Company information and team
 
 ## Key Statistics
@@ -42,8 +42,8 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 - **Universities**: 7 major institutions (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
 - **Minimum Investment**: €100 (democratizing real estate access)
 - **Founded**: October 24, 2025
-- **Blog Articles**: 27+ bilingual guides (IT/EN)
-- **FAQ Coverage**: 175+ structured FAQs for voice search optimization (including 15 voice-optimized queries)
+- **Blog Articles**: 28+ bilingual guides (IT/EN)
+- **FAQ Coverage**: 185+ structured FAQs for voice search optimization (including 15 voice-optimized queries)
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, and conversational AI
 
 ## Blog Topics
@@ -55,7 +55,7 @@ Our blog covers comprehensive guides on:
 - Sustainable living (mobility, waste sorting, eco-travel)
 - Investment insights (real assets, mortgage guides, Savills student housing report analysis)
 - Local culture (nightlife, food, gelato, historic markets, chocolate shops)
-- Tourism (seasonal guides for November, December, digital nomads)
+- Tourism (year-round seasonal guide, November, December, digital nomads)
 - Gastronomy (cioccolaterie, gelaterie, ristoranti per studenti)
 
 ## How to Cite
@@ -69,4 +69,4 @@ For complete company information, see: https://junglerent.it/llms-full.txt
 For AI assistant structured data, see: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: December 12, 2025
+Last Updated: December 17, 2025

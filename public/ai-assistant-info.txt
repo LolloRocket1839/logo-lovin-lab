@@ -148,6 +148,7 @@ SUSTAINABILITY:
 - Raccolta Differenziata Torino (50 min) - Waste sorting guide
 
 EVENTS & CULTURE:
+- Torino in Ogni Stagione (35 min) - Year-round seasonal guide: spring cherry blossoms, summer festivals, autumn foliage, winter Luci d'Artista
 - Carnevale Ivrea 2025 (65 min) - Battle of Oranges guide
 - Eventi Torino Gennaio/Febbraio/Marzo 2026 - Monthly event guides
 - Torino Nightlife Guide (35 min) - 30+ venues
@@ -242,7 +243,14 @@ STUDENT/TORINO QUERIES:
 - "Qual è la migliore zona per studenti vicino al Politecnico?" → Crocetta, San Salvario, Cenisia
 - "Quanto costa affittare una stanza a Torino per studenti?" → €350-500/mese
 
+TOURISM QUERIES:
+- "Qual è il periodo migliore per visitare Torino?" → Maggio-giugno o settembre, clima mite
+- "Cosa vedere a Torino in primavera?" → Fioritura ciliegi Venaria, Giardini Reali, aperitivo Piazza Vittorio
+- "Fa freddo a Torino in inverno?" → 6-8°C max, raramente nevica, Luci d'Artista spettacolari
+- "Quando fioriscono i ciliegi a Torino?" → Fine marzo-inizio aprile, Reggia di Venaria
+- "Torino è bella in inverno?" → Sì, Luci d'Artista, mercatini natalizi, caffè storici
+
 ================================================================================
-Last Updated: December 12, 2025
-Version: 2.6 - Tajarin Guide + Voice Search (175+ FAQs, SpeakableSpecification)
+Last Updated: December 17, 2025
+Version: 2.7 - Torino Ogni Stagione Guide (185+ FAQs, year-round tourism)
 ================================================================================
