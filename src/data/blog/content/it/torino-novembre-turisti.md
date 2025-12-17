@@ -2,7 +2,7 @@
 
 Novembre trasforma Torino in un punto di convergenza di quattro distinti fenomeni culturali e sportivi, ciascuno dei quali attira migliaia di partecipanti e visitatori internazionali per vivere quello che rappresenta il mese culturalmente più denso della città. Mentre le temperature scendono a un fresco 10-15°C e il paesaggio piemontese transita verso l'inverno, Torino ospita simultaneamente il campionato mondiale di tennis di fine stagione, un festival cinematografico di fama internazionale, la settimana dell'arte contemporanea più significativa d'Italia e il picco della stagione del tartufo bianco—l'ingrediente culinario più pregiato al mondo. Questa convergenza non è casuale; riflette piuttosto come le città europee di significato culturale mantengano calendari di programmazione multipli ed egualmente sofisticati che servono pubblici distinti mentre definiscono collettivamente l'identità urbana. Novembre a Torino rappresenta molto più di una collezione di eventi simultanei; esemplifica come una città storica possa mantenere la sua rilevanza attraverso una programmazione culturale che onora la tradizione abbracciando al contempo la pratica artistica contemporanea.
 
-*Questo articolo fa parte della nostra serie **[Torino Nel Corso dell'Anno](/blog)**, che esplora la ricchezza culturale della città mese per mese. Vedi anche: [Torino a Dicembre 2025](/blog/torino-dicembre-turisti).*
+*Questo articolo fa parte della nostra serie **[Torino Nel Corso dell'Anno](/blog)**, che esplora la ricchezza culturale della città mese per mese. Vedi anche: [Torino in ogni stagione: guida completa](/blog/torino-ogni-stagione-turisti) e [Torino a Dicembre 2025](/blog/torino-dicembre-turisti).*
 
 ## Le Nitto ATP Finals: il tennis d'élite arriva a Torino
 
