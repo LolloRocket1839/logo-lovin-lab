@@ -39,11 +39,17 @@ export const SellerSection = () => {
           </div>
           
           <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
-            <StyledText>{t('seller.newTitle')}</StyledText>
+            <StyledText>{t('seller.directBuyerTitle')}</StyledText>
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-6">
-            <StyledText>{t('seller.newSubtitle')}</StyledText>
+          <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-2">
+            <StyledText>{t('seller.directBuyerSubtitle')}</StyledText>
           </p>
+          {/* Benefits list */}
+          <div className="flex flex-wrap justify-center gap-3 mb-6 text-sm">
+            <span className="inline-flex items-center text-primary font-medium">✓ {t('seller.benefit1')}</span>
+            <span className="inline-flex items-center text-primary font-medium">✓ {t('seller.benefit2')}</span>
+            <span className="inline-flex items-center text-primary font-medium">✓ {t('seller.benefit3')}</span>
+          </div>
           
           {/* Comparison table */}
           <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-4 sm:p-6 mb-6 max-w-2xl mx-auto">

@@ -1,12 +1,19 @@
 import { useRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { ArrowDown, Sparkles } from "lucide-react";
+import { ArrowDown, ChevronDown, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { openWhatsApp, CONTACTS, MESSAGES } from "@/lib/contacts";
 
 export const ImmersiveHero = () => {
   const { t } = useTranslation();
@@ -44,6 +51,14 @@ export const ImmersiveHero = () => {
     setInvestDialogOpen(true);
   };
 
+  const handleLorenzoClick = () => {
+    trackClick('immersive_hero_lorenzo');
+    const lang = (document.documentElement.lang || 'it') as 'it' | 'en';
+    const validLang = lang === 'en' ? 'en' : 'it';
+    const message = MESSAGES.investor.whatsapp[validLang](CONTACTS.lorenzo.name);
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
+
   const scrollToContent = () => {
     const investorSection = document.getElementById('investor-section');
     investorSection?.scrollIntoView({ behavior: 'smooth' });
@@ -52,6 +67,13 @@ export const ImmersiveHero = () => {
   // Split headline into words for staggered animation
   const headline = t('hero.mainHeadline');
   const words = headline.split(' ');
+
+  // Mini FAQ items
+  const miniFaqs = [
+    { key: 'whatBuy', question: t('hero.miniFaq.whatBuy'), answer: t('hero.miniFaq.whatBuyAnswer') },
+    { key: 'howEarn', question: t('hero.miniFaq.howEarn'), answer: t('hero.miniFaq.howEarnAnswer') },
+    { key: 'whoManages', question: t('hero.miniFaq.whoManages'), answer: t('hero.miniFaq.whoManagesAnswer') },
+  ];
 
   return (
     <header 
@@ -88,7 +110,7 @@ export const ImmersiveHero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Breathing logo */}
           <motion.div
-            className="mb-12 md:mb-16"
+            className="mb-8 md:mb-10"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -98,7 +120,7 @@ export const ImmersiveHero = () => {
               alt={t('hero.logoAlt')}
               width="160"
               height="160"
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 mx-auto rounded-full cursor-pointer"
+              className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 mx-auto rounded-full cursor-pointer"
               animate={prefersReducedMotion ? {} : {
                 scale: [1, 1.03, 1],
                 opacity: [0.9, 1, 0.9],
@@ -116,9 +138,9 @@ export const ImmersiveHero = () => {
           </motion.div>
 
           {/* Staggered headline reveal */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold mb-6 md:mb-8 leading-tight text-foreground tracking-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight">
             <span className="sr-only">{headline}</span>
-            <span aria-hidden="true" className="flex flex-wrap justify-center gap-x-3 md:gap-x-4">
+            <span aria-hidden="true" className="flex flex-wrap justify-center gap-x-2 md:gap-x-3">
               {words.map((word, i) => (
                 <motion.span
                   key={i}
@@ -129,7 +151,7 @@ export const ImmersiveHero = () => {
                     delay: prefersReducedMotion ? 0 : i * 0.08,
                     ease: [0.16, 1, 0.3, 1]
                   }}
-                  className={word.toLowerCase().includes('investimenti') || word.toLowerCase().includes('investment') 
+                  className={word.toLowerCase().includes('investimenti') || word.toLowerCase().includes('investment') || word.toLowerCase().includes('investi') || word.toLowerCase().includes('invest')
                     ? 'text-primary' 
                     : ''
                   }
@@ -145,48 +167,81 @@ export const ImmersiveHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={textRevealed ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: prefersReducedMotion ? 0 : 0.6 }}
-            className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-10 md:mb-14 font-light leading-relaxed max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 font-light leading-relaxed max-w-2xl mx-auto"
           >
             {t('hero.mainSubheadline')}
           </motion.p>
 
-          {/* Minimum investment badge */}
+          {/* Minimum investment badge with explanation */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={textRevealed ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 0.8 }}
-            className="flex justify-center mb-8"
+            className="flex flex-col items-center mb-6"
           >
-            <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-              <span className="text-sm md:text-base font-medium text-primary">
+            <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-2">
+              <span className="text-sm md:text-base font-semibold text-primary">
                 {t('investor.minInvestment', 'Investi da €100')}
               </span>
             </div>
+            <p className="text-xs sm:text-sm text-muted-foreground max-w-md">
+              {t('hero.badgeExplanation')}
+            </p>
           </motion.div>
 
-          {/* CTA Button with magnetic effect */}
+          {/* Simplified 2 CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={textRevealed ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 1 }}
-            className="flex justify-center mb-24"
+            className="flex flex-col sm:flex-row gap-3 justify-center mb-8"
           >
             <Button
               size="lg"
               variant="premium"
               onClick={handleInvestClick}
-              className="text-lg md:text-xl px-10 py-7 group magnetic-button"
+              className="text-base md:text-lg px-8 py-6 group"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                {t('hero.invest')}
+              <span className="relative z-10 flex items-center gap-2">
+                {t('hero.discoverOpportunity')}
                 <motion.span
-                  animate={prefersReducedMotion ? {} : { x: [0, 5, 0] }}
+                  animate={prefersReducedMotion ? {} : { x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
                   →
                 </motion.span>
               </span>
             </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              onClick={handleLorenzoClick}
+              className="text-base md:text-lg px-8 py-6"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              {t('hero.talkToLorenzo')}
+            </Button>
+          </motion.div>
+
+          {/* Mini FAQ Accordion */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={textRevealed ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 1.2 }}
+            className="max-w-xl mx-auto mb-16"
+          >
+            <Accordion type="single" collapsible className="bg-card/30 backdrop-blur-sm rounded-xl border border-border/30">
+              {miniFaqs.map((faq) => (
+                <AccordionItem key={faq.key} value={faq.key} className="border-border/30">
+                  <AccordionTrigger className="px-4 py-3 text-sm font-medium text-foreground hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-3 text-sm text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </motion.div>
         </div>
       </motion.div>
@@ -200,7 +255,7 @@ export const ImmersiveHero = () => {
         transition={{ delay: 1.5 }}
         aria-label="Scroll to content"
       >
-        <span className="text-xs uppercase tracking-widest font-light">Scopri</span>
+        <span className="text-xs uppercase tracking-widest font-light">{t('hero.discover')}</span>
         <motion.div
           animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

@@ -89,6 +89,18 @@
     "tagline": "Democratizing access to real estate",
     "mainHeadline": "Invest in student housing in Turin",
     "mainSubheadline": "Invest from €100 in university properties. We acquire and manage, you earn.",
+    "badgeExplanation": "Purchase shares of our real estate portfolio. Zero management, quarterly returns.",
+    "discoverOpportunity": "Discover the opportunity",
+    "talkToLorenzo": "Talk to Lorenzo",
+    "discover": "Discover",
+    "miniFaq": {
+      "whatBuy": "What do I buy with €100?",
+      "whatBuyAnswer": "You purchase equity shares in Jungle Rent's real estate portfolio. Not a whole property, but a fraction of our managed assets.",
+      "howEarn": "How do I receive returns?",
+      "howEarnAnswer": "Each quarter you receive your share of collected rents, proportional to your investment. Transparent reports and personal dashboard.",
+      "whoManages": "Who manages the properties?",
+      "whoManagesAnswer": "Jungle Rent manages everything: acquisition, contracts, tenants, maintenance and taxes. You don't have to do anything."
+    },
     "miniSteps": {
       "step1": "From €100",
       "step2": "We manage"
@@ -477,6 +489,11 @@
     "sectionLabel": "Sell Property",
     "newTitle": "We buy your property. We're not an agency.",
     "newSubtitle": "We don't find buyers for you. Jungle Rent directly purchases properties in university areas.",
+    "directBuyerTitle": "We buy your property directly",
+    "directBuyerSubtitle": "We're not an agency. We acquire for our own portfolio.",
+    "benefit1": "Zero commissions",
+    "benefit2": "60-90 days",
+    "benefit3": "Guaranteed buyer",
     "urgencyBadge": "Looking for properties in San Salvario, Vanchiglia, Hospital area, Santa Rita, Cit Turin, Campidoglio, Aurora, Campus Einaudi, Corso Casale",
     "missionStatement": "We acquire properties in Turin's university areas to provide housing for 90,000+ students. Your property becomes part of the solution to the housing crisis.",
     "readGuide": "Read the complete guide: risks, taxes and agencies",
