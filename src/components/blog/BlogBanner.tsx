@@ -7,7 +7,7 @@ export const BlogBanner = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-12 md:py-16 px-4">
+    <section className="py-12 md:py-16 px-4 bg-accent/30">
       <div className="container mx-auto max-w-4xl">
         <div className="relative rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 p-8 md:p-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">

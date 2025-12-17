@@ -28,7 +28,7 @@ export const InvestorSection = () => {
   return (
     <section 
       id="investor-section" 
-      className="pt-16 pb-12 md:py-20 lg:py-28 relative overflow-hidden transition-spacing"
+      className="pt-16 pb-12 md:py-20 lg:py-28 bg-accent/30 relative overflow-hidden transition-spacing"
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />

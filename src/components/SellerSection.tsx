@@ -19,7 +19,7 @@ export const SellerSection = () => {
   };
 
   return (
-    <section id="seller-section" className="py-8 sm:py-10 md:py-12 lg:py-16 relative overflow-hidden transition-spacing">
+    <section id="seller-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/30 relative overflow-hidden transition-spacing">
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
