@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils } from "lucide-react";
+import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -19,10 +19,10 @@ const Students = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
 
-  // Filter student-category blog posts
+  // Filter student-category blog posts (expanded to include more)
   const studentPosts = blogPosts
     .filter(post => post.category === 'students')
-    .slice(0, 6);
+    .slice(0, 12);
 
   // Group by topic for resource sections
   const resourceCategories = [
@@ -48,10 +48,17 @@ const Students = () => {
       )
     },
     {
+      icon: Train,
+      titleKey: "students.resources.mobility",
+      posts: studentPosts.filter(p => 
+        p.slug.includes('mobilita') || p.slug.includes('sostenibile')
+      )
+    },
+    {
       icon: Utensils,
       titleKey: "students.resources.dailyLife",
       posts: studentPosts.filter(p => 
-        p.slug.includes('mangiare') || p.slug.includes('gelaterie')
+        p.slug.includes('mangiare') || p.slug.includes('gelaterie') || p.slug.includes('raccolta')
       )
     }
   ];
