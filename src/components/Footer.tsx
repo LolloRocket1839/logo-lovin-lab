@@ -41,7 +41,7 @@ export const Footer = () => {
   };
   
   return (
-    <footer id="footer" className="relative overflow-hidden transition-spacing">
+    <footer id="footer" className="bg-accent/30 relative overflow-hidden transition-spacing">
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-footer" />
       
