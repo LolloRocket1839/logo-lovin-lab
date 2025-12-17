@@ -570,4 +570,23 @@
     </image:image>
   </url>
 
+  <!-- Blog Post: Torino in ogni stagione turisti -->
+  <url>
+    <loc>https://junglerent.it/blog/torino-ogni-stagione-turisti</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-primavera-marzo.jpg</image:loc>
+      <image:title>Torino in ogni stagione: guida per turisti</image:title>
+      <image:caption>Guida completa a Torino in primavera, estate, autunno e inverno</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
