@@ -125,7 +125,7 @@ export const VideoSection = () => {
               <div className="text-center">
                 <Button 
                   size="lg" 
-                  className="w-full max-w-xs"
+                  className="w-full"
                   onClick={() => window.open('https://calendly.com/lorenzo-onijoseph/jungle-rent', '_blank')}
                 >
                   {t('video.cta', 'Parla con Lorenzo')}
