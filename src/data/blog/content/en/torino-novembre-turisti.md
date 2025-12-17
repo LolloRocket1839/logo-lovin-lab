@@ -2,7 +2,7 @@
 
 November transforms Turin into a convergence point for four distinct cultural and sporting phenomena, each drawing thousands of international participants and visitors to experience what amounts to the city's most culturally dense month. As temperatures drop to a crisp 10-15°C (50-59°F) and the Piedmontese landscape transitions toward winter, Turin simultaneously hosts the world's premier year-end tennis championships, an internationally renowned film festival, Italy's most significant contemporary art week, and the peak season for white truffles—the world's most prized culinary ingredient. This convergence is not accidental; rather, it reflects how European cities of cultural significance maintain multiple, equally sophisticated programming calendars that serve distinct audiences while collectively defining urban identity. November in Turin represents far more than a collection of simultaneous events; it exemplifies how a historic city can maintain its relevance through cultural programming that honors tradition while embracing contemporary artistic practice.
 
-*This article is part of our **[Turin Throughout the Year](/blog)** series, exploring the city's cultural richness month by month. See also: [Turin in December 2025](/blog/torino-dicembre-turisti).*
+*This article is part of our **[Turin Throughout the Year](/blog)** series, exploring the city's cultural richness month by month. See also: [Turin in Every Season: Complete Guide](/blog/torino-ogni-stagione-turisti) and [Turin in December 2025](/blog/torino-dicembre-turisti).*
 
 ## The Nitto ATP Finals: world-class tennis arrives in Torino
 
