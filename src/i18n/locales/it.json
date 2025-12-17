@@ -1105,5 +1105,43 @@
       "examDays": "Giorni esame gratis"
     },
     "cta": "Presto disponibile: alloggi da settembre 2026"
+  },
+  "students": {
+    "seo": {
+      "title": "Affitti per Studenti a Torino | Jungle Rent",
+      "description": "Trova il tuo alloggio studentesco vicino a Politecnico, UniTo e tutte le università di Torino. Contratti flessibili e prezzi accessibili."
+    },
+    "badge": "Coming Soon 2026",
+    "hero": {
+      "title": "Affitti per studenti a Torino",
+      "subtitle": "Stiamo costruendo un modo migliore per trovare casa vicino all'università. Iscriviti per essere tra i primi."
+    },
+    "waitlist": {
+      "placeholder": "La tua email",
+      "button": "Iscriviti alla waitlist",
+      "note": "Ti contatteremo quando saremo pronti. Niente spam.",
+      "success": "Iscrizione completata! Ti contatteremo presto.",
+      "error": "Errore. Riprova più tardi."
+    },
+    "stats": {
+      "students": "studenti universitari",
+      "universities": "università a Torino",
+      "neighborhoods": "quartieri studenteschi",
+      "avgRent": "affitto medio stanza"
+    },
+    "resources": {
+      "title": "Risorse per studenti",
+      "subtitle": "Guide gratuite per vivere e studiare a Torino",
+      "neighborhoods": "Guide quartieri",
+      "universities": "Università",
+      "studySpaces": "Aule studio",
+      "dailyLife": "Vita quotidiana",
+      "viewAll": "Vedi tutte le guide"
+    },
+    "investorCta": {
+      "title": "Sei un investitore?",
+      "subtitle": "Scopri come partecipare al mercato degli affitti studenteschi a Torino.",
+      "button": "Scopri l'opportunità"
+    }
   }
 }

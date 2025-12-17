@@ -1331,5 +1331,43 @@
       "examDays": "Free exam days"
     },
     "cta": "Coming soon: housing from September 2026"
+  },
+  "students": {
+    "seo": {
+      "title": "Student Housing in Turin | Jungle Rent",
+      "description": "Find your student accommodation near Politecnico, UniTo and all Turin universities. Flexible contracts and affordable prices."
+    },
+    "badge": "Coming Soon 2026",
+    "hero": {
+      "title": "Student housing in Turin",
+      "subtitle": "We're building a better way to find a home near university. Sign up to be among the first."
+    },
+    "waitlist": {
+      "placeholder": "Your email",
+      "button": "Join the waitlist",
+      "note": "We'll contact you when we're ready. No spam.",
+      "success": "Signed up! We'll contact you soon.",
+      "error": "Error. Please try again later."
+    },
+    "stats": {
+      "students": "university students",
+      "universities": "universities in Turin",
+      "neighborhoods": "student neighborhoods",
+      "avgRent": "average room rent"
+    },
+    "resources": {
+      "title": "Resources for students",
+      "subtitle": "Free guides for living and studying in Turin",
+      "neighborhoods": "Neighborhood guides",
+      "universities": "Universities",
+      "studySpaces": "Study spaces",
+      "dailyLife": "Daily life",
+      "viewAll": "View all guides"
+    },
+    "investorCta": {
+      "title": "Are you an investor?",
+      "subtitle": "Discover how to participate in the student rental market in Turin.",
+      "button": "Discover the opportunity"
+    }
   }
 }
