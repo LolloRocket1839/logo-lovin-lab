@@ -89,6 +89,18 @@
     "tagline": "Democratizziamo l'accesso al mercato immobiliare",
     "mainHeadline": "Investi in student housing a Torino",
     "mainSubheadline": "Investi da €100 in immobili universitari. Noi acquistiamo e gestiamo, tu guadagni.",
+    "badgeExplanation": "Acquisti quote del nostro portafoglio immobiliare. Zero gestione, rendite trimestrali.",
+    "discoverOpportunity": "Scopri l'opportunità",
+    "talkToLorenzo": "Parla con Lorenzo",
+    "discover": "Scopri",
+    "miniFaq": {
+      "whatBuy": "Cosa compro con €100?",
+      "whatBuyAnswer": "Acquisti quote di partecipazione nel portafoglio immobiliare di Jungle Rent. Non un immobile intero, ma una frazione del nostro patrimonio gestito.",
+      "howEarn": "Come ricevo i rendimenti?",
+      "howEarnAnswer": "Ogni trimestre ricevi la tua quota degli affitti incassati, proporzionale al tuo investimento. Report trasparenti e dashboard personale.",
+      "whoManages": "Chi gestisce gli immobili?",
+      "whoManagesAnswer": "Jungle Rent gestisce tutto: acquisizione, contratti, inquilini, manutenzione e fiscalità. Tu non devi fare nulla."
+    },
     "miniSteps": {
       "step1": "Da €100",
       "step2": "Gestiamo noi"
@@ -450,6 +462,11 @@
     "sectionLabel": "Vendi casa",
     "newTitle": "Compriamo il tuo immobile. Non siamo un'agenzia.",
     "newSubtitle": "Non cerchiamo acquirenti per te. Jungle Rent acquista direttamente immobili in zone universitarie.",
+    "directBuyerTitle": "Compriamo il tuo immobile direttamente",
+    "directBuyerSubtitle": "Non siamo un'agenzia. Acquistiamo noi per il nostro portafoglio.",
+    "benefit1": "Zero commissioni",
+    "benefit2": "60-90 giorni",
+    "benefit3": "Acquirente garantito",
     "urgencyBadge": "Cerchiamo immobili in San Salvario, Vanchiglia, zona Ospedali, Santa Rita, Cit Turin, Campidoglio, Aurora, Campus Einaudi, Corso Casale",
     "missionStatement": "Acquistiamo immobili nelle zone universitarie di Torino per offrire alloggi a 90.000+ studenti. Il tuo immobile diventa parte della soluzione alla crisi abitativa.",
     "readGuide": "Leggi la guida completa: rischi, tasse e agenzie",
