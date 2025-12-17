@@ -2488,6 +2488,61 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     }
+  },
+  {
+    slug: "torino-ogni-stagione-turisti",
+    category: "turisti",
+    date: "2025-12-17",
+    author: "Jungle Rent Team",
+    image: "/images/torino-primavera-marzo.jpg",
+    readTime: 35,
+    content: "torino-ogni-stagione-turisti",
+    translations: {
+      it: {
+        title: "Torino in ogni stagione: una guida per i turisti",
+        excerpt: "Primavera ciliegi, estate festival, autunno foliage, inverno Luci d'Artista. Clima, eventi, cosa portare. 27 fonti.",
+        seo: {
+          title: "Torino in ogni stagione: guida completa clima, eventi e consigli | Jungle Rent",
+          description: "Guida completa a Torino in ogni stagione: primavera ciliegi Venaria, estate festival all'aperto, autunno foliage e Artissima, inverno Luci d'Artista e mercatini. 27 fonti.",
+          keywords: ["torino stagioni", "quando visitare torino", "clima torino", "torino primavera", "torino estate", "torino autunno", "torino inverno", "luci artista torino", "foliage torino", "ciliegi venaria"]
+        },
+        tags: ["Turisti", "Stagioni", "Torino", "Clima", "Eventi", "Guida"],
+        faqs: [
+          { question: "Qual è il periodo migliore per visitare Torino?", answer: "Il periodo migliore è la tarda primavera (maggio-giugno) con clima mite 20-25°C e parchi fioriti. Settembre è un'ottima alternativa con meno turisti e inizio del foliage. Gennaio offre Torino innevata (raro) e Luci d'Artista." },
+          { question: "Fa freddo a Torino in inverno?", answer: "Sì, in inverno le temperature sono 6-8°C di giorno e 2-3°C di notte. La neve è rara ma quando cade trasforma la città in uno scenario fiabesco. Il Phön può portare improvvise giornate a 20°C." },
+          { question: "Quando fioriscono i ciliegi a Torino?", answer: "I ciliegi fioriscono tra fine marzo e inizio aprile. Il luogo migliore è la Reggia di Venaria Reale con il Potager Royal. Anche i colli di Pecetto e Revigliasco offrono splendide fioriture." },
+          { question: "Piove molto a Torino in estate?", answer: "Paradossalmente l'estate è la stagione più piovosa di Torino, con temporali improvvisi. È consigliabile portare sempre un ombrello nonostante le temperature di 25-28°C." },
+          { question: "Quando ci sono le Luci d'Artista a Torino?", answer: "Le Luci d'Artista illuminano Torino da fine ottobre a gennaio, trasformando la città in un museo a cielo aperto con installazioni luminose di artisti internazionali nelle piazze principali." },
+          { question: "Cosa vedere a Torino in autunno?", answer: "In autunno imperdibili: foliage sulla Collina di Torino e Parco Valentino, fiera Artissima (arte contemporanea), Festival d'Autunno, mercato di Porta Palazzo con tartufi e castagne." },
+          { question: "Nevica spesso a Torino?", answer: "No, la neve è rara. Negli ultimi tre anni è stata un evento effimero. Tuttavia quando cade trasforma Torino in uno scenario indimenticabile, soprattutto con la Mole Antonelliana innevata." },
+          { question: "Quali vestiti portare a Torino in primavera?", answer: "Vestiti a strati: t-shirt e maglioncini leggeri, un impermeabile o k-way per la pioggia, scarpe comode per camminare. Le temperature variano da 16°C ad aprile a 21°C a maggio." },
+          { question: "Cosa fare a Torino con la pioggia?", answer: "Con la pioggia: Museo Egizio, Museo del Cinema nella Mole, caffè storici come Al Bicerin, shopping nei 18 km di portici, gallerie storiche (Subalpina, Umberto I, San Federico), QC Terme." },
+          { question: "Torino è bella in inverno?", answer: "Sì, l'inverno torinese ha un fascino particolare: Luci d'Artista, mercatini natalizi, piste di pattinaggio, caffè storici con Bicerin caldo, atmosfera nebbiosa suggestiva. È il periodo meno affollato per visitare i musei." }
+        ]
+      },
+      en: {
+        title: "Turin in every season: a guide for tourists",
+        excerpt: "Spring cherry blossoms, summer festivals, autumn foliage, winter Luci d'Artista. Climate, events, what to pack. 27 sources.",
+        seo: {
+          title: "Turin in every season: complete guide to climate, events and tips | Jungle Rent",
+          description: "Complete guide to Turin in every season: spring cherry blossoms at Venaria, summer outdoor festivals, autumn foliage and Artissima, winter Luci d'Artista and markets. 27 sources.",
+          keywords: ["turin seasons", "when to visit turin", "turin climate", "turin spring", "turin summer", "turin autumn", "turin winter", "luci artista turin", "turin foliage", "venaria cherry blossoms"]
+        },
+        tags: ["Tourists", "Seasons", "Turin", "Climate", "Events", "Guide"],
+        faqs: [
+          { question: "What is the best time to visit Turin?", answer: "The best time is late spring (May-June) with mild weather 20-25°C and blooming parks. September is a great alternative with fewer tourists and early foliage. January offers snowy Turin (rare) and Luci d'Artista." },
+          { question: "Is it cold in Turin in winter?", answer: "Yes, winter temperatures are 6-8°C during the day and 2-3°C at night. Snow is rare but when it falls it transforms the city into a fairy tale. The Föhn wind can bring sudden 20°C days." },
+          { question: "When do cherry blossoms bloom in Turin?", answer: "Cherry trees bloom between late March and early April. The best place is Reggia di Venaria Reale with the Potager Royal. The Pecetto and Revigliasco hills also offer beautiful blooms." },
+          { question: "Does it rain a lot in Turin in summer?", answer: "Paradoxically summer is Turin's rainiest season, with sudden thunderstorms. It's advisable to always carry an umbrella despite temperatures of 25-28°C." },
+          { question: "When is Luci d'Artista in Turin?", answer: "Luci d'Artista illuminates Turin from late October to January, transforming the city into an open-air museum with light installations by international artists in the main squares." },
+          { question: "What to see in Turin in autumn?", answer: "In autumn must-sees: foliage on Turin Hill and Parco Valentino, Artissima fair (contemporary art), Autumn Festival, Porta Palazzo market with truffles and chestnuts." },
+          { question: "Does it snow often in Turin?", answer: "No, snow is rare. In the last three years it has been an ephemeral event. However when it falls it transforms Turin into an unforgettable scenario, especially with the snow-covered Mole Antonelliana." },
+          { question: "What clothes to bring to Turin in spring?", answer: "Dress in layers: t-shirts and light sweaters, a raincoat or windbreaker for rain, comfortable walking shoes. Temperatures range from 16°C in April to 21°C in May." },
+          { question: "What to do in Turin when it rains?", answer: "When it rains: Egyptian Museum, Cinema Museum in the Mole, historic cafés like Al Bicerin, shopping in the 18 km of arcades, historic galleries (Subalpina, Umberto I, San Federico), QC Terme." },
+          { question: "Is Turin beautiful in winter?", answer: "Yes, Turin's winter has a special charm: Luci d'Artista, Christmas markets, ice skating rinks, historic cafés with hot Bicerin, suggestive foggy atmosphere. It's the least crowded time to visit museums." }
+        ]
+      }
+    }
   }
 ];
 
