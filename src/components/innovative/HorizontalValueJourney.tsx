@@ -332,7 +332,7 @@ export const HorizontalValueJourney = () => {
   return (
     <section 
       ref={containerRef}
-      className="relative h-[400vh]"
+      className="relative h-[400vh] bg-accent/30"
       id="value-journey"
     >
       {/* Sticky container */}

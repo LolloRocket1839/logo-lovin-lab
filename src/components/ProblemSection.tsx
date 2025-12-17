@@ -34,7 +34,7 @@ export const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-background relative">
+    <section className="py-16 md:py-24 lg:py-32 bg-accent/30 relative">
       <div className="container px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
