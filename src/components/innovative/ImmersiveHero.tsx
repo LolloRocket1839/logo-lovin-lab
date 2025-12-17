@@ -177,16 +177,41 @@ export const ImmersiveHero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={textRevealed ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 0.8 }}
-            className="flex flex-col items-center mb-6"
+            className="flex flex-col items-center mb-4 md:mb-6"
           >
-            <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-2">
+            <div className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-2">
               <span className="text-sm md:text-base font-semibold text-primary">
                 {t('investor.minInvestment', 'Investi da €100')}
               </span>
             </div>
-            <p className="text-xs sm:text-sm text-muted-foreground max-w-md">
+            <p className="text-xs sm:text-sm text-muted-foreground max-w-md px-4">
               {t('hero.badgeExplanation')}
             </p>
+          </motion.div>
+
+          {/* Mini Visual Flow Schema */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={textRevealed ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 0.9 }}
+            className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3 mb-4 md:mb-6 px-2 flex-wrap"
+          >
+            {[
+              { icon: '€100', label: t('hero.flowStep1', 'Investi') },
+              { icon: '📋', label: t('hero.flowStep2', 'Quote') },
+              { icon: '🏠', label: t('hero.flowStep3', 'Affitti') },
+              { icon: '💰', label: t('hero.flowStep4', 'Rendite') },
+            ].map((step, i) => (
+              <div key={i} className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
+                <div className="flex flex-col items-center">
+                  <span className="text-lg sm:text-xl md:text-2xl">{step.icon}</span>
+                  <span className="text-[10px] sm:text-xs text-muted-foreground font-medium">{step.label}</span>
+                </div>
+                {i < 3 && (
+                  <span className="text-primary text-base sm:text-lg md:text-xl">→</span>
+                )}
+              </div>
+            ))}
           </motion.div>
 
           {/* Simplified 2 CTAs */}
@@ -194,13 +219,13 @@ export const ImmersiveHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={textRevealed ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 1 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center mb-8"
+            className="flex flex-col sm:flex-row gap-3 justify-center mb-4 md:mb-8"
           >
             <Button
               size="lg"
               variant="premium"
               onClick={handleInvestClick}
-              className="text-base md:text-lg px-8 py-6 group"
+              className="text-sm md:text-lg px-6 py-5 md:px-8 md:py-6 group"
             >
               <span className="relative z-10 flex items-center gap-2">
                 {t('hero.discoverOpportunity')}
@@ -216,27 +241,27 @@ export const ImmersiveHero = () => {
               size="lg"
               variant="outline"
               onClick={handleLorenzoClick}
-              className="text-base md:text-lg px-8 py-6"
+              className="text-sm md:text-lg px-6 py-5 md:px-8 md:py-6"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
               {t('hero.talkToLorenzo')}
             </Button>
           </motion.div>
 
-          {/* Mini FAQ Accordion */}
+          {/* Mini FAQ Accordion - Optimized for mobile */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={textRevealed ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : 1.2 }}
-            className="max-w-xl mx-auto mb-16"
+            className="max-w-xl mx-auto mb-8 md:mb-16 px-2"
           >
-            <Accordion type="single" collapsible className="bg-card/30 backdrop-blur-sm rounded-xl border border-border/30">
+            <Accordion type="single" collapsible className="bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl border border-border/30">
               {miniFaqs.map((faq) => (
                 <AccordionItem key={faq.key} value={faq.key} className="border-border/30">
-                  <AccordionTrigger className="px-4 py-3 text-sm font-medium text-foreground hover:no-underline">
+                  <AccordionTrigger className="px-3 py-2.5 md:px-4 md:py-3 text-xs sm:text-sm font-medium text-foreground hover:no-underline text-left">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="px-4 pb-3 text-sm text-muted-foreground">
+                  <AccordionContent className="px-3 pb-2.5 md:px-4 md:pb-3 text-xs sm:text-sm text-muted-foreground">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
