@@ -26,6 +26,8 @@ const AnalyticsDashboard = lazy(() => import("./pages/AnalyticsDashboard"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const TerminiCondizioni = lazy(() => import("./pages/TerminiCondizioni"));
 const Students = lazy(() => import("./pages/Students"));
+const StudentTools = lazy(() => import("./pages/StudentTools"));
+const BudgetCalculator = lazy(() => import("./pages/tools/BudgetCalculator"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -52,6 +54,10 @@ const AppContent = () => {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/studenti" element={<Students />} />
         <Route path="/students" element={<Students />} />
+        <Route path="/studenti/strumenti" element={<StudentTools />} />
+        <Route path="/students/tools" element={<StudentTools />} />
+        <Route path="/studenti/strumenti/budget" element={<BudgetCalculator />} />
+        <Route path="/students/tools/budget" element={<BudgetCalculator />} />
         <Route path="/ai-testing" element={<AITesting />} />
         <Route path="/ab-test-results" element={<ABTestResults />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
