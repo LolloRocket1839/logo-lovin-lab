@@ -29,6 +29,7 @@ import { AIBudgetAdvisor } from "@/components/tools/AIBudgetAdvisor";
 import { RentPriceHistory } from "@/components/tools/RentPriceHistory";
 import { BudgetShareExport } from "@/components/tools/BudgetShareExport";
 import { NeighborhoodRadarChart } from "@/components/tools/NeighborhoodRadarChart";
+import { WhatIfSimulator } from "@/components/tools/WhatIfSimulator";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -948,7 +949,20 @@ const BudgetCalculator = () => {
                   </CardContent>
                 </Card>
 
-                {/* 12-Month Projection - Only in advanced */}
+                {/* What-If Simulator */}
+                <WhatIfSimulator
+                  currentRent={rent}
+                  currentGroceries={groceries[0]}
+                  currentGym={gym[0]}
+                  housingType={housingType}
+                  selectedArea={selectedArea}
+                  language={currentLang}
+                  onApplyScenario={(changes) => {
+                    if (changes.housingType) setHousingType(changes.housingType);
+                    if (changes.groceries !== undefined) setGroceries([changes.groceries]);
+                    if (changes.gym !== undefined) setGym([changes.gym]);
+                  }}
+                />
                 {mode === "advanced" && (
                   <Card>
                     <CardHeader className="pb-2">
