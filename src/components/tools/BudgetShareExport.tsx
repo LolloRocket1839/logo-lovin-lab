@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link2, FileDown, Check, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import jsPDF from "jspdf";
+import jungleRentLogo from "@/assets/jungle-rent-logo.png";
 
 interface BudgetShareExportProps {
   selectedArea: string;
@@ -29,6 +30,25 @@ export const BudgetShareExport = ({
   language
 }: BudgetShareExportProps) => {
   const [linkCopied, setLinkCopied] = useState(false);
+  const [logoBase64, setLogoBase64] = useState<string | null>(null);
+
+  // Pre-load logo as base64 for PDF
+  useEffect(() => {
+    const loadLogo = async () => {
+      try {
+        const response = await fetch(jungleRentLogo);
+        const blob = await response.blob();
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setLogoBase64(reader.result as string);
+        };
+        reader.readAsDataURL(blob);
+      } catch (error) {
+        console.error("Failed to load logo:", error);
+      }
+    };
+    loadLogo();
+  }, []);
 
   const generateShareLink = () => {
     const params = new URLSearchParams({
@@ -65,30 +85,45 @@ export const BudgetShareExport = ({
     doc.setFillColor(22, 101, 52); // primary green
     doc.rect(0, 0, pageWidth, 50, "F");
     
-    // Logo placeholder (cerchio con JR)
-    doc.setFillColor(255, 255, 255);
-    doc.circle(30, 25, 12, "F");
-    doc.setTextColor(22, 101, 52);
-    doc.setFontSize(14);
-    doc.setFont("helvetica", "bold");
-    doc.text("JR", 30, 28, { align: "center" });
+    // Logo reale o fallback
+    if (logoBase64) {
+      try {
+        doc.addImage(logoBase64, "PNG", 12, 8, 34, 34);
+      } catch {
+        // Fallback: cerchio con JR
+        doc.setFillColor(255, 255, 255);
+        doc.circle(30, 25, 12, "F");
+        doc.setTextColor(22, 101, 52);
+        doc.setFontSize(14);
+        doc.setFont("helvetica", "bold");
+        doc.text("JR", 30, 28, { align: "center" });
+      }
+    } else {
+      // Fallback: cerchio con JR
+      doc.setFillColor(255, 255, 255);
+      doc.circle(30, 25, 12, "F");
+      doc.setTextColor(22, 101, 52);
+      doc.setFontSize(14);
+      doc.setFont("helvetica", "bold");
+      doc.text("JR", 30, 28, { align: "center" });
+    }
     
     // Titolo header
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(24);
     doc.setFont("helvetica", "bold");
-    doc.text("Jungle Rent", 50, 22);
+    doc.text("Jungle Rent", 52, 20);
     
-    doc.setFontSize(11);
+    doc.setFontSize(12);
     doc.setFont("helvetica", "normal");
-    doc.text("junglerent.it", 50, 32);
+    doc.text("junglerent.it", 52, 30);
     
     // Sottotitolo
     doc.setFontSize(10);
     doc.text(
       language === "it" ? "L'affitto sicuro nella giungla immobiliare" : "Safe renting in the real estate jungle",
-      50,
-      42
+      52,
+      40
     );
 
     // === TITOLO DOCUMENTO ===
