@@ -9,7 +9,7 @@ import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { ShareButton } from "@/components/blog/ShareButton";
 import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
-import { BlogProgressBar } from "@/components/blog/BlogProgressBar";
+
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { Calendar, Clock } from "lucide-react";
@@ -325,7 +325,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       
       <StructuredData />
       <Navigation />
-      <BlogProgressBar />
+      
       
       <div className="pt-20">
         <Breadcrumbs

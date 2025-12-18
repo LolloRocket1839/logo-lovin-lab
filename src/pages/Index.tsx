@@ -3,7 +3,6 @@ import { Navigation } from "@/components/Navigation";
 import { MobileHeader } from "@/components/MobileHeader";
 import { TrustBadge } from "@/components/TrustBadge";
 import { StructuredData } from "@/components/StructuredData";
-import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 
@@ -93,9 +92,8 @@ const Index = () => {
       
       <StructuredData />
       <Navigation />
-      <ScrollProgressBar />
       
-      {/* Immersive Hero with Parallax */}
+      {/* Immersive Hero */}
       <div id="hero">
         <ImmersiveHero />
       </div>
