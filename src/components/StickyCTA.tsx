@@ -56,7 +56,7 @@ export const StickyCTA = () => {
         role="region"
         aria-live="polite"
         aria-label={t('nav.investors')}
-        className="fixed bottom-16 left-0 right-0 z-40 md:hidden
+        className="fixed bottom-4 left-0 right-0 z-40 hidden md:block
                     backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
                     transition-all duration-300 shadow-lg"
       >
