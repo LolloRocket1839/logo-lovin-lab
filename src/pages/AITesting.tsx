@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { aiTestingQueries, TestResult } from "@/data/aiTestingQueries";
+import { AITestDbRow } from "@/types/aiTesting";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -77,23 +78,23 @@ export default function AITesting() {
     }
   };
 
-  const dbResultToAppResult = (db: any): TestResult => ({
+  const dbResultToAppResult = (db: AITestDbRow): TestResult => ({
     queryId: db.query_id,
     date: db.test_date,
     chatgpt: {
-      cited: db.chatgpt_cited,
+      cited: db.chatgpt_cited ?? false,
       context: db.chatgpt_context || "",
-      position: db.chatgpt_position || undefined
+      position: db.chatgpt_position ?? undefined
     },
     claude: {
-      cited: db.claude_cited,
+      cited: db.claude_cited ?? false,
       context: db.claude_context || "",
-      position: db.claude_position || undefined
+      position: db.claude_position ?? undefined
     },
     perplexity: {
-      cited: db.perplexity_cited,
+      cited: db.perplexity_cited ?? false,
       context: db.perplexity_context || "",
-      position: db.perplexity_position || undefined
+      position: db.perplexity_position ?? undefined
     },
     notes: db.notes || ""
   });
@@ -191,10 +192,11 @@ export default function AITesting() {
         title: "Report inviato!",
         description: "Controlla la tua email per il report settimanale di test.",
       });
-    } catch (error: any) {
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       toast({
         title: "Errore invio report",
-        description: error.message,
+        description: errorMessage,
         variant: "destructive",
       });
     }

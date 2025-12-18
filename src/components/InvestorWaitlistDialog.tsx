@@ -23,7 +23,7 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 
-const getInvestorWaitlistSchema = (t: any) => z.object({
+const getInvestorWaitlistSchema = (t: (key: string) => string) => z.object({
   name: z.string().trim().min(2, t("investorWaitlist.nameError")).max(100),
   email: z.string().email(t("investorWaitlist.emailError")).max(255),
   investment_budget: z.string().min(1, t("investorWaitlist.budgetError")),
@@ -31,12 +31,6 @@ const getInvestorWaitlistSchema = (t: any) => z.object({
     message: t("investorWaitlist.consentError"),
   }),
 });
-
-interface InvestorWaitlistDialogProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  guideType?: 'general' | 'torino';
-}
 
 interface InvestorWaitlistDialogProps {
   open: boolean;

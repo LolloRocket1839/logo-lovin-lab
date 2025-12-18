@@ -20,7 +20,7 @@ import {
   FormLabel,
 } from "@/components/ui/form";
 
-const getWaitlistSchema = (t: any) => z.object({
+const getWaitlistSchema = (t: (key: string) => string) => z.object({
   name: z.string().trim().min(2, t("waitlist.nameError")).max(100),
   email: z.string().email(t("waitlist.emailError")).max(255),
   university: z.string().optional(),

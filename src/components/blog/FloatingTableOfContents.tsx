@@ -1,6 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useMemo } from "react";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { cn } from "@/lib/utils";
 
 interface TOCItem {
@@ -14,16 +12,8 @@ interface FloatingTableOfContentsProps {
 }
 
 export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProps) => {
-  const prefersReducedMotion = useReducedMotion();
   const [activeId, setActiveId] = useState<string>("");
-  const { scrollYProgress } = useScroll();
-
-  // Show TOC after scrolling past hero, hide near footer
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.08, 0.85, 0.92],
-    [0, 1, 1, 0]
-  );
+  const [isVisible, setIsVisible] = useState(false);
 
   // Extract headings from markdown content
   const headings = useMemo(() => {
@@ -49,6 +39,18 @@ export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProp
     return items;
   }, [content]);
 
+  // Show/hide based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      setIsVisible(scrollPercent > 0.08 && scrollPercent < 0.92);
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Track active section via Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,10 +75,7 @@ export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProp
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ 
-        behavior: prefersReducedMotion ? 'auto' : 'smooth', 
-        block: 'start' 
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       window.history.pushState(null, '', `#${id}`);
     }
   };
@@ -85,9 +84,11 @@ export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProp
   if (headings.length === 0) return null;
 
   return (
-    <motion.nav
-      className="fixed left-6 top-1/2 -translate-y-1/2 z-30 hidden xl:block max-w-[200px]"
-      style={{ opacity: prefersReducedMotion ? 1 : opacity }}
+    <nav
+      className={cn(
+        "fixed left-6 top-1/2 -translate-y-1/2 z-30 hidden xl:block max-w-[200px] transition-opacity duration-300",
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+      )}
       aria-label="Table of contents"
     >
       <div className="relative pl-4 border-l border-border/50">
@@ -113,16 +114,14 @@ export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProp
         
         {/* Active indicator dot */}
         {activeId && (
-          <motion.div
-            className="absolute left-0 w-1.5 h-1.5 rounded-full bg-primary -translate-x-[3px]"
-            layoutId="toc-indicator"
+          <div
+            className="absolute left-0 w-1.5 h-1.5 rounded-full bg-primary -translate-x-[3px] transition-all duration-200"
             style={{
               top: `${headings.findIndex(h => h.id === activeId) * 28 + 6}px`
             }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           />
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
