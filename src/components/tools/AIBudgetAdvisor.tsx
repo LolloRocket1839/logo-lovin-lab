@@ -52,7 +52,8 @@ export const AIBudgetAdvisor = ({
   housingType,
   totalBudget,
   breakdown,
-  language
+  language,
+  savingTarget = 0
 }: AIBudgetAdvisorProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [advice, setAdvice] = useState<BudgetAdvice | null>(null);
@@ -76,7 +77,8 @@ export const AIBudgetAdvisor = ({
             housingType,
             totalBudget,
             breakdown,
-            language
+            language,
+            savingTarget
           }),
         }
       );

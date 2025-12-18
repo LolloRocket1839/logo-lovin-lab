@@ -28,6 +28,7 @@ import {
 import { AIBudgetAdvisor } from "@/components/tools/AIBudgetAdvisor";
 import { RentPriceHistory } from "@/components/tools/RentPriceHistory";
 import { BudgetShareExport } from "@/components/tools/BudgetShareExport";
+import { NeighborhoodRadarChart } from "@/components/tools/NeighborhoodRadarChart";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -1010,6 +1011,14 @@ const BudgetCalculator = () => {
                   onAreaChange={setSelectedArea}
                 />
 
+                {/* Neighborhood Radar Comparison */}
+                <NeighborhoodRadarChart
+                  selectedArea={selectedArea}
+                  housingType={housingType}
+                  language={currentLang}
+                  onAreaChange={setSelectedArea}
+                />
+
                 {/* AI Budget Advisor */}
                 <AIBudgetAdvisor
                   selectedArea={selectedArea}
@@ -1025,6 +1034,7 @@ const BudgetCalculator = () => {
                     extra: extras[0] + (mode === "advanced" ? gym[0] + subscriptions[0] + studyMaterials[0] : 0)
                   }}
                   language={currentLang}
+                  savingTarget={savingTarget[0]}
                 />
 
                 {/* CTA */}
