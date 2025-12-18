@@ -46,7 +46,7 @@ const InvestInfographic = () => {
         {/* Jungle Rent */}
         <div className="flex flex-col items-center">
           <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center p-4">
-            <img src={jungleRentLogo} alt="Jungle Rent" className="w-full h-full object-contain" />
+            <img src={jungleRentLogo} alt="Jungle Rent" className="w-full h-full object-contain" loading="lazy" decoding="async" />
           </div>
           <span className="mt-3 text-sm md:text-base font-semibold text-foreground">Jungle Rent</span>
         </div>
@@ -70,7 +70,7 @@ const AcquireInfographic = () => {
         {/* Jungle Rent */}
         <div className="flex flex-col items-center">
           <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center p-4">
-            <img src={jungleRentLogo} alt="Jungle Rent" className="w-full h-full object-contain" />
+            <img src={jungleRentLogo} alt="Jungle Rent" className="w-full h-full object-contain" loading="lazy" decoding="async" />
           </div>
           <span className="mt-3 text-sm md:text-base font-semibold text-foreground">Jungle Rent</span>
         </div>

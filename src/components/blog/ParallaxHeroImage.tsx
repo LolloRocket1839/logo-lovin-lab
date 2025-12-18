@@ -1,17 +1,20 @@
+import { OptimizedImage } from "@/components/OptimizedImage";
+
 interface ParallaxHeroImageProps {
   src: string;
   alt: string;
+  priority?: boolean;
 }
 
-export const ParallaxHeroImage = ({ src, alt }: ParallaxHeroImageProps) => {
+export const ParallaxHeroImage = ({ src, alt, priority = true }: ParallaxHeroImageProps) => {
   return (
     <div className="aspect-video rounded-xl overflow-hidden mb-12">
-      <img
+      <OptimizedImage
         src={src}
         alt={alt}
         className="w-full h-full object-cover"
-        loading="eager"
-        fetchPriority="high"
+        priority={priority}
+        sizes="(max-width: 768px) 100vw, 80vw"
       />
     </div>
   );
