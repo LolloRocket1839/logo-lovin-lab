@@ -958,7 +958,6 @@ const BudgetCalculator = () => {
                   selectedArea={selectedArea}
                   language={currentLang}
                   onApplyScenario={(changes) => {
-                    if (changes.housingType) setHousingType(changes.housingType);
                     if (changes.groceries !== undefined) setGroceries([changes.groceries]);
                     if (changes.gym !== undefined) setGym([changes.gym]);
                   }}
