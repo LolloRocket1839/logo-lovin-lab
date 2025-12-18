@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Building2, Users, TrendingUp, Award, MapPin, Mail, Phone } from "lucide-react";
+import BusinessCycleInfographic from "@/components/BusinessCycleInfographic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CONTACTS, openWhatsApp, openEmail, MESSAGES } from "@/lib/contacts";
@@ -147,6 +148,9 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* Business Model Cycle Section */}
+        <BusinessCycleInfographic />
 
         {/* Services Section */}
         <section className="mb-16">
