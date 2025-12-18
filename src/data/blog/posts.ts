@@ -2543,6 +2543,61 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     }
+  },
+  {
+    slug: "cicloturismo-avanzato-torino",
+    category: "turisti",
+    date: "2025-12-18",
+    author: "Jungle Rent",
+    image: "/images/cicloturismo-avanzato-torino.jpg",
+    readTime: 35,
+    content: "cicloturismo-avanzato-torino",
+    translations: {
+      it: {
+        title: "Cicloturismo avanzato a Torino: pedalare oltre i confini urbani",
+        excerpt: "Guida completa a 290 km di percorsi ciclabili, e-bike tours, bike packing, ciclocamping e la vivace comunità cicloattivista torinese. 28 fonti.",
+        seo: {
+          title: "Cicloturismo avanzato a Torino: 290 km di percorsi, e-bike tours e bike packing | Jungle Rent",
+          description: "Guida completa al cicloturismo a Torino: 290 km di piste ciclabili, noleggio e-bike, itinerari multitappa, bike packing in Piemonte e comunità cicloattivista. 28 fonti.",
+          keywords: ["cicloturismo torino", "piste ciclabili torino", "e-bike torino", "bike packing piemonte", "noleggio bici torino", "ciclovia vento", "critical mass torino", "fiab torino"]
+        },
+        tags: ["Cicloturismo", "E-bike", "Bike Packing", "Piste Ciclabili", "Torino", "Mobilità Sostenibile"],
+        faqs: [
+          { question: "Quanti chilometri di piste ciclabili ci sono a Torino?", answer: "Torino dispone di 290 km di percorsi ciclabili pianificati e realizzati, suddivisi in corsie ciclabili, percorsi ciclo-pedonali e tracciati nel verde che collegano centro storico, collina, fiumi e province limitrofe." },
+          { question: "Dove posso noleggiare una e-bike a Torino?", answer: "I principali servizi sono Duma c'anduma (35-50€/giorno, tour guidati), Mobilitas Rent (40-60€/giorno, diverse tipologie), BikeSquare (30-45€/giorno, app dedicata) e TO-BIKE per bike sharing urbano (25€/anno)." },
+          { question: "È possibile fare bike packing in Piemonte?", answer: "Sì, il Piemonte permette il campeggio libero per massimo 2 giorni con comunicazione al Sindaco 24 ore prima. Il bivacco notturno singolo è ancora più permissivo, ideale per cicloturisti." },
+          { question: "Quali sono i migliori percorsi ciclabili a Torino?", answer: "I principali sono: Anello Verde dei Parchi (17 km facile), Ciclovia del Po (25-100 km medio), Corona di Delizie verso residenze sabaude (40-60 km), salita a Superga (25 km impegnativo) e Ciclovia VENTO verso Milano." },
+          { question: "Come funziona il campeggio libero per cicloturisti in Piemonte?", answer: "È consentito per massimo 2 giorni fuori da campeggi autorizzati, con comunicazione al Sindaco 24 ore prima. Esistono anche ostelli cicloturistici (15-25€), aziende agricole bike-friendly e bivacchi autorizzati." },
+          { question: "Esistono tour e-bike organizzati a Torino?", answer: "Sì, Duma c'anduma offre tour guidati con e-bike trekking (autonomia 50-100 km), consegna gratuita entro 20 km e percorsi GPS scaricabili. Anche BikeSquare propone tour organizzati con app dedicata." },
+          { question: "Cos'è la Critical Mass di Torino?", answer: "È un evento informale di attivismo ciclistico che si tiene l'ultimo venerdì del mese, dove centinaia di ciclisti occupano le strade per rivendicare visibilità e spazio urbano. Opera in zona grigia legale ma rappresenta la subcultura cicloattivista torinese." },
+          { question: "Quali itinerari multitappa si possono fare da Torino in bicicletta?", answer: "I principali sono: Corona di Delizie (2-3 giorni verso residenze sabaude), Valle del Po verso Asti o Vercelli, Ciclovia VENTO verso Venezia, e percorsi verso le Langhe. Mancano però guide editoriali strutturate." },
+          { question: "Dove posso trovare comunità cicloattiviste a Torino?", answer: "FIAB Torino con il gruppo 'Pedaliamo Insieme' (60+ membri, uscite ogni mercoledì), Bici & Dintorni (150+ iniziative annuali, attiva dagli anni '80), e la Critical Mass informale l'ultimo venerdì del mese." },
+          { question: "Torino è una buona destinazione per il cicloturismo?", answer: "Sì, Torino ha infrastrutture eccellenti (290 km percorsi), posizione strategica tra Alpi e pianura, accesso a Langhe e territori enogastronomici, e comunità cicloattivista vibrante. Il gap principale è nella comunicazione editoriale, non nell'infrastruttura." }
+        ]
+      },
+      en: {
+        title: "Advanced cycle tourism in Turin: pedaling beyond urban borders",
+        excerpt: "Complete guide to 290 km of cycling paths, e-bike tours, bike packing, cycle camping, and Turin's vibrant cycling activist community. 28 sources.",
+        seo: {
+          title: "Advanced cycle tourism in Turin: 290 km of paths, e-bike tours and bike packing | Jungle Rent",
+          description: "Complete guide to cycle tourism in Turin: 290 km of bike paths, e-bike rental, multi-stage itineraries, bike packing in Piedmont and cycling activist community. 28 sources.",
+          keywords: ["cycle tourism turin", "bike paths turin", "e-bike turin", "bike packing piedmont", "bike rental turin", "vento cycleway", "critical mass turin", "fiab turin"]
+        },
+        tags: ["Cycle Tourism", "E-bike", "Bike Packing", "Bike Paths", "Turin", "Sustainable Mobility"],
+        faqs: [
+          { question: "How many kilometers of bike paths are there in Turin?", answer: "Turin has 290 km of planned and realized cycling paths, divided into cycle lanes, cycle-pedestrian routes, and green trails connecting the historic center, hills, rivers, and surrounding provinces." },
+          { question: "Where can I rent an e-bike in Turin?", answer: "Main services are Duma c'anduma (€35-50/day, guided tours), Mobilitas Rent (€40-60/day, various types), BikeSquare (€30-45/day, dedicated app), and TO-BIKE for urban bike sharing (€25/year)." },
+          { question: "Is bike packing possible in Piedmont?", answer: "Yes, Piedmont allows free camping for up to 2 days with notice to the Mayor 24 hours in advance. Single night bivouac is even more permissive, ideal for cycle tourists." },
+          { question: "What are the best cycling routes in Turin?", answer: "Main routes are: Anello Verde dei Parchi (17 km easy), Po River Cycleway (25-100 km medium), Corona di Delizie to Savoy residences (40-60 km), Superga climb (25 km challenging), and VENTO Cycleway to Milan." },
+          { question: "How does free camping work for cycle tourists in Piedmont?", answer: "It's allowed for up to 2 days outside authorized campgrounds, with notice to the Mayor 24 hours before. There are also cycle tourism hostels (€15-25), bike-friendly farms, and authorized bivouacs." },
+          { question: "Are there organized e-bike tours in Turin?", answer: "Yes, Duma c'anduma offers guided tours with trekking e-bikes (50-100 km range), free delivery within 20 km, and downloadable GPS routes. BikeSquare also offers organized tours with a dedicated app." },
+          { question: "What is Turin's Critical Mass?", answer: "It's an informal cycling activism event held the last Friday of the month, where hundreds of cyclists occupy streets to claim visibility and urban space. It operates in a legal gray zone but represents Turin's cycling activist subculture." },
+          { question: "What multi-stage itineraries can be done from Turin by bicycle?", answer: "Main ones are: Crown of Delights (2-3 days to Savoy residences), Po Valley to Asti or Vercelli, VENTO Cycleway to Venice, and routes to the Langhe. However, structured editorial guides are lacking." },
+          { question: "Where can I find cycling activist communities in Turin?", answer: "FIAB Turin with the 'Pedaliamo Insieme' group (60+ members, outings every Wednesday), Bici & Dintorni (150+ annual initiatives, active since the '80s), and the informal Critical Mass the last Friday of the month." },
+          { question: "Is Turin a good destination for cycle tourism?", answer: "Yes, Turin has excellent infrastructure (290 km paths), strategic location between Alps and plain, access to Langhe and food/wine territories, and vibrant cycling activist community. The main gap is in editorial communication, not infrastructure." }
+        ]
+      }
+    }
   }
 ];
 
