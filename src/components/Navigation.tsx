@@ -105,6 +105,7 @@ export const Navigation = () => {
     { label: t("nav.investors"), id: "investor-section", path: undefined },
     { label: t("nav.sell"), id: "seller-section", path: undefined },
     { label: t("nav.blog"), id: undefined, path: "/blog" },
+    { label: t("nav.faq"), id: undefined, path: "/faq" },
   ];
 
   return (
