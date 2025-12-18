@@ -1174,5 +1174,10 @@
     "example3": "Come funziona l'investimento Jungle Rent?",
     "followUp": "Domande correlate",
     "poweredBy": "Powered by"
+  },
+  "homeFaq": {
+    "title": "Domande frequenti",
+    "subtitle": "Le risposte alle domande più comuni degli investitori",
+    "viewAll": "Vedi tutte le FAQ"
   }
 }
