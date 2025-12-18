@@ -17,6 +17,7 @@ interface BudgetRequest {
     extra: number;
   };
   language: "it" | "en";
+  savingTarget?: number;
 }
 
 serve(async (req) => {
@@ -25,14 +26,14 @@ serve(async (req) => {
   }
 
   try {
-    const { selectedArea, housingType, totalBudget, breakdown, language = "it" }: BudgetRequest = await req.json();
+    const { selectedArea, housingType, totalBudget, breakdown, language = "it", savingTarget = 0 }: BudgetRequest = await req.json();
     
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
-    console.log("Analyzing budget for:", { selectedArea, housingType, totalBudget, breakdown });
+    console.log("Analyzing budget for:", { selectedArea, housingType, totalBudget, breakdown, savingTarget });
 
     const systemPrompt = language === "it" 
       ? `Sei un esperto consulente per studenti universitari che vivono a Torino. Conosci perfettamente:
@@ -54,45 +55,51 @@ IMPORTANTE: Rispondi SOLO usando la funzione suggest_budget_tips, non aggiungere
 Analyze the provided budget and give practical, Turin-specific advice. Be concise but helpful.
 IMPORTANT: Respond ONLY using the suggest_budget_tips function, don't add any other text.`;
 
+    const savingInfo = savingTarget > 0 
+      ? (language === "it" 
+          ? `\nObiettivo risparmio: €${savingTarget}/mese (reddito necessario: €${totalBudget + savingTarget})`
+          : `\nSaving goal: €${savingTarget}/month (required income: €${totalBudget + savingTarget})`)
+      : '';
+
     const userPrompt = language === "it"
-      ? `Analizza questo budget mensile per uno studente a Torino:
+      ? `Analizza questo budget mensile dettagliato per uno studente a Torino:
 
 Quartiere: ${selectedArea}
 Tipo alloggio: ${housingType === "shared" ? "Stanza doppia" : housingType === "single" ? "Stanza singola" : "Monolocale"}
-Budget totale: €${totalBudget}/mese
+Budget totale: €${totalBudget}/mese${savingInfo}
 
 Dettaglio spese:
 - Affitto: €${breakdown.affitto}
-- Bollette + Internet: €${breakdown.bollette}
+- Bollette (elettricità, gas, acqua, internet): €${breakdown.bollette}
 - Trasporti: €${breakdown.trasporti}
-- Spesa alimentare: €${breakdown.spesa}
-- Extra (uscite, hobby): €${breakdown.extra}
+- Alimentazione (spesa + mangiare fuori): €${breakdown.spesa}
+- Extra (studio, palestra, abbonamenti, uscite): €${breakdown.extra}
 
 Genera:
-1. Un breve sommario (max 40 parole) sulla sostenibilità del budget
-2. 3-4 consigli specifici per Torino (mercati, mense, sconti studenti, etc.)
-3. 1-2 quartieri alternativi con stima del risparmio mensile
-4. Eventuali avvisi se qualche voce di spesa sembra troppo bassa o alta
-5. 2-3 articoli correlati dal blog Jungle Rent (usa questi slug: san-salvario-guida-studenti, dove-mangiare-torino-studenti, mercati-storici-torino-chiusure, mobilita-sostenibile-torino-studenti, aule-studio-torino-guida-completa)`
-      : `Analyze this monthly budget for a student in Turin:
+1. Un breve sommario (max 40 parole) sulla sostenibilità del budget considerando la stagione attuale
+2. 3-4 consigli specifici per Torino basati sulle voci di spesa (mercati, mense EDISU, sconti studenti, borse di studio)
+3. 1-2 quartieri alternativi più economici con stima del risparmio
+4. Eventuali avvisi se qualche voce sembra troppo alta o bassa per uno studente
+5. 2-3 articoli correlati dal blog (slug disponibili: san-salvario-guida-studenti, dove-mangiare-torino-studenti, mercati-storici-torino-chiusure, mobilita-sostenibile-torino-studenti, aule-studio-torino-guida-completa, guida-volontariato-torino)`
+      : `Analyze this detailed monthly budget for a student in Turin:
 
 Neighborhood: ${selectedArea}
 Housing type: ${housingType === "shared" ? "Shared room" : housingType === "single" ? "Single room" : "Studio apartment"}
-Total budget: €${totalBudget}/month
+Total budget: €${totalBudget}/month${savingInfo}
 
 Expense breakdown:
 - Rent: €${breakdown.affitto}
-- Utilities + Internet: €${breakdown.bollette}
+- Utilities (electricity, gas, water, internet): €${breakdown.bollette}
 - Transport: €${breakdown.trasporti}
-- Groceries: €${breakdown.spesa}
-- Extras (going out, hobbies): €${breakdown.extra}
+- Food (groceries + eating out): €${breakdown.spesa}
+- Extras (study, gym, subscriptions, going out): €${breakdown.extra}
 
 Generate:
-1. A brief summary (max 40 words) about budget sustainability
-2. 3-4 Turin-specific tips (markets, canteens, student discounts, etc.)
-3. 1-2 alternative neighborhoods with estimated monthly savings
-4. Any warnings if expenses seem too low or high
-5. 2-3 related articles from Jungle Rent blog (use these slugs: san-salvario-guida-studenti, dove-mangiare-torino-studenti, mercati-storici-torino-chiusure, mobilita-sostenibile-torino-studenti, aule-studio-torino-guida-completa)`;
+1. A brief summary (max 40 words) about budget sustainability considering current season
+2. 3-4 Turin-specific tips based on expense categories (markets, EDISU canteens, student discounts, scholarships)
+3. 1-2 cheaper alternative neighborhoods with estimated savings
+4. Any warnings if expenses seem too high or low for a student
+5. 2-3 related blog articles (available slugs: san-salvario-guida-studenti, dove-mangiare-torino-studenti, mercati-storici-torino-chiusure, mobilita-sostenibile-torino-studenti, aule-studio-torino-guida-completa, guida-volontariato-torino)`;
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",

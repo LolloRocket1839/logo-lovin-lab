@@ -38,6 +38,7 @@ interface AIBudgetAdvisorProps {
     extra: number;
   };
   language: "it" | "en";
+  savingTarget?: number;
 }
 
 const tipIcons = {
