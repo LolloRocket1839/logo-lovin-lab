@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Lightbulb, Users, UtensilsCrossed, Dumbbell, TrendingDown, Check, ArrowRight } from "lucide-react";
+import { Lightbulb, Users, UtensilsCrossed, Dumbbell, TrendingDown, Check, ArrowRight, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Button } from "@/components/ui/button";
@@ -29,10 +29,22 @@ const translations = {
     perYear: "/anno",
     apply: "Applica modifiche",
     applied: "Modifiche applicate!",
-    roommate: {
-      title: "Trovi un coinquilino",
-      description: "Dividi affitto e bollette con un compagno",
-      tip: "Cerca su gruppi Facebook 'Cerco coinquilino Torino'"
+    housingScenario: {
+      single: {
+        title: "Passa a stanza doppia",
+        description: "Condividi la camera con un altro studente",
+        tip: "Le doppie costano circa 30% in meno delle singole"
+      },
+      studio: {
+        title: "Passa a stanza in appartamento",
+        description: "Lascia il monolocale e cerca una stanza singola",
+        tip: "Una singola costa €150-200 in meno al mese"
+      },
+      shared: {
+        title: "Già in stanza condivisa",
+        description: "Stai già risparmiando con la doppia!",
+        tip: ""
+      }
     },
     mensa: {
       title: "Pranzi in mensa EDISU",
@@ -45,8 +57,9 @@ const translations = {
       tip: "Palestre universitarie + corsi fitness inclusi"
     },
     notApplicable: "Non applicabile",
-    alreadyShared: "Già in stanza doppia",
-    noGym: "Nessun costo palestra"
+    alreadyOptimal: "Già ottimizzato",
+    noGym: "Nessun costo palestra",
+    warning: "Richiede cambiare alloggio"
   },
   en: {
     title: '"What if...?" Scenario Simulator',
@@ -56,10 +69,22 @@ const translations = {
     perYear: "/year",
     apply: "Apply changes",
     applied: "Changes applied!",
-    roommate: {
-      title: "Find a roommate",
-      description: "Split rent and utilities with a flatmate",
-      tip: "Search on Facebook groups 'Cerco coinquilino Torino'"
+    housingScenario: {
+      single: {
+        title: "Switch to shared room",
+        description: "Share the bedroom with another student",
+        tip: "Shared rooms cost about 30% less than singles"
+      },
+      studio: {
+        title: "Move to shared apartment",
+        description: "Leave the studio and find a single room",
+        tip: "A single room costs €150-200 less per month"
+      },
+      shared: {
+        title: "Already in shared room",
+        description: "You're already saving with a shared room!",
+        tip: ""
+      }
     },
     mensa: {
       title: "Eat at EDISU canteen",
@@ -72,8 +97,9 @@ const translations = {
       tip: "University gyms + fitness classes included"
     },
     notApplicable: "Not applicable",
-    alreadyShared: "Already in shared room",
-    noGym: "No gym cost"
+    alreadyOptimal: "Already optimal",
+    noGym: "No gym cost",
+    warning: "Requires changing accommodation"
   }
 };
 
@@ -88,17 +114,26 @@ export const WhatIfSimulator = ({
 }: WhatIfSimulatorProps) => {
   const t = translations[language];
   
-  const [roommateActive, setRoommateActive] = useState(false);
+  const [housingActive, setHousingActive] = useState(false);
   const [mensaActive, setMensaActive] = useState(false);
   const [gymActive, setGymActive] = useState(false);
   const [applied, setApplied] = useState(false);
+  
+  // Get housing scenario text based on current type
+  const housingScenario = t.housingScenario[housingType];
 
-  // Calculate savings for each scenario
-  const roommateSavings = useMemo(() => {
-    // Only applicable if single or studio
-    if (housingType === "shared") return 0;
-    // Roughly 30% savings by switching to shared room
-    return Math.round(currentRent * 0.3);
+  // Calculate savings for each housing scenario
+  const housingSavings = useMemo(() => {
+    if (housingType === "shared") return 0; // Already optimal
+    if (housingType === "single") {
+      // Single → Shared room: ~30% savings
+      return Math.round(currentRent * 0.3);
+    }
+    if (housingType === "studio") {
+      // Studio → Single room: ~€150-200 savings (studio typically €500-600, single €350-400)
+      return Math.round(currentRent * 0.35);
+    }
+    return 0;
   }, [currentRent, housingType]);
 
   const mensaSavings = 90; // Fixed estimate: 20 meals × €4.50 saved
@@ -108,20 +143,21 @@ export const WhatIfSimulator = ({
   // Total active savings
   const totalSavings = useMemo(() => {
     let total = 0;
-    if (roommateActive && housingType !== "shared") total += roommateSavings;
+    if (housingActive && housingType !== "shared") total += housingSavings;
     if (mensaActive) total += mensaSavings;
     if (gymActive && currentGym > 0) total += gymSavings;
     return total;
-  }, [roommateActive, mensaActive, gymActive, roommateSavings, mensaSavings, gymSavings, housingType, currentGym]);
+  }, [housingActive, mensaActive, gymActive, housingSavings, mensaSavings, gymSavings, housingType, currentGym]);
 
-  const canApplyRoommate = housingType !== "shared";
+  const canApplyHousing = housingType !== "shared";
   const canApplyGym = currentGym > 0;
 
   const handleApply = () => {
     const changes: Parameters<typeof onApplyScenario>[0] = {};
     
-    if (roommateActive && canApplyRoommate) {
-      changes.housingType = "shared";
+    if (housingActive && canApplyHousing) {
+      // Single → Shared, Studio → Single
+      changes.housingType = housingType === "single" ? "shared" : "single";
     }
     if (mensaActive) {
       changes.groceries = Math.max(100, currentGroceries - mensaSavings);
@@ -137,16 +173,17 @@ export const WhatIfSimulator = ({
 
   const scenarios = [
     {
-      id: "roommate",
+      id: "housing",
       icon: Users,
-      title: t.roommate.title,
-      description: t.roommate.description,
-      tip: t.roommate.tip,
-      savings: roommateSavings,
-      active: roommateActive,
-      setActive: setRoommateActive,
-      applicable: canApplyRoommate,
-      disabledReason: t.alreadyShared
+      title: housingScenario.title,
+      description: housingScenario.description,
+      tip: housingScenario.tip,
+      savings: housingSavings,
+      active: housingActive,
+      setActive: setHousingActive,
+      applicable: canApplyHousing,
+      disabledReason: t.alreadyOptimal,
+      showWarning: canApplyHousing
     },
     {
       id: "mensa",
@@ -158,7 +195,8 @@ export const WhatIfSimulator = ({
       active: mensaActive,
       setActive: setMensaActive,
       applicable: true,
-      disabledReason: null
+      disabledReason: null,
+      showWarning: false
     },
     {
       id: "gym",
@@ -170,7 +208,8 @@ export const WhatIfSimulator = ({
       active: gymActive,
       setActive: setGymActive,
       applicable: canApplyGym,
-      disabledReason: t.noGym
+      disabledReason: t.noGym,
+      showWarning: false
     }
   ];
 
@@ -243,13 +282,23 @@ export const WhatIfSimulator = ({
                     <p className="text-xs text-muted-foreground mt-0.5">
                       {scenario.description}
                     </p>
-                    {scenario.active && scenario.applicable && (
+                    {scenario.active && scenario.applicable && scenario.tip && (
                       <motion.p
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         className="text-xs text-amber-600 mt-1.5"
                       >
                         💡 {scenario.tip}
+                      </motion.p>
+                    )}
+                    {scenario.showWarning && scenario.active && (
+                      <motion.p
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        className="text-xs text-orange-500 mt-1 flex items-center gap-1"
+                      >
+                        <AlertTriangle className="w-3 h-3" />
+                        {t.warning}
                       </motion.p>
                     )}
                   </div>
