@@ -203,6 +203,69 @@ export type Database = {
         }
         Relationships: []
       }
+      push_subscriptions: {
+        Row: {
+          areas: string[] | null
+          auth_key: string
+          created_at: string | null
+          endpoint: string
+          id: string
+          p256dh_key: string
+        }
+        Insert: {
+          areas?: string[] | null
+          auth_key: string
+          created_at?: string | null
+          endpoint: string
+          id?: string
+          p256dh_key: string
+        }
+        Update: {
+          areas?: string[] | null
+          auth_key?: string
+          created_at?: string | null
+          endpoint?: string
+          id?: string
+          p256dh_key?: string
+        }
+        Relationships: []
+      }
+      rent_price_history: {
+        Row: {
+          area_name: string
+          avg_rent: number | null
+          created_at: string | null
+          fetched_at: string | null
+          id: string
+          max_rent: number
+          min_rent: number
+          source: string | null
+          year: number
+        }
+        Insert: {
+          area_name: string
+          avg_rent?: number | null
+          created_at?: string | null
+          fetched_at?: string | null
+          id?: string
+          max_rent: number
+          min_rent: number
+          source?: string | null
+          year: number
+        }
+        Update: {
+          area_name?: string
+          avg_rent?: number | null
+          created_at?: string | null
+          fetched_at?: string | null
+          id?: string
+          max_rent?: number
+          min_rent?: number
+          source?: string | null
+          year?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       ab_test_results: {

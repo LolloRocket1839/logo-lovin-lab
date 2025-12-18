@@ -20,3 +20,6 @@ verify_jwt = false
 
 [functions.budget-advisor]
 verify_jwt = false
+
+[functions.rent-prices-update]
+verify_jwt = false
