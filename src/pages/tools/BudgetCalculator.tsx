@@ -26,6 +26,7 @@ import {
   Lightbulb
 } from "lucide-react";
 import { AIBudgetAdvisor } from "@/components/tools/AIBudgetAdvisor";
+import { RentPriceHistory } from "@/components/tools/RentPriceHistory";
 import { BudgetShareExport } from "@/components/tools/BudgetShareExport";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -1002,6 +1003,12 @@ const BudgetCalculator = () => {
                     </div>
                   </CardContent>
                 </Card>
+
+                {/* Rent Price History Dashboard */}
+                <RentPriceHistory 
+                  selectedArea={selectedArea}
+                  onAreaChange={setSelectedArea}
+                />
 
                 {/* AI Budget Advisor */}
                 <AIBudgetAdvisor
