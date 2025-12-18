@@ -483,13 +483,20 @@ serve(async (req) => {
 
     console.log('Searching for:', query.substring(0, 100));
 
+    // Detect if this is a price/cost query - always use Perplexity for these
+    const normalizedQuery = query.toLowerCase();
+    const isPriceQuery = /quanto|costo|prezzo|€|euro|affitto.*medio|media.*affitt|price|cost|how much|rent.*average|average.*rent/i.test(query);
+    console.log('Is price query:', isPriceQuery);
+
     // Step 1: Search local Jungle Rent content first
     const { results: localResults, topScore } = searchLocalContent(query, language);
     console.log('Local search results:', localResults.length, 'Top score:', topScore);
 
-    // If we have high-confidence local results, use them
-    if (topScore >= 0.6 && localResults.length > 0) {
-      console.log('Using Jungle Rent content (high confidence)');
+    // Use local content only if:
+    // 1. High confidence match (>= 0.8) AND
+    // 2. NOT a price query (price queries always go to Perplexity for fresh data)
+    if (topScore >= 0.8 && localResults.length > 0 && !isPriceQuery) {
+      console.log('Using Jungle Rent content (high confidence, non-price query)');
       
       const answer = generateLocalAnswer(localResults, query, language);
       const articles = localResults.slice(0, 3).map(r => ({
@@ -562,16 +569,30 @@ serve(async (req) => {
     const systemPrompt = language === 'it' 
       ? `Sei l'assistente AI di Jungle Rent, specializzato in affitti studenteschi e investimenti immobiliari a Torino.
          
-         ISTRUZIONI:
+         ISTRUZIONI IMPORTANTI:
          - Rispondi sempre in italiano
-         - Fornisci informazioni accurate e aggiornate su Torino
-         - Concentrati su: mercato immobiliare, zone universitarie, prezzi affitti, investimenti
-         - Se non sei sicuro, dillo chiaramente
-         - Mantieni le risposte concise ma complete (max 200 parole)
-         - Cita sempre le fonti quando possibile
+         - Fornisci informazioni SPECIFICHE e NUMERICHE, non generiche
+         
+         PER DOMANDE SUI PREZZI/COSTI:
+         - Fornisci SEMPRE cifre specifiche in euro (es. "€350-450/mese")
+         - Per ogni quartiere, specifica i prezzi per tipo di alloggio:
+           * Stanza singola: €XXX-YYY/mese
+           * Posto letto in doppia: €XXX-YYY/mese
+           * Bilocale: €XXX-YYY/mese
+         - Usa dati 2024-2025 da immobiliare.it, idealista.it
+         
+         QUARTIERI TORINO CON DISTANZE DAL POLITECNICO:
+         - Cenisia: a 5 min a piedi dal Politecnico
+         - Cit Turin: a 10 min in bici
+         - San Paolo: 15 min metro
+         - Crocetta: 10 min tram (zona più costosa)
+         - San Salvario: 15 min bici (quartiere vivace)
+         - Vanchiglia: 20 min bici (vicino UniTo)
+         - Aurora: 10 min metro (prezzi più bassi)
          
          FORMATO RISPOSTA:
-         Alla fine della tua risposta, aggiungi SEMPRE una sezione con 3 domande di follow-up correlate nel formato:
+         - Mantieni le risposte concise ma complete (max 250 parole)
+         - Alla fine, aggiungi SEMPRE 3 domande di follow-up nel formato:
          
          ---FOLLOWUP---
          1. [Domanda correlata 1]
@@ -579,16 +600,30 @@ serve(async (req) => {
          3. [Domanda correlata 3]`
       : `You are Jungle Rent's AI assistant, specializing in student housing and real estate investments in Turin, Italy.
          
-         INSTRUCTIONS:
+         IMPORTANT INSTRUCTIONS:
          - Always respond in English
-         - Provide accurate, up-to-date information about Turin
-         - Focus on: real estate market, university areas, rent prices, investments
-         - If unsure, clearly state so
-         - Keep responses concise but complete (max 200 words)
-         - Always cite sources when possible
+         - Provide SPECIFIC and NUMERICAL information, not generic answers
+         
+         FOR PRICE/COST QUESTIONS:
+         - ALWAYS provide specific figures in euros (e.g., "€350-450/month")
+         - For each neighborhood, specify prices by accommodation type:
+           * Single room: €XXX-YYY/month
+           * Bed in shared room: €XXX-YYY/month
+           * One-bedroom apartment: €XXX-YYY/month
+         - Use 2024-2025 data from immobiliare.it, idealista.it
+         
+         TURIN NEIGHBORHOODS WITH DISTANCES FROM POLITECNICO:
+         - Cenisia: 5 min walk from Politecnico
+         - Cit Turin: 10 min by bike
+         - San Paolo: 15 min by metro
+         - Crocetta: 10 min by tram (more expensive area)
+         - San Salvario: 15 min by bike (lively neighborhood)
+         - Vanchiglia: 20 min by bike (near UniTo)
+         - Aurora: 10 min by metro (lower prices)
          
          RESPONSE FORMAT:
-         At the end of your response, ALWAYS add a section with 3 related follow-up questions in this format:
+         - Keep responses concise but complete (max 250 words)
+         - At the end, ALWAYS add 3 follow-up questions in this format:
          
          ---FOLLOWUP---
          1. [Related question 1]

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Search, ExternalLink, Loader2, AlertCircle, MessageCircle, BookOpen, Globe, ArrowRight } from "lucide-react";
+import { Search, ExternalLink, Loader2, AlertCircle, MessageCircle, BookOpen, Globe, ArrowRight, Sparkles, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
@@ -183,8 +183,8 @@ export const AISearchBox = () => {
       {/* Response */}
       {response && (
         <div className="mt-6 space-y-4">
-          {/* Source Badge */}
-          <div className="flex items-center gap-2">
+          {/* Source Badge with Updated Data Indicator */}
+          <div className="flex flex-wrap items-center gap-2">
             <span className={`inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full ${
               isJungleRent 
                 ? 'bg-primary/10 text-primary border border-primary/20' 
@@ -197,6 +197,13 @@ export const AISearchBox = () => {
               )}
               {sourceLabel}
             </span>
+            {/* Fresh Data Badge - only for Perplexity responses */}
+            {!isJungleRent && (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                <Sparkles className="h-3 w-3" />
+                {i18n.language.startsWith('it') ? 'Dati aggiornati 2025' : 'Updated data 2025'}
+              </span>
+            )}
           </div>
 
           {/* Answer */}
