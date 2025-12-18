@@ -107,8 +107,8 @@ export const AISearchBox = () => {
     <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-accent/5 rounded-2xl p-6 sm:p-8 border border-primary/20">
       <div className="flex items-center justify-between gap-3 mb-4">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-primary/10 rounded-lg">
-            <Sparkles className="h-5 w-5 text-primary" />
+          <div className="p-2 bg-[#1a7b7b] rounded-lg">
+            <img src={perplexityLogo} alt="AI" className="h-5 w-5" />
           </div>
           <div>
             <h3 className="text-lg sm:text-xl font-semibold">{t("aiSearch.title")}</h3>
