@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 
 // Lazy load below-the-fold components
-const HorizontalValueJourney = lazy(() => import("@/components/innovative/HorizontalValueJourney").then(m => ({ default: m.HorizontalValueJourney })));
+import BusinessCycleInfographic from "@/components/BusinessCycleInfographic";
 const VideoSection = lazy(() => import("@/components/VideoSection").then(m => ({ default: m.VideoSection })));
 const ProblemSection = lazy(() => import("@/components/ProblemSection").then(m => ({ default: m.ProblemSection })));
 const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
@@ -100,11 +100,12 @@ const Index = () => {
       
       <TrustBadge />
       
+      {/* Business Cycle Infographic - How it works */}
+      <div id="how-it-works">
+        <BusinessCycleInfographic />
+      </div>
+
       <Suspense fallback={<div className="min-h-[200px]" />}>
-        {/* Horizontal Value Journey - Desktop only */}
-        <div className="hidden md:block">
-          <HorizontalValueJourney />
-        </div>
         
         {/* Video Explainer Section */}
         <VideoSection />
