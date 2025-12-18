@@ -59,31 +59,58 @@ export const BudgetShareExport = ({
   const generatePDF = () => {
     const doc = new jsPDF();
     const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
     
-    // Header
-    doc.setFillColor(34, 139, 34); // Forest green
-    doc.rect(0, 0, pageWidth, 40, "F");
+    // === HEADER con gradiente verde ===
+    doc.setFillColor(22, 101, 52); // primary green
+    doc.rect(0, 0, pageWidth, 50, "F");
     
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(22);
+    // Logo placeholder (cerchio con JR)
+    doc.setFillColor(255, 255, 255);
+    doc.circle(30, 25, 12, "F");
+    doc.setTextColor(22, 101, 52);
+    doc.setFontSize(14);
     doc.setFont("helvetica", "bold");
-    doc.text("Jungle Rent", 20, 20);
+    doc.text("JR", 30, 28, { align: "center" });
     
-    doc.setFontSize(12);
+    // Titolo header
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(24);
+    doc.setFont("helvetica", "bold");
+    doc.text("Jungle Rent", 50, 22);
+    
+    doc.setFontSize(11);
     doc.setFont("helvetica", "normal");
+    doc.text("junglerent.it", 50, 32);
+    
+    // Sottotitolo
+    doc.setFontSize(10);
+    doc.text(
+      language === "it" ? "L'affitto sicuro nella giungla immobiliare" : "Safe renting in the real estate jungle",
+      50,
+      42
+    );
+
+    // === TITOLO DOCUMENTO ===
+    doc.setTextColor(22, 101, 52);
+    doc.setFontSize(20);
+    doc.setFont("helvetica", "bold");
     doc.text(
       language === "it" ? "Budget Mensile Studente" : "Student Monthly Budget",
       20,
-      30
+      70
     );
-
-    // Main content
-    doc.setTextColor(0, 0, 0);
     
-    // Title section
-    doc.setFontSize(18);
+    // Linea decorativa
+    doc.setDrawColor(22, 101, 52);
+    doc.setLineWidth(0.5);
+    doc.line(20, 75, 100, 75);
+
+    // === INFO ZONA ===
+    doc.setTextColor(60, 60, 60);
+    doc.setFontSize(14);
     doc.setFont("helvetica", "bold");
-    doc.text(selectedArea, 20, 60);
+    doc.text(selectedArea, 20, 90);
     
     doc.setFontSize(11);
     doc.setFont("helvetica", "normal");
@@ -92,80 +119,112 @@ export const BudgetShareExport = ({
       ? (language === "it" ? "Stanza doppia" : "Shared room")
       : housingType === "single" 
         ? (language === "it" ? "Stanza singola" : "Single room")
-        : "Monolocale";
-    doc.text(housingLabel, 20, 68);
+        : "Monolocale / Studio";
+    doc.text(housingLabel, 20, 98);
 
-    // Total budget highlight
-    doc.setFillColor(240, 255, 240);
-    doc.roundedRect(20, 80, pageWidth - 40, 30, 5, 5, "F");
+    // === BOX TOTALE ===
+    doc.setFillColor(240, 253, 244); // emerald-50
+    doc.setDrawColor(22, 101, 52);
+    doc.setLineWidth(1);
+    doc.roundedRect(20, 108, pageWidth - 40, 35, 4, 4, "FD");
     
-    doc.setTextColor(34, 139, 34);
-    doc.setFontSize(28);
+    doc.setTextColor(22, 101, 52);
+    doc.setFontSize(32);
     doc.setFont("helvetica", "bold");
-    doc.text(`€${totalBudget}`, pageWidth / 2, 98, { align: "center" });
+    doc.text(`€${totalBudget}`, pageWidth / 2, 128, { align: "center" });
     
-    doc.setFontSize(10);
-    doc.setTextColor(100, 100, 100);
-    doc.text(language === "it" ? "/mese" : "/month", pageWidth / 2 + 30, 98);
+    doc.setFontSize(12);
+    doc.setFont("helvetica", "normal");
+    doc.text(language === "it" ? "al mese" : "per month", pageWidth / 2, 138, { align: "center" });
 
-    // Breakdown table
-    doc.setTextColor(0, 0, 0);
+    // === TABELLA SPESE ===
+    doc.setTextColor(40, 40, 40);
     doc.setFontSize(14);
     doc.setFont("helvetica", "bold");
     doc.text(
-      language === "it" ? "Dettaglio spese" : "Expense breakdown",
+      language === "it" ? "Dettaglio spese mensili" : "Monthly expense breakdown",
       20,
-      130
+      160
     );
 
-    let yPos = 145;
+    let yPos = 175;
     doc.setFontSize(11);
-    doc.setFont("helvetica", "normal");
 
     breakdown.forEach((item, index) => {
-      // Alternating background
+      // Sfondo alternato
       if (index % 2 === 0) {
-        doc.setFillColor(248, 248, 248);
-        doc.rect(20, yPos - 5, pageWidth - 40, 12, "F");
+        doc.setFillColor(249, 250, 251);
+        doc.rect(20, yPos - 6, pageWidth - 40, 14, "F");
       }
       
-      doc.setTextColor(60, 60, 60);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(75, 85, 99);
       doc.text(item.name, 25, yPos);
       
-      doc.setTextColor(0, 0, 0);
+      doc.setTextColor(17, 24, 39);
       doc.setFont("helvetica", "bold");
       doc.text(`€${item.value}`, pageWidth - 25, yPos, { align: "right" });
-      doc.setFont("helvetica", "normal");
       
       yPos += 14;
     });
 
-    // Total line
-    doc.setDrawColor(200, 200, 200);
+    // Linea separatrice
+    doc.setDrawColor(209, 213, 219);
+    doc.setLineWidth(0.3);
     doc.line(20, yPos + 2, pageWidth - 20, yPos + 2);
+    
+    // Totale
+    doc.setFillColor(22, 101, 52);
+    doc.rect(20, yPos + 5, pageWidth - 40, 16, "F");
     
     doc.setFont("helvetica", "bold");
     doc.setFontSize(12);
-    doc.text(language === "it" ? "Totale" : "Total", 25, yPos + 15);
-    doc.setTextColor(34, 139, 34);
+    doc.setTextColor(255, 255, 255);
+    doc.text(language === "it" ? "TOTALE MENSILE" : "MONTHLY TOTAL", 25, yPos + 15);
     doc.text(`€${totalBudget}`, pageWidth - 25, yPos + 15, { align: "right" });
 
-    // Footer
-    const footerY = doc.internal.pageSize.getHeight() - 30;
-    doc.setTextColor(150, 150, 150);
+    // === NOTE ===
+    const notesY = yPos + 35;
+    doc.setTextColor(107, 114, 128);
     doc.setFontSize(9);
-    doc.setFont("helvetica", "normal");
+    doc.setFont("helvetica", "italic");
     doc.text(
       language === "it" 
-        ? "Generato con Jungle Rent - junglerent.com" 
-        : "Generated with Jungle Rent - junglerent.com",
+        ? "* I valori sono stime basate sui prezzi medi di Torino per studenti universitari."
+        : "* Values are estimates based on average prices in Turin for university students.",
+      20,
+      notesY
+    );
+
+    // === FOOTER ===
+    doc.setFillColor(249, 250, 251);
+    doc.rect(0, pageHeight - 35, pageWidth, 35, "F");
+    
+    doc.setDrawColor(22, 101, 52);
+    doc.setLineWidth(2);
+    doc.line(0, pageHeight - 35, pageWidth, pageHeight - 35);
+    
+    doc.setTextColor(22, 101, 52);
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "bold");
+    doc.text("junglerent.it", pageWidth / 2, pageHeight - 22, { align: "center" });
+    
+    doc.setTextColor(107, 114, 128);
+    doc.setFontSize(8);
+    doc.setFont("helvetica", "normal");
+    const date = new Date().toLocaleDateString(language === "it" ? "it-IT" : "en-US", {
+      day: "numeric",
+      month: "long", 
+      year: "numeric"
+    });
+    doc.text(
+      language === "it" 
+        ? `Generato il ${date} con Jungle Rent`
+        : `Generated on ${date} with Jungle Rent`,
       pageWidth / 2,
-      footerY,
+      pageHeight - 12,
       { align: "center" }
     );
-    
-    const date = new Date().toLocaleDateString(language === "it" ? "it-IT" : "en-US");
-    doc.text(date, pageWidth / 2, footerY + 8, { align: "center" });
 
     // Save
     const filename = `budget-${selectedArea.toLowerCase().replace(/\s+/g, "-")}-${totalBudget}euro.pdf`;
