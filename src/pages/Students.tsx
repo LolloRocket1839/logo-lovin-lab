@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train } from "lucide-react";
+import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -153,8 +153,96 @@ const Students = () => {
           </div>
         </section>
 
-        {/* Market Stats */}
+        {/* Tools Section - NEW */}
         <section className="py-12 bg-accent/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <Badge variant="outline" className="mb-3 text-primary border-primary/30">
+                <Sparkles className="w-3 h-3 mr-1" />
+                {currentLang === 'it' ? 'Strumenti gratuiti' : 'Free tools'}
+              </Badge>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                {currentLang === 'it' ? 'Strumenti utili per studenti' : 'Useful tools for students'}
+              </h2>
+              <p className="text-muted-foreground">
+                {currentLang === 'it' 
+                  ? 'Risorse pratiche per aiutarti a pianificare la vita a Torino'
+                  : 'Practical resources to help you plan your life in Turin'
+                }
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              {/* Budget Calculator */}
+              <Link to="/studenti/strumenti/budget">
+                <Card className="h-full hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                      <Calculator className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {currentLang === 'it' ? 'Calcolatore Budget' : 'Budget Calculator'}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {currentLang === 'it' 
+                        ? 'Scopri quanto costa vivere in ogni quartiere'
+                        : 'Find out living costs in each neighborhood'
+                      }
+                    </p>
+                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                      {currentLang === 'it' ? 'Prova ora' : 'Try now'}
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Badge>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Utility Comparator - Coming Soon */}
+              <Card className="h-full opacity-75">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    {currentLang === 'it' ? 'Comparatore Bollette' : 'Utility Comparator'}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    {currentLang === 'it' 
+                      ? 'Confronta le tariffe di luce e gas'
+                      : 'Compare electricity and gas rates'
+                    }
+                  </p>
+                  <Badge variant="secondary">
+                    {currentLang === 'it' ? 'Prossimamente' : 'Coming soon'}
+                  </Badge>
+                </CardContent>
+              </Card>
+
+              {/* All Tools Link */}
+              <Link to="/studenti/strumenti">
+                <Card className="h-full border-dashed hover:border-primary/50 transition-all cursor-pointer group">
+                  <CardContent className="p-6 text-center flex flex-col items-center justify-center h-full">
+                    <div className="w-12 h-12 rounded-xl border-2 border-dashed border-muted-foreground/30 flex items-center justify-center mx-auto mb-4 group-hover:border-primary/50 transition-colors">
+                      <ArrowRight className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {currentLang === 'it' ? 'Tutti gli strumenti' : 'All tools'}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {currentLang === 'it' 
+                        ? 'Scopri tutti i tool gratuiti'
+                        : 'Discover all free tools'
+                      }
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Market Stats */}
+        <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[

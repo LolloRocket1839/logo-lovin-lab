@@ -102,6 +102,7 @@ export const Navigation = () => {
 
   const menuItems = [
     { label: t("nav.home"), id: "hero" as string | undefined, path: undefined as string | undefined },
+    { label: t("nav.students"), id: undefined, path: "/studenti" },
     { label: t("nav.investors"), id: "investor-section", path: undefined },
     { label: t("nav.sell"), id: "seller-section", path: undefined },
     { label: t("nav.blog"), id: undefined, path: "/blog" },
