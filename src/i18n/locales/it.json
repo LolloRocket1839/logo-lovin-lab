@@ -1146,8 +1146,8 @@
     }
   },
   "aiSearch": {
-    "title": "Chiedi all'Assistente AI",
-    "subtitle": "Non trovi la risposta? Chiedi qualsiasi cosa su alloggi e investimenti a Torino",
+    "title": "Chiedi a Perplexity",
+    "subtitle": "Ricerca in tempo reale su alloggi e investimenti a Torino",
     "placeholder": "Chiedi sui prezzi degli affitti, quartieri, rendimenti...",
     "askButton": "Chiedi a Perplexity",
     "searching": "Ricerca in corso...",

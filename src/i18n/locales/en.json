@@ -1372,8 +1372,8 @@
     }
   },
   "aiSearch": {
-    "title": "Ask our AI Assistant",
-    "subtitle": "Can't find your answer? Ask anything about Turin housing and investments",
+    "title": "Ask Perplexity",
+    "subtitle": "Real-time search for Turin housing and investment information",
     "placeholder": "Ask about rent prices, neighborhoods, investment returns...",
     "askButton": "Ask Perplexity",
     "searching": "Searching...",
