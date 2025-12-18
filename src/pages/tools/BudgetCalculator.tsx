@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Info
 } from "lucide-react";
+import { AIBudgetAdvisor } from "@/components/tools/AIBudgetAdvisor";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -498,6 +499,21 @@ const BudgetCalculator = () => {
                     </div>
                   </CardContent>
                 </Card>
+
+                {/* AI Budget Advisor */}
+                <AIBudgetAdvisor
+                  selectedArea={selectedArea}
+                  housingType={housingType}
+                  totalBudget={totalBudget}
+                  breakdown={{
+                    affitto: rent,
+                    bollette: fixedCosts.utilities + fixedCosts.internet,
+                    trasporti: transportCost,
+                    spesa: groceries[0],
+                    extra: extras[0]
+                  }}
+                  language={currentLang as "it" | "en"}
+                />
 
                 {/* CTA */}
                 <Card className="bg-primary text-primary-foreground">
