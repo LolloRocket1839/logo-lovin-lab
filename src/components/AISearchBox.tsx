@@ -22,6 +22,7 @@ interface AIResponse {
   followUpQuestions: string[];
   query: string;
   language: string;
+  cached?: boolean;
 }
 
 export const AISearchBox = () => {

@@ -203,6 +203,36 @@ export type Database = {
         }
         Relationships: []
       }
+      perplexity_cache: {
+        Row: {
+          created_at: string
+          expires_at: string
+          id: string
+          language: string
+          query: string
+          query_hash: string
+          response: Json
+        }
+        Insert: {
+          created_at?: string
+          expires_at?: string
+          id?: string
+          language?: string
+          query: string
+          query_hash: string
+          response: Json
+        }
+        Update: {
+          created_at?: string
+          expires_at?: string
+          id?: string
+          language?: string
+          query?: string
+          query_hash?: string
+          response?: Json
+        }
+        Relationships: []
+      }
       push_subscriptions: {
         Row: {
           areas: string[] | null
