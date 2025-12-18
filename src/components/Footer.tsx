@@ -116,9 +116,9 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                <Link to="/chi-siamo" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
                   {t('footer.howItWorksLink')}
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="mt-6">
