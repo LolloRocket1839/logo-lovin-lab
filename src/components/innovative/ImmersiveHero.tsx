@@ -100,7 +100,7 @@ export const ImmersiveHero = () => {
           <div className="flex flex-col items-center mb-4 md:mb-6">
             <div className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-2">
               <span className="text-sm md:text-base font-semibold text-primary">
-                {t('investor.minInvestment', 'Investi da €100')}
+                {t('investor.minInvestmentBadge')}
               </span>
             </div>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-md px-4">
@@ -111,10 +111,10 @@ export const ImmersiveHero = () => {
           {/* Mini Visual Flow Schema */}
           <div className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3 mb-4 md:mb-6 px-2 flex-wrap">
             {[
-              { icon: '€100', label: t('hero.flowStep1', 'Investi') },
-              { icon: '📋', label: t('hero.flowStep2', 'Quote') },
-              { icon: '🏠', label: t('hero.flowStep3', 'Affitti') },
-              { icon: '💰', label: t('hero.flowStep4', 'Rendite') },
+              { icon: '€100', label: t('hero.flowStep1') },
+              { icon: '📋', label: t('hero.flowStep2') },
+              { icon: '🏠', label: t('hero.flowStep3') },
+              { icon: '💰', label: t('hero.flowStep4') },
             ].map((step, i) => (
               <div key={i} className="flex items-center gap-1.5 sm:gap-2 md:gap-3">
                 <div className="flex flex-col items-center">
