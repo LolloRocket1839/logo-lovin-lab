@@ -31,6 +31,12 @@ const tools: Tool[] = [
     path: '/studenti/strumenti/budget'
   },
   {
+    id: 'grades',
+    icon: GraduationCap,
+    status: 'available',
+    path: '/studenti/strumenti/media'
+  },
+  {
     id: 'utilities',
     icon: Zap,
     status: 'coming-soon'
@@ -51,11 +57,15 @@ const StudentTools = () => {
       title: "Strumenti per Studenti",
       subtitle: "Risorse gratuite per aiutarti a vivere meglio a Torino",
       seoTitle: "Strumenti Utili per Studenti | Jungle Rent",
-      seoDesc: "Calcolatore budget, comparatore bollette e altri strumenti gratuiti per studenti universitari a Torino.",
+      seoDesc: "Calcolatore budget, media ponderata, comparatore bollette e altri strumenti gratuiti per studenti universitari a Torino.",
       tools: {
         budget: {
           title: "Calcolatore Budget Mensile",
           description: "Scopri quanto costa vivere in ogni quartiere di Torino. Calcola affitto, bollette, trasporti e spese."
+        },
+        grades: {
+          title: "Calcolatore Media Ponderata",
+          description: "Inserisci voti e CFU, calcola la media ponderata e simula il voto di laurea."
         },
         utilities: {
           title: "Comparatore Bollette",
@@ -75,11 +85,15 @@ const StudentTools = () => {
       title: "Student Tools",
       subtitle: "Free resources to help you live better in Turin",
       seoTitle: "Useful Tools for Students | Jungle Rent",
-      seoDesc: "Budget calculator, utility comparator and other free tools for university students in Turin.",
+      seoDesc: "Budget calculator, GPA calculator, utility comparator and other free tools for university students in Turin.",
       tools: {
         budget: {
           title: "Monthly Budget Calculator",
           description: "Find out how much it costs to live in each Turin neighborhood. Calculate rent, bills, transport and expenses."
+        },
+        grades: {
+          title: "Weighted Average Calculator",
+          description: "Enter grades and credits, calculate weighted GPA and simulate graduation grade."
         },
         utilities: {
           title: "Utility Comparator",

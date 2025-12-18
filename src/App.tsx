@@ -28,6 +28,7 @@ const TerminiCondizioni = lazy(() => import("./pages/TerminiCondizioni"));
 const Students = lazy(() => import("./pages/Students"));
 const StudentTools = lazy(() => import("./pages/StudentTools"));
 const BudgetCalculator = lazy(() => import("./pages/tools/BudgetCalculator"));
+const GradeCalculator = lazy(() => import("./pages/tools/GradeCalculator"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -58,6 +59,8 @@ const AppContent = () => {
         <Route path="/students/tools" element={<StudentTools />} />
         <Route path="/studenti/strumenti/budget" element={<BudgetCalculator />} />
         <Route path="/students/tools/budget" element={<BudgetCalculator />} />
+        <Route path="/studenti/strumenti/media" element={<GradeCalculator />} />
+        <Route path="/students/tools/gpa" element={<GradeCalculator />} />
         <Route path="/ai-testing" element={<AITesting />} />
         <Route path="/ab-test-results" element={<ABTestResults />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
