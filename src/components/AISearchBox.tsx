@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, Sparkles, ExternalLink, Loader2, AlertCircle } from "lucide-react";
+import { Search, Sparkles, ExternalLink, Loader2, AlertCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 interface AIResponse {
   answer: string;
   citations: string[];
+  followUpQuestions: string[];
   query: string;
   language: string;
 }
@@ -20,6 +21,31 @@ export const AISearchBox = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState<AIResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  const handleFollowUp = (question: string) => {
+    setQuery(question);
+    // Auto-submit the follow-up question
+    setIsLoading(true);
+    setError(null);
+    setResponse(null);
+    
+    supabase.functions.invoke('perplexity-search', {
+      body: {
+        query: question.trim(),
+        language: i18n.language.startsWith('it') ? 'it' : 'en',
+      },
+    }).then(({ data, error: fnError }) => {
+      if (fnError || data?.error) {
+        setError(t("aiSearch.error"));
+      } else {
+        setResponse(data as AIResponse);
+      }
+      setIsLoading(false);
+    }).catch(() => {
+      setError(t("aiSearch.error"));
+      setIsLoading(false);
+    });
+  };
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -157,6 +183,29 @@ export const AISearchBox = () => {
                       {extractDomain(citation)}
                     </span>
                   </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Follow-up Questions */}
+          {response.followUpQuestions && response.followUpQuestions.length > 0 && (
+            <div className="space-y-2">
+              <h4 className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <MessageCircle className="h-4 w-4" />
+                {t("aiSearch.followUp")}
+              </h4>
+              <div className="flex flex-col gap-2">
+                {response.followUpQuestions.map((question, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => handleFollowUp(question)}
+                    disabled={isLoading}
+                    className="text-left text-sm px-4 py-2.5 bg-primary/5 hover:bg-primary/10 border border-primary/20 rounded-lg transition-colors text-foreground hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {question}
+                  </button>
                 ))}
               </div>
             </div>

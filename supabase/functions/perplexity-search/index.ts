@@ -53,7 +53,15 @@ serve(async (req) => {
          - Concentrati su: mercato immobiliare, zone universitarie, prezzi affitti, investimenti
          - Se non sei sicuro, dillo chiaramente
          - Mantieni le risposte concise ma complete (max 200 parole)
-         - Cita sempre le fonti quando possibile`
+         - Cita sempre le fonti quando possibile
+         
+         FORMATO RISPOSTA:
+         Alla fine della tua risposta, aggiungi SEMPRE una sezione con 3 domande di follow-up correlate nel formato:
+         
+         ---FOLLOWUP---
+         1. [Domanda correlata 1]
+         2. [Domanda correlata 2]
+         3. [Domanda correlata 3]`
       : `You are Jungle Rent's AI assistant, specializing in student housing and real estate investments in Turin, Italy.
          
          INSTRUCTIONS:
@@ -62,7 +70,15 @@ serve(async (req) => {
          - Focus on: real estate market, university areas, rent prices, investments
          - If unsure, clearly state so
          - Keep responses concise but complete (max 200 words)
-         - Always cite sources when possible`;
+         - Always cite sources when possible
+         
+         RESPONSE FORMAT:
+         At the end of your response, ALWAYS add a section with 3 related follow-up questions in this format:
+         
+         ---FOLLOWUP---
+         1. [Related question 1]
+         2. [Related question 2]
+         3. [Related question 3]`;
 
     console.log('Calling Perplexity API with query:', query.substring(0, 100));
 
@@ -104,13 +120,32 @@ serve(async (req) => {
     const data = await response.json();
     console.log('Perplexity response received successfully');
 
-    const answer = data.choices?.[0]?.message?.content || '';
+    const rawAnswer = data.choices?.[0]?.message?.content || '';
     const citations = data.citations || [];
+
+    // Parse follow-up questions from response
+    let answer = rawAnswer;
+    let followUpQuestions: string[] = [];
+
+    if (rawAnswer.includes('---FOLLOWUP---')) {
+      const parts = rawAnswer.split('---FOLLOWUP---');
+      answer = parts[0].trim();
+      
+      if (parts[1]) {
+        const followUpSection = parts[1].trim();
+        const lines: string[] = followUpSection.split('\n').filter((line: string) => line.trim());
+        followUpQuestions = lines
+          .map((line: string) => line.replace(/^\d+\.\s*/, '').trim())
+          .filter((q: string) => q.length > 5)
+          .slice(0, 3);
+      }
+    }
 
     return new Response(
       JSON.stringify({
         answer,
         citations,
+        followUpQuestions,
         query,
         language,
       }),
