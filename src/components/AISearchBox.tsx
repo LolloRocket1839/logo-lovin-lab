@@ -1,14 +1,23 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Search, Sparkles, ExternalLink, Loader2, AlertCircle, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Search, ExternalLink, Loader2, AlertCircle, MessageCircle, BookOpen, Globe, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import perplexityLogo from "@/assets/perplexity-logo.svg";
 
+interface ArticleLink {
+  slug: string;
+  title: string;
+  url: string;
+}
+
 interface AIResponse {
   answer: string;
+  source: 'jungle_rent' | 'perplexity';
+  articles?: ArticleLink[];
   citations: string[];
   followUpQuestions: string[];
   query: string;
@@ -25,7 +34,6 @@ export const AISearchBox = () => {
 
   const handleFollowUp = (question: string) => {
     setQuery(question);
-    // Auto-submit the follow-up question
     setIsLoading(true);
     setError(null);
     setResponse(null);
@@ -103,6 +111,11 @@ export const AISearchBox = () => {
     }
   };
 
+  const isJungleRent = response?.source === 'jungle_rent';
+  const sourceLabel = i18n.language.startsWith('it')
+    ? (isJungleRent ? 'Dalle nostre guide' : 'Da Perplexity AI')
+    : (isJungleRent ? 'From our guides' : 'From Perplexity AI');
+
   return (
     <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-accent/5 rounded-2xl p-5 sm:p-8 border border-primary/20">
       {/* Header */}
@@ -170,14 +183,55 @@ export const AISearchBox = () => {
       {/* Response */}
       {response && (
         <div className="mt-6 space-y-4">
+          {/* Source Badge */}
+          <div className="flex items-center gap-2">
+            <span className={`inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full ${
+              isJungleRent 
+                ? 'bg-primary/10 text-primary border border-primary/20' 
+                : 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20'
+            }`}>
+              {isJungleRent ? (
+                <BookOpen className="h-3 w-3" />
+              ) : (
+                <Globe className="h-3 w-3" />
+              )}
+              {sourceLabel}
+            </span>
+          </div>
+
+          {/* Answer */}
           <div className="bg-background/80 rounded-xl p-4 sm:p-6 border">
             <p className="text-foreground leading-relaxed whitespace-pre-wrap">
               {response.answer}
             </p>
           </div>
 
-          {/* Citations */}
-          {response.citations && response.citations.length > 0 && (
+          {/* Related Articles from Jungle Rent */}
+          {response.articles && response.articles.length > 0 && (
+            <div className="space-y-2">
+              <h4 className="text-sm font-medium text-muted-foreground flex items-center gap-2">
+                <BookOpen className="h-4 w-4" />
+                {i18n.language.startsWith('it') ? 'Approfondisci su Jungle Rent' : 'Read more on Jungle Rent'}
+              </h4>
+              <div className="grid gap-2">
+                {response.articles.map((article, index) => (
+                  <Link
+                    key={index}
+                    to={article.url}
+                    className="flex items-center justify-between gap-3 p-3 bg-primary/5 hover:bg-primary/10 border border-primary/20 rounded-lg transition-colors group"
+                  >
+                    <span className="text-sm text-foreground group-hover:text-primary transition-colors line-clamp-1">
+                      {article.title}
+                    </span>
+                    <ArrowRight className="h-4 w-4 text-primary shrink-0 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Citations (only for Perplexity responses) */}
+          {!isJungleRent && response.citations && response.citations.length > 0 && (
             <div className="space-y-2">
               <h4 className="text-sm font-medium text-muted-foreground flex items-center gap-2">
                 <ExternalLink className="h-4 w-4" />
