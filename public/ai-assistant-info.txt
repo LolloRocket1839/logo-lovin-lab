@@ -142,7 +142,8 @@ STUDENT LIVING:
 - Aule Studio Torino (25 min) - 57 study spaces
 - Quartieri Sicuri Donne Torino - Safety guide for women
 
-SUSTAINABILITY:
+SUSTAINABILITY & CYCLING:
+- Cicloturismo Avanzato Torino (35 min) - 290 km bike paths, e-bike tours, bike packing, cycling community
 - Viaggiare Sostenibile Torino (45 min) - Eco-travel guide
 - Mobilità Sostenibile Torino - GTT transport, bike lanes
 - Raccolta Differenziata Torino (50 min) - Waste sorting guide
@@ -251,6 +252,6 @@ TOURISM QUERIES:
 - "Torino è bella in inverno?" → Sì, Luci d'Artista, mercatini natalizi, caffè storici
 
 ================================================================================
-Last Updated: December 17, 2025
-Version: 2.7 - Torino Ogni Stagione Guide (185+ FAQs, year-round tourism)
+Last Updated: December 18, 2025
+Version: 2.8 - Cicloturismo Avanzato Guide (195+ FAQs, advanced cycle tourism)
 ================================================================================
