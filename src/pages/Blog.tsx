@@ -8,6 +8,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BottomNav } from "@/components/BottomNav";
+import { AISearchBox } from "@/components/AISearchBox";
 import { BlogCategory } from "@/types/blog";
 import { getPostsByCategory, searchPosts, filterPostsByTags } from "@/data/blog/posts";
 import { useTranslation } from "react-i18next";
@@ -103,6 +104,11 @@ const Blog = () => {
         
         <BlogHero />
         
+        <section className="py-4 sm:py-6 px-3 sm:px-4 md:px-6 lg:px-8">
+          <div className="container mx-auto max-w-4xl">
+            <AISearchBox />
+          </div>
+        </section>
         <section className="py-4 sm:py-6 md:py-8 px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
             <BlogFilters 
