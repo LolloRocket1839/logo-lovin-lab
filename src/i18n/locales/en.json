@@ -1395,6 +1395,11 @@
         "description": "Find out living costs in each neighborhood",
         "cta": "Try now"
       },
+      "gradeCalc": {
+        "title": "GPA Calculator",
+        "description": "Calculate weighted average and graduation grade",
+        "cta": "Try now"
+      },
       "utilityComp": {
         "title": "Utility Comparator",
         "description": "Compare electricity and gas rates",

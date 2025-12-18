@@ -1169,6 +1169,11 @@
         "description": "Scopri quanto costa vivere in ogni quartiere",
         "cta": "Prova ora"
       },
+      "gradeCalc": {
+        "title": "Calcolatore Media",
+        "description": "Calcola media ponderata e voto di laurea",
+        "cta": "Prova ora"
+      },
       "utilityComp": {
         "title": "Comparatore Bollette",
         "description": "Confronta le tariffe di luce e gas",
