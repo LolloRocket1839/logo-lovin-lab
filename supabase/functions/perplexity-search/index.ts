@@ -1,9 +1,69 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
+
+// Create Supabase client for cache operations
+const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+
+// Simple hash function for cache keys
+function hashQuery(query: string, language: string): string {
+  const str = `${query.toLowerCase().trim()}:${language}`;
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash).toString(36);
+}
+
+// Check cache for existing response
+async function getCachedResponse(queryHash: string): Promise<any | null> {
+  try {
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    const { data, error } = await supabase
+      .from('perplexity_cache')
+      .select('response')
+      .eq('query_hash', queryHash)
+      .gt('expires_at', new Date().toISOString())
+      .single();
+
+    if (error || !data) return null;
+    console.log('Cache HIT for hash:', queryHash);
+    return data.response;
+  } catch (e) {
+    console.error('Cache read error:', e);
+    return null;
+  }
+}
+
+// Store response in cache
+async function setCacheResponse(queryHash: string, query: string, language: string, response: any): Promise<void> {
+  try {
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    const expiresAt = new Date();
+    expiresAt.setDate(expiresAt.getDate() + 7); // 7 days cache
+
+    await supabase
+      .from('perplexity_cache')
+      .upsert({
+        query_hash: queryHash,
+        query: query.substring(0, 500), // Limit query length
+        language,
+        response,
+        expires_at: expiresAt.toISOString(),
+      }, { onConflict: 'query_hash' });
+
+    console.log('Cache SET for hash:', queryHash);
+  } catch (e) {
+    console.error('Cache write error:', e);
+  }
+}
 
 // Turin-focused domains for grounded search
 const TURIN_DOMAINS = [
@@ -532,7 +592,22 @@ serve(async (req) => {
       );
     }
 
-    // Step 2: Fall back to Perplexity for external search
+    // Step 2: Check cache before calling Perplexity
+    const queryHash = hashQuery(query, language);
+    const cachedResponse = await getCachedResponse(queryHash);
+    
+    if (cachedResponse) {
+      console.log('Returning cached Perplexity response');
+      return new Response(
+        JSON.stringify({
+          ...cachedResponse,
+          cached: true,
+        }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Step 3: Fall back to Perplexity for external search
     const PERPLEXITY_API_KEY = Deno.env.get('PERPLEXITY_API_KEY');
     if (!PERPLEXITY_API_KEY) {
       console.error('PERPLEXITY_API_KEY is not configured');
@@ -564,7 +639,7 @@ serve(async (req) => {
       );
     }
 
-    console.log('Using Perplexity API for external search');
+    console.log('Using Perplexity API for external search (cache MISS)');
 
     const systemPrompt = language === 'it' 
       ? `Sei l'assistente AI di Jungle Rent, specializzato in affitti studenteschi e investimenti immobiliari a Torino.
@@ -719,16 +794,21 @@ serve(async (req) => {
         }))
       : [];
 
+    const responseData = {
+      answer,
+      source: 'perplexity',
+      articles,
+      citations,
+      followUpQuestions,
+      query,
+      language,
+    };
+
+    // Cache the response for future use (7 days)
+    await setCacheResponse(queryHash, query, language, responseData);
+
     return new Response(
-      JSON.stringify({
-        answer,
-        source: 'perplexity',
-        articles,
-        citations,
-        followUpQuestions,
-        query,
-        language,
-      }),
+      JSON.stringify(responseData),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
 
