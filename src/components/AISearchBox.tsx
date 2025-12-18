@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import perplexityLogo from "@/assets/perplexity-logo.svg";
 
 interface AIResponse {
   answer: string;
@@ -104,14 +105,26 @@ export const AISearchBox = () => {
 
   return (
     <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-accent/5 rounded-2xl p-6 sm:p-8 border border-primary/20">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="p-2 bg-primary/10 rounded-lg">
-          <Sparkles className="h-5 w-5 text-primary" />
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <div className="flex items-center gap-3">
+          <div className="p-2 bg-primary/10 rounded-lg">
+            <Sparkles className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <h3 className="text-lg sm:text-xl font-semibold">{t("aiSearch.title")}</h3>
+            <p className="text-sm text-muted-foreground">{t("aiSearch.subtitle")}</p>
+          </div>
         </div>
-        <div>
-          <h3 className="text-lg sm:text-xl font-semibold">{t("aiSearch.title")}</h3>
-          <p className="text-sm text-muted-foreground">{t("aiSearch.subtitle")}</p>
-        </div>
+        
+        <a 
+          href="https://perplexity.ai" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors shrink-0"
+        >
+          <span className="hidden sm:inline">{t("aiSearch.poweredBy")}</span>
+          <img src={perplexityLogo} alt="Perplexity" className="h-5 w-5" />
+        </a>
       </div>
 
       <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
