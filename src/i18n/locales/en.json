@@ -1375,7 +1375,7 @@
     "title": "Ask our AI Assistant",
     "subtitle": "Can't find your answer? Ask anything about Turin housing and investments",
     "placeholder": "Ask about rent prices, neighborhoods, investment returns...",
-    "askButton": "Ask AI",
+    "askButton": "Ask Perplexity",
     "searching": "Searching...",
     "sources": "Sources",
     "error": "Sorry, I couldn't find an answer. Please try rephrasing your question.",
