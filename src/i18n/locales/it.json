@@ -117,6 +117,10 @@
       "step1": "Da €100",
       "step2": "Gestiamo noi"
     },
+    "flowStep1": "Investi",
+    "flowStep2": "Quote",
+    "flowStep3": "Affitti",
+    "flowStep4": "Rendite",
     "invest": "Investi in Jungle Rent",
     "launchCountdown": "Lancio tra",
     "days": "giorni",

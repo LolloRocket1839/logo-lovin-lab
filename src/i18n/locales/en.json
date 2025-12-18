@@ -117,6 +117,10 @@
       "step1": "From €100",
       "step2": "We manage"
     },
+    "flowStep1": "Invest",
+    "flowStep2": "Shares",
+    "flowStep3": "Rent",
+    "flowStep4": "Returns",
     "invest": "Invest in Jungle Rent",
     "launchCountdown": "Launch in",
     "days": "days",
