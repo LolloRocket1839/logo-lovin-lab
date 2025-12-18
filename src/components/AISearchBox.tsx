@@ -104,54 +104,55 @@ export const AISearchBox = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-accent/5 rounded-2xl p-6 sm:p-8 border border-primary/20">
-      <div className="flex items-center justify-between gap-3 mb-4">
-        <div className="flex items-center gap-3">
-          <div className="p-2 bg-[#1a7b7b] rounded-lg">
-            <img src={perplexityLogo} alt="AI" className="h-5 w-5" />
-          </div>
-          <div>
-            <h3 className="text-lg sm:text-xl font-semibold">{t("aiSearch.title")}</h3>
-            <p className="text-sm text-muted-foreground">{t("aiSearch.subtitle")}</p>
+    <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-accent/5 rounded-2xl p-5 sm:p-8 border border-primary/20">
+      {/* Header */}
+      <div className="flex items-start gap-3 mb-5">
+        <div className="p-2.5 bg-[#1a7b7b] rounded-xl shadow-lg">
+          <img src={perplexityLogo} alt="Perplexity" className="h-6 w-6" />
+        </div>
+        <div className="flex-1">
+          <h3 className="text-lg sm:text-xl font-bold text-foreground">{t("aiSearch.title")}</h3>
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-0.5">
+            <a 
+              href="https://perplexity.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-xs text-primary/80 hover:text-primary transition-colors font-medium"
+            >
+              Powered by Perplexity AI
+            </a>
+            <span className="text-muted-foreground/50 hidden sm:inline">·</span>
+            <p className="text-xs text-muted-foreground">{t("aiSearch.subtitle")}</p>
           </div>
         </div>
-        
-        <a 
-          href="https://perplexity.ai" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors shrink-0"
-        >
-          <span className="hidden sm:inline">{t("aiSearch.poweredBy")}</span>
-          <img src={perplexityLogo} alt="Perplexity" className="h-5 w-5" />
-        </a>
       </div>
 
-      <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
-        <div className="relative flex-1">
+      {/* Search Form */}
+      <form onSubmit={handleSearch} className="flex flex-col gap-3">
+        <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={t("aiSearch.placeholder")}
-            className="pl-10 h-12 bg-background/80 border-primary/20 focus:border-primary"
+            className="pl-10 h-12 bg-background/80 border-primary/20 focus:border-primary text-base"
             disabled={isLoading}
           />
         </div>
         <Button
           type="submit"
           disabled={isLoading || query.trim().length < 3}
-          className="h-12 px-6"
+          className="h-12 w-full sm:w-auto sm:px-8 font-semibold gap-2"
         >
           {isLoading ? (
             <>
-              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              <Loader2 className="h-4 w-4 animate-spin" />
               {t("aiSearch.searching")}
             </>
           ) : (
             <>
-              <Sparkles className="h-4 w-4 mr-2" />
+              <img src={perplexityLogo} alt="" className="h-4 w-4 brightness-0 invert" />
               {t("aiSearch.askButton")}
             </>
           )}
