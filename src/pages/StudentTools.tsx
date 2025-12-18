@@ -7,7 +7,8 @@ import {
   Mail as Postcard,
   ArrowRight,
   Sparkles,
-  GraduationCap
+  GraduationCap,
+  Calendar
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -35,6 +36,12 @@ const tools: Tool[] = [
     icon: GraduationCap,
     status: 'available',
     path: '/studenti/strumenti/media'
+  },
+  {
+    id: 'session',
+    icon: Calendar,
+    status: 'available',
+    path: '/studenti/strumenti/sessione'
   },
   {
     id: 'utilities',
@@ -67,6 +74,10 @@ const StudentTools = () => {
           title: "Calcolatore Media Ponderata",
           description: "Inserisci voti e CFU, calcola la media ponderata e simula il voto di laurea."
         },
+        session: {
+          title: "Organizzatore Sessione",
+          description: "Pianifica la sessione d'esame con calendario, CFU e difficoltà. Ottimizza il tuo piano di studio."
+        },
         utilities: {
           title: "Comparatore Bollette",
           description: "Confronta le tariffe di luce e gas per trovare l'offerta migliore per la tua casa."
@@ -94,6 +105,10 @@ const StudentTools = () => {
         grades: {
           title: "Weighted Average Calculator",
           description: "Enter grades and credits, calculate weighted GPA and simulate graduation grade."
+        },
+        session: {
+          title: "Exam Session Planner",
+          description: "Plan your exam session with calendar, credits and difficulty. Optimize your study plan."
         },
         utilities: {
           title: "Utility Comparator",
