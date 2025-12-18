@@ -1144,5 +1144,21 @@
       "subtitle": "Scopri come partecipare al mercato degli affitti studenteschi a Torino.",
       "button": "Scopri l'opportunità"
     }
+  },
+  "aiSearch": {
+    "title": "Chiedi all'Assistente AI",
+    "subtitle": "Non trovi la risposta? Chiedi qualsiasi cosa su alloggi e investimenti a Torino",
+    "placeholder": "Chiedi sui prezzi degli affitti, quartieri, rendimenti...",
+    "askButton": "Chiedi all'AI",
+    "searching": "Ricerca in corso...",
+    "sources": "Fonti",
+    "error": "Mi dispiace, non ho trovato una risposta. Prova a riformulare la domanda.",
+    "rateLimit": "Attendi un momento prima di fare un'altra domanda.",
+    "errorTitle": "Errore",
+    "minChars": "Inserisci almeno 3 caratteri",
+    "examples": "Prova a chiedere:",
+    "example1": "Affitto medio vicino al Politecnico?",
+    "example2": "San Salvario è sicuro per studenti?",
+    "example3": "Come funziona l'investimento Jungle Rent?"
   }
 }
