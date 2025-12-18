@@ -1,7 +1,7 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { 
   Calculator, 
   Home, 
@@ -15,6 +15,7 @@ import {
   Info
 } from "lucide-react";
 import { AIBudgetAdvisor } from "@/components/tools/AIBudgetAdvisor";
+import { BudgetShareExport } from "@/components/tools/BudgetShareExport";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -92,13 +93,27 @@ const BudgetCalculator = () => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
   
-  // State
-  const [selectedArea, setSelectedArea] = useState<string>("San Salvario");
-  const [housingType, setHousingType] = useState<keyof typeof housingTypes>("single");
-  const [hasGTT, setHasGTT] = useState(true);
-  const [isUnder26, setIsUnder26] = useState(true);
-  const [groceries, setGroceries] = useState([200]);
-  const [extras, setExtras] = useState([100]);
+  const [searchParams] = useSearchParams();
+  
+  // State with URL params initialization
+  const [selectedArea, setSelectedArea] = useState<string>(() => {
+    const area = searchParams.get("area");
+    return area && areasWithRent.some(a => a.name === area) ? area : "San Salvario";
+  });
+  const [housingType, setHousingType] = useState<keyof typeof housingTypes>(() => {
+    const housing = searchParams.get("housing") as keyof typeof housingTypes;
+    return housing && housing in housingTypes ? housing : "single";
+  });
+  const [hasGTT, setHasGTT] = useState(() => searchParams.get("gtt") !== "0");
+  const [isUnder26, setIsUnder26] = useState(() => searchParams.get("under26") !== "0");
+  const [groceries, setGroceries] = useState(() => {
+    const g = parseInt(searchParams.get("groceries") || "200");
+    return [isNaN(g) ? 200 : Math.max(100, Math.min(400, g))];
+  });
+  const [extras, setExtras] = useState(() => {
+    const e = parseInt(searchParams.get("extras") || "100");
+    return [isNaN(e) ? 100 : Math.max(0, Math.min(300, e))];
+  });
   
   // Get selected area data
   const areaData = useMemo(() => {
@@ -428,6 +443,19 @@ const BudgetCalculator = () => {
                     </div>
                   </CardContent>
                 </Card>
+
+                {/* Share & Export */}
+                <BudgetShareExport
+                  selectedArea={selectedArea}
+                  housingType={housingType}
+                  totalBudget={totalBudget}
+                  breakdown={budgetBreakdown}
+                  hasGTT={hasGTT}
+                  isUnder26={isUnder26}
+                  groceries={groceries[0]}
+                  extras={extras[0]}
+                  language={currentLang as "it" | "en"}
+                />
 
                 {/* Pie Chart */}
                 <Card>
