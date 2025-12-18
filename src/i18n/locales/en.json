@@ -1400,5 +1400,10 @@
     "example3": "How does Jungle Rent investment work?",
     "followUp": "Related questions",
     "poweredBy": "Powered by"
+  },
+  "homeFaq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common investor questions",
+    "viewAll": "View all FAQs"
   }
 }
