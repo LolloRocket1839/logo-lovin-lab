@@ -153,22 +153,19 @@ const Students = () => {
           </div>
         </section>
 
-        {/* Tools Section - NEW */}
+        {/* Tools Section */}
         <section className="py-12 bg-accent/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <Badge variant="outline" className="mb-3 text-primary border-primary/30">
                 <Sparkles className="w-3 h-3 mr-1" />
-                {currentLang === 'it' ? 'Strumenti gratuiti' : 'Free tools'}
+                {t("students.tools.badge")}
               </Badge>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                {currentLang === 'it' ? 'Strumenti utili per studenti' : 'Useful tools for students'}
+                {t("students.tools.title")}
               </h2>
               <p className="text-muted-foreground">
-                {currentLang === 'it' 
-                  ? 'Risorse pratiche per aiutarti a pianificare la vita a Torino'
-                  : 'Practical resources to help you plan your life in Turin'
-                }
+                {t("students.tools.subtitle")}
               </p>
             </div>
 
@@ -181,16 +178,13 @@ const Students = () => {
                       <Calculator className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">
-                      {currentLang === 'it' ? 'Calcolatore Budget' : 'Budget Calculator'}
+                      {t("students.tools.budgetCalc.title")}
                     </h3>
                     <p className="text-sm text-muted-foreground mb-3">
-                      {currentLang === 'it' 
-                        ? 'Scopri quanto costa vivere in ogni quartiere'
-                        : 'Find out living costs in each neighborhood'
-                      }
+                      {t("students.tools.budgetCalc.description")}
                     </p>
                     <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
-                      {currentLang === 'it' ? 'Prova ora' : 'Try now'}
+                      {t("students.tools.budgetCalc.cta")}
                       <ArrowRight className="w-3 h-3 ml-1" />
                     </Badge>
                   </CardContent>
@@ -204,16 +198,13 @@ const Students = () => {
                     <Zap className="w-6 h-6 text-muted-foreground" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">
-                    {currentLang === 'it' ? 'Comparatore Bollette' : 'Utility Comparator'}
+                    {t("students.tools.utilityComp.title")}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3">
-                    {currentLang === 'it' 
-                      ? 'Confronta le tariffe di luce e gas'
-                      : 'Compare electricity and gas rates'
-                    }
+                    {t("students.tools.utilityComp.description")}
                   </p>
                   <Badge variant="secondary">
-                    {currentLang === 'it' ? 'Prossimamente' : 'Coming soon'}
+                    {t("students.tools.utilityComp.comingSoon")}
                   </Badge>
                 </CardContent>
               </Card>
@@ -226,13 +217,10 @@ const Students = () => {
                       <ArrowRight className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">
-                      {currentLang === 'it' ? 'Tutti gli strumenti' : 'All tools'}
+                      {t("students.tools.allTools.title")}
                     </h3>
                     <p className="text-sm text-muted-foreground">
-                      {currentLang === 'it' 
-                        ? 'Scopri tutti i tool gratuiti'
-                        : 'Discover all free tools'
-                      }
+                      {t("students.tools.allTools.description")}
                     </p>
                   </CardContent>
                 </Card>

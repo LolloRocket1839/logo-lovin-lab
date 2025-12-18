@@ -460,7 +460,7 @@
     "metaDescription": "Democratizziamo l'accesso al mercato immobiliare, un'asset class storicamente sicura oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione completa.",
     "heroTitle": "Democratizziamo l'accesso al real estate",
     "heroSubtitle": "Un'asset class storicamente sicura, oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione professionale.",
-    "metricMinInvestment": "Investimento minimo",
+    "metricReturn": "Rendimento annuo target",
     "metricOccupancy": "Tasso occupazione",
     "metricManagement": "Gestione inclusa",
     "benefitsTitle": "Perché investire con noi",
@@ -1159,6 +1159,26 @@
       "title": "Sei un investitore?",
       "subtitle": "Scopri come partecipare al mercato degli affitti studenteschi a Torino.",
       "button": "Scopri l'opportunità"
+    },
+    "tools": {
+      "badge": "Strumenti gratuiti",
+      "title": "Strumenti utili per studenti",
+      "subtitle": "Risorse pratiche per aiutarti a pianificare la vita a Torino",
+      "budgetCalc": {
+        "title": "Calcolatore Budget",
+        "description": "Scopri quanto costa vivere in ogni quartiere",
+        "cta": "Prova ora"
+      },
+      "utilityComp": {
+        "title": "Comparatore Bollette",
+        "description": "Confronta le tariffe di luce e gas",
+        "comingSoon": "Prossimamente"
+      },
+      "allTools": {
+        "title": "Tutti gli strumenti",
+        "description": "Scopri tutti i tool gratuiti"
+      },
+      "backToTools": "Torna agli strumenti"
     }
   },
   "aiSearch": {

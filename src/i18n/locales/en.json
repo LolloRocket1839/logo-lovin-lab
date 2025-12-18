@@ -487,7 +487,7 @@
     "metaDescription": "Democratizing access to real estate, a historically safe asset class now inaccessible to many. Invest in university properties in Turin with complete management.",
     "heroTitle": "Democratizing Access to Real Estate",
     "heroSubtitle": "A historically safe asset class, now inaccessible to many. Invest in university properties in Turin with professional management.",
-    "metricMinInvestment": "Minimum investment",
+    "metricReturn": "Target annual return",
     "metricOccupancy": "Occupancy rate",
     "metricManagement": "Management included",
     "benefitsTitle": "Why Invest With Us",
@@ -1385,6 +1385,26 @@
       "title": "Are you an investor?",
       "subtitle": "Discover how to participate in the student rental market in Turin.",
       "button": "Discover the opportunity"
+    },
+    "tools": {
+      "badge": "Free tools",
+      "title": "Useful tools for students",
+      "subtitle": "Practical resources to help you plan your life in Turin",
+      "budgetCalc": {
+        "title": "Budget Calculator",
+        "description": "Find out living costs in each neighborhood",
+        "cta": "Try now"
+      },
+      "utilityComp": {
+        "title": "Utility Comparator",
+        "description": "Compare electricity and gas rates",
+        "comingSoon": "Coming soon"
+      },
+      "allTools": {
+        "title": "All tools",
+        "description": "Discover all free tools"
+      },
+      "backToTools": "Back to tools"
     }
   },
   "aiSearch": {
