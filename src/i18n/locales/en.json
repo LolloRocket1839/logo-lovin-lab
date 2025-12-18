@@ -1385,6 +1385,7 @@
     "examples": "Try asking:",
     "example1": "Average rent near Politecnico?",
     "example2": "Is San Salvario safe for students?",
-    "example3": "How does Jungle Rent investment work?"
+    "example3": "How does Jungle Rent investment work?",
+    "followUp": "Related questions"
   }
 }
