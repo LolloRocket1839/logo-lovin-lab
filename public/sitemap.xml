@@ -209,6 +209,25 @@
     </image:image>
   </url>
 
+  <!-- Blog Post: Cicloturismo avanzato Torino -->
+  <url>
+    <loc>https://junglerent.it/blog/cicloturismo-avanzato-torino</loc>
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/cicloturismo-avanzato-torino.jpg</image:loc>
+      <image:title>Cicloturismo avanzato a Torino</image:title>
+      <image:caption>Guida completa al cicloturismo a Torino: 290 km piste ciclabili, e-bike tours, bike packing e comunità cicloattivista</image:caption>
+    </image:image>
+  </url>
+
   <!-- Blog Post: Viaggiare sostenibile Torino guida -->
   <url>
     <loc>https://junglerent.it/blog/viaggiare-sostenibile-torino-guida</loc>
