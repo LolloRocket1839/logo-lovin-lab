@@ -86,7 +86,7 @@ const About = () => {
         </section>
 
         {/* Key Information Cards */}
-        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <section className="grid md:grid-cols-3 gap-6 mb-16">
           <Card className="border-primary/20 hover:border-primary/40 transition-colors">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3 mb-3">
@@ -111,17 +111,6 @@ const About = () => {
               <div itemProp="founders" itemScope itemType="https://schema.org/Person">
                 <p className="font-medium" itemProp="name">Andrea Niccolaini</p>
               </div>
-            </CardContent>
-          </Card>
-
-          <Card className="border-primary/20 hover:border-primary/40 transition-colors">
-            <CardContent className="pt-6">
-              <div className="flex items-center gap-3 mb-3">
-                <TrendingUp className="w-8 h-8 text-primary" />
-                <h3 className="font-semibold text-lg">{t("about.capitalLabel")}</h3>
-              </div>
-              <p className="text-2xl font-bold">€500</p>
-              <p className="text-sm text-muted-foreground">{t("about.capitalDesc")}</p>
             </CardContent>
           </Card>
 
@@ -183,7 +172,7 @@ const About = () => {
 
             <Card itemProp="makesOffer" itemScope itemType="https://schema.org/Offer">
               <CardContent className="pt-6">
-                <TrendingUp className="w-10 h-10 text-primary mb-4" />
+                <Award className="w-10 h-10 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3" itemProp="name">{t("about.service3Title")}</h3>
                 <p className="text-muted-foreground" itemProp="description">{t("about.service3Desc")}</p>
               </CardContent>
@@ -191,17 +180,9 @@ const About = () => {
 
             <Card itemProp="makesOffer" itemScope itemType="https://schema.org/Offer">
               <CardContent className="pt-6">
-                <Award className="w-10 h-10 text-primary mb-4" />
+                <TrendingUp className="w-10 h-10 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3" itemProp="name">{t("about.service4Title")}</h3>
                 <p className="text-muted-foreground" itemProp="description">{t("about.service4Desc")}</p>
-              </CardContent>
-            </Card>
-
-            <Card itemProp="makesOffer" itemScope itemType="https://schema.org/Offer">
-              <CardContent className="pt-6">
-                <Building2 className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-3" itemProp="name">{t("about.service5Title")}</h3>
-                <p className="text-muted-foreground" itemProp="description">{t("about.service5Desc")}</p>
               </CardContent>
             </Card>
           </div>
