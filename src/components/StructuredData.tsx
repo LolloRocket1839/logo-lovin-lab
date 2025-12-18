@@ -13,7 +13,7 @@ export const StructuredData = () => {
       alternateName: ["JungleRent", "JUNGLE RENT S.R.L.", "Jungle Rent Torino", "JungleRent Property Management", "Jungle Rent Italia"],
       url: baseUrl,
       logo: `${baseUrl}/jungle-rent-logo.svg`,
-      description: "Startup immobiliare con duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al mercato immobiliare — un'asset class storicamente sicura diventata inaccessibile per molti. Acquistiamo e gestiamo immobili a Torino per studenti e turisti.",
+      description: "L'affitto sicuro nella giungla immobiliare. Startup immobiliare: risolviamo la crisi abitativa studentesca e rendiamo accessibili gli investimenti immobiliari. Acquistiamo e gestiamo immobili a Torino per studenti e turisti.",
       foundingDate: "2025-10-24",
       taxID: "13333450016",
       vatID: "IT13333450016",
@@ -119,7 +119,7 @@ export const StructuredData = () => {
       name: "Jungle Rent",
       image: `${baseUrl}/jungle-rent-logo.svg`,
       description:
-        "Duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al mercato immobiliare. Acquistiamo e gestiamo immobili a Torino per studenti e turisti.",
+        "L'affitto sicuro nella giungla immobiliare. Risolviamo la crisi abitativa studentesca e rendiamo accessibili gli investimenti immobiliari a Torino.",
       areaServed: {
         "@type": "City",
         name: "Torino",
@@ -165,7 +165,7 @@ export const StructuredData = () => {
       areaServed: "Torino",
       offers: {
         "@type": "Offer",
-        description: "Democratizziamo l'accesso al mercato immobiliare - opportunità di investimento a partire da 100€",
+        description: "L'affitto sicuro nella giungla immobiliare - opportunità di investimento a partire da 100€",
         priceCurrency: "EUR",
         price: "100",
         priceValidUntil: "2026-12-31",
