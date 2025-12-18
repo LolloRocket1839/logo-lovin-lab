@@ -14,7 +14,7 @@ Oltre alla natura, la primavera porta con sé un calendario ricco di eventi cult
 
 **Cosa portare**: Si consiglia di indossare a strati ("vestirsi a cipolla"), con t-shirt e maglioncini leggeri che possono essere facilmente tolti durante il giorno quando le temperature salgono. Un impermeabile leggero o un k-way sono essenziali data la variabilità meteorologica. Scarpe da passeggio comode sono fondamentali per le lunghe esplorazioni nei giardini e per le passeggiate in città.[9]
 
-> **Esplora la città in modo sostenibile**: leggi la nostra guida alla [mobilità sostenibile a Torino](/blog/viaggiare-sostenibile-torino-guida) per scoprire come spostarti in modo ecologico e conveniente.
+> **Esplora la città in modo sostenibile**: leggi la nostra guida alla [mobilità sostenibile a Torino](/blog/viaggiare-sostenibile-torino-guida) e il [cicloturismo avanzato a Torino](/blog/cicloturismo-avanzato-torino) per scoprire come spostarti in modo ecologico e conveniente.
 
 ## Estate a Torino: vivacità e eventi
 

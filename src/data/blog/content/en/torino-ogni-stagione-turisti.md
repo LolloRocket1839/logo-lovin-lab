@@ -14,7 +14,7 @@ Beyond nature, spring brings with it a rich calendar of cultural events. During 
 
 **What to pack**: It's recommended to dress in layers, with t-shirts and light sweaters that can be easily removed during the day when temperatures rise. A light raincoat or windbreaker is essential given the weather variability. Comfortable walking shoes are fundamental for long explorations in the gardens and for city walks.[9]
 
-> **Explore the city sustainably**: read our guide to [sustainable mobility in Turin](/blog/viaggiare-sostenibile-torino-guida) to discover how to get around in an ecological and convenient way.
+> **Explore the city sustainably**: read our guide to [sustainable mobility in Turin](/blog/viaggiare-sostenibile-torino-guida) and [advanced cycle tourism in Turin](/blog/cicloturismo-avanzato-torino) to discover how to get around in an ecological and convenient way.
 
 ## Summer in Turin: vibrancy and events
 
