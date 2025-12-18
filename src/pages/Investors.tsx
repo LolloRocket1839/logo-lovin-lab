@@ -3,7 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { ScrollProgressBar } from "@/components/ScrollProgressBar";
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -129,7 +129,7 @@ const Investors = () => {
       
       <StructuredData />
       <Navigation />
-      <ScrollProgressBar />
+      
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-background relative overflow-hidden">
