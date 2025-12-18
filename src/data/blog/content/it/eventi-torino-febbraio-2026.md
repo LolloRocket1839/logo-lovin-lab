@@ -1,91 +1,100 @@
-# Febbraio 2026 a Torino: tra amore, cioccolato, arte e palco lirico
+# Febbraio 2026 a Torino: amore, cioccolato, arte e palco lirico
 
-Febbraio 2026 trasforma Torino in una città dove l'amore, il sapore, la bellezza e lo spettacolo si intrecciano indissolubilmente. Dal fascino surrealista della fotografia ai capolavori della danza lirica, dalle dolcezze artigianali alle battaglie tradizionali, dalle emozioni del basket di alto livello ai percorsi estetici più sofisticati, il mese breve offre un calendario ricco di opportunità per scoprire il capoluogo piemontese sotto nuove prospettive. È un mese che riesce, nello spazio di soli 28 giorni, a condensare una varietà straordinaria di esperienze: dalla contemplazione intimista della fotografia storica alla partecipazione collettiva di tradizioni popolari, dal godimento sensoriale del cibo ai trasporti emotivi delle arti sceniche.
+Febbraio 2026 trasforma Torino in una città dove amore, sapore, bellezza e spettacolo si intrecciano. Dal fascino della fotografia ai capolavori dell'opera, dalle dolcezze artigianali alle battaglie tradizionali, il mese breve offre un calendario ricchissimo.
 
-## La fotografia storica: due grandi retrospettive
+## Due grandi retrospettive fotografiche
 
-Febbraio 2026 rappresenta il mese conclusivo di due affascinanti esposizioni fotografiche che hanno definito il volto culturale di Torino nel biennio 2025-2026. La prima è **"Lee Miller. Opere 1930-1955"** al CAMERA – Centro Italiano per la Fotografia, che si conclude il **1° febbraio**. Questa grande retrospettiva, curata da **Walter Guadagnini** nel contesto delle celebrazioni decennali di CAMERA, raduna oltre **160 fotografie provenienti dagli archivi ufficiali della fotografa**, molte delle quali pubblicate per la prima volta. Il percorso espositivo è strutturato in sezioni tematiche che ripercorrono l'arco completo della sua parabola artistica dai **tardi anni Venti fino al 1955**, quando la fotografa smise di scattare in seguito ai traumi della guerra.[1][2]
+### Lee Miller a CAMERA
 
-Lee Miller (1907-1977) rappresenta una figura centrale della storia della fotografia novecentesca e della cultura contemporanea: dalla sua epoca parigina come assistente di **Man Ray**, dove sperimentò le tecniche surrealiste della **solarizzazione**, alla sua attività come fotografa di moda e ritrattista nel contesto mondano newyorkese degli anni Trenta. La mostra documenta inoltre il suo ruolo di **fotografa di guerra durante la Seconda Guerra Mondiale**, quando al servizio di "Vogue" realizzò reportage straordinari che dalla Londra bombardata dai nazisti giungevano fino ai **campi di concentramento tedeschi**, catturando con acutezza l'orrore e la fragile umanità di quei momenti. Una sezione significativa della mostra è inoltre dedicata alla sua ritrazione negli ultimi anni nel tranquillo Sussex, quando si ritrasse accanto al marito **Roland Penrose** in immagini domestiche che mantengono la visione poetica e l'ironia dissimulata che ha caratterizzato tutta la sua ricerca.[2][1]
+Fino al **1° febbraio**, CAMERA ospita **"Lee Miller. Opere 1930-1955"**. La retrospettiva, curata da Walter Guadagnini, riunisce oltre 160 fotografie dagli archivi ufficiali, molte pubblicate per la prima volta.[1][2]
 
-Completamente diverso, ma egualmente avvincente, è il percorso proposto da **"Jeff Wall. Photographs"** alle Gallerie d'Italia di Torino, visitabile dal **9 ottobre 2025 al 1° febbraio 2026**. Il fotografo canadese **Jeff Wall** (nato nel 1946 a Vancouver) è considerato uno dei più **significativi artisti fotografici del nostro tempo**, non per la velocità dello scatto ma, paradossalmente, per la sua estrema **lentezza nella realizzazione delle immagini**. Wall è un artista che lavora come un pittore: ogni immagine richiede mesi di preparazione, direzione di attori, costruzione di set, illuminazione calibrata; in mezzo secolo di attività ha realizzato poco più di **duecento fotografie** di grande formato.[3][4]
+Lee Miller (1907-1977) fu assistente di Man Ray a Parigi, dove sperimentò la solarizzazione. Lavorò come fotografa di moda a New York, poi come corrispondente di guerra per Vogue. I suoi reportage dalla Londra bombardata ai campi di concentramento tedeschi catturano l'orrore e la fragile umanità di quei momenti.
 
-La mostra alle Gallerie d'Italia presenta **ventisette opere** selezionate dalla fine degli anni Settanta fino ai giorni nostri, curata da **David Campany**, scrittore e curatore che è il massimo esperto mondiale del lavoro di Wall e direttore creativo dell'International Center of Photography di New York. Le fotografie affrontano con profondità tematica questioni cruciali della società contemporanea, affrontando il tema della **natura, della guerra, del genere, della razza e della classe sociale** attraverso la messa in scena di situazioni che appaiono familiari ma che, osservate con attenzione, generano inquietudine e riflessione. La sua influenza dall'arte cinema e dalla letteratura — in particolare dal neorealismo italiano — emerge in molte delle sue composizioni, dove la vita ordinaria viene elevata a contemplazione estetica di rango elevato.[4][3]
+### Jeff Wall alle Gallerie d'Italia
 
-## La magica dolcezza: CioccolaTò torna a febbraio
+Fino al **1° febbraio 2026**, le Gallerie d'Italia presentano **"Jeff Wall. Photographs"**. Il fotografo canadese (nato nel 1946) lavora come un pittore: ogni immagine richiede mesi di preparazione. In mezzo secolo ha realizzato poco più di duecento fotografie.[3][4]
 
-A metà febbraio, precisamente **dal 13 al 17 febbraio 2026**, Torino si trasforma nella **capitale mondiale del cioccolato** con la seconda edizione di **CioccolaTò**, la grande manifestazione dedicata al "**cibo degli dèi**". La manifestazione, che raccolse più di **100.000 visitatori nell'edizione precedente**, ritorna in **Piazza Vittorio Veneto** con una durata ampliata di un giorno rispetto al 2025, permettendo così di abbracciare simultaneamente **San Valentino (14 febbraio) e il Carnevale** (con il Martedì Grasso il 17 febbraio).[5][6]
+La mostra presenta 27 opere dalla fine degli anni Settanta a oggi, curata da David Campany. Le fotografie affrontano temi come natura, guerra, genere, razza e classe sociale.
 
-L'evento ruota intorno a una **selezione rigorosissima di maestri cioccolatieri**, prediligendo l'eccellenza dell'artigianalità su industrialità e quantità. Solo i produttori che lavorano con metodologie tradizionali e con materie prime di qualità superiore avranno accesso agli stand: non solo cioccolatieri puri, ma anche pasticceri, gelatai, panettieri e persino liquorifici capaci di integrare il cacao nella loro produzione. È atteso il ritorno dei **Maestri del Gusto torinesi e piemontesi** accanto a realtà nazionali e internazionali che porteranno prospettive inedite sulla lavorazione del cacao.[5]
+## CioccolaTò: la capitale mondiale del cioccolato
 
-Tuttavia CioccolaTò non è una semplice fiera culinaria: l'evento propone un vero e proprio **itinerario culturale e multisensoriale** con **degustazioni, talk specialistici, masterclass, laboratori interattivi per famiglie, visite guidate nel patrimonio storico e museale di Torino**. La "Casa del Cioccolato" fungerà da fulcro per conferenze e presentazioni, mentre la "Fabbrica del Cioccolato" e lo **Choco Tram** (un tram storico decorato) offriranno ai visitatori un'esperienza immersiva dove cioccolato, storia e musica si mescolano. Per i più giovani, un'ampia **Area Kids** propone laboratori creativi e attività ludiche. L'evento è promosso da importanti attori istituzionali come la **Camera di Commercio di Torino, la Città di Torino, la Regione Piemonte, la Fondazione Compagnia di San Paolo e la Fondazione CRT**, garantendo così una dimensione non solo commerciale ma anche di riflessione profonda sul significato storico, culturale e simbolico del cacao nella civiltà torinese.[6][5]
+Dal **13 al 17 febbraio 2026**, torna **CioccolaTò** in Piazza Vittorio Veneto. L'edizione precedente ha raccolto oltre 100.000 visitatori.[5][6]
 
-## Opera lirica: il Macbeth di Verdi diretto da Riccardo Muti
+Quest'anno dura un giorno in più, abbracciando **San Valentino** (14 febbraio) e il **Martedì Grasso** (17 febbraio).
 
-Sul versante della musica lirica, **febbraio 2026** propone un evento di straordinaria importanza: la nuova produzione di **"Macbeth" di Giuseppe Verdi** al Teatro Regio di Torino, con **rappresentazioni il 20, 24, 26 febbraio e il 1° e 3 marzo**. La direzione d'orchestra è affidata a **Riccardo Muti**, il massimo conoscitore contemporaneo di questo capolavoro, che lo dirige da cinquant'anni affinandolo continuamente. La regia è curata da **Chiara Muti**, ideatrice di un **nuovo allestimento atteso da anni** che promette di offrire una prospettiva interpretativa inedita.[7]
+Solo produttori che lavorano con metodologie tradizionali avranno accesso agli stand. Oltre ai cioccolatieri, anche pasticceri, gelatai, panettieri e liquorifici.
 
-Nel ruolo del titolo figura il baritono **Luca Micheletti**, che essendo una figura dalla formazione sia di attore di prosa che di cantante lirico porta intrinsecamente il dramma shakespeariano nel suo sangue. Al suo fianco sono schierati interpreti di assoluto rilievo nel repertorio verdiano come **Lidia Fridman**, **Giovanni Sala** e **Ildebrando D'Arcangelo**. L'allestimento mette in scena la straordinaria capacità di Verdi di evocare dal linguaggio musicale italiano le atmosfere gotiche e terrifiche della Scozia medievale: **cabalette infuocate, marcette demoniache, danze infere** si susseguono per creare un affresco sonoro di vera inquietudine, completato da un apparato orchestra che sperimenta con **sapienza inedita i timbri più scuri dell'organico sinfonico**. Una conferenza-concerto preparatoria è prevista il **18 febbraio alle 17.30 nel Piccolo Regio Puccini**.[7]
+Il programma include degustazioni, talk, masterclass, laboratori per famiglie e visite guidate. La "Casa del Cioccolato" ospiterà conferenze. Lo Choco Tram offrirà un'esperienza immersiva dove cioccolato, storia e musica si mescolano. L'Area Kids propone laboratori creativi.
 
-## La battaglia delle arance: il carnevale storico di Ivrea
+## Macbeth al Teatro Regio
 
-A pochi chilometri da Torino, il **15 febbraio 2026**, si svolge una delle manifestazioni più singolari e affascinanti d'Italia: la **Battaglia delle Arance** del **Carnevale Storico di Ivrea**. Questo evento secolare è un simbolo vivente di **libertà popolare e resistenza civile**, celebrando la rivolta della leggendaria **Vezzosa Mugnaia** e dell'intero popolo ivrese contro il tiranno medievale. Per un giorno intero, le piazze storiche — **Piazza Ottinetti, Piazza di Città e Piazza del Rondolino** — si trasformano in un campo di battaglia allegro e carico di adrenalina.[8][9]
+Rappresentazioni il **20, 24, 26 febbraio e il 1° e 3 marzo**. Direzione di **Riccardo Muti**, che dirige quest'opera da cinquant'anni. Regia di Chiara Muti con un nuovo allestimento atteso da anni.[7]
 
-La manifestazione raggruppa **nove squadre di aranceri a piedi** che si confrontano armate di arance contro oltre **cinquanta carri trainati da cavalli**, in uno spettacolo che coniuga rigorosamente la **rievocazione storica con la partecipazione popolare**. La battaglia prende il via alle **ore 14:00** dopo una serie di cerimonie mattutine di assoluta rilevanza: il **Giuramento del Magnifico Podestà** alle 9:30 in Piazza Castello e la suggestiva **Cerimonia della Preda in Dora** sul Ponte Vecchio alle 10:30, dove il Podestà lancia una pietra nel fiume come simbolo di pace. Il **Corteo Storico**, con la Mugnaia sul Cocchio Dorato, il Generale e il suo Stato Maggiore, parte alle 14:00 da Piazza di Città proprio in contemporanea all'inizio della battaglia. Per assistere in sicurezza all'evento è consigliato indossare il **berretto frigio**, il classico cappello rosso che protegge simbolicamente il pubblico dall'arancione battaglia. Il **Villaggio Arancio** con stand enogastronomici permette di scoprire i sapori tipici del Canavese, mentre il pomeriggio prosegue con sfilate di gruppi ospiti alle 11:00 e 15:00. La giornata si conclude alle 17:30 con la **Generala in Piazza di Città**, il saluto finale del Generale.[9][8]
+Nel ruolo del titolo, il baritono **Luca Micheletti**. Al suo fianco Lidia Fridman, Giovanni Sala e Ildebrando D'Arcangelo. Conferenza-concerto preparatoria il 18 febbraio alle 17.30 nel Piccolo Regio Puccini.
 
-> **Approfondimento**: Per la guida completa al Carnevale di Ivrea con storia della Mugnaia, programma dettagliato e come arrivare da Torino, leggi il nostro articolo dedicato: [Lo storico carnevale di Ivrea: guida alla battaglia delle arance](/blog/carnevale-ivrea-battaglia-arance-2025).
+## La Battaglia delle Arance a Ivrea
 
-## La Frecciarossa Final Eight: il grande basket a febbraio
+Il **15 febbraio 2026**, a pochi chilometri da Torino, si svolge la **Battaglia delle Arance** del Carnevale Storico di Ivrea. Celebra la rivolta della Mugnaia e del popolo ivrese contro il tiranno medievale.[8][9]
 
-Dal **18 al 22 febbraio 2026**, Torino ospiterà per il terzo anno consecutivo la **Frecciarossa Final Eight 2026**, il più prestigioso evento di basket italiano. Presso l'**Inalpi Arena** (ampliata di ulteriori **500 posti** per raggiungere una capienza ottimale) si confronteranno le **otto migliori squadre della Serie A Unipol 2025/26** in una serie di sfide al cardiopalma che culminerà nella conquista del prestigioso trofeo. L'edizione 2026 introduce una novità rilevante: l'arrivo anche della **IBSA NextGen Cup 2025/26**, ovvero la fase finale con le migliori formazioni **Under 19** delle squadre di Serie A, offrendo al pubblico l'occasione di ammirare il talento delle giovani promesse del basket italiano.[10][11]
+**Nove squadre di aranceri a piedi** si confrontano contro oltre cinquanta carri trainati da cavalli. La battaglia inizia alle 14:00 dopo il Giuramento del Magnifico Podestà (9:30) e la Cerimonia della Preda in Dora (10:30).
 
-La manifestazione è attesa da **oltre 46.000 spettatori nelle edizioni passate** e si è ormai affermata come uno degli appuntamenti più seguiti e amati dagli appassionati di pallacanestro. Il pubblico avrà la possibilità di scegliere tra due tipologie di abbonamento: il "**Full Pass**" valido per tutte le sette partite e l'"**Abbonamento 2 Giorni**" dedicato alle giornate di mercoledì e giovedì. L'atmosfera della struttura torinese, già celebre dalle edizioni precedenti, renderà ancora più intensa la settimana di gare, con sfide decisive e momenti di grande sportività.[11][10]
+Per assistere in sicurezza, indossa il **berretto frigio**. Il Villaggio Arancio offre stand enogastronomici. La giornata si conclude alle 17:30 con la Generala in Piazza di Città.
 
-## Spettacoli, concerti e incontri multidisciplinari
+> **Approfondimento**: leggi la [guida completa al Carnevale di Ivrea](/blog/carnevale-ivrea-battaglia-arance-2025).
 
-Accanto ai grandi eventi tematici, febbraio 2026 propone una ricca programmazione di spettacoli teatrali e concerti. **"Aggiungi un posto a tavola"** il musical che ritorna nei teatri torinesi con la special guest **Lorella Cuccarini**, e **"7 Spose per 7 Fratelli"** arricchiscono il palinsesto teatrale insieme a spettacoli comici come quelli di **Claudio Bisio** ("La mia vita raccontata male") e **Enrico Brignano** ("I 7 Re di Roma"). Inoltre, il **26 febbraio 2026** alle **Gallerie d'Italia** si terrà il concerto **"Candlelight: Ennio Morricone e colonne sonore"** al Palazzo della Luce, un'occasione per celebrare uno dei più grandi compositori italiani attraverso una selezione magistrale delle sue musiche da film.[12][13]
+## Frecciarossa Final Eight: grande basket
 
-Sul fronte del teatro di prosa, spettacoli come **"Amadeus"** (dal 24 febbraio al 1° marzo al Teatro Carignano) e **"Disagiada"** propongono varietà drammatica, mentre vari teatri ospiteranno incontri, conferenze e spettacoli di improvvisazione che animano quotidianamente la vita culturale della città.[14]
+Dal **18 al 22 febbraio 2026**, all'**Inalpi Arena** si confronteranno le otto migliori squadre della Serie A. Novità: arriva anche la **IBSA NextGen Cup** con le migliori formazioni Under 19.[10][11]
 
-## Consigli pratici per orientarsi
+Le edizioni passate hanno attirato oltre 46.000 spettatori. Disponibili abbonamento "Full Pass" per tutte le sette partite o "Abbonamento 2 Giorni" per mercoledì e giovedì.
 
-Con un calendario così articolato, è consigliabile pianificare il proprio itinerario con una strategia mirata. Chi ama la fotografia e il pensiero critico troverà nelle due grandi esposizioni fotografiche (Lee Miller e Jeff Wall) due universi complementari: la prima scandaglia la storia novecentesca attraverso lo sguardo documentario e surrealista; la seconda propone una meditazione contemporanea sulla visione costruita e sulla messa in scena della realtà. Chi ama il gusto e la tradizione artigianale non può mancare CioccolaTò, che combina le esperienze sensoriali con l'approfondimento culturale. Gli amanti dell'opera lirica avranno modo di vivere un appuntamento straordinario con Verdi; gli appassionati di tradizioni popolari potranno partecipare alla Battaglia delle Arance; i tifosi di basket si immergono nell'atmosfera adrenalinica della Final Eight.[10][6][7][5]
+## Spettacoli e concerti
 
-È consigliabile **verificare sempre gli orari aggiornati e prenotare per tempo**, in quanto molti eventi raggiungono il sold-out rapidamente, specialmente quelli con artisti di grande visibilità. I calendari online del Comune di Torino, dei portali cittadini e dei siti dei musei permettono di filtrare gli appuntamenti per giorno e categoria, facilitando il coordinamento logistico. Inoltre, la **distribuzione geografica degli eventi sulla mappa urbana** è favorevole a itinerari compatti: CAMERA e le Gallerie d'Italia sono raggiungibili agevolmente a piedi, così come il Teatro Regio e i Musei Reali; il planning di una giornata può includere un'esposizione mattutina, una pausa pranzo in zona e uno spettacolo serale.[15][16][17]
+**"Aggiungi un posto a tavola"** con Lorella Cuccarini. **"7 Spose per 7 Fratelli"**. Spettacoli comici con Claudio Bisio ("La mia vita raccontata male") ed Enrico Brignano ("I 7 Re di Roma").[12][13]
+
+Il **26 febbraio** alle Gallerie d'Italia: **"Candlelight: Ennio Morricone e colonne sonore"**.
+
+Teatro di prosa: **"Amadeus"** al Teatro Carignano (24 febbraio - 1° marzo).[14]
+
+## Consigli pratici
+
+- **Fotografia**: Lee Miller e Jeff Wall offrono due universi complementari. La prima scandaglia la storia novecentesca, la seconda propone una meditazione contemporanea.
+- **Gusto e tradizione**: non perdere CioccolaTò.
+- **Opera lirica**: Macbeth con Riccardo Muti.
+- **Tradizioni popolari**: la Battaglia delle Arance.
+- **Sport**: la Final Eight di basket.
+
+Verifica orari e prenota in anticipo. Molti eventi vanno in sold-out rapidamente. CAMERA e Gallerie d'Italia sono raggiungibili a piedi, così come Teatro Regio e Musei Reali.
 
 ## Conclusione
 
-Febbraio 2026 offre a Torino un'opportunità straordinaria di sperimentare il capoluogo piemontese attraverso molteplici linguaggi espressivi: dalla contemplazione intimista della grande fotografia storica alla partecipazione gioiosa di tradizioni multicentenarie, dal godimento sensoriale del cibo artigianale all'emozione della musica lirica di livello mondiale, dall'adrenalina dello sport di eccellenza ai sentieri della riflessione contemporanea. Non esiste un solo modo di vivere febbraio a Torino, ma piuttosto tante possibilità di scoperta e meraviglia, tutte ugualmente legittime e affascinanti. L'invito è a consultare i calendari, selezionare gli eventi che rispecchiano le proprie passioni, prenotare per tempo e lasciarsi guidare dalla curiosità attraverso le molteplici manifestazioni della bellezza, del sapore, della tradizione e dell'innovazione che caratterizzano questa città straordinaria. Febbraio 2026 a Torino è dunque un'occasione da non lasciarsi sfuggire per rinnovare il legame con il patrimonio culturale, con le tradizioni popolari e con i linguaggi artistici contemporanei che continuano a definire l'identità e il fascino del capoluogo piemontese.
+Febbraio 2026 offre fotografia storica, tradizioni popolari, cibo artigianale, opera lirica e sport di eccellenza. Non esiste un solo modo di vivere febbraio a Torino, ma tante possibilità di scoperta.
 
 ---
 
 ## Articoli correlati
 
-- [Eventi a Torino a gennaio 2026: guida completa](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza, Teatro Regio, Fiamma Olimpica
-- [Eventi a Torino a marzo 2026: arte, musica e spettacolo](/blog/eventi-torino-marzo-2026) - Chiharu Shiota al MAO, Mika, Renato Zero, Subsonica 30 anni, Rocky Musical
-- [Lo storico carnevale di Ivrea: guida alla battaglia delle arance](/blog/carnevale-ivrea-battaglia-arance-2025) - Storia della Mugnaia, programma completo, come arrivare da Torino
-- [Come raggiungere Torino in modo sostenibile: guida completa](/blog/viaggiare-sostenibile-torino-guida) - Treni Frecciarossa, FlixBus, aeroporto carbon-neutral
-- [Torino in ogni stagione: guida completa per turisti](/blog/torino-ogni-stagione-turisti) - Primavera, estate, autunno e inverno a Torino
+- [Eventi a Torino a gennaio 2026](/blog/eventi-torino-gennaio-2026)
+- [Eventi a Torino a marzo 2026](/blog/eventi-torino-marzo-2026)
+- [Carnevale di Ivrea](/blog/carnevale-ivrea-battaglia-arance-2025)
+- [Come raggiungere Torino in modo sostenibile](/blog/viaggiare-sostenibile-torino-guida)
+- [Torino in ogni stagione](/blog/torino-ogni-stagione-turisti)
 
 ---
 
 ## Fonti
 
-[1] Lee Miller a Torino: la mostra da Camera tra guerra, arte e ... https://www.guidatorino.com/eventi-torino/lee-miller-torino-mostra-2025-2026/
-[2] Lee Miller: una mostra a Torino http://www.artedossier.it/it/art-news/lee-miller-una-mostra-torino/
-[3] Jeff Wall: fotografo in "modalità pittore" https://fotocult.it/jeff-wall-photographs-mostra-fotografica-gallerie-italia-torino/
-[4] Mostra fotografica "Jeff Wall. Photographs" a Torino https://gallerieditalia.com/it/torino/mostre-e-iniziative/mostre/2025/10/09/jeff-wall-photographs-in-mostra-a-torino/
-[5] CioccolaTò torna per 2026 dal 13 al 17 febbraio - Giornale del Cioccolato https://www.giornaledelcioccolato.it/senza-categoria/cioccolato-torna-per-2026-dal-13-al-17-febbraio/
-[6] CioccolaTò 2026 a Torino: le nuove date del grande festival https://www.guidatorino.com/eventi-torino/cioccolato-2026-torino/
-[7] Macbeth - Teatro Regio Torino https://www.teatroregio.torino.it/opera-e-balletto-2025-2026/macbeth
-[8] Torna la Battaglia delle Arance del Carnevale di Ivrea 2026 https://www.guidatorino.com/eventi-torino/battaglia-arance-carnevaleivrea-2026/
+[1] Lee Miller a Torino - GuidaTorino https://www.guidatorino.com/eventi-torino/lee-miller-torino-mostra-2025-2026/
+[2] Lee Miller: mostra a Torino http://www.artedossier.it/it/art-news/lee-miller-una-mostra-torino/
+[3] Jeff Wall - Fotocult https://fotocult.it/jeff-wall-photographs-mostra-fotografica-gallerie-italia-torino/
+[4] Jeff Wall alle Gallerie d'Italia https://gallerieditalia.com/it/torino/mostre-e-iniziative/mostre/2025/10/09/jeff-wall-photographs-in-mostra-a-torino/
+[5] CioccolaTò 2026 - Giornale del Cioccolato https://www.giornaledelcioccolato.it/senza-categoria/cioccolato-torna-per-2026-dal-13-al-17-febbraio/
+[6] CioccolaTò 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino/cioccolato-2026-torino/
+[7] Macbeth - Teatro Regio https://www.teatroregio.torino.it/opera-e-balletto-2025-2026/macbeth
+[8] Battaglia delle Arance 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino/battaglia-arance-carnevaleivrea-2026/
 [9] Programma Carnevale di Ivrea 2026 https://www.storicocarnevaleivrea.it/it/Edizione-2026/Programma/
-[10] Frecciarossa Final Eight 2026: il grande basket a Torino https://eventi.comune.torino.it/calendario/frecciarossa-final-eight/
-[11] Frecciarossa Final Eight 2026 a Torino https://www.guidatorino.com/eventi-torino/frecciarossa-final-eight-2026-torino/
-[12] Eventi a Torino: Febbraio 2026 https://www.guidatorino.com/eventi-torino-febbraio/
-[13] Candlelight: Ennio Morricone e colonne sonore in concerto a Torino https://www.concerti-italia.it/concerti/candlelight-ennio-morricone-e-colonne-sonore-in-concerto-a-torino-26-febbraio-2026-biglietti-e-info/
+[10] Final Eight 2026 - Comune di Torino https://eventi.comune.torino.it/calendario/frecciarossa-final-eight/
+[11] Final Eight 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino/frecciarossa-final-eight-2026-torino/
+[12] Eventi Febbraio 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino-febbraio/
+[13] Candlelight: Ennio Morricone https://www.concerti-italia.it/concerti/candlelight-ennio-morricone-e-colonne-sonore-in-concerto-a-torino-26-febbraio-2026-biglietti-e-info/
 [14] Torino Febbraio 2026 https://www.turinoise.it/torino-febbraio/
-[15] Concerti a Torino (date, biglietti e calendario 2025-2026) https://www.guidatorino.com/eventi/torino/concerti/
-[16] Calendario Eventi – Eventi a Torino https://eventi.comune.torino.it/calendario/2026-03-01/
-[17] In Piemonte in Torino: calendario eventi https://www.inpiemonteintorino.it
-[18] Tutte le Mostre di February 2026 a Torino https://www.arte.it/calendario-arte/torino/2026/02/
-[19] Le mostre del mese di febbraio 2026 a Torino https://www.cosedicasa.com/mostre/citta/torino/mese/febbraio-2026

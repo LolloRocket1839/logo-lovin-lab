@@ -1,150 +1,133 @@
 # Eventi a Torino a gennaio 2026: guida completa
 
-Gennaio 2026 si profila come un mese straordinario per Torino, con un calendario ricco di eventi culturali, musicali, teatrali e sportivi che animeranno la città durante l'inverno. Dalle iconiche Luci d'Artista alle grandi mostre internazionali, dai concerti sold-out agli spettacoli teatrali, passando per eventi sportivi e il passaggio della Fiamma Olimpica, il capoluogo piemontese offre opportunità per tutti i gusti e per ogni fascia d'età.
+Gennaio 2026 sarà un mese ricchissimo per Torino. Il calendario include eventi culturali, musicali, teatrali e sportivi. Dalle Luci d'Artista alle grandi mostre, dai concerti sold-out agli spettacoli teatrali, passando per il passaggio della Fiamma Olimpica.
 
-## Luci d'Artista: gli ultimi giorni di magia
+## Luci d'Artista: gli ultimi giorni
 
-La celebre manifestazione **Luci d'Artista**, giunta alla sua 28ª edizione, continuerà a illuminare Torino fino all'**11 gennaio 2026**. Questa rassegna trasforma la città in un museo a cielo aperto con installazioni luminose di artisti contemporanei italiani e internazionali distribuite in tutta la città. Quest'anno la manifestazione si arricchisce di quattro nuove opere, tra cui "Sex and Solitude" di **Tracey Emin** ai Giardini Reali Bassi e "Mummer Love" del collettivo **Soundwalk Collective** con Patti Smith e Philip Glass nel cortile esterno delle OGR Torino. Le luci sono accese quotidianamente dalle 18:30 alle 23:45, offrendo ai visitatori l'opportunità di passeggiare tra piazze e vie illuminate da creazioni artistiche uniche.
+La 28ª edizione di **Luci d'Artista** illumina Torino fino all'**11 gennaio 2026**. Quest'anno ci sono quattro nuove opere: "Sex and Solitude" di Tracey Emin ai Giardini Reali Bassi e "Mummer Love" del collettivo Soundwalk Collective con Patti Smith e Philip Glass alle OGR.
 
-## Mostre ed esposizioni d'arte
+Le luci sono accese dalle 18:30 alle 23:45.
 
-Gennaio 2026 vede Torino protagonista di un panorama espositivo di altissimo livello, con mostre che spaziano dall'arte classica alla fotografia contemporanea.
+## Mostre ed esposizioni
 
-### Orazio Gentileschi: un pittore in viaggio
+### Orazio Gentileschi ai Musei Reali
 
-Le **Sale Chiablese dei Musei Reali** ospitano fino al **3 maggio 2026** la mostra dedicata a **Orazio Gentileschi** (Pisa, 1563 – Londra, 1639), uno dei più importanti maestri del Seicento italiano. Curata da Annamaria Bava e Gelsomina Spione, l'esposizione riunisce oltre 40 opere provenienti da istituzioni prestigiose come il Louvre di Parigi, il Prado di Madrid, la Pinacoteca Vaticana e gli Uffizi. Il percorso espositivo ripercorre l'itinerario artistico del pittore da Roma a Fabriano, da Genova a Torino, Parigi e Londra, con particolare attenzione all'Annunciazione realizzata nel 1623 per il duca di Savoia, considerata uno dei vertici della sua produzione. La mostra è aperta dal giovedì al martedì dalle 9:30 alle 19:30, con aperture straordinarie durante le festività.
+Fino al **3 maggio 2026**, le Sale Chiablese ospitano la mostra dedicata a **Orazio Gentileschi** (1563-1639). Curata da Annamaria Bava e Gelsomina Spione, riunisce oltre 40 opere dal Louvre, Prado, Pinacoteca Vaticana e Uffizi.
 
-### Fotografia contemporanea e arte moderna
+Il percorso ripercorre l'itinerario artistico del pittore da Roma a Londra. L'Annunciazione del 1623 per il duca di Savoia è il fulcro della mostra. Apertura: giovedì-martedì 9:30-19:30.
 
-Il **CAMERA - Centro Italiano per la Fotografia** presenta diverse mostre in corso a gennaio. **"Lee Miller. Opere 1930-1955"** (fino al 1° febbraio 2026) offre un'esposizione inedita di 160 immagini della fotografa americana provenienti dai Lee Miller Archives, che documentano il suo lavoro tra guerra, arte e surrealismo. La Project Room ospita **"Cristian Chironi. Abitare l'Immagine"** (fino al 1° febbraio 2026), dedicata alla relazione dell'artista con la fotografia e la performance.
+### Fotografia a CAMERA
 
-Le **Gallerie d'Italia** di Torino propongono **"Jeff Wall. Photographs"** (fino al 28 gennaio 2026), un'importante retrospettiva del fotografo canadese che trasforma la realtà in visione artistica. La mostra rappresenta un'occasione unica per ammirare il lavoro di uno dei maestri della fotografia contemporanea.
+**"Lee Miller. Opere 1930-1955"** (fino al 1° febbraio 2026) presenta 160 immagini che documentano il lavoro della fotografa tra guerra, arte e surrealismo. La Project Room ospita **"Cristian Chironi. Abitare l'Immagine"**.
 
-### Mostre d'arte alla GAM e alla Reggia di Venaria
+### Jeff Wall alle Gallerie d'Italia
 
-La **Galleria d'Arte Moderna (GAM)** presenta tre esposizioni significative. **"Notti"** (fino al 1° marzo 2026) è un viaggio attraverso cinque secoli di rappresentazioni notturne nell'arte, con stelle, sogni e pleniluni come protagonisti. **"Elisabetta Di Maggio. Frangibile"** e **"Linda Fregni Nagler"** completano l'offerta espositiva della GAM per l'inizio del 2026.
+**"Jeff Wall. Photographs"** (fino al 28 gennaio 2026) è una retrospettiva del fotografo canadese.
 
-La **Reggia di Venaria** ospita **"Fernand Léger! Yves Klein, Niki de Saint Phalle, Keith Haring"** (fino al 1° febbraio 2026), una mostra che mette in evidenza il legame storico e artistico tra Léger e la generazione di artisti francesi Nuovi Realisti, con 70 opere in totale.
+### GAM e Reggia di Venaria
 
-### Mostre al Museo del Cinema e arte orientale
+Alla GAM: **"Notti"** (fino al 1° marzo 2026), viaggio attraverso cinque secoli di rappresentazioni notturne. Anche le personali di Elisabetta Di Maggio e Linda Fregni Nagler.
 
-Il **Museo Nazionale del Cinema** alla Mole Antonelliana presenta **"Pazza Idea: in mostra le icone pop di Angelo Frontoni"**, un percorso dedicato alla cultura pop attraverso l'obiettivo del fotografo. Sempre alla Mole, **"Manifesti d'Artista"** esplora il momento in cui il cinema diventa pittura attraverso manifesti storici.
+La Reggia di Venaria ospita **"Fernand Léger! Yves Klein, Niki de Saint Phalle, Keith Haring"** (fino al 1° febbraio 2026) con 70 opere.
 
-Il **MAO - Museo d'Arte Orientale** propone **"Chiharu Shiota. The Soul Trembles"** (fino al 28 giugno 2026), mostra dedicata alla celebre artista giapponese curata da Mami Kataoka, direttrice del Mori Art Museum. L'installazione esplora i temi dell'anima e della memoria attraverso le caratteristiche reti intrecciate dell'artista.
+### Museo del Cinema e MAO
+
+Al Museo Nazionale del Cinema: **"Pazza Idea: in mostra le icone pop di Angelo Frontoni"** e **"Manifesti d'Artista"**.
+
+Al MAO: **"Chiharu Shiota. The Soul Trembles"** (fino al 28 giugno 2026), curata da Mami Kataoka.
 
 ## Teatro e spettacolo
 
-Il panorama teatrale torinese a gennaio 2026 è ricchissimo, con proposte che spaziano dalla prosa al musical, dalla lirica alla danza.
+### Teatro Regio
 
-### Teatro Regio: opera e balletto
+**"La Cenerentola"** di Rossini, dal 20 al 27 gennaio. Sul podio il maestro Antonino Fogliani, regia di Manu Lalli, protagonista Vasilisa Berzhanskaya. Anteprima giovani (under 30) il 17 gennaio.
 
-Il **Teatro Regio** apre il 2026 con **"La Cenerentola"** di Gioachino Rossini, in scena dal **20 al 27 gennaio**. La produzione, proveniente dal Maggio Musicale Fiorentino, presenta tre importanti debutti: sul podio dell'Orchestra e Coro del Regio sale il maestro **Antonino Fogliani**, mentre la regia è affidata a **Manu Lalli** e il ruolo protagonista a **Vasilisa Berzhanskaya**. L'anteprima giovani (under 30) è prevista per sabato 17 gennaio alle ore 20.
+**"L'elisir d'amore"** di Donizetti: 28, 29, 30 e 31 gennaio. Concerti del Regio il 14 e 30 gennaio.
 
-Il Teatro Regio propone anche **"L'elisir d'amore"** di Donizetti, in scena il 28, 29, 30 e 31 gennaio. Il cartellone include inoltre i "Concerti del Regio" con appuntamenti il 14 e 30 gennaio.
+### Teatro Colosseo
 
-### Teatro Colosseo: grande varietà
+**Antonio Albanese** con "Personaggi" dal 15 gennaio al 1° febbraio. **Diana Del Bufalo** il 5 gennaio con "Tra sogni e desideri", colonne sonore Disney con l'Orchestra Filarmonica di Benevento. **Luca Barbarossa** il 10 gennaio.
 
-Il **Teatro Colosseo** presenta una stagione estremamente variegata. **Antonio Albanese** torna a Torino con il suo spettacolo "Personaggi" dal **15 gennaio al 1° febbraio 2026**. Lo show riporta in scena le celebri maschere create dall'attore lombardo, tra cui Epifanio, L'Ottimista, il Sommelier, Cetto La Qualunque, Alex Drastico e Perego.
+### Musical
 
-**Diana Del Bufalo** sarà protagonista il **5 gennaio 2026** con "Tra sogni e desideri", uno spettacolo dedicato alle più belle colonne sonore Disney, accompagnata dalla narrazione di Francesco Pannofino e dall'Orchestra Filarmonica di Benevento. Lo show rappresenta un viaggio musicale attraverso oltre cento anni di fiabe e melodie che hanno segnato generazioni.
-
-**Camilla Boniardi e Guglielmo Scilla** si esibiranno il 20 e 21 gennaio. Altri appuntamenti includono "La Locandiera" di Goldoni per il periodo natalizio e Capodanno, e **Luca Barbarossa** il 10 gennaio.
-
-### Musical e grandi produzioni
-
-Il Teatro Alfieri ospita **"Grease"** dal 30 gennaio al 2 febbraio, mentre altri musical in programma includono **"We Will Rock You"** (sulle note dei Queen) il 16 gennaio al Teatro Colosseo, e "Cuore di ghiaccio – il musical" il 26 gennaio al Teatro Cardinal Massaia.
-
-**"Forbici Follia"**, il celebre giallo comico interattivo, continua la sua tradizione con repliche al **Teatro Erba** il 10-12 e 17-19 gennaio, celebrando 25 anni di successi.
+**"Grease"** al Teatro Alfieri dal 30 gennaio al 2 febbraio. **"We Will Rock You"** il 16 gennaio al Colosseo. **"Forbici Follia"** al Teatro Erba il 10-12 e 17-19 gennaio.
 
 ### Altri teatri
 
-Il **Teatro della Concordia di Venaria Reale** propone il **Gran Galà di Capodanno 2026** e "The Opera Locos" (comicità lirica) sempre per Capodanno. Il teatro ospiterà anche **Franco126** il 23 gennaio con il "Futuri Possibili Club Tour".
-
-Il **Teatro Gioiello** vede in scena **"Il Lago dei cigni"** con il balletto classico, mentre il **Teatro Gobetti** presenta vari spettacoli di prosa tra cui "La coscienza di Zeno" e "Uccellini".
+Al Teatro della Concordia: Gran Galà di Capodanno e **Franco126** il 23 gennaio. Al Teatro Gioiello: **"Il Lago dei cigni"**.
 
 ## Musica e concerti
 
-Gennaio 2026 offre un calendario musicale straordinario con artisti nazionali e internazionali.
+### Inalpi Arena
 
-### Grandi concerti all'Inalpi Arena
-
-L'**Inalpi Arena** ospita alcuni degli eventi musicali più attesi del mese. **Lazza** si è esibito il **15 gennaio** (data sold out) con il suo "Locura Tour 2025", presentando oltre due ore di musica con 37 brani tra cui le novità dell'album "Locura" e i suoi successi storici.
+**Lazza** il 15 gennaio (sold out) con il "Locura Tour 2025", oltre due ore di musica con 37 brani.
 
 ### Concerti nei teatri
 
-**Dardust** porta il suo "Urban Impressionism Tour" al **Teatro Gioiello** il **12 gennaio 2026**. Il concerto rappresenta un viaggio sonoro che fonde pianoforte ed elettronica in un'esperienza multisensoriale unica, con brani tratti dall'ultimo album e dall'ep "Urban Impressionism (Piano Solo)".
+**Dardust** al Teatro Gioiello il 12 gennaio con "Urban Impressionism Tour".
 
-La **PFM – Premiata Forneria Marconi** sarà in concerto al **Teatro Alfieri** lunedì **12 gennaio 2026** con il "Doppia Traccia Tour". Il concerto sarà diviso in due parti: la prima con i grandi successi del gruppo come "Impressioni di settembre", "È festa" e "La carrozza di Hans", la seconda dedicata ai brani di Fabrizio De André come "Il pescatore" e "Volta la carta". In apertura si esibirà il cantautore Fabrizio Consoli.
+**PFM** al Teatro Alfieri il 12 gennaio con "Doppia Traccia Tour": prima parte con i successi del gruppo, seconda dedicata a Fabrizio De André.
 
-**Franco126** si esibirà il **23 gennaio 2026** al Teatro della Concordia di Venaria Reale (secondo alcune fonti) o all'Hiroshima Mon Amour (secondo altre), presentando il nuovo album "Futuri Possibili", un progetto che attraversa diversi generi dalla trap alle ballate, fino alle canzoni d'autore della tradizione italiana.
+**Franco126** il 23 gennaio con il nuovo album "Futuri Possibili".
 
 ### Musica classica
 
-Il **Concerto del 1° gennaio 2026** segna tradizionalmente l'inizio dell'anno con musica classica. L'**Auditorium Rai** ospita l'**Orchestra Sinfonica della Rai** in vari appuntamenti il 9-10, 16-17 e 30-31 gennaio.
-
-La **Sala 500 del Centro Congressi Lingotto** presenta **Alexandra Dovgan** il 28 gennaio con la serie "I pianisti del Lingotto". Il **Teatro Regio** offre anche conferenze concerto il 22 gennaio.
+**Concerto del 1° gennaio** tradizionale. **Orchestra Sinfonica della Rai** all'Auditorium: 9-10, 16-17 e 30-31 gennaio. **Alexandra Dovgan** al Lingotto il 28 gennaio.
 
 ## Sport
 
-Gennaio 2026 è un mese importante per lo sport torinese, con eventi calcistici di rilievo e manifestazioni internazionali.
-
 ### Calcio
 
-Lo **Stadio Olimpico Grande Torino** ospita due partite casalinghe del Torino FC: **Torino-Parma** domenica 5 gennaio e **Torino-Cagliari** domenica 26 gennaio. Il derby più atteso è **Torino-Juventus** domenica 12 gennaio sempre allo Stadio Olimpico.
+- **Torino-Parma**: 5 gennaio
+- **Torino-Juventus**: 12 gennaio (derby)
+- **Juventus-Milan**: 19 gennaio
+- **Torino-Cagliari**: 26 gennaio
 
-Lo **Juventus Stadium** ospita il big match **Juventus-Milan** domenica 19 gennaio.
+### Pattinaggio
 
-### Pattinaggio sul ghiaccio
+**Palavela On Ice** continua per tutto gennaio.
 
-Il **Palavela On Ice 2025/2026** continua per tutto gennaio, offrendo ai torinesi e ai visitatori la magia del pattinaggio sul ghiaccio in uno degli impianti più moderni della città. Anche il **Villaggio di Natale in piazza Solferino** mantiene la sua pista di pattinaggio fino all'Epifania.
+### La Fiamma Olimpica
 
-### La Fiamma Olimpica di Milano Cortina 2026
+Dal **10 al 16 gennaio**, la Fiamma dei Giochi di Milano Cortina 2026 attraversa il Piemonte. Entra a Cuneo il 10 gennaio, tocca Langhe e Alba l'11. Il **12 gennaio** attraversa Torino verso la Valle d'Aosta, passando per Venaria Reale, Rivoli, Settimo Torinese e Chivasso. In totale 25 comuni piemontesi e 4 siti UNESCO.
 
-Un evento di portata storica attraverserà il Piemonte dal **10 al 16 gennaio 2026**: il passaggio della **Fiamma Olimpica dei Giochi Invernali di Milano Cortina 2026**. La Fiamma entrerà in Piemonte sabato 10 gennaio a Cuneo, toccando poi le Langhe (La Morra, Bra, Alba) l'11 gennaio. **Lunedì 12 gennaio**, dal capoluogo la Fiamma attraverserà Torino e si avventurerà verso la Valle d'Aosta passando per Venaria Reale, Rivoli, Settimo Torinese e Chivasso. Il percorso coinvolgerà complessivamente 25 comuni piemontesi e 4 siti UNESCO.
+## Shopping e mercatini
 
-## Shopping ed eventi commerciali
+### Saldi invernali
 
-### Saldi invernali 2026
-
-I tanto attesi **Saldi Invernali 2026** prenderanno il via il **3 gennaio** in tutto il Piemonte, con una durata massima di otto settimane fino al **28 febbraio 2026**. Le vie centrali di Torino, da via Roma a via Lagrange, insieme ai centri commerciali e agli outlet della regione, offriranno sconti su abbigliamento, accessori e articoli per la casa. È importante notare che nei trenta giorni precedenti l'inizio dei saldi sono vietate tutte le vendite promozionali.
+Iniziano il **3 gennaio** in tutto il Piemonte, durano fino al 28 febbraio.
 
 ### Mercatini
 
-Il **Mercato dell'Antiquariato di Piazza Vittorio** si tiene ogni prima domenica del mese (quindi il 5 gennaio 2026) sotto i portici della più grande piazza porticata d'Europa. Qui 80 espositori propongono oggetti di antiquariato e modernariato, dagli arredi antichi alle ceramiche, dai bronzi ai pizzi antichi.
+**Mercato dell'Antiquariato di Piazza Vittorio**: prima domenica del mese (5 gennaio), 80 espositori sotto i portici.
 
-Il **Vintage della Gran Madre** si svolge domenica 19 gennaio in Piazza Gran Madre di Dio, a partire dalle ore 10:00. Questo mercatino è dedicato al vintage e all'abbigliamento di seconda mano.
+**Vintage della Gran Madre**: domenica 19 gennaio, dalle 10:00.
 
-## Eventi speciali e iniziative culturali
-
-### Capodanno e inizio anno
-
-Il **Concerto del 1° gennaio** al Teatro Regio segna tradizionalmente l'inizio dell'anno con musica classica. Vari locali e teatri propongono eventi speciali per il Capodanno, tra cui il Gran Galà al Teatro della Concordia e The Opera Locos al Teatro Colosseo.
+## Eventi speciali
 
 ### Giorno della Memoria
 
-Il **27 gennaio** si celebra il **Giorno della Memoria**, con eventi e iniziative in tutta la città per ricordare le vittime dell'Olocausto. Torino, con le sue Pietre d'Inciampo e i numerosi luoghi della memoria, offre percorsi e riflessioni su questo tema fondamentale.
+Il **27 gennaio** si celebra con eventi in tutta la città. Torino ha numerose Pietre d'Inciampo e luoghi della memoria.
 
 ### Capodanno Cinese
 
-Il **Capodanno Cinese 2026**, anno del Serpente di Legno, cade in gennaio e sarà celebrato nei ristoranti e nelle comunità cinesi di Torino. Il Serpente di Legno simboleggia saggezza, tranquillità e stabilità.
+L'anno del Serpente di Legno cade in gennaio.
 
 ### Capodanno Ortodosso
 
-Il **14 gennaio** si festeggia il **Capodanno russo-ortodosso**, una delle più importanti festività russe. Questa celebrazione offre l'occasione di scoprire tradizioni e specialità della cultura russa presenti anche a Torino.
+Il **14 gennaio** si festeggia il Capodanno russo-ortodosso.
 
-## Conclusioni
+## Conclusione
 
-Gennaio 2026 si presenta come un mese eccezionale per vivere Torino in tutte le sue sfaccettature culturali, artistiche e sportive. Dalle ultime giornate delle Luci d'Artista che trasformano la città in un museo luminoso a cielo aperto, alle grandi mostre internazionali che ospitano capolavori provenienti dai più prestigiosi musei del mondo, fino ai concerti sold-out e agli spettacoli teatrali di alta qualità, il capoluogo piemontese conferma la sua vocazione di polo culturale di primo piano.
-
-L'arrivo della Fiamma Olimpica, i saldi invernali, gli eventi sportivi e le numerose iniziative nei teatri e nei musei rendono questo mese un periodo ideale per visitare Torino o per riscoprirla da residenti. Con temperature invernali che invitano a rifugiarsi nei teatri riscaldati, nelle sale espositive e nei caffè storici, gennaio offre il perfetto equilibrio tra cultura alta e intrattenimento popolare, tra tradizione e contemporaneità, confermando Torino come una delle città italiane più vivaci e culturalmente stimolanti.
+Gennaio 2026 offre Luci d'Artista, grandi mostre internazionali, concerti sold-out e spettacoli teatrali. L'arrivo della Fiamma Olimpica, i saldi e gli eventi sportivi rendono questo mese ideale per visitare Torino. Temperature invernali che invitano a rifugiarsi nei teatri, nelle sale espositive e nei caffè storici.
 
 ---
 
 ## Articoli correlati
 
-- [Eventi a Torino a febbraio 2026: amore, cioccolato, arte e opera](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth con Riccardo Muti, mostre Lee Miller e Jeff Wall, Carnevale di Ivrea, Final Eight basket
-- [Eventi a Torino a marzo 2026: arte, musica e spettacolo](/blog/eventi-torino-marzo-2026) - Chiharu Shiota al MAO, Mika, Renato Zero, Subsonica 30 anni, Rocky Musical
-- [Come raggiungere Torino in modo sostenibile: guida completa ai viaggi eco-friendly](/blog/viaggiare-sostenibile-torino-guida) - Treni Frecciarossa, FlixBus, aeroporto carbon-neutral e Torino+Piemonte Card
-- [Mobilità sostenibile a Torino: guida completa ai trasporti per studenti](/blog/mobilita-sostenibile-torino-studenti)
-- [Lo storico carnevale di Ivrea: guida completa alla battaglia delle arance](/blog/carnevale-ivrea-battaglia-arance-2025)
-- [Torino in ogni stagione: guida completa per turisti](/blog/torino-ogni-stagione-turisti) - Primavera, estate, autunno e inverno a Torino
+- [Eventi a Torino a febbraio 2026](/blog/eventi-torino-febbraio-2026)
+- [Eventi a Torino a marzo 2026](/blog/eventi-torino-marzo-2026)
+- [Come raggiungere Torino in modo sostenibile](/blog/viaggiare-sostenibile-torino-guida)
+- [Mobilità sostenibile a Torino per studenti](/blog/mobilita-sostenibile-torino-studenti)
+- [Carnevale di Ivrea](/blog/carnevale-ivrea-battaglia-arance-2025)
+- [Torino in ogni stagione](/blog/torino-ogni-stagione-turisti)
