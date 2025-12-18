@@ -29,6 +29,11 @@ const translations = {
     perYear: "/anno",
     apply: "Applica modifiche",
     applied: "Modifiche applicate!",
+    before: "Ora",
+    after: "Dopo",
+    housing: "Alloggio",
+    food: "Cibo",
+    gym: "Palestra",
     housingScenario: {
       single: {
         title: "Passa a stanza doppia",
@@ -51,7 +56,7 @@ const translations = {
       description: "Pasto completo €3-5 con ISEE ridotto",
       tip: "20 pranzi/mese = €90 risparmio vs cucinare"
     },
-    gym: {
+    gymScenario: {
       title: "Rinuncia alla palestra privata",
       description: "CUS Torino gratis per studenti PoliTo/UniTo",
       tip: "Palestre universitarie + corsi fitness inclusi"
@@ -69,6 +74,11 @@ const translations = {
     perYear: "/year",
     apply: "Apply changes",
     applied: "Changes applied!",
+    before: "Now",
+    after: "After",
+    housing: "Housing",
+    food: "Food",
+    gym: "Gym",
     housingScenario: {
       single: {
         title: "Switch to shared room",
@@ -91,7 +101,7 @@ const translations = {
       description: "Full meal €3-5 with reduced ISEE",
       tip: "20 lunches/month = €90 savings vs cooking"
     },
-    gym: {
+    gymScenario: {
       title: "Skip private gym",
       description: "CUS Turin free for PoliTo/UniTo students",
       tip: "University gyms + fitness classes included"
@@ -171,6 +181,28 @@ export const WhatIfSimulator = ({
     setTimeout(() => setApplied(false), 2000);
   };
 
+  // Before/After comparison data
+  const comparisonData = useMemo(() => {
+    const beforeRent = currentRent;
+    const afterRent = housingActive && canApplyHousing ? currentRent - housingSavings : currentRent;
+    
+    const beforeFood = currentGroceries;
+    const afterFood = mensaActive ? Math.max(100, currentGroceries - mensaSavings) : currentGroceries;
+    
+    const beforeGym = currentGym;
+    const afterGym = gymActive && canApplyGym ? 0 : currentGym;
+    
+    return {
+      housing: { before: beforeRent, after: afterRent },
+      food: { before: beforeFood, after: afterFood },
+      gym: { before: beforeGym, after: afterGym },
+      total: { 
+        before: beforeRent + beforeFood + beforeGym, 
+        after: afterRent + afterFood + afterGym 
+      }
+    };
+  }, [currentRent, currentGroceries, currentGym, housingActive, mensaActive, gymActive, housingSavings, mensaSavings, canApplyHousing, canApplyGym]);
+
   const scenarios = [
     {
       id: "housing",
@@ -201,9 +233,9 @@ export const WhatIfSimulator = ({
     {
       id: "gym",
       icon: Dumbbell,
-      title: t.gym.title,
-      description: t.gym.description,
-      tip: t.gym.tip,
+      title: t.gymScenario.title,
+      description: t.gymScenario.description,
+      tip: t.gymScenario.tip,
       savings: gymSavings,
       active: gymActive,
       setActive: setGymActive,
@@ -212,6 +244,10 @@ export const WhatIfSimulator = ({
       showWarning: false
     }
   ];
+
+  // Helper to calculate bar width percentage
+  const maxValue = Math.max(comparisonData.total.before, 1);
+  const getBarWidth = (value: number) => Math.max((value / maxValue) * 100, 2);
 
   return (
     <Card className="border-amber-500/30 bg-gradient-to-br from-amber-500/5 to-background overflow-hidden">
@@ -227,28 +263,139 @@ export const WhatIfSimulator = ({
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
-        {/* Total Savings Summary */}
+        {/* Before/After Bar Chart Comparison */}
         <AnimatePresence mode="wait">
-          <motion.div
-            key={totalSavings}
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.95, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20"
-          >
-            <p className="text-sm text-muted-foreground mb-1">{t.totalSavings}:</p>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-emerald-600">
-                €{totalSavings}
-              </span>
-              <span className="text-sm text-muted-foreground">{t.perMonth}</span>
-              <span className="text-xs text-emerald-600/70 ml-auto">
-                = €{totalSavings * 12}{t.perYear}
-              </span>
-            </div>
-          </motion.div>
+          {totalSavings > 0 && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="p-4 rounded-xl bg-muted/30 border border-border/50 space-y-3"
+            >
+              {/* Legend */}
+              <div className="flex items-center justify-between text-xs">
+                <div className="flex items-center gap-4">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-3 h-3 rounded-sm bg-muted-foreground/40" />
+                    {t.before}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-3 h-3 rounded-sm bg-emerald-500" />
+                    {t.after}
+                  </span>
+                </div>
+                <span className="text-emerald-600 font-medium">
+                  -€{totalSavings}{t.perMonth}
+                </span>
+              </div>
+
+              {/* Bar comparisons */}
+              <div className="space-y-2.5">
+                {/* Housing */}
+                {comparisonData.housing.before !== comparisonData.housing.after && (
+                  <div className="space-y-1">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <span>{t.housing}</span>
+                      <span className="text-emerald-600">-€{comparisonData.housing.before - comparisonData.housing.after}</span>
+                    </div>
+                    <div className="relative h-5 flex gap-0.5">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${getBarWidth(comparisonData.housing.before)}%` }}
+                        className="h-full rounded-l bg-muted-foreground/30 flex items-center justify-end pr-1.5"
+                      >
+                        <span className="text-[10px] text-muted-foreground font-medium">€{comparisonData.housing.before}</span>
+                      </motion.div>
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${getBarWidth(comparisonData.housing.after)}%` }}
+                        transition={{ delay: 0.1 }}
+                        className="h-full rounded-r bg-emerald-500 flex items-center justify-end pr-1.5"
+                      >
+                        <span className="text-[10px] text-white font-medium">€{comparisonData.housing.after}</span>
+                      </motion.div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Food */}
+                {comparisonData.food.before !== comparisonData.food.after && (
+                  <div className="space-y-1">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <span>{t.food}</span>
+                      <span className="text-emerald-600">-€{comparisonData.food.before - comparisonData.food.after}</span>
+                    </div>
+                    <div className="relative h-5 flex gap-0.5">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${getBarWidth(comparisonData.food.before)}%` }}
+                        className="h-full rounded-l bg-muted-foreground/30 flex items-center justify-end pr-1.5"
+                      >
+                        <span className="text-[10px] text-muted-foreground font-medium">€{comparisonData.food.before}</span>
+                      </motion.div>
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${getBarWidth(comparisonData.food.after)}%` }}
+                        transition={{ delay: 0.1 }}
+                        className="h-full rounded-r bg-emerald-500 flex items-center justify-end pr-1.5"
+                      >
+                        <span className="text-[10px] text-white font-medium">€{comparisonData.food.after}</span>
+                      </motion.div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Gym */}
+                {comparisonData.gym.before !== comparisonData.gym.after && comparisonData.gym.before > 0 && (
+                  <div className="space-y-1">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <span>{t.gym}</span>
+                      <span className="text-emerald-600">-€{comparisonData.gym.before - comparisonData.gym.after}</span>
+                    </div>
+                    <div className="relative h-5 flex gap-0.5">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${getBarWidth(comparisonData.gym.before)}%` }}
+                        className="h-full rounded-l bg-muted-foreground/30 flex items-center justify-end pr-1.5"
+                      >
+                        <span className="text-[10px] text-muted-foreground font-medium">€{comparisonData.gym.before}</span>
+                      </motion.div>
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={{ width: `${getBarWidth(comparisonData.gym.after)}%` }}
+                        transition={{ delay: 0.1 }}
+                        className="h-full rounded-r bg-emerald-500 flex items-center justify-end pr-1.5"
+                      >
+                        <span className="text-[10px] text-white font-medium">€{comparisonData.gym.after}</span>
+                      </motion.div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Total comparison */}
+              <div className="pt-2 border-t border-border/50">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">
+                    €{comparisonData.total.before} → €{comparisonData.total.after}
+                  </span>
+                  <Badge className="bg-emerald-500/20 text-emerald-600 border-emerald-500/30">
+                    -€{totalSavings * 12}{t.perYear}
+                  </Badge>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </AnimatePresence>
+
+        {/* Total Savings Summary (shown when no scenarios active) */}
+        {totalSavings === 0 && (
+          <div className="p-4 rounded-xl bg-muted/20 border border-border/30">
+            <p className="text-sm text-muted-foreground text-center">
+              {language === 'it' ? 'Attiva uno scenario per vedere il risparmio' : 'Enable a scenario to see savings'}
+            </p>
+          </div>
+        )}
 
         {/* Scenario Cards */}
         <div className="space-y-3">
