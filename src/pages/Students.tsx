@@ -169,7 +169,7 @@ const Students = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {/* Budget Calculator */}
               <Link to="/studenti/strumenti/budget">
                 <Card className="h-full hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group">
@@ -185,6 +185,27 @@ const Students = () => {
                     </p>
                     <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
                       {t("students.tools.budgetCalc.cta")}
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Badge>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Grade Calculator - NEW */}
+              <Link to="/studenti/strumenti/media">
+                <Card className="h-full hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                      <GraduationCap className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {t("students.tools.gradeCalc.title")}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {t("students.tools.gradeCalc.description")}
+                    </p>
+                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                      {t("students.tools.gradeCalc.cta")}
                       <ArrowRight className="w-3 h-3 ml-1" />
                     </Badge>
                   </CardContent>
