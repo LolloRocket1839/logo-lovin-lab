@@ -1405,11 +1405,94 @@
         "description": "Compare electricity and gas rates",
         "comingSoon": "Coming soon"
       },
+      "examSession": {
+        "title": "Exam Session Planner",
+        "description": "Plan your exam session optimally",
+        "cta": "Try now"
+      },
       "allTools": {
         "title": "All tools",
         "description": "Discover all free tools"
       },
       "backToTools": "Back to tools"
+    }
+  },
+  "examSessionPlanner": {
+    "seo": {
+      "title": "Exam Session Planner | Jungle Rent",
+      "description": "Plan your exam session optimally. Consider CFU, difficulty and prerequisites to create the perfect plan."
+    },
+    "badge": "Free tool",
+    "title": "Exam Session Planner",
+    "subtitle": "Plan your session strategically considering CFU, difficulty and prerequisites",
+    "addExam": {
+      "title": "Add exam",
+      "name": "Exam name",
+      "namePlaceholder": "E.g: Calculus I",
+      "cfu": "Credits",
+      "difficulty": "Perceived difficulty",
+      "difficultyOptions": {
+        "1": "😊 Easy",
+        "2": "😐 Medium",
+        "3": "😰 Hard",
+        "4": "💀 Final boss"
+      },
+      "prerequisite": "Prerequisite for",
+      "prerequisitePlaceholder": "Select exam...",
+      "noPrerequisite": "No prerequisite",
+      "date": "Exam date",
+      "datePlaceholder": "Select date...",
+      "session": "Session",
+      "sessionOptions": {
+        "invernale": "Winter (Jan-Feb)",
+        "estiva": "Summer (Jun-Jul)",
+        "autunnale": "Fall (Sep)"
+      },
+      "addButton": "Add exam",
+      "editButton": "Edit exam"
+    },
+    "config": {
+      "title": "Configuration",
+      "maxCfu": "Max CFU per session",
+      "sessions": "Available sessions"
+    },
+    "calendar": {
+      "title": "Exam calendar",
+      "noExams": "No exams with dates",
+      "examDetails": "Exam details",
+      "studyHours": "Estimated study hours",
+      "warning": "Warning: multiple exams on the same day!"
+    },
+    "plan": {
+      "title": "Session plan",
+      "generate": "Generate optimal plan",
+      "regenerate": "Regenerate plan",
+      "empty": "Add at least one exam to generate the plan",
+      "totalCfu": "Total credits",
+      "avgDifficulty": "Average difficulty",
+      "estimatedHours": "Estimated study hours",
+      "warning": "Challenging session!",
+      "proBadge": "Pro Session!",
+      "noExamsInSession": "No exams in this session"
+    },
+    "share": {
+      "title": "Share plan",
+      "downloadPdf": "Download PDF",
+      "shareWhatsApp": "Share on WhatsApp",
+      "copyLink": "Copy link",
+      "linkCopied": "Link copied!",
+      "pdfGenerated": "PDF generated successfully!"
+    },
+    "exams": {
+      "title": "Your exams",
+      "empty": "No exams added",
+      "delete": "Delete",
+      "edit": "Edit"
+    },
+    "gamification": {
+      "progress": "Plan progress",
+      "balanced": "Balanced plan! 🎉",
+      "momentum": "Build momentum with easier exams"
     }
   },
   "aiSearch": {

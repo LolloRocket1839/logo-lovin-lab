@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles } from "lucide-react";
+import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -212,23 +212,26 @@ const Students = () => {
                 </Card>
               </Link>
 
-              {/* Utility Comparator - Coming Soon */}
-              <Card className="h-full opacity-75">
-                <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-6 h-6 text-muted-foreground" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">
-                    {t("students.tools.utilityComp.title")}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    {t("students.tools.utilityComp.description")}
-                  </p>
-                  <Badge variant="secondary">
-                    {t("students.tools.utilityComp.comingSoon")}
-                  </Badge>
-                </CardContent>
-              </Card>
+              {/* Exam Session Planner */}
+              <Link to="/studenti/strumenti/sessione">
+                <Card className="h-full hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                      <Calendar className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {t("students.tools.examSession.title")}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {t("students.tools.examSession.description")}
+                    </p>
+                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                      {t("students.tools.examSession.cta")}
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Badge>
+                  </CardContent>
+                </Card>
+              </Link>
 
               {/* All Tools Link */}
               <Link to="/studenti/strumenti">
