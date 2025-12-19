@@ -120,5 +120,6 @@ Allow: /
 # - Airbnb management in Turin
 # - University accommodation (Politecnico, UniTo)
 
-# Sitemap
+# Sitemaps
 Sitemap: https://junglerent.it/sitemap.xml
+Sitemap: https://junglerent.it/sitemap-tools.xml
