@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { 
   Calendar, 
   ArrowLeft,
-  Plus,
+  GraduationCap,
   Sparkles,
   MoreHorizontal,
   Trash2,
@@ -13,8 +13,6 @@ import {
   Undo2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   DropdownMenu,
@@ -35,7 +33,9 @@ import {
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { BottomNav } from "@/components/BottomNav";
-import { SessionExamInput, type SessionExam } from "@/components/tools/SessionExamInput";
+import { type SessionExam } from "@/components/tools/SessionExamInput";
+import { ExamModal } from "@/components/tools/ExamModal";
+import { ExamList } from "@/components/tools/ExamList";
 import { SessionCalendarView } from "@/components/tools/SessionCalendarView";
 import { SessionPlanOutput } from "@/components/tools/SessionPlanOutput";
 import { SessionShareExport } from "@/components/tools/SessionShareExport";
@@ -55,6 +55,10 @@ const ExamSessionPlanner = () => {
   const [showClearDialog, setShowClearDialog] = useState(false);
   const [deletedExams, setDeletedExams] = useState<SessionExam[] | null>(null);
   const undoTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  
+  // Modal state
+  const [modalOpen, setModalOpen] = useState(false);
+  const [editingExam, setEditingExam] = useState<SessionExam | null>(null);
   
   // Load from localStorage
   useEffect(() => {
@@ -82,16 +86,57 @@ const ExamSessionPlanner = () => {
     }
   }, [exams, cfuMax]);
   
-  const addExam = (exam: SessionExam) => {
-    setExams(prev => [...prev, exam]);
+  const handleSaveExam = (exam: SessionExam) => {
+    if (editingExam) {
+      // Update existing
+      setExams(prev => prev.map(e => e.id === exam.id ? exam : e));
+      toast({
+        title: currentLang === 'it' ? "Esame modificato" : "Exam updated",
+        description: exam.nome,
+      });
+    } else {
+      // Add new
+      setExams(prev => [...prev, exam]);
+      toast({
+        title: currentLang === 'it' ? "Esame aggiunto" : "Exam added",
+        description: exam.nome,
+      });
+    }
+    setEditingExam(null);
+  };
+  
+  const handleEditExam = (exam: SessionExam) => {
+    setEditingExam(exam);
+    setModalOpen(true);
+  };
+  
+  const handleDuplicateExam = (exam: SessionExam) => {
+    const duplicated: SessionExam = {
+      ...exam,
+      id: crypto.randomUUID(),
+      nome: `${exam.nome} (${currentLang === 'it' ? 'copia' : 'copy'})`
+    };
+    setExams(prev => [...prev, duplicated]);
     toast({
-      title: currentLang === 'it' ? "Esame aggiunto" : "Exam added",
-      description: exam.nome,
+      title: currentLang === 'it' ? "Esame duplicato" : "Exam duplicated",
+      description: duplicated.nome,
     });
   };
   
+  const handleAddNew = () => {
+    setEditingExam(null);
+    setModalOpen(true);
+  };
+  
   const removeExam = (id: string) => {
+    const exam = exams.find(e => e.id === id);
     setExams(prev => prev.filter(e => e.id !== id));
+    if (exam) {
+      toast({
+        title: currentLang === 'it' ? "Esame eliminato" : "Exam deleted",
+        description: exam.nome,
+      });
+    }
   };
   
   const updateExam = (id: string, updates: Partial<SessionExam>) => {
@@ -221,6 +266,15 @@ const ExamSessionPlanner = () => {
   
   return (
     <>
+      {/* Exam Modal */}
+      <ExamModal
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+        onSave={handleSaveExam}
+        existingExams={exams}
+        editExam={editingExam}
+        lang={currentLang}
+      />
       <Helmet>
         <title>{c.seoTitle}</title>
         <meta name="description" content={c.seoDesc} />
@@ -294,7 +348,7 @@ const ExamSessionPlanner = () => {
               <div className="flex items-center justify-between gap-4 mb-6">
                 <TabsList className="grid w-full md:w-auto grid-cols-3 sticky top-16 z-40 bg-background/95 backdrop-blur-sm">
                   <TabsTrigger value="input" className="gap-1.5">
-                    <Plus className="w-4 h-4" />
+                    <GraduationCap className="w-4 h-4" />
                     <span className="text-xs sm:text-sm">{currentLang === 'it' ? 'Esami' : 'Exams'}</span>
                   </TabsTrigger>
                   <TabsTrigger value="calendar" className="gap-1.5">
@@ -328,60 +382,14 @@ const ExamSessionPlanner = () => {
               </div>
               
               <TabsContent value="input" className="mt-0">
-                <div className="grid lg:grid-cols-2 gap-6">
-                  <SessionExamInput 
-                    onAdd={addExam}
-                    existingExams={exams}
-                    lang={currentLang}
-                  />
-                  
-                  {/* Exam List */}
-                  <Card>
-                    <CardHeader className="pb-3">
-                      <CardTitle className="text-lg">
-                        {currentLang === 'it' ? 'Esami inseriti' : 'Added exams'} ({exams.length})
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      {exams.length === 0 ? (
-                        <div className="text-center py-8 text-muted-foreground">
-                          <Calendar className="w-12 h-12 mx-auto mb-3 opacity-30" />
-                          <p>{c.warnings.noExams}</p>
-                        </div>
-                      ) : (
-                        <div className="space-y-2 max-h-[400px] overflow-y-auto">
-                          {exams.map((exam) => (
-                            <div 
-                              key={exam.id}
-                              className="flex items-center justify-between p-3 rounded-lg bg-muted/50 group hover:bg-muted transition-colors"
-                            >
-                              <div className="flex items-center gap-3">
-                                <span className="text-xl">{difficultyEmojis[exam.difficolta]}</span>
-                                <div>
-                                  <div className="font-medium text-foreground">{exam.nome}</div>
-                                  <div className="text-xs text-muted-foreground">
-                                    {exam.cfu} CFU
-                                    {exam.dataAppello && (
-                                      <> • {exam.dataAppello.toLocaleDateString(currentLang === 'it' ? 'it-IT' : 'en-US')}</>
-                                    )}
-                                  </div>
-                                </div>
-                              </div>
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                onClick={() => removeExam(exam.id)}
-                                className="opacity-0 group-hover:opacity-100 transition-opacity text-destructive hover:text-destructive"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </Button>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                </div>
+                <ExamList 
+                  exams={exams}
+                  onEdit={handleEditExam}
+                  onDuplicate={handleDuplicateExam}
+                  onDelete={removeExam}
+                  onAddNew={handleAddNew}
+                  lang={currentLang}
+                />
               </TabsContent>
               
               <TabsContent value="calendar" className="mt-0">
