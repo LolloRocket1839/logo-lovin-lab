@@ -523,16 +523,23 @@ const BudgetCalculator = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {/* Manual rent toggle */}
-                    <div className="flex items-center justify-between">
-                      <Label htmlFor="manual-rent" className="text-sm">
-                        {currentLang === 'it' ? 'Ho già un affitto' : 'I already have rent'}
-                      </Label>
-                      <Switch 
-                        id="manual-rent" 
-                        checked={useManualRent} 
-                        onCheckedChange={setUseManualRent} 
-                      />
+                    {/* Manual rent toggle - first element */}
+                    <div className="p-3 bg-muted/50 rounded-lg space-y-2">
+                      <p className="text-sm text-muted-foreground">
+                        {currentLang === 'it' 
+                          ? 'Hai già trovato casa? Inserisci il tuo affitto reale.' 
+                          : 'Already found a place? Enter your actual rent.'}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <Label htmlFor="manual-rent" className="text-sm font-medium">
+                          {currentLang === 'it' ? 'Ho già un affitto' : 'I already have rent'}
+                        </Label>
+                        <Switch 
+                          id="manual-rent" 
+                          checked={useManualRent} 
+                          onCheckedChange={setUseManualRent} 
+                        />
+                      </div>
                     </div>
                     
                     {useManualRent ? (
