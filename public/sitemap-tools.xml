@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Student Tools Hub -->
+  <url>
+    <loc>https://jungle-rent.com/studenti</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://jungle-rent.com/studenti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jungle-rent.com/studenti"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jungle-rent.com/studenti"/>
+  </url>
+
+  <!-- Budget Calculator Tool -->
+  <url>
+    <loc>https://jungle-rent.com/studenti/strumenti/budget</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://jungle-rent.com/studenti/strumenti/budget"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jungle-rent.com/studenti/strumenti/budget"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jungle-rent.com/studenti/strumenti/budget"/>
+  </url>
+
+  <!-- Grade Calculator Tool -->
+  <url>
+    <loc>https://jungle-rent.com/studenti/strumenti/media</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://jungle-rent.com/studenti/strumenti/media"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jungle-rent.com/studenti/strumenti/media"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jungle-rent.com/studenti/strumenti/media"/>
+  </url>
+
+  <!-- Exam Session Planner Tool -->
+  <url>
+    <loc>https://jungle-rent.com/studenti/strumenti/sessione</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://jungle-rent.com/studenti/strumenti/sessione"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jungle-rent.com/studenti/strumenti/sessione"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jungle-rent.com/studenti/strumenti/sessione"/>
+  </url>
+
+</urlset>
