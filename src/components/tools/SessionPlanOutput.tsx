@@ -1,14 +1,24 @@
 import { useMemo } from "react";
-import { Sparkles, AlertTriangle, Trophy, Clock, BookOpen } from "lucide-react";
+import { Sparkles, AlertTriangle, Trophy, Clock, BookOpen, Settings, ChevronDown } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import type { SessionExam } from "./SessionExamInput";
 import { format, compareAsc } from "date-fns";
 import { it, enUS } from "date-fns/locale";
+
+// Difficulty multipliers for study hours calculation
+export const DIFFICULTY_MULTIPLIERS = [0, 0.8, 1.0, 1.2, 1.4];
+export const BASE_HOURS_PER_CFU = 25;
+
+export const calculateStudyHours = (cfu: number, difficulty: number): number => {
+  return Math.round(cfu * BASE_HOURS_PER_CFU * DIFFICULTY_MULTIPLIERS[difficulty]);
+};
 
 interface SessionPlanOutputProps {
   exams: SessionExam[];
@@ -31,7 +41,8 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
     it: {
       title: "Piano Sessione Ottimizzato",
       subtitle: "Basato su CFU, difficoltà e propedeuticità",
-      cfuMax: "CFU massimi per sessione",
+      cfuMax: "Limite crediti per sessione",
+      sessionsNeeded: "sessioni necessarie",
       sessions: {
         invernale: "Sessione Invernale (Gen-Feb)",
         estiva: "Sessione Estiva (Giu-Lug)",
@@ -47,19 +58,23 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
         overload: "Sessione sovraccarica",
         noExams: "Aggiungi esami per generare il piano",
         proBadge: "Sessione da Pro!",
-        balanced: "Piano bilanciato"
+        balanced: "Piano bilanciato",
+        prereqMissing: "Prerequisito mancante"
       },
       tips: {
         title: "Consigli",
         easy: "Inizia dagli esami più facili per costruire momentum",
         prereq: "Rispetta le propedeuticità",
         balance: "Bilancia la difficoltà tra le sessioni"
-      }
+      },
+      settings: "Impostazioni piano",
+      formula: "Formula ore"
     },
     en: {
       title: "Optimized Session Plan",
       subtitle: "Based on credits, difficulty and prerequisites",
-      cfuMax: "Max credits per session",
+      cfuMax: "Credits limit per session",
+      sessionsNeeded: "sessions needed",
       sessions: {
         invernale: "Winter Session (Jan-Feb)",
         estiva: "Summer Session (Jun-Jul)",
@@ -75,14 +90,17 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
         overload: "Session overloaded",
         noExams: "Add exams to generate the plan",
         proBadge: "Pro Session!",
-        balanced: "Balanced plan"
+        balanced: "Balanced plan",
+        prereqMissing: "Missing prerequisite"
       },
       tips: {
         title: "Tips",
         easy: "Start with easier exams to build momentum",
         prereq: "Respect prerequisites",
         balance: "Balance difficulty across sessions"
-      }
+      },
+      settings: "Plan settings",
+      formula: "Hours formula"
     }
   };
   
@@ -143,6 +161,7 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
       
       const cfuTotali = sessionExams.reduce((sum, e) => sum + e.cfu, 0);
       const difficoltaMedia = sessionExams.reduce((sum, e) => sum + e.difficolta, 0) / sessionExams.length;
+      const oreStudioStimate = sessionExams.reduce((sum, e) => sum + calculateStudyHours(e.cfu, e.difficolta), 0);
       
       result.push({
         tipo,
@@ -150,53 +169,138 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
         esami: sessionExams,
         cfuTotali,
         difficoltaMedia,
-        oreStudioStimate: cfuTotali * 25
+        oreStudioStimate
       });
     });
     
     return result;
   }, [exams, c.sessions]);
   
+  const totalCfu = exams.reduce((sum, e) => sum + e.cfu, 0);
   const totalAvgDifficulty = exams.length > 0 
     ? exams.reduce((sum, e) => sum + e.difficolta, 0) / exams.length 
     : 0;
+  const sessionsNeeded = Math.ceil(totalCfu / cfuMax);
   
   const isBalanced = sessions.length > 0 && sessions.every(s => s.cfuTotali <= cfuMax);
   const isPro = totalAvgDifficulty < 2.5 && isBalanced;
   
+  // Check for prerequisite issues
+  const getPrereqIssues = (exam: SessionExam, sessionExams: SessionExam[], sessionOrder: number): boolean => {
+    if (!exam.propedeuticoId || exam.propedeuticoId === 'none') return false;
+    
+    // Find prerequisite exam
+    const prereq = exams.find(e => e.id === exam.propedeuticoId);
+    if (!prereq) return false;
+    
+    // Check if prereq is in a later session or same session but after this exam
+    const prereqSession = sessions.find(s => s.esami.some(e => e.id === prereq.id));
+    if (!prereqSession) return false;
+    
+    const prereqSessionOrder = sessions.indexOf(prereqSession);
+    const currentSession = sessions.find(s => s.esami.some(e => e.id === exam.id));
+    const currentSessionOrder = currentSession ? sessions.indexOf(currentSession) : 0;
+    
+    // Prereq is in a later session
+    if (prereqSessionOrder > currentSessionOrder) return true;
+    
+    // Same session: check dates
+    if (prereqSessionOrder === currentSessionOrder) {
+      if (exam.dataAppello && prereq.dataAppello) {
+        return exam.dataAppello < prereq.dataAppello;
+      }
+    }
+    
+    return false;
+  };
+  
   const difficultyColors = [
     "",
-    "border-green-300 bg-green-50",
-    "border-yellow-300 bg-yellow-50",
-    "border-orange-300 bg-orange-50",
-    "border-red-300 bg-red-50"
+    "border-green-300 bg-green-50 dark:border-green-700 dark:bg-green-950/30",
+    "border-yellow-300 bg-yellow-50 dark:border-yellow-700 dark:bg-yellow-950/30",
+    "border-orange-300 bg-orange-50 dark:border-orange-700 dark:bg-orange-950/30",
+    "border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/30"
   ];
   
+  const difficultyLabels = lang === 'it' 
+    ? ['', 'facile', 'media', 'difficile', 'boss'] 
+    : ['', 'easy', 'medium', 'hard', 'boss'];
+  
   return (
-    <div className="space-y-6">
-      {/* Config */}
-      <Card>
-        <CardContent className="pt-6">
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <Label>{c.cfuMax}</Label>
-              <Badge variant="outline">{cfuMax} CFU</Badge>
-            </div>
-            <Slider
-              value={[cfuMax]}
-              onValueChange={([val]) => onCfuMaxChange(val)}
-              min={15}
-              max={45}
-              step={3}
-            />
-            <div className="flex justify-between text-xs text-muted-foreground">
-              <span>15 CFU</span>
-              <span>30 CFU</span>
-              <span>45 CFU</span>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+    <TooltipProvider>
+      <div className="space-y-6">
+        {/* Config - Collapsible */}
+        <Card>
+          <Collapsible defaultOpen={false}>
+            <CollapsibleTrigger className="w-full">
+              <CardHeader className="py-4 cursor-pointer hover:bg-muted/30 transition-colors">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Settings className="w-4 h-4 text-muted-foreground" />
+                    <span className="font-medium">{c.settings}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Badge variant="outline">{cfuMax} CFU/{lang === 'it' ? 'sessione' : 'session'}</Badge>
+                    {totalCfu > 0 && (
+                      <Badge variant="secondary" className="text-xs">
+                        ~{sessionsNeeded} {c.sessionsNeeded}
+                      </Badge>
+                    )}
+                    <ChevronDown className="w-4 h-4 text-muted-foreground transition-transform [[data-state=open]_&]:rotate-180" />
+                  </div>
+                </div>
+              </CardHeader>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <CardContent className="pt-0 pb-4 space-y-4">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <Label>{c.cfuMax}</Label>
+                    <span className="text-sm font-medium text-primary">{cfuMax} CFU</span>
+                  </div>
+                  <Slider
+                    value={[cfuMax]}
+                    onValueChange={([val]) => onCfuMaxChange(val)}
+                    min={15}
+                    max={45}
+                    step={3}
+                  />
+                  <div className="flex justify-between text-xs text-muted-foreground">
+                    <span>15 CFU</span>
+                    <span>30 CFU</span>
+                    <span>45 CFU</span>
+                  </div>
+                  
+                  {totalCfu > 0 && (
+                    <p className="text-xs text-muted-foreground bg-muted/50 p-2 rounded">
+                      {lang === 'it' 
+                        ? `Con ${cfuMax} CFU/sessione → serviranno ~${sessionsNeeded} sessioni per ${totalCfu} CFU`
+                        : `With ${cfuMax} credits/session → ~${sessionsNeeded} sessions needed for ${totalCfu} credits`
+                      }
+                    </p>
+                  )}
+                </div>
+                
+                {/* Formula explanation */}
+                <div className="pt-2 border-t">
+                  <div className="text-xs text-muted-foreground space-y-1">
+                    <div className="font-medium">{c.formula}:</div>
+                    <div className="font-mono bg-muted/50 p-2 rounded text-[10px]">
+                      {lang === 'it' ? 'Ore' : 'Hours'} = CFU × {BASE_HOURS_PER_CFU}h × {lang === 'it' ? 'moltiplicatore' : 'multiplier'}
+                    </div>
+                    <div className="flex flex-wrap gap-2 mt-1">
+                      {[1, 2, 3, 4].map((d) => (
+                        <span key={d} className="inline-flex items-center gap-1 text-[10px]">
+                          {difficultyEmojis[d]} ×{DIFFICULTY_MULTIPLIERS[d]}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </CollapsibleContent>
+          </Collapsible>
+        </Card>
       
       {/* Status Badges */}
       {exams.length > 0 && (
@@ -269,34 +373,65 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
                 
                 <CardContent>
                   <div className="space-y-2">
-                    {session.esami.map((exam, idx) => (
-                      <div 
-                        key={exam.id}
-                        className={cn(
-                          "flex items-center justify-between p-3 rounded-lg border",
-                          difficultyColors[exam.difficolta]
-                        )}
-                      >
-                        <div className="flex items-center gap-3">
-                          <span className="text-lg w-8 text-center">{idx + 1}</span>
-                          <div>
-                            <div className="font-medium text-foreground">{exam.nome}</div>
-                            <div className="text-xs text-muted-foreground flex items-center gap-2">
-                              <span>{exam.cfu} CFU</span>
-                              {exam.dataAppello && (
-                                <>
-                                  <span>•</span>
-                                  <span>{format(exam.dataAppello, "d MMM", { locale: lang === 'it' ? it : enUS })}</span>
-                                </>
-                              )}
+                    {session.esami.map((exam, idx) => {
+                      const hasPrereqIssue = getPrereqIssues(exam, session.esami, sessions.indexOf(session));
+                      const studyHours = calculateStudyHours(exam.cfu, exam.difficolta);
+                      
+                      return (
+                        <div 
+                          key={exam.id}
+                          className={cn(
+                            "flex items-center justify-between p-3 rounded-lg border",
+                            difficultyColors[exam.difficolta],
+                            hasPrereqIssue && "ring-2 ring-red-400 ring-offset-1"
+                          )}
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="text-lg w-8 text-center">{idx + 1}</span>
+                            <div>
+                              <div className="font-medium text-foreground flex items-center gap-2">
+                                {exam.nome}
+                                {hasPrereqIssue && (
+                                  <Tooltip>
+                                    <TooltipTrigger>
+                                      <Badge variant="destructive" className="text-[10px] px-1.5 py-0">
+                                        <AlertTriangle className="w-3 h-3 mr-0.5" />
+                                        {c.warnings.prereqMissing}
+                                      </Badge>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                      {lang === 'it' 
+                                        ? 'Questo esame è programmato prima del suo prerequisito'
+                                        : 'This exam is scheduled before its prerequisite'
+                                      }
+                                    </TooltipContent>
+                                  </Tooltip>
+                                )}
+                              </div>
+                              <div className="text-xs text-muted-foreground flex items-center gap-2 flex-wrap">
+                                <Tooltip>
+                                  <TooltipTrigger className="cursor-help underline-offset-2 decoration-dotted underline">
+                                    <span>{exam.cfu} CFU • ~{studyHours}h</span>
+                                  </TooltipTrigger>
+                                  <TooltipContent className="font-mono text-xs">
+                                    {exam.cfu} × {BASE_HOURS_PER_CFU}h × {DIFFICULTY_MULTIPLIERS[exam.difficolta]} ({difficultyLabels[exam.difficolta]}) = {studyHours}h
+                                  </TooltipContent>
+                                </Tooltip>
+                                {exam.dataAppello && (
+                                  <>
+                                    <span>•</span>
+                                    <span>{format(exam.dataAppello, "d MMM", { locale: lang === 'it' ? it : enUS })}</span>
+                                  </>
+                                )}
+                              </div>
                             </div>
                           </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-xl">{difficultyEmojis[exam.difficolta]}</span>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-xl">{difficultyEmojis[exam.difficolta]}</span>
-                        </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                   
                   {/* Session Stats */}
@@ -334,6 +469,7 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
           </CardContent>
         </Card>
       )}
-    </div>
+      </div>
+    </TooltipProvider>
   );
 };
