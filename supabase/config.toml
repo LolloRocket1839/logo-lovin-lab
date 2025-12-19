@@ -3,9 +3,6 @@ project_id = "ekrrrlrwdshhlqnuxjbz"
 [functions.send-investor-guide]
 verify_jwt = false
 
-[functions.weekly-analytics-report]
-verify_jwt = false
-
 [functions.submit-investor-interest]
 verify_jwt = false
 
