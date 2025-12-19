@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
@@ -7,15 +7,31 @@ import {
   ArrowLeft,
   Plus,
   Sparkles,
-  Download,
-  Share2,
+  MoreHorizontal,
   Trash2,
-  AlertTriangle
+  AlertTriangle,
+  Undo2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { BottomNav } from "@/components/BottomNav";
@@ -36,6 +52,9 @@ const ExamSessionPlanner = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const [activeTab, setActiveTab] = useState("input");
   const [cfuMax, setCfuMax] = useState(30);
+  const [showClearDialog, setShowClearDialog] = useState(false);
+  const [deletedExams, setDeletedExams] = useState<SessionExam[] | null>(null);
+  const undoTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   // Load from localStorage
   useEffect(() => {
@@ -80,12 +99,60 @@ const ExamSessionPlanner = () => {
   };
   
   const clearAll = () => {
+    // Save for undo
+    setDeletedExams([...exams]);
     setExams([]);
     localStorage.removeItem(STORAGE_KEY);
+    setShowClearDialog(false);
+    
+    // Clear any existing timeout
+    if (undoTimeoutRef.current) {
+      clearTimeout(undoTimeoutRef.current);
+    }
+    
     toast({
       title: currentLang === 'it' ? "Dati cancellati" : "Data cleared",
+      description: currentLang === 'it' 
+        ? "Clicca 'Annulla' per ripristinare" 
+        : "Click 'Undo' to restore",
+      action: (
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => {
+            if (deletedExams) {
+              setExams(deletedExams);
+              setDeletedExams(null);
+              if (undoTimeoutRef.current) {
+                clearTimeout(undoTimeoutRef.current);
+              }
+              toast({
+                title: currentLang === 'it' ? "Dati ripristinati" : "Data restored",
+              });
+            }
+          }}
+          className="gap-1"
+        >
+          <Undo2 className="w-3 h-3" />
+          {currentLang === 'it' ? 'Annulla' : 'Undo'}
+        </Button>
+      ),
     });
+    
+    // Clear undo data after 10 seconds
+    undoTimeoutRef.current = setTimeout(() => {
+      setDeletedExams(null);
+    }, 10000);
   };
+  
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (undoTimeoutRef.current) {
+        clearTimeout(undoTimeoutRef.current);
+      }
+    };
+  }, []);
   
   const totalCfu = exams.reduce((sum, e) => sum + e.cfu, 0);
   const avgDifficulty = exams.length > 0 
@@ -224,34 +291,39 @@ const ExamSessionPlanner = () => {
         <section className="py-6 md:py-8">
           <div className="container mx-auto px-4">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
-                <TabsList className="grid w-full md:w-auto grid-cols-3">
-                  <TabsTrigger value="input" className="gap-1">
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <TabsList className="grid w-full md:w-auto grid-cols-3 sticky top-16 z-40 bg-background/95 backdrop-blur-sm">
+                  <TabsTrigger value="input" className="gap-1.5">
                     <Plus className="w-4 h-4" />
-                    <span className="hidden sm:inline">{c.tabs.input}</span>
+                    <span className="text-xs sm:text-sm">{currentLang === 'it' ? 'Esami' : 'Exams'}</span>
                   </TabsTrigger>
-                  <TabsTrigger value="calendar" className="gap-1">
+                  <TabsTrigger value="calendar" className="gap-1.5">
                     <Calendar className="w-4 h-4" />
-                    <span className="hidden sm:inline">{c.tabs.calendar}</span>
+                    <span className="text-xs sm:text-sm">{currentLang === 'it' ? 'Calendario' : 'Calendar'}</span>
                   </TabsTrigger>
-                  <TabsTrigger value="plan" className="gap-1">
+                  <TabsTrigger value="plan" className="gap-1.5">
                     <Sparkles className="w-4 h-4" />
-                    <span className="hidden sm:inline">{c.tabs.plan}</span>
+                    <span className="text-xs sm:text-sm">{currentLang === 'it' ? 'Piano' : 'Plan'}</span>
                   </TabsTrigger>
                 </TabsList>
                 
                 {exams.length > 0 && (
-                  <div className="flex gap-2">
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      onClick={clearAll}
-                      className="text-destructive hover:text-destructive"
-                    >
-                      <Trash2 className="w-4 h-4 mr-1" />
-                      {c.actions.clear}
-                    </Button>
-                  </div>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon" className="shrink-0">
+                        <MoreHorizontal className="w-5 h-5" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="bg-background">
+                      <DropdownMenuItem 
+                        onClick={() => setShowClearDialog(true)}
+                        className="text-destructive focus:text-destructive cursor-pointer"
+                      >
+                        <Trash2 className="w-4 h-4 mr-2" />
+                        {c.actions.clear} ({exams.length} {currentLang === 'it' ? 'esami' : 'exams'})
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 )}
               </div>
               
@@ -344,6 +416,34 @@ const ExamSessionPlanner = () => {
           </div>
         </section>
       </main>
+      
+      {/* Clear Confirmation Dialog */}
+      <AlertDialog open={showClearDialog} onOpenChange={setShowClearDialog}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-destructive" />
+              {currentLang === 'it' ? 'Cancella tutti gli esami?' : 'Delete all exams?'}
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              {currentLang === 'it' 
+                ? `Stai eliminando ${exams.length} esami (${totalCfu} CFU totali). Potrai annullare l'azione per 10 secondi dopo la cancellazione.`
+                : `You are deleting ${exams.length} exams (${totalCfu} total credits). You can undo for 10 seconds after deletion.`
+              }
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel>{currentLang === 'it' ? 'Annulla' : 'Cancel'}</AlertDialogCancel>
+            <AlertDialogAction 
+              onClick={clearAll}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              <Trash2 className="w-4 h-4 mr-1" />
+              {currentLang === 'it' ? 'Elimina tutto' : 'Delete all'}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
       
       <Footer />
       <BottomNav />

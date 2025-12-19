@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Plus, Calendar as CalendarIcon } from "lucide-react";
+import { useState, useMemo } from "react";
+import { Plus, Calendar as CalendarIcon, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,9 +8,18 @@ import { Slider } from "@/components/ui/slider";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { it, enUS } from "date-fns/locale";
+
+// Difficulty multipliers for study hours calculation
+const DIFFICULTY_MULTIPLIERS = [0, 0.8, 1.0, 1.2, 1.4];
+const BASE_HOURS_PER_CFU = 25;
+
+const calculateStudyHours = (cfu: number, difficulty: number): number => {
+  return Math.round(cfu * BASE_HOURS_PER_CFU * DIFFICULTY_MULTIPLIERS[difficulty]);
+};
 
 export interface SessionExam {
   id: string;
@@ -56,7 +65,9 @@ export const SessionExamInput = ({ onAdd, existingExams, lang }: SessionExamInpu
         autunnale: "Autunnale (Set)"
       },
       add: "Aggiungi esame",
-      studyHours: "Ore studio stimate"
+      studyHours: "Ore studio stimate",
+      hoursFormula: "ore",
+      circularWarning: "Dipendenza circolare! Questo creerebbe un loop."
     },
     en: {
       title: "Add Exam",
@@ -77,11 +88,35 @@ export const SessionExamInput = ({ onAdd, existingExams, lang }: SessionExamInpu
         autunnale: "Fall (Sep)"
       },
       add: "Add exam",
-      studyHours: "Est. study hours"
+      studyHours: "Est. study hours",
+      hoursFormula: "hours",
+      circularWarning: "Circular dependency detected! This would create a loop."
     }
   };
   
   const c = content[lang];
+  
+  // Calculate study hours with multiplier
+  const estimatedHours = calculateStudyHours(cfu, difficolta);
+  const difficultyLabel = c.difficultyLevels[difficolta].split(" ")[1];
+  
+  // Check for circular dependencies
+  const hasCircularDependency = useMemo(() => {
+    if (!propedeuticoId || propedeuticoId === 'none') return false;
+    
+    // Build dependency chain
+    const visited = new Set<string>();
+    let currentId: string | undefined = propedeuticoId;
+    
+    while (currentId && currentId !== 'none') {
+      if (visited.has(currentId)) return true; // Cycle detected
+      visited.add(currentId);
+      const exam = existingExams.find(e => e.id === currentId);
+      currentId = exam?.propedeuticoId;
+    }
+    
+    return false;
+  }, [propedeuticoId, existingExams]);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -151,8 +186,11 @@ export const SessionExamInput = ({ onAdd, existingExams, lang }: SessionExamInpu
               step={1}
               className="py-2"
             />
-            <div className="text-xs text-muted-foreground text-right">
-              {c.studyHours}: ~{cfu * 25}h
+            <div className="text-xs text-muted-foreground text-right space-y-0.5">
+              <div>{c.studyHours}: <span className="font-medium text-foreground">~{estimatedHours}h</span></div>
+              <div className="font-mono text-[10px] opacity-70">
+                {cfu} × {BASE_HOURS_PER_CFU}h × {DIFFICULTY_MULTIPLIERS[difficolta]} ({difficultyLabel}) = {estimatedHours}h
+              </div>
             </div>
           </div>
           
@@ -231,7 +269,7 @@ export const SessionExamInput = ({ onAdd, existingExams, lang }: SessionExamInpu
             <div className="space-y-2">
               <Label>{c.prerequisite}</Label>
               <Select value={propedeuticoId} onValueChange={setPropedeuticoId}>
-                <SelectTrigger>
+                <SelectTrigger className={cn(hasCircularDependency && "border-destructive")}>
                   <SelectValue placeholder={c.prerequisitePlaceholder} />
                 </SelectTrigger>
                 <SelectContent>
@@ -243,10 +281,18 @@ export const SessionExamInput = ({ onAdd, existingExams, lang }: SessionExamInpu
                   ))}
                 </SelectContent>
               </Select>
+              {hasCircularDependency && (
+                <Alert variant="destructive" className="py-2">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription className="text-xs">
+                    {c.circularWarning}
+                  </AlertDescription>
+                </Alert>
+              )}
             </div>
           )}
           
-          <Button type="submit" className="w-full" disabled={!nome.trim()}>
+          <Button type="submit" className="w-full" disabled={!nome.trim() || hasCircularDependency}>
             <Plus className="w-4 h-4 mr-2" />
             {c.add}
           </Button>
