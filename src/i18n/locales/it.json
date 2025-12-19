@@ -1179,11 +1179,94 @@
         "description": "Confronta le tariffe di luce e gas",
         "comingSoon": "Prossimamente"
       },
+      "examSession": {
+        "title": "Organizzatore Sessione",
+        "description": "Pianifica la sessione esami in modo ottimale",
+        "cta": "Prova ora"
+      },
       "allTools": {
         "title": "Tutti gli strumenti",
         "description": "Scopri tutti i tool gratuiti"
       },
       "backToTools": "Torna agli strumenti"
+    }
+  },
+  "examSessionPlanner": {
+    "seo": {
+      "title": "Organizzatore Sessione Esami | Jungle Rent",
+      "description": "Pianifica la tua sessione d'esame in modo ottimale. Considera CFU, difficoltà e propedeuticità per creare il piano perfetto."
+    },
+    "badge": "Strumento gratuito",
+    "title": "Organizzatore Sessione Esami",
+    "subtitle": "Pianifica la tua sessione in modo strategico considerando CFU, difficoltà e propedeuticità",
+    "addExam": {
+      "title": "Aggiungi esame",
+      "name": "Nome esame",
+      "namePlaceholder": "Es: Analisi Matematica I",
+      "cfu": "CFU",
+      "difficulty": "Difficoltà percepita",
+      "difficultyOptions": {
+        "1": "😊 Facile",
+        "2": "😐 Media",
+        "3": "😰 Difficile",
+        "4": "💀 Boss finale"
+      },
+      "prerequisite": "Propedeutico a",
+      "prerequisitePlaceholder": "Seleziona esame...",
+      "noPrerequisite": "Nessun prerequisito",
+      "date": "Data appello",
+      "datePlaceholder": "Seleziona data...",
+      "session": "Sessione",
+      "sessionOptions": {
+        "invernale": "Invernale (Gen-Feb)",
+        "estiva": "Estiva (Giu-Lug)",
+        "autunnale": "Autunnale (Set)"
+      },
+      "addButton": "Aggiungi esame",
+      "editButton": "Modifica esame"
+    },
+    "config": {
+      "title": "Configurazione",
+      "maxCfu": "CFU massimi per sessione",
+      "sessions": "Sessioni disponibili"
+    },
+    "calendar": {
+      "title": "Calendario appelli",
+      "noExams": "Nessun esame con data",
+      "examDetails": "Dettagli esame",
+      "studyHours": "Ore studio stimate",
+      "warning": "Attenzione: più esami lo stesso giorno!"
+    },
+    "plan": {
+      "title": "Piano sessione",
+      "generate": "Genera piano ottimale",
+      "regenerate": "Rigenera piano",
+      "empty": "Aggiungi almeno un esame per generare il piano",
+      "totalCfu": "CFU totali",
+      "avgDifficulty": "Difficoltà media",
+      "estimatedHours": "Ore studio stimate",
+      "warning": "Sessione impegnativa!",
+      "proBadge": "Sessione da Pro!",
+      "noExamsInSession": "Nessun esame in questa sessione"
+    },
+    "share": {
+      "title": "Condividi piano",
+      "downloadPdf": "Scarica PDF",
+      "shareWhatsApp": "Condividi su WhatsApp",
+      "copyLink": "Copia link",
+      "linkCopied": "Link copiato!",
+      "pdfGenerated": "PDF generato con successo!"
+    },
+    "exams": {
+      "title": "I tuoi esami",
+      "empty": "Nessun esame aggiunto",
+      "delete": "Elimina",
+      "edit": "Modifica"
+    },
+    "gamification": {
+      "progress": "Progresso piano",
+      "balanced": "Piano bilanciato! 🎉",
+      "momentum": "Costruisci momentum con esami facili"
     }
   },
   "aiSearch": {
