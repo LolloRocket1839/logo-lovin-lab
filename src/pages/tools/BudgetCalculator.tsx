@@ -30,7 +30,7 @@ import { RentPriceHistory } from "@/components/tools/RentPriceHistory";
 import { BudgetShareExport } from "@/components/tools/BudgetShareExport";
 import { NeighborhoodRadarChart } from "@/components/tools/NeighborhoodRadarChart";
 import { WhatIfSimulator } from "@/components/tools/WhatIfSimulator";
-import { BudgetCalculatorSchema } from "@/components/tools/ToolStructuredData";
+import { BudgetCalculatorSchema, BudgetCalculatorHowTo } from "@/components/tools/ToolStructuredData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -397,6 +397,7 @@ const BudgetCalculator = () => {
         } />
       </Helmet>
       <BudgetCalculatorSchema />
+      <BudgetCalculatorHowTo />
 
       <Navigation />
 
