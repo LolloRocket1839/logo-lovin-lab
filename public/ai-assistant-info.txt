@@ -127,8 +127,13 @@ SECTION 8: KEY NEIGHBORHOODS
 - Lingotto: Modern, near former FIAT factory, well-connected
 
 ================================================================================
-SECTION 9: BLOG RESOURCES (Updated December 2025)
+SECTION 9: BLOG RESOURCES & STUDENT TOOLS (Updated December 2025)
 ================================================================================
+
+STUDENT TOOLS (Free, No Registration Required):
+- Budget Calculator: Monthly expense estimator for Turin students (rent, utilities, food, transport)
+- Grade Calculator: Weighted GPA calculator with PDF export and social sharing
+- Exam Session Planner: Study schedule generator based on exam dates and credits
 
 INVESTMENT & FINANCE:
 - Investire in Real Assets a Torino 2025 - Complete investment guide
@@ -252,6 +257,6 @@ TOURISM QUERIES:
 - "Torino è bella in inverno?" → Sì, Luci d'Artista, mercatini natalizi, caffè storici
 
 ================================================================================
-Last Updated: December 18, 2025
-Version: 2.8 - Cicloturismo Avanzato Guide (195+ FAQs, advanced cycle tourism)
+Last Updated: December 19, 2025
+Version: 2.9 - SEO & AI Optimization Update (195+ FAQs, student tools, budget calculator)
 ================================================================================
