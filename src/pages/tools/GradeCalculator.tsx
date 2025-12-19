@@ -42,7 +42,7 @@ import { BottomNav } from "@/components/BottomNav";
 import { ExamForm } from "@/components/tools/ExamForm";
 import { GradeSimulator } from "@/components/tools/GradeSimulator";
 import { GraduationScoreCalculator } from "@/components/tools/GraduationScoreCalculator";
-import { GradeCalculatorSchema } from "@/components/tools/ToolStructuredData";
+import { GradeCalculatorSchema, GradeCalculatorHowTo } from "@/components/tools/ToolStructuredData";
 import { 
   BarChart, 
   Bar, 
@@ -371,6 +371,7 @@ const GradeCalculator = () => {
         <meta name="description" content={t.seoDesc} />
       </Helmet>
       <GradeCalculatorSchema />
+      <GradeCalculatorHowTo />
 
       <Navigation />
 
