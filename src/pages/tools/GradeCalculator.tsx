@@ -12,8 +12,12 @@ import {
   BarChart3,
   Calculator,
   Info,
-  Download
+  Download,
+  MessageCircle,
+  Copy,
+  Check
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -62,6 +66,8 @@ const STORAGE_KEY = "jungle-rent-exams";
 const GradeCalculator = () => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
+  const { toast } = useToast();
+  const [copied, setCopied] = useState(false);
   
   const [exams, setExams] = useState<Exam[]>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -119,6 +125,9 @@ const GradeCalculator = () => {
       gradeDistribution: "Distribuzione Voti",
       noExams: "Aggiungi il tuo primo esame per iniziare",
       exportPdf: "Esporta PDF",
+      shareWhatsApp: "WhatsApp",
+      copyLink: "Copia Link",
+      linkCopied: "Link copiato!",
       avgBadge: {
         excellent: "Eccellente",
         good: "Buono",
@@ -143,6 +152,9 @@ const GradeCalculator = () => {
       gradeDistribution: "Grade Distribution",
       noExams: "Add your first exam to get started",
       exportPdf: "Export PDF",
+      shareWhatsApp: "WhatsApp",
+      copyLink: "Copy Link",
+      linkCopied: "Link copied!",
       avgBadge: {
         excellent: "Excellent",
         good: "Good",
@@ -231,6 +243,28 @@ const GradeCalculator = () => {
   // Remove exam handler
   const handleRemoveExam = (id: string) => {
     setExams(prev => prev.filter(e => e.id !== id));
+  };
+
+  // Generate WhatsApp share text
+  const generateWhatsAppText = () => {
+    const text = currentLang === 'it'
+      ? `🎓 La mia media universitaria:\n\n📊 Media Ponderata: ${stats.weightedAvg.toFixed(2)}\n📚 CFU Totali: ${stats.totalCfu}\n✅ Esami: ${stats.totalExams}${lodiCount > 0 ? `\n🏆 Lodi: ${lodiCount}` : ''}\n\nCalcola anche tu 👉 junglerent.it/studenti/strumenti/media`
+      : `🎓 My university GPA:\n\n📊 Weighted Average: ${stats.weightedAvg.toFixed(2)}\n📚 Total Credits: ${stats.totalCfu}\n✅ Exams: ${stats.totalExams}${lodiCount > 0 ? `\n🏆 Honors: ${lodiCount}` : ''}\n\nCalculate yours 👉 junglerent.it/students/tools/grades`;
+    return text;
+  };
+
+  // Share via WhatsApp
+  const shareWhatsApp = () => {
+    const text = encodeURIComponent(generateWhatsAppText());
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+  };
+
+  // Copy link to clipboard
+  const copyLink = async () => {
+    await navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    toast({ title: t.linkCopied });
+    setTimeout(() => setCopied(false), 2000);
   };
 
   // Export PDF
@@ -446,10 +480,20 @@ const GradeCalculator = () => {
                 </TabsList>
 
                 {exams.length > 0 && (
-                  <Button variant="outline" size="sm" onClick={exportPDF} className="gap-2">
-                    <Download className="w-4 h-4" />
-                    {t.exportPdf}
-                  </Button>
+                  <div className="flex gap-2 flex-wrap">
+                    <Button variant="outline" size="sm" onClick={exportPDF} className="gap-2">
+                      <Download className="w-4 h-4" />
+                      {t.exportPdf}
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={shareWhatsApp} className="gap-2">
+                      <MessageCircle className="w-4 h-4" />
+                      {t.shareWhatsApp}
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={copyLink} className="gap-2">
+                      {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                      {copied ? t.linkCopied : t.copyLink}
+                    </Button>
+                  </div>
                 )}
               </div>
 
