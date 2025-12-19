@@ -23,6 +23,7 @@ import { SessionExamInput, type SessionExam } from "@/components/tools/SessionEx
 import { SessionCalendarView } from "@/components/tools/SessionCalendarView";
 import { SessionPlanOutput } from "@/components/tools/SessionPlanOutput";
 import { SessionShareExport } from "@/components/tools/SessionShareExport";
+import { ExamSessionPlannerSchema } from "@/components/tools/ToolStructuredData";
 import { toast } from "@/hooks/use-toast";
 
 const STORAGE_KEY = "junglerent_exam_session_v1";
@@ -157,6 +158,7 @@ const ExamSessionPlanner = () => {
         <title>{c.seoTitle}</title>
         <meta name="description" content={c.seoDesc} />
       </Helmet>
+      <ExamSessionPlannerSchema />
       
       <Navigation />
       

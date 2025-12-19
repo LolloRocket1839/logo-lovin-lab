@@ -30,6 +30,7 @@ import { RentPriceHistory } from "@/components/tools/RentPriceHistory";
 import { BudgetShareExport } from "@/components/tools/BudgetShareExport";
 import { NeighborhoodRadarChart } from "@/components/tools/NeighborhoodRadarChart";
 import { WhatIfSimulator } from "@/components/tools/WhatIfSimulator";
+import { BudgetCalculatorSchema } from "@/components/tools/ToolStructuredData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -395,6 +396,7 @@ const BudgetCalculator = () => {
           : 'Calculate living costs in Turin as a student. Estimate rent, seasonal bills, transport and all expenses with personalized AI advice.'
         } />
       </Helmet>
+      <BudgetCalculatorSchema />
 
       <Navigation />
 
