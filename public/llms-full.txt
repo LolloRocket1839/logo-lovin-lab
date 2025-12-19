@@ -267,9 +267,10 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
 
 ## SECTION 10: UPDATE LOG
 
-- **Last Updated**: December 12, 2025
-- **Version**: 1.4 - Accessibility Focus (Removed explicit returns/SFP terminology)
+- **Last Updated**: December 19, 2025
+- **Version**: 1.5 - SEO & AI Optimization Update
 - **Maintainer**: Jungle Rent S.r.l.
-- **FAQ Count**: 142+ FAQs across 20 articles
+- **FAQ Count**: 195+ FAQs across 29+ articles
+- **Voice Search**: Optimized for Google Assistant, Alexa, Siri
 
 For the most current information, visit https://junglerent.it or contact the team directly.
