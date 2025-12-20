@@ -666,7 +666,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-06",
     author: "Jungle Rent Team",
-    image: "/images/viaggiare-sostenibile-torino.jpg",
+    image: "/images/portici-torino.jpg",
     readTime: 45,
     content: "viaggiare-sostenibile-torino-guida",
     translations: {
@@ -1206,7 +1206,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-23",
     author: "Jungle Rent Team",
-    image: "/images/torino-gennaio-luci.jpg",
+    image: "/images/duomo-torino-natale.jpg",
     readTime: 40,
     content: "eventi-torino-gennaio-2026",
     translations: {
@@ -1462,7 +1462,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-17",
     author: "Jungle Rent Team",
-    image: "/images/torino-nightlife.jpg",
+    image: "/images/quadrilatero-notte-torino.jpg",
     readTime: 35,
     content: "torino-nightlife-guide",
     translations: {
@@ -1928,7 +1928,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-10",
     author: "Team Jungle Rent",
-    image: "/images/torino-natale-luci-artista.jpg",
+    image: "/images/duomo-torino-natale.jpg",
     readTime: 25,
     content: "torino-dicembre-turisti",
     translations: {
@@ -2416,7 +2416,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-03",
     author: "Team Jungle Rent",
-    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop",
+    image: "/images/caffe-vini-quadrilatero.jpg",
     readTime: 12,
     content: "dove-mangiare-torino-studenti",
     translations: {
@@ -2536,7 +2536,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-17",
     author: "Jungle Rent Team",
-    image: "/images/torino-ogni-stagione-collage.jpg",
+    image: "/images/parco-valentino-inverno.jpg",
     readTime: 35,
     content: "torino-ogni-stagione-turisti",
     translations: {
