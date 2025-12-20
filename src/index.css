@@ -975,3 +975,17 @@ All colors MUST be HSL.
 .dark .blog-content-wrapper table tr:hover {
   background: hsl(var(--muted) / 0.4);
 }
+
+/* Subtle floating animation for Jungle Control dino astronaut */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 4s ease-in-out infinite;
+}
