@@ -6,7 +6,7 @@ export const blogPosts: BlogPost[] = [
     category: "societa",
     date: "2025-12-20",
     author: "Lorenzo",
-    image: "/images/digital-nomad-torino.jpg",
+    image: "/jungle-rent-logo.svg",
     readTime: 4,
     content: "jungle-control-dicembre-2025",
     noteStyle: true,
