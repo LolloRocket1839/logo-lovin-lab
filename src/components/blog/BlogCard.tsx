@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import jungleRentLogo from "@/assets/jungle-rent-logo.svg";
+import jungleControlDino from "@/assets/jungle-control-dino-astronaut.png";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -40,26 +40,17 @@ export const BlogCard = ({ post }: BlogCardProps) => {
       >
         <div className="aspect-video relative overflow-hidden">
           {isJungleControlSeries ? (
-            // Custom Jungle Control series card with gradient and centered logo
-            <div className="w-full h-full bg-gradient-to-br from-[#1a472a] via-[#2d5a3d] to-[#65C466] flex items-center justify-center relative">
-              {/* Decorative elements */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-4 left-4 w-16 h-16 border border-white/30 rounded-full" />
-                <div className="absolute bottom-6 right-6 w-24 h-24 border border-white/20 rounded-full" />
-                <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-white/10 rounded-full blur-sm" />
-              </div>
-              
-              {/* Centered logo */}
-              <div className={`relative z-10 ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-110'}`}>
-                <img
-                  src={jungleRentLogo}
-                  alt="Jungle Rent"
-                  className="w-32 h-32 object-contain drop-shadow-2xl"
-                />
-              </div>
+            // Custom Jungle Control series card with dino astronaut image
+            <div className="w-full h-full relative overflow-hidden">
+              {/* Dino astronaut image with floating animation */}
+              <img
+                src={jungleControlDino}
+                alt="Dinosauro Astronauta - Jungle Control Series"
+                className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'animate-subtle-float'}`}
+              />
               
               {/* Series badge overlay */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full">
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
                 <span className="text-white text-xs font-medium tracking-wide">
                   🎙️ Jungle Control Series
                 </span>
