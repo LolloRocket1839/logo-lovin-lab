@@ -2,14 +2,12 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Users, Award, Calendar, Target, Heart, Euro, TrendingUp, Building2, GraduationCap, Coins, PiggyBank } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { ArrowRight, MessageCircle, Users, Calendar, Heart, Target, AlertTriangle, TrendingUp, Building2, ExternalLink } from "lucide-react";
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
 import { openCalendly } from "@/lib/calendly";
 import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
-import InvestorInfographic from "@/components/investor/InvestorInfographic";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 
@@ -25,126 +23,145 @@ export const InvestorSection = () => {
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
+  // Problem stats from Savills report - shown only here, not duplicated elsewhere
+  const problemStats = [
+    {
+      value: "589K",
+      label: t('problem.stat1Label', 'studenti fuori sede'),
+      sublabel: t('problem.stat1Sub', 'in Italia'),
+      icon: Users,
+    },
+    {
+      value: "87%",
+      label: t('problem.stat2Label', 'cerca alloggio'),
+      sublabel: t('problem.stat2Sub', 'nel privato'),
+      icon: Building2,
+    },
+    {
+      value: "12.6%",
+      label: t('problem.stat3Label', 'domanda coperta'),
+      sublabel: t('problem.stat3Sub', 'da housing dedicato'),
+      icon: AlertTriangle,
+    },
+    {
+      value: "€4B",
+      label: t('problem.stat4Label', 'mercato potenziale'),
+      sublabel: t('problem.stat4Sub', 'in Italia'),
+      icon: TrendingUp,
+    },
+  ];
+
   return (
     <section 
       id="investor-section" 
-      className="pt-16 pb-12 md:py-20 lg:py-28 bg-accent/30 relative overflow-hidden transition-spacing"
+      className="py-16 md:py-24 bg-accent/30 relative overflow-hidden"
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
-      <div className="container px-4 sm:px-6 md:px-8 relative z-10 transition-spacing">
-        <div className="text-center max-w-2xl mx-auto">
-          {/* Dual Mission Badge - Hidden on mobile */}
-          <div className="hidden md:flex justify-center mb-6">
-            <div
-              className="inline-flex items-center gap-3 px-5 py-3 
-                         bg-gradient-to-r from-primary/10 to-accent/10
-                         dark:from-primary/20 dark:to-accent/20
-                         backdrop-blur-md 
-                         border border-primary/20 rounded-2xl
-                         shadow-[0_4px_20px_hsla(142,76%,36%,0.1)]"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Heart className="w-4 h-4 text-primary" aria-hidden="true" />
-                </div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
-                  {i18n.language.startsWith('it') ? 'Crisi Abitativa' : 'Housing Crisis'}
-                </span>
-              </div>
-              <span className="text-muted-foreground">+</span>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
-                  <Target className="w-4 h-4 text-accent-foreground" aria-hidden="true" />
-                </div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
-                  {i18n.language.startsWith('it') ? 'Accesso Democratico' : 'Democratic Access'}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Start-up Innovativa Badge - Hidden on mobile */}
-          <div className="hidden md:flex justify-center mb-4">
-            <div
-              className="inline-flex items-center gap-2 px-4 py-2 
-                         bg-white/80 dark:bg-card/80 backdrop-blur-sm 
-                         border border-primary/10 rounded-full"
-            >
-              <Award className="w-3.5 h-3.5 text-primary" aria-hidden="true" />
-              <span className="text-xs uppercase tracking-wider font-medium text-muted-foreground">
-                {t('investor.startupInnovativaBadge')}
-              </span>
-            </div>
-          </div>
-
-          <p className="hidden md:block text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
-            {t('investor.sectionLabel')}
-          </p>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-4 md:mb-6 leading-tight text-foreground tracking-tight">
-            {t('investor.sectionTitle')}
-          </h2>
-          <p className="hidden sm:block text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-4 md:mb-6">
-            <StyledText>{t('investor.compactDesc')}</StyledText>
-          </p>
+      <div className="container px-6 md:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto">
           
-          {/* Badge "Da €100" + Active Investors */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
-            <Badge 
-              className="px-4 py-2 md:px-5 md:py-2.5 text-sm md:text-base font-bold bg-primary text-primary-foreground shadow-lg"
-            >
-              <Euro className="w-4 h-4 md:w-5 md:h-5 mr-1.5" />
-              {t('investor.minInvestmentBadge')}
-            </Badge>
-            <Badge 
-              variant="secondary" 
-              className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium"
-            >
-              <Users className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2" />
-              {count}+ {t('investor.activeInvestors')}
-            </Badge>
+          {/* Problem Context Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-6">
+              <AlertTriangle className="w-4 h-4" />
+              <span>{t('problem.badge', 'Il problema')}</span>
+            </div>
+            
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-foreground mb-4 leading-tight">
+              {t('problem.title', 'La crisi degli alloggi studenteschi in Italia')}
+            </h2>
+            
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t('problem.subtitle', 'Quasi 600.000 studenti cercano casa ogni anno, ma l\'offerta di alloggi dedicati copre solo il 12,6% della domanda. Una crisi che rappresenta un\'opportunità.')}
+            </p>
           </div>
 
-          {/* Market Numbers - Key Stats */}
-          <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8 max-w-xl mx-auto">
-            <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
-              <div className="flex items-center justify-center mb-1">
-                <PiggyBank className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+          {/* Problem Stats Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            {problemStats.map((stat, index) => (
+              <div 
+                key={index}
+                className="bg-card border border-border/50 rounded-xl p-4 md:p-6 text-center"
+              >
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary mb-3">
+                  <stat.icon className="w-5 h-5" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-xs md:text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
+                <div className="text-[10px] md:text-xs text-muted-foreground/70">
+                  {stat.sublabel}
+                </div>
               </div>
-              <p className="text-lg md:text-2xl font-bold text-foreground">25%</p>
-              <p className="text-[10px] md:text-xs text-muted-foreground font-light">
-                {t('investor.marketStats.studentSavings')}
-              </p>
+            ))}
+          </div>
+
+          {/* Source link */}
+          <div className="text-center mb-12">
+            <p className="text-xs text-muted-foreground/60 mb-2">
+              *{t('problem.source', 'Dati 2025 - Fonte: Savills Research, Student Housing Italy Spotlight')}
+            </p>
+            <Link 
+              to="/blog/student-housing-italia-savills-2025"
+              className="inline-flex items-center text-xs text-primary hover:underline underline-offset-2"
+            >
+              {t('problem.cta', 'Leggi il report completo')}
+              <ExternalLink className="w-3 h-3 ml-1" />
+            </Link>
+          </div>
+
+          {/* Solution Divider */}
+          <div className="flex items-center gap-4 mb-12">
+            <div className="flex-1 h-px bg-border/50" />
+            <div className="flex items-center gap-3 px-4 py-2 bg-primary/10 rounded-full">
+              <div className="flex items-center gap-2">
+                <Heart className="w-4 h-4 text-primary" />
+                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+                  {i18n.language.startsWith('it') ? 'La Soluzione' : 'The Solution'}
+                </span>
+              </div>
+              <span className="text-muted-foreground">→</span>
+              <div className="flex items-center gap-2">
+                <Target className="w-4 h-4 text-primary" />
+                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+                  {i18n.language.startsWith('it') ? 'Jungle Rent' : 'Jungle Rent'}
+                </span>
+              </div>
             </div>
-            <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
-              <div className="flex items-center justify-center mb-1">
-                <GraduationCap className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-              </div>
-              <p className="text-lg md:text-2xl font-bold text-foreground">~589K</p>
-              <p className="text-[10px] md:text-xs text-muted-foreground font-light">
-                {t('investor.marketStats.studentsOffsite')}
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-4 rounded-2xl bg-card/50 border border-border/50">
-              <div className="flex items-center justify-center mb-1">
-                <Building2 className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-              </div>
-              <p className="text-lg md:text-2xl font-bold text-foreground">~€4B</p>
-              <p className="text-[10px] md:text-xs text-muted-foreground font-light">
-                {t('investor.marketStats.marketPotential')}
-              </p>
+            <div className="flex-1 h-px bg-border/50" />
+          </div>
+
+          {/* Investor Value Prop */}
+          <div className="text-center mb-8">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
+              {t('investor.sectionLabel')}
+            </p>
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-4 text-foreground">
+              {t('investor.sectionTitle')}
+            </h3>
+            <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto mb-6">
+              <StyledText>{t('investor.compactDesc')}</StyledText>
+            </p>
+            
+            {/* Active Investors Badge only - €100 and StartupInnovativa are in Hero */}
+            <div className="flex justify-center mb-8">
+              <Badge 
+                variant="secondary" 
+                className="px-4 py-2 text-sm font-medium"
+              >
+                <Users className="w-4 h-4 mr-2" />
+                {count}+ {t('investor.activeInvestors')}
+              </Badge>
             </div>
           </div>
-          <Link 
-            to="/blog/student-housing-italia-savills-2025" 
-            className="block text-[9px] md:text-[10px] text-muted-foreground/60 font-light mt-2 hover:text-primary transition-colors underline-offset-2 hover:underline"
-          >
-            *{t('investor.marketStats.disclaimer')} →
-          </Link>
 
-          {/* 2 CTA on mobile, 3 on desktop */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center flex-wrap">
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
@@ -177,7 +194,6 @@ export const InvestorSection = () => {
           </div>
 
         </div>
-
       </div>
       
       <QuickInvestorLeadDialog 
