@@ -336,7 +336,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
           ]}
         />
         
-        <article className="py-8 sm:py-10 md:py-12 px-3 sm:px-4 md:px-6">
+        <article className="py-12 md:py-16 px-4 md:px-8">
           <div className="container mx-auto max-w-4xl">
             {/* Header */}
             <header className="mb-6 sm:mb-8">
@@ -344,7 +344,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                 {t(`blog.categories.${post.category}`)}
               </Badge>
               
-              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
                 {translatedData.title}
               </h1>
               
@@ -384,7 +384,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             <BlogCTA type={post.category} />
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 pt-6 sm:pt-8 border-t border-border">
+            <div className="flex flex-wrap gap-2 pt-8 border-t border-border/20">
               {translatedData.tags.map((tag) => (
                 <Badge key={tag} variant="secondary">
                   #{tag}
