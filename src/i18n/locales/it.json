@@ -1189,6 +1189,47 @@
         "description": "Scopri tutti i tool gratuiti"
       },
       "backToTools": "Torna agli strumenti"
+    },
+    "whyJungle": {
+      "badge": "Il nostro modello",
+      "title": "Affitto pensato per chi studia",
+      "subtitle": "Finalmente un modello che capisce la vita universitaria",
+      "contract": {
+        "title": "Contratto 9 Mesi",
+        "description": "Paghi settembre-maggio. L'estate è tua, non del proprietario.",
+        "highlight": "Risparmi 2-3 mesi di affitto"
+      },
+      "summer": {
+        "badge": "Esclusivo",
+        "title": "Flessibilità Estiva",
+        "description": "Devi tornare per gli esami? Nessun problema. Paghi solo i giorni che usi, non mesi interi.",
+        "cta": "Scopri come funziona"
+      },
+      "commissions": {
+        "title": "Zero Commissioni",
+        "description": "Affitti direttamente da noi. Niente agenzie, niente costi nascosti.",
+        "highlight": "Risparmi €200-400"
+      },
+      "comparison": {
+        "traditional": {
+          "title": "Affitto tradizionale",
+          "months12": "Contratto 12 mesi obbligatorio",
+          "paySummer": "Paghi l'estate anche se sei a casa",
+          "noFlex": "Nessuna flessibilità per gli esami",
+          "commissions": "Commissioni agenzia €200-400"
+        },
+        "jungle": {
+          "title": "Jungle Rent",
+          "months9": "Contratto 9 mesi (settembre-maggio)",
+          "payUse": "Estate: paghi solo i giorni che usi",
+          "flex": "Flessibilità per sessioni estive",
+          "noCommissions": "Zero commissioni, affitti diretti"
+        }
+      },
+      "cta": {
+        "waitlist": "Iscriviti alla waitlist",
+        "whatsapp": "Parla con Lorenzo"
+      }
     }
   },
   "examSessionPlanner": {
