@@ -437,6 +437,14 @@ L'aperitivo torinese è un'istituzione. La formula: paghi il drink (€7-12), bu
 
 ### Aperitivi medi (€8-10)
 
+**Caffè e Vini Ranzini** (Quadrilatero Romano, Via Sant'Agostino 13/C)
+- Calice di vino: €3-5
+- Aperitivo con stuzzichini: €8-10
+- Locale storico nel cuore del Quadrilatero
+- Vini piemontesi sfusi, atmosfera autentica e genuina
+- Clientela mista, perfetto per dopo le lezioni
+- **Verdetto:** ⭐⭐⭐⭐ Storico e genuino, un pezzo di Torino vera
+
 **Caffè degli Specchi** (San Salvario, Piazza Madama Cristina)
 - Drink: €8
 - Buffet abbondante (pasta fredda, pizzette, focaccia, verdure)

@@ -437,6 +437,14 @@ The Turin aperitivo is an institution. The formula: you pay for the drink (€7-
 
 ### Medium aperitivos (€8-10)
 
+**Caffè e Vini Ranzini** (Quadrilatero Romano, Via Sant'Agostino 13/C)
+- Glass of wine: €3-5
+- Aperitivo with snacks: €8-10
+- Historic venue in the heart of Quadrilatero
+- Piedmontese bulk wines, authentic and genuine atmosphere
+- Mixed clientele, perfect for after classes
+- **Verdict:** ⭐⭐⭐⭐ Historic and genuine, a piece of real Turin
+
 **Caffè degli Specchi** (San Salvario, Piazza Madama Cristina)
 - Drink: €8
 - Abundant buffet (cold pasta, pizzette, focaccia, vegetables)
