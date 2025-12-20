@@ -1375,5 +1375,33 @@
     "title": "Domande frequenti",
     "subtitle": "Le risposte alle domande più comuni degli investitori",
     "viewAll": "Vedi tutte le FAQ"
+  },
+  "thankYou": {
+    "title": "Grazie per averci contattato!",
+    "investor": {
+      "subtitle": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 24 ore per discutere le opportunità di investimento.",
+      "step1": "Ti contatteremo entro 24 ore via email o telefono",
+      "step2": "Fisseremo una call conoscitiva per capire le tue esigenze",
+      "step3": "Ti invieremo la documentazione e le informazioni dettagliate",
+      "scheduleCta": "Prenota subito una call"
+    },
+    "student": {
+      "subtitle": "Sei in lista d'attesa! Ti avviseremo non appena avremo alloggi disponibili nella tua zona.",
+      "step1": "Riceverai aggiornamenti sulle disponibilità via email",
+      "step2": "Lanceremo le prime stanze a settembre 2026",
+      "step3": "Avrai priorità rispetto ai non iscritti",
+      "resourcesCta": "Scopri le risorse per studenti"
+    },
+    "nextSteps": {
+      "title": "Prossimi passi"
+    },
+    "followLinkedin": "Seguici su LinkedIn",
+    "followInstagram": "Seguici su Instagram",
+    "trustBadge": "Start-up incubata presso 2i3T - Università di Torino",
+    "backHome": "Torna alla home"
+  },
+  "startupBadge": {
+    "label": "Start-up Innovativa",
+    "tooltip": "Iscritta al Registro Speciale delle Start-up Innovative"
   }
 }
