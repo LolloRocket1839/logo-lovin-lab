@@ -471,7 +471,7 @@ The Turin aperitivo is an institution. The formula: you pay for the drink (€7-
 
 ### "Nice" aperitivos (€10-15)
 
-**Centralino** (San Salvario, Via Carlo Alberto)
+**Centralino** (Centro, Via Carlo Alberto)
 - Cocktail: €10-12
 - Gourmet buffet
 - Design atmosphere

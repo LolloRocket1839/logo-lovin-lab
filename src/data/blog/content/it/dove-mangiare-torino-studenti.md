@@ -471,7 +471,7 @@ L'aperitivo torinese è un'istituzione. La formula: paghi il drink (€7-12), bu
 
 ### Aperitivi "belli" (€10-15)
 
-**Centralino** (San Salvario, Via Carlo Alberto)
+**Centralino** (Centro, Via Carlo Alberto)
 - Cocktail: €10-12
 - Buffet gourmet
 - Ambiente design
