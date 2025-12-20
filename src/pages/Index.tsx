@@ -11,6 +11,7 @@ import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/HowItWorks").then(m => ({ default: m.HowItWorks })));
+const InvestmentFlowInfographic = lazy(() => import("@/components/InvestmentFlowInfographic").then(m => ({ default: m.InvestmentFlowInfographic })));
 const ProblemSection = lazy(() => import("@/components/ProblemSection").then(m => ({ default: m.ProblemSection })));
 const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
@@ -105,6 +106,9 @@ const Index = () => {
         
         {/* How It Works Section */}
         <HowItWorks />
+        
+        {/* Investment Flow Infographic */}
+        <InvestmentFlowInfographic />
         
         {/* Problem Section - Savills Data */}
         <ProblemSection />

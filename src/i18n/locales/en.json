@@ -53,6 +53,57 @@
     "ctaInvest": "Invest from €100",
     "ctaRent": "Find housing"
   },
+  "investmentFlow": {
+    "badge": "Your investment journey",
+    "title": "From €100 to Returns",
+    "subtitle": "Follow your capital flow: from initial investment to bi-monthly payouts",
+    "steps": {
+      "deposit": {
+        "amount": "€100+",
+        "title": "Deposit",
+        "desc": "Invest from €100 and buy portfolio shares"
+      },
+      "portfolio": {
+        "amount": "100%",
+        "title": "Allocation",
+        "desc": "Capital is allocated to selected properties"
+      },
+      "properties": {
+        "amount": "7+",
+        "title": "Properties",
+        "desc": "Real estate near Turin universities"
+      },
+      "tenants": {
+        "amount": "95%",
+        "title": "Occupancy",
+        "desc": "Rented to students and tourists year-round"
+      },
+      "returns": {
+        "amount": "6x/year",
+        "title": "Payouts",
+        "desc": "Returns distributed every 2 months"
+      }
+    },
+    "cycle": "Continuous cycle • Payouts are automatically reinvested if you wish",
+    "stats": {
+      "minInvestment": {
+        "value": "€100",
+        "label": "Minimum investment"
+      },
+      "payoutFrequency": {
+        "value": "6x",
+        "label": "Payouts per year"
+      },
+      "properties": {
+        "value": "7+",
+        "label": "Properties in portfolio"
+      },
+      "occupancy": {
+        "value": "95%",
+        "label": "Occupancy rate"
+      }
+    }
+  },
   "video": {
     "title": "Understand our model in 2 minutes",
     "subtitle": "A short video explaining how to invest in student properties in Turin with Jungle Rent.",
