@@ -1,80 +1,57 @@
 # Jungle Control to Major Lol
-## Issue #1 — December 2025
+## Issue #1 — Volition
 
 ---
 
-📅 December 20, 2025, 11:47 PM
-
-The notes I write when I should be sleeping but instead I'm thinking about Jungle Rent.
+📅 December 2025
 
 ---
 
-### ✅ What we shipped this month
+I wasn't going through a happy time.
 
-- [x] Landing page with complete design system
-- [x] Blog infrastructure live with 28 articles
-- [x] SEO optimized for AI crawlers (llms.txt)
-- [x] Student budget calculator
-- [x] Exam session planner
-- [ ] Mobile app (still dreaming)
-- [ ] Automatic matching system
+I couldn't understand the meaning of my studies, where I wanted to go. Talking with friends and my ex, I realized I wasn't my usual self.
 
----
+I received a proposal to go to a monastery in Bordeaux, Plum Village. I lived with nuns for a week, waking up at 5 in the morning.
 
-### 💭 Random thoughts from the trenches
+Up to here it sounds like a story of privilege. It is anyway.
 
-Building a proptech startup in Turin is weird. On one hand you have the Langhe with truffles, on the other you have students looking for a decent room under €400.
+I meditated, I was in silence a lot, I listened to the nuns' teachings. One point emerged that sparked something:
 
-**What I learned:**
-- Real estate investors want data, not fancy slides
-- Students want simplicity, not feature bloat
-- Turin's student market is bigger than I thought
+> Beyond knowing that you are here and now, you need to know where you want to go. Your volition.
 
-**What I still don't understand:**
-- Why all real estate portals look stuck in 2005
-- How agencies survive with such high commissions
-- Whether this is a good idea or I'm just stubborn
+Hearing this concept explained, which partly contained ambition but was something else, gave me a new perspective. It lit the fire I've always had for building something.
+
+When I came back, I started writing down ideas every day.
+
+Until Jungle Rent came along.
 
 ---
 
-### 📊 Numbers that matter
+### 🏠 Why rentals?
 
-| Metric | Value |
-|--------|-------|
-| Waitlist | Growing |
-| Blog articles | 28 |
-| Coffees consumed | ∞ |
-| Sleep hours lost | Too many |
-| Moments of doubt | Daily |
-| Desire to quit | 0 |
+To solve a problem that was mine — in Rome I was paying high rent and had taken out a loan to study. A problem that belonged to everyone around me.
 
----
+Why rentals? Because there are few things as fundamental as water, food, warmth. One of these, if not the only one, is a roof and walls to live, succeed in your life, be safe.
 
-### 🎯 Next mission (January 2026)
+I talked about it with Andrea, my co-founder. And from there I couldn't take my mind off it. Like a boomerang — even if I had wanted to throw the idea away, it always came back.
 
-- Launch beta version for first users
-- Start outreach with landlords in Turin
-- Close university partnerships
-- Keep writing useful content
+Now it's real.
 
 ---
 
-### 🎵 Vibe of the month
+### 🌴 Where we are
 
-> "Ground Control to Major Tom, your circuit's dead, there's something wrong..."  
-> — But we're in the jungle, and here we survive.
-
-**The song that defined this month:**  
-*Space Oddity* by Bowie, obviously. But also lots of lo-fi hip hop at 2 AM.
+- [x] Landing page live
+- [x] Blog with 28+ articles for students
+- [x] Free tools (budget, exams)
+- [x] SEO optimized for AI
+- [ ] Beta with first users
+- [ ] University partnerships
 
 ---
 
-### 📝 Final notes
+### 📝 Final note
 
-If you're reading this, thank you. We're building something we hope will make finding a home easier for students in Turin.
+I hope that by continuing this series I'll improve at writing and communicating. And in the meantime, I'll update on Jungle Rent and its developments.
 
-It won't be perfect. But it will be honest.
-
-See you in January.
-
-— The Jungle Rent team 🌴
+— Lorenzo 🌴
