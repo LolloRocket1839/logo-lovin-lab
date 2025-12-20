@@ -56,7 +56,7 @@ export const ImmersiveHero = () => {
       <div className="absolute inset-0 gradient-jungle-hero" />
 
       {/* Main content */}
-      <div className="container relative z-10 px-4 sm:px-6 md:px-8 py-12">
+      <div className="container relative z-10 px-4 md:px-8 py-12">
         <div className="max-w-5xl mx-auto text-center">
           {/* Logo - static, large, centered */}
           <div className="mb-8 md:mb-10">
@@ -158,9 +158,9 @@ export const ImmersiveHero = () => {
 
           {/* Mini FAQ Accordion */}
           <div className="max-w-xl mx-auto mb-8 md:mb-16 px-2">
-            <Accordion type="single" collapsible className="bg-card/30 backdrop-blur-sm rounded-lg md:rounded-xl border border-border/30">
+            <Accordion type="single" collapsible className="bg-card/30 backdrop-blur-sm rounded-xl border border-border/20">
               {miniFaqs.map((faq) => (
-                <AccordionItem key={faq.key} value={faq.key} className="border-border/30">
+                <AccordionItem key={faq.key} value={faq.key} className="border-border/20">
                   <AccordionTrigger className="px-3 py-2.5 md:px-4 md:py-3 text-xs sm:text-sm font-medium text-foreground hover:no-underline text-left">
                     {faq.question}
                   </AccordionTrigger>

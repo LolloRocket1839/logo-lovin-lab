@@ -22,10 +22,13 @@ const HomepageFAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-muted/30">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-8 md:mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">
+    <section id="faq" className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="text-center mb-12">
+          <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
+            {t("homeFaq.label", "FAQ")}
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-3">
             {t("homeFaq.title")}
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
@@ -34,12 +37,12 @@ const HomepageFAQ = () => {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className="space-y-4">
             {topFAQs.map((faq, index) => (
               <AccordionItem
                 key={`home-faq-${index}`}
                 value={`home-faq-${index}`}
-                className="bg-background border border-border/20 rounded-lg px-6"
+                className="bg-muted/30 border border-border/20 rounded-xl px-6"
               >
                 <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline py-4">
                   {faq.q}
