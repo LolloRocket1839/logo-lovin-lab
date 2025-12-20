@@ -9,6 +9,7 @@ import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { ShareButton } from "@/components/blog/ShareButton";
 import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
+import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
 
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
@@ -338,59 +339,92 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         
         <article className="py-12 md:py-16 px-4 md:px-8">
           <div className="container mx-auto max-w-4xl">
-            {/* Header */}
-            <header className="mb-6 sm:mb-8">
-              <Badge className={`mb-3 sm:mb-4 ${getCategoryColor(post.category)}`}>
-                {t(`blog.categories.${post.category}`)}
-              </Badge>
-              
-              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
-                {translatedData.title}
-              </h1>
-              
-              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
-                <span className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  {new Date(post.date).toLocaleDateString('it-IT', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric'
-                  })}
-                </span>
-                <span className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  {post.readTime} min di lettura
-                </span>
-                <span>{post.author}</span>
-              </div>
+            {/* iPhone Notes Template for special posts */}
+            {post.noteStyle ? (
+              <>
+                <IPhoneNotesTemplate 
+                  content={content} 
+                  title={translatedData.title}
+                  date={post.date}
+                />
+                
+                {/* Share and Tags below the phone */}
+                <div className="max-w-2xl mx-auto mt-8 space-y-6">
+                  <ShareButton 
+                    title={translatedData.title}
+                    excerpt={translatedData.excerpt}
+                    url={window.location.href}
+                  />
+                  
+                  <div className="flex flex-wrap gap-2 pt-6 border-t border-border/20">
+                    {translatedData.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">
+                        #{tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* CTA */}
+                <BlogCTA type={post.category} />
+              </>
+            ) : (
+              <>
+                {/* Header */}
+                <header className="mb-6 sm:mb-8">
+                  <Badge className={`mb-3 sm:mb-4 ${getCategoryColor(post.category)}`}>
+                    {t(`blog.categories.${post.category}`)}
+                  </Badge>
+                  
+                  <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6 leading-tight">
+                    {translatedData.title}
+                  </h1>
+                  
+                  <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
+                    <span className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4" />
+                      {new Date(post.date).toLocaleDateString('it-IT', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric'
+                      })}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <Clock className="w-4 h-4" />
+                      {post.readTime} min di lettura
+                    </span>
+                    <span>{post.author}</span>
+                  </div>
 
-              <ShareButton 
-                title={translatedData.title}
-                excerpt={translatedData.excerpt}
-                url={window.location.href}
-              />
-            </header>
+                  <ShareButton 
+                    title={translatedData.title}
+                    excerpt={translatedData.excerpt}
+                    url={window.location.href}
+                  />
+                </header>
 
-            {/* Featured Image with Parallax */}
-            <ParallaxHeroImage src={post.image} alt={translatedData.title} />
+                {/* Featured Image with Parallax */}
+                <ParallaxHeroImage src={post.image} alt={translatedData.title} />
 
-            {/* Animated Content */}
-            <AnimatedBlogContent content={content} markdownComponents={markdownComponents} />
+                {/* Animated Content */}
+                <AnimatedBlogContent content={content} markdownComponents={markdownComponents} />
 
-            {/* Floating Table of Contents (Desktop) */}
-            <FloatingTableOfContents content={content} />
+                {/* Floating Table of Contents (Desktop) */}
+                <FloatingTableOfContents content={content} />
 
-            {/* CTA */}
-            <BlogCTA type={post.category} />
+                {/* CTA */}
+                <BlogCTA type={post.category} />
 
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 pt-8 border-t border-border/20">
-              {translatedData.tags.map((tag) => (
-                <Badge key={tag} variant="secondary">
-                  #{tag}
-                </Badge>
-              ))}
-            </div>
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 pt-8 border-t border-border/20">
+                  {translatedData.tags.map((tag) => (
+                    <Badge key={tag} variant="secondary">
+                      #{tag}
+                    </Badge>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </article>
 
