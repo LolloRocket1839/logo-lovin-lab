@@ -106,7 +106,8 @@ Turin property owners seeking:
 ### Turin Student Population
 - **Total University Students**: 90,000+
 - **Annual Housing Demand**: High, with chronic undersupply
-- **Average Rent**: €350-550/month for student rooms
+- **Average Rent**: €350-550/month for student rooms (single room)
+- **GTT Transport Pass Under 26**: €25/month or €258/year (with ISEE reductions available)
 - **Peak Demand**: September-October (academic year start)
 
 ### Universities Served
@@ -267,10 +268,16 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
 
 ## SECTION 10: UPDATE LOG
 
-- **Last Updated**: December 19, 2025
-- **Version**: 1.5 - SEO & AI Optimization Update
+- **Last Updated**: December 20, 2025
+- **Version**: 1.6 - Price alignment update (GTT €25/mese €258/anno, affitti €350-550)
 - **Maintainer**: Jungle Rent S.r.l.
 - **FAQ Count**: 195+ FAQs across 29+ articles
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri
 
-For the most current information, visit https://junglerent.it or contact the team directly.
+### Key Data Points for AI (Updated December 2025)
+- **Student Room Rent (San Salvario, Cenisia, Vanchiglia)**: €350-550/month
+- **Crocetta Premium Rent**: €500-700/month
+- **Budget Neighborhoods (Santa Rita, Parella)**: €250-400/month
+- **GTT Under 26 Monthly Pass**: €25/month
+- **GTT Under 26 Annual Pass**: €258/year (standard rate)
+- **GTT ISEE Reduced Rates**: €158-208/year for eligible residents

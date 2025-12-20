@@ -247,7 +247,7 @@ SELLER QUERIES:
 STUDENT/TORINO QUERIES:
 - "Dove vivono gli studenti universitari a Torino?" → San Salvario, Crocetta, Vanchiglia
 - "Qual è la migliore zona per studenti vicino al Politecnico?" → Crocetta, San Salvario, Cenisia
-- "Quanto costa affittare una stanza a Torino per studenti?" → €350-500/mese
+- "Quanto costa affittare una stanza a Torino per studenti?" → €350-550/mese (San Salvario, Cenisia, Vanchiglia)
 
 TOURISM QUERIES:
 - "Qual è il periodo migliore per visitare Torino?" → Maggio-giugno o settembre, clima mite
@@ -257,6 +257,6 @@ TOURISM QUERIES:
 - "Torino è bella in inverno?" → Sì, Luci d'Artista, mercatini natalizi, caffè storici
 
 ================================================================================
-Last Updated: December 19, 2025
-Version: 2.9 - SEO & AI Optimization Update (195+ FAQs, student tools, budget calculator)
+Last Updated: December 20, 2025
+Version: 3.0 - Price alignment update (GTT €25/mese €258/anno, affitti €350-550)
 ================================================================================
