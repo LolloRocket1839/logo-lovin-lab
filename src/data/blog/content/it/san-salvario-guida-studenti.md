@@ -210,7 +210,6 @@ San Salvario non è tutto uguale. Ci sono zone più tranquille, zone più rumoro
 
 **Sera:**
 - **Fluido:** Club, ingresso €10-15
-- **Centralino:** Cocktail bar
 - **Bunker:** Musica live
 
 ## Pro e contro (quelli veri)
