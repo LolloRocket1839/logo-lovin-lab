@@ -23,6 +23,7 @@ export interface BlogPost {
   image: string;
   readTime: number;
   content: string; // filename without extension in /data/blog/content/
+  noteStyle?: boolean; // iPhone Notes template styling
   translations: {
     it: BlogPostTranslation;
     en: BlogPostTranslation;

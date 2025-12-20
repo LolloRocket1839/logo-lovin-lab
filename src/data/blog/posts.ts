@@ -2,6 +2,46 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "jungle-control-dicembre-2025",
+    category: "societa",
+    date: "2025-12-20",
+    author: "Jungle Rent Team",
+    image: "/images/digital-nomad-torino.jpg",
+    readTime: 5,
+    content: "jungle-control-dicembre-2025",
+    noteStyle: true,
+    translations: {
+      it: {
+        title: "Jungle Control to Major Lol — Issue #1",
+        excerpt: "Le note che scrivo quando dovrei dormire ma invece penso a Jungle Rent. Il primo numero della nostra serie mensile dallo sviluppo di una startup proptech a Torino.",
+        seo: {
+          title: "Jungle Control to Major Lol #1 | Dicembre 2025 | Jungle Rent",
+          description: "Issue #1 della serie mensile Building Jungle Rent. Note autentiche, numeri reali, pensieri dalle trincee dello sviluppo di una startup proptech a Torino.",
+          keywords: ["jungle rent", "startup torino", "proptech italia", "student housing", "building in public", "startup diary"]
+        },
+        tags: ["Società", "Startup", "Jungle Control to Major Lol", "Behind the Scenes"],
+        faqs: [
+          { question: "Cos'è Jungle Control to Major Lol?", answer: "È la nostra serie mensile in cui condividiamo in modo autentico cosa stiamo costruendo, i numeri, le sfide e le lezioni imparate nel percorso di Jungle Rent." },
+          { question: "Ogni quanto esce un nuovo numero?", answer: "Pubblichiamo un nuovo numero ogni mese, con un recap onesto di cosa abbiamo fatto, cosa abbiamo imparato e dove stiamo andando." }
+        ]
+      },
+      en: {
+        title: "Jungle Control to Major Lol — Issue #1",
+        excerpt: "The notes I write when I should be sleeping but instead I'm thinking about Jungle Rent. The first issue of our monthly series from building a proptech startup in Turin.",
+        seo: {
+          title: "Jungle Control to Major Lol #1 | December 2025 | Jungle Rent",
+          description: "Issue #1 of the monthly Building Jungle Rent series. Authentic notes, real numbers, thoughts from the trenches of building a proptech startup in Turin.",
+          keywords: ["jungle rent", "turin startup", "proptech italy", "student housing", "building in public", "startup diary"]
+        },
+        tags: ["Company", "Startup", "Jungle Control to Major Lol", "Behind the Scenes"],
+        faqs: [
+          { question: "What is Jungle Control to Major Lol?", answer: "It's our monthly series where we authentically share what we're building, the numbers, challenges, and lessons learned on the Jungle Rent journey." },
+          { question: "How often is a new issue released?", answer: "We publish a new issue every month, with an honest recap of what we did, what we learned, and where we're headed." }
+        ]
+      }
+    }
+  },
+  {
     slug: "tajarin-piemontesi-guida-completa",
     category: "turisti",
     date: "2025-12-12",
