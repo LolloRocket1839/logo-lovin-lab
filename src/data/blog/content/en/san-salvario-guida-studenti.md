@@ -36,8 +36,8 @@ Let's talk money, because that's the question you're asking yourself.
 ### Rent (November 2025 data)
 
 **Single room:**
-- Minimum: €300/month (less central areas, dated apartments)
-- Average: €380/month (most rooms)
+- Minimum: €350/month (less central areas, dated apartments)
+- Average: €400/month (most rooms)
 - Maximum: €550/month (renovated apartments, most requested area)
 
 **Bed in double room:**
@@ -326,7 +326,7 @@ Yes, it's safe by big city standards. Like anywhere, normal caution at night is 
 Depends on budget. The double costs €200-300/month (save €100-150), but you have less privacy. For most students, the single is worth the extra cost.
 
 **How much is the GTT subscription?**
-€25/month (under 26) or €255/year. Includes unlimited metro, tram and bus.
+€25/month (under 26) or €258/year. With reduced ISEE you can pay €158-208/year. Includes unlimited metro, tram and bus.
 
 **Where can I wash clothes?**
 Many apartments have washing machines. Otherwise there are 3 self-service laundries in San Salvario (€3-5/wash).

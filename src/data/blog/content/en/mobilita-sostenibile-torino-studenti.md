@@ -23,7 +23,8 @@ To plan your trips, visit [Muoversi a Torino](https://www.muoversiatorino.it), t
 The Piedmont Region, through the [Piemove](https://www.regione.piemonte.it/web/temi/mobilita-trasporti) portal, offers various advantageous fare solutions for students:
 
 **Under 26 annual pass:**
-- Cost: approximately €230-350/year (depending on zones)
+- Cost: €258/year (standard rate)
+- With reduced ISEE: €158-208/year for Turin residents/domiciled
 - Validity: 365 days from activation date
 - Unlimited use on the entire GTT urban network
 

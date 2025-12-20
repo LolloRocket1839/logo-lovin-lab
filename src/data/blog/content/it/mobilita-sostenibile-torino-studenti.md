@@ -23,7 +23,8 @@ Per pianificare i tuoi spostamenti, visita il sito [Muoversi a Torino](https://w
 La Regione Piemonte, attraverso il portale [Piemove](https://www.regione.piemonte.it/web/temi/mobilita-trasporti), offre diverse soluzioni tariffarie vantaggiose per gli studenti:
 
 **Abbonamento Under 26 annuale:**
-- Costo: circa €230-350/anno (a seconda delle zone)
+- Costo: €258/anno (tariffa ordinaria)
+- Con ISEE ridotto: €158-208/anno per residenti/domiciliati a Torino
 - Validità: 365 giorni dalla data di attivazione
 - Utilizzo illimitato su tutta la rete GTT urbana
 

@@ -36,8 +36,8 @@ Parliamo di soldi, perché è la domanda che ti stai facendo.
 ### Affitto (dati Novembre 2025)
 
 **Stanza singola:**
-- Minimo: €300/mese (zone meno centrali, appartamenti datati)
-- Media: €380/mese (la maggior parte delle stanze)
+- Minimo: €350/mese (zone meno centrali, appartamenti datati)
+- Media: €400/mese (la maggior parte delle stanze)
 - Massimo: €550/mese (appartamenti ristrutturati, zona più richiesta)
 
 **Posto letto in doppia:**
@@ -326,7 +326,7 @@ Sì, è sicuro per gli standard di una grande città. Come ovunque, serve attenz
 Dipende dal budget. La doppia costa €200-300/mese (risparmi €100-150), ma hai meno privacy. Per la maggior parte degli studenti, la singola vale la spesa extra.
 
 **Quanto costa l'abbonamento GTT?**
-€25/mese (under 26) o €255/anno. Include metro, tram e bus illimitati.
+€25/mese (under 26) o €258/anno. Con ISEE ridotto si può arrivare a €158-208/anno. Include metro, tram e bus illimitati.
 
 **Dove posso lavare i vestiti?**
 Molti appartamenti hanno lavatrice. Altrimenti ci sono 3 lavanderie self-service in San Salvario (€3-5/lavaggio).
