@@ -5,38 +5,40 @@ export const blogPosts: BlogPost[] = [
     slug: "jungle-control-dicembre-2025",
     category: "societa",
     date: "2025-12-20",
-    author: "Jungle Rent Team",
+    author: "Lorenzo",
     image: "/images/digital-nomad-torino.jpg",
-    readTime: 5,
+    readTime: 4,
     content: "jungle-control-dicembre-2025",
     noteStyle: true,
     translations: {
       it: {
-        title: "Jungle Control to Major Lol — Issue #1",
-        excerpt: "Le note che scrivo quando dovrei dormire ma invece penso a Jungle Rent. Il primo numero della nostra serie mensile dallo sviluppo di una startup proptech a Torino.",
+        title: "Jungle Control to Major Lol — Issue #1: Volizione",
+        excerpt: "Non stavo passando un periodo felice. Un monastero a Bordeaux, le monache, e una domanda: dove vuoi andare? Così è nata Jungle Rent.",
         seo: {
-          title: "Jungle Control to Major Lol #1 | Dicembre 2025 | Jungle Rent",
-          description: "Issue #1 della serie mensile Building Jungle Rent. Note autentiche, numeri reali, pensieri dalle trincee dello sviluppo di una startup proptech a Torino.",
-          keywords: ["jungle rent", "startup torino", "proptech italia", "student housing", "building in public", "startup diary"]
+          title: "Jungle Control to Major Lol #1: Volizione | Jungle Rent",
+          description: "Issue #1: Volizione. La storia personale dietro Jungle Rent. Dal monastero di Plum Village alla startup proptech per studenti a Torino.",
+          keywords: ["jungle rent", "startup torino", "proptech italia", "student housing", "building in public", "volizione", "plum village"]
         },
-        tags: ["Società", "Startup", "Jungle Control to Major Lol", "Behind the Scenes"],
+        tags: ["Società", "Startup", "Jungle Control to Major Lol", "Founder Story"],
         faqs: [
-          { question: "Cos'è Jungle Control to Major Lol?", answer: "È la nostra serie mensile in cui condividiamo in modo autentico cosa stiamo costruendo, i numeri, le sfide e le lezioni imparate nel percorso di Jungle Rent." },
-          { question: "Ogni quanto esce un nuovo numero?", answer: "Pubblichiamo un nuovo numero ogni mese, con un recap onesto di cosa abbiamo fatto, cosa abbiamo imparato e dove stiamo andando." }
+          { question: "Cos'è Jungle Control to Major Lol?", answer: "È la serie mensile in cui Lorenzo condivide in modo autentico il percorso di costruzione di Jungle Rent — le sfide, le lezioni e i momenti di dubbio." },
+          { question: "Cosa significa volizione?", answer: "La volizione è la consapevolezza di dove vuoi andare. Non è solo ambizione — è sapere cosa stai costruendo e perché. È la scintilla che ha fatto nascere Jungle Rent." },
+          { question: "Chi sono i founder di Jungle Rent?", answer: "Jungle Rent è stata fondata da Lorenzo e Andrea, due studenti che hanno vissuto sulla propria pelle il problema degli affitti alti e vogliono rendere più semplice trovare casa per chi studia." }
         ]
       },
       en: {
-        title: "Jungle Control to Major Lol — Issue #1",
-        excerpt: "The notes I write when I should be sleeping but instead I'm thinking about Jungle Rent. The first issue of our monthly series from building a proptech startup in Turin.",
+        title: "Jungle Control to Major Lol — Issue #1: Volition",
+        excerpt: "I wasn't going through a happy time. A monastery in Bordeaux, the nuns, and one question: where do you want to go? That's how Jungle Rent was born.",
         seo: {
-          title: "Jungle Control to Major Lol #1 | December 2025 | Jungle Rent",
-          description: "Issue #1 of the monthly Building Jungle Rent series. Authentic notes, real numbers, thoughts from the trenches of building a proptech startup in Turin.",
-          keywords: ["jungle rent", "turin startup", "proptech italy", "student housing", "building in public", "startup diary"]
+          title: "Jungle Control to Major Lol #1: Volition | Jungle Rent",
+          description: "Issue #1: Volition. The personal story behind Jungle Rent. From the Plum Village monastery to a proptech startup for students in Turin.",
+          keywords: ["jungle rent", "turin startup", "proptech italy", "student housing", "building in public", "volition", "plum village"]
         },
-        tags: ["Company", "Startup", "Jungle Control to Major Lol", "Behind the Scenes"],
+        tags: ["Company", "Startup", "Jungle Control to Major Lol", "Founder Story"],
         faqs: [
-          { question: "What is Jungle Control to Major Lol?", answer: "It's our monthly series where we authentically share what we're building, the numbers, challenges, and lessons learned on the Jungle Rent journey." },
-          { question: "How often is a new issue released?", answer: "We publish a new issue every month, with an honest recap of what we did, what we learned, and where we're headed." }
+          { question: "What is Jungle Control to Major Lol?", answer: "It's the monthly series where Lorenzo authentically shares the journey of building Jungle Rent — the challenges, lessons and moments of doubt." },
+          { question: "What does volition mean?", answer: "Volition is the awareness of where you want to go. It's not just ambition — it's knowing what you're building and why. It's the spark that started Jungle Rent." },
+          { question: "Who are the Jungle Rent founders?", answer: "Jungle Rent was founded by Lorenzo and Andrea, two students who experienced firsthand the problem of high rents and want to make finding a home easier for those who study." }
         ]
       }
     }
