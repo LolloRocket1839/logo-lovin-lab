@@ -384,7 +384,7 @@ Passed an exam, birthday, parents visiting, or simply want to treat yourself.
 - **Budget 2 people:** €45-55
 - **Verdict:** ⭐⭐⭐⭐ Turin institution
 
-**Cianci Piola** (Vanchiglia)
+**Cianci Piola** (Quadrilatero Romano)
 - Dish: €12-18
 - Unconventional piola
 - Creative Piedmontese cuisine

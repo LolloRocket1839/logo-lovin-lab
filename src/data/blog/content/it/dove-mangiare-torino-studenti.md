@@ -384,7 +384,7 @@ Esame superato, compleanno, genitori in visita, o semplicemente ti vuoi togliere
 - **Budget 2 persone:** €45-55
 - **Verdetto:** ⭐⭐⭐⭐ Istituzione torinese
 
-**Cianci Piola** (Vanchiglia)
+**Cianci Piola** (Quadrilatero Romano)
 - Piatto: €12-18
 - Piola non convenzionale
 - Cucina piemontese creativa
