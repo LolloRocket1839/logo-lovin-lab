@@ -210,7 +210,6 @@ San Salvario is not all the same. There are quieter areas, noisier areas, cheape
 
 **Evening:**
 - **Fluido:** Club, entrance €10-15
-- **Centralino:** Cocktail bar
 - **Bunker:** Live music
 
 ## Pros and cons (the real ones)
