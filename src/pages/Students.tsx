@@ -115,12 +115,12 @@ const Students = () => {
           
           <div className="container relative mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <Badge variant="outline" className="mb-4 text-primary border-primary/30">
-                <GraduationCap className="w-3 h-3 mr-1" />
+              <Badge variant="outline" className="mb-4 text-primary border-primary/20">
+                <GraduationCap className="w-4 h-4 mr-2" />
                 {t("students.badge")}
               </Badge>
               
-              <h1 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4">
+              <h1 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
                 {t("students.hero.title")}
               </h1>
               
@@ -154,14 +154,13 @@ const Students = () => {
         </section>
 
         {/* Why Jungle Rent Section */}
-        <section className="py-16 bg-primary/5">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <Badge variant="outline" className="mb-4 text-primary border-primary/30">
-                <Home className="w-3 h-3 mr-1" />
+              <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
                 {t("students.whyJungle.badge")}
-              </Badge>
-              <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3">
+              </p>
+              <h2 className="text-2xl md:text-4xl font-display font-bold text-foreground mb-3">
                 {t("students.whyJungle.title")}
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
@@ -172,8 +171,8 @@ const Students = () => {
             {/* Benefit Cards */}
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
               {/* 9-Month Contract */}
-              <Card className="relative overflow-hidden hover:shadow-lg transition-shadow border-primary/20">
-                <CardContent className="p-6">
+              <Card className="relative overflow-hidden rounded-xl hover:shadow-lg transition-shadow border-border/20 hover:border-primary/30">
+                <CardContent className="p-6 md:p-8">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <Calendar className="w-6 h-6 text-primary" />
                   </div>
@@ -190,11 +189,11 @@ const Students = () => {
               </Card>
 
               {/* Summer Flexibility */}
-              <Card className="relative overflow-hidden hover:shadow-lg transition-shadow border-primary/20 ring-2 ring-primary/30">
+              <Card className="relative overflow-hidden rounded-xl hover:shadow-lg transition-shadow border-border/20 ring-2 ring-primary/20">
                 <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-bl-lg font-medium">
                   {t("students.whyJungle.summer.badge")}
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 md:p-8">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <Sun className="w-6 h-6 text-primary" />
                   </div>
@@ -217,8 +216,8 @@ const Students = () => {
               </Card>
 
               {/* Zero Commissions */}
-              <Card className="relative overflow-hidden hover:shadow-lg transition-shadow border-primary/20">
-                <CardContent className="p-6">
+              <Card className="relative overflow-hidden rounded-xl hover:shadow-lg transition-shadow border-border/20 hover:border-primary/30">
+                <CardContent className="p-6 md:p-8">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <BadgeCheck className="w-6 h-6 text-primary" />
                   </div>
@@ -237,7 +236,7 @@ const Students = () => {
 
             {/* Comparison */}
             <div className="max-w-3xl mx-auto mb-12">
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden rounded-xl">
                 <CardContent className="p-0">
                   <div className="grid md:grid-cols-2">
                     {/* Traditional */}
@@ -312,14 +311,13 @@ const Students = () => {
         </section>
 
         {/* Tools Section */}
-        <section className="py-12 bg-accent/30">
+        <section className="py-16 md:py-24 bg-accent/30">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-              <Badge variant="outline" className="mb-3 text-primary border-primary/30">
-                <Sparkles className="w-3 h-3 mr-1" />
+            <div className="text-center mb-12">
+              <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
                 {t("students.tools.badge")}
-              </Badge>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+              </p>
+              <h2 className="text-2xl md:text-4xl font-display font-bold text-foreground mb-3">
                 {t("students.tools.title")}
               </h2>
               <p className="text-muted-foreground">
@@ -327,11 +325,11 @@ const Students = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {/* Budget Calculator */}
               <Link to="/studenti/strumenti/budget">
-                <Card className="h-full hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group">
-                  <CardContent className="p-6 text-center">
+                <Card className="h-full rounded-xl hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group border-border/20">
+                  <CardContent className="p-6 md:p-8 text-center">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                       <Calculator className="w-6 h-6 text-primary" />
                     </div>
@@ -351,8 +349,8 @@ const Students = () => {
 
               {/* Grade Calculator - NEW */}
               <Link to="/studenti/strumenti/media">
-                <Card className="h-full hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group">
-                  <CardContent className="p-6 text-center">
+                <Card className="h-full rounded-xl hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group border-border/20">
+                  <CardContent className="p-6 md:p-8 text-center">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                       <GraduationCap className="w-6 h-6 text-primary" />
                     </div>
@@ -372,8 +370,8 @@ const Students = () => {
 
               {/* Exam Session Planner */}
               <Link to="/studenti/strumenti/sessione">
-                <Card className="h-full hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group">
-                  <CardContent className="p-6 text-center">
+                <Card className="h-full rounded-xl hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group border-border/20">
+                  <CardContent className="p-6 md:p-8 text-center">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                       <Calendar className="w-6 h-6 text-primary" />
                     </div>
@@ -393,9 +391,9 @@ const Students = () => {
 
               {/* All Tools Link */}
               <Link to="/studenti/strumenti">
-                <Card className="h-full border-dashed hover:border-primary/50 transition-all cursor-pointer group">
-                  <CardContent className="p-6 text-center flex flex-col items-center justify-center h-full">
-                    <div className="w-12 h-12 rounded-xl border-2 border-dashed border-muted-foreground/30 flex items-center justify-center mx-auto mb-4 group-hover:border-primary/50 transition-colors">
+                <Card className="h-full rounded-xl border-dashed hover:border-primary/30 transition-all cursor-pointer group border-border/20">
+                  <CardContent className="p-6 md:p-8 text-center flex flex-col items-center justify-center h-full">
+                    <div className="w-12 h-12 rounded-xl border-2 border-dashed border-muted-foreground/30 flex items-center justify-center mx-auto mb-4 group-hover:border-primary/30 transition-colors">
                       <ArrowRight className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
                     <h3 className="font-semibold text-foreground mb-2">
@@ -412,8 +410,11 @@ const Students = () => {
         </section>
 
         {/* Market Stats */}
-        <section className="py-12">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
+            <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground text-center mb-8">
+              {t("students.stats.label", "Turin at a Glance")}
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[
                 { value: "90.000+", label: t("students.stats.students"), icon: Users },
@@ -421,21 +422,26 @@ const Students = () => {
                 { value: "9", label: t("students.stats.neighborhoods"), icon: MapPin },
                 { value: "€300-500", label: t("students.stats.avgRent"), icon: Home }
               ].map((stat, i) => (
-                <div key={i} className="text-center">
-                  <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
+                <Card key={i} className="rounded-xl border-border/20 bg-background/30 backdrop-blur-sm p-6 md:p-8 text-center">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="w-6 h-6 text-primary" />
+                  </div>
                   <div className="text-2xl md:text-3xl font-bold text-foreground">{stat.value}</div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
         </section>
 
         {/* Resources Hub */}
-        <section className="py-16">
+        <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
+              <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
+                {t("students.resources.label", "Guides & Resources")}
+              </p>
+              <h2 className="text-2xl md:text-4xl font-display font-bold text-foreground mb-3">
                 {t("students.resources.title")}
               </h2>
               <p className="text-muted-foreground">
@@ -445,11 +451,11 @@ const Students = () => {
 
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {resourceCategories.filter(cat => cat.posts.length > 0).map((category, i) => (
-                <Card key={i} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
+                <Card key={i} className="rounded-xl hover:shadow-md transition-shadow border-border/20 hover:border-primary/30">
+                  <CardContent className="p-6 md:p-8">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                        <category.icon className="w-5 h-5 text-primary" />
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <category.icon className="w-6 h-6 text-primary" />
                       </div>
                       <h3 className="font-semibold text-foreground">
                         {t(category.titleKey)}
@@ -485,9 +491,9 @@ const Students = () => {
         </section>
 
         {/* Investor CTA */}
-        <section className="py-12 bg-primary/5">
+        <section className="py-16 md:py-24 bg-primary/5">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+            <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-3">
               {t("students.investorCta.title")}
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
