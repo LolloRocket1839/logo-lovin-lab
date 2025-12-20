@@ -41,12 +41,12 @@ export const Footer = () => {
   };
   
   return (
-    <footer id="footer" className="bg-accent/30 relative overflow-hidden transition-spacing">
+    <footer id="footer" className="bg-muted/30 relative overflow-hidden transition-spacing">
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-footer" />
       
-      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 relative z-10 transition-spacing">
-        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-10 md:mb-16 lg:mb-20 max-w-6xl mx-auto transition-spacing transition-layout">
+      <div className="container px-4 md:px-8 py-16 md:py-24 relative z-10 transition-spacing">
+        <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20 max-w-6xl mx-auto transition-spacing transition-layout">
           {/* Brand */}
           <div>
             <div className="mb-6">
@@ -79,7 +79,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-display text-base sm:text-lg font-bold mb-4 sm:mb-6 text-foreground">{t('footer.contactTitle')}</h3>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">{t('footer.contactTitle')}</h3>
             <div className="space-y-3">
               <a 
                 href={`https://wa.me/${CONTACTS.lorenzo.phone}`}
@@ -108,7 +108,7 @@ export const Footer = () => {
 
           {/* Info */}
           <div>
-            <h3 className="font-display text-base sm:text-lg font-bold mb-4 sm:mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
             <ul className="space-y-3 text-muted-foreground">
               <li>
                 <Link to="/studenti" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
@@ -140,7 +140,7 @@ export const Footer = () => {
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground/60 mb-3 font-medium">
               Powered by
             </p>
-            <h3 className="font-display text-base sm:text-lg font-bold mb-4 sm:mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
             <div className="space-y-4">
               <a 
                 href="https://www.2i3t.it"
@@ -174,7 +174,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom tagline */}
-        <div className="border-t border-border pt-12 text-center">
+        <div className="border-t border-border/20 pt-12 text-center">
           <p className="text-primary text-base font-accent mb-2 tracking-wide">
             {t('footer.bottomTagline')}
           </p>
@@ -183,7 +183,7 @@ export const Footer = () => {
           </p>
           
           {/* Legal Information */}
-          <div className="mt-6 pt-6 border-t border-border/50">
+          <div className="mt-8 pt-8 border-t border-border/10">
             <p className="text-muted-foreground/70 text-xs font-light">
               JUNGLE RENT S.R.L. - Start-up Innovativa | P.IVA 13333450016 | REA TO-1355899
             </p>

@@ -116,13 +116,13 @@ export const Navigation = () => {
         prefersReducedMotion ? '' : 'transition-all duration-500'
       } ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-minimal"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/20 shadow-minimal"
           : "bg-transparent"
       }`}
       role="navigation"
       aria-label="Navigazione principale"
     >
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 transition-spacing">
+      <div className="container mx-auto px-4 md:px-8 transition-spacing">
         <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
           {/* Mobile: Back Button + Logo | Desktop: Logo only */}
           <div className="flex items-center gap-3">
@@ -229,7 +229,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border bg-background/95 backdrop-blur-xl z-50">
+          <div className="lg:hidden py-4 border-t border-border/20 bg-background/95 backdrop-blur-xl z-50">
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => {
                 const href = item.path || (item.id ? `/#${item.id}` : '/');
