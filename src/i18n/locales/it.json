@@ -53,57 +53,6 @@
     "ctaInvest": "Investi da €100",
     "ctaRent": "Cerca alloggio"
   },
-  "investmentFlow": {
-    "badge": "Il percorso del tuo investimento",
-    "title": "Da €100 ai Rendimenti",
-    "subtitle": "Segui il flusso del tuo capitale: dall'investimento iniziale ai payout bimestrali",
-    "steps": {
-      "deposit": {
-        "amount": "€100+",
-        "title": "Deposito",
-        "desc": "Investi a partire da €100 e acquista quote del portafoglio"
-      },
-      "portfolio": {
-        "amount": "100%",
-        "title": "Allocazione",
-        "desc": "Il capitale viene allocato in immobili selezionati"
-      },
-      "properties": {
-        "amount": "7+",
-        "title": "Immobili",
-        "desc": "Proprietà vicino alle università di Torino"
-      },
-      "tenants": {
-        "amount": "95%",
-        "title": "Occupazione",
-        "desc": "Affitti a studenti e turisti tutto l'anno"
-      },
-      "returns": {
-        "amount": "6x/anno",
-        "title": "Payout",
-        "desc": "Rendimenti distribuiti ogni 2 mesi"
-      }
-    },
-    "cycle": "Ciclo continuo • I payout vengono reinvestiti automaticamente se lo desideri",
-    "stats": {
-      "minInvestment": {
-        "value": "€100",
-        "label": "Investimento minimo"
-      },
-      "payoutFrequency": {
-        "value": "6x",
-        "label": "Payout all'anno"
-      },
-      "properties": {
-        "value": "7+",
-        "label": "Immobili in portafoglio"
-      },
-      "occupancy": {
-        "value": "95%",
-        "label": "Tasso occupazione"
-      }
-    }
-  },
   "video": {
     "title": "Capire il nostro modello in 2 minuti",
     "subtitle": "Un breve video che spiega come investire in immobili studenteschi a Torino con Jungle Rent.",
