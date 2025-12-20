@@ -53,7 +53,7 @@ Borgo San Paolo is a more peripheral area but well served by public transport. R
 
 ### San Salvario: movement and multiculturality
 
-The San Salvario neighborhood is particularly appreciated by university students, especially those who love an active social life and multiculturality. Here the evening nightlife is intense, with many bars, restaurants, and cultural venues. Rents for a single room are around 350-550 euros per month. San Salvario is perfect for those who want to experience the city's rhythm without giving up attending Politecnico.
+The San Salvario neighborhood is particularly appreciated by university students, especially those who love an active social life and multiculturality. Here the evening nightlife is intense, with many bars, restaurants, and cultural venues. Rents for a single room are around **€350-550 per month**. San Salvario is perfect for those who want to experience the city's rhythm without giving up attending Politecnico.
 
 **Main advantages:**
 - ✅ Very active nightlife and social scene
@@ -221,8 +221,8 @@ Turin has an efficient public transport network managed by GTT (Gruppo Torinese 
 - **Line 13**: connects Santa Rita with the center
 
 **Student subscriptions:**
-- **Annual subscription under 26**: about 230€ (23€/month equivalent)
-- **Monthly subscription under 26**: about 35€
+- **Annual subscription under 26**: €258/year (with reduced ISEE €158-208)
+- **Monthly subscription under 26**: €25/month
 - Valid on the entire GTT network (bus, metro, tram)
 
 ### Bicycle

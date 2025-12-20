@@ -93,7 +93,7 @@ San Salvario si è trasformato da quartiere artistico bohémien a destinazione t
 
 Per una guida dettagliata su come vivere a San Salvario, leggi la [guida completa per studenti](/blog/san-salvario-guida-studenti).
 
-**Prezzi:** €13.00-14.00/mq mensili, €2.800-3.200/mq per acquisto. L'opzione di quartiere centrale più accessibile.
+**Prezzi:** €350-550/mese per stanza singola, €2.800-3.200/mq per acquisto. L'opzione di quartiere centrale più accessibile.
 
 ### Vanchiglia: carattere artistico con limitazioni notturne
 

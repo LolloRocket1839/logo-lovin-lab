@@ -89,7 +89,7 @@ Real resident women report key safety divides:
 
 For a detailed guide to living in San Salvario, including cost breakdowns and zone-by-zone analysis, read our [comprehensive San Salvario student guide](/blog/san-salvario-guida-studenti).
 
-**Rental pricing:** €13.00-14.00/sqm monthly, €2,800-3,200/sqm purchase making San Salvario the most affordable central neighborhood option.
+**Rental pricing:** €350-550/month for a single room, €2,800-3,200/sqm purchase making San Salvario the most affordable central neighborhood option.
 
 ### Vanchiglia (Vanchiglietta): artistic character with nighttime limitations
 

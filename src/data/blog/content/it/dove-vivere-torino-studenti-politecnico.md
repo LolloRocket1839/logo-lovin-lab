@@ -53,7 +53,7 @@ Borgo San Paolo è una zona più periferica ma ben servita dai mezzi pubblici. G
 
 ### San Salvario: movimento e multiculturalità
 
-Il quartiere di San Salvario è particolarmente apprezzato dagli studenti universitari, soprattutto da chi ama una vita sociale attiva e la multiculturalità. Qui la movida serale è intensa, con molti bar, ristoranti e locali culturali. Gli affitti per una stanza singola si aggirano intorno ai 350-550 euro mensili. San Salvario è perfetto per chi vuole vivere il ritmo della città senza rinunciare a frequentare il Politecnico.
+Il quartiere di San Salvario è particolarmente apprezzato dagli studenti universitari, soprattutto da chi ama una vita sociale attiva e la multiculturalità. Qui la movida serale è intensa, con molti bar, ristoranti e locali culturali. Gli affitti per una stanza singola si aggirano intorno ai **350-550 euro mensili**. San Salvario è perfetto per chi vuole vivere il ritmo della città senza rinunciare a frequentare il Politecnico.
 
 **Vantaggi principali:**
 - ✅ Vita notturna e sociale molto attiva
@@ -221,8 +221,8 @@ Torino dispone di una rete di trasporto pubblico efficiente gestita da GTT (Grup
 - **Linea 13**: collega Santa Rita con il centro
 
 **Abbonamenti studenti:**
-- **Abbonamento annuale under 26**: circa 230€ (23€/mese equivalente)
-- **Abbonamento mensile under 26**: circa 35€
+- **Abbonamento annuale under 26**: €258/anno (con ISEE ridotto €158-208)
+- **Abbonamento mensile under 26**: €25/mese
 - Validi su tutta la rete GTT (bus, metro, tram)
 
 ### Bicicletta
