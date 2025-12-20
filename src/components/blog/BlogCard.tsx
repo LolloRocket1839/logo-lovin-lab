@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import jungleControlDino from "@/assets/jungle-control-dino-astronaut.png";
+import dinoEyesOpen from "@/assets/jungle-control-dino-eyes-open.png";
+import dinoEyesClosed from "@/assets/jungle-control-dino-eyes-closed.png";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -40,13 +41,19 @@ export const BlogCard = ({ post }: BlogCardProps) => {
       >
         <div className="aspect-video relative overflow-hidden">
           {isJungleControlSeries ? (
-            // Custom Jungle Control series card with dino astronaut image
-            <div className="w-full h-full relative overflow-hidden">
-              {/* Dino astronaut image with floating animation */}
+            // Custom Jungle Control series card with hyperrealistic dino + blinking animation
+            <div className={`w-full h-full relative overflow-hidden ${prefersReducedMotion ? '' : 'animate-subtle-float'}`}>
+              {/* Eyes closed layer (behind) */}
               <img
-                src={jungleControlDino}
+                src={dinoEyesClosed}
+                alt="Dinosauro Astronauta occhi chiusi"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* Eyes open layer (front) with blink animation */}
+              <img
+                src={dinoEyesOpen}
                 alt="Dinosauro Astronauta - Jungle Control Series"
-                className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'animate-subtle-float'}`}
+                className={`absolute inset-0 w-full h-full object-cover ${prefersReducedMotion ? '' : 'animate-dino-blink'}`}
               />
               
               {/* Series badge overlay */}
