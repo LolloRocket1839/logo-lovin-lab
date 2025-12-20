@@ -1415,6 +1415,47 @@
         "description": "Discover all free tools"
       },
       "backToTools": "Back to tools"
+    },
+    "whyJungle": {
+      "badge": "Our model",
+      "title": "Rent designed for students",
+      "subtitle": "Finally a model that understands university life",
+      "contract": {
+        "title": "9-Month Contract",
+        "description": "Pay September to May. Summer is yours, not the landlord's.",
+        "highlight": "Save 2-3 months of rent"
+      },
+      "summer": {
+        "badge": "Exclusive",
+        "title": "Summer Flexibility",
+        "description": "Need to come back for exams? No problem. Pay only the days you use, not full months.",
+        "cta": "Learn how it works"
+      },
+      "commissions": {
+        "title": "Zero Commissions",
+        "description": "Rent directly from us. No agencies, no hidden costs.",
+        "highlight": "Save €200-400"
+      },
+      "comparison": {
+        "traditional": {
+          "title": "Traditional rental",
+          "months12": "Mandatory 12-month contract",
+          "paySummer": "Pay summer even when you're home",
+          "noFlex": "No flexibility for exams",
+          "commissions": "Agency commissions €200-400"
+        },
+        "jungle": {
+          "title": "Jungle Rent",
+          "months9": "9-month contract (September-May)",
+          "payUse": "Summer: pay only days you use",
+          "flex": "Flexibility for summer sessions",
+          "noCommissions": "Zero commissions, direct rentals"
+        }
+      },
+      "cta": {
+        "waitlist": "Join the waitlist",
+        "whatsapp": "Talk to Lorenzo"
+      }
     }
   },
   "examSessionPlanner": {

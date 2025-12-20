@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles, Calendar } from "lucide-react";
+import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles, Calendar, Sun, BadgeCheck, Check, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -149,6 +149,164 @@ const Students = () => {
               <p className="text-sm text-muted-foreground">
                 {t("students.waitlist.note")}
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Jungle Rent Section */}
+        <section className="py-16 bg-primary/5">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <Badge variant="outline" className="mb-4 text-primary border-primary/30">
+                <Home className="w-3 h-3 mr-1" />
+                {t("students.whyJungle.badge")}
+              </Badge>
+              <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3">
+                {t("students.whyJungle.title")}
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                {t("students.whyJungle.subtitle")}
+              </p>
+            </div>
+
+            {/* Benefit Cards */}
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+              {/* 9-Month Contract */}
+              <Card className="relative overflow-hidden hover:shadow-lg transition-shadow border-primary/20">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Calendar className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-2">
+                    {t("students.whyJungle.contract.title")}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {t("students.whyJungle.contract.description")}
+                  </p>
+                  <p className="text-xs text-primary font-medium">
+                    {t("students.whyJungle.contract.highlight")}
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Summer Flexibility */}
+              <Card className="relative overflow-hidden hover:shadow-lg transition-shadow border-primary/20 ring-2 ring-primary/30">
+                <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-bl-lg font-medium">
+                  {t("students.whyJungle.summer.badge")}
+                </div>
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Sun className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-2">
+                    {t("students.whyJungle.summer.title")}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {t("students.whyJungle.summer.description")}
+                  </p>
+                  <a 
+                    href="https://wa.me/393347818180?text=Ciao%20Lorenzo!%20Vorrei%20sapere%20di%20più%20sull'opzione%20estiva%20pay-per-use"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-primary font-medium hover:underline inline-flex items-center gap-1"
+                  >
+                    {t("students.whyJungle.summer.cta")}
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
+                </CardContent>
+              </Card>
+
+              {/* Zero Commissions */}
+              <Card className="relative overflow-hidden hover:shadow-lg transition-shadow border-primary/20">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <BadgeCheck className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-2">
+                    {t("students.whyJungle.commissions.title")}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {t("students.whyJungle.commissions.description")}
+                  </p>
+                  <p className="text-xs text-primary font-medium">
+                    {t("students.whyJungle.commissions.highlight")}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Comparison */}
+            <div className="max-w-3xl mx-auto mb-12">
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="grid md:grid-cols-2">
+                    {/* Traditional */}
+                    <div className="p-6 bg-destructive/5 border-r border-border">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-full bg-destructive/10 flex items-center justify-center">
+                          <X className="w-4 h-4 text-destructive" />
+                        </div>
+                        <h4 className="font-semibold text-foreground">
+                          {t("students.whyJungle.comparison.traditional.title")}
+                        </h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {["months12", "paySummer", "noFlex", "commissions"].map((key) => (
+                          <li key={key} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <X className="w-4 h-4 text-destructive shrink-0 mt-0.5" />
+                            {t(`students.whyJungle.comparison.traditional.${key}`)}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Jungle Rent */}
+                    <div className="p-6 bg-primary/5">
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Check className="w-4 h-4 text-primary" />
+                        </div>
+                        <h4 className="font-semibold text-foreground">
+                          {t("students.whyJungle.comparison.jungle.title")}
+                        </h4>
+                      </div>
+                      <ul className="space-y-3">
+                        {["months9", "payUse", "flex", "noCommissions"].map((key) => (
+                          <li key={key} className="flex items-start gap-2 text-sm text-foreground">
+                            <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                            {t(`students.whyJungle.comparison.jungle.${key}`)}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* CTA */}
+            <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                onClick={() => {
+                  const heroForm = document.querySelector('input[type="email"]');
+                  heroForm?.scrollIntoView({ behavior: 'smooth' });
+                  (heroForm as HTMLInputElement)?.focus();
+                }}
+                size="lg"
+              >
+                {t("students.whyJungle.cta.waitlist")}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+              <a 
+                href="https://wa.me/393347818180?text=Ciao%20Lorenzo!%20Vorrei%20sapere%20di%20più%20sul%20modello%20Jungle%20Rent%20per%20studenti"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  {t("students.whyJungle.cta.whatsapp")}
+                </Button>
+              </a>
             </div>
           </div>
         </section>
