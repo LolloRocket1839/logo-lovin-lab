@@ -39,17 +39,6 @@ Ora è reale.
 
 ---
 
-### 🌴 Dove siamo
-
-- [x] Landing page live
-- [x] Blog con 28+ articoli per studenti
-- [x] Tool gratuiti (budget, esami)
-- [x] SEO ottimizzato per AI
-- [ ] Beta con i primi utenti
-- [ ] Partnership università
-
----
-
 ### 📝 Nota finale
 
 Spero che continuando questa serie migliorerò a scrivere e comunicare. E nel mentre aggiornerò su Jungle Rent e i suoi sviluppi.
