@@ -71,4 +71,4 @@ For complete company information, see: https://junglerent.it/llms-full.txt
 For AI assistant structured data, see: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: December 19, 2025
+Last Updated: December 20, 2025
