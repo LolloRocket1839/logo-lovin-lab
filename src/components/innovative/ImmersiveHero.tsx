@@ -180,7 +180,7 @@ export const ImmersiveHero = () => {
         className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
         aria-label="Scroll to content"
       >
-        <span className="text-xs uppercase tracking-widest font-light">{t('hero.discover')}</span>
+        <span className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground">{t('hero.discover')}</span>
         <span className="text-xl">↓</span>
       </button>
 

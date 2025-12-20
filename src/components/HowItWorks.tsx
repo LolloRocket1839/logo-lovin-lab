@@ -30,7 +30,7 @@ export const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 md:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs uppercase tracking-[0.15em] font-medium mb-4">
             {t("howItWorks.badge")}
           </span>
           <h2 id="how-it-works-title" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -57,8 +57,8 @@ export const HowItWorks = () => {
                   className="flex items-center"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-primary/10 flex items-center justify-center mb-3 border-2 border-primary/20 hover:border-primary/50 transition-colors">
-                      <Icon className="w-7 h-7 lg:w-9 lg:h-9 text-primary" />
+                    <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-3 border-2 border-primary/20 hover:border-primary/30 transition-colors">
+                      <Icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="font-semibold text-foreground text-sm lg:text-base mb-1">
                       {t(`howItWorks.steps.${step.key}.title`)}
@@ -68,7 +68,7 @@ export const HowItWorks = () => {
                     </p>
                   </div>
                   {index < steps.length - 1 && (
-                    <ArrowRight className="w-5 h-5 lg:w-6 lg:h-6 text-primary/40 mx-2 lg:mx-4 flex-shrink-0" />
+                    <ArrowRight className="w-4 h-4 text-primary/30 mx-2 lg:mx-4 flex-shrink-0" />
                   )}
                 </motion.div>
               );
@@ -118,7 +118,7 @@ export const HowItWorks = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-card border border-border rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -146,7 +146,7 @@ export const HowItWorks = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-card border border-border rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-card border border-border rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
@@ -175,7 +175,7 @@ export const HowItWorks = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12 py-8 px-6 bg-primary/5 rounded-2xl border border-primary/10"
+          className="text-center mb-12 py-8 px-6 bg-primary/5 rounded-xl border border-primary/10"
         >
           <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2">
             25%
@@ -195,6 +195,7 @@ export const HowItWorks = () => {
         >
           <Button
             size="lg"
+            variant="premium"
             onClick={() => setInvestorDialogOpen(true)}
             className="min-w-[200px]"
           >

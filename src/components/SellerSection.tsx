@@ -19,14 +19,14 @@ export const SellerSection = () => {
   };
 
   return (
-    <section id="seller-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-accent/30 relative overflow-hidden transition-spacing">
+    <section id="seller-section" className="py-16 md:py-24 bg-accent/30 relative overflow-hidden">
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
-      <div className="container px-3 sm:px-4 md:px-6 lg:px-8 mx-auto relative z-10 transition-spacing">
+      <div className="container px-6 md:px-8 mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto">
           {/* Section title */}
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-primary font-semibold mb-3">
+          <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-3">
             {t('seller.sectionTitle')}
           </p>
           
@@ -52,7 +52,7 @@ export const SellerSection = () => {
           </div>
           
           {/* Comparison table */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-4 sm:p-6 mb-6 max-w-2xl mx-auto">
+          <div className="bg-card/50 backdrop-blur-sm border border-border/20 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
             <div className="grid grid-cols-3 gap-2 sm:gap-4 text-xs sm:text-sm">
               {/* Header row */}
               <div className="text-left font-medium text-muted-foreground"></div>
@@ -60,39 +60,39 @@ export const SellerSection = () => {
               <div className="text-center font-semibold text-primary">{t('seller.comparison.jungleRent')}</div>
               
               {/* Role row */}
-              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.roleLabel')}</div>
-              <div className="text-center py-2 border-t border-border/30 text-muted-foreground">{t('seller.comparison.roleAgency')}</div>
-              <div className="text-center py-2 border-t border-border/30 font-medium text-foreground flex items-center justify-center gap-1">
-                <Building2 className="w-3 h-3 text-primary" />
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">{t('seller.comparison.roleLabel')}</div>
+              <div className="text-center py-2 border-t border-border/20 text-muted-foreground">{t('seller.comparison.roleAgency')}</div>
+              <div className="text-center py-2 border-t border-border/20 font-medium text-foreground flex items-center justify-center gap-1">
+                <Building2 className="w-4 h-4 text-primary" />
                 {t('seller.comparison.roleJR')}
               </div>
               
               {/* Commissions row */}
-              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.commissionsLabel')}</div>
-              <div className="text-center py-2 border-t border-border/30 text-destructive flex items-center justify-center gap-1">
-                <X className="w-3 h-3" />
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">{t('seller.comparison.commissionsLabel')}</div>
+              <div className="text-center py-2 border-t border-border/20 text-destructive flex items-center justify-center gap-1">
+                <X className="w-4 h-4" />
                 3-4%
               </div>
-              <div className="text-center py-2 border-t border-border/30 text-primary font-semibold flex items-center justify-center gap-1">
-                <Check className="w-3 h-3" />
+              <div className="text-center py-2 border-t border-border/20 text-primary font-semibold flex items-center justify-center gap-1">
+                <Check className="w-4 h-4" />
                 {t('seller.comparison.commissionsJR')}
               </div>
               
               {/* Time row */}
-              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.timeLabel')}</div>
-              <div className="text-center py-2 border-t border-border/30 text-muted-foreground flex items-center justify-center gap-1">
-                <Clock className="w-3 h-3" />
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">{t('seller.comparison.timeLabel')}</div>
+              <div className="text-center py-2 border-t border-border/20 text-muted-foreground flex items-center justify-center gap-1">
+                <Clock className="w-4 h-4" />
                 6-12 {t('seller.comparison.months')}
               </div>
-              <div className="text-center py-2 border-t border-border/30 text-primary font-medium flex items-center justify-center gap-1">
-                <Clock className="w-3 h-3" />
+              <div className="text-center py-2 border-t border-border/20 text-primary font-medium flex items-center justify-center gap-1">
+                <Clock className="w-4 h-4" />
                 60-90 {t('seller.comparison.days')}
               </div>
               
               {/* Visits row */}
-              <div className="text-left text-muted-foreground py-2 border-t border-border/30">{t('seller.comparison.visitsLabel')}</div>
-              <div className="text-center py-2 border-t border-border/30 text-muted-foreground">{t('seller.comparison.visitsAgency')}</div>
-              <div className="text-center py-2 border-t border-border/30 text-primary font-medium">{t('seller.comparison.visitsJR')}</div>
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">{t('seller.comparison.visitsLabel')}</div>
+              <div className="text-center py-2 border-t border-border/20 text-muted-foreground">{t('seller.comparison.visitsAgency')}</div>
+              <div className="text-center py-2 border-t border-border/20 text-primary font-medium">{t('seller.comparison.visitsJR')}</div>
             </div>
           </div>
           
