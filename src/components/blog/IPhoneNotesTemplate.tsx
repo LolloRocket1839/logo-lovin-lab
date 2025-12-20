@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { CheckSquare, Square, ChevronLeft, Share, MoreHorizontal, Undo2, Redo2, ListChecks, Pencil, Type, SquarePen } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface IPhoneNotesTemplateProps {
   content: string;
@@ -33,7 +34,17 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
   };
 
   return (
-    <div className="relative max-w-sm mx-auto my-8">
+    <motion.div 
+      className="relative max-w-sm mx-auto my-8"
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ 
+        type: "spring",
+        damping: 25,
+        stiffness: 200,
+        duration: 0.6
+      }}
+    >
       {/* iPhone-like container without frame */}
       <div className="relative bg-[#65C466] rounded-[2.5rem] overflow-hidden shadow-2xl">
         {/* Status bar - green background */}
@@ -205,6 +216,6 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
       
       {/* Subtle shadow effect */}
       <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] h-8 bg-gradient-to-b from-black/15 to-transparent rounded-full blur-xl" />
-    </div>
+    </motion.div>
   );
 };
