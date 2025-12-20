@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 
 // Lazy load below-the-fold components
-const VideoSection = lazy(() => import("@/components/VideoSection").then(m => ({ default: m.VideoSection })));
+const HowItWorks = lazy(() => import("@/components/HowItWorks").then(m => ({ default: m.HowItWorks })));
 const ProblemSection = lazy(() => import("@/components/ProblemSection").then(m => ({ default: m.ProblemSection })));
 const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
@@ -103,8 +103,8 @@ const Index = () => {
 
       <Suspense fallback={<div className="min-h-[200px]" />}>
         
-        {/* Video Explainer Section */}
-        <VideoSection />
+        {/* How It Works Section */}
+        <HowItWorks />
         
         {/* Problem Section - Savills Data */}
         <ProblemSection />
