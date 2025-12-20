@@ -109,13 +109,13 @@ export const ResourceLibrary = () => {
               return (
                 <Card 
                   key={guide.id}
-                  className="relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-primary/50 animate-fade-in"
+                  className="relative overflow-hidden rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-primary/30 animate-fade-in"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <CardHeader>
+                  <CardHeader className="p-6 md:p-8">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 rounded-lg bg-primary/10">
-                        <Icon className="h-8 w-8 text-primary" />
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-primary" />
                       </div>
                       <Badge variant="outline" className={guide.badgeColor}>
                         {guide.badge}
@@ -126,7 +126,7 @@ export const ResourceLibrary = () => {
                       {guide.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="px-6 md:px-8 pb-6 md:pb-8">
                     <div className="space-y-4">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <FileText className="h-4 w-4" />
