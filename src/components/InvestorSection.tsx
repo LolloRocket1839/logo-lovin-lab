@@ -64,7 +64,7 @@ export const InvestorSection = () => {
           
           {/* Problem Context Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-destructive/10 text-destructive text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-destructive/10 text-destructive text-xs uppercase tracking-[0.15em] font-medium mb-6">
               <AlertTriangle className="w-4 h-4" />
               <span>{t('problem.badge', 'Il problema')}</span>
             </div>
@@ -83,7 +83,7 @@ export const InvestorSection = () => {
             {problemStats.map((stat, index) => (
               <div 
                 key={index}
-                className="bg-card border border-border/50 rounded-xl p-4 md:p-6 text-center"
+                className="bg-card border border-border/20 rounded-xl p-6 text-center"
               >
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary mb-3">
                   <stat.icon className="w-5 h-5" />
@@ -121,14 +121,14 @@ export const InvestorSection = () => {
             <div className="flex items-center gap-3 px-4 py-2 bg-primary/10 rounded-full">
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-primary" />
-                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+                <span className="text-xs uppercase tracking-[0.15em] font-medium text-foreground">
                   {i18n.language.startsWith('it') ? 'La Soluzione' : 'The Solution'}
                 </span>
               </div>
-              <span className="text-muted-foreground">→</span>
+              <span className="text-muted-foreground/30">→</span>
               <div className="flex items-center gap-2">
                 <Target className="w-4 h-4 text-primary" />
-                <span className="text-xs uppercase tracking-wider font-semibold text-foreground">
+                <span className="text-xs uppercase tracking-[0.15em] font-medium text-foreground">
                   {i18n.language.startsWith('it') ? 'Jungle Rent' : 'Jungle Rent'}
                 </span>
               </div>
@@ -138,7 +138,7 @@ export const InvestorSection = () => {
 
           {/* Investor Value Prop */}
           <div className="text-center mb-8">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4 font-medium">
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4 font-medium">
               {t('investor.sectionLabel')}
             </p>
             <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-4 text-foreground">

@@ -101,7 +101,7 @@ export const VideoSection = () => {
   ];
 
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-accent/30 relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-accent/30 relative overflow-hidden">
       
       <div className="container px-6 md:px-8 relative">
         <div className="max-w-6xl mx-auto">
@@ -138,7 +138,7 @@ export const VideoSection = () => {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Video Column */}
               <div className="order-1">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-card border border-border/50 group">
+                <div className="relative rounded-xl overflow-hidden shadow-2xl bg-card border border-border/20 group">
                   <AspectRatio ratio={16 / 9}>
                     {/* Loading spinner */}
                     {isLoading && !hasError && (
