@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -38,7 +39,8 @@ interface WaitlistDialogProps {
 }
 
 export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const { incrementCount } = useWaitlistCounter();
   const { trackFormSubmit } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -96,12 +98,12 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
         referral_source: data.referral_source,
       });
 
-      toast({
-        title: t("waitlist.successTitle"),
-        description: t("waitlist.successDescription"),
-      });
       form.reset();
       onOpenChange(false);
+      
+      // Redirect to thank you page
+      const thankYouPath = i18n.language === 'it' ? '/grazie' : '/thank-you';
+      navigate(`${thankYouPath}?type=student`);
     } catch (error) {
       toast({
         title: t("waitlist.errorTitle"),

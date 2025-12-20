@@ -1601,5 +1601,33 @@
     "title": "Frequently Asked Questions",
     "subtitle": "Answers to the most common investor questions",
     "viewAll": "View all FAQs"
+  },
+  "thankYou": {
+    "title": "Thank you for contacting us!",
+    "investor": {
+      "subtitle": "We've received your request. We'll contact you within 24 hours to discuss investment opportunities.",
+      "step1": "We'll contact you within 24 hours via email or phone",
+      "step2": "We'll schedule a discovery call to understand your needs",
+      "step3": "We'll send you documentation and detailed information",
+      "scheduleCta": "Schedule a call now"
+    },
+    "student": {
+      "subtitle": "You're on the waitlist! We'll notify you as soon as we have housing available in your area.",
+      "step1": "You'll receive availability updates via email",
+      "step2": "We'll launch the first rooms in September 2026",
+      "step3": "You'll have priority over non-subscribers",
+      "resourcesCta": "Discover student resources"
+    },
+    "nextSteps": {
+      "title": "Next steps"
+    },
+    "followLinkedin": "Follow us on LinkedIn",
+    "followInstagram": "Follow us on Instagram",
+    "trustBadge": "Startup incubated at 2i3T - University of Turin",
+    "backHome": "Back to home"
+  },
+  "startupBadge": {
+    "label": "Innovative Startup",
+    "tooltip": "Registered in the Special Registry of Innovative Startups"
   }
 }

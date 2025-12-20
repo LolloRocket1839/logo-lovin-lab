@@ -4,6 +4,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
+import { StartupInnovativaBadge } from "@/components/StartupInnovativaBadge";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import {
   Accordion,
@@ -96,12 +97,15 @@ export const ImmersiveHero = () => {
             {t('hero.mainSubheadline')}
           </p>
 
-          {/* Minimum investment badge with explanation */}
-          <div className="flex flex-col items-center mb-4 md:mb-6">
-            <div className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-2">
-              <span className="text-sm md:text-base font-semibold text-primary">
-                {t('investor.minInvestmentBadge')}
-              </span>
+          {/* Minimum investment badge with explanation + Startup Innovativa */}
+          <div className="flex flex-col items-center mb-4 md:mb-6 gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <div className="inline-flex items-center px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
+                <span className="text-sm md:text-base font-semibold text-primary">
+                  {t('investor.minInvestmentBadge')}
+                </span>
+              </div>
+              <StartupInnovativaBadge />
             </div>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-md px-4">
               {t('hero.badgeExplanation')}

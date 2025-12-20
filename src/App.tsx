@@ -30,6 +30,7 @@ const StudentTools = lazy(() => import("./pages/StudentTools"));
 const BudgetCalculator = lazy(() => import("./pages/tools/BudgetCalculator"));
 const GradeCalculator = lazy(() => import("./pages/tools/GradeCalculator"));
 const ExamSessionPlanner = lazy(() => import("./pages/tools/ExamSessionPlanner"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -67,6 +68,8 @@ const AppContent = () => {
         <Route path="/ai-testing" element={<AITesting />} />
         <Route path="/ab-test-results" element={<ABTestResults />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
+        <Route path="/grazie" element={<ThankYou />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
