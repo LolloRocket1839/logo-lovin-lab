@@ -24,7 +24,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
   };
 
   return (
-    <article className="blog-card-marvis feel-good-click group h-full flex flex-col rounded-lg overflow-hidden relative">
+    <article className="blog-card-marvis feel-good-click group h-full flex flex-col rounded-xl overflow-hidden relative border border-border/20 hover:border-primary/30 transition-all">
       {isNew(post.date) && <div className="new-badge">Nuovo</div>}
       
       <Link 

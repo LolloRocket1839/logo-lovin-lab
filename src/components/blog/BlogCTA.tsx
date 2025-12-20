@@ -83,15 +83,15 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
 
   return (
     <>
-      <div className="my-12 p-8 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20">
+      <div className="my-12 p-8 md:p-10 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20">
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="flex-shrink-0">
-            <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-              <Icon className="w-8 h-8 text-primary" />
+            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+              <Icon className="w-6 h-6 text-primary" />
             </div>
           </div>
           <div className="flex-1 text-center md:text-left">
-            <h3 className="text-2xl font-bold mb-2">{config.title}</h3>
+            <h3 className="text-xl md:text-2xl font-display font-bold mb-2">{config.title}</h3>
             <p className="text-muted-foreground">{config.description}</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">

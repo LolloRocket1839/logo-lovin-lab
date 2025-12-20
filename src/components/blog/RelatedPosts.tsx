@@ -24,15 +24,17 @@ export const RelatedPosts = ({ posts, currentTags = [] }: RelatedPostsProps) => 
   });
 
   return (
-    <section className="py-16 border-t border-border bg-gradient-to-b from-background to-muted/30">
-      <div className="container mx-auto max-w-7xl px-4">
-        <div className="flex items-center gap-3 mb-8">
-          <Sparkles className="h-6 w-6 text-primary" aria-hidden="true" />
-          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground">
+    <section className="py-16 md:py-24 border-t border-border/20 bg-gradient-to-b from-background to-muted/30">
+      <div className="container mx-auto max-w-7xl px-4 md:px-8">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+            <Sparkles className="h-6 w-6 text-primary" aria-hidden="true" />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
             {t('blog.relatedPosts', 'Articoli correlati')}
           </h2>
         </div>
-        <p className="text-muted-foreground mb-8 max-w-2xl">
+        <p className="text-muted-foreground mb-12 max-w-2xl">
           {currentLang === 'it' 
             ? 'Scopri altri contenuti selezionati per te in base agli argomenti di questo articolo.'
             : 'Discover more content selected for you based on this article\'s topics.'}
