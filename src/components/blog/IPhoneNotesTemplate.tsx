@@ -1,7 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
-import { CheckSquare, Square } from "lucide-react";
+import { CheckSquare, Square, ChevronLeft, Share, MoreHorizontal, Undo2, Redo2, ListChecks, Pencil, Type, SquarePen } from "lucide-react";
 
 interface IPhoneNotesTemplateProps {
   content: string;
@@ -19,67 +19,80 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
 
   const processedContent = processCheckboxes(content);
 
+  // Format date in Italian style like iOS
+  const formatDate = (dateStr: string) => {
+    const d = new Date(dateStr);
+    const options: Intl.DateTimeFormatOptions = { 
+      day: 'numeric',
+      month: 'long', 
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    };
+    return d.toLocaleDateString('it-IT', options).replace(',', ' alle ore');
+  };
+
   return (
-    <div className="relative max-w-2xl mx-auto my-8">
-      {/* iPhone frame */}
-      <div className="relative bg-[#1c1c1e] rounded-[3rem] p-3 shadow-2xl">
-        {/* Dynamic Island */}
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-10" />
+    <div className="relative max-w-sm mx-auto my-8">
+      {/* iPhone-like container without frame */}
+      <div className="relative bg-[#65C466] rounded-[2.5rem] overflow-hidden shadow-2xl">
+        {/* Status bar - green background */}
+        <div className="flex justify-between items-center px-8 pt-4 pb-2 text-sm text-white font-medium">
+          <span>Salt 4G</span>
+          <span className="font-semibold">20:57</span>
+          <div className="flex gap-1 items-center">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
+            </svg>
+            <svg className="w-6 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <rect x="2" y="7" width="18" height="10" rx="2" stroke="currentColor" strokeWidth="1" fill="none"/>
+              <rect x="20" y="10" width="2" height="4" rx="0.5" fill="currentColor"/>
+              <rect x="4" y="9" width="14" height="6" rx="1" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
         
-        {/* Screen */}
-        <div className="relative bg-gradient-to-b from-[#fffef0] via-[#fffce8] to-[#fff8dc] rounded-[2.5rem] overflow-hidden min-h-[600px]">
-          {/* Status bar */}
-          <div className="flex justify-between items-center px-8 pt-4 pb-2 text-xs text-[#3c3c43]/60">
-            <span className="font-medium">9:41</span>
-            <div className="flex gap-1 items-center">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 3C7.46 3 3.34 4.78.29 7.67c-.18.18-.29.43-.29.71 0 .28.11.53.29.71l11.29 11.29c.39.39 1.02.39 1.41 0l11.29-11.29c.18-.18.29-.43.29-.71 0-.28-.11-.53-.29-.71C21.66 4.78 17.54 3 12 3z"/>
-              </svg>
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17 4h-3V2h-4v2H7v18h10V4z"/>
-              </svg>
+        {/* Navigation bar - green background */}
+        <div className="flex items-center justify-between px-4 py-3">
+          <div className="flex items-center gap-1 text-white">
+            <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
+            <span className="text-lg">Indietro</span>
+          </div>
+          <div className="flex items-center gap-2">
+            {/* Yellow circular icons */}
+            <div className="w-8 h-8 rounded-full bg-[#FFCC00] flex items-center justify-center">
+              <Undo2 className="w-4 h-4 text-[#65C466]" strokeWidth={2.5} />
+            </div>
+            <div className="w-8 h-8 rounded-full bg-[#FFCC00] flex items-center justify-center">
+              <Redo2 className="w-4 h-4 text-[#65C466]" strokeWidth={2.5} />
+            </div>
+            <div className="w-8 h-8 rounded-full bg-[#FFCC00] flex items-center justify-center">
+              <Share className="w-4 h-4 text-[#65C466]" strokeWidth={2.5} />
+            </div>
+            <div className="w-8 h-8 rounded-full bg-[#FFCC00] flex items-center justify-center">
+              <MoreHorizontal className="w-4 h-4 text-[#65C466]" strokeWidth={2.5} />
             </div>
           </div>
-          
-          {/* Notes header */}
-          <div className="px-6 pb-4 border-b border-[#d1c4a9]/30">
-            <div className="flex items-center gap-2 text-[#ff9500] text-sm mb-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              <span>Notes</span>
-            </div>
-            <p className="text-xs text-[#8e8e93]">
-              {new Date(date).toLocaleDateString('en-US', { 
-                month: 'long', 
-                day: 'numeric', 
-                year: 'numeric',
-                hour: 'numeric',
-                minute: '2-digit'
-              })}
+        </div>
+        
+        {/* Content area - cream/yellow background */}
+        <div className="bg-[#FEF9E7] min-h-[500px] pb-20">
+          {/* Date */}
+          <div className="px-5 pt-4 pb-2">
+            <p className="text-xs text-[#8e8e93] text-center">
+              {formatDate(date)}
             </p>
           </div>
           
-          {/* Content area with lines */}
-          <div 
-            className="px-6 py-4 space-y-0"
-            style={{
-              backgroundImage: `repeating-linear-gradient(
-                transparent,
-                transparent 27px,
-                #d1c4a9 27px,
-                #d1c4a9 28px
-              )`,
-              backgroundPositionY: '8px'
-            }}
-          >
+          {/* Main content */}
+          <div className="px-5 py-2">
             {/* Title in Notes style */}
-            <h1 className="text-2xl font-bold text-[#1c1c1e] leading-[28px] mb-4 font-['SF_Pro_Text',_system-ui,_-apple-system,_sans-serif]">
+            <h1 className="text-2xl font-bold text-[#1c1c1e] mb-4 font-['SF_Pro_Text',_system-ui,_-apple-system,_sans-serif]">
               {title}
             </h1>
             
             {/* Markdown content */}
-            <div className="notes-content text-[#1c1c1e] text-base leading-[28px] font-['SF_Pro_Text',_system-ui,_-apple-system,_sans-serif]">
+            <div className="notes-content text-[#1c1c1e] text-base leading-relaxed font-['SF_Pro_Text',_system-ui,_-apple-system,_sans-serif]">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
@@ -101,7 +114,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                         if (line.includes('✓CHECKED✓')) {
                           return (
                             <div key={i} className="flex items-start gap-2 my-1">
-                              <CheckSquare className="w-5 h-5 text-[#ff9500] mt-0.5 flex-shrink-0" />
+                              <CheckSquare className="w-5 h-5 text-[#FFCC00] mt-0.5 flex-shrink-0" />
                               <span className="line-through text-[#8e8e93]">
                                 {line.replace('✓CHECKED✓', '').trim()}
                               </span>
@@ -111,7 +124,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                         if (line.includes('✓UNCHECKED✓')) {
                           return (
                             <div key={i} className="flex items-start gap-2 my-1">
-                              <Square className="w-5 h-5 text-[#ff9500] mt-0.5 flex-shrink-0" />
+                              <Square className="w-5 h-5 text-[#FFCC00] mt-0.5 flex-shrink-0" />
                               <span>{line.replace('✓UNCHECKED✓', '').trim()}</span>
                             </div>
                           );
@@ -120,7 +133,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                       });
                       return <div className="my-2">{items}</div>;
                     }
-                    return <p className="my-2 leading-[28px]">{children}</p>;
+                    return <p className="my-2 leading-relaxed">{children}</p>;
                   },
                   ul: ({ children }) => (
                     <ul className="my-2 space-y-1">{children}</ul>
@@ -130,7 +143,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                     if (text.includes('✓CHECKED✓')) {
                       return (
                         <li className="flex items-start gap-2 list-none">
-                          <CheckSquare className="w-5 h-5 text-[#ff9500] mt-0.5 flex-shrink-0" />
+                          <CheckSquare className="w-5 h-5 text-[#FFCC00] mt-0.5 flex-shrink-0" />
                           <span className="line-through text-[#8e8e93]">
                             {text.replace('✓CHECKED✓', '').trim()}
                           </span>
@@ -140,14 +153,14 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                     if (text.includes('✓UNCHECKED✓')) {
                       return (
                         <li className="flex items-start gap-2 list-none">
-                          <Square className="w-5 h-5 text-[#ff9500] mt-0.5 flex-shrink-0" />
+                          <Square className="w-5 h-5 text-[#FFCC00] mt-0.5 flex-shrink-0" />
                           <span>{text.replace('✓UNCHECKED✓', '').trim()}</span>
                         </li>
                       );
                     }
                     return (
                       <li className="flex items-start gap-2 list-none">
-                        <span className="text-[#ff9500]">•</span>
+                        <span className="text-[#FFCC00]">•</span>
                         <span>{children}</span>
                       </li>
                     );
@@ -162,7 +175,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                     <hr className="border-[#d1c4a9] my-4" />
                   ),
                   blockquote: ({ children }) => (
-                    <blockquote className="border-l-4 border-[#ff9500] pl-4 my-4 italic text-[#8e8e93]">
+                    <blockquote className="border-l-4 border-[#FFCC00] pl-4 my-4 italic text-[#8e8e93]">
                       {children}
                     </blockquote>
                   ),
@@ -177,26 +190,21 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
               </ReactMarkdown>
             </div>
           </div>
-          
-          {/* Bottom toolbar */}
-          <div className="absolute bottom-0 left-0 right-0 bg-[#fffef0]/90 backdrop-blur-sm border-t border-[#d1c4a9]/30 px-6 py-3 flex justify-between items-center rounded-b-[2.5rem]">
-            <div className="flex gap-6">
-              <svg className="w-6 h-6 text-[#ff9500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <svg className="w-6 h-6 text-[#ff9500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-              </svg>
-            </div>
-            <svg className="w-6 h-6 text-[#ff9500]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
+        </div>
+        
+        {/* Bottom toolbar - authentic iOS style */}
+        <div className="absolute bottom-0 left-0 right-0 bg-[#FEF9E7] border-t border-[#e5dcc8] px-6 py-4 flex justify-between items-center">
+          <div className="flex gap-8">
+            <ListChecks className="w-6 h-6 text-[#FFCC00]" strokeWidth={2} />
+            <Pencil className="w-6 h-6 text-[#FFCC00]" strokeWidth={2} />
+            <Type className="w-6 h-6 text-[#FFCC00]" strokeWidth={2} />
           </div>
+          <SquarePen className="w-6 h-6 text-[#FFCC00]" strokeWidth={2} />
         </div>
       </div>
       
-      {/* Reflection effect */}
-      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-8 bg-gradient-to-b from-black/10 to-transparent rounded-full blur-xl" />
+      {/* Subtle shadow effect */}
+      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] h-8 bg-gradient-to-b from-black/15 to-transparent rounded-full blur-xl" />
     </div>
   );
 };
