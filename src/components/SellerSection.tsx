@@ -19,7 +19,7 @@ export const SellerSection = () => {
   };
 
   return (
-    <section id="seller-section" className="py-16 md:py-24 bg-accent/30 relative overflow-hidden">
+    <section id="seller-section" className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
@@ -38,7 +38,7 @@ export const SellerSection = () => {
             </Badge>
           </div>
           
-          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-foreground">
+          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-3 text-foreground">
             <StyledText>{t('seller.directBuyerTitle')}</StyledText>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-2">

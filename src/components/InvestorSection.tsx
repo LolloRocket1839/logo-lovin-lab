@@ -83,10 +83,10 @@ export const InvestorSection = () => {
             {problemStats.map((stat, index) => (
               <div 
                 key={index}
-                className="bg-card border border-border/20 rounded-xl p-6 text-center"
+                className="bg-card border border-border/20 rounded-xl p-6 md:p-8 text-center"
               >
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary mb-3">
-                  <stat.icon className="w-5 h-5" />
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
+                  <stat.icon className="w-6 h-6" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">
                   {stat.value}
@@ -117,7 +117,7 @@ export const InvestorSection = () => {
 
           {/* Solution Divider */}
           <div className="flex items-center gap-4 mb-12">
-            <div className="flex-1 h-px bg-border/50" />
+            <div className="flex-1 h-px bg-border/20" />
             <div className="flex items-center gap-3 px-4 py-2 bg-primary/10 rounded-full">
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-primary" />
@@ -133,7 +133,7 @@ export const InvestorSection = () => {
                 </span>
               </div>
             </div>
-            <div className="flex-1 h-px bg-border/50" />
+            <div className="flex-1 h-px bg-border/20" />
           </div>
 
           {/* Investor Value Prop */}
