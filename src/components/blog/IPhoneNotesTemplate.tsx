@@ -30,7 +30,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
       hour: '2-digit',
       minute: '2-digit'
     };
-    return d.toLocaleDateString('it-IT', options).replace(',', ' alle ore');
+    return d.toLocaleDateString('en-US', options).replace(',', ' at');
   };
 
   return (
@@ -67,7 +67,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-1 text-white">
             <ChevronLeft className="w-6 h-6" strokeWidth={2.5} />
-            <span className="text-lg">Indietro</span>
+            <span className="text-lg">Back</span>
           </div>
           <div className="flex items-center gap-2">
             {/* Yellow circular icons */}
