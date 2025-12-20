@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import dinoEyesOpen from "@/assets/jungle-control-dino-eyes-open.png";
-import dinoEyesClosed from "@/assets/jungle-control-dino-eyes-closed.png";
+import astronautCover from "@/assets/jungle-control-astronaut-cover.png";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -41,25 +40,18 @@ export const BlogCard = ({ post }: BlogCardProps) => {
       >
         <div className="aspect-video relative overflow-hidden">
           {isJungleControlSeries ? (
-            // Custom Jungle Control series card with hyperrealistic dino + blinking animation
-            <div className={`w-full h-full relative overflow-hidden ${prefersReducedMotion ? '' : 'animate-subtle-float'}`}>
-              {/* Eyes closed layer (behind) */}
+            // Cinematic Interstellar-style astronaut cover
+            <div className="w-full h-full relative overflow-hidden">
               <img
-                src={dinoEyesClosed}
-                alt="Dinosauro Astronauta occhi chiusi"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              {/* Eyes open layer (front) with blink animation */}
-              <img
-                src={dinoEyesOpen}
-                alt="Dinosauro Astronauta - Jungle Control Series"
-                className={`absolute inset-0 w-full h-full object-cover ${prefersReducedMotion ? '' : 'animate-dino-blink'}`}
+                src={astronautCover}
+                alt="Astronaut floating in space with Earth - Jungle Control Series"
+                className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'transition-transform duration-500 group-hover:scale-105'}`}
               />
               
               {/* Series badge overlay */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                <span className="text-white text-xs font-medium tracking-wide">
-                  🎙️ Jungle Control Series
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+                <span className="text-white text-xs font-medium tracking-wider uppercase">
+                  🚀 Jungle Control
                 </span>
               </div>
             </div>
