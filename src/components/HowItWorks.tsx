@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Euro, Key, Home, Users, TrendingUp, PiggyBank, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
+import { WaitlistDialog } from "@/components/WaitlistDialog";
 
 const steps = [
   { key: "invest", icon: Euro },
@@ -13,14 +16,8 @@ const steps = [
 
 export const HowItWorks = () => {
   const { t } = useTranslation();
-
-  const scrollToInvestor = () => {
-    document.getElementById("investor-section")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToStudents = () => {
-    window.location.href = "/students";
-  };
+  const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
+  const [studentDialogOpen, setStudentDialogOpen] = useState(false);
 
   return (
     <section className="py-16 md:py-24 bg-muted/30" aria-labelledby="how-it-works-title">
@@ -198,7 +195,7 @@ export const HowItWorks = () => {
         >
           <Button
             size="lg"
-            onClick={scrollToInvestor}
+            onClick={() => setInvestorDialogOpen(true)}
             className="min-w-[200px]"
           >
             {t("howItWorks.ctaInvest")}
@@ -206,12 +203,22 @@ export const HowItWorks = () => {
           <Button
             size="lg"
             variant="outline"
-            onClick={scrollToStudents}
+            onClick={() => setStudentDialogOpen(true)}
             className="min-w-[200px]"
           >
             {t("howItWorks.ctaRent")}
           </Button>
         </motion.div>
+
+        <QuickInvestorLeadDialog 
+          open={investorDialogOpen} 
+          onOpenChange={setInvestorDialogOpen}
+          source="how_it_works_cta"
+        />
+        <WaitlistDialog 
+          open={studentDialogOpen} 
+          onOpenChange={setStudentDialogOpen}
+        />
       </div>
     </section>
   );
