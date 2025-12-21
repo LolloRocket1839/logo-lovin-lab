@@ -11,11 +11,11 @@ export const blogPosts: BlogPost[] = [
     content: "panettoni-pandori-torino-guida-2025",
     translations: {
       it: {
-        title: "I Migliori Panettoni e Pandori di Torino 2025: Guida Completa",
+        title: "I Migliori Panettoni e Pandori di Torino 2025",
         excerpt: "Pasticceria Racca, Murdocco, Stratta, Ghigo: tutti gli indirizzi, telefoni, prezzi. Artigianali, creativi, marche storiche. 31 fonti.",
         seo: {
-          title: "Panettoni e Pandori Torino 2025: Guida Completa | Artigianali e Non",
-          description: "Guida completa ai migliori panettoni e pandori di Torino 2025. Pasticceria Racca, Murdocco, Stratta, Ghigo. Indirizzi, telefoni, prezzi. Artigianali, creativi, marche storiche.",
+          title: "Panettoni e Pandori Torino 2025 | Artigianali e Non",
+          description: "I migliori panettoni e pandori di Torino 2025. Pasticceria Racca, Murdocco, Stratta, Ghigo. Indirizzi, telefoni, prezzi. Artigianali, creativi, marche storiche.",
           keywords: ["panettone torino", "pandoro torino", "panettoni artigianali torino", "pasticceria racca", "pasticceria stratta", "enrico murdocco", "ghigo torino", "nuvola di ghigo", "migliori panettoni torino 2025", "dove comprare panettone torino", "pandoro artigianale torino"]
         },
         tags: ["Turisti", "Gastronomia", "Torino", "Natale", "Dolci", "Artigianale"],
@@ -33,11 +33,11 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Best Panettone and Pandoro in Turin 2025: Complete Guide",
+        title: "Best Panettone and Pandoro in Turin 2025",
         excerpt: "Pasticceria Racca, Murdocco, Stratta, Ghigo: all addresses, phones, prices. Artisanal, creative, historic brands. 31 sources.",
         seo: {
-          title: "Panettone and Pandoro Turin 2025: Complete Guide | Artisanal and Commercial",
-          description: "Complete guide to the best panettone and pandoro in Turin 2025. Pasticceria Racca, Murdocco, Stratta, Ghigo. Addresses, phones, prices. Artisanal, creative, historic brands.",
+          title: "Panettone and Pandoro Turin 2025 | Artisanal and Commercial",
+          description: "The best panettone and pandoro in Turin 2025. Pasticceria Racca, Murdocco, Stratta, Ghigo. Addresses, phones, prices. Artisanal, creative, historic brands.",
           keywords: ["panettone turin", "pandoro turin", "artisanal panettone turin", "pasticceria racca", "pasticceria stratta", "enrico murdocco", "ghigo turin", "ghigo cloud", "best panettone turin 2025", "where to buy panettone turin", "artisanal pandoro turin"]
         },
         tags: ["Tourists", "Gastronomy", "Turin", "Christmas", "Desserts", "Artisanal"],
