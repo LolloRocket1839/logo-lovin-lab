@@ -2,6 +2,61 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "panettoni-pandori-torino-guida-2025",
+    category: "turisti",
+    date: "2025-12-21",
+    author: "Jungle Rent Team",
+    image: "/images/duomo-torino-natale.jpg",
+    readTime: 45,
+    content: "panettoni-pandori-torino-guida-2025",
+    translations: {
+      it: {
+        title: "I Migliori Panettoni e Pandori di Torino 2025: Guida Completa",
+        excerpt: "Pasticceria Racca, Murdocco, Stratta, Ghigo: tutti gli indirizzi, telefoni, prezzi. Artigianali, creativi, marche storiche. 31 fonti.",
+        seo: {
+          title: "Panettoni e Pandori Torino 2025: Guida Completa | Artigianali e Non",
+          description: "Guida completa ai migliori panettoni e pandori di Torino 2025. Pasticceria Racca, Murdocco, Stratta, Ghigo. Indirizzi, telefoni, prezzi. Artigianali, creativi, marche storiche.",
+          keywords: ["panettone torino", "pandoro torino", "panettoni artigianali torino", "pasticceria racca", "pasticceria stratta", "enrico murdocco", "ghigo torino", "nuvola di ghigo", "migliori panettoni torino 2025", "dove comprare panettone torino", "pandoro artigianale torino"]
+        },
+        tags: ["Turisti", "Gastronomia", "Torino", "Natale", "Dolci", "Artigianale"],
+        faqs: [
+          { question: "Qual è il miglior panettone artigianale di Torino?", answer: "Tra i migliori ci sono Pasticceria Racca (dal 1953), Enrico Murdocco (Tellia Lab), Grano - Fornai in Fermento e Tarì - Cake Lab Viennoiserie. Tutti utilizzano lievitazione naturale e ingredienti selezionati." },
+          { question: "Dove comprare la Nuvola di Ghigo a Torino?", answer: "La Nuvola di Ghigo si acquista presso la Pasticceria Ghigo dal 1870 in Via Po 52b, Torino. Telefono: +39 011 887 017. Prezzo: €48 al kg oppure €6 per la monoporzione." },
+          { question: "Quanto costa un panettone artigianale a Torino nel 2025?", answer: "Il prezzo medio al kg è di circa €44,74. Un panettone da 750g costa tra €30-40, mentre le versioni creative o premium raggiungono €38-45. I pandori artigianali oscillano tra €30-40." },
+          { question: "Qual è la pasticceria più antica di Torino per panettoni?", answer: "Pasticceria Stratta, fondata nel 1836 in Piazza San Carlo 191, è la più antica. Realizza panettoni con lievito madre naturale e vaniglia Bourbon del Madagascar." },
+          { question: "Chi è Enrico Murdocco?", answer: "Enrico Murdocco è uno dei maestri lievitisti più autorevoli di Torino. Opera presso Tellia Lab (Via Maria Vittoria 20) e Tellia Santa Rita (Corso Sebastopoli 241). I suoi panettoni utilizzano pasta madre viva e lunghe lievitazioni naturali." },
+          { question: "Quali panettoni creativi provare a Torino?", answer: "Tra i più innovativi: Marino di Aria (acqua di mare della Sardegna, pistacchio e mandarino candito), Yuzu e Nocciole di Massimiliano Prete, Cioccolato 60 Days di Luca Scarcella, e Lamponi, Caffè e Cioccolato di Murdocco." },
+          { question: "Dove comprare panettoni senza uvetta a Torino?", answer: "Gerla 1927 propone il panettone al Marron Glacé senza uvetta e scorza di agrumi. La Perla offre panettone al Limoncello senza uvetta e canditi. Cabaret ha varianti senza uvetta e canditi." },
+          { question: "Guido Gobino fa panettoni?", answer: "Sì, Guido Gobino in collaborazione con l'Atelier Reale di Gian Piero Vivalda propone tre varianti: Panettone 3 Cioccolati con Gianduja Maximo, Panettone Tourinot e Panettone Ricoperto di Cioccolato Extra Bitter Blend 63%." },
+          { question: "Qual è il miglior pandoro di Torino?", answer: "Tra i migliori: Nuvola di Ghigo (€48/kg), Giandoro della Farmacia del Cambio (€32), Pandorino Farcito di Fabrizio Racca (€8), Pandoro allo Champagne di Pasticceria Giorcelli (€38)." },
+          { question: "Come prenotare panettoni artigianali a Torino?", answer: "Si consiglia di prenotare con anticipo, soprattutto per le creazioni più ricercate. La maggior parte delle pasticcerie accetta prenotazioni fino a pochi giorni prima di Natale. Molte offrono anche spedizioni tramite e-shop." }
+        ]
+      },
+      en: {
+        title: "Best Panettone and Pandoro in Turin 2025: Complete Guide",
+        excerpt: "Pasticceria Racca, Murdocco, Stratta, Ghigo: all addresses, phones, prices. Artisanal, creative, historic brands. 31 sources.",
+        seo: {
+          title: "Panettone and Pandoro Turin 2025: Complete Guide | Artisanal and Commercial",
+          description: "Complete guide to the best panettone and pandoro in Turin 2025. Pasticceria Racca, Murdocco, Stratta, Ghigo. Addresses, phones, prices. Artisanal, creative, historic brands.",
+          keywords: ["panettone turin", "pandoro turin", "artisanal panettone turin", "pasticceria racca", "pasticceria stratta", "enrico murdocco", "ghigo turin", "ghigo cloud", "best panettone turin 2025", "where to buy panettone turin", "artisanal pandoro turin"]
+        },
+        tags: ["Tourists", "Gastronomy", "Turin", "Christmas", "Desserts", "Artisanal"],
+        faqs: [
+          { question: "What is the best artisanal panettone in Turin?", answer: "Among the best are Pasticceria Racca (since 1953), Enrico Murdocco (Tellia Lab), Grano - Fornai in Fermento and Tarì - Cake Lab Viennoiserie. All use natural leavening and selected ingredients." },
+          { question: "Where to buy the Ghigo Cloud in Turin?", answer: "The Nuvola di Ghigo (Ghigo Cloud) is available at Pasticceria Ghigo dal 1870 at Via Po 52b, Turin. Phone: +39 011 887 017. Price: €48 per kg or €6 for single portion." },
+          { question: "How much does an artisanal panettone cost in Turin in 2025?", answer: "The average price per kg is about €44.74. A 750g panettone costs €30-40, while creative or premium versions reach €38-45. Artisanal pandoro range from €30-40." },
+          { question: "What is Turin's oldest pastry shop for panettone?", answer: "Pasticceria Stratta, founded in 1836 at Piazza San Carlo 191, is the oldest. They make panettone with natural mother yeast and Madagascar Bourbon vanilla." },
+          { question: "Who is Enrico Murdocco?", answer: "Enrico Murdocco is one of Turin's most authoritative master leavening specialists. He works at Tellia Lab (Via Maria Vittoria 20) and Tellia Santa Rita (Corso Sebastopoli 241). His panettone use live mother dough and long natural leavening." },
+          { question: "What creative panettone to try in Turin?", answer: "Among the most innovative: Marino by Aria (Sardinian sea water, pistachio and candied mandarin), Yuzu and Hazelnut by Massimiliano Prete, Chocolate 60 Days by Luca Scarcella, and Raspberry, Coffee and Chocolate by Murdocco." },
+          { question: "Where to buy panettone without raisins in Turin?", answer: "Gerla 1927 offers Marron Glacé panettone without raisins and citrus zest. La Perla offers Limoncello panettone without raisins and candied fruits. Cabaret has variants without raisins and candied fruits." },
+          { question: "Does Guido Gobino make panettone?", answer: "Yes, Guido Gobino in collaboration with Atelier Reale by Gian Piero Vivalda offers three variants: 3 Chocolates Panettone with Gianduja Maximo, Tourinot Panettone and Panettone Covered with 63% Extra Bitter Blend Chocolate." },
+          { question: "What is the best pandoro in Turin?", answer: "Among the best: Ghigo Cloud (€48/kg), Giandoro from Farmacia del Cambio (€32), Filled Pandorino by Fabrizio Racca (€8), Champagne Pandoro by Pasticceria Giorcelli (€38)." },
+          { question: "How to order artisanal panettone in Turin?", answer: "It's recommended to book in advance, especially for the most refined creations. Most pastry shops accept reservations until a few days before Christmas. Many also offer shipping through e-shops." }
+        ]
+      }
+    }
+  },
+  {
     slug: "jungle-control-dicembre-2025",
     category: "societa",
     date: "2025-12-20",
