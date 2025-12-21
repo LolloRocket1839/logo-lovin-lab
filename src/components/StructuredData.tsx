@@ -98,7 +98,7 @@ export const StructuredData = () => {
         "@type": "PostalAddress",
         streetAddress: "Via Gioacchino Quarello 15/A",
         addressLocality: "Torino",
-        postalCode: "10135",
+        postalCode: "10137",
         addressCountry: "IT",
       },
       contactPoint: [
