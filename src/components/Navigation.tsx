@@ -167,19 +167,6 @@ export const Navigation = () => {
             })}
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
-            <Button
-              variant="premium"
-              size="sm"
-              onClick={() => {
-                trackClick('nav_invest_button');
-                setInvestDialogOpen(true);
-              }}
-              className="px-6 font-semibold"
-            >
-              {t('hero.invest')}
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-2">
@@ -215,17 +202,6 @@ export const Navigation = () => {
                   </Link>
                 );
               })}
-              <Button
-                variant="premium"
-                onClick={() => {
-                  trackClick('nav_mobile_invest_button');
-                  setIsMobileMenuOpen(false);
-                  setInvestDialogOpen(true);
-                }}
-                className="mt-2 w-full font-semibold"
-              >
-                {t('hero.invest')}
-              </Button>
             </div>
           </div>
         )}
