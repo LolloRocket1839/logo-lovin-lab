@@ -3,15 +3,13 @@ import { Menu, X, ChevronLeft } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import { CONTACTS, openWhatsApp, MESSAGES } from "@/lib/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 
 export const Navigation = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const { trackClick } = useAnalytics();
@@ -21,10 +19,8 @@ export const Navigation = () => {
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
-  // Check if we're on a non-home page (show back button)
   const isHomePage = location.pathname === '/';
   const isBlogPost = location.pathname.startsWith('/blog/');
-  const isBlogPage = location.pathname === '/blog';
   const showBackButton = !isHomePage;
 
   useEffect(() => {
@@ -32,14 +28,13 @@ export const Navigation = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 50);
       
-      // Calculate scroll progress for logo transition (0 to 1)
       const windowHeight = window.innerHeight;
       const progress = Math.min(Math.max(scrollY / (windowHeight * 0.5), 0), 1);
       setScrollProgress(progress);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial call
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -54,30 +49,24 @@ export const Navigation = () => {
   const handleLogoClick = (e: React.MouseEvent) => {
     trackClick('nav_logo');
     
-    // If already on home page, just scroll to top smoothly
     if (isHomePage) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     }
-    // Otherwise, Link handles client-side navigation to '/'
   };
 
   const handleMenuClick = (e: React.MouseEvent, item: typeof menuItems[0]) => {
     trackClick(`nav_menu_${item.id || item.path}`, { label: item.label });
     
     if (item.id) {
-      // If already on home page, prevent default and scroll smoothly
       if (window.location.pathname === '/') {
         e.preventDefault();
         scrollToSection(item.id);
       }
-      // Otherwise, Link navigates to /#section-id and useEffect handles scroll
     }
-    // For path items (like /blog), Link handles navigation normally
     setIsMobileMenuOpen(false);
   };
 
-  // Handle hash-based navigation after route change (e.g., navigating to /#student-section)
   useEffect(() => {
     if (window.location.pathname === '/' && window.location.hash) {
       const id = window.location.hash.slice(1);
@@ -85,29 +74,17 @@ export const Navigation = () => {
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
-          // Clean up the hash from URL
           window.history.replaceState(null, '', '/');
         }
       }, 100);
     }
   }, [prefersReducedMotion]);
 
-  const currentLang = (i18n.language === 'en' ? 'en' : 'it') as 'it' | 'en';
-
-  const handleContact = () => {
-    trackClick('nav_contact_button');
-    openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.student.whatsapp[currentLang](CONTACTS.lorenzo.name));
-    setIsMobileMenuOpen(false);
-  };
-
+  // Simplified to 3 items: Invest | Sell | For Students
   const menuItems = [
-    { label: t("nav.home"), id: "hero" as string | undefined, path: undefined as string | undefined },
-    { label: t("nav.about"), id: undefined, path: "/chi-siamo" },
-    { label: t("nav.students"), id: undefined, path: "/studenti" },
-    { label: t("nav.investors"), id: undefined, path: "/investitori" },
+    { label: t("nav.investors"), id: undefined as string | undefined, path: "/investitori" as string | undefined },
     { label: t("nav.sell"), id: "seller-section", path: undefined },
-    { label: t("nav.blog"), id: undefined, path: "/blog" },
-    { label: t("nav.faq"), id: undefined, path: "/faq" },
+    { label: t("nav.students"), id: undefined, path: "/studenti" },
   ];
 
   return (
@@ -126,7 +103,6 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
           {/* Mobile: Back Button + Logo | Desktop: Logo only */}
           <div className="flex items-center gap-3">
-            {/* Mobile Back Button - shown on non-home pages */}
             {showBackButton && (
               <>
                 <button
@@ -147,12 +123,11 @@ export const Navigation = () => {
                   </span>
                 </button>
 
-                {/* Vertical separator */}
                 <div className="lg:hidden h-5 w-px bg-border mx-1" aria-hidden="true" />
               </>
             )}
 
-            {/* Logo - always visible, clickable to go home */}
+            {/* Logo */}
             <Link
               to="/"
               onClick={handleLogoClick}
@@ -175,8 +150,7 @@ export const Navigation = () => {
             </Link>
           </div>
 
-
-          {/* Desktop Menu */}
+          {/* Desktop Menu - 3 items only */}
           <div className="hidden lg:flex items-center gap-1">
             {menuItems.map((item, index) => {
               const href = item.path || (item.id ? `/#${item.id}` : '/');
@@ -185,7 +159,7 @@ export const Navigation = () => {
                   key={item.id || item.path || index}
                   to={href}
                   onClick={(e) => handleMenuClick(e, item)}
-                  className="px-4 py-2 text-sm font-normal text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
                   {item.label}
                 </Link>
@@ -194,7 +168,6 @@ export const Navigation = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <LanguageSwitcher />
             <Button
               variant="premium"
               size="sm"
@@ -209,9 +182,7 @@ export const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          {/* Mobile Menu & Language */}
           <div className="lg:hidden flex items-center gap-2">
-            <LanguageSwitcher />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center text-foreground hover:bg-accent/50 rounded-md transition-size focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
@@ -238,7 +209,7 @@ export const Navigation = () => {
                     key={item.id || item.path || index}
                     to={href}
                     onClick={(e) => handleMenuClick(e, item)}
-                    className="px-4 py-3 text-left text-sm font-normal text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    className="px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     {item.label}
                   </Link>
