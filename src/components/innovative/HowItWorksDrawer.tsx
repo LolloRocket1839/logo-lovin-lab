@@ -7,7 +7,6 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 const steps = [
   { key: "invest", icon: Euro },
   { key: "acquire", icon: Key },
-  { key: "manage", icon: Home },
   { key: "rent", icon: Users },
   { key: "win", icon: TrendingUp },
 ];
@@ -65,8 +64,8 @@ export const HowItWorksDrawer = () => {
                           <div className="w-0.5 h-4 bg-primary/20 mt-1" />
                         )}
                       </div>
-                      <div className="pt-1">
-                        <h4 className="font-semibold text-foreground text-sm">
+                      <div className="flex flex-col justify-center min-h-[40px]">
+                        <h4 className="font-semibold text-foreground text-sm leading-tight">
                           {t(`howItWorks.steps.${step.key}.title`)}
                         </h4>
                         <p className="text-xs text-muted-foreground leading-relaxed">
