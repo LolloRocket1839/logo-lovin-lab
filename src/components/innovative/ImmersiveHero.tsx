@@ -62,7 +62,8 @@ export const ImmersiveHero = () => {
             href="https://2i3t.it" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mb-8 md:mb-10 px-4 py-2 bg-background/50 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/70 transition-colors"
+            className="inline-flex items-center gap-2 mb-8 md:mb-10 px-4 py-2 bg-background/50 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/70 transition-colors animate-fade-in"
+            style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
             onClick={() => trackClick('hero_2i3t_badge')}
           >
             <img src={logo2i3t} alt="2i3T" className="h-5 w-auto" />
