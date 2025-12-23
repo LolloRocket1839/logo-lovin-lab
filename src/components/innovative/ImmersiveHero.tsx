@@ -57,21 +57,8 @@ export const ImmersiveHero = () => {
             {t('hero.mainSubheadline')}
           </p>
 
-          {/* 2i3T Badge */}
-          <a 
-            href="https://2i3t.it" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mb-8 md:mb-10 px-4 py-2 bg-background/50 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/70 transition-colors animate-fade-in"
-            style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
-            onClick={() => trackClick('hero_2i3t_badge')}
-          >
-            <img src={logo2i3t} alt="2i3T" className="h-5 w-auto" />
-            <span className="text-xs text-muted-foreground">{t("trust.incubator")}</span>
-          </a>
-
           {/* Single CTA */}
-          <div>
+          <div className="mb-8 md:mb-10">
             <Button
               size="lg"
               variant="premium"
@@ -81,6 +68,22 @@ export const ImmersiveHero = () => {
               {t('hero.startInvesting')} →
             </Button>
           </div>
+
+          {/* 2i3T Badge - below CTA */}
+          <a 
+            href="https://2i3t.it" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-5 py-3 bg-background/60 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/80 hover-scale transition-all animate-fade-in"
+            style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+            onClick={() => trackClick('hero_2i3t_badge')}
+          >
+            <img src={logo2i3t} alt="2i3T" className="h-7 w-auto" />
+            <div className="text-left">
+              <p className="text-sm font-medium text-foreground">{t("trust.incubator")}</p>
+              <p className="text-xs text-muted-foreground">Startup Innovativa</p>
+            </div>
+          </a>
 
           {/* How it works drawer - mobile only */}
           <HowItWorksDrawer />
