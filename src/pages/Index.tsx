@@ -98,23 +98,33 @@ const Index = () => {
         <ImmersiveHero />
       </div>
       
-      <TrustBadge />
-      
+      <div className="hidden md:block">
+        <TrustBadge />
+      </div>
 
       <Suspense fallback={<div className="min-h-[200px]" />}>
         
-        {/* How It Works Section */}
-        <HowItWorks />
+        {/* How It Works Section - hidden on mobile */}
+        <div className="hidden md:block">
+          <HowItWorks />
+        </div>
         
-        {/* Problem + Investor Section (merged) */}
-        <InvestorSection />
+        {/* Investor Section - hidden on mobile */}
+        <div className="hidden md:block">
+          <InvestorSection />
+        </div>
+        
         <SellerSection />
         
-        {/* FAQ Section */}
-        <HomepageFAQ />
+        {/* FAQ Section - hidden on mobile */}
+        <div className="hidden md:block">
+          <HomepageFAQ />
+        </div>
         
-        {/* Compact blog banner */}
-        <BlogBanner />
+        {/* Blog banner - hidden on mobile */}
+        <div className="hidden md:block">
+          <BlogBanner />
+        </div>
         
         <div className="pb-16 lg:pb-0">
           <Footer />
