@@ -55,7 +55,7 @@ export const HowItWorksDrawer = () => {
                 }
               }}
             >
-              <div className="space-y-3">
+              <div className="space-y-2 max-w-xs mx-auto">
                 {steps.map((step, index) => {
                   const Icon = step.icon;
                   return (
@@ -74,9 +74,9 @@ export const HowItWorksDrawer = () => {
                           }
                         }
                       }}
-                      className="flex items-start gap-3"
+                      className="flex items-start gap-4"
                     >
-                      <div className="flex flex-col items-center flex-shrink-0">
+                      <div className="flex flex-col items-center flex-shrink-0 w-10">
                         <motion.div 
                           className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20"
                           whileTap={{ scale: 0.95 }}
@@ -87,7 +87,7 @@ export const HowItWorksDrawer = () => {
                           <motion.div 
                             className="w-0.5 bg-primary/20 mt-1"
                             initial={{ height: 0 }}
-                            animate={{ height: 16 }}
+                            animate={{ height: 12 }}
                             transition={{ 
                               delay: prefersReducedMotion ? 0 : 0.3 + index * 0.12,
                               duration: prefersReducedMotion ? 0 : 0.3,
@@ -96,11 +96,11 @@ export const HowItWorksDrawer = () => {
                           />
                         )}
                       </div>
-                      <div className="flex flex-col justify-center min-h-[40px]">
+                      <div className="flex flex-col justify-center min-h-[40px] text-left pt-1">
                         <h4 className="font-semibold text-foreground text-sm leading-tight">
                           {t(`howItWorks.steps.${step.key}.title`)}
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">
                           {t(`howItWorks.steps.${step.key}.desc`)}
                         </p>
                       </div>
