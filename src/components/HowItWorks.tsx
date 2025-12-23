@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Euro, Key, Home, Users, TrendingUp, PiggyBank, CheckCircle, ArrowRight } from "lucide-react";
+import { Euro, Key, Users, TrendingUp, PiggyBank, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
@@ -9,7 +9,6 @@ import { WaitlistDialog } from "@/components/WaitlistDialog";
 const steps = [
   { key: "invest", icon: Euro },
   { key: "acquire", icon: Key },
-  { key: "manage", icon: Home },
   { key: "rent", icon: Users },
   { key: "win", icon: TrendingUp },
 ];
