@@ -13,7 +13,11 @@
   "founders": {
     "title": "Fondatori",
     "contactUs": "Contattaci direttamente",
-    "callNow": "Chiama ora"
+    "callNow": "Chiama ora",
+    "message": "Scrivi",
+    "noWhatsApp": "Non hai WhatsApp?",
+    "sendSMS": "Invia un SMS",
+    "callDirect": "Chiama direttamente"
   },
   "howItWorks": {
     "badge": "Il nostro modello",

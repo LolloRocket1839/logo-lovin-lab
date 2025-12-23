@@ -13,7 +13,11 @@
   "founders": {
     "title": "Founders",
     "contactUs": "Contact us directly",
-    "callNow": "Call now"
+    "callNow": "Call now",
+    "message": "Message",
+    "noWhatsApp": "No WhatsApp?",
+    "sendSMS": "Send an SMS",
+    "callDirect": "Call directly"
   },
   "howItWorks": {
     "badge": "Our model",

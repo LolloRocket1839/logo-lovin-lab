@@ -1,11 +1,11 @@
 import { useState, Suspense, lazy } from "react";
-import { TrendingUp, Building2, Info, GraduationCap, Heart, Users, Phone } from "lucide-react";
+import { TrendingUp, Building2, GraduationCap, Heart, Users, Phone, MessageCircle, MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
-import { CONTACTS } from "@/lib/contacts";
+import { CONTACTS, openQuickContact, openQuickContactWithFallback } from "@/lib/contacts";
 import {
   Drawer,
   DrawerContent,
@@ -46,6 +46,18 @@ export const BottomNav = () => {
   const handleFoundersClick = () => {
     trackClick('bottom_nav_founders');
     setFoundersDrawerOpen(true);
+  };
+
+  const handleWhatsAppLorenzo = () => {
+    trackClick('founders_whatsapp_lorenzo');
+    const language = (document.documentElement.lang || 'it') as 'it' | 'en';
+    openQuickContact(language === 'en' ? 'en' : 'it');
+  };
+
+  const handleSMSLorenzo = () => {
+    trackClick('founders_sms_lorenzo');
+    const language = (document.documentElement.lang || 'it') as 'it' | 'en';
+    openQuickContactWithFallback(language === 'en' ? 'en' : 'it', 'sms');
   };
 
   const handleCallLorenzo = () => {
@@ -126,21 +138,49 @@ export const BottomNav = () => {
             <p className="text-sm text-muted-foreground text-center mb-6">
               {t("founders.contactUs")}
             </p>
-            <div className="space-y-4">
+            <div className="space-y-3">
+              {/* WhatsApp - Primary */}
               <button
-                onClick={handleCallLorenzo}
-                className="w-full flex items-center gap-4 p-4 rounded-xl bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-colors"
+                onClick={handleWhatsAppLorenzo}
+                className="w-full flex items-center gap-4 p-4 rounded-xl bg-[#25D366]/10 border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-colors"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-lg font-bold text-primary">L</span>
+                <div className="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-[#25D366]" />
                 </div>
                 <div className="flex-1 text-left">
                   <p className="font-semibold text-foreground">{CONTACTS.lorenzo.name}</p>
-                  <p className="text-sm text-muted-foreground">{CONTACTS.lorenzo.phone}</p>
+                  <p className="text-sm text-muted-foreground">WhatsApp</p>
                 </div>
-                <div className="flex items-center gap-2 text-primary">
-                  <Phone className="w-5 h-5" />
-                  <span className="text-sm font-medium">{t("founders.callNow")}</span>
+                <div className="flex items-center gap-2 text-[#25D366]">
+                  <span className="text-sm font-medium">{t("founders.message")}</span>
+                </div>
+              </button>
+
+              {/* SMS - Fallback */}
+              <button
+                onClick={handleSMSLorenzo}
+                className="w-full flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border/20 hover:bg-muted transition-colors"
+              >
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                  <MessageSquare className="w-6 h-6 text-muted-foreground" />
+                </div>
+                <div className="flex-1 text-left">
+                  <p className="font-semibold text-foreground">{t("founders.noWhatsApp")}</p>
+                  <p className="text-sm text-muted-foreground">{t("founders.sendSMS")}</p>
+                </div>
+              </button>
+
+              {/* Call - Fallback */}
+              <button
+                onClick={handleCallLorenzo}
+                className="w-full flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border/20 hover:bg-muted transition-colors"
+              >
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-muted-foreground" />
+                </div>
+                <div className="flex-1 text-left">
+                  <p className="font-semibold text-foreground">{t("founders.callDirect")}</p>
+                  <p className="text-sm text-muted-foreground">{CONTACTS.lorenzo.phone}</p>
                 </div>
               </button>
             </div>
