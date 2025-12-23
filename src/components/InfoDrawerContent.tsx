@@ -84,7 +84,7 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
             onClick={onClose}
             className="text-xs text-primary hover:underline inline-flex items-center gap-1 mt-2"
           >
-            {t("faq.viewAll")} <ArrowRight className="w-3 h-3" />
+            {t("homepageFaq.viewAll")} <ArrowRight className="w-3 h-3" />
           </Link>
         </section>
 
@@ -92,7 +92,7 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
         <section className="bg-muted/30 rounded-lg p-4">
           <h3 className="font-semibold mb-3 flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-primary" />
-            {t("blog.title")}
+            {t("blog.sectionTitle")}
           </h3>
           <div className="space-y-3 mb-4">
             {latestPosts.map((post) => {
