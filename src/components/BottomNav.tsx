@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
-import { CONTACTS, openQuickContact, openQuickContactWithFallback } from "@/lib/contacts";
+import { CONTACTS, openQuickContact, openQuickContactWithFallback, type SupportedLanguage } from "@/lib/contacts";
 import {
   Drawer,
   DrawerContent,
@@ -50,14 +50,14 @@ export const BottomNav = () => {
 
   const handleWhatsAppLorenzo = () => {
     trackClick('founders_whatsapp_lorenzo');
-    const language = (document.documentElement.lang || 'it') as 'it' | 'en';
-    openQuickContact(language === 'en' ? 'en' : 'it');
+    const lang = (document.documentElement.lang || 'it') as SupportedLanguage;
+    openQuickContact(lang);
   };
 
   const handleSMSLorenzo = () => {
     trackClick('founders_sms_lorenzo');
-    const language = (document.documentElement.lang || 'it') as 'it' | 'en';
-    openQuickContactWithFallback(language === 'en' ? 'en' : 'it', 'sms');
+    const lang = (document.documentElement.lang || 'it') as SupportedLanguage;
+    openQuickContactWithFallback(lang, 'sms');
   };
 
   const handleCallLorenzo = () => {

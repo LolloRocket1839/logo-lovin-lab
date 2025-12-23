@@ -140,7 +140,10 @@ Best regards`
   quickContact: {
     whatsapp: {
       it: (name: string) => `Ciao ${name}, mi interessa Jungle Rent!`,
-      en: (name: string) => `Hi ${name}, I'm interested in Jungle Rent!`
+      en: (name: string) => `Hi ${name}, I'm interested in Jungle Rent!`,
+      es: (name: string) => `¡Hola ${name}, me interesa Jungle Rent!`,
+      fr: (name: string) => `Bonjour ${name}, je suis intéressé(e) par Jungle Rent !`,
+      de: (name: string) => `Hallo ${name}, ich interessiere mich für Jungle Rent!`
     }
   }
 } as const;
@@ -176,14 +179,18 @@ export const openGeneralEmail = (language: 'it' | 'en' = 'it') => {
   openEmail(emailData.subject, emailData.body);
 };
 
-export const openQuickContact = (language: 'it' | 'en' = 'it') => {
-  const message = MESSAGES.quickContact.whatsapp[language](CONTACTS.lorenzo.name);
+export type SupportedLanguage = 'it' | 'en' | 'es' | 'fr' | 'de';
+
+export const openQuickContact = (language: SupportedLanguage = 'it') => {
+  // Map language to available message, fallback to English for unsupported
+  const msgLang = ['it', 'en', 'es', 'fr', 'de'].includes(language) ? language : 'en';
+  const message = MESSAGES.quickContact.whatsapp[msgLang as keyof typeof MESSAGES.quickContact.whatsapp](CONTACTS.lorenzo.name);
   const phone = CONTACTS.lorenzo.phone;
   const encoded = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phone}?text=${encoded}`;
   
   if (isMobile()) {
-    // On mobile, try WhatsApp first, then SMS, then call
+    // On mobile, try WhatsApp first
     window.location.href = whatsappUrl;
   } else {
     // On desktop, open WhatsApp web
@@ -199,8 +206,9 @@ export const openSMS = (phone: string, message: string) => {
   window.location.href = url;
 };
 
-export const openQuickContactWithFallback = (language: 'it' | 'en' = 'it', fallbackType: 'sms' | 'call' = 'sms') => {
-  const message = MESSAGES.quickContact.whatsapp[language](CONTACTS.lorenzo.name);
+export const openQuickContactWithFallback = (language: SupportedLanguage = 'it', fallbackType: 'sms' | 'call' = 'sms') => {
+  const msgLang = ['it', 'en', 'es', 'fr', 'de'].includes(language) ? language : 'en';
+  const message = MESSAGES.quickContact.whatsapp[msgLang as keyof typeof MESSAGES.quickContact.whatsapp](CONTACTS.lorenzo.name);
   const phone = CONTACTS.lorenzo.phone;
   
   if (fallbackType === 'sms') {
