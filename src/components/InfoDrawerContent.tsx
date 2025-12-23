@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useMemo } from "react";
 import { 
   Search, 
   FileText, 
   ArrowRight,
   Sparkles,
-  BookOpen
+  BookOpen,
+  Calendar
 } from "lucide-react";
 import {
   Accordion,
@@ -16,19 +17,28 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { blogPosts } from "@/data/blog/posts";
 
 // Lazy load AISearchBox since it's heavy
 const AISearchBox = lazy(() => import("@/components/AISearchBox").then(m => ({ default: m.AISearchBox })));
 
 export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language.startsWith('en') ? 'en' : 'it';
+
+  // Get latest 3 blog posts
+  const latestPosts = useMemo(() => {
+    return blogPosts
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 3);
+  }, []);
 
   const topFAQs = [
-    { q: t("faq.investors.q1"), a: t("faq.investors.a1") },
-    { q: t("faq.investors.q2"), a: t("faq.investors.a2") },
-    { q: t("faq.investors.q3"), a: t("faq.investors.a3") },
-    { q: t("faq.students.q1"), a: t("faq.students.a1") },
-    { q: t("faq.students.q2"), a: t("faq.students.a2") },
+    { q: t("faq.investorQ1"), a: t("faq.investorA1") },
+    { q: t("faq.investorQ2"), a: t("faq.investorA2") },
+    { q: t("faq.studentQ1"), a: t("faq.studentA1") },
+    { q: t("faq.sellerQ1"), a: t("faq.sellerA1") },
+    { q: t("faq.aboutQ1"), a: t("faq.aboutA1") },
   ];
 
   return (
@@ -78,15 +88,35 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
           </Link>
         </section>
 
-        {/* Blog */}
+        {/* Blog - Latest Articles */}
         <section className="bg-muted/30 rounded-lg p-4">
-          <h3 className="font-semibold mb-2 flex items-center gap-2">
+          <h3 className="font-semibold mb-3 flex items-center gap-2">
             <BookOpen className="w-4 h-4 text-primary" />
-            Blog
+            {t("blog.title")}
           </h3>
-          <p className="text-sm text-muted-foreground mb-3">
-            {t("blog.subtitle")}
-          </p>
+          <div className="space-y-3 mb-4">
+            {latestPosts.map((post) => {
+              const translation = post.translations[currentLang as keyof typeof post.translations] || post.translations.it;
+              return (
+                <Link
+                  key={post.slug}
+                  to={`/blog/${post.slug}`}
+                  onClick={onClose}
+                  className="block p-3 bg-background/50 rounded-lg hover:bg-background/80 transition-colors"
+                >
+                  <p className="text-sm font-medium text-foreground line-clamp-2 mb-1">
+                    {translation.title}
+                  </p>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <Calendar className="w-3 h-3" />
+                    <span>{new Date(post.date).toLocaleDateString(currentLang === 'it' ? 'it-IT' : 'en-US', { day: 'numeric', month: 'short' })}</span>
+                    <span>•</span>
+                    <span>{post.readTime} min</span>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
           <Button 
             variant="outline" 
             size="sm" 
