@@ -54,10 +54,8 @@ export const InvestorSection = () => {
   return (
     <section 
       id="investor-section" 
-      className="py-16 md:py-24 bg-accent/30 relative overflow-hidden"
+      className="py-16 md:py-24 bg-background relative overflow-hidden"
     >
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 gradient-jungle-section pointer-events-none" />
       
       <div className="container px-6 md:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -94,7 +92,7 @@ export const InvestorSection = () => {
                 <div className="text-xs md:text-sm text-muted-foreground">
                   {stat.label}
                 </div>
-                <div className="text-[10px] md:text-xs text-muted-foreground/70">
+                <div className="text-[10px] md:text-xs text-muted-foreground">
                   {stat.sublabel}
                 </div>
               </div>
@@ -103,7 +101,7 @@ export const InvestorSection = () => {
 
           {/* Source link */}
           <div className="text-center mb-12">
-            <p className="text-xs text-muted-foreground/60 mb-2">
+            <p className="text-xs text-muted-foreground mb-2">
               *{t('problem.source', 'Dati 2025 - Fonte: Savills Research, Student Housing Italy Spotlight')}
             </p>
             <Link 
@@ -125,7 +123,7 @@ export const InvestorSection = () => {
                   {i18n.language.startsWith('it') ? 'La Soluzione' : 'The Solution'}
                 </span>
               </div>
-              <span className="text-muted-foreground/30">→</span>
+              <span className="text-muted-foreground">→</span>
               <div className="flex items-center gap-2">
                 <Target className="w-4 h-4 text-primary" />
                 <span className="text-xs uppercase tracking-[0.15em] font-medium text-foreground">
