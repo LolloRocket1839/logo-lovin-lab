@@ -41,27 +41,59 @@ export const HowItWorksDrawer = () => {
             transition={{ duration: prefersReducedMotion ? 0 : 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="mt-6 pt-6 border-t border-border/20">
-              <div className="space-y-4">
+            <motion.div 
+              className="mt-6 pt-6 border-t border-border/20"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: prefersReducedMotion ? 0 : 0.12,
+                    delayChildren: prefersReducedMotion ? 0 : 0.1
+                  }
+                }
+              }}
+            >
+              <div className="space-y-3">
                 {steps.map((step, index) => {
                   const Icon = step.icon;
                   return (
                     <motion.div
                       key={step.key}
-                      initial={prefersReducedMotion ? {} : { opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ 
-                        duration: prefersReducedMotion ? 0 : 0.3, 
-                        delay: prefersReducedMotion ? 0 : index * 0.08 
+                      variants={{
+                        hidden: { opacity: 0, x: -20, scale: 0.95 },
+                        visible: { 
+                          opacity: 1, 
+                          x: 0, 
+                          scale: 1,
+                          transition: {
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 24
+                          }
+                        }
                       }}
                       className="flex items-start gap-3"
                     >
                       <div className="flex flex-col items-center flex-shrink-0">
-                        <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
+                        <motion.div 
+                          className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20"
+                          whileTap={{ scale: 0.95 }}
+                        >
                           <Icon className="w-4 h-4 text-primary" />
-                        </div>
+                        </motion.div>
                         {index < steps.length - 1 && (
-                          <div className="w-0.5 h-4 bg-primary/20 mt-1" />
+                          <motion.div 
+                            className="w-0.5 bg-primary/20 mt-1"
+                            initial={{ height: 0 }}
+                            animate={{ height: 16 }}
+                            transition={{ 
+                              delay: prefersReducedMotion ? 0 : 0.3 + index * 0.12,
+                              duration: prefersReducedMotion ? 0 : 0.3,
+                              ease: "easeOut"
+                            }}
+                          />
                         )}
                       </div>
                       <div className="flex flex-col justify-center min-h-[40px]">
@@ -76,7 +108,7 @@ export const HowItWorksDrawer = () => {
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
