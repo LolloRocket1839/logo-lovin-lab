@@ -35,7 +35,6 @@ export const QuickInvestorLeadDialog = ({
   const { trackClick } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +48,6 @@ export const QuickInvestorLeadDialog = ({
       return;
     }
 
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.trim())) {
       toast({
@@ -73,7 +71,6 @@ export const QuickInvestorLeadDialog = ({
         body: JSON.stringify({
           _subject: `🚀 QUICK INVESTOR LEAD - Jungle Rent - ${email.trim()}${utmParams.utm_source ? ` [${utmParams.utm_source}]` : ''}`,
           email: email.trim(),
-          name: name.trim() || "Non specificato",
           source,
           timestamp: new Date().toISOString(),
           type: "quick_investor_lead",
@@ -87,7 +84,6 @@ export const QuickInvestorLeadDialog = ({
 
       if (response.ok) {
         setEmail("");
-        setName("");
         onOpenChange(false);
         const thankYouPath = i18n.language === 'it' ? '/grazie' : '/thank-you';
         navigate(`${thankYouPath}?type=investor`);
@@ -124,7 +120,7 @@ export const QuickInvestorLeadDialog = ({
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-2">
             <Label htmlFor="quick-email" className="text-sm font-medium">
-              Email *
+              Email
             </Label>
             <Input
               id="quick-email"
@@ -135,20 +131,6 @@ export const QuickInvestorLeadDialog = ({
               required
               className="h-12"
               autoFocus
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="quick-name" className="text-sm font-medium text-muted-foreground">
-              {t('quickLead.namePlaceholder')} ({t('quickLead.optional')})
-            </Label>
-            <Input
-              id="quick-name"
-              type="text"
-              placeholder={t('quickLead.namePlaceholder')}
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="h-12"
             />
           </div>
 
