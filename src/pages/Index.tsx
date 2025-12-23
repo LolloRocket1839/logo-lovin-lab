@@ -5,6 +5,7 @@ import { TrustBadge } from "@/components/TrustBadge";
 import { StructuredData } from "@/components/StructuredData";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { MobileFooter } from "@/components/MobileFooter";
 
 // Innovative components - loaded immediately for impact
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
@@ -126,8 +127,14 @@ const Index = () => {
           <BlogBanner />
         </div>
         
+        {/* Desktop Footer */}
         <div className="pb-16 lg:pb-0">
           <Footer />
+        </div>
+        
+        {/* Mobile Footer - compact version */}
+        <div className="pb-20">
+          <MobileFooter />
         </div>
         <ScrollToTop />
         <StickyCTA />

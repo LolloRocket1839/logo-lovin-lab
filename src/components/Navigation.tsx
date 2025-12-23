@@ -127,16 +127,16 @@ export const Navigation = () => {
               </>
             )}
 
-            {/* Logo */}
+            {/* Logo - fades in on scroll when on homepage (since hero has the large logo) */}
             <Link
               to="/"
               onClick={handleLogoClick}
               className={`flex items-center gap-2 group ${prefersReducedMotion ? '' : 'transition-all duration-500 hover:scale-105'}`}
               aria-label="Torna alla home"
               style={{
-                opacity: isHomePage ? scrollProgress : 1,
-                transform: prefersReducedMotion ? undefined : `scale(${isHomePage ? (0.8 + (scrollProgress * 0.2)) : 1})`,
-                pointerEvents: isHomePage && scrollProgress < 0.3 ? 'none' : 'auto'
+                opacity: isHomePage ? Math.min(scrollProgress * 1.5, 1) : 1,
+                transform: prefersReducedMotion ? undefined : `scale(${isHomePage ? (0.8 + (Math.min(scrollProgress, 1) * 0.2)) : 1})`,
+                pointerEvents: isHomePage && scrollProgress < 0.2 ? 'none' : 'auto'
               }}
             >
               <img
