@@ -22,7 +22,7 @@ const HomepageFAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-background">
+    <section id="faq" className="py-16 md:py-24 bg-background border-t border-border/20">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
@@ -42,7 +42,7 @@ const HomepageFAQ = () => {
               <AccordionItem
                 key={`home-faq-${index}`}
                 value={`home-faq-${index}`}
-                className="bg-muted/30 border border-border/20 rounded-xl px-6"
+                className="bg-card border border-border/20 rounded-xl px-6"
               >
                 <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline py-4">
                   {faq.q}
