@@ -998,11 +998,11 @@ All colors MUST be HSL.
   top: 0;
   left: 0;
   right: 0;
-  height: 120px;
+  height: 140px;
   background: linear-gradient(
     180deg,
-    hsl(38 45% 85% / 0.25) 0%,
-    hsl(40 50% 88% / 0.1) 40%,
+    hsl(38 40% 82% / 0.15) 0%,
+    hsl(40 45% 85% / 0.06) 50%,
     transparent 100%
   );
   pointer-events: none;
@@ -1015,11 +1015,11 @@ All colors MUST be HSL.
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 120px;
   background: linear-gradient(
     0deg,
-    hsl(38 45% 85% / 0.2) 0%,
-    hsl(40 50% 88% / 0.08) 50%,
+    hsl(38 40% 82% / 0.12) 0%,
+    hsl(40 45% 85% / 0.05) 50%,
     transparent 100%
   );
   pointer-events: none;
@@ -1030,8 +1030,8 @@ All colors MUST be HSL.
 .dark .section-fade-top::before {
   background: linear-gradient(
     180deg,
-    hsl(40 15% 12% / 0.3) 0%,
-    hsl(40 10% 8% / 0.1) 40%,
+    hsl(40 12% 10% / 0.15) 0%,
+    hsl(40 8% 6% / 0.06) 50%,
     transparent 100%
   );
 }
@@ -1039,8 +1039,8 @@ All colors MUST be HSL.
 .dark .section-fade-top::after {
   background: linear-gradient(
     0deg,
-    hsl(40 15% 12% / 0.25) 0%,
-    hsl(40 10% 8% / 0.08) 50%,
+    hsl(40 12% 10% / 0.12) 0%,
+    hsl(40 8% 6% / 0.05) 50%,
     transparent 100%
   );
 }
