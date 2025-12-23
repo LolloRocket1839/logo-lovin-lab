@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronLeft } from "lucide-react";
+import { Menu, X, ChevronLeft, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
+import { CONTACTS } from "@/lib/contacts";
 
 export const Navigation = () => {
   const { t } = useTranslation();
@@ -56,7 +57,15 @@ export const Navigation = () => {
   };
 
   const handleMenuClick = (e: React.MouseEvent, item: typeof menuItems[0]) => {
-    trackClick(`nav_menu_${item.id || item.path}`, { label: item.label });
+    trackClick(`nav_menu_${item.id || item.path || 'founders'}`, { label: item.label });
+    
+    // Handle founders click - open phone call
+    if ('isFounders' in item && item.isFounders) {
+      e.preventDefault();
+      window.location.href = `tel:${CONTACTS.lorenzo.phone}`;
+      setIsMobileMenuOpen(false);
+      return;
+    }
     
     if (item.id) {
       if (window.location.pathname === '/') {
@@ -80,11 +89,12 @@ export const Navigation = () => {
     }
   }, [prefersReducedMotion]);
 
-  // Simplified to 3 items: Invest | Sell | For Students
+  // Simplified to 4 items: Invest | Sell | For Students | Founders
   const menuItems = [
     { label: t("nav.investors"), id: undefined as string | undefined, path: "/investitori" as string | undefined },
     { label: t("nav.sell"), id: "seller-section", path: undefined },
     { label: t("nav.students"), id: undefined, path: "/studenti" },
+    { label: t("founders.title"), id: undefined, path: undefined, isFounders: true },
   ];
 
   return (
@@ -150,17 +160,19 @@ export const Navigation = () => {
             </Link>
           </div>
 
-          {/* Desktop Menu - 3 items only */}
+          {/* Desktop Menu - 4 items */}
           <div className="hidden lg:flex items-center gap-1">
             {menuItems.map((item, index) => {
               const href = item.path || (item.id ? `/#${item.id}` : '/');
+              const isFoundersItem = 'isFounders' in item && item.isFounders;
               return (
                 <Link
                   key={item.id || item.path || index}
                   to={href}
                   onClick={(e) => handleMenuClick(e, item)}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 flex items-center gap-1.5"
                 >
+                  {isFoundersItem && <Phone className="w-4 h-4" />}
                   {item.label}
                 </Link>
               );
@@ -191,14 +203,19 @@ export const Navigation = () => {
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => {
                 const href = item.path || (item.id ? `/#${item.id}` : '/');
+                const isFoundersItem = 'isFounders' in item && item.isFounders;
                 return (
                   <Link
                     key={item.id || item.path || index}
                     to={href}
                     onClick={(e) => handleMenuClick(e, item)}
-                    className="px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    className="px-4 py-3 text-left text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent/50 rounded-md transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 flex items-center gap-2"
                   >
+                    {isFoundersItem && <Phone className="w-4 h-4" />}
                     {item.label}
+                    {isFoundersItem && (
+                      <span className="text-xs text-primary ml-auto">{CONTACTS.lorenzo.phone}</span>
+                    )}
                   </Link>
                 );
               })}

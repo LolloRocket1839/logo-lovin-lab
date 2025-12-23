@@ -10,6 +10,11 @@
     "loading": "Caricamento in corso...",
     "currentPage": "Pagina corrente"
   },
+  "founders": {
+    "title": "Fondatori",
+    "contactUs": "Contattaci direttamente",
+    "callNow": "Chiama ora"
+  },
   "howItWorks": {
     "badge": "Il nostro modello",
     "title": "Come Funziona Jungle Rent",

@@ -10,6 +10,11 @@
     "loading": "Loading...",
     "currentPage": "Current page"
   },
+  "founders": {
+    "title": "Founders",
+    "contactUs": "Contact us directly",
+    "callNow": "Call now"
+  },
   "howItWorks": {
     "badge": "Our model",
     "title": "How Jungle Rent Works",
