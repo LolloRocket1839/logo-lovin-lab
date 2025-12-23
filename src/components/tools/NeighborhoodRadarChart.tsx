@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, memo } from "react";
 import { motion } from "framer-motion";
 import { Radar, Target, Plus, X, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -128,7 +128,7 @@ const CHART_COLORS = [
   "hsl(38, 92%, 50%)", // amber
 ];
 
-export const NeighborhoodRadarChart = ({
+const NeighborhoodRadarChartComponent = ({
   selectedArea,
   housingType,
   language,
@@ -416,3 +416,5 @@ export const NeighborhoodRadarChart = ({
     </Card>
   );
 };
+
+export const NeighborhoodRadarChart = memo(NeighborhoodRadarChartComponent);

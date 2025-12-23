@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { BlogPost } from "@/types/blog";
 import { useTranslation } from "react-i18next";
 import { BlogCard } from "./BlogCard";
@@ -8,7 +9,7 @@ interface RelatedPostsProps {
   currentTags?: string[];
 }
 
-export const RelatedPosts = ({ posts, currentTags = [] }: RelatedPostsProps) => {
+const RelatedPostsComponent = ({ posts, currentTags = [] }: RelatedPostsProps) => {
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
 
@@ -55,3 +56,5 @@ export const RelatedPosts = ({ posts, currentTags = [] }: RelatedPostsProps) => 
     </section>
   );
 };
+
+export const RelatedPosts = memo(RelatedPostsComponent);

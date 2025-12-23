@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { BlogPost } from "@/types/blog";
 import { Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -12,7 +13,7 @@ interface BlogCardProps {
   post: BlogPost;
 }
 
-export const BlogCard = ({ post }: BlogCardProps) => {
+const BlogCardComponent = ({ post }: BlogCardProps) => {
   const { t } = useTranslation();
   const { trackClick } = useAnalytics();
   const currentLang = useBlogLanguage();
@@ -100,3 +101,5 @@ export const BlogCard = ({ post }: BlogCardProps) => {
     </article>
   );
 };
+
+export const BlogCard = memo(BlogCardComponent);

@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Lightbulb, Users, UtensilsCrossed, Dumbbell, Check } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -70,7 +70,7 @@ const translations = {
   }
 };
 
-export const WhatIfSimulator = ({
+const WhatIfSimulatorComponent = ({
   currentRent,
   currentGroceries,
   currentGym,
@@ -251,3 +251,5 @@ export const WhatIfSimulator = ({
     </Card>
   );
 };
+
+export const WhatIfSimulator = memo(WhatIfSimulatorComponent);

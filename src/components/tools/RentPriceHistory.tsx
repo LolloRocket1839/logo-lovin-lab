@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, memo } from "react";
 import { useTranslation } from "react-i18next";
 import { 
   TrendingUp, 
@@ -70,7 +70,7 @@ const AREAS = [
   'Vanchiglia', 'Santa Rita', 'Cenisia', 'Lingotto'
 ];
 
-export const RentPriceHistory = ({ selectedArea, onAreaChange }: RentPriceHistoryProps) => {
+const RentPriceHistoryComponent = ({ selectedArea, onAreaChange }: RentPriceHistoryProps) => {
   const { i18n } = useTranslation();
   const currentLang = (i18n.language?.startsWith('it') ? 'it' : 'en') as 'it' | 'en';
   
@@ -436,3 +436,5 @@ export const RentPriceHistory = ({ selectedArea, onAreaChange }: RentPriceHistor
     </Card>
   );
 };
+
+export const RentPriceHistory = memo(RentPriceHistoryComponent);
