@@ -5,6 +5,7 @@ import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { HeroLogo } from "./HeroLogo";
 import { HowItWorksDrawer } from "./HowItWorksDrawer";
+import logo2i3t from "@/assets/2i3t-logo-green.png";
 
 export const ImmersiveHero = () => {
   const { t } = useTranslation();
@@ -52,19 +53,33 @@ export const ImmersiveHero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-10 md:mb-12 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 font-light leading-relaxed max-w-2xl mx-auto">
             {t('hero.mainSubheadline')}
           </p>
 
-          {/* Single CTA */}
-          <Button
-            size="lg"
-            variant="premium"
-            onClick={handleInvestClick}
-            className="text-base md:text-lg px-8 py-6 md:px-10 md:py-7"
+          {/* 2i3T Badge */}
+          <a 
+            href="https://2i3t.it" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mb-8 md:mb-10 px-4 py-2 bg-background/50 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/70 transition-colors"
+            onClick={() => trackClick('hero_2i3t_badge')}
           >
-            {t('hero.startInvesting')} →
-          </Button>
+            <img src={logo2i3t} alt="2i3T" className="h-5 w-auto" />
+            <span className="text-xs text-muted-foreground">{t("trust.incubator")}</span>
+          </a>
+
+          {/* Single CTA */}
+          <div>
+            <Button
+              size="lg"
+              variant="premium"
+              onClick={handleInvestClick}
+              className="text-base md:text-lg px-8 py-6 md:px-10 md:py-7"
+            >
+              {t('hero.startInvesting')} →
+            </Button>
+          </div>
 
           {/* How it works drawer - mobile only */}
           <HowItWorksDrawer />
