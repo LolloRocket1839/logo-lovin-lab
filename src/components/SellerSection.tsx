@@ -19,7 +19,7 @@ export const SellerSection = () => {
           {/* Hero headline - same style as ImmersiveHero */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight">
             <span className="text-primary">{t('seller.heroHighlight')}</span> {t('seller.heroRest')}{' '}
-            <span className="text-muted-foreground">{t('seller.heroBracket')}</span>
+            <span className="text-foreground">{t('seller.heroBracket')}</span>
           </h2>
           
           {/* Subheadline */}
