@@ -1,5 +1,5 @@
 import { useState, Suspense, lazy } from "react";
-import { TrendingUp, Building2, Info, GraduationCap } from "lucide-react";
+import { TrendingUp, Building2, Info, GraduationCap, Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -48,14 +48,14 @@ export const BottomNav = () => {
         aria-label={t('nav.home')}
       >
         <div className="flex items-center justify-around h-16 px-2">
-          {/* Investi - Primary CTA with pulse */}
+          {/* Investi - Primary CTA with heart */}
           <button
             onClick={handleInvestClick}
             className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-primary relative"
           >
-            <div className="relative">
+            <div className="flex items-center gap-0.5">
               <TrendingUp className="w-5 h-5" aria-hidden="true" />
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-primary rounded-full animate-pulse" />
+              <Heart className="w-2.5 h-2.5 fill-primary text-primary" aria-hidden="true" />
             </div>
             <span className="text-[10px] font-medium">{t("nav.investors")}</span>
           </button>
