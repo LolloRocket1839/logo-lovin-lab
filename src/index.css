@@ -775,7 +775,7 @@ All colors MUST be HSL.
 
 .blog-content-wrapper p {
   margin-bottom: 1.5em;
-  color: hsl(var(--foreground) / 0.9);
+  color: hsl(var(--foreground));
 }
 
 .blog-content-wrapper h2 {
@@ -815,7 +815,7 @@ All colors MUST be HSL.
 .blog-content-wrapper ol {
   margin: 1.5em 0;
   padding-left: 2rem;
-  color: hsl(var(--foreground) / 0.9);
+  color: hsl(var(--foreground));
 }
 
 .blog-content-wrapper li {
@@ -962,7 +962,7 @@ All colors MUST be HSL.
 }
 
 .dark .blog-content-wrapper p {
-  color: hsl(var(--foreground) / 0.85);
+  color: hsl(var(--foreground));
 }
 
 .dark .blog-content-wrapper blockquote {
