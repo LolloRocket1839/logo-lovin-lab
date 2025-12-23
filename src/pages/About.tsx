@@ -132,7 +132,7 @@ const About = () => {
         </section>
 
         {/* Legal Registry Section */}
-        <section className="mb-16 bg-muted/30 rounded-2xl p-6 md:p-8">
+        <section className="mb-16 bg-card border border-border/20 rounded-2xl p-6 md:p-8">
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
               <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">P.IVA / C.F.</p>
@@ -193,7 +193,7 @@ const About = () => {
         </section>
 
         {/* Why Choose Section */}
-        <section className="mb-16 bg-accent/30 rounded-2xl p-8 md:p-12">
+        <section className="mb-16 bg-card border border-border/20 rounded-2xl p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center">
             {t("about.whyChooseTitle")}
           </h2>
