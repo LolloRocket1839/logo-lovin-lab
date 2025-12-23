@@ -136,6 +136,12 @@ Best regards`
       en: (name: string) => 
         `Hi ${name}! I'm interested in Turin and would like advice about accommodations and neighborhoods.\n\nI'm looking for information about:\n- Tourist/digital nomad accommodations\n- Best areas to stay\n- Local tips about Turin\n\nThank you!`
     }
+  },
+  quickContact: {
+    whatsapp: {
+      it: (name: string) => `Ciao ${name}, mi interessa Jungle Rent!`,
+      en: (name: string) => `Hi ${name}, I'm interested in Jungle Rent!`
+    }
   }
 } as const;
 
@@ -168,4 +174,38 @@ export const openEmail = (subject: string, body: string, email: string = CONTACT
 export const openGeneralEmail = (language: 'it' | 'en' = 'it') => {
   const emailData = MESSAGES.general.email[language];
   openEmail(emailData.subject, emailData.body);
+};
+
+export const openQuickContact = (language: 'it' | 'en' = 'it') => {
+  const message = MESSAGES.quickContact.whatsapp[language](CONTACTS.lorenzo.name);
+  const phone = CONTACTS.lorenzo.phone;
+  const encoded = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${phone}?text=${encoded}`;
+  
+  if (isMobile()) {
+    // On mobile, try WhatsApp first, then SMS, then call
+    window.location.href = whatsappUrl;
+  } else {
+    // On desktop, open WhatsApp web
+    window.open(whatsappUrl, '_blank');
+  }
+};
+
+export const openSMS = (phone: string, message: string) => {
+  const encoded = encodeURIComponent(message);
+  // iOS uses &body=, Android uses ?body=
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isIOS ? `sms:${phone}&body=${encoded}` : `sms:${phone}?body=${encoded}`;
+  window.location.href = url;
+};
+
+export const openQuickContactWithFallback = (language: 'it' | 'en' = 'it', fallbackType: 'sms' | 'call' = 'sms') => {
+  const message = MESSAGES.quickContact.whatsapp[language](CONTACTS.lorenzo.name);
+  const phone = CONTACTS.lorenzo.phone;
+  
+  if (fallbackType === 'sms') {
+    openSMS(phone, message);
+  } else {
+    window.location.href = `tel:${phone}`;
+  }
 };

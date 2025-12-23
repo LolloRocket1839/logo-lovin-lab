@@ -7,7 +7,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
-import { CONTACTS } from "@/lib/contacts";
+import { CONTACTS, openQuickContact } from "@/lib/contacts";
 
 export const Navigation = () => {
   const { t } = useTranslation();
@@ -59,10 +59,11 @@ export const Navigation = () => {
   const handleMenuClick = (e: React.MouseEvent, item: typeof menuItems[0]) => {
     trackClick(`nav_menu_${item.id || item.path || 'founders'}`, { label: item.label });
     
-    // Handle founders click - open phone call
+    // Handle founders click - open WhatsApp with preset message
     if ('isFounders' in item && item.isFounders) {
       e.preventDefault();
-      window.location.href = `tel:${CONTACTS.lorenzo.phone}`;
+      const language = (document.documentElement.lang || 'it') as 'it' | 'en';
+      openQuickContact(language === 'en' ? 'en' : 'it');
       setIsMobileMenuOpen(false);
       return;
     }
