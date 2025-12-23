@@ -177,7 +177,7 @@ const Investors = () => {
       </section>
 
       {/* Metrics Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-background border-t border-border/20">
         <div className="container px-8">
           <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground text-center mb-8">
             {t('investors.metricsLabel', 'Key Metrics')}
@@ -186,7 +186,7 @@ const Investors = () => {
             {metrics.map((metric, index) => {
               const Icon = metric.icon;
               return (
-                <Card key={index} className="p-6 md:p-8 text-center rounded-xl border-border/20 bg-background/30 backdrop-blur-sm">
+                <Card key={index} className="p-6 md:p-8 text-center rounded-xl border-border/20 bg-card">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
@@ -205,7 +205,7 @@ const Investors = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background border-t border-border/20">
         <div className="container px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
@@ -240,7 +240,7 @@ const Investors = () => {
       <ResourceLibrary />
 
       {/* Process Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-background border-t border-border/20">
         <div className="container px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
@@ -259,7 +259,7 @@ const Investors = () => {
               const Icon = step.icon;
               return (
                 <div key={index} className="relative">
-                  <Card className="p-6 md:p-8 h-full rounded-xl border-border/20 bg-background/30 backdrop-blur-sm">
+                  <Card className="p-6 md:p-8 h-full rounded-xl border-border/20 bg-card">
                     <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
                       {index + 1}
                     </div>
@@ -277,7 +277,7 @@ const Investors = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background border-t border-border/20">
         <div className="container px-8">
           <Card className="max-w-4xl mx-auto p-8 md:p-12 rounded-xl border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
             <div className="text-center">

@@ -154,7 +154,7 @@ const Students = () => {
         </section>
 
         {/* Why Jungle Rent Section */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-16 md:py-24 bg-background border-t border-border/20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
@@ -311,7 +311,7 @@ const Students = () => {
         </section>
 
         {/* Tools Section */}
-        <section className="py-16 md:py-24 bg-accent/30">
+        <section className="py-16 md:py-24 bg-background border-t border-border/20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
@@ -410,7 +410,7 @@ const Students = () => {
         </section>
 
         {/* Market Stats */}
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 border-t border-border/20">
           <div className="container mx-auto px-4">
             <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground text-center mb-8">
               {t("students.stats.label", "Turin at a Glance")}
@@ -422,7 +422,7 @@ const Students = () => {
                 { value: "9", label: t("students.stats.neighborhoods"), icon: MapPin },
                 { value: "€300-500", label: t("students.stats.avgRent"), icon: Home }
               ].map((stat, i) => (
-                <Card key={i} className="rounded-xl border-border/20 bg-background/30 backdrop-blur-sm p-6 md:p-8 text-center">
+                <Card key={i} className="rounded-xl border-border/20 bg-card p-6 md:p-8 text-center">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="w-6 h-6 text-primary" />
                   </div>
@@ -435,7 +435,7 @@ const Students = () => {
         </section>
 
         {/* Resources Hub */}
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-16 md:py-24 bg-background border-t border-border/20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
@@ -491,7 +491,7 @@ const Students = () => {
         </section>
 
         {/* Investor CTA */}
-        <section className="py-16 md:py-24 bg-primary/5">
+        <section className="py-16 md:py-24 bg-background border-t border-border/20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-3">
               {t("students.investorCta.title")}
