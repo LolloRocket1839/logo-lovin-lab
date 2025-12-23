@@ -986,3 +986,24 @@ All colors MUST be HSL.
 .animate-subtle-float {
   animation: subtle-float 4s ease-in-out infinite;
 }
+
+/* ===== Section Fade Transitions ===== */
+.section-fade-top {
+  position: relative;
+}
+
+.section-fade-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(
+    180deg,
+    hsl(40 55% 88% / 0.6) 0%,
+    hsl(44 65% 90% / 0) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}

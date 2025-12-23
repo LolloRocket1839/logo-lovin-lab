@@ -19,7 +19,7 @@ export const HowItWorks = () => {
   const [studentDialogOpen, setStudentDialogOpen] = useState(false);
 
   return (
-    <section className="py-16 md:py-24 bg-background border-t border-border/20" aria-labelledby="how-it-works-title">
+    <section className="py-16 md:py-24 bg-background section-fade-top" aria-labelledby="how-it-works-title">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <motion.div
