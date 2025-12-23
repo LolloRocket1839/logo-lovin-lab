@@ -88,7 +88,8 @@
     "faq": "FAQ",
     "contacts": "Contatti",
     "contactUs": "Contattaci",
-    "call": "Chiama"
+    "call": "Chiama",
+    "search": "Cerca"
   },
 "about": {
     "metaTitle": "Jungle Rent - Compriamo e Affittiamo Immobili per Studenti | Torino",
@@ -149,6 +150,7 @@
     "talkToLorenzo": "Parla con Lorenzo",
     "startInvesting": "Inizia a investire",
     "discover": "Scopri",
+    "howItWorks": "Come funziona?",
     "miniFaq": {
       "whatBuy": "Cosa compro con €100?",
       "whatBuyAnswer": "Acquisti quote di partecipazione nel portafoglio immobiliare di Jungle Rent. Non un immobile intero, ma una frazione del nostro patrimonio gestito.",
@@ -907,6 +909,9 @@
       "ai-assistant": "AI assistant",
       "other": "Altro"
     }
+  },
+  "search": {
+    "askAnything": "Chiedi qualsiasi cosa"
   },
   "stickyCta": {
     "closeLabel": "Chiudi"

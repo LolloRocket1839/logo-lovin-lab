@@ -88,7 +88,8 @@
     "faq": "FAQ",
     "contacts": "Contacts",
     "contactUs": "Contact us",
-    "call": "Call"
+    "call": "Call",
+    "search": "Search"
   },
 "about": {
     "metaTitle": "Jungle Rent - We Buy and Rent Properties to Students | Turin",
@@ -149,6 +150,7 @@
     "talkToLorenzo": "Talk to Lorenzo",
     "startInvesting": "Start investing",
     "discover": "Discover",
+    "howItWorks": "How it works?",
     "miniFaq": {
       "whatBuy": "What do I buy with €100?",
       "whatBuyAnswer": "You purchase equity shares in Jungle Rent's real estate portfolio. Not a whole property, but a fraction of our managed assets.",
@@ -1150,6 +1152,9 @@
       "ai-assistant": "AI assistant",
       "other": "Other"
     }
+  },
+  "search": {
+    "askAnything": "Ask anything"
   },
   "stickyCta": {
     "lorenzoButton": "Lorenzo",

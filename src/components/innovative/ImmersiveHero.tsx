@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -60,6 +61,16 @@ export const ImmersiveHero = () => {
           >
             {t('hero.startInvesting')} →
           </Button>
+
+          {/* How it works link - visible on mobile */}
+          <div className="mt-6 md:hidden">
+            <Link
+              to="/faq"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors underline-offset-4 hover:underline"
+            >
+              {t('hero.howItWorks')} →
+            </Link>
+          </div>
         </div>
       </div>
 
