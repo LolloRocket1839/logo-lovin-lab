@@ -84,7 +84,7 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
             onClick={onClose}
             className="text-xs text-primary hover:underline inline-flex items-center gap-1 mt-2"
           >
-            {t("homepageFaq.viewAll")} <ArrowRight className="w-3 h-3" />
+            {currentLang === 'it' ? 'Tutte le FAQ' : 'All FAQs'} <ArrowRight className="w-3 h-3" />
           </Link>
         </section>
 
