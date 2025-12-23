@@ -1,0 +1,179 @@
+{
+  "accessibility": {
+    "skipToContent": "Saltar al contenido principal",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "languageSelector": "Seleccionar idioma",
+    "startupInnovativaLink": "Startup Innovadora Certificada - Verificar en el registro oficial (abre en nueva ventana)",
+    "opensNewWindow": "(abre en nueva ventana)",
+    "openLogoModal": "Abrir información del logo Jungle Rent",
+    "loading": "Cargando...",
+    "currentPage": "Página actual"
+  },
+  "founders": {
+    "title": "Fundadores",
+    "contactUs": "Contáctanos directamente",
+    "callNow": "Llamar ahora",
+    "message": "Escribir",
+    "noWhatsApp": "¿No tienes WhatsApp?",
+    "sendSMS": "Enviar SMS",
+    "callDirect": "Llamar directamente"
+  },
+  "howItWorks": {
+    "badge": "Nuestro modelo",
+    "title": "Cómo funciona Jungle Rent",
+    "subtitle": "Un modelo donde todos ganan: inversores, estudiantes y turistas",
+    "steps": {
+      "invest": {
+        "title": "Invierte",
+        "desc": "Desde €100, compra acciones de nuestra cartera inmobiliaria"
+      },
+      "acquire": {
+        "title": "Adquirimos",
+        "desc": "Propiedades cerca de las universidades de Turín"
+      },
+      "rent": {
+        "title": "Alquilamos",
+        "desc": "Alquileres flexibles para estudiantes y turistas"
+      },
+      "win": {
+        "title": "Todos ganan",
+        "desc": "Inversores: pagos bimestrales • Estudiantes: -25% alquiler"
+      }
+    },
+    "investors": {
+      "title": "Para inversores",
+      "point1": "Pagos bimestrales",
+      "point2": "Rendimientos por encima del mercado",
+      "point3": "Cero gestión",
+      "point4": "Cartera diversificada"
+    },
+    "students": {
+      "title": "Para estudiantes",
+      "point1": "-25% comparado con el alquiler promedio de Turín",
+      "point2": "Contratos flexibles año académico",
+      "point3": "Cero comisiones de agencia"
+    },
+    "savingHighlight": "Ahorro anual para estudiantes comparado con el alquiler promedio de Turín",
+    "ctaInvest": "Invierte desde €100",
+    "ctaRent": "Buscar alojamiento"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Quiénes somos",
+    "students": "Para estudiantes",
+    "investors": "Para inversores",
+    "sell": "Vender casa",
+    "blog": "Recursos",
+    "faq": "FAQ",
+    "contacts": "Contactos",
+    "contactUs": "Contáctanos",
+    "call": "Llamar",
+    "search": "Buscar"
+  },
+  "hero": {
+    "tagline": "El alquiler seguro en la jungla inmobiliaria",
+    "mainHeadline": "Invierte en vivienda estudiantil en Turín",
+    "mainSubheadline": "Invierte desde €100 en propiedades universitarias. Nosotros compramos y gestionamos, tú ganas.",
+    "badgeExplanation": "Compras acciones de nuestra cartera inmobiliaria. Cero gestión, rentas trimestrales.",
+    "discoverOpportunity": "Descubre la oportunidad",
+    "talkToLorenzo": "Habla con Lorenzo",
+    "startInvesting": "Empieza a invertir",
+    "discover": "Descubrir",
+    "howItWorks": "¿Cómo funciona?",
+    "iAmStudent": "Soy estudiante",
+    "iAmInvestor": "Soy inversor",
+    "contactLorenzo": "Contactar a Lorenzo"
+  },
+  "student": {
+    "title": "Para estudiantes",
+    "subtitle": "Nuestra misión: resolver la crisis habitacional estudiantil",
+    "sectionLabel": "Para estudiantes",
+    "sectionTitle": "Resolvemos la crisis habitacional estudiantil",
+    "compactDesc": "Alquileres accesibles en zonas universitarias. Contratos transparentes, cero comisiones y soporte dedicado para tu trayectoria académica.",
+    "contactCta": "Contáctanos por WhatsApp"
+  },
+  "investor": {
+    "title": "Para inversores",
+    "subtitle": "Democratizamos el acceso al mercado inmobiliario",
+    "sectionLabel": "Para inversores",
+    "sectionTitle": "Accede al mercado inmobiliario desde €100",
+    "compactDesc": "Invierte en propiedades universitarias en Turín. Gestión completa, modelo híbrido estudiantes/turistas.",
+    "cta": "Descubre la oportunidad"
+  },
+  "seller": {
+    "title": "Vende tu casa en Turín",
+    "subtitle": "Valoración gratuita • Cero comisiones • Cierre en 60-90 días",
+    "sectionLabel": "Vender casa",
+    "newTitle": "Compramos tu propiedad. No somos una agencia.",
+    "newSubtitle": "No buscamos compradores para ti. Jungle Rent compra directamente propiedades en zonas universitarias.",
+    "cta": "Solicitar valoración"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Respuestas rápidas a tus preguntas",
+    "sectionLabel": "FAQ",
+    "investorCategory": "Para inversores",
+    "sellerCategory": "Para vendedores",
+    "aboutCategory": "Quién es Jungle Rent"
+  },
+  "footer": {
+    "tagline": "El alquiler seguro en la jungla inmobiliaria",
+    "description": "Inversiones inmobiliarias en vivienda estudiantil en Turín. Acceso desde €100.",
+    "quickLinks": "Enlaces rápidos",
+    "forStudents": "Para estudiantes",
+    "forInvestors": "Para inversores",
+    "sellProperty": "Vender propiedad",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto",
+    "copyright": "© 2025 Jungle Rent S.r.l. Todos los derechos reservados.",
+    "startupBadge": "Startup Innovadora registrada en el Registro de Empresas de Turín"
+  },
+  "blog": {
+    "sectionLabel": "City Living",
+    "sectionTitle": "City Living",
+    "sectionSubtitle": "Contenidos sobre la ciudad para ti... ¡y quizás no obvios!",
+    "readGuide": "Leer la guía",
+    "exploreAll": "Explorar todo",
+    "newBadge": "Nuevo",
+    "viewAll": "Ver todos los recursos",
+    "readMore": "Leer artículo",
+    "share": "Compartir",
+    "relatedPosts": "Artículos relacionados",
+    "categories": {
+      "all": "Todos",
+      "students": "Para estudiantes",
+      "investors": "Para inversores",
+      "sellers": "Para vendedores",
+      "turisti": "Para turistas",
+      "societa": "Empresa"
+    }
+  },
+  "quickLead": {
+    "title": "Invierte en Jungle Rent",
+    "description": "Deja tu email y te contactaremos para discutir las oportunidades de inversión.",
+    "namePlaceholder": "¿Cómo te llamas?",
+    "optional": "opcional",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "successTitle": "¡Gracias!",
+    "successDescription": "Te contactaremos pronto para discutir las oportunidades de inversión.",
+    "errorTitle": "Error",
+    "errorDescription": "Ha ocurrido un error. Inténtalo más tarde.",
+    "emailRequired": "Introduce tu email",
+    "invalidEmail": "Introduce un email válido",
+    "privacy": "Tus datos están seguros. Nunca los compartiremos con terceros."
+  },
+  "trustBadge": {
+    "title": "Tu seguridad es nuestra prioridad",
+    "verified": "Contratos certificados",
+    "support": "Soporte 24/7",
+    "transparent": "Transparencia total",
+    "sectionLabel": "Asociación institucional",
+    "supportedBy": "Apoyados por 2i3T",
+    "incubator": "Incubadora de Empresas de la Universidad de Turín"
+  }
+}

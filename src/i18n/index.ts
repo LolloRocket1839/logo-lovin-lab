@@ -4,6 +4,9 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import translationIT from './locales/it.json';
 import translationEN from './locales/en.json';
+import translationES from './locales/es.json';
+import translationFR from './locales/fr.json';
+import translationDE from './locales/de.json';
 
 const resources = {
   it: {
@@ -11,8 +14,19 @@ const resources = {
   },
   en: {
     translation: translationEN
+  },
+  es: {
+    translation: translationES
+  },
+  fr: {
+    translation: translationFR
+  },
+  de: {
+    translation: translationDE
   }
 };
+
+const supportedLanguages = ['it', 'en', 'es', 'fr', 'de'];
 
 i18n
   .use(LanguageDetector)
@@ -20,7 +34,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'it',
-    supportedLngs: ['it', 'en'],
+    supportedLngs: supportedLanguages,
     debug: false,
     interpolation: {
       escapeValue: false
@@ -37,7 +51,7 @@ i18n
         // Extract base language code (e.g., 'en-US' -> 'en', 'it-IT' -> 'it')
         const baseLang = lng.split('-')[0].toLowerCase();
         // Only return if it's a supported language, otherwise fallback
-        return ['it', 'en'].includes(baseLang) ? baseLang : 'it';
+        return supportedLanguages.includes(baseLang) ? baseLang : 'it';
       }
     }
   });

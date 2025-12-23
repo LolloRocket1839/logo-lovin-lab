@@ -7,7 +7,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
-import { CONTACTS, openQuickContact } from "@/lib/contacts";
+import { CONTACTS, openQuickContact, type SupportedLanguage } from "@/lib/contacts";
 
 export const Navigation = () => {
   const { t } = useTranslation();
@@ -62,8 +62,8 @@ export const Navigation = () => {
     // Handle founders click - open WhatsApp with preset message
     if ('isFounders' in item && item.isFounders) {
       e.preventDefault();
-      const language = (document.documentElement.lang || 'it') as 'it' | 'en';
-      openQuickContact(language === 'en' ? 'en' : 'it');
+      const lang = (document.documentElement.lang || 'it') as SupportedLanguage;
+      openQuickContact(lang);
       setIsMobileMenuOpen(false);
       return;
     }
