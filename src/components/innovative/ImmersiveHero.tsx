@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { HeroLogo } from "./HeroLogo";
+import { HowItWorksDrawer } from "./HowItWorksDrawer";
 
 export const ImmersiveHero = () => {
   const { t } = useTranslation();
@@ -28,6 +29,9 @@ export const ImmersiveHero = () => {
       {/* Main content */}
       <div className="container relative z-10 px-4 md:px-8 py-12">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Animated Logo - visible on mobile, fades with scroll */}
+          <HeroLogo />
+
           {/* Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight">
             {headline.split(' ').map((word, i) => (
@@ -62,15 +66,8 @@ export const ImmersiveHero = () => {
             {t('hero.startInvesting')} →
           </Button>
 
-          {/* How it works link - visible on mobile */}
-          <div className="mt-6 md:hidden">
-            <Link
-              to="/faq"
-              className="text-sm text-muted-foreground hover:text-primary transition-colors underline-offset-4 hover:underline"
-            >
-              {t('hero.howItWorks')} →
-            </Link>
-          </div>
+          {/* How it works drawer - mobile only */}
+          <HowItWorksDrawer />
         </div>
       </div>
 
