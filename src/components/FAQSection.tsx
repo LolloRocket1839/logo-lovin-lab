@@ -68,7 +68,7 @@ export const FAQSection = () => {
   ];
 
   return (
-    <section id="faq-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-background">
+    <section id="faq-section" className="py-8 sm:py-10 md:py-12 lg:py-16 bg-background border-t border-border/20">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4">{t("faq.title")}</h2>

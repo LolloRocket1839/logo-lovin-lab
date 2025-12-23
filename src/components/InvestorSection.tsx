@@ -54,7 +54,7 @@ export const InvestorSection = () => {
   return (
     <section 
       id="investor-section" 
-      className="py-16 md:py-24 bg-background relative overflow-hidden"
+      className="py-16 md:py-24 bg-background border-t border-border/20 relative overflow-hidden"
     >
       
       <div className="container px-6 md:px-8 relative z-10">
