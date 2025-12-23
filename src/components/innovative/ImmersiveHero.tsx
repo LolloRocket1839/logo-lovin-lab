@@ -80,8 +80,8 @@ export const ImmersiveHero = () => {
           >
             <img src={logo2i3t} alt="2i3T" className="h-7 w-auto" />
             <div className="text-left">
-              <p className="text-sm font-medium text-foreground">{t("trust.incubator")}</p>
-              <p className="text-xs text-muted-foreground">Startup Innovativa</p>
+              <p className="text-sm font-medium text-foreground">Incubatore Imprese UniTO</p>
+              <p className="text-xs text-primary font-medium">Startup Innovativa</p>
             </div>
           </a>
 
