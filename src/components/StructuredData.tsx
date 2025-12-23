@@ -305,7 +305,7 @@ export const StructuredData = () => {
           name: "Quanto si guadagna investendo in appartamenti per studenti a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione: 9 mesi di affitti studenteschi più 3 mesi estivi di affitti turistici. Ricevi report trimestrali dettagliati.",
+            text: "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione con contratti flessibili per l'anno accademico più affitti turistici estivi. Ricevi report trimestrali dettagliati.",
           },
         },
         {
@@ -353,7 +353,7 @@ export const StructuredData = () => {
           name: "Come funziona il mercato degli affitti studenteschi a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Torino ha oltre 90.000 studenti universitari e forte domanda di alloggi. I contratti sono tipicamente di 9-12 mesi, i prezzi variano da €300-600 per stanza singola a seconda della zona. Jungle Rent offre contratti 9 mesi con risparmio del 25%.",
+            text: "Torino ha oltre 90.000 studenti universitari e forte domanda di alloggi. I contratti variano da 9 a 12 mesi, i prezzi da €300-600 per stanza singola a seconda della zona. Jungle Rent offre contratti flessibili per l'anno accademico con risparmio del 25%.",
           },
         },
         {
