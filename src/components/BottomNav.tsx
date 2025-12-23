@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Home, TrendingUp, Building2, Calendar } from "lucide-react";
+import { Home, TrendingUp, Building2, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { openCalendly } from "@/lib/calendly";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
 
@@ -36,9 +35,9 @@ export const BottomNav = () => {
     setSellerDialogOpen(true);
   };
 
-  const handleCalendlyClick = () => {
-    trackClick('bottom_nav_calendly');
-    openCalendly();
+  const handleStudentsClick = () => {
+    trackClick('bottom_nav_students');
+    navigate('/studenti');
   };
 
   return (
@@ -79,13 +78,13 @@ export const BottomNav = () => {
             <span className="text-[10px] font-medium">{t("nav.sell")}</span>
           </button>
 
-          {/* Calendly - Schedule call */}
+          {/* Students */}
           <button
-            onClick={handleCalendlyClick}
+            onClick={handleStudentsClick}
             className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
           >
-            <Calendar className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">{t("nav.call")}</span>
+            <GraduationCap className="w-5 h-5" aria-hidden="true" />
+            <span className="text-[10px] font-medium">{t("nav.students")}</span>
           </button>
         </div>
       </nav>
