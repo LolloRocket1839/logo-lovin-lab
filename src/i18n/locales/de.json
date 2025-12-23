@@ -58,6 +58,31 @@
     "ctaInvest": "Investieren ab 100€",
     "ctaRent": "Unterkunft suchen"
   },
+  "video": {
+    "title": "Unser Modell in 2 Minuten verstehen",
+    "subtitle": "Ein kurzes Video, das erklärt, wie man in Studentenwohnungen in Turin mit Jungle Rent investiert.",
+    "badge": "2 Minuten",
+    "point1": "Wie das Modell funktioniert",
+    "point2": "Erwartete Renditen",
+    "point3": "Null Verwaltung für Sie",
+    "cta": "Mit Lorenzo sprechen",
+    "play": "Video abspielen"
+  },
+  "problem": {
+    "badge": "Das Problem",
+    "title": "Die Wohnungskrise für Studenten in Italien",
+    "subtitle": "Fast 600.000 Studenten suchen jedes Jahr eine Wohnung, aber das Angebot deckt nur 12,6% der Nachfrage. Eine Krise, die eine Chance darstellt.",
+    "stat1Label": "Studenten außerhalb des Heimatortes",
+    "stat1Sub": "in Italien",
+    "stat2Label": "suchen Unterkunft",
+    "stat2Sub": "im privaten Sektor",
+    "stat3Label": "Nachfrage gedeckt",
+    "stat3Sub": "durch dediziertes Housing",
+    "stat4Label": "Marktpotenzial",
+    "stat4Sub": "in Italien",
+    "source": "Daten 2025 - Quelle: Savills Research, Student Housing Italy Spotlight",
+    "cta": "Den vollständigen Bericht lesen"
+  },
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
@@ -69,7 +94,30 @@
     "contacts": "Kontakte",
     "contactUs": "Kontaktieren Sie uns",
     "call": "Anrufen",
-    "search": "Suchen"
+    "search": "Suchen",
+    "back": "Zurück"
+  },
+  "about": {
+    "metaTitle": "Jungle Rent - Wir kaufen und vermieten Immobilien für Studenten | Turin",
+    "metaDescription": "Immobilien-Startup mit doppelter Mission: Die studentische Wohnungskrise lösen und den Zugang zu Immobilien demokratisieren.",
+    "title": "Wer ist Jungle Rent",
+    "subtitle": "Wir kaufen Immobilien und vermieten sie, um die studentische Wohnungskrise zu lösen",
+    "foundedLabel": "Gründungsdatum",
+    "foundedDate": "Oktober 2025",
+    "legalForm": "Innovative Start-up S.r.l.",
+    "foundersLabel": "Gründungsgesellschafter",
+    "founderLabel": "Gründer",
+    "lorenzoRole": "Gründer • LUISS Recht und Wirtschaft",
+    "capitalLabel": "Stammkapital",
+    "capitalDesc": "Vollständig eingezahlt",
+    "locationLabel": "Firmensitz",
+    "servicesTitle": "Was wir tun",
+    "contactTitle": "Kontaktieren Sie uns",
+    "contactLorenzo": "Mit Lorenzo sprechen",
+    "sendEmail": "E-Mail senden"
+  },
+  "breadcrumbs": {
+    "home": "Startseite"
   },
   "hero": {
     "tagline": "Die sichere Miete im Immobiliendschungel",
@@ -81,17 +129,78 @@
     "startInvesting": "Jetzt investieren",
     "discover": "Entdecken",
     "howItWorks": "Wie funktioniert es?",
+    "miniFaq": {
+      "whatBuy": "Was kaufe ich mit 100€?",
+      "whatBuyAnswer": "Sie kaufen Beteiligungsanteile am Immobilienportfolio von Jungle Rent. Nicht eine ganze Immobilie, sondern einen Bruchteil unseres verwalteten Vermögens.",
+      "howEarn": "Wie erhalte ich die Renditen?",
+      "howEarnAnswer": "Jedes Quartal erhalten Sie Ihren Anteil an den eingezogenen Mieten, proportional zu Ihrer Investition.",
+      "whoManages": "Wer verwaltet die Immobilien?",
+      "whoManagesAnswer": "Jungle Rent verwaltet alles: Akquisition, Verträge, Mieter, Wartung und Steuern."
+    },
     "iAmStudent": "Ich bin Student",
     "iAmInvestor": "Ich bin Investor",
-    "contactLorenzo": "Lorenzo kontaktieren"
+    "contactLorenzo": "Lorenzo kontaktieren",
+    "waitlistCounter": "Schließen Sie sich {{count}} anderen auf der Warteliste an",
+    "supportedBy": "Unterstützt von",
+    "logo2i3tAlt": "2i3T Inkubator Universität Turin - Offizieller Partner"
+  },
+  "studentSearch": {
+    "title": "Finden Sie Ihr Zimmer",
+    "description": "Sagen Sie uns, was Sie suchen, und wir helfen Ihnen, die perfekte Lösung zu finden",
+    "cardTitle": "Finden Sie Ihr ideales Zimmer",
+    "cardDescription": "Füllen Sie das Formular aus und wir helfen Ihnen, die perfekte Lösung zu finden",
+    "cardCta": "Suche starten",
+    "nameLabel": "Name",
+    "namePlaceholder": "Max Mustermann",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "max.mustermann@example.com",
+    "whatYouLookingForLabel": "Was suchen Sie?",
+    "whatYouLookingForPlaceholder": "Beschreiben Sie Ihr ideales Zimmer: Gegend, Eigenschaften, was Ihnen wichtig ist...",
+    "submitButton": "Anfrage senden",
+    "submitting": "Wird gesendet...",
+    "successTitle": "Anfrage gesendet! 🎉",
+    "successDescription": "Wir werden Sie bald mit den besten Optionen für Sie kontaktieren"
+  },
+  "trustBadge": {
+    "title": "Ihre Sicherheit hat Priorität",
+    "verified": "Zertifizierte Verträge",
+    "support": "24/7 Support",
+    "transparent": "Volle Transparenz",
+    "sectionLabel": "Institutionelle Partnerschaft",
+    "supportedBy": "Unterstützt von 2i3T",
+    "incubator": "Unternehmensinkubator der Universität Turin",
+    "learnMore": "Mehr über 2i3T erfahren",
+    "guarantee": "Im Turiner Universitäts-Ökosystem inkubiert, garantiert Professionalität und Zuverlässigkeit"
+  },
+  "benefits": {
+    "title": "Warum Jungle Rent wählen",
+    "subtitle": "Exklusive Vorteile für Ihr Wohnerlebnis",
+    "sectionLabel": "Unsere Vorteile",
+    "savings": "Zertifizierte Einsparungen",
+    "savingsDesc": "Sparen Sie etwa 30% bei Mieten mit transparenten Verträgen.",
+    "investment": "Investitionsmöglichkeit",
+    "investmentDesc": "Für Investoren: professionelle Immobilienverwaltung mit konstanter universitärer Nachfrage",
+    "location": "Strategische Lage",
+    "locationDesc": "Ausgewähltes Immobilienportfolio in der Nähe aller wichtigen Universitäten",
+    "quality": "Zertifizierte Verträge",
+    "qualityDesc": "Reguläre Verträge, professionelle Verwaltung und volle Transparenz."
   },
   "student": {
     "title": "Für Studenten",
     "subtitle": "Unsere Mission: Die studentische Wohnungskrise lösen",
     "sectionLabel": "Für Studenten",
     "sectionTitle": "Wir lösen die studentische Wohnungskrise",
-    "compactDesc": "Bezahlbare Mieten in Universitätsvierteln. Transparente Verträge, keine Gebühren und dedizierter Support für Ihre akademische Laufbahn.",
-    "contactCta": "Kontaktieren Sie uns über WhatsApp"
+    "compactDesc": "Bezahlbare Mieten in Universitätsvierteln. Transparente Verträge, keine Gebühren und dedizierter Support.",
+    "contactCta": "Kontaktieren Sie uns über WhatsApp",
+    "benefit1Title": "Reduzierte Kosten",
+    "benefit1Desc": "Günstige Mieten: mehr Geld zum Studieren und Leben in Turin",
+    "benefit2Title": "Flexible Verträge",
+    "benefit2Desc": "Flexible Verträge für das akademische Jahr: 25% sparen",
+    "contactText": "Kontaktieren Sie direkt unsere Berater:",
+    "contactLorenzo": "Mit Lorenzo sprechen",
+    "sendEmail": "E-Mail senden",
+    "responseTime": "Antwort in 40 Minuten",
+    "cta": "Zimmer entdecken"
   },
   "investor": {
     "title": "Für Investoren",
@@ -99,7 +208,22 @@
     "sectionLabel": "Für Investoren",
     "sectionTitle": "Zugang zum Immobilienmarkt ab 100€",
     "compactDesc": "Investieren Sie in Universitätsimmobilien in Turin. Komplette Verwaltung, Hybridmodell Studenten/Touristen.",
-    "cta": "Entdecken Sie die Gelegenheit"
+    "sectionSubtitle": "Doppelte Mission: Studentische Wohnungskrise und demokratischer Zugang zum Immobilienmarkt",
+    "startupInnovativaBadge": "Zertifiziertes innovatives Startup",
+    "whyInvestTitle": "Warum bei uns investieren",
+    "benefit1Title": "Optimierte Investition",
+    "benefit1Desc": "Möglichkeiten auf dem Immobilienmarkt dank unserer professionellen Verwaltung",
+    "benefit2Title": "Komplette Verwaltung",
+    "benefit2Desc": "Wir kümmern uns um alles: Verträge, Wartung, Mieterbeziehungen",
+    "benefit3Title": "Strategisches Portfolio",
+    "benefit3Desc": "Ausgewählte Immobilien in der Nähe der wichtigsten Universitätsstandorte in Turin",
+    "waitlistTitle": "Treten Sie der Investoren-Warteliste bei",
+    "waitlistSubtitle": "Erhalten Sie exklusive Updates zu Immobilieninvestitionsmöglichkeiten",
+    "waitlistCta": "Auf die Warteliste",
+    "cta": "Entdecken Sie die Gelegenheit",
+    "talkToLorenzo": "Mit Lorenzo sprechen",
+    "bookCall": "Interesse zeigen",
+    "minInvestmentBadge": "Investieren ab 100€"
   },
   "seller": {
     "title": "Verkaufen Sie Ihr Haus in Turin",
@@ -107,7 +231,49 @@
     "sectionLabel": "Haus verkaufen",
     "newTitle": "Wir kaufen Ihre Immobilie. Wir sind keine Agentur.",
     "newSubtitle": "Wir suchen keine Käufer für Sie. Jungle Rent kauft direkt Immobilien in Universitätsvierteln.",
-    "cta": "Bewertung anfordern"
+    "directBuyerTitle": "Wir kaufen Ihre Immobilie direkt",
+    "directBuyerSubtitle": "Wir sind keine Agentur. Wir kaufen für unser Portfolio.",
+    "benefit1": "Null Provision",
+    "benefit2": "60-90 Tage",
+    "benefit3": "Garantierter Käufer",
+    "cta": "Bewertung anfordern",
+    "ctaButton": "Kostenlose Bewertung anfordern"
+  },
+  "quickSellerLead": {
+    "title": "Verkaufen Sie Ihr Haus",
+    "newTitle": "Kostenlose Bewertung in 24 Stunden",
+    "description": "Hinterlassen Sie Ihre Daten und wir kontaktieren Sie für eine kostenlose Bewertung.",
+    "notAgency": "Wir sind keine Agentur. Wenn Ihre Immobilie in unseren Zonen liegt, machen wir Ihnen ein direktes Angebot.",
+    "advantage1": "Direkter Käufer",
+    "advantage2": "Null Provision",
+    "advantage3": "Angebot in 7 Tagen",
+    "namePlaceholder": "Wie heißen Sie?",
+    "addressPlaceholder": "Adresse der Immobilie",
+    "optional": "optional",
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet...",
+    "successTitle": "Anfrage gesendet!",
+    "successDescription": "Wir werden Sie bald für eine kostenlose Bewertung kontaktieren.",
+    "close": "Schließen",
+    "errorTitle": "Fehler",
+    "errorDescription": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+    "privacy": "Ihre Daten sind sicher. Wir werden sie niemals mit Dritten teilen."
+  },
+  "tourist": {
+    "sectionLabel": "Für Touristen & Digital Nomads",
+    "sectionTitle": "Entdecken Sie Turin wie ein Einheimischer",
+    "sectionDesc": "Ausgewählte Unterkünfte, exklusive Guides und authentische Tipps, um Turin optimal zu erleben.",
+    "ctaTitle": "Vollständige Guides über Turin",
+    "ctaDesc": "Entdecken Sie, wo man essen, arbeiten, erkunden und leben kann in Turin",
+    "ctaButton": "Guides lesen",
+    "benefit1Title": "Ausgewählte Unterkünfte",
+    "benefit1Desc": "Verifizierte Apartments in den besten Vierteln von Turin",
+    "benefit2Title": "Authentische lokale Guides",
+    "benefit2Desc": "Insider-Tipps zu Cafés, Coworking, Restaurants und lokaler Kultur",
+    "benefit3Title": "Persönlicher Support",
+    "benefit3Desc": "Dedizierte Unterstützung, um Ihren Aufenthalt unvergesslich zu machen",
+    "contactPrompt": "Brauchen Sie Tipps zu Turin?",
+    "contactButton": "Kontaktieren Sie uns über WhatsApp"
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
@@ -115,7 +281,21 @@
     "sectionLabel": "FAQ",
     "investorCategory": "Für Investoren",
     "sellerCategory": "Für Verkäufer",
-    "aboutCategory": "Wer ist Jungle Rent"
+    "aboutCategory": "Wer ist Jungle Rent",
+    "investorQ1": "Was ist die Mindestinvestition?",
+    "investorA1": "Die Mindestinvestition bei Jungle Rent beginnt bei 100€ und ermöglicht den Zugang zum Turiner Immobilienmarkt auch mit begrenztem Kapital.",
+    "investorQ2": "Wie funktioniert die Investition?",
+    "investorA2": "Sie investieren in Anteile des Jungle Rent Immobilienportfolios. Sie partizipieren an den Ergebnissen der Verwaltung proportional zu Ihrem Anteil.",
+    "investorQ3": "Verwaltet Jungle Rent die Immobilie vollständig?",
+    "investorA3": "Ja, wir bieten einen Full-Service-Verwaltungsdienst, der Folgendes umfasst: Suche und Auswahl von Mietern, Vertragsverwaltung, Wartung, Mieteinzug und vierteljährliche Berichte.",
+    "sellerQ1": "Was kostet der Verkauf meines Hauses an Jungle Rent?",
+    "sellerA1": "Null Provision. Wir sind direkte Käufer, keine Immobilienagentur.",
+    "sellerQ2": "Wie lange dauert der Verkaufsprozess?",
+    "sellerA2": "Kostenlose Bewertung in 48-72 Stunden, Angebot in 7 Tagen, Abschluss in 60-90 Tagen.",
+    "aboutQ1": "Was ist Jungle Rent?",
+    "aboutA1": "Jungle Rent ist ein innovatives Startup, das Immobilien in Universitätsvierteln von Turin kauft und an Studenten vermietet.",
+    "aboutQ2": "Wer steckt hinter Jungle Rent?",
+    "aboutA2": "Jungle Rent wurde von Lorenzo gegründet und ist bei 2i3T, dem Unternehmensinkubator der Universität Turin, inkubiert."
   },
   "footer": {
     "tagline": "Die sichere Miete im Immobiliendschungel",
@@ -130,27 +310,59 @@
     "terms": "Bedingungen",
     "contact": "Kontakt",
     "copyright": "© 2025 Jungle Rent S.r.l. Alle Rechte vorbehalten.",
-    "startupBadge": "Innovatives Startup im Handelsregister Turin eingetragen"
+    "startupBadge": "Innovatives Startup im Handelsregister Turin eingetragen",
+    "madeWith": "Gemacht mit",
+    "inTurin": "in Turin"
   },
-  "blog": {
-    "sectionLabel": "City Living",
-    "sectionTitle": "City Living",
-    "sectionSubtitle": "Inhalte über die Stadt für Sie... und vielleicht nicht offensichtlich!",
-    "readGuide": "Leitfaden lesen",
-    "exploreAll": "Alles erkunden",
-    "newBadge": "Neu",
-    "viewAll": "Alle Ressourcen anzeigen",
-    "readMore": "Artikel lesen",
-    "share": "Teilen",
-    "relatedPosts": "Ähnliche Artikel",
-    "categories": {
-      "all": "Alle",
-      "students": "Für Studenten",
-      "investors": "Für Investoren",
-      "sellers": "Für Verkäufer",
-      "turisti": "Für Touristen",
-      "societa": "Unternehmen"
-    }
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "lastUpdated": "Zuletzt aktualisiert"
+  },
+  "terms": {
+    "title": "Allgemeine Geschäftsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert"
+  },
+  "waitlist": {
+    "title": "Der Warteliste beitreten",
+    "description": "Seien Sie der Erste, der erfährt, wenn wir neue Zimmer starten",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "ihre@email.de",
+    "universityLabel": "Universität",
+    "budgetLabel": "Monatliches Budget",
+    "moveDateLabel": "Wann möchten Sie einziehen?",
+    "referralLabel": "Wie haben Sie uns gefunden?",
+    "consentLabel": "Ich stimme der Verarbeitung meiner persönlichen Daten gemäß der Datenschutzrichtlinie zu",
+    "submitButton": "Der Warteliste beitreten",
+    "submitting": "Wird gesendet...",
+    "successTitle": "✨ Anmeldung abgeschlossen!",
+    "successDescription": "Überprüfen Sie Ihre E-Mail zur Bestätigung. Willkommen bei Jungle Rent!"
+  },
+  "investorWaitlist": {
+    "title": "Der Investoren-Warteliste beitreten",
+    "description": "Zeigen Sie Ihr Interesse, in Jungle Rent zu investieren. Wir werden Sie mit exklusiven Informationen kontaktieren.",
+    "nameLabel": "Vollständiger Name",
+    "namePlaceholder": "Max Mustermann",
+    "nameError": "Geben Sie Ihren Namen ein",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "max.mustermann@email.de",
+    "emailError": "Geben Sie eine gültige E-Mail ein",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+49 151 12345678",
+    "phoneError": "Geben Sie Ihre Telefonnummer ein",
+    "investmentBudgetLabel": "Investitionsbudget",
+    "investmentBudgetPlaceholder": "Wählen Sie Ihr Budget",
+    "consentLabel": "Ich stimme der Datenverarbeitung (DSGVO) zu und möchte Updates zu Investitionsmöglichkeiten erhalten",
+    "consentError": "Sie müssen zustimmen, um fortzufahren",
+    "submitButton": "Interesse zeigen",
+    "submitting": "Wird gesendet...",
+    "successTitle": "🎉 Interesse registriert!",
+    "successDescription": "Danke! Sie erhalten bald exklusive Informationen über Investitionsmöglichkeiten."
+  },
+  "search": {
+    "askAnything": "Fragen Sie alles"
+  },
+  "stickyCta": {
+    "closeLabel": "Schließen"
   },
   "quickLead": {
     "title": "In Jungle Rent investieren",
@@ -161,19 +373,163 @@
     "sending": "Wird gesendet...",
     "successTitle": "Danke!",
     "successDescription": "Wir werden Sie bald kontaktieren, um Investitionsmöglichkeiten zu besprechen.",
+    "successMessage": "Wir werden Sie bald kontaktieren, um Investitionsmöglichkeiten zu besprechen.",
+    "scheduleCall": "Anruf buchen",
+    "close": "Schließen",
     "errorTitle": "Fehler",
     "errorDescription": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
     "emailRequired": "Geben Sie Ihre E-Mail ein",
     "invalidEmail": "Geben Sie eine gültige E-Mail ein",
     "privacy": "Ihre Daten sind sicher. Wir werden sie niemals mit Dritten teilen."
   },
-  "trustBadge": {
-    "title": "Ihre Sicherheit hat Priorität",
-    "verified": "Zertifizierte Verträge",
-    "support": "24/7 Support",
-    "transparent": "Volle Transparenz",
-    "sectionLabel": "Institutionelle Partnerschaft",
-    "supportedBy": "Unterstützt von 2i3T",
-    "incubator": "Unternehmensinkubator der Universität Turin"
+  "blog": {
+    "sectionLabel": "City Living",
+    "sectionTitle": "City Living",
+    "sectionSubtitle": "Inhalte über die Stadt für Sie... und vielleicht nicht offensichtlich!",
+    "bannerTitle": "Info über die Stadt, Immobilien und Studenten-Shortcuts",
+    "bannerSubtitle": "Guides, Analysen und Tipps zu Turin",
+    "readGuide": "Guide lesen",
+    "exploreAll": "Alles erkunden",
+    "newBadge": "Neu",
+    "viewAll": "Alle Ressourcen anzeigen",
+    "readMore": "Artikel lesen",
+    "share": "Teilen",
+    "shareVia": "Teilen via",
+    "shareWhatsApp": "Auf WhatsApp teilen",
+    "copyLink": "Link kopieren",
+    "linkCopied": "Link kopiert!",
+    "relatedPosts": "Ähnliche Artikel",
+    "categories": {
+      "all": "Alle",
+      "students": "Für Studenten",
+      "investors": "Für Investoren",
+      "sellers": "Für Verkäufer",
+      "turisti": "Für Touristen",
+      "societa": "Unternehmen"
+    },
+    "search": {
+      "placeholder": "Artikel suchen...",
+      "noResults": "Keine Artikel für \"{{query}}\" gefunden"
+    },
+    "hero": {
+      "title": "Ressourcen und Guides",
+      "subtitle": "Analysen, Daten und praktische Tipps zum Turiner Immobilienmarkt"
+    },
+    "meta": {
+      "title": "Blog Jungle Rent | Guides zu Vermietungen, Investitionen und Verkäufen in Turin",
+      "description": "Entdecken Sie Guides, Daten und Analysen zum Turiner Immobilienmarkt."
+    }
+  },
+  "resourceLibrary": {
+    "sectionTitle": "Kostenlose Ressourcen für Investoren",
+    "sectionSubtitle": "Vollständige Guides zur Maximierung Ihrer Immobilieninvestitionen",
+    "downloadCta": "Kostenlosen Guide herunterladen",
+    "downloadDirectCta": "PDF herunterladen",
+    "readAnalysis": "Berichtsanalyse lesen"
+  },
+  "students": {
+    "seo": {
+      "title": "Vermietungen für Studenten in Turin | Jungle Rent",
+      "description": "Finden Sie Ihre Studentenunterkunft in der Nähe von Politecnico, UniTo und allen Universitäten in Turin."
+    },
+    "badge": "Coming Soon 2026",
+    "hero": {
+      "title": "Vermietungen für Studenten in Turin",
+      "subtitle": "Wir bauen einen besseren Weg, um eine Wohnung in der Nähe der Universität zu finden. Melden Sie sich an, um zu den Ersten zu gehören."
+    },
+    "waitlist": {
+      "placeholder": "Ihre E-Mail",
+      "button": "Der Warteliste beitreten",
+      "note": "Wir werden Sie kontaktieren, wenn wir bereit sind. Kein Spam.",
+      "success": "Anmeldung abgeschlossen! Wir werden Sie bald kontaktieren.",
+      "error": "Fehler. Versuchen Sie es später erneut."
+    },
+    "stats": {
+      "students": "Universitätsstudenten",
+      "universities": "Universitäten in Turin",
+      "neighborhoods": "Studentenviertel",
+      "avgRent": "durchschnittliche Zimmermiete"
+    },
+    "resources": {
+      "title": "Ressourcen für Studenten",
+      "subtitle": "Kostenlose Guides zum Leben und Studieren in Turin",
+      "viewAll": "Alle Guides anzeigen"
+    },
+    "tools": {
+      "badge": "Kostenlose Tools",
+      "title": "Nützliche Tools für Studenten",
+      "subtitle": "Praktische Ressourcen zur Planung Ihres Lebens in Turin",
+      "budgetCalc": {
+        "title": "Budget-Rechner",
+        "description": "Erfahren Sie, wie viel das Leben in jedem Viertel kostet",
+        "cta": "Jetzt ausprobieren"
+      },
+      "gradeCalc": {
+        "title": "Notenrechner",
+        "description": "Berechnen Sie Ihren gewichteten Durchschnitt und Ihre Abschlussnote",
+        "cta": "Jetzt ausprobieren"
+      },
+      "backToTools": "Zurück zu Tools"
+    }
+  },
+  "aiSearch": {
+    "title": "Perplexity fragen",
+    "subtitle": "Echtzeit-Suche zu Unterkünften und Investitionen in Turin",
+    "placeholder": "Fragen Sie zu Mietpreisen, Vierteln, Renditen...",
+    "askButton": "Perplexity fragen",
+    "searching": "Suche läuft...",
+    "sources": "Quellen",
+    "error": "Entschuldigung, ich habe keine Antwort gefunden. Versuchen Sie, die Frage umzuformulieren.",
+    "poweredBy": "Powered by"
+  },
+  "homeFaq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Die Antworten auf die häufigsten Fragen von Investoren",
+    "viewAll": "Alle FAQ anzeigen"
+  },
+  "thankYou": {
+    "title": "Danke, dass Sie uns kontaktiert haben! ((:",
+    "investor": {
+      "subtitle": "Wir haben Ihre Anfrage erhalten. Wir werden Sie innerhalb von 24 Stunden kontaktieren.",
+      "step1": "Wir werden Sie innerhalb von 24 Stunden per E-Mail oder Telefon kontaktieren",
+      "step2": "Wir werden einen Anruf vereinbaren, um Ihre Bedürfnisse zu verstehen",
+      "step3": "Wir senden Ihnen die Dokumentation und detaillierte Informationen",
+      "scheduleCta": "Jetzt einen Anruf buchen"
+    },
+    "student": {
+      "subtitle": "Sie sind auf der Warteliste! Wir benachrichtigen Sie, sobald wir verfügbare Unterkünfte haben.",
+      "step1": "Sie erhalten Updates zur Verfügbarkeit per E-Mail",
+      "step2": "Wir starten die ersten Zimmer im September 2026",
+      "step3": "Sie haben Priorität gegenüber Nicht-Angemeldeten",
+      "resourcesCta": "Ressourcen für Studenten entdecken"
+    },
+    "nextSteps": {
+      "title": "Nächste Schritte"
+    },
+    "backHome": "Zurück zur Startseite"
+  },
+  "startupBadge": {
+    "label": "Innovatives Start-up",
+    "tooltip": "Im Sonderregister für innovative Start-ups eingetragen"
+  },
+  "infographic": {
+    "badge": "Unser Modell",
+    "title": "Das Jungle Rent Modell",
+    "subtitle": "Vereinfachte Immobilieninvestitionen",
+    "disclaimer": "*Investitionen beinhalten Risiken, einschließlich des möglichen Kapitalverlusts.",
+    "cta": "Komplette Verwaltung inklusive.",
+    "scrollHint": "Warten Sie, um fortzufahren"
+  },
+  "investors": {
+    "metaTitle": "Zugängliche Immobilieninvestitionen Turin - Wir demokratisieren Immobilien | Jungle Rent",
+    "metaDescription": "Wir demokratisieren den Zugang zum Immobilienmarkt. Investieren Sie in Universitätsimmobilien in Turin mit kompletter Verwaltung.",
+    "heroTitle": "Wir demokratisieren den Zugang zu Immobilien",
+    "heroSubtitle": "Eine historisch sichere Anlageklasse, heute für viele unzugänglich. Investieren Sie in Universitätsimmobilien in Turin mit professioneller Verwaltung.",
+    "benefitsTitle": "Warum bei uns investieren",
+    "benefitsSubtitle": "Professionelle Partnerschaften auf dem Turiner Universitätsmietmarkt",
+    "processTitle": "Wie es funktioniert",
+    "processSubtitle": "4 einfache Schritte, um mit dem Investieren zu beginnen",
+    "ctaTitle": "Bereit zu investieren?",
+    "ctaSubtitle": "Sprechen Sie mit einem unserer Berater und entdecken Sie die verfügbaren Möglichkeiten"
   }
 }
