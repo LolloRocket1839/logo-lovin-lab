@@ -268,7 +268,7 @@ San Salvario non è tutto uguale. Ci sono zone più tranquille, zone più rumoro
 
 **Jungle Rent:**
 - Appartamenti verificati vicino alle università
-- Contratto 9 mesi (settembre-maggio) con prezzi ridotti
+- Contratti flessibili per l'anno accademico con prezzi ridotti
 - Processo semplificato per studenti
 
 ### Red flags (truffe da evitare)

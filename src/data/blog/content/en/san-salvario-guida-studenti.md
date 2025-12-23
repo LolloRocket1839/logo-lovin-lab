@@ -268,7 +268,7 @@ San Salvario is not all the same. There are quieter areas, noisier areas, cheape
 
 **Jungle Rent:**
 - Verified apartments near universities
-- 9-month contract (September-May) with reduced prices
+- Flexible academic year contracts with reduced prices
 - Simplified process for students
 
 ### Red flags (scams to avoid)
