@@ -41,7 +41,7 @@ export const Footer = () => {
   };
   
   return (
-    <footer id="footer" className="hidden md:block bg-muted/30 relative overflow-hidden transition-spacing">
+    <footer id="footer" className="hidden md:block bg-background relative overflow-hidden transition-spacing">
       {/* Gradient overlay */}
       <div className="absolute inset-0 gradient-jungle-footer" />
       
@@ -137,7 +137,7 @@ export const Footer = () => {
 
           {/* Partnership con logo 2i3T */}
           <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground/60 mb-3 font-medium">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3 font-medium">
               Powered by
             </p>
             <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">{t('footer.partnershipTitle')}</h3>
@@ -184,23 +184,23 @@ export const Footer = () => {
           
           {/* Legal Information */}
           <div className="mt-8 pt-8 border-t border-border/10">
-            <p className="text-muted-foreground/70 text-xs font-light">
+            <p className="text-muted-foreground text-xs font-light">
               JUNGLE RENT S.R.L. - Start-up Innovativa | P.IVA 13333450016 | REA TO-1355899
             </p>
-            <p className="text-muted-foreground/60 text-xs font-light mt-1">
+            <p className="text-muted-foreground text-xs font-light mt-1">
               {t('footer.legalAddress')} | PEC: junglerent@legalmail.it
             </p>
             <div className="mt-3 flex items-center justify-center gap-4">
               <Link 
                 to="/privacy" 
-                className="text-muted-foreground/60 text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
+                className="text-muted-foreground text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
               >
                 Privacy Policy
               </Link>
-              <span className="text-muted-foreground/40">|</span>
+              <span className="text-muted-foreground">|</span>
               <Link 
                 to="/termini-e-condizioni" 
-                className="text-muted-foreground/60 text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
+                className="text-muted-foreground text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
               >
                 {i18n.language === 'it' || i18n.language.startsWith('it') ? 'Termini e Condizioni' : 'Terms & Conditions'}
               </Link>
