@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import { 
   Building2, 
   TrendingUp, 
@@ -24,6 +25,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
+
+// Lazy load AISearchBox since it's heavy
+const AISearchBox = lazy(() => import("@/components/AISearchBox").then(m => ({ default: m.AISearchBox })));
 
 const steps = [
   { key: "search", icon: Search },
@@ -52,6 +56,22 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
     <ScrollArea className="h-[70vh] pr-4">
       <div className="space-y-6 pb-8">
         
+        {/* AI Search Section - NEW */}
+        <section className="bg-primary/5 border border-primary/20 rounded-lg p-4">
+          <h3 className="font-semibold mb-3 flex items-center gap-2">
+            <Search className="w-4 h-4 text-primary" />
+            <Sparkles className="w-3 h-3 text-primary" />
+            {t("search.askAnything")}
+          </h3>
+          <Suspense fallback={
+            <div className="h-24 flex items-center justify-center text-muted-foreground text-sm">
+              {t("common.loading")}...
+            </div>
+          }>
+            <AISearchBox />
+          </Suspense>
+        </section>
+
         {/* 2i3T Partnership */}
         <section className="bg-muted/30 rounded-lg p-4">
           <div className="flex items-center gap-3 mb-2">
@@ -163,21 +183,6 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
           >
             <Link to="/blog">
               {t("blog.viewAll")} <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
-        </section>
-
-        {/* Studenti Link */}
-        <section className="text-center">
-          <Button 
-            variant="secondary" 
-            className="w-full"
-            onClick={onClose}
-            asChild
-          >
-            <Link to="/studenti">
-              <GraduationCap className="w-4 h-4 mr-2" />
-              {t("nav.students")}
             </Link>
           </Button>
         </section>
