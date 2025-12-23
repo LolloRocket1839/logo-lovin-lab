@@ -1,7 +1,7 @@
 import { useState, Suspense, lazy } from "react";
-import { Home, TrendingUp, Building2, Search, Info } from "lucide-react";
+import { TrendingUp, Building2, Info, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
@@ -13,29 +13,14 @@ import {
 } from "@/components/ui/drawer";
 
 // Lazy load components since they're only shown on demand
-const AISearchBox = lazy(() => import("@/components/AISearchBox").then(m => ({ default: m.AISearchBox })));
 const InfoDrawerContent = lazy(() => import("@/components/InfoDrawerContent").then(m => ({ default: m.InfoDrawerContent })));
 
 export const BottomNav = () => {
   const { t } = useTranslation();
-  const location = useLocation();
-  const navigate = useNavigate();
   const { trackClick } = useAnalytics();
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
-  const [searchDrawerOpen, setSearchDrawerOpen] = useState(false);
   const [infoDrawerOpen, setInfoDrawerOpen] = useState(false);
-
-  const handleHomeClick = (e: React.MouseEvent) => {
-    trackClick('bottom_nav_home');
-    e.preventDefault();
-    
-    if (location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      navigate('/');
-    }
-  };
 
   const handleInvestClick = () => {
     trackClick('bottom_nav_invest');
@@ -47,9 +32,8 @@ export const BottomNav = () => {
     setSellerDialogOpen(true);
   };
 
-  const handleSearchClick = () => {
-    trackClick('bottom_nav_search');
-    setSearchDrawerOpen(true);
+  const handleStudentsClick = () => {
+    trackClick('bottom_nav_students');
   };
 
   const handleInfoClick = () => {
@@ -64,16 +48,6 @@ export const BottomNav = () => {
         aria-label={t('nav.home')}
       >
         <div className="flex items-center justify-around h-16 px-2">
-          {/* Home */}
-          <Link
-            to="/"
-            onClick={handleHomeClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
-          >
-            <Home className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">{t("nav.home")}</span>
-          </Link>
-
           {/* Investi - Primary CTA with pulse */}
           <button
             onClick={handleInvestClick}
@@ -86,15 +60,6 @@ export const BottomNav = () => {
             <span className="text-[10px] font-medium">{t("nav.investors")}</span>
           </button>
 
-          {/* Search - Center icon */}
-          <button
-            onClick={handleSearchClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
-          >
-            <Search className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">{t("nav.search")}</span>
-          </button>
-
           {/* Vendi - Seller CTA */}
           <button
             onClick={handleSellerClick}
@@ -103,6 +68,16 @@ export const BottomNav = () => {
             <Building2 className="w-5 h-5" aria-hidden="true" />
             <span className="text-[10px] font-medium">{t("nav.sell")}</span>
           </button>
+
+          {/* Studenti - Direct navigation */}
+          <Link
+            to="/studenti"
+            onClick={handleStudentsClick}
+            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+          >
+            <GraduationCap className="w-5 h-5" aria-hidden="true" />
+            <span className="text-[10px] font-medium">{t("nav.students")}</span>
+          </Link>
 
           {/* Info - infoinfoinfo(: */}
           <button
@@ -114,20 +89,6 @@ export const BottomNav = () => {
           </button>
         </div>
       </nav>
-
-      {/* Search Drawer */}
-      <Drawer open={searchDrawerOpen} onOpenChange={setSearchDrawerOpen}>
-        <DrawerContent className="max-h-[85vh]">
-          <DrawerHeader className="pb-2">
-            <DrawerTitle className="text-center">{t("search.askAnything")}</DrawerTitle>
-          </DrawerHeader>
-          <div className="px-4 pb-8 overflow-y-auto">
-            <Suspense fallback={<div className="h-32 flex items-center justify-center text-muted-foreground">Loading...</div>}>
-              <AISearchBox />
-            </Suspense>
-          </div>
-        </DrawerContent>
-      </Drawer>
 
       {/* Info Drawer - infoinfoinfo(: */}
       <Drawer open={infoDrawerOpen} onOpenChange={setInfoDrawerOpen}>
