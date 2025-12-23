@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useBlogLanguage } from "@/hooks/useBlogLanguage";
+import { isNewPost, formatDate } from "@/lib/blog";
 import astronautCover from "@/assets/jungle-control-astronaut-cover.png";
 
 interface BlogCardProps {
@@ -11,18 +13,11 @@ interface BlogCardProps {
 }
 
 export const BlogCard = ({ post }: BlogCardProps) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { trackClick } = useAnalytics();
-  const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
+  const currentLang = useBlogLanguage();
   const prefersReducedMotion = useReducedMotion();
   const translatedData = post.translations[currentLang];
-
-  // Helper to check if post is new (< 7 days)
-  const isNew = (dateString: string) => {
-    const postDate = new Date(dateString);
-    const daysSince = (Date.now() - postDate.getTime()) / (1000 * 60 * 60 * 24);
-    return daysSince <= 7;
-  };
 
   // Check if this is a Jungle Control series post
   const isJungleControlSeries = translatedData.tags?.some(tag => 
@@ -31,7 +26,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
 
   return (
     <article className="blog-card-marvis feel-good-click group h-full flex flex-col rounded-xl overflow-hidden relative border border-border/20 hover:border-primary/30 transition-all">
-      {isNew(post.date) && <div className="new-badge">Nuovo</div>}
+      {isNewPost(post.date) && <div className="new-badge">Nuovo</div>}
       
       <Link 
         to={`/blog/${post.slug}`} 
@@ -75,11 +70,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
         <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-3">
           <span className="flex items-center gap-1">
             <Calendar className="w-4 h-4" />
-            {new Date(post.date).toLocaleDateString('it-IT', {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric'
-            })}
+            {formatDate(post.date, currentLang)}
           </span>
           <span className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
