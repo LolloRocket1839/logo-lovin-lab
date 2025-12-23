@@ -1,5 +1,5 @@
 import { useState, Suspense, lazy } from "react";
-import { Home, TrendingUp, Building2, GraduationCap, Search } from "lucide-react";
+import { Home, TrendingUp, Building2, Search, Info } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -12,8 +12,9 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer";
 
-// Lazy load AISearchBox since it's only shown on demand
+// Lazy load components since they're only shown on demand
 const AISearchBox = lazy(() => import("@/components/AISearchBox").then(m => ({ default: m.AISearchBox })));
+const InfoDrawerContent = lazy(() => import("@/components/InfoDrawerContent").then(m => ({ default: m.InfoDrawerContent })));
 
 export const BottomNav = () => {
   const { t } = useTranslation();
@@ -23,6 +24,7 @@ export const BottomNav = () => {
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
   const [searchDrawerOpen, setSearchDrawerOpen] = useState(false);
+  const [infoDrawerOpen, setInfoDrawerOpen] = useState(false);
 
   const handleHomeClick = (e: React.MouseEvent) => {
     trackClick('bottom_nav_home');
@@ -45,14 +47,14 @@ export const BottomNav = () => {
     setSellerDialogOpen(true);
   };
 
-  const handleStudentsClick = () => {
-    trackClick('bottom_nav_students');
-    navigate('/studenti');
-  };
-
   const handleSearchClick = () => {
     trackClick('bottom_nav_search');
     setSearchDrawerOpen(true);
+  };
+
+  const handleInfoClick = () => {
+    trackClick('bottom_nav_info');
+    setInfoDrawerOpen(true);
   };
 
   return (
@@ -102,13 +104,13 @@ export const BottomNav = () => {
             <span className="text-[10px] font-medium">{t("nav.sell")}</span>
           </button>
 
-          {/* Students */}
+          {/* Info - infoinfoinfo(: */}
           <button
-            onClick={handleStudentsClick}
+            onClick={handleInfoClick}
             className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
           >
-            <GraduationCap className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">{t("nav.students")}</span>
+            <Info className="w-5 h-5" aria-hidden="true" />
+            <span className="text-[10px] font-medium leading-tight">infoinfoinfo(:</span>
           </button>
         </div>
       </nav>
@@ -122,6 +124,20 @@ export const BottomNav = () => {
           <div className="px-4 pb-8 overflow-y-auto">
             <Suspense fallback={<div className="h-32 flex items-center justify-center text-muted-foreground">Loading...</div>}>
               <AISearchBox />
+            </Suspense>
+          </div>
+        </DrawerContent>
+      </Drawer>
+
+      {/* Info Drawer - infoinfoinfo(: */}
+      <Drawer open={infoDrawerOpen} onOpenChange={setInfoDrawerOpen}>
+        <DrawerContent className="max-h-[85vh]">
+          <DrawerHeader className="pb-2">
+            <DrawerTitle className="text-center">infoinfoinfo(:</DrawerTitle>
+          </DrawerHeader>
+          <div className="px-4 pb-8">
+            <Suspense fallback={<div className="h-32 flex items-center justify-center text-muted-foreground">Loading...</div>}>
+              <InfoDrawerContent onClose={() => setInfoDrawerOpen(false)} />
             </Suspense>
           </div>
         </DrawerContent>
