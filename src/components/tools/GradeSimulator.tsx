@@ -12,6 +12,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
+import { 
+  getGradeOptions, 
+  simulateNewExam, 
+  calculateRequiredGrade 
+} from "@/lib/tools/gradeUtils";
 
 interface GradeSimulatorProps {
   currentAverage: number;
@@ -19,96 +24,65 @@ interface GradeSimulatorProps {
   language: 'it' | 'en';
 }
 
+const content = {
+  it: {
+    title: "Simulatore What-If",
+    whatIfTitle: "Cosa succede se prendo...",
+    whatIfDesc: "Simula l'impatto di un nuovo esame sulla tua media",
+    grade: "Voto prossimo esame",
+    cfu: "CFU esame",
+    currentAvg: "Media attuale",
+    newAvg: "Nuova media",
+    difference: "Differenza",
+    targetTitle: "Che voto devo prendere?",
+    targetDesc: "Calcola il voto necessario per raggiungere una media obiettivo",
+    targetAvg: "Media obiettivo",
+    cfuRemaining: "CFU rimanenti",
+    requiredGrade: "Voto necessario",
+    impossible: "Impossibile",
+    impossibleDesc: "Non è possibile raggiungere questa media con i CFU rimanenti",
+    noExams: "Aggiungi almeno un esame per usare il simulatore"
+  },
+  en: {
+    title: "What-If Simulator",
+    whatIfTitle: "What if I get...",
+    whatIfDesc: "Simulate the impact of a new exam on your GPA",
+    grade: "Next exam grade",
+    cfu: "Exam credits",
+    currentAvg: "Current average",
+    newAvg: "New average",
+    difference: "Difference",
+    targetTitle: "What grade do I need?",
+    targetDesc: "Calculate the grade needed to reach a target average",
+    targetAvg: "Target average",
+    cfuRemaining: "Remaining credits",
+    requiredGrade: "Required grade",
+    impossible: "Impossible",
+    impossibleDesc: "It's not possible to reach this average with the remaining credits",
+    noExams: "Add at least one exam to use the simulator"
+  }
+};
+
 export const GradeSimulator = ({ currentAverage, currentCfu, language }: GradeSimulatorProps) => {
   const [targetAvg, setTargetAvg] = useState<number[]>([27]);
   const [nextGrade, setNextGrade] = useState<string>("28");
   const [nextCfu, setNextCfu] = useState<string>("9");
-
-  const content = {
-    it: {
-      title: "Simulatore What-If",
-      whatIfTitle: "Cosa succede se prendo...",
-      whatIfDesc: "Simula l'impatto di un nuovo esame sulla tua media",
-      grade: "Voto prossimo esame",
-      cfu: "CFU esame",
-      currentAvg: "Media attuale",
-      newAvg: "Nuova media",
-      difference: "Differenza",
-      targetTitle: "Che voto devo prendere?",
-      targetDesc: "Calcola il voto necessario per raggiungere una media obiettivo",
-      targetAvg: "Media obiettivo",
-      cfuRemaining: "CFU rimanenti",
-      requiredGrade: "Voto necessario",
-      impossible: "Impossibile",
-      impossibleDesc: "Non è possibile raggiungere questa media con i CFU rimanenti",
-      noExams: "Aggiungi almeno un esame per usare il simulatore"
-    },
-    en: {
-      title: "What-If Simulator",
-      whatIfTitle: "What if I get...",
-      whatIfDesc: "Simulate the impact of a new exam on your GPA",
-      grade: "Next exam grade",
-      cfu: "Exam credits",
-      currentAvg: "Current average",
-      newAvg: "New average",
-      difference: "Difference",
-      targetTitle: "What grade do I need?",
-      targetDesc: "Calculate the grade needed to reach a target average",
-      targetAvg: "Target average",
-      cfuRemaining: "Remaining credits",
-      requiredGrade: "Required grade",
-      impossible: "Impossible",
-      impossibleDesc: "It's not possible to reach this average with the remaining credits",
-      noExams: "Add at least one exam to use the simulator"
-    }
-  };
+  const [remainingCfu, setRemainingCfu] = useState<string>("60");
 
   const t = content[language];
-
-  // Grade options
-  const gradeOptions = [];
-  for (let i = 18; i <= 30; i++) {
-    gradeOptions.push({ value: i.toString(), label: i.toString() });
-  }
-  gradeOptions.push({ value: "31", label: "30L" });
+  const gradeOptions = getGradeOptions();
 
   // Calculate new average with simulated exam
   const simulatedResult = useMemo(() => {
-    if (currentCfu === 0) return null;
-
     const gradeNum = parseInt(nextGrade);
     const cfuNum = parseInt(nextCfu) || 0;
-    
-    if (cfuNum <= 0) return null;
-
-    const gradeValue = gradeNum > 30 ? 30 : gradeNum;
-    const totalWeightedSum = (currentAverage * currentCfu) + (gradeValue * cfuNum);
-    const totalCfu = currentCfu + cfuNum;
-    const newAvg = totalWeightedSum / totalCfu;
-
-    return {
-      newAvg,
-      difference: newAvg - currentAverage
-    };
+    return simulateNewExam(currentAverage, currentCfu, gradeNum, cfuNum);
   }, [currentAverage, currentCfu, nextGrade, nextCfu]);
 
   // Calculate required grade for target
-  const [remainingCfu, setRemainingCfu] = useState<string>("60");
-  
   const requiredGrade = useMemo(() => {
-    if (currentCfu === 0) return null;
-
     const cfuNum = parseInt(remainingCfu) || 0;
-    if (cfuNum <= 0) return null;
-
-    const target = targetAvg[0];
-    const totalCfuAfter = currentCfu + cfuNum;
-    
-    // target = (currentAvg * currentCfu + requiredGrade * cfuNum) / totalCfuAfter
-    // requiredGrade = (target * totalCfuAfter - currentAvg * currentCfu) / cfuNum
-    const required = (target * totalCfuAfter - currentAverage * currentCfu) / cfuNum;
-
-    return required;
+    return calculateRequiredGrade(currentAverage, currentCfu, targetAvg[0], cfuNum);
   }, [currentAverage, currentCfu, targetAvg, remainingCfu]);
 
   if (currentCfu === 0) {

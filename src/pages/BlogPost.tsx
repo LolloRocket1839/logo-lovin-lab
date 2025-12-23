@@ -10,7 +10,6 @@ import { ShareButton } from "@/components/blog/ShareButton";
 import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
 import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
-
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { Calendar, Clock } from "lucide-react";
@@ -18,13 +17,14 @@ import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
-import type { Components } from "react-markdown";
+import { useBlogLanguage } from "@/hooks/useBlogLanguage";
+import { getCategoryColor, getAbsoluteImageUrl, formatDate } from "@/lib/blog";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [content, setContent] = useState<string>("");
-  const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
+  const currentLang = useBlogLanguage();
   
   if (!slug) return <Navigate to="/blog" replace />;
   
@@ -108,70 +108,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
         console.log('Error sharing:', err);
       }
     }
-  };
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'students':
-        return 'bg-primary/10 text-primary';
-      case 'investors':
-        return 'bg-secondary/10 text-secondary-foreground';
-      case 'sellers':
-        return 'bg-accent/10 text-accent-foreground';
-      default:
-        return 'bg-muted text-muted-foreground';
-    }
-  };
-
-  // Custom components for ReactMarkdown to handle IDs
-  const markdownComponents: Components = {
-    h2: ({ children, ...props }) => {
-      const text = String(children);
-      const match = text.match(/^(.*?)\s*\{#([^}]+)\}$/);
-      if (match) {
-        const [, title, id] = match;
-        return <h2 id={id} {...props}>{title}</h2>;
-      }
-      return <h2 {...props}>{children}</h2>;
-    },
-    h3: ({ children, ...props }) => {
-      const text = String(children);
-      const match = text.match(/^(.*?)\s*\{#([^}]+)\}$/);
-      if (match) {
-        const [, title, id] = match;
-        return <h3 id={id} {...props}>{title}</h3>;
-      }
-      return <h3 {...props}>{children}</h3>;
-    },
-    a: ({ href, children, ...props }) => {
-      // Handle internal anchor links
-      if (href?.startsWith('#')) {
-        return (
-          <a
-            href={href}
-            onClick={(e) => {
-              e.preventDefault();
-              const element = document.getElementById(href.slice(1));
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                // Update URL hash without jumping
-                window.history.pushState(null, '', href);
-              }
-            }}
-            {...props}
-          >
-            {children}
-          </a>
-        );
-      }
-      return <a href={href} {...props}>{children}</a>;
-    },
-  };
-
-  // Helper function to get absolute image URL
-  const getAbsoluteImageUrl = (imageUrl: string) => {
-    if (imageUrl.startsWith('http')) return imageUrl;
-    return `https://junglerent.it${imageUrl}`;
   };
 
   const absoluteImageUrl = getAbsoluteImageUrl(post.image);
@@ -383,11 +319,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                   <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
                     <span className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString('it-IT', {
-                        day: 'numeric',
-                        month: 'long',
-                        year: 'numeric'
-                      })}
+                      {formatDate(post.date, currentLang)}
                     </span>
                     <span className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
@@ -407,7 +339,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                 <ParallaxHeroImage src={post.image} alt={translatedData.title} />
 
                 {/* Animated Content */}
-                <AnimatedBlogContent content={content} markdownComponents={markdownComponents} />
+                <AnimatedBlogContent content={content} />
 
                 {/* Floating Table of Contents (Desktop) */}
                 <FloatingTableOfContents content={content} />
