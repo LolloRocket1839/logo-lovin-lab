@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, memo } from "react";
 import { TrendingUp, Calculator, Target } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -63,7 +63,7 @@ const content = {
   }
 };
 
-export const GradeSimulator = ({ currentAverage, currentCfu, language }: GradeSimulatorProps) => {
+const GradeSimulatorComponent = ({ currentAverage, currentCfu, language }: GradeSimulatorProps) => {
   const [targetAvg, setTargetAvg] = useState<number[]>([27]);
   const [nextGrade, setNextGrade] = useState<string>("28");
   const [nextCfu, setNextCfu] = useState<string>("9");
@@ -221,3 +221,5 @@ export const GradeSimulator = ({ currentAverage, currentCfu, language }: GradeSi
     </div>
   );
 };
+
+export const GradeSimulator = memo(GradeSimulatorComponent);
