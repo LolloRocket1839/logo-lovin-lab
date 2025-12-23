@@ -1,10 +1,11 @@
 import { useState, Suspense, lazy } from "react";
-import { TrendingUp, Building2, Info, GraduationCap, Heart } from "lucide-react";
+import { TrendingUp, Building2, Info, GraduationCap, Heart, Users, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
+import { CONTACTS } from "@/lib/contacts";
 import {
   Drawer,
   DrawerContent,
@@ -21,6 +22,7 @@ export const BottomNav = () => {
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
   const [infoDrawerOpen, setInfoDrawerOpen] = useState(false);
+  const [foundersDrawerOpen, setFoundersDrawerOpen] = useState(false);
 
   const handleInvestClick = () => {
     trackClick('bottom_nav_invest');
@@ -39,6 +41,16 @@ export const BottomNav = () => {
   const handleInfoClick = () => {
     trackClick('bottom_nav_info');
     setInfoDrawerOpen(true);
+  };
+
+  const handleFoundersClick = () => {
+    trackClick('bottom_nav_founders');
+    setFoundersDrawerOpen(true);
+  };
+
+  const handleCallLorenzo = () => {
+    trackClick('founders_call_lorenzo');
+    window.location.href = `tel:${CONTACTS.lorenzo.phone}`;
   };
 
   return (
@@ -79,13 +91,13 @@ export const BottomNav = () => {
             <span className="text-[10px] font-medium">{t("nav.students")}</span>
           </Link>
 
-          {/* Info - infoinfoinfo(: */}
+          {/* Fondatori */}
           <button
-            onClick={handleInfoClick}
+            onClick={handleFoundersClick}
             className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
           >
-            <Info className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium leading-tight">infoinfoinfo(:</span>
+            <Users className="w-5 h-5" aria-hidden="true" />
+            <span className="text-[10px] font-medium">{t("founders.title")}</span>
           </button>
         </div>
       </nav>
@@ -100,6 +112,38 @@ export const BottomNav = () => {
             <Suspense fallback={<div className="h-32 flex items-center justify-center text-muted-foreground">Loading...</div>}>
               <InfoDrawerContent onClose={() => setInfoDrawerOpen(false)} />
             </Suspense>
+          </div>
+        </DrawerContent>
+      </Drawer>
+
+      {/* Founders Drawer */}
+      <Drawer open={foundersDrawerOpen} onOpenChange={setFoundersDrawerOpen}>
+        <DrawerContent className="max-h-[85vh]">
+          <DrawerHeader className="pb-2">
+            <DrawerTitle className="text-center">{t("founders.title")}</DrawerTitle>
+          </DrawerHeader>
+          <div className="px-4 pb-8">
+            <p className="text-sm text-muted-foreground text-center mb-6">
+              {t("founders.contactUs")}
+            </p>
+            <div className="space-y-4">
+              <button
+                onClick={handleCallLorenzo}
+                className="w-full flex items-center gap-4 p-4 rounded-xl bg-primary/10 border border-primary/20 hover:bg-primary/20 transition-colors"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-lg font-bold text-primary">L</span>
+                </div>
+                <div className="flex-1 text-left">
+                  <p className="font-semibold text-foreground">{CONTACTS.lorenzo.name}</p>
+                  <p className="text-sm text-muted-foreground">{CONTACTS.lorenzo.phone}</p>
+                </div>
+                <div className="flex items-center gap-2 text-primary">
+                  <Phone className="w-5 h-5" />
+                  <span className="text-sm font-medium">{t("founders.callNow")}</span>
+                </div>
+              </button>
+            </div>
           </div>
         </DrawerContent>
       </Drawer>
