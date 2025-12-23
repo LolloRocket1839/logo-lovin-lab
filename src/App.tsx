@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { SkipToContent } from "./components/SkipToContent";
 import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
 import { usePageViewTracking } from "./hooks/useAnalytics";
@@ -59,6 +59,7 @@ const AppContent = () => {
         <Route path="/students" element={<Students />} />
         <Route path="/studenti/strumenti" element={<StudentTools />} />
         <Route path="/students/tools" element={<StudentTools />} />
+        <Route path="/tools" element={<Navigate to="/studenti/strumenti" replace />} />
         <Route path="/studenti/strumenti/budget" element={<BudgetCalculator />} />
         <Route path="/students/tools/budget" element={<BudgetCalculator />} />
         <Route path="/studenti/strumenti/media" element={<GradeCalculator />} />
