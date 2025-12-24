@@ -8,7 +8,7 @@ const steps = [
   { key: "invest", icon: Coins },
   { key: "acquire", icon: Key },
   { key: "rent", icon: Users },
-  { key: "earn", icon: TrendingUp },
+  { key: "win", icon: TrendingUp },
 ];
 
 export const HowItWorksInline = () => {
