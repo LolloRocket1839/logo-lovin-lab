@@ -20,43 +20,26 @@
     "callDirect": "Chiama direttamente"
   },
   "howItWorks": {
-    "badge": "Il nostro modello",
-    "title": "Come Funziona Jungle Rent",
-    "subtitle": "Un modello che fa vincere tutti: investitori, studenti e turisti",
+    "title": "Come funziona",
+    "subtitle": "Un modello dove tutti vincono",
     "steps": {
       "invest": {
         "title": "Investi",
-        "desc": "A partire da €100, investi in Jungle Rent"
+        "desc": "Da €100"
       },
       "acquire": {
         "title": "Acquistiamo",
-        "desc": "Immobili vicino alle università di Torino"
+        "desc": "Vicino alle università"
       },
       "rent": {
         "title": "Affittiamo",
-        "desc": "Affitti flessibili a studenti e turisti"
+        "desc": "A studenti e turisti"
       },
       "win": {
-        "title": "Tutti Guadagnano",
-        "desc": "Investitori: payout bimestrali • Studenti: -25% affitto"
+        "title": "Tutti guadagnano",
+        "desc": "Payout + affitti -25%"
       }
-    },
-    "investors": {
-      "title": "Per Investitori",
-      "point1": "Payout bimestrali",
-      "point2": "Rendimenti sopra mercato",
-      "point3": "Zero gestione",
-      "point4": "Portafoglio diversificato"
-    },
-    "students": {
-      "title": "Per Studenti",
-      "point1": "-25% rispetto all'affitto medio di Torino",
-      "point2": "Contratti flessibili anno accademico",
-      "point3": "Zero commissioni d'agenzia"
-    },
-    "savingHighlight": "Risparmio annuale per gli studenti rispetto all'affitto medio di Torino",
-    "ctaInvest": "Investi da €100",
-    "ctaRent": "Cerca alloggio"
+    }
   },
   "video": {
     "title": "Capire il nostro modello in 2 minuti",

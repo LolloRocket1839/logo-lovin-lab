@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Euro, Key, Users, TrendingUp, PiggyBank, CheckCircle, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
-import { WaitlistDialog } from "@/components/WaitlistDialog";
+import { Euro, Key, Users, TrendingUp, ArrowRight } from "lucide-react";
 
 const steps = [
   { key: "invest", icon: Euro },
@@ -15,8 +11,6 @@ const steps = [
 
 export const HowItWorks = () => {
   const { t } = useTranslation();
-  const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
-  const [studentDialogOpen, setStudentDialogOpen] = useState(false);
 
   return (
     <section className="py-16 md:py-24 bg-background" aria-labelledby="how-it-works-title">
@@ -105,59 +99,6 @@ export const HowItWorks = () => {
             })}
           </div>
         </div>
-
-
-        {/* Central Stat Highlight */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12 py-8 px-6 bg-primary/5 rounded-xl border border-primary/20"
-        >
-          <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2">
-            25%
-          </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-md mx-auto">
-            {t("howItWorks.savingHighlight")}
-          </p>
-        </motion.div>
-
-        {/* Dual CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <Button
-            size="lg"
-            variant="premium"
-            onClick={() => setInvestorDialogOpen(true)}
-            className="min-w-[200px]"
-          >
-            {t("howItWorks.ctaInvest")}
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => setStudentDialogOpen(true)}
-            className="min-w-[200px]"
-          >
-            {t("howItWorks.ctaRent")}
-          </Button>
-        </motion.div>
-
-        <QuickInvestorLeadDialog 
-          open={investorDialogOpen} 
-          onOpenChange={setInvestorDialogOpen}
-          source="how_it_works_cta"
-        />
-        <WaitlistDialog 
-          open={studentDialogOpen} 
-          onOpenChange={setStudentDialogOpen}
-        />
       </div>
     </section>
   );
