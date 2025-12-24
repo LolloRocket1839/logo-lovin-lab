@@ -19,7 +19,6 @@ const BlogBanner = lazy(() => import("@/components/blog/BlogBanner").then(m => (
 const HomepageFAQ = lazy(() => import("@/components/HomepageFAQ"));
 const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
-const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
 const BottomNav = lazy(() => import("@/components/BottomNav").then(m => ({ default: m.BottomNav })));
 
 const Index = () => {
@@ -137,7 +136,6 @@ const Index = () => {
           <MobileFooter />
         </div>
         <ScrollToTop />
-        <StickyCTA />
         <BottomNav />
       </Suspense>
     </main>
