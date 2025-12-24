@@ -55,9 +55,14 @@ export const HowItWorksInline = () => {
                       <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary">
                         <Icon className="w-4 h-4" />
                       </div>
-                      <span className="text-xs font-medium text-foreground">
-                        {t(`howItWorks.steps.${step.key}.title`)}
-                      </span>
+                      <div className="flex flex-col">
+                        <span className="text-xs font-medium text-foreground">
+                          {t(`howItWorks.steps.${step.key}.title`)}
+                        </span>
+                        <span className="text-[10px] text-muted-foreground">
+                          {t(`howItWorks.steps.${step.key}.desc`)}
+                        </span>
+                      </div>
                     </motion.div>
                   );
                 })}
@@ -79,9 +84,14 @@ export const HowItWorksInline = () => {
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary">
                 <Icon className="w-3.5 h-3.5" />
               </div>
-              <span className="text-xs font-medium text-foreground whitespace-nowrap">
-                {t(`howItWorks.steps.${step.key}.title`)}
-              </span>
+              <div className="flex flex-col leading-tight">
+                <span className="text-xs font-medium text-foreground whitespace-nowrap">
+                  {t(`howItWorks.steps.${step.key}.title`)}
+                </span>
+                <span className="text-[10px] text-muted-foreground whitespace-nowrap">
+                  {t(`howItWorks.steps.${step.key}.desc`)}
+                </span>
+              </div>
             </div>
             {index < steps.length - 1 && (
               <span className="text-primary/60 font-bold">→</span>
