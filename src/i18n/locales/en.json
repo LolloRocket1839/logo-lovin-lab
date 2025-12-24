@@ -956,7 +956,8 @@
     "motivationOther": "Other"
   },
   "stickyCta": {
-    "investNow": "Invest now",
+    "investNow": "Invest",
+    "sellNow": "Sell",
     "closeLabel": "Close"
   },
   "quickLead": {
