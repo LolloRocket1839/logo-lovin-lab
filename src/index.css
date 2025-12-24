@@ -103,6 +103,30 @@ All colors MUST be HSL.
     --shadow-soft: 0 2px 15px -3px hsla(37, 20%, 15%, 0.07), 0 10px 20px -2px hsla(37, 20%, 15%, 0.04);
     --shadow-focus: 0 0 0 2px hsl(28 24% 100%), 0 0 0 4px hsl(150 45% 18%);
   }
+
+  /* Highlighter marker animation */
+  @keyframes highlight-draw {
+    0% { background-size: 0% 100%; }
+    100% { background-size: 100% 100%; }
+  }
+
+  .highlight-marker {
+    background: linear-gradient(120deg, hsl(var(--primary) / 0.4) 0%, hsl(var(--primary) / 0.3) 100%);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;
+    animation: highlight-draw 0.8s ease-out 0.3s forwards;
+    padding: 0 4px;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .highlight-marker {
+      background-size: 100% 100%;
+      animation: none;
+    }
+  }
   
   /* ============================================
    MARVIS-STYLE FEEL GOOD CLICKS & INTERACTIONS

@@ -37,7 +37,8 @@
       },
       "win": {
         "title": "Tutti guadagnano",
-        "desc": "Payout + affitti -25%"
+        "desc": "Investitori guadagnano",
+        "descHighlight": "Studenti risparmiano"
       }
     }
   },
