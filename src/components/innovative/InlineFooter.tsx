@@ -5,10 +5,6 @@ export const InlineFooter = () => {
   const { t } = useTranslation();
 
   const links = [
-    { label: t("nav.investors"), path: "/investitori" },
-    { label: t("nav.sell"), path: "/vendi" },
-    { label: t("nav.students"), path: "/studenti" },
-    { label: "FAQ", path: "/faq" },
     { label: "Blog", path: "/blog" },
     { label: "Cities", path: "/blog?category=torino" },
     { label: "Real Estate", path: "/blog?category=immobiliare" },
