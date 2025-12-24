@@ -29,9 +29,6 @@ export const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 md:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs uppercase tracking-[0.15em] font-medium mb-4">
-            {t("howItWorks.badge")}
-          </span>
           <h2 id="how-it-works-title" className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
             {t("howItWorks.title")}
           </h2>
@@ -109,64 +106,6 @@ export const HowItWorks = () => {
           </div>
         </div>
 
-        {/* Dual Value Boxes */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
-          {/* Investors Box */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
-          >
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground">
-                {t("howItWorks.investors.title")}
-              </h3>
-            </div>
-            <ul className="space-y-3">
-              {["point1", "point2", "point3", "point4"].map((point) => (
-              <li key={point} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">
-                    {t(`howItWorks.investors.${point}`)}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Students Box */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
-          >
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                <PiggyBank className="w-6 h-6 text-accent-foreground" />
-              </div>
-              <h3 className="text-xl font-bold text-foreground">
-                {t("howItWorks.students.title")}
-              </h3>
-            </div>
-            <ul className="space-y-3">
-              {["point1", "point2", "point3"].map((point) => (
-                <li key={point} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className={point === "point1" ? "text-foreground font-semibold" : "text-muted-foreground"}>
-                    {t(`howItWorks.students.${point}`)}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
 
         {/* Central Stat Highlight */}
         <motion.div
