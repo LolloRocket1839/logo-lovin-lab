@@ -110,26 +110,27 @@ export const ImmersiveHero = () => {
             </div>
           </div>
 
-          {/* How It Works Inline */}
-          <div className="mb-6 md:mb-8 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-            <HowItWorksInline />
-          </div>
-
-          {/* 2i3T Badge */}
+          {/* 2i3T Trust Badge */}
           <a 
             href="https://2i3t.it" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-5 py-3 bg-background/60 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/80 hover-scale transition-all animate-fade-in"
-            style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+            className="inline-flex items-center gap-3 px-5 py-3 bg-background/60 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/80 hover-scale transition-all animate-fade-in mb-6 md:mb-8"
+            style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
             onClick={() => trackClick('hero_2i3t_badge')}
+            aria-label={t('trustBadge.supportedBy', 'Supportati da 2i3T')}
           >
-            <img src={logo2i3t} alt="2i3T" className="h-7 w-auto" />
+            <img src={logo2i3t} alt="Logo 2i3T - incubatore UniTO" className="h-7 w-auto" />
             <div className="text-left">
               <p className="text-sm font-medium text-foreground">Incubatore Imprese UniTO</p>
               <p className="text-xs text-primary font-medium">Startup Innovativa</p>
             </div>
           </a>
+
+          {/* How It Works Inline */}
+          <div className="mb-6 md:mb-8 animate-fade-in" style={{ animationDelay: '0.5s', animationFillMode: 'both' }}>
+            <HowItWorksInline />
+          </div>
         </div>
       </div>
 
