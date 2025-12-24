@@ -26,7 +26,7 @@
     "steps": {
       "invest": {
         "title": "Investi",
-        "desc": "A partire da €100, acquisti quote del nostro portafoglio immobiliare"
+        "desc": "A partire da €100, investi in Jungle Rent"
       },
       "acquire": {
         "title": "Acquistiamo",
@@ -132,7 +132,7 @@
     "service3Title": "Gestiamo tutto internamente",
     "service3Desc": "Manutenzione, contratti, assistenza 24/7, pulizie: gestiamo ogni aspetto delle nostre proprietà direttamente, senza delegare a terzi.",
     "service4Title": "Investimenti accessibili",
-    "service4Desc": "Offriamo la possibilità di investire nel nostro portafoglio immobiliare a partire da €100, democratizzando l'accesso al mercato immobiliare.",
+    "service4Desc": "Offriamo la possibilità di investire in Jungle Rent a partire da €100, democratizzando l'accesso al mercato immobiliare.",
     "whyChooseTitle": "Perché scegliere JungleRent",
     "whyPoint1": "Proprietari diretti: non intermediari, ma investitori a lungo termine",
     "whyPoint2": "Focus esclusivo sugli studenti universitari",
@@ -150,7 +150,7 @@
     "tagline": "L'affitto sicuro nella giungla immobiliare",
     "mainHeadline": "Investi in student housing a Torino",
     "mainSubheadline": "Investi da €100 in immobili universitari. Noi acquistiamo e gestiamo, tu guadagni.",
-    "badgeExplanation": "Acquisti quote del nostro portafoglio immobiliare. Zero gestione, rendite trimestrali.",
+    "badgeExplanation": "Investi in Jungle Rent. Zero gestione, rendite trimestrali.",
     "discoverOpportunity": "Scopri l'opportunità",
     "talkToLorenzo": "Parla con Lorenzo",
     "startInvesting": "Inizia a investire",
@@ -158,7 +158,7 @@
     "howItWorks": "Come funziona?",
     "miniFaq": {
       "whatBuy": "Cosa compro con €100?",
-      "whatBuyAnswer": "Acquisti quote di partecipazione nel portafoglio immobiliare di Jungle Rent. Non un immobile intero, ma una frazione del nostro patrimonio gestito.",
+      "whatBuyAnswer": "Investi in Jungle Rent, una startup che acquisisce e gestisce immobili universitari a Torino. Non compri un immobile intero, ma partecipi ai risultati del nostro portafoglio.",
       "howEarn": "Come ricevo i rendimenti?",
       "howEarnAnswer": "Ogni trimestre ricevi la tua quota degli affitti incassati, proporzionale al tuo investimento. Report trasparenti e dashboard personale.",
       "whoManages": "Chi gestisce gli immobili?",
@@ -665,7 +665,7 @@
     "investorQ1": "Qual è l'investimento minimo richiesto?",
     "investorA1": "L'investimento minimo in Jungle Rent parte da €100, permettendo di accedere al mercato immobiliare torinese anche con capitali limitati. Per chi vuole investire di più, le opportunità dipendono dagli immobili che abbiamo a disposizione e che vogliamo acquisire.",
     "investorQ2": "Come funziona l'investimento?",
-    "investorA2": "Investi in quote del portafoglio immobiliare di Jungle Rent. Partecipi ai risultati della gestione proporzionalmente alla tua quota. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito. I risultati dipendono dall'andamento del mercato.",
+    "investorA2": "Investi in Jungle Rent, partecipando ai risultati della gestione del portafoglio immobiliare proporzionalmente alla tua quota. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito. I risultati dipendono dall'andamento del mercato.",
     "investorQ3": "Jungle Rent gestisce completamente l'immobile?",
     "investorA3": "Sì, offriamo un servizio di gestione full-service che include: ricerca e selezione inquilini, gestione contratti e registrazioni, manutenzione ordinaria e straordinaria, riscossione affitti, gestione morosità, assistenza legale e reportistica trimestrale dettagliata. L'investitore partecipa ai risultati senza doversi preoccupare di nulla.",
     "investorQ4": "Quanto tempo ci vuole per vedere i primi risultati?",
@@ -717,7 +717,7 @@
     "aboutA3": "No. Jungle Rent è una startup immobiliare con una duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al mercato immobiliare — un'asset class storicamente sicura che, a differenza del passato, è diventata inaccessibile per molti. Acquistiamo, ristrutturiamo e gestiamo immobili per affittarli a studenti universitari e turisti.",
     "voiceCategory": "Domande vocali comuni",
     "voiceQ1": "Come posso investire in immobili a Torino con pochi soldi?",
-    "voiceA1": "Con Jungle Rent puoi investire nel mercato immobiliare torinese a partire da soli 100 euro. Acquisti una quota del portafoglio immobiliare e partecipi ai risultati della gestione. È il modo più accessibile per entrare nel real estate senza comprare un intero appartamento.",
+    "voiceA1": "Con Jungle Rent puoi investire nel mercato immobiliare torinese a partire da soli 100 euro. Investi in Jungle Rent e partecipi ai risultati della gestione del portafoglio immobiliare. È il modo più accessibile per entrare nel real estate senza comprare un intero appartamento.",
     "voiceQ2": "È sicuro investire in Jungle Rent?",
     "voiceA2": "Jungle Rent è una startup innovativa certificata, registrata alla Camera di Commercio di Torino con P.IVA 13333450016. Siamo incubati da 2i3T, l'incubatore dell'Università di Torino. Tuttavia, come ogni investimento, comporta rischi inclusa la possibile perdita del capitale.",
     "voiceQ3": "Quanto si guadagna investendo in appartamenti per studenti a Torino?",
