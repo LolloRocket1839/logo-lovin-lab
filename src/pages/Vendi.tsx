@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 
 const Vendi = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const isItalian = i18n.language.startsWith('it');
 
   const title = isItalian 
