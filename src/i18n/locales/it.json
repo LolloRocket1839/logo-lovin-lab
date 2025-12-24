@@ -932,7 +932,8 @@
     "askAnything": "Chiedi qualsiasi cosa"
   },
   "stickyCta": {
-    "investNow": "Investi ora",
+    "investNow": "Investi",
+    "sellNow": "Vendi",
     "closeLabel": "Chiudi"
   },
   "quickLead": {
