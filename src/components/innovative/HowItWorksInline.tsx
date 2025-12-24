@@ -41,7 +41,7 @@ export const HowItWorksInline = () => {
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >
-              <div className="grid grid-cols-2 gap-3 mt-4 px-4 pb-32">
+              <div className="grid grid-cols-2 gap-3 mt-4 px-4 pb-24">
                 {steps.map((step, index) => {
                   const Icon = step.icon;
                   return (

@@ -37,14 +37,14 @@ export const ImmersiveHero = () => {
 
   return (
     <header 
-      className="relative min-h-screen md:h-screen flex items-center justify-center md:overflow-hidden pb-28 md:pb-0"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
       role="banner"
     >
       {/* Gradient background */}
       <div className="absolute inset-0 gradient-jungle-hero" />
 
       {/* Main content - centered with slight upward offset */}
-      <div className="container relative z-10 px-4 md:px-8 mt-4 md:-mt-20">
+      <div className="container relative z-10 px-4 md:px-8 -mt-16 md:-mt-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated Logo */}
           <HeroLogo />
