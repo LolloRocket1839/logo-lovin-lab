@@ -61,6 +61,14 @@ export const HowItWorksInline = () => {
                         </span>
                         <span className="text-[10px] text-muted-foreground">
                           {t(`howItWorks.steps.${step.key}.desc`)}
+                          {step.key === "win" && (
+                            <>
+                              {" · "}
+                              <span className="highlight-marker">
+                                {t(`howItWorks.steps.win.descHighlight`)}
+                              </span>
+                            </>
+                          )}
                         </span>
                       </div>
                     </motion.div>
@@ -90,6 +98,14 @@ export const HowItWorksInline = () => {
                 </span>
                 <span className="text-[10px] text-muted-foreground whitespace-nowrap">
                   {t(`howItWorks.steps.${step.key}.desc`)}
+                  {step.key === "win" && (
+                    <>
+                      {" · "}
+                      <span className="highlight-marker">
+                        {t(`howItWorks.steps.win.descHighlight`)}
+                      </span>
+                    </>
+                  )}
                 </span>
               </div>
             </div>

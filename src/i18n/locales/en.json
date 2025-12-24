@@ -37,7 +37,8 @@
       },
       "win": {
         "title": "Everyone wins",
-        "desc": "Payouts + 25% off rent"
+        "desc": "Investors earn",
+        "descHighlight": "Students save"
       }
     }
   },
