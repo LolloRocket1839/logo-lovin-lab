@@ -13,7 +13,7 @@ export const InlineFooter = () => {
   ];
 
   return (
-    <footer className="absolute bottom-0 left-0 right-0 pb-6 md:pb-8">
+    <footer className="absolute bottom-0 left-0 right-0 pb-6 md:pb-8 hidden md:block">
       <div className="container px-4 md:px-8">
         <div className="flex flex-col items-center gap-4">
           {/* Navigation links */}
