@@ -20,43 +20,26 @@
     "callDirect": "Call directly"
   },
   "howItWorks": {
-    "badge": "Our model",
-    "title": "How Jungle Rent Works",
-    "subtitle": "A model where everyone wins: investors, students, and tourists",
+    "title": "How it works",
+    "subtitle": "A model where everyone wins",
     "steps": {
       "invest": {
         "title": "Invest",
-        "desc": "From €100, invest in Jungle Rent"
+        "desc": "From €100"
       },
       "acquire": {
-        "title": "We Acquire",
-        "desc": "Properties near Turin universities"
+        "title": "We acquire",
+        "desc": "Near universities"
       },
       "rent": {
-        "title": "We Rent",
-        "desc": "Flexible rentals to students and tourists"
+        "title": "We rent",
+        "desc": "To students & tourists"
       },
       "win": {
-        "title": "Everyone Wins",
-        "desc": "Investors: bi-monthly payouts • Students: -25% rent"
+        "title": "Everyone wins",
+        "desc": "Payouts + 25% off rent"
       }
-    },
-    "investors": {
-      "title": "For Investors",
-      "point1": "Bi-monthly payouts",
-      "point2": "Above-market returns",
-      "point3": "Zero management",
-      "point4": "Diversified portfolio"
-    },
-    "students": {
-      "title": "For Students",
-      "point1": "-25% compared to Turin average rent",
-      "point2": "Flexible academic year contracts",
-      "point3": "Zero agency fees"
-    },
-    "savingHighlight": "Annual savings for students compared to Turin average rent",
-    "ctaInvest": "Invest from €100",
-    "ctaRent": "Find housing"
+    }
   },
   "video": {
     "title": "Understand our model in 2 minutes",
