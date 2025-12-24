@@ -54,7 +54,7 @@ export const InvestorSection = () => {
   return (
     <section 
       id="investor-section" 
-      className="py-16 md:py-24 bg-background relative overflow-hidden"
+      className="py-16 md:py-24 bg-background section-fade-top relative overflow-hidden"
     >
       
       <div className="container px-6 md:px-8 relative z-10">
@@ -146,6 +146,16 @@ export const InvestorSection = () => {
               <StyledText>{t('investor.compactDesc')}</StyledText>
             </p>
             
+            {/* Active Investors Badge only - €100 and StartupInnovativa are in Hero */}
+            <div className="flex justify-center mb-8">
+              <Badge 
+                variant="secondary" 
+                className="px-4 py-2 text-sm font-medium"
+              >
+                <Users className="w-4 h-4 mr-2" />
+                {count}+ {t('investor.activeInvestors')}
+              </Badge>
+            </div>
           </div>
 
           {/* CTAs */}

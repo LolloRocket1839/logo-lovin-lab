@@ -17,7 +17,6 @@ import Index from "./pages/Index";
 // Lazy load - secondary pages
 const About = lazy(() => import("./pages/About"));
 const Investors = lazy(() => import("./pages/Investors"));
-const Vendi = lazy(() => import("./pages/Vendi"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const FAQ = lazy(() => import("./pages/FAQ"));
@@ -49,8 +48,6 @@ const AppContent = () => {
         <Route path="/about" element={<About />} />
         <Route path="/investitori" element={<Investors />} />
         <Route path="/investors" element={<Investors />} />
-        <Route path="/vendi" element={<Vendi />} />
-        <Route path="/sell" element={<Vendi />} />
         
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />

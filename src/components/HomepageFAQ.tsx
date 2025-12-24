@@ -22,7 +22,7 @@ const HomepageFAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-background">
+    <section id="faq" className="py-16 md:py-24 bg-background section-fade-top">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
           <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">

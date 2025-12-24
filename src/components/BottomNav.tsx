@@ -1,5 +1,5 @@
 import { useState, Suspense, lazy } from "react";
-import { TrendingUp, Building2, GraduationCap, Heart, Users, Phone, MessageCircle, MessageSquare, Info } from "lucide-react";
+import { TrendingUp, Building2, GraduationCap, Heart, Users, Phone, MessageCircle, MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -110,15 +110,6 @@ export const BottomNav = () => {
           >
             <Users className="w-5 h-5" aria-hidden="true" />
             <span className="text-[10px] font-medium">{t("founders.title")}</span>
-          </button>
-
-          {/* infoinfo(: */}
-          <button
-            onClick={handleInfoClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
-          >
-            <Info className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">infoinfo(:</span>
           </button>
         </div>
       </nav>

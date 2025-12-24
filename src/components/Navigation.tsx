@@ -93,7 +93,7 @@ export const Navigation = () => {
   // Simplified to 4 items: Invest | Sell | For Students | Founders
   const menuItems = [
     { label: t("nav.investors"), id: undefined as string | undefined, path: "/investitori" as string | undefined },
-    { label: t("nav.sell"), id: undefined, path: "/vendi" },
+    { label: t("nav.sell"), id: "seller-section", path: undefined },
     { label: t("nav.students"), id: undefined, path: "/studenti" },
     { label: t("founders.title"), id: undefined, path: undefined, isFounders: true },
   ];

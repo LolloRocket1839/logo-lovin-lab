@@ -20,27 +20,43 @@
     "callDirect": "Call directly"
   },
   "howItWorks": {
-    "title": "How it works",
-    "subtitle": "A model where everyone wins",
+    "badge": "Our model",
+    "title": "How Jungle Rent Works",
+    "subtitle": "A model where everyone wins: investors, students, and tourists",
     "steps": {
       "invest": {
         "title": "Invest",
-        "desc": "From €100"
+        "desc": "From €100, buy shares in our real estate portfolio"
       },
       "acquire": {
-        "title": "We acquire",
-        "desc": "Near universities"
+        "title": "We Acquire",
+        "desc": "Properties near Turin universities"
       },
       "rent": {
-        "title": "We rent",
-        "desc": "To students & tourists"
+        "title": "We Rent",
+        "desc": "Flexible rentals to students and tourists"
       },
       "win": {
-        "title": "Everyone wins",
-        "desc": "Investors earn",
-        "descHighlight": "Students save"
+        "title": "Everyone Wins",
+        "desc": "Investors: bi-monthly payouts • Students: -25% rent"
       }
-    }
+    },
+    "investors": {
+      "title": "For Investors",
+      "point1": "Bi-monthly payouts",
+      "point2": "Above-market returns",
+      "point3": "Zero management",
+      "point4": "Diversified portfolio"
+    },
+    "students": {
+      "title": "For Students",
+      "point1": "-25% compared to Turin average rent",
+      "point2": "Flexible academic year contracts",
+      "point3": "Zero agency fees"
+    },
+    "savingHighlight": "Annual savings for students compared to Turin average rent",
+    "ctaInvest": "Invest from €100",
+    "ctaRent": "Find housing"
   },
   "video": {
     "title": "Understand our model in 2 minutes",
@@ -116,7 +132,7 @@
     "service3Title": "We Manage Everything In-House",
     "service3Desc": "Maintenance, contracts, 24/7 support, cleaning: we manage every aspect of our properties directly, without outsourcing.",
     "service4Title": "Accessible Investments",
-    "service4Desc": "We offer the opportunity to invest in Jungle Rent starting from €100, democratizing access to the property market.",
+    "service4Desc": "We offer the opportunity to invest in our real estate portfolio starting from €100, democratizing access to the property market.",
     "whyChooseTitle": "Why Choose JungleRent",
     "whyPoint1": "Direct owners: not intermediaries, but long-term investors",
     "whyPoint2": "Exclusive focus on university students",
@@ -134,7 +150,7 @@
     "tagline": "Safe renting in the real estate jungle",
     "mainHeadline": "Invest in student housing in Turin",
     "mainSubheadline": "Invest from €100 in university properties. We acquire and manage, you earn.",
-    "badgeExplanation": "Invest in Jungle Rent. Zero management, quarterly returns.",
+    "badgeExplanation": "Purchase shares of our real estate portfolio. Zero management, quarterly returns.",
     "discoverOpportunity": "Discover the opportunity",
     "talkToLorenzo": "Talk to Lorenzo",
     "startInvesting": "Start investing",
@@ -142,7 +158,7 @@
     "howItWorks": "How it works?",
     "miniFaq": {
       "whatBuy": "What do I buy with €100?",
-      "whatBuyAnswer": "You invest in Jungle Rent, a startup that acquires and manages university properties in Turin. You don't buy a whole property, but participate in our portfolio results.",
+      "whatBuyAnswer": "You purchase equity shares in Jungle Rent's real estate portfolio. Not a whole property, but a fraction of our managed assets.",
       "howEarn": "How do I receive returns?",
       "howEarnAnswer": "Each quarter you receive your share of collected rents, proportional to your investment. Transparent reports and personal dashboard.",
       "whoManages": "Who manages the properties?",
@@ -157,9 +173,6 @@
     "flowStep3": "Rent",
     "flowStep4": "Returns",
     "invest": "Invest in Jungle Rent",
-    "investInJungle": "Invest in Jungle Rent",
-    "sellYourHouse": "Sell your house",
-    "studentWaitlist": "Student Waitlist",
     "launchCountdown": "Launch in",
     "days": "days",
     "hours": "hours",
@@ -294,9 +307,9 @@
     "subtitle": "Watch how our platform works and how we can help you find the perfect home in Turin",
     "cta": "Talk to Lorenzo"
   },
-  "studentHowItWorks": {
+  "howItWorks": {
     "title": "How it works",
-    "subtitle": "Your path to the perfect home in 4 simple steps",
+    "subtitle": "Your path to the perfect home in 3 simple steps",
     "sectionLabel": "Simple process",
     "sectionSubtitle": "Four simple steps to start saving",
     "step1Title": "Explore available rooms",
@@ -679,7 +692,7 @@
     "investorQ1": "What is the minimum investment required?",
     "investorA1": "The minimum investment in Jungle Rent starts from €100, allowing access to the Turin real estate market even with limited capital. For those wanting to invest more, opportunities depend on the properties we have available and that we want to acquire.",
     "investorQ2": "How does the investment work?",
-    "investorA2": "You invest in Jungle Rent, participating in the real estate portfolio management results proportionally to your share. WARNING: investments involve risks, including possible partial or total loss of invested capital. Results depend on market performance.",
+    "investorA2": "You invest in shares of Jungle Rent's real estate portfolio. You participate in the management results proportionally to your share. WARNING: investments involve risks, including possible partial or total loss of invested capital. Results depend on market performance.",
     "investorQ3": "Does Jungle Rent manage the property completely?",
     "investorA3": "Yes, we offer a full-service management service that includes: tenant search and selection, contract management and registrations, ordinary and extraordinary maintenance, rent collection, arrears management, legal assistance, and detailed quarterly reporting. The investor participates in results without having to worry about anything.",
     "investorQ4": "How long does it take to see the first results?",
@@ -693,7 +706,7 @@
     "investorQ8": "Can I visit the properties before investing?",
     "investorA8": "Yes, we organize property visits by appointment for interested investors. You can see the properties in person, evaluate the quality of the renovations and speak directly with our management team.",
     "investorQ9": "How can I invest with Jungle Rent?",
-    "investorA9": "You can invest in Jungle Rent starting from €100 and participate in the results generated by the real estate portfolio, proportionally to your share. It's a way to access the real estate market with reduced capital without having to deal with management, maintenance or paperwork.",
+    "investorA9": "You can invest in Jungle Rent's real estate portfolio starting from €100. You buy a share of the portfolio and participate in results generated by rentals, proportionally to your share. It's a way to access the real estate market with reduced capital without having to deal with management, maintenance or paperwork.",
     "investorQ10": "How are results calculated?",
     "investorA10": "Results are calculated based on our hybrid model: renting to university students during the academic year and short-term tourist rentals in summer months. This model optimizes occupancy compared to traditional fixed-rent contracts. Results are net of management costs but gross of personal taxes. WARNING: results depend on market performance and are not guaranteed. Investments involve risks, including possible partial or total loss of capital.",
     "investorQ11": "What is the hybrid student/tourist model?",
@@ -731,7 +744,7 @@
     "aboutA3": "No. Jungle Rent is a real estate startup with a dual mission: to solve the student housing crisis and democratize access to real estate — a historically safe asset class that, unlike in the past, has become inaccessible to many. We acquire, renovate and manage properties to rent to university students and tourists.",
     "voiceCategory": "Common Voice Questions",
     "voiceQ1": "How can I invest in real estate in Turin with little money?",
-    "voiceA1": "With Jungle Rent you can invest in the Turin real estate market starting from just €100. You invest in Jungle Rent and participate in the real estate portfolio management results. It's the most accessible way to enter real estate without buying an entire apartment.",
+    "voiceA1": "With Jungle Rent you can invest in the Turin real estate market starting from just €100. You buy a share of the property portfolio and participate in management results. It's the most accessible way to enter real estate without buying an entire apartment.",
     "voiceQ2": "Is it safe to invest in Jungle Rent?",
     "voiceA2": "Jungle Rent is a certified innovative startup, registered with the Turin Chamber of Commerce with VAT number 13333450016. We are incubated by 2i3T, the University of Turin incubator. However, like any investment, it carries risks including possible loss of capital.",
     "voiceQ3": "How much can you earn investing in student apartments in Turin?",
@@ -960,8 +973,6 @@
     "motivationOther": "Other"
   },
   "stickyCta": {
-    "investNow": "Invest",
-    "sellNow": "Sell",
     "closeLabel": "Close"
   },
   "quickLead": {

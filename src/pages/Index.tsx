@@ -1,15 +1,29 @@
+import { Suspense, lazy } from "react";
 import { Navigation } from "@/components/Navigation";
 import { MobileHeader } from "@/components/MobileHeader";
-import { BottomNav } from "@/components/BottomNav";
+import { TrustBadge } from "@/components/TrustBadge";
 import { StructuredData } from "@/components/StructuredData";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { MobileFooter } from "@/components/MobileFooter";
 
-// Innovative components - the only content for zero-scroll
+// Innovative components - loaded immediately for impact
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 
+// Lazy load below-the-fold components
+const HowItWorks = lazy(() => import("@/components/HowItWorks").then(m => ({ default: m.HowItWorks })));
+
+const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
+const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
+const BlogBanner = lazy(() => import("@/components/blog/BlogBanner").then(m => ({ default: m.BlogBanner })));
+const HomepageFAQ = lazy(() => import("@/components/HomepageFAQ"));
+const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
+const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
+const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
+const BottomNav = lazy(() => import("@/components/BottomNav").then(m => ({ default: m.BottomNav })));
+
 const Index = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isItalian = i18n.language.startsWith('it');
 
   const title = isItalian 
@@ -21,7 +35,7 @@ const Index = () => {
     : "Real estate investments in Turin's university market. Above-market returns, full professional management. 90,000+ students, 7 universities.";
 
   return (
-    <main role="main" className="h-screen bg-background relative overflow-hidden" id="main-content" tabIndex={-1}>
+    <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
       <MobileHeader />
       <Helmet>
         <title>{title}</title>
@@ -80,9 +94,52 @@ const Index = () => {
       <StructuredData />
       <Navigation />
       
-      {/* Zero-scroll: Only the hero with integrated footer */}
-      <ImmersiveHero />
-      <BottomNav />
+      {/* Immersive Hero */}
+      <div id="hero">
+        <ImmersiveHero />
+      </div>
+      
+      <div className="hidden md:block">
+        <TrustBadge />
+      </div>
+
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        
+        {/* How It Works Section - hidden on mobile */}
+        <div className="hidden md:block">
+          <HowItWorks />
+        </div>
+        
+        {/* Investor Section - hidden on mobile */}
+        <div className="hidden md:block">
+          <InvestorSection />
+        </div>
+        
+        <SellerSection />
+        
+        {/* FAQ Section - hidden on mobile */}
+        <div className="hidden md:block">
+          <HomepageFAQ />
+        </div>
+        
+        {/* Blog banner - hidden on mobile */}
+        <div className="hidden md:block">
+          <BlogBanner />
+        </div>
+        
+        {/* Desktop Footer */}
+        <div className="pb-16 lg:pb-0">
+          <Footer />
+        </div>
+        
+        {/* Mobile Footer - compact version */}
+        <div className="pb-20">
+          <MobileFooter />
+        </div>
+        <ScrollToTop />
+        <StickyCTA />
+        <BottomNav />
+      </Suspense>
     </main>
   );
 };

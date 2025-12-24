@@ -28,10 +28,10 @@ export const ScrollToTop = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  const scrollToHowItWorks = () => {
-    const howItWorksSection = document.getElementById('how-it-works-title');
-    if (howItWorksSection) {
-      howItWorksSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToJourney = () => {
+    const journeySection = document.getElementById('value-journey');
+    if (journeySection) {
+      journeySection.scrollIntoView({ behavior: "smooth" });
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -41,7 +41,7 @@ export const ScrollToTop = () => {
 
   return (
     <button
-      onClick={scrollToHowItWorks}
+      onClick={scrollToJourney}
       className="fixed bottom-20 md:bottom-24 right-6 z-50 hidden lg:flex items-center gap-2 
                  px-4 py-2.5 rounded-full bg-primary text-primary-foreground shadow-lg
                  hover:shadow-xl hover:scale-105 transition-all duration-200 cursor-pointer"

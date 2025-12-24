@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { X } from "lucide-react";
+import { X, TrendingUp, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
@@ -20,7 +20,7 @@ export const StickyCTA = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const threshold = window.innerHeight * 1.5;
+          const threshold = window.innerHeight * 1.0;
           if (window.scrollY > threshold && !isDismissed) {
             setIsVisible(true);
           } else if (window.scrollY <= threshold) {
@@ -43,8 +43,8 @@ export const StickyCTA = () => {
     setInvestDialogOpen(true);
   };
 
-  const handleSellClick = () => {
-    trackClick('sticky_cta_sell');
+  const handleSellerClick = () => {
+    trackClick('sticky_cta_seller');
     setSellerDialogOpen(true);
   };
 
@@ -55,34 +55,38 @@ export const StickyCTA = () => {
       <div 
         role="region"
         aria-live="polite"
-        className="fixed bottom-6 right-6 z-40 hidden md:flex items-center gap-2
-                   animate-in slide-in-from-bottom-4 fade-in duration-300"
+        aria-label={t('nav.investors')}
+        className="fixed bottom-4 left-0 right-0 z-40 hidden md:block
+                    backdrop-blur-xl bg-primary/95 border-t border-primary-foreground/20
+                    transition-all duration-300 shadow-lg rounded-t-xl"
       >
-        <div className="flex items-center gap-1.5 bg-background/80 backdrop-blur-md 
-                        rounded-full p-1.5 shadow-lg border border-border/50">
+        <div className="container px-4 md:px-8 py-3 flex items-center justify-between gap-3">
           <Button
             onClick={handleInvestClick}
-            size="sm"
-            className="h-9 px-4 text-sm font-medium rounded-full"
+            size="lg"
+            variant="secondary"
+            className="flex-1 h-12 text-sm font-semibold shadow-xl touch-target"
           >
-            {t('stickyCta.investNow')}
+            <TrendingUp className="mr-2 w-5 h-5" aria-hidden="true" />
+            {t('nav.investors')}
           </Button>
           <Button
-            onClick={handleSellClick}
-            size="sm"
-            variant="ghost"
-            className="h-9 px-4 text-sm font-medium rounded-full text-muted-foreground hover:text-foreground"
+            onClick={handleSellerClick}
+            size="lg"
+            variant="outline"
+            className="flex-1 h-12 text-sm font-semibold bg-background/90 touch-target"
           >
-            {t('stickyCta.sellNow')}
+            <Building2 className="mr-2 w-5 h-5" aria-hidden="true" />
+            {t('nav.sell')}
           </Button>
           <Button
             onClick={() => setIsDismissed(true)}
             variant="ghost"
             size="icon"
-            className="h-8 w-8 rounded-full text-muted-foreground hover:text-foreground"
+            className="h-12 w-12 flex-shrink-0 text-primary-foreground hover:bg-primary-foreground/10 touch-target"
             aria-label={t('stickyCta.closeLabel')}
           >
-            <X className="h-4 w-4" />
+            <X className="h-5 w-5" />
           </Button>
         </div>
       </div>
@@ -92,7 +96,7 @@ export const StickyCTA = () => {
         onOpenChange={setInvestDialogOpen}
         source="sticky_cta"
       />
-      
+
       <QuickSellerLeadDialog 
         open={sellerDialogOpen} 
         onOpenChange={setSellerDialogOpen}
