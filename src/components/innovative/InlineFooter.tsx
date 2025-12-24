@@ -10,6 +10,8 @@ export const InlineFooter = () => {
     { label: t("nav.students"), path: "/studenti" },
     { label: "FAQ", path: "/faq" },
     { label: "Blog", path: "/blog" },
+    { label: "Cities", path: "/blog?category=torino" },
+    { label: "Real Estate", path: "/blog?category=immobiliare" },
   ];
 
   return (
