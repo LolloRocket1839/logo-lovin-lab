@@ -7,6 +7,7 @@ import { WaitlistDialog } from "@/components/WaitlistDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { HeroLogo } from "./HeroLogo";
 import { InlineFooter } from "./InlineFooter";
+import { HowItWorksInline } from "./HowItWorksInline";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { TrendingUp, Home, GraduationCap } from "lucide-react";
 
@@ -107,6 +108,11 @@ export const ImmersiveHero = () => {
                 {t('hero.studentWaitlist', 'Waitlist Student')}
               </Button>
             </div>
+          </div>
+
+          {/* How It Works Inline */}
+          <div className="mb-6 md:mb-8 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+            <HowItWorksInline />
           </div>
 
           {/* 2i3T Badge */}
