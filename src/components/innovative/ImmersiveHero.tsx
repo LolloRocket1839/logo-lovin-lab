@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { HeroLogo } from "./HeroLogo";
-import { HowItWorksDrawer } from "./HowItWorksDrawer";
+import { InlineFooter } from "./InlineFooter";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 
 export const ImmersiveHero = () => {
@@ -21,16 +21,16 @@ export const ImmersiveHero = () => {
 
   return (
     <header 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
       role="banner"
     >
       {/* Gradient background */}
       <div className="absolute inset-0 gradient-jungle-hero" />
 
-      {/* Main content */}
-      <div className="container relative z-10 px-4 md:px-8 py-12">
+      {/* Main content - centered with slight upward offset */}
+      <div className="container relative z-10 px-4 md:px-8 -mt-16 md:-mt-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Animated Logo - visible on mobile, fades with scroll */}
+          {/* Animated Logo */}
           <HeroLogo />
 
           {/* Headline */}
@@ -69,7 +69,7 @@ export const ImmersiveHero = () => {
             </Button>
           </div>
 
-          {/* 2i3T Badge - below CTA */}
+          {/* 2i3T Badge */}
           <a 
             href="https://2i3t.it" 
             target="_blank" 
@@ -84,11 +84,11 @@ export const ImmersiveHero = () => {
               <p className="text-xs text-primary font-medium">Startup Innovativa</p>
             </div>
           </a>
-
-          {/* How it works drawer - mobile only */}
-          <HowItWorksDrawer />
         </div>
       </div>
+
+      {/* Inline Footer at bottom */}
+      <InlineFooter />
 
       <QuickInvestorLeadDialog open={investDialogOpen} onOpenChange={setInvestDialogOpen} source="hero" />
     </header>
