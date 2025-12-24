@@ -37,7 +37,7 @@ export const ImmersiveHero = () => {
 
   return (
     <header 
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen md:h-screen flex items-center justify-center md:overflow-hidden pb-20 md:pb-0"
       role="banner"
     >
       {/* Gradient background */}
