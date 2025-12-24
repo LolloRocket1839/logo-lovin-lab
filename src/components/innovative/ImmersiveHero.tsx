@@ -2,19 +2,34 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
+import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
+import { WaitlistDialog } from "@/components/WaitlistDialog";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { HeroLogo } from "./HeroLogo";
 import { InlineFooter } from "./InlineFooter";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
+import { TrendingUp, Home, GraduationCap } from "lucide-react";
 
 export const ImmersiveHero = () => {
   const { t } = useTranslation();
   const { trackClick } = useAnalytics();
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
+  const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
+  const [studentDialogOpen, setStudentDialogOpen] = useState(false);
 
   const handleInvestClick = () => {
     trackClick('immersive_hero_invest');
     setInvestDialogOpen(true);
+  };
+
+  const handleSellClick = () => {
+    trackClick('immersive_hero_sell');
+    setSellerDialogOpen(true);
+  };
+
+  const handleStudentClick = () => {
+    trackClick('immersive_hero_student');
+    setStudentDialogOpen(true);
   };
 
   const headline = t('hero.mainHeadline');
@@ -57,16 +72,41 @@ export const ImmersiveHero = () => {
             {t('hero.mainSubheadline')}
           </p>
 
-          {/* Single CTA */}
-          <div className="mb-8 md:mb-10">
+          {/* 3 CTAs */}
+          <div className="flex flex-col items-center gap-4 mb-8 md:mb-10">
+            {/* Primary CTA - Invest */}
             <Button
               size="lg"
               variant="premium"
               onClick={handleInvestClick}
-              className="text-base md:text-lg px-8 py-6 md:px-10 md:py-7"
+              className="text-base md:text-lg px-8 py-6 md:px-10 md:py-7 w-full sm:w-auto"
             >
-              {t('hero.startInvesting')} →
+              <TrendingUp className="w-5 h-5 mr-2" />
+              {t('hero.investInJungle', 'Invest in Jungle Rent')} →
             </Button>
+
+            {/* Secondary CTAs - Sell & Student */}
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handleSellClick}
+                className="text-sm md:text-base px-6 py-5 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                {t('hero.sellYourHouse', 'Sell your house')}
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handleStudentClick}
+                className="text-sm md:text-base px-6 py-5 border-primary/30 hover:bg-primary/10 hover:border-primary/50"
+              >
+                <GraduationCap className="w-4 h-4 mr-2" />
+                {t('hero.studentWaitlist', 'Waitlist Student')}
+              </Button>
+            </div>
           </div>
 
           {/* 2i3T Badge */}
@@ -91,6 +131,8 @@ export const ImmersiveHero = () => {
       <InlineFooter />
 
       <QuickInvestorLeadDialog open={investDialogOpen} onOpenChange={setInvestDialogOpen} source="hero" />
+      <QuickSellerLeadDialog open={sellerDialogOpen} onOpenChange={setSellerDialogOpen} source="hero" />
+      <WaitlistDialog open={studentDialogOpen} onOpenChange={setStudentDialogOpen} />
     </header>
   );
 };
