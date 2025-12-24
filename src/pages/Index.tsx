@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { MobileHeader } from "@/components/MobileHeader";
+import { BottomNav } from "@/components/BottomNav";
 import { StructuredData } from "@/components/StructuredData";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
@@ -81,6 +82,7 @@ const Index = () => {
       
       {/* Zero-scroll: Only the hero with integrated footer */}
       <ImmersiveHero />
+      <BottomNav />
     </main>
   );
 };
