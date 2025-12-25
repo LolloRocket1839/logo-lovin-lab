@@ -1,0 +1,1425 @@
+{
+  "accessibility": {
+    "skipToContent": "Hoppa till huvudinnehåll",
+    "openMenu": "Öppna meny",
+    "closeMenu": "Stäng meny",
+    "languageSelector": "Välj språk",
+    "startupInnovativaLink": "Certifierat innovativt startup - Verifiera i det officiella registret (öppnas i nytt fönster)",
+    "opensNewWindow": "(öppnas i nytt fönster)",
+    "openLogoModal": "Öppna Jungle Rent logotypinformation",
+    "loading": "Laddar...",
+    "currentPage": "Aktuell sida"
+  },
+  "founders": {
+    "title": "Grundare",
+    "contactUs": "Kontakta oss direkt",
+    "callNow": "Ring nu",
+    "message": "Skriv",
+    "noWhatsApp": "Har du inte WhatsApp?",
+    "sendSMS": "Skicka SMS",
+    "callDirect": "Ring direkt"
+  },
+  "howItWorks": {
+    "badge": "Vår modell",
+    "title": "Hur Jungle Rent fungerar",
+    "subtitle": "En modell där alla vinner: investerare, studenter och turister",
+    "steps": {
+      "invest": {
+        "title": "Investera",
+        "desc": "Från €100, köp andelar i vår fastighetsportfölj"
+      },
+      "acquire": {
+        "title": "Vi förvärvar",
+        "desc": "Fastigheter nära universiteten i Turin"
+      },
+      "rent": {
+        "title": "Vi hyr ut",
+        "desc": "Flexibla hyresavtal till studenter och turister"
+      },
+      "win": {
+        "title": "Alla vinner",
+        "desc": "Investerare: utbetalning varannan månad • Studenter: -25% hyra"
+      }
+    },
+    "investors": {
+      "title": "För investerare",
+      "point1": "Utbetalning varannan månad",
+      "point2": "Avkastning över marknadssnittet",
+      "point3": "Ingen förvaltning",
+      "point4": "Diversifierad portfölj"
+    },
+    "students": {
+      "title": "För studenter",
+      "point1": "-25% jämfört med genomsnittshyran i Turin",
+      "point2": "Flexibla kontrakt för läsåret",
+      "point3": "Inga mäklararvoden"
+    },
+    "savingHighlight": "Årlig besparing för studenter jämfört med genomsnittshyran i Turin",
+    "ctaInvest": "Investera från €100",
+    "ctaRent": "Sök boende"
+  },
+  "video": {
+    "title": "Förstå vår modell på 2 minuter",
+    "subtitle": "En kort video som förklarar hur du investerar i studentbostäder i Turin med Jungle Rent.",
+    "badge": "2 minuter",
+    "point1": "Hur modellen fungerar",
+    "point2": "Förväntad avkastning",
+    "point3": "Ingen förvaltning för dig",
+    "cta": "Prata med Lorenzo",
+    "play": "Spela video"
+  },
+  "problem": {
+    "badge": "Problemet",
+    "title": "Studentbostadskrisen i Italien",
+    "subtitle": "Nästan 600 000 studenter söker bostad varje år, men utbudet av dedikerade bostäder täcker endast 12,6% av efterfrågan. En kris som representerar en möjlighet.",
+    "stat1Label": "studenter från andra städer",
+    "stat1Sub": "i Italien",
+    "stat2Label": "söker bostad",
+    "stat2Sub": "på privata marknaden",
+    "stat3Label": "efterfrågan täckt",
+    "stat3Sub": "av dedikerade bostäder",
+    "stat4Label": "marknadspotential",
+    "stat4Sub": "i Italien",
+    "source": "Data 2025 - Källa: Savills Research, Student Housing Italy Spotlight",
+    "cta": "Läs hela rapporten"
+  },
+  "nav": {
+    "home": "Hem",
+    "about": "Om oss",
+    "students": "För studenter",
+    "investors": "För investerare",
+    "sell": "Sälj bostad",
+    "blog": "Resurser",
+    "faq": "FAQ",
+    "contacts": "Kontakt",
+    "contactUs": "Kontakta oss",
+    "call": "Ring",
+    "search": "Sök"
+  },
+  "about": {
+    "metaTitle": "Jungle Rent - Vi köper och hyr ut studentbostäder | Turin",
+    "metaDescription": "Fastighets-startup med dubbelt uppdrag: lösa studentbostadskrisen och demokratisera tillgång till fastigheter. Vi förvärvar fastigheter i Turin och hyr ut långsiktigt.",
+    "title": "Om Jungle Rent",
+    "subtitle": "Vi köper fastigheter och hyr ut för att lösa studentbostadskrisen",
+    "cycle": {
+      "title": "Vår modell",
+      "subtitle": "En positiv cykel som skapar värde för studenter och investerare",
+      "stepLabel": "Fas {{number}}",
+      "step1Title": "Förvärv",
+      "step1Desc": "Vi köper fastigheter i universitetsnära områden i Turin. Vi behåller dem i portföljen i minst 10 år.",
+      "step2Title": "Uthyrning till studenter",
+      "step2Desc": "Vi hyr ut fastigheterna till universitetsstudenter med flexibla kontrakt och överkomliga priser.",
+      "step3Title": "Intern förvaltning",
+      "step3Desc": "Vi hanterar allt internt: underhåll, kontrakt, support 24/7, utan att delegera till tredje part.",
+      "step4Title": "Avkastning till investerare",
+      "step4Desc": "Hyrorna genererar avkastning som distribueras kvartalsvis till investerare, på ett transparent sätt.",
+      "reinvest": "Intäkterna återinvesteras för att förvärva nya fastigheter"
+    },
+    "foundedLabel": "Grundat",
+    "foundedDate": "Oktober 2025",
+    "legalForm": "Innovativt startup AB",
+    "foundersLabel": "Grundarpartners",
+    "founderLabel": "Grundare",
+    "lorenzoRole": "Grundare • LUISS Juridik och Ekonomi",
+    "capitalLabel": "Aktiekapital",
+    "capitalDesc": "Fullt inbetalt",
+    "locationLabel": "Säte",
+    "servicesTitle": "Vad vi gör",
+    "service1Title": "Vi köper fastigheter",
+    "service1Desc": "Vi köper fastigheter direkt i Turins universitetsområden. Vi är inte mellanhänder: vi köper direkt och behåller dem i vår portfölj i minst 10 år.",
+    "service2Title": "Vi hyr ut till studenter",
+    "service2Desc": "Vi hyr ut våra fastigheter till universitetsstudenter med flexibla kontrakt, och bidrar till att lösa studentbostadskrisen i Turin.",
+    "service3Title": "Vi hanterar allt internt",
+    "service3Desc": "Underhåll, kontrakt, support 24/7, städning: vi hanterar varje aspekt av våra fastigheter direkt.",
+    "service4Title": "Tillgängliga investeringar",
+    "service4Desc": "Vi erbjuder möjligheten att investera i vår fastighetsportfölj från €100, och demokratiserar tillgången till fastighetsmarknaden.",
+    "whyChooseTitle": "Varför välja JungleRent",
+    "whyPoint1": "Direkta ägare: inte mellanhänder, utan långsiktiga investerare",
+    "whyPoint2": "Exklusivt fokus på universitetsstudenter",
+    "whyPoint3": "Tillgång till fastighetsmarknaden från €100",
+    "whyPoint4": "Support 24/7 med garanterat svar",
+    "whyPoint5": "Regelefterlevnad. Partnerskap med 2i3T",
+    "contactTitle": "Kontakta oss",
+    "contactLorenzo": "Prata med Lorenzo",
+    "sendEmail": "Skicka e-post"
+  },
+  "breadcrumbs": {
+    "home": "Hem"
+  },
+  "hero": {
+    "tagline": "Trygg hyra i fastighetsdjungeln",
+    "mainHeadline": "Investera i studentbostäder i Turin",
+    "mainSubheadline": "Investera från €100 i Jungle Rent. Vi köper och förvaltar, du tjänar.",
+    "badgeExplanation": "Du köper andelar i vår fastighetsportfölj. Ingen förvaltning, kvartalsvis avkastning.",
+    "discoverOpportunity": "Upptäck möjligheten",
+    "talkToLorenzo": "Prata med Lorenzo",
+    "startInvesting": "Börja investera",
+    "discover": "Upptäck",
+    "howItWorks": "Hur fungerar det?",
+    "miniFaq": {
+      "whatBuy": "Vad köper jag för €100?",
+      "whatBuyAnswer": "Du köper andelar i Jungle Rents fastighetsportfölj. Inte en hel fastighet, utan en andel av vårt förvaltade kapital.",
+      "howEarn": "Hur får jag avkastning?",
+      "howEarnAnswer": "Varje kvartal får du din andel av inkasserade hyror, proportionellt till din investering. Transparenta rapporter och personlig dashboard.",
+      "whoManages": "Vem förvaltar fastigheterna?",
+      "whoManagesAnswer": "Jungle Rent hanterar allt: förvärv, kontrakt, hyresgäster, underhåll och skatter. Du behöver inte göra något."
+    },
+    "miniSteps": {
+      "step1": "Från €100",
+      "step2": "Vi förvaltar"
+    },
+    "flowStep1": "Investera",
+    "flowStep2": "Andelar",
+    "flowStep3": "Hyror",
+    "flowStep4": "Avkastning",
+    "invest": "Investera i Jungle Rent",
+    "launchCountdown": "Lansering om",
+    "days": "dagar",
+    "hours": "timmar",
+    "minutes": "minuter",
+    "seconds": "sekunder",
+    "waitlistCounter": "Gå med {{count}} andra på väntelistan",
+    "earlyBirdPerk": "🎉 Early bird-förmåner: De första 100 studenterna får €100 kredit",
+    "studentTitle": "Är du student?",
+    "studentSubtitle": "Spara på hyran!",
+    "investorTitle": "Är du fastighetsinvesterare?",
+    "investorSubtitle": "Investera i Jungle Rents fastigheter från €100!",
+    "subheadline": "Smarta hyror och investeringsmöjligheter",
+    "targetAudience": "För studenter och investerare",
+    "location": "Nära Politecnico, UniTo och alla större universitet i Turin",
+    "questionnaire": "Vinn €100 - Fyll i enkäten!",
+    "quizCta": "Ta quizet och vinn €100",
+    "quizSubtitle": "Hjälp oss förstå dina behov och du kan vinna €100",
+    "availableRooms": "30 rum i fyrarumslägenheter tillgängliga från september 2026",
+    "supportedBy": "Med stöd av",
+    "iAmStudent": "Jag är student",
+    "iAmInvestor": "Jag är investerare",
+    "contactLorenzo": "Kontakta Lorenzo",
+    "trustSafe": "Säkra kontrakt",
+    "trustSupport": "Dedikerad support",
+    "trustNoFees": "Inga avgifter",
+    "logoAlt": "Jungle Rent - Officiell logotyp - Optimerade hyror för studenter och investerare i Turin",
+    "seoH1": "Jungle Rent - Investeringar i studentbostäder i Turin | Komplett förvaltning",
+    "smartRentals": "Smarta hyror",
+    "investmentOpportunities": "Investeringsmöjligheter",
+    "students": "studenter",
+    "investors": "investerare",
+    "politecnico": "Politecnico",
+    "unito": "UniTo",
+    "benefits": "fördelar",
+    "logo2i3tAlt": "2i3T Företagsinkubator Turin Universitet - Officiell partner"
+  },
+  "studentSearch": {
+    "title": "Hitta ditt rum",
+    "description": "Berätta vad du letar efter så hjälper vi dig hitta den perfekta lösningen",
+    "cardTitle": "Hitta ditt idealiska rum",
+    "cardDescription": "Fyll i formuläret så hjälper vi dig hitta den perfekta lösningen för dig",
+    "cardCta": "Börja söka",
+    "nameLabel": "Namn",
+    "namePlaceholder": "Anna Andersson",
+    "nameErrorMin": "Namnet måste innehålla minst 2 tecken",
+    "nameErrorMax": "Namnet får inte överstiga 100 tecken",
+    "nameErrorFormat": "Namnet får endast innehålla bokstäver, mellanslag, apostrofer och bindestreck",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "anna.andersson@example.com",
+    "emailErrorRequired": "E-post krävs",
+    "emailErrorInvalid": "Ange en giltig e-postadress (t.ex. namn@example.com)",
+    "emailErrorMax": "E-posten får inte överstiga 255 tecken",
+    "whatYouLookingForLabel": "Vad letar du efter?",
+    "whatYouLookingForPlaceholder": "Beskriv ditt idealiska rum: område, egenskaper, vad som är viktigt för dig...",
+    "whatYouLookingForErrorMin": "Beskriv vad du letar efter med minst 20 tecken så att vi kan hitta den bästa lösningen",
+    "whatYouLookingForErrorMax": "Beskrivningen får inte överstiga 500 tecken",
+    "roommatesLabel": "Antal rumskamrater (valfritt)",
+    "roommatesPlaceholder": "Välj...",
+    "roommatesOptions": {
+      "solo": "Bara jag (eget rum)",
+      "2": "2 personer totalt",
+      "3": "3 personer totalt",
+      "4plus": "4+ personer totalt",
+      "flexible": "Inga preferenser"
+    },
+    "areaLabel": "Föredraget område (valfritt)",
+    "areaPlaceholder": "Välj...",
+    "areaOptions": {
+      "san-salvario": "San Salvario",
+      "crocetta": "Crocetta",
+      "centro": "Centrum",
+      "polito": "Nära Politecnico",
+      "unito": "Nära universitetet",
+      "san-paolo": "San Paolo/Santa Rita",
+      "aurora": "Aurora/Vanchiglia",
+      "flexible": "Inga preferenser"
+    },
+    "studyLabel": "Vad ska du studera? (valfritt)",
+    "studyPlaceholder": "T.ex. Datateknik på Politecnico",
+    "studyErrorMax": "Studieområdet får inte överstiga 150 tecken",
+    "budgetLabel": "Månadsbudget (valfritt)",
+    "budgetPlaceholder": "Välj...",
+    "budgetRanges": {
+      "400-500": "400-500€ (exkl. kostnader)",
+      "500-600": "500-600€ (exkl. kostnader)",
+      "600-700": "600-700€ (exkl. kostnader)",
+      "over-700": "Över 700€ (exkl. kostnader)"
+    },
+    "moveDateLabel": "När vill du flytta in? (valfritt)",
+    "moveDatePlaceholder": "Välj...",
+    "moveDates": {
+      "september-2026": "September 2026",
+      "asap": "Så snart som möjligt",
+      "custom": "Anpassat datum"
+    },
+    "customMoveDateLabel": "Ange datum",
+    "customMoveDatePlaceholder": "T.ex. Mars 2026, Årets slut, etc.",
+    "customMoveDateErrorMax": "Det anpassade datumet får inte överstiga 100 tecken",
+    "consentLabel": "Jag samtycker till behandling av mina personuppgifter enligt integritetspolicyn",
+    "consentError": "Du måste acceptera integritetspolicyn för att fortsätta",
+    "resourcesTitle": "📚 Användbara resurser för studenter",
+    "resourcesDesc": "Medan du letar efter bostad, upptäck var du kan studera i Turin",
+    "studySpacesLink": "Guide till de 57 bästa studielokalerna",
+    "submitButton": "Skicka förfrågan",
+    "submitting": "Skickar...",
+    "successTitle": "Förfrågan skickad! 🎉",
+    "successDescription": "Vi kontaktar dig snart med de bästa alternativen för dig",
+    "errorTitle": "Fel vid sändning",
+    "errorDescription": "Ett fel uppstod. Försök igen eller kontakta oss på WhatsApp",
+    "draftFoundMessage": "Vi hittade ett automatiskt sparat utkast",
+    "loadDraft": "Ladda utkast",
+    "draftLoadedTitle": "Utkast laddat",
+    "draftLoadedDesc": "Dina tidigare data har återställts",
+    "draftClearedTitle": "Utkast raderat",
+    "draftClearedDesc": "Det sparade utkastet har tagits bort",
+    "draftAutoSaved": "Utkast automatiskt sparat"
+  },
+  "trustBadge": {
+    "title": "Din säkerhet är vår prioritet",
+    "verified": "Certifierade kontrakt",
+    "support": "Support 24/7",
+    "transparent": "Total transparens",
+    "sectionLabel": "Institutionellt partnerskap",
+    "supportedBy": "Med stöd av 2i3T",
+    "incubator": "Företagsinkubator vid Turin Universitet",
+    "learnMore": "Läs mer om 2i3T",
+    "guarantee": "Inkuberade i Turin universitets ekosystem, vilket garanterar professionalism och tillförlitlighet i varje transaktion"
+  },
+  "benefits": {
+    "title": "Varför välja Jungle Rent",
+    "subtitle": "Exklusiva fördelar för din boendeupplevelse",
+    "sectionLabel": "Våra fördelar",
+    "whyJungleRent": "Varför Jungle Rent",
+    "sectionTitle": "Konkreta fördelar för studenter och investerare",
+    "sectionSubtitle": "Professionell förvaltning, garanterade besparingar och institutionella partnerskap",
+    "savings": "Certifierade besparingar",
+    "savingsDesc": "Spara cirka 30% på hyran. Förmånliga hyror med transparenta kontrakt.",
+    "savingsHighlight": "Spara",
+    "savingsHow1": "Inga mäklararvoden",
+    "savingsHow2": "Konkurrenskraftiga hyror",
+    "savingsTooltip": "Spara €200-400 per månad",
+    "investment": "Investeringsmöjligheter",
+    "investmentDesc": "För investerare: professionell fastighetsförvaltning med konstant universitetsefterfrågan",
+    "investmentHighlight": "Investerare",
+    "investmentHow1": "Tillgång från €100",
+    "investmentHow2": "Komplett förvaltning ingår",
+    "investmentTooltip": "Delta i fastighetsmarknaden",
+    "location": "Strategiskt läge",
+    "locationDesc": "Utvald fastighetsportfölj nära alla stora universitet: Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO",
+    "locationHighlight": "Toppläge",
+    "locationHow1": "Nära alla universitet",
+    "locationHow2": "Strategiska områden med hög efterfrågan",
+    "locationTooltip": "Nära alla universitet",
+    "quality": "Certifierade kontrakt",
+    "qualityDesc": "Reguljära kontrakt, professionell förvaltning och total transparens. Med stöd av 2i3T - Universitetsinkubator.",
+    "qualityHighlight": "100% Säkert",
+    "qualityHow1": "Juridisk support ingår",
+    "qualityHow2": "Partnerskap med 2i3T",
+    "qualityTooltip": "Verifierade juridiska kontrakt",
+    "studentCta": "Jag är student",
+    "investorCta": "Jag är investerare"
+  },
+  "student": {
+    "title": "För studenter",
+    "subtitle": "Vårt uppdrag: lösa studentbostadskrisen",
+    "marketProofLabel": "Vår marknad",
+    "marketProofTitle": "90 000+ universitetsstudenter i Turin",
+    "marketProofDesc": "7 universitet, konstant efterfrågan hela året. Det är därför vi investerar här.",
+    "sectionLabel": "För studenter",
+    "sectionTitle": "Vi löser studentbostadskrisen",
+    "compactDesc": "Överkomliga hyror i universitetsområden. Transparenta kontrakt, inga avgifter och dedikerad support för din akademiska resa.",
+    "contactCta": "Kontakta oss på WhatsApp",
+    "sectionSubtitle": "En del av vårt dubbla uppdrag: göra boende tillgängligt för alla studenter",
+    "benefit1Title": "Reducerade kostnader",
+    "benefit1Desc": "Förmånliga hyror: mer pengar för att studera och uppleva Turin",
+    "benefit1Tooltip": "Kvalitetsrum till bra priser",
+    "benefit2Title": "Flexibla kontrakt",
+    "benefit2Desc": "Flexibla kontrakt för läsåret med gratis gästdagar för sommartentor: spara 25%",
+    "benefit2Tooltip": "Flexibla bokningsalternativ",
+    "contactText": "Kontakta våra studentrådgivare direkt:",
+    "contactLorenzo": "Prata med Lorenzo",
+    "sendEmail": "Skicka e-post",
+    "responseTime": "Svar inom 40 minuter",
+    "cta": "Upptäck rummen",
+    "feature1": "Nära universiteten",
+    "feature2": "Utvalda rumskamrater",
+    "feature3": "Allt ingår",
+    "separator": "och"
+  },
+  "investor": {
+    "title": "För investerare",
+    "subtitle": "Vi demokratiserar tillgången till fastighetsmarknaden",
+    "sectionLabel": "För investerare",
+    "sectionTitle": "Tillgång till fastighetsmarknaden från €100",
+    "compactDesc": "Investera i universitetsfastigheter i Turin. Komplett förvaltning, hybridmodell studenter/turister.",
+    "sectionSubtitle": "Dubbelt uppdrag: studentbostadskris och demokratisk tillgång till fastighetsmarknaden",
+    "startupInnovativaBadge": "Certifierat innovativt startup",
+    "whyInvestTitle": "Varför investera med oss",
+    "benefit1Title": "Optimerad investering",
+    "benefit1Desc": "Möjligheter på fastighetsmarknaden tack vare vår professionella förvaltning och strategiska prissättning",
+    "benefit2Title": "Komplett förvaltning",
+    "benefit2Desc": "Vi tar hand om allt: kontrakt, underhåll, hyresgästrelationer. Du tänker bara på investeringen",
+    "benefit3Title": "Strategisk portfölj",
+    "benefit3Desc": "Utvalda fastigheter nära Turins 7 största universitetsnav (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO) med konstant hög efterfrågan",
+    "flowStep1": "Tillgänglighet",
+    "flowStep1Sub": "Från €100",
+    "flowStep2": "Förvaltning",
+    "flowStep2Sub": "Professionell",
+    "flowStep3": "Portfölj",
+    "flowStep3Sub": "Strategisk",
+    "waitlistTitle": "Gå med på investerarväntelistan",
+    "waitlistSubtitle": "Få exklusiva uppdateringar om fastighetsinvesteringsmöjligheter i Turin",
+    "waitlistCta": "Gå med på väntelistan",
+    "priorityResponse": "Garanterat prioriterat svar",
+    "cta": "Upptäck möjligheten",
+    "feature1": "Tillgång från €100",
+    "feature2": "Komplett förvaltning",
+    "feature3": "Ingen byråkrati",
+    "activeInvestors": "aktiva investerare",
+    "talkToAdvisor": "Prata med Lorenzo",
+    "talkToLorenzo": "Prata med Lorenzo",
+    "scheduleCall": "Boka samtal",
+    "bookCall": "Visa intresse",
+    "incubatorTooltip": "Inkuberade hos 2i3T - Företagsinkubator Turin Universitet",
+    "minInvestmentBadge": "Investera från €100",
+    "marketStats": {
+      "minInvestment": "minsta investering",
+      "studentSavings": "studentbesparingar",
+      "studentsOffsite": "studenter från andra städer i Italien",
+      "marketPotential": "marknadspotential",
+      "disclaimer": "Uppskattningar 2025 - Källa: Savills Research"
+    },
+    "testimonials": {
+      "title": "Vad investerare säger",
+      "quote1": "Jag investerade €500 och får transparenta kvartalsrapporter. Äntligen kan jag komma in på fastighetsmarknaden.",
+      "author1": "Marco, 32 år",
+      "quote2": "Ingen förvaltning, allt sköts av teamet. Jag kan fokusera på mitt arbete medan investeringen arbetar för mig.",
+      "author2": "Giulia, 28 år"
+    }
+  },
+  "infographic": {
+    "badge": "Vår modell",
+    "title": "Jungle Rent-modellen",
+    "subtitle": "Förenklade fastighetsinvesteringar",
+    "steps": {
+      "invest": {
+        "title": "Investera",
+        "description": "Delta från €100",
+        "detail": "Få tillgång till fastighetsmarknaden utan att köpa en hel fastighet. Ingen byråkrati, ingen direkt förvaltning.",
+        "keyPoints": [
+          "Investera från endast €100",
+          "Ingen fastighet att förvalta",
+          "Ingen byråkrati eller dolda kostnader"
+        ]
+      },
+      "acquire": {
+        "title": "Vi förvärvar",
+        "description": "Fastigheter i universitetsområden",
+        "detail": "Vi väljer ut och förvärvar fastigheter i områden med hög efterfrågan nära Politecnico, UniTo och Turins universitet.",
+        "keyPoints": [
+          "Komplett due diligence",
+          "Strategiska områden med hög efterfrågan",
+          "7 universitet betjänade"
+        ]
+      },
+      "manage": {
+        "title": "Vi förvaltar",
+        "description": "Flexibla hyror",
+        "detail": "Flexibla hyror för studenter och turister. Maximal beläggning hela året.",
+        "keyPoints": [
+          "Flexibla hyror för studenter och turister",
+          "Underhåll ingår"
+        ]
+      },
+      "earn": {
+        "title": "Du deltar",
+        "description": "I portföljresultaten",
+        "detail": "Du deltar i resultaten från förvaltade fastigheter. Transparenta rapporter och personlig dashboard för att övervaka din investering.",
+        "keyPoints": [
+          "Transparenta kvartalsrapporter",
+          "Personlig dashboard",
+          "Distribuerad avkastning"
+        ]
+      }
+    },
+    "metrics": {
+      "yield": {
+        "label": "Minsta investering",
+        "description": "Från €100"
+      },
+      "savings": {
+        "label": "Studentbesparingar",
+        "description": "jämfört med 12-månaderskontrakt"
+      },
+      "students": {
+        "label": "Studenter",
+        "description": "Universitetsstudenter i Turin"
+      },
+      "universities": {
+        "label": "Universitet",
+        "description": "Lärosäten i området"
+      }
+    },
+    "disclaimer": "*Investeringar innebär risker, inklusive möjlig förlust av kapital. Resultaten beror på marknadsutvecklingen.",
+    "cta": "Komplett förvaltning ingår.",
+    "scrollHint": "Vänta för att fortsätta"
+  },
+  "slideOverlays": {
+    "invest": {
+      "minInvestment": "Från €100",
+      "caption": "Du investerar, vi gör resten. Ingen byråkrati."
+    },
+    "acquire": {
+      "university": "Universitetsområden",
+      "caption": "Vi förvärvar nära Politecnico, UniTo och Turins 7 universitet."
+    },
+    "manage": {
+      "students": "Studenter sep-jun",
+      "tourists": "Turister jul-aug",
+      "caption": "Beläggning 365 dagar. Kontrakt, underhåll, skatter ingår."
+    },
+    "earn": {
+      "quarterly": "Kvartalsrapporter",
+      "dashboard": "Personlig dashboard",
+      "caption": "Du deltar i resultaten med total transparens."
+    }
+  },
+  "investors": {
+    "metaTitle": "Tillgängliga fastighetsinvesteringar Turin - Vi demokratiserar fastigheter | Jungle Rent",
+    "metaDescription": "Vi demokratiserar tillgången till fastighetsmarknaden, en historiskt säker tillgångsklass som idag är otillgänglig för många. Investera i universitetsfastigheter i Turin med komplett förvaltning.",
+    "heroTitle": "Vi demokratiserar tillgången till fastigheter",
+    "heroSubtitle": "En historiskt säker tillgångsklass, idag otillgänglig för många. Investera i universitetsfastigheter i Turin med professionell förvaltning.",
+    "metricReturn": "Årlig målavkastning",
+    "metricOccupancy": "Beläggningsgrad",
+    "metricManagement": "Förvaltning ingår",
+    "benefitsTitle": "Varför investera med oss",
+    "benefitsSubtitle": "Professionella partnerskap på Turins universitetsuthyrningsmarknad",
+    "processTitle": "Hur det fungerar",
+    "processSubtitle": "4 enkla steg för att börja investera",
+    "step1Title": "Initial kontakt",
+    "step1Desc": "Vi pratar om dina behov och investeringsmål via WhatsApp eller samtal",
+    "step2Title": "Möjlighetsanalys",
+    "step2Desc": "Vi presenterar tillgängliga fastigheter med detaljerad analys och prognoser",
+    "step3Title": "Bekräftelse",
+    "step3Desc": "Du slutför deltagandet med transparenta kontrakt och juridisk support ingår",
+    "step4Title": "Deltagande i resultaten",
+    "step4Desc": "Du deltar i portföljresultaten med kvartalsrapporter. Vi förvaltar allt",
+    "ctaTitle": "Redo att investera?",
+    "ctaSubtitle": "Prata med en av våra rådgivare och upptäck tillgängliga möjligheter idag",
+    "readSavillsAnalysis": "Läs hela marknadsanalysen"
+  },
+  "seller": {
+    "title": "Sälj ditt hem i Turin",
+    "subtitle": "Gratis värdering • Inga avgifter • Avslut inom 60-90 dagar",
+    "sectionLabel": "Sälj bostad",
+    "heroHighlight": "Sälj",
+    "heroRest": "din fastighet",
+    "heroBracket": "(till oss)",
+    "heroSubheadline": "Direkt köpare, inga avgifter, 60-90 dagar",
+    "newTitle": "Vi köper din fastighet. Vi är ingen mäklare.",
+    "newSubtitle": "Vi letar inte efter köpare åt dig. Jungle Rent köper direkt fastigheter i universitetsområden.",
+    "directBuyerTitle": "Vi köper din fastighet direkt",
+    "directBuyerSubtitle": "Vi är ingen mäklare. Vi köper för vår egen portfölj.",
+    "benefit1": "Inga avgifter",
+    "benefit2": "60-90 dagar",
+    "benefit3": "Garanterad köpare",
+    "urgencyBadge": "Vi söker fastigheter i San Salvario, Vanchiglia, Sjukhusområdet, Santa Rita, Cit Turin, Campidoglio, Aurora, Campus Einaudi, Corso Casale",
+    "missionStatement": "Vi köper fastigheter i Turins universitetsområden för att erbjuda boende till 90 000+ studenter. Din fastighet blir en del av lösningen på bostadskrisen.",
+    "readGuide": "Läs hela guiden: risker, skatter och mäklare",
+    "comparison": {
+      "agency": "Mäklare",
+      "jungleRent": "Jungle Rent",
+      "roleLabel": "Roll",
+      "roleAgency": "Mellanhand",
+      "roleJR": "Köpare",
+      "commissionsLabel": "Provision",
+      "commissionsJR": "€0",
+      "timeLabel": "Tid",
+      "months": "månader",
+      "days": "dagar",
+      "visitsLabel": "Visningar",
+      "visitsAgency": "Dussintals",
+      "visitsJR": "Max 1-2"
+    },
+    "compactTitle": "Vi värderar och köper inom 7 dagar",
+    "compactDesc": "Sälj din fastighet till Jungle Rent snabbt och utan avgifter. Vi köper i universitetsområden.",
+    "compactBullet1": "Gratis värdering inom 72 timmar",
+    "compactBullet2": "Skriftligt bud inom 10 dagar, inga avgifter",
+    "sectionTitle": "För säljare",
+    "intro": "Äger du en fastighet i Turin och vill sälja snabbt? Jungle Rent är den direkta köparen du letade efter. Vi köper lägenheter i Turins universitetsområden (Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto) för att omvandla dem till optimerade boendelösningar för studenter och unga yrkesverksamma.",
+    "valuationFree": "Gratis värdering inom 3-5 dagar",
+    "zeroFees": "inga avgifter",
+    "forSeller": "för säljaren",
+    "whyWeAcquire": "Varför vi förvärvar fastigheter i Turin",
+    "para1": "Jungle Rent föddes ur visionen att optimera studentuthyrningsmarknaden i Turin, en universitetsstad i ständig tillväxt med över 90 000 studenter vid Politecnico di Torino, Università degli Studi (UniTo), ESCP Business School och IED. Efterfrågan på kvalitetsbostäder i universitetsområden är mycket hög, men utbudet är ofta fragmenterat och oprofessionellt.",
+    "para2": "Vårt uppdrag är att förvärva strategiskt placerade lägenheter i universitetsområden och omvandla dem till modernt, optimerat boende: bekväma gemensamma utrymmen, välmöblerade enkelrum, inkluderade tjänster och professionell förvaltning. Därför söker vi treor, fyror och större lägenheter i områden som",
+    "zones": "Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto, Santa Rita och San Paolo",
+    "para3": "idealiskt 10-20 minuters promenad eller kollektivtrafik från Turins huvuduniversitet.",
+    "para4": "Vi arbetar med specialiserade notarier och advokater för att garantera säkra och snabba transaktioner. Vår värdering baseras på veckovis uppdaterade marknadsanalyser, med hänsyn till läge, yta, fastighetsskick och optimeringspotential för hyresmarknaden.",
+    "advantagesTitle": "Fördelar med att sälja till Jungle Rent:",
+    "para5": "ingen mäklarprovision (spara €6 000-10 000), snabb process utan dussintals visningar av främlingar i ditt hem, skriftligt bud inom 48 timmar efter besiktning, juridisk support ingår och säker betalning.",
+    "timelineValuation": "Värdering",
+    "timelineValuationTime": "48h",
+    "timelineInspection": "Besiktning",
+    "timelineInspectionTime": "10-14 dagar",
+    "timelineOffer": "Bud",
+    "timelineOfferTime": "5-7 dagar",
+    "timelineClosing": "Avslut",
+    "timelineClosingTime": "60-90 dagar",
+    "benefit1Title": "Omedelbar värdering",
+    "benefit1Desc": "Få en professionell värdering av din fastighet inom 24-48 timmar",
+    "benefit1Tooltip": "Snabb professionell värdering",
+    "benefit2Title": "Snabb försäljning",
+    "benefit2Desc": "Förenklad och snabb försäljningsprocess, utan onödiga mellanhänder",
+    "benefit2Tooltip": "Sälj inom 60-90 dagar",
+    "benefit3Title": "Säker transaktion",
+    "benefit3Desc": "Transparenta kontrakt och juridisk support genom hela processen",
+    "benefit3Tooltip": "Transparent juridisk support",
+    "benefit4Title": "Maximalt värde",
+    "benefit4Desc": "Få bästa marknadspris för din fastighet i Turin",
+    "benefit4Tooltip": "Bästa marknadspris",
+    "zonesTitle": "Intresseområden i Turin",
+    "zonesText": "Vi söker lägenheter till salu i följande universitetsområden i Turin:",
+    "zonesList": "Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto, Santa Rita, San Paolo",
+    "idealProperty": "Idealiskt: treor, fyror eller större lägenheter nära Politecnico di Torino, Università di Torino (UniTo), ESCP Business School, SAA, IED.",
+    "formInvitation": "Fyll i formuläret för att få en gratis värdering av din fastighet. Ingen förpliktelse, garanterat svar inom 3-5 dagar.",
+    "ctaButton": "Begär gratis värdering",
+    "cta": "Begär värdering",
+    "scheduleCall": "Boka samtal",
+    "feature1": "Gratis värdering",
+    "feature2": "Försäljning inom 30 dagar",
+    "feature3": "Inga avgifter"
+  },
+  "quickSellerLead": {
+    "title": "Sälj ditt hem",
+    "newTitle": "Gratis värdering inom 24 timmar",
+    "description": "Lämna dina uppgifter så kontaktar vi dig för en gratis värdering.",
+    "notAgency": "Vi är ingen mäklare. Om din fastighet är i våra områden ger vi ett direkt bud.",
+    "advantage1": "Direkt köpare",
+    "advantage2": "Inga avgifter",
+    "advantage3": "Bud inom 7 dagar",
+    "namePlaceholder": "Vad heter du?",
+    "addressPlaceholder": "Fastighetens adress",
+    "optional": "valfritt",
+    "submit": "Skicka förfrågan",
+    "sending": "Skickar...",
+    "successTitle": "Förfrågan skickad!",
+    "successDescription": "Vi kontaktar dig snart för en gratis värdering.",
+    "successMessage": "Vi kontaktar dig snart för att diskutera försäljningen av din fastighet.",
+    "scheduleCall": "Boka samtal",
+    "close": "Stäng",
+    "errorTitle": "Fel",
+    "errorDescription": "Ett fel uppstod. Försök igen senare.",
+    "emailRequired": "Ange din e-post",
+    "invalidEmail": "Ange en giltig e-post",
+    "privacy": "Dina uppgifter är säkra. Vi delar dem aldrig med tredje part."
+  },
+  "tourist": {
+    "sectionLabel": "För turister & digitala nomader",
+    "sectionTitle": "Upptäck Turin som en lokalbo",
+    "sectionDesc": "Utvalda boenden, exklusiva guider och autentiska tips för att uppleva Turin på bästa sätt. Oavsett om du är turist eller digital nomad hjälper vi dig att upptäcka staden.",
+    "ctaTitle": "Kompletta guider om Turin",
+    "ctaDesc": "Upptäck var du ska äta, arbeta, utforska och bo i Turin",
+    "ctaButton": "Läs guiderna",
+    "benefit1Title": "Utvalda boenden",
+    "benefit1Desc": "Verifierade lägenheter i Turins bästa stadsdelar",
+    "benefit1Tooltip": "Kvalitetsboenden i säkra och autentiska områden",
+    "benefit2Title": "Autentiska lokalguider",
+    "benefit2Desc": "Insidertips om kaféer, coworking, restauranger och lokal kultur",
+    "benefit2Tooltip": "Upptäck Turin som en invånare",
+    "benefit3Title": "Personlig support",
+    "benefit3Desc": "Dedikerad hjälp för att göra din vistelse oförglömlig",
+    "benefit3Tooltip": "WhatsApp-support på italienska och engelska",
+    "contactPrompt": "Behöver du tips om Turin?",
+    "contactButton": "Kontakta oss på WhatsApp"
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "subtitle": "Snabba svar på dina frågor",
+    "sectionLabel": "FAQ",
+    "investorCategory": "För investerare",
+    "sellerCategory": "För säljare",
+    "aboutCategory": "Om Jungle Rent",
+    "investorQ1": "Vad är den minsta investeringen?",
+    "investorA1": "Minsta investering i Jungle Rent börjar från €100, vilket ger tillgång till Turins fastighetsmarknad även med begränsat kapital. För den som vill investera mer beror möjligheterna på fastigheterna vi har tillgängliga och vill förvärva.",
+    "investorQ2": "Hur fungerar investeringen?",
+    "investorA2": "Du investerar i andelar av Jungle Rents fastighetsportfölj. Du deltar i förvaltningsresultaten proportionellt till din andel. OBS: investeringar innebär risker, inklusive möjlig partiell eller total förlust av investerat kapital. Resultaten beror på marknadsutvecklingen.",
+    "investorQ3": "Förvaltar Jungle Rent fastigheterna helt?",
+    "investorA3": "Ja, vi erbjuder fullservice-förvaltning som inkluderar: sökning och urval av hyresgäster, kontraktshantering och registrering, ordinarie och extraordinärt underhåll, hyresindrivning, hantering av uteblivna betalningar, juridisk hjälp och detaljerad kvartalsrapportering. Investeraren deltar i resultaten utan att behöva oroa sig för något.",
+    "investorQ4": "Hur lång tid tar det att se de första resultaten?",
+    "investorA4": "De första resultaten meddelas efter cirka 2 månader från investeringen, när uppstartsfasen är klar (köp/renovering, hyresgästsökning, kontraktsregistrering). Därefter får du detaljerade kvartalsrapporter.",
+    "investorQ5": "Vilken typ av kontrakt erbjuds hyresgäster?",
+    "investorA5": "Vi använder tillfälliga kontrakt med studiemotivering (art. 5 L. 431/98) anpassade till läsåret, förnybara årligen. Denna typ garanterar högre omsättning (därmed anpassning av hyror till marknadspriser) och juridiskt skydd för både ägare och hyresgäst.",
+    "investorQ6": "Hur fungerar investeringsförvaltningen?",
+    "investorA6": "När investeringen är gjord tar vi hand om allt: hyresgästurval, kontrakt, underhåll och hyresindrivning. Du får detaljerade kvartalsrapporter med all portföljdata.",
+    "investorQ7": "Vilka rapporter får jag och hur ofta?",
+    "investorA7": "Du får en detaljerad kvartalsrapport som inkluderar: fastighetsstatus, beläggningsgrad, portföljresultat, kostnader och prognoser för nästa kvartal. Du har också tillgång till en online-dashboard för att övervaka din investering i realtid.",
+    "investorQ8": "Kan jag besöka fastigheterna innan jag investerar?",
+    "investorA8": "Ja, vi organiserar besök på fastigheterna på bokning för intresserade investerare. Du kan se fastigheterna personligen, bedöma renoveringskvaliteten och prata direkt med vårt förvaltningsteam.",
+    "investorQ9": "Hur kan jag investera med Jungle Rent?",
+    "investorA9": "Du kan investera i Jungle Rents fastighetsportfölj från €100. Du köper en andel av portföljen och deltar i resultaten från hyrorna, proportionellt till din andel. Det är ett sätt att få tillgång till fastighetsmarknaden med begränsat kapital utan att behöva hantera förvaltning, underhåll eller byråkrati.",
+    "investorQ10": "Hur beräknas resultaten?",
+    "investorA10": "Resultaten beräknas baserat på vår hybridmodell: hyror till universitetsstudenter under läsåret och korttidsuthyrning till turister under sommarmånaderna. Denna modell optimerar beläggningen jämfört med traditionella hyror med fast avgift. Resultaten är netto efter förvaltningskostnader men före personliga skatter. OBS: resultaten beror på marknadsutvecklingen och är inte garanterade. Investeringar innebär risker, inklusive möjlig partiell eller total kapitalförlust.",
+    "investorQ11": "Vad är hybridmodellen studenter/turister?",
+    "investorA11": "Vår hybridmodell kombinerar: (1) Hyror till universitetsstudenter med tillfälliga kontrakt anpassade till läsåret, vilket garanterar stabilitet och pålitliga hyresgäster; (2) Korttidsuthyrning till turister under sommarmånaderna när studenterna är på semester, vilket maximerar säsongsintäkterna. Studenterna sparar betydligt jämfört med traditionella kontrakt genom att bara betala för de månader de faktiskt bor där. Dessutom erbjuder vi gratis gästdagar under sommaren för att låta studenter komma tillbaka till Turin för tentor utan extra kostnad.",
+    "studentCategory": "För studenter",
+    "studentQ1": "Hur fungerar det flexibla kontraktet?",
+    "studentA1": "Det tillfälliga kontraktet för studier täcker läsåret (september-juni), så du betalar bara för de månader du faktiskt är i Turin. Du sparar betydligt jämfört med traditionella kontrakt. Kontraktet kan förnyas årligen.",
+    "studentQ2": "Och om jag behöver komma tillbaka till Turin för sommartentor?",
+    "studentA2": "Vi erbjuder gratis gästdagar under sommarmånaderna. Det betyder att du kan komma tillbaka till Turin för att ta sommartentor utan att betala extra hyra. Det ingår i ditt kontrakt.",
+    "studentQ3": "Hur mycket sparar jag jämfört med traditionell hyra?",
+    "studentA3": "Med vår modell sparar du betydligt jämfört med ett traditionellt 12-månaderskontrakt. Du betalar bara för läsårsmånaderna och undviker sommarhyra när du inte är i Turin.",
+    "studentQ4": "I vilka områden i Turin har ni boenden?",
+    "studentA4": "Våra boenden finns i de mest efterfrågade universitetsområdena: San Salvario, Crocetta, Vanchiglia, Centro, Aurora, Cenisia. Alla inom några minuters promenad eller cykling från Politecnico, UniTo och andra universitet i Turin.",
+    "studentQ5": "Vad ingår i hyran?",
+    "studentA5": "Hyran inkluderar: möblerat rum, avgifter till bostadsrättsförening, Wi-Fi, veckovis städning av gemensamma utrymmen, ordinarie underhåll. El, gas och vatten ingår inte och delas mellan rumskamrater. Reguljära registrerade kontrakt, dedikerad support.",
+    "sellerQ1": "Vilka fastigheter köper ni?",
+    "sellerA1": "Vi köper lägenheter i Turin och närområdet, helst i universitetsområden: Vanchiglia, San Salvario, Cenisia, Crocetta, Lingotto, Aurora. Vi är intresserade av fastigheter med 2 till 5 rum, även de som behöver renoveras. Vi utvärderar varje förslag utan förpliktelse.",
+    "sellerQ2": "Hur fungerar den gratis värderingen?",
+    "sellerA2": "Du fyller i formuläret med fastighetsuppgifter så återkommer vi inom 24 timmar. Efter en första telefonanalys organiserar vi en gratis besiktning för att värdera fastigheten. Vi ger dig en marknadsuppskattning och, om vi är intresserade, ett köpförslag inom 7 dagar.",
+    "sellerQ3": "Hur lång tid tar det att sälja?",
+    "sellerA3": "Vår process är mycket snabbare än traditionell försäljning. Från värdering till notariehandling kan det ta 30-60 dagar, beroende på ärendets komplexitet och fastighetens tillgänglighet. Vi hanterar all byråkrati.",
+    "sellerQ4": "Måste jag renovera innan jag säljer?",
+    "sellerA4": "Nej, vi köper fastigheter i alla skick, även de som behöver total renovering. Vi föredrar ofta fastigheter som behöver arbete eftersom vi kan anpassa dem till studenternas behov. Köpeskillingen kommer att ta hänsyn till fastighetens skick.",
+    "sellerQ5": "Hur sker betalningen?",
+    "sellerA5": "Betalning sker vid notariehandlingen via banköverföring eller bankväxel. Vi kan vara flexibla med överlämningstider om du behöver tid att flytta. Inga provisioner eller dolda kostnader för säljaren.",
+    "sellerQ6": "Vad är skillnaden mellan er och en fastighetsmäklare?",
+    "sellerA6": "Den grundläggande skillnaden är att vi är den direkta köparen, inte en mellanhand. En mäklare söker en köpare åt dig (och tar ut 3-4% provision). Vi köper istället din fastighet direkt för vår portfölj, vilket eliminerar mellanhänder, provisioner och dussintals visningar.",
+    "sellerQ7": "Varför tar ni ingen provision?",
+    "sellerA7": "Eftersom vi inte är mellanhänder. Mäklare tar ut provision eftersom de kopplar samman säljare och köpare. Vi köper istället direkt för att omvandla fastigheterna till studentbostäder, så det finns ingen mellanhand att betala. Du sparar €6 000-10 000.",
+    "aboutQ1": "Vilka är ni och hur länge har ni varit verksamma?",
+    "aboutA1": "Jungle Rent S.r.l. är ett innovativt startup grundat i oktober 2025 av Lorenzo Oni-Joseph och Andrea Niccolaini. Vi har drivit med egna investeringar i 2 år, och i februari 2026 lanserar vi startupen för att öppna investeringsmöjligheter även för externa investerare. Vi är inkuberade av 2i3T, Politecnico di Torinos inkubator.",
+    "aboutQ2": "Hur kan jag kontakta er?",
+    "aboutA2": "Du kan kontakta oss på WhatsApp +39 331 905 3037 (svar inom 2 timmar), e-post junglerententeprise@gmail.com, eller genom att fylla i formulären på webbplatsen. Säte: via Gioacchino Quarello 15/A, Turin. Tillgängliga för möten på bokning.",
+    "aboutQ3": "Är ni en fastighetsmäklare?",
+    "aboutA3": "Nej. Jungle Rent är ett fastighets-startup med dubbelt uppdrag: lösa studentbostadskrisen och demokratisera tillgången till fastighetsmarknaden — en historiskt säker tillgångsklass som, till skillnad från förr, har blivit otillgänglig för många. Vi förvärvar, renoverar och förvaltar fastigheter för uthyrning till universitetsstudenter och turister.",
+    "voiceCategory": "Vanliga röstfrågor",
+    "voiceQ1": "Hur kan jag investera i fastigheter i Turin med lite pengar?",
+    "voiceA1": "Med Jungle Rent kan du investera på Turins fastighetsmarknad från endast 100 euro. Du köper en andel av fastighetsportföljen och deltar i förvaltningsresultaten. Det är det mest tillgängliga sättet att komma in på fastighetsmarknaden utan att köpa en hel lägenhet.",
+    "voiceQ2": "Är det säkert att investera i Jungle Rent?",
+    "voiceA2": "Jungle Rent är ett certifierat innovativt startup, registrerat vid Handelskammaren i Turin med organisationsnummer 13333450016. Vi är inkuberade av 2i3T, Turin universitets inkubator. Dock innebär det, som alla investeringar, risker inklusive möjlig kapitalförlust.",
+    "voiceQ3": "Hur mycket kan man tjäna på att investera i studentlägenheter i Turin?",
+    "voiceA3": "Resultaten beror på marknadsutvecklingen och är inte garanterade. Vår hybridmodell studenter/turister optimerar beläggningen: studentuthyrning under läsåret och turistuthyrning under sommarmånaderna. Du får detaljerade kvartalsrapporter.",
+    "voiceQ4": "Hur ser jag mina fastighetsavkastningar?",
+    "voiceA4": "Du har tillgång till en personlig online-dashboard där du kan övervaka din investering i realtid. Dessutom får du en detaljerad kvartalsrapport via e-post med fastighetsstatus, beläggningsgrad, resultat och prognoser.",
+    "voiceQ5": "Hur säljer jag hus snabbt i Turin?",
+    "voiceA5": "Jungle Rent köper direkt ditt hus utan mellanhänder. Fyll i formuläret, få gratis värdering inom 48 timmar, besiktning inom 7 dagar, skriftligt bud inom 48 timmar efter besiktning, och avslut inom 60-90 dagar. Inga avgifter.",
+    "voiceQ6": "Vem köper lägenheter nära Politecnico di Torino?",
+    "voiceA6": "Jungle Rent köper lägenheter i Turins universitetsområden: Crocetta, San Salvario, Centro, Vanchiglia, Aurora, Lingotto, mycket nära Politecnico och UniTo. Vi köper treor, fyror och större lägenheter, även de som behöver renoveras.",
+    "voiceQ7": "Vad är min lägenhet i San Salvario värd?",
+    "voiceA7": "Värdet beror på yta, våning, skick och exakt läge i San Salvario. En genomsnittlig trea (80-90 kvm) i gott skick värderas till cirka €180 000-220 000. Begär en gratis värdering från Jungle Rent för ett exakt pris.",
+    "voiceQ8": "Var bor universitetsstudenter i Turin?",
+    "voiceA8": "Universitetsstudenter i Turin föredrar områden nära universiteten: San Salvario och Crocetta för Politecnico, Centro och Vanchiglia för UniTo, Aurora för överkomliga priser. Dessa områden erbjuder service, nattliv och kollektivtrafik.",
+    "voiceQ9": "Vilket är det bästa området för studenter nära Politecnico?",
+    "voiceA9": "De bästa områdena för studenter nära Politecnico di Torino är Crocetta (elegant, lugnt, 5-10 minuters promenad), San Salvario (livligt, mångkulturellt, prisvärt) och Cenisia/San Paolo (lugnare, bra priser).",
+    "voiceQ10": "Hur fungerar studentuthyrningsmarknaden i Turin?",
+    "voiceA10": "Turin har över 90 000 universitetsstudenter och stark efterfrågan på bostäder. Kontrakt är typiskt anpassade till läsåret, priserna varierar från €300-600 för enkelrum beroende på område. Jungle Rent erbjuder flexibla kontrakt med betydande besparingar.",
+    "voiceQ11": "Vad kostar det att hyra ett rum i Turin för studenter?",
+    "voiceA11": "Ett enkelrum för studenter i Turin kostar i genomsnitt €350-500 per månad i områden som San Salvario, €400-550 i Crocetta, €300-400 i Aurora. Priserna inkluderar avgifter till bostadsrättsförening men inte el och gas.",
+    "voiceQ12": "Är Jungle Rent pålitligt för investeringar?",
+    "voiceA12": "Jungle Rent är ett aktiebolag registrerat i Italien (org.nr 13333450016, REA TO-1355899), certifierat som innovativt startup. Vi är inkuberade av 2i3T, partner till Politecnico di Torino. Vi erbjuder transparenta kontrakt och kvartalsrapporter.",
+    "voiceQ13": "Vad händer om jag vill lämna Jungle Rent-investeringen?",
+    "voiceA13": "Utträdesvillkoren definieras i kontraktet. Vi rekommenderar att du kontaktar oss för att diskutera tillgängliga alternativ. Investeringen är utformad för medellång till lång sikt (3-5 år) för att maximera resultaten.",
+    "voiceQ14": "Köper Jungle Rent hus som behöver renoveras?",
+    "voiceA14": "Ja, Jungle Rent köper även lägenheter som behöver renoveras i Turins universitetsområden. Vi föredrar ofta fastigheter som behöver arbete eftersom vi kan anpassa dem till studenternas behov. Priset tar hänsyn till fastighetens skick.",
+    "voiceQ15": "Hur kontaktar jag Jungle Rent för att investera?",
+    "voiceA15": "Du kan kontakta Jungle Rent på WhatsApp +39 331 905 3037 (svar inom 2 timmar), e-post junglerententeprise@gmail.com, eller genom att fylla i formuläret på junglerent.it. Lorenzo Oni-Joseph, grundaren, svarar personligen."
+  },
+  "contacts": {
+    "title": "Kontakt",
+    "subtitle": "Prata med vårt team",
+    "address": "Adress",
+    "email": "E-post",
+    "phone": "Telefon",
+    "social": "Följ oss på sociala medier",
+    "formTitle": "Skicka ett meddelande",
+    "formName": "Namn",
+    "formEmail": "E-post",
+    "formMessage": "Meddelande",
+    "formSubmit": "Skicka",
+    "formSuccess": "Tack! Ditt meddelande har skickats.",
+    "formError": "Fel! Försök igen senare."
+  },
+  "footer": {
+    "taglineAlt": "Trygg hyra i fastighetsdjungeln",
+    "copyright": "© 2025 JUNGLE RENT S.R.L. Alla rättigheter förbehållna.",
+    "contactTitle": "Kontakt",
+    "location": "Turin, Italien",
+    "forStudentsTitle": "För studenter",
+    "howItWorksLink": "Hur det fungerar",
+    "universitiesLabel": "Universitet vi täcker",
+    "partnershipTitle": "Partnerskap",
+    "incubatorDesc": "Inkuberade vid Turin Universitet",
+    "bottomTagline": "Dubbelt uppdrag: studentbostadskris och tillgång till fastigheter",
+    "bottomText": "Med stöd av 2i3T - Företagsinkubator Turin Universitet",
+    "legalAddress": "Via Gioacchino Quarello 15/A, 10135 Turin"
+  },
+  "waitlist": {
+    "title": "Gå med på väntelistan",
+    "description": "Fyll i formuläret för att få prioriterad tillgång till tillgängliga rum.",
+    "nameLabel": "Fullständigt namn",
+    "namePlaceholder": "Anna Andersson",
+    "nameError": "Ange ditt namn",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "anna.andersson@studenti.unito.it",
+    "emailError": "Ange en giltig e-post",
+    "universityLabel": "Universitet (valfritt)",
+    "universityPlaceholder": "T.ex. Politecnico di Torino",
+    "budgetLabel": "Månadsbudget (valfritt)",
+    "budgetPlaceholder": "Ange ungefärlig budget",
+    "moveDateLabel": "Flytt-datum (valfritt)",
+    "moveDatePlaceholder": "När vill du flytta in?",
+    "referralLabel": "Hur hittade du oss? (valfritt)",
+    "referralPlaceholder": "Hjälp oss lära känna dig bättre",
+    "consentLabel": "Jag samtycker till databehandling (GDPR) och till att ta emot uppdateringar från Jungle Rent",
+    "consentError": "Du måste acceptera för att fortsätta",
+    "submitButton": "Registrera dig",
+    "submitting": "Skickar...",
+    "successTitle": "✨ Registrering klar!",
+    "successDescription": "Kolla din e-post för bekräftelse. Välkommen till Jungle Rent!",
+    "errorTitle": "❌ Sändningsfel",
+    "errorDescription": "Ett problem uppstod. Försök igen om en stund eller kontakta oss på WhatsApp.",
+    "universities": {
+      "polito": "Politecnico di Torino",
+      "unito": "Università di Torino",
+      "escp": "ESCP Business School",
+      "ied": "IED Torino",
+      "iaad": "IAAD",
+      "iusto": "IUSTO",
+      "other": "Annat"
+    },
+    "budgetRanges": {
+      "300-400": "€300-400",
+      "400-500": "€400-500",
+      "500-600": "€500-600",
+      "over-600": ">€600"
+    },
+    "moveDates": {
+      "september-2025": "September 2025",
+      "january-2026": "Januari 2026",
+      "asap": "Så snart som möjligt",
+      "other": "Annat"
+    },
+    "referralSources": {
+      "friend": "Vän",
+      "university": "Universitet",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "google": "Google",
+      "ai-assistant": "AI-assistent",
+      "other": "Annat"
+    }
+  },
+  "investorWaitlist": {
+    "title": "Gå med på investerarväntelistan",
+    "description": "Visa ditt intresse för att investera i Jungle Rent. Vi kontaktar dig med exklusiv information om tillgängliga möjligheter.",
+    "nameLabel": "Fullständigt namn",
+    "namePlaceholder": "Anna Andersson",
+    "nameError": "Ange ditt namn",
+    "emailLabel": "E-post",
+    "emailPlaceholder": "anna.andersson@email.com",
+    "emailError": "Ange en giltig e-post",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+46 70 123 4567",
+    "phoneError": "Ange ditt telefonnummer",
+    "investmentBudgetLabel": "Investeringsbudget",
+    "investmentBudgetPlaceholder": "Välj din budget",
+    "budgetError": "Välj tillgänglig budget",
+    "propertyTypeLabel": "Fastighetstyp",
+    "propertyTypePlaceholder": "Vad intresserar dig?",
+    "propertyError": "Välj en typ",
+    "investmentHorizonLabel": "Investeringshorisont",
+    "investmentHorizonPlaceholder": "Hur länge?",
+    "horizonError": "Välj en investeringshorisont",
+    "investmentTimingLabel": "När vill du investera?",
+    "investmentTimingPlaceholder": "Tidsram (valfritt)",
+    "hasRentalPropertiesLabel": "Har du redan hyresfastigheter?",
+    "hasRentalPropertiesPlaceholder": "Välj (valfritt)",
+    "preferredAreaLabel": "Föredraget område i Turin (valfritt)",
+    "preferredAreaPlaceholder": "Välj ett område...",
+    "areaFlexible": "Inga preferenser - Flexibel",
+    "referralLabel": "Hur hittade du oss? (valfritt)",
+    "referralPlaceholder": "Hjälp oss lära känna dig bättre",
+    "consentLabel": "Jag samtycker till databehandling (GDPR) och till att ta emot uppdateringar om investeringsmöjligheter",
+    "consentError": "Du måste acceptera för att fortsätta",
+    "submitButton": "Visa intresse",
+    "submitting": "Skickar...",
+    "successTitle": "🎉 Intresse registrerat!",
+    "successDescription": "Tack! Du får snart exklusiv information om investeringsmöjligheter i Jungle Rent.",
+    "errorTitle": "Fel",
+    "errorDescription": "Något gick fel. Försök igen.",
+    "budgetRanges": {
+      "50k-100k": "€50k - €100k",
+      "100k-200k": "€100k - €200k",
+      "200k-300k": "€200k - €300k",
+      "over-300k": "Över €300k"
+    },
+    "propertyTypes": {
+      "monolocale": "Etta",
+      "bilocale": "Tvåa",
+      "trilocale": "Trea",
+      "appartamento-completo": "Lägenhet 4+ rum",
+      "indeciso": "Ej bestämt ännu"
+    },
+    "investmentHorizons": {
+      "short-term": "1-3 år",
+      "medium-term": "3-5 år",
+      "long-term": "5+ år",
+      "flexible": "Flexibel"
+    },
+    "investmentTimings": {
+      "immediate": "Omedelbart (0-3 månader)",
+      "short": "3-6 månader",
+      "medium": "6-12 månader",
+      "long": "12+ månader"
+    },
+    "rentalProperties": {
+      "yes": "Ja, har erfarenhet",
+      "no": "Nej, första investeringen",
+      "considering": "Överväger"
+    },
+    "areas": {
+      "san-salvario": "San Salvario",
+      "crocetta": "Crocetta",
+      "centro": "Historiskt centrum",
+      "vanchiglia": "Vanchiglia",
+      "aurora": "Aurora/Barriera Milano",
+      "polito": "Nära Politecnico",
+      "lingotto": "Lingotto",
+      "san-paolo": "San Paolo/Santa Rita"
+    },
+    "referralSources": {
+      "network": "Professionellt nätverk",
+      "linkedin": "LinkedIn",
+      "referral": "Rekommendation",
+      "google": "Google",
+      "ai-assistant": "AI-assistent",
+      "other": "Annat"
+    }
+  },
+  "search": {
+    "askAnything": "Fråga vad som helst"
+  },
+  "stickyCta": {
+    "closeLabel": "Stäng"
+  },
+  "quickLead": {
+    "title": "Investera i Jungle Rent",
+    "description": "Lämna din e-post så kontaktar vi dig för att diskutera investeringsmöjligheter.",
+    "namePlaceholder": "Vad heter du?",
+    "optional": "valfritt",
+    "submit": "Skicka",
+    "sending": "Skickar...",
+    "successTitle": "Tack!",
+    "successDescription": "Vi kontaktar dig snart för att diskutera investeringsmöjligheter.",
+    "successMessage": "Vi kontaktar dig snart för att diskutera investeringsmöjligheter.",
+    "scheduleCall": "Boka samtal",
+    "close": "Stäng",
+    "errorTitle": "Fel",
+    "errorDescription": "Ett fel uppstod. Försök igen senare.",
+    "emailRequired": "Ange din e-post",
+    "invalidEmail": "Ange en giltig e-post",
+    "privacy": "Dina uppgifter är säkra. Vi delar dem aldrig med tredje part."
+  },
+  "blog": {
+    "sectionLabel": "City Living",
+    "sectionTitle": "City Living",
+    "sectionSubtitle": "Stadsinnehåll för dig... och kanske inte så självklart! (:",
+    "bannerTitle": "Info om staden, fastigheter och studentgenvägar",
+    "bannerSubtitle": "Guider, analyser och tips om Turin",
+    "readGuide": "Läs guiden",
+    "exploreAll": "Låt oss kolla detta",
+    "newBadge": "Nytt",
+    "viewAll": "Upptäck alla resurser",
+    "readMore": "Läs artikeln",
+    "share": "Dela",
+    "shareVia": "Dela via",
+    "shareWhatsApp": "Dela på WhatsApp",
+    "copyLink": "Kopiera länk",
+    "linkCopied": "Länk kopierad!",
+    "shareNative": "Fler alternativ...",
+    "relatedPosts": "Relaterade artiklar",
+    "categories": {
+      "all": "Alla",
+      "students": "För studenter",
+      "investors": "För investerare",
+      "sellers": "För säljare",
+      "turisti": "För turister",
+      "societa": "Företag"
+    },
+    "search": {
+      "placeholder": "Sök artiklar...",
+      "noResults": "Inga artiklar hittades för \"{{query}}\""
+    },
+    "filters": {
+      "tags": "Filtrera efter tagg",
+      "clearAll": "Ta bort filter"
+    },
+    "hero": {
+      "title": "Resurser och guider",
+      "subtitle": "Djupgående analyser, data och praktiska tips om Turins fastighetsmarknad"
+    },
+    "cta": {
+      "students": {
+        "A": {
+          "title": "Börja din sökning idag",
+          "description": "Gå med 100+ studenter som hittar prisvärda rum nära Politecnico och UniTo",
+          "button": "Hitta ett rum"
+        },
+        "B": {
+          "title": "Ditt perfekta rum väntar",
+          "description": "Få först tillgång till verifierade rum nära campus. 100+ studenter redan registrerade",
+          "button": "Registrera dig nu - Det är gratis"
+        }
+      },
+      "investors": {
+        "A": {
+          "title": "Tjäna 7-9% årligen",
+          "description": "Investera i Turins universitetsfastighetsmarknad med komplett förvaltning ingår",
+          "button": "Ladda ner guiden"
+        },
+        "B": {
+          "title": "Omvandla €100k till €7-9k årlig avkastning",
+          "description": "Ingen fastighetsförvaltning. Komplett hyresgästurval. Garanterad avkastning i universitetsdistriktet",
+          "button": "Boka gratis konsultation"
+        }
+      },
+      "sellers": {
+        "A": {
+          "title": "Sälj inom 60-90 dagar, inga avgifter",
+          "description": "Få en professionell värdering inom 48h och spara €6 000-10 000 i provisioner",
+          "button": "Begär gratis värdering"
+        },
+        "B": {
+          "title": "Spara €10k i provisioner, sälj snabbare",
+          "description": "Professionell värdering inom 48h. Direkt köparnätverk. I genomsnitt 75 dagar mot branschens 180",
+          "button": "Få kontantbud"
+        }
+      },
+      "turisti": {
+        "A": {
+          "title": "Upptäck Turin som en lokalbo",
+          "description": "Gå med i vår community för att få exklusiva tips, evenemang och boendeerbjudanden i Turin",
+          "button": "Gå med på väntelistan"
+        },
+        "B": {
+          "title": "Upplev det autentiska Turin",
+          "description": "Tidig tillgång till exklusiva guider, lokala evenemang och utvalda boenden i hjärtat av Turin",
+          "button": "Gå med i communityn"
+        }
+      },
+      "downloadReport": "Ladda ner rapport",
+      "readSavillsReport": "Savills-rapport 2025"
+    },
+    "meta": {
+      "title": "Jungle Rent-blogg | Guider om hyror, investeringar och försäljningar i Turin",
+      "description": "Upptäck guider, data och djupgående analyser om Turins fastighetsmarknad för studenter, investerare och säljare."
+    }
+  },
+  "resourceLibrary": {
+    "sectionTitle": "Gratis resurser för investerare",
+    "sectionSubtitle": "Kompletta guider för att maximera dina fastighetsinvesteringar",
+    "guide1Title": "Komplett investerarguide",
+    "guide1Badge": "Väsentlig",
+    "guide1Desc": "Allt du behöver veta för att börja investera i universitetsfastigheter i Turin",
+    "guide1Pages": "45 sidor",
+    "guide1Bullet1": "Jungle Rents affärsmodell",
+    "guide1Bullet2": "Detaljerad ROI och finansiella prognoser",
+    "guide1Bullet3": "Verkliga fallstudier med avkastning",
+    "guide1Bullet4": "Jämförelse med andra investeringsformer",
+    "guide2Title": "Bästa fastighetsinvesteringar i Turin 2025",
+    "guide2Badge": "Avancerad - Turin-marknaden",
+    "guide2Desc": "Djupgående analys av de mest lönsamma områdena, priser, avkastning och strategier för Turin-marknaden",
+    "guide2Pages": "Komplett guide",
+    "guide2Bullet1": "Detaljerad analys av alla områden (Centro, Aurora, Lingotto, Mirafiori...)",
+    "guide2Bullet2": "Priser per kvm och avkastning per stadsdel (2025-data)",
+    "guide2Bullet3": "Studentbostäder: möjligheter och operativa strategier",
+    "guide2Bullet4": "Uppdaterade bolån, räntor och skatteförmåner",
+    "guide3Title": "Universitetsfastighetsmarknaden Turin",
+    "guide3Badge": "Rapport 2025",
+    "guide3Desc": "Komplett analys av Turins studentbostadsmarknad med data om efterfrågan, utbud, priser och avkastning",
+    "guide3Pages": "18 sidor",
+    "guide3Bullet1": "120 000 studenter och 50 000 från andra städer: efterfrågans storlek",
+    "guide3Bullet2": "Utbuds-efterfrågan-gap: 42 500 saknade sängplatser",
+    "guide3Bullet3": "7-9% avkastning mot Milanos 4-5%",
+    "guide3Bullet4": "Priser per område och nationell jämförelse",
+    "guide4Title": "Student Housing Italy Spotlight",
+    "guide4Badge": "Savills 2025",
+    "guide4Desc": "Officiell Savills Research-rapport om italienska studentbostadsmarknaden med nationella data och trender",
+    "guide4Pages": "12 sidor",
+    "guide4Bullet1": "589K studenter från andra städer i Italien",
+    "guide4Bullet2": "Endast 12,6% av efterfrågan täckt av dedikerade bostäder",
+    "guide4Bullet3": "€4 miljarder marknadspotential",
+    "guide4Bullet4": "Analys av universitetsstäder och avkastning",
+    "downloadCta": "Ladda ner gratis guide",
+    "downloadDirectCta": "Ladda ner PDF",
+    "readAnalysis": "Läs rapportanalysen"
+  },
+  "areaSuggestion": {
+    "addToForm": "Lägg till info i formuläret"
+  },
+  "sellerContact": {
+    "title": "Sälj ditt hem",
+    "description": "Fyll i formuläret för att få en gratis värdering av din fastighet i Turin",
+    "nameLabel": "Namn *",
+    "namePlaceholder": "Anna Andersson",
+    "nameError": "Namn krävs",
+    "emailLabel": "E-post *",
+    "emailPlaceholder": "anna.andersson@email.com",
+    "emailErrorInvalid": "Ogiltig e-post",
+    "phoneLabel": "Telefon *",
+    "phonePlaceholder": "+46 70 123 4567",
+    "phoneError": "Telefon krävs",
+    "addressLabel": "Fastighetsadress *",
+    "addressPlaceholder": "Via Roma 1, Turin",
+    "addressError": "Adress krävs",
+    "zoneLabel": "Område (valfritt)",
+    "zonePlaceholder": "T.ex. Crocetta",
+    "squareMetersLabel": "Yta (valfritt)",
+    "squareMetersPlaceholder": "T.ex. 85 kvm",
+    "roomsLabel": "Antal rum (valfritt)",
+    "roomsPlaceholder": "T.ex. Trea",
+    "floorLabel": "Våning (valfritt)",
+    "floorPlaceholder": "T.ex. 2:a våningen",
+    "conditionLabel": "Fastighetsskick (valfritt)",
+    "conditionPlaceholder": "T.ex. Bra",
+    "motivationLabel": "Anledning till försäljning (valfritt)",
+    "motivationPlaceholder": "Varför säljer du?",
+    "urgentLabel": "⚡ Jag behöver sälja brådskande (högsta prioritet)",
+    "messageLabel": "Ytterligare anteckningar (valfritt)",
+    "messagePlaceholder": "Annan användbar information (valfritt)...",
+    "privacyLabel": "Jag samtycker till behandling av mina personuppgifter enligt EU-förordning 2016/679 (GDPR) och ger Jungle Rent tillstånd att kontakta mig för fastighetsvärdering.",
+    "privacyLink": "Läs integritetspolicyn",
+    "privacyError": "Du måste samtycka till databehandling",
+    "submitButton": "Skicka förfrågan",
+    "submitting": "Skickar...",
+    "successTitle": "✨ Förfrågan skickad framgångsrikt!",
+    "successDescription": "Vi kontaktar dig inom 48 timmar för gratis värdering av din fastighet",
+    "errorTitle": "❌ Sändningsfel",
+    "errorDescription": "Ett fel uppstod. Försök igen eller kontakta oss på WhatsApp.",
+    "footerInfo": "✓ Garanterat svar inom 48 timmar • ✓ Gratis värdering utan förpliktelse • ✓ Inga avgifter",
+    "zones": {
+      "crocetta": "Crocetta",
+      "san-salvario": "San Salvario",
+      "centro": "Centro",
+      "vanchiglia": "Vanchiglia",
+      "lingotto": "Lingotto",
+      "santa-rita": "Santa Rita",
+      "san-paolo": "San Paolo",
+      "altra": "Annat område"
+    },
+    "rooms": {
+      "2": "Tvåa (2)",
+      "3": "Trea (3)",
+      "4": "Fyra (4)",
+      "5+": "5 eller fler rum"
+    },
+    "floors": {
+      "terra": "Bottenvåning",
+      "1": "1:a våningen",
+      "2": "2:a våningen",
+      "3": "3:e våningen",
+      "4": "4:e våningen",
+      "5": "5:e våningen",
+      "6+": "6:e våningen eller högre"
+    },
+    "conditions": {
+      "ottimo": "Utmärkt",
+      "buono": "Bra",
+      "da-ristrutturare": "Behöver renoveras"
+    },
+    "motivations": {
+      "cambio-citta": "Byter stad",
+      "liquidita": "Behöver likviditet",
+      "eredita": "Arv",
+      "investimento": "Avyttring av investering",
+      "altro": "Annat"
+    }
+  },
+  "studentInfographic": {
+    "badge": "Hur det fungerar",
+    "title": "Hitta ditt idealiska boende",
+    "subtitle": "Vår hybridmodell sparar pengar åt dig",
+    "steps": {
+      "search": {
+        "title": "Sök boende",
+        "description": "Hitta rum nära Politecnico, UniTo och alla universitet i Turin"
+      },
+      "save": {
+        "title": "Spara",
+        "description": "Flexibla kontrakt anpassade till läsåret"
+      }
+    },
+    "benefits": {
+      "contract": "Flexibelt kontrakt",
+      "savings": "Garanterade besparingar",
+      "examDays": "Gratis tentadagar"
+    },
+    "cta": "Kommer snart: boenden från september 2026"
+  },
+  "students": {
+    "seo": {
+      "title": "Studenthyror i Turin | Jungle Rent",
+      "description": "Hitta ditt studentboende nära Politecnico, UniTo och alla universitet i Turin. Flexibla kontrakt och överkomliga priser."
+    },
+    "badge": "Kommer 2026",
+    "hero": {
+      "title": "Studenthyror i Turin",
+      "subtitle": "Vi bygger ett bättre sätt att hitta boende nära universitetet. Registrera dig för att vara bland de första."
+    },
+    "waitlist": {
+      "placeholder": "Din e-post",
+      "button": "Gå med på väntelistan",
+      "note": "Vi kontaktar dig när vi är redo. Ingen spam.",
+      "success": "Registrering klar! Vi kontaktar dig snart.",
+      "error": "Fel. Försök igen senare."
+    },
+    "stats": {
+      "students": "universitetsstudenter",
+      "universities": "universitet i Turin",
+      "neighborhoods": "studentstadsdelar",
+      "avgRent": "genomsnittlig rumshyra"
+    },
+    "resources": {
+      "title": "Resurser för studenter",
+      "subtitle": "Gratis guider för att leva och studera i Turin",
+      "neighborhoods": "Stadsdelsguider",
+      "universities": "Universitet",
+      "studySpaces": "Studielokaler",
+      "mobility": "Mobilitet och transport",
+      "dailyLife": "Vardagsliv",
+      "viewAll": "Se alla guider"
+    },
+    "investorCta": {
+      "title": "Är du investerare?",
+      "subtitle": "Upptäck hur du kan delta på studentuthyrningsmarknaden i Turin.",
+      "button": "Upptäck möjligheten"
+    },
+    "tools": {
+      "badge": "Gratis verktyg",
+      "title": "Användbara verktyg för studenter",
+      "subtitle": "Praktiska resurser för att hjälpa dig planera livet i Turin",
+      "budgetCalc": {
+        "title": "Budgetkalkylator",
+        "description": "Ta reda på hur mycket det kostar att leva i varje stadsdel",
+        "cta": "Prova nu"
+      },
+      "gradeCalc": {
+        "title": "Betygskalkylator",
+        "description": "Beräkna viktad medelpoäng och examensbetyg",
+        "cta": "Prova nu"
+      },
+      "utilityComp": {
+        "title": "Räkningsjämförare",
+        "description": "Jämför el- och gaspriser",
+        "comingSoon": "Kommer snart"
+      },
+      "examSession": {
+        "title": "Tentaplanerare",
+        "description": "Planera din tentaperiod optimalt",
+        "cta": "Prova nu"
+      },
+      "allTools": {
+        "title": "Alla verktyg",
+        "description": "Upptäck alla gratis verktyg"
+      },
+      "backToTools": "Tillbaka till verktyg"
+    },
+    "whyJungle": {
+      "badge": "Vår modell",
+      "title": "Hyra utformad för studenter",
+      "subtitle": "Äntligen en modell som förstår universitetsliv",
+      "contract": {
+        "title": "Betala bara när du studerar",
+        "description": "Din hyra följer universitetskalendern, inte hyresvärdens. Studerar du i Turin? Betala. Hemma hos familjen? Betala inte.",
+        "highlight": "Garanterade besparingar"
+      },
+      "summer": {
+        "badge": "Exklusivt",
+        "title": "Sommarflexibilitet",
+        "description": "Behöver du komma tillbaka för tentor? Inga problem. Betala bara för dagarna du använder, inte hela månader.",
+        "cta": "Upptäck hur det fungerar"
+      },
+      "commissions": {
+        "title": "Inga avgifter",
+        "description": "Hyr direkt från oss. Inga mäklare, inga dolda kostnader.",
+        "highlight": "Spara €200-400"
+      },
+      "comparison": {
+        "traditional": {
+          "title": "Traditionell hyra",
+          "months12": "Obligatoriskt 12-månaderskontrakt",
+          "paySummer": "Betalar sommar även om du är hemma",
+          "noFlex": "Ingen flexibilitet för tentor",
+          "commissions": "Mäklarprovision €200-400"
+        },
+        "jungle": {
+          "title": "Jungle Rent",
+          "months9": "Kontrakt för läsåret",
+          "payUse": "Sommar: betala bara dagar du använder",
+          "flex": "Flexibilitet för sommartentor",
+          "noCommissions": "Inga avgifter, direkthyror"
+        }
+      },
+      "cta": {
+        "waitlist": "Gå med på väntelistan",
+        "whatsapp": "Prata med Lorenzo"
+      }
+    }
+  },
+  "examSessionPlanner": {
+    "seo": {
+      "title": "Tentaplanerare | Jungle Rent",
+      "description": "Planera din tentaperiod optimalt. Ta hänsyn till hp, svårighetsgrad och förkunskapskrav för att skapa det perfekta schemat."
+    },
+    "badge": "Gratis verktyg",
+    "title": "Tentaplanerare",
+    "subtitle": "Planera din tentaperiod strategiskt med hänsyn till hp, svårighetsgrad och förkunskapskrav",
+    "addExam": {
+      "title": "Lägg till tenta",
+      "name": "Tentans namn",
+      "namePlaceholder": "T.ex. Matematisk analys I",
+      "cfu": "HP",
+      "difficulty": "Upplevd svårighetsgrad",
+      "difficultyOptions": {
+        "1": "😊 Lätt",
+        "2": "😐 Medel",
+        "3": "😰 Svår",
+        "4": "💀 Slutboss"
+      },
+      "prerequisite": "Förkunskapskrav till",
+      "prerequisitePlaceholder": "Välj tenta...",
+      "noPrerequisite": "Inga förkunskapskrav",
+      "date": "Tentadatum",
+      "datePlaceholder": "Välj datum...",
+      "session": "Tentaperiod",
+      "sessionOptions": {
+        "invernale": "Vinter (jan-feb)",
+        "estiva": "Sommar (jun-jul)",
+        "autunnale": "Höst (sep)"
+      },
+      "button": "Lägg till tenta"
+    },
+    "output": {
+      "title": "Din plan",
+      "empty": "Lägg till tentor för att se din optimerade plan",
+      "emptyHint": "Använd formuläret ovan för att börja planera din tentaperiod"
+    },
+    "shareExport": {
+      "share": "Dela plan",
+      "export": "Exportera PDF",
+      "copyLink": "Kopiera länk",
+      "copied": "Länk kopierad!"
+    }
+  },
+  "aiSearch": {
+    "placeholder": "Fråga vad som helst om Turin...",
+    "buttonSearch": "Sök",
+    "buttonSearching": "Söker...",
+    "poweredBy": "Drivs av Perplexity AI",
+    "exampleQueries": "T.ex. \"Bästa stadsdelar för studenter i Turin?\", \"Vad kostar ett rum nära Politecnico?\"",
+    "errorMessage": "Ett fel uppstod. Försök igen senare.",
+    "sources": "Källor",
+    "relatedQuestions": "Relaterade frågor"
+  },
+  "homeFaq": {
+    "title": "Vanliga frågor",
+    "subtitle": "Snabba svar på dina frågor",
+    "viewAll": "Se alla FAQ"
+  },
+  "thankYou": {
+    "title": "Tack!",
+    "subtitle": "Vi har tagit emot din förfrågan",
+    "message": "Vårt team kontaktar dig snart. Kolla din e-post för uppdateringar.",
+    "backHome": "Tillbaka till startsidan",
+    "contactUs": "Kontakta oss"
+  },
+  "gradeCalculator": {
+    "seo": {
+      "title": "Viktad medelpoäng och examensbetygsräknare | Jungle Rent",
+      "description": "Beräkna din viktade medelpoäng och simulera ditt examensbetyg. Gratis verktyg för studenter."
+    },
+    "badge": "Gratis verktyg",
+    "title": "Betygsräknare",
+    "subtitle": "Beräkna din viktade medelpoäng och simulera ditt examensbetyg",
+    "addExam": {
+      "title": "Lägg till tenta",
+      "name": "Tentans namn",
+      "namePlaceholder": "T.ex. Matematisk analys I",
+      "grade": "Betyg",
+      "cfu": "HP",
+      "addButton": "Lägg till tenta",
+      "laudeCheckbox": "Med beröm"
+    },
+    "exams": {
+      "title": "Dina tentor",
+      "empty": "Inga tentor tillagda ännu",
+      "emptyHint": "Använd formuläret ovan för att lägga till dina tentor"
+    },
+    "results": {
+      "title": "Dina resultat",
+      "weightedAvg": "Viktad medelpoäng",
+      "graduationBase": "Examensbas på 110",
+      "totalCfu": "Totala hp",
+      "totalExams": "Totalt antal tentor"
+    },
+    "simulator": {
+      "title": "Examensbetygsimulator",
+      "thesisBonus": "Uppsatsbonus",
+      "otherBonus": "Andra bonusar",
+      "finalGrade": "Slutbetyg"
+    },
+    "share": {
+      "shareButton": "Dela resultat",
+      "exportPdf": "Exportera PDF",
+      "copied": "Länk kopierad!"
+    },
+    "budgetCalculator": {
+      "seo": {
+        "title": "Studentbudgetkalkylator Turin | Jungle Rent",
+        "description": "Beräkna dina levnadskostnader i Turins olika stadsdelar. Detaljerade uppskattningar för hyra, el och gas, transport och mat."
+      },
+      "badge": "Gratis verktyg",
+      "title": "Budgetkalkylator",
+      "subtitle": "Ta reda på levnadskostnaderna i Turins olika stadsdelar",
+      "neighborhood": {
+        "label": "Välj stadsdel",
+        "placeholder": "Välj..."
+      },
+      "roomType": {
+        "label": "Rumstyp",
+        "single": "Enkelrum",
+        "double": "Dubbelrum"
+      },
+      "results": {
+        "title": "Uppskattade resultat",
+        "rent": "Hyra",
+        "utilities": "El och gas",
+        "transport": "Transport",
+        "food": "Mat",
+        "total": "Månadstotal"
+      },
+      "aiAdvisor": {
+        "title": "AI-budgetrådgivare",
+        "placeholder": "Fråga mig om budgetråd...",
+        "exampleQueries": "T.ex. \"Hur sparar jag på el?\", \"Billigaste mataffärerna i Turin?\""
+      }
+    }
+  }
+}
