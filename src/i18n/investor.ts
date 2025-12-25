@@ -7,6 +7,7 @@ import investorDE from './locales/investor/de.json';
 import investorES from './locales/investor/es.json';
 import investorFR from './locales/investor/fr.json';
 import investorPT from './locales/investor/pt.json';
+import investorZH from './locales/investor/zh.json';
 
 const resources = {
   en: { translation: investorEN },
@@ -15,6 +16,7 @@ const resources = {
   es: { translation: investorES },
   fr: { translation: investorFR },
   pt: { translation: investorPT },
+  zh: { translation: investorZH },
 };
 
 // Create a separate i18n instance for the investor form

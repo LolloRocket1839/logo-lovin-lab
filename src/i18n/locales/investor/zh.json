@@ -1,0 +1,128 @@
+{
+  "header": {
+    "title": "Jungle Rent",
+    "subtitle": "投资学生住房的未来",
+    "backToWebsite": "返回网站"
+  },
+  "autoSave": {
+    "saved": "自动保存",
+    "restored": "您的进度已恢复"
+  },
+  "navigation": {
+    "continue": "继续",
+    "back": "返回",
+    "submit": "提交申请",
+    "halfway": "已完成一半！"
+  },
+  "questions": {
+    "welcome": "👋 欢迎！让我们开始了解您...",
+    "fullName": "首先是您的全名",
+    "email": "您的邮箱地址是？",
+    "phone": "您的电话号码是？",
+    "country": "您居住在哪个国家？",
+    "investorType": "您是哪种类型的投资者？",
+    "investmentGoals": "💰 很好！现在让我们谈谈您的投资目标...",
+    "investmentRange": "您的投资范围是多少？",
+    "investmentTimeline": "您的首选时间表是？",
+    "heardAbout": "您是如何了解Jungle Rent的？",
+    "almostThere": "📊 快完成了！只剩几个问题...",
+    "investmentExperience": "告诉我们您的投资经验（可选）",
+    "accreditedInvestor": "您是合格/认证投资者吗？",
+    "areasOfInterest": "您对哪些领域感兴趣？（选择所有适用项）",
+    "finalStep": "✅ 最后一步：法律确认",
+    "consentsLabel": "请审阅并接受以下内容：",
+    "gdprConsent": "我同意根据欧盟通用数据保护条例（GDPR）处理我的个人数据。我理解我的数据将用于评估我的投资兴趣，我可以随时撤销同意。",
+    "fadpConsent": "我同意根据瑞士联邦数据保护法（FADP）处理和潜在的国际数据传输。",
+    "consentContact": "我同意就投资机会与我联系",
+    "understandNoCommitment": "我理解此表格仅表示兴趣，不构成任何投资承诺"
+  },
+  "placeholders": {
+    "fullName": "输入您的全名",
+    "email": "your.email@example.com",
+    "phone": "+86 138 0000 0000",
+    "investmentExperience": "分享您的投资经验...",
+    "additionalComments": "其他评论..."
+  },
+  "countries": {
+    "italy": "意大利",
+    "france": "法国",
+    "germany": "德国",
+    "spain": "西班牙",
+    "uk": "英国",
+    "usa": "美国",
+    "china": "中国",
+    "other": "其他"
+  },
+  "investorTypes": {
+    "individual": "个人",
+    "company": "公司",
+    "familyOffice": "家族办公室",
+    "other": "其他"
+  },
+  "investmentRanges": {
+    "100-5000": "€100 - €5,000",
+    "5000-10000": "€5,000 - €10,000",
+    "10000-25000": "€10,000 - €25,000",
+    "25000-50000": "€25,000 - €50,000",
+    "50000-100000": "€50,000 - €100,000",
+    "100000+": "€100,000+"
+  },
+  "timelines": {
+    "immediate": "立即",
+    "3months": "3个月内",
+    "6months": "6个月内",
+    "exploratory": "探索性"
+  },
+  "sources": {
+    "linkedin": "LinkedIn",
+    "referral": "推荐",
+    "news": "新闻/媒体",
+    "website": "网站",
+    "event": "活动/会议",
+    "other": "其他"
+  },
+  "accredited": {
+    "yes": "是",
+    "no": "否",
+    "unsure": "不确定"
+  },
+  "interests": {
+    "equity": "股权投资",
+    "convertible": "可转换票据",
+    "revenue": "收益分成",
+    "advisory": "顾问角色"
+  },
+  "footer": {
+    "visitWebsite": "访问 junglerent.it"
+  },
+  "success": {
+    "title": "感谢您的兴趣！",
+    "message": "我们已收到您的申请，将尽快与您联系。"
+  },
+  "errors": {
+    "submitFailed": "表单提交失败，请重试。",
+    "fullNameMin": "全名至少需要2个字符",
+    "fullNameMax": "全名不能超过100个字符",
+    "fullNamePattern": "全名只能包含字母、空格、连字符和撇号",
+    "invalidEmail": "邮箱地址无效",
+    "emailMax": "邮箱不能超过255个字符",
+    "emailTypo": "请检查邮箱地址是否有拼写错误",
+    "emailFake": "请使用有效的邮箱地址",
+    "phoneRequired": "电话号码必填",
+    "countryRequired": "请选择国家",
+    "invalidPhone": "所选国家的电话号码无效",
+    "selectCountryFirst": "请先选择您的国家",
+    "investorTypeRequired": "请选择投资者类型",
+    "investmentRangeRequired": "请选择投资范围",
+    "timelineRequired": "请选择时间表",
+    "heardAboutRequired": "请告诉我们您如何了解Jungle Rent",
+    "experienceMax": "投资经验不能超过1000个字符",
+    "accreditedRequired": "请选择一个选项",
+    "interestsRequired": "请至少选择一个兴趣领域",
+    "commentsMax": "附加评论不能超过1000个字符",
+    "consentRequired": "您必须同意被联系",
+    "commitmentRequired": "您必须确认这不是承诺",
+    "gdprRequired": "您必须同意GDPR数据处理",
+    "fadpRequired": "您必须同意FADP数据处理"
+  }
+}
