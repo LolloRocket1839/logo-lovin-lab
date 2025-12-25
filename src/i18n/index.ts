@@ -8,6 +8,7 @@ import translationES from './locales/es.json';
 import translationFR from './locales/fr.json';
 import translationDE from './locales/de.json';
 import translationZH from './locales/zh.json';
+import translationSV from './locales/sv.json';
 
 const resources = {
   it: {
@@ -27,10 +28,13 @@ const resources = {
   },
   zh: {
     translation: translationZH
+  },
+  sv: {
+    translation: translationSV
   }
 };
 
-const supportedLanguages = ['it', 'en', 'es', 'fr', 'de', 'zh'];
+const supportedLanguages = ['it', 'en', 'es', 'fr', 'de', 'zh', 'sv'];
 
 i18n
   .use(LanguageDetector)

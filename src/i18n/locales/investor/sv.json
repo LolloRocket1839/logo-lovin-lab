@@ -1,0 +1,128 @@
+{
+  "header": {
+    "title": "Jungle Rent",
+    "subtitle": "Investera i framtidens studentbostäder",
+    "backToWebsite": "Gå till webbplatsen"
+  },
+  "autoSave": {
+    "saved": "Sparad automatiskt",
+    "restored": "Dina framsteg har återställts"
+  },
+  "navigation": {
+    "continue": "Fortsätt",
+    "back": "Tillbaka",
+    "submit": "Skicka ansökan",
+    "halfway": "Du är halvvägs!"
+  },
+  "questions": {
+    "welcome": "👋 Välkommen! Låt oss börja lära känna dig...",
+    "fullName": "Låt oss börja med ditt fullständiga namn",
+    "email": "Vad är din e-postadress?",
+    "phone": "Och ditt telefonnummer?",
+    "country": "I vilket land bor du?",
+    "investorType": "Vilken typ av investerare är du?",
+    "investmentGoals": "💰 Utmärkt! Nu ska vi prata om dina investeringsmål...",
+    "investmentRange": "Vad är ditt investeringsintervall?",
+    "investmentTimeline": "Vad är din föredragna tidsram?",
+    "heardAbout": "Hur hörde du talas om Jungle Rent?",
+    "almostThere": "📊 Nästan klara! Bara några fler frågor...",
+    "investmentExperience": "Berätta om din investeringserfarenhet (valfritt)",
+    "accreditedInvestor": "Är du en kvalificerad/ackrediterad investerare?",
+    "areasOfInterest": "Vilka områden intresserar dig? (Välj alla som gäller)",
+    "finalStep": "✅ Sista steget: Juridiska bekräftelser",
+    "consentsLabel": "Vänligen granska och acceptera följande:",
+    "gdprConsent": "Jag samtycker till behandling av mina personuppgifter i enlighet med EU:s dataskyddsförordning (GDPR). Jag förstår att mina uppgifter kommer att användas för att bedöma mitt investeringsintresse och att jag kan återkalla mitt samtycke när som helst.",
+    "fadpConsent": "Jag samtycker till behandling och eventuell internationell överföring av mina uppgifter i enlighet med den schweiziska federala dataskyddslagen (FADP).",
+    "consentContact": "Jag samtycker till att bli kontaktad angående investeringsmöjligheter",
+    "understandNoCommitment": "Jag förstår att detta formulär endast är ett intresseanmälan och inte utgör något investeringsåtagande"
+  },
+  "placeholders": {
+    "fullName": "Ange ditt fullständiga namn",
+    "email": "din.email@example.com",
+    "phone": "+46 70 123 4567",
+    "investmentExperience": "Dela med dig av din investeringserfarenhet...",
+    "additionalComments": "Ytterligare kommentarer..."
+  },
+  "countries": {
+    "italy": "Italien",
+    "france": "Frankrike",
+    "germany": "Tyskland",
+    "spain": "Spanien",
+    "uk": "Storbritannien",
+    "usa": "USA",
+    "sweden": "Sverige",
+    "other": "Annat"
+  },
+  "investorTypes": {
+    "individual": "Privatperson",
+    "company": "Företag",
+    "familyOffice": "Family Office",
+    "other": "Annat"
+  },
+  "investmentRanges": {
+    "100-5000": "€100 - €5 000",
+    "5000-10000": "€5 000 - €10 000",
+    "10000-25000": "€10 000 - €25 000",
+    "25000-50000": "€25 000 - €50 000",
+    "50000-100000": "€50 000 - €100 000",
+    "100000+": "€100 000+"
+  },
+  "timelines": {
+    "immediate": "Omedelbart",
+    "3months": "Inom 3 månader",
+    "6months": "Inom 6 månader",
+    "exploratory": "Utforskande"
+  },
+  "sources": {
+    "linkedin": "LinkedIn",
+    "referral": "Rekommendation",
+    "news": "Nyheter/Media",
+    "website": "Webbplats",
+    "event": "Event/Konferens",
+    "other": "Annat"
+  },
+  "accredited": {
+    "yes": "Ja",
+    "no": "Nej",
+    "unsure": "Osäker"
+  },
+  "interests": {
+    "equity": "Aktieinvestering",
+    "convertible": "Konvertibelt lån",
+    "revenue": "Intäktsdelning",
+    "advisory": "Rådgivande roll"
+  },
+  "footer": {
+    "visitWebsite": "Besök junglerent.it"
+  },
+  "success": {
+    "title": "Tack för ditt intresse!",
+    "message": "Vi har tagit emot din ansökan och kommer att kontakta dig snart."
+  },
+  "errors": {
+    "submitFailed": "Formulärinlämning misslyckades. Försök igen.",
+    "fullNameMin": "Fullständigt namn måste innehålla minst 2 tecken",
+    "fullNameMax": "Fullständigt namn måste innehålla mindre än 100 tecken",
+    "fullNamePattern": "Fullständigt namn får endast innehålla bokstäver, mellanslag, bindestreck och apostrofer",
+    "invalidEmail": "Ogiltig e-postadress",
+    "emailMax": "E-post måste innehålla mindre än 255 tecken",
+    "emailTypo": "Kontrollera e-postadressen för stavfel",
+    "emailFake": "Använd en giltig e-postadress",
+    "phoneRequired": "Telefonnummer krävs",
+    "countryRequired": "Välj ett land",
+    "invalidPhone": "Ogiltigt telefonnummer för det valda landet",
+    "selectCountryFirst": "Välj ditt land först",
+    "investorTypeRequired": "Välj investerartyp",
+    "investmentRangeRequired": "Välj ett investeringsintervall",
+    "timelineRequired": "Välj en tidsram",
+    "heardAboutRequired": "Berätta hur du hörde talas om Jungle Rent",
+    "experienceMax": "Investeringserfarenhet måste innehålla mindre än 1000 tecken",
+    "accreditedRequired": "Välj ett alternativ",
+    "interestsRequired": "Välj minst ett intresseområde",
+    "commentsMax": "Ytterligare kommentarer måste innehålla mindre än 1000 tecken",
+    "consentRequired": "Du måste samtycka till att bli kontaktad",
+    "commitmentRequired": "Du måste bekräfta att detta inte är ett åtagande",
+    "gdprRequired": "Du måste samtycka till GDPR-databehandling",
+    "fadpRequired": "Du måste samtycka till FADP-databehandling"
+  }
+}
