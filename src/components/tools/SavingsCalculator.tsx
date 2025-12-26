@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Calculator, TrendingDown, Percent, Euro, Building2, Home } from "lucide-react";
+import { Calculator, TrendingDown, Percent, Euro, Building2, Home, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
@@ -197,12 +197,22 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
         {/* Comparison */}
         <div className="grid grid-cols-2 gap-4">
           {/* Agency */}
-          <div className="p-4 rounded-lg bg-destructive/5 border border-destructive/20">
+          <div className={`p-4 rounded-lg border transition-all duration-300 ${
+            isMinimumFee 
+              ? 'bg-destructive/10 border-destructive/40 ring-1 ring-destructive/20' 
+              : 'bg-destructive/5 border-destructive/20'
+          }`}>
             <div className="flex items-center gap-2 mb-2">
               <Percent className="w-4 h-4 text-destructive" />
               <span className="text-xs font-medium text-muted-foreground">
                 {t('sellersPage.calculator.agency')}
               </span>
+              {isMinimumFee && (
+                <span className="ml-auto flex items-center gap-1 text-[10px] font-semibold text-destructive bg-destructive/10 px-1.5 py-0.5 rounded">
+                  <AlertTriangle className="w-3 h-3" />
+                  MIN
+                </span>
+              )}
             </div>
             <p className="text-lg font-bold text-destructive">
               {formatCurrency(agencyCommission)}
