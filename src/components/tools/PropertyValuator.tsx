@@ -1,0 +1,723 @@
+import { useState, useMemo, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  MapPin, Home, Zap, Car, ChevronDown, ChevronUp, 
+  Calculator, Info, Building2, TrendingUp, AlertTriangle
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Slider } from "@/components/ui/slider";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Checkbox } from "@/components/ui/checkbox";
+import { 
+  turinZonePrices, 
+  quickSelectZones, 
+  getZoneById,
+  type ZonePrice 
+} from "@/data/turinZonePrices";
+import {
+  floorWithElevator,
+  floorWithoutElevator,
+  conservationState,
+  energyClass,
+  heatingSystem,
+  balconyTerrace,
+  garageParking,
+  exposure,
+  additionalPremiums,
+  additionalPenalties,
+  calculateReliability,
+  type CoefficientOption
+} from "@/data/propertyCoefficients";
+
+interface PropertyValuatorProps {
+  onValueCalculated?: (value: number) => void;
+  onContactClick?: () => void;
+}
+
+interface AppliedCoefficient {
+  label: string;
+  value: number;
+  category: string;
+}
+
+const formatCurrency = (value: number): string => {
+  return new Intl.NumberFormat('it-IT', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0
+  }).format(value);
+};
+
+const formatPercentage = (value: number): string => {
+  const sign = value >= 0 ? '+' : '';
+  return `${sign}${(value * 100).toFixed(1)}%`;
+};
+
+export const PropertyValuator = ({ onValueCalculated, onContactClick }: PropertyValuatorProps) => {
+  const { t } = useTranslation();
+  
+  // Form state
+  const [zone, setZone] = useState<string>('');
+  const [sqm, setSqm] = useState<string>('');
+  const [hasElevator, setHasElevator] = useState<boolean>(true);
+  const [floor, setFloor] = useState<string>('third');
+  const [condition, setCondition] = useState<string>('good');
+  const [energy, setEnergy] = useState<string>('d');
+  const [heating, setHeating] = useState<string>('centralized');
+  const [balcony, setBalcony] = useState<string>('absent');
+  const [garage, setGarage] = useState<string>('absent');
+  const [exposureType, setExposureType] = useState<string>('double');
+  const [selectedPremiums, setSelectedPremiums] = useState<string[]>([]);
+  const [selectedPenalties, setSelectedPenalties] = useState<string[]>([]);
+  
+  // UI state
+  const [energyOpen, setEnergyOpen] = useState(false);
+  const [extrasOpen, setExtrasOpen] = useState(false);
+  const [showBreakdown, setShowBreakdown] = useState(false);
+
+  // Get floor options based on elevator
+  const floorOptions = hasElevator ? floorWithElevator : floorWithoutElevator;
+
+  // Calculate coefficients
+  const calculation = useMemo(() => {
+    const selectedZone = getZoneById(zone);
+    const sqmValue = parseInt(sqm) || 0;
+    
+    if (!selectedZone || sqmValue <= 0) {
+      return null;
+    }
+
+    const appliedCoefficients: AppliedCoefficient[] = [];
+    
+    // Floor coefficient
+    const floorCoef = floorOptions.find(f => f.id === floor);
+    if (floorCoef && floorCoef.value !== 0) {
+      appliedCoefficients.push({ label: floorCoef.label, value: floorCoef.value, category: 'Piano' });
+    }
+    
+    // Condition coefficient
+    const condCoef = conservationState.find(c => c.id === condition);
+    if (condCoef && condCoef.value !== 0) {
+      appliedCoefficients.push({ label: condCoef.label, value: condCoef.value, category: 'Stato' });
+    }
+    
+    // Energy coefficient
+    const energyCoef = energyClass.find(e => e.id === energy);
+    if (energyCoef && energyCoef.value !== 0) {
+      appliedCoefficients.push({ label: `Classe ${energyCoef.label}`, value: energyCoef.value, category: 'Energia' });
+    }
+    
+    // Heating coefficient
+    const heatCoef = heatingSystem.find(h => h.id === heating);
+    if (heatCoef && heatCoef.value !== 0) {
+      appliedCoefficients.push({ label: heatCoef.label, value: heatCoef.value, category: 'Riscaldamento' });
+    }
+    
+    // Balcony coefficient
+    const balcCoef = balconyTerrace.find(b => b.id === balcony);
+    if (balcCoef && balcCoef.value !== 0) {
+      appliedCoefficients.push({ label: balcCoef.label, value: balcCoef.value, category: 'Esterno' });
+    }
+    
+    // Garage coefficient
+    const garageCoef = garageParking.find(g => g.id === garage);
+    if (garageCoef && garageCoef.value !== 0) {
+      appliedCoefficients.push({ label: garageCoef.label, value: garageCoef.value, category: 'Parcheggio' });
+    }
+    
+    // Exposure coefficient
+    const expCoef = exposure.find(e => e.id === exposureType);
+    if (expCoef && expCoef.value !== 0) {
+      appliedCoefficients.push({ label: `Esposizione ${expCoef.label}`, value: expCoef.value, category: 'Esposizione' });
+    }
+    
+    // Additional premiums
+    selectedPremiums.forEach(premiumId => {
+      const premium = additionalPremiums.find(p => p.id === premiumId);
+      if (premium) {
+        appliedCoefficients.push({ label: premium.label, value: premium.value, category: 'Extra' });
+      }
+    });
+    
+    // Additional penalties
+    selectedPenalties.forEach(penaltyId => {
+      const penalty = additionalPenalties.find(p => p.id === penaltyId);
+      if (penalty) {
+        appliedCoefficients.push({ label: penalty.label, value: penalty.value, category: 'Penalità' });
+      }
+    });
+    
+    // Calculate total coefficient
+    const totalCoefficient = appliedCoefficients.reduce((sum, c) => sum + c.value, 0);
+    
+    // Sanity check: limit coefficients to -25% to +50%
+    const clampedCoefficient = Math.max(-0.25, Math.min(0.50, totalCoefficient));
+    
+    // Base price
+    const basePrice = sqmValue * selectedZone.avgPrice;
+    
+    // Final price
+    const multiplier = 1 + clampedCoefficient;
+    const estimatedPrice = basePrice * multiplier;
+    
+    // Price range ±5%
+    const minPrice = estimatedPrice * 0.95;
+    const maxPrice = estimatedPrice * 1.05;
+    
+    // Calculate reliability
+    const filledFields = [zone, sqm, floor, condition, energy].filter(Boolean).length;
+    const reliability = calculateReliability(filledFields, 9);
+    
+    return {
+      zone: selectedZone,
+      sqm: sqmValue,
+      pricePerSqm: selectedZone.avgPrice,
+      basePrice,
+      totalCoefficient: clampedCoefficient,
+      estimatedPrice,
+      minPrice,
+      maxPrice,
+      reliability,
+      appliedCoefficients,
+      wasClamped: totalCoefficient !== clampedCoefficient
+    };
+  }, [zone, sqm, hasElevator, floor, condition, energy, heating, balcony, garage, exposureType, selectedPremiums, selectedPenalties, floorOptions]);
+
+  // Notify parent when value changes
+  useMemo(() => {
+    if (calculation && onValueCalculated) {
+      onValueCalculated(calculation.estimatedPrice);
+    }
+  }, [calculation, onValueCalculated]);
+
+  const handlePremiumToggle = useCallback((premiumId: string) => {
+    setSelectedPremiums(prev => 
+      prev.includes(premiumId) 
+        ? prev.filter(id => id !== premiumId)
+        : [...prev, premiumId]
+    );
+  }, []);
+
+  const handlePenaltyToggle = useCallback((penaltyId: string) => {
+    setSelectedPenalties(prev => 
+      prev.includes(penaltyId) 
+        ? prev.filter(id => id !== penaltyId)
+        : [...prev, penaltyId]
+    );
+  }, []);
+
+  const handleReset = useCallback(() => {
+    setZone('');
+    setSqm('');
+    setHasElevator(true);
+    setFloor('third');
+    setCondition('good');
+    setEnergy('d');
+    setHeating('centralized');
+    setBalcony('absent');
+    setGarage('absent');
+    setExposureType('double');
+    setSelectedPremiums([]);
+    setSelectedPenalties([]);
+  }, []);
+
+  return (
+    <div className="grid lg:grid-cols-5 gap-6">
+      {/* Left: Form inputs */}
+      <div className="lg:col-span-3 space-y-6">
+        {/* Location Section */}
+        <Card>
+          <CardHeader className="pb-4">
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <MapPin className="w-5 h-5 text-primary" />
+              {t('propertyValuator.location', 'Localizzazione')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {/* Quick select zones */}
+            <div className="flex flex-wrap gap-2">
+              {quickSelectZones.map(zoneId => {
+                const zoneData = getZoneById(zoneId);
+                if (!zoneData) return null;
+                return (
+                  <Button
+                    key={zoneId}
+                    variant={zone === zoneId ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setZone(zoneId)}
+                    className="text-xs"
+                  >
+                    {zoneData.name}
+                  </Button>
+                );
+              })}
+            </div>
+            
+            {/* Zone select */}
+            <div className="space-y-2">
+              <Label>{t('propertyValuator.zone', 'Zona')}</Label>
+              <Select value={zone} onValueChange={setZone}>
+                <SelectTrigger>
+                  <SelectValue placeholder={t('propertyValuator.selectZone', 'Seleziona zona...')} />
+                </SelectTrigger>
+                <SelectContent>
+                  <div className="text-xs font-medium text-muted-foreground px-2 py-1">Zone Centrali</div>
+                  {turinZonePrices.filter(z => z.category === 'central').map(z => (
+                    <SelectItem key={z.id} value={z.id}>
+                      {z.name} ({formatCurrency(z.avgPrice)}/mq)
+                    </SelectItem>
+                  ))}
+                  <div className="text-xs font-medium text-muted-foreground px-2 py-1 mt-2">Zone Semicentrali</div>
+                  {turinZonePrices.filter(z => z.category === 'semicentral').map(z => (
+                    <SelectItem key={z.id} value={z.id}>
+                      {z.name} ({formatCurrency(z.avgPrice)}/mq)
+                    </SelectItem>
+                  ))}
+                  <div className="text-xs font-medium text-muted-foreground px-2 py-1 mt-2">Zone Periferiche</div>
+                  {turinZonePrices.filter(z => z.category === 'peripheral_north' || z.category === 'peripheral_south').map(z => (
+                    <SelectItem key={z.id} value={z.id}>
+                      {z.name} ({formatCurrency(z.avgPrice)}/mq)
+                    </SelectItem>
+                  ))}
+                  <div className="text-xs font-medium text-muted-foreground px-2 py-1 mt-2">Zone Collinari</div>
+                  {turinZonePrices.filter(z => z.category === 'hill').map(z => (
+                    <SelectItem key={z.id} value={z.id}>
+                      {z.name} ({formatCurrency(z.avgPrice)}/mq)
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Base Characteristics */}
+        <Card>
+          <CardHeader className="pb-4">
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Home className="w-5 h-5 text-primary" />
+              {t('propertyValuator.characteristics', 'Caratteristiche')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {/* Surface area */}
+            <div className="space-y-2">
+              <Label>{t('propertyValuator.surface', 'Superficie (mq)')}</Label>
+              <div className="flex gap-4 items-center">
+                <Input
+                  type="number"
+                  value={sqm}
+                  onChange={(e) => setSqm(e.target.value)}
+                  placeholder="85"
+                  className="w-24"
+                  min={10}
+                  max={500}
+                />
+                <Slider
+                  value={[parseInt(sqm) || 50]}
+                  onValueChange={([val]) => setSqm(val.toString())}
+                  min={20}
+                  max={300}
+                  step={5}
+                  className="flex-1"
+                />
+              </div>
+            </div>
+
+            {/* Elevator toggle */}
+            <div className="flex items-center gap-3">
+              <Checkbox
+                id="elevator"
+                checked={hasElevator}
+                onCheckedChange={(checked) => {
+                  setHasElevator(checked as boolean);
+                  setFloor('third'); // Reset floor when elevator changes
+                }}
+              />
+              <Label htmlFor="elevator" className="cursor-pointer">
+                {t('propertyValuator.hasElevator', 'Con ascensore')}
+              </Label>
+            </div>
+
+            {/* Floor */}
+            <div className="space-y-2">
+              <Label>{t('propertyValuator.floor', 'Piano')}</Label>
+              <Select value={floor} onValueChange={setFloor}>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {floorOptions.map(f => (
+                    <SelectItem key={f.id} value={f.id}>
+                      {f.label} ({f.description})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Condition */}
+            <div className="space-y-2">
+              <Label>{t('propertyValuator.condition', 'Stato conservazione')}</Label>
+              <Select value={condition} onValueChange={setCondition}>
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {conservationState.map(c => (
+                    <SelectItem key={c.id} value={c.id}>
+                      {c.label} ({c.description})
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Energy Section - Collapsible */}
+        <Collapsible open={energyOpen} onOpenChange={setEnergyOpen}>
+          <Card>
+            <CollapsibleTrigger asChild>
+              <CardHeader className="pb-4 cursor-pointer hover:bg-muted/50 transition-colors">
+                <CardTitle className="flex items-center justify-between text-lg">
+                  <span className="flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-primary" />
+                    {t('propertyValuator.energySection', 'Energia e Impianti')}
+                  </span>
+                  {energyOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                </CardTitle>
+              </CardHeader>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <CardContent className="space-y-4 pt-0">
+                {/* Energy class */}
+                <div className="space-y-2">
+                  <Label>{t('propertyValuator.energyClass', 'Classe energetica (APE)')}</Label>
+                  <Select value={energy} onValueChange={setEnergy}>
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {energyClass.map(e => (
+                        <SelectItem key={e.id} value={e.id}>
+                          {e.label} ({e.description})
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Heating */}
+                <div className="space-y-2">
+                  <Label>{t('propertyValuator.heating', 'Riscaldamento')}</Label>
+                  <Select value={heating} onValueChange={setHeating}>
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {heatingSystem.map(h => (
+                        <SelectItem key={h.id} value={h.id}>
+                          {h.label} ({h.description})
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </CardContent>
+            </CollapsibleContent>
+          </Card>
+        </Collapsible>
+
+        {/* Extras Section - Collapsible */}
+        <Collapsible open={extrasOpen} onOpenChange={setExtrasOpen}>
+          <Card>
+            <CollapsibleTrigger asChild>
+              <CardHeader className="pb-4 cursor-pointer hover:bg-muted/50 transition-colors">
+                <CardTitle className="flex items-center justify-between text-lg">
+                  <span className="flex items-center gap-2">
+                    <Car className="w-5 h-5 text-primary" />
+                    {t('propertyValuator.extrasSection', 'Extra e Fattori Aggiuntivi')}
+                  </span>
+                  {extrasOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                </CardTitle>
+              </CardHeader>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <CardContent className="space-y-4 pt-0">
+                {/* Balcony */}
+                <div className="space-y-2">
+                  <Label>{t('propertyValuator.balcony', 'Balcone / Terrazzo')}</Label>
+                  <Select value={balcony} onValueChange={setBalcony}>
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {balconyTerrace.map(b => (
+                        <SelectItem key={b.id} value={b.id}>
+                          {b.label} ({b.description})
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Garage */}
+                <div className="space-y-2">
+                  <Label>{t('propertyValuator.garage', 'Garage / Box auto')}</Label>
+                  <Select value={garage} onValueChange={setGarage}>
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {garageParking.map(g => (
+                        <SelectItem key={g.id} value={g.id}>
+                          {g.label} ({g.description})
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Exposure */}
+                <div className="space-y-2">
+                  <Label>{t('propertyValuator.exposure', 'Esposizione')}</Label>
+                  <Select value={exposureType} onValueChange={setExposureType}>
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {exposure.map(e => (
+                        <SelectItem key={e.id} value={e.id}>
+                          {e.label} ({e.description})
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Additional factors */}
+                <div className="space-y-3">
+                  <Label className="text-primary">{t('propertyValuator.premiums', 'Fattori positivi')}</Label>
+                  <div className="space-y-2">
+                    {additionalPremiums.map(p => (
+                      <div key={p.id} className="flex items-center gap-2">
+                        <Checkbox
+                          id={p.id}
+                          checked={selectedPremiums.includes(p.id)}
+                          onCheckedChange={() => handlePremiumToggle(p.id)}
+                        />
+                        <Label htmlFor={p.id} className="cursor-pointer text-sm">
+                          {p.label} ({p.description})
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <Label className="text-destructive">{t('propertyValuator.penalties', 'Fattori negativi')}</Label>
+                  <div className="space-y-2">
+                    {additionalPenalties.map(p => (
+                      <div key={p.id} className="flex items-center gap-2">
+                        <Checkbox
+                          id={p.id}
+                          checked={selectedPenalties.includes(p.id)}
+                          onCheckedChange={() => handlePenaltyToggle(p.id)}
+                        />
+                        <Label htmlFor={p.id} className="cursor-pointer text-sm">
+                          {p.label} ({p.description})
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </CollapsibleContent>
+          </Card>
+        </Collapsible>
+
+        {/* Reset button */}
+        <Button variant="outline" onClick={handleReset} className="w-full">
+          {t('propertyValuator.reset', 'Azzera campi')}
+        </Button>
+      </div>
+
+      {/* Right: Results sidebar (sticky) */}
+      <div className="lg:col-span-2">
+        <div className="sticky top-24 space-y-4">
+          <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-background">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Calculator className="w-5 h-5 text-primary" />
+                {t('propertyValuator.result', 'Valutazione Stimata')}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <AnimatePresence mode="wait">
+                {calculation ? (
+                  <motion.div
+                    key="result"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="space-y-4"
+                  >
+                    {/* Main price */}
+                    <div className="text-center py-4">
+                      <motion.div
+                        key={calculation.estimatedPrice}
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        className="text-4xl font-bold text-primary"
+                      >
+                        {formatCurrency(calculation.estimatedPrice)}
+                      </motion.div>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {formatCurrency(calculation.minPrice)} - {formatCurrency(calculation.maxPrice)}
+                      </p>
+                    </div>
+
+                    {/* Quick stats */}
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div className="p-3 rounded-lg bg-muted/50">
+                        <p className="text-muted-foreground">{t('propertyValuator.basePrice', 'Prezzo base')}</p>
+                        <p className="font-semibold">{formatCurrency(calculation.basePrice)}</p>
+                      </div>
+                      <div className="p-3 rounded-lg bg-muted/50">
+                        <p className="text-muted-foreground">{t('propertyValuator.pricePerSqm', '€/mq zona')}</p>
+                        <p className="font-semibold">{formatCurrency(calculation.pricePerSqm)}</p>
+                      </div>
+                      <div className="p-3 rounded-lg bg-muted/50">
+                        <p className="text-muted-foreground">{t('propertyValuator.coefficients', 'Coefficienti')}</p>
+                        <p className={`font-semibold ${calculation.totalCoefficient >= 0 ? 'text-primary' : 'text-destructive'}`}>
+                          {formatPercentage(calculation.totalCoefficient)}
+                        </p>
+                      </div>
+                      <div className="p-3 rounded-lg bg-muted/50">
+                        <p className="text-muted-foreground">{t('propertyValuator.reliability', 'Affidabilità')}</p>
+                        <p className="font-semibold">{calculation.reliability}%</p>
+                      </div>
+                    </div>
+
+                    {/* Clamped warning */}
+                    {calculation.wasClamped && (
+                      <div className="flex items-start gap-2 p-3 rounded-lg bg-yellow-500/10 border border-yellow-500/20 text-sm">
+                        <AlertTriangle className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
+                        <p className="text-yellow-700 dark:text-yellow-300">
+                          {t('propertyValuator.clampedWarning', 'Coefficienti limitati per sanity check (-25% / +50%)')}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Coefficient breakdown */}
+                    <Collapsible open={showBreakdown} onOpenChange={setShowBreakdown}>
+                      <CollapsibleTrigger asChild>
+                        <Button variant="ghost" size="sm" className="w-full justify-between">
+                          {t('propertyValuator.showBreakdown', 'Dettaglio coefficienti')}
+                          {showBreakdown ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                        </Button>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <div className="space-y-2 pt-2">
+                          {calculation.appliedCoefficients.length > 0 ? (
+                            calculation.appliedCoefficients.map((coef, idx) => (
+                              <div key={idx} className="flex justify-between text-sm py-1 border-b border-border/50 last:border-0">
+                                <span className="text-muted-foreground">{coef.label}</span>
+                                <span className={coef.value >= 0 ? 'text-primary' : 'text-destructive'}>
+                                  {formatPercentage(coef.value)}
+                                </span>
+                              </div>
+                            ))
+                          ) : (
+                            <p className="text-sm text-muted-foreground text-center py-2">
+                              {t('propertyValuator.noCoefficients', 'Nessun coefficiente applicato')}
+                            </p>
+                          )}
+                        </div>
+                      </CollapsibleContent>
+                    </Collapsible>
+
+                    {/* Zone info */}
+                    <div className="p-3 rounded-lg bg-primary/5 border border-primary/10 text-sm">
+                      <div className="flex items-center gap-2 mb-1">
+                        <TrendingUp className="w-4 h-4 text-primary" />
+                        <span className="font-medium">{calculation.zone.name}</span>
+                      </div>
+                      <p className="text-muted-foreground">
+                        {t('propertyValuator.variation2024', 'Variazione 2024')}: 
+                        <span className="text-primary font-medium ml-1">+{calculation.zone.variation2024}%</span>
+                      </p>
+                      {calculation.zone.note && (
+                        <p className="text-xs text-muted-foreground mt-1">{calculation.zone.note}</p>
+                      )}
+                    </div>
+
+                    {/* CTAs */}
+                    <div className="space-y-2 pt-2">
+                      <Button 
+                        variant="premium" 
+                        className="w-full"
+                        onClick={onContactClick}
+                      >
+                        <Building2 className="w-4 h-4 mr-2" />
+                        {t('propertyValuator.ctaProfessional', 'Richiedi valutazione professionale')}
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        className="w-full"
+                        onClick={onContactClick}
+                      >
+                        {t('propertyValuator.ctaSavings', 'Quanto risparmi con Jungle Rent?')}
+                      </Button>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="empty"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-center py-8"
+                  >
+                    <Info className="w-12 h-12 text-muted-foreground/30 mx-auto mb-3" />
+                    <p className="text-muted-foreground">
+                      {t('propertyValuator.emptyState', 'Seleziona zona e inserisci superficie per calcolare la stima')}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </CardContent>
+          </Card>
+
+          {/* Disclaimer */}
+          <Card className="bg-muted/30">
+            <CardContent className="p-4">
+              <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <p>
+                  {t('propertyValuator.disclaimer', 'Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati. Margine di errore: ±5-12%.')}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+};
