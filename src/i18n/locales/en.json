@@ -1665,7 +1665,12 @@
       "directBuyer": "Direct buyer",
       "yourSavings": "Your savings",
       "savingsNote": "Savings compared to agency commission (4% + VAT)",
-      "cta": "Request free valuation"
+      "cta": "Request free valuation",
+      "presets": {
+        "bilocale": "2-Room",
+        "trilocale": "3-Room",
+        "quadrilocale": "4-Room"
+      }
     },
     "timeline": {
       "title": "Our 4-step process",
