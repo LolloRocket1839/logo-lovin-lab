@@ -199,12 +199,37 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
     const agencyCommissionAmount = agencySalePrice * AGENCY_COMMISSION;
     const agencyNetToSeller = agencySalePrice - agencyCommissionAmount;
     
-    // Jungle Rent offer: slightly below market for quick sale
-    const JUNGLE_RENT_DISCOUNT_MIN = 0.02; // -2% best offer
-    const JUNGLE_RENT_DISCOUNT_MAX = 0.05; // -5% base offer
-    const jungleRentOfferMax = marketPrice * (1 - JUNGLE_RENT_DISCOUNT_MIN);
-    const jungleRentOfferMin = marketPrice * (1 - JUNGLE_RENT_DISCOUNT_MAX);
+    // Jungle Rent offer: dynamic discount based on property condition
+    // - "renovate" (da ristrutturare): -12% to -18% (high renovation costs)
+    // - "good" (buono stato): -6% to -10% (minor updates needed)
+    // - "renovated" (ristrutturato): -3% to -6% (turnkey property)
+    const getJungleRentDiscount = (propertyCondition: string) => {
+      switch(propertyCondition) {
+        case 'renovate': return { min: 0.12, max: 0.18 }; // -12% to -18%
+        case 'good': return { min: 0.06, max: 0.10 };     // -6% to -10%
+        case 'renovated': return { min: 0.03, max: 0.06 }; // -3% to -6%
+        default: return { min: 0.06, max: 0.10 };         // Default to good
+      }
+    };
+    
+    const jungleRentDiscounts = getJungleRentDiscount(condition);
+    const jungleRentOfferMax = marketPrice * (1 - jungleRentDiscounts.min); // Best offer
+    const jungleRentOfferMin = marketPrice * (1 - jungleRentDiscounts.max); // Base offer
     const jungleRentOfferMid = (jungleRentOfferMax + jungleRentOfferMin) / 2;
+    
+    // Estimated renovation costs (for transparency)
+    const estimatedRenovationCost = condition === 'renovate' 
+      ? sqmValue * 600 // ~€600/mq for full renovation
+      : condition === 'good' 
+        ? sqmValue * 200 // ~€200/mq for light updates
+        : 0;
+    
+    // Jungle Rent discount explanation
+    const jungleRentDiscountReason = condition === 'renovate'
+      ? 'Costi ristrutturazione stimati: ' + formatCurrency(estimatedRenovationCost)
+      : condition === 'good'
+        ? 'Costi adeguamento stimati: ' + formatCurrency(estimatedRenovationCost)
+        : 'Immobile pronto per affitto';
     
     // Calculate reliability
     const filledFields = [zone, sqm, floor, condition, energy].filter(Boolean).length;
@@ -235,6 +260,9 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
       jungleRentOfferMin,
       jungleRentOfferMax,
       jungleRentOfferMid,
+      jungleRentDiscounts,
+      estimatedRenovationCost,
+      jungleRentDiscountReason,
       // Legacy support
       estimatedPrice: marketPrice,
       minPrice: marketMinPrice,
@@ -768,6 +796,14 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                           <div className="flex justify-between">
                             <span className="text-muted-foreground">{t('propertyValuator.directOffer', 'Offerta diretta')}</span>
                             <span className="font-medium">{formatCurrency(calculation.jungleRentOfferMin)} - {formatCurrency(calculation.jungleRentOfferMax)}</span>
+                          </div>
+                          {/* Dynamic discount explanation */}
+                          <div className="text-xs text-muted-foreground bg-muted/50 rounded px-2 py-1">
+                            <span className="font-medium">
+                              {t('propertyValuator.discountRange', 'Sconto')}: -{Math.round(calculation.jungleRentDiscounts.min * 100)}% / -{Math.round(calculation.jungleRentDiscounts.max * 100)}%
+                            </span>
+                            <br />
+                            <span>{calculation.jungleRentDiscountReason}</span>
                           </div>
                           <div className="flex justify-between text-primary">
                             <span>{t('propertyValuator.commission', 'Commissione')}</span>
