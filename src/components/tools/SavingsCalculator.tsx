@@ -133,17 +133,17 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
       
       <CardContent className="space-y-6">
         {/* Preset Buttons */}
-        <div className="flex gap-2 flex-wrap">
+        <div className="grid grid-cols-3 gap-2">
           {PRESETS.map((preset) => (
             <Button
               key={preset.key}
               variant={activePreset === preset.key ? "default" : "outline"}
               size="sm"
               onClick={() => handlePresetClick(preset)}
-              className="flex-1 min-w-[100px] transition-all duration-200"
+              className="text-xs sm:text-sm transition-all duration-200 px-2 sm:px-3"
             >
-              <Home className="w-3.5 h-3.5 mr-1.5" />
-              {t(`sellersPage.calculator.presets.${preset.key}`)}
+              <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1 sm:mr-1.5 shrink-0" />
+              <span className="truncate">{t(`sellersPage.calculator.presets.${preset.key}`)}</span>
             </Button>
           ))}
         </div>
