@@ -140,18 +140,18 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
         </p>
       </CardHeader>
       
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 overflow-hidden">
         {/* Preset Buttons */}
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
           {PRESETS.map((preset) => (
             <Button
               key={preset.key}
               variant={activePreset === preset.key ? "default" : "outline"}
               size="sm"
               onClick={() => handlePresetClick(preset)}
-              className="text-xs sm:text-sm transition-all duration-200 px-2 sm:px-3"
+              className="text-[11px] sm:text-sm transition-all duration-200 px-1.5 sm:px-3 h-9"
             >
-              <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-1 sm:mr-1.5 shrink-0" />
+              <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5 sm:mr-1.5 shrink-0" />
               <span className="truncate">{t(`sellersPage.calculator.presets.${preset.key}`)}</span>
             </Button>
           ))}
@@ -188,7 +188,7 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
             className="py-4"
           />
           
-          <div className="flex justify-between text-xs text-muted-foreground">
+          <div className="flex justify-between text-xs text-muted-foreground px-0.5">
             <span>€50k</span>
             <span>€2M</span>
           </div>
