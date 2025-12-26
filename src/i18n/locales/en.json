@@ -1671,7 +1671,8 @@
         "trilocale": "3-Room",
         "quadrilocale": "4-Room"
       },
-      "minimumFee": "Agency minimum fee"
+      "minimumFee": "Agency minimum fee",
+      "minimumFeeExplanation": "Min. €5,000 (4% would be lower)"
     },
     "timeline": {
       "title": "Our 4-step process",
