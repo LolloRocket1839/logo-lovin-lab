@@ -208,7 +208,10 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
               {formatCurrency(agencyCommission)}
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              {isMinimumFee ? t('sellersPage.calculator.minimumFee') : '4% + IVA'}
+              {isMinimumFee 
+                ? t('sellersPage.calculator.minimumFeeExplanation')
+                : '4% + IVA'
+              }
             </p>
           </div>
           

@@ -1445,7 +1445,8 @@
         "trilocale": "Trilocale",
         "quadrilocale": "Quadrilocale"
       },
-      "minimumFee": "Compenso minimo agenzia"
+      "minimumFee": "Compenso minimo agenzia",
+      "minimumFeeExplanation": "Minimo €5.000 (il 4% sarebbe inferiore)"
     },
     "timeline": {
       "title": "Il nostro processo in 4 fasi",
