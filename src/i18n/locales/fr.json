@@ -1102,5 +1102,17 @@
   "startupBadge": {
     "label": "Start-up Innovante",
     "tooltip": "Inscrite au Registre Spécial des Start-ups Innovantes"
+  },
+  "sellersPage": {
+    "breadcrumb": "Vendre bien",
+    "meta": {
+      "title": "Vendez Votre Bien à Turin Sans Frais | Jungle Rent - Acheteur Direct",
+      "description": "Vendez votre bien à Turin directement à Jungle Rent. Zéro commission, 60-90 jours, acheteur garanti."
+    },
+    "hero": { "badge": "Acheteur direct", "subtitle": "Nous ne sommes pas une agence. Nous achetons votre bien directement pour notre portefeuille de logements étudiants." },
+    "calculator": { "title": "Calculez vos économies", "subtitle": "Voyez combien vous économisez en vendant directement", "propertyValue": "Valeur du bien", "agency": "Agence traditionnelle", "directBuyer": "Acheteur direct", "yourSavings": "Vos économies", "savingsNote": "Économies par rapport à la commission d'agence (4% + TVA)", "cta": "Demander une évaluation gratuite" },
+    "timeline": { "title": "Notre processus en 4 étapes", "subtitle": "De l'évaluation à la clôture en 60-90 jours", "step1Desc": "Analyse basée sur les données du marché", "step2Desc": "Visite avec notre équipe technique", "step3Desc": "Offre d'achat écrite sans engagement", "step4Desc": "Signature notariale et paiement sécurisé" },
+    "faq": { "subtitle": "Tout ce que vous devez savoir sur la vente à Jungle Rent" },
+    "finalCta": { "title": "Prêt à vendre votre bien?", "subtitle": "Obtenez une évaluation gratuite sous 48 heures. Sans engagement." }
   }
 }

@@ -531,5 +531,14 @@
     "processSubtitle": "4 einfache Schritte, um mit dem Investieren zu beginnen",
     "ctaTitle": "Bereit zu investieren?",
     "ctaSubtitle": "Sprechen Sie mit einem unserer Berater und entdecken Sie die verfügbaren Möglichkeiten"
+  },
+  "sellersPage": {
+    "breadcrumb": "Immobilie verkaufen",
+    "meta": { "title": "Verkaufen Sie Ihre Immobilie in Turin Ohne Gebühren | Jungle Rent", "description": "Verkaufen Sie Ihre Immobilie direkt an Jungle Rent. Null Provision, 60-90 Tage." },
+    "hero": { "badge": "Direktkäufer", "subtitle": "Wir sind keine Agentur. Wir kaufen Ihre Immobilie direkt." },
+    "calculator": { "title": "Berechnen Sie Ihre Ersparnis", "subtitle": "Sehen Sie, wie viel Sie beim Direktverkauf sparen", "propertyValue": "Immobilienwert", "agency": "Traditionelle Agentur", "directBuyer": "Direktkäufer", "yourSavings": "Ihre Ersparnis", "savingsNote": "Ersparnis gegenüber Agenturprovision (4% + MwSt.)", "cta": "Kostenlose Bewertung anfordern" },
+    "timeline": { "title": "Unser 4-Schritte-Prozess", "subtitle": "Von der Bewertung bis zum Abschluss in 60-90 Tagen", "step1Desc": "Analyse basierend auf Marktdaten", "step2Desc": "Besichtigung mit unserem Fachteam", "step3Desc": "Schriftliches Kaufangebot unverbindlich", "step4Desc": "Notarielle Unterzeichnung und sichere Zahlung" },
+    "faq": { "subtitle": "Alles, was Sie über den Verkauf an Jungle Rent wissen müssen" },
+    "finalCta": { "title": "Bereit, Ihre Immobilie zu verkaufen?", "subtitle": "Erhalten Sie eine kostenlose Bewertung innerhalb von 48 Stunden." }
   }
 }

@@ -1420,5 +1420,41 @@
   "startupBadge": {
     "label": "Start-up Innovativa",
     "tooltip": "Iscritta al Registro Speciale delle Start-up Innovative"
+  },
+  "sellersPage": {
+    "breadcrumb": "Vendi casa",
+    "meta": {
+      "title": "Vendi Casa a Torino senza Commissioni | Jungle Rent - Acquirente Diretto",
+      "description": "Vendi il tuo immobile a Torino direttamente a Jungle Rent. Zero commissioni, 60-90 giorni, acquirente garantito. Valutazione gratuita."
+    },
+    "hero": {
+      "badge": "Acquirente diretto",
+      "subtitle": "Non siamo un'agenzia. Acquistiamo direttamente il tuo immobile per il nostro portafoglio di student housing. Zero intermediari, zero commissioni, processo rapido."
+    },
+    "calculator": {
+      "title": "Calcola il tuo risparmio",
+      "subtitle": "Scopri quanto risparmi vendendo direttamente a noi invece che tramite agenzia",
+      "propertyValue": "Valore dell'immobile",
+      "agency": "Agenzia tradizionale",
+      "directBuyer": "Acquirente diretto",
+      "yourSavings": "Il tuo risparmio",
+      "savingsNote": "Risparmio rispetto alla commissione d'agenzia (4% + IVA)",
+      "cta": "Richiedi valutazione gratuita"
+    },
+    "timeline": {
+      "title": "Il nostro processo in 4 fasi",
+      "subtitle": "Dalla valutazione al rogito in 60-90 giorni",
+      "step1Desc": "Analisi del tuo immobile basata su dati di mercato aggiornati",
+      "step2Desc": "Visita dell'immobile con il nostro team tecnico",
+      "step3Desc": "Proposta d'acquisto scritta senza impegno",
+      "step4Desc": "Firma dal notaio e pagamento sicuro"
+    },
+    "faq": {
+      "subtitle": "Tutto quello che devi sapere sulla vendita a Jungle Rent"
+    },
+    "finalCta": {
+      "title": "Pronto a vendere il tuo immobile?",
+      "subtitle": "Ricevi una valutazione gratuita in 48 ore. Nessun impegno, zero commissioni."
+    }
   }
 }

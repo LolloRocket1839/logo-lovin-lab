@@ -1646,5 +1646,41 @@
   "startupBadge": {
     "label": "Innovative Startup",
     "tooltip": "Registered in the Special Registry of Innovative Startups"
+  },
+  "sellersPage": {
+    "breadcrumb": "Sell property",
+    "meta": {
+      "title": "Sell Your Property in Turin Without Fees | Jungle Rent - Direct Buyer",
+      "description": "Sell your property in Turin directly to Jungle Rent. Zero commissions, 60-90 days, guaranteed buyer. Free valuation."
+    },
+    "hero": {
+      "badge": "Direct buyer",
+      "subtitle": "We're not an agency. We buy your property directly for our student housing portfolio. No intermediaries, no commissions, fast process."
+    },
+    "calculator": {
+      "title": "Calculate your savings",
+      "subtitle": "See how much you save by selling directly to us instead of through an agency",
+      "propertyValue": "Property value",
+      "agency": "Traditional agency",
+      "directBuyer": "Direct buyer",
+      "yourSavings": "Your savings",
+      "savingsNote": "Savings compared to agency commission (4% + VAT)",
+      "cta": "Request free valuation"
+    },
+    "timeline": {
+      "title": "Our 4-step process",
+      "subtitle": "From valuation to closing in 60-90 days",
+      "step1Desc": "Analysis of your property based on up-to-date market data",
+      "step2Desc": "Property visit with our technical team",
+      "step3Desc": "Written purchase offer with no obligation",
+      "step4Desc": "Notary signing and secure payment"
+    },
+    "faq": {
+      "subtitle": "Everything you need to know about selling to Jungle Rent"
+    },
+    "finalCta": {
+      "title": "Ready to sell your property?",
+      "subtitle": "Get a free valuation within 48 hours. No obligation, zero commissions."
+    }
   }
 }
