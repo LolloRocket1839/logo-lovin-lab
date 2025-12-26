@@ -1421,5 +1421,14 @@
         "exampleQueries": "例如：\"如何节省电费？\"、\"都灵最便宜的超市？\""
       }
     }
+  },
+  "sellersPage": {
+    "breadcrumb": "出售房产",
+    "meta": { "title": "在都灵零佣金出售您的房产 | Jungle Rent", "description": "直接将您的房产出售给Jungle Rent。零佣金，60-90天。" },
+    "hero": { "badge": "直接买家", "subtitle": "我们不是中介。我们直接购买您的房产。" },
+    "calculator": { "title": "计算您的节省", "subtitle": "看看直接出售能节省多少", "propertyValue": "房产价值", "agency": "传统中介", "directBuyer": "直接买家", "yourSavings": "您的节省", "savingsNote": "与中介佣金相比的节省（4% + 增值税）", "cta": "申请免费估价" },
+    "timeline": { "title": "我们的4步流程", "subtitle": "从估价到成交60-90天", "step1Desc": "基于市场数据的分析", "step2Desc": "我们技术团队实地考察", "step3Desc": "无约束力的书面报价", "step4Desc": "公证签署和安全付款" },
+    "faq": { "subtitle": "关于出售给Jungle Rent您需要知道的一切" },
+    "finalCta": { "title": "准备出售您的房产？", "subtitle": "48小时内获得免费估价。无需承诺。" }
   }
 }

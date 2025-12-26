@@ -531,5 +531,14 @@
     "processSubtitle": "4 simples pasos para empezar a invertir",
     "ctaTitle": "¿Listo para invertir?",
     "ctaSubtitle": "Habla con uno de nuestros asesores y descubre las oportunidades disponibles"
+  },
+  "sellersPage": {
+    "breadcrumb": "Vender propiedad",
+    "meta": { "title": "Vende Tu Propiedad en Turín Sin Comisiones | Jungle Rent", "description": "Vende tu propiedad directamente a Jungle Rent. Cero comisiones, 60-90 días." },
+    "hero": { "badge": "Comprador directo", "subtitle": "No somos una agencia. Compramos directamente tu propiedad." },
+    "calculator": { "title": "Calcula tu ahorro", "subtitle": "Descubre cuánto ahorras vendiendo directamente", "propertyValue": "Valor de la propiedad", "agency": "Agencia tradicional", "directBuyer": "Comprador directo", "yourSavings": "Tu ahorro", "savingsNote": "Ahorro comparado con comisión de agencia (4% + IVA)", "cta": "Solicita valoración gratuita" },
+    "timeline": { "title": "Nuestro proceso en 4 pasos", "subtitle": "De la valoración al cierre en 60-90 días", "step1Desc": "Análisis basado en datos de mercado", "step2Desc": "Visita con nuestro equipo técnico", "step3Desc": "Oferta de compra por escrito sin compromiso", "step4Desc": "Firma notarial y pago seguro" },
+    "faq": { "subtitle": "Todo lo que necesitas saber sobre vender a Jungle Rent" },
+    "finalCta": { "title": "¿Listo para vender tu propiedad?", "subtitle": "Obtén una valoración gratuita en 48 horas. Sin compromiso." }
   }
 }

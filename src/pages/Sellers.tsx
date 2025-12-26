@@ -1,0 +1,484 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
+import { 
+  Building2, Clock, Check, X, MapPin, FileText, 
+  Handshake, Shield, ArrowRight, Phone, CalendarCheck,
+  Home, Users, TrendingUp, Star
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import { MobileHeader } from "@/components/MobileHeader";
+import { MobileFooter } from "@/components/MobileFooter";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
+import { SavingsCalculator } from "@/components/tools/SavingsCalculator";
+import { StyledText } from "@/components/StyledText";
+import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const Sellers = () => {
+  const { t, i18n } = useTranslation();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const lang = i18n.language;
+
+  // Timeline steps
+  const timelineSteps = [
+    { 
+      icon: FileText, 
+      title: t('seller.timelineValuation'), 
+      time: t('seller.timelineValuationTime'),
+      desc: t('sellersPage.timeline.step1Desc')
+    },
+    { 
+      icon: Home, 
+      title: t('seller.timelineInspection'), 
+      time: t('seller.timelineInspectionTime'),
+      desc: t('sellersPage.timeline.step2Desc')
+    },
+    { 
+      icon: Handshake, 
+      title: t('seller.timelineOffer'), 
+      time: t('seller.timelineOfferTime'),
+      desc: t('sellersPage.timeline.step3Desc')
+    },
+    { 
+      icon: CalendarCheck, 
+      title: t('seller.timelineClosing'), 
+      time: t('seller.timelineClosingTime'),
+      desc: t('sellersPage.timeline.step4Desc')
+    },
+  ];
+
+  // Benefits
+  const benefits = [
+    { 
+      icon: Building2, 
+      title: t('seller.benefit1Title'), 
+      desc: t('seller.benefit1Desc') 
+    },
+    { 
+      icon: Clock, 
+      title: t('seller.benefit2Title'), 
+      desc: t('seller.benefit2Desc') 
+    },
+    { 
+      icon: Shield, 
+      title: t('seller.benefit3Title'), 
+      desc: t('seller.benefit3Desc') 
+    },
+    { 
+      icon: TrendingUp, 
+      title: t('seller.benefit4Title'), 
+      desc: t('seller.benefit4Desc') 
+    },
+  ];
+
+  // Interest zones
+  const zones = [
+    "San Salvario", "Vanchiglia", "Crocetta", "Aurora", 
+    "Santa Rita", "San Paolo", "Cenisia", "Lingotto",
+    "Campidoglio", "Cit Turin", "Campus Einaudi"
+  ];
+
+  // Seller FAQs
+  const sellerFaqs = [
+    { question: t('faq.sellerQ1'), answer: t('faq.sellerA1') },
+    { question: t('faq.sellerQ2'), answer: t('faq.sellerA2') },
+    { question: t('faq.sellerQ3'), answer: t('faq.sellerA3') },
+    { question: t('faq.sellerQ4'), answer: t('faq.sellerA4') },
+    { question: t('faq.sellerQ5'), answer: t('faq.sellerA5') },
+    { question: t('faq.sellerQ6'), answer: t('faq.sellerA6') },
+    { question: t('faq.sellerQ7'), answer: t('faq.sellerA7') },
+  ];
+
+  const handleOpenDialog = () => setIsDialogOpen(true);
+
+  return (
+    <>
+      <Helmet>
+        <title>{t('sellersPage.meta.title')}</title>
+        <meta name="description" content={t('sellersPage.meta.description')} />
+        <link rel="canonical" href={`https://junglerent.it/${lang === 'it' ? 'vendi' : 'sell'}`} />
+        <meta property="og:title" content={t('sellersPage.meta.title')} />
+        <meta property="og:description" content={t('sellersPage.meta.description')} />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <Navigation />
+      <MobileHeader />
+
+      <main id="main-content" className="min-h-screen bg-background pt-20 md:pt-24">
+        <div className="container px-4 md:px-8 mx-auto">
+          <Breadcrumbs 
+            items={[
+              { label: t('breadcrumbs.home'), href: '/' },
+              { label: t('sellersPage.breadcrumb') }
+            ]} 
+          />
+        </div>
+
+        {/* Hero Section */}
+        <section className="py-12 md:py-20 relative overflow-hidden">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left: Content */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                  <Building2 className="w-4 h-4" />
+                  {t('sellersPage.hero.badge')}
+                </div>
+                
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight text-foreground tracking-tight">
+                  <span className="text-primary">{t('seller.heroHighlight')}</span> {t('seller.heroRest')}{' '}
+                  <span className="text-foreground">{t('seller.heroBracket')}</span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+                  {t('sellersPage.hero.subtitle')}
+                </p>
+
+                {/* Key benefits inline */}
+                <div className="flex flex-wrap gap-4 mb-8">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Check className="w-5 h-5 text-primary" />
+                    <span>{t('seller.benefit1')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Check className="w-5 h-5 text-primary" />
+                    <span>{t('seller.benefit2')}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Check className="w-5 h-5 text-primary" />
+                    <span>{t('seller.benefit3')}</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    size="lg" 
+                    variant="premium"
+                    onClick={handleOpenDialog}
+                    className="text-base"
+                  >
+                    {t('seller.ctaButton')}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    onClick={() => window.open('https://calendly.com/junglerent/vendere', '_blank')}
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    {t('seller.scheduleCall')}
+                  </Button>
+                </div>
+              </motion.div>
+
+              {/* Right: Calculator */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <SavingsCalculator onContactClick={handleOpenDialog} />
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Comparison Table */}
+        <section className="py-12 md:py-16 bg-muted/30">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                <StyledText>{t('seller.directBuyerTitle')}</StyledText>
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                {t('seller.directBuyerSubtitle')}
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="grid grid-cols-3">
+                    {/* Header */}
+                    <div className="p-4 bg-muted/50 font-medium text-muted-foreground"></div>
+                    <div className="p-4 bg-muted/50 text-center font-semibold text-muted-foreground border-l border-border">
+                      {t('seller.comparison.agency')}
+                    </div>
+                    <div className="p-4 bg-primary/10 text-center font-semibold text-primary border-l border-border">
+                      Jungle Rent
+                    </div>
+
+                    {/* Role */}
+                    <div className="p-4 border-t border-border text-muted-foreground">
+                      {t('seller.comparison.roleLabel')}
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center text-muted-foreground">
+                      {t('seller.comparison.roleAgency')}
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center font-medium text-foreground flex items-center justify-center gap-2">
+                      <Building2 className="w-4 h-4 text-primary" />
+                      {t('seller.comparison.roleJR')}
+                    </div>
+
+                    {/* Commissions */}
+                    <div className="p-4 border-t border-border text-muted-foreground">
+                      {t('seller.comparison.commissionsLabel')}
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center text-destructive flex items-center justify-center gap-1">
+                      <X className="w-4 h-4" />
+                      3-4%
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center text-primary font-bold flex items-center justify-center gap-1">
+                      <Check className="w-4 h-4" />
+                      {t('seller.comparison.commissionsJR')}
+                    </div>
+
+                    {/* Time */}
+                    <div className="p-4 border-t border-border text-muted-foreground">
+                      {t('seller.comparison.timeLabel')}
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center text-muted-foreground flex items-center justify-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      6-12 {t('seller.comparison.months')}
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center text-primary font-medium flex items-center justify-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      60-90 {t('seller.comparison.days')}
+                    </div>
+
+                    {/* Visits */}
+                    <div className="p-4 border-t border-border text-muted-foreground">
+                      {t('seller.comparison.visitsLabel')}
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center text-muted-foreground">
+                      {t('seller.comparison.visitsAgency')}
+                    </div>
+                    <div className="p-4 border-t border-l border-border text-center text-primary font-medium">
+                      {t('seller.comparison.visitsJR')}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Timeline */}
+        <section className="py-12 md:py-16">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                {t('sellersPage.timeline.title')}
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                {t('sellersPage.timeline.subtitle')}
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
+
+                {timelineSteps.map((step, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`relative flex items-start gap-6 mb-8 ${
+                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
+                  >
+                    {/* Icon */}
+                    <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg md:absolute md:left-1/2 md:-translate-x-1/2">
+                      <step.icon className="w-5 h-5" />
+                    </div>
+
+                    {/* Content */}
+                    <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'} pl-2 md:pl-0`}>
+                      <Card className="inline-block">
+                        <CardContent className="p-4">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary">
+                              {step.time}
+                            </span>
+                          </div>
+                          <h3 className="font-display font-bold text-lg mb-1">{step.title}</h3>
+                          <p className="text-sm text-muted-foreground">{step.desc}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Grid */}
+        <section className="py-12 md:py-16 bg-muted/30">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                {t('seller.advantagesTitle')}
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="h-full hover:shadow-md transition-shadow">
+                    <CardContent className="p-6 text-center">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <benefit.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-display font-bold mb-2">{benefit.title}</h3>
+                      <p className="text-sm text-muted-foreground">{benefit.desc}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Interest Zones */}
+        <section className="py-12 md:py-16">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                {t('seller.zonesTitle')}
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                {t('seller.zonesText')}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto mb-8">
+              {zones.map((zone, index) => (
+                <motion.div
+                  key={zone}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors cursor-default"
+                >
+                  <MapPin className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-medium">{zone}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            <p className="text-center text-sm text-muted-foreground max-w-2xl mx-auto">
+              {t('seller.idealProperty')}
+            </p>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-12 md:py-16 bg-muted/30">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                {t('faq.title')}
+              </h2>
+              <p className="text-muted-foreground">
+                {t('sellersPage.faq.subtitle')}
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-2">
+                {sellerFaqs.map((faq, index) => (
+                  <AccordionItem
+                    key={`seller-faq-${index}`}
+                    value={`seller-faq-${index}`}
+                    className="bg-background border rounded-lg px-4 md:px-6"
+                  >
+                    <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-sm sm:text-base">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="py-16 md:py-24">
+          <div className="container px-4 md:px-8 mx-auto">
+            <Card className="max-w-3xl mx-auto bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+              <CardContent className="p-8 md:p-12 text-center">
+                <Star className="w-12 h-12 text-primary mx-auto mb-6" />
+                <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                  {t('sellersPage.finalCta.title')}
+                </h2>
+                <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+                  {t('sellersPage.finalCta.subtitle')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    variant="premium"
+                    onClick={handleOpenDialog}
+                    className="text-base"
+                  >
+                    {t('seller.ctaButton')}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    onClick={() => window.open('https://calendly.com/junglerent/vendere', '_blank')}
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    {t('seller.scheduleCall')}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+      <MobileFooter />
+
+      <QuickSellerLeadDialog 
+        open={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+        source="sellers_page" 
+      />
+    </>
+  );
+};
+
+export default Sellers;

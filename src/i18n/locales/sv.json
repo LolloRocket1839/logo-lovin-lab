@@ -1421,5 +1421,14 @@
         "exampleQueries": "T.ex. \"Hur sparar jag på el?\", \"Billigaste mataffärerna i Turin?\""
       }
     }
+  },
+  "sellersPage": {
+    "breadcrumb": "Sälj fastighet",
+    "meta": { "title": "Sälj Din Fastighet i Turin Utan Avgifter | Jungle Rent", "description": "Sälj din fastighet direkt till Jungle Rent. Noll provision, 60-90 dagar." },
+    "hero": { "badge": "Direktköpare", "subtitle": "Vi är ingen mäklare. Vi köper din fastighet direkt." },
+    "calculator": { "title": "Beräkna din besparing", "subtitle": "Se hur mycket du sparar genom att sälja direkt", "propertyValue": "Fastighetsvärde", "agency": "Traditionell mäklare", "directBuyer": "Direktköpare", "yourSavings": "Din besparing", "savingsNote": "Besparing jämfört med mäklararvode (4% + moms)", "cta": "Begär gratis värdering" },
+    "timeline": { "title": "Vår 4-stegsprocess", "subtitle": "Från värdering till avslut på 60-90 dagar", "step1Desc": "Analys baserad på marknadsdata", "step2Desc": "Besök med vårt tekniska team", "step3Desc": "Skriftligt köperbjudande utan förpliktelse", "step4Desc": "Notarieunderteckning och säker betalning" },
+    "faq": { "subtitle": "Allt du behöver veta om att sälja till Jungle Rent" },
+    "finalCta": { "title": "Redo att sälja din fastighet?", "subtitle": "Få en gratis värdering inom 48 timmar. Ingen förpliktelse." }
   }
 }
