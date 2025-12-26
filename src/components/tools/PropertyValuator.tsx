@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   MapPin, Home, Zap, Car, ChevronDown, ChevronUp, 
   Calculator, Info, Building2, TrendingUp, AlertTriangle,
-  ArrowDown, Target, TrendingDown, Lightbulb
+  Target, TrendingDown, Lightbulb, Clock, BadgeCheck, Users
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -193,6 +193,19 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
     const expectedClosingPrice = marketPrice;
     const minimumPrice = marketPrice * 0.95; // Floor price
     
+    // Sale simulation: Agency vs Jungle Rent
+    const AGENCY_COMMISSION = 0.04; // 4% typical in Piemonte
+    const agencySalePrice = marketPrice;
+    const agencyCommissionAmount = agencySalePrice * AGENCY_COMMISSION;
+    const agencyNetToSeller = agencySalePrice - agencyCommissionAmount;
+    
+    // Jungle Rent offer: slightly below market for quick sale
+    const JUNGLE_RENT_DISCOUNT_MIN = 0.02; // -2% best offer
+    const JUNGLE_RENT_DISCOUNT_MAX = 0.05; // -5% base offer
+    const jungleRentOfferMax = marketPrice * (1 - JUNGLE_RENT_DISCOUNT_MIN);
+    const jungleRentOfferMin = marketPrice * (1 - JUNGLE_RENT_DISCOUNT_MAX);
+    const jungleRentOfferMid = (jungleRentOfferMax + jungleRentOfferMin) / 2;
+    
     // Calculate reliability
     const filledFields = [zone, sqm, floor, condition, energy].filter(Boolean).length;
     const reliability = calculateReliability(filledFields, 9);
@@ -215,6 +228,13 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
       askingPrice,
       expectedClosingPrice,
       minimumPrice,
+      // Sale simulation
+      agencySalePrice,
+      agencyCommissionAmount,
+      agencyNetToSeller,
+      jungleRentOfferMin,
+      jungleRentOfferMax,
+      jungleRentOfferMid,
       // Legacy support
       estimatedPrice: marketPrice,
       minPrice: marketMinPrice,
@@ -695,6 +715,117 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                           <span className="font-semibold text-destructive">{formatCurrency(calculation.minimumPrice)}</span>
                         </div>
                       </div>
+                    </div>
+
+                    {/* Sale Simulation: Agency vs Jungle Rent */}
+                    <div className="space-y-3 p-4 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30">
+                      <div className="flex items-center gap-2 text-sm font-semibold">
+                        <Users className="w-4 h-4 text-primary" />
+                        {t('propertyValuator.saleSimulation', 'Simulazione Vendita')}
+                      </div>
+
+                      {/* Agency Card */}
+                      <div className="p-3 rounded-lg bg-muted/50 border border-border/50 space-y-2">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-medium text-muted-foreground">
+                            {t('propertyValuator.withAgency', 'Con Agenzia Tradizionale')}
+                          </span>
+                        </div>
+                        <div className="space-y-1 text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">{t('propertyValuator.salePrice', 'Prezzo vendita')}</span>
+                            <span>{formatCurrency(calculation.agencySalePrice)}</span>
+                          </div>
+                          <div className="flex justify-between text-destructive">
+                            <span>{t('propertyValuator.commission', 'Commissione (4%)')}</span>
+                            <span>-{formatCurrency(calculation.agencyCommissionAmount)}</span>
+                          </div>
+                          <div className="flex justify-between text-muted-foreground">
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              {t('propertyValuator.timeToSale', 'Tempo vendita')}
+                            </span>
+                            <span>6-12 mesi</span>
+                          </div>
+                          <div className="flex justify-between font-semibold pt-1 border-t border-border/50">
+                            <span>{t('propertyValuator.netToSeller', 'Netto al venditore')}</span>
+                            <span>{formatCurrency(calculation.agencyNetToSeller)}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Jungle Rent Card */}
+                      <div className="p-3 rounded-lg bg-primary/10 border-2 border-primary/40 space-y-2 relative">
+                        <Badge variant="default" className="absolute -top-2 -right-2 text-xs">
+                          {t('propertyValuator.recommended', 'Consigliato')}
+                        </Badge>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-medium text-primary">
+                            {t('propertyValuator.withJungleRent', 'Con Jungle Rent')}
+                          </span>
+                        </div>
+                        <div className="space-y-1 text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-muted-foreground">{t('propertyValuator.directOffer', 'Offerta diretta')}</span>
+                            <span className="font-medium">{formatCurrency(calculation.jungleRentOfferMin)} - {formatCurrency(calculation.jungleRentOfferMax)}</span>
+                          </div>
+                          <div className="flex justify-between text-primary">
+                            <span>{t('propertyValuator.commission', 'Commissione')}</span>
+                            <span className="font-medium">€ 0</span>
+                          </div>
+                          <div className="flex justify-between text-muted-foreground">
+                            <span className="flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              {t('propertyValuator.timeToSale', 'Tempo vendita')}
+                            </span>
+                            <span>60-90 giorni</span>
+                          </div>
+                          <div className="flex justify-between font-semibold pt-1 border-t border-primary/30 text-primary">
+                            <span>{t('propertyValuator.netToSeller', 'Netto al venditore')}</span>
+                            <span>{formatCurrency(calculation.jungleRentOfferMin)} - {formatCurrency(calculation.jungleRentOfferMax)}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Comparison insight */}
+                      <div className="flex items-start gap-2 p-2 rounded bg-primary/5 text-xs">
+                        <BadgeCheck className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                        <p className="text-foreground">
+                          {calculation.jungleRentOfferMax >= calculation.agencyNetToSeller ? (
+                            <span>
+                              <strong className="text-primary">{t('propertyValuator.sameOrBetter', 'Stesso netto o migliore')}</strong>
+                              {' '}{t('propertyValuator.withFasterSale', 'con vendita 4x più rapida!')}
+                            </span>
+                          ) : (
+                            <span>
+                              {t('propertyValuator.slightlyLess', 'Ricavo simile,')}
+                              {' '}<strong className="text-primary">{t('propertyValuator.butMuchFaster', 'ma vendita 4x più rapida')}</strong>
+                              {' '}{t('propertyValuator.noHassle', 'e zero stress!')}
+                            </span>
+                          )}
+                        </p>
+                      </div>
+
+                      {/* Info text */}
+                      <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                        <Lightbulb className="w-4 h-4 mt-0.5 flex-shrink-0 text-amber-500" />
+                        <p>
+                          {t('propertyValuator.agencyCommissionInfo', 'Con un\'agenzia tradizionale, il 4% del prezzo va in commissioni. Con Jungle Rent ottieni un\'offerta diretta senza costi nascosti.')}
+                        </p>
+                      </div>
+
+                      {/* CTA */}
+                      <Button 
+                        variant="premium" 
+                        className="w-full mt-2"
+                        onClick={onContactClick}
+                      >
+                        <Building2 className="w-4 h-4 mr-2" />
+                        {t('propertyValuator.ctaJungleRentOffer', 'Richiedi offerta Jungle Rent')}
+                      </Button>
+                      <p className="text-xs text-center text-muted-foreground">
+                        {t('propertyValuator.ctaSubtext', 'Valutazione gratuita in 24h • Offerta vincolante in 7 giorni')}
+                      </p>
                     </div>
 
                     {/* Quick stats */}
