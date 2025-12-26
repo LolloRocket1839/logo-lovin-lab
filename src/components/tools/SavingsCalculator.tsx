@@ -149,10 +149,10 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
               variant={activePreset === preset.key ? "default" : "outline"}
               size="sm"
               onClick={() => handlePresetClick(preset)}
-              className="text-[11px] sm:text-sm transition-all duration-200 px-1.5 sm:px-3 h-9"
+              className="w-full min-w-0 text-[11px] sm:text-sm transition-all duration-200 px-1.5 sm:px-3 h-9"
             >
-              <Home className="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5 sm:mr-1.5 shrink-0" />
-              <span className="truncate">{t(`sellersPage.calculator.presets.${preset.key}`)}</span>
+              <Home className="hidden sm:block w-3.5 h-3.5 mr-1.5 shrink-0" />
+              <span className="truncate min-w-0">{t(`sellersPage.calculator.presets.${preset.key}`)}</span>
             </Button>
           ))}
         </div>
