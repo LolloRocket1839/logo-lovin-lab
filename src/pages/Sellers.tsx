@@ -114,7 +114,7 @@ const Sellers = () => {
       </Helmet>
 
       <Navigation />
-      <MobileHeader />
+      <MobileHeader variant="seller" />
 
       <main id="main-content" className="min-h-screen bg-background pt-20 md:pt-24 overflow-x-hidden">
         <div className="container px-4 md:px-8 mx-auto">
