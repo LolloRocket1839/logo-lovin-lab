@@ -32,6 +32,7 @@ const GradeCalculator = lazy(() => import("./pages/tools/GradeCalculator"));
 const ExamSessionPlanner = lazy(() => import("./pages/tools/ExamSessionPlanner"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const Sellers = lazy(() => import("./pages/Sellers"));
+const PropertyValuation = lazy(() => import("./pages/PropertyValuation"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -74,6 +75,8 @@ const AppContent = () => {
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/vendi" element={<Sellers />} />
         <Route path="/sell" element={<Sellers />} />
+        <Route path="/valutazione-immobile" element={<PropertyValuation />} />
+        <Route path="/property-valuation" element={<PropertyValuation />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
