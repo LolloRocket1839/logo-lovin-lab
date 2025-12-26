@@ -3,7 +3,8 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   MapPin, Home, Zap, Car, ChevronDown, ChevronUp, 
-  Calculator, Info, Building2, TrendingUp, AlertTriangle
+  Calculator, Info, Building2, TrendingUp, AlertTriangle,
+  ArrowDown, Target, TrendingDown, Lightbulb
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -90,6 +91,7 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
   const [energyOpen, setEnergyOpen] = useState(false);
   const [extrasOpen, setExtrasOpen] = useState(false);
   const [showBreakdown, setShowBreakdown] = useState(false);
+  const [showTheoreticalPrice, setShowTheoreticalPrice] = useState(false);
 
   // Get floor options based on elevator
   const floorOptions = hasElevator ? floorWithElevator : floorWithoutElevator;
@@ -172,13 +174,24 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
     // Base price
     const basePrice = sqmValue * selectedZone.avgPrice;
     
-    // Final price
+    // Theoretical price (FIAIP formula)
     const multiplier = 1 + clampedCoefficient;
-    const estimatedPrice = basePrice * multiplier;
+    const theoreticalPrice = basePrice * multiplier;
     
-    // Price range ±5%
-    const minPrice = estimatedPrice * 0.95;
-    const maxPrice = estimatedPrice * 1.05;
+    // Market haircut -15% (typical difference between theoretical and real transaction prices)
+    const MARKET_HAIRCUT = 0.15;
+    const marketPrice = theoreticalPrice * (1 - MARKET_HAIRCUT);
+    
+    // Price ranges
+    const theoreticalMinPrice = theoreticalPrice * 0.95;
+    const theoreticalMaxPrice = theoreticalPrice * 1.05;
+    const marketMinPrice = marketPrice * 0.95;
+    const marketMaxPrice = marketPrice * 1.05;
+    
+    // Pricing strategy
+    const askingPrice = marketPrice * 1.05; // +5% for negotiation room
+    const expectedClosingPrice = marketPrice;
+    const minimumPrice = marketPrice * 0.95; // Floor price
     
     // Calculate reliability
     const filledFields = [zone, sqm, floor, condition, energy].filter(Boolean).length;
@@ -190,9 +203,22 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
       pricePerSqm: selectedZone.avgPrice,
       basePrice,
       totalCoefficient: clampedCoefficient,
-      estimatedPrice,
-      minPrice,
-      maxPrice,
+      // Theoretical prices (FIAIP)
+      theoreticalPrice,
+      theoreticalMinPrice,
+      theoreticalMaxPrice,
+      // Market prices (with -15% haircut)
+      marketPrice,
+      marketMinPrice,
+      marketMaxPrice,
+      // Pricing strategy
+      askingPrice,
+      expectedClosingPrice,
+      minimumPrice,
+      // Legacy support
+      estimatedPrice: marketPrice,
+      minPrice: marketMinPrice,
+      maxPrice: marketMaxPrice,
       reliability,
       appliedCoefficients,
       wasClamped: totalCoefficient !== clampedCoefficient
@@ -579,19 +605,96 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                     exit={{ opacity: 0, y: -10 }}
                     className="space-y-4"
                   >
-                    {/* Main price */}
-                    <div className="text-center py-4">
+                    {/* Market Price (main - with haircut) */}
+                    <div className="text-center py-4 px-3 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
+                      <div className="flex items-center justify-center gap-2 text-xs text-primary font-medium mb-2">
+                        <Target className="w-4 h-4" />
+                        {t('propertyValuator.marketPrice', 'Prezzo di Mercato Realistico')}
+                      </div>
                       <motion.div
-                        key={calculation.estimatedPrice}
+                        key={calculation.marketPrice}
                         initial={{ scale: 0.9 }}
                         animate={{ scale: 1 }}
                         className="text-4xl font-bold text-primary"
                       >
-                        {formatCurrency(calculation.estimatedPrice)}
+                        {formatCurrency(calculation.marketPrice)}
                       </motion.div>
                       <p className="text-sm text-muted-foreground mt-1">
-                        {formatCurrency(calculation.minPrice)} - {formatCurrency(calculation.maxPrice)}
+                        {formatCurrency(calculation.marketMinPrice)} - {formatCurrency(calculation.marketMaxPrice)}
                       </p>
+                      <div className="flex items-center justify-center gap-1 mt-2 text-xs text-muted-foreground">
+                        <TrendingDown className="w-3 h-3" />
+                        <span>{t('propertyValuator.haircutApplied', 'Haircut -15% applicato')}</span>
+                      </div>
+                    </div>
+
+                    {/* Toggle for theoretical price */}
+                    <div className="flex items-center gap-2 text-sm">
+                      <Checkbox
+                        id="showTheoretical"
+                        checked={showTheoreticalPrice}
+                        onCheckedChange={(checked) => setShowTheoreticalPrice(checked as boolean)}
+                      />
+                      <Label htmlFor="showTheoretical" className="cursor-pointer text-muted-foreground">
+                        {t('propertyValuator.showTheoreticalPrice', 'Mostra prezzo teorico FIAIP')}
+                      </Label>
+                    </div>
+
+                    {/* Theoretical Price (FIAIP) - Collapsible */}
+                    <AnimatePresence>
+                      {showTheoreticalPrice && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="text-center py-3 px-3 rounded-lg bg-muted/50 border border-border/50">
+                            <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground font-medium mb-1">
+                              <Calculator className="w-4 h-4" />
+                              {t('propertyValuator.theoreticalPrice', 'Valutazione Peritale FIAIP')}
+                            </div>
+                            <div className="text-2xl font-bold text-foreground">
+                              {formatCurrency(calculation.theoreticalPrice)}
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-1">
+                              {formatCurrency(calculation.theoreticalMinPrice)} - {formatCurrency(calculation.theoreticalMaxPrice)}
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Haircut Explanation */}
+                    <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs">
+                      <div className="flex items-start gap-2">
+                        <Lightbulb className="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" />
+                        <p className="text-amber-700 dark:text-amber-300">
+                          {t('propertyValuator.haircutExplanation', 'Il prezzo di mercato include un haircut del 15% che riflette la differenza tipica tra valutazioni teoriche e transazioni reali a Torino.')}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Pricing Strategy */}
+                    <div className="space-y-2 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                      <div className="flex items-center gap-2 text-sm font-medium">
+                        <Target className="w-4 h-4 text-primary" />
+                        {t('propertyValuator.pricingStrategy', 'Strategia di Prezzo Consigliata')}
+                      </div>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between items-center py-1 border-b border-border/50">
+                          <span className="text-muted-foreground">{t('propertyValuator.askingPrice', 'Prezzo annuncio')}</span>
+                          <span className="font-semibold text-primary">{formatCurrency(calculation.askingPrice)}</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1 border-b border-border/50">
+                          <span className="text-muted-foreground">{t('propertyValuator.expectedClosing', 'Chiusura attesa')}</span>
+                          <span className="font-semibold">{formatCurrency(calculation.expectedClosingPrice)}</span>
+                        </div>
+                        <div className="flex justify-between items-center py-1">
+                          <span className="text-muted-foreground">{t('propertyValuator.minimumPrice', 'Soglia minima')}</span>
+                          <span className="font-semibold text-destructive">{formatCurrency(calculation.minimumPrice)}</span>
+                        </div>
+                      </div>
                     </div>
 
                     {/* Quick stats */}
@@ -710,9 +813,17 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
             <CardContent className="p-4">
               <div className="flex items-start gap-2 text-xs text-muted-foreground">
                 <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <p>
-                  {t('propertyValuator.disclaimer', 'Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati. Margine di errore: ±5-12%.')}
-                </p>
+                <div className="space-y-1">
+                  <p>
+                    {t('propertyValuator.disclaimer', 'Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati.')}
+                  </p>
+                  <p className="text-xs">
+                    {t('propertyValuator.disclaimerHaircut', 'Il prezzo di mercato include un haircut del 15% che riflette la differenza tipica tra valutazioni teoriche e transazioni reali (fonte: osservazioni mercato Torino 2024-2025).')}
+                  </p>
+                  <p className="text-xs font-medium mt-1">
+                    {t('propertyValuator.sources', 'Fonti: OMI Agenzia Entrate, FIAIP Torino Osservatorio 2025, Immobiliare.it, Nomisma, Scenari Immobiliari')}
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>
