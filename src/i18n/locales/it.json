@@ -1434,11 +1434,23 @@
     "calculator": {
       "title": "Calcola il tuo risparmio",
       "subtitle": "Scopri quanto risparmi vendendo direttamente a noi invece che tramite agenzia",
+      "condition": {
+        "label": "Stato immobile",
+        "tooltip": "Seleziona lo stato attuale del tuo immobile per una stima più accurata",
+        "daRistrutturare": "Da ristrutturare",
+        "daRistrutturareShort": "Da rist.",
+        "buonoStato": "Buono stato",
+        "buonoStatoShort": "Buono",
+        "ristrutturato": "Ristrutturato",
+        "ristrutturatShort": "Nuovo"
+      },
+      "propertyType": "Tipologia",
       "propertyValue": "Valore dell'immobile",
       "agency": "Agenzia tradizionale",
       "directBuyer": "Acquirente diretto",
       "yourSavings": "Il tuo risparmio",
       "savingsNote": "Risparmio rispetto alla commissione d'agenzia (4% + IVA)",
+      "dataSource": "Prezzi indicativi zone semicentrali Torino. Dati: OMI, Immobiliare.it, nov 2025",
       "cta": "Richiedi valutazione gratuita",
       "presets": {
         "bilocale": "2 locali",
