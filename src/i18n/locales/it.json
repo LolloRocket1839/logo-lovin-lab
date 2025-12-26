@@ -1441,9 +1441,9 @@
       "savingsNote": "Risparmio rispetto alla commissione d'agenzia (4% + IVA)",
       "cta": "Richiedi valutazione gratuita",
       "presets": {
-        "bilocale": "Bilocale",
-        "trilocale": "Trilocale",
-        "quadrilocale": "Quadrilocale"
+        "bilocale": "2 locali",
+        "trilocale": "3 locali",
+        "quadrilocale": "4 locali"
       },
       "minimumFee": "Compenso minimo agenzia",
       "minimumFeeExplanation": "Minimo €5.000 (il 4% sarebbe inferiore)"
