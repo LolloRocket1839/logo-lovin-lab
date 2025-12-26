@@ -1,31 +1,68 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Calculator, TrendingDown, Percent, Euro, Building2, Home, AlertTriangle } from "lucide-react";
+import { Calculator, TrendingDown, Percent, Euro, Building2, Home, AlertTriangle, Info } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface SavingsCalculatorProps {
   onContactClick: () => void;
 }
 
-const PRESETS = [
-  { key: "bilocale", value: 150000 },
-  { key: "trilocale", value: 250000 },
-  { key: "quadrilocale", value: 400000 },
-];
+type ConditionType = 'daRistrutturare' | 'buonoStato' | 'ristrutturato';
+type PropertyType = 'bilocale' | 'trilocale' | 'quadrilocale';
+
+// Prezzi validati OMI/Immobiliare.it novembre 2025 - zone semicentrali Torino
+const CONDITION_PRESETS: Record<ConditionType, Record<PropertyType, number>> = {
+  daRistrutturare: {
+    bilocale: 60000,     // €55-65k mediano = €60k
+    trilocale: 87500,    // €80-95k mediano = €87.5k  
+    quadrilocale: 120000 // €110-130k mediano = €120k
+  },
+  buonoStato: {
+    bilocale: 95000,     // €85-100k mediano = €95k
+    trilocale: 145000,   // €130-160k mediano = €145k
+    quadrilocale: 197500 // €175-220k mediano = €197.5k
+  },
+  ristrutturato: {
+    bilocale: 120000,    // €110-130k mediano = €120k
+    trilocale: 190000,   // €170-210k mediano = €190k
+    quadrilocale: 260000 // €230-290k mediano = €260k
+  }
+};
+
+const CONDITION_ICONS: Record<ConditionType, string> = {
+  daRistrutturare: '🏚️',
+  buonoStato: '🏠',
+  ristrutturato: '✨'
+};
+
+const PROPERTY_TYPES: PropertyType[] = ['bilocale', 'trilocale', 'quadrilocale'];
 
 const MIN_VALUE = 50000;
 const MAX_VALUE = 2000000;
 
+// Format number with dots as thousand separators (moved outside component)
+const formatNumber = (num: number) => {
+  return num.toLocaleString('it-IT');
+};
+
 export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) => {
   const { t } = useTranslation();
-  const [propertyValue, setPropertyValue] = useState([200000]);
-  const [inputValue, setInputValue] = useState("200.000");
+  const [selectedCondition, setSelectedCondition] = useState<ConditionType>('buonoStato');
+  const [activePreset, setActivePreset] = useState<PropertyType | null>('trilocale');
+  const [propertyValue, setPropertyValue] = useState([CONDITION_PRESETS.buonoStato.trilocale]);
+  const [inputValue, setInputValue] = useState(formatNumber(CONDITION_PRESETS.buonoStato.trilocale));
   const [animatedSavings, setAnimatedSavings] = useState(0);
-  const [activePreset, setActivePreset] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   
   // Agency commission typically 3-4% + IVA (22%) = ~4.27-4.88%
@@ -46,23 +83,33 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
   const jungleRentCommission = 0;
   const savings = agencyCommission - jungleRentCommission;
 
-  // Format number with dots as thousand separators
-  const formatNumber = (num: number) => {
-    return num.toLocaleString('it-IT');
-  };
-
   // Parse formatted string to number
   const parseFormattedNumber = (str: string) => {
     return parseInt(str.replace(/\./g, ''), 10) || 0;
+  };
+
+  // Handle condition change
+  const handleConditionChange = (value: string) => {
+    if (value) {
+      const newCondition = value as ConditionType;
+      setSelectedCondition(newCondition);
+      // Update value if preset is selected
+      if (activePreset) {
+        const newValue = CONDITION_PRESETS[newCondition][activePreset];
+        setPropertyValue([newValue]);
+        setInputValue(formatNumber(newValue));
+      }
+    }
   };
 
   // Handle slider change
   const handleSliderChange = (values: number[]) => {
     setPropertyValue(values);
     setInputValue(formatNumber(values[0]));
-    // Check if value matches a preset
-    const matchingPreset = PRESETS.find(p => p.value === values[0]);
-    setActivePreset(matchingPreset?.key || null);
+    // Check if value matches a preset in current condition
+    const currentConditionPresets = CONDITION_PRESETS[selectedCondition];
+    const matchingPreset = PROPERTY_TYPES.find(type => currentConditionPresets[type] === values[0]);
+    setActivePreset(matchingPreset || null);
   };
 
   // Handle direct input change
@@ -83,15 +130,18 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
     if (num > MAX_VALUE) num = MAX_VALUE;
     setPropertyValue([num]);
     setInputValue(formatNumber(num));
-    const matchingPreset = PRESETS.find(p => p.value === num);
-    setActivePreset(matchingPreset?.key || null);
+    // Check if value matches a preset in current condition
+    const currentConditionPresets = CONDITION_PRESETS[selectedCondition];
+    const matchingPreset = PROPERTY_TYPES.find(type => currentConditionPresets[type] === num);
+    setActivePreset(matchingPreset || null);
   };
 
   // Handle preset click
-  const handlePresetClick = (preset: typeof PRESETS[0]) => {
-    setPropertyValue([preset.value]);
-    setInputValue(formatNumber(preset.value));
-    setActivePreset(preset.key);
+  const handlePresetClick = (type: PropertyType) => {
+    const value = CONDITION_PRESETS[selectedCondition][type];
+    setPropertyValue([value]);
+    setInputValue(formatNumber(value));
+    setActivePreset(type);
   };
   
   // Animate savings value
@@ -140,21 +190,77 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
         </p>
       </CardHeader>
       
-      <CardContent className="space-y-6 overflow-hidden">
-        {/* Preset Buttons */}
-        <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
-          {PRESETS.map((preset) => (
-            <Button
-              key={preset.key}
-              variant={activePreset === preset.key ? "default" : "outline"}
-              size="sm"
-              onClick={() => handlePresetClick(preset)}
-              className="w-full min-w-0 text-[11px] sm:text-sm transition-all duration-200 px-1.5 sm:px-3 h-9"
-            >
-              <Home className="hidden sm:block w-3.5 h-3.5 mr-1.5 shrink-0" />
-              <span className="truncate min-w-0">{t(`sellersPage.calculator.presets.${preset.key}`)}</span>
-            </Button>
-          ))}
+      <CardContent className="space-y-5 overflow-hidden">
+        {/* Condition Selector */}
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-sm text-muted-foreground">
+              {t('sellersPage.calculator.condition.label', 'Stato immobile')}
+            </span>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Info className="w-3.5 h-3.5 text-muted-foreground cursor-help" />
+                </TooltipTrigger>
+                <TooltipContent className="max-w-xs">
+                  <p className="text-xs">
+                    {t('sellersPage.calculator.condition.tooltip', 'Seleziona lo stato attuale del tuo immobile per una stima più accurata')}
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+          <ToggleGroup 
+            type="single" 
+            value={selectedCondition} 
+            onValueChange={handleConditionChange}
+            className="grid grid-cols-3 gap-1.5 sm:gap-2"
+          >
+            {(['daRistrutturare', 'buonoStato', 'ristrutturato'] as ConditionType[]).map((condition) => (
+              <ToggleGroupItem
+                key={condition}
+                value={condition}
+                aria-label={t(`sellersPage.calculator.condition.${condition}`)}
+                className="flex items-center justify-center gap-1 px-2 py-2 text-[11px] sm:text-sm data-[state=on]:bg-primary data-[state=on]:text-primary-foreground transition-all border border-input hover:bg-accent hover:text-accent-foreground"
+              >
+                <span className="hidden xs:inline">{CONDITION_ICONS[condition]}</span>
+                <span className="truncate">
+                  {t(`sellersPage.calculator.condition.${condition}Short`, 
+                    condition === 'daRistrutturare' ? 'Rist.' : 
+                    condition === 'buonoStato' ? 'Buono' : 'Nuovo'
+                  )}
+                </span>
+              </ToggleGroupItem>
+            ))}
+          </ToggleGroup>
+        </div>
+
+        {/* Property Type Presets with Dynamic Prices */}
+        <div>
+          <span className="text-sm text-muted-foreground mb-2 block">
+            {t('sellersPage.calculator.propertyType', 'Tipologia')}
+          </span>
+          <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
+            {PROPERTY_TYPES.map((type) => (
+              <Button
+                key={type}
+                variant={activePreset === type ? "default" : "outline"}
+                size="sm"
+                onClick={() => handlePresetClick(type)}
+                className="w-full min-w-0 flex-col h-auto py-2 px-1.5 sm:px-3 transition-all duration-200"
+              >
+                <div className="flex items-center gap-1">
+                  <Home className="hidden sm:block w-3.5 h-3.5 shrink-0" />
+                  <span className="text-[11px] sm:text-sm truncate">
+                    {t(`sellersPage.calculator.presets.${type}`)}
+                  </span>
+                </div>
+                <span className="text-[10px] sm:text-xs opacity-70 mt-0.5">
+                  {formatCurrency(CONDITION_PRESETS[selectedCondition][type])}
+                </span>
+              </Button>
+            ))}
+          </div>
         </div>
 
         {/* Property Value Input + Slider */}
@@ -264,6 +370,11 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
             </p>
           </motion.div>
         </AnimatePresence>
+
+        {/* Data Source Note */}
+        <p className="text-[10px] sm:text-xs text-muted-foreground text-center">
+          {t('sellersPage.calculator.dataSource')}
+        </p>
 
         {/* CTA */}
         <Button 
