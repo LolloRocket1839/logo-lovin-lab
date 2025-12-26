@@ -1686,6 +1686,61 @@
     "finalCta": {
       "title": "Ready to sell your property?",
       "subtitle": "Get a free valuation within 48 hours. No obligation, zero commissions."
+    },
+    "valuatorLink": "Calculate your property value"
+  },
+  "propertyValuation": {
+    "meta": {
+      "title": "Property Valuation Turin | Calculate Your Home's Value",
+      "description": "Calculate your property value in Turin for free. OMI 2025 data, FIAIP coefficients, 35+ zones. Accurate estimate ±5%."
+    },
+    "breadcrumb": "Property Valuation",
+    "badge": "Free Tool",
+    "title": "Property Valuation",
+    "subtitle": "Calculate your property value with OMI 2025 data and FIAIP coefficients. 35+ Turin zones, accurate estimate with ±5% margin.",
+    "feature1": "35+ Turin zones",
+    "feature2": "OMI Data Nov 2025",
+    "feature3": "9 coefficient categories",
+    "sources": {
+      "title": "Official Sources",
+      "description": "Data used comes from official sources updated to November 2025."
+    },
+    "structuredData": {
+      "name": "Turin Property Valuation Calculator",
+      "description": "Free tool to calculate the market value of a property in Turin based on OMI data and FIAIP coefficients 2024-2025."
     }
+  },
+  "propertyValuator": {
+    "location": "Location",
+    "zone": "Zone",
+    "selectZone": "Select zone...",
+    "characteristics": "Characteristics",
+    "surface": "Surface area (sqm)",
+    "hasElevator": "With elevator",
+    "floor": "Floor",
+    "condition": "Conservation state",
+    "energySection": "Energy & Systems",
+    "energyClass": "Energy class (EPC)",
+    "heating": "Heating",
+    "extrasSection": "Extras & Additional Factors",
+    "balcony": "Balcony / Terrace",
+    "garage": "Garage / Parking",
+    "exposure": "Exposure",
+    "premiums": "Positive factors",
+    "penalties": "Negative factors",
+    "reset": "Reset fields",
+    "result": "Estimated Valuation",
+    "basePrice": "Base price",
+    "pricePerSqm": "€/sqm zone",
+    "coefficients": "Coefficients",
+    "reliability": "Reliability",
+    "clampedWarning": "Coefficients clamped for sanity check (-25% / +50%)",
+    "showBreakdown": "Coefficient details",
+    "noCoefficients": "No coefficients applied",
+    "variation2024": "2024 variation",
+    "ctaProfessional": "Request professional valuation",
+    "ctaSavings": "How much do you save with Jungle Rent?",
+    "emptyState": "Select zone and enter surface area to calculate estimate",
+    "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers. Error margin: ±5-12%."
   }
 }
