@@ -1,19 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Calculator, TrendingDown, Percent, Euro, Building2 } from "lucide-react";
+import { Calculator, TrendingDown, Percent, Euro, Building2, Home } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface SavingsCalculatorProps {
   onContactClick: () => void;
 }
 
+const PRESETS = [
+  { key: "bilocale", value: 150000 },
+  { key: "trilocale", value: 250000 },
+  { key: "quadrilocale", value: 400000 },
+];
+
+const MIN_VALUE = 50000;
+const MAX_VALUE = 2000000;
+
 export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) => {
   const { t } = useTranslation();
   const [propertyValue, setPropertyValue] = useState([200000]);
+  const [inputValue, setInputValue] = useState("200.000");
   const [animatedSavings, setAnimatedSavings] = useState(0);
+  const [activePreset, setActivePreset] = useState<string | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   
   // Agency commission typically 3-4% + IVA (22%) = ~4.27-4.88%
   const agencyCommissionRate = 0.04;
@@ -23,6 +36,54 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
   const agencyCommission = Math.round(propertyValue[0] * totalAgencyRate);
   const jungleRentCommission = 0;
   const savings = agencyCommission - jungleRentCommission;
+
+  // Format number with dots as thousand separators
+  const formatNumber = (num: number) => {
+    return num.toLocaleString('it-IT');
+  };
+
+  // Parse formatted string to number
+  const parseFormattedNumber = (str: string) => {
+    return parseInt(str.replace(/\./g, ''), 10) || 0;
+  };
+
+  // Handle slider change
+  const handleSliderChange = (values: number[]) => {
+    setPropertyValue(values);
+    setInputValue(formatNumber(values[0]));
+    // Check if value matches a preset
+    const matchingPreset = PRESETS.find(p => p.value === values[0]);
+    setActivePreset(matchingPreset?.key || null);
+  };
+
+  // Handle direct input change
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value.replace(/[^\d]/g, '');
+    if (raw === '') {
+      setInputValue('');
+      return;
+    }
+    const num = parseInt(raw, 10);
+    setInputValue(formatNumber(num));
+  };
+
+  // Handle input blur - validate and sync
+  const handleInputBlur = () => {
+    let num = parseFormattedNumber(inputValue);
+    if (num < MIN_VALUE) num = MIN_VALUE;
+    if (num > MAX_VALUE) num = MAX_VALUE;
+    setPropertyValue([num]);
+    setInputValue(formatNumber(num));
+    const matchingPreset = PRESETS.find(p => p.value === num);
+    setActivePreset(matchingPreset?.key || null);
+  };
+
+  // Handle preset click
+  const handlePresetClick = (preset: typeof PRESETS[0]) => {
+    setPropertyValue([preset.value]);
+    setInputValue(formatNumber(preset.value));
+    setActivePreset(preset.key);
+  };
   
   // Animate savings value
   useEffect(() => {
@@ -71,29 +132,56 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
       </CardHeader>
       
       <CardContent className="space-y-6">
-        {/* Property Value Slider */}
+        {/* Preset Buttons */}
+        <div className="flex gap-2 flex-wrap">
+          {PRESETS.map((preset) => (
+            <Button
+              key={preset.key}
+              variant={activePreset === preset.key ? "default" : "outline"}
+              size="sm"
+              onClick={() => handlePresetClick(preset)}
+              className="flex-1 min-w-[100px] transition-all duration-200"
+            >
+              <Home className="w-3.5 h-3.5 mr-1.5" />
+              {t(`sellersPage.calculator.presets.${preset.key}`)}
+            </Button>
+          ))}
+        </div>
+
+        {/* Property Value Input + Slider */}
         <div className="space-y-4">
-          <div className="flex justify-between items-center">
-            <label className="text-sm font-medium text-foreground">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <label className="text-sm font-medium text-foreground whitespace-nowrap">
               {t('sellersPage.calculator.propertyValue')}
             </label>
-            <span className="text-lg font-bold text-primary">
-              {formatCurrency(propertyValue[0])}
-            </span>
+            <div className="relative flex-1 max-w-[180px]">
+              <Euro className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input
+                ref={inputRef}
+                type="text"
+                inputMode="numeric"
+                value={inputValue}
+                onChange={handleInputChange}
+                onBlur={handleInputBlur}
+                onKeyDown={(e) => e.key === 'Enter' && handleInputBlur()}
+                className="pl-9 text-right font-semibold text-lg"
+                placeholder="200.000"
+              />
+            </div>
           </div>
           
           <Slider
             value={propertyValue}
-            onValueChange={setPropertyValue}
-            min={100000}
-            max={1000000}
+            onValueChange={handleSliderChange}
+            min={MIN_VALUE}
+            max={MAX_VALUE}
             step={10000}
             className="py-4"
           />
           
           <div className="flex justify-between text-xs text-muted-foreground">
-            <span>€100k</span>
-            <span>€1M</span>
+            <span>€50k</span>
+            <span>€2M</span>
           </div>
         </div>
 

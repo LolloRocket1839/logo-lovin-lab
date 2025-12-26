@@ -1439,7 +1439,12 @@
       "directBuyer": "Acquirente diretto",
       "yourSavings": "Il tuo risparmio",
       "savingsNote": "Risparmio rispetto alla commissione d'agenzia (4% + IVA)",
-      "cta": "Richiedi valutazione gratuita"
+      "cta": "Richiedi valutazione gratuita",
+      "presets": {
+        "bilocale": "Bilocale",
+        "trilocale": "Trilocale",
+        "quadrilocale": "Quadrilocale"
+      }
     },
     "timeline": {
       "title": "Il nostro processo in 4 fasi",
