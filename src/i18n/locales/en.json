@@ -1670,7 +1670,8 @@
         "bilocale": "2-Room",
         "trilocale": "3-Room",
         "quadrilocale": "4-Room"
-      }
+      },
+      "minimumFee": "Agency minimum fee"
     },
     "timeline": {
       "title": "Our 4-step process",

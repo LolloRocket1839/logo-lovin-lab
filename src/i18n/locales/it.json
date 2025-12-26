@@ -1444,7 +1444,8 @@
         "bilocale": "Bilocale",
         "trilocale": "Trilocale",
         "quadrilocale": "Quadrilocale"
-      }
+      },
+      "minimumFee": "Compenso minimo agenzia"
     },
     "timeline": {
       "title": "Il nostro processo in 4 fasi",
