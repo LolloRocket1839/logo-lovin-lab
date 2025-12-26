@@ -33,7 +33,16 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
   const ivaRate = 0.22;
   const totalAgencyRate = agencyCommissionRate * (1 + ivaRate);
   
-  const agencyCommission = Math.round(propertyValue[0] * totalAgencyRate);
+  // Minimum agency fee (€4k-€6k for properties < €60k)
+  const MINIMUM_AGENCY_FEE = 5000;
+  const MIN_FEE_THRESHOLD = 60000;
+  
+  const percentageCommission = Math.round(propertyValue[0] * totalAgencyRate);
+  const agencyCommission = propertyValue[0] < MIN_FEE_THRESHOLD 
+    ? Math.max(MINIMUM_AGENCY_FEE, percentageCommission)
+    : percentageCommission;
+  const isMinimumFee = propertyValue[0] < MIN_FEE_THRESHOLD && agencyCommission === MINIMUM_AGENCY_FEE;
+  
   const jungleRentCommission = 0;
   const savings = agencyCommission - jungleRentCommission;
 
@@ -199,7 +208,7 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
               {formatCurrency(agencyCommission)}
             </p>
             <p className="text-xs text-muted-foreground mt-1">
-              4% + IVA
+              {isMinimumFee ? t('sellersPage.calculator.minimumFee') : '4% + IVA'}
             </p>
           </div>
           
