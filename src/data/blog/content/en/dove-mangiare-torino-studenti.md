@@ -708,6 +708,21 @@ EDISU canteens are reserved for students with low ISEE, but anyone can access by
 
 ---
 
+## 🗺️ Use Our Interactive Directory
+
+Want to find where to eat right now? We've created an **interactive directory** with map, price and category filters, and all the details (hours, addresses, vegetarian options) of the best tested budget spots.
+
+👉 **[Open the Cheap Eats Directory →](/strumenti/dove-mangiare-torino)**
+
+Filter by:
+- 💰 Lunch under €5
+- 🎓 EDISU Canteens
+- 🥗 Vegetarian options
+- 📶 Free WiFi
+- ♿ Accessibility
+
+---
+
 ## Related Articles
 
 - [San Salvario: Student Neighborhood Guide](/blog/san-salvario-guida-studenti) - Turin's most vibrant student neighborhood
@@ -716,6 +731,6 @@ EDISU canteens are reserved for students with low ISEE, but anyone can access by
 
 ---
 
-*This guide was written by students for students, based on real prices and tested places. All prices are updated to November 2025.*
+*This guide was written by students for students, based on real prices and tested places. All prices are updated to December 2025.*
 
 **Questions or suggestions?** Write us! We update this guide regularly with student feedback.
