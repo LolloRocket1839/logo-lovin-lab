@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { 
@@ -214,7 +215,6 @@ const Sellers = () => {
         <div className="container px-4 md:px-8 mx-auto">
           <Breadcrumbs 
             items={[
-              { label: t('breadcrumbs.home'), href: '/' },
               { label: t('sellersPage.breadcrumb') }
             ]} 
           />
@@ -581,6 +581,8 @@ const Sellers = () => {
         onOpenChange={setIsDialogOpen} 
         source="sellers_page" 
       />
+      
+      <ExitIntentPopup source="exit-intent-sellers" />
     </>
   );
 };
