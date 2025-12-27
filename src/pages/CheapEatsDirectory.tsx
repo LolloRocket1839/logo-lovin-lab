@@ -279,18 +279,18 @@ const CheapEatsDirectory = () => {
                 </Card>
               </Link>
               
-              <Link to={lang === 'it' ? '/studenti/strumenti/budget' : '/students/tools/budget'}>
+              <Link to={lang === 'it' ? '/strumenti/sportelli-studenti-torino' : '/tools/student-services-turin'}>
                 <Card className="h-full hover:border-primary/50 transition-colors">
                   <CardContent className="p-4 flex items-start gap-3">
                     <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
-                      <Calculator className="w-5 h-5" />
+                      <GraduationCap className="w-5 h-5" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-1">
-                        {lang === 'it' ? 'Calcolatore budget' : 'Budget calculator'}
+                        {lang === 'it' ? 'Sportelli studenti' : 'Student services'}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {lang === 'it' ? 'Pianifica le tue spese mensili per cibo e altro' : 'Plan your monthly food and other expenses'}
+                        {lang === 'it' ? 'Segreterie, EDISU, borse di studio e servizi' : 'Registrars, EDISU, scholarships and services'}
                       </p>
                     </div>
                   </CardContent>
@@ -301,7 +301,7 @@ const CheapEatsDirectory = () => {
                 <Card className="h-full hover:border-primary/50 transition-colors">
                   <CardContent className="p-4 flex items-start gap-3">
                     <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
-                      <GraduationCap className="w-5 h-5" />
+                      <BookOpen className="w-5 h-5" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-1">
@@ -315,18 +315,18 @@ const CheapEatsDirectory = () => {
                 </Card>
               </Link>
               
-              <Link to="/blog/san-salvario-guida-studenti">
+              <Link to={lang === 'it' ? '/studenti/strumenti/budget' : '/students/tools/budget'}>
                 <Card className="h-full hover:border-primary/50 transition-colors">
                   <CardContent className="p-4 flex items-start gap-3">
                     <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
-                      <MapPin className="w-5 h-5" />
+                      <Calculator className="w-5 h-5" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-1">
-                        {lang === 'it' ? 'Guida San Salvario' : 'San Salvario guide'}
+                        {lang === 'it' ? 'Calcolatore budget' : 'Budget calculator'}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {lang === 'it' ? 'Il quartiere con più opzioni economiche' : 'The neighborhood with most budget options'}
+                        {lang === 'it' ? 'Pianifica le tue spese mensili per cibo e altro' : 'Plan your monthly food and other expenses'}
                       </p>
                     </div>
                   </CardContent>
