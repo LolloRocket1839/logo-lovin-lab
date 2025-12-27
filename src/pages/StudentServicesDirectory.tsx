@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -9,8 +9,12 @@ import {
   BookOpen,
   Utensils,
   Calculator,
-  ArrowRight
+  ArrowRight,
+  Map,
+  List
 } from 'lucide-react';
+
+const StudentServicesMap = lazy(() => import('@/components/tools/StudentServicesMap'));
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { BottomNav } from '@/components/BottomNav';
@@ -31,6 +35,7 @@ const StudentServicesDirectory = () => {
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
 
   const [activeQuickFilter, setActiveQuickFilter] = useState<Institution | null>(null);
+  const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
   const [filters, setFilters] = useState<ServiceFilters>({
     search: '',
     institution: 'all',
@@ -295,23 +300,75 @@ const StudentServicesDirectory = () => {
           </div>
         </section>
 
-        {/* Results Count */}
+        {/* View Mode Toggle */}
         <section className="pb-4">
           <div className="container mx-auto px-4">
-            <p className="text-sm text-muted-foreground">
-              <span className="font-semibold text-foreground">{filteredServices.length}</span> {t.servicesFound}
-            </p>
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-muted-foreground">
+                <span className="font-semibold text-foreground">{filteredServices.length}</span> {t.servicesFound}
+              </p>
+              <div className="flex gap-2">
+                <Button
+                  variant={viewMode === 'list' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setViewMode('list')}
+                >
+                  <List className="w-4 h-4 mr-1" />
+                  {currentLang === 'it' ? 'Lista' : 'List'}
+                </Button>
+                <Button
+                  variant={viewMode === 'map' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setViewMode('map')}
+                >
+                  <Map className="w-4 h-4 mr-1" />
+                  {currentLang === 'it' ? 'Mappa' : 'Map'}
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
+
+        {/* Map View */}
+        {viewMode === 'map' && (
+          <section className="py-4">
+            <div className="container mx-auto px-4">
+              <Suspense fallback={
+                <div className="w-full h-[400px] bg-muted/50 rounded-lg flex items-center justify-center">
+                  <div className="animate-pulse text-muted-foreground">
+                    {currentLang === 'it' ? 'Caricamento mappa...' : 'Loading map...'}
+                  </div>
+                </div>
+              }>
+                <StudentServicesMap 
+                  services={filteredServices} 
+                  lang={currentLang} 
+                />
+              </Suspense>
+            </div>
+          </section>
+        )}
 
         {/* Services Grid */}
         <section className="py-8">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredServices.map((service) => (
-                <StudentServiceCard key={service.id} service={service} />
-              ))}
-            </div>
+            {viewMode === 'list' && (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredServices.map((service) => (
+                  <StudentServiceCard key={service.id} service={service} />
+                ))}
+              </div>
+            )}
+
+            {viewMode === 'map' && filteredServices.length > 0 && (
+              <div className="mt-6">
+                <p className="text-sm text-muted-foreground mb-4">
+                  {currentLang === 'it' 
+                    ? 'Clicca sui marker per vedere i dettagli' 
+                    : 'Click on markers to see details'}
+                </p>
+              </div>
+            )}
 
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
