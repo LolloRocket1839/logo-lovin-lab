@@ -91,9 +91,9 @@ const StudySpacesDirectory = () => {
       breadcrumbAuleStudio: 'Aule Studio'
     },
     en: {
-      title: 'Study Spaces Turin',
+      title: 'Study spaces Turin',
       subtitle: 'Complete directory of study rooms, libraries and spaces to study in Turin',
-      seoTitle: 'Study Spaces Turin 2025 | Complete Directory with Hours and Contacts',
+      seoTitle: 'Study spaces Turin 2025 | Complete directory with hours and contacts',
       seoDesc: 'Find the best study spaces in Turin: EDISU rooms, libraries, study-friendly cafes and coworking. Hours, contacts, WiFi and accessibility.',
       seoKeywords: 'study spaces turin, libraries turin students, edisu study rooms, where to study turin, free study spaces turin, libraries open evening turin, coworking students turin',
       backToTools: 'Student tools',
@@ -101,30 +101,30 @@ const StudySpacesDirectory = () => {
       noResults: 'No spaces match the selected filters.',
       resetFilters: 'Reset filters',
       quickFilters: 'Find by need',
-      silenzio: 'Complete Silence',
-      caffe: 'Coffee & Study',
-      h24: '24/7 Access',
+      silenzio: 'Complete silence',
+      caffe: 'Coffee & study',
+      h24: '24/7 access',
       aperto: 'Outdoors',
-      accessibile: 'Full Accessibility',
-      bigSpace: '100+ Seats',
-      parking: 'Free Parking',
+      accessibile: 'Full accessibility',
+      bigSpace: '100+ seats',
+      parking: 'Free parking',
       zoneStats: 'Distribution',
-      noteImportanti: 'Important Notes',
-      sessioneEsami: 'Winter Exam Session (Dec 2025 - Feb 2026): EDISU rooms extend hours until midnight. Check EDISU for confirmation.',
+      noteImportanti: 'Important notes',
+      sessioneEsami: 'Winter exam session (Dec 2025 - Feb 2026): EDISU rooms extend hours until midnight. Check EDISU for confirmation.',
       contattoConsigliato: 'We recommend calling before visiting. Hours may vary by season.',
       ultimoAggiornamento: 'Last updated: December 2025',
-      linkUtili: 'Useful Links',
+      linkUtili: 'Useful links',
       edisu: 'EDISU Piemonte',
       biblioteche: 'Turin Civic Libraries',
       circolo: 'Circolo dei Lettori',
       comune: 'City of Turin',
-      articoliCorrelati: 'Related Articles',
-      tuttiGliSpazi: 'All Study Spaces',
-      filtraRisultati: 'Filter Results',
+      articoliCorrelati: 'Related articles',
+      tuttiGliSpazi: 'All study spaces',
+      filtraRisultati: 'Filter results',
       breadcrumbHome: 'Home',
       breadcrumbStudenti: 'Students',
       breadcrumbStrumenti: 'Tools',
-      breadcrumbAuleStudio: 'Study Spaces'
+      breadcrumbAuleStudio: 'Study spaces'
     }
   };
 
@@ -301,25 +301,25 @@ const StudySpacesDirectory = () => {
     }
   ] : [
     {
-      title: 'Study Spaces Turin: Complete Guide',
+      title: 'Study spaces Turin: Complete guide',
       description: 'In-depth guide with tips for choosing the right spot',
       url: '/blog/aule-studio-torino-guida-completa',
       icon: BookOpen
     },
     {
-      title: 'San Salvario: Student Guide',
+      title: 'San Salvario: Student guide',
       description: 'The liveliest neighborhood for university life',
       url: '/blog/san-salvario-guida-studenti',
       icon: GraduationCap
     },
     {
-      title: 'Cheap Eats Directory',
+      title: 'Cheap eats directory',
       description: 'Directory of 20 budget eateries near study spaces',
       url: '/tools/cheap-eats-turin',
       icon: Coffee
     },
     {
-      title: 'Sustainable Mobility Turin',
+      title: 'Sustainable mobility Turin',
       description: 'How to get around by bike and public transport',
       url: '/blog/mobilita-sostenibile-torino-studenti',
       icon: Bike
