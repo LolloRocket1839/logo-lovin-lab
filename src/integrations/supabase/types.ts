@@ -296,6 +296,66 @@ export type Database = {
         }
         Relationships: []
       }
+      seller_leads: {
+        Row: {
+          created_at: string | null
+          email: string
+          estimated_value: number | null
+          has_cellar: boolean | null
+          has_terrace: boolean | null
+          id: string
+          num_bathrooms: number | null
+          num_rooms: number | null
+          phone: string | null
+          photos: Json | null
+          property_address: string | null
+          property_condition: string | null
+          property_sqm: number | null
+          property_zone: string | null
+          source: string | null
+          status: string | null
+          utm_data: Json | null
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          estimated_value?: number | null
+          has_cellar?: boolean | null
+          has_terrace?: boolean | null
+          id?: string
+          num_bathrooms?: number | null
+          num_rooms?: number | null
+          phone?: string | null
+          photos?: Json | null
+          property_address?: string | null
+          property_condition?: string | null
+          property_sqm?: number | null
+          property_zone?: string | null
+          source?: string | null
+          status?: string | null
+          utm_data?: Json | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          estimated_value?: number | null
+          has_cellar?: boolean | null
+          has_terrace?: boolean | null
+          id?: string
+          num_bathrooms?: number | null
+          num_rooms?: number | null
+          phone?: string | null
+          photos?: Json | null
+          property_address?: string | null
+          property_condition?: string | null
+          property_sqm?: number | null
+          property_zone?: string | null
+          source?: string | null
+          status?: string | null
+          utm_data?: Json | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       ab_test_results: {

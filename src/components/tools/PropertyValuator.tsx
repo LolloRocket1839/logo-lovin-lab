@@ -45,6 +45,7 @@ import {
   calculateReliability,
   type CoefficientOption
 } from "@/data/propertyCoefficients";
+import { SellerLeadFormWithPhotos } from "./SellerLeadFormWithPhotos";
 
 interface PropertyValuatorProps {
   onValueCalculated?: (value: number) => void;
@@ -92,6 +93,13 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
   const [extrasOpen, setExtrasOpen] = useState(false);
   const [showBreakdown, setShowBreakdown] = useState(false);
   const [showTheoreticalPrice, setShowTheoreticalPrice] = useState(false);
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
+
+  // Handler for opening lead form with property data
+  const handleOpenLeadForm = useCallback(() => {
+    setIsLeadFormOpen(true);
+    onContactClick?.();
+  }, [onContactClick]);
 
   // Get floor options based on elevator
   const floorOptions = hasElevator ? floorWithElevator : floorWithoutElevator;
@@ -821,7 +829,7 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                           <Button 
                             variant="default" 
                             className="w-full bg-amber-600 hover:bg-amber-700 text-white"
-                            onClick={() => onContactClick?.()}
+                            onClick={handleOpenLeadForm}
                           >
                             📋 Richiedi valutazione gratuita
                           </Button>
@@ -997,7 +1005,7 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                       <Button 
                         variant="premium" 
                         className="w-full"
-                        onClick={onContactClick}
+                        onClick={handleOpenLeadForm}
                       >
                         <Building2 className="w-4 h-4 mr-2" />
                         {t('propertyValuator.ctaProfessional', 'Richiedi valutazione professionale')}
@@ -1005,7 +1013,7 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                       <Button 
                         variant="outline" 
                         className="w-full"
-                        onClick={onContactClick}
+                        onClick={handleOpenLeadForm}
                       >
                         {t('propertyValuator.ctaSavings', 'Quanto risparmi con Jungle Rent?')}
                       </Button>
@@ -1049,6 +1057,19 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
           </Card>
         </div>
       </div>
+
+      {/* Seller Lead Form with Photos */}
+      <SellerLeadFormWithPhotos
+        open={isLeadFormOpen}
+        onOpenChange={setIsLeadFormOpen}
+        source="property-valuator"
+        propertyData={{
+          zone: zone || undefined,
+          sqm: parseInt(sqm) || undefined,
+          condition: condition || undefined,
+          estimatedValue: calculation?.marketPrice || undefined,
+        }}
+      />
     </div>
   );
 };
