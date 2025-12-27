@@ -9,21 +9,15 @@ import { MobileHeader } from "@/components/MobileHeader";
 import { MobileFooter } from "@/components/MobileFooter";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PropertyValuator } from "@/components/tools/PropertyValuator";
-import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
 import { ToolStructuredData } from "@/components/tools/ToolStructuredData";
 
 const PropertyValuation = () => {
   const { t, i18n } = useTranslation();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [estimatedValue, setEstimatedValue] = useState<number | null>(null);
   const lang = i18n.language;
 
   const handleValueCalculated = (value: number) => {
     setEstimatedValue(value);
-  };
-
-  const handleContactClick = () => {
-    setIsDialogOpen(true);
   };
 
   return (
@@ -102,7 +96,6 @@ const PropertyValuation = () => {
             {/* Valuator Component */}
             <PropertyValuator 
               onValueCalculated={handleValueCalculated}
-              onContactClick={handleContactClick}
             />
           </div>
         </section>
@@ -130,11 +123,6 @@ const PropertyValuation = () => {
 
       <Footer />
       <MobileFooter />
-
-      <QuickSellerLeadDialog 
-        open={isDialogOpen} 
-        onOpenChange={setIsDialogOpen}
-      />
     </>
   );
 };

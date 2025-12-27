@@ -49,7 +49,6 @@ import { SellerLeadFormWithPhotos } from "./SellerLeadFormWithPhotos";
 
 interface PropertyValuatorProps {
   onValueCalculated?: (value: number) => void;
-  onContactClick?: () => void;
 }
 
 interface AppliedCoefficient {
@@ -71,7 +70,7 @@ const formatPercentage = (value: number): string => {
   return `${sign}${(value * 100).toFixed(1)}%`;
 };
 
-export const PropertyValuator = ({ onValueCalculated, onContactClick }: PropertyValuatorProps) => {
+export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) => {
   const { t } = useTranslation();
   
   // Form state
@@ -98,8 +97,7 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
   // Handler for opening lead form with property data
   const handleOpenLeadForm = useCallback(() => {
     setIsLeadFormOpen(true);
-    onContactClick?.();
-  }, [onContactClick]);
+  }, []);
 
   // Get floor options based on elevator
   const floorOptions = hasElevator ? floorWithElevator : floorWithoutElevator;
@@ -911,18 +909,6 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                         </p>
                       </div>
 
-                      {/* CTA */}
-                      <Button 
-                        variant="premium" 
-                        className="w-full mt-2"
-                        onClick={onContactClick}
-                      >
-                        <Building2 className="w-4 h-4 mr-2" />
-                        {t('propertyValuator.ctaJungleRentOffer', 'Richiedi offerta Jungle Rent')}
-                      </Button>
-                      <p className="text-xs text-center text-muted-foreground">
-                        {t('propertyValuator.ctaSubtext', 'Valutazione gratuita in 24h • Offerta vincolante in 7 giorni')}
-                      </p>
                     </div>
 
                     {/* Quick stats */}
@@ -1000,23 +986,19 @@ export const PropertyValuator = ({ onValueCalculated, onContactClick }: Property
                       )}
                     </div>
 
-                    {/* CTAs */}
-                    <div className="space-y-2 pt-2">
+                    {/* CTA */}
+                    <div className="pt-2">
                       <Button 
                         variant="premium" 
                         className="w-full"
                         onClick={handleOpenLeadForm}
                       >
                         <Building2 className="w-4 h-4 mr-2" />
-                        {t('propertyValuator.ctaProfessional', 'Richiedi valutazione professionale')}
+                        {t('propertyValuator.ctaOffer', 'Richiedi offerta gratuita')}
                       </Button>
-                      <Button 
-                        variant="outline" 
-                        className="w-full"
-                        onClick={handleOpenLeadForm}
-                      >
-                        {t('propertyValuator.ctaSavings', 'Quanto risparmi con Jungle Rent?')}
-                      </Button>
+                      <p className="text-xs text-center text-muted-foreground mt-2">
+                        {t('propertyValuator.ctaSubtext', 'Valutazione in 24h • Offerta vincolante in 7 giorni')}
+                      </p>
                     </div>
                   </motion.div>
                 ) : (
