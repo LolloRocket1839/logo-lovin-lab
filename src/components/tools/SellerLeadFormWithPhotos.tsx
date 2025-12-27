@@ -339,7 +339,7 @@ export const SellerLeadFormWithPhotos = ({
       }
 
       // Insert lead into database
-      const { error } = await supabase.from('seller_leads').insert([{
+      const { data: insertedLead, error } = await supabase.from('seller_leads').insert([{
         email: email.trim(),
         phone: phone.trim() || null,
         property_address: address.trim() || null,
@@ -355,10 +355,33 @@ export const SellerLeadFormWithPhotos = ({
         video_url: videoUrl,
         source,
         utm_data: Object.keys(utmParams).length > 0 ? utmParams as unknown as null : null,
-      }]);
+      }]).select('id').single();
 
       if (error) {
         throw error;
+      }
+
+      // Send notification email to team (fire and forget)
+      try {
+        await supabase.functions.invoke('notify-new-lead', {
+          body: {
+            leadId: insertedLead?.id || tempLeadId,
+            email: email.trim(),
+            phone: phone.trim() || undefined,
+            zone: propertyData?.zone,
+            sqm: propertyData?.sqm,
+            condition: propertyData?.condition,
+            estimatedValue: propertyData?.estimatedValue,
+            hasPhotos: uploadedPhotos.length > 0,
+            photoCount: uploadedPhotos.length,
+            hasVideo: !!videoUrl,
+            source,
+          },
+        });
+        console.log('Team notification sent');
+      } catch (notifyError) {
+        // Don't fail the lead submission if notification fails
+        console.error('Failed to send team notification:', notifyError);
       }
 
       setIsSubmitted(true);

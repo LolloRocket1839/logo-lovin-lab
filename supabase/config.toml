@@ -23,3 +23,6 @@ verify_jwt = false
 
 [functions.cleanup-perplexity-cache]
 verify_jwt = false
+
+[functions.notify-new-lead]
+verify_jwt = false
