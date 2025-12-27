@@ -315,6 +315,7 @@ export type Database = {
           source: string | null
           status: string | null
           utm_data: Json | null
+          video_url: string | null
         }
         Insert: {
           created_at?: string | null
@@ -334,6 +335,7 @@ export type Database = {
           source?: string | null
           status?: string | null
           utm_data?: Json | null
+          video_url?: string | null
         }
         Update: {
           created_at?: string | null
@@ -353,6 +355,7 @@ export type Database = {
           source?: string | null
           status?: string | null
           utm_data?: Json | null
+          video_url?: string | null
         }
         Relationships: []
       }
