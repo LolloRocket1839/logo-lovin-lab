@@ -112,10 +112,24 @@ export const StudySpaceCard = ({ space, lang }: StudySpaceCardProps) => {
           <span>{space.address}</span>
         </div>
         
-        {/* District Badge */}
-        <Badge variant="outline" className="w-fit mt-1">
-          {space.district}
-        </Badge>
+        {/* Note (if exists) */}
+        {space.note && (
+          <p className="text-sm italic text-muted-foreground mt-1 pl-6">
+            "{space.note}"
+          </p>
+        )}
+        
+        {/* District & Capacity Badges */}
+        <div className="flex items-center gap-2 mt-2 flex-wrap">
+          <Badge variant="outline">
+            {space.district}
+          </Badge>
+          {space.capacity && (
+            <Badge variant="secondary" className="gap-1">
+              {space.capacity}
+            </Badge>
+          )}
+        </div>
       </CardHeader>
       
       <CardContent className="space-y-4">
