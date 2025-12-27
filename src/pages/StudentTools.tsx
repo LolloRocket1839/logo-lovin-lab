@@ -44,6 +44,12 @@ const tools: Tool[] = [
     path: '/studenti/strumenti/sessione'
   },
   {
+    id: 'studySpaces',
+    icon: GraduationCap,
+    status: 'available',
+    path: '/strumenti/aule-studio-torino'
+  },
+  {
     id: 'utilities',
     icon: Zap,
     status: 'coming-soon'
@@ -78,6 +84,10 @@ const StudentTools = () => {
           title: "Organizzatore Sessione",
           description: "Pianifica la sessione d'esame con calendario, CFU e difficoltà. Ottimizza il tuo piano di studio."
         },
+        studySpaces: {
+          title: "Directory Aule Studio",
+          description: "Trova le migliori aule studio a Torino: biblioteche, sale EDISU, caffetterie e coworking con orari e contatti."
+        },
         utilities: {
           title: "Comparatore Bollette",
           description: "Confronta le tariffe di luce e gas per trovare l'offerta migliore per la tua casa."
@@ -109,6 +119,10 @@ const StudentTools = () => {
         session: {
           title: "Exam Session Planner",
           description: "Plan your exam session with calendar, credits and difficulty. Optimize your study plan."
+        },
+        studySpaces: {
+          title: "Study Spaces Directory",
+          description: "Find the best study spaces in Turin: libraries, EDISU rooms, cafes and coworking with hours and contacts."
         },
         utilities: {
           title: "Utility Comparator",
