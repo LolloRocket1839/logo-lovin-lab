@@ -33,7 +33,7 @@ const getConditionLabel = (condition?: string): string => {
   switch (condition) {
     case 'renovated': return 'Ristrutturato';
     case 'good': return 'Buono stato';
-    case 'renovate': return 'Da ristrutturare';
+    case 'to_renovate': return 'Da ristrutturare';
     default: return condition || 'Non specificato';
   }
 };
