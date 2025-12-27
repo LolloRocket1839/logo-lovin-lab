@@ -706,11 +706,28 @@ Le mense EDISU sono riservate a studenti con ISEE basso, ma chiunque può accede
 
 **La regola d'oro:** Cucina 60% del tempo, mangia fuori strategicamente 40%. Qualità di vita alta, costi sostenibili.
 
+---
+
+## 🗺️ Usa la Directory Interattiva
+
+Vuoi trovare subito dove mangiare? Abbiamo creato una **directory interattiva** con mappa, filtri per prezzo e categoria, e tutti i dettagli (orari, indirizzi, opzioni vegetariane) dei migliori posti economici testati.
+
+👉 **[Apri la Directory Dove Mangiare Cheap →](/strumenti/dove-mangiare-torino)**
+
+Filtra per:
+- 💰 Pranzo sotto €5
+- 🎓 Mense EDISU
+- 🥗 Opzioni vegetariane
+- 📶 WiFi gratis
+- ♿ Accessibilità
+
+---
+
 > **📚 Guide correlate**
 > - [San Salvario: guida completa per studenti](/blog/san-salvario-guida-studenti) - Il quartiere con più ristoranti economici
 > - [Le migliori gelaterie di Torino per studenti](/blog/migliori-gelaterie-torino-studenti) - Dove gustare il gelato perfetto
 > - [I mercati storici di Torino](/blog/mercati-storici-torino-chiusure) - Storia e impatto sociale dei mercati rionali
 
-*Questa guida è stata scritta da studenti per studenti, basandosi su prezzi reali e posti testati. Tutti i prezzi sono aggiornati a Novembre 2025.*
+*Questa guida è stata scritta da studenti per studenti, basandosi su prezzi reali e posti testati. Tutti i prezzi sono aggiornati a Dicembre 2025.*
 
 **Hai domande o suggerimenti?** Scrivici! Aggiorniamo questa guida regolarmente con i feedback degli studenti.

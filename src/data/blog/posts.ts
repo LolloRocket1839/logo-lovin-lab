@@ -2555,7 +2555,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "dove-mangiare-torino-studenti",
     category: "students",
-    date: "2025-11-03",
+    date: "2025-12-27",
     author: "Team Jungle Rent",
     image: "/images/caffe-vini-quadrilatero.jpg",
     readTime: 12,
@@ -2563,11 +2563,11 @@ export const blogPosts: BlogPost[] = [
     translations: {
       it: {
         title: "Dove mangiare a Torino: la guida definitiva per studenti con budget limitato",
-        excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti.",
+        excerpt: "La guida definitiva per mangiare bene a Torino spendendo poco: i migliori posti per colazione, pranzo, cena e aperitivo, mercati, mense universitarie e strategie di risparmio testati da studenti. Con directory interattiva!",
         seo: {
-          title: "Dove mangiare Torino studenti 2025 | guida budget-friendly",
-          description: "Dove mangiare a Torino da studente: guida 2025 ai migliori ristoranti economici vicino Politecnico e UniTo. Kebab €5, pizzerie, mercati e mense. Risparmia fino al 50% su colazione, pranzo e cena.",
-          keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino", "politecnico torino", "unito torino"]
+          title: "Dove mangiare Torino studenti 2025 | guida budget-friendly + Directory",
+          description: "Dove mangiare a Torino da studente: guida 2025 ai migliori ristoranti economici vicino Politecnico e UniTo. Kebab €5, pizzerie, mercati e mense. Directory interattiva con mappa e filtri.",
+          keywords: ["dove mangiare torino studenti", "ristoranti economici torino", "mangiare poco torino", "mercati torino", "mense universitarie torino", "aperitivo economico torino", "politecnico torino", "unito torino", "street food torino", "pranzo economico torino"]
         },
         tags: ["studenti", "cibo", "torino", "risparmio", "ristoranti", "guida"],
         faqs: [
@@ -2595,11 +2595,11 @@ export const blogPosts: BlogPost[] = [
       },
       en: {
         title: "Where to eat in Turin: the definitive guide for students on a budget",
-        excerpt: "The ultimate guide to eating well in Turin on a budget: the best places for breakfast, lunch, dinner and aperitivo, markets, university canteens and money-saving strategies tested by students.",
+        excerpt: "The ultimate guide to eating well in Turin on a budget: the best places for breakfast, lunch, dinner and aperitivo, markets, university canteens and money-saving strategies tested by students. With interactive directory!",
         seo: {
-          title: "Where to eat Turin students 2025 | Budget-friendly guide",
-          description: "Discover the best places to eat in Turin on a budget: kebab shops, pizzerias, ethnic restaurants, markets, canteens and tips to save money. Complete guide with real prices.",
-          keywords: ["where to eat turin students", "cheap restaurants turin", "budget food turin", "turin markets", "university canteens turin", "cheap aperitivo turin"]
+          title: "Where to eat Turin students 2025 | Budget-friendly guide + Directory",
+          description: "Discover the best places to eat in Turin on a budget: kebab shops, pizzerias, ethnic restaurants, markets, canteens. Interactive directory with map and filters.",
+          keywords: ["where to eat turin students", "cheap restaurants turin", "budget food turin", "turin markets", "university canteens turin", "cheap aperitivo turin", "street food turin", "cheap lunch turin"]
         },
         tags: ["students", "food", "turin", "budget", "restaurants", "guide"],
         faqs: [
