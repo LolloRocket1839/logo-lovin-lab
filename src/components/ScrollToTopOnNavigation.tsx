@@ -5,7 +5,8 @@ export const ScrollToTopOnNavigation = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Use instant scroll to ensure page starts at top immediately
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;
