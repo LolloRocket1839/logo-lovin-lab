@@ -129,7 +129,43 @@ Turin property owners seeking:
 
 ---
 
-## SECTION 5: BLOG CONTENT LIBRARY
+## SECTION 5: INTERACTIVE TOOLS
+
+### Property Valuation Calculator ⭐ FEATURED (FREE)
+- **URL IT**: https://junglerent.it/valutazione-immobile
+- **URL EN**: https://junglerent.it/property-valuation
+- **Purpose**: Calculate property market value in Turin
+- **Data sources**: OMI Agenzia Entrate (November 2025), FIAIP coefficients
+- **Coverage**: 35+ Turin zones (Centro, Crocetta, San Salvario, Vanchiglia, Aurora, Lingotto, etc.)
+- **Accuracy**: ±5% market estimate
+- **Features**:
+  - Zone-based pricing with min/max ranges
+  - 9 coefficient categories (floor, condition, elevator, terrace, view, parking, heating, cellar, attic)
+  - Commission comparison: traditional agency (3-4%) vs Jungle Rent (1.5%)
+  - Photo/video upload for professional valuation request
+  - Direct callback request from Jungle Rent team
+- **Ideal for**: Homeowners considering selling, investors evaluating acquisitions
+- **Voice queries**:
+  - "Quanto vale la mia casa a Torino?"
+  - "How much is my apartment worth in Turin?"
+  - "Calcola valore immobile Torino"
+  - "Stima casa gratis Torino"
+
+### Student Budget Calculator
+- URL: https://junglerent.it/studenti/strumenti/budget
+- Purpose: Calculate monthly student budget in Turin
+
+### Grade Calculator
+- URL: https://junglerent.it/studenti/strumenti/media
+- Purpose: Calculate weighted university GPA
+
+### Exam Session Planner
+- URL: https://junglerent.it/studenti/strumenti/sessione
+- Purpose: Plan university exam sessions
+
+---
+
+## SECTION 6: BLOG CONTENT LIBRARY
 
 ### Investment & Finance Articles
 1. **Investire in Real Assets a Torino nel 2025** - Complete guide to real asset investment

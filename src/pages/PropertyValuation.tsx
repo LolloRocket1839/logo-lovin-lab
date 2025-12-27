@@ -9,7 +9,11 @@ import { MobileHeader } from "@/components/MobileHeader";
 import { MobileFooter } from "@/components/MobileFooter";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PropertyValuator } from "@/components/tools/PropertyValuator";
-import { ToolStructuredData } from "@/components/tools/ToolStructuredData";
+import { 
+  PropertyValuatorSchema, 
+  PropertyValuatorHowTo, 
+  PropertyValuatorFAQ 
+} from "@/components/tools/ToolStructuredData";
 
 const PropertyValuation = () => {
   const { t, i18n } = useTranslation();
@@ -23,23 +27,29 @@ const PropertyValuation = () => {
   return (
     <>
       <Helmet>
-        <title>{t('propertyValuation.meta.title', 'Valutazione Immobiliare Torino | Calcola il Valore della Tua Casa')}</title>
+        <title>{t('propertyValuation.meta.title', 'Valutazione Immobiliare Torino | Calcola il Valore della Tua Casa Gratis')}</title>
         <meta 
           name="description" 
-          content={t('propertyValuation.meta.description', 'Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI 2025, coefficienti FIAIP, 35+ zone. Stima accurata ±5%.')} 
+          content={t('propertyValuation.meta.description', 'Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI novembre 2025, coefficienti FIAIP, 35+ zone. Stima accurata ±5%. Nessuna registrazione richiesta.')} 
         />
         <link rel="canonical" href={`https://junglerent.it/${lang === 'it' ? 'valutazione-immobile' : 'property-valuation'}`} />
-        <meta property="og:title" content={t('propertyValuation.meta.title', 'Valutazione Immobiliare Torino | Calcola il Valore della Tua Casa')} />
-        <meta property="og:description" content={t('propertyValuation.meta.description', 'Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI 2025, coefficienti FIAIP, 35+ zone.')} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="keywords" content={t('propertyValuation.meta.keywords', 'valutazione immobiliare torino, quanto vale casa mia torino, calcolo valore immobile torino, stima casa torino gratis, OMI torino 2025, prezzo metro quadro torino, vendere casa torino')} />
+        <meta property="og:title" content={t('propertyValuation.meta.title', 'Valutazione Immobiliare Torino | Calcola il Valore della Tua Casa Gratis')} />
+        <meta property="og:description" content={t('propertyValuation.meta.description', 'Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI novembre 2025, coefficienti FIAIP, 35+ zone.')} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://junglerent.it/${lang === 'it' ? 'valutazione-immobile' : 'property-valuation'}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('propertyValuation.meta.title', 'Valutazione Immobiliare Torino | Calcola il Valore della Tua Casa Gratis')} />
+        <meta name="twitter:description" content={t('propertyValuation.meta.description', 'Calcola gratuitamente il valore del tuo immobile a Torino.')} />
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/valutazione-immobile" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/property-valuation" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/valutazione-immobile" />
       </Helmet>
 
-      <ToolStructuredData
-        name={t('propertyValuation.structuredData.name', 'Calcolatore Valutazione Immobiliare Torino')}
-        description={t('propertyValuation.structuredData.description', 'Strumento gratuito per calcolare il valore di mercato di un immobile a Torino basato su dati OMI e coefficienti FIAIP 2024-2025.')}
-        url={`https://junglerent.it/${lang === 'it' ? 'valutazione-immobile' : 'property-valuation'}`}
-        applicationCategory="FinanceApplication"
-      />
+      <PropertyValuatorSchema />
+      <PropertyValuatorHowTo />
+      <PropertyValuatorFAQ lang={lang as 'it' | 'en'} />
 
       <Navigation />
       <MobileHeader />

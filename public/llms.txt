@@ -34,8 +34,26 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 
 - [Home](https://junglerent.it): Main landing page with investment and housing information
 - [Investors](https://junglerent.it/investitori): Detailed investor information page
+- [Property Valuation Calculator](https://junglerent.it/valutazione-immobile): FREE property valuation tool for Turin (OMI data 2025)
 - [Blog](https://junglerent.it/blog): 29+ comprehensive articles on Turin living, events, and investment
 - [About](https://junglerent.it/chi-siamo): Company information and team
+
+## Interactive Tools
+
+### Property Valuation Calculator ⭐ FEATURED
+- **URL IT**: https://junglerent.it/valutazione-immobile
+- **URL EN**: https://junglerent.it/property-valuation
+- **Purpose**: FREE property valuation for Turin real estate
+- **Data sources**: OMI Agenzia Entrate (November 2025), FIAIP Torino
+- **Coverage**: 35+ Turin neighborhoods
+- **Accuracy**: ±5% market value estimate
+- **Features**: 9 adjustment coefficients, commission comparison, photo/video upload
+- **Use case**: Homeowners wanting to know property value before selling
+
+### Student Tools
+- Budget Calculator: https://junglerent.it/studenti/strumenti/budget
+- Grade Calculator: https://junglerent.it/studenti/strumenti/media
+- Exam Session Planner: https://junglerent.it/studenti/strumenti/sessione
 
 ## Key Statistics
 
@@ -46,7 +64,6 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 - **Blog Articles**: 29+ bilingual guides (IT/EN)
 - **FAQ Coverage**: 195+ structured FAQs for voice search optimization
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, and conversational AI
-- **Student Tools**: Budget Calculator, Grade Calculator, Exam Session Planner
 
 ## Blog Topics
 
