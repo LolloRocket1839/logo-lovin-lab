@@ -144,9 +144,14 @@ const StudentTools = () => {
 
   return (
     <>
+      {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
       <Helmet>
         <title>{t.seoTitle}</title>
         <meta name="description" content={t.seoDesc} />
+        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'students/tools' : 'studenti/strumenti'}`} />
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/studenti/strumenti" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/students/tools" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti/strumenti" />
       </Helmet>
 
       <Navigation />

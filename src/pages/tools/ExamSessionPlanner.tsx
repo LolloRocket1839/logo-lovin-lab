@@ -275,9 +275,14 @@ const ExamSessionPlanner = () => {
         editExam={editingExam}
         lang={currentLang}
       />
+      {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
       <Helmet>
         <title>{c.seoTitle}</title>
         <meta name="description" content={c.seoDesc} />
+        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'students/tools/session' : 'studenti/strumenti/sessione'}`} />
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/studenti/strumenti/sessione" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/students/tools/session" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti/strumenti/sessione" />
       </Helmet>
       <ExamSessionPlannerSchema />
       <ExamSessionPlannerHowTo />

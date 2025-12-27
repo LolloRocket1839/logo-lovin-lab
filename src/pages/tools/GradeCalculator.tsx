@@ -366,9 +366,14 @@ const GradeCalculator = () => {
 
   return (
     <>
+      {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
       <Helmet>
         <title>{t.seoTitle}</title>
         <meta name="description" content={t.seoDesc} />
+        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'students/tools/grades' : 'studenti/strumenti/media'}`} />
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/studenti/strumenti/media" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/students/tools/grades" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti/strumenti/media" />
       </Helmet>
       <GradeCalculatorSchema />
       <GradeCalculatorHowTo />

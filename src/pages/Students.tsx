@@ -96,11 +96,15 @@ const Students = () => {
 
   return (
     <>
+      {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
       <Helmet>
         <title>{t("students.seo.title")}</title>
         <meta name="description" content={t("students.seo.description")} />
         <meta name="keywords" content="affitti studenti torino, casa studenti politecnico, appartamenti universitari torino, student housing turin" />
-        <link rel="canonical" href="https://junglerent.com/studenti" />
+        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'students' : 'studenti'}`} />
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/studenti" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/students" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti" />
         <meta property="og:title" content={t("students.seo.title")} />
         <meta property="og:description" content={t("students.seo.description")} />
         <meta property="og:type" content="website" />

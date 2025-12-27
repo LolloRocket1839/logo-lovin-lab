@@ -389,12 +389,17 @@ const BudgetCalculator = () => {
 
   return (
     <>
+      {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
       <Helmet>
         <title>{currentLang === 'it' ? 'Calcolatore Budget Studente Torino | Jungle Rent' : 'Turin Student Budget Calculator | Jungle Rent'}</title>
         <meta name="description" content={currentLang === 'it' 
           ? 'Calcola quanto costa vivere a Torino come studente. Stima affitto, bollette stagionali, trasporti e tutte le spese con consigli AI personalizzati.'
           : 'Calculate living costs in Turin as a student. Estimate rent, seasonal bills, transport and all expenses with personalized AI advice.'
         } />
+        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'students/tools/budget' : 'studenti/strumenti/budget'}`} />
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/studenti/strumenti/budget" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/students/tools/budget" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti/strumenti/budget" />
       </Helmet>
       <BudgetCalculatorSchema />
       <BudgetCalculatorHowTo />
