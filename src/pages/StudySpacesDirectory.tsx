@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,9 @@ import {
   Accessibility,
   AlertCircle,
   ExternalLink,
-  Phone
+  Phone,
+  Map as MapIcon,
+  List
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -23,6 +25,7 @@ import { Footer } from '@/components/Footer';
 import { BottomNav } from '@/components/BottomNav';
 import { StudySpaceCard } from '@/components/tools/StudySpaceCard';
 import { StudySpaceFilters, StudySpaceFiltersState } from '@/components/tools/StudySpaceFilters';
+import { StudySpacesMap } from '@/components/tools/StudySpacesMap';
 import { detailedStudySpaces, DetailedStudySpace } from '@/data/detailedStudySpaces';
 
 // Quick filter type
@@ -42,6 +45,8 @@ const StudySpacesDirectory = () => {
   });
 
   const [activeQuickFilter, setActiveQuickFilter] = useState<QuickFilterType>(null);
+  const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
+  const cardRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
   const content = {
     it: {
@@ -413,8 +418,8 @@ const StudySpacesDirectory = () => {
         {/* Filters & Results */}
         <section className="py-8">
           <div className="container mx-auto px-4">
-            {/* Filters */}
-            <div className="mb-8">
+            {/* View Toggle + Filters */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
               <StudySpaceFilters
                 filters={filters}
                 onFiltersChange={(newFilters) => {
@@ -424,42 +429,94 @@ const StudySpacesDirectory = () => {
                 lang={currentLang}
                 totalResults={filteredSpaces.length}
               />
-            </div>
-            
-            {/* Results Grid */}
-            {filteredSpaces.length > 0 ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredSpaces.map((space) => (
-                  <StudySpaceCard 
-                    key={space.id} 
-                    space={space} 
-                    lang={currentLang} 
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-12">
-                <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-lg text-muted-foreground mb-4">
-                  {t.noResults}
-                </p>
-                <Button 
-                  variant="outline" 
-                  onClick={() => {
-                    setFilters({
-                      search: '',
-                      category: 'all',
-                      district: 'all',
-                      silenceLevel: 'all',
-                      access24h: false,
-                      disabledAccess: false
-                    });
-                    setActiveQuickFilter(null);
-                  }}
+              
+              {/* View Toggle */}
+              <div className="flex gap-2">
+                <Button
+                  variant={viewMode === 'list' ? 'default' : 'outline'}
+                  size="sm"
+                  className="gap-1"
+                  onClick={() => setViewMode('list')}
                 >
-                  {t.resetFilters}
+                  <List className="w-4 h-4" />
+                  {currentLang === 'it' ? 'Lista' : 'List'}
+                </Button>
+                <Button
+                  variant={viewMode === 'map' ? 'default' : 'outline'}
+                  size="sm"
+                  className="gap-1"
+                  onClick={() => setViewMode('map')}
+                >
+                  <MapIcon className="w-4 h-4" />
+                  {currentLang === 'it' ? 'Mappa' : 'Map'}
                 </Button>
               </div>
+            </div>
+
+            {/* Map View */}
+            {viewMode === 'map' && (
+              <div className="mb-8">
+                <StudySpacesMap 
+                  spaces={filteredSpaces} 
+                  lang={currentLang}
+                  onMarkerClick={(spaceId) => {
+                    setViewMode('list');
+                    setTimeout(() => {
+                      const card = cardRefs.current[spaceId];
+                      if (card) {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        card.classList.add('ring-2', 'ring-primary');
+                        setTimeout(() => card.classList.remove('ring-2', 'ring-primary'), 2000);
+                      }
+                    }, 100);
+                  }}
+                />
+              </div>
+            )}
+            
+            {/* Results Grid */}
+            {viewMode === 'list' && (
+              <>
+                {filteredSpaces.length > 0 ? (
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {filteredSpaces.map((space) => (
+                      <div 
+                        key={space.id} 
+                        ref={(el) => { cardRefs.current[space.id] = el; }}
+                        className="transition-all duration-300"
+                      >
+                        <StudySpaceCard 
+                          space={space} 
+                          lang={currentLang} 
+                        />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-12">
+                    <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
+                    <p className="text-lg text-muted-foreground mb-4">
+                      {t.noResults}
+                    </p>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => {
+                        setFilters({
+                          search: '',
+                          category: 'all',
+                          district: 'all',
+                          silenceLevel: 'all',
+                          access24h: false,
+                          disabledAccess: false
+                        });
+                        setActiveQuickFilter(null);
+                      }}
+                    >
+                      {t.resetFilters}
+                    </Button>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </section>
