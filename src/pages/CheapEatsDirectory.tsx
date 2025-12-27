@@ -10,11 +10,7 @@ import { List, Map as MapIcon } from 'lucide-react';
 import CheapEatCard from '@/components/tools/CheapEatCard';
 import CheapEatFilters, { CheapEatFiltersState } from '@/components/tools/CheapEatFilters';
 import CheapEatsMap from '@/components/tools/CheapEatsMap';
-import { cheapEatsData, quickFilters, CheapEatLocation, categoryLabels } from '@/data/cheapEatsDirectory';
-import CheapEatCard from '@/components/tools/CheapEatCard';
-import CheapEatFilters, { CheapEatFiltersState } from '@/components/tools/CheapEatFilters';
-import CheapEatsMap from '@/components/tools/CheapEatsMap';
-import { cheapEatsData, quickFilters, CheapEatLocation, categoryLabels } from '@/data/cheapEatsDirectory';
+import { cheapEatsData, quickFilters, CheapEatLocation } from '@/data/cheapEatsDirectory';
 
 const CheapEatsDirectory = () => {
   const { i18n } = useTranslation();
