@@ -106,6 +106,10 @@ const StudentTools = () => {
           title: "Directory Dove Mangiare Cheap",
           description: "Trova ristoranti, pizzerie, kebab e mense economiche vicino alle università. Filtri per prezzo, cucina e zona."
         },
+        studentServices: {
+          title: "Sportelli e Servizi Studenti",
+          description: "Guida completa a segreterie, uffici EDISU, borse di studio, DSA, Erasmus e tutti i servizi universitari."
+        },
         utilities: {
           title: "Comparatore Bollette",
           description: "Confronta le tariffe di luce e gas per trovare l'offerta migliore per la tua casa."
@@ -145,6 +149,10 @@ const StudentTools = () => {
         cheapEats: {
           title: "Cheap Eats Directory",
           description: "Find affordable restaurants, pizzerias, kebabs and canteens near universities. Filter by price, cuisine and area."
+        },
+        studentServices: {
+          title: "Student services directory",
+          description: "Complete guide to registrars, EDISU offices, scholarships, disability services, Erasmus and all university services."
         },
         utilities: {
           title: "Utility Comparator",
