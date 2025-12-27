@@ -2,15 +2,31 @@ import { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { BookOpen, ArrowLeft, MapPin } from 'lucide-react';
+import { 
+  BookOpen, 
+  ArrowLeft, 
+  MapPin, 
+  VolumeX, 
+  Coffee, 
+  Clock, 
+  Trees, 
+  Accessibility,
+  AlertCircle,
+  ExternalLink,
+  Phone
+} from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { BottomNav } from '@/components/BottomNav';
 import { StudySpaceCard } from '@/components/tools/StudySpaceCard';
 import { StudySpaceFilters, StudySpaceFiltersState } from '@/components/tools/StudySpaceFilters';
 import { detailedStudySpaces, DetailedStudySpace } from '@/data/detailedStudySpaces';
+
+// Quick filter type
+type QuickFilterType = 'silenzio' | 'caffe' | '24h' | 'aperto' | 'accessibile' | null;
 
 const StudySpacesDirectory = () => {
   const { i18n } = useTranslation();
@@ -25,6 +41,8 @@ const StudySpacesDirectory = () => {
     disabledAccess: false
   });
 
+  const [activeQuickFilter, setActiveQuickFilter] = useState<QuickFilterType>(null);
+
   const content = {
     it: {
       title: 'Aule Studio Torino',
@@ -34,7 +52,23 @@ const StudySpacesDirectory = () => {
       backToTools: 'Strumenti studenti',
       readGuide: 'Leggi la guida completa',
       noResults: 'Nessuno spazio corrisponde ai filtri selezionati.',
-      resetFilters: 'Reset filtri'
+      resetFilters: 'Reset filtri',
+      quickFilters: 'Trova per esigenza',
+      silenzio: 'Silenzio Assoluto',
+      caffe: 'Caffè e Studio',
+      h24: '24/7 Access',
+      aperto: 'All\'Aperto',
+      accessibile: 'Accessibilità Totale',
+      zoneStats: 'Distribuzione',
+      noteImportanti: 'Note Importanti',
+      sessioneEsami: 'Sessione Invernale d\'Esami (Dic 2025 - Feb 2026): le sale EDISU ampliano orari fino alle 24:00. Consulta EDISU per conferma.',
+      contattoConsigliato: 'Si consiglia contatto telefonico prima della visita. Orari soggetti a variazioni stagionali.',
+      ultimoAggiornamento: 'Ultimo aggiornamento: Dicembre 2025',
+      linkUtili: 'Link Utili',
+      edisu: 'EDISU Piemonte',
+      biblioteche: 'Biblioteche Civiche Torino',
+      circolo: 'Circolo dei Lettori',
+      comune: 'Comune di Torino'
     },
     en: {
       title: 'Study Spaces Turin',
@@ -44,16 +78,105 @@ const StudySpacesDirectory = () => {
       backToTools: 'Student tools',
       readGuide: 'Read the full guide',
       noResults: 'No spaces match the selected filters.',
-      resetFilters: 'Reset filters'
+      resetFilters: 'Reset filters',
+      quickFilters: 'Find by need',
+      silenzio: 'Complete Silence',
+      caffe: 'Coffee & Study',
+      h24: '24/7 Access',
+      aperto: 'Outdoors',
+      accessibile: 'Full Accessibility',
+      zoneStats: 'Distribution',
+      noteImportanti: 'Important Notes',
+      sessioneEsami: 'Winter Exam Session (Dec 2025 - Feb 2026): EDISU rooms extend hours until midnight. Check EDISU for confirmation.',
+      contattoConsigliato: 'We recommend calling before visiting. Hours may vary by season.',
+      ultimoAggiornamento: 'Last updated: December 2025',
+      linkUtili: 'Useful Links',
+      edisu: 'EDISU Piemonte',
+      biblioteche: 'Turin Civic Libraries',
+      circolo: 'Circolo dei Lettori',
+      comune: 'City of Turin'
     }
   };
 
   const t = content[currentLang];
 
+  // Zone statistics
+  const zoneStats = useMemo(() => {
+    const stats: Record<string, number> = {};
+    detailedStudySpaces.forEach(space => {
+      stats[space.district] = (stats[space.district] || 0) + 1;
+    });
+    return stats;
+  }, []);
+
+  // Handle quick filter click
+  const handleQuickFilter = (filterType: QuickFilterType) => {
+    if (activeQuickFilter === filterType) {
+      // Reset
+      setActiveQuickFilter(null);
+      setFilters({
+        search: '',
+        category: 'all',
+        district: 'all',
+        silenceLevel: 'all',
+        access24h: false,
+        disabledAccess: false
+      });
+    } else {
+      setActiveQuickFilter(filterType);
+      switch (filterType) {
+        case 'silenzio':
+          setFilters({
+            ...filters,
+            category: 'all',
+            silenceLevel: 'assoluto',
+            access24h: false,
+            disabledAccess: false
+          });
+          break;
+        case 'caffe':
+          setFilters({
+            ...filters,
+            category: 'caffetteria',
+            silenceLevel: 'all',
+            access24h: false,
+            disabledAccess: false
+          });
+          break;
+        case '24h':
+          setFilters({
+            ...filters,
+            category: 'all',
+            silenceLevel: 'all',
+            access24h: true,
+            disabledAccess: false
+          });
+          break;
+        case 'aperto':
+          setFilters({
+            ...filters,
+            category: 'spazi_alternativi',
+            silenceLevel: 'all',
+            access24h: false,
+            disabledAccess: false
+          });
+          break;
+        case 'accessibile':
+          setFilters({
+            ...filters,
+            category: 'all',
+            silenceLevel: 'all',
+            access24h: false,
+            disabledAccess: true
+          });
+          break;
+      }
+    }
+  };
+
   // Filter spaces
   const filteredSpaces = useMemo(() => {
     return detailedStudySpaces.filter((space) => {
-      // Search
       if (filters.search) {
         const searchLower = filters.search.toLowerCase();
         const matchesSearch = 
@@ -63,28 +186,23 @@ const StudySpacesDirectory = () => {
         if (!matchesSearch) return false;
       }
       
-      // Category
       if (filters.category !== 'all' && space.category !== filters.category) {
         return false;
       }
       
-      // District
       if (filters.district !== 'all' && space.district !== filters.district) {
         return false;
       }
       
-      // Silence level
       if (filters.silenceLevel !== 'all' && space.features.silence !== filters.silenceLevel) {
         return false;
       }
       
-      // 24/7 access
       if (filters.access24h && !space.features.access24h) {
         return false;
       }
       
-      // Disabled access
-      if (filters.disabledAccess && space.features.disabledAccess === 'no') {
+      if (filters.disabledAccess && space.features.disabledAccess !== 'totale') {
         return false;
       }
       
@@ -117,6 +235,44 @@ const StudySpacesDirectory = () => {
     }))
   };
 
+  // FAQ Structured Data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": currentLang === 'it' ? "Dove posso studiare in silenzio a Torino?" : "Where can I study in silence in Turin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": currentLang === 'it' 
+            ? "Le sale studio EDISU (Michelangelo, Verdi, Giuria, Principe Amedeo) e le biblioteche (BNUTO, Civica Centrale) offrono silenzio assoluto."
+            : "EDISU study rooms (Michelangelo, Verdi, Giuria, Principe Amedeo) and libraries (BNUTO, Civica Centrale) offer complete silence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": currentLang === 'it' ? "Quali spazi studio sono aperti 24/7 a Torino?" : "Which study spaces are open 24/7 in Turin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": currentLang === 'it'
+            ? "Copernico Garibaldi e Bliss Coworking offrono accesso 24/7 per membri. Il Parco del Valentino è sempre accessibile."
+            : "Copernico Garibaldi and Bliss Coworking offer 24/7 access for members. Parco del Valentino is always accessible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": currentLang === 'it' ? "Ci sono caffetterie study-friendly a Torino?" : "Are there study-friendly cafes in Turin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": currentLang === 'it'
+            ? "Sì! Circolo dei Lettori, Mara dei Boschi (2 sedi), Convitto Cafè e EXKi sono caffetterie dove studiare con WiFi e prese."
+            : "Yes! Circolo dei Lettori, Mara dei Boschi (2 locations), Convitto Cafè and EXKi are cafes where you can study with WiFi and outlets."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Helmet>
@@ -127,6 +283,9 @@ const StudySpacesDirectory = () => {
         <link rel="canonical" href={`https://jungle-rent.com/strumenti/aule-studio-torino`} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqStructuredData)}
         </script>
       </Helmet>
 
@@ -159,6 +318,16 @@ const StudySpacesDirectory = () => {
                 {t.subtitle}
               </p>
               
+              {/* Zone Statistics */}
+              <div className="flex flex-wrap justify-center gap-2 mb-6">
+                <span className="text-sm text-muted-foreground">{t.zoneStats}:</span>
+                {Object.entries(zoneStats).map(([zone, count]) => (
+                  <Badge key={zone} variant="secondary" className="text-xs">
+                    {zone}: {count}
+                  </Badge>
+                ))}
+              </div>
+              
               {/* Link to blog article */}
               <Link to="/blog/aule-studio-torino-guida-completa">
                 <Button variant="outline" className="gap-2">
@@ -170,6 +339,77 @@ const StudySpacesDirectory = () => {
           </div>
         </section>
 
+        {/* Quick Filters */}
+        <section className="py-4 border-b border-border/50">
+          <div className="container mx-auto px-4">
+            <p className="text-sm font-medium text-muted-foreground mb-3">{t.quickFilters}:</p>
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant={activeQuickFilter === 'silenzio' ? 'default' : 'outline'}
+                size="sm"
+                className="gap-1"
+                onClick={() => handleQuickFilter('silenzio')}
+              >
+                <VolumeX className="w-4 h-4" />
+                {t.silenzio}
+              </Button>
+              <Button
+                variant={activeQuickFilter === 'caffe' ? 'default' : 'outline'}
+                size="sm"
+                className="gap-1"
+                onClick={() => handleQuickFilter('caffe')}
+              >
+                <Coffee className="w-4 h-4" />
+                {t.caffe}
+              </Button>
+              <Button
+                variant={activeQuickFilter === '24h' ? 'default' : 'outline'}
+                size="sm"
+                className="gap-1"
+                onClick={() => handleQuickFilter('24h')}
+              >
+                <Clock className="w-4 h-4" />
+                {t.h24}
+              </Button>
+              <Button
+                variant={activeQuickFilter === 'aperto' ? 'default' : 'outline'}
+                size="sm"
+                className="gap-1"
+                onClick={() => handleQuickFilter('aperto')}
+              >
+                <Trees className="w-4 h-4" />
+                {t.aperto}
+              </Button>
+              <Button
+                variant={activeQuickFilter === 'accessibile' ? 'default' : 'outline'}
+                size="sm"
+                className="gap-1"
+                onClick={() => handleQuickFilter('accessibile')}
+              >
+                <Accessibility className="w-4 h-4" />
+                {t.accessibile}
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Important Notes Alert */}
+        <section className="py-4">
+          <div className="container mx-auto px-4">
+            <Alert className="bg-primary/5 border-primary/20">
+              <AlertCircle className="h-4 w-4 text-primary" />
+              <AlertDescription className="text-sm">
+                <strong>{t.noteImportanti}:</strong>
+                <ul className="list-disc list-inside mt-1 space-y-1">
+                  <li>📚 {t.sessioneEsami}</li>
+                  <li>📞 {t.contattoConsigliato}</li>
+                  <li>📅 {t.ultimoAggiornamento}</li>
+                </ul>
+              </AlertDescription>
+            </Alert>
+          </div>
+        </section>
+
         {/* Filters & Results */}
         <section className="py-8">
           <div className="container mx-auto px-4">
@@ -177,7 +417,10 @@ const StudySpacesDirectory = () => {
             <div className="mb-8">
               <StudySpaceFilters
                 filters={filters}
-                onFiltersChange={setFilters}
+                onFiltersChange={(newFilters) => {
+                  setFilters(newFilters);
+                  setActiveQuickFilter(null);
+                }}
                 lang={currentLang}
                 totalResults={filteredSpaces.length}
               />
@@ -202,19 +445,67 @@ const StudySpacesDirectory = () => {
                 </p>
                 <Button 
                   variant="outline" 
-                  onClick={() => setFilters({
-                    search: '',
-                    category: 'all',
-                    district: 'all',
-                    silenceLevel: 'all',
-                    access24h: false,
-                    disabledAccess: false
-                  })}
+                  onClick={() => {
+                    setFilters({
+                      search: '',
+                      category: 'all',
+                      district: 'all',
+                      silenceLevel: 'all',
+                      access24h: false,
+                      disabledAccess: false
+                    });
+                    setActiveQuickFilter(null);
+                  }}
                 >
                   {t.resetFilters}
                 </Button>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Useful Links Section */}
+        <section className="py-8 bg-muted/30 border-t">
+          <div className="container mx-auto px-4">
+            <h2 className="text-xl font-semibold text-foreground mb-4">🔗 {t.linkUtili}</h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <a 
+                href="https://www.edisu.piemonte.it/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-3 bg-background rounded-lg border hover:border-primary/50 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">{t.edisu}</span>
+              </a>
+              <a 
+                href="https://bct.comune.torino.it/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-3 bg-background rounded-lg border hover:border-primary/50 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">{t.biblioteche}</span>
+              </a>
+              <a 
+                href="https://torino.circololettori.it/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-3 bg-background rounded-lg border hover:border-primary/50 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">{t.circolo}</span>
+              </a>
+              <a 
+                href="https://www.comune.torino.it/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-3 bg-background rounded-lg border hover:border-primary/50 transition-colors"
+              >
+                <ExternalLink className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">{t.comune}</span>
+              </a>
+            </div>
           </div>
         </section>
       </main>

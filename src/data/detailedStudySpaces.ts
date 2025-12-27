@@ -50,6 +50,8 @@ export interface DetailedStudySpace {
   website?: string;
   hours: DailyHours;
   features: SpaceFeatures;
+  note?: string;
+  capacity?: string;
 }
 
 export const detailedStudySpaces: DetailedStudySpace[] = [
@@ -206,7 +208,9 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'no',
       disabledAccess: 'totale',
       access24h: false
-    }
+    },
+    capacity: '81 posti',
+    note: 'Vista sul Po, mensa universitaria disponibile'
   },
   // Biblioteche
   {
@@ -297,7 +301,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'si',
       disabledAccess: 'totale',
       access24h: false
-    }
+    },
+    note: 'Polo culturale con ampi spazi verdi'
   },
   // Caffetterie Study-Friendly
   {
@@ -329,7 +334,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'vicino',
       disabledAccess: 'totale',
       access24h: false
-    }
+    },
+    note: 'Spazio dedicato alla lettura e studio, accesso libero, Palazzo Graneri'
   },
   {
     id: 10,
@@ -453,7 +459,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'no',
       disabledAccess: 'parziale',
       access24h: false
-    }
+    },
+    note: 'Molto frequentato da studenti, ottimo caffè e dolci'
   },
   // Coworking
   {
@@ -512,7 +519,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'si',
       disabledAccess: 'totale',
       access24h: true
-    }
+    },
+    note: 'Palazzo iconico con storia, vicino Porta Susa'
   },
   {
     id: 16,
@@ -540,7 +548,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'si',
       disabledAccess: 'parziale',
       access24h: true
-    }
+    },
+    note: 'Vicino metro Massaua e tangenziale, videosorvegliato'
   },
   {
     id: 17,
@@ -570,7 +579,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'si',
       disabledAccess: 'totale',
       access24h: false
-    }
+    },
+    note: 'Vicino Lungo Po Antonelli'
   },
   // Spazi Alternativi
   {
@@ -600,7 +610,9 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'si',
       disabledAccess: 'parziale',
       access24h: true
-    }
+    },
+    capacity: '421.000 mq',
+    note: 'Perfetto per studio in primavera/estate, sponde Po e aree ombreggiate'
   },
   {
     id: 19,
@@ -630,7 +642,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'vicino',
       disabledAccess: 'parziale',
       access24h: false
-    }
+    },
+    note: 'Vista sul fiume, spazi interni ed esterni, atmosfera sociale'
   },
   {
     id: 20,
@@ -659,7 +672,8 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       parking: 'parziale',
       disabledAccess: 'totale',
       access24h: false
-    }
+    },
+    note: 'Spazio pubblico ex-caserma, usabile da chiunque, acqua gratis'
   }
 ];
 
