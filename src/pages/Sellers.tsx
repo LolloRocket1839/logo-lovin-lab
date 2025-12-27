@@ -223,7 +223,7 @@ const Sellers = () => {
         {/* Hero Section */}
         <section className="py-12 md:py-20 relative overflow-hidden">
           <div className="container px-4 md:px-8 mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left: Content */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
