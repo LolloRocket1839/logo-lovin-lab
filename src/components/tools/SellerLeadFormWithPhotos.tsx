@@ -3,12 +3,14 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Building2, Send, Loader2, CheckCircle, Calendar, Upload, X,
-  Bed, Bath, UtensilsCrossed, Sofa, Sun, Package, ChevronLeft, ChevronRight, Camera, Video
+  Bed, Bath, UtensilsCrossed, Sofa, Sun, Package, ChevronLeft, ChevronRight, Camera, Video,
+  ImageIcon, Film
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Progress } from "@/components/ui/progress";
 import {
   Dialog,
   DialogContent,
@@ -85,6 +87,23 @@ export const SellerLeadFormWithPhotos = ({
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  // Upload progress state
+  const [uploadProgress, setUploadProgress] = useState<{
+    isUploading: boolean;
+    currentFile: string;
+    currentIndex: number;
+    totalFiles: number;
+    percentage: number;
+    phase: 'photos' | 'video' | 'saving' | 'done';
+  }>({
+    isUploading: false,
+    currentFile: '',
+    currentIndex: 0,
+    totalFiles: 0,
+    percentage: 0,
+    phase: 'photos',
+  });
   
   // Step 1: Contact info
   const [email, setEmail] = useState("");
@@ -260,8 +279,22 @@ export const SellerLeadFormWithPhotos = ({
 
   const uploadPhotosToStorage = async (leadId: string): Promise<Array<{url: string; category: string; fileName: string}>> => {
     const uploadedPhotos: Array<{url: string; category: string; fileName: string}> = [];
+    const totalFiles = photos.length + (video ? 1 : 0);
 
-    for (const photo of photos) {
+    for (let i = 0; i < photos.length; i++) {
+      const photo = photos[i];
+      
+      // Update progress
+      setUploadProgress(prev => ({
+        ...prev,
+        isUploading: true,
+        currentFile: photo.file.name,
+        currentIndex: i + 1,
+        totalFiles,
+        percentage: Math.round(((i) / totalFiles) * 100),
+        phase: 'photos',
+      }));
+
       const fileExt = photo.file.name.split('.').pop();
       const fileName = `${leadId}/${photo.category}/${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
 
@@ -285,13 +318,32 @@ export const SellerLeadFormWithPhotos = ({
           fileName: photo.file.name,
         });
       }
+
+      // Update progress after upload
+      setUploadProgress(prev => ({
+        ...prev,
+        percentage: Math.round(((i + 1) / totalFiles) * 100),
+      }));
     }
 
     return uploadedPhotos;
   };
 
-  const uploadVideoToStorage = async (leadId: string): Promise<string | null> => {
+  const uploadVideoToStorage = async (leadId: string, photoCount: number): Promise<string | null> => {
     if (!video) return null;
+
+    const totalFiles = photoCount + 1;
+    
+    // Update progress for video
+    setUploadProgress(prev => ({
+      ...prev,
+      isUploading: true,
+      currentFile: video.file.name,
+      currentIndex: totalFiles,
+      totalFiles,
+      percentage: Math.round((photoCount / totalFiles) * 100),
+      phase: 'video',
+    }));
 
     const fileExt = video.file.name.split('.').pop();
     const fileName = `${leadId}/video/${Date.now()}.${fileExt}`;
@@ -304,6 +356,12 @@ export const SellerLeadFormWithPhotos = ({
       console.error('Video upload error:', error);
       return null;
     }
+
+    // Update progress after video upload
+    setUploadProgress(prev => ({
+      ...prev,
+      percentage: 100,
+    }));
 
     if (data) {
       const { data: urlData } = supabase.storage
@@ -326,6 +384,19 @@ export const SellerLeadFormWithPhotos = ({
       // Generate a temporary lead ID for uploads
       const tempLeadId = `lead-${Date.now()}-${Math.random().toString(36).substring(7)}`;
       
+      // Reset and start upload progress
+      const hasMedia = photos.length > 0 || video;
+      if (hasMedia) {
+        setUploadProgress({
+          isUploading: true,
+          currentFile: '',
+          currentIndex: 0,
+          totalFiles: photos.length + (video ? 1 : 0),
+          percentage: 0,
+          phase: 'photos',
+        });
+      }
+      
       // Upload photos first
       let uploadedPhotos: Array<{url: string; category: string; fileName: string}> = [];
       if (photos.length > 0) {
@@ -335,8 +406,16 @@ export const SellerLeadFormWithPhotos = ({
       // Upload video
       let videoUrl: string | null = null;
       if (video) {
-        videoUrl = await uploadVideoToStorage(tempLeadId);
+        videoUrl = await uploadVideoToStorage(tempLeadId, photos.length);
       }
+
+      // Update progress for saving phase
+      setUploadProgress(prev => ({
+        ...prev,
+        phase: 'saving',
+        percentage: 100,
+        currentFile: 'Salvataggio dati...',
+      }));
 
       // Insert lead into database
       const { data: insertedLead, error } = await supabase.from('seller_leads').insert([{
@@ -384,6 +463,13 @@ export const SellerLeadFormWithPhotos = ({
         console.error('Failed to send team notification:', notifyError);
       }
 
+      // Mark upload as done
+      setUploadProgress(prev => ({
+        ...prev,
+        phase: 'done',
+        isUploading: false,
+      }));
+
       setIsSubmitted(true);
       toast({
         title: "Richiesta inviata!",
@@ -391,6 +477,7 @@ export const SellerLeadFormWithPhotos = ({
       });
     } catch (error) {
       console.error("Seller lead submission error:", error);
+      setUploadProgress(prev => ({ ...prev, isUploading: false }));
       toast({
         title: "Errore",
         description: "Si è verificato un errore. Riprova.",
@@ -419,6 +506,15 @@ export const SellerLeadFormWithPhotos = ({
       setHasCellar(false);
       setPhotos([]);
       setVideo(null);
+      // Reset upload progress
+      setUploadProgress({
+        isUploading: false,
+        currentFile: '',
+        currentIndex: 0,
+        totalFiles: 0,
+        percentage: 0,
+        phase: 'photos',
+      });
     }
     onOpenChange(newOpen);
   };
@@ -438,11 +534,75 @@ export const SellerLeadFormWithPhotos = ({
     return true;
   });
 
+  // Upload progress UI component
+  const UploadProgressUI = () => {
+    if (!uploadProgress.isUploading) return null;
+    
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm"
+      >
+        <div className="bg-background border border-primary/20 rounded-xl p-6 shadow-lg max-w-sm w-full mx-4 space-y-4">
+          <div className="text-center space-y-2">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+              className="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center"
+            >
+              {uploadProgress.phase === 'photos' ? (
+                <ImageIcon className="w-6 h-6 text-primary" />
+              ) : uploadProgress.phase === 'video' ? (
+                <Film className="w-6 h-6 text-primary" />
+              ) : (
+                <Loader2 className="w-6 h-6 text-primary animate-spin" />
+              )}
+            </motion.div>
+            
+            <h3 className="font-semibold text-foreground">
+              {uploadProgress.phase === 'photos' && 'Caricamento foto...'}
+              {uploadProgress.phase === 'video' && 'Caricamento video...'}
+              {uploadProgress.phase === 'saving' && 'Salvataggio dati...'}
+            </h3>
+            
+            <p className="text-sm text-muted-foreground truncate max-w-[250px] mx-auto">
+              {uploadProgress.phase !== 'saving' && uploadProgress.currentFile}
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <Progress value={uploadProgress.percentage} className="h-2" />
+            <div className="flex justify-between text-xs text-muted-foreground">
+              <span>
+                {uploadProgress.phase !== 'saving' && (
+                  <>File {uploadProgress.currentIndex} di {uploadProgress.totalFiles}</>
+                )}
+              </span>
+              <span>{uploadProgress.percentage}%</span>
+            </div>
+          </div>
+
+          <p className="text-xs text-center text-muted-foreground">
+            Non chiudere questa finestra
+          </p>
+        </div>
+      </motion.div>
+    );
+  };
+
   return (
-    <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto bg-gradient-to-br from-background via-background to-primary/5 border-primary/20">
-        <AnimatePresence mode="wait">
-          {isSubmitted ? (
+    <>
+      {/* Upload Progress Overlay */}
+      <AnimatePresence>
+        {uploadProgress.isUploading && <UploadProgressUI />}
+      </AnimatePresence>
+
+      <Dialog open={open} onOpenChange={handleOpenChange}>
+        <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto bg-gradient-to-br from-background via-background to-primary/5 border-primary/20">
+          <AnimatePresence mode="wait">
+            {isSubmitted ? (
             <motion.div
               key="success"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -835,8 +995,9 @@ export const SellerLeadFormWithPhotos = ({
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
-      </DialogContent>
-    </Dialog>
+          </AnimatePresence>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
