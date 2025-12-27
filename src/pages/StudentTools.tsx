@@ -8,7 +8,8 @@ import {
   ArrowRight,
   Sparkles,
   GraduationCap,
-  Calendar
+  Calendar,
+  Utensils
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -50,6 +51,12 @@ const tools: Tool[] = [
     path: '/strumenti/aule-studio-torino'
   },
   {
+    id: 'cheapEats',
+    icon: Utensils,
+    status: 'available',
+    path: '/strumenti/dove-mangiare-torino'
+  },
+  {
     id: 'utilities',
     icon: Zap,
     status: 'coming-soon'
@@ -88,6 +95,10 @@ const StudentTools = () => {
           title: "Directory Aule Studio",
           description: "Trova le migliori aule studio a Torino: biblioteche, sale EDISU, caffetterie e coworking con orari e contatti."
         },
+        cheapEats: {
+          title: "Directory Dove Mangiare Cheap",
+          description: "Trova ristoranti, pizzerie, kebab e mense economiche vicino alle università. Filtri per prezzo, cucina e zona."
+        },
         utilities: {
           title: "Comparatore Bollette",
           description: "Confronta le tariffe di luce e gas per trovare l'offerta migliore per la tua casa."
@@ -123,6 +134,10 @@ const StudentTools = () => {
         studySpaces: {
           title: "Study Spaces Directory",
           description: "Find the best study spaces in Turin: libraries, EDISU rooms, cafes and coworking with hours and contacts."
+        },
+        cheapEats: {
+          title: "Cheap Eats Directory",
+          description: "Find affordable restaurants, pizzerias, kebabs and canteens near universities. Filter by price, cuisine and area."
         },
         utilities: {
           title: "Utility Comparator",
