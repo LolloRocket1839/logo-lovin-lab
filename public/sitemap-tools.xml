@@ -57,7 +57,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti/strumenti/sessione"/>
   </url>
 
-  <!-- Study Spaces Directory ⭐ NEW -->
+  <!-- Study Spaces Directory -->
   <url>
     <loc>https://junglerent.it/strumenti/aule-studio-torino</loc>
     <lastmod>2025-12-27</lastmod>
@@ -66,6 +66,17 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/aule-studio-torino"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/study-spaces-turin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/aule-studio-torino"/>
+  </url>
+
+  <!-- Cheap Eats Directory ⭐ NEW -->
+  <url>
+    <loc>https://junglerent.it/strumenti/dove-mangiare-torino</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/dove-mangiare-torino"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/cheap-eats-turin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/dove-mangiare-torino"/>
   </url>
 
 </urlset>
