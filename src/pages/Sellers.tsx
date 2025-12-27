@@ -286,17 +286,8 @@ const Sellers = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="space-y-4"
               >
                 <SavingsCalculator onContactClick={handleOpenDialog} />
-                
-                {/* Link to PropertyValuator */}
-                <Link to={lang === 'it' ? '/valutazione-immobile' : '/property-valuation'}>
-                  <Button variant="outline" className="w-full">
-                    <Calculator className="w-4 h-4 mr-2" />
-                    {t('sellersPage.valuatorLink', 'Calcola il valore del tuo immobile')}
-                  </Button>
-                </Link>
               </motion.div>
             </div>
           </div>

@@ -386,6 +386,16 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
           <Euro className="w-4 h-4 mr-2" />
           {t('sellersPage.calculator.cta')}
         </Button>
+
+        {/* Link to PropertyValuator */}
+        <p className="text-xs text-center text-muted-foreground">
+          <a 
+            href="/valutazione-immobile" 
+            className="text-primary hover:underline inline-flex items-center gap-1"
+          >
+            {t('sellersPage.calculator.valuatorLink', 'Vuoi una stima dettagliata?')} →
+          </a>
+        </p>
       </CardContent>
     </Card>
   );
