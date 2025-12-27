@@ -1530,5 +1530,21 @@
     "ctaSavings": "Quanto risparmi con Jungle Rent?",
     "emptyState": "Seleziona zona e inserisci superficie per calcolare la stima",
     "disclaimer": "Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati. Margine di errore: ±5-12%."
+  },
+  "exitIntent": {
+    "badge": "Offerta esclusiva",
+    "title": "Stai andando via?",
+    "subtitle": "Ricevi una valutazione gratuita del tuo immobile in 24 ore",
+    "emailPlaceholder": "La tua email *",
+    "phonePlaceholder": "Telefono (opzionale)",
+    "cta": "Ricevi valutazione gratuita",
+    "submitting": "Invio...",
+    "success": "Riceverai la valutazione entro 24 ore!",
+    "error": "Errore. Riprova più tardi.",
+    "emailRequired": "Inserisci un'email valida",
+    "emailInvalid": "Email non valida",
+    "close": "Chiudi",
+    "trust1": "Risposta in 24h",
+    "trust2": "Zero impegno"
   }
 }

@@ -10,6 +10,11 @@ import { MobileFooter } from "@/components/MobileFooter";
 // Innovative components - loaded immediately for impact
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 
+// Mobile components - compact versions
+import { HowItWorksMobile } from "@/components/mobile/HowItWorksMobile";
+import { InvestorSectionMobile } from "@/components/mobile/InvestorSectionMobile";
+import { HomepageFAQMobile } from "@/components/mobile/HomepageFAQMobile";
+
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/HowItWorks").then(m => ({ default: m.HowItWorks })));
 
@@ -105,22 +110,25 @@ const Index = () => {
 
       <Suspense fallback={<div className="min-h-[200px]" />}>
         
-        {/* How It Works Section - hidden on mobile */}
+        {/* How It Works Section */}
         <div className="hidden md:block">
           <HowItWorks />
         </div>
+        <HowItWorksMobile />
         
-        {/* Investor Section - hidden on mobile */}
+        {/* Investor Section */}
         <div className="hidden md:block">
           <InvestorSection />
         </div>
+        <InvestorSectionMobile />
         
         <SellerSection />
         
-        {/* FAQ Section - hidden on mobile */}
+        {/* FAQ Section */}
         <div className="hidden md:block">
           <HomepageFAQ />
         </div>
+        <HomepageFAQMobile />
         
         {/* Blog banner - hidden on mobile */}
         <div className="hidden md:block">

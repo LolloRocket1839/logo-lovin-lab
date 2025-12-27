@@ -58,7 +58,6 @@ const PropertyValuation = () => {
         <div className="container px-4 md:px-8 mx-auto">
           <Breadcrumbs 
             items={[
-              { label: t('breadcrumbs.home'), href: '/' },
               { label: t('propertyValuation.breadcrumb', 'Valutazione Immobile') }
             ]} 
           />

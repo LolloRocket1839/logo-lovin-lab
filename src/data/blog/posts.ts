@@ -2,6 +2,47 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "valutazione-immobiliare-torino-guida-completa",
+    category: "sellers",
+    date: "2025-12-27",
+    author: "Jungle Rent Team",
+    image: "/images/vendere-casa-torino.jpg",
+    readTime: 12,
+    content: "valutazione-immobiliare-torino-guida-completa",
+    translations: {
+      it: {
+        title: "Valutazione immobiliare a Torino: guida completa per stimare il valore della tua casa",
+        excerpt: "Metodi OMI, coefficienti FIAIP, 9 fattori che influenzano il prezzo. Come calcolare il valore del tuo immobile a Torino nel 2025.",
+        seo: {
+          title: "Valutazione Immobiliare Torino 2025 | Guida Completa Stima Casa",
+          description: "Guida completa alla valutazione immobiliare a Torino: metodi OMI, coefficienti FIAIP, 9 fattori prezzo, calcolatore gratuito. Stima accurata ±5%.",
+          keywords: ["valutazione immobiliare torino", "quanto vale casa mia torino", "stima immobile torino", "prezzo metro quadro torino", "OMI torino 2025", "vendere casa torino"]
+        },
+        tags: ["Venditori", "Immobiliare", "Torino", "Valutazione", "Guide"],
+        faqs: [
+          { question: "Come si calcola il valore di un immobile a Torino?", answer: "Si parte dalle quotazioni OMI della zona, si calcola la superficie commerciale e si applicano coefficienti correttivi per piano, stato, classe energetica, esposizione e pertinenze." },
+          { question: "Quanto costa una perizia immobiliare a Torino?", answer: "Una perizia professionale asseverata costa tra €300 e €600 per un appartamento standard a Torino." },
+          { question: "Qual è il prezzo medio al metro quadro a Torino nel 2025?", answer: "Il prezzo medio varia da €1.200/mq nelle zone periferiche a €4.500/mq nel centro storico e Crocetta. La media città è €1.800-2.200/mq." }
+        ]
+      },
+      en: {
+        title: "Property Valuation in Turin: Complete Guide to Estimating Your Home's Value",
+        excerpt: "OMI methods, FIAIP coefficients, 9 factors that influence price. How to calculate your property's value in Turin in 2025.",
+        seo: {
+          title: "Property Valuation Turin 2025 | Complete Home Estimate Guide",
+          description: "Complete guide to property valuation in Turin: OMI methods, FIAIP coefficients, 9 price factors, free calculator. Accurate estimate ±5%.",
+          keywords: ["property valuation turin", "how much is my house worth turin", "property estimate turin", "price per square meter turin", "OMI turin 2025", "sell house turin"]
+        },
+        tags: ["Sellers", "Real Estate", "Turin", "Valuation", "Guides"],
+        faqs: [
+          { question: "How is property value calculated in Turin?", answer: "Start with OMI valuations for the area, calculate commercial surface area and apply correction coefficients for floor, condition, energy class, exposure and appurtenances." },
+          { question: "How much does a property appraisal cost in Turin?", answer: "A professional sworn appraisal costs between €300 and €600 for a standard apartment in Turin." },
+          { question: "What is the average price per square meter in Turin in 2025?", answer: "Average price ranges from €1,200/sqm in peripheral areas to €4,500/sqm in the historic center and Crocetta. City average is €1,800-2,200/sqm." }
+        ]
+      }
+    }
+  },
+  {
     slug: "panettoni-pandori-torino-guida-2025",
     category: "turisti",
     date: "2025-12-21",
