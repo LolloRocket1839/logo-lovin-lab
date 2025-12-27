@@ -105,12 +105,106 @@ const Sellers = () => {
   return (
     <>
       <Helmet>
-        <title>{t('sellersPage.meta.title')}</title>
-        <meta name="description" content={t('sellersPage.meta.description')} />
+        <title>{t('sellersPage.meta.title', 'Vendi Casa a Torino Senza Commissioni | Jungle Rent Acquista Direttamente')}</title>
+        <meta name="description" content={t('sellersPage.meta.description', 'Vendi il tuo immobile a Torino senza commissioni. Jungle Rent acquista direttamente in 60-90 giorni. Zero visite, valutazione gratuita, pagamento sicuro.')} />
         <link rel="canonical" href={`https://junglerent.it/${lang === 'it' ? 'vendi' : 'sell'}`} />
-        <meta property="og:title" content={t('sellersPage.meta.title')} />
-        <meta property="og:description" content={t('sellersPage.meta.description')} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="keywords" content={t('sellersPage.meta.keywords', 'vendere casa torino, vendi appartamento torino senza agenzia, compratore diretto torino, vendita immobile torino veloce, jungle rent acquista casa')} />
+        <meta property="og:title" content={t('sellersPage.meta.title', 'Vendi Casa a Torino Senza Commissioni | Jungle Rent')} />
+        <meta property="og:description" content={t('sellersPage.meta.description', 'Vendi il tuo immobile a Torino senza commissioni. Jungle Rent acquista direttamente in 60-90 giorni.')} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://junglerent.it/${lang === 'it' ? 'vendi' : 'sell'}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('sellersPage.meta.title', 'Vendi Casa a Torino Senza Commissioni')} />
+        <meta name="twitter:description" content={t('sellersPage.meta.description', 'Jungle Rent acquista direttamente. Zero commissioni, 60-90 giorni.')} />
+        <link rel="alternate" hrefLang="it" href="https://junglerent.it/vendi" />
+        <link rel="alternate" hrefLang="en" href="https://junglerent.it/sell" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/vendi" />
+        
+        {/* Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": lang === 'it' ? "Acquisto Diretto Immobili Torino" : "Direct Property Purchase Turin",
+            "description": lang === 'it' 
+              ? "Jungle Rent acquista direttamente il tuo immobile a Torino senza commissioni. Valutazione gratuita, offerta in 48 ore, chiusura in 60-90 giorni."
+              : "Jungle Rent directly purchases your property in Turin with no fees. Free valuation, offer in 48 hours, closing in 60-90 days.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Jungle Rent S.r.l.",
+              "url": "https://junglerent.it",
+              "logo": "https://junglerent.it/jungle-rent-logo.svg"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Turin",
+              "containedIn": "Piedmont, Italy"
+            },
+            "serviceType": "Real Estate Acquisition",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "description": lang === 'it' ? "Zero commissioni - Acquisto diretto" : "Zero fees - Direct purchase"
+            }
+          })}
+        </script>
+
+        {/* FAQPage Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": sellerFaqs.slice(0, 6).map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })}
+        </script>
+
+        {/* HowTo Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": lang === 'it' ? "Come vendere casa a Torino senza agenzia" : "How to sell your home in Turin without an agency",
+            "description": lang === 'it' 
+              ? "Guida passo-passo per vendere il tuo immobile a Torino direttamente a Jungle Rent senza commissioni."
+              : "Step-by-step guide to sell your property in Turin directly to Jungle Rent with no fees.",
+            "totalTime": "P90D",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": lang === 'it' ? "Richiedi valutazione gratuita" : "Request free valuation",
+                "text": lang === 'it' ? "Compila il form con i dati del tuo immobile. Riceverai una valutazione gratuita entro 24 ore." : "Fill out the form with your property details. You'll receive a free valuation within 24 hours."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": lang === 'it' ? "Sopralluogo tecnico" : "Technical inspection",
+                "text": lang === 'it' ? "Un nostro esperto visiterà l'immobile per verificare lo stato e confermare la valutazione." : "Our expert will visit the property to verify the condition and confirm the valuation."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": lang === 'it' ? "Ricevi l'offerta" : "Receive the offer",
+                "text": lang === 'it' ? "Entro 48 ore dal sopralluogo riceverai un'offerta scritta senza impegno." : "Within 48 hours of the inspection, you'll receive a written offer with no obligation."
+              },
+              {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": lang === 'it' ? "Chiusura rapida" : "Quick closing",
+                "text": lang === 'it' ? "Se accetti, chiudiamo dal notaio in 60-90 giorni. Tu non paghi commissioni." : "If you accept, we close at the notary in 60-90 days. You pay no fees."
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Navigation />

@@ -34,6 +34,7 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 
 - [Home](https://junglerent.it): Main landing page with investment and housing information
 - [Investors](https://junglerent.it/investitori): Detailed investor information page
+- [Sell Your Property](https://junglerent.it/vendi): Sell your property directly to Jungle Rent - zero fees, 60-90 days
 - [Property Valuation Calculator](https://junglerent.it/valutazione-immobile): FREE property valuation tool for Turin (OMI data 2025)
 - [Blog](https://junglerent.it/blog): 29+ comprehensive articles on Turin living, events, and investment
 - [About](https://junglerent.it/chi-siamo): Company information and team
