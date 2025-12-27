@@ -176,27 +176,27 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
 
   return (
     <Card className="border-primary/20 bg-gradient-to-br from-card to-card/80 shadow-lg overflow-hidden">
-      <CardHeader className="pb-2 pt-4">
+      <CardHeader className="pb-1 pt-3">
         <div className="flex items-center gap-2">
-          <div className="p-1.5 rounded-lg bg-primary/10">
-            <Calculator className="w-4 h-4 text-primary" />
+          <div className="p-1 rounded-lg bg-primary/10">
+            <Calculator className="w-3.5 h-3.5 text-primary" />
           </div>
-          <CardTitle className="text-base md:text-lg font-display">
+          <CardTitle className="text-sm md:text-base font-display">
             {t('sellersPage.calculator.title')}
           </CardTitle>
         </div>
-        <p className="text-xs text-muted-foreground mt-1">
+        <p className="text-[10px] text-muted-foreground mt-0.5">
           {t('sellersPage.calculator.subtitle')}
         </p>
       </CardHeader>
       
-      <CardContent className="space-y-2 overflow-hidden pt-0">
+      <CardContent className="space-y-1.5 overflow-hidden pt-0">
         {/* Combined Condition + Property Type on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5">
           {/* Condition Selector */}
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs text-muted-foreground">
+            <div className="flex items-center gap-1.5 mb-0.5">
+              <span className="text-[10px] text-muted-foreground">
                 {t('sellersPage.calculator.condition.label', 'Stato immobile')}
               </span>
               <TooltipProvider>
@@ -238,7 +238,7 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
 
           {/* Property Type Presets */}
           <div>
-            <span className="text-xs text-muted-foreground mb-1 block">
+            <span className="text-[10px] text-muted-foreground mb-0.5 block">
               {t('sellersPage.calculator.propertyType', 'Tipologia')}
             </span>
             <div className="grid grid-cols-3 gap-1">
@@ -263,9 +263,9 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
         </div>
 
         {/* Property Value Input + Slider */}
-        <div className="space-y-1">
-          <div className="flex items-center gap-3">
-            <label className="text-xs font-medium text-foreground whitespace-nowrap">
+        <div className="space-y-0.5">
+          <div className="flex items-center gap-2">
+            <label className="text-[10px] font-medium text-foreground whitespace-nowrap">
               {t('sellersPage.calculator.propertyValue')}
             </label>
             <div className="relative flex-1 max-w-[160px]">
@@ -300,9 +300,9 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
         </div>
 
         {/* Comparison */}
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-1.5">
           {/* Agency */}
-          <div className={`p-2 rounded-lg border transition-all duration-300 ${
+          <div className={`p-1.5 rounded-lg border transition-all duration-300 ${
             isMinimumFee 
               ? 'bg-destructive/10 border-destructive/40 ring-1 ring-destructive/20' 
               : 'bg-destructive/5 border-destructive/20'
@@ -331,17 +331,17 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
           </div>
           
           {/* Jungle Rent */}
-          <div className="p-2 rounded-lg bg-primary/5 border border-primary/20">
-            <div className="flex items-center gap-1.5">
+          <div className="p-1.5 rounded-lg bg-primary/5 border border-primary/20">
+            <div className="flex items-center gap-1">
               <Building2 className="w-3 h-3 text-primary" />
               <span className="text-[10px] font-medium text-muted-foreground">
                 Jungle Rent
               </span>
             </div>
-            <p className="text-sm font-bold text-primary mt-0.5">
+            <p className="text-xs font-bold text-primary">
               €0
             </p>
-            <p className="text-[9px] text-muted-foreground">
+            <p className="text-[8px] text-muted-foreground">
               {t('sellersPage.calculator.directBuyer')}
             </p>
           </div>
@@ -353,38 +353,38 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
             key={savings}
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="p-2 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20"
+            className="p-1.5 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20"
           >
-            <div className="flex items-center justify-center gap-1.5">
-              <TrendingDown className="w-3.5 h-3.5 text-primary" />
-              <span className="text-xs font-medium text-foreground">
+            <div className="flex items-center justify-center gap-1">
+              <TrendingDown className="w-3 h-3 text-primary" />
+              <span className="text-[10px] font-medium text-foreground">
                 {t('sellersPage.calculator.yourSavings')}
               </span>
             </div>
-            <p className="text-xl md:text-2xl font-display font-bold text-primary text-center">
+            <p className="text-lg md:text-xl font-display font-bold text-primary text-center">
               {formatCurrency(animatedSavings)}
             </p>
-            <p className="text-[9px] text-muted-foreground text-center">
+            <p className="text-[8px] text-muted-foreground text-center">
               {t('sellersPage.calculator.savingsNote')}
             </p>
           </motion.div>
         </AnimatePresence>
 
         {/* CTA + Link combined */}
-        <div className="space-y-1">
+        <div className="space-y-0.5">
           <Button 
             variant="premium" 
             size="sm" 
-            className="w-full"
+            className="w-full h-8 text-xs"
             onClick={onContactClick}
           >
-            <Euro className="w-3.5 h-3.5 mr-1.5" />
+            <Euro className="w-3 h-3 mr-1" />
             {t('sellersPage.calculator.cta')}
           </Button>
-          <p className="text-[9px] text-center text-muted-foreground">
+          <p className="text-[8px] text-center text-muted-foreground">
             <a 
               href="/valutazione-immobile" 
-              className="text-primary hover:underline inline-flex items-center gap-1"
+              className="text-primary hover:underline inline-flex items-center gap-0.5"
             >
               {t('sellersPage.calculator.valuatorLink', 'Vuoi una stima dettagliata?')} →
             </a>
