@@ -221,9 +221,9 @@ const Sellers = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 md:py-20 relative overflow-hidden">
+        <section className="py-10 md:py-16 relative overflow-hidden">
           <div className="container px-4 md:px-8 mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-8 items-start">
               {/* Left: Content */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -286,7 +286,7 @@ const Sellers = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="lg:max-h-[480px] lg:self-start"
+                className="lg:sticky lg:top-24 lg:self-start"
               >
                 <SavingsCalculator onContactClick={handleOpenDialog} />
               </motion.div>
