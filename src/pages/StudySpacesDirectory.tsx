@@ -288,6 +288,12 @@ const StudySpacesDirectory = () => {
       icon: GraduationCap
     },
     {
+      title: 'Dove Mangiare Cheap',
+      description: 'Directory 20 locali economici vicino alle aule studio',
+      url: '/strumenti/dove-mangiare-torino',
+      icon: Coffee
+    },
+    {
       title: 'Mobilità Sostenibile Torino',
       description: 'Come muoversi in bici e mezzi pubblici',
       url: '/blog/mobilita-sostenibile-torino-studenti',
@@ -305,6 +311,12 @@ const StudySpacesDirectory = () => {
       description: 'The liveliest neighborhood for university life',
       url: '/blog/san-salvario-guida-studenti',
       icon: GraduationCap
+    },
+    {
+      title: 'Cheap Eats Directory',
+      description: 'Directory of 20 budget eateries near study spaces',
+      url: '/tools/cheap-eats-turin',
+      icon: Coffee
     },
     {
       title: 'Sustainable Mobility Turin',

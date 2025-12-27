@@ -1065,6 +1065,46 @@ const BudgetCalculator = () => {
                   savingTarget={savingTarget[0]}
                 />
 
+                {/* Related Tools */}
+                <Card className="border-dashed">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-base flex items-center gap-2">
+                      <Lightbulb className="w-4 h-4 text-primary" />
+                      {currentLang === 'it' ? 'Strumenti correlati' : 'Related tools'}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <Link 
+                      to={currentLang === 'it' ? '/strumenti/dove-mangiare-torino' : '/tools/cheap-eats-turin'}
+                      className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                    >
+                      <ShoppingCart className="w-5 h-5 text-primary" />
+                      <div>
+                        <p className="font-medium text-sm">
+                          {currentLang === 'it' ? 'Dove Mangiare Cheap' : 'Cheap Eats Directory'}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {currentLang === 'it' ? '20 locali da €3 a €15' : '20 eateries from €3 to €15'}
+                        </p>
+                      </div>
+                    </Link>
+                    <Link 
+                      to={currentLang === 'it' ? '/strumenti/aule-studio-torino' : '/tools/study-spaces-turin'}
+                      className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                    >
+                      <BookOpen className="w-5 h-5 text-primary" />
+                      <div>
+                        <p className="font-medium text-sm">
+                          {currentLang === 'it' ? 'Directory Aule Studio' : 'Study Spaces Directory'}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {currentLang === 'it' ? 'Trova dove studiare gratis' : 'Find free study spots'}
+                        </p>
+                      </div>
+                    </Link>
+                  </CardContent>
+                </Card>
+
                 {/* CTA */}
                 <Card className="bg-primary text-primary-foreground">
                   <CardContent className="pt-6 text-center">
