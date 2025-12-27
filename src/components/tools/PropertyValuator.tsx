@@ -4,8 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   MapPin, Home, Zap, Car, ChevronDown, ChevronUp, 
   Calculator, Info, Building2, TrendingUp, AlertTriangle,
-  Target, TrendingDown, Lightbulb, Clock, BadgeCheck, Users
+  Target, TrendingDown, Lightbulb, Clock, BadgeCheck, Users, Flame
 } from "lucide-react";
+import { useValuationCount } from "@/hooks/useValuationCount";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -72,6 +73,7 @@ const formatPercentage = (value: number): string => {
 
 export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) => {
   const { t } = useTranslation();
+  const { count: valuationCount, isLoading: isCountLoading } = useValuationCount();
   
   // Form state
   const [zone, setZone] = useState<string>('');
@@ -329,6 +331,30 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
     <div className="grid lg:grid-cols-5 gap-6">
       {/* Left: Form inputs */}
       <div className="lg:col-span-3 space-y-6">
+        {/* Social Proof Counter */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary/10 border border-primary/20"
+        >
+          <Flame className="w-4 h-4 text-primary animate-pulse" />
+          <span className="text-sm font-medium text-foreground">
+            {isCountLoading ? (
+              <span className="inline-block w-4 h-4 rounded-full bg-primary/20 animate-pulse" />
+            ) : (
+              <motion.span
+                key={valuationCount}
+                initial={{ scale: 1.2, color: 'hsl(var(--primary))' }}
+                animate={{ scale: 1, color: 'hsl(var(--foreground))' }}
+                className="font-bold"
+              >
+                {valuationCount}
+              </motion.span>
+            )}
+            {' '}{t('propertyValuator.socialProof', 'proprietari hanno valutato la loro casa questa settimana')}
+          </span>
+        </motion.div>
+
         {/* Location Section */}
         <Card>
           <CardHeader className="pb-4">
