@@ -1,12 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { BottomNav } from '@/components/BottomNav';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Badge } from '@/components/ui/badge';
-import { List, Map as MapIcon } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { List, Map as MapIcon, BookOpen, Calculator, GraduationCap, MapPin } from 'lucide-react';
 import CheapEatCard from '@/components/tools/CheapEatCard';
 import CheapEatFilters, { CheapEatFiltersState } from '@/components/tools/CheapEatFilters';
 import CheapEatsMap from '@/components/tools/CheapEatsMap';
@@ -252,6 +254,86 @@ const CheapEatsDirectory = () => {
               onMarkerClick={setSelectedLocation}
             />
           )}
+
+          {/* Related Resources Section */}
+          <section className="mt-12 py-8 border-t border-border/50">
+            <h2 className="text-xl font-semibold text-foreground mb-6">
+              📚 {lang === 'it' ? 'Risorse Correlate' : 'Related Resources'}
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <Link to="/blog/dove-mangiare-torino-studenti">
+                <Card className="h-full hover:border-primary/50 transition-colors">
+                  <CardContent className="p-4 flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+                      <BookOpen className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">
+                        {lang === 'it' ? 'Guida Completa' : 'Complete Guide'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {lang === 'it' ? 'Blog con tutti i consigli per mangiare bene spendendo poco' : 'Blog with all tips for eating well on a budget'}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+              
+              <Link to={lang === 'it' ? '/studenti/strumenti/budget' : '/students/tools/budget'}>
+                <Card className="h-full hover:border-primary/50 transition-colors">
+                  <CardContent className="p-4 flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+                      <Calculator className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">
+                        {lang === 'it' ? 'Calcolatore Budget' : 'Budget Calculator'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {lang === 'it' ? 'Pianifica le tue spese mensili per cibo e altro' : 'Plan your monthly food and other expenses'}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+              
+              <Link to={lang === 'it' ? '/strumenti/aule-studio-torino' : '/tools/study-spaces-turin'}>
+                <Card className="h-full hover:border-primary/50 transition-colors">
+                  <CardContent className="p-4 flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+                      <GraduationCap className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">
+                        {lang === 'it' ? 'Aule Studio' : 'Study Spaces'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {lang === 'it' ? 'Trova dove studiare vicino ai ristoranti economici' : 'Find where to study near budget eateries'}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+              
+              <Link to="/blog/san-salvario-guida-studenti">
+                <Card className="h-full hover:border-primary/50 transition-colors">
+                  <CardContent className="p-4 flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+                      <MapPin className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">
+                        {lang === 'it' ? 'Guida San Salvario' : 'San Salvario Guide'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {lang === 'it' ? 'Il quartiere con più opzioni economiche' : 'The neighborhood with most budget options'}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+          </section>
         </div>
       </main>
 

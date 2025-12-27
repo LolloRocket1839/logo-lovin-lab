@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { Building2, Calculator, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Building2, Calculator, TrendingUp, BookOpen, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -9,6 +10,8 @@ import { MobileHeader } from "@/components/MobileHeader";
 import { MobileFooter } from "@/components/MobileFooter";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PropertyValuator } from "@/components/tools/PropertyValuator";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { 
   PropertyValuatorSchema, 
   PropertyValuatorHowTo, 
@@ -109,10 +112,62 @@ const PropertyValuation = () => {
           </div>
         </section>
 
-        {/* Data Sources */}
+        {/* Related Resources & CTA Section */}
         <section className="py-8 md:py-12 bg-muted/30">
           <div className="container px-4 md:px-8 mx-auto">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Blog Link */}
+              <Link to="/blog/valutazione-immobiliare-torino-guida-completa">
+                <Card className="h-full hover:border-primary/50 transition-colors cursor-pointer">
+                  <CardContent className="p-6 flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-primary/10 text-primary shrink-0">
+                      <BookOpen className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-2">
+                        {lang === 'it' ? 'Guida Completa Valutazione Immobiliare' : 'Complete Property Valuation Guide'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {lang === 'it' 
+                          ? 'Approfondisci metodi, coefficienti e consigli per una stima accurata del tuo immobile a Torino.'
+                          : 'Explore methods, coefficients and tips for an accurate estimate of your property in Turin.'
+                        }
+                      </p>
+                      <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
+                        {lang === 'it' ? 'Leggi la guida' : 'Read the guide'}
+                        <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Sellers CTA */}
+              <Card className="h-full bg-primary text-primary-foreground">
+                <CardContent className="p-6 flex flex-col justify-between h-full">
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">
+                      {lang === 'it' ? 'Vuoi vendere la tua casa?' : 'Want to sell your property?'}
+                    </h3>
+                    <p className="text-sm opacity-90 mb-4">
+                      {lang === 'it' 
+                        ? 'Scopri come vendere direttamente a investitori qualificati, risparmiando sulle commissioni di agenzia.'
+                        : 'Learn how to sell directly to qualified investors, saving on agency fees.'
+                      }
+                    </p>
+                  </div>
+                  <Link to={lang === 'it' ? '/vendi' : '/sell'}>
+                    <Button variant="secondary" className="w-full gap-2">
+                      {lang === 'it' ? 'Scopri come vendere' : 'Learn how to sell'}
+                      <ArrowRight className="w-4 h-4" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Data Sources */}
+            <div className="max-w-3xl mx-auto text-center mt-12">
               <h2 className="text-xl font-display font-bold mb-4">
                 {t('propertyValuation.sources.title', 'Fonti Ufficiali')}
               </h2>
