@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Building2, Send, Loader2, CheckCircle, Calendar, Upload, X,
-  Bed, Bath, UtensilsCrossed, Sofa, Sun, Package, ChevronLeft, ChevronRight, Camera
+  Bed, Bath, UtensilsCrossed, Sofa, Sun, Package, ChevronLeft, ChevronRight, Camera, Video
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,7 +60,16 @@ const PHOTO_CATEGORIES: PhotoCategory[] = [
 ];
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+const MAX_VIDEO_SIZE = 100 * 1024 * 1024; // 100MB
+const MAX_VIDEO_DURATION = 120; // 2 minutes
 const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic'];
+const ACCEPTED_VIDEO_TYPES = ['video/mp4', 'video/quicktime', 'video/webm'];
+
+interface UploadedVideo {
+  file: File;
+  preview: string;
+  duration?: number;
+}
 
 export const SellerLeadFormWithPhotos = ({ 
   open, 
@@ -88,8 +97,9 @@ export const SellerLeadFormWithPhotos = ({
   const [hasTerrace, setHasTerrace] = useState(false);
   const [hasCellar, setHasCellar] = useState(false);
   
-  // Step 3: Photos
+  // Step 3: Photos & Video
   const [photos, setPhotos] = useState<UploadedPhoto[]>([]);
+  const [video, setVideo] = useState<UploadedVideo | null>(null);
   const [uploadingCategory, setUploadingCategory] = useState<string | null>(null);
 
   const totalSteps = 3;
@@ -182,6 +192,72 @@ export const SellerLeadFormWithPhotos = ({
     });
   };
 
+  const handleVideoSelect = useCallback((files: FileList | null) => {
+    if (!files || files.length === 0) return;
+
+    const file = files[0];
+
+    // Validate file type
+    if (!ACCEPTED_VIDEO_TYPES.includes(file.type)) {
+      toast({
+        title: "Formato video non supportato",
+        description: "Usa MP4, MOV o WebM",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Validate file size
+    if (file.size > MAX_VIDEO_SIZE) {
+      toast({
+        title: "Video troppo grande",
+        description: "Max 100MB per video",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Create video element to check duration
+    const videoElement = document.createElement('video');
+    videoElement.preload = 'metadata';
+    
+    const preview = URL.createObjectURL(file);
+    videoElement.src = preview;
+
+    videoElement.onloadedmetadata = () => {
+      if (videoElement.duration > MAX_VIDEO_DURATION) {
+        toast({
+          title: "Video troppo lungo",
+          description: "Max 2 minuti di durata",
+          variant: "destructive",
+        });
+        URL.revokeObjectURL(preview);
+        return;
+      }
+
+      setVideo({
+        file,
+        preview,
+        duration: videoElement.duration,
+      });
+    };
+
+    videoElement.onerror = () => {
+      // If can't read metadata, allow upload anyway
+      setVideo({
+        file,
+        preview,
+      });
+    };
+  }, [toast]);
+
+  const removeVideo = () => {
+    if (video) {
+      URL.revokeObjectURL(video.preview);
+      setVideo(null);
+    }
+  };
+
   const uploadPhotosToStorage = async (leadId: string): Promise<Array<{url: string; category: string; fileName: string}>> => {
     const uploadedPhotos: Array<{url: string; category: string; fileName: string}> = [];
 
@@ -214,20 +290,52 @@ export const SellerLeadFormWithPhotos = ({
     return uploadedPhotos;
   };
 
+  const uploadVideoToStorage = async (leadId: string): Promise<string | null> => {
+    if (!video) return null;
+
+    const fileExt = video.file.name.split('.').pop();
+    const fileName = `${leadId}/video/${Date.now()}.${fileExt}`;
+
+    const { data, error } = await supabase.storage
+      .from('property-photos')
+      .upload(fileName, video.file);
+
+    if (error) {
+      console.error('Video upload error:', error);
+      return null;
+    }
+
+    if (data) {
+      const { data: urlData } = supabase.storage
+        .from('property-photos')
+        .getPublicUrl(fileName);
+
+      return urlData.publicUrl;
+    }
+
+    return null;
+  };
+
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    trackClick('seller_lead_with_photos_submit', { source, hasPhotos: photos.length > 0 });
+    trackClick('seller_lead_with_photos_submit', { source, hasPhotos: photos.length > 0, hasVideo: !!video });
 
     try {
       const utmParams = getUTMParams();
       
-      // Generate a temporary lead ID for photo uploads
+      // Generate a temporary lead ID for uploads
       const tempLeadId = `lead-${Date.now()}-${Math.random().toString(36).substring(7)}`;
       
       // Upload photos first
       let uploadedPhotos: Array<{url: string; category: string; fileName: string}> = [];
       if (photos.length > 0) {
         uploadedPhotos = await uploadPhotosToStorage(tempLeadId);
+      }
+
+      // Upload video
+      let videoUrl: string | null = null;
+      if (video) {
+        videoUrl = await uploadVideoToStorage(tempLeadId);
       }
 
       // Insert lead into database
@@ -244,6 +352,7 @@ export const SellerLeadFormWithPhotos = ({
         num_bathrooms: numBathrooms ? parseInt(numBathrooms) : null,
         estimated_value: propertyData?.estimatedValue || null,
         photos: uploadedPhotos as unknown as null,
+        video_url: videoUrl,
         source,
         utm_data: Object.keys(utmParams).length > 0 ? utmParams as unknown as null : null,
       }]);
@@ -273,6 +382,8 @@ export const SellerLeadFormWithPhotos = ({
     if (!newOpen) {
       // Cleanup photo previews
       photos.forEach(p => URL.revokeObjectURL(p.preview));
+      // Cleanup video preview
+      if (video) URL.revokeObjectURL(video.preview);
       // Reset form
       setStep(1);
       setIsSubmitted(false);
@@ -284,6 +395,7 @@ export const SellerLeadFormWithPhotos = ({
       setHasTerrace(false);
       setHasCellar(false);
       setPhotos([]);
+      setVideo(null);
     }
     onOpenChange(newOpen);
   };
@@ -325,9 +437,12 @@ export const SellerLeadFormWithPhotos = ({
                 <p className="text-muted-foreground mt-2">
                   Ti contatteremo entro 48 ore per la valutazione
                 </p>
-                {photos.length > 0 && (
+                {(photos.length > 0 || video) && (
                   <p className="text-sm text-primary mt-2">
-                    📸 {photos.length} foto caricate correttamente
+                    {photos.length > 0 && `📸 ${photos.length} foto`}
+                    {photos.length > 0 && video && ' + '}
+                    {video && '🎬 1 video'}
+                    {' caricati correttamente'}
                   </p>
                 )}
               </div>
@@ -505,13 +620,71 @@ export const SellerLeadFormWithPhotos = ({
                   </div>
                 )}
 
-                {/* Step 3: Photo Upload */}
+                {/* Step 3: Photo & Video Upload */}
                 {step === 3 && (
                   <div className="space-y-4">
                     <p className="text-sm text-muted-foreground text-center">
-                      Carica foto stanza per stanza per una valutazione più precisa
+                      Carica media per una valutazione più precisa
                     </p>
+
+                    {/* Video Tour Section */}
+                    <div className="border-2 border-dashed border-primary/30 rounded-xl p-4 bg-primary/5">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Video className="w-5 h-5 text-primary" />
+                        <span className="font-medium text-foreground">🎬 Video tour (opzionale)</span>
+                      </div>
+                      
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Un breve video (max 2 min) che mostra l'immobile aiuta molto la valutazione
+                      </p>
+                      
+                      {video ? (
+                        <div className="relative">
+                          <video 
+                            src={video.preview} 
+                            controls 
+                            className="w-full rounded-lg max-h-48"
+                          />
+                          <button
+                            type="button"
+                            onClick={removeVideo}
+                            className="absolute top-2 right-2 w-8 h-8 bg-destructive text-destructive-foreground rounded-full flex items-center justify-center hover:bg-destructive/80"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                          {video.duration && (
+                            <p className="text-xs text-muted-foreground mt-1 text-center">
+                              Durata: {Math.floor(video.duration / 60)}:{String(Math.floor(video.duration % 60)).padStart(2, '0')}
+                            </p>
+                          )}
+                        </div>
+                      ) : (
+                        <label className="flex flex-col items-center justify-center h-24 cursor-pointer hover:bg-primary/10 rounded-lg transition-colors border border-dashed border-primary/20">
+                          <Video className="w-8 h-8 text-muted-foreground mb-2" />
+                          <span className="text-sm text-muted-foreground">
+                            Carica video (max 100MB, 2 min)
+                          </span>
+                          <span className="text-xs text-muted-foreground mt-1">
+                            MP4, MOV, WebM
+                          </span>
+                          <input
+                            type="file"
+                            accept="video/mp4,video/quicktime,video/webm"
+                            className="hidden"
+                            onChange={(e) => handleVideoSelect(e.target.files)}
+                          />
+                        </label>
+                      )}
+                    </div>
+
+                    {/* Divider */}
+                    <div className="flex items-center gap-3">
+                      <div className="flex-1 h-px bg-border" />
+                      <span className="text-xs text-muted-foreground">oppure aggiungi foto</span>
+                      <div className="flex-1 h-px bg-border" />
+                    </div>
                     
+                    {/* Photo Categories */}
                     <div className="space-y-3">
                       {visibleCategories.map((category) => {
                         const categoryPhotos = getPhotosForCategory(category.id);
@@ -574,9 +747,12 @@ export const SellerLeadFormWithPhotos = ({
                       })}
                     </div>
 
-                    {photos.length > 0 && (
+                    {(photos.length > 0 || video) && (
                       <p className="text-center text-sm text-primary font-medium">
-                        📸 {photos.length} foto pronte per l'invio
+                        {photos.length > 0 && `📸 ${photos.length} foto`}
+                        {photos.length > 0 && video && ' + '}
+                        {video && '🎬 1 video'}
+                        {' pronte per l\'invio'}
                       </p>
                     )}
                   </div>
