@@ -125,7 +125,7 @@ const PropertyValuation = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-2">
-                        {lang === 'it' ? 'Guida Completa Valutazione Immobiliare' : 'Complete Property Valuation Guide'}
+                        {lang === 'it' ? 'Guida completa valutazione immobiliare' : 'Complete property valuation guide'}
                       </h3>
                       <p className="text-sm text-muted-foreground mb-3">
                         {lang === 'it' 

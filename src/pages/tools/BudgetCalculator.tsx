@@ -108,7 +108,7 @@ const getSeasonalDefaults = () => {
 // Student profile presets
 const studentPresets = {
   base: {
-    label: { it: "Studente Base", en: "Standard Student" },
+    label: { it: "Studente base", en: "Standard student" },
     description: { it: "€750-900/mese", en: "€750-900/month" },
     icon: Users,
     values: {
@@ -124,7 +124,7 @@ const studentPresets = {
     }
   },
   international: {
-    label: { it: "Studente Internazionale", en: "International Student" },
+    label: { it: "Studente internazionale", en: "International student" },
     description: { it: "€900-1100/mese", en: "€900-1100/month" },
     icon: Globe,
     values: {
@@ -140,7 +140,7 @@ const studentPresets = {
     }
   },
   minimal: {
-    label: { it: "Budget Minimo", en: "Minimum Budget" },
+    label: { it: "Budget minimo", en: "Minimum budget" },
     description: { it: "€550-700/mese", en: "€550-700/month" },
     icon: Wallet,
     values: {
@@ -424,7 +424,7 @@ const BudgetCalculator = () => {
               </div>
               <div>
                 <h1 className="text-2xl md:text-3xl font-bold text-foreground">
-                  {currentLang === 'it' ? 'Calcolatore Budget Mensile' : 'Monthly Budget Calculator'}
+                  {currentLang === 'it' ? 'Calcolatore budget mensile' : 'Monthly budget calculator'}
                 </h1>
                 <p className="text-muted-foreground">
                   {currentLang === 'it' ? 'Personalizza ogni voce di spesa per un calcolo preciso' : 'Customize every expense for accurate calculation'}
@@ -1081,7 +1081,7 @@ const BudgetCalculator = () => {
                       <ShoppingCart className="w-5 h-5 text-primary" />
                       <div>
                         <p className="font-medium text-sm">
-                          {currentLang === 'it' ? 'Dove Mangiare Cheap' : 'Cheap Eats Directory'}
+                          {currentLang === 'it' ? 'Dove mangiare cheap' : 'Cheap eats directory'}
                         </p>
                         <p className="text-xs text-muted-foreground">
                           {currentLang === 'it' ? '20 locali da €3 a €15' : '20 eateries from €3 to €15'}
@@ -1095,7 +1095,7 @@ const BudgetCalculator = () => {
                       <BookOpen className="w-5 h-5 text-primary" />
                       <div>
                         <p className="font-medium text-sm">
-                          {currentLang === 'it' ? 'Directory Aule Studio' : 'Study Spaces Directory'}
+                          {currentLang === 'it' ? 'Directory aule studio' : 'Study spaces directory'}
                         </p>
                         <p className="text-xs text-muted-foreground">
                           {currentLang === 'it' ? 'Trova dove studiare gratis' : 'Find free study spots'}

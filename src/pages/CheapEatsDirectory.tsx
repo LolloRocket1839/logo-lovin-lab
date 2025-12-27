@@ -43,11 +43,11 @@ const CheapEatsDirectory = () => {
       quickFiltersLabel: 'Filtri rapidi',
     },
     en: {
-      title: 'Where to Eat Cheap in Turin - Student Guide 2025',
+      title: 'Where to eat cheap in Turin - Student guide 2025',
       subtitle: 'Complete directory of 20 verified budget eateries: taverns, street food, canteens and restaurants from €3 to €15',
       metaDescription: 'Complete guide to eating cheap in Turin: EDISU canteens from €3, street food, Piedmontese taverns, budget restaurants. 20 venues verified December 2025.',
       breadcrumbTools: 'Tools',
-      breadcrumbCurrent: 'Cheap Eats',
+      breadcrumbCurrent: 'Cheap eats',
       viewList: 'List',
       viewMap: 'Map',
       quickFiltersLabel: 'Quick filters',
@@ -258,7 +258,7 @@ const CheapEatsDirectory = () => {
           {/* Related Resources Section */}
           <section className="mt-12 py-8 border-t border-border/50">
             <h2 className="text-xl font-semibold text-foreground mb-6">
-              📚 {lang === 'it' ? 'Risorse Correlate' : 'Related Resources'}
+              📚 {lang === 'it' ? 'Risorse correlate' : 'Related resources'}
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               <Link to="/blog/dove-mangiare-torino-studenti">
@@ -269,7 +269,7 @@ const CheapEatsDirectory = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-1">
-                        {lang === 'it' ? 'Guida Completa' : 'Complete Guide'}
+                        {lang === 'it' ? 'Guida completa' : 'Complete guide'}
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {lang === 'it' ? 'Blog con tutti i consigli per mangiare bene spendendo poco' : 'Blog with all tips for eating well on a budget'}
@@ -287,7 +287,7 @@ const CheapEatsDirectory = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-1">
-                        {lang === 'it' ? 'Calcolatore Budget' : 'Budget Calculator'}
+                        {lang === 'it' ? 'Calcolatore budget' : 'Budget calculator'}
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {lang === 'it' ? 'Pianifica le tue spese mensili per cibo e altro' : 'Plan your monthly food and other expenses'}
@@ -305,7 +305,7 @@ const CheapEatsDirectory = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-1">
-                        {lang === 'it' ? 'Aule Studio' : 'Study Spaces'}
+                        {lang === 'it' ? 'Aule studio' : 'Study spaces'}
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {lang === 'it' ? 'Trova dove studiare vicino ai ristoranti economici' : 'Find where to study near budget eateries'}
@@ -323,7 +323,7 @@ const CheapEatsDirectory = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground mb-1">
-                        {lang === 'it' ? 'Guida San Salvario' : 'San Salvario Guide'}
+                        {lang === 'it' ? 'Guida San Salvario' : 'San Salvario guide'}
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {lang === 'it' ? 'Il quartiere con più opzioni economiche' : 'The neighborhood with most budget options'}
