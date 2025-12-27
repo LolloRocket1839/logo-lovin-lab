@@ -116,6 +116,21 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/studenti/strumenti" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Strumenti Studenti' : 'Student Tools'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/strumenti/aule-studio-torino" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Aule Studio' : 'Study Spaces'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/strumenti/dove-mangiare-torino" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Dove Mangiare Cheap' : 'Cheap Eats'}
+                </Link>
+              </li>
+              <li>
                 <Link to="/chi-siamo" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
                   {t('footer.howItWorksLink')}
                 </Link>
