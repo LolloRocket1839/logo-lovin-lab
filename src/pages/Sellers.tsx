@@ -286,6 +286,7 @@ const Sellers = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
+                className="lg:max-h-[480px] lg:self-start"
               >
                 <SavingsCalculator onContactClick={handleOpenDialog} />
               </motion.div>
