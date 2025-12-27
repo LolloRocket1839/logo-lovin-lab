@@ -9,7 +9,8 @@ import {
   Sparkles,
   GraduationCap,
   Calendar,
-  Utensils
+  Utensils,
+  Building2
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -55,6 +56,12 @@ const tools: Tool[] = [
     icon: Utensils,
     status: 'available',
     path: '/strumenti/dove-mangiare-torino'
+  },
+  {
+    id: 'studentServices',
+    icon: Building2,
+    status: 'available',
+    path: '/strumenti/sportelli-studenti-torino'
   },
   {
     id: 'utilities',
