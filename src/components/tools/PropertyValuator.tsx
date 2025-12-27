@@ -208,7 +208,7 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
     // Jungle Rent business logic:
     // - Only makes automatic offers for "good" or "renovated" properties
     // - Properties "to renovate" require custom ad-hoc evaluation
-    const requiresCustomEvaluation = condition === 'renovate';
+    const requiresCustomEvaluation = condition === 'to_renovate';
     
     // Jungle Rent offer: dynamic discount based on property condition
     // - "good" (buono stato): -6% to -10% (minor updates needed)
@@ -217,7 +217,7 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
       switch(propertyCondition) {
         case 'good': return { min: 0.06, max: 0.10 };     // -6% to -10%
         case 'renovated': return { min: 0.03, max: 0.06 }; // -3% to -6%
-        case 'renovate': return null; // Requires custom evaluation
+        case 'to_renovate': return null; // Requires custom evaluation
         default: return { min: 0.06, max: 0.10 };         // Default to good
       }
     };
@@ -231,12 +231,12 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
     // Estimated renovation costs (Torino 2025 real data)
     // Complete renovation: €800/mq, Light updates: €450/mq
     const RENOVATION_COSTS = { complete: 800, light: 450 };
-    const estimatedRenovationCost = condition === 'renovate' 
+    const estimatedRenovationCost = condition === 'to_renovate' 
       ? sqmValue * RENOVATION_COSTS.complete // €800/mq for full renovation
       : condition === 'good' 
         ? sqmValue * RENOVATION_COSTS.light   // €450/mq for light updates
         : 0;
-    const estimatedRenovationTime = condition === 'renovate' ? 90 : condition === 'good' ? 45 : 0;
+    const estimatedRenovationTime = condition === 'to_renovate' ? 90 : condition === 'good' ? 45 : 0;
     
     // Jungle Rent discount explanation
     const jungleRentDiscountReason = condition === 'good'
