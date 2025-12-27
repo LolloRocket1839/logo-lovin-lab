@@ -2,6 +2,51 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "emergenze-affitti-torino-diritti-inquilini",
+    category: "students",
+    date: "2025-12-27",
+    author: "Jungle Rent Team",
+    image: "/images/quadrilatero-notte-torino.jpg",
+    readTime: 18,
+    content: "emergenze-affitti-torino-diritti-inquilini",
+    translations: {
+      it: {
+        title: "Emergenze Affitti a Torino: Contratto Non Registrato, Caparra e Rescissione",
+        excerpt: "Contratto non registrato? Caparra oltre 3 mesi? Vuoi recedere anticipatamente? Tutti i tuoi diritti di inquilino a Torino, procedure legali e risorse gratuite.",
+        seo: {
+          title: "Emergenze Affitti Torino 2025 | Contratto Non Registrato, Caparra, Rescissione",
+          description: "Contratto non registrato, caparra illegale, rescissione anticipata: tutti i diritti degli inquilini a Torino. Procedure legali, CAF gratuiti, tempi e sanzioni.",
+          keywords: ["contratto affitto non registrato", "caparra affitto torino", "rescissione anticipata contratto affitto", "diritti inquilino torino", "sfratto torino", "contratto locazione nullo", "restituzione caparra", "affitto studenti torino", "CAF torino", "recesso contratto affitto"]
+        },
+        tags: ["Studenti", "Affitti", "Torino", "Legale", "Guide"],
+        faqs: [
+          { question: "Il mio contratto non è registrato. Devo continuare a pagare l'affitto?", answer: "Tecnicamente no. Un contratto non registrato è nullo, quindi non sei obbligato a pagare il canone concordato. Potresti dover pagare un'indennità di occupazione inferiore, determinata dal giudice." },
+          { question: "Posso chiedere indietro tutti i soldi che ho pagato per un contratto nullo?", answer: "Sì, secondo l'articolo 2033 del Codice Civile puoi richiedere la restituzione di tutti i canoni versati per un contratto nullo, entro 6 mesi dal rilascio dell'immobile." },
+          { question: "Il proprietario vuole 4 mesi di caparra. È legale?", answer: "No, è illegale. L'articolo 11 della Legge 392/78 vieta esplicitamente cauzioni superiori a 3 mensilità. Puoi rifiutare e citare la legge." },
+          { question: "Quanto preavviso devo dare per lasciare l'appartamento?", answer: "Dipende dal tipo di contratto: 6 mesi per contratti ordinari, 3 mesi per studenti (se previsto nel contratto), 1 mese in alcuni contratti transitori con clausola specifica." },
+          { question: "Il proprietario non mi restituisce la caparra. Cosa faccio?", answer: "Invia una richiesta formale via raccomandata A/R. Se ignora, puoi richiedere un decreto ingiuntivo al Giudice di Pace per somme fino a €5.000 – è la procedura più veloce." }
+        ]
+      },
+      en: {
+        title: "Rental Emergencies in Turin: Unregistered Contracts, Deposits and Early Termination",
+        excerpt: "Unregistered contract? Deposit over 3 months? Want to terminate early? All your tenant rights in Turin, legal procedures and free resources.",
+        seo: {
+          title: "Rental Emergencies Turin 2025 | Unregistered Contract, Deposit, Termination",
+          description: "Unregistered contract, illegal deposit, early termination: all tenant rights in Turin. Legal procedures, free CAF services, deadlines and penalties.",
+          keywords: ["unregistered rental contract", "rental deposit turin", "early contract termination", "tenant rights turin", "eviction turin", "void rental contract", "deposit refund", "student rental turin", "CAF turin", "lease withdrawal"]
+        },
+        tags: ["Students", "Rentals", "Turin", "Legal", "Guides"],
+        faqs: [
+          { question: "My contract isn't registered. Do I have to keep paying rent?", answer: "Technically no. An unregistered contract is null, so you're not obligated to pay the agreed rent. You may have to pay a lower occupancy indemnity determined by a judge." },
+          { question: "Can I ask for all the money I paid back for a void contract?", answer: "Yes, according to Article 2033 of the Civil Code, you can request a refund of all rent paid under a void contract, within 6 months of leaving the property." },
+          { question: "The landlord wants 4 months' deposit. Is that legal?", answer: "No, it's illegal. Article 11 of Law 392/78 explicitly prohibits deposits exceeding 3 months' rent. You can refuse and cite the law." },
+          { question: "How much notice do I need to give to leave the apartment?", answer: "It depends on the contract type: 6 months for ordinary contracts, 3 months for students (if specified in the contract), 1 month in some transitional contracts with a specific clause." },
+          { question: "The landlord won't return my deposit. What do I do?", answer: "Send a formal request via registered mail. If ignored, you can request an injunction order from the Justice of the Peace for amounts up to €5,000 – it's the fastest procedure." }
+        ]
+      }
+    }
+  },
+  {
     slug: "valutazione-immobiliare-torino-guida-completa",
     category: "sellers",
     date: "2025-12-27",
