@@ -51,19 +51,26 @@ Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the 
 - **Features**: 9 adjustment coefficients, commission comparison, photo/video upload
 - **Use case**: Homeowners wanting to know property value before selling
 
-### Study Spaces Directory ⭐ NEW
+### Study Spaces Directory ⭐ EXPANDED
 - **URL IT**: https://junglerent.it/strumenti/aule-studio-torino
 - **URL EN**: https://junglerent.it/tools/study-spaces-turin
-- **Purpose**: Complete directory of 20+ study spaces in Turin
-- **Features**: Interactive map, filters by silence/WiFi/24h/accessibility, quick filters
+- **Purpose**: Complete directory of 30 study spaces in Turin
+- **Features**: Interactive map, filters by silence/WiFi/24h/accessibility, quick filters (100+ posti, parcheggio ampio)
 - **Data**: Libraries, EDISU rooms, cafes, coworking, outdoor spaces
-- **Coverage**: All Turin districts (Centro, Vanchiglia, San Salvario, Crocetta, Aurora)
+- **Coverage**: All Turin districts (Centro, Vanchiglia, San Salvario, Crocetta, Aurora, Barriera di Milano, Cavoretto, Cenisia)
+- **Highlights**:
+  - Toolbox Coworking: 150+ postazioni, il più grande di Torino
+  - Toco Coworking: 24/7 access per abbonati
+  - Spazio Nuvola 9: Parcheggio ampio gratuito, collina
+  - Polo del '900: Archivio storico del Novecento
 - **Voice queries**:
   - "Dove studiare a Torino gratis?"
   - "Aule studio aperte 24 ore Torino"
   - "Biblioteche Torino studenti"
   - "Where to study in Turin for free?"
   - "Study spaces open late Turin"
+  - "Coworking con parcheggio Torino"
+  - "Spazi studio 100+ posti Torino"
 
 ### Student Tools
 - Budget Calculator: https://junglerent.it/studenti/strumenti/budget

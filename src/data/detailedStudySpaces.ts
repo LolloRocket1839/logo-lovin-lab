@@ -52,6 +52,7 @@ export interface DetailedStudySpace {
   features: SpaceFeatures;
   note?: string;
   capacity?: string;
+  chairs?: string;
 }
 
 export const detailedStudySpaces: DetailedStudySpace[] = [
@@ -674,6 +675,316 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       access24h: false
     },
     note: 'Spazio pubblico ex-caserma, usabile da chiunque, acqua gratis'
+  },
+  // Nuovi spazi dal CSV Dicembre 2025
+  {
+    id: 21,
+    category: 'biblioteca',
+    name: 'Polo del \'900 - Sala Lettura',
+    address: 'Piazzetta Antonicelli, 10122 Torino',
+    district: 'Centro',
+    phone: '+39 011 0883200',
+    email: 'reception@polodel900.it',
+    website: 'https://polodel900.it/',
+    hours: {
+      monday: '10:00 - 18:00',
+      tuesday: '10:00 - 18:00',
+      wednesday: '10:00 - 18:00',
+      thursday: '10:00 - 18:00',
+      friday: '10:00 - 13:00',
+      saturday: 'Chiuso',
+      sunday: 'Chiuso'
+    },
+    features: {
+      silence: 'assoluto',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: false,
+      hasBathrooms: true,
+      parking: 'vicino',
+      disabledAccess: 'totale',
+      access24h: false
+    },
+    note: 'Centro culturale storico, archivio e museo del Novecento'
+  },
+  {
+    id: 22,
+    category: 'spazi_polivalenti',
+    name: 'MagazziniOz',
+    address: 'Via Giolitti, Torino',
+    district: 'Centro',
+    email: 'ristorazione@magazzinioz.it',
+    website: 'http://www.magazzinioz.it/',
+    hours: {
+      monday: '08:30 - 19:00',
+      tuesday: '08:30 - 19:00',
+      wednesday: '08:30 - 19:00',
+      thursday: '08:30 - 21:30',
+      friday: '08:30 - 23:00',
+      saturday: '10:00 - 23:00',
+      sunday: '10:00 - 19:00'
+    },
+    features: {
+      silence: 'informale',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: true,
+      barDescription: 'Birre, cocktail',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Spazio culturale con eventi, ristorazione e atmosfera creativa'
+  },
+  {
+    id: 23,
+    category: 'caffetteria',
+    name: 'Costadoro Coffee Lab',
+    address: 'Corso Vinzaglio, 33, 10121 Torino',
+    district: 'Centro',
+    phone: '+39 011 8004660',
+    email: 'coffeelab@costadoro.it',
+    website: 'https://costadoro.it/',
+    hours: {
+      monday: '07:00 - 20:00',
+      tuesday: '07:00 - 20:00',
+      wednesday: '07:00 - 20:00',
+      thursday: '07:00 - 20:00',
+      friday: '07:00 - 20:00',
+      saturday: '08:00 - 20:00',
+      sunday: '09:00 - 19:00'
+    },
+    features: {
+      silence: 'informale',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: true,
+      barDescription: 'Caffè premium, specialty coffee',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Laboratorio caffè di alta qualità, torrefazione storica torinese'
+  },
+  {
+    id: 24,
+    category: 'caffetteria',
+    name: 'Costadoro Social Coffee Factory',
+    address: 'Via Teofilo Rossi di Montelera, 2, 10123 Torino',
+    district: 'San Salvario',
+    phone: '+39 011 0371020',
+    email: 'coffeelab@costadoro.it',
+    website: 'https://costadoro.it/',
+    hours: {
+      monday: '07:00 - 19:00',
+      tuesday: '07:00 - 19:00',
+      wednesday: '07:00 - 19:00',
+      thursday: '07:00 - 19:00',
+      friday: '07:00 - 19:00',
+      saturday: '08:00 - 19:00',
+      sunday: '09:00 - 19:00'
+    },
+    features: {
+      silence: 'informale',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: true,
+      barDescription: 'Caffè premium',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Versione social della storica torrefazione, vicino centro'
+  },
+  {
+    id: 25,
+    category: 'caffetteria',
+    name: 'C\'entro Food Garden',
+    address: 'Via dell\'Arcivescovado, 2, 10121 Torino',
+    district: 'Centro',
+    website: 'https://ascomtorino.it/',
+    hours: {
+      monday: '08:00 - 19:30',
+      tuesday: '08:00 - 19:30',
+      wednesday: '08:00 - 19:30',
+      thursday: '08:00 - 19:30',
+      friday: '08:00 - 19:30',
+      saturday: '09:00 - 19:30',
+      sunday: '10:00 - 19:30'
+    },
+    features: {
+      silence: 'moderato',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: true,
+      barDescription: 'Biologico',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Food court biologico nel cuore del centro'
+  },
+  {
+    id: 26,
+    category: 'coworking',
+    name: 'Poliedro Coworking',
+    address: 'Corso Giacomo Matteotti, 11, 10121 Torino',
+    district: 'Centro',
+    website: 'https://poliedrocoworking.it/',
+    hours: {
+      monday: '09:00 - 19:00',
+      tuesday: '09:00 - 19:00',
+      wednesday: '09:00 - 19:00',
+      thursday: '09:00 - 19:00',
+      friday: '09:00 - 19:00',
+      saturday: 'Chiuso',
+      sunday: 'Chiuso'
+    },
+    features: {
+      silence: 'assoluto',
+      wifi: 'si',
+      powerOutlets: 'numerose',
+      tables: '12 posti max',
+      hasBar: false,
+      hasBathrooms: true,
+      parking: 'parziale',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    capacity: '12 posti max',
+    note: 'Spazio intimo e professionale, ideale per concentrazione'
+  },
+  {
+    id: 27,
+    category: 'coworking',
+    name: 'Toolbox Coworking',
+    address: 'Via Agostino da Montefeltro, 2, 10134 Torino',
+    district: 'San Salvario',
+    phone: '+39 011 3157111',
+    email: 'desk@toolboxcoworking.com',
+    website: 'https://toolboxcoworking.com/',
+    hours: {
+      monday: '08:00 - 22:00',
+      tuesday: '08:00 - 22:00',
+      wednesday: '08:00 - 22:00',
+      thursday: '08:00 - 22:00',
+      friday: '08:00 - 22:00',
+      saturday: '10:00 - 18:00',
+      sunday: '10:00 - 18:00'
+    },
+    features: {
+      silence: 'moderato',
+      wifi: 'ultra-veloce',
+      powerOutlets: 'numerose',
+      tables: '150+ postazioni',
+      hasBar: true,
+      barDescription: 'Interno',
+      hasBathrooms: true,
+      parking: 'si',
+      disabledAccess: 'totale',
+      access24h: false
+    },
+    capacity: '150+ postazioni',
+    note: 'Il più grande coworking di Torino, ex-fabbrica industriale, fibra ottica'
+  },
+  {
+    id: 28,
+    category: 'coworking',
+    name: 'Toco Coworking',
+    address: 'Via Brandizzo, 9, 10154 Torino',
+    district: 'Barriera di Milano',
+    website: 'https://www.toco-coworking.it/',
+    hours: {
+      monday: '24/7 per abbonati',
+      tuesday: '24/7 per abbonati',
+      wednesday: '24/7 per abbonati',
+      thursday: '24/7 per abbonati',
+      friday: '24/7 per abbonati',
+      saturday: '24/7 per abbonati',
+      sunday: '24/7 per abbonati'
+    },
+    features: {
+      silence: 'assoluto',
+      wifi: 'ultra-veloce',
+      powerOutlets: 'numerose',
+      tables: 'Ampie scrivanie',
+      hasBar: false,
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: true
+    },
+    chairs: 'Ergonomiche',
+    note: 'Accesso 24/7, zona Aurora/Barriera, prezzi accessibili'
+  },
+  {
+    id: 29,
+    category: 'coworking',
+    name: 'Spazio Nuvola 9',
+    address: 'Corso Moncalieri, 506/28, 10135 Torino',
+    district: 'Cavoretto',
+    website: 'https://www.spazionuvola9.it/',
+    hours: {
+      monday: '09:00 - 19:00',
+      tuesday: '09:00 - 19:00',
+      wednesday: '09:00 - 19:00',
+      thursday: '09:00 - 19:00',
+      friday: '09:00 - 19:00',
+      saturday: 'Chiuso',
+      sunday: 'Chiuso'
+    },
+    features: {
+      silence: 'assoluto',
+      wifi: 'si',
+      powerOutlets: 'numerose',
+      tables: 'Numerosi',
+      hasBar: false,
+      hasBathrooms: true,
+      parking: 'si',
+      disabledAccess: 'totale',
+      access24h: false
+    },
+    note: 'Collina di Torino, parcheggio ampio gratuito, vista panoramica'
+  },
+  {
+    id: 30,
+    category: 'coworking',
+    name: 'Spazio19 Coworking',
+    address: 'Via Cesare Balbo, 19, 10124 Torino',
+    district: 'Vanchiglia',
+    phone: '+39 011 1982489',
+    email: 'info@spazio19.it',
+    website: 'https://spazio19.it/',
+    hours: {
+      monday: '09:00 - 19:00',
+      tuesday: '09:00 - 19:00',
+      wednesday: '09:00 - 19:00',
+      thursday: '09:00 - 19:00',
+      friday: '09:00 - 19:00',
+      saturday: '10:00 - 16:00',
+      sunday: 'Chiuso'
+    },
+    features: {
+      silence: 'assoluto',
+      wifi: 'si',
+      powerOutlets: 'numerose',
+      tables: 'Numerosi',
+      hasBar: false,
+      hasBathrooms: true,
+      parking: 'parziale',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Nel cuore di Vanchiglia, quartiere trendy e artistico'
   }
 ];
 

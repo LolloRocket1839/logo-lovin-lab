@@ -38,6 +38,17 @@ export const studySpaceCoordinates: Record<number, [number, number]> = {
   18: [45.0550, 7.6870],  // Parco del Valentino
   19: [45.0530, 7.6880],  // Imbarchino
   20: [45.0750, 7.6600],  // Comala
+  // Nuovi spazi Dicembre 2025
+  21: [45.0717, 7.6876],  // Polo del '900 - Sala Lettura
+  22: [45.0623, 7.6795],  // MagazziniOz
+  23: [45.0685, 7.6700],  // Costadoro Coffee Lab
+  24: [45.0610, 7.6820],  // Costadoro Social Coffee Factory
+  25: [45.0702, 7.6845],  // C'entro Food Garden
+  26: [45.0698, 7.6755],  // Poliedro Coworking
+  27: [45.0520, 7.6750],  // Toolbox Coworking
+  28: [45.0890, 7.6950],  // Toco Coworking
+  29: [45.0280, 7.7050],  // Spazio Nuvola 9
+  30: [45.0680, 7.6950],  // Spazio19 Coworking
 };
 
 // Category colors

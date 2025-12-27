@@ -34,7 +34,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { detailedStudySpaces, DetailedStudySpace } from '@/data/detailedStudySpaces';
 
 // Quick filter type
-type QuickFilterType = 'silenzio' | 'caffe' | '24h' | 'aperto' | 'accessibile' | null;
+type QuickFilterType = 'silenzio' | 'caffe' | '24h' | 'aperto' | 'accessibile' | 'bigSpace' | 'parking' | null;
 
 const StudySpacesDirectory = () => {
   const { i18n } = useTranslation();
@@ -70,6 +70,8 @@ const StudySpacesDirectory = () => {
       h24: '24/7 Access',
       aperto: 'All\'Aperto',
       accessibile: 'Accessibilità Totale',
+      bigSpace: '100+ Posti',
+      parking: 'Parcheggio Ampio',
       zoneStats: 'Distribuzione',
       noteImportanti: 'Note Importanti',
       sessioneEsami: 'Sessione Invernale d\'Esami (Dic 2025 - Feb 2026): le sale EDISU ampliano orari fino alle 24:00. Consulta EDISU per conferma.',
@@ -104,6 +106,8 @@ const StudySpacesDirectory = () => {
       h24: '24/7 Access',
       aperto: 'Outdoors',
       accessibile: 'Full Accessibility',
+      bigSpace: '100+ Seats',
+      parking: 'Free Parking',
       zoneStats: 'Distribution',
       noteImportanti: 'Important Notes',
       sessioneEsami: 'Winter Exam Session (Dec 2025 - Feb 2026): EDISU rooms extend hours until midnight. Check EDISU for confirmation.',
@@ -203,6 +207,27 @@ const StudySpacesDirectory = () => {
             disabledAccess: true
           });
           break;
+        case 'bigSpace':
+          // Filter for Toolbox (150+ posti)
+          setFilters({
+            ...filters,
+            search: 'Toolbox',
+            category: 'all',
+            silenceLevel: 'all',
+            access24h: false,
+            disabledAccess: false
+          });
+          break;
+        case 'parking':
+          // Will be handled in filteredSpaces
+          setFilters({
+            ...filters,
+            category: 'all',
+            silenceLevel: 'all',
+            access24h: false,
+            disabledAccess: false
+          });
+          break;
       }
     }
   };
@@ -238,10 +263,15 @@ const StudySpacesDirectory = () => {
       if (filters.disabledAccess && space.features.disabledAccess !== 'totale') {
         return false;
       }
+
+      // Filter for parking (for bigSpace quick filter)
+      if (activeQuickFilter === 'parking' && space.features.parking !== 'si') {
+        return false;
+      }
       
       return true;
     });
-  }, [filters]);
+  }, [filters, activeQuickFilter]);
 
   // Related articles
   const relatedArticles = currentLang === 'it' ? [
@@ -684,6 +714,24 @@ const StudySpacesDirectory = () => {
               >
                 <Accessibility className="w-4 h-4" />
                 {t.accessibile}
+              </Button>
+              <Button
+                variant={activeQuickFilter === 'bigSpace' ? 'default' : 'outline'}
+                size="sm"
+                className="gap-1"
+                onClick={() => handleQuickFilter('bigSpace')}
+              >
+                <BookOpen className="w-4 h-4" />
+                {t.bigSpace}
+              </Button>
+              <Button
+                variant={activeQuickFilter === 'parking' ? 'default' : 'outline'}
+                size="sm"
+                className="gap-1"
+                onClick={() => handleQuickFilter('parking')}
+              >
+                <MapPin className="w-4 h-4" />
+                {t.parking}
               </Button>
             </div>
           </div>
