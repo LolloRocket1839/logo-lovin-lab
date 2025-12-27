@@ -1,4 +1,4 @@
-import { useState, useMemo, lazy, Suspense } from 'react';
+import { useState, useMemo, lazy, Suspense, useRef, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -36,6 +36,8 @@ const StudentServicesDirectory = () => {
 
   const [activeQuickFilter, setActiveQuickFilter] = useState<Institution | null>(null);
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
+  const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
+  const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const [filters, setFilters] = useState<ServiceFilters>({
     search: '',
     institution: 'all',
@@ -43,6 +45,21 @@ const StudentServicesDirectory = () => {
     district: '',
     booking: 'all'
   });
+
+  const handleSelectService = useCallback((serviceId: string) => {
+    setSelectedServiceId(serviceId);
+    setViewMode('list');
+    
+    // Scroll to the card after switching to list view
+    setTimeout(() => {
+      const cardElement = cardRefs.current[serviceId];
+      if (cardElement) {
+        cardElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Remove highlight after animation
+        setTimeout(() => setSelectedServiceId(null), 2000);
+      }
+    }, 100);
+  }, []);
 
   const content = {
     it: {
@@ -342,7 +359,9 @@ const StudentServicesDirectory = () => {
               }>
                 <StudentServicesMap 
                   services={filteredServices} 
-                  lang={currentLang} 
+                  lang={currentLang}
+                  selectedServiceId={selectedServiceId || undefined}
+                  onSelectService={handleSelectService}
                 />
               </Suspense>
             </div>
@@ -355,7 +374,17 @@ const StudentServicesDirectory = () => {
             {viewMode === 'list' && (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (
-                  <StudentServiceCard key={service.id} service={service} />
+                  <div
+                    key={service.id}
+                    ref={(el) => { cardRefs.current[service.id] = el; }}
+                    className={`transition-all duration-500 ${
+                      selectedServiceId === service.id 
+                        ? 'ring-2 ring-primary ring-offset-2 rounded-lg scale-[1.02]' 
+                        : ''
+                    }`}
+                  >
+                    <StudentServiceCard service={service} />
+                  </div>
                 ))}
               </div>
             )}

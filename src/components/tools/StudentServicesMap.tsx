@@ -23,9 +23,10 @@ interface StudentServicesMapProps {
   lang: 'it' | 'en';
   onMarkerClick?: (serviceId: string) => void;
   selectedServiceId?: string;
+  onSelectService?: (serviceId: string) => void;
 }
 
-const StudentServicesMap = ({ services, lang, onMarkerClick, selectedServiceId }: StudentServicesMapProps) => {
+const StudentServicesMap = ({ services, lang, onMarkerClick, selectedServiceId, onSelectService }: StudentServicesMapProps) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<L.Map | null>(null);
   const markersRef = useRef<L.Marker[]>([]);
@@ -127,7 +128,11 @@ const StudentServicesMap = ({ services, lang, onMarkerClick, selectedServiceId }
 
       marker.bindPopup(popupContent);
       
-      if (onMarkerClick) {
+      if (onSelectService) {
+        marker.on('click', () => {
+          onSelectService(service.id);
+        });
+      } else if (onMarkerClick) {
         marker.on('click', () => onMarkerClick(service.id));
       }
 
