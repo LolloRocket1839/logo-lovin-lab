@@ -104,10 +104,11 @@ const Investors = () => {
 
   return (
     <main role="main" className="min-h-screen" id="main-content" tabIndex={-1}>
+      {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
       <Helmet>
         <title>{t('investors.metaTitle')}</title>
         <meta name="description" content={t('investors.metaDescription')} />
-        <link rel="canonical" href="https://junglerent.it/investitori" />
+        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'investors' : 'investitori'}`} />
         
         {/* Hreflang for multilingual SEO */}
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/investitori" />
