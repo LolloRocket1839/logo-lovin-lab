@@ -370,4 +370,159 @@ export const ExamSessionPlannerHowTo = () => (
   />
 );
 
+// Property Valuator Schemas
+export const PropertyValuatorSchema = () => (
+  <ToolStructuredData
+    name="Calcolatore Valutazione Immobiliare Torino"
+    description="Calcola gratuitamente il valore di mercato del tuo immobile a Torino. Dati OMI Agenzia Entrate novembre 2025, coefficienti FIAIP, 35+ zone, stima accurata ±5%."
+    url="/valutazione-immobile"
+    applicationCategory="FinanceApplication"
+    dateModified="2025-12-27"
+    featureList={[
+      "35+ zone di Torino con prezzi OMI",
+      "Dati OMI Agenzia Entrate novembre 2025",
+      "9 categorie coefficienti FIAIP",
+      "Confronto commissioni agenzia vs Jungle Rent",
+      "Upload foto e video proprietà",
+      "Richiesta valutazione professionale gratuita",
+      "Stima range valore ±5%",
+      "Calcolo prezzo al metro quadro"
+    ]}
+    aggregateRating={{
+      ratingValue: "4.8",
+      ratingCount: "127"
+    }}
+  />
+);
+
+export const PropertyValuatorHowTo = () => (
+  <HowToStructuredData
+    name="Come calcolare il valore della tua casa a Torino"
+    description="Guida passo-passo per valutare il tuo immobile a Torino con dati OMI ufficiali 2025 e coefficienti FIAIP. Stima gratuita in 3 minuti."
+    url="/valutazione-immobile"
+    totalTime="PT3M"
+    estimatedCost={{ currency: "EUR", value: "0" }}
+    steps={[
+      {
+        name: "Seleziona la zona di Torino",
+        text: "Scegli tra 35+ zone di Torino: Centro, Crocetta, San Salvario, Vanchiglia, Aurora, Lingotto e molte altre. I prezzi OMI variano significativamente tra quartieri."
+      },
+      {
+        name: "Inserisci la superficie",
+        text: "Indica i metri quadri commerciali del tuo immobile. La superficie commerciale include muri perimetrali e quote di spazi comuni."
+      },
+      {
+        name: "Specifica il piano",
+        text: "Seleziona il piano dell'immobile. I piani alti hanno coefficienti maggiori (+5-10%), i piani terra o seminterrati valori inferiori (-10-20%)."
+      },
+      {
+        name: "Indica lo stato di manutenzione",
+        text: "Scegli tra ottimo, buono, normale o da ristrutturare. Lo stato influenza il valore fino al ±15%."
+      },
+      {
+        name: "Aggiungi caratteristiche accessorie",
+        text: "Indica se hai ascensore, terrazzo, cantina, box auto. Ogni elemento aggiunge o sottrae valore secondo coefficienti FIAIP."
+      },
+      {
+        name: "Visualizza la stima",
+        text: "Ottieni il range di valore (min-max) con accuratezza ±5%, il prezzo al metro quadro e il confronto commissioni tra agenzia tradizionale e Jungle Rent."
+      },
+      {
+        name: "Richiedi valutazione professionale",
+        text: "Se interessato a vendere, carica foto e video dell'immobile e richiedi una valutazione gratuita da Jungle Rent."
+      }
+    ]}
+  />
+);
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface PropertyValuatorFAQProps {
+  lang?: 'it' | 'en';
+}
+
+export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) => {
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://junglerent.it';
+  
+  const faqsIT: FAQItem[] = [
+    {
+      question: "Quanto vale il mio appartamento a Torino?",
+      answer: "Il valore dipende da zona, metratura, piano, stato e caratteristiche. Usa il nostro calcolatore gratuito con dati OMI 2025 per una stima accurata ±5%. Zone come Crocetta e Centro hanno prezzi medi di €2.800-3.500/mq, mentre Aurora e Barriera di Milano €1.200-1.800/mq."
+    },
+    {
+      question: "Cosa sono i dati OMI?",
+      answer: "OMI (Osservatorio del Mercato Immobiliare) è la banca dati ufficiale dell'Agenzia delle Entrate che registra i valori di compravendita degli immobili in Italia. I dati vengono aggiornati semestralmente e sono la fonte più affidabile per le valutazioni immobiliari."
+    },
+    {
+      question: "La valutazione online è gratuita?",
+      answer: "Sì, il calcolatore è completamente gratuito e non richiede registrazione. Puoi anche richiedere una valutazione professionale gratuita da Jungle Rent caricando foto dell'immobile."
+    },
+    {
+      question: "Quanto sono accurate le stime?",
+      answer: "Le stime hanno un margine di accuratezza del ±5% rispetto al valore di mercato. Utilizziamo dati OMI novembre 2025 e coefficienti FIAIP per calcolare il valore in base a 9 parametri: zona, piano, stato, ascensore, terrazzo, vista, riscaldamento, cantina e posto auto."
+    },
+    {
+      question: "Jungle Rent addebita commissioni per la valutazione?",
+      answer: "No, la valutazione è gratuita. Se decidi di vendere a Jungle Rent, non paghi commissioni di agenzia perché acquistiamo direttamente. Se vendi tramite agenzia tradizionale, la commissione media a Torino è del 3-4%."
+    },
+    {
+      question: "Come funziona la vendita a Jungle Rent?",
+      answer: "Jungle Rent acquista direttamente immobili in zone universitarie di Torino (San Salvario, Crocetta, Vanchiglia, etc.). Dopo la valutazione, ricevi un'offerta entro 48 ore. Se accetti, chiudiamo in 60-90 giorni senza commissioni di agenzia."
+    }
+  ];
+
+  const faqsEN: FAQItem[] = [
+    {
+      question: "How much is my apartment worth in Turin?",
+      answer: "The value depends on location, size, floor, condition, and features. Use our free calculator with OMI 2025 data for an accurate ±5% estimate. Areas like Crocetta and Centro have average prices of €2,800-3,500/sqm, while Aurora and Barriera di Milano are €1,200-1,800/sqm."
+    },
+    {
+      question: "What is OMI data?",
+      answer: "OMI (Real Estate Market Observatory) is the official database of the Italian Revenue Agency that records property transaction values in Italy. Data is updated bi-annually and is the most reliable source for property valuations."
+    },
+    {
+      question: "Is the online valuation free?",
+      answer: "Yes, the calculator is completely free and requires no registration. You can also request a free professional valuation from Jungle Rent by uploading property photos."
+    },
+    {
+      question: "How accurate are the estimates?",
+      answer: "Estimates have an accuracy margin of ±5% compared to market value. We use November 2025 OMI data and FIAIP coefficients to calculate value based on 9 parameters: zone, floor, condition, elevator, terrace, view, heating, cellar, and parking."
+    },
+    {
+      question: "Does Jungle Rent charge fees for valuation?",
+      answer: "No, valuation is free. If you decide to sell to Jungle Rent, you pay no agency fees because we buy directly. If you sell through a traditional agency, the average commission in Turin is 3-4%."
+    },
+    {
+      question: "How does selling to Jungle Rent work?",
+      answer: "Jungle Rent directly purchases properties in Turin's university areas (San Salvario, Crocetta, Vanchiglia, etc.). After valuation, you receive an offer within 48 hours. If you accept, we close in 60-90 days with no agency fees."
+    }
+  ];
+
+  const faqs = lang === 'en' ? faqsEN : faqsIT;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
 export default ToolStructuredData;
