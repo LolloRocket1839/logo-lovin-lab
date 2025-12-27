@@ -393,6 +393,27 @@ const Students = () => {
                 </Card>
               </Link>
 
+              {/* Student Services Directory */}
+              <Link to="/strumenti/sportelli-studenti-torino">
+                <Card className="h-full rounded-xl hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group border-border/20">
+                  <CardContent className="p-6 md:p-8 text-center">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                      <Building2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {currentLang === 'it' ? 'Sportelli e Servizi' : 'Student services'}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {currentLang === 'it' ? 'Segreterie, EDISU, borse di studio, DSA, Erasmus' : 'Registrars, EDISU, scholarships, DSA, Erasmus'}
+                    </p>
+                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                      {currentLang === 'it' ? 'Scopri' : 'Explore'}
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Badge>
+                  </CardContent>
+                </Card>
+              </Link>
+
               {/* All Tools Link */}
               <Link to="/studenti/strumenti">
                 <Card className="h-full rounded-xl border-dashed hover:border-primary/30 transition-all cursor-pointer group border-border/20">

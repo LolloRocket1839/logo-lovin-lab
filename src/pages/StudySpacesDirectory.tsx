@@ -18,7 +18,8 @@ import {
   List,
   FileText,
   GraduationCap,
-  Bike
+  Bike,
+  Building2
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -282,10 +283,10 @@ const StudySpacesDirectory = () => {
       icon: BookOpen
     },
     {
-      title: 'San Salvario: Guida Studenti',
-      description: 'Il quartiere più vivace per la vita universitaria',
-      url: '/blog/san-salvario-guida-studenti',
-      icon: GraduationCap
+      title: 'Sportelli e Servizi Studenti',
+      description: 'Directory segreterie, EDISU, borse di studio e servizi',
+      url: '/strumenti/sportelli-studenti-torino',
+      icon: Building2
     },
     {
       title: 'Dove Mangiare Cheap',
@@ -307,10 +308,10 @@ const StudySpacesDirectory = () => {
       icon: BookOpen
     },
     {
-      title: 'San Salvario: Student guide',
-      description: 'The liveliest neighborhood for university life',
-      url: '/blog/san-salvario-guida-studenti',
-      icon: GraduationCap
+      title: 'Student services directory',
+      description: 'Directory of registrars, EDISU, scholarships and services',
+      url: '/tools/student-services-turin',
+      icon: Building2
     },
     {
       title: 'Cheap eats directory',
