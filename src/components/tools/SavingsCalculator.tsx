@@ -190,87 +190,86 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
         </p>
       </CardHeader>
       
-      <CardContent className="space-y-5 overflow-hidden">
-        {/* Condition Selector */}
-        <div>
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-sm text-muted-foreground">
-              {t('sellersPage.calculator.condition.label', 'Stato immobile')}
-            </span>
-            <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Info className="w-3.5 h-3.5 text-muted-foreground cursor-help" />
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <p className="text-xs">
-                    {t('sellersPage.calculator.condition.tooltip', 'Seleziona lo stato attuale del tuo immobile per una stima più accurata')}
-                  </p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+      <CardContent className="space-y-3 overflow-hidden">
+        {/* Combined Condition + Property Type on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {/* Condition Selector */}
+          <div>
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="text-xs text-muted-foreground">
+                {t('sellersPage.calculator.condition.label', 'Stato immobile')}
+              </span>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Info className="w-3 h-3 text-muted-foreground cursor-help" />
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p className="text-xs">
+                      {t('sellersPage.calculator.condition.tooltip', 'Seleziona lo stato attuale del tuo immobile per una stima più accurata')}
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+            <ToggleGroup 
+              type="single" 
+              value={selectedCondition} 
+              onValueChange={handleConditionChange}
+              className="grid grid-cols-3 gap-1"
+            >
+              {(['daRistrutturare', 'buonoStato', 'ristrutturato'] as ConditionType[]).map((condition) => (
+                <ToggleGroupItem
+                  key={condition}
+                  value={condition}
+                  aria-label={t(`sellersPage.calculator.condition.${condition}`)}
+                  className="flex items-center justify-center gap-1 px-1.5 py-1.5 text-[10px] sm:text-xs data-[state=on]:bg-primary data-[state=on]:text-primary-foreground transition-all border border-input hover:bg-accent hover:text-accent-foreground"
+                >
+                  <span className="truncate">
+                    {t(`sellersPage.calculator.condition.${condition}Short`, 
+                      condition === 'daRistrutturare' ? 'Rist.' : 
+                      condition === 'buonoStato' ? 'Buono' : 'Nuovo'
+                    )}
+                  </span>
+                </ToggleGroupItem>
+              ))}
+            </ToggleGroup>
           </div>
-          <ToggleGroup 
-            type="single" 
-            value={selectedCondition} 
-            onValueChange={handleConditionChange}
-            className="grid grid-cols-3 gap-1.5 sm:gap-2"
-          >
-            {(['daRistrutturare', 'buonoStato', 'ristrutturato'] as ConditionType[]).map((condition) => (
-              <ToggleGroupItem
-                key={condition}
-                value={condition}
-                aria-label={t(`sellersPage.calculator.condition.${condition}`)}
-                className="flex items-center justify-center gap-1 px-2 py-2 text-[11px] sm:text-sm data-[state=on]:bg-primary data-[state=on]:text-primary-foreground transition-all border border-input hover:bg-accent hover:text-accent-foreground"
-              >
-                <span className="hidden xs:inline">{CONDITION_ICONS[condition]}</span>
-                <span className="truncate">
-                  {t(`sellersPage.calculator.condition.${condition}Short`, 
-                    condition === 'daRistrutturare' ? 'Rist.' : 
-                    condition === 'buonoStato' ? 'Buono' : 'Nuovo'
-                  )}
-                </span>
-              </ToggleGroupItem>
-            ))}
-          </ToggleGroup>
-        </div>
 
-        {/* Property Type Presets with Dynamic Prices */}
-        <div>
-          <span className="text-sm text-muted-foreground mb-2 block">
-            {t('sellersPage.calculator.propertyType', 'Tipologia')}
-          </span>
-          <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
-            {PROPERTY_TYPES.map((type) => (
-              <Button
-                key={type}
-                variant={activePreset === type ? "default" : "outline"}
-                size="sm"
-                onClick={() => handlePresetClick(type)}
-                className="w-full min-w-0 flex-col h-auto py-2 px-1.5 sm:px-3 transition-all duration-200"
-              >
-                <div className="flex items-center gap-1">
-                  <Home className="hidden sm:block w-3.5 h-3.5 shrink-0" />
-                  <span className="text-[11px] sm:text-sm truncate">
+          {/* Property Type Presets */}
+          <div>
+            <span className="text-xs text-muted-foreground mb-1.5 block">
+              {t('sellersPage.calculator.propertyType', 'Tipologia')}
+            </span>
+            <div className="grid grid-cols-3 gap-1">
+              {PROPERTY_TYPES.map((type) => (
+                <Button
+                  key={type}
+                  variant={activePreset === type ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => handlePresetClick(type)}
+                  className="w-full min-w-0 flex-col h-auto py-1.5 px-1 transition-all duration-200"
+                >
+                  <span className="text-[10px] sm:text-xs truncate">
                     {t(`sellersPage.calculator.presets.${type}`)}
                   </span>
-                </div>
-                <span className="text-[10px] sm:text-xs opacity-70 mt-0.5">
-                  {formatCurrency(CONDITION_PRESETS[selectedCondition][type])}
-                </span>
-              </Button>
-            ))}
+                  <span className="text-[9px] sm:text-[10px] opacity-70">
+                    {formatCurrency(CONDITION_PRESETS[selectedCondition][type])}
+                  </span>
+                </Button>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Property Value Input + Slider */}
-        <div className="space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-            <label className="text-sm font-medium text-foreground whitespace-nowrap">
+        <div className="space-y-2">
+          <div className="flex items-center gap-3">
+            <label className="text-xs font-medium text-foreground whitespace-nowrap">
               {t('sellersPage.calculator.propertyValue')}
             </label>
-            <div className="relative flex-1 max-w-[180px]">
-              <Euro className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <div className="relative flex-1 max-w-[160px]">
+              <Euro className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground" />
               <Input
                 ref={inputRef}
                 type="text"
@@ -279,7 +278,7 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
                 onChange={handleInputChange}
                 onBlur={handleInputBlur}
                 onKeyDown={(e) => e.key === 'Enter' && handleInputBlur()}
-                className="pl-9 text-right font-semibold text-lg"
+                className="pl-8 text-right font-semibold text-base h-9"
                 placeholder="200.000"
               />
             </div>
@@ -291,39 +290,39 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
             min={MIN_VALUE}
             max={MAX_VALUE}
             step={10000}
-            className="py-4"
+            className="py-2"
           />
           
-          <div className="flex justify-between text-xs text-muted-foreground px-0.5">
+          <div className="flex justify-between text-[10px] text-muted-foreground px-0.5">
             <span>€50k</span>
             <span>€2M</span>
           </div>
         </div>
 
         {/* Comparison */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-2">
           {/* Agency */}
-          <div className={`p-4 rounded-lg border transition-all duration-300 ${
+          <div className={`p-3 rounded-lg border transition-all duration-300 ${
             isMinimumFee 
               ? 'bg-destructive/10 border-destructive/40 ring-1 ring-destructive/20' 
               : 'bg-destructive/5 border-destructive/20'
           }`}>
-            <div className="flex items-center gap-2 mb-2">
-              <Percent className="w-4 h-4 text-destructive" />
-              <span className="text-xs font-medium text-muted-foreground">
+            <div className="flex items-center gap-1.5 mb-1">
+              <Percent className="w-3.5 h-3.5 text-destructive" />
+              <span className="text-[10px] font-medium text-muted-foreground">
                 {t('sellersPage.calculator.agency')}
               </span>
               {isMinimumFee && (
-                <span className="ml-auto flex items-center gap-1 text-[10px] font-semibold text-destructive bg-destructive/10 px-1.5 py-0.5 rounded">
-                  <AlertTriangle className="w-3 h-3" />
+                <span className="ml-auto flex items-center gap-0.5 text-[9px] font-semibold text-destructive bg-destructive/10 px-1 py-0.5 rounded">
+                  <AlertTriangle className="w-2.5 h-2.5" />
                   MIN
                 </span>
               )}
             </div>
-            <p className="text-lg font-bold text-destructive">
+            <p className="text-base font-bold text-destructive">
               {formatCurrency(agencyCommission)}
             </p>
-            <p className="text-xs text-muted-foreground mt-1">
+            <p className="text-[10px] text-muted-foreground mt-0.5">
               {isMinimumFee 
                 ? t('sellersPage.calculator.minimumFeeExplanation')
                 : '4% + IVA'
@@ -332,70 +331,65 @@ export const SavingsCalculator = ({ onContactClick }: SavingsCalculatorProps) =>
           </div>
           
           {/* Jungle Rent */}
-          <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
-            <div className="flex items-center gap-2 mb-2">
-              <Building2 className="w-4 h-4 text-primary" />
-              <span className="text-xs font-medium text-muted-foreground">
+          <div className="p-3 rounded-lg bg-primary/5 border border-primary/20">
+            <div className="flex items-center gap-1.5 mb-1">
+              <Building2 className="w-3.5 h-3.5 text-primary" />
+              <span className="text-[10px] font-medium text-muted-foreground">
                 Jungle Rent
               </span>
             </div>
-            <p className="text-lg font-bold text-primary">
+            <p className="text-base font-bold text-primary">
               €0
             </p>
-            <p className="text-xs text-muted-foreground mt-1">
+            <p className="text-[10px] text-muted-foreground mt-0.5">
               {t('sellersPage.calculator.directBuyer')}
             </p>
           </div>
         </div>
 
-        {/* Savings Result */}
+        {/* Savings Result - Compact */}
         <AnimatePresence mode="wait">
           <motion.div
             key={savings}
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="p-6 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20"
+            className="p-4 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20"
           >
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <TrendingDown className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-foreground">
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <TrendingDown className="w-4 h-4 text-primary" />
+              <span className="text-xs font-medium text-foreground">
                 {t('sellersPage.calculator.yourSavings')}
               </span>
             </div>
-            <p className="text-3xl md:text-4xl font-display font-bold text-primary text-center">
+            <p className="text-2xl md:text-3xl font-display font-bold text-primary text-center">
               {formatCurrency(animatedSavings)}
             </p>
-            <p className="text-xs text-muted-foreground text-center mt-2">
+            <p className="text-[10px] text-muted-foreground text-center mt-1">
               {t('sellersPage.calculator.savingsNote')}
             </p>
           </motion.div>
         </AnimatePresence>
 
-        {/* Data Source Note */}
-        <p className="text-[10px] sm:text-xs text-muted-foreground text-center">
-          {t('sellersPage.calculator.dataSource')}
-        </p>
-
-        {/* CTA */}
-        <Button 
-          variant="premium" 
-          size="lg" 
-          className="w-full"
-          onClick={onContactClick}
-        >
-          <Euro className="w-4 h-4 mr-2" />
-          {t('sellersPage.calculator.cta')}
-        </Button>
-
-        {/* Link to PropertyValuator */}
-        <p className="text-xs text-center text-muted-foreground">
-          <a 
-            href="/valutazione-immobile" 
-            className="text-primary hover:underline inline-flex items-center gap-1"
+        {/* CTA + Link combined */}
+        <div className="space-y-2">
+          <Button 
+            variant="premium" 
+            size="default" 
+            className="w-full"
+            onClick={onContactClick}
           >
-            {t('sellersPage.calculator.valuatorLink', 'Vuoi una stima dettagliata?')} →
-          </a>
-        </p>
+            <Euro className="w-4 h-4 mr-2" />
+            {t('sellersPage.calculator.cta')}
+          </Button>
+          <p className="text-[10px] text-center text-muted-foreground">
+            <a 
+              href="/valutazione-immobile" 
+              className="text-primary hover:underline inline-flex items-center gap-1"
+            >
+              {t('sellersPage.calculator.valuatorLink', 'Vuoi una stima dettagliata?')} →
+            </a>
+          </p>
+        </div>
       </CardContent>
     </Card>
   );
