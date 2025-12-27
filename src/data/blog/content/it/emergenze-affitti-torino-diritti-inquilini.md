@@ -2,6 +2,8 @@
 
 Cercare casa a Torino può essere stressante, e talvolta gli studenti e i giovani inquilini si trovano di fronte a situazioni critiche che richiedono una risposta legale rapida e consapevole. Questa guida affronta **tre delle emergenze più frequenti** negli affitti: cosa fare se il contratto non è registrato, quali sono i diritti sulla caparra e come rescindere anticipatamente un contratto.
 
+> **Stai cercando casa?** Consulta le nostre guide su [dove vivere a Torino per studenti del Politecnico](/blog/dove-vivere-torino-studenti-politecnico) e la [guida completa a San Salvario](/blog/san-salvario-guida-studenti).
+
 ---
 
 ## Contratto di Affitto Non Registrato: Cosa Fare
@@ -239,6 +241,16 @@ Il problema maggiore non è la mancanza di protezione legale, ma la **consapevol
 - Non esitare a contattare CAF o patronati
 
 Se sei uno studente universitario a Torino, la tua posizione legale è ancora più forte grazie alle specifiche protezioni del contratto transitorio. Conosci i tuoi diritti e comunicali chiaramente al proprietario.
+
+---
+
+## Articoli Correlati
+
+- 📍 [Dove Vivere a Torino per Studenti del Politecnico](/blog/dove-vivere-torino-studenti-politecnico) – Guida ai quartieri migliori vicino al campus
+- 🏘️ [San Salvario: Guida Completa per Studenti](/blog/san-salvario-guida-studenti) – Prezzi, vita notturna, trasporti e consigli
+- 📚 [Aule Studio a Torino: Guida Completa](/blog/aule-studio-torino-guida-completa) – Dove studiare gratis in città
+- 🚲 [Mobilità Sostenibile per Studenti a Torino](/blog/mobilita-sostenibile-torino-studenti) – Bici, mezzi pubblici e abbonamenti
+- 🎓 [Politecnico di Torino: Guida Completa](/blog/politecnico-torino-guida-completa) – Tutto quello che devi sapere
 
 ---
 

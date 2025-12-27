@@ -2,6 +2,8 @@
 
 Finding housing in Turin can be stressful, and students and young tenants often face critical situations that require a quick and informed legal response. This guide addresses **three of the most common rental emergencies**: what to do if your contract isn't registered, your rights regarding security deposits, and how to terminate a contract early.
 
+> **Looking for housing?** Check our guides on [where to live in Turin for Politecnico students](/blog/dove-vivere-torino-studenti-politecnico) and the [complete guide to San Salvario](/blog/san-salvario-guida-studenti).
+
 ---
 
 ## Unregistered Rental Contract: What To Do
@@ -239,6 +241,16 @@ The main problem is not the lack of legal protection, but tenants' **limited awa
 - Don't hesitate to contact CAF or patronage offices
 
 If you're a university student in Turin, your legal position is even stronger thanks to the specific protections of transitional contracts. Know your rights and communicate them clearly to your landlord.
+
+---
+
+## Related Articles
+
+- 📍 [Where to Live in Turin for Politecnico Students](/blog/dove-vivere-torino-studenti-politecnico) – Guide to the best neighborhoods near campus
+- 🏘️ [San Salvario: Complete Guide for Students](/blog/san-salvario-guida-studenti) – Prices, nightlife, transport and tips
+- 📚 [Study Spaces in Turin: Complete Guide](/blog/aule-studio-torino-guida-completa) – Where to study for free in the city
+- 🚲 [Sustainable Mobility for Students in Turin](/blog/mobilita-sostenibile-torino-studenti) – Bikes, public transport and subscriptions
+- 🎓 [Politecnico di Torino: Complete Guide](/blog/politecnico-torino-guida-completa) – Everything you need to know
 
 ---
 
