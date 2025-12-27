@@ -32,6 +32,7 @@ const GradeCalculator = lazy(() => import("./pages/tools/GradeCalculator"));
 const ExamSessionPlanner = lazy(() => import("./pages/tools/ExamSessionPlanner"));
 const StudySpacesDirectory = lazy(() => import("./pages/StudySpacesDirectory"));
 const CheapEatsDirectory = lazy(() => import("./pages/CheapEatsDirectory"));
+const StudentServicesDirectory = lazy(() => import("./pages/StudentServicesDirectory"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const Sellers = lazy(() => import("./pages/Sellers"));
 const PropertyValuation = lazy(() => import("./pages/PropertyValuation"));
@@ -74,6 +75,8 @@ const AppContent = () => {
         <Route path="/tools/study-spaces-turin" element={<StudySpacesDirectory />} />
         <Route path="/strumenti/dove-mangiare-torino" element={<CheapEatsDirectory />} />
         <Route path="/tools/cheap-eats-turin" element={<CheapEatsDirectory />} />
+        <Route path="/strumenti/sportelli-studenti-torino" element={<StudentServicesDirectory />} />
+        <Route path="/tools/student-services-turin" element={<StudentServicesDirectory />} />
         <Route path="/ai-testing" element={<AITesting />} />
         <Route path="/ab-test-results" element={<ABTestResults />} />
         <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
