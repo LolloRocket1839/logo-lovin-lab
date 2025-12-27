@@ -35,9 +35,9 @@ export const ScrollToTop = () => {
 
   const scrollToTop = () => {
     if (isHomepage) {
-      const journeySection = document.getElementById('value-journey');
-      if (journeySection) {
-        journeySection.scrollIntoView({ behavior: "smooth" });
+      const howItWorksSection = document.getElementById('how-it-works');
+      if (howItWorksSection) {
+        howItWorksSection.scrollIntoView({ behavior: "smooth" });
         return;
       }
     }
