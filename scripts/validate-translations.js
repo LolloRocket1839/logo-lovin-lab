@@ -2,18 +2,17 @@
 
 /**
  * Translation Validation Script
- * Compares translation keys between IT (reference) and EN files
+ * Compares translation keys between IT (reference) and other language files
  * Reports missing keys in either direction
  * 
  * Usage: node scripts/validate-translations.js
+ * 
+ * To add as npm script, add to package.json:
+ * "scripts": { "validate:translations": "node scripts/validate-translations.js" }
  */
 
-import { readFileSync } from 'fs';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const fs = require('fs');
+const path = require('path');
 
 // Configuration
 const REFERENCE_LANG = 'it'; // Italian is the reference
@@ -52,9 +51,9 @@ function extractKeys(obj, prefix = '') {
  * Load a translation file
  */
 function loadTranslation(lang) {
-  const filePath = resolve(__dirname, `../src/i18n/locales/${lang}.json`);
+  const filePath = path.resolve(__dirname, `../src/i18n/locales/${lang}.json`);
   try {
-    const content = readFileSync(filePath, 'utf-8');
+    const content = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(content);
   } catch (error) {
     console.error(`${COLORS.red}Error loading ${lang}.json: ${error.message}${COLORS.reset}`);
