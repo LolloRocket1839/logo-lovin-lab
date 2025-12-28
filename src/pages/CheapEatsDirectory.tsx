@@ -13,6 +13,11 @@ import CheapEatCard from '@/components/tools/CheapEatCard';
 import CheapEatFilters, { CheapEatFiltersState } from '@/components/tools/CheapEatFilters';
 import CheapEatsMap from '@/components/tools/CheapEatsMap';
 import { cheapEatsData, quickFilters, CheapEatLocation } from '@/data/cheapEatsDirectory';
+import { 
+  CheapEatsDirectorySchema, 
+  CheapEatsDirectoryBreadcrumb, 
+  CheapEatsDirectoryFAQ 
+} from '@/components/tools/ToolStructuredData';
 
 const CheapEatsDirectory = () => {
   const { i18n } = useTranslation();
@@ -36,6 +41,7 @@ const CheapEatsDirectory = () => {
       title: 'Dove Mangiare Cheap a Torino - Guida Studenti 2025',
       subtitle: 'Directory completa di 20 locali economici verificati: piole, street food, mense e ristoranti da €3 a €15',
       metaDescription: 'Guida completa dove mangiare a Torino spendendo poco: mense EDISU da €3, street food, piole piemontesi, ristoranti economici. 20 locali verificati dicembre 2025.',
+      keywords: 'dove mangiare economico torino, ristoranti economici torino studenti, mense edisu torino, street food torino, piole torino, pranzo economico torino, cena studenti torino, mangiare poco torino',
       breadcrumbTools: 'Strumenti',
       breadcrumbCurrent: 'Dove Mangiare Cheap',
       viewList: 'Lista',
@@ -46,6 +52,7 @@ const CheapEatsDirectory = () => {
       title: 'Where to eat cheap in Turin - Student guide 2025',
       subtitle: 'Complete directory of 20 verified budget eateries: taverns, street food, canteens and restaurants from €3 to €15',
       metaDescription: 'Complete guide to eating cheap in Turin: EDISU canteens from €3, street food, Piedmontese taverns, budget restaurants. 20 venues verified December 2025.',
+      keywords: 'cheap eats turin, budget restaurants turin students, edisu canteens turin, street food turin, piedmontese taverns, cheap lunch turin, student dinner turin, eating on budget turin',
       breadcrumbTools: 'Tools',
       breadcrumbCurrent: 'Cheap eats',
       viewList: 'List',
@@ -129,14 +136,15 @@ const CheapEatsDirectory = () => {
 
   const canonicalUrl = `https://junglerent.it/${lang === 'en' ? 'tools/cheap-eats-turin' : 'strumenti/dove-mangiare-torino'}`;
 
-  // Structured data
-  const structuredData = {
+  // Enhanced Structured data - ItemList with Restaurant schema
+  const itemListStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: t.title,
     description: t.metaDescription,
+    url: canonicalUrl,
     numberOfItems: cheapEatsData.length,
-    itemListElement: cheapEatsData.slice(0, 10).map((loc, idx) => ({
+    itemListElement: cheapEatsData.slice(0, 15).map((loc, idx) => ({
       '@type': 'ListItem',
       position: idx + 1,
       item: {
@@ -146,10 +154,19 @@ const CheapEatsDirectory = () => {
           '@type': 'PostalAddress',
           streetAddress: loc.address,
           addressLocality: 'Torino',
+          addressRegion: 'Piemonte',
+          postalCode: '10100',
           addressCountry: 'IT',
         },
         priceRange: loc.priceRange,
         servesCuisine: loc.cuisineType,
+        ...(loc.coordinates && {
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: loc.coordinates[0],
+            longitude: loc.coordinates[1],
+          }
+        })
       },
     })),
   };
@@ -159,12 +176,38 @@ const CheapEatsDirectory = () => {
       <Helmet>
         <title>{t.title} | Jungle Rent</title>
         <meta name="description" content={t.metaDescription} />
+        <meta name="keywords" content={t.keywords} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/strumenti/dove-mangiare-torino" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/tools/cheap-eats-turin" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/strumenti/dove-mangiare-torino" />
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${t.title} | Jungle Rent`} />
+        <meta property="og:description" content={t.metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content="https://junglerent.it/images/caffe-vini-quadrilatero.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content={lang === 'it' ? 'it_IT' : 'en_US'} />
+        <meta property="og:site_name" content="Jungle Rent" />
+        
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${t.title} | Jungle Rent`} />
+        <meta name="twitter:description" content={t.metaDescription} />
+        <meta name="twitter:image" content="https://junglerent.it/images/caffe-vini-quadrilatero.jpg" />
+        
+        {/* ItemList Schema */}
+        <script type="application/ld+json">{JSON.stringify(itemListStructuredData)}</script>
       </Helmet>
+      
+      {/* Additional Structured Data Components */}
+      <CheapEatsDirectorySchema lang={lang} totalLocations={cheapEatsData.length} />
+      <CheapEatsDirectoryBreadcrumb lang={lang} />
+      <CheapEatsDirectoryFAQ lang={lang} />
 
       <Navigation />
 

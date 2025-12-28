@@ -29,6 +29,11 @@ import {
   institutionLabels, 
   Institution 
 } from '@/data/studentServicesDirectory';
+import { 
+  StudentServicesDirectorySchema, 
+  StudentServicesDirectoryBreadcrumb, 
+  StudentServicesDirectoryFAQ 
+} from '@/components/tools/ToolStructuredData';
 
 const StudentServicesDirectory = () => {
   const { i18n } = useTranslation();
@@ -61,12 +66,15 @@ const StudentServicesDirectory = () => {
     }, 100);
   }, []);
 
+  const canonicalUrl = `https://junglerent.it/${currentLang === 'en' ? 'tools/student-services-turin' : 'strumenti/sportelli-studenti-torino'}`;
+  
   const content = {
     it: {
       title: 'Sportelli e Servizi per Studenti a Torino',
       subtitle: 'Guida completa a segreterie, uffici e sportelli universitari: UniTO, PoliTO, EDISU e altre istituzioni',
-      seoTitle: 'Sportelli e Servizi per Studenti a Torino | Guida Completa | Jungle Rent',
+      seoTitle: 'Sportelli e Servizi per Studenti a Torino | Guida Completa 2025 | Jungle Rent',
       seoDesc: 'Directory completa degli sportelli e servizi per studenti universitari a Torino: segreterie UniTO e PoliTO, EDISU, borse di studio, DSA, Erasmus, counseling e molto altro.',
+      keywords: 'sportelli studenti torino, segreteria unito, segreteria polito, edisu torino, borse di studio torino, erasmus torino, dsa università torino, counseling universitario, servizi studenti, segreteria didattica torino',
       servicesFound: 'servizi trovati',
       downloadPdf: 'Scarica Guida PDF',
       relatedResources: 'Risorse Correlate',
@@ -98,8 +106,9 @@ const StudentServicesDirectory = () => {
     en: {
       title: 'Student services and offices in Turin',
       subtitle: 'Complete guide to university offices: UniTO, PoliTO, EDISU and other institutions',
-      seoTitle: 'Student Services and Offices in Turin | Complete Guide | Jungle Rent',
+      seoTitle: 'Student Services and Offices in Turin | Complete Guide 2025 | Jungle Rent',
       seoDesc: 'Complete directory of student services and offices in Turin: UniTO and PoliTO registrars, EDISU, scholarships, disability services, Erasmus, counseling and more.',
+      keywords: 'student services turin, unito registrar, polito registrar, edisu turin, scholarships turin, erasmus turin, dsa university turin, university counseling, student offices',
       servicesFound: 'services found',
       downloadPdf: 'Download PDF guide',
       relatedResources: 'Related resources',
@@ -183,14 +192,15 @@ const StudentServicesDirectory = () => {
     });
   }, [filters, activeQuickFilter]);
 
-  // Structured data for SEO
-  const structuredData = {
+  // Enhanced Structured data for SEO - ItemList with GovernmentService
+  const itemListStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": t.title,
     "description": t.seoDesc,
+    "url": canonicalUrl,
     "numberOfItems": studentServicesData.length,
-    "itemListElement": filteredServices.slice(0, 10).map((service, index) => ({
+    "itemListElement": studentServicesData.slice(0, 15).map((service, index) => ({
       "@type": "ListItem",
       "position": index + 1,
       "item": {
@@ -202,9 +212,22 @@ const StudentServicesDirectory = () => {
         },
         "areaServed": {
           "@type": "City",
-          "name": "Torino"
+          "name": "Torino",
+          "sameAs": "https://www.wikidata.org/wiki/Q495"
         },
-        "serviceType": service.type
+        "serviceType": service.type,
+        "availableChannel": {
+          "@type": "ServiceChannel",
+          "serviceLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": service.address,
+              "addressLocality": "Torino",
+              "addressCountry": "IT"
+            }
+          }
+        }
       }
     }))
   };
@@ -228,14 +251,40 @@ const StudentServicesDirectory = () => {
       <Helmet>
         <title>{t.seoTitle}</title>
         <meta name="description" content={t.seoDesc} />
-        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'tools/student-services-turin' : 'strumenti/sportelli-studenti-torino'}`} />
+        <meta name="keywords" content={t.keywords} />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+        <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/tools/student-services-turin" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={t.seoTitle} />
+        <meta property="og:description" content={t.seoDesc} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content="https://junglerent.it/images/politecnico-torino.avif" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content={currentLang === 'it' ? 'it_IT' : 'en_US'} />
+        <meta property="og:site_name" content="Jungle Rent" />
+        
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t.seoTitle} />
+        <meta name="twitter:description" content={t.seoDesc} />
+        <meta name="twitter:image" content="https://junglerent.it/images/politecnico-torino.avif" />
+        
+        {/* ItemList Schema */}
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(itemListStructuredData)}
         </script>
       </Helmet>
+      
+      {/* Additional Structured Data Components */}
+      <StudentServicesDirectorySchema lang={currentLang} totalServices={studentServicesData.length} />
+      <StudentServicesDirectoryBreadcrumb lang={currentLang} />
+      <StudentServicesDirectoryFAQ lang={currentLang} />
 
       <Navigation />
 

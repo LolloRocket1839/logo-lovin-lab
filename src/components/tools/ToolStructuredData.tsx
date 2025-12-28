@@ -525,4 +525,364 @@ export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) =
   );
 };
 
+// ===== STUDENT SERVICES DIRECTORY SCHEMAS =====
+
+interface StudentServicesDirectorySchemaProps {
+  lang?: 'it' | 'en';
+  totalServices: number;
+}
+
+export const StudentServicesDirectorySchema = ({ lang = 'it', totalServices }: StudentServicesDirectorySchemaProps) => {
+  const isItalian = lang === 'it';
+  
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": isItalian 
+      ? "Sportelli e Servizi per Studenti a Torino" 
+      : "Student Services and Offices in Turin",
+    "description": isItalian
+      ? "Directory completa degli sportelli e servizi per studenti universitari a Torino: segreterie UniTO e PoliTO, EDISU, borse di studio, DSA, Erasmus, counseling e molto altro."
+      : "Complete directory of student services and offices in Turin: UniTO and PoliTO registrars, EDISU, scholarships, disability services, Erasmus, counseling and more.",
+    "url": isItalian 
+      ? "https://junglerent.it/strumenti/sportelli-studenti-torino"
+      : "https://junglerent.it/tools/student-services-turin",
+    "inLanguage": isItalian ? "it-IT" : "en-US",
+    "dateModified": "2025-12-28",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Jungle Rent",
+      "url": "https://junglerent.it"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".subtitle"]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": totalServices
+    }
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+export const StudentServicesDirectoryBreadcrumb = ({ lang = 'it' }: { lang?: 'it' | 'en' }) => {
+  const isItalian = lang === 'it';
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://junglerent.it"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isItalian ? "Studenti" : "Students",
+        "item": isItalian ? "https://junglerent.it/studenti" : "https://junglerent.it/students"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": isItalian ? "Strumenti" : "Tools",
+        "item": isItalian ? "https://junglerent.it/studenti/strumenti" : "https://junglerent.it/students/tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": isItalian ? "Sportelli e Servizi" : "Student Services",
+        "item": isItalian 
+          ? "https://junglerent.it/strumenti/sportelli-studenti-torino"
+          : "https://junglerent.it/tools/student-services-turin"
+      }
+    ]
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+export const StudentServicesDirectoryFAQ = ({ lang = 'it' }: { lang?: 'it' | 'en' }) => {
+  const faqsIT: FAQItem[] = [
+    {
+      question: "Come fare domanda per la borsa di studio EDISU?",
+      answer: "La domanda per la borsa di studio EDISU va presentata online sul portale EDISU Piemonte entro le scadenze annuali (solitamente settembre). Servono ISEE universitario, iscrizione all'università e requisiti di merito. L'importo varia da €1.800 a €5.200 annui."
+    },
+    {
+      question: "Dove si trova la segreteria studenti UniTO?",
+      answer: "L'Università di Torino ha diverse segreterie: la principale è in Via Po 29 (Centro). Ogni dipartimento ha la propria segreteria didattica. Per informazioni generali c'è lo sportello Unito Orienta in Via Verdi 8."
+    },
+    {
+      question: "Come prenotare un appuntamento al Politecnico di Torino?",
+      answer: "Per prenotare un appuntamento al PoliTO usa il sistema online Ticket Office accessibile dal Portale della Didattica. La maggior parte dei servizi (segreteria, borse di studio, Erasmus) richiede prenotazione. Tempi medi: 2-5 giorni lavorativi."
+    },
+    {
+      question: "Quali servizi offre EDISU oltre alle borse di studio?",
+      answer: "EDISU Piemonte offre: mense universitarie (pasti da €2,50), residenze studentesche, contributi affitto, borse di studio, prestiti d'onore, servizi per studenti disabili e DSA, orientamento al lavoro e attività culturali."
+    },
+    {
+      question: "Come richiedere assistenza DSA all'università a Torino?",
+      answer: "Per assistenza DSA contatta l'Ufficio Studenti Disabili e DSA della tua università. All'UniTO è in Via Po 31, al PoliTO in Corso Duca degli Abruzzi 24. Servono certificazione DSA e richiesta formale. Ottieni tutor, tempo aggiuntivo esami e materiali accessibili."
+    },
+    {
+      question: "Dove fare l'Erasmus da Torino?",
+      answer: "Sia UniTO che PoliTO offrono programmi Erasmus+ con centinaia di destinazioni in Europa. Contatta l'Ufficio Relazioni Internazionali: UniTO in Via Verdi 8, PoliTO in Corso Duca degli Abruzzi 24. Le domande si presentano solitamente tra febbraio e marzo."
+    },
+    {
+      question: "Quali sono gli orari della segreteria UniTO?",
+      answer: "Le segreterie UniTO sono aperte generalmente dal lunedì al venerdì, con orari variabili per dipartimento. Lo sportello centrale è aperto 9:00-12:00 e 14:00-16:00. Molti servizi sono disponibili online 24/7 tramite MyUniTO."
+    },
+    {
+      question: "Come accedere al counseling psicologico universitario?",
+      answer: "Sia UniTO che PoliTO offrono servizi di counseling psicologico gratuiti per studenti. All'UniTO prenota tramite CUS Torino (Centro Universitario Sportivo) o Servizio Counseling. Al PoliTO contatta il Servizio Orientamento. I colloqui sono riservati e gratuiti."
+    }
+  ];
+
+  const faqsEN: FAQItem[] = [
+    {
+      question: "How to apply for an EDISU scholarship?",
+      answer: "Apply for the EDISU scholarship online through the EDISU Piemonte portal before annual deadlines (usually September). You need university ISEE, university enrollment, and merit requirements. Amount ranges from €1,800 to €5,200 annually."
+    },
+    {
+      question: "Where is the UniTO student office located?",
+      answer: "The University of Turin has several offices: the main one is at Via Po 29 (Center). Each department has its own teaching office. For general information, there's the Unito Orienta desk at Via Verdi 8."
+    },
+    {
+      question: "How to book an appointment at Politecnico di Torino?",
+      answer: "To book an appointment at PoliTO, use the online Ticket Office system accessible from the Teaching Portal. Most services (registry, scholarships, Erasmus) require booking. Average waiting time: 2-5 business days."
+    },
+    {
+      question: "What services does EDISU offer besides scholarships?",
+      answer: "EDISU Piemonte offers: university canteens (meals from €2.50), student residences, rent subsidies, scholarships, honor loans, services for disabled and DSA students, career guidance, and cultural activities."
+    },
+    {
+      question: "How to request DSA assistance at university in Turin?",
+      answer: "For DSA assistance, contact the Disabled Students and DSA Office at your university. At UniTO it's at Via Po 31, at PoliTO at Corso Duca degli Abruzzi 24. You need DSA certification and a formal request. You'll get tutors, extra exam time, and accessible materials."
+    },
+    {
+      question: "Where to do Erasmus from Turin?",
+      answer: "Both UniTO and PoliTO offer Erasmus+ programs with hundreds of destinations across Europe. Contact the International Relations Office: UniTO at Via Verdi 8, PoliTO at Corso Duca degli Abruzzi 24. Applications are usually submitted between February and March."
+    },
+    {
+      question: "What are UniTO office hours?",
+      answer: "UniTO offices are generally open Monday to Friday, with varying hours by department. The central desk is open 9:00-12:00 and 14:00-16:00. Many services are available online 24/7 through MyUniTO."
+    },
+    {
+      question: "How to access university psychological counseling?",
+      answer: "Both UniTO and PoliTO offer free psychological counseling services for students. At UniTO, book through CUS Torino (University Sports Center) or Counseling Service. At PoliTO, contact the Orientation Service. Sessions are confidential and free."
+    }
+  ];
+
+  const faqs = lang === 'en' ? faqsEN : faqsIT;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+// ===== CHEAP EATS DIRECTORY SCHEMAS =====
+
+interface CheapEatsDirectorySchemaProps {
+  lang?: 'it' | 'en';
+  totalLocations: number;
+}
+
+export const CheapEatsDirectorySchema = ({ lang = 'it', totalLocations }: CheapEatsDirectorySchemaProps) => {
+  const isItalian = lang === 'it';
+  
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": isItalian 
+      ? "Dove Mangiare Cheap a Torino - Guida Studenti 2025" 
+      : "Where to Eat Cheap in Turin - Student Guide 2025",
+    "description": isItalian
+      ? "Guida completa dove mangiare a Torino spendendo poco: mense EDISU da €3, street food, piole piemontesi, ristoranti economici. 20 locali verificati dicembre 2025."
+      : "Complete guide to eating cheap in Turin: EDISU canteens from €3, street food, Piedmontese taverns, budget restaurants. 20 venues verified December 2025.",
+    "url": isItalian 
+      ? "https://junglerent.it/strumenti/dove-mangiare-torino"
+      : "https://junglerent.it/tools/cheap-eats-turin",
+    "inLanguage": isItalian ? "it-IT" : "en-US",
+    "dateModified": "2025-12-28",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Jungle Rent",
+      "url": "https://junglerent.it"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".subtitle"]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": totalLocations
+    }
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+export const CheapEatsDirectoryBreadcrumb = ({ lang = 'it' }: { lang?: 'it' | 'en' }) => {
+  const isItalian = lang === 'it';
+  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://junglerent.it"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": isItalian ? "Studenti" : "Students",
+        "item": isItalian ? "https://junglerent.it/studenti" : "https://junglerent.it/students"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": isItalian ? "Strumenti" : "Tools",
+        "item": isItalian ? "https://junglerent.it/studenti/strumenti" : "https://junglerent.it/students/tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": isItalian ? "Dove Mangiare Cheap" : "Cheap Eats",
+        "item": isItalian 
+          ? "https://junglerent.it/strumenti/dove-mangiare-torino"
+          : "https://junglerent.it/tools/cheap-eats-turin"
+      }
+    ]
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+export const CheapEatsDirectoryFAQ = ({ lang = 'it' }: { lang?: 'it' | 'en' }) => {
+  const faqsIT: FAQItem[] = [
+    {
+      question: "Dove mangiare a Torino con meno di 5 euro?",
+      answer: "Le mense EDISU offrono pasti completi da €2,50 a €5 per studenti. Altre opzioni economiche: kebab da €4, pizza al taglio da €3, panini da Porta Palazzo, street food etnico in Barriera di Milano. La nostra directory include 20+ locali verificati sotto i €5."
+    },
+    {
+      question: "Quali sono le mense EDISU a Torino?",
+      answer: "EDISU gestisce diverse mense a Torino: Borsellino (Via Principe Amedeo), Castelfidardo (Via Castelfidardo 30), Paolo Borsellino (Corso Tassoni), Olimpia (Via Artom). I prezzi variano da €2,50 a €5 in base all'ISEE. Orari: pranzo 11:30-14:30, cena 19:00-21:00."
+    },
+    {
+      question: "Dove trovare street food economico a Torino?",
+      answer: "Le zone migliori per street food economico sono: Porta Palazzo (mercato più grande d'Europa), San Salvario (via Madama Cristina), Barriera di Milano (cucina etnica). Trovi kebab, falafel, porchetta, panini, pizza al taglio da €3-7."
+    },
+    {
+      question: "Ci sono ristoranti vegetariani economici a Torino?",
+      answer: "Sì, Torino ha diverse opzioni vegetariane economiche: Soul Kitchen (menu €8-12), Loving Hut (vegan da €7), mense EDISU (opzione vegetariana sempre disponibile), ristoranti indiani come Shri Ganesh (thali vegetariano €8). Molti locali etnici hanno ampie opzioni vegetariane."
+    },
+    {
+      question: "Qual è il quartiere più economico per mangiare a Torino?",
+      answer: "I quartieri più economici sono: Barriera di Milano (cucina etnica, prezzi bassi), Aurora/Porta Palazzo (mercato e street food), San Salvario (mix di opzioni). Il Centro è generalmente più caro, ma trovi comunque opzioni economiche come mense e tavole calde."
+    },
+    {
+      question: "Quanto costa mangiare in mensa EDISU?",
+      answer: "I prezzi delle mense EDISU dipendono dall'ISEE: Fascia 1 (€2,50) per ISEE sotto €6.000, Fascia 2 (€3,50) fino a €10.000, Fascia 3 (€4,50) fino a €15.000, Fascia 4 (€5,00) per ISEE superiori. Il pasto include primo, secondo, contorno, pane e frutta."
+    }
+  ];
+
+  const faqsEN: FAQItem[] = [
+    {
+      question: "Where to eat in Turin for under 5 euros?",
+      answer: "EDISU canteens offer complete meals from €2.50 to €5 for students. Other budget options: kebab from €4, pizza slices from €3, sandwiches from Porta Palazzo, ethnic street food in Barriera di Milano. Our directory includes 20+ verified locations under €5."
+    },
+    {
+      question: "What are the EDISU canteens in Turin?",
+      answer: "EDISU manages several canteens in Turin: Borsellino (Via Principe Amedeo), Castelfidardo (Via Castelfidardo 30), Paolo Borsellino (Corso Tassoni), Olimpia (Via Artom). Prices range from €2.50 to €5 based on ISEE. Hours: lunch 11:30-14:30, dinner 19:00-21:00."
+    },
+    {
+      question: "Where to find cheap street food in Turin?",
+      answer: "The best areas for cheap street food are: Porta Palazzo (Europe's largest market), San Salvario (Via Madama Cristina), Barriera di Milano (ethnic cuisine). You'll find kebab, falafel, porchetta, sandwiches, pizza slices from €3-7."
+    },
+    {
+      question: "Are there cheap vegetarian restaurants in Turin?",
+      answer: "Yes, Turin has several budget vegetarian options: Soul Kitchen (menu €8-12), Loving Hut (vegan from €7), EDISU canteens (vegetarian option always available), Indian restaurants like Shri Ganesh (vegetarian thali €8). Many ethnic restaurants have extensive vegetarian options."
+    },
+    {
+      question: "What's the cheapest neighborhood to eat in Turin?",
+      answer: "The cheapest neighborhoods are: Barriera di Milano (ethnic cuisine, low prices), Aurora/Porta Palazzo (market and street food), San Salvario (mix of options). The Center is generally more expensive, but you can still find budget options like canteens and cafeterias."
+    },
+    {
+      question: "How much does it cost to eat at an EDISU canteen?",
+      answer: "EDISU canteen prices depend on ISEE: Tier 1 (€2.50) for ISEE under €6,000, Tier 2 (€3.50) up to €10,000, Tier 3 (€4.50) up to €15,000, Tier 4 (€5.00) for higher ISEE. The meal includes first course, second course, side dish, bread, and fruit."
+    }
+  ];
+
+  const faqs = lang === 'en' ? faqsEN : faqsIT;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
 export default ToolStructuredData;
