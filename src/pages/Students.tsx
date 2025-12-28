@@ -7,9 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { BottomNav } from "@/components/BottomNav";
+import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { toast } from "sonner";
 import { blogPosts } from "@/data/blog/posts";
 

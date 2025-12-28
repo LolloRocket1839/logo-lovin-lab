@@ -9,8 +9,7 @@ import { ConversionByScrollChart } from "@/components/analytics/ConversionByScro
 import { EngagementComparisonChart } from "@/components/analytics/EngagementComparisonChart";
 import { TopPagesTable } from "@/components/analytics/TopPagesTable";
 import { RecentEventsTable } from "@/components/analytics/RecentEventsTable";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Navigation, Footer } from "@/components/layout";
 import { BarChart3, Users, MousePointer, ScrollText } from "lucide-react";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 

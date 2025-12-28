@@ -30,9 +30,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { BottomNav } from "@/components/BottomNav";
+import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { type SessionExam } from "@/components/tools/SessionExamInput";
 import { ExamModal } from "@/components/tools/ExamModal";
 import { ExamList } from "@/components/tools/ExamList";

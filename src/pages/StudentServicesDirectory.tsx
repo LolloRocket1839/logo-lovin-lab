@@ -15,9 +15,7 @@ import {
 } from 'lucide-react';
 
 const StudentServicesMap = lazy(() => import('@/components/tools/StudentServicesMap'));
-import { Navigation } from '@/components/Navigation';
-import { Footer } from '@/components/Footer';
-import { BottomNav } from '@/components/BottomNav';
+import { Navigation, Footer, BottomNav } from '@/components/layout';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';

@@ -6,9 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { SkipToContent } from "./components/SkipToContent";
 import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
-import { usePageViewTracking } from "./hooks/useAnalytics";
-import { useScrollDepth } from "./hooks/useScrollDepth";
-import { useUTMTracking } from "./hooks/useUTMTracking";
+import { usePageViewTracking, useScrollDepth, useUTMTracking } from "./hooks";
 import { LoadingSpinner } from "./components/LoadingSpinner";
 
 // Eager load - homepage

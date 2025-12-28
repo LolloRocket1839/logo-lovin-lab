@@ -10,12 +10,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { MobileHeader } from "@/components/MobileHeader";
-import { MobileFooter } from "@/components/MobileFooter";
+import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
+import { QuickSellerLeadDialog } from "@/components/dialogs";
 import { SavingsCalculator } from "@/components/tools/SavingsCalculator";
 import { StyledText } from "@/components/StyledText";
 import { motion } from "framer-motion";

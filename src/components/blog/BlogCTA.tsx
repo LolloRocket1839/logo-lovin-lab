@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Bell, TrendingUp, Download, FileText } from "lucide-react";
-import { WaitlistDialog } from "@/components/WaitlistDialog";
+import { WaitlistDialog } from "@/components/dialogs";
 import { useState, useEffect } from "react";
 import { CONTACTS } from "@/lib/contacts";
 import { useABTest } from "@/hooks/useABTest";

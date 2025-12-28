@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Navigation, Footer } from "@/components/layout";
+import { InvestorWaitlistDialog } from "@/components/dialogs";
 import { StructuredData } from "@/components/StructuredData";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
+
 import { ResourceLibrary } from "@/components/investor/ResourceLibrary";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";

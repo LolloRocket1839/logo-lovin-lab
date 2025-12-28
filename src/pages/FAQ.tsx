@@ -1,10 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { Navigation } from "@/components/Navigation";
-import { MobileHeader } from "@/components/MobileHeader";
+import { Navigation, MobileHeader, Footer, BottomNav } from "@/components/layout";
 import { FAQSection } from "@/components/FAQSection";
-import { Footer } from "@/components/Footer";
-import { BottomNav } from "@/components/BottomNav";
 
 const FAQ = () => {
   const { t, i18n } = useTranslation();

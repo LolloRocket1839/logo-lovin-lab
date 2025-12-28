@@ -1,5 +1,4 @@
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Navigation, Footer } from "@/components/layout";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Building2, Users, TrendingUp, Award, MapPin, Mail, Phone } from "lucide-react";
