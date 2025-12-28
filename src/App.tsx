@@ -82,6 +82,7 @@ const AppContent = () => {
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/vendi" element={<Sellers />} />
         <Route path="/sell" element={<Sellers />} />
+        <Route path="/proprietari" element={<Navigate to="/vendi" replace />} />
         <Route path="/valutazione-immobile" element={<PropertyValuation />} />
         <Route path="/property-valuation" element={<PropertyValuation />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
