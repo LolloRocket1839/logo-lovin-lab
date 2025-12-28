@@ -1,31 +1,25 @@
 import { Suspense, lazy } from "react";
-import { Navigation } from "@/components/Navigation";
-import { MobileHeader } from "@/components/MobileHeader";
+import { Navigation } from "@/components/layout/Navigation";
+import { MobileHeader } from "@/components/layout/MobileHeader";
 import { TrustBadge } from "@/components/TrustBadge";
 import { StructuredData } from "@/components/StructuredData";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { MobileFooter } from "@/components/MobileFooter";
+import { MobileFooter } from "@/components/layout/MobileFooter";
 
 // Innovative components - loaded immediately for impact
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 
-// Mobile components - compact versions
-import { HowItWorksMobile } from "@/components/mobile/HowItWorksMobile";
-import { InvestorSectionMobile } from "@/components/mobile/InvestorSectionMobile";
-import { HomepageFAQMobile } from "@/components/mobile/HomepageFAQMobile";
-
 // Lazy load below-the-fold components
-const HowItWorks = lazy(() => import("@/components/HowItWorks").then(m => ({ default: m.HowItWorks })));
-
-const InvestorSection = lazy(() => import("@/components/InvestorSection").then(m => ({ default: m.InvestorSection })));
+const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
+const InvestorSection = lazy(() => import("@/components/sections/InvestorSection"));
+const HomepageFAQ = lazy(() => import("@/components/sections/HomepageFAQ"));
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
 const BlogBanner = lazy(() => import("@/components/blog/BlogBanner").then(m => ({ default: m.BlogBanner })));
-const HomepageFAQ = lazy(() => import("@/components/HomepageFAQ"));
-const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
+const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ default: m.Footer })));
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
 const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
-const BottomNav = lazy(() => import("@/components/BottomNav").then(m => ({ default: m.BottomNav })));
+const BottomNav = lazy(() => import("@/components/layout/BottomNav").then(m => ({ default: m.BottomNav })));
 
 const Index = () => {
   const { t, i18n } = useTranslation();
@@ -110,25 +104,16 @@ const Index = () => {
 
       <Suspense fallback={<div className="min-h-[200px]" />}>
         
-        {/* How It Works Section */}
-        <div className="hidden md:block">
-          <HowItWorks />
-        </div>
-        <HowItWorksMobile />
+        {/* How It Works Section - unified component handles desktop/mobile */}
+        <HowItWorks />
         
-        {/* Investor Section */}
-        <div className="hidden md:block">
-          <InvestorSection />
-        </div>
-        <InvestorSectionMobile />
+        {/* Investor Section - unified component handles desktop/mobile */}
+        <InvestorSection />
         
         <SellerSection />
         
-        {/* FAQ Section */}
-        <div className="hidden md:block">
-          <HomepageFAQ />
-        </div>
-        <HomepageFAQMobile />
+        {/* FAQ Section - unified component handles desktop/mobile */}
+        <HomepageFAQ />
         
         {/* Blog banner - hidden on mobile */}
         <div className="hidden md:block">
