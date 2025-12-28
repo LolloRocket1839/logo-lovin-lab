@@ -94,7 +94,7 @@ const Students = () => {
   };
 
   return (
-    <>
+    <main role="main" className="min-h-screen bg-background" id="main-content" tabIndex={-1}>
       {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
       <Helmet>
         <title>{t("students.seo.title")}</title>
@@ -110,8 +110,6 @@ const Students = () => {
       </Helmet>
 
       <Navigation />
-
-      <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
@@ -531,11 +529,10 @@ const Students = () => {
             </Link>
           </div>
         </section>
-      </main>
 
-      <Footer />
-      <BottomNav />
-    </>
+        <Footer />
+        <BottomNav />
+      </main>
   );
 };
 
