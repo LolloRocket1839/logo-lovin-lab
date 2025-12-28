@@ -302,37 +302,6 @@
     "learnMore": "Learn more about 2i3T",
     "guarantee": "Incubated within the Turin university ecosystem, ensuring professionalism and reliability in every transaction"
   },
-  "video": {
-    "title": "Discover Jungle Rent",
-    "subtitle": "Watch how our platform works and how we can help you find the perfect home in Turin",
-    "cta": "Talk to Lorenzo"
-  },
-  "howItWorks": {
-    "title": "How it works",
-    "subtitle": "Your path to the perfect home in 3 simple steps",
-    "sectionLabel": "Simple process",
-    "sectionSubtitle": "Four simple steps to start saving",
-    "step1Title": "Explore available rooms",
-    "step1Desc": "Browse our rooms near Politecnico, UniTo and all Turin universities. Each listing shows price, photos, included services and roommates.",
-    "step1Bullet1": "10-15 min walk from universities",
-    "step1Bullet2": "All bills included (electricity, gas, Wi-Fi)",
-    "step1Bullet3": "Furnished and ready to move in",
-    "step2Title": "Book your room",
-    "step2Desc": "Fill in the form with your preferences (budget, university, interests). Book with your friends or we help you find roommates.",
-    "step2Bullet1": "Flexible booking options",
-    "step2Bullet2": "You can come alone or with friends",
-    "step2Bullet3": "Verified profiles, zero surprises",
-    "step3Title": "Sign contract and pay online",
-    "step3Desc": "Receive the regular contract via email, sign digitally and pay the deposit. Zero agency commissions, zero hidden costs.",
-    "step3Bullet1": "Registered contract",
-    "step3Bullet2": "Standard security deposit",
-    "step3Bullet3": "Secure online payment",
-    "step4Title": "We support you always",
-    "step4Desc": "WhatsApp assistance 7/7 for maintenance, bills or cohabitation problems.",
-    "step4Bullet1": "Personal welcome and key handover",
-    "step4Bullet2": "Response in <24h for emergencies",
-    "waitlistCta": "Join waitlist"
-  },
   "benefits": {
     "title": "Why choose Jungle Rent",
     "subtitle": "Exclusive benefits for your living experience",
@@ -1302,9 +1271,6 @@
     "downloadCta": "Download Free Guide",
     "downloadDirectCta": "Download PDF",
     "readAnalysis": "Read the report analysis"
-  },
-  "accessibility": {
-    "skipToContent": "Skip to main content"
   },
   "areaSuggestion": {
     "addToForm": "Add info to form"
