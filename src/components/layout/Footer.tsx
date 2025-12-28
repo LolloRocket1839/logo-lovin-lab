@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
-import { CONTACTS, openGeneralEmail } from "@/lib/contacts";
+import { CONTACTS, openGeneralEmail } from "@/constants";
 import { LogoModal } from "@/components/LogoModal";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 

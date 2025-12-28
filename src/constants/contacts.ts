@@ -182,7 +182,6 @@ export const openGeneralEmail = (language: 'it' | 'en' = 'it') => {
 export type SupportedLanguage = 'it' | 'en' | 'es' | 'fr' | 'de';
 
 export const openQuickContact = (language: SupportedLanguage = 'it') => {
-  // Map language to available message, fallback to English for unsupported
   const msgLang = ['it', 'en', 'es', 'fr', 'de'].includes(language) ? language : 'en';
   const message = MESSAGES.quickContact.whatsapp[msgLang as keyof typeof MESSAGES.quickContact.whatsapp](CONTACTS.lorenzo.name);
   const phone = CONTACTS.lorenzo.phone;
@@ -190,17 +189,14 @@ export const openQuickContact = (language: SupportedLanguage = 'it') => {
   const whatsappUrl = `https://wa.me/${phone}?text=${encoded}`;
   
   if (isMobile()) {
-    // On mobile, try WhatsApp first
     window.location.href = whatsappUrl;
   } else {
-    // On desktop, open WhatsApp web
     window.open(whatsappUrl, '_blank');
   }
 };
 
 export const openSMS = (phone: string, message: string) => {
   const encoded = encodeURIComponent(message);
-  // iOS uses &body=, Android uses ?body=
   const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const url = isIOS ? `sms:${phone}&body=${encoded}` : `sms:${phone}?body=${encoded}`;
   window.location.href = url;

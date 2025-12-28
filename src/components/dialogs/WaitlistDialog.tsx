@@ -13,6 +13,7 @@ import { toast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { FORMSPREE_ENDPOINTS } from "@/constants";
 import {
   Form,
   FormControl,
@@ -65,7 +66,7 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/xeojbzow", {
+      const response = await fetch(FORMSPREE_ENDPOINTS.waitlist, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

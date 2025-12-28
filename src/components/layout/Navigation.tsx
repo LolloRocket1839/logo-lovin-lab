@@ -7,7 +7,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
-import { CONTACTS, openQuickContact, type SupportedLanguage } from "@/lib/contacts";
+import { CONTACTS, openQuickContact, type SupportedLanguage } from "@/constants";
 
 export const Navigation = () => {
   const { t } = useTranslation();

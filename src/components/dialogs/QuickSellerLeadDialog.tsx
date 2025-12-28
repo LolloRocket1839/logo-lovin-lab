@@ -15,14 +15,13 @@ import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { openCalendly } from "@/lib/calendly";
 import { getUTMParams } from "@/hooks/useUTMTracking";
+import { FORMSPREE_ENDPOINTS } from "@/constants";
 
 interface QuickSellerLeadDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   source?: string;
 }
-
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeojbzow";
 
 export const QuickSellerLeadDialog = ({ 
   open, 
@@ -63,7 +62,7 @@ export const QuickSellerLeadDialog = ({
 
     try {
       const utmParams = getUTMParams();
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(FORMSPREE_ENDPOINTS.quickSeller, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

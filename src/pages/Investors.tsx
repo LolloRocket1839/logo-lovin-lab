@@ -24,7 +24,7 @@ import {
   Shield,
   Clock
 } from "lucide-react";
-import { openWhatsApp, CONTACTS, MESSAGES } from "@/lib/contacts";
+import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 
 const Investors = () => {

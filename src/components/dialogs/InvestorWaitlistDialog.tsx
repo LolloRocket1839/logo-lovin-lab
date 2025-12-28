@@ -14,6 +14,7 @@ import { Loader2, InfoIcon } from "lucide-react";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { supabase } from "@/integrations/supabase/client";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { FORMSPREE_ENDPOINTS } from "@/constants";
 import {
   Form,
   FormControl,
@@ -62,7 +63,7 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
     try {
       const guideLabel = guideType === 'torino' ? 'GUIDA TORINO 2025' : 'GUIDA GENERALE';
       
-      const response = await fetch("https://formspree.io/f/xeojbzow", {
+      const response = await fetch(FORMSPREE_ENDPOINTS.main, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

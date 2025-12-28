@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { toast } from "sonner";
 import { blogPosts } from "@/data/blog/posts";
+import { FORMSPREE_ENDPOINTS } from "@/constants";
 
 const Students = () => {
   const { t, i18n } = useTranslation();
@@ -67,7 +68,7 @@ const Students = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("https://formspree.io/f/xeojbzow", {
+      const response = await fetch(FORMSPREE_ENDPOINTS.student, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

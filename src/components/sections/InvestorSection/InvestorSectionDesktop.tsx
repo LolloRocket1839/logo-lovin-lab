@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Users, Calendar, Heart, Target, AlertTriangle, TrendingUp, Building2, ExternalLink } from "lucide-react";
-import { MESSAGES, openWhatsApp, CONTACTS } from "@/lib/contacts";
+import { MESSAGES, openWhatsApp, CONTACTS } from "@/constants";
 import { openCalendly } from "@/lib/calendly";
 import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
