@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
+import { QuickInvestorLeadDialog } from "@/components/dialogs";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { HeroLogo } from "./HeroLogo";
 import { HowItWorksDrawer } from "./HowItWorksDrawer";

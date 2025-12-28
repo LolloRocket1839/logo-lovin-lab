@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Navigation, Footer } from "@/components/layout";
 import { aiTestingQueries, TestResult } from "@/data/aiTestingQueries";
 import { AITestDbRow } from "@/types/aiTesting";
 import { Button } from "@/components/ui/button";

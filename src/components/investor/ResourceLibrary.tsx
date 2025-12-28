@@ -5,7 +5,7 @@ import { FileText, Building2, TrendingUp, ArrowRight, CheckCircle, Download } fr
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { InvestorWaitlistDialog } from "@/components/InvestorWaitlistDialog";
+import { InvestorWaitlistDialog } from "@/components/dialogs";
 
 export const ResourceLibrary = () => {
   const { t } = useTranslation();

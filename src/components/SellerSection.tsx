@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { Building2, Clock, Check, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { QuickSellerLeadDialog } from "./QuickSellerLeadDialog";
+import { QuickSellerLeadDialog } from "@/components/dialogs";
 import { StyledText } from "@/components/StyledText";
 
 export const SellerSection = () => {

@@ -36,9 +36,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
-import { BottomNav } from "@/components/BottomNav";
+import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { ExamForm } from "@/components/tools/ExamForm";
 import { GradeSimulator } from "@/components/tools/GradeSimulator";
 import { GraduationScoreCalculator } from "@/components/tools/GraduationScoreCalculator";

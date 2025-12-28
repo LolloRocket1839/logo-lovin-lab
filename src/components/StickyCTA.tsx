@@ -3,8 +3,7 @@ import { useTranslation } from "react-i18next";
 import { X, TrendingUp, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { QuickInvestorLeadDialog } from "@/components/QuickInvestorLeadDialog";
-import { QuickSellerLeadDialog } from "@/components/QuickSellerLeadDialog";
+import { QuickInvestorLeadDialog, QuickSellerLeadDialog } from "@/components/dialogs";
 
 export const StickyCTA = () => {
   const { t } = useTranslation();

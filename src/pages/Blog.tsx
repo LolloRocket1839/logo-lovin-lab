@@ -1,13 +1,12 @@
 import { useState, useMemo } from "react";
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
+import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFilters } from "@/components/blog/BlogFilters";
 import { BlogGrid } from "@/components/blog/BlogGrid";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { BottomNav } from "@/components/BottomNav";
+
 import { AISearchBox } from "@/components/AISearchBox";
 import { BlogCategory } from "@/types/blog";
 import { getPostsByCategory, searchPosts, filterPostsByTags } from "@/data/blog/posts";
