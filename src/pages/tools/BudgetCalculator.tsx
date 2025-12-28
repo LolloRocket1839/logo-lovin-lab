@@ -52,7 +52,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Navigation, Footer, BottomNav } from "@/components/layout";
-import { turinAreas } from "@/data/turinAreas";
+import { turinAreas } from "@/constants";
 import { 
   PieChart, 
   Pie, 

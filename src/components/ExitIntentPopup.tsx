@@ -7,12 +7,12 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { getUTMParams, formatUTMForEmail } from "@/hooks/useUTMTracking";
+import { FORMSPREE_ENDPOINTS } from "@/constants";
 
 interface ExitIntentPopupProps {
   source?: string;
 }
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xkgowklq";
 const STORAGE_KEY = "exitIntentShown";
 
 export const ExitIntentPopup = ({ source = "exit-intent" }: ExitIntentPopupProps) => {
@@ -93,7 +93,7 @@ export const ExitIntentPopup = ({ source = "exit-intent" }: ExitIntentPopupProps
       const utmParams = getUTMParams();
       const utmString = formatUTMForEmail(utmParams);
 
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(FORMSPREE_ENDPOINTS.exitIntent, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

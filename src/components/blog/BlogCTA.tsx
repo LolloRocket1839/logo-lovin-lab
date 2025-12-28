@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, Bell, TrendingUp, Download, FileText } from "lucide-react";
 import { WaitlistDialog } from "@/components/dialogs";
 import { useState, useEffect } from "react";
-import { CONTACTS } from "@/lib/contacts";
+import { CONTACTS } from "@/constants";
 import { useABTest } from "@/hooks/useABTest";
 
 interface BlogCTAProps {

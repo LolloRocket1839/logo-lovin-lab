@@ -5,7 +5,7 @@ import { Building2, Users, TrendingUp, Award, MapPin, Mail, Phone } from "lucide
 import BusinessCycleInfographic from "@/components/BusinessCycleInfographic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CONTACTS, openWhatsApp, openEmail, MESSAGES } from "@/lib/contacts";
+import { CONTACTS, openWhatsApp, openEmail, MESSAGES } from "@/constants";
 
 const About = () => {
   const { t, i18n } = useTranslation();

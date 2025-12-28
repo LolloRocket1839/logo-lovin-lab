@@ -14,14 +14,13 @@ import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { getUTMParams } from "@/hooks/useUTMTracking";
 import { Loader2, TrendingUp } from "lucide-react";
+import { FORMSPREE_ENDPOINTS } from "@/constants";
 
 interface QuickInvestorLeadDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   source?: string;
 }
-
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeojbzow";
 
 export const QuickInvestorLeadDialog = ({
   open,
@@ -62,7 +61,7 @@ export const QuickInvestorLeadDialog = ({
 
     try {
       const utmParams = getUTMParams();
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(FORMSPREE_ENDPOINTS.quickInvestor, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
