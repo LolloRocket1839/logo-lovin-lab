@@ -138,7 +138,7 @@
     "whyPoint2": "Focus esclusivo sugli studenti universitari",
     "whyPoint3": "Accesso al mercato immobiliare da €100",
     "whyPoint4": "Assistenza 24/7 con risposta garantita",
-    "whyPoint5": "Conformità normative. Partnership con 2i3T",
+    "whyPoint5": "Conformità normativa e partnership con 2i3T",
     "contactTitle": "Contattaci",
     "contactLorenzo": "Parla con Lorenzo",
     "sendEmail": "Invia email"
@@ -681,7 +681,7 @@
     "investorQ9": "Come posso investire con Jungle Rent?",
     "investorA9": "Puoi investire nel portafoglio immobiliare di Jungle Rent a partire da €100. Acquisti una quota del portafoglio e partecipi ai risultati generati dagli affitti, proporzionalmente alla tua quota. È un modo per accedere al mercato immobiliare con capitali ridotti senza doverti occupare di gestione, manutenzione o burocrazia.",
     "investorQ10": "Come vengono calcolati i risultati?",
-    "investorA10": "I risultati sono calcolati sulla base del nostro modello ibrido: affitti a studenti universitari durante l'anno accademico e affitti brevi turistici nei mesi estivi. Questo modello ottimizza l'occupazione rispetto agli affitti tradizionali a canone fisso. I risultati sono al netto delle spese di gestione ma lordi di imposte personali. ATTENZIONE: i risultati dipendono dall'andamento del mercato e non sono garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale.",
+    "investorA10": "I risultati sono calcolati sulla base del nostro modello ibrido: affitti a studenti universitari durante l'anno accademico e affitti brevi turistici nei mesi estivi. Questo modello ottimizza l'occupazione rispetto agli affitti tradizionali a canone fisso. I risultati sono al netto delle spese di gestione ma al lordo delle imposte personali. ATTENZIONE: i risultati dipendono dall'andamento del mercato e non sono garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale.",
     "investorQ11": "Cos'è il modello ibrido studenti/turisti?",
     "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori allineati all'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano significativamente rispetto ai contratti tradizionali, pagando solo i mesi di effettiva permanenza. Inoltre, offriamo giorni ospite gratuiti durante l'estate per permettere agli studenti di tornare a Torino per gli esami senza costi aggiuntivi.",
     "studentCategory": "Per studenti",
@@ -1002,7 +1002,7 @@
         },
         "B": {
           "title": "Trasforma €100k in €7-9k di rendita annua",
-          "description": "Zero gestione immobiliare. Selezione inquilini completa. Rendimenti garantiti nel distretto universitario",
+          "description": "Zero gestione immobiliare. Selezione inquilini completa. Rendimenti potenziali nel distretto universitario",
           "button": "Prenota consulenza gratuita"
         }
       },
@@ -1394,7 +1394,7 @@
     "viewAll": "Vedi tutte le FAQ"
   },
   "thankYou": {
-    "title": "Grazie per averci contattato! ((:",
+    "title": "Grazie per averci contattato! 🙂",
     "investor": {
       "subtitle": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 24 ore per discutere le opportunità di investimento.",
       "step1": "Ti contatteremo entro 24 ore via email o telefono",
