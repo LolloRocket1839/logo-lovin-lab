@@ -31,7 +31,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 9%;
 
     --muted: 40 55% 88%;
-    --muted-foreground: 0 0% 30%;
+    --muted-foreground: 0 0% 25%; /* Improved from 30% for WCAG AA 4.5:1 contrast */
 
     --accent: 40 55% 88%;
     --accent-foreground: 0 0% 9%;
@@ -244,7 +244,7 @@ All colors MUST be HSL.
     border-top: 2px solid hsl(37 20% 88%);
     font-size: 0.875rem;
     line-height: 1.7;
-    color: hsl(28 24% 35%);
+    color: hsl(28 24% 25%); /* Improved from 35% for WCAG AA contrast */
   }
 
   .footnotes::before {
@@ -337,7 +337,7 @@ All colors MUST be HSL.
     --secondary-foreground: 45 20% 97%;
 
     --muted: 145 20% 20%;
-    --muted-foreground: 145 15% 65%;
+    --muted-foreground: 145 12% 72%; /* Improved for WCAG AA contrast on dark backgrounds */
 
     --accent: 145 25% 30%;
     --accent-foreground: 45 20% 97%;
