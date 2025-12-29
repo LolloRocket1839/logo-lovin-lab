@@ -106,11 +106,16 @@ export const StudySpaceCard = ({ space, lang }: StudySpaceCardProps) => {
           )}
         </div>
         
-        {/* Address */}
-        <div className="flex items-start gap-2 text-sm text-muted-foreground mt-2">
+        {/* Address - clickable to open Google Maps */}
+        <a 
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(space.address)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-start gap-2 text-sm text-muted-foreground mt-2 hover:text-primary transition-colors group"
+        >
           <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-          <span>{space.address}</span>
-        </div>
+          <span className="underline-offset-2 group-hover:underline">{space.address}</span>
+        </a>
         
         {/* Note (if exists) */}
         {space.note && (
