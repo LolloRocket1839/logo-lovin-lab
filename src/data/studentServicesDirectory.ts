@@ -109,7 +109,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Centro',
     phone: '011 670 4949',
     email: 'segreteria.studenti@unito.it',
-    website: 'https://www.unito.it/servizi/lo-studio/segreterie-studenti',
+    website: 'https://www.unito.it/servizi/segreterie-studenti-e-uffici-aperti-al-pubblico/segreterie-studenti',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00 | 14:00-16:00',
@@ -135,7 +135,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Grugliasco',
     phone: '011 670 8601',
     email: 'segreteria.agraria@unito.it',
-    website: 'https://www.unito.it/servizi/lo-studio/segreterie-studenti',
+    website: 'https://www.unito.it/servizi/segreterie-studenti-e-uffici-aperti-al-pubblico/segreterie-studenti',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00',
@@ -161,7 +161,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Centro',
     phone: '011 670 4949',
     email: 'tasse.contributi@unito.it',
-    website: 'https://www.unito.it/servizi/lo-studio/tasse-e-contributi',
+    website: 'https://www.unito.it/servizi/welfare-studentesco-e-del-personale/diritto-allo-studio',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00 | 14:00-16:00',
@@ -187,7 +187,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Centro',
     phone: '011 670 2280',
     email: 'ufficio.disabili@unito.it',
-    website: 'https://www.unito.it/servizi/lo-studio/studenti-e-studentesse-con-disabilita',
+    website: 'https://www.unito.it/servizi/inclusione-ed-esigenze-specifiche/servizi-la-disabilita',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00 | 14:00-16:00',
@@ -213,7 +213,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Centro',
     phone: '011 670 2284',
     email: 'internationalexchange@unito.it',
-    website: 'https://www.unito.it/internazionalita/studiare-allestero',
+    website: 'https://www.unito.it/internazionalita/studiare-e-lavorare-allestero/erasmus/programma-erasmus-studio',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00 | 14:00-16:00',
@@ -239,7 +239,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Centro',
     phone: '011 670 2286',
     email: 'welcome.students@unito.it',
-    website: 'https://www.unito.it/internazionalita/studenti-internazionali',
+    website: 'https://www.unito.it/internazionalita/arrivare-unito-dallestero/ammissione-studenti-internazionali',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00 | 14:00-16:00',
@@ -265,7 +265,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Centro',
     phone: '011 670 3171',
     email: 'counselling@unito.it',
-    website: 'https://www.unito.it/servizi/lo-studio/counselling',
+    website: 'https://www.unito.it/ateneo/benessere-parita-e-inclusione',
     hours: {
       monday: 'Su appuntamento',
       tuesday: 'Su appuntamento',
@@ -369,9 +369,9 @@ export const studentServicesData: StudentService[] = [
     type: 'Servizi Inclusione',
     address: 'Corso Duca degli Abruzzi 24, 10129 Torino',
     district: 'Crocetta',
-    phone: '011 090 6tried',
+    phone: '011 090 6321',
     email: 'disabilita@polito.it',
-    website: 'https://www.polito.it/ateneo/chi-siamo/pari-opportunita/studenti-con-disabilita',
+    website: 'https://www.polito.it/ateneo/parita-welfare-e-inclusione/special-needs',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00 | 14:00-16:00',
@@ -449,7 +449,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Crocetta',
     phone: '011 090 6000',
     email: 'counseling@polito.it',
-    website: 'https://www.polito.it/ateneo/chi-siamo/pari-opportunita/counseling',
+    website: 'https://www.polito.it/ateneo/parita-welfare-e-inclusione/benessere-della-persona',
     hours: {
       monday: 'Su appuntamento',
       tuesday: 'Su appuntamento',
@@ -816,7 +816,7 @@ export const studentServicesData: StudentService[] = [
     district: 'Crocetta',
     phone: '011 090 6400',
     email: 'career.service@polito.it',
-    website: 'https://www.polito.it/ateneo/chi-siamo/career-service',
+    website: 'https://www.polito.it/ateneo/career-hub',
     hours: {
       monday: '09:00-12:00',
       tuesday: '09:00-12:00 | 14:00-16:00',
