@@ -96,16 +96,21 @@ const CheapEatCard: React.FC<CheapEatCardProps> = ({ location, lang, onMapClick 
           </div>
         </div>
 
-        {/* Location & District */}
-        <div className="flex items-start gap-2 text-sm text-muted-foreground mb-3">
+        {/* Location & District - clickable to open Google Maps */}
+        <a 
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address + ', Torino')}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-start gap-2 text-sm text-muted-foreground mb-3 hover:text-primary transition-colors group"
+        >
           <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
           <div className="line-clamp-2">
-            <span className="font-medium">{location.district}</span>
+            <span className="font-medium group-hover:underline underline-offset-2">{location.district}</span>
             {location.address !== 'Centro, Torino' && location.address !== 'Multiple sedi Torino' && (
-              <span className="block text-xs">{location.address}</span>
+              <span className="block text-xs group-hover:underline underline-offset-2">{location.address}</span>
             )}
           </div>
-        </div>
+        </a>
 
         {/* Typical Dish */}
         <div className="flex items-start gap-2 mb-3">

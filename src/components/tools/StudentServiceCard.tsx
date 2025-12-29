@@ -139,11 +139,16 @@ export const StudentServiceCard = ({ service }: StudentServiceCardProps) => {
           {service.name}
         </h3>
 
-        {/* Address */}
-        <div className="flex items-start gap-2 text-sm text-muted-foreground mt-1">
+        {/* Address - clickable to open Google Maps */}
+        <a 
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(service.address)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-start gap-2 text-sm text-muted-foreground mt-1 hover:text-primary transition-colors group"
+        >
           <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-          <span>{service.address}</span>
-        </div>
+          <span className="underline-offset-2 group-hover:underline">{service.address}</span>
+        </a>
       </CardHeader>
 
       <CardContent className="space-y-4">
