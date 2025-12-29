@@ -49,6 +49,93 @@ const categoryIcons: Record<ServiceCategory, React.ElementType> = {
   'musica-arte': Music,
 };
 
+// Generate personalized mailto link based on service category and language
+const generateMailtoLink = (service: StudentService, lang: 'it' | 'en'): string => {
+  const categoryTemplates: Record<ServiceCategory, { it: string; en: string }> = {
+    'informazioni-generali': {
+      it: 'riguardo a informazioni generali sui servizi universitari',
+      en: 'regarding general information about university services'
+    },
+    'iscrizione-carriera': {
+      it: 'riguardo a pratiche di iscrizione e carriera',
+      en: 'regarding enrollment and academic career procedures'
+    },
+    'tasse-borse': {
+      it: 'riguardo a tasse universitarie e borse di studio',
+      en: 'regarding tuition fees and scholarships'
+    },
+    'inclusione-accessibilita': {
+      it: 'riguardo ai servizi di inclusione e accessibilità',
+      en: 'regarding inclusion and accessibility services'
+    },
+    'mobilita-internazionale': {
+      it: 'riguardo ai programmi di mobilità internazionale',
+      en: 'regarding international mobility programs'
+    },
+    'studenti-internazionali': {
+      it: 'riguardo ai servizi per studenti internazionali',
+      en: 'regarding services for international students'
+    },
+    'supporto-psicologico': {
+      it: 'riguardo alla prenotazione di un colloquio di supporto psicologico',
+      en: 'regarding booking a psychological support session'
+    },
+    'supporto-accademico': {
+      it: 'riguardo ai servizi di supporto accademico e tutoraggio',
+      en: 'regarding academic support and tutoring services'
+    },
+    'lingue': {
+      it: 'riguardo ai corsi e certificazioni linguistiche',
+      en: 'regarding language courses and certifications'
+    },
+    'ristorazione': {
+      it: 'riguardo ai servizi di ristorazione universitaria',
+      en: 'regarding university catering services'
+    },
+    'alloggio': {
+      it: 'riguardo agli alloggi e residenze universitarie',
+      en: 'regarding university housing and residences'
+    },
+    'diritti-studenti': {
+      it: 'riguardo ai diritti degli studenti e rappresentanza',
+      en: 'regarding student rights and representation'
+    },
+    'musica-arte': {
+      it: 'riguardo alle attività musicali e artistiche',
+      en: 'regarding music and artistic activities'
+    }
+  };
+
+  const categoryText = categoryTemplates[service.category];
+  const institutionName = institutionLabels[service.institution]?.it || 'l\'università';
+
+  const subject = lang === 'it' 
+    ? `Richiesta informazioni - ${service.name}`
+    : `Information request - ${service.name}`;
+
+  const body = lang === 'it'
+    ? `Gentile ${service.name},
+
+Sono uno studente presso ${institutionName} e scrivo per richiedere informazioni ${categoryText.it}.
+
+[Inserire qui la tua richiesta]
+
+Cordiali saluti,
+[Il tuo nome]
+[Numero di matricola, se applicabile]`
+    : `Dear ${service.name},
+
+I am a student at ${institutionName} and I am writing to request information ${categoryText.en}.
+
+[Insert your request here]
+
+Best regards,
+[Your name]
+[Student ID, if applicable]`;
+
+  return `mailto:${service.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
 export const StudentServiceCard = ({ service }: StudentServiceCardProps) => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
@@ -172,10 +259,11 @@ export const StudentServiceCard = ({ service }: StudentServiceCardProps) => {
               {service.phone}
             </a>
           )}
-          {service.email && (
+        {service.email && (
             <a 
-              href={`mailto:${service.email}`}
+              href={generateMailtoLink(service, currentLang)}
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+              title={currentLang === 'it' ? 'Clicca per inviare email con modello pre-compilato' : 'Click to send email with pre-filled template'}
             >
               <Mail className="w-4 h-4 flex-shrink-0" />
               {service.email}
