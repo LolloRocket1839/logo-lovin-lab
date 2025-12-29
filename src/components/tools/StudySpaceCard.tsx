@@ -33,6 +33,33 @@ interface StudySpaceCardProps {
   lang: 'it' | 'en';
 }
 
+// Generate personalized mailto link for study spaces
+const generateStudySpaceMailto = (space: DetailedStudySpace, lang: 'it' | 'en'): string => {
+  const subject = lang === 'it'
+    ? `Richiesta informazioni - ${space.name}`
+    : `Information request - ${space.name}`;
+
+  const body = lang === 'it'
+    ? `Gentile ${space.name},
+
+Scrivo per richiedere informazioni riguardo ai vostri servizi e spazi di studio.
+
+[Inserire qui la tua richiesta]
+
+Cordiali saluti,
+[Il tuo nome]`
+    : `Dear ${space.name},
+
+I am writing to request information about your study spaces and services.
+
+[Insert your request here]
+
+Best regards,
+[Your name]`;
+
+  return `mailto:${space.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
 const getCategoryIcon = (category: string) => {
   switch (category) {
     case 'biblioteca':
@@ -235,7 +262,10 @@ export const StudySpaceCard = ({ space, lang }: StudySpaceCardProps) => {
           
           {space.email && (
             <Button variant="outline" size="sm" asChild className="gap-1">
-              <a href={`mailto:${space.email}`}>
+              <a 
+                href={generateStudySpaceMailto(space, lang)}
+                title={lang === 'it' ? 'Invia email con modello pre-compilato' : 'Send email with pre-filled template'}
+              >
                 <Mail className="w-3 h-3" />
                 Email
               </a>
