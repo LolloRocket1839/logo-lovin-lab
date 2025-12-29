@@ -13,7 +13,8 @@ import {
   Plug,
   ChevronDown,
   ChevronUp,
-  MessageCircle
+  MessageCircle,
+  Send
 } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -266,7 +267,10 @@ export const StudySpaceCard = ({ space, lang }: StudySpaceCardProps) => {
                 href={generateStudySpaceMailto(space, lang)}
                 title={lang === 'it' ? 'Invia email con modello pre-compilato' : 'Send email with pre-filled template'}
               >
-                <Mail className="w-3 h-3" />
+                <div className="relative">
+                  <Mail className="w-3 h-3" />
+                  <Send className="w-2 h-2 absolute -top-0.5 -right-1 text-primary" />
+                </div>
                 Email
               </a>
             </Button>

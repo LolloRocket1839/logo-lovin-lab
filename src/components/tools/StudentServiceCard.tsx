@@ -21,7 +21,8 @@ import {
   UtensilsCrossed,
   Home,
   Scale,
-  Music
+  Music,
+  Send
 } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -262,11 +263,14 @@ export const StudentServiceCard = ({ service }: StudentServiceCardProps) => {
         {service.email && (
             <a 
               href={generateMailtoLink(service, currentLang)}
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors break-all group"
               title={currentLang === 'it' ? 'Clicca per inviare email con modello pre-compilato' : 'Click to send email with pre-filled template'}
             >
-              <Mail className="w-4 h-4 flex-shrink-0" />
-              {service.email}
+              <div className="relative flex-shrink-0">
+                <Mail className="w-4 h-4" />
+                <Send className="w-2.5 h-2.5 absolute -top-0.5 -right-1 text-primary opacity-80" />
+              </div>
+              <span className="group-hover:underline underline-offset-2">{service.email}</span>
             </a>
           )}
         </div>
