@@ -937,6 +937,17 @@
     "invalidEmail": "Ange en giltig e-post",
     "privacy": "Dina uppgifter är säkra. Vi delar dem aldrig med tredje part."
   },
+  "quickInvestorLead": {
+    "title": "Börja investera",
+    "description": "Ange din e-post för att få information om investeringsmöjligheter i Jungle Rent",
+    "submit": "Skicka förfrågan",
+    "sending": "Skickar...",
+    "privacy": "Genom att skicka godkänner du vår integritetspolicy",
+    "errorTitle": "Fel",
+    "emailRequired": "Ange din e-postadress",
+    "invalidEmail": "Ange en giltig e-postadress",
+    "errorDescription": "Ett fel uppstod. Försök igen senare."
+  },
   "blog": {
     "sectionLabel": "City Living",
     "sectionTitle": "City Living",

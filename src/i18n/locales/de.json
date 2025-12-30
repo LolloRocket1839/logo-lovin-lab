@@ -382,6 +382,17 @@
     "invalidEmail": "Geben Sie eine gültige E-Mail ein",
     "privacy": "Ihre Daten sind sicher. Wir werden sie niemals mit Dritten teilen."
   },
+  "quickInvestorLead": {
+    "title": "Investition starten",
+    "description": "Geben Sie Ihre E-Mail ein, um Informationen über Investitionsmöglichkeiten bei Jungle Rent zu erhalten",
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet...",
+    "privacy": "Mit dem Absenden stimmen Sie unserer Datenschutzrichtlinie zu",
+    "errorTitle": "Fehler",
+    "emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse ein",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "errorDescription": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+  },
   "blog": {
     "sectionLabel": "City Living",
     "sectionTitle": "City Living",
