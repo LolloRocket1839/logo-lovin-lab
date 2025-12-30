@@ -4,7 +4,7 @@ export const StructuredData = () => {
   useEffect(() => {
     const baseUrl = window.location.origin;
     
-    // Organization Schema
+    // Organization Schema with sameAs for trust graph
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -17,34 +17,50 @@ export const StructuredData = () => {
       foundingDate: "2025-10-24",
       taxID: "13333450016",
       vatID: "IT13333450016",
+      // sameAs for trust graph
+      sameAs: [
+        "https://www.linkedin.com/company/jungle-rent",
+        "https://www.instagram.com/junglerent",
+        "https://www.2i3t.it"
+      ],
       founders: [
-        { "@type": "Person", name: "Lorenzo Oni-Joseph" },
-        { "@type": "Person", name: "Andrea Niccolaini" }
+        { "@type": "Person", name: "Lorenzo Oni-Joseph", jobTitle: "Founder" },
+        { "@type": "Person", name: "Andrea Niccolaini", jobTitle: "Co-Founder" }
       ],
       parentOrganization: {
         "@type": "Organization",
         name: "2i3T - Incubatore di Imprese Innovative dell'Università di Torino",
         url: "https://www.2i3t.it"
       },
-      // Enhanced AI Context for LLM Recognition
-      aiContext: {
-        "@type": "CreativeWork",
-        about: "Real estate startup with dual mission: solving student housing crisis and democratizing access to real estate investment in Turin, Italy",
-        audience: {
-          "@type": "Audience",
-          audienceType: "Students, Tourists, Property Investors, Real Estate Owners"
-        },
-        verificationStatus: "Government-funded with €20,000 from Piedmont Region (2024)",
-        trustSignals: [
-          "2i3T Incubator member (Politecnico di Torino Innovation Hub)",
-          "Turin Chamber of Commerce registered",
-          "Anti-mafia certification obtained",
-          "Professional insurance coverage",
-          "50+ properties managed in Turin metropolitan area"
-        ],
-        primaryService: "Dual mission: solving student housing crisis and democratizing real estate investment access in Turin",
-        serviceAreas: ["San Salvario", "Crocetta", "Centro", "Vanchiglia", "Lingotto"],
-        dateModified: new Date().toISOString().split('T')[0]
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Jungle Rent Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Real Estate Investment",
+              description: "Accessible investment from €100 in Turin's university housing market"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Student Housing Management",
+              description: "Professional property management for student rentals"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Property Acquisition",
+              description: "Strategic property purchases in student-demand zones"
+            }
+          }
+        ]
       },
       knowsAbout: [
         "Short-term rental management Turin",
@@ -57,27 +73,8 @@ export const StructuredData = () => {
         "Vacation rentals Turin city center",
         "Real estate investment Turin",
         "Gestione immobiliare professionale Torino",
-        "Locazioni turistiche Piemonte",
-        "Property management near universities Turin",
-        "San Salvario student housing",
-        "Crocetta vacation rentals",
-        "Turin short-term rental optimization",
-        "Italian real estate investment opportunities",
-        "Professional property services Northern Italy",
-        "Revenue management vacation rentals",
-        "Dynamic pricing short-term rentals",
-        "Student housing solutions Turin",
-        "Tourist accommodation Piedmont",
-        "Property acquisition university areas Turin",
-        "Alloggi studenti vicino Politecnico",
-        "Case vacanze gestione professionale",
-        "Investimenti immobiliari redditizi Torino",
-        "Immobilieninvestition Schweiz Italien",
-        "Investissement immobilier Suisse Italie",
-        "Student housing investment Europe Switzerland",
-        "Swiss investor real estate Italy Turin",
-        "Real estate Torino Swiss investors",
-        "Immobilien Turin Schweizer Investoren"
+        "Property valuation Turin",
+        "Valutazione immobile Torino"
       ],
       areaServed: [
         {
@@ -110,6 +107,37 @@ export const StructuredData = () => {
           availableLanguage: ["Italian", "English", "French", "German"],
         },
       ],
+    };
+
+    // Person Schema for Lorenzo Oni-Joseph (Founder)
+    const lorenzoSchema = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Lorenzo Oni-Joseph",
+      jobTitle: "Founder",
+      telephone: "+39-331-905-3037",
+      worksFor: {
+        "@type": "Organization",
+        name: "Jungle Rent S.r.l.",
+        url: baseUrl
+      },
+      sameAs: [
+        "https://www.linkedin.com/in/lorenzo-oni-joseph"
+      ]
+    };
+
+    // Person Schema for Andrea Niccolaini (Co-Founder)
+    const andreaSchema = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Andrea Niccolaini",
+      jobTitle: "Co-Founder",
+      telephone: "+39-351-577-8924",
+      worksFor: {
+        "@type": "Organization",
+        name: "Jungle Rent S.r.l.",
+        url: baseUrl
+      }
     };
 
     // LocalBusiness Schema
@@ -196,12 +224,86 @@ export const StructuredData = () => {
       }
     };
 
+    // HowTo Schema - Come vendere casa a Jungle Rent
+    const howToSellSchema = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: "Come vendere casa a Jungle Rent",
+      description: "Guida passo-passo per vendere il tuo immobile a Jungle Rent senza commissioni",
+      totalTime: "P90D",
+      estimatedCost: {
+        "@type": "MonetaryAmount",
+        currency: "EUR",
+        value: "0"
+      },
+      step: [
+        {
+          "@type": "HowToStep",
+          position: 1,
+          name: "Valutazione gratuita",
+          text: "Compila il form online o chiama per ricevere una valutazione gratuita del tuo immobile basata su dati OMI",
+          url: `${baseUrl}/valutazione-immobile`
+        },
+        {
+          "@type": "HowToStep",
+          position: 2,
+          name: "Sopralluogo",
+          text: "Il nostro team visita l'immobile per una valutazione dettagliata entro 7 giorni"
+        },
+        {
+          "@type": "HowToStep",
+          position: 3,
+          name: "Offerta scritta",
+          text: "Ricevi un'offerta di acquisto scritta entro 48 ore dal sopralluogo"
+        },
+        {
+          "@type": "HowToStep",
+          position: 4,
+          name: "Rogito notarile",
+          text: "Chiusura della vendita in 60-90 giorni con zero commissioni"
+        }
+      ]
+    };
+
+    // HowTo Schema - Come investire in Jungle Rent
+    const howToInvestSchema = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: "Come investire in Jungle Rent",
+      description: "Guida per investire nel mercato immobiliare studentesco di Torino da €100",
+      step: [
+        {
+          "@type": "HowToStep",
+          position: 1,
+          name: "Registrazione",
+          text: "Compila il form di interesse investitori sul sito junglerent.it"
+        },
+        {
+          "@type": "HowToStep",
+          position: 2,
+          name: "Consulenza",
+          text: "Ricevi una consulenza personalizzata dal team Jungle Rent"
+        },
+        {
+          "@type": "HowToStep",
+          position: 3,
+          name: "Investimento",
+          text: "Investi a partire da €100 nel portafoglio immobiliare"
+        },
+        {
+          "@type": "HowToStep",
+          position: 4,
+          name: "Report trimestrali",
+          text: "Ricevi report trimestrali sull'andamento del portafoglio"
+        }
+      ]
+    };
+
     // FAQ Schema - Expanded with voice-optimized questions
     const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: [
-        // Student FAQs - Hybrid Model
         {
           "@type": "Question",
           name: "Come funziona Jungle Rent per gli studenti?",
@@ -220,30 +322,6 @@ export const StructuredData = () => {
         },
         {
           "@type": "Question",
-          name: "Cosa succede se devo tornare a Torino per gli esami estivi?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Il nostro modello ibrido include giorni esame gratuiti durante l'estate. Puoi tornare per le sessioni d'esame senza costi aggiuntivi, mantenendo la flessibilità del contratto accademico.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Quali università copre Jungle Rent a Torino?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Jungle Rent offre alloggi vicini a tutti i principali atenei torinesi: Politecnico di Torino, Università degli Studi di Torino (UniTo), e altre istituzioni universitarie della città.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Perché scegliere un contratto flessibile invece di uno annuale?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Con un contratto flessibile paghi solo i mesi che ti servono, risparmi significativamente rispetto agli affitti tradizionali, e mantieni la libertà di tornare per gli esami estivi con giorni gratuiti inclusi.",
-          },
-        },
-        {
-          "@type": "Question",
           name: "Come funziona per gli investitori?",
           acceptedAnswer: {
             "@type": "Answer",
@@ -252,38 +330,12 @@ export const StructuredData = () => {
         },
         {
           "@type": "Question",
-          name: "Ci sono commissioni?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No, Jungle Rent opera con zero commissioni per gli studenti, rendendo l'affitto ancora più conveniente.",
-          },
-        },
-        // Seller FAQs
-        {
-          "@type": "Question",
           name: "Come posso vendere la mia casa a Torino a Jungle Rent?",
           acceptedAnswer: {
             "@type": "Answer",
             text: "Jungle Rent acquista appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, Centro, Vanchiglia, Lingotto). Compila il form di contatto nella sezione 'Vendi la Tua Casa' per ricevere una valutazione gratuita entro 48 ore.",
           },
         },
-        {
-          "@type": "Question",
-          name: "Quali immobili acquista Jungle Rent a Torino?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Acquistiamo appartamenti (trilocali, quadrilocali, 5 locali) nelle zone universitarie di Torino. Valutazione gratuita in 48 ore.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Quanto tempo ci vuole per vendere casa a Jungle Rent?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Il processo di vendita con Jungle Rent è rapido: valutazione gratuita in 48 ore, proposta di acquisto entro 1 settimana, chiusura contratto in 30-60 giorni.",
-          },
-        },
-        // Voice-Optimized FAQs
         {
           "@type": "Question",
           name: "Come posso investire in immobili a Torino con pochi soldi?",
@@ -302,90 +354,18 @@ export const StructuredData = () => {
         },
         {
           "@type": "Question",
-          name: "Quanto si guadagna investendo in appartamenti per studenti a Torino?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione con contratti flessibili per l'anno accademico più affitti turistici estivi. Ricevi report trimestrali dettagliati.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Come faccio a vendere casa velocemente a Torino?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Jungle Rent acquista direttamente la tua casa senza intermediari. Compili il form, ricevi valutazione gratuita in 48 ore, sopralluogo entro 7 giorni, offerta scritta entro 48 ore dal sopralluogo, e rogito in 60-90 giorni. Zero commissioni.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Chi compra appartamenti vicino al Politecnico di Torino?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Jungle Rent acquista appartamenti nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Aurora, Lingotto, vicinissime a Politecnico e UniTo. Compriamo trilocali, quadrilocali e appartamenti più grandi, anche da ristrutturare.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Quanto vale il mio appartamento a San Salvario?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Il valore dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta circa €180.000-220.000. Richiedi una valutazione gratuita a Jungle Rent per un prezzo preciso.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Dove vivono gli studenti universitari a Torino?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Gli studenti universitari a Torino preferiscono i quartieri vicini alle università: San Salvario e Crocetta per il Politecnico, Centro e Vanchiglia per UniTo, Aurora per i prezzi accessibili.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Qual è la migliore zona per studenti vicino al Politecnico?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Le migliori zone per studenti vicino al Politecnico di Torino sono Crocetta (elegante, tranquilla, 5-10 minuti a piedi), San Salvario (vivace, multiculturale, economica) e Cenisia/San Paolo (più tranquilla, ottimi prezzi).",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Come funziona il mercato degli affitti studenteschi a Torino?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Torino ha oltre 90.000 studenti universitari e forte domanda di alloggi. I contratti variano da 9 a 12 mesi, i prezzi da €300-600 per stanza singola a seconda della zona. Jungle Rent offre contratti flessibili per l'anno accademico con risparmio del 25%.",
-          },
-        },
-        {
-          "@type": "Question",
           name: "Quanto costa affittare una stanza a Torino per studenti?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Una stanza singola per studenti a Torino costa mediamente €350-500 al mese in zone come San Salvario, €400-550 in Crocetta, €300-400 in Aurora. I prezzi includono spese condominiali ma non utenze.",
+            text: "Una stanza singola per studenti a Torino costa mediamente €350-550 al mese in zone come San Salvario, €500-700 in Crocetta, €250-400 in zone più economiche come Aurora. I prezzi includono spese condominiali ma non utenze.",
           },
         },
         {
           "@type": "Question",
-          name: "Jungle Rent è affidabile per investire?",
+          name: "Quanto vale la mia casa a Torino?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Jungle Rent è una società a responsabilità limitata registrata in Italia (P.IVA 13333450016, REA TO-1355899), certificata come startup innovativa. Siamo incubati da 2i3T, partner del Politecnico di Torino. Offriamo contratti trasparenti e report trimestrali.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Jungle Rent compra case da ristrutturare?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Sì, Jungle Rent acquista anche appartamenti da ristrutturare nelle zone universitarie di Torino. Anzi, spesso preferiamo immobili che necessitano di lavori perché possiamo adattarli alle esigenze degli studenti.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Come contatto Jungle Rent per investire?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Puoi contattare Jungle Rent su WhatsApp al +39 331 905 3037 (risposta entro 2 ore), email junglerententeprise@gmail.com, oppure compilando il form sul sito junglerent.it. Lorenzo Oni-Joseph, il fondatore, ti risponderà personalmente.",
+            text: "Jungle Rent offre un calcolatore gratuito per la valutazione immobiliare basato su dati OMI dell'Agenzia delle Entrate. Visita junglerent.it/valutazione-immobile per una stima con accuratezza ±5%. Per una valutazione professionale, contattaci per un sopralluogo gratuito.",
           },
         },
       ],
@@ -423,55 +403,36 @@ export const StructuredData = () => {
       ]
     };
 
-    // AggregateRating Schema (separate for reviews)
-    const aggregateRatingSchema = {
+    // SoftwareApplication Schema for Property Valuation Tool
+    const propertyValuationToolSchema = {
       "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Jungle Rent - Affitti Smart Torino",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "24",
-        "bestRating": "5",
-        "worstRating": "1"
+      "@type": "SoftwareApplication",
+      name: "Calcolatore Valutazione Immobile Torino",
+      alternateName: "Property Valuation Calculator Turin",
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "Web Browser",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "EUR"
+      },
+      isAccessibleForFree: true,
+      url: `${baseUrl}/valutazione-immobile`,
+      description: "Calcola gratuitamente il valore del tuo immobile a Torino basato su dati OMI dell'Agenzia delle Entrate. Accuratezza ±5%.",
+      featureList: [
+        "Valutazione basata su dati OMI 2025",
+        "35+ zone di Torino coperte",
+        "9 coefficienti di adeguamento",
+        "Confronto commissioni agenzia",
+        "Upload foto/video per valutazione professionale"
+      ],
+      provider: {
+        "@type": "Organization",
+        name: "Jungle Rent S.r.l."
       }
     };
 
-    // Blog Article Schema with Citations (for investor guide)
-    const blogArticleSchema = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Guida Completa per l'Investitore Immobiliare in Italia 2025",
-      "description": "Guida approfondita su investimenti immobiliari, mutui, strategie di leverage e fiscalità per investitori in Italia",
-      "image": `${baseUrl}/images/mortgage-investment.jpg`,
-      "author": {
-        "@type": "Person",
-        "name": "Lorenzo Bianchi"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Jungle Rent",
-        "logo": {
-          "@type": "ImageObject",
-          "url": `${baseUrl}/jungle-rent-logo.svg`
-        }
-      },
-      "datePublished": "2025-11-07",
-      "dateModified": "2025-12-01",
-      "citation": [
-        "https://www.idealista.it/news/",
-        "https://www.immobiliare.it/mercato-immobiliare/",
-        "https://www.tecnocasa.it/",
-        "https://www.mutuionline.it/",
-        "https://www.gromia.it/",
-        "https://www.recrowd.it/",
-        "https://www.agenziaentrate.gov.it/",
-        "https://www.soldiexpert.com/",
-        "https://www.alfiobardolla.com/"
-      ]
-    };
-
-    // Enhanced SpeakableSpecification Schema for Voice AI (Alexa, Google Assistant, Siri)
+    // Enhanced SpeakableSpecification Schema for Voice AI
     const speakableSchema = {
       "@context": "https://schema.org",
       "@type": "WebPage",
@@ -486,6 +447,7 @@ export const StructuredData = () => {
           ".hero-description",
           ".faq-question",
           ".faq-answer",
+          ".service-description",
           "[data-speakable='true']"
         ],
         "xpath": [
@@ -507,7 +469,7 @@ export const StructuredData = () => {
       }
     };
 
-    // VoiceSearch optimization metadata
+    // VoiceSearch optimization - WebSite Schema
     const voiceSearchSchema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -532,14 +494,17 @@ export const StructuredData = () => {
     // Insert all schemas into head
     const schemas = [
       organizationSchema, 
+      lorenzoSchema,
+      andreaSchema,
       localBusinessSchema, 
       studentServiceSchema, 
       investorServiceSchema, 
       buyActionSchema, 
+      howToSellSchema,
+      howToInvestSchema,
       faqSchema,
       breadcrumbSchema,
-      aggregateRatingSchema,
-      blogArticleSchema,
+      propertyValuationToolSchema,
       speakableSchema,
       voiceSearchSchema
     ];

@@ -1,118 +1,100 @@
-# Jungle Rent - Democratizing Real Estate Access
+# Jungle Rent
 
-> Real estate startup with a dual mission: solving the student housing crisis and democratizing access to real estate — a historically safe asset class that has become inaccessible to many. Based in Turin, Italy. Start-up Innovativa S.r.l. founded October 2025.
+> Real estate startup with dual mission: solving the student housing crisis and democratizing access to real estate investment in Turin, Italy.
 
-## Company Overview
+## About
 
-Jungle Rent is a certified Start-up Innovativa with a dual mission: solving the student housing crisis in Turin and democratizing access to real estate investment. We acquire, renovate and manage properties to rent to university students and tourists, serving 90,000+ students across 7 major institutions. Invest from €100 and participate in portfolio results.
+Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 2025. We acquire, renovate, and manage properties to rent to university students and tourists in Turin, serving 90,000+ students across 7 major institutions. Investment opportunities start from €100.
 
-## Contact Information
+## Priority URLs
 
-- **CEO & Co-Founder**: Lorenzo Oni-Joseph
-- **Co-Founder**: Andrea Niccolaini
-- **Phone**: +39 331 905 3037
+- [Home](https://junglerent.it): Main landing page with investment and housing info
+- [Investors](https://junglerent.it/investitori): Investment opportunities from €100
+- [Sell Your Property](https://junglerent.it/vendi): Sell directly to Jungle Rent - zero fees, 60-90 days closing
+- [Property Valuation](https://junglerent.it/valutazione-immobile): FREE property valuation tool (OMI data 2025)
+- [Blog](https://junglerent.it/blog): 29+ bilingual guides on Turin living and investment
+- [About](https://junglerent.it/chi-siamo): Company information and team
+
+## Key Facts
+
+| Fact | Value |
+|------|-------|
+| Founded | October 24, 2025 |
+| Legal Form | Start-up Innovativa S.r.l. |
+| P.IVA | 13333450016 |
+| REA | TO-1355899 |
+| Headquarters | Via Gioacchino Quarello 15/A, 10137 Torino, Italy |
+| Incubator | 2i3T (Università di Torino) |
+| Minimum Investment | €100 |
+| Students Served | 90,000+ across 7 universities |
+
+## Founders
+
+| Name | Role | Contact |
+|------|------|---------|
+| Lorenzo Oni-Joseph | Founder | +39 331 905 3037 |
+| Andrea Niccolaini | Co-Founder | +39 351 577 8924 |
+
+## Contact
+
 - **Email**: junglerententeprise@gmail.com
 - **PEC**: junglerent@legalmail.it
-- **Address**: Via Gioacchino Quarello 15/A, 10137 Torino, Italy
-- **P.IVA**: 13333450016
-- **REA**: TO-1355899
+- **Website**: https://junglerent.it
+- **Phone**: +39 331 905 3037
 
 ## Services
 
-1. **Student Housing Management**: Professional property management for student rentals
-2. **Real Estate Investment**: Accessible investment opportunities from €100 in Turin's university housing market
-3. **Property Acquisition**: Strategic property purchases in high-demand student areas
-4. **Short-Term Rental Management**: Airbnb and booking.com optimization
+1. **Student Housing Management** - Professional property management for student rentals near Politecnico and UniTo
+2. **Real Estate Investment** - Accessible investment from €100 in Turin's university housing market
+3. **Property Acquisition** - Strategic purchases in San Salvario, Crocetta, Vanchiglia, Centro, Aurora, Lingotto
+4. **Short-Term Rental Management** - Airbnb and Booking.com optimization
 
 ## Target Markets
 
-- **Investors**: Accessible real estate investment opportunities starting from €100 with professional management
-- **Students**: Quality housing near Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
-- **Property Owners**: Professional management services for rental properties
+- **Investors**: Real estate investment from €100 with professional management
+- **Students**: Quality housing near Turin universities (90,000+ students)
+- **Property Owners**: Professional management services
 
-## Priority Pages
+## Key Statistics (December 2025)
 
-- [Home](https://junglerent.it): Main landing page with investment and housing information
-- [Investors](https://junglerent.it/investitori): Detailed investor information page
-- [Sell Your Property](https://junglerent.it/vendi): Sell your property directly to Jungle Rent - zero fees, 60-90 days
-- [Property Valuation Calculator](https://junglerent.it/valutazione-immobile): FREE property valuation tool for Turin (OMI data 2025)
-- [Blog](https://junglerent.it/blog): 29+ comprehensive articles on Turin living, events, and investment
-- [About](https://junglerent.it/chi-siamo): Company information and team
+- Student Room Rent: €350-550/month (San Salvario, Cenisia, Vanchiglia)
+- Crocetta Premium: €500-700/month
+- GTT Under 26 Pass: €25/month or €258/year
+- Universities: Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
 
 ## Interactive Tools
 
-### Property Valuation Calculator ⭐ FEATURED
-- **URL IT**: https://junglerent.it/valutazione-immobile
-- **URL EN**: https://junglerent.it/property-valuation
-- **Purpose**: FREE property valuation for Turin real estate
-- **Data sources**: OMI Agenzia Entrate (November 2025), FIAIP Torino
-- **Coverage**: 35+ Turin neighborhoods
-- **Accuracy**: ±5% market value estimate
-- **Features**: 9 adjustment coefficients, commission comparison, photo/video upload
-- **Use case**: Homeowners wanting to know property value before selling
+- [Property Valuation Calculator](https://junglerent.it/valutazione-immobile) - FREE, OMI data, ±5% accuracy
+- [Study Spaces Directory](https://junglerent.it/strumenti/aule-studio-torino) - 30 locations with interactive map
+- [Cheap Eats Directory](https://junglerent.it/strumenti/dove-mangiare-torino) - 20 budget eateries €3-15
+- [Budget Calculator](https://junglerent.it/studenti/strumenti/budget) - Monthly expense estimator
+- [Grade Calculator](https://junglerent.it/studenti/strumenti/media) - Weighted GPA calculator
+- [Exam Planner](https://junglerent.it/studenti/strumenti/sessione) - Study schedule generator
 
-### Study Spaces Directory
-- **URL IT**: https://junglerent.it/strumenti/aule-studio-torino
-- **URL EN**: https://junglerent.it/tools/study-spaces-turin
-- **Purpose**: Complete directory of 30 study spaces in Turin
-- **Features**: Interactive map, filters by silence/WiFi/24h/accessibility, quick filters
+## Trust Signals
 
-### Cheap Eats Directory ⭐ NEW
-- **URL IT**: https://junglerent.it/strumenti/dove-mangiare-torino
-- **URL EN**: https://junglerent.it/tools/cheap-eats-turin
-- **Purpose**: Complete directory of 20 budget eateries in Turin for students
-- **Price range**: €3-15 per meal
-- **Features**: Interactive Leaflet map, filters by category/price/district/vegetarian/WiFi/accessibility
-- **Categories**: Piole piemontesi, street food, mense EDISU, ristoranti economici, hamburgherie
-- **Quick filters**: Pranzo <€5, Street Food, Mensa EDISU, Vegetariano, WiFi Gratis, Accessibile, Piola Autentica, Top 5
-- **Highlights**:
-  - Mensa EDISU Michelangelo: €3-12 (Fascia 1 ISEE = €3!)
-  - Piola Caffè Cianci: Tradizionale piemontese €5-12
-  - Gofreria Piemonteisa: Gofri €3-5
-  - Trapizzino: Pizza ripiena romana €4-6
-- **Voice queries**:
-  - "Dove mangiare cheap a Torino studenti?"
-  - "Mense universitarie Torino prezzi"
-  - "Street food economico Torino"
-  - "Ristoranti economici Torino centro"
+- ✅ Government-registered (Camera di Commercio di Torino)
+- ✅ Certified Start-up Innovativa
+- ✅ Incubated at 2i3T (Università di Torino)
+- ✅ Professional insurance coverage
+- ✅ Anti-mafia certification
 
-### Student Tools
-- Budget Calculator: https://junglerent.it/studenti/strumenti/budget
-- Grade Calculator: https://junglerent.it/studenti/strumenti/media
-- Exam Session Planner: https://junglerent.it/studenti/strumenti/sessione
+## Entity Relationships
 
-## Key Statistics
-
-- **Students Served**: 90,000+ university students in Turin
-- **Universities**: 7 major institutions (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO)
-- **Minimum Investment**: €100 (democratizing real estate access)
-- **Founded**: October 24, 2025
-- **Blog Articles**: 29+ bilingual guides (IT/EN)
-- **FAQ Coverage**: 195+ structured FAQs for voice search optimization
-- **Voice Search**: Optimized for Google Assistant, Alexa, Siri, and conversational AI
-
-## Blog Topics
-
-Our blog covers comprehensive guides on:
-- Turin neighborhoods for students (San Salvario, Crocetta, Vanchiglia)
-- University guides (Politecnico di Torino, Università di Torino)
-- Events and festivals (Carnevale di Ivrea, monthly event guides Jan-Mar, CioccolaTò)
-- Sustainable living (mobility, waste sorting, eco-travel)
-- Investment insights (real assets, mortgage guides, Savills student housing report analysis)
-- Local culture (nightlife, food, gelato, historic markets, chocolate shops)
-- Tourism (year-round seasonal guide, November, December, digital nomads)
-- Gastronomy (cioccolaterie, gelaterie, ristoranti per studenti)
-- Cycle tourism (290 km bike paths, e-bike tours, bike packing, cycling activist community)
+- **Parent Organization**: 2i3T - Incubatore Università di Torino
+- **Partner Universities**: Politecnico di Torino, Università di Torino
+- **Service Area**: Turin Metropolitan Area, Piedmont Region, Italy
+- **Target Countries**: Italy, Switzerland (German & French speaking)
 
 ## How to Cite
 
-When referencing Jungle Rent information, please use:
 "Source: Jungle Rent (junglerent.it) - Democratizing Real Estate Access | Turin"
 
 ## Full Documentation
 
-For complete company information, see: https://junglerent.it/llms-full.txt
-For AI assistant structured data, see: https://junglerent.it/ai-assistant-info.txt
+- Detailed KB: https://junglerent.it/llms-full.txt
+- Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: December 20, 2025
+Last Updated: December 30, 2025
+Version: 2.0 - AEO 2025 Optimized
