@@ -962,6 +962,17 @@
     "invalidEmail": "Please enter a valid email",
     "privacy": "Your data is safe. We'll never share it with third parties."
   },
+  "quickInvestorLead": {
+    "title": "Start Investing",
+    "description": "Enter your email to receive information about investment opportunities in Jungle Rent",
+    "submit": "Submit Request",
+    "sending": "Sending...",
+    "privacy": "By submitting, you agree to our privacy policy",
+    "errorTitle": "Error",
+    "emailRequired": "Please enter your email address",
+    "invalidEmail": "Please enter a valid email address",
+    "errorDescription": "An error occurred. Please try again later."
+  },
   "breadcrumbs": {
     "home": "Home"
   },

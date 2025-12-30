@@ -831,6 +831,17 @@
     "invalidEmail": "Entrez un email valide",
     "privacy": "Vos données sont en sécurité. Nous ne les partagerons jamais avec des tiers."
   },
+  "quickInvestorLead": {
+    "title": "Commencez à investir",
+    "description": "Entrez votre email pour recevoir des informations sur les opportunités d'investissement chez Jungle Rent",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi en cours...",
+    "privacy": "En soumettant, vous acceptez notre politique de confidentialité",
+    "errorTitle": "Erreur",
+    "emailRequired": "Veuillez entrer votre adresse email",
+    "invalidEmail": "Veuillez entrer une adresse email valide",
+    "errorDescription": "Une erreur s'est produite. Veuillez réessayer plus tard."
+  },
   "blog": {
     "title": "Blog",
     "subtitle": "Guides et ressources pour étudiants, investisseurs et touristes à Turin",

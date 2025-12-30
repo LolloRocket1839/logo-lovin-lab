@@ -937,6 +937,17 @@
     "invalidEmail": "请输入有效邮箱",
     "privacy": "您的数据是安全的。我们绝不会与第三方共享。"
   },
+  "quickInvestorLead": {
+    "title": "开始投资",
+    "description": "输入您的邮箱以获取Jungle Rent投资机会的信息",
+    "submit": "提交请求",
+    "sending": "发送中...",
+    "privacy": "提交即表示您同意我们的隐私政策",
+    "errorTitle": "错误",
+    "emailRequired": "请输入您的邮箱地址",
+    "invalidEmail": "请输入有效的邮箱地址",
+    "errorDescription": "发生错误，请稍后重试。"
+  },
   "blog": {
     "sectionLabel": "城市生活",
     "sectionTitle": "城市生活",
