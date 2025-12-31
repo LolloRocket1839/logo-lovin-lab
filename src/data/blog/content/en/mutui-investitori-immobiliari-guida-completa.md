@@ -108,6 +108,7 @@ The student housing sector represents one of the most stable segments of the Ita
 
 Jungle Rent operates an innovative business model combining strategic acquisition, targeted renovation and professional management of student properties in university areas of Turin.
 
+Already have rental properties? **[Props](/blog/props-gestione-immobiliare-semplificata)**, Jungle Rent's software, automates management: expense splitting, bill OCR, real-time cash flow.
 
 #### Advantages for Investors
 

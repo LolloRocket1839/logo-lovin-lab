@@ -143,6 +143,7 @@ For those wishing to learn more, the full report is available for download in ou
 
 ## Related Articles
 
+- [Props: Simplified Property Management](/blog/props-gestione-immobiliare-semplificata) - Jungle Rent's software to automate rentals, expenses, and cash flow
 - [Investing in Real Assets in Turin 2025](/blog/investire-real-assets-torino-2025) - Strategies, returns, and market opportunities
 - [Polytechnic University of Turin: Complete Guide](/blog/politecnico-torino-guida-completa) - 38,000 students, programs, campus, and services
 - [University of Turin: Complete Guide](/blog/universita-torino-guida-completa) - 83,000 students, history, faculties, and opportunities

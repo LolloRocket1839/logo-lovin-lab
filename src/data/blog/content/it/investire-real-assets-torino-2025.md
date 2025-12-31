@@ -116,6 +116,7 @@ Per investitori abituati alla volatilità azionaria, gli asset tangibili fornisc
 ---
 
 > **Articoli correlati:**
+> - [Props: Gestione Immobiliare Semplificata](/blog/props-gestione-immobiliare-semplificata) - Il software Jungle Rent per automatizzare affitti, spese e cash flow
 > - [Student Housing in Italia: Report Savills 2025](/blog/student-housing-italia-savills-2025)
 > - [Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa)
 > - [Università di Torino: guida completa](/blog/universita-torino-guida-completa)
