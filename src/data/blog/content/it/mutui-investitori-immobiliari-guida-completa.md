@@ -112,6 +112,7 @@ Jungle Rent opera un modello di business innovativo che combina acquisizione str
 3. **Gestione Full-Service**: ci occupiamo di tutto - dalla ricerca inquilini alla manutenzione, dalla gestione contratti alla fiscalità
 4. **Tecnologia e Innovazione**: utilizziamo piattaforme digitali per massimizzare l'efficienza e garantire trasparenza agli investitori
 
+Hai già immobili a reddito? **[Props](/blog/props-gestione-immobiliare-semplificata)**, il software Jungle Rent, automatizza la gestione: ripartizione spese, OCR bollette, cash flow in tempo reale.
 
 #### Vantaggi per l'Investitore
 
