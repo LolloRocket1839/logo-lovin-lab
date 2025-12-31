@@ -2,6 +2,87 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "props-gestione-immobiliare-semplificata",
+    category: "investors",
+    date: "2025-12-31",
+    author: "Jungle Rent Team",
+    image: "/images/digital-nomad-torino.jpg",
+    readTime: 12,
+    content: "props-gestione-immobiliare-semplificata",
+    translations: {
+      it: {
+        title: "Props: La Soluzione Definitiva per la Gestione Immobiliare Semplificata",
+        excerpt: "Ripartizione spese automatica, OCR bollette, cash flow in tempo reale. Come Props trasforma il caos degli affitti in gestione professionale.",
+        seo: {
+          title: "Props Gestione Immobiliare 2025 | Software Affitti e Spese",
+          description: "Props semplifica la gestione affitti: ripartizione spese automatica, OCR bollette, dashboard pagamenti, cash flow. Software Jungle Rent per proprietari.",
+          keywords: [
+            "gestione affitti software",
+            "ripartizione spese coinquilini",
+            "software gestione immobiliare",
+            "props gestione affitti",
+            "dividere bollette appartamento",
+            "gestione inquilini app",
+            "cash flow immobiliare",
+            "OCR bollette",
+            "software proprietari immobili",
+            "gestione affitti studenti",
+            "jungle rent props",
+            "app gestione affitti italia"
+          ]
+        },
+        tags: ["Investitori", "Software", "Gestione", "Props", "Affitti"],
+        faqs: [
+          { question: "Cos'è Props?", answer: "Props è il software di gestione immobiliare sviluppato da Jungle Rent. Automatizza ripartizione spese, tracciamento pagamenti, OCR bollette e cash flow per proprietari di immobili in affitto." },
+          { question: "Come dividere le bollette tra coinquilini in modo equo?", answer: "Props offre 4 metodi: divisione equa, per coefficiente stanza (mq), per giorni di occupazione, o percentuali personalizzate. Carica la bolletta e Props calcola automaticamente." },
+          { question: "Props è gratis?", answer: "Sì, Props offre un piano gratuito per iniziare. Puoi registrarti su props.properties e gestire le tue proprietà senza costi iniziali." },
+          { question: "Come funziona l'OCR di Props per le bollette?", answer: "Scatta una foto alla bolletta, caricala su Props e l'OCR estrae automaticamente importo, data, periodo e fornitore. Niente più inserimento manuale dei dati." },
+          { question: "Props funziona su smartphone?", answer: "Sì, Props è una Progressive Web App (PWA) mobile-first. Puoi installarla come app nativa su iOS e Android e funziona anche offline per le operazioni di base." },
+          { question: "Come gestire gli affitti in ritardo con Props?", answer: "La dashboard Inbox Zero mostra immediatamente chi è in ritardo e da quanto tempo. Props ordina le azioni urgenti per priorità, così sai sempre cosa richiede attenzione." },
+          { question: "Props è meglio di Excel per gestire affitti?", answer: "Props automatizza tutto ciò che faresti manualmente in Excel: calcoli ripartizione, tracciamento scadenze, storico pagamenti, report. Elimina errori e risparmia ore ogni mese." },
+          { question: "Come calcolare il cash flow immobiliare con Props?", answer: "Props genera automaticamente proiezioni a 3, 6 o 12 mesi, storico incassi vs spese, report per singola proprietà o aggregati, con export Excel/PDF per il commercialista." },
+          { question: "I dati su Props sono sicuri?", answer: "Sì, Props utilizza crittografia e sincronizzazione in tempo reale. I tuoi dati sono protetti e accessibili solo a te da qualsiasi dispositivo." },
+          { question: "Chi ha creato Props?", answer: "Props è un prodotto Jungle Rent, la startup proptech di Torino fondata da Lorenzo e Andrea per semplificare la gestione immobiliare per proprietari e studenti." }
+        ]
+      },
+      en: {
+        title: "Props: The Ultimate Solution for Simplified Property Management",
+        excerpt: "Automatic expense splitting, bill OCR, real-time cash flow. How Props transforms rental chaos into professional management.",
+        seo: {
+          title: "Props Property Management 2025 | Rental & Expense Software",
+          description: "Props simplifies rental management: automatic expense splitting, bill OCR, payment dashboard, cash flow. Jungle Rent software for landlords.",
+          keywords: [
+            "rental management software",
+            "split expenses roommates",
+            "property management software",
+            "props rental management",
+            "split bills apartment",
+            "tenant management app",
+            "real estate cash flow",
+            "bill OCR",
+            "landlord software",
+            "student rental management",
+            "jungle rent props",
+            "rental management app italy"
+          ]
+        },
+        tags: ["Investors", "Software", "Management", "Props", "Rentals"],
+        faqs: [
+          { question: "What is Props?", answer: "Props is the property management software developed by Jungle Rent. It automates expense splitting, payment tracking, bill OCR and cash flow for rental property owners." },
+          { question: "How to fairly split bills among roommates?", answer: "Props offers 4 methods: equal division, by room coefficient (sqm), by days of occupancy, or custom percentages. Upload the bill and Props calculates automatically." },
+          { question: "Is Props free?", answer: "Yes, Props offers a free plan to get started. You can sign up at props.properties and manage your properties at no initial cost." },
+          { question: "How does Props' bill OCR work?", answer: "Take a photo of the bill, upload it to Props and the OCR automatically extracts amount, date, period and supplier. No more manual data entry." },
+          { question: "Does Props work on smartphones?", answer: "Yes, Props is a mobile-first Progressive Web App (PWA). You can install it as a native app on iOS and Android and it works offline for basic operations." },
+          { question: "How to manage late rent with Props?", answer: "The Inbox Zero dashboard immediately shows who is late and for how long. Props orders urgent actions by priority, so you always know what needs attention." },
+          { question: "Is Props better than Excel for managing rentals?", answer: "Props automates everything you'd do manually in Excel: split calculations, deadline tracking, payment history, reports. Eliminates errors and saves hours every month." },
+          { question: "How to calculate real estate cash flow with Props?", answer: "Props automatically generates 3, 6 or 12 month projections, income vs expense history, per-property or aggregated reports, with Excel/PDF export for your accountant." },
+          { question: "Is data on Props secure?", answer: "Yes, Props uses encryption and real-time sync. Your data is protected and accessible only to you from any device." },
+          { question: "Who created Props?", answer: "Props is a Jungle Rent product, the Turin-based proptech startup founded by Lorenzo and Andrea to simplify property management for landlords and students." }
+        ]
+      }
+    }
+  },
+  {
     slug: "emergenze-affitti-torino-diritti-inquilini",
     category: "students",
     date: "2025-12-27",
