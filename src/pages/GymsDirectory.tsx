@@ -16,7 +16,7 @@ import GymsMap from '@/components/tools/GymsMap';
 import { gymsData, Gym } from '@/data/gymsDirectory';
 
 const GymsDirectory: React.FC = () => {
-  const { lang } = useToolLanguage();
+  const lang = useToolLanguage();
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
   const [selectedGymId, setSelectedGymId] = useState<string | undefined>();
   const [activeQuickFilter, setActiveQuickFilter] = useState<string | null>(null);

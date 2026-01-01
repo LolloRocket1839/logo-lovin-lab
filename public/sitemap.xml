@@ -144,7 +144,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti/strumenti/sessione" />
   </url>
 
-  <!-- Property Valuation Calculator - FEATURED TOOL -->
+  <!-- Gyms Directory - NEW -->
+  <url>
+    <loc>https://junglerent.it/strumenti/palestre-torino-studenti</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/gyms-turin-students" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
+  </url>
+
   <url>
     <loc>https://junglerent.it/valutazione-immobile</loc>
     <lastmod>2025-12-27</lastmod>
