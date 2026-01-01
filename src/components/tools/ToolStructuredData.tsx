@@ -885,4 +885,225 @@ export const CheapEatsDirectoryFAQ = ({ lang = 'it' }: { lang?: 'it' | 'en' }) =
   );
 };
 
+// ========== GYMS DIRECTORY SCHEMAS ==========
+
+interface GymsDirectorySchemaProps {
+  lang?: 'it' | 'en';
+  gymsCount: number;
+}
+
+export const GymsDirectorySchema = ({ lang = 'it', gymsCount }: GymsDirectorySchemaProps) => {
+  const baseUrl = 'https://junglerent.it';
+  const url = lang === 'it' 
+    ? `${baseUrl}/strumenti/palestre-torino-studenti`
+    : `${baseUrl}/tools/gyms-turin-students`;
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    "url": url,
+    "name": lang === 'it' 
+      ? "Palestre Torino per Studenti 2026 - Prezzi e Sconti Universitari"
+      : "Turin Gyms for Students 2026 - Prices and University Discounts",
+    "description": lang === 'it'
+      ? `Directory completa delle ${gymsCount} migliori palestre a Torino per studenti universitari. Confronta prezzi, sconti studenti, orari 24h, piscine e distanza dalle università.`
+      : `Complete directory of the ${gymsCount} best gyms in Turin for university students. Compare prices, student discounts, 24h hours, pools and distance from universities.`,
+    "inLanguage": lang,
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": `${baseUrl}#website`,
+      "name": "Jungle Rent",
+      "url": baseUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jungle Rent",
+      "url": baseUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}/jungle-rent-logo.svg`
+      }
+    },
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01"
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(webPageSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+interface GymForSchema {
+  id: string;
+  name: string;
+  address: string;
+  priceStudent?: number;
+  priceStandard: number;
+  rating: number;
+}
+
+interface GymsItemListSchemaProps {
+  lang?: 'it' | 'en';
+  gyms: GymForSchema[];
+}
+
+export const GymsItemListSchema = ({ lang = 'it', gyms }: GymsItemListSchemaProps) => {
+  const baseUrl = 'https://junglerent.it';
+  const url = lang === 'it' 
+    ? `${baseUrl}/strumenti/palestre-torino-studenti`
+    : `${baseUrl}/tools/gyms-turin-students`;
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": lang === 'it' 
+      ? "Migliori Palestre Torino per Studenti"
+      : "Best Turin Gyms for Students",
+    "description": lang === 'it'
+      ? "Classifica delle migliori palestre a Torino ordinate per rapporto qualità-prezzo per studenti universitari"
+      : "Ranking of the best gyms in Turin sorted by value for money for university students",
+    "url": url,
+    "numberOfItems": gyms.length,
+    "itemListElement": gyms.slice(0, 10).map((gym, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "LocalBusiness",
+        "@id": `${url}#${gym.id}`,
+        "name": gym.name,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": gym.address,
+          "addressLocality": "Torino",
+          "addressRegion": "Piemonte",
+          "addressCountry": "IT"
+        },
+        "priceRange": `€${gym.priceStudent || gym.priceStandard}/mese`,
+        ...(gym.rating && {
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": gym.rating.toString(),
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        })
+      }
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(itemListSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
+interface GymsDirectoryFAQProps {
+  lang?: 'it' | 'en';
+}
+
+export const GymsDirectoryFAQ = ({ lang = 'it' }: GymsDirectoryFAQProps) => {
+  const baseUrl = 'https://junglerent.it';
+  
+  const faqsIT = [
+    {
+      question: "Qual è la palestra più economica a Torino per studenti?",
+      answer: "Le palestre più economiche per studenti a Torino sono FitActive (€9.90/mese con sconto studenti), McFIT (€19.90/mese) e Gym Club 32 (€15/mese per universitari). FitActive offre il miglior rapporto qualità-prezzo con accesso a tutte le sedi."
+    },
+    {
+      question: "Quali palestre a Torino offrono sconti per studenti universitari?",
+      answer: "Le palestre con sconti studenti includono FitActive (-50% sul primo anno), Virgin Active (convenzioni universitarie), McFIT (tariffa unica), Anytime Fitness (sconti per studenti Politecnico) e GO Fit (convenzione con UniTO). Porta sempre il tesserino universitario."
+    },
+    {
+      question: "Ci sono palestre aperte 24 ore a Torino?",
+      answer: "Sì, diverse palestre sono aperte 24/7: Anytime Fitness (tutte le sedi), McFIT (alcune sedi), e FitActive (sedi selezionate). Ideali per studenti con orari flessibili o durante le sessioni d'esame."
+    },
+    {
+      question: "Quali palestre a Torino hanno la piscina?",
+      answer: "Le palestre con piscina a Torino includono Virgin Active (Lingotto, Torino Centro), GO Fit, Master Club Torino e Villa Glicini. I prezzi partono da €40-50/mese, significativamente più alti delle palestre solo fitness."
+    },
+    {
+      question: "Qual è la palestra più vicina al Politecnico di Torino?",
+      answer: "Le palestre più vicine al Politecnico sono McFIT Corso Castelfidardo (5 min a piedi), FitActive Corso Francia (10 min), e Anytime Fitness Crocetta (8 min). McFIT ha una sede proprio accanto al campus principale."
+    },
+    {
+      question: "Quanto costa mediamente una palestra a Torino?",
+      answer: "I prezzi medi a Torino: low-cost €10-20/mese (FitActive, McFIT), mid-range €30-50/mese (Orange, Anytime), premium €60-100/mese (Virgin Active). Con sconto studenti si risparmia dal 20% al 50%."
+    },
+    {
+      question: "Posso provare la palestra prima di iscrivermi?",
+      answer: "Quasi tutte le palestre offrono un ingresso di prova gratuito o a prezzo ridotto: FitActive (1 giorno free), McFIT (day pass €9.90), Virgin Active (tour + prova gratuita), Anytime Fitness (settimana prova). Verifica sul sito o chiamando."
+    },
+    {
+      question: "Quali palestre accettano la tessera AICS o UISP?",
+      answer: "Le palestre affiliate AICS/UISP offrono spesso sconti o accesso agevolato. A Torino, molte palestre indipendenti e centri sportivi comunali accettano queste tessere. Controlla sempre prima di iscriverti."
+    }
+  ];
+
+  const faqsEN = [
+    {
+      question: "What is the cheapest gym in Turin for students?",
+      answer: "The cheapest gyms for students in Turin are FitActive (€9.90/month with student discount), McFIT (€19.90/month) and Gym Club 32 (€15/month for university students). FitActive offers the best value with access to all locations."
+    },
+    {
+      question: "Which gyms in Turin offer student discounts?",
+      answer: "Gyms with student discounts include FitActive (-50% first year), Virgin Active (university agreements), McFIT (flat rate), Anytime Fitness (Politecnico student discounts) and GO Fit (UniTO agreement). Always bring your student ID."
+    },
+    {
+      question: "Are there 24-hour gyms in Turin?",
+      answer: "Yes, several gyms are open 24/7: Anytime Fitness (all locations), McFIT (some locations), and FitActive (selected locations). Ideal for students with flexible schedules or during exam sessions."
+    },
+    {
+      question: "Which gyms in Turin have a swimming pool?",
+      answer: "Gyms with pools in Turin include Virgin Active (Lingotto, Torino Centro), GO Fit, Master Club Torino and Villa Glicini. Prices start from €40-50/month, significantly higher than fitness-only gyms."
+    },
+    {
+      question: "What is the closest gym to Politecnico di Torino?",
+      answer: "The closest gyms to Politecnico are McFIT Corso Castelfidardo (5 min walk), FitActive Corso Francia (10 min), and Anytime Fitness Crocetta (8 min). McFIT has a location right next to the main campus."
+    },
+    {
+      question: "How much does a gym membership cost in Turin on average?",
+      answer: "Average prices in Turin: low-cost €10-20/month (FitActive, McFIT), mid-range €30-50/month (Orange, Anytime), premium €60-100/month (Virgin Active). With student discount you save 20% to 50%."
+    },
+    {
+      question: "Can I try the gym before signing up?",
+      answer: "Almost all gyms offer a free or reduced-price trial: FitActive (1 day free), McFIT (day pass €9.90), Virgin Active (tour + free trial), Anytime Fitness (week trial). Check on the website or by calling."
+    },
+    {
+      question: "Which gyms accept AICS or UISP cards?",
+      answer: "AICS/UISP affiliated gyms often offer discounts or facilitated access. In Turin, many independent gyms and municipal sports centers accept these cards. Always check before signing up."
+    }
+  ];
+
+  const faqs = lang === 'it' ? faqsIT : faqsEN;
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
+    </Helmet>
+  );
+};
+
 export default ToolStructuredData;
