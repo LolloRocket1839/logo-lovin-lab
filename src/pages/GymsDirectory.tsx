@@ -14,6 +14,7 @@ import GymCard from '@/components/tools/GymCard';
 import GymFilters, { GymFiltersState } from '@/components/tools/GymFilters';
 import GymsMap from '@/components/tools/GymsMap';
 import { gymsData, Gym } from '@/data/gymsDirectory';
+import { GymsDirectorySchema, GymsItemListSchema, GymsDirectoryFAQ } from '@/components/tools/ToolStructuredData';
 
 const GymsDirectory: React.FC = () => {
   const lang = useToolLanguage();
@@ -110,6 +111,11 @@ const GymsDirectory: React.FC = () => {
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/tools/gyms-turin-students" />
       </Helmet>
+
+      {/* Structured Data for SEO */}
+      <GymsDirectorySchema lang={lang} gymsCount={gymsData.length} />
+      <GymsItemListSchema lang={lang} gyms={gymsData} />
+      <GymsDirectoryFAQ lang={lang} />
 
       <Navigation />
 
