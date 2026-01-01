@@ -6,7 +6,7 @@ import { Navigation, Footer, BottomNav } from '@/components/layout';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { List, Map as MapIcon, BookOpen, Calculator, GraduationCap, MapPin } from 'lucide-react';
+import { List, Map as MapIcon, BookOpen, Calculator, GraduationCap, MapPin, Dumbbell } from 'lucide-react';
 import CheapEatCard from '@/components/tools/CheapEatCard';
 import CheapEatFilters, { CheapEatFiltersState } from '@/components/tools/CheapEatFilters';
 import CheapEatsMap from '@/components/tools/CheapEatsMap';
@@ -368,6 +368,24 @@ const CheapEatsDirectory = () => {
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {lang === 'it' ? 'Pianifica le tue spese mensili per cibo e altro' : 'Plan your monthly food and other expenses'}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to={lang === 'it' ? '/strumenti/palestre-torino-studenti' : '/tools/gyms-turin-students'}>
+                <Card className="h-full hover:border-primary/50 transition-colors">
+                  <CardContent className="p-4 flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+                      <Dumbbell className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground mb-1">
+                        {lang === 'it' ? 'Palestre studenti' : 'Student gyms'}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {lang === 'it' ? 'Palestre economiche e centri sportivi per studenti' : 'Affordable gyms and sports centers for students'}
                       </p>
                     </div>
                   </CardContent>
