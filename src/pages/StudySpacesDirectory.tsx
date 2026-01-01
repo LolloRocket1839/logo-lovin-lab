@@ -19,7 +19,8 @@ import {
   FileText,
   GraduationCap,
   Bike,
-  Building2
+  Building2,
+  Dumbbell
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -297,6 +298,12 @@ const StudySpacesDirectory = () => {
       description: 'Come muoversi in bici e mezzi pubblici',
       url: '/blog/mobilita-sostenibile-torino-studenti',
       icon: Bike
+    },
+    {
+      title: 'Palestre per Studenti',
+      description: 'Palestre economiche e centri sportivi a Torino',
+      url: '/strumenti/palestre-torino-studenti',
+      icon: Dumbbell
     }
   ] : [
     {
@@ -322,6 +329,12 @@ const StudySpacesDirectory = () => {
       description: 'How to get around by bike and public transport',
       url: '/blog/mobilita-sostenibile-torino-studenti',
       icon: Bike
+    },
+    {
+      title: 'Student gyms',
+      description: 'Affordable gyms and sports centers in Turin',
+      url: '/tools/gyms-turin-students',
+      icon: Dumbbell
     }
   ];
 

@@ -11,7 +11,8 @@ import {
   Calculator,
   ArrowRight,
   Map,
-  List
+  List,
+  Dumbbell
 } from 'lucide-react';
 
 const StudentServicesMap = lazy(() => import('@/components/tools/StudentServicesMap'));
@@ -91,6 +92,10 @@ const StudentServicesDirectory = () => {
           title: 'Calcolatore Budget',
           description: 'Calcola il costo della vita studentesca a Torino.'
         },
+        gyms: {
+          title: 'Palestre per Studenti',
+          description: 'Palestre economiche e centri sportivi a Torino.'
+        },
         unito: {
           title: 'Guida Università di Torino',
           description: 'Tutto quello che devi sapere su UniTO.'
@@ -124,6 +129,10 @@ const StudentServicesDirectory = () => {
         budget: {
           title: 'Budget calculator',
           description: 'Calculate the cost of student life in Turin.'
+        },
+        gyms: {
+          title: 'Student gyms',
+          description: 'Affordable gyms and sports centers in Turin.'
         },
         unito: {
           title: 'University of Turin guide',
@@ -517,6 +526,25 @@ const StudentServicesDirectory = () => {
                   </CardHeader>
                   <CardContent>
                     <CardDescription>{t.resources.budget.description}</CardDescription>
+                    <div className="flex items-center text-primary text-sm mt-4 group-hover:gap-2 transition-all">
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link to={currentLang === 'it' ? '/strumenti/palestre-torino-studenti' : '/tools/gyms-turin-students'}>
+                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer group">
+                  <CardHeader>
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+                      <Dumbbell className="w-5 h-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {t.resources.gyms.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>{t.resources.gyms.description}</CardDescription>
                     <div className="flex items-center text-primary text-sm mt-4 group-hover:gap-2 transition-all">
                       <ArrowRight className="w-4 h-4" />
                     </div>
