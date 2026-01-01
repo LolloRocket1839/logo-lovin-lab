@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles, Calendar, Sun, BadgeCheck, Check, X, MessageCircle } from "lucide-react";
+import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles, Calendar, Sun, BadgeCheck, Check, X, MessageCircle, Dumbbell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -402,6 +402,27 @@ const Students = () => {
                     </h3>
                     <p className="text-sm text-muted-foreground mb-3">
                       {currentLang === 'it' ? 'Segreterie, EDISU, borse di studio, DSA, Erasmus' : 'Registrars, EDISU, scholarships, DSA, Erasmus'}
+                    </p>
+                    <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                      {currentLang === 'it' ? 'Scopri' : 'Explore'}
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Badge>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              {/* Gyms Directory - NEW */}
+              <Link to="/strumenti/palestre-torino-studenti">
+                <Card className="h-full rounded-xl hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer group border-border/20">
+                  <CardContent className="p-6 md:p-8 text-center">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                      <Dumbbell className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {currentLang === 'it' ? 'Palestre Studenti' : 'Student Gyms'}
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      {currentLang === 'it' ? 'Prezzi, sconti studenti, 24h, piscine' : 'Prices, student discounts, 24h, pools'}
                     </p>
                     <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
                       {currentLang === 'it' ? 'Scopri' : 'Explore'}
