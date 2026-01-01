@@ -1,204 +1,59 @@
-# Gyms in Turin for Students: Complete Guide 2026 with Prices and Discounts
+# How to choose the right gym in Turin: options for students in 2026
 
-**Looking for the perfect gym in Turin without breaking the bank?** We've compared the 24 best gyms in the city, analyzing prices, student discounts, hours and services to help you choose the right one.
+Between lectures, study sessions and social life, finding time to work out is already challenging enough. Let alone choosing a gym that won't drain your bank account. In Turin, though, options abound: we've sifted through 24 facilities to figure out which ones are actually worth it for students.
 
-## 📊 Price Overview 2026
+## The gym landscape in Turin
 
-| Category | Average Price | Examples |
-|----------|---------------|----------|
-| **Low-cost** | €10-25/month | FitActive, McFIT, Gym Club 32 |
-| **Mid-range** | €30-50/month | Orange Palestre, Anytime Fitness |
-| **Premium** | €60-100/month | Virgin Active, Master Club |
-| **With pool** | €45-100/month | GO Fit, Villa Glicini |
+The Turin fitness market has transformed radically in recent years. Low-cost chains have revolutionized pricing, bringing monthly memberships under 20 euros. But not everything that glitters is gold: the choice depends heavily on what you're looking for and, above all, where you study.
 
----
+Prices in 2026 break down like this: low-cost gyms start from 10-25 euros per month (FitActive, McFIT), mid-range ones settle around 30-50 euros (Orange, Anytime Fitness), while premium facilities reach 60-100 euros monthly (Virgin Active). Anyone wanting a pool should budget at least 45 euros per month.
 
-## 🏆 Top 5 Low-Cost Gyms for Students
+## FitActive: the king of value for money
 
-### 1. FitActive (from €19.90/month)
+If we had to recommend just one gym to a budget-conscious student, it would be FitActive. At 19.90 euros per month, it offers a package that's hard to beat: 24-hour access, unlimited fitness classes, Technogym equipment, and the ability to use any of the 180 Italian locations.
 
-📍 **Locations**: Corso Svizzera, Via Giordano Bruno, Corso Francia  
-⏰ **Hours**: 24h (most locations)  
-🎓 **Student discount**: -50% on first year with university agreements
+The three Turin locations (Corso Svizzera, Via Giordano Bruno, Corso Francia) are all reachable from the main university hubs in 10-15 minutes. With university agreements, the first year costs 50% less.
 
-**Why choose it:**
-- Unbeatable price: only €19.90/month all-inclusive
-- 24-hour access, ideal during exam sessions
-- Unlimited fitness classes (spinning, yoga, functional)
-- Latest generation Technogym equipment
-- Access to all 180+ locations in Italy
+The downside? No pool, basic locker rooms, and quite a crowd during peak hours, between 6 and 8 PM. But at that price, these are acceptable compromises.
 
-**Pros:** Best value for money, perfect for students with irregular schedules.
+## McFIT: the choice for Politecnico students
 
-**Cons:** No pool, basic locker rooms, crowded during peak hours (6-8 PM).
+For Politecnico students, there's a gym practically on their doorstep: McFIT on Corso Castelfidardo, five minutes' walk from the main campus. It costs slightly more (24.90 euros), but has serious equipment for those who mean business with weights.
 
-🔗 [Go to complete directory →](/tools/gyms-turin-students)
+The atmosphere is more "gym bro" compared to FitActive: you'll find mainly people lifting iron here, less variety in fitness classes. Group classes, by the way, cost extra. But if your goal is building muscle and convenience is a priority, it's hard to find better.
 
----
+## The best-kept secret: Gym Club 32
 
-### 2. McFIT (from €24.90/month)
+On Via Ormea, in the heart of San Salvario, there's a small gym offering memberships at 15 euros per month for university students. Gym Club 32 doesn't have the appeal of the big chains, but makes up for it with a friendly environment, never too crowded, and even a month of personal training included for new members.
 
-📍 **Locations**: Corso Castelfidardo, Corso Giulio Cesare, Via Nizza  
-⏰ **Hours**: Mon-Sun 6:00-24:00, some locations 24h  
-🎓 **Discount**: Single rate with no extra costs
+Hours are more limited compared to the competition (closes at 10 PM on weekdays, 6 PM on Saturdays), but for those living in the area who prefer more intimate facilities, it's a hidden gem.
 
-**Why choose it:**
-- Corso Castelfidardo location just 5 minutes from Politecnico!
-- Professional bodybuilding equipment
-- Large functional and cardio areas
-- No long-term contract commitments
+## If you want to swim: options narrow down
 
-**Pros:** Very close to Politecnico, great for strength training.
+Adding a pool to your workout inflates the budget. Virgin Active starts at 69 euros per month, but offers 25-meter lanes, full spa, and that premium experience that justifies the price for those who can afford it. Some locations have university agreements that slightly lower the cost.
 
-**Cons:** Fitness classes cost extra, more "gym bro" atmosphere.
+For those who want to swim without breaking the bank, GO Fit on Corso Trapani represents the best compromise: 49 euros per month, dropping to about 40 with the UniTO agreement. 25-meter pool, aqua gym classes included, without the pretensions (and prices) of luxury facilities.
 
----
+## The 24-hour dilemma
 
-### 3. Gym Club 32 (from €15/month for students)
+Studying for exams often means unlikely hours. 11 PM the night before an important test might be the only time to let off steam with some cardio. This is where the 24/7 access question comes in.
 
-📍 **Location**: Via Ormea 32  
-⏰ **Hours**: Mon-Fri 7:00-22:00, Sat 9:00-18:00  
-🎓 **Student discount**: 40% with university card
+Anytime Fitness guarantees continuous opening at all its locations, with a personal key that works even at clubs in other countries. It costs more (39 euros), but for those who travel or have irregular schedules, it can be worth the difference.
 
-**Why choose it:**
-- The lowest price for students (€15/month!)
-- Friendly and uncrowded atmosphere
-- Personal training included in first month
-- Central location, San Salvario area
+FitActive and McFIT offer night access only at some locations: better to check before signing up.
 
-**Pros:** Unbeatable price, welcoming atmosphere.
+## The CUS card
 
-**Cons:** Limited hours, only one location.
+Then there's an option many students overlook: the University Sports Center. For about 100 euros per year (not per month), CUS Torino on Via Braccini offers access to gym, pool, sports fields, and free courses.
+
+The facility is 15 minutes by bike from Politecnico. Don't expect the latest Technogym machines, but the price-to-service ratio is unbeatable for those wanting variety without hassle.
+
+## Before you sign
+
+Whatever gym you choose, some precautions are in order. Always ask for the total cost, including any one-time registration fees. Check the minimum contract duration and cancellation costs. Almost all facilities offer a free trial: use it to gauge crowding during the hours that interest you.
+
+And don't forget your student ID: it's your passport to discounts that can reach 50%.
 
 ---
 
-## 🏊 Gyms with Pool in Turin
-
-If you want to swim as well as workout, these are the best options:
-
-### 1. Virgin Active (from €69/month)
-
-📍 **Locations**: Lingotto, Torino Centro  
-🏊 **Pool**: 25m + jacuzzi  
-🧖 **Spa**: Sauna, Turkish bath, relaxation area
-
-**Ideal for:** Those seeking a complete premium experience. University agreements available.
-
-### 2. GO Fit (from €49/month)
-
-📍 **Location**: Corso Trapani  
-🏊 **Pool**: 25m, aqua gym classes  
-🎓 **UniTO agreement**: 20% discount
-
-**Ideal for:** UniTO students who want to swim without spending too much.
-
-### 3. Villa Glicini (from €45/month)
-
-📍 **Location**: Corso Moncalieri  
-🏊 **Pool**: Outdoor summer + indoor  
-🌳 **Extra**: Park and solarium
-
-**Ideal for:** Those seeking a relaxing environment with greenery.
-
----
-
-## 🌙 24-Hour Gyms in Turin
-
-Perfect for students with flexible schedules or during exam season:
-
-| Gym | Price | All locations 24h? |
-|-----|-------|---------------------|
-| **Anytime Fitness** | €39/month | ✅ Yes |
-| **FitActive** | €19.90/month | ⚠️ Selected locations |
-| **McFIT** | €24.90/month | ⚠️ Some locations |
-
-### Anytime Fitness
-
-📍 **Locations**: Crocetta, San Paolo, Lingotto  
-⏰ **Hours**: 24/7 all year  
-🔐 **Access**: Personal key for 24/7 entry
-
-**Pros:** Guaranteed 24h access at all worldwide locations, ideal for travelers.
-
-**Cons:** Higher price than average low-cost.
-
----
-
-## 🎓 Gyms Near Universities
-
-### Near Politecnico di Torino
-
-1. **McFIT Corso Castelfidardo** - 5 min walk (€24.90)
-2. **FitActive Corso Svizzera** - 10 min walk (€19.90)
-3. **Anytime Fitness Crocetta** - 8 min walk (€39)
-4. **CUS Torino** - 15 min by bike (€100/year)
-
-### Near UniTO (Palazzo Nuovo/Einaudi)
-
-1. **FitActive Via Giordano Bruno** - 10 min (€19.90)
-2. **Orange Palestre Vanchiglia** - 8 min (€35)
-3. **Anytime Fitness Centro** - 12 min (€39)
-
----
-
-## 💰 How to Get Student Discounts
-
-### 1. University Agreements
-Always check on the student portal:
-- **UniTO**: Agreements with GO Fit, Virgin Active, some independent gyms
-- **Politecnico**: Discounts at Anytime Fitness, FitActive, McFIT
-
-### 2. AICS/UISP Card
-Many independent gyms offer discounts with sports cards (€15-20/year).
-
-### 3. CUS Torino
-The University Sports Center offers:
-- Annual membership: ~€100
-- Access to gym, pool, sports fields
-- Free courses included
-
-📍 Via Braccini 1 (Politecnico area)
-
----
-
-## 📋 Checklist Before Signing Up
-
-✅ **Always ask:**
-- Total monthly cost (including registration fees)
-- Minimum contract duration
-- Early cancellation costs
-- Free trial availability
-
-✅ **Check:**
-- Actual hours at your chosen location
-- Crowding during hours you'd use it
-- Adequate lockers and showers
-- Real distance from home/university
-
-✅ **Bring:**
-- University ID for discounts
-- ID document
-- IBAN for direct debit (often required)
-
----
-
-## 🔗 Useful Resources
-
-- [🏋️ Complete Turin Gyms Directory](/tools/gyms-turin-students) - All 24 gyms with filters and map
-- [💰 Student Budget Calculator](/students/tools/budget) - Plan your monthly expenses
-- [📚 Turin Study Spaces](/tools/study-spaces-turin) - Where to study after your workout
-- [🍕 Cheap Eats](/tools/cheap-eats-turin) - Budget-friendly restaurants
-
----
-
-## Conclusion
-
-For students in Turin in 2026, **FitActive** remains the best choice in terms of value for money: €19.90/month with 24h access and unlimited classes. If you're looking for something even cheaper and don't need night access, **Gym Club 32** offers memberships from €15/month with a university card.
-
-For those who want a pool, **GO Fit** with the UniTO agreement represents the best compromise. And if you have unpredictable hours and travel often, **Anytime Fitness** guarantees 24/7 access worldwide.
-
-Whatever your choice, always remember to ask for a free trial before committing!
-
----
-
-*Last updated: January 2026. Prices verified directly with gyms.*
+*To compare all 24 gyms with updated prices, filters, and interactive map, check our [complete Turin gyms directory](/tools/gyms-turin-students).*

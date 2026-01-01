@@ -92,11 +92,11 @@ export const blogPosts: BlogPost[] = [
     content: "palestre-torino-studenti-guida-completa",
     translations: {
       it: {
-        title: "Palestre a Torino per Studenti: Guida Completa 2026 con Prezzi e Sconti",
-        excerpt: "24 palestre confrontate: FitActive da €19,90, McFIT vicino al Politecnico, palestre 24h, piscine e sconti universitari. Trova la palestra perfetta.",
+        title: "Come scegliere la palestra giusta a Torino: le opzioni per studenti nel 2026",
+        excerpt: "FitActive, McFIT, palestre h24 e sconti universitari: abbiamo analizzato 24 strutture per capire quali valgono davvero la pena per chi studia a Torino.",
         seo: {
-          title: "Palestre Torino Studenti 2026 | Prezzi, Sconti e Guida Completa",
-          description: "Guida completa alle palestre per studenti a Torino: 24 palestre confrontate, prezzi da €15/mese, sconti UniTO e PoliTO, orari 24h, piscine. Aggiornato gennaio 2026.",
+          title: "Palestre Torino Studenti 2026 | Prezzi, Sconti e Confronto",
+          description: "Come scegliere la palestra giusta a Torino: 24 strutture analizzate, prezzi da €15/mese, sconti UniTO e PoliTO, orari 24h, piscine. Aggiornato gennaio 2026.",
           keywords: [
             "palestre torino studenti",
             "palestra economica torino",
@@ -112,7 +112,7 @@ export const blogPosts: BlogPost[] = [
             "palestre con piscina torino"
           ]
         },
-        tags: ["Studenti", "Sport", "Torino", "Palestre", "Guide"],
+        tags: ["Studenti", "Sport", "Torino", "Palestre", "Articoli"],
         faqs: [
           { question: "Qual è la palestra più economica a Torino per studenti?", answer: "Le palestre più economiche sono FitActive (€19,90/mese), Gym Club 32 (€15/mese con tessera studente) e McFIT (€24,90/mese). FitActive offre il miglior rapporto qualità-prezzo con accesso 24h." },
           { question: "Quali palestre a Torino offrono sconti per studenti universitari?", answer: "FitActive (-50% primo anno), Virgin Active (convenzioni universitarie), GO Fit (convenzione UniTO -20%), Anytime Fitness (sconti Politecnico). Porta sempre il tesserino universitario." },
@@ -122,11 +122,11 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Gyms in Turin for Students: Complete Guide 2026 with Prices and Discounts",
-        excerpt: "24 gyms compared: FitActive from €19.90, McFIT near Politecnico, 24h gyms, pools and university discounts. Find the perfect gym.",
+        title: "How to choose the right gym in Turin: options for students in 2026",
+        excerpt: "FitActive, McFIT, 24h gyms and university discounts: we analyzed 24 facilities to figure out which ones are actually worth it for students in Turin.",
         seo: {
-          title: "Turin Gyms Students 2026 | Prices, Discounts & Complete Guide",
-          description: "Complete guide to gyms for students in Turin: 24 gyms compared, prices from €15/month, UniTO and PoliTO discounts, 24h hours, pools. Updated January 2026.",
+          title: "Turin Gyms Students 2026 | Prices, Discounts & Comparison",
+          description: "How to choose the right gym in Turin: 24 facilities analyzed, prices from €15/month, UniTO and PoliTO discounts, 24h hours, pools. Updated January 2026.",
           keywords: [
             "turin gyms students",
             "cheap gym turin",
