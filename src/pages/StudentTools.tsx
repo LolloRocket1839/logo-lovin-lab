@@ -10,7 +10,8 @@ import {
   GraduationCap,
   Calendar,
   Utensils,
-  Building2
+  Building2,
+  Dumbbell
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -62,6 +63,12 @@ const tools: Tool[] = [
     path: '/strumenti/sportelli-studenti-torino'
   },
   {
+    id: 'gyms',
+    icon: Dumbbell,
+    status: 'available',
+    path: '/strumenti/palestre-torino-studenti'
+  },
+  {
     id: 'utilities',
     icon: Zap,
     status: 'coming-soon'
@@ -108,6 +115,10 @@ const StudentTools = () => {
           title: "Sportelli e Servizi Studenti",
           description: "Guida completa a segreterie, uffici EDISU, borse di studio, DSA, Erasmus e tutti i servizi universitari."
         },
+        gyms: {
+          title: "Directory Palestre Studenti",
+          description: "Trova le migliori palestre a Torino con sconti studenti: prezzi, orari 24h, piscine e distanza dalle università."
+        },
         utilities: {
           title: "Comparatore Bollette",
           description: "Confronta le tariffe di luce e gas per trovare l'offerta migliore per la tua casa."
@@ -151,6 +162,10 @@ const StudentTools = () => {
         studentServices: {
           title: "Student services directory",
           description: "Complete guide to registrars, EDISU offices, scholarships, disability services, Erasmus and all university services."
+        },
+        gyms: {
+          title: "Student Gyms Directory",
+          description: "Find the best gyms in Turin with student discounts: prices, 24h hours, pools and distance from universities."
         },
         utilities: {
           title: "Utility Comparator",
