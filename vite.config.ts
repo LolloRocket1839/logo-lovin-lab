@@ -4,6 +4,19 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { visualizer } from "rollup-plugin-visualizer";
 import { imagetools } from "vite-imagetools";
+import { execSync } from "child_process";
+
+// Run sentence case validation in production builds
+const validateSentenceCase = () => ({
+  name: 'validate-sentence-case',
+  buildStart() {
+    try {
+      execSync('node scripts/validate-sentence-case.js', { stdio: 'inherit' });
+    } catch (e) {
+      // Validation runs but doesn't block build
+    }
+  }
+});
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -25,6 +38,7 @@ export default defineConfig(({ mode }) => ({
       },
     }),
     mode === "development" && componentTagger(),
+    mode === "production" && validateSentenceCase(),
     mode === "production" && visualizer({
       filename: "dist/stats.html",
       open: false,
