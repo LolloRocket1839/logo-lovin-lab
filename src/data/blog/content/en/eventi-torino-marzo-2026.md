@@ -1,4 +1,4 @@
-# March 2026 in Turin: A Month of Discovery Through Art, Music and Entertainment
+# March 2026 in Turin: a month of discovery through art, music and entertainment
 
 March 2026 promises to be an extraordinary month for Turin, with a packed calendar of events ranging from major artistic retrospectives to international concerts, iconic musicals to conferences by renowned intellectuals. The Piedmontese capital transforms into a widespread stage where culture, live entertainment and reflection intertwine to offer visitors unforgettable experiences.
 

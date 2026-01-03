@@ -1,4 +1,4 @@
-# How to Reach Turin Sustainably: A Practical Guide
+# How to reach Turin sustainably: a practical guide
 
 Turin sits at a crossroads of European rail networks, making it one of Italy's most accessible cities for low-carbon travel. This guide covers trains, coaches, and sustainable options for getting around once you arrive.
 

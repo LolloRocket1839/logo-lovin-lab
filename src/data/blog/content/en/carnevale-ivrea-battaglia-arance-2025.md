@@ -1,4 +1,4 @@
-# The Historic Ivrea Carnival: Complete Guide to the Battle of Oranges from Turin
+# The historic Ivrea Carnival: complete guide to the Battle of Oranges from Turin
 
 The **Ivrea Carnival**, officially the **Historic Carnival of Ivrea**, ranks among Italy's oldest and most distinctive carnival celebrations. Its fame rests on the **Battle of Oranges**, a controlled citrus fight that draws thousands of visitors each year. This guide covers everything tourists and students need to know: history, getting there from Turin, what to expect, and how to prepare. The 2025 edition runs **from March 1-5**, with five days of historical ceremonies, processions, and the spectacular battle itself.[1][2]
 
