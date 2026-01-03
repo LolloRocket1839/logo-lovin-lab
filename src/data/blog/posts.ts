@@ -223,7 +223,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Property Valuation in Turin: Complete Guide to Estimating Your Home's Value",
+        title: "Property valuation in Turin: complete guide to estimating your home's value",
         excerpt: "OMI methods, FIAIP coefficients, 9 factors that influence price. How to calculate your property's value in Turin in 2025.",
         seo: {
           title: "Property Valuation Turin 2025 | Complete Home Estimate Guide",
@@ -271,7 +271,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Best Panettone and Pandoro in Turin 2025",
+        title: "Best panettone and pandoro in Turin 2025",
         excerpt: "Pasticceria Racca, Murdocco, Stratta, Ghigo: all addresses, phones, prices. Artisanal, creative, historic brands. 31 sources.",
         seo: {
           title: "Panettone and Pandoro Turin 2025 | Artisanal and Commercial",
@@ -698,7 +698,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Student Housing in Italy: Analysis of Savills Research Report 2025",
+        title: "Student housing in Italy: analysis of Savills research report 2025",
         excerpt: "Exclusive Savills data: 1.96M students, 589K off-campus, only 12.6% housing coverage, €270M invested in 2024, 7% net yields. Turin with 113K students and 45,000 bed gap.",
         seo: {
           title: "Student Housing Italy 2025: Savills report analysis | investment data",
@@ -799,7 +799,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "February 2026 in Turin: Love, Chocolate, Art and Opera",
+        title: "February 2026 in Turin: love, chocolate, art and opera",
         excerpt: "February 2026 in Turin: CioccolaTò chocolate festival, Verdi's Macbeth conducted by Riccardo Muti, Lee Miller and Jeff Wall exhibitions, Ivrea Battle of the Oranges, Final Eight basketball.",
         seo: {
           title: "Turin events February 2026: CioccolaTò, Macbeth, exhibitions, basketball | complete guide",
@@ -905,7 +905,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "March 2026 in Turin: A Month of Discovery Through Art, Music and Entertainment",
+        title: "March 2026 in Turin: a month of discovery through art, music and entertainment",
         excerpt: "Extraordinary March 2026 for Turin: Chiharu Shiota retrospective at MAO, Gentileschi exhibition, Mika and Renato Zero concerts, Subsonica 30th anniversary, Rocky Musical, conferences with Galimberti and Crepet.",
         seo: {
           title: "Turin events March 2026: concerts, exhibitions, theater | complete guide",
@@ -1007,7 +1007,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "How to Get Sustainably to Turin: A Comprehensive Travel Guide",
+        title: "How to get sustainably to Turin: a comprehensive travel guide",
         excerpt: "Complete guide to sustainable travel to Turin: Frecciarossa trains, FlixBus, carbon-neutral airport, public transport, bike-sharing and micro-mobility options.",
         seo: {
           title: "Sustainable Travel to Turin: Complete Guide Trains, Buses & Bikes | JungleRent",
@@ -1188,7 +1188,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "The University of Turin: A Legacy of Excellence and Innovation",
+        title: "The University of Turin: a legacy of excellence and innovation",
         excerpt: "Complete guide to University of Turin: history since 1404, international rankings, 3 Nobel Prize winners, student life, Erasmus programs and innovation achievements.",
         seo: {
           title: "University of Turin 2025: Complete Guide | JungleRent",
@@ -1259,7 +1259,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Polytechnic University of Turin: Complete Guide for Students",
+        title: "Polytechnic University of Turin: complete guide for students",
         excerpt: "Complete guide to Politecnico di Torino: history, degree programs, TIL admission test, fees, housing, Erasmus, career outcomes and international rankings.",
         seo: {
           title: "Politecnico di Torino 2025: Complete Guide | JungleRent",
@@ -1345,7 +1345,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Waste Sorting in Turin: Complete Practical Guide",
+        title: "Waste sorting in Turin: complete practical guide",
         excerpt: "Practical guide to waste sorting in Turin: door-to-door collection, smart eco-islands, waste fractions, recycling centers, fines and tips for proper recycling.",
         seo: {
           title: "Waste Sorting Turin 2025: Complete Guide | JungleRent",
@@ -1447,7 +1447,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Turin's Historic Markets: Closures and Social Impact",
+        title: "Turin's historic markets: closures and social impact",
         excerpt: "In-depth analysis of Turin's neighborhood market crisis: from Piazza Crispi to CISM liquidation, the impact on elderly, vendors and fragile communities.",
         seo: {
           title: "Historic Markets Turin: Closures and Social Impact | JungleRent",
@@ -1685,7 +1685,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Study Spaces in Turin: Complete Guide to the 57 Best Places to Study",
+        title: "Study spaces in Turin: complete guide to the 57 best places to study",
         excerpt: "Discover all 57 best places to study in Turin: EDISU libraries, Politecnico, UniTo, University Diffused Campus (unique in Italy!), coworking and cafés. With map, schedules, bookings and practical tips.",
         seo: {
           title: "Study Spaces Turin: Complete Guide to 57 Best Places | JungleRent",
@@ -1732,7 +1732,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Why This is the Perfect Time to Invest in Real Assets: Focus on Turin",
+        title: "Why this is the perfect time to invest in real assets: focus on Turin",
         excerpt: "Complete analysis on why stock market volatility and Italian real estate recovery make Turin the optimal investment opportunity in 2025.",
         seo: {
           title: "Invest Real Assets Turin 2025: Real Estate Opportunity | Jungle Rent",
@@ -1792,7 +1792,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "All Turin's Nightclubs: Complete Guide to Night Clubs and Unmissable Events",
+        title: "All Turin's nightclubs: complete guide to night clubs and unmissable events",
         excerpt: "Discover the entire Turin nightlife scene: from historic clubs like Hiroshima and Centralino to modern underground warehouses, from major festivals like Kappa FuturFestival and Club to Club to innovative museum nights. Definitive guide with over 30 venues, events and practical tips.",
         seo: {
           title: "Turin Nightclubs: Complete Club, Events & Nightlife Guide 2025 | Jungle Rent",
@@ -1899,7 +1899,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Turin: The Underrated Digital Nomad Paradise - Peaceful Places to Work in Italy's Most Overlooked City",
+        title: "Turin: the underrated digital nomad paradise - peaceful places to work in Italy's most overlooked city",
         excerpt: "Turin emerges as Europe's best-kept secret for digital nomads: sophisticated infrastructure, affordable living, and a culture that values focused work. Complete guide to coworking spaces, cafés, libraries, and neighborhoods ideal for remote professionals.",
         seo: {
           title: "Turin Digital Nomad Guide 2025: Best Working Spaces | Jungle Rent",
@@ -2147,7 +2147,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Turin in november 2025: where tennis, cinema, art, and truffles converge in autumn's golden month",
+        title: "Turin in November 2025: where tennis, cinema, art, and truffles converge in autumn's golden month",
         excerpt: "Discover why November is Turin's most culturally dense month: ATP Finals, Film Festival, Artissima art fair, white truffle season and the unique atmosphere of Piedmontese autumn.",
         seo: {
           title: "Turin november 2025: ATP Finals, Film Festival, Artissima | Complete guide",
@@ -2278,7 +2278,7 @@ export const blogPosts: BlogPost[] = [
         ]
       },
       en: {
-        title: "Turin in december: where history, Christmas lights and hot chocolate converge in the capital of winter magic",
+        title: "Turin in December: where history, Christmas lights and hot chocolate converge in the capital of winter magic",
         excerpt: "Discover why Turin in December is one of Europe's most enchanting destinations: Luci d'Artista, Christmas markets, Teatro Regio, Baroque architecture and culinary traditions.",
         seo: {
           title: "Turin december: Christmas markets, lights and magic | Complete guide",
