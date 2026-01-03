@@ -38,7 +38,7 @@ export default defineConfig(({ mode }) => ({
       },
     }),
     mode === "development" && componentTagger(),
-    mode === "production" && validateSentenceCase(),
+    validateSentenceCase(),
     mode === "production" && visualizer({
       filename: "dist/stats.html",
       open: false,
