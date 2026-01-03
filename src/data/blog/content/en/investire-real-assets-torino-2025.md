@@ -1,4 +1,4 @@
-# Why This is the Perfect Time to Invest in Real Assets: A Focus on Turin's Exceptional Opportunity
+# Why this is the perfect time to invest in real assets: a focus on Turin's exceptional opportunity
 
 > 📥 **Download the full report:** [Turin University Real Estate Market - 23 pages of data and analysis](/resources/mercato-immobiliare-universitario-torino.pdf)
 

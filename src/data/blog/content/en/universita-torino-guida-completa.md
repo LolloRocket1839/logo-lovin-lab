@@ -1,4 +1,4 @@
-# The University of Turin: A Legacy of Excellence and Innovation
+# The University of Turin: a legacy of excellence and innovation
 
 The University of Turin (Università degli Studi di Torino, or UniTo) stands as one of Italy's most distinguished institutions of higher learning, combining over six centuries of academic tradition with a dynamic commitment to modern research and innovation. Founded in **1404** and currently educating approximately **83,000 students** across **27 departments**, the university has established itself as a cornerstone of Italian academia and a significant contributor to European intellectual life.
 

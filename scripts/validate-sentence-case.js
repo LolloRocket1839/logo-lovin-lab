@@ -8,7 +8,7 @@ import path from 'path';
 
 // Proper nouns that should remain capitalized
 const PROPER_NOUNS = [
-  'Turin', 'Torino', 'Italy', 'Italian', 'Piedmont', 'Piemonte',
+  'Turin', 'Torino', 'Italy', 'Italian', 'Piedmont', 'Piemonte', 'Piedmontese',
   'San Salvario', 'Porta Palazzo', 'Quadrilatero', 'Vanchiglia',
   'Aurora', 'Crocetta', 'Cenisia', 'Lingotto', 'Mirafiori',
   'Politecnico', 'UniTo', 'EDISU', 'GTT', 'CUS',
@@ -18,7 +18,7 @@ const PROPER_NOUNS = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
   'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
-  'Savills', 'OMI', 'PBSA', 'EU', 'Erasmus',
+  'Savills', 'OMI', 'PBSA', 'EU', 'Erasmus', 'Europe', 'European',
   'McFIT', 'FitActive', 'Virgin Active', 'GO Fit', 'Anytime Fitness',
   'Nobel', 'UNESCO', 'FIAT', 'Lavazza',
   'Ivrea', 'Barriera', 'Milano', 'Crispi', 'Nitti',
@@ -26,7 +26,8 @@ const PROPER_NOUNS = [
   'Baroque', 'Renaissance', 'Art Nouveau',
   'I', 'II', 'III', 'IV', 'V',
   'Piazza', 'Via', 'Corso', 'Largo',
-  '2i3T', 'UNITA'
+  '2i3T', 'UNITA', 'University', 'Polytechnic', 'Battle',
+  'Langhe', 'Monferrato', 'Seicento', 'East'
 ];
 
 function isProperNoun(word) {

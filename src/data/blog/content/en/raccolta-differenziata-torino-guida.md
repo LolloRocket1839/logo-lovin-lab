@@ -1,4 +1,4 @@
-# Waste Sorting in Turin: Complete Practical Guide
+# Waste sorting in Turin: complete practical guide
 
 Waste sorting in Turin is a mandatory and well-structured service managed by **Amiat Gruppo Iren** across nearly the entire urban territory. With a current rate of **57.2%**, the city aims to reach **65% by 2027**, aligning with European standards. This comprehensive guide explains how to properly sort waste in Turin, what collection methods exist, where to take special materials, and how to avoid penalties. Reading this information carefully is essential to contribute to an efficient and sustainable recycling system.
 

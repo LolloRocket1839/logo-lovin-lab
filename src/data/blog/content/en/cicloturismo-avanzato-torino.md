@@ -1,4 +1,4 @@
-# Advanced Cycle Tourism in Turin: Pedaling Beyond Urban Borders
+# Advanced cycle tourism in Turin: pedaling beyond urban borders
 
 Turin is emerging as a serious destination for advanced cycle tourism. The city's infrastructure spans **290 km of dedicated paths** connecting the historic center to hills, rivers, and surrounding provinces. This guide covers multi-stage bicycle travel, e-bike solutions, bikepacking and cycle camping, and Turin's cycling activist community. For the contemporary cycle tourist, Turin offers far more than weekend rides: it's a launch pad for sustainable, authentic cycling adventures.
 

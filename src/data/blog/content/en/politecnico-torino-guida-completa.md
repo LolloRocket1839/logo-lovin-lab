@@ -1,4 +1,4 @@
-# Polytechnic University of Turin: Complete Guide for Students
+# Polytechnic University of Turin: complete guide for students
 
 The Polytechnic University of Turin (Politecnico di Torino) is one of the leading academic institutions in Italy and Europe in the fields of engineering, architecture, and design. With a history rooted in the 19th century and a consolidated international reputation, the university stands out for its high-quality education, extraordinary graduate employment rates, and excellent research and industry collaboration opportunities. Officially founded in 1906, the Politecnico now attracts over 38,000 students from more than 100 countries, offering a multicultural and stimulating environment where technological innovation and academic tradition merge to prepare the professionals of the future.
 

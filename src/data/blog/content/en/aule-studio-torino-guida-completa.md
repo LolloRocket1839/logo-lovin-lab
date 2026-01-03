@@ -1,4 +1,4 @@
-# Study Spaces in Turin: Complete Guide to the 57 Best Places to Study
+# Study spaces in Turin: complete guide to the 57 best places to study
 
 **Are you a Politecnico or University of Turin student looking for the perfect study space?** We've mapped all 57 best places to study in Turin for you, from university libraries to the coziest cafés, from the University Diffused Campus (unique in Italy!) to the most innovative coworking spaces.
 

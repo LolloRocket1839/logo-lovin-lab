@@ -1,4 +1,4 @@
-# February 2026 in Turin: Love, Chocolate, Art and Opera
+# February 2026 in Turin: love, chocolate, art and opera
 
 February 2026 packs an extraordinary range of experiences into just 28 days. From surrealist photography to opera masterpieces, artisanal chocolate to traditional battles, high-level basketball to intimate museum visits, the shortest month offers a dense calendar of reasons to explore the Piedmontese capital.
 

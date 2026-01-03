@@ -1,4 +1,4 @@
-# Turin: The Underrated Digital Nomad Paradise - Peaceful Places to Work in Italy's Most Overlooked City
+# Turin: the underrated digital nomad paradise - peaceful places to work in Italy's most overlooked city
 
 Turin, often overshadowed by Milan's bustle and Florence's fame, has emerged as one of Europe's most attractive destinations for digital nomads and remote workers seeking productivity without the chaos. With its elegant architecture, affordable cost of living, reliable internet infrastructure, and most importantly, a **culture of calm and organization**, Turin offers something increasingly rare in European cities: the ability to focus deeply while maintaining an exceptional quality of life.
 
