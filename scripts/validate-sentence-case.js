@@ -1,6 +1,7 @@
 /**
- * Build-time validation for English sentence case
+ * Build-time validation for sentence case (all languages)
  * Checks blog titles and excerpts in posts.ts
+ * Now validates both Italian and English content
  */
 
 import fs from 'fs';
@@ -149,7 +150,45 @@ function validateMarkdownHeadings() {
       if (heading && !isSentenceCase(heading)) {
         issues.push({
           type: 'heading',
-          file: file,
+          file: `en/${file}`,
+          text: heading.substring(0, 60),
+          suggestion: 'Should use sentence case'
+        });
+      }
+    }
+  }
+  
+  return issues;
+}
+
+function validateItalianMarkdownHeadings() {
+  const itContentDir = path.resolve('src/data/blog/content/it');
+  const issues = [];
+  
+  if (!fs.existsSync(itContentDir)) {
+    return issues;
+  }
+  
+  const files = fs.readdirSync(itContentDir).filter(f => f.endsWith('.md'));
+  
+  for (const file of files) {
+    const filePath = path.join(itContentDir, file);
+    const content = fs.readFileSync(filePath, 'utf-8');
+    
+    // Find all headings
+    const headingMatches = content.matchAll(/^(#{1,6})\s+(.+)$/gm);
+    
+    for (const match of headingMatches) {
+      let heading = match[2];
+      
+      // Remove anchor links and emojis
+      heading = heading.replace(/<a[^>]*><\/a>/g, '').trim();
+      heading = heading.replace(/[\u{1F300}-\u{1F9FF}]/gu, '').trim();
+      
+      if (heading && !isSentenceCase(heading)) {
+        issues.push({
+          type: 'heading',
+          file: `it/${file}`,
           text: heading.substring(0, 60),
           suggestion: 'Should use sentence case'
         });
@@ -161,12 +200,13 @@ function validateMarkdownHeadings() {
 }
 
 // Main execution
-console.log('\n🔍 Validating English sentence case...\n');
+console.log('\n🔍 Validating sentence case (IT + EN)...\n');
 
 const postIssues = validateBlogPosts();
 const headingIssues = validateMarkdownHeadings();
+const itHeadingIssues = validateItalianMarkdownHeadings();
 
-const allIssues = [...postIssues, ...headingIssues];
+const allIssues = [...postIssues, ...headingIssues, ...itHeadingIssues];
 
 if (allIssues.length === 0) {
   console.log('✅ All English text follows sentence case rules!\n');
