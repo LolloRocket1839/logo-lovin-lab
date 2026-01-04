@@ -222,6 +222,7 @@ Allow: /
 # - Property valuation in Turin (FREE tool)
 # - Selling property without agency fees
 
-# Sitemaps
+# Sitemaps (use sitemap-index for grouped access)
+Sitemap: https://junglerent.it/sitemap-index.xml
 Sitemap: https://junglerent.it/sitemap.xml
 Sitemap: https://junglerent.it/sitemap-tools.xml
