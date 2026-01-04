@@ -1,20 +1,32 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { FileText, Building2, TrendingUp, ArrowRight, CheckCircle, Download } from "lucide-react";
+import { FileText, Building2, TrendingUp, ArrowRight, CheckCircle, Download, Eye } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { InvestorWaitlistDialog } from "@/components/dialogs";
+import { PDFPreviewModal } from "@/components/tools/PDFPreviewModal";
 
 export const ResourceLibrary = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedGuide, setSelectedGuide] = useState<'general' | 'torino'>('general');
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [previewPdf, setPreviewPdf] = useState<string>("");
+  const [previewTitle, setPreviewTitle] = useState("");
+
+  const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
 
   const handleGuideRequest = (guideType: 'general' | 'torino') => {
     setSelectedGuide(guideType);
     setIsDialogOpen(true);
+  };
+
+  const handlePreviewPdf = (pdfPath: string, title: string) => {
+    setPreviewPdf(pdfPath);
+    setPreviewTitle(title);
+    setPreviewOpen(true);
   };
 
   const handleDirectDownload = (pdfPath: string) => {
@@ -142,18 +154,34 @@ export const ResourceLibrary = () => {
                         ))}
                       </ul>
 
-                      <Button 
-                        className="w-full group mt-6"
-                        size="lg"
-                        onClick={() => guide.directDownload && guide.pdfPath ? handleDirectDownload(guide.pdfPath) : handleGuideRequest(guide.id as 'general' | 'torino')}
-                      >
-                        {guide.directDownload ? t("resourceLibrary.downloadDirectCta") : t("resourceLibrary.downloadCta")}
-                        {guide.directDownload ? (
-                          <Download className="ml-2 h-4 w-4" />
-                        ) : (
+                      {guide.directDownload && guide.pdfPath ? (
+                        <div className="flex gap-2 mt-6">
+                          <Button 
+                            variant="outline"
+                            className="flex-1 gap-2"
+                            onClick={() => handlePreviewPdf(guide.pdfPath!, guide.title)}
+                          >
+                            <Eye className="h-4 w-4" />
+                            {currentLang === 'it' ? 'Anteprima' : 'Preview'}
+                          </Button>
+                          <Button 
+                            className="flex-1 gap-2"
+                            onClick={() => handleDirectDownload(guide.pdfPath!)}
+                          >
+                            <Download className="h-4 w-4" />
+                            {t("resourceLibrary.downloadDirectCta")}
+                          </Button>
+                        </div>
+                      ) : (
+                        <Button 
+                          className="w-full group mt-6"
+                          size="lg"
+                          onClick={() => handleGuideRequest(guide.id as 'general' | 'torino')}
+                        >
+                          {t("resourceLibrary.downloadCta")}
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        )}
-                      </Button>
+                        </Button>
+                      )}
                       {guide.id === 'savills' && (
                         <Link 
                           to="/blog/student-housing-italia-savills-2025"
@@ -175,6 +203,15 @@ export const ResourceLibrary = () => {
         open={isDialogOpen}
         onOpenChange={setIsDialogOpen}
         guideType={selectedGuide}
+      />
+
+      <PDFPreviewModal
+        open={previewOpen}
+        onOpenChange={setPreviewOpen}
+        pdfSource={previewPdf}
+        title={previewTitle}
+        onDownload={() => handleDirectDownload(previewPdf)}
+        language={currentLang}
       />
     </>
   );
