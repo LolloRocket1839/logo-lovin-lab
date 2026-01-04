@@ -226,4 +226,5 @@ Allow: /
 Sitemap: https://junglerent.it/sitemap-index.xml
 Sitemap: https://junglerent.it/sitemap.xml
 Sitemap: https://junglerent.it/sitemap-blog.xml
+Sitemap: https://junglerent.it/sitemap-images.xml
 Sitemap: https://junglerent.it/sitemap-tools.xml
