@@ -1557,5 +1557,22 @@
     "close": "Chiudi",
     "trust1": "Risposta in 24h",
     "trust2": "Zero impegno"
+  },
+  "investorExitIntent": {
+    "badge": "Prima di andare...",
+    "title": "Soddisfa la tua curiosità, contatta Lorenzo!",
+    "subtitle": "Una chiamata senza impegno per scoprire le opportunità di investimento immobiliare a Torino",
+    "whatsappCTA": "Scrivi su WhatsApp",
+    "emailCTA": "Invia un'email",
+    "orSeparator": "oppure lascia la tua email",
+    "emailPlaceholder": "La tua email",
+    "submitCTA": "Ti ricontattiamo noi",
+    "submitting": "Invio...",
+    "trust1": "Zero impegno",
+    "trust2": "Risposta entro 24h",
+    "success": "Perfetto! Lorenzo ti contatterà presto.",
+    "errorSubmit": "Errore nell'invio. Riprova.",
+    "emailError": "Inserisci un'email valida",
+    "close": "Chiudi"
   }
 }

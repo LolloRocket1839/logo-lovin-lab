@@ -1721,5 +1721,22 @@
     "ctaSavings": "How much do you save with Jungle Rent?",
     "emptyState": "Select zone and enter surface area to calculate estimate",
     "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers. Error margin: ±5-12%."
+  },
+  "investorExitIntent": {
+    "badge": "Before you go...",
+    "title": "Satisfy your curiosity, contact Lorenzo!",
+    "subtitle": "A no-commitment call to discover real estate investment opportunities in Turin",
+    "whatsappCTA": "Message on WhatsApp",
+    "emailCTA": "Send an email",
+    "orSeparator": "or leave your email",
+    "emailPlaceholder": "Your email",
+    "submitCTA": "We'll contact you",
+    "submitting": "Sending...",
+    "trust1": "Zero commitment",
+    "trust2": "Reply within 24h",
+    "success": "Perfect! Lorenzo will contact you soon.",
+    "errorSubmit": "Submission error. Please try again.",
+    "emailError": "Please enter a valid email",
+    "close": "Close"
   }
 }
