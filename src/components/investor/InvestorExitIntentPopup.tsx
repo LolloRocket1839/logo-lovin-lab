@@ -183,7 +183,7 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
                 <img 
                   src={jungleRentLogo} 
                   alt="" 
-                  className="w-4 h-4 object-contain" 
+                  className="w-5 h-5 object-contain" 
                   aria-hidden="true"
                 />
                 {t("investorExitIntent.badge")}
