@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 import { ResourceLibrary } from "@/components/investor/ResourceLibrary";
+import { InvestorExitIntentPopup } from "@/components/investor/InvestorExitIntentPopup";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
@@ -312,6 +313,7 @@ const Investors = () => {
       </section>
 
       <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
+      <InvestorExitIntentPopup source="investors_page" />
       <Footer />
       <ScrollToTop />
     </main>
