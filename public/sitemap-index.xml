@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://jungle-rent.lovable.app/sitemap.xml</loc>
+    <loc>https://junglerent.it/sitemap.xml</loc>
     <lastmod>2026-01-04</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://jungle-rent.lovable.app/sitemap-tools.xml</loc>
+    <loc>https://junglerent.it/sitemap-tools.xml</loc>
+    <lastmod>2026-01-04</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://junglerent.it/sitemap-blog.xml</loc>
     <lastmod>2026-01-04</lastmod>
   </sitemap>
 </sitemapindex>

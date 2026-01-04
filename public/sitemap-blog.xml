@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Blog Index Page -->
+  <url>
+    <loc>https://junglerent.it/blog</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog" />
+  </url>
+
+  <!-- FEATURED: Jungle Control December 2025 (Company News) -->
+  <url>
+    <loc>https://junglerent.it/blog/jungle-control-dicembre-2025</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/jungle-control-dicembre-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/jungle-control-december-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/jungle-control-dicembre-2025" />
+  </url>
+
+  <!-- FEATURED: Props Gestione Immobiliare (Product) -->
+  <url>
+    <loc>https://junglerent.it/blog/props-gestione-immobiliare-semplificata</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/props-gestione-immobiliare-semplificata" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/props-gestione-immobiliare-semplificata" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/props-gestione-immobiliare-semplificata" />
+  </url>
+
+  <!-- INVESTORS: Student Housing Italia Savills 2025 -->
+  <url>
+    <loc>https://junglerent.it/blog/student-housing-italia-savills-2025</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
+      <image:title>Student Housing Italia Savills 2025</image:title>
+    </image:image>
+  </url>
+
+  <!-- INVESTORS: Investire real assets Torino 2025 -->
+  <url>
+    <loc>https://junglerent.it/blog/investire-real-assets-torino-2025</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/investire-real-assets-torino-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/investire-real-assets-torino-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/investire-real-assets-torino-2025" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
+      <image:title>Investire real assets Torino 2025</image:title>
+    </image:image>
+  </url>
+
+  <!-- INVESTORS: Mutui investitori immobiliari -->
+  <url>
+    <loc>https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
+      <image:title>Guida mutui investitori immobiliari</image:title>
+    </image:image>
+  </url>
+
+  <!-- SELLERS: Vendere casa Torino guida 2025 -->
+  <url>
+    <loc>https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/vendere-casa-torino.jpg</image:loc>
+      <image:title>Vendere casa Torino 2025</image:title>
+    </image:image>
+  </url>
+
+  <!-- SELLERS: Valutazione immobiliare Torino -->
+  <url>
+    <loc>https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa" />
+  </url>
+
+  <!-- STUDENTS: Università di Torino guida completa -->
+  <url>
+    <loc>https://junglerent.it/blog/universita-torino-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/universita-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/universita-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/universita-torino-guida-completa" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/unito-campus-torino.jpg</image:loc>
+      <image:title>Università di Torino guida</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: Politecnico di Torino guida completa -->
+  <url>
+    <loc>https://junglerent.it/blog/politecnico-torino-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/politecnico-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/politecnico-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/politecnico-torino-guida-completa" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
+      <image:title>Politecnico di Torino guida</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: Dove vivere Torino studenti Politecnico -->
+  <url>
+    <loc>https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/quartieri-studenti-torino.jpg</image:loc>
+      <image:title>Dove vivere Torino studenti</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: San Salvario guida studenti -->
+  <url>
+    <loc>https://junglerent.it/blog/san-salvario-guida-studenti</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
+      <image:title>San Salvario guida studenti</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: Aule studio Torino guida completa -->
+  <url>
+    <loc>https://junglerent.it/blog/aule-studio-torino-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/aule-studio-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/aule-studio-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/aule-studio-torino-guida-completa" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/aule-studio-torino.jpg</image:loc>
+      <image:title>Aule studio Torino guida</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: Palestre Torino studenti -->
+  <url>
+    <loc>https://junglerent.it/blog/palestre-torino-studenti-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/palestre-torino-studenti-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/palestre-torino-studenti-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/palestre-torino-studenti-guida-completa" />
+  </url>
+
+  <!-- STUDENTS: Mobilità sostenibile Torino studenti -->
+  <url>
+    <loc>https://junglerent.it/blog/mobilita-sostenibile-torino-studenti</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mobilita-sostenibile-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/mobilita-sostenibile-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/mobilita-sostenibile-torino-studenti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-transport.jpg</image:loc>
+      <image:title>Mobilità sostenibile Torino studenti</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: Dove mangiare Torino studenti -->
+  <url>
+    <loc>https://junglerent.it/blog/dove-mangiare-torino-studenti</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/caffe-vini-quadrilatero.jpg</image:loc>
+      <image:title>Dove mangiare Torino studenti</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: Migliori gelaterie Torino studenti -->
+  <url>
+    <loc>https://junglerent.it/blog/migliori-gelaterie-torino-studenti</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/migliori-gelaterie-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/migliori-gelaterie-torino-studenti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/migliori-gelaterie-torino-studenti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/gelato-italiano.jpg</image:loc>
+      <image:title>Migliori gelaterie Torino</image:title>
+    </image:image>
+  </url>
+
+  <!-- STUDENTS: Emergenze affitti Torino diritti inquilini -->
+  <url>
+    <loc>https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini" />
+  </url>
+
+  <!-- TURISTI: Eventi Torino gennaio 2026 (TIME-SENSITIVE) -->
+  <url>
+    <loc>https://junglerent.it/blog/eventi-torino-gennaio-2026</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-gennaio-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-gennaio-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-gennaio-2026" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-gennaio-luci.jpg</image:loc>
+      <image:title>Eventi Torino gennaio 2026</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Eventi Torino febbraio 2026 (TIME-SENSITIVE) -->
+  <url>
+    <loc>https://junglerent.it/blog/eventi-torino-febbraio-2026</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/cioccolato-festival-torino.jpg</image:loc>
+      <image:title>Eventi Torino febbraio 2026</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Eventi Torino marzo 2026 (TIME-SENSITIVE) -->
+  <url>
+    <loc>https://junglerent.it/blog/eventi-torino-marzo-2026</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-primavera-marzo.jpg</image:loc>
+      <image:title>Eventi Torino marzo 2026</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Carnevale Ivrea Battaglia Arance 2025 -->
+  <url>
+    <loc>https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2025" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/battaglia-arance-ivrea.jpg</image:loc>
+      <image:title>Carnevale Ivrea Battaglia Arance</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Torino ogni stagione turisti -->
+  <url>
+    <loc>https://junglerent.it/blog/torino-ogni-stagione-turisti</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-ogni-stagione-collage.jpg</image:loc>
+      <image:title>Torino ogni stagione</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Torino novembre turisti -->
+  <url>
+    <loc>https://junglerent.it/blog/torino-novembre-turisti</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-novembre-turisti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-novembre-turisti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-novembre-turisti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-autunno-novembre.jpg</image:loc>
+      <image:title>Torino novembre turisti</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Torino dicembre turisti -->
+  <url>
+    <loc>https://junglerent.it/blog/torino-dicembre-turisti</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-dicembre-turisti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-dicembre-turisti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-dicembre-turisti" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-natale-luci-artista.jpg</image:loc>
+      <image:title>Torino dicembre turisti</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Viaggiare sostenibile Torino -->
+  <url>
+    <loc>https://junglerent.it/blog/viaggiare-sostenibile-torino-guida</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/viaggiare-sostenibile-torino.jpg</image:loc>
+      <image:title>Viaggiare sostenibile Torino</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Cicloturismo avanzato Torino -->
+  <url>
+    <loc>https://junglerent.it/blog/cicloturismo-avanzato-torino</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/cicloturismo-avanzato-torino.jpg</image:loc>
+      <image:title>Cicloturismo avanzato Torino</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Torino nightlife guide -->
+  <url>
+    <loc>https://junglerent.it/blog/torino-nightlife-guide</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-nightlife-guide" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-nightlife-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-nightlife-guide" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-nightlife.jpg</image:loc>
+      <image:title>Torino nightlife guide</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Torino digital nomads guide -->
+  <url>
+    <loc>https://junglerent.it/blog/torino-digital-nomads-guide</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-digital-nomads-guide" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-digital-nomads-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-digital-nomads-guide" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/digital-nomad-torino.jpg</image:loc>
+      <image:title>Torino digital nomads guide</image:title>
+    </image:image>
+  </url>
+
+  <!-- TURISTI: Quartieri sicuri donne Torino -->
+  <url>
+    <loc>https://junglerent.it/blog/quartieri-sicuri-donne-torino</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/quartieri-sicuri-donne-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/quartieri-sicuri-donne-torino" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/quartieri-sicuri-donne-torino" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
+      <image:title>Quartieri sicuri donne Torino</image:title>
+    </image:image>
+  </url>
+
+  <!-- FOOD: Tajarin piemontesi guida completa -->
+  <url>
+    <loc>https://junglerent.it/blog/tajarin-piemontesi-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/tajarin-tartufo-torino.jpg</image:loc>
+      <image:title>Tajarin piemontesi guida</image:title>
+    </image:image>
+  </url>
+
+  <!-- FOOD: Cioccolaterie Torino guida completa -->
+  <url>
+    <loc>https://junglerent.it/blog/cioccolaterie-torino-guida-completa</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/cioccolato-gianduiotti-torino.jpg</image:loc>
+      <image:title>Cioccolaterie Torino guida</image:title>
+    </image:image>
+  </url>
+
+  <!-- FOOD: Panettoni e Pandori Torino 2025 -->
+  <url>
+    <loc>https://junglerent.it/blog/panettoni-pandori-torino-guida-2025</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/panettoni-pandori-torino-guida-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/panettoni-pandori-torino-guida-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/panettoni-pandori-torino-guida-2025" />
+  </url>
+
+  <!-- SOCIETA: Raccolta differenziata Torino guida -->
+  <url>
+    <loc>https://junglerent.it/blog/raccolta-differenziata-torino-guida</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/raccolta-differenziata-torino-guida" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/raccolta-differenziata-torino-guida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/raccolta-differenziata-torino-guida" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/raccolta-differenziata-torino.jpg</image:loc>
+      <image:title>Raccolta differenziata Torino</image:title>
+    </image:image>
+  </url>
+
+  <!-- SOCIETA: Mercati storici Torino chiusure -->
+  <url>
+    <loc>https://junglerent.it/blog/mercati-storici-torino-chiusure</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mercati-storici-torino-chiusure" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/mercati-storici-torino-chiusure" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/mercati-storici-torino-chiusure" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
+      <image:title>Mercati storici Torino</image:title>
+    </image:image>
+  </url>
+
+  <!-- SOCIETA: Guida volontariato Torino -->
+  <url>
+    <loc>https://junglerent.it/blog/guida-volontariato-torino</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/guida-volontariato-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/guida-volontariato-torino" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/guida-volontariato-torino" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
+      <image:title>Guida volontariato Torino</image:title>
+    </image:image>
+  </url>
+
+</urlset>
