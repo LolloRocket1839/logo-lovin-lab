@@ -15,7 +15,8 @@ import {
   Download,
   MessageCircle,
   Copy,
-  Check
+  Check,
+  Eye
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -52,6 +53,7 @@ import {
 } from "recharts";
 import jsPDF from "jspdf";
 import jungleRentLogo from "@/assets/jungle-rent-logo.png";
+import { PDFPreviewModal } from "@/components/tools/PDFPreviewModal";
 
 export interface Exam {
   id: string;
@@ -67,6 +69,8 @@ const GradeCalculator = () => {
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [pdfBlob, setPdfBlob] = useState<Blob | null>(null);
   
   const [exams, setExams] = useState<Exam[]>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -266,8 +270,8 @@ const GradeCalculator = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // Export PDF
-  const exportPDF = () => {
+  // Generate PDF document
+  const generatePDFDoc = () => {
     const doc = new jsPDF();
     const pageWidth = doc.internal.pageSize.getWidth();
     
@@ -359,6 +363,21 @@ const GradeCalculator = () => {
     doc.setTextColor(120, 120, 120);
     doc.text(`junglerent.it - ${today}`, pageWidth / 2, 290, { align: "center" });
 
+    return doc;
+  };
+
+  // Preview PDF
+  const handlePreviewPDF = () => {
+    const doc = generatePDFDoc();
+    const blob = doc.output("blob");
+    setPdfBlob(blob);
+    setPreviewOpen(true);
+  };
+
+  // Export PDF
+  const exportPDF = () => {
+    const doc = generatePDFDoc();
+    const today = new Date().toLocaleDateString(currentLang === 'it' ? 'it-IT' : 'en-US');
     doc.save(`media-universitaria-${today}.pdf`);
   };
 
@@ -487,6 +506,10 @@ const GradeCalculator = () => {
 
                 {exams.length > 0 && (
                   <div className="flex gap-2 flex-wrap">
+                    <Button variant="outline" size="sm" onClick={handlePreviewPDF} className="gap-2">
+                      <Eye className="w-4 h-4" />
+                      {currentLang === 'it' ? 'Anteprima' : 'Preview'}
+                    </Button>
                     <Button variant="outline" size="sm" onClick={exportPDF} className="gap-2">
                       <Download className="w-4 h-4" />
                       {t.exportPdf}
@@ -631,6 +654,15 @@ const GradeCalculator = () => {
 
       <Footer />
       <BottomNav />
+
+      <PDFPreviewModal
+        open={previewOpen}
+        onOpenChange={setPreviewOpen}
+        pdfSource={pdfBlob}
+        title={t.title}
+        onDownload={exportPDF}
+        language={currentLang}
+      />
     </>
   );
 };

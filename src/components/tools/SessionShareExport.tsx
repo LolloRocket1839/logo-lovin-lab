@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Download, Share2, MessageCircle, Copy, Check, FileText } from "lucide-react";
+import { Download, Share2, MessageCircle, Copy, Check, FileText, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
@@ -7,6 +7,7 @@ import type { SessionExam } from "./SessionExamInput";
 import { format } from "date-fns";
 import { it, enUS } from "date-fns/locale";
 import jsPDF from "jspdf";
+import { PDFPreviewModal } from "./PDFPreviewModal";
 
 interface SessionShareExportProps {
   exams: SessionExam[];
@@ -17,6 +18,8 @@ interface SessionShareExportProps {
 export const SessionShareExport = ({ exams, cfuMax, lang }: SessionShareExportProps) => {
   const [copied, setCopied] = useState(false);
   const [exporting, setExporting] = useState(false);
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [pdfBlob, setPdfBlob] = useState<Blob | null>(null);
   
   const content = {
     it: {
@@ -73,90 +76,108 @@ export const SessionShareExport = ({ exams, cfuMax, lang }: SessionShareExportPr
     return acc;
   }, {} as Record<string, SessionExam[]>);
   
-  const generatePDF = async () => {
-    setExporting(true);
+  const generatePDFDoc = () => {
+    const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.getWidth();
     
-    try {
-      const doc = new jsPDF();
-      const pageWidth = doc.internal.pageSize.getWidth();
+    // Title
+    doc.setFontSize(20);
+    doc.setFont("helvetica", "bold");
+    doc.text(c.pdfTitle, pageWidth / 2, 20, { align: "center" });
+    
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(128, 128, 128);
+    doc.text(c.pdfSubtitle, pageWidth / 2, 28, { align: "center" });
+    
+    let yPos = 45;
+    
+    // Sessions
+    Object.entries(groupedExams).forEach(([session, sessionExams]) => {
+      if (yPos > 250) {
+        doc.addPage();
+        yPos = 20;
+      }
       
-      // Title
-      doc.setFontSize(20);
+      // Session header
+      doc.setFontSize(14);
       doc.setFont("helvetica", "bold");
-      doc.text(c.pdfTitle, pageWidth / 2, 20, { align: "center" });
+      doc.setTextColor(0, 0, 0);
+      doc.text(`${c.pdfSession}: ${sessionLabels[session as keyof typeof sessionLabels]}`, 20, yPos);
+      yPos += 10;
       
-      doc.setFontSize(10);
+      // Table header
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "bold");
+      doc.setFillColor(240, 240, 240);
+      doc.rect(20, yPos - 5, pageWidth - 40, 8, "F");
+      doc.text(c.pdfExam, 25, yPos);
+      doc.text(c.pdfCfu, 100, yPos);
+      doc.text(c.pdfDate, 125, yPos);
+      doc.text(c.pdfDifficulty, 160, yPos);
+      yPos += 8;
+      
+      // Exams
       doc.setFont("helvetica", "normal");
-      doc.setTextColor(128, 128, 128);
-      doc.text(c.pdfSubtitle, pageWidth / 2, 28, { align: "center" });
-      
-      let yPos = 45;
-      
-      // Sessions
-      Object.entries(groupedExams).forEach(([session, sessionExams]) => {
-        if (yPos > 250) {
+      sessionExams.forEach((exam) => {
+        if (yPos > 270) {
           doc.addPage();
           yPos = 20;
         }
         
-        // Session header
-        doc.setFontSize(14);
-        doc.setFont("helvetica", "bold");
-        doc.setTextColor(0, 0, 0);
-        doc.text(`${c.pdfSession}: ${sessionLabels[session as keyof typeof sessionLabels]}`, 20, yPos);
-        yPos += 10;
-        
-        // Table header
-        doc.setFontSize(9);
-        doc.setFont("helvetica", "bold");
-        doc.setFillColor(240, 240, 240);
-        doc.rect(20, yPos - 5, pageWidth - 40, 8, "F");
-        doc.text(c.pdfExam, 25, yPos);
-        doc.text(c.pdfCfu, 100, yPos);
-        doc.text(c.pdfDate, 125, yPos);
-        doc.text(c.pdfDifficulty, 160, yPos);
-        yPos += 8;
-        
-        // Exams
-        doc.setFont("helvetica", "normal");
-        sessionExams.forEach((exam) => {
-          if (yPos > 270) {
-            doc.addPage();
-            yPos = 20;
-          }
-          
-          doc.text(exam.nome.substring(0, 30), 25, yPos);
-          doc.text(String(exam.cfu), 100, yPos);
-          doc.text(
-            exam.dataAppello 
-              ? format(exam.dataAppello, "dd/MM/yy") 
-              : "-", 
-            125, 
-            yPos
-          );
-          doc.text(
-            (lang === 'it' ? difficultyLabelsIt : difficultyLabels)[exam.difficolta], 
-            160, 
-            yPos
-          );
-          yPos += 7;
-        });
-        
-        // Session totals
-        const sessionCfu = sessionExams.reduce((sum, e) => sum + e.cfu, 0);
-        yPos += 3;
-        doc.setFont("helvetica", "bold");
-        doc.text(`${c.pdfTotal}: ${sessionCfu} CFU | ${c.pdfHours}: ${sessionCfu * 25}h`, 25, yPos);
-        yPos += 15;
+        doc.text(exam.nome.substring(0, 30), 25, yPos);
+        doc.text(String(exam.cfu), 100, yPos);
+        doc.text(
+          exam.dataAppello 
+            ? format(exam.dataAppello, "dd/MM/yy") 
+            : "-", 
+          125, 
+          yPos
+        );
+        doc.text(
+          (lang === 'it' ? difficultyLabelsIt : difficultyLabels)[exam.difficolta], 
+          160, 
+          yPos
+        );
+        yPos += 7;
       });
       
-      // Footer
-      doc.setFontSize(8);
-      doc.setTextColor(128, 128, 128);
-      doc.text("junglerent.com", pageWidth / 2, 290, { align: "center" });
-      
+      // Session totals
+      const sessionCfu = sessionExams.reduce((sum, e) => sum + e.cfu, 0);
+      yPos += 3;
+      doc.setFont("helvetica", "bold");
+      doc.text(`${c.pdfTotal}: ${sessionCfu} CFU | ${c.pdfHours}: ${sessionCfu * 25}h`, 25, yPos);
+      yPos += 15;
+    });
+    
+    // Footer
+    doc.setFontSize(8);
+    doc.setTextColor(128, 128, 128);
+    doc.text("junglerent.com", pageWidth / 2, 290, { align: "center" });
+    
+    return doc;
+  };
+
+  const handlePreviewPDF = () => {
+    try {
+      const doc = generatePDFDoc();
+      const blob = doc.output("blob");
+      setPdfBlob(blob);
+      setPreviewOpen(true);
+    } catch (error) {
+      console.error("PDF preview error:", error);
+      toast({
+        title: lang === 'it' ? "Errore durante la preview" : "Preview error",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const handleDownloadPDF = () => {
+    setExporting(true);
+    try {
+      const doc = generatePDFDoc();
       doc.save(`piano-sessione-${format(new Date(), "yyyy-MM-dd")}.pdf`);
-      
       toast({
         title: lang === 'it' ? "PDF scaricato!" : "PDF downloaded!",
       });
@@ -217,7 +238,17 @@ export const SessionShareExport = ({ exams, cfuMax, lang }: SessionShareExportPr
       <CardContent>
         <div className="flex flex-wrap gap-3">
           <Button 
-            onClick={generatePDF} 
+            variant="outline"
+            onClick={handlePreviewPDF} 
+            disabled={exams.length === 0}
+            className="gap-2"
+          >
+            <Eye className="w-4 h-4" />
+            {lang === 'it' ? 'Anteprima' : 'Preview'}
+          </Button>
+          
+          <Button 
+            onClick={handleDownloadPDF} 
             disabled={exporting || exams.length === 0}
             className="gap-2"
           >
@@ -248,6 +279,15 @@ export const SessionShareExport = ({ exams, cfuMax, lang }: SessionShareExportPr
             {copied ? c.copied : c.copyLink}
           </Button>
         </div>
+
+        <PDFPreviewModal
+          open={previewOpen}
+          onOpenChange={setPreviewOpen}
+          pdfSource={pdfBlob}
+          title={c.pdfTitle}
+          onDownload={handleDownloadPDF}
+          language={lang}
+        />
       </CardContent>
     </Card>
   );

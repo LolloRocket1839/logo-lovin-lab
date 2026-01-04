@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link2, FileDown, Check, Share2 } from "lucide-react";
+import { Link2, FileDown, Check, Share2, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import jsPDF from "jspdf";
 import jungleRentLogo from "@/assets/jungle-rent-logo.png";
+import { PDFPreviewModal } from "./PDFPreviewModal";
 
 interface BudgetShareExportProps {
   selectedArea: string;
@@ -31,6 +32,8 @@ export const BudgetShareExport = ({
 }: BudgetShareExportProps) => {
   const [linkCopied, setLinkCopied] = useState(false);
   const [logoBase64, setLogoBase64] = useState<string | null>(null);
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [pdfBlob, setPdfBlob] = useState<Blob | null>(null);
 
   // Pre-load logo as base64 for PDF
   useEffect(() => {
@@ -76,7 +79,7 @@ export const BudgetShareExport = ({
     }
   };
 
-  const generatePDF = () => {
+  const generatePDFDoc = () => {
     const doc = new jsPDF();
     const pageWidth = doc.internal.pageSize.getWidth();
     const pageHeight = doc.internal.pageSize.getHeight();
@@ -261,10 +264,24 @@ export const BudgetShareExport = ({
       { align: "center" }
     );
 
-    // Save
+    return doc;
+  };
+
+  const generatePDFBlob = (): Blob => {
+    const doc = generatePDFDoc();
+    return doc.output("blob");
+  };
+
+  const handlePreviewPDF = () => {
+    const blob = generatePDFBlob();
+    setPdfBlob(blob);
+    setPreviewOpen(true);
+  };
+
+  const handleDownloadPDF = () => {
+    const doc = generatePDFDoc();
     const filename = `budget-${selectedArea.toLowerCase().replace(/\s+/g, "-")}-${totalBudget}euro.pdf`;
     doc.save(filename);
-    
     toast.success(language === "it" ? "PDF scaricato!" : "PDF downloaded!");
   };
 
@@ -298,12 +315,29 @@ export const BudgetShareExport = ({
           <Button
             variant="outline"
             className="flex-1 gap-2"
-            onClick={generatePDF}
+            onClick={handlePreviewPDF}
+          >
+            <Eye className="w-4 h-4" />
+            {language === "it" ? "Anteprima" : "Preview"}
+          </Button>
+          <Button
+            variant="outline"
+            className="flex-1 gap-2"
+            onClick={handleDownloadPDF}
           >
             <FileDown className="w-4 h-4" />
-            {language === "it" ? "Scarica PDF" : "Download PDF"}
+            {language === "it" ? "Scarica" : "Download"}
           </Button>
         </div>
+
+        <PDFPreviewModal
+          open={previewOpen}
+          onOpenChange={setPreviewOpen}
+          pdfSource={pdfBlob}
+          title={language === "it" ? "Budget Mensile Studente" : "Student Monthly Budget"}
+          onDownload={handleDownloadPDF}
+          language={language}
+        />
         <p className="text-xs text-muted-foreground mt-3 text-center">
           {language === "it" 
             ? "Condividi questo budget con amici o salvalo per dopo"
