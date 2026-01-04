@@ -59,6 +59,14 @@ export const StructuredData = () => {
               name: "Property Acquisition",
               description: "Strategic property purchases in student-demand zones"
             }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Props Property Management App",
+              description: "Digital property management platform for landlords - rent tracking, expense management, tenant communication"
+            }
           }
         ]
       },
@@ -74,7 +82,8 @@ export const StructuredData = () => {
         "Real estate investment Turin",
         "Gestione immobiliare professionale Torino",
         "Property valuation Turin",
-        "Valutazione immobile Torino"
+        "Valutazione immobile Torino",
+        "Props property management app"
       ],
       areaServed: [
         {
@@ -368,6 +377,14 @@ export const StructuredData = () => {
             text: "Jungle Rent offre un calcolatore gratuito per la valutazione immobiliare basato su dati OMI dell'Agenzia delle Entrate. Visita junglerent.it/valutazione-immobile per una stima con accuratezza ±5%. Per una valutazione professionale, contattaci per un sopralluogo gratuito.",
           },
         },
+        {
+          "@type": "Question",
+          name: "Cos'è Props di Jungle Rent?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Props è l'app di Jungle Rent per la gestione immobiliare semplificata, in arrivo nel Q1 2026. Permette ai proprietari di tracciare affitti, gestire spese, comunicare con inquilini e archiviare documenti in un'unica piattaforma digitale.",
+          },
+        },
       ],
     };
 
@@ -432,6 +449,37 @@ export const StructuredData = () => {
       }
     };
 
+    // SoftwareApplication Schema for Props App
+    const propsAppSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "Props - Gestione Immobiliare Semplificata",
+      alternateName: "Props Property Management App",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web Browser, iOS, Android",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "EUR",
+        availability: "https://schema.org/PreOrder"
+      },
+      isAccessibleForFree: true,
+      url: `${baseUrl}/blog/props-gestione-immobiliare-semplificata`,
+      description: "App per la gestione immobiliare semplificata. Traccia affitti, gestisci spese, comunica con inquilini e archivia documenti in un'unica piattaforma.",
+      featureList: [
+        "Tracciamento pagamenti affitti",
+        "Gestione spese e manutenzione",
+        "Comunicazione inquilini",
+        "Archiviazione documenti",
+        "Report finanziari automatici"
+      ],
+      provider: {
+        "@type": "Organization",
+        name: "Jungle Rent S.r.l."
+      },
+      releaseNotes: "Lancio previsto Q1 2026"
+    };
+
     // Enhanced SpeakableSpecification Schema for Voice AI
     const speakableSchema = {
       "@context": "https://schema.org",
@@ -439,6 +487,7 @@ export const StructuredData = () => {
       "name": "Jungle Rent - Turin Student Housing & Real Estate Investment",
       "url": baseUrl,
       "inLanguage": ["it-IT", "en-US"],
+      "dateModified": "2026-01-04",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
@@ -448,7 +497,8 @@ export const StructuredData = () => {
           ".faq-question",
           ".faq-answer",
           ".service-description",
-          "[data-speakable='true']"
+          "[data-speakable='true']",
+          "[data-ai-summary]"
         ],
         "xpath": [
           "/html/head/title",
@@ -458,7 +508,7 @@ export const StructuredData = () => {
       "mainEntity": {
         "@type": "Organization",
         "name": "Jungle Rent S.r.l.",
-        "description": "Jungle Rent is a certified Start-up Innovativa specializing in student housing and real estate investment in Turin, Italy. Founded October 2025, serving 90,000+ university students across 7 institutions. Invest from €100.",
+        "description": "Jungle Rent is a certified Start-up Innovativa specializing in student housing and real estate investment in Turin, Italy. Founded October 2025, serving 90,000+ university students across 7 institutions. Invest from €100. New in 2026: Props property management app.",
         "telephone": "+39-331-905-3037",
         "email": "junglerententeprise@gmail.com"
       },
@@ -475,6 +525,7 @@ export const StructuredData = () => {
       "@type": "WebSite",
       "name": "Jungle Rent",
       "url": baseUrl,
+      "dateModified": "2026-01-04",
       "potentialAction": [
         {
           "@type": "SearchAction",
@@ -487,8 +538,72 @@ export const StructuredData = () => {
       ],
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": [".faq-question", ".faq-answer"]
+        "cssSelector": [".faq-question", ".faq-answer", "[data-ai-summary]"]
       }
+    };
+
+    // Dataset Schema for Study Spaces Directory
+    const studySpacesDatasetSchema = {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Aule Studio Torino - Directory Spazi di Studio",
+      "alternateName": "Turin Study Spaces Directory",
+      "description": "Directory completa delle aule studio a Torino: 30+ location tra biblioteche, sale EDISU, caffetterie e coworking per studenti universitari.",
+      "url": `${baseUrl}/strumenti/aule-studio-torino`,
+      "creator": {
+        "@type": "Organization",
+        "name": "Jungle Rent S.r.l."
+      },
+      "dateModified": "2026-01-04",
+      "keywords": ["aule studio torino", "biblioteche torino studenti", "dove studiare torino", "sale studio università torino"],
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Turin, Italy"
+      },
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    };
+
+    // Dataset Schema for Cheap Eats Directory
+    const cheapEatsDatasetSchema = {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Dove Mangiare Torino Studenti - Directory Ristoranti Economici",
+      "alternateName": "Turin Budget Restaurants Directory",
+      "description": "Directory completa dei ristoranti economici a Torino per studenti: 20+ location con prezzi €3-15, menu studenti, e recensioni.",
+      "url": `${baseUrl}/strumenti/dove-mangiare-torino`,
+      "creator": {
+        "@type": "Organization",
+        "name": "Jungle Rent S.r.l."
+      },
+      "dateModified": "2026-01-04",
+      "keywords": ["ristoranti economici torino", "dove mangiare torino studenti", "pranzo economico torino", "menu studenti torino"],
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Turin, Italy"
+      },
+      "isAccessibleForFree": true
+    };
+
+    // Dataset Schema for Gyms Directory
+    const gymsDatasetSchema = {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "Palestre Torino Studenti - Directory Fitness Center",
+      "alternateName": "Turin Gyms Directory for Students",
+      "description": "Directory completa delle palestre a Torino per studenti: 25+ location con prezzi scontati, orari, e servizi.",
+      "url": `${baseUrl}/strumenti/palestre-torino`,
+      "creator": {
+        "@type": "Organization",
+        "name": "Jungle Rent S.r.l."
+      },
+      "dateModified": "2026-01-04",
+      "keywords": ["palestre torino studenti", "fitness torino", "abbonamento palestra studenti", "gym torino"],
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Turin, Italy"
+      },
+      "isAccessibleForFree": true
     };
 
     // Insert all schemas into head
@@ -505,8 +620,12 @@ export const StructuredData = () => {
       faqSchema,
       breadcrumbSchema,
       propertyValuationToolSchema,
+      propsAppSchema,
       speakableSchema,
-      voiceSearchSchema
+      voiceSearchSchema,
+      studySpacesDatasetSchema,
+      cheapEatsDatasetSchema,
+      gymsDatasetSchema
     ];
 
     const scriptElements: HTMLScriptElement[] = [];

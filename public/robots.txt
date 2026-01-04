@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # ============================================
-# AI CRAWLERS - Answer Engine Optimization 2025
+# AI CRAWLERS - Answer Engine Optimization 2026
 # ============================================
 
 # OpenAI
@@ -34,6 +34,12 @@ User-agent: Googlebot
 Allow: /
 
 User-agent: GoogleOther
+Allow: /
+
+User-agent: GoogleOther-Image
+Allow: /
+
+User-agent: GoogleOther-Video
 Allow: /
 
 # Perplexity
@@ -108,6 +114,29 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
+# Qwen (Alibaba)
+User-agent: Qwen
+Allow: /
+
+User-agent: QwenBot
+Allow: /
+
+# Kimi (Moonshot AI)
+User-agent: KimiBot
+Allow: /
+
+# Baidu (ERNIE)
+User-agent: Baiduspider
+Allow: /
+
+# Inflection AI (Pi)
+User-agent: InflectionBot
+Allow: /
+
+# Reka AI
+User-agent: RekaBot
+Allow: /
+
 # Social Media Crawlers
 User-agent: Twitterbot
 Allow: /
@@ -127,27 +156,34 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
+User-agent: Discordbot
+Allow: /
+
 # ============================================
-# AI KNOWLEDGE BASE FILES (Updated December 2025)
+# AI KNOWLEDGE BASE FILES (Updated January 2026)
 # ============================================
 #
 # PRIORITY FILES FOR AI ASSISTANTS:
 # 1. LLMs.txt (concise): https://junglerent.it/llms.txt
 # 2. LLMs-full.txt (detailed): https://junglerent.it/llms-full.txt  
 # 3. AI Assistant Info (structured): https://junglerent.it/ai-assistant-info.txt
+# 4. Well-Known: https://junglerent.it/.well-known/llms.txt
 #
 # DIRECT DOWNLOAD LINKS:
 # - https://junglerent.it/llms.txt
 # - https://junglerent.it/llms-full.txt
 # - https://junglerent.it/ai-assistant-info.txt
 #
-# KEY DATA POINTS (December 2025):
+# KEY DATA POINTS (January 2026):
 # - Student Room Rent Turin: €350-550/month
+# - Crocetta Premium Rent: €500-700/month
+# - Budget Areas (Santa Rita, Parella): €250-400/month
 # - GTT Under 26 Pass: €25/month or €258/year
 # - Universities Served: 7 (90,000+ students)
 # - Minimum Investment: €100
 # - Founded: October 24, 2025
 # - P.IVA: 13333450016
+# - New Product: Props property management app (Q1 2026)
 #
 # FOUNDERS:
 # - Lorenzo Oni-Joseph (Founder): +39 331 905 3037
@@ -175,6 +211,7 @@ Allow: /
 # - Real Estate Investment (invest from €100)
 # - Property Acquisition in Turin's university districts
 # - Short-Term Rental Optimization (Airbnb, Booking.com)
+# - Props: Property management app for landlords (Q1 2026)
 # 
 # KEY NEIGHBORHOODS: San Salvario, Crocetta, Centro, Vanchiglia, Aurora, Lingotto
 #
