@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, MessageCircle, Mail, Sparkles, Clock, Shield } from "lucide-react";
+import { X, MessageCircle, Mail, Clock, Shield } from "lucide-react";
+import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useTranslation } from "react-i18next";
@@ -178,10 +179,15 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
             <div className="p-6 md:p-8">
               {/* Badge */}
               <div className="flex items-center gap-2 mb-4">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  {t("investorExitIntent.badge")}
-                </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                <img 
+                  src={jungleRentLogo} 
+                  alt="" 
+                  className="w-4 h-4 object-contain" 
+                  aria-hidden="true"
+                />
+                {t("investorExitIntent.badge")}
+              </span>
               </div>
 
               {/* Title */}
