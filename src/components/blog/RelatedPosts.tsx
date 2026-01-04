@@ -25,7 +25,7 @@ const RelatedPostsComponent = ({ posts, currentTags = [] }: RelatedPostsProps) =
   });
 
   return (
-    <section className="py-16 md:py-24 border-t border-border/20 bg-background">
+    <section id="related-posts-section" className="py-16 md:py-24 border-t border-border/20 bg-background">
       <div className="container mx-auto max-w-7xl px-4 md:px-8">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">

@@ -39,11 +39,21 @@ export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProp
     return items;
   }, [content]);
 
-  // Show/hide based on scroll position
+  // Show/hide based on scroll position and Related Posts section
   useEffect(() => {
     const handleScroll = () => {
       const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-      setIsVisible(scrollPercent > 0.08 && scrollPercent < 0.92);
+      
+      // Hide when Related Posts section enters viewport
+      const relatedSection = document.getElementById('related-posts-section');
+      let hideForRelated = false;
+      
+      if (relatedSection) {
+        const rect = relatedSection.getBoundingClientRect();
+        hideForRelated = rect.top < window.innerHeight * 0.7;
+      }
+      
+      setIsVisible(scrollPercent > 0.08 && !hideForRelated);
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
