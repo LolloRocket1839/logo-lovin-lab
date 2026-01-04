@@ -1,13 +1,7 @@
-import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-
-// Configure PDF.js worker
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import { Download, Loader2, ExternalLink } from "lucide-react";
 
 interface PDFPreviewModalProps {
   open: boolean;
@@ -26,21 +20,19 @@ export const PDFPreviewModal = ({
   onDownload,
   language = "it"
 }: PDFPreviewModalProps) => {
-  const [numPages, setNumPages] = useState<number>(0);
-  const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [objectUrl, setObjectUrl] = useState<string | null>(null);
 
-  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
-    setNumPages(numPages);
-    setLoading(false);
-    setError(false);
-  };
-
-  const onDocumentLoadError = () => {
-    setLoading(false);
-    setError(true);
-  };
+  // Create object URL for Blob sources
+  useEffect(() => {
+    if (pdfSource instanceof Blob) {
+      const url = URL.createObjectURL(pdfSource);
+      setObjectUrl(url);
+      return () => URL.revokeObjectURL(url);
+    } else {
+      setObjectUrl(null);
+    }
+  }, [pdfSource]);
 
   const handleDownload = () => {
     onDownload();
@@ -49,10 +41,7 @@ export const PDFPreviewModal = ({
 
   const handleOpenChange = (newOpen: boolean) => {
     if (!newOpen) {
-      // Reset state when closing
-      setPageNumber(1);
       setLoading(true);
-      setError(false);
     }
     onOpenChange(newOpen);
   };
@@ -60,94 +49,64 @@ export const PDFPreviewModal = ({
   const content = {
     it: {
       loading: "Caricamento preview...",
-      error: "Impossibile caricare la preview",
       close: "Chiudi",
       download: "Scarica PDF",
-      page: "Pagina"
+      openInNewTab: "Apri in nuova scheda"
     },
     en: {
       loading: "Loading preview...",
-      error: "Unable to load preview",
       close: "Close",
       download: "Download PDF",
-      page: "Page"
+      openInNewTab: "Open in new tab"
     }
   };
 
   const t = content[language];
 
-  // Prepare file source for react-pdf
-  const file = pdfSource instanceof Blob 
-    ? URL.createObjectURL(pdfSource)
-    : pdfSource;
+  // Get the URL to display
+  const displayUrl = objectUrl || (typeof pdfSource === 'string' ? pdfSource : null);
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-auto">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle className="pr-8">{title}</DialogTitle>
         </DialogHeader>
         
-        <div className="flex flex-col items-center py-4 min-h-[400px]">
-          {loading && !error && (
-            <div className="flex items-center gap-2 py-8 text-muted-foreground">
+        <div className="flex-1 min-h-[500px] relative bg-muted rounded-lg overflow-hidden">
+          {loading && (
+            <div className="absolute inset-0 flex items-center justify-center gap-2 text-muted-foreground z-10 bg-muted">
               <Loader2 className="w-6 h-6 animate-spin" />
               {t.loading}
             </div>
           )}
           
-          {error && (
-            <div className="flex items-center justify-center py-8 text-muted-foreground">
-              {t.error}
-            </div>
-          )}
-          
-          {file && (
-            <Document
-              file={file}
-              onLoadSuccess={onDocumentLoadSuccess}
-              onLoadError={onDocumentLoadError}
-              loading={null}
-              className="shadow-lg rounded-lg overflow-hidden"
-            >
-              <Page 
-                pageNumber={pageNumber} 
-                width={Math.min(600, window.innerWidth - 80)}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
-              />
-            </Document>
-          )}
-          
-          {numPages > 1 && !loading && !error && (
-            <div className="flex items-center gap-4 mt-4">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setPageNumber(p => Math.max(1, p - 1))}
-                disabled={pageNumber <= 1}
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </Button>
-              <span className="text-sm text-muted-foreground">
-                {t.page} {pageNumber} / {numPages}
-              </span>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setPageNumber(p => Math.min(numPages, p + 1))}
-                disabled={pageNumber >= numPages}
-              >
-                <ChevronRight className="w-4 h-4" />
-              </Button>
-            </div>
+          {displayUrl && (
+            <iframe
+              src={`${displayUrl}#toolbar=0&navpanes=0`}
+              className="w-full h-full min-h-[500px] border-0"
+              onLoad={() => setLoading(false)}
+              title={title}
+            />
           )}
         </div>
         
-        <DialogFooter>
-          <Button variant="outline" onClick={() => handleOpenChange(false)}>
-            {t.close}
-          </Button>
+        <DialogFooter className="flex-row justify-between sm:justify-between gap-2 pt-4">
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={() => handleOpenChange(false)}>
+              {t.close}
+            </Button>
+            {displayUrl && (
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={() => window.open(displayUrl, '_blank')}
+                title={t.openInNewTab}
+              >
+                <ExternalLink className="w-4 h-4" />
+              </Button>
+            )}
+          </div>
           <Button onClick={handleDownload} className="gap-2">
             <Download className="w-4 h-4" />
             {t.download}
