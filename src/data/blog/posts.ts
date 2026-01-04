@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     content: "props-gestione-immobiliare-semplificata",
     translations: {
       it: {
-        title: "Props: La Soluzione Definitiva per la Gestione Immobiliare Semplificata",
+        title: "Props: la soluzione definitiva per la gestione immobiliare semplificata",
         excerpt: "Ripartizione spese automatica, OCR bollette, cash flow in tempo reale. Come Props trasforma il caos degli affitti in gestione professionale.",
         seo: {
           title: "Props Gestione Immobiliare 2025 | Software Affitti e Spese",
@@ -163,7 +163,7 @@ export const blogPosts: BlogPost[] = [
     content: "emergenze-affitti-torino-diritti-inquilini",
     translations: {
       it: {
-        title: "Emergenze Affitti a Torino: Contratto Non Registrato, Caparra e Rescissione",
+        title: "Emergenze affitti a Torino: contratto non registrato, caparra e rescissione",
         excerpt: "Contratto non registrato? Caparra oltre 3 mesi? Vuoi recedere anticipatamente? Tutti i tuoi diritti di inquilino a Torino, procedure legali e risorse gratuite.",
         seo: {
           title: "Emergenze Affitti Torino 2025 | Contratto Non Registrato, Caparra, Rescissione",
@@ -249,7 +249,7 @@ export const blogPosts: BlogPost[] = [
     content: "panettoni-pandori-torino-guida-2025",
     translations: {
       it: {
-        title: "I Migliori Panettoni e Pandori di Torino 2025",
+        title: "I migliori panettoni e pandori di Torino 2025",
         excerpt: "Pasticceria Racca, Murdocco, Stratta, Ghigo: tutti gli indirizzi, telefoni, prezzi. Artigianali, creativi, marche storiche. 31 fonti.",
         seo: {
           title: "Panettoni e Pandori Torino 2025 | Artigianali e Non",

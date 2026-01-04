@@ -2,8 +2,8 @@
  * Text Casing Utilities
  * 
  * Enforces text casing conventions:
- * - Italian (IT): Title Case
- * - English (EN): sentence case
+ * - Italian (IT): Sentence case
+ * - English (EN): Sentence case
  * 
  * See: public/resources/style-guide-text-casing.md
  */
@@ -179,18 +179,11 @@ export function validateTextCasing(
   let isValid = true;
   let expected = text;
   
-  if (language === 'it') {
-    isValid = isTitleCase(text);
-    expected = toTitleCase(text);
-    if (!isValid) {
-      issues.push(`Italian text should use Title Case. Expected: \"${expected}\"`);
-    }
-  } else {
-    isValid = isSentenceCase(text);
-    expected = toSentenceCase(text);
-    if (!isValid) {
-      issues.push(`English text should use sentence case. Expected: \"${expected}\"`);
-    }
+  // Both languages now use sentence case
+  isValid = isSentenceCase(text);
+  expected = toSentenceCase(text);
+  if (!isValid) {
+    issues.push(`Text should use sentence case. Expected: \"${expected}\"`);
   }
   
   return { isValid, text, language, expected, issues };

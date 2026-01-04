@@ -1,8 +1,8 @@
 {
   "header": {
     "title": "Jungle Rent",
-    "subtitle": "Investi nel Futuro degli Alloggi per Studenti",
-    "backToWebsite": "Vai al Sito"
+    "subtitle": "Investi nel futuro degli alloggi per studenti",
+    "backToWebsite": "Vai al sito"
   },
   "autoSave": {
     "saved": "Salvato automaticamente",
@@ -11,7 +11,7 @@
   "navigation": {
     "continue": "Continua",
     "back": "Indietro",
-    "submit": "Invia Candidatura",
+    "submit": "Invia candidatura",
     "halfway": "Sei a metà!"
   },
   "questions": {
