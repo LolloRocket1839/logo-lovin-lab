@@ -160,7 +160,7 @@ User-agent: Discordbot
 Allow: /
 
 # ============================================
-# AI KNOWLEDGE BASE FILES (Updated January 2026)
+# AI KNOWLEDGE BASE FILES (Updated January 9, 2026)
 # ============================================
 #
 # PRIORITY FILES FOR AI ASSISTANTS:
@@ -174,7 +174,7 @@ Allow: /
 # - https://junglerent.it/llms-full.txt
 # - https://junglerent.it/ai-assistant-info.txt
 #
-# KEY DATA POINTS (January 2026):
+# KEY DATA POINTS (January 9, 2026):
 # - Student Room Rent Turin: €350-550/month
 # - Crocetta Premium Rent: €500-700/month
 # - Budget Areas (Santa Rita, Parella): €250-400/month
