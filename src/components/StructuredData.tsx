@@ -487,7 +487,7 @@ export const StructuredData = () => {
       "name": "Jungle Rent - Turin Student Housing & Real Estate Investment",
       "url": baseUrl,
       "inLanguage": ["it-IT", "en-US"],
-      "dateModified": "2026-01-04",
+      "dateModified": "2026-01-09",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
