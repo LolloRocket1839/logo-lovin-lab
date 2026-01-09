@@ -18,7 +18,7 @@ export const HeroLogo = () => {
         <img
           src={jungleRentLogo}
           alt="Jungle Rent"
-          className="w-20 h-20 md:w-24 md:h-24 mx-auto block"
+          className="w-20 h-20 md:w-32 md:h-32 mx-auto block"
         />
       </div>
     );
@@ -36,7 +36,7 @@ export const HeroLogo = () => {
       <motion.img
         src={jungleRentLogo}
         alt="Jungle Rent"
-        className="w-20 h-20 md:w-24 md:h-24 mx-auto block"
+        className="w-20 h-20 md:w-32 md:h-32 mx-auto block"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
