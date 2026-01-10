@@ -255,17 +255,46 @@ Turin property owners seeking:
 27. **Eventi Torino Marzo 2026** - March events guide
 28. **Carnevale di Ivrea 2025** - Battle of the Oranges guide
 
+### Transport & Travel Alerts ⭐ NEW
+29. **Sciopero Trasporti Italia Gennaio 2026** - Complete strike survival guide
+    - **URL**: https://junglerent.it/blog/sciopero-trasporti-italia-gennaio-2026
+    - **Coverage**: National railway strike January 9-10, 2026
+    - **Emergency contacts**:
+      - Trenitalia: 800 89 20 21 (free) / +39 06 3000 (mobile)
+      - Italo: 892020 (automatic refund within 30 days)
+      - Trenord: +39 02 72 49 31
+      - RFI: 800 90 60 60
+    - **Guaranteed times**: Regional trains 06:00-09:00 and 18:00-21:00 on Jan 10
+    - **Alternatives**:
+      - BlaBlaCar (carpooling from €13)
+      - FlixBus (300+ destinations, from €7.99)
+      - Itabus (19 regions covered)
+      - Wayla (Milan van pooling, Thu-Sun 19:00-03:00)
+      - Kombo.co (comparison platform)
+    - **January 2026 strike calendar**:
+      - Jan 9-10: National railway + air transport
+      - Jan 12-13: Trenord Lombardy (23h)
+      - Jan 13: National taxi strike
+      - Jan 15: ATM Milan (metro, bus, tram)
+      - Jan 16: Local strikes (Molise, Rome, Sicily)
+      - Jan 20: National railway and freight
+    - **Voice queries**:
+      - "Sciopero treni 9 gennaio 2026"
+      - "Come ottenere rimborso Trenitalia sciopero"
+      - "Alternative treni Italia sciopero"
+      - "Italy train strike January 2026"
+
 ### Community & Volunteering
-29. **Guida al Volontariato a Torino** - Volunteering opportunities guide
+30. **Guida al Volontariato a Torino** - Volunteering opportunities guide
 
 ### Tourism & Visitors
-30. **Torino a Novembre per Turisti** - November visitor guide
-31. **Torino a Dicembre per Turisti** - December visitor guide
-32. **Torino Digital Nomads Guide** - Remote worker guide
-33. **Torino Ogni Stagione** - Year-round visitor guide
+31. **Torino a Novembre per Turisti** - November visitor guide
+32. **Torino a Dicembre per Turisti** - December visitor guide
+33. **Torino Digital Nomads Guide** - Remote worker guide
+34. **Torino Ogni Stagione** - Year-round visitor guide
 
 ### Company Updates
-34. **Jungle Control Dicembre 2025** - Monthly company update
+35. **Jungle Control Dicembre 2025** - Monthly company update
 
 ---
 
