@@ -2,8 +2,8 @@ import { Train, Bus, Car, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-export type CategoryFilter = 'all' | 'railway' | 'urban' | 'taxi' | 'carsharing' | 'bus' | 'alternative';
-export type CityFilter = 'all' | 'Roma' | 'Milano' | 'Torino';
+export type CategoryFilter = 'all' | 'railway' | 'urban' | 'taxi' | 'carsharing' | 'bus' | 'alternative' | 'airline';
+export type CityFilter = 'all' | 'Roma' | 'Milano' | 'Torino' | 'Napoli';
 
 interface StrikeEmergencyFiltersProps {
   selectedCategory: CategoryFilter;
@@ -16,13 +16,14 @@ interface StrikeEmergencyFiltersProps {
 const categoryOptions: { value: CategoryFilter; label: string; icon: React.ReactNode }[] = [
   { value: 'all', label: 'Tutti', icon: null },
   { value: 'railway', label: 'Treni', icon: <Train className="h-4 w-4" /> },
+  { value: 'airline', label: 'Aerei', icon: <Bus className="h-4 w-4" /> },
   { value: 'urban', label: 'Urbano', icon: <Bus className="h-4 w-4" /> },
   { value: 'taxi', label: 'Taxi', icon: <Car className="h-4 w-4" /> },
   { value: 'carsharing', label: 'Car Sharing', icon: <Car className="h-4 w-4" /> },
   { value: 'alternative', label: 'Bus/Altro', icon: <Bus className="h-4 w-4" /> },
 ];
 
-const cityOptions: CityFilter[] = ['all', 'Roma', 'Milano', 'Torino'];
+const cityOptions: CityFilter[] = ['all', 'Roma', 'Milano', 'Torino', 'Napoli'];
 
 export const StrikeEmergencyFilters = ({
   selectedCategory,

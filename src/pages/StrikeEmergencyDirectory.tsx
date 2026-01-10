@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
-import { AlertTriangle, Phone, Train, Bus, Car, Download, CheckCircle, Calendar, ExternalLink, Apple } from 'lucide-react';
+import { AlertTriangle, Phone, Train, Bus, Car, Download, CheckCircle, Calendar, ExternalLink, Apple, Plane, CreditCard, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Navigation } from '@/components/layout/Navigation';
 import { Footer } from '@/components/layout/Footer';
@@ -12,6 +12,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { StrikeEmergencyCard } from '@/components/tools/StrikeEmergencyCard';
 import { StrikeCalendarTable } from '@/components/tools/StrikeCalendarTable';
 import { StrikeEmergencyFilters, type CategoryFilter, type CityFilter } from '@/components/tools/StrikeEmergencyFilters';
+import { RefundProcedureCard } from '@/components/tools/RefundProcedureCard';
+import { AirlineContactCard } from '@/components/tools/AirlineContactCard';
+import { PassengerRightsSection } from '@/components/tools/PassengerRightsSection';
 import {
   railwayContacts,
   urbanContacts,
@@ -19,11 +22,16 @@ import {
   carSharingServices,
   alternativeServices,
   strikeCalendarJanuary2026,
+  strikeCalendarFebMar2026,
   essentialApps,
   travelChecklist,
   getNationalStrikes,
   getTaxiByCity,
-  getCarSharingByCity
+  getCarSharingByCity,
+  airlineContacts,
+  airportContacts,
+  refundProcedures,
+  officialLinks
 } from '@/data/strikeEmergencyDirectory';
 
 const StrikeEmergencyDirectory = () => {
