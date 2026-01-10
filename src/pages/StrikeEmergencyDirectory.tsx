@@ -41,6 +41,7 @@ const StrikeEmergencyDirectory = () => {
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('all');
   const [selectedCity, setSelectedCity] = useState<CityFilter>('all');
   const [checkedItems, setCheckedItems] = useState<number[]>([]);
+  const [calendarMonth, setCalendarMonth] = useState<'january' | 'february'>('january');
 
   const content = {
     it: {
@@ -160,13 +161,35 @@ const StrikeEmergencyDirectory = () => {
               </div>
             </div>
 
-            {/* Link to full article */}
-            <Button variant="outline" asChild className="w-full sm:w-auto">
-              <a href={isItalian ? '/blog/sciopero-trasporti-italia-gennaio-2026' : '/en/blog/sciopero-trasporti-italia-gennaio-2026'}>
-                <ExternalLink className="h-4 w-4 mr-2" />
-                {t.relatedArticle}
+            {/* Emergency 112 Banner */}
+            <div className="bg-red-600 text-white rounded-lg p-4 flex items-center justify-between mb-6">
+              <div className="flex items-center gap-3">
+                <Phone className="h-6 w-6" />
+                <div>
+                  <p className="font-bold">Emergenza: 112</p>
+                  <p className="text-sm opacity-90">Numero unico europeo - Gratuito 24/7</p>
+                </div>
+              </div>
+              <a href="tel:112" className="bg-white text-red-600 px-4 py-2 rounded-lg font-bold hover:bg-red-100 transition-colors">
+                Chiama
               </a>
-            </Button>
+            </div>
+
+            {/* Link to full article + MIT */}
+            <div className="flex flex-wrap gap-3">
+              <Button variant="outline" asChild>
+                <a href={isItalian ? '/blog/sciopero-trasporti-italia-gennaio-2026' : '/en/blog/sciopero-trasporti-italia-gennaio-2026'}>
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  {t.relatedArticle}
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
+                <a href={officialLinks.mitCalendar} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Calendario MIT ufficiale
+                </a>
+              </Button>
+            </div>
           </section>
 
           {/* Quick Numbers - Most Important */}
@@ -225,26 +248,38 @@ const StrikeEmergencyDirectory = () => {
 
           {/* Main Tabs */}
           <Tabs defaultValue="calendar" className="space-y-6">
-            <TabsList className="grid grid-cols-2 md:grid-cols-5 w-full">
-              <TabsTrigger value="calendar" className="gap-1">
+            <TabsList className="grid grid-cols-4 md:grid-cols-8 w-full h-auto">
+              <TabsTrigger value="calendar" className="gap-1 text-xs md:text-sm">
                 <Calendar className="h-4 w-4" />
-                <span className="hidden sm:inline">{t.calendar}</span>
+                <span className="hidden sm:inline">Calendario</span>
               </TabsTrigger>
-              <TabsTrigger value="directory" className="gap-1">
+              <TabsTrigger value="directory" className="gap-1 text-xs md:text-sm">
                 <Phone className="h-4 w-4" />
-                <span className="hidden sm:inline">{t.directory}</span>
+                <span className="hidden sm:inline">Directory</span>
               </TabsTrigger>
-              <TabsTrigger value="alternatives" className="gap-1">
+              <TabsTrigger value="airlines" className="gap-1 text-xs md:text-sm">
+                <Plane className="h-4 w-4" />
+                <span className="hidden sm:inline">Aerei</span>
+              </TabsTrigger>
+              <TabsTrigger value="refunds" className="gap-1 text-xs md:text-sm">
+                <CreditCard className="h-4 w-4" />
+                <span className="hidden sm:inline">Rimborsi</span>
+              </TabsTrigger>
+              <TabsTrigger value="rights" className="gap-1 text-xs md:text-sm">
+                <Shield className="h-4 w-4" />
+                <span className="hidden sm:inline">Diritti</span>
+              </TabsTrigger>
+              <TabsTrigger value="alternatives" className="gap-1 text-xs md:text-sm">
                 <Bus className="h-4 w-4" />
-                <span className="hidden sm:inline">{t.alternatives}</span>
+                <span className="hidden sm:inline">Alternative</span>
               </TabsTrigger>
-              <TabsTrigger value="apps" className="gap-1">
+              <TabsTrigger value="apps" className="gap-1 text-xs md:text-sm">
                 <Download className="h-4 w-4" />
-                <span className="hidden sm:inline">{t.apps}</span>
+                <span className="hidden sm:inline">App</span>
               </TabsTrigger>
-              <TabsTrigger value="checklist" className="gap-1">
+              <TabsTrigger value="checklist" className="gap-1 text-xs md:text-sm">
                 <CheckCircle className="h-4 w-4" />
-                <span className="hidden sm:inline">{t.checklist}</span>
+                <span className="hidden sm:inline">Checklist</span>
               </TabsTrigger>
             </TabsList>
 
@@ -252,13 +287,41 @@ const StrikeEmergencyDirectory = () => {
             <TabsContent value="calendar">
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5" />
-                    {t.calendar} - {t.january2026}
-                  </CardTitle>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <CardTitle className="flex items-center gap-2">
+                      <Calendar className="h-5 w-5" />
+                      Calendario scioperi 2026
+                    </CardTitle>
+                    <div className="flex gap-2">
+                      <Button 
+                        variant={calendarMonth === 'january' ? 'default' : 'outline'} 
+                        size="sm"
+                        onClick={() => setCalendarMonth('january')}
+                      >
+                        Gennaio
+                      </Button>
+                      <Button 
+                        variant={calendarMonth === 'february' ? 'default' : 'outline'} 
+                        size="sm"
+                        onClick={() => setCalendarMonth('february')}
+                      >
+                        Feb-Marzo
+                      </Button>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <StrikeCalendarTable strikes={strikeCalendarJanuary2026} />
+                  <StrikeCalendarTable 
+                    strikes={calendarMonth === 'january' ? strikeCalendarJanuary2026 : strikeCalendarFebMar2026} 
+                  />
+                  <div className="mt-4 pt-4 border-t">
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={officialLinks.mitCalendar} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Verifica su MIT.gov.it
+                      </a>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -331,6 +394,60 @@ const StrikeEmergencyDirectory = () => {
                   </div>
                 </section>
               )}
+            </TabsContent>
+
+            {/* Airlines Tab */}
+            <TabsContent value="airlines" className="space-y-6">
+              <section>
+                <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                  <Plane className="h-5 w-5" />
+                  Compagnie aeree
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {airlineContacts.map(airline => (
+                    <AirlineContactCard key={airline.id} airline={airline} />
+                  ))}
+                </div>
+              </section>
+
+              <section>
+                <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                  🛫 Aeroporti principali
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {airportContacts.map(airport => (
+                    <AirlineContactCard key={airport.id} airport={airport} />
+                  ))}
+                </div>
+              </section>
+
+              <Card className="bg-primary/5 border-primary/30">
+                <CardContent className="p-4">
+                  <p className="text-sm">
+                    <strong>Diritti passeggeri aerei:</strong> Se il volo è cancellato per sciopero, hai diritto a rimborso 100% OPPURE volo alternativo gratuito + assistenza (pasti, hotel se necessario).
+                  </p>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* Refunds Tab */}
+            <TabsContent value="refunds" className="space-y-6">
+              <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-4">
+                <p className="text-sm">
+                  <strong>💡 Consiglio:</strong> Per i treni Italo il rimborso è <strong>automatico</strong> entro 30 giorni. Per Trenitalia usa il <strong>web form</strong> (gratuito e veloce). Per Trenord usa la <strong>chat TREasy</strong> (24/7 gratuita).
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {refundProcedures.map(procedure => (
+                  <RefundProcedureCard key={procedure.company} procedure={procedure} />
+                ))}
+              </div>
+            </TabsContent>
+
+            {/* Rights Tab */}
+            <TabsContent value="rights">
+              <PassengerRightsSection />
             </TabsContent>
 
             {/* Alternatives Tab */}
