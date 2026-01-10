@@ -11,7 +11,8 @@ import {
   Calendar,
   Utensils,
   Building2,
-  Dumbbell
+  Dumbbell,
+  AlertTriangle
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -69,6 +70,12 @@ const tools: Tool[] = [
     path: '/strumenti/palestre-torino-studenti'
   },
   {
+    id: 'strikes',
+    icon: AlertTriangle,
+    status: 'available',
+    path: '/scioperi-italia'
+  },
+  {
     id: 'utilities',
     icon: Zap,
     status: 'coming-soon'
@@ -119,6 +126,10 @@ const StudentTools = () => {
           title: "Directory Palestre Studenti",
           description: "Trova le migliori palestre a Torino con sconti studenti: prezzi, orari 24h, piscine e distanza dalle università."
         },
+        strikes: {
+          title: "Directory Scioperi Italia",
+          description: "Calendario scioperi trasporti 2026, numeri emergenza, compagnie aeree, rimborsi e diritti passeggeri."
+        },
         utilities: {
           title: "Comparatore Bollette",
           description: "Confronta le tariffe di luce e gas per trovare l'offerta migliore per la tua casa."
@@ -166,6 +177,10 @@ const StudentTools = () => {
         gyms: {
           title: "Student Gyms Directory",
           description: "Find the best gyms in Turin with student discounts: prices, 24h hours, pools and distance from universities."
+        },
+        strikes: {
+          title: "Italy Strikes Directory",
+          description: "2026 transport strike calendar, emergency numbers, airlines, refunds and passenger rights."
         },
         utilities: {
           title: "Utility Comparator",
