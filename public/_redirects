@@ -1,0 +1,2 @@
+# Server-side 301 redirect for sitemap (Netlify/Vercel)
+/sitemap  /sitemap.xml  301
