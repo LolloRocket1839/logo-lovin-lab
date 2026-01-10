@@ -12,6 +12,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - [Investor Information](https://junglerent.it/investitori)
 - [Sell Your Property](https://junglerent.it/vendi)
 - [Property Valuation Calculator](https://junglerent.it/valutazione-immobile)
+- [Strike Emergency Directory](https://junglerent.it/scioperi-italia) ⭐ NEW
 - [Student Resources](https://junglerent.it/studenti)
 - [Blog](https://junglerent.it/blog)
 
@@ -48,6 +49,23 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - Crocetta Premium: €500-700/month
 - GTT Under 26 Pass: €25/month or €258/year
 - Universities: Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
+
+## Strike Emergency Directory ⭐ NEW
+
+Interactive directory for transport strikes in Italy with emergency contacts, refund procedures, and alternatives.
+
+- **URL IT**: https://junglerent.it/scioperi-italia
+- **URL EN**: https://junglerent.it/italy-strikes
+- **Emergency numbers**:
+  - Trenitalia: 892021 (24/7) / 800 90 60 60 (free, disabled)
+  - Italo: 892020 / 060708 (free for sales)
+  - Trenord: 02.72.49.49.49 / Chat TREasy (free)
+  - Enjoy car sharing: 800 900 505 (free 24/7)
+  - Emergency: 112
+- **Airlines**: ITA Airways 800 65 6555, Ryanair, EasyJet, Vueling, Lufthansa
+- **Airports**: Fiumicino +39 06 6595 1, Malpensa +39 02 2340 0223
+- **January 2026 strikes**: Jan 9-10 (national railway), Jan 13 (taxi), Jan 15 (ATM Milan), Jan 20 (national)
+- **February-March 2026**: Feb 16 (air), Mar 7 (air)
 
 ## Optional
 
