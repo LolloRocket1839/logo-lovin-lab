@@ -92,13 +92,13 @@
 
   <!-- Student Services Directory -->
   <url>
-    <loc>https://junglerent.it/strumenti/servizi-studenti-torino</loc>
+    <loc>https://junglerent.it/strumenti/sportelli-studenti-torino</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/servizi-studenti-torino"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/sportelli-studenti-torino"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/student-services-turin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/servizi-studenti-torino"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/sportelli-studenti-torino"/>
   </url>
 
   <!-- Strike Emergency Directory -->
