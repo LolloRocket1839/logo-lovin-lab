@@ -28,6 +28,12 @@
 - **Numero da mobile:** +39 02 32 32 32
 - **Info scioperi:** [rfi.it/infomobilita](https://www.rfi.it/it/news-e-media/infomobilita/)
 
+> 📱 **DIRECTORY COMPLETA NUMERI EMERGENZA**
+> 
+> Tutti i contatti, app e alternative in un'unica pagina interattiva con calendario scioperi aggiornato, procedure rimborso step-by-step e checklist viaggio.
+> 
+> **[→ Apri Directory Emergenza Scioperi](/scioperi-italia)**
+
 ---
 
 ## Panorama completo dello sciopero del 9-10 gennaio 2026
