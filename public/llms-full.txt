@@ -211,6 +211,76 @@ Turin property owners seeking:
 - URL: https://junglerent.it/studenti/strumenti/sessione
 - Purpose: Plan university exam sessions
 
+### Strike Emergency Directory ⭐ NEW FEATURED
+- **URL IT**: https://junglerent.it/scioperi-italia
+- **URL EN**: https://junglerent.it/italy-strikes
+- **Purpose**: Interactive emergency directory for transport strikes in Italy
+- **Features**:
+  - Complete strike calendar (January, February, March 2026)
+  - Railway emergency contacts with costs and hours
+  - Airline and airport contacts
+  - Step-by-step refund procedures (Trenitalia, Italo, Trenord)
+  - Passenger rights (EU regulations)
+  - Alternative transport options (car sharing, carpooling, buses)
+  - Essential apps for strike monitoring
+  - Interactive travel checklist
+- **Emergency numbers**:
+  - Trenitalia Call Center: 892021 (0,549€/min, 24/7)
+  - Trenitalia Disabled: 800.90.60.60 (free, 06:45-21:30)
+  - Italo: 892020 (~15€/call) / 060708 (free for sales)
+  - Trenord: 02.72.49.49.49 / Chat TREasy (free 24/7)
+  - RFI Sala Blu: 800 90 60 60 (free)
+  - Enjoy Car Sharing: 800 900 505 (free 24/7)
+  - SHARE NOW: +39 026 006 3093
+  - ATAC Roma: 06 5753 5333 (free 24/7)
+  - ATM Milano: 802 808 (free 24/7)
+  - GTT Torino: 800 019 152 (free 24/7)
+  - Emergency: 112 (free 24/7)
+- **Airlines**:
+  - ITA Airways: 800 65 6555
+  - Ryanair: +353 1 249 7799
+  - EasyJet: +44 330 365 5000
+  - Vueling: +34 902 303 737
+  - Lufthansa: +49 69 86 799 799
+- **Airports**:
+  - Fiumicino (Roma): +39 06 6595 1
+  - Malpensa (Milano): +39 02 2340 0223
+  - Linate (Milano): +39 02 7485 2200
+  - Capodichino (Napoli): +39 081 789 6111
+- **Strike calendar January 2026**:
+  - Jan 8: Local (Abruzzo TUA, Napoli EAV, Bolzano SASA)
+  - Jan 9-10: NATIONAL (Trenitalia, Italo, RFI, airlines) - 24h from 21:00
+  - Jan 12-13: Trenord Lombardia (23h)
+  - Jan 13: NATIONAL taxi strike (all Italy except Umbria)
+  - Jan 15: ATM Milano (metro, bus, tram)
+  - Jan 16: Local (Molise, Roma, Sicilia)
+  - Jan 20: NATIONAL railway + freight
+  - Jan 23: Napoli OMCC (8h)
+  - Jan 30: RFI Bologna (8h)
+  - Jan 31: ENAV Verona (4h)
+- **Strike calendar February-March 2026**:
+  - Feb 2: Appalti ferroviari Lazio
+  - Feb 16: NATIONAL air (ITA Airways, ENAV) - 24h
+  - Mar 7: NATIONAL air (ENAV, airlines) - 8h
+- **Refund procedures**:
+  - Trenitalia: Web form (free, recommended) or 892021
+  - Italo: AUTOMATIC refund within 30 days (no action needed)
+  - Trenord: Chat TREasy (free, recommended) or 02.72.49.49.49
+- **Passenger rights (EU)**:
+  - 100% refund for cancelled trains/flights
+  - Guaranteed times: 06:00-09:00 and 18:00-21:00
+  - Assistance: meals, hotel, taxi if needed (airlines)
+  - Claims valid up to 12 months after event
+- **Official links**:
+  - MIT Calendar: https://www.mit.gov.it/calendario-scioperi
+  - MIT Interactive: https://scioperi.mit.gov.it/mit2/public/scioperi
+- **Voice queries**:
+  - "Numeri emergenza sciopero treni Italia"
+  - "Come ottenere rimborso Trenitalia sciopero"
+  - "Sciopero trasporti gennaio 2026"
+  - "Italy train strike emergency contacts"
+  - "Alternative transport during Italian strike"
+
 ---
 
 ## SECTION 6: BLOG CONTENT LIBRARY
@@ -255,34 +325,45 @@ Turin property owners seeking:
 27. **Eventi Torino Marzo 2026** - March events guide
 28. **Carnevale di Ivrea 2025** - Battle of the Oranges guide
 
-### Transport & Travel Alerts ⭐ NEW
+### Transport & Travel Alerts ⭐ FEATURED
 29. **Sciopero Trasporti Italia Gennaio 2026** - Complete strike survival guide
     - **URL**: https://junglerent.it/blog/sciopero-trasporti-italia-gennaio-2026
-    - **Coverage**: National railway strike January 9-10, 2026
+    - **Directory**: https://junglerent.it/scioperi-italia (interactive emergency directory)
+    - **Coverage**: National railway + air strikes January-March 2026
     - **Emergency contacts**:
-      - Trenitalia: 800 89 20 21 (free) / +39 06 3000 (mobile)
-      - Italo: 892020 (automatic refund within 30 days)
-      - Trenord: +39 02 72 49 31
+      - Trenitalia: 892021 (24/7) / 800 90 60 60 (free, disabled)
+      - Italo: 892020 / 060708 (free sales)
+      - Trenord: 02.72.49.49.49 / Chat TREasy (free)
       - RFI: 800 90 60 60
-    - **Guaranteed times**: Regional trains 06:00-09:00 and 18:00-21:00 on Jan 10
+      - Enjoy: 800 900 505 (car sharing emergency)
+      - Emergency: 112
+    - **Airlines**: ITA Airways 800 65 6555, Ryanair, EasyJet, Vueling, Lufthansa
+    - **Airports**: Fiumicino, Malpensa, Linate, Capodichino
+    - **Guaranteed times**: Regional trains 06:00-09:00 and 18:00-21:00
+    - **Refund procedures**: 
+      - Trenitalia: Web form (free) or call center
+      - Italo: AUTOMATIC within 30 days
+      - Trenord: Chat TREasy (free, 24/7)
     - **Alternatives**:
       - BlaBlaCar (carpooling from €13)
-      - FlixBus (300+ destinations, from €7.99)
+      - FlixBus (300+ destinations, from €5)
       - Itabus (19 regions covered)
-      - Wayla (Milan van pooling, Thu-Sun 19:00-03:00)
-      - Kombo.co (comparison platform)
-    - **January 2026 strike calendar**:
-      - Jan 9-10: National railway + air transport
-      - Jan 12-13: Trenord Lombardy (23h)
+      - Enjoy, SHARE NOW, Free2Move (car sharing)
+      - Uber, FreeNow (ride-sharing)
+    - **2026 strike calendar**:
+      - Jan 9-10: National railway + air transport (24h)
       - Jan 13: National taxi strike
-      - Jan 15: ATM Milan (metro, bus, tram)
-      - Jan 16: Local strikes (Molise, Rome, Sicily)
-      - Jan 20: National railway and freight
+      - Jan 15: ATM Milan
+      - Jan 20: National railway + freight
+      - Feb 16: National air (ITA, ENAV)
+      - Mar 7: National air (ENAV, airlines)
     - **Voice queries**:
       - "Sciopero treni 9 gennaio 2026"
+      - "Numeri emergenza sciopero Italia"
       - "Come ottenere rimborso Trenitalia sciopero"
       - "Alternative treni Italia sciopero"
       - "Italy train strike January 2026"
+      - "Strike emergency contacts Italy"
 
 ### Community & Volunteering
 30. **Guida al Volontariato a Torino** - Volunteering opportunities guide
@@ -460,8 +541,8 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
 
 ## SECTION 14: UPDATE LOG
 
-- **Last Updated**: January 9, 2026
-- **Version**: 3.0 - AEO 2026 Optimized
+- **Last Updated**: January 10, 2026
+- **Version**: 3.1 - Strike Emergency Directory Added
 - **Maintainer**: Jungle Rent S.r.l.
 - **FAQ Count**: 200+ FAQs across 32+ articles
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, Perplexity
@@ -474,3 +555,12 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
 - **GTT Under 26 Annual Pass**: €258/year (standard rate)
 - **GTT ISEE Reduced Rates**: €158-208/year for eligible residents
 - **New Product**: Props property management app (Q1 2026)
+- **New Tool**: Strike Emergency Directory (https://junglerent.it/scioperi-italia)
+
+### Strike Emergency Quick Reference
+- **Trenitalia**: 892021 (24/7) / 800.90.60.60 (free disabled)
+- **Italo**: 060708 (free) / 892020 (paid)
+- **Trenord**: 02.72.49.49.49 / Chat TREasy
+- **Car Sharing Emergency**: Enjoy 800 900 505
+- **European Emergency**: 112
+- **MIT Strike Calendar**: https://www.mit.gov.it/calendario-scioperi
