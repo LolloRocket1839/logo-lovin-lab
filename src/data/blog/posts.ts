@@ -2,6 +2,73 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "sciopero-trasporti-italia-gennaio-2026",
+    category: "societa",
+    date: "2026-01-09",
+    author: "Jungle Rent Team",
+    image: "/images/torino-transport.jpg",
+    readTime: 25,
+    content: "sciopero-trasporti-italia-gennaio-2026",
+    translations: {
+      it: {
+        title: "Sciopero nazionale trasporti ferroviari: guida completa con link verificati, numeri e app alternative",
+        excerpt: "Trenitalia, Italo, Trenord fermi il 9-10 gennaio 2026. Contatti emergenza, rimborsi, BlaBlaCar, FlixBus, Wayla e tutte le alternative verificate.",
+        seo: {
+          title: "Sciopero Treni 9-10 Gennaio 2026 | Guida Completa Rimborsi e Alternative",
+          description: "Sciopero ferroviario nazionale 9-10 gennaio 2026: numeri emergenza Trenitalia, Italo, Trenord, rimborsi, FlixBus, BlaBlaCar, calendario scioperi gennaio.",
+          keywords: [
+            "sciopero treni gennaio 2026",
+            "sciopero trenitalia 9 gennaio",
+            "rimborso sciopero treni",
+            "alternative sciopero ferroviario",
+            "flixbus italia",
+            "blablacar sciopero",
+            "trenord sciopero",
+            "calendario scioperi 2026",
+            "treni garantiti sciopero",
+            "italo sciopero rimborso"
+          ]
+        },
+        tags: ["Trasporti", "Scioperi", "Italia", "Viaggi", "Emergenze"],
+        faqs: [
+          { question: "Quali treni sono garantiti durante lo sciopero del 9-10 gennaio 2026?", answer: "Treni regionali garantiti dalle 06:00-09:00 e 18:00-21:00 di sabato 10 gennaio. Frecce e Intercity partiti entro le 21:00 del venerdì con arrivo entro le 22:00." },
+          { question: "Come ottenere il rimborso Trenitalia per sciopero?", answer: "Chiama il numero verde 800 89 20 21 (gratuito) o compila il web form su trenitalia.com. Per treni regionali richiedi entro le 24:00 del giorno precedente; per Frecce/IC fino all'ora di partenza." },
+          { question: "Quali sono le alternative ai treni durante lo sciopero?", answer: "BlaBlaCar (carpooling da €13), FlixBus (da €7.99 per aeroporti), Itabus, Wayla (van pooling Milano). Usa Kombo.co per confrontare tutte le opzioni." },
+          { question: "Italo rimborsa automaticamente per sciopero?", answer: "Sì, Italo riconosce rimborso automatico entro 30 giorni senza necessità di richiesta. L'importo viene accreditato come voucher Credito Italo." },
+          { question: "Quali altri scioperi ci sono a gennaio 2026?", answer: "12-13 gennaio: Trenord Lombardia. 13 gennaio: taxi nazionale. 15 gennaio: ATM Milano. 16 gennaio: scioperi locali. 20 gennaio: trasporto ferroviario nazionale." }
+        ]
+      },
+      en: {
+        title: "National railway transport strike: complete guide with verified links, numbers and alternative apps",
+        excerpt: "Trenitalia, Italo, Trenord stopped on January 9-10, 2026. Emergency contacts, refunds, BlaBlaCar, FlixBus, Wayla and all verified alternatives.",
+        seo: {
+          title: "Italy Train Strike January 9-10, 2026 | Complete Guide Refunds & Alternatives",
+          description: "National railway strike Italy January 9-10, 2026: emergency numbers Trenitalia, Italo, Trenord, refunds, FlixBus, BlaBlaCar, January strike calendar.",
+          keywords: [
+            "italy train strike january 2026",
+            "trenitalia strike january 9",
+            "train strike refund italy",
+            "railway strike alternatives",
+            "flixbus italy",
+            "blablacar strike",
+            "trenord strike",
+            "strike calendar 2026",
+            "guaranteed trains strike",
+            "italo strike refund"
+          ]
+        },
+        tags: ["Transport", "Strikes", "Italy", "Travel", "Emergencies"],
+        faqs: [
+          { question: "Which trains are guaranteed during the January 9-10, 2026 strike?", answer: "Regional trains guaranteed from 6:00-9:00 AM and 6:00-9:00 PM on Saturday, January 10. Frecce and Intercity departing before 9:00 PM Friday with arrival before 10:00 PM." },
+          { question: "How to get a Trenitalia refund for strike?", answer: "Call the free number 800 89 20 21 or fill out the web form on trenitalia.com. For regional trains request by midnight the day before; for Frecce/IC until departure time." },
+          { question: "What are the alternatives to trains during the strike?", answer: "BlaBlaCar (carpooling from €13), FlixBus (from €7.99 for airports), Itabus, Wayla (van pooling Milan). Use Kombo.co to compare all options." },
+          { question: "Does Italo automatically refund for strikes?", answer: "Yes, Italo recognizes automatic refund within 30 days without need for request. The amount is credited as Italo Credit voucher." },
+          { question: "What other strikes are there in January 2026?", answer: "January 12-13: Trenord Lombardy. January 13: national taxi. January 15: ATM Milan. January 16: local strikes. January 20: national railway transport." }
+        ]
+      }
+    }
+  },
+  {
     slug: "props-gestione-immobiliare-semplificata",
     category: "investors",
     date: "2025-12-31",
