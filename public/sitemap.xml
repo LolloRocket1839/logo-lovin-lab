@@ -72,19 +72,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
   </url>
 
-  <!-- Investor Form Page -->
-  <url>
-    <loc>https://junglerent.it/invest</loc>
-    <lastmod>2026-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/invest" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/invest" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/invest" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/invest" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/invest" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/invest" />
-  </url>
+  <!-- Investor Form Page - Redirect to Investors -->
+  <!-- REMOVED: /invest was a soft 404, investors page is the main entry point -->
 
   <!-- Sell Property Page - FEATURED SERVICE -->
   <url>
@@ -190,13 +179,13 @@
 
   <!-- Student Services Directory -->
   <url>
-    <loc>https://junglerent.it/strumenti/servizi-studenti-torino</loc>
+    <loc>https://junglerent.it/strumenti/sportelli-studenti-torino</loc>
     <lastmod>2026-01-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/servizi-studenti-torino" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/student-services-turin" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/servizi-studenti-torino" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
   </url>
 
   <!-- Blog Page -->

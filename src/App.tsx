@@ -53,6 +53,7 @@ const AppContent = () => {
         <Route path="/about" element={<About />} />
         <Route path="/investitori" element={<Investors />} />
         <Route path="/investors" element={<Investors />} />
+        <Route path="/invest" element={<Navigate to="/investitori" replace />} />
         
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
