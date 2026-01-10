@@ -78,6 +78,8 @@ const AppContent = () => {
         <Route path="/tools/cheap-eats-turin" element={<CheapEatsDirectory />} />
         <Route path="/strumenti/sportelli-studenti-torino" element={<StudentServicesDirectory />} />
         <Route path="/tools/student-services-turin" element={<StudentServicesDirectory />} />
+        {/* 301 Redirect for old URL (was causing Soft 404 in sitemap) */}
+        <Route path="/strumenti/servizi-studenti-torino" element={<Navigate to="/strumenti/sportelli-studenti-torino" replace />} />
         <Route path="/strumenti/palestre-torino-studenti" element={<GymsDirectory />} />
         <Route path="/tools/gyms-turin-students" element={<GymsDirectory />} />
         <Route path="/ai-testing" element={<AITesting />} />

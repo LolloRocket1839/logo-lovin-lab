@@ -111,6 +111,7 @@ const GymsDirectory: React.FC = () => {
         <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/tools/gyms-turin-students" />
+        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
       </Helmet>
 
       {/* Structured Data for SEO */}
