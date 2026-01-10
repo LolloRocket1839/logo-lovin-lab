@@ -35,6 +35,7 @@ const GymsDirectory = lazy(() => import("./pages/GymsDirectory"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const Sellers = lazy(() => import("./pages/Sellers"));
 const PropertyValuation = lazy(() => import("./pages/PropertyValuation"));
+const StrikeEmergencyDirectory = lazy(() => import("./pages/StrikeEmergencyDirectory"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -88,6 +89,8 @@ const AppContent = () => {
         <Route path="/proprietari" element={<Navigate to="/vendi" replace />} />
         <Route path="/valutazione-immobile" element={<PropertyValuation />} />
         <Route path="/property-valuation" element={<PropertyValuation />} />
+        <Route path="/scioperi-italia" element={<StrikeEmergencyDirectory />} />
+        <Route path="/italy-strikes" element={<StrikeEmergencyDirectory />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
