@@ -36,6 +36,7 @@ const ThankYou = lazy(() => import("./pages/ThankYou"));
 const Sellers = lazy(() => import("./pages/Sellers"));
 const PropertyValuation = lazy(() => import("./pages/PropertyValuation"));
 const StrikeEmergencyDirectory = lazy(() => import("./pages/StrikeEmergencyDirectory"));
+const SitemapDebug = lazy(() => import("./pages/SitemapDebug"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -94,6 +95,7 @@ const AppContent = () => {
         <Route path="/property-valuation" element={<PropertyValuation />} />
         <Route path="/scioperi-italia" element={<StrikeEmergencyDirectory />} />
         <Route path="/italy-strikes" element={<StrikeEmergencyDirectory />} />
+        <Route path="/sitemap" element={<SitemapDebug />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
