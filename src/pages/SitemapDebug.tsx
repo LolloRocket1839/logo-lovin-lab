@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { 
@@ -16,7 +16,11 @@ import {
   ChevronDown,
   ChevronRight,
   Copy,
-  CheckCircle2
+  CheckCircle2,
+  Loader2,
+  XCircle,
+  RefreshCw,
+  ArrowRight
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -25,6 +29,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Navigation, Footer } from '@/components/layout';
 import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
+
+interface UrlStatus {
+  url: string;
+  status: number;
+  ok: boolean;
+  redirected?: boolean;
+  finalUrl?: string;
+  error?: string;
+}
 
 interface SiteUrl {
   path: string;
@@ -114,6 +128,9 @@ const SitemapDebug = () => {
   const [search, setSearch] = useState('');
   const [expandedCategories, setExpandedCategories] = useState<string[]>(['core', 'tools']);
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
+  const [urlStatuses, setUrlStatuses] = useState<Record<string, UrlStatus>>({});
+  const [isChecking, setIsChecking] = useState(false);
+  const [checkingUrls, setCheckingUrls] = useState<Set<string>>(new Set());
 
   const filteredUrls = useMemo(() => {
     if (!search) return siteUrls;
@@ -163,6 +180,131 @@ const SitemapDebug = () => {
     toast.success(`${siteUrls.length} URL copiati!`);
   };
 
+  // Check a batch of URLs
+  const checkUrls = useCallback(async (urlsToCheck: string[]) => {
+    try {
+      const { data, error } = await supabase.functions.invoke('check-url-status', {
+        body: { urls: urlsToCheck }
+      });
+
+      if (error) throw error;
+
+      const newStatuses: Record<string, UrlStatus> = {};
+      data.results.forEach((result: UrlStatus) => {
+        newStatuses[result.url] = result;
+      });
+      
+      setUrlStatuses(prev => ({ ...prev, ...newStatuses }));
+      return data.results;
+    } catch (error) {
+      console.error('Error checking URLs:', error);
+      toast.error('Errore nel controllo URL');
+      return [];
+    }
+  }, []);
+
+  // Check all URLs
+  const checkAllUrls = useCallback(async () => {
+    setIsChecking(true);
+    setUrlStatuses({});
+    
+    const allUrls = siteUrls.flatMap(u => {
+      const urls = [`https://junglerent.it${u.path}`];
+      if (u.pathEN) urls.push(`https://junglerent.it${u.pathEN}`);
+      return urls;
+    });
+
+    // Check in batches of 20
+    for (let i = 0; i < allUrls.length; i += 20) {
+      const batch = allUrls.slice(i, i + 20);
+      setCheckingUrls(new Set(batch));
+      await checkUrls(batch);
+      // Small delay between batches
+      if (i + 20 < allUrls.length) {
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+    }
+
+    setCheckingUrls(new Set());
+    setIsChecking(false);
+    toast.success('Controllo completato!');
+  }, [checkUrls]);
+
+  // Check single URL
+  const checkSingleUrl = useCallback(async (path: string) => {
+    const fullUrl = `https://junglerent.it${path}`;
+    setCheckingUrls(prev => new Set([...prev, fullUrl]));
+    await checkUrls([fullUrl]);
+    setCheckingUrls(prev => {
+      const newSet = new Set(prev);
+      newSet.delete(fullUrl);
+      return newSet;
+    });
+  }, [checkUrls]);
+
+  // Get status stats
+  const statusStats = useMemo(() => {
+    const statuses = Object.values(urlStatuses);
+    return {
+      checked: statuses.length,
+      ok: statuses.filter(s => s.ok && !s.redirected).length,
+      redirected: statuses.filter(s => s.redirected).length,
+      errors: statuses.filter(s => !s.ok).length,
+    };
+  }, [urlStatuses]);
+
+  // Get status for a path
+  const getUrlStatus = (path: string) => {
+    const fullUrl = `https://junglerent.it${path}`;
+    return urlStatuses[fullUrl];
+  };
+
+  // Render status badge
+  const renderStatusBadge = (path: string) => {
+    const fullUrl = `https://junglerent.it${path}`;
+    
+    if (checkingUrls.has(fullUrl)) {
+      return <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />;
+    }
+    
+    const status = urlStatuses[fullUrl];
+    if (!status) return null;
+
+    if (status.error) {
+      return (
+        <Badge variant="destructive" className="text-xs">
+          <XCircle className="w-3 h-3 mr-1" />
+          Errore
+        </Badge>
+      );
+    }
+
+    if (status.redirected) {
+      return (
+        <Badge variant="outline" className="text-xs bg-yellow-50 text-yellow-700 border-yellow-300">
+          <ArrowRight className="w-3 h-3 mr-1" />
+          {status.status} Redirect
+        </Badge>
+      );
+    }
+
+    if (status.ok) {
+      return (
+        <Badge variant="outline" className="text-xs bg-green-50 text-green-700 border-green-300">
+          <Check className="w-3 h-3 mr-1" />
+          {status.status}
+        </Badge>
+      );
+    }
+
+    return (
+      <Badge variant="destructive" className="text-xs">
+        <XCircle className="w-3 h-3 mr-1" />
+        {status.status}
+      </Badge>
+    );
+  };
+
   return (
     <>
       <Helmet>
@@ -187,7 +329,7 @@ const SitemapDebug = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
             <Card>
               <CardContent className="pt-4 text-center">
                 <div className="text-2xl font-bold text-primary">{stats.total}</div>
@@ -219,6 +361,66 @@ const SitemapDebug = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* HTTP Status Test Card */}
+          <Card className="mb-8">
+            <CardHeader className="pb-3">
+              <CardTitle className="text-lg flex items-center justify-between">
+                <span className="flex items-center gap-2">
+                  <RefreshCw className={`w-4 h-4 ${isChecking ? 'animate-spin' : ''}`} />
+                  Test HTTP Status
+                </span>
+                <Button 
+                  onClick={checkAllUrls} 
+                  disabled={isChecking}
+                  size="sm"
+                >
+                  {isChecking ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      Controllo in corso...
+                    </>
+                  ) : (
+                    <>
+                      <RefreshCw className="w-4 h-4 mr-2" />
+                      Testa tutti gli URL
+                    </>
+                  )}
+                </Button>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0">
+              {statusStats.checked > 0 ? (
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex items-center gap-2">
+                    <Badge variant="outline" className="bg-green-50 text-green-700 border-green-300">
+                      <Check className="w-3 h-3 mr-1" />
+                      {statusStats.ok} OK
+                    </Badge>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Badge variant="outline" className="bg-yellow-50 text-yellow-700 border-yellow-300">
+                      <ArrowRight className="w-3 h-3 mr-1" />
+                      {statusStats.redirected} Redirect
+                    </Badge>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Badge variant="destructive">
+                      <XCircle className="w-3 h-3 mr-1" />
+                      {statusStats.errors} Errori
+                    </Badge>
+                  </div>
+                  <div className="text-sm text-muted-foreground ml-auto">
+                    {statusStats.checked} URL controllati
+                  </div>
+                </div>
+              ) : (
+                <p className="text-sm text-muted-foreground">
+                  Clicca "Testa tutti gli URL" per verificare lo status HTTP di ogni pagina
+                </p>
+              )}
+            </CardContent>
+          </Card>
 
           {/* Search and Actions */}
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -309,12 +511,22 @@ const SitemapDebug = () => {
                               </div>
                               
                               <div className="flex items-center gap-2 shrink-0">
+                                {renderStatusBadge(url.path)}
                                 <Badge 
                                   variant={url.priority >= 0.8 ? 'default' : 'secondary'}
                                   className="text-xs"
                                 >
                                   {url.priority.toFixed(1)}
                                 </Badge>
+                                <Button 
+                                  variant="ghost" 
+                                  size="sm"
+                                  onClick={() => checkSingleUrl(url.path)}
+                                  disabled={checkingUrls.has(`https://junglerent.it${url.path}`)}
+                                  title="Testa URL"
+                                >
+                                  <RefreshCw className={`w-4 h-4 ${checkingUrls.has(`https://junglerent.it${url.path}`) ? 'animate-spin' : ''}`} />
+                                </Button>
                                 <Button 
                                   variant="ghost" 
                                   size="sm"
