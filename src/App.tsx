@@ -95,7 +95,8 @@ const AppContent = () => {
         <Route path="/property-valuation" element={<PropertyValuation />} />
         <Route path="/scioperi-italia" element={<StrikeEmergencyDirectory />} />
         <Route path="/italy-strikes" element={<StrikeEmergencyDirectory />} />
-        <Route path="/sitemap" element={<SitemapDebug />} />
+        <Route path="/sitemap-debug" element={<SitemapDebug />} />
+        <Route path="/sitemap" element={<Navigate to="/sitemap.xml" replace />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
