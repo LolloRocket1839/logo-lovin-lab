@@ -28,6 +28,12 @@
 - **Mobile number:** +39 02 32 32 32
 - **Strike info:** [rfi.it/infomobility](https://www.rfi.it/it/news-e-media/infomobilita/)
 
+> 📱 **COMPLETE EMERGENCY CONTACTS DIRECTORY**
+> 
+> All contacts, apps for all alternatives on a single interactive page with updated strike calendar, step-by-step refund procedures and travel checklist.
+> 
+> **[→ Open Strike Emergency Directory](/italy-strikes)**
+
 ---
 
 ## Complete overview of the January 9-10, 2026 strike
