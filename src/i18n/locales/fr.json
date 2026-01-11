@@ -208,7 +208,11 @@
     "politecnico": "Politecnico",
     "unito": "UniTo",
     "benefits": "avantages",
-    "logo2i3tAlt": "2i3T Incubateur Université de Turin - Partenaire officiel"
+    "logo2i3tAlt": "2i3T Incubateur Université de Turin - Partenaire officiel",
+    "sellerLink": {
+      "prefix": "Vous êtes propriétaire ?",
+      "cta": "Découvrez comment vendre"
+    }
   },
   "studentSearch": {
     "title": "Trouvez votre chambre",

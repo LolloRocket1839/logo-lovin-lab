@@ -140,6 +140,10 @@
     "iAmStudent": "Ich bin Student",
     "iAmInvestor": "Ich bin Investor",
     "contactLorenzo": "Lorenzo kontaktieren",
+    "sellerLink": {
+      "prefix": "Sind Sie Immobilienbesitzer?",
+      "cta": "Erfahren Sie, wie Sie verkaufen können"
+    },
     "waitlistCounter": "Schließen Sie sich {{count}} anderen auf der Warteliste an",
     "supportedBy": "Unterstützt von",
     "logo2i3tAlt": "2i3T Inkubator Universität Turin - Offizieller Partner"

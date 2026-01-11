@@ -207,7 +207,11 @@
     "politecnico": "Politecnico",
     "unito": "UniTo",
     "benefits": "fördelar",
-    "logo2i3tAlt": "2i3T Företagsinkubator Turin Universitet - Officiell partner"
+    "logo2i3tAlt": "2i3T Företagsinkubator Turin Universitet - Officiell partner",
+    "sellerLink": {
+      "prefix": "Är du fastighetsägare?",
+      "cta": "Upptäck hur du säljer"
+    }
   },
   "studentSearch": {
     "title": "Hitta ditt rum",
