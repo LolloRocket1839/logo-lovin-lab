@@ -208,7 +208,11 @@
     "politecnico": "Politecnico",
     "unito": "UniTo",
     "benefits": "benefici",
-    "logo2i3tAlt": "2i3T Incubatore Imprese Università di Torino - Partner ufficiale"
+    "logo2i3tAlt": "2i3T Incubatore Imprese Università di Torino - Partner ufficiale",
+    "sellerLink": {
+      "prefix": "Sei un proprietario?",
+      "cta": "Scopri come vendere casa"
+    }
   },
   "studentSearch": {
     "title": "Trova la tua stanza",

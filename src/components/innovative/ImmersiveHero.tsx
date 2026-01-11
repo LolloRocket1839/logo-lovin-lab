@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/dialogs";
 import { useAnalytics } from "@/hooks/useAnalytics";
@@ -8,7 +9,7 @@ import { HowItWorksDrawer } from "./HowItWorksDrawer";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 
 export const ImmersiveHero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
 
@@ -67,6 +68,18 @@ export const ImmersiveHero = () => {
             >
               {t('hero.startInvesting')} →
             </Button>
+            
+            {/* Secondary seller link */}
+            <p className="mt-4 text-sm text-muted-foreground">
+              {t('hero.sellerLink.prefix')}{' '}
+              <Link 
+                to={i18n.language === 'it' ? '/vendi' : '/sellers'}
+                onClick={() => trackClick('hero_seller_link')}
+                className="text-primary hover:underline font-medium"
+              >
+                {t('hero.sellerLink.cta')} →
+              </Link>
+            </p>
           </div>
 
           {/* 2i3T Badge - below CTA */}
