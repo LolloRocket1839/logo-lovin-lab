@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Building2, Clock, Check, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { QuickSellerLeadDialog } from "@/components/dialogs";
 import { StyledText } from "@/components/StyledText";
 
 export const SellerSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
@@ -83,6 +84,17 @@ export const SellerSection = () => {
           >
             {t('seller.ctaButton')} →
           </Button>
+          
+          {/* Contextual link to property valuation - NEW for SEO */}
+          <p className="mt-6 text-sm text-muted-foreground">
+            {t('seller.valuationCta', 'Vuoi prima sapere quanto vale il tuo immobile?')}{' '}
+            <Link 
+              to={i18n.language.startsWith('it') ? '/valutazione-immobile' : '/property-valuation'}
+              className="text-primary hover:underline font-medium"
+            >
+              {t('seller.valuationLink', 'Prova la nostra valutazione gratuita →')}
+            </Link>
+          </p>
         </div>
       </div>
 

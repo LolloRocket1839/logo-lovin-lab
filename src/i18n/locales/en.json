@@ -606,7 +606,9 @@
     "scheduleCall": "Schedule a Call",
     "feature1": "Free valuation",
     "feature2": "Sale in 30 days",
-    "feature3": "Zero commissions"
+    "feature3": "Zero commissions",
+    "valuationCta": "Want to know what your property is worth first?",
+    "valuationLink": "Try our free valuation →"
   },
   "quickSellerLead": {
     "title": "Sell your property",
@@ -743,7 +745,12 @@
     "voiceQ15": "How do I contact Jungle Rent to invest?",
     "voiceA15": "You can contact Jungle Rent on WhatsApp at +39 331 905 3037 (response within 2 hours), email junglerententeprise@gmail.com, or by filling out the form on junglerent.it. Lorenzo Oni-Joseph, the founder, will personally respond to you."
   },
-  "footer": {
+"footer": {
+    "forOwnersTitle": "For Property Owners",
+    "valuateProperty": "Valuate your property",
+    "sellProperty": "Sell your property",
+    "usefulResources": "Useful resources",
+    "cheapEats": "Cheap eats",
     "tagline": "Democratizing access to real estate",
     "taglineAlt": "Safe renting in the real estate jungle",
     "copyright": "© 2025 JUNGLE RENT S.R.L.",

@@ -106,7 +106,29 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Info */}
+          {/* For Property Owners - NEW SECTION */}
+          <div>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">{t('footer.forOwnersTitle')}</h3>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>
+                <Link to={i18n.language.startsWith('it') ? '/valutazione-immobile' : '/property-valuation'} className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {t('footer.valuateProperty')}
+                </Link>
+              </li>
+              <li>
+                <Link to={i18n.language.startsWith('it') ? '/vendi' : '/sell'} className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {t('footer.sellProperty')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/chi-siamo" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {t('footer.howItWorksLink')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* For Students */}
           <div>
             <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
             <ul className="space-y-3 text-muted-foreground">
@@ -126,13 +148,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/strumenti/dove-mangiare-torino" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
-                  {i18n.language.startsWith('it') ? 'Dove Mangiare Cheap' : 'Cheap Eats'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/chi-siamo" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
-                  {t('footer.howItWorksLink')}
+                <Link to={i18n.language.startsWith('it') ? '/strumenti/dove-mangiare-torino' : '/tools/cheap-eats-turin'} className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {t('footer.cheapEats')}
                 </Link>
               </li>
             </ul>
@@ -142,10 +159,6 @@ export const Footer = () => {
                 <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
                 <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
                 <a href="https://www.escp.eu" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">ESCP Business School<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
-                <a href="https://www.saamanagement.com/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">SAA School of Management<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
-                <a href="https://www.ied.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IED Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
-                <a href="https://www.iaad.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IAAD<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
-                <a href="https://www.ius.to/" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">IUSTO<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
               </div>
             </div>
           </div>

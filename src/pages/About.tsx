@@ -1,5 +1,6 @@
-import { Navigation, Footer } from "@/components/layout";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { Navigation, Footer } from "@/components/layout";
 import { useTranslation } from "react-i18next";
 import { Building2, Users, TrendingUp, Award, MapPin, Mail, Phone } from "lucide-react";
 import BusinessCycleInfographic from "@/components/BusinessCycleInfographic";
@@ -256,6 +257,27 @@ const About = () => {
             <Button onClick={handleEmail} variant="outline" size="lg">
               {t("about.sendEmail")}
             </Button>
+          </div>
+          
+          {/* Related Tools for SEO - NEW */}
+          <div className="mt-12 pt-8 border-t border-border/20">
+            <p className="text-sm text-muted-foreground mb-4">
+              {currentLang === 'it' ? 'Scopri i nostri strumenti:' : 'Discover our tools:'}
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                to={currentLang === 'it' ? '/valutazione-immobile' : '/property-valuation'}
+                className="text-sm text-primary hover:underline"
+              >
+                {currentLang === 'it' ? 'Valutazione immobiliare gratuita →' : 'Free property valuation →'}
+              </Link>
+              <Link 
+                to={currentLang === 'it' ? '/strumenti/dove-mangiare-torino' : '/tools/cheap-eats-turin'}
+                className="text-sm text-primary hover:underline"
+              >
+                {currentLang === 'it' ? 'Dove mangiare economico a Torino →' : 'Cheap eats in Turin →'}
+              </Link>
+            </div>
           </div>
         </section>
       </div>

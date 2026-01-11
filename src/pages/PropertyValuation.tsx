@@ -159,6 +159,16 @@ const PropertyValuation = () => {
                       <ArrowRight className="w-4 h-4" />
                     </Button>
                   </Link>
+                  
+                  {/* Link to About for SEO - NEW */}
+                  <p className="mt-3 text-xs text-center opacity-80">
+                    <Link 
+                      to={lang === 'it' ? '/chi-siamo' : '/about'}
+                      className="hover:underline"
+                    >
+                      {lang === 'it' ? 'Scopri chi siamo →' : 'Learn about us →'}
+                    </Link>
+                  </p>
                 </CardContent>
               </Card>
             </div>
