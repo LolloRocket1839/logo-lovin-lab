@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { CheckCircle, Calendar, ArrowRight, BookOpen, Instagram, Linkedin, Home } from "lucide-react";
+import { CheckCircle, Calendar, ArrowRight, BookOpen, Instagram, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Navigation, Footer } from "@/components/layout";
 import { openCalendly } from "@/lib/calendly";
@@ -101,30 +101,15 @@ const ThankYou = () => {
           {/* CTAs */}
           <div className="space-y-4">
             {isInvestor ? (
-              <>
-                <Button
-                  size="lg"
-                  variant="premium"
-                  onClick={handleCalendlyClick}
-                  className="w-full sm:w-auto px-8"
-                >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  {t('thankYou.investor.scheduleCta')}
-                </Button>
-                
-                <div className="flex items-center justify-center gap-4 pt-4">
-                  <a 
-                    href="https://www.linkedin.com/company/jungle-rent/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    onClick={() => handleSocialClick('linkedin')}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                    <span className="text-sm">{t('thankYou.followLinkedin')}</span>
-                  </a>
-                </div>
-              </>
+              <Button
+                size="lg"
+                variant="premium"
+                onClick={handleCalendlyClick}
+                className="w-full sm:w-auto px-8"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                {t('thankYou.investor.scheduleCta')}
+              </Button>
             ) : (
               <>
                 <Link to={lang === 'it' ? '/blog' : '/blog'}>
