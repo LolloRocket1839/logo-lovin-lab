@@ -23,7 +23,8 @@ import {
   Users,
   Globe,
   Wallet,
-  Lightbulb
+  Lightbulb,
+  ChevronDown
 } from "lucide-react";
 import { AIBudgetAdvisor } from "@/components/tools/AIBudgetAdvisor";
 import { RentPriceHistory } from "@/components/tools/RentPriceHistory";
@@ -51,6 +52,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { turinAreas } from "@/constants";
 import { 
@@ -406,7 +408,7 @@ const BudgetCalculator = () => {
 
       <main className="min-h-screen bg-background pt-20 pb-24 md:pb-8">
         {/* Header */}
-        <section className="py-6 md:py-10 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-8 md:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <Link 
               to="/studenti/strumenti" 
@@ -430,31 +432,37 @@ const BudgetCalculator = () => {
               </div>
             </div>
             
-            {/* Presets */}
-            <div className="mb-6">
-              <p className="text-sm text-muted-foreground mb-3">
-                {currentLang === 'it' ? 'Inizia con un profilo:' : 'Start with a profile:'}
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {Object.entries(studentPresets).map(([key, preset]) => {
-                  const Icon = preset.icon;
-                  return (
-                    <Button
-                      key={key}
-                      variant="outline"
-                      className="gap-2 h-auto py-3 px-4"
-                      onClick={() => applyPreset(key as keyof typeof studentPresets)}
-                    >
-                      <Icon className="w-4 h-4 text-primary" />
-                      <div className="text-left">
-                        <div className="text-sm font-medium">{preset.label[currentLang]}</div>
-                        <div className="text-xs text-muted-foreground">{preset.description[currentLang]}</div>
-                      </div>
-                    </Button>
-                  );
-                })}
-              </div>
-            </div>
+            {/* Collapsible Presets */}
+            <Collapsible className="mb-6">
+              <CollapsibleTrigger asChild>
+                <Button variant="outline" size="sm" className="gap-2">
+                  <Users className="w-4 h-4 text-primary" />
+                  {currentLang === 'it' ? 'Usa profilo predefinito' : 'Use preset profile'}
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="mt-4">
+                <div className="flex flex-wrap gap-3">
+                  {Object.entries(studentPresets).map(([key, preset]) => {
+                    const Icon = preset.icon;
+                    return (
+                      <Button
+                        key={key}
+                        variant="outline"
+                        className="gap-2 h-auto py-3 px-4"
+                        onClick={() => applyPreset(key as keyof typeof studentPresets)}
+                      >
+                        <Icon className="w-4 h-4 text-primary" />
+                        <div className="text-left">
+                          <div className="text-sm font-medium">{preset.label[currentLang]}</div>
+                          <div className="text-xs text-muted-foreground">{preset.description[currentLang]}</div>
+                        </div>
+                      </Button>
+                    );
+                  })}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
 
             {/* Mode Toggle */}
             <Tabs value={mode} onValueChange={(v) => setMode(v as "simple" | "advanced")}>
@@ -473,14 +481,14 @@ const BudgetCalculator = () => {
         </section>
 
         {/* Calculator */}
-        <section className="py-6">
+        <section className="py-8 md:py-10">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-8">
               {/* Left: Inputs */}
-              <div className="space-y-5">
+              <div className="space-y-6">
                 {/* Area Selection */}
                 <Card>
-                  <CardHeader className="pb-3">
+                  <CardHeader className="pb-4">
                     <CardTitle className="flex items-center gap-2 text-base">
                       <MapPin className="w-5 h-5 text-primary" />
                       {currentLang === 'it' ? 'Quartiere' : 'Neighborhood'}
@@ -522,7 +530,7 @@ const BudgetCalculator = () => {
 
                 {/* Housing */}
                 <Card>
-                  <CardHeader className="pb-3">
+                  <CardHeader className="pb-4">
                     <CardTitle className="flex items-center gap-2 text-base">
                       <Home className="w-5 h-5 text-primary" />
                       {currentLang === 'it' ? 'Alloggio' : 'Housing'}
@@ -592,7 +600,7 @@ const BudgetCalculator = () => {
                 {/* Utilities - Only in advanced mode */}
                 {mode === "advanced" && (
                   <Card>
-                    <CardHeader className="pb-3">
+                    <CardHeader className="pb-4">
                       <CardTitle className="flex items-center gap-2 text-base">
                         <Zap className="w-5 h-5 text-primary" />
                         {currentLang === 'it' ? 'Utenze' : 'Utilities'}
@@ -660,7 +668,7 @@ const BudgetCalculator = () => {
 
                 {/* Transport */}
                 <Card>
-                  <CardHeader className="pb-3">
+                  <CardHeader className="pb-4">
                     <CardTitle className="flex items-center gap-2 text-base">
                       <Bus className="w-5 h-5 text-primary" />
                       {currentLang === 'it' ? 'Trasporti' : 'Transport'}
@@ -703,7 +711,7 @@ const BudgetCalculator = () => {
                 {/* Phone - Only in advanced */}
                 {mode === "advanced" && (
                   <Card>
-                    <CardHeader className="pb-3">
+                    <CardHeader className="pb-4">
                       <CardTitle className="flex items-center gap-2 text-base">
                         <Smartphone className="w-5 h-5 text-primary" />
                         {currentLang === 'it' ? 'Telefono' : 'Phone'}
@@ -725,7 +733,7 @@ const BudgetCalculator = () => {
 
                 {/* Food */}
                 <Card>
-                  <CardHeader className="pb-3">
+                  <CardHeader className="pb-4">
                     <CardTitle className="flex items-center gap-2 text-base">
                       <ShoppingCart className="w-5 h-5 text-primary" />
                       {currentLang === 'it' ? 'Alimentazione' : 'Food'}
@@ -768,7 +776,7 @@ const BudgetCalculator = () => {
                 {/* Study & Leisure - Only in advanced */}
                 {mode === "advanced" && (
                   <Card>
-                    <CardHeader className="pb-3">
+                    <CardHeader className="pb-4">
                       <CardTitle className="flex items-center gap-2 text-base">
                         <BookOpen className="w-5 h-5 text-primary" />
                         {currentLang === 'it' ? 'Studio & Tempo libero' : 'Study & Leisure'}
@@ -813,7 +821,7 @@ const BudgetCalculator = () => {
 
                 {/* Extras */}
                 <Card>
-                  <CardHeader className="pb-3">
+                  <CardHeader className="pb-4">
                     <CardTitle className="flex items-center gap-2 text-base">
                       <Coffee className="w-5 h-5 text-primary" />
                       Extra
@@ -837,7 +845,7 @@ const BudgetCalculator = () => {
                 {/* Saving Target - Only in advanced */}
                 {mode === "advanced" && (
                   <Card className="border-emerald-500/30 bg-emerald-500/5">
-                    <CardHeader className="pb-3">
+                    <CardHeader className="pb-4">
                       <CardTitle className="flex items-center gap-2 text-base text-emerald-600">
                         <PiggyBank className="w-5 h-5" />
                         {currentLang === 'it' ? 'Obiettivo risparmio' : 'Saving target'}
@@ -859,7 +867,7 @@ const BudgetCalculator = () => {
               </div>
 
               {/* Right: Results */}
-              <div className="space-y-5">
+              <div className="space-y-6">
                 {/* Total */}
                 <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-background">
                   <CardContent className="pt-6">
@@ -929,36 +937,75 @@ const BudgetCalculator = () => {
                   language={currentLang}
                 />
 
-                {/* Pie Chart */}
+                {/* Chart Analysis Tabs */}
                 <Card>
-                  <CardHeader className="pb-2">
+                  <CardHeader className="pb-3">
                     <CardTitle className="text-base">
-                      {currentLang === 'it' ? 'Distribuzione spese' : 'Expense distribution'}
+                      {currentLang === 'it' ? 'Analisi budget' : 'Budget analysis'}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="h-[220px]">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
-                          <Pie
-                            data={budgetBreakdown.filter(item => item.value > 0)}
-                            cx="50%"
-                            cy="50%"
-                            innerRadius={50}
-                            outerRadius={85}
-                            paddingAngle={2}
-                            dataKey="value"
-                            label={({ name, percent }) => `${name.split(' ')[0]} ${(percent * 100).toFixed(0)}%`}
-                            labelLine={false}
-                          >
-                            {budgetBreakdown.map((_, index) => (
-                              <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
-                            ))}
-                          </Pie>
-                          <RechartsTooltip formatter={(value: number) => [`€${value}`, '']} />
-                        </PieChart>
-                      </ResponsiveContainer>
-                    </div>
+                    <Tabs defaultValue="distribution" className="w-full">
+                      <TabsList className="w-full grid grid-cols-3 mb-4">
+                        <TabsTrigger value="distribution" className="text-xs">
+                          {currentLang === 'it' ? 'Spese' : 'Expenses'}
+                        </TabsTrigger>
+                        <TabsTrigger value="comparison" className="text-xs">
+                          {currentLang === 'it' ? 'Confronto' : 'Compare'}
+                        </TabsTrigger>
+                        <TabsTrigger value="radar" className="text-xs">
+                          Radar
+                        </TabsTrigger>
+                      </TabsList>
+                      
+                      <TabsContent value="distribution" className="mt-0">
+                        <div className="h-[220px]">
+                          <ResponsiveContainer width="100%" height="100%">
+                            <PieChart>
+                              <Pie
+                                data={budgetBreakdown.filter(item => item.value > 0)}
+                                cx="50%"
+                                cy="50%"
+                                innerRadius={50}
+                                outerRadius={85}
+                                paddingAngle={2}
+                                dataKey="value"
+                                label={({ name, percent }) => `${name.split(' ')[0]} ${(percent * 100).toFixed(0)}%`}
+                                labelLine={false}
+                              >
+                                {budgetBreakdown.map((_, index) => (
+                                  <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
+                                ))}
+                              </Pie>
+                              <RechartsTooltip formatter={(value: number) => [`€${value}`, '']} />
+                            </PieChart>
+                          </ResponsiveContainer>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="comparison" className="mt-0">
+                        <div className="h-[280px]">
+                          <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={comparisonData} layout="vertical">
+                              <XAxis type="number" tickFormatter={(v) => `€${v}`} />
+                              <YAxis type="category" dataKey="name" width={75} tick={{ fontSize: 11 }} />
+                              <RechartsTooltip formatter={(value: number) => [`€${value}/mese`, 'Budget']} />
+                              <Bar dataKey="budget" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} />
+                            </BarChart>
+                          </ResponsiveContainer>
+                        </div>
+                      </TabsContent>
+                      
+                      <TabsContent value="radar" className="mt-0">
+                        <NeighborhoodRadarChart
+                          selectedArea={selectedArea}
+                          housingType={housingType}
+                          language={currentLang}
+                          onAreaChange={setSelectedArea}
+                          embedded
+                        />
+                      </TabsContent>
+                    </Tabs>
                   </CardContent>
                 </Card>
 
@@ -975,6 +1022,8 @@ const BudgetCalculator = () => {
                     if (changes.gym !== undefined) setGym([changes.gym]);
                   }}
                 />
+
+                {/* 12-Month Projection - Only in advanced */}
                 {mode === "advanced" && (
                   <Card>
                     <CardHeader className="pb-2">
@@ -1009,39 +1058,9 @@ const BudgetCalculator = () => {
                   </Card>
                 )}
 
-                {/* Comparison Chart */}
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="flex items-center gap-2 text-base">
-                      <TrendingUp className="w-4 h-4 text-primary" />
-                      {currentLang === 'it' ? 'Confronto quartieri' : 'Neighborhood comparison'}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="h-[280px]">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <BarChart data={comparisonData} layout="vertical">
-                          <XAxis type="number" tickFormatter={(v) => `€${v}`} />
-                          <YAxis type="category" dataKey="name" width={75} tick={{ fontSize: 11 }} />
-                          <RechartsTooltip formatter={(value: number) => [`€${value}/mese`, 'Budget']} />
-                          <Bar dataKey="budget" fill="hsl(var(--primary))" radius={[0, 4, 4, 0]} />
-                        </BarChart>
-                      </ResponsiveContainer>
-                    </div>
-                  </CardContent>
-                </Card>
-
                 {/* Rent Price History Dashboard */}
                 <RentPriceHistory 
                   selectedArea={selectedArea}
-                  onAreaChange={setSelectedArea}
-                />
-
-                {/* Neighborhood Radar Comparison */}
-                <NeighborhoodRadarChart
-                  selectedArea={selectedArea}
-                  housingType={housingType}
-                  language={currentLang}
                   onAreaChange={setSelectedArea}
                 />
 
@@ -1063,7 +1082,30 @@ const BudgetCalculator = () => {
                   savingTarget={savingTarget[0]}
                 />
 
-                {/* Related Tools */}
+                {/* CTA */}
+                <Card className="bg-primary text-primary-foreground">
+                  <CardContent className="pt-6 text-center">
+                    <h3 className="text-lg font-semibold mb-2">
+                      {currentLang === 'it' 
+                        ? 'Vuoi trovare casa in questo budget?' 
+                        : 'Want to find housing in this budget?'
+                      }
+                    </h3>
+                    <p className="text-sm opacity-90 mb-4">
+                      {currentLang === 'it' 
+                        ? 'Iscriviti alla waitlist per trovare la soluzione perfetta'
+                        : 'Join the waitlist to find the perfect solution'
+                      }
+                    </p>
+                    <Link to="/studenti">
+                      <Button variant="secondary" size="lg">
+                        {currentLang === 'it' ? 'Iscriviti alla waitlist' : 'Join the waitlist'}
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                {/* Related Tools - positioned after CTA */}
                 <Card className="border-dashed">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-base flex items-center gap-2">
@@ -1099,29 +1141,6 @@ const BudgetCalculator = () => {
                           {currentLang === 'it' ? 'Trova dove studiare gratis' : 'Find free study spots'}
                         </p>
                       </div>
-                    </Link>
-                  </CardContent>
-                </Card>
-
-                {/* CTA */}
-                <Card className="bg-primary text-primary-foreground">
-                  <CardContent className="pt-6 text-center">
-                    <h3 className="text-lg font-semibold mb-2">
-                      {currentLang === 'it' 
-                        ? 'Vuoi trovare casa in questo budget?' 
-                        : 'Want to find housing in this budget?'
-                      }
-                    </h3>
-                    <p className="text-sm opacity-90 mb-4">
-                      {currentLang === 'it' 
-                        ? 'Iscriviti alla waitlist per trovare la soluzione perfetta'
-                        : 'Join the waitlist to find the perfect solution'
-                      }
-                    </p>
-                    <Link to="/studenti">
-                      <Button variant="secondary" size="lg">
-                        {currentLang === 'it' ? 'Iscriviti alla waitlist' : 'Join the waitlist'}
-                      </Button>
                     </Link>
                   </CardContent>
                 </Card>
