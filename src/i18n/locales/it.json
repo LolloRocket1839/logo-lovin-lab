@@ -610,7 +610,9 @@
     "scheduleCall": "Prenota una call",
     "feature1": "Valutazione gratuita",
     "feature2": "Vendita in 30 giorni",
-    "feature3": "Zero commissioni"
+    "feature3": "Zero commissioni",
+    "valuationCta": "Vuoi prima sapere quanto vale il tuo immobile?",
+    "valuationLink": "Prova la nostra valutazione gratuita →"
   },
   "quickSellerLead": {
     "title": "Vendi la tua casa",
@@ -762,7 +764,12 @@
     "formSuccess": "Grazie! Il tuo messaggio è stato inviato.",
     "formError": "Errore! Riprova più tardi."
   },
-  "footer": {
+"footer": {
+    "forOwnersTitle": "Per proprietari",
+    "valuateProperty": "Valuta il tuo immobile",
+    "sellProperty": "Vendi casa",
+    "usefulResources": "Risorse utili",
+    "cheapEats": "Dove mangiare economico",
     "taglineAlt": "L'affitto sicuro nella giungla immobiliare",
     "copyright": "© 2025 JUNGLE RENT S.R.L. Tutti i diritti riservati.",
     "contactTitle": "Contatti",
