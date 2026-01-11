@@ -38,6 +38,7 @@ interface NeighborhoodRadarChartProps {
   housingType: "shared" | "single" | "studio";
   language: "it" | "en";
   onAreaChange?: (area: string) => void;
+  embedded?: boolean;
 }
 
 // Neighborhood data with scores
@@ -132,7 +133,8 @@ const NeighborhoodRadarChartComponent = ({
   selectedArea,
   housingType,
   language,
-  onAreaChange
+  onAreaChange,
+  embedded = false
 }: NeighborhoodRadarChartProps) => {
   const [comparisonAreas, setComparisonAreas] = useState<string[]>([]);
   
@@ -246,17 +248,10 @@ const NeighborhoodRadarChartComponent = ({
 
   const areas = [selectedArea, ...comparisonAreas];
 
-  return (
-    <Card>
-      <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-base">
-          <Target className="w-5 h-5 text-primary" />
-          {language === "it" ? "Confronto quartieri" : "Neighborhood Comparison"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        {/* Area selection */}
-        <div className="mb-4">
+  const content = (
+    <>
+      {/* Area selection */}
+      <div className={embedded ? "mb-3" : "mb-4"}>
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <Badge variant="default" className="gap-1 py-1.5">
               <MapPin className="w-3 h-3" />
@@ -309,7 +304,7 @@ const NeighborhoodRadarChartComponent = ({
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
-          className="h-[300px]"
+          className={embedded ? "h-[260px]" : "h-[300px]"}
         >
           <ResponsiveContainer width="100%" height="100%">
             <RadarChart data={radarData} margin={{ top: 20, right: 30, bottom: 20, left: 30 }}>
@@ -392,7 +387,7 @@ const NeighborhoodRadarChartComponent = ({
         )}
 
         {/* Quick action */}
-        {comparisonAreas.length > 0 && onAreaChange && (
+        {comparisonAreas.length > 0 && onAreaChange && !embedded && (
           <div className="mt-4 pt-3 border-t border-border/50">
             <p className="text-xs text-muted-foreground mb-2">
               {language === "it" ? "Vuoi cambiare quartiere?" : "Want to switch neighborhood?"}
@@ -412,6 +407,23 @@ const NeighborhoodRadarChartComponent = ({
             </div>
           </div>
         )}
+    </>
+  );
+
+  if (embedded) {
+    return content;
+  }
+
+  return (
+    <Card>
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-base">
+          <Target className="w-5 h-5 text-primary" />
+          {language === "it" ? "Confronto quartieri" : "Neighborhood Comparison"}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {content}
       </CardContent>
     </Card>
   );
