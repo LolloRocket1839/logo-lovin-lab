@@ -19,7 +19,7 @@ export const StructuredData = () => {
       vatID: "IT13333450016",
       // sameAs for trust graph
       sameAs: [
-        "https://www.linkedin.com/company/jungle-rent",
+        // "https://www.linkedin.com/company/jungle-rent", // TODO: Re-enable when LinkedIn page is created
         "https://www.instagram.com/junglerent",
         "https://www.2i3t.it"
       ],
