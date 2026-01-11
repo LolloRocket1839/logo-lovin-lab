@@ -140,6 +140,10 @@
     "iAmStudent": "Soy estudiante",
     "iAmInvestor": "Soy inversor",
     "contactLorenzo": "Contactar a Lorenzo",
+    "sellerLink": {
+      "prefix": "¿Eres propietario?",
+      "cta": "Descubre cómo vender"
+    },
     "waitlistCounter": "Únete a otros {{count}} en lista de espera",
     "supportedBy": "Apoyados por",
     "logo2i3tAlt": "2i3T Incubadora Universidad de Turín - Partner oficial"

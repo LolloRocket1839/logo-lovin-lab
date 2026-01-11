@@ -207,7 +207,11 @@
     "politecnico": "都灵理工",
     "unito": "都灵大学",
     "benefits": "优势",
-    "logo2i3tAlt": "2i3T 都灵大学企业孵化器 - 官方合作伙伴"
+    "logo2i3tAlt": "2i3T 都灵大学企业孵化器 - 官方合作伙伴",
+    "sellerLink": {
+      "prefix": "您是房产所有者吗？",
+      "cta": "了解如何出售"
+    }
   },
   "studentSearch": {
     "title": "找到您的房间",
