@@ -7,6 +7,7 @@ import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useBlogLanguage } from "@/hooks/useBlogLanguage";
 import { isNewPost, formatDate } from "@/lib/blog";
+import { OptimizedImage } from "@/components/OptimizedImage";
 import astronautCover from "@/assets/jungle-control-astronaut-cover.png";
 
 interface BlogCardProps {
@@ -38,27 +39,26 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
           {isJungleControlSeries ? (
             // Cinematic Interstellar-style astronaut cover
             <div className="w-full h-full relative overflow-hidden">
-              <img
+              <OptimizedImage
                 src={astronautCover}
                 alt="Astronaut floating in space with Earth - Jungle Control Series"
-                className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'transition-transform duration-500 group-hover:scale-105'}`}
+                className={`w-full h-full ${prefersReducedMotion ? '' : 'transition-transform duration-500 group-hover:scale-105'}`}
+                blurPlaceholder
               />
               
               {/* Series badge overlay */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 z-10">
                 <span className="text-white text-xs font-medium tracking-wider uppercase">
                   🚀 Jungle Control
                 </span>
               </div>
             </div>
           ) : (
-            <img
+            <OptimizedImage
               src={post.image}
               alt={translatedData.title}
-              className={`w-full h-full object-cover ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
-              loading="lazy"
-              decoding="async"
-              fetchPriority="low"
+              className={`w-full h-full ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
+              blurPlaceholder
             />
           )}
           <span className={`absolute top-4 left-4 category-badge ${post.category}`}>
