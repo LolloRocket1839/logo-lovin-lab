@@ -1040,3 +1040,46 @@ All colors MUST be HSL.
     hsl(40 15% 10% / 0) 100%
   );
 }
+
+/* ============================================
+   MOBILE UX OPTIMIZATIONS
+   ============================================ */
+
+/* Safe area padding for iPhone notch/home indicator */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* iOS scroll momentum */
+.scroll-smooth-ios {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tap highlight color for mobile */
+@media (max-width: 768px) {
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: hsl(var(--primary) / 0.1);
+  }
+}
+
+/* Active state for touch feedback on mobile */
+@media (max-width: 768px) {
+  .tap-feedback:active {
+    background-color: hsl(var(--primary) / 0.05);
+    transition: background-color 100ms ease;
+  }
+}

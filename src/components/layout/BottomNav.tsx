@@ -68,57 +68,57 @@ export const BottomNav = () => {
   return (
     <>
       <nav 
-        className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border/20 shadow-lg"
+        className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background/95 backdrop-blur-xl border-t border-border/20 shadow-lg safe-area-bottom"
         aria-label={t('nav.home')}
       >
-        <div className="flex items-center justify-around h-16 px-2">
+        <div className="flex items-center justify-around h-[4.5rem] px-1">
           {/* Investi - Primary CTA with heart */}
           <button
             onClick={handleInvestClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-primary relative"
+            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-primary/5 rounded-lg text-primary relative"
           >
             <div className="flex items-center gap-0.5">
-              <TrendingUp className="w-5 h-5" aria-hidden="true" />
-              <Heart className="w-2.5 h-2.5 fill-primary text-primary" aria-hidden="true" />
+              <TrendingUp className="w-6 h-6" aria-hidden="true" />
+              <Heart className="w-3 h-3 fill-primary text-primary" aria-hidden="true" />
             </div>
-            <span className="text-[10px] font-medium">{t("nav.investors")}</span>
+            <span className="text-xs font-semibold">{t("nav.investors")}</span>
           </button>
 
           {/* Vendi - Seller CTA */}
           <button
             onClick={handleSellerClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
           >
-            <Building2 className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">{t("nav.sell")}</span>
+            <Building2 className="w-6 h-6" aria-hidden="true" />
+            <span className="text-xs font-medium">{t("nav.sell")}</span>
           </button>
 
           {/* Studenti - Direct navigation */}
           <Link
             to="/studenti"
             onClick={handleStudentsClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
           >
-            <GraduationCap className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">{t("nav.students")}</span>
+            <GraduationCap className="w-6 h-6" aria-hidden="true" />
+            <span className="text-xs font-medium">{t("nav.students")}</span>
           </Link>
 
-          {/* Info - infoinfoinfo(: */}
+          {/* Info */}
           <button
             onClick={handleInfoClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
           >
-            <Info className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">Info</span>
+            <Info className="w-6 h-6" aria-hidden="true" />
+            <span className="text-xs font-medium">Info</span>
           </button>
 
           {/* Fondatori */}
           <button
             onClick={handleFoundersClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1 transition-colors touch-target text-muted-foreground"
+            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
           >
-            <Users className="w-5 h-5" aria-hidden="true" />
-            <span className="text-[10px] font-medium">{t("founders.title")}</span>
+            <Users className="w-6 h-6" aria-hidden="true" />
+            <span className="text-xs font-medium">{t("founders.title")}</span>
           </button>
         </div>
       </nav>

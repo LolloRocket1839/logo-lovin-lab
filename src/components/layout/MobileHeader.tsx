@@ -14,9 +14,17 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
   const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
 
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 200);
+      // Reduced threshold from 200 to 100 for faster brand recognition
+      setIsVisible(window.scrollY > 100);
+      
+      // Calculate scroll progress
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+      setScrollProgress(Math.min(progress, 100));
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -29,17 +37,22 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-b border-border/50 px-4 py-2">
-        <div className="flex items-center justify-between">
+      <header className="fixed top-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-b border-border/50">
+        {/* Scroll progress indicator */}
+        <div 
+          className="absolute top-0 left-0 h-0.5 bg-primary transition-all duration-150 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        />
+        <div className="flex items-center justify-between px-4 py-2.5">
           <img
             src={jungleRentLogo}
             alt="Jungle Rent"
-            className="h-8 w-auto"
+            className="h-9 w-auto"
           />
           <Button
             size="sm"
             onClick={() => isSeller ? setSellerDialogOpen(true) : setInvestorDialogOpen(true)}
-            className="h-9 px-4 text-sm font-semibold"
+            className="h-10 px-5 text-sm font-semibold shadow-md"
           >
             {isSeller ? (
               <>
