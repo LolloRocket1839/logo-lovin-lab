@@ -64,7 +64,15 @@ Interactive directory for transport strikes in Italy with emergency contacts, re
   - Emergency: 112
 - **Airlines**: ITA Airways 800 65 6555, Ryanair, EasyJet, Vueling, Lufthansa
 - **Airports**: Fiumicino +39 06 6595 1, Malpensa +39 02 2340 0223
-- **January 2026 strikes**: Jan 9-10 (national railway), Jan 13 (taxi), Jan 15 (ATM Milan), Jan 20 (national)
+- **January 2026 strikes**:
+  - Jan 9-10: National railway (Trenitalia, Italo, RFI, Trenord)
+  - Jan 12-13: National school strike (FLP, CONALPE, CONFSAI, CSLE)
+  - Jan 13: National taxi strike 24h (excl. Umbria) - Uri/itTaxi NOT participating
+  - Jan 13: Busitalia Umbria, Minimetrò Perugia, Konecta Torino/Asti
+  - Jan 15: ATM Milan 24h
+  - Jan 20: National railway + TPL
+  - Jan 29: Conerobus Ancona
+  - Jan 30: RFI Bologna, Sicilia bus (Gallo, Giamporcaro, Sais)
 - **February-March 2026**: Feb 16 (air), Mar 7 (air)
 
 ## Optional
@@ -74,5 +82,5 @@ For detailed information:
 - Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: January 9, 2026
-Version: 3.0 - AEO 2026 Optimized
+Last Updated: January 13, 2026
+Version: 3.1 - Strike Calendar Updated
