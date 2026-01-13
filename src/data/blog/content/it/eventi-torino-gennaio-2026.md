@@ -117,14 +117,33 @@ L'anno del Serpente di Legno cade in gennaio.
 
 Il **14 gennaio** si festeggia il Capodanno russo-ortodosso.
 
+## ⚠️ Scioperi e trasporti
+
+### Sciopero taxi 13 gennaio
+
+Lo **sciopero nazionale dei taxi** del 13 gennaio coinvolge **tutta Italia eccetto l'Umbria**. Durata: 24 ore (00:00-24:00). **Uri e itTaxi NON aderiscono**. Alternative: Uber, FreeNow, car sharing (Enjoy, SHARE NOW).
+
+> 📱 **[Directory Emergenza Scioperi →](/scioperi-italia)**
+> Contatti, alternative e procedure rimborso
+
+### Altri scioperi gennaio 2026
+
+- **9-10 gennaio**: Treni nazionali (Trenitalia, Italo, Trenord)
+- **12-13 gennaio**: Scuola nazionale
+- **15 gennaio**: ATM Milano (metro, bus, tram)
+- **20 gennaio**: Secondo sciopero nazionale trasporti
+
 ## Conclusione
 
 Gennaio 2026 offre Luci d'Artista, grandi mostre internazionali, concerti sold-out e spettacoli teatrali. L'arrivo della Fiamma Olimpica, i saldi e gli eventi sportivi rendono questo mese ideale per visitare Torino. Temperature invernali che invitano a rifugiarsi nei teatri, nelle sale espositive e nei caffè storici.
+
+**Attenzione**: verificare sempre il [calendario scioperi](/scioperi-italia) prima di spostarsi.
 
 ---
 
 ## Articoli correlati
 
+- [Guida sciopero trasporti gennaio 2026](/blog/sciopero-trasporti-italia-gennaio-2026)
 - [Eventi a Torino a febbraio 2026](/blog/eventi-torino-febbraio-2026)
 - [Eventi a Torino a marzo 2026](/blog/eventi-torino-marzo-2026)
 - [Come raggiungere Torino in modo sostenibile](/blog/viaggiare-sostenibile-torino-guida)

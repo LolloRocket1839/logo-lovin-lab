@@ -132,20 +132,35 @@ The **Chinese New Year 2026**, year of the Wood Snake, falls in January and will
 
 On **January 14** the **Russian-Orthodox New Year** is celebrated, one of the most important Russian holidays. This celebration offers the opportunity to discover traditions and specialties of Russian culture also present in Turin.
 
+## ⚠️ Strikes and Transport
+
+### Taxi Strike January 13
+
+The **national taxi strike** on January 13 affects **all of Italy except Umbria**. Duration: 24 hours (00:00-24:00). **Uri and itTaxi are NOT participating**. Alternatives: Uber, FreeNow, car sharing (Enjoy, SHARE NOW).
+
+> 📱 **[Strike Emergency Directory →](/italy-strikes)**
+> Contacts, alternatives and refund procedures
+
+### Other January 2026 Strikes
+
+- **January 9-10**: National railways (Trenitalia, Italo, Trenord)
+- **January 12-13**: National school strike
+- **January 15**: ATM Milan (metro, bus, tram)
+- **January 20**: Second national transport strike
+
 ## Conclusions
 
 January 2026 presents itself as an exceptional month to experience Turin in all its cultural, artistic and sporting facets. From the last days of Luci d'Artista that transforms the city into a luminous open-air museum, to major international exhibitions hosting masterpieces from the world's most prestigious museums, to sold-out concerts and high-quality theatrical performances, the Piedmontese capital confirms its vocation as a leading cultural hub.
 
 The arrival of the Olympic Flame, winter sales, sporting events and numerous initiatives in theaters and museums make this month an ideal period to visit Turin or rediscover it as residents. With winter temperatures that invite you to take refuge in heated theaters, exhibition halls and historic cafes, January offers the perfect balance between high culture and popular entertainment, between tradition and contemporaneity, confirming Turin as one of Italy's most vibrant and culturally stimulating cities.
 
+**Note**: Always check the [strike calendar](/italy-strikes) before traveling.
+
 ---
 
 ## Related Articles
 
+- [January 2026 Transport Strike Guide](/blog/sciopero-trasporti-italia-gennaio-2026) - Complete strike guide with alternatives and refund procedures
 - [Events in Turin in February 2026: Love, Chocolate, Art and Opera](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth with Riccardo Muti, Lee Miller and Jeff Wall exhibitions, Ivrea Carnival, Final Eight basketball
 - [Events in Turin in March 2026: Art, Music and Entertainment](/blog/eventi-torino-marzo-2026) - Chiharu Shiota at MAO, Mika, Renato Zero, Subsonica 30 years, Rocky Musical
 - [How to Get Sustainably to Turin: A Comprehensive Travel Guide](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, carbon-neutral airport and Torino+Piemonte Card
-- [Sustainable Mobility in Turin: Complete Student Transport Guide](/blog/mobilita-sostenibile-torino-studenti) - GTT, metro, bus, and student passes
-- [The Historic Ivrea Carnival: Complete Guide to the Battle of Oranges](/blog/carnevale-ivrea-battaglia-arance-2025) - How to get there from Turin, program, and history
-- [Turin in December 2025: Christmas Lights and Winter Magic](/blog/torino-dicembre-turisti) - Luci d'Artista, markets, and festive traditions
-- [Turin in Every Season: Complete Tourist Guide](/blog/torino-ogni-stagione-turisti) - Spring, summer, autumn and winter in Turin

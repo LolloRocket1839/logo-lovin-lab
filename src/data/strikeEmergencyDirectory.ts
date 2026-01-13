@@ -565,6 +565,16 @@ export const strikeCalendarJanuary2026: StrikeEvent[] = [
   {
     date: '2026-01-12',
     dateEnd: '2026-01-13',
+    regions: ['Nazionale'],
+    companies: ['Scuola pubblica e privata (FLP, CONALPE, CONFSAI, CSLE)'],
+    duration: '2 giorni interi',
+    severity: 'national',
+    notes: 'Docenti, ATA, personale educativo. Verificare con la propria scuola. Richieste: aumento stipendi, buoni pasto, riconoscimento lavoro usurante',
+    verifyLink: 'https://www.mit.gov.it/calendario-scioperi'
+  },
+  {
+    date: '2026-01-12',
+    dateEnd: '2026-01-13',
     regions: ['Lombardia'],
     companies: ['Trenord', 'Malpensa Express', 'S9'],
     duration: '23 ore (03:00→02:00)',
@@ -576,11 +586,38 @@ export const strikeCalendarJanuary2026: StrikeEvent[] = [
   {
     date: '2026-01-13',
     regions: ['Nazionale (esclusa Umbria)'],
-    companies: ['Taxi (tutte le città)'],
+    companies: ['Taxi (tutte le città) - 20 sigle sindacali'],
     duration: '24 ore (00:00-24:00)',
     severity: 'national',
-    notes: 'ZERO taxi disponibili - usare car sharing, carpooling',
+    notes: 'ZERO taxi. Uri e itTaxi NON aderiscono. Protesta anti-uberizzazione e regolamentazione NCC. Usare Uber, FreeNow, car sharing',
     verifyLink: 'https://www.mit.gov.it/calendario-scioperi'
+  },
+  {
+    date: '2026-01-13',
+    regions: ['Umbria'],
+    companies: ['Busitalia Sita Nord'],
+    duration: '24 ore',
+    severity: 'regional',
+    notes: 'TPL extraurbano Umbria - coincide con ESCLUSIONE taxi (taxi operativi in Umbria)',
+    verifyLink: 'https://www.mit.gov.it/calendario-scioperi'
+  },
+  {
+    date: '2026-01-13',
+    regions: ['Perugia'],
+    companies: ['Minimetrò Perugia (USB)'],
+    duration: '24 ore',
+    guaranteedTimes: '07:00-09:00 e 12:00-15:00',
+    severity: 'local',
+    notes: 'Scale mobili e ascensore Pincetto operativi. Usare fasce garantite',
+    verifyLink: 'https://www.minimetrospa.it'
+  },
+  {
+    date: '2026-01-13',
+    regions: ['Torino', 'Asti'],
+    companies: ['Konecta (contact center telecomunicazioni)'],
+    duration: '24 ore',
+    severity: 'local',
+    notes: 'Slc Cgil, Uilcom Uil, Fistel Cisl - possibili disservizi call center'
   },
   {
     date: '2026-01-14',
@@ -646,6 +683,14 @@ export const strikeCalendarJanuary2026: StrikeEvent[] = [
     verifyLink: 'https://www.trenitalia.com'
   },
   {
+    date: '2026-01-29',
+    regions: ['Ancona'],
+    companies: ['Conerobus'],
+    duration: 'Intera giornata',
+    severity: 'local',
+    notes: 'TPL Ancona - verificare servizi alternativi'
+  },
+  {
     date: '2026-01-30',
     regions: ['Bologna', 'Emilia-Romagna'],
     companies: ['RFI area Bologna'],
@@ -653,6 +698,14 @@ export const strikeCalendarJanuary2026: StrikeEvent[] = [
     severity: 'local',
     notes: 'Personale RFI Bologna',
     verifyLink: 'https://www.rfi.it'
+  },
+  {
+    date: '2026-01-30',
+    regions: ['Sicilia'],
+    companies: ['Gallo', 'Giamporcaro', 'Sais'],
+    duration: '4 ore',
+    severity: 'local',
+    notes: 'Autolinee regionali Sicilia'
   },
   {
     date: '2026-01-31',
