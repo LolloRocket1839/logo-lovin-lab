@@ -7,11 +7,11 @@ export const TrustBadge = () => {
   
   return (
     <section 
-      className="py-12 md:py-16 bg-muted/30 relative overflow-hidden border-b border-border/20"
+      className="py-8 md:py-16 bg-muted/30 relative overflow-hidden border-b border-border/20"
     >
       
       <div className="container px-4 md:px-8 relative z-10">
-      <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <p className="hidden md:block text-xs uppercase tracking-[0.15em] text-muted-foreground mb-6 font-medium">
             {t('trustBadge.sectionLabel')}
           </p>
@@ -20,9 +20,9 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-5 bg-card border border-border/20 rounded-xl sm:rounded-xl px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6 mb-4 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] cursor-pointer"
+            className="inline-flex flex-row items-center gap-4 md:gap-5 bg-card border border-border/20 rounded-xl px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6 mb-4 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] cursor-pointer active:scale-[0.98]"
           >
-            <div className="w-20 h-20 sm:w-32 sm:h-32 md:w-48 md:h-48 flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 sm:w-32 sm:h-32 md:w-48 md:h-48 flex items-center justify-center flex-shrink-0">
               <img 
                 src={logo2i3t} 
                 alt="2i3T Logo" 
@@ -33,11 +33,11 @@ export const TrustBadge = () => {
                 decoding="async"
               />
             </div>
-            <div className="text-center sm:text-left max-w-sm">
-              <h3 className="text-base sm:text-lg md:text-xl font-display font-bold text-foreground mb-1 leading-tight">
+            <div className="text-left max-w-sm">
+              <h3 className="text-sm sm:text-lg md:text-xl font-display font-bold text-foreground mb-0.5 md:mb-1 leading-tight">
                 {t('trustBadge.supportedBy')}
               </h3>
-              <p className="hidden sm:block text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
                 {t('trustBadge.incubator')}
               </p>
             </div>

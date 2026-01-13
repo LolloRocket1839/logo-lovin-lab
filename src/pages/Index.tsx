@@ -100,9 +100,8 @@ const Index = () => {
         <ImmersiveHero />
       </div>
       
-      <div className="hidden md:block">
-        <TrustBadge />
-      </div>
+      {/* TrustBadge - now visible on all devices */}
+      <TrustBadge />
 
       <Suspense fallback={<div className="min-h-[200px]" />}>
         
@@ -167,10 +166,8 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Blog banner - hidden on mobile */}
-        <div className="hidden md:block">
-          <BlogBanner />
-        </div>
+        {/* Blog banner - now visible on all devices */}
+        <BlogBanner />
         
         {/* Desktop Footer */}
         <div className="pb-16 lg:pb-0">
