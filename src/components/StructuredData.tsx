@@ -149,24 +149,78 @@ export const StructuredData = () => {
       }
     };
 
-    // LocalBusiness Schema
+    // LocalBusiness Schema (PropTech Startup - NOT a RealEstateAgent)
     const localBusinessSchema = {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      name: "Jungle Rent",
+      "@type": "LocalBusiness",
+      "additionalType": "https://schema.org/ProfessionalService",
+      "@id": `${baseUrl}/#business`,
+      name: "Jungle Rent S.r.l.",
+      legalName: "JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA",
       image: `${baseUrl}/jungle-rent-logo.svg`,
       description:
-        "L'affitto sicuro nella giungla immobiliare. Risolviamo la crisi abitativa studentesca e rendiamo accessibili gli investimenti immobiliari a Torino.",
+        "Startup innovativa: acquistiamo e gestiamo immobili per studenti a Torino. Investimenti frazionati da €100.",
+      telephone: "+39-331-905-3037",
+      email: "junglerententeprise@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Via Gioacchino Quarello 15/A",
+        addressLocality: "Torino",
+        postalCode: "10137",
+        addressRegion: "Piemonte",
+        addressCountry: "IT",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 45.0312,
+        longitude: 7.6427,
+      },
+      url: baseUrl,
+      priceRange: "€€",
+      currenciesAccepted: "EUR",
+      paymentAccepted: "Bank Transfer, Credit Card",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "19:00",
+      },
+      hasMap: "https://maps.google.com/?q=Via+Gioacchino+Quarello+15/A,+Torino",
       areaServed: {
         "@type": "City",
         name: "Torino",
       },
-      priceRange: "€€",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: "127",
+    };
+
+    // Startup Innovativa Schema
+    const startupSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": `${baseUrl}/#startup`,
+      additionalType: "https://schema.org/Corporation",
+      name: "Jungle Rent S.r.l.",
+      foundingDate: "2025-10-24",
+      foundingLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Torino",
+          addressCountry: "IT",
+        },
       },
+      memberOf: {
+        "@type": "Organization",
+        name: "2i3T - Incubatore di Imprese Innovative dell'Università di Torino",
+        url: "https://www.2i3t.it",
+      },
+      naics: "531110",
+      isicV4: "6820",
+      knowsAbout: [
+        "Property Management",
+        "Fractional Real Estate Investment",
+        "Student Housing",
+        "Short Term Rentals",
+      ],
     };
 
     // Service Schema - Studenti
@@ -223,9 +277,9 @@ export const StructuredData = () => {
         }
       },
       agent: {
-        "@type": "RealEstateAgent",
-        name: "Jungle Rent",
-        url: baseUrl
+        "@type": "Organization",
+        name: "Jungle Rent S.r.l.",
+        url: baseUrl,
       },
       target: {
         "@type": "EntryPoint",
@@ -611,7 +665,8 @@ export const StructuredData = () => {
       organizationSchema, 
       lorenzoSchema,
       andreaSchema,
-      localBusinessSchema, 
+      localBusinessSchema,
+      startupSchema,
       studentServiceSchema, 
       investorServiceSchema, 
       buyActionSchema, 
