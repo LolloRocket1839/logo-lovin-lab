@@ -2,6 +2,87 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cedolare-secca-2026-investitori",
+    category: "investors",
+    date: "2026-01-17",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 15,
+    content: "cedolare-secca-2026-investitori",
+    translations: {
+      it: {
+        title: "Cedolare secca 2026: guida completa alle novità fiscali per investitori",
+        excerpt: "Aumento aliquota dal 21% al 26%, periodi transitori e strategie di ottimizzazione fiscale per proprietari di immobili a reddito.",
+        seo: {
+          title: "Cedolare secca 2026 | Guida novità fiscali investitori immobiliari",
+          description: "Cedolare secca 2026: aliquota aumentata dal 21% al 26%. Guida completa con fonti normative, strategie e confronti per investitori immobiliari.",
+          keywords: [
+            "cedolare secca 2026",
+            "cedolare secca 26%",
+            "aumento cedolare secca",
+            "tasse affitto 2026",
+            "cedolare secca investitori",
+            "aliquota cedolare secca",
+            "locazione abitativa 2026",
+            "tassazione affitti italia",
+            "cedolare secca vs irpef",
+            "legge bilancio 2026 affitti",
+            "rinnovo contratto cedolare secca",
+            "social housing cedolare secca"
+          ]
+        },
+        tags: ["Investitori", "Fiscalità", "Cedolare secca", "Affitti", "Guide"],
+        faqs: [
+          { question: "Qual è l'aliquota della cedolare secca nel 2026?", answer: "Dal 1° gennaio 2026, l'aliquota ordinaria della cedolare secca è aumentata dal 21% al 26% per i nuovi contratti e i rinnovi. I contratti stipulati entro il 31 dicembre 2025 mantengono l'aliquota del 21% fino alla scadenza naturale." },
+          { question: "La cedolare secca al 26% conviene ancora rispetto all'IRPEF?", answer: "Sì, la cedolare secca al 26% rimane significativamente più conveniente della dichiarazione ordinaria. Su €10.000 di reddito lordo, la cedolare secca genera €2.600 di imposta, mentre IRPEF + IRAP genererebbero circa €4.300." },
+          { question: "I contratti già in essere passano al 26%?", answer: "No, i contratti stipulati prima del 1° gennaio 2026 con opzione cedolare secca già esercitata mantengono l'aliquota del 21% fino alla scadenza. Il 26% si applica solo ai rinnovi successivi al 1° gennaio 2026." },
+          { question: "La cedolare secca si applica agli affitti brevi?", answer: "No, la cedolare secca si applica solo a locazioni abitative di durata minima 180 giorni. Gli affitti brevi (Airbnb, Booking) sono tassati con IRPEF ordinaria secondo gli scaglioni progressivi." },
+          { question: "Esiste ancora l'aliquota ridotta al 10%?", answer: "Sì, l'aliquota agevolata del 10% è confermata per contratti in cui almeno il 75% del canone viene destinato a fondi comuni di social housing, in comuni ad alta tensione abitativa." },
+          { question: "Cosa succede se il mio contratto si rinnova tacitamente nel 2026?", answer: "Il rinnovo tacito dopo il 1° gennaio 2026 costituisce novazione contrattuale e comporta l'applicazione della nuova aliquota del 26%. Consiglio: formalizzare il rinnovo entro il 31 dicembre 2025 per preservare il 21%." },
+          { question: "Conviene ancora investire in immobili a reddito nel 2026?", answer: "Sì, nonostante l'aumento dell'aliquota. Un immobile a Torino con €12.000 di reddito lordo genera ancora un rendimento netto del 5,55% circa. La cedolare secca resta il regime più vantaggioso rispetto alla tassazione ordinaria." },
+          { question: "Le società immobiliari possono usare la cedolare secca?", answer: "No, la cedolare secca è riservata esclusivamente alle persone fisiche. Le società (S.R.L., S.P.A.) sono soggette al regime ordinario con IRES o IRPEF per società di persone." },
+          { question: "Quanto costa registrare un contratto con cedolare secca?", answer: "L'imposta di registro per contratti registrati online tramite modello RLI ammonta a soli €16, indipendentemente dall'importo del canone. La registrazione deve avvenire entro 30 giorni dalla stipula." },
+          { question: "Dove trovo le fonti normative sulla cedolare secca 2026?", answer: "Le fonti principali sono: Legge 27 dicembre 2025 n. 207 (Bilancio 2026), D.L. 6 dicembre 2011 n. 201, Circolari Agenzia Entrate n. 39/E 2022 e n. 18/E 2023. Tutti i link sono nell'articolo." }
+        ]
+      },
+      en: {
+        title: "Cedolare secca 2026: complete guide to tax changes for property investors",
+        excerpt: "Tax rate increase from 21% to 26%, transition periods and optimization strategies for rental property owners in Italy.",
+        seo: {
+          title: "Cedolare secca 2026 | Tax guide for property investors Italy",
+          description: "Cedolare secca 2026: rate increased from 21% to 26%. Complete guide with regulatory sources, strategies and comparisons for property investors.",
+          keywords: [
+            "cedolare secca 2026",
+            "cedolare secca 26%",
+            "flat tax italy rental",
+            "rental tax italy 2026",
+            "cedolare secca investors",
+            "italy property tax",
+            "residential lease tax 2026",
+            "rental taxation italy",
+            "cedolare secca vs irpef",
+            "2026 budget law rentals",
+            "contract renewal cedolare secca",
+            "social housing flat tax italy"
+          ]
+        },
+        tags: ["Investors", "Taxation", "Cedolare secca", "Rentals", "Guides"],
+        faqs: [
+          { question: "What is the cedolare secca rate in 2026?", answer: "From January 1, 2026, the standard cedolare secca rate increased from 21% to 26% for new contracts and renewals. Agreements signed by December 31, 2025 maintain the 21% rate until natural expiration." },
+          { question: "Is cedolare secca at 26% still better than IRPEF?", answer: "Yes, cedolare secca at 26% remains significantly more advantageous than standard declaration. On €10,000 gross income, cedolare secca generates €2,600 tax, while IRPEF + IRAP would generate approximately €4,300." },
+          { question: "Do existing contracts switch to 26%?", answer: "No, contracts signed before January 1, 2026 with cedolare secca option already exercised maintain the 21% rate until expiration. The 26% applies only to renewals after January 1, 2026." },
+          { question: "Does cedolare secca apply to short-term rentals?", answer: "No, cedolare secca applies only to residential leases of minimum 180 days duration. Short-term rentals (Airbnb, Booking) are taxed with standard IRPEF according to progressive brackets." },
+          { question: "Does the reduced 10% rate still exist?", answer: "Yes, the preferential 10% rate is confirmed for contracts where at least 75% of rent is allocated to common social housing funds, in high housing tension municipalities." },
+          { question: "What happens if my contract tacitly renews in 2026?", answer: "Tacit renewal after January 1, 2026 constitutes contractual novation and results in application of the new 26% rate. Advice: formalize renewal by December 31, 2025 to preserve the 21%." },
+          { question: "Is it still worth investing in rental properties in 2026?", answer: "Yes, despite the rate increase. A property in Turin with €12,000 gross income still generates approximately 5.55% net return. Cedolare secca remains the most advantageous regime compared to standard taxation." },
+          { question: "Can real estate companies use cedolare secca?", answer: "No, cedolare secca is reserved exclusively for natural persons. Companies (S.R.L., S.P.A.) are subject to standard regime with IRES or IRPEF for partnerships." },
+          { question: "How much does it cost to register a contract with cedolare secca?", answer: "Registration tax for contracts registered online via RLI form amounts to only €16, regardless of rent amount. Registration must occur within 30 days of signing." },
+          { question: "Where can I find regulatory sources on cedolare secca 2026?", answer: "Main sources are: Law December 27, 2025 no. 207 (2026 Budget), D.L. December 6, 2011 no. 201, Revenue Agency Circulars no. 39/E 2022 and no. 18/E 2023. All links are in the article." }
+        ]
+      }
+    }
+  },
+  {
     slug: "sciopero-trasporti-italia-gennaio-2026",
     category: "societa",
     date: "2026-01-09",
