@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/dialogs";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { HeroLogo } from "./HeroLogo";
 import { HowItWorksDrawer } from "./HowItWorksDrawer";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
@@ -12,6 +13,14 @@ export const ImmersiveHero = () => {
   const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+
+  // Trigger entrance animations after mount
+  useEffect(() => {
+    const timer = setTimeout(() => setHasLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleInvestClick = () => {
     trackClick('immersive_hero_invest');
@@ -25,8 +34,13 @@ export const ImmersiveHero = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       role="banner"
     >
-      {/* Gradient background */}
-      <div className="absolute inset-0 gradient-jungle-hero" />
+      {/* Gradient background with subtle scroll-settle effect */}
+      <div 
+        className="absolute inset-0 gradient-jungle-hero transition-[filter] duration-[var(--duration-view)]"
+        style={{
+          // Subtle hue shift could be added via CSS scroll-timeline when supported
+        }}
+      />
 
       {/* Main content */}
       <div className="container relative z-10 px-4 md:px-8 py-12">
@@ -34,8 +48,13 @@ export const ImmersiveHero = () => {
           {/* Animated Logo - visible on mobile, fades with scroll */}
           <HeroLogo />
 
-          {/* Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight">
+          {/* Headline - materialize on load */}
+          <h1 
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight ${
+              hasLoaded && !prefersReducedMotion ? 'animate-materialize' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
+          >
             {headline.split(' ').map((word, i) => (
               <span
                 key={i}
@@ -54,17 +73,29 @@ export const ImmersiveHero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 font-light leading-relaxed max-w-2xl mx-auto">
+          <p 
+            className={`text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 font-light leading-relaxed max-w-2xl mx-auto ${
+              hasLoaded && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-1' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
+          >
             {t('hero.mainSubheadline')}
           </p>
 
-          {/* Single CTA */}
-          <div className="mb-8 md:mb-10">
+          {/* Single CTA with energy pulse */}
+          <div 
+            className={`mb-8 md:mb-10 ${
+              hasLoaded && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-2' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
+          >
             <Button
               size="lg"
               variant="premium"
               onClick={handleInvestClick}
-              className="text-base md:text-lg px-8 py-6 md:px-10 md:py-7"
+              className={`text-base md:text-lg px-8 py-6 md:px-10 md:py-7 ${
+                hasLoaded && !prefersReducedMotion ? 'animate-energy-pulse' : ''
+              }`}
             >
               {t('hero.startInvesting')} →
             </Button>
@@ -87,8 +118,10 @@ export const ImmersiveHero = () => {
             href="https://2i3t.it" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-5 py-3 bg-background/60 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/80 hover-scale transition-all animate-fade-in"
-            style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+            className={`inline-flex items-center gap-3 px-5 py-3 bg-background/60 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/80 transition-all duration-[var(--duration-ui)] active:scale-[0.98] ${
+              hasLoaded && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-3' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
             onClick={() => trackClick('hero_2i3t_badge')}
           >
             <img src={logo2i3t} alt="2i3T" className="h-7 w-auto" />

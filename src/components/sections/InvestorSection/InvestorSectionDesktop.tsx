@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,7 @@ import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useHasBeenSeen, useStaggeredVisibility } from "@/hooks/useScrollProgress";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 
 export const InvestorSectionDesktop = () => {
@@ -16,6 +17,11 @@ export const InvestorSectionDesktop = () => {
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const { count } = useWaitlistCounter();
   const prefersReducedMotion = useReducedMotion();
+  
+  const sectionRef = useRef<HTMLElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
+  const hasBeenSeen = useHasBeenSeen(sectionRef, 0.1);
+  const statVisibility = useStaggeredVisibility(statsRef, 4, 100);
 
   const handleLorenzoWhatsApp = () => {
     const language = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
@@ -53,6 +59,7 @@ export const InvestorSectionDesktop = () => {
 
   return (
     <section 
+      ref={sectionRef}
       id="investor-section" 
       className="py-16 md:py-24 bg-background section-fade-top relative overflow-hidden"
     >
@@ -61,7 +68,12 @@ export const InvestorSectionDesktop = () => {
         <div className="max-w-4xl mx-auto">
           
           {/* Problem Context Header */}
-          <div className="text-center mb-12">
+          <div 
+            className={`text-center mb-12 ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
+          >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-destructive/10 text-destructive text-xs uppercase tracking-[0.15em] font-medium mb-6">
               <AlertTriangle className="w-4 h-4" />
               <span>{t('problem.badge', 'Il problema')}</span>
@@ -76,31 +88,52 @@ export const InvestorSectionDesktop = () => {
             </p>
           </div>
 
-          {/* Problem Stats Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
-            {problemStats.map((stat, index) => (
-              <div 
-                key={index}
-                className="bg-card border border-border/20 rounded-xl p-6 md:p-8 text-center"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
-                  <stat.icon className="w-6 h-6" />
+          {/* Problem Stats Grid - Staggered Reveal */}
+          <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            {problemStats.map((stat, index) => {
+              const isVisible = statVisibility[index] || prefersReducedMotion;
+              const isFocused = statVisibility[index] && !statVisibility[index + 1] && index < 3;
+              
+              return (
+                <div 
+                  key={index}
+                  className={`bg-card border rounded-xl p-6 md:p-8 text-center transition-all duration-[var(--duration-transition)] ${
+                    isVisible 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-4'
+                  } ${
+                    isFocused && !prefersReducedMotion
+                      ? 'border-primary/30 shadow-[var(--shadow-focus-card)] -translate-y-1 scale-[1.02]' 
+                      : 'border-border/20'
+                  }`}
+                  style={{
+                    transitionDelay: prefersReducedMotion ? '0ms' : `${index * 80}ms`
+                  }}
+                >
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
+                    <stat.icon className="w-6 h-6" />
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs md:text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
+                  <div className="text-[10px] md:text-xs text-muted-foreground">
+                    {stat.sublabel}
+                  </div>
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs md:text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-                <div className="text-[10px] md:text-xs text-muted-foreground">
-                  {stat.sublabel}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Source link */}
-          <div className="text-center mb-12">
+          <div 
+            className={`text-center mb-12 ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-2' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
+          >
             <p className="text-xs text-muted-foreground mb-2">
               *{t('problem.source', 'Dati 2025 - Fonte: Savills Research, Student Housing Italy Spotlight')}
             </p>
@@ -114,7 +147,12 @@ export const InvestorSectionDesktop = () => {
           </div>
 
           {/* Solution Divider */}
-          <div className="flex items-center gap-4 mb-12">
+          <div 
+            className={`flex items-center gap-4 mb-12 ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-3' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
+          >
             <div className="flex-1 h-px bg-border/20" />
             <div className="flex items-center gap-3 px-4 py-2 bg-primary/10 rounded-full">
               <div className="flex items-center gap-2">
@@ -135,7 +173,12 @@ export const InvestorSectionDesktop = () => {
           </div>
 
           {/* Investor Value Prop */}
-          <div className="text-center mb-8">
+          <div 
+            className={`text-center mb-8 ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-4' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
+          >
             <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4 font-medium">
               {t('investor.sectionLabel')}
             </p>
@@ -158,8 +201,16 @@ export const InvestorSectionDesktop = () => {
             </div>
           </div>
 
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
+          {/* CTAs - materialize last */}
+          <div 
+            className={`flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-slide-up-settle' : ''
+            }`}
+            style={{ 
+              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
+              animationDelay: '500ms'
+            }}
+          >
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
