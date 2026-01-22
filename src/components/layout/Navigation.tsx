@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronLeft, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -98,20 +97,23 @@ export const Navigation = () => {
     { label: t("founders.title"), id: undefined, path: undefined, isFounders: true },
   ];
 
+  // Dynamic height based on scroll
+  const navHeight = isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20';
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 ${
-        prefersReducedMotion ? '' : 'transition-all duration-500'
-      } ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/20 shadow-minimal"
-          : "bg-transparent"
+          ? "glass-nav glass-nav-scrolled"
+          : isHomePage 
+            ? "bg-transparent"
+            : "glass-nav"
       }`}
       role="navigation"
       aria-label="Navigazione principale"
     >
       <div className="container mx-auto px-4 md:px-8 transition-spacing">
-        <div className="flex items-center justify-between h-16 md:h-20 transition-responsive">
+        <div className={`flex items-center justify-between ${navHeight} transition-[height] duration-[var(--duration-ui)]`}>
           {/* Mobile: Back Button + Logo | Desktop: Logo only */}
           <div className="flex items-center gap-3">
             {showBackButton && (
@@ -142,7 +144,7 @@ export const Navigation = () => {
             <Link
               to="/"
               onClick={handleLogoClick}
-              className={`flex items-center gap-2 group ${prefersReducedMotion ? '' : 'transition-all duration-500 hover:scale-105'}`}
+              className="flex items-center gap-2 group transition-[transform,opacity] duration-[var(--duration-transition)] hover:scale-105"
               aria-label="Torna alla home"
               style={{
                 opacity: isHomePage ? Math.min(scrollProgress * 1.5, 1) : 1,
@@ -153,7 +155,7 @@ export const Navigation = () => {
               <img
                 src={jungleRentLogo}
                 alt="Jungle Rent Logo"
-                className={`w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 ${prefersReducedMotion ? '' : 'transition-size group-hover:rotate-6'}`}
+                className={`w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 transition-[width,height] duration-[var(--duration-ui)] ${prefersReducedMotion ? '' : 'group-hover:rotate-6'}`}
               />
               <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:block">
                 Jungle Rent
@@ -171,7 +173,7 @@ export const Navigation = () => {
                   key={item.id || item.path || index}
                   to={href}
                   onClick={(e) => handleMenuClick(e, item)}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 flex items-center gap-1.5"
+                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-[var(--duration-micro)] rounded-md hover:bg-accent/50 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 flex items-center gap-1.5"
                 >
                   {isFoundersItem && <Phone className="w-4 h-4" />}
                   {item.label}
@@ -185,7 +187,7 @@ export const Navigation = () => {
           <div className="lg:hidden flex items-center gap-2">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center text-foreground hover:bg-accent/50 rounded-md transition-size focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className="p-2 w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center text-foreground hover:bg-accent/50 rounded-md transition-[background-color] duration-[var(--duration-micro)] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               aria-label={isMobileMenuOpen ? t("accessibility.closeMenu") : t("accessibility.openMenu")}
               aria-expanded={isMobileMenuOpen}
             >
@@ -200,7 +202,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border/20 bg-background/95 backdrop-blur-xl z-50">
+          <div className="lg:hidden py-4 border-t border-border/20 bg-background/95 backdrop-blur-xl z-50 animate-materialize">
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => {
                 const href = item.path || (item.id ? `/#${item.id}` : '/');

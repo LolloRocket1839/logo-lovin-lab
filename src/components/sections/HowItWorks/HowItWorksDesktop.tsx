@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Euro, Key, Users, TrendingUp, PiggyBank, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 import { WaitlistDialog } from "@/components/dialogs/WaitlistDialog";
+import { useHasBeenSeen, useStaggeredVisibility } from "@/hooks/useScrollProgress";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const steps = [
   { key: "invest", icon: Euro },
@@ -17,17 +18,27 @@ export const HowItWorksDesktop = () => {
   const { t } = useTranslation();
   const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
   const [studentDialogOpen, setStudentDialogOpen] = useState(false);
+  
+  const sectionRef = useRef<HTMLElement>(null);
+  const stepsRef = useRef<HTMLDivElement>(null);
+  const hasBeenSeen = useHasBeenSeen(sectionRef, 0.15);
+  const stepVisibility = useStaggeredVisibility(stepsRef, steps.length, 120);
+  const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-background section-fade-top" aria-labelledby="how-it-works-title">
+    <section 
+      ref={sectionRef}
+      id="how-it-works" 
+      className="py-16 md:py-24 bg-background section-fade-top" 
+      aria-labelledby="how-it-works-title"
+    >
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12 md:mb-16"
+        <div
+          className={`text-center mb-12 md:mb-16 ${
+            hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+          }`}
+          style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
         >
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-xs uppercase tracking-[0.15em] font-medium mb-4">
             {t("howItWorks.badge")}
@@ -38,24 +49,33 @@ export const HowItWorksDesktop = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             {t("howItWorks.subtitle")}
           </p>
-        </motion.div>
+        </div>
 
-        {/* 5-Step Flow - Desktop Horizontal */}
-        <div className="mb-16">
+        {/* 4-Step Flow - Desktop Horizontal with staggered reveal */}
+        <div ref={stepsRef} className="mb-16">
           <div className="flex items-center justify-center gap-2 lg:gap-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
+              const isVisible = stepVisibility[index] || prefersReducedMotion;
+              
               return (
-                <motion.div
+                <div
                   key={step.key}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-center"
+                  className={`flex items-center transition-all duration-[var(--duration-transition)] ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+                  }`}
+                  style={{
+                    transitionDelay: prefersReducedMotion ? '0ms' : `${index * 80}ms`
+                  }}
                 >
                   <div className="flex flex-col items-center">
-                    <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-3 border-2 border-primary/20 hover:border-primary/30 transition-colors">
+                    <div 
+                      className={`w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-3 border-2 transition-all duration-[var(--duration-ui)] ${
+                        isVisible 
+                          ? 'border-primary/30 shadow-[var(--shadow-rest-card)]' 
+                          : 'border-primary/20'
+                      }`}
+                    >
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="font-semibold text-foreground text-sm lg:text-base mb-1">
@@ -66,9 +86,16 @@ export const HowItWorksDesktop = () => {
                     </p>
                   </div>
                   {index < steps.length - 1 && (
-                    <ArrowRight className="w-4 h-4 text-primary/30 mx-2 lg:mx-4 flex-shrink-0" />
+                    <ArrowRight 
+                      className={`w-4 h-4 text-primary/30 mx-2 lg:mx-4 flex-shrink-0 transition-opacity duration-[var(--duration-transition)] ${
+                        isVisible ? 'opacity-100' : 'opacity-0'
+                      }`}
+                      style={{
+                        transitionDelay: prefersReducedMotion ? '0ms' : `${index * 80 + 60}ms`
+                      }}
+                    />
                   )}
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -77,12 +104,14 @@ export const HowItWorksDesktop = () => {
         {/* Dual Value Boxes */}
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {/* Investors Box */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
+          <div
+            className={`bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-[var(--duration-transition)] ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            }`}
+            style={{ 
+              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
+              animationDelay: '200ms'
+            }}
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -102,15 +131,17 @@ export const HowItWorksDesktop = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Students Box */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all"
+          <div
+            className={`bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-[var(--duration-transition)] ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            }`}
+            style={{ 
+              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
+              animationDelay: '280ms'
+            }}
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
@@ -130,16 +161,18 @@ export const HowItWorksDesktop = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
         {/* Central Stat Highlight */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12 py-8 px-6 bg-primary/5 rounded-xl border border-primary/20"
+        <div
+          className={`text-center mb-12 py-8 px-6 bg-primary/5 rounded-xl border border-primary/20 ${
+            hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+          }`}
+          style={{ 
+            opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
+            animationDelay: '360ms'
+          }}
         >
           <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2">
             25%
@@ -147,15 +180,17 @@ export const HowItWorksDesktop = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-md mx-auto">
             {t("howItWorks.savingHighlight")}
           </p>
-        </motion.div>
+        </div>
 
         {/* Dual CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        <div
+          className={`flex flex-col sm:flex-row items-center justify-center gap-4 ${
+            hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+          }`}
+          style={{ 
+            opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
+            animationDelay: '440ms'
+          }}
         >
           <Button
             size="lg"
@@ -173,7 +208,7 @@ export const HowItWorksDesktop = () => {
           >
             {t("howItWorks.ctaRent")}
           </Button>
-        </motion.div>
+        </div>
 
         <QuickInvestorLeadDialog 
           open={investorDialogOpen} 
