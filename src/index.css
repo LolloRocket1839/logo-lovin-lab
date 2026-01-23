@@ -85,45 +85,11 @@ All colors MUST be HSL.
     --radius: 0.5rem;
     
     /* Jungle Rent Fluid Gradients - Warmer Night Mode */
-    --gradient-jungle-vertical: linear-gradient(
-      180deg,
-      hsl(44 65% 90%) 0%,
-      hsl(42 60% 92%) 25%,
-      hsl(40 55% 93%) 50%,
-      hsl(42 60% 92%) 75%,
-      hsl(44 65% 90%) 100%
-    );
-    
-    --gradient-jungle-hero: linear-gradient(
-      180deg,
-      hsl(40 55% 93%) 0%,
-      hsl(44 65% 90%) 50%,
-      hsl(42 60% 92%) 100%
-    );
-    
-    --gradient-jungle-section: linear-gradient(
-      180deg,
-      transparent 0%,
-      transparent 100%
-    );
-    
-    --gradient-jungle-blog: linear-gradient(
-      180deg,
-      hsl(44 65% 90%) 0%,
-      hsl(40 55% 93%) 30%,
-      hsl(42 60% 92%) 50%,
-      hsl(40 55% 93%) 70%,
-      hsl(44 65% 90%) 100%
-    );
-    
-    --gradient-jungle-footer: linear-gradient(
-      180deg,
-      hsl(44 65% 90%) 0%,
-      hsl(42 60% 92%) 30%,
-      hsl(40 55% 93%) 60%,
-      hsl(42 60% 92%) 85%,
-      hsl(44 65% 90%) 100%
-    );
+    --gradient-jungle-vertical: hsl(44 65% 90%);
+    --gradient-jungle-hero: hsl(44 65% 90%);
+    --gradient-jungle-section: hsl(44 65% 90%);
+    --gradient-jungle-blog: hsl(44 65% 90%);
+    --gradient-jungle-footer: hsl(44 65% 90%);
     
     /* Clean gradients */
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
@@ -560,48 +526,11 @@ All colors MUST be HSL.
     --ring: 145 35% 65%;
     
     /* Dark Mode Jungle Gradients - More Visible */
-    --gradient-jungle-vertical: linear-gradient(
-      180deg,
-      hsl(150 40% 8%) 0%,
-      hsl(150 45% 18% / 0.5) 20%,
-      hsl(150 40% 8%) 50%,
-      hsl(150 45% 18% / 0.4) 80%,
-      hsl(150 40% 8%) 100%
-    );
-    
-    --gradient-jungle-hero: linear-gradient(
-      180deg,
-      hsl(150 45% 18% / 0.6) 0%,
-      hsl(150 40% 8%) 40%,
-      hsl(150 45% 18% / 0.4) 70%,
-      hsl(150 40% 8%) 100%
-    );
-    
-    --gradient-jungle-section: linear-gradient(
-      180deg,
-      transparent 0%,
-      hsl(150 45% 18% / 0.3) 20%,
-      hsl(150 45% 18% / 0.5) 50%,
-      hsl(150 45% 18% / 0.3) 80%,
-      transparent 100%
-    );
-    
-    --gradient-jungle-blog: linear-gradient(
-      180deg,
-      hsl(150 40% 8%) 0%,
-      hsl(150 45% 18% / 0.3) 30%,
-      hsl(150 45% 18% / 0.4) 50%,
-      hsl(150 45% 18% / 0.3) 70%,
-      hsl(150 40% 8%) 100%
-    );
-    
-    --gradient-jungle-footer: linear-gradient(
-      180deg,
-      hsl(150 40% 8%) 0%,
-      hsl(150 45% 18% / 0.5) 30%,
-      hsl(150 45% 18% / 0.9) 70%,
-      hsl(150 45% 18%) 100%
-    );
+    --gradient-jungle-vertical: hsl(var(--background));
+    --gradient-jungle-hero: hsl(var(--background));
+    --gradient-jungle-section: hsl(var(--background));
+    --gradient-jungle-blog: hsl(var(--background));
+    --gradient-jungle-footer: hsl(var(--background));
     
     --gradient-hero: linear-gradient(135deg, hsl(150 40% 8%) 0%, hsl(145 35% 18%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(150 40% 8%) 0%, hsl(145 30% 12%) 100%);

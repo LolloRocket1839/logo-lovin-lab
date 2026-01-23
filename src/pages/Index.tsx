@@ -117,7 +117,7 @@ const Index = () => {
         <HomepageFAQ />
         
         {/* Useful Resources Section - NEW for internal linking SEO */}
-        <section className="py-12 md:py-16 bg-muted/30">
+        <section className="py-12 md:py-16 bg-background">
           <div className="container px-4 md:px-8 mx-auto">
             <h2 className="text-xl md:text-2xl font-display font-bold text-center mb-8">
               {isItalian ? 'Risorse utili' : 'Useful resources'}
