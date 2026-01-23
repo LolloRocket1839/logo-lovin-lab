@@ -16,9 +16,6 @@ export const SellerSection = () => {
   const hasBeenSeen = useHasBeenSeen(sectionRef, 0.15);
   const prefersReducedMotion = useReducedMotion();
 
-  // Table rows for stagger animation
-  const tableRows = ['role', 'commissions', 'time', 'visits'];
-
   return (
     <section 
       ref={sectionRef}
@@ -28,10 +25,10 @@ export const SellerSection = () => {
       
       <div className="container px-6 md:px-8 mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto">
-          {/* Hero headline - same style as ImmersiveHero */}
+          {/* Hero headline */}
           <h2 
             className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
@@ -42,7 +39,7 @@ export const SellerSection = () => {
           {/* Subheadline */}
           <p 
             className={`text-base sm:text-lg md:text-xl text-muted-foreground mb-10 md:mb-12 font-light leading-relaxed max-w-2xl mx-auto ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-1' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-1' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
@@ -52,17 +49,17 @@ export const SellerSection = () => {
           {/* Section title */}
           <h3 
             className={`text-lg sm:text-xl md:text-2xl font-display font-bold mb-6 text-foreground ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-2' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-2' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
             <StyledText>{t('seller.directBuyerTitle')}</StyledText>
           </h3>
           
-          {/* Comparison table with row stagger animation */}
+          {/* Comparison table */}
           <div 
             className={`bg-card/50 backdrop-blur-sm border border-border/20 rounded-xl p-6 mb-8 max-w-2xl mx-auto ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-2' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-2' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
@@ -73,122 +70,62 @@ export const SellerSection = () => {
               <div className="text-center font-semibold text-primary">{t('seller.comparison.jungleRent')}</div>
               
               {/* Role row */}
-              <div 
-                className={`text-left text-muted-foreground py-2 border-t border-border/20 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-              >
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">
                 {t('seller.comparison.roleLabel')}
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 text-muted-foreground ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-              >
+              <div className="text-center py-2 border-t border-border/20 text-muted-foreground">
                 {t('seller.comparison.roleAgency')}
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 font-medium text-foreground flex items-center justify-center gap-1 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-              >
+              <div className="text-center py-2 border-t border-border/20 font-medium text-foreground flex items-center justify-center gap-1">
                 <Building2 className="w-4 h-4 text-primary" />
                 {t('seller.comparison.roleJR')}
               </div>
               
               {/* Commissions row */}
-              <div 
-                className={`text-left text-muted-foreground py-2 border-t border-border/20 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '80ms' }}
-              >
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">
                 {t('seller.comparison.commissionsLabel')}
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 text-destructive flex items-center justify-center gap-1 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '80ms' }}
-              >
+              <div className="text-center py-2 border-t border-border/20 text-destructive flex items-center justify-center gap-1">
                 <X className="w-4 h-4" />
                 3-4%
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 text-primary font-semibold flex items-center justify-center gap-1 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '80ms' }}
-              >
+              <div className="text-center py-2 border-t border-border/20 text-primary font-semibold flex items-center justify-center gap-1">
                 <Check className="w-4 h-4" />
                 {t('seller.comparison.commissionsJR')}
               </div>
               
               {/* Time row */}
-              <div 
-                className={`text-left text-muted-foreground py-2 border-t border-border/20 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '160ms' }}
-              >
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">
                 {t('seller.comparison.timeLabel')}
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 text-muted-foreground flex items-center justify-center gap-1 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '160ms' }}
-              >
+              <div className="text-center py-2 border-t border-border/20 text-muted-foreground flex items-center justify-center gap-1">
                 <Clock className="w-4 h-4" />
                 6-12 {t('seller.comparison.months')}
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 text-primary font-medium flex items-center justify-center gap-1 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '160ms' }}
-              >
+              <div className="text-center py-2 border-t border-border/20 text-primary font-medium flex items-center justify-center gap-1">
                 <Clock className="w-4 h-4" />
                 60-90 {t('seller.comparison.days')}
               </div>
               
               {/* Visits row */}
-              <div 
-                className={`text-left text-muted-foreground py-2 border-t border-border/20 ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '240ms' }}
-              >
+              <div className="text-left text-muted-foreground py-2 border-t border-border/20">
                 {t('seller.comparison.visitsLabel')}
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 text-muted-foreground ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '240ms' }}
-              >
+              <div className="text-center py-2 border-t border-border/20 text-muted-foreground">
                 {t('seller.comparison.visitsAgency')}
               </div>
-              <div 
-                className={`text-center py-2 border-t border-border/20 text-primary font-medium ${
-                  hasBeenSeen && !prefersReducedMotion ? 'table-row-stagger' : ''
-                }`}
-                style={{ animationDelay: '240ms' }}
-              >
+              <div className="text-center py-2 border-t border-border/20 text-primary font-medium">
                 {t('seller.comparison.visitsJR')}
               </div>
             </div>
           </div>
           
-          {/* CTA - materializes last */}
+          {/* CTA */}
           <div
             className={`${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-slide-up-settle' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-3' : ''
             }`}
-            style={{ 
-              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
-              animationDelay: '400ms'
-            }}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
             <Button 
               size="lg" 
@@ -200,15 +137,12 @@ export const SellerSection = () => {
             </Button>
           </div>
           
-          {/* Contextual link to property valuation - NEW for SEO */}
+          {/* Contextual link to property valuation */}
           <p 
             className={`mt-6 text-sm text-muted-foreground ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-4' : ''
             }`}
-            style={{ 
-              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
-              animationDelay: '480ms'
-            }}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
             {t('seller.valuationCta', 'Vuoi prima sapere quanto vale il tuo immobile?')}{' '}
             <Link 

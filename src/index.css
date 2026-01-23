@@ -103,176 +103,93 @@ All colors MUST be HSL.
     --shadow-focus: 0 0 0 2px hsl(28 24% 100%), 0 0 0 4px hsl(150 45% 18%);
   }
   
-  /* ============================================
-     PREMIUM SCROLL-DIRECTED ANIMATIONS
-     ============================================ */
-  
-  /* Materialize animation - combines opacity, translate, blur, shadow */
-  @keyframes materialize {
-    from {
-      opacity: 0;
-      transform: translateY(var(--materialize-translate));
-      filter: blur(var(--materialize-blur));
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
-    }
-  }
-  
-  .animate-materialize {
-    animation: materialize var(--duration-transition) var(--ease-settle) forwards;
-  }
-  
-  /* Materialize with delay variants */
-  .animate-materialize-delay-1 { animation-delay: 80ms; }
-  .animate-materialize-delay-2 { animation-delay: 160ms; }
-  .animate-materialize-delay-3 { animation-delay: 240ms; }
-  .animate-materialize-delay-4 { animation-delay: 320ms; }
-  
-  /* Spotlight flash - temporary highlight on arrival */
-  @keyframes spotlight-flash {
-    0%, 100% { 
-      box-shadow: var(--shadow-rest-card); 
-      border-color: hsl(var(--border) / 0.2); 
-    }
-    50% { 
-      box-shadow: var(--shadow-spotlight); 
-      border-color: hsl(var(--primary) / 0.4); 
-    }
-  }
-  
-  .animate-spotlight {
-    animation: spotlight-flash 0.6s var(--ease-settle) forwards;
-    animation-delay: 0.3s;
-  }
-  
-  /* Energy pulse for CTA - single pulse on load */
-  @keyframes energy-pulse {
-    0% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4); }
-    70% { box-shadow: 0 0 0 12px hsl(var(--primary) / 0); }
-    100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0); }
-  }
-  
-  .animate-energy-pulse {
-    animation: energy-pulse 1.2s ease-out 0.8s forwards;
-  }
-  
-  /* Card focus state - when card is the attention target */
-  @keyframes card-focus {
-    from {
-      transform: translateY(0);
-      box-shadow: var(--shadow-rest-card);
-    }
-    to {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-focus-card);
-    }
-  }
-  
-  .card-focus-target {
-    animation: card-focus var(--duration-ui) var(--ease-spring) forwards;
-  }
-  
-  /* Slide up settle - for final CTA sections */
-  @keyframes slide-up-settle {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-slide-up-settle {
-    animation: slide-up-settle var(--duration-transition) var(--ease-settle) forwards;
-  }
-  
-  /* Glass layer utilities */
-  .glass-nav {
-    background: hsl(var(--glass-bg));
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border-bottom: 1px solid hsl(var(--glass-border));
-    box-shadow: var(--glass-shadow);
-    transition: all var(--duration-ui) var(--ease-settle);
-  }
-  
-  .glass-nav-scrolled {
-    background: hsl(var(--glass-bg-scrolled));
-    backdrop-filter: blur(var(--glass-blur-scrolled));
-    -webkit-backdrop-filter: blur(var(--glass-blur-scrolled));
-    box-shadow: var(--glass-shadow-scrolled);
-  }
-  
-  .glass-sticky {
-    background: hsl(var(--primary) / 0.95);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border-top: 1px solid hsl(var(--primary-foreground) / 0.15);
-  }
-  
-  /* Step tracker styles */
-  .step-tracker-item {
-    transition: all var(--duration-ui) var(--ease-settle);
-  }
-  
-  .step-tracker-item.active {
-    background: hsl(var(--primary) / 0.1);
-    border-color: hsl(var(--primary) / 0.3);
-  }
-  
-  .step-tracker-item.inactive {
-    opacity: 0.5;
-  }
-  
-  /* Row stagger animation for tables */
-  .table-row-stagger {
+/* ============================================
+   MINIMAL MOTION SYSTEM
+   Single elegant animation for all reveals
+   ============================================ */
+
+/* Single reveal animation - fade + subtle translate */
+@keyframes fade-up {
+  from {
     opacity: 0;
-    transform: translateX(-10px);
-    animation: row-slide-in var(--duration-ui) var(--ease-settle) forwards;
+    transform: translateY(12px);
   }
-  
-  @keyframes row-slide-in {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .table-row-stagger:nth-child(1) { animation-delay: 0ms; }
-  .table-row-stagger:nth-child(2) { animation-delay: 80ms; }
-  .table-row-stagger:nth-child(3) { animation-delay: 160ms; }
-  .table-row-stagger:nth-child(4) { animation-delay: 240ms; }
-  .table-row-stagger:nth-child(5) { animation-delay: 320ms; }
-  
-  /* Reduced motion: disable all scroll-directed animations */
-  @media (prefers-reduced-motion: reduce) {
-    .animate-materialize,
-    .animate-materialize-delay-1,
-    .animate-materialize-delay-2,
-    .animate-materialize-delay-3,
-    .animate-materialize-delay-4,
-    .animate-spotlight,
-    .animate-energy-pulse,
-    .card-focus-target,
-    .animate-slide-up-settle,
-    .table-row-stagger {
-      animation: none;
-      opacity: 1;
-      transform: none;
-      filter: none;
-    }
-    
-    .glass-nav,
-    .glass-nav-scrolled,
-    .glass-sticky {
-      transition: none;
-    }
+}
+
+.animate-fade-up {
+  animation: fade-up 400ms var(--ease-settle) forwards;
+}
+
+/* CSS-based stagger delays */
+.stagger-1 { animation-delay: 80ms; }
+.stagger-2 { animation-delay: 160ms; }
+.stagger-3 { animation-delay: 240ms; }
+.stagger-4 { animation-delay: 320ms; }
+.stagger-5 { animation-delay: 400ms; }
+
+/* Legacy aliases for gradual migration */
+.animate-materialize {
+  animation: fade-up 400ms var(--ease-settle) forwards;
+}
+.animate-materialize-delay-1 { animation-delay: 80ms; }
+.animate-materialize-delay-2 { animation-delay: 160ms; }
+.animate-materialize-delay-3 { animation-delay: 240ms; }
+.animate-materialize-delay-4 { animation-delay: 320ms; }
+.animate-materialize-delay-5 { animation-delay: 400ms; }
+
+/* Slide up for CTAs */
+@keyframes slide-up-settle {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up-settle {
+  animation: slide-up-settle 400ms var(--ease-settle) forwards;
+}
+
+/* Glass layer utilities */
+.glass-nav {
+  background: hsl(var(--glass-bg));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid hsl(var(--glass-border));
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-nav-scrolled {
+  background: hsl(var(--glass-bg-scrolled));
+  backdrop-filter: blur(var(--glass-blur-scrolled));
+  -webkit-backdrop-filter: blur(var(--glass-blur-scrolled));
+  box-shadow: var(--glass-shadow-scrolled);
+}
+
+.glass-sticky {
+  background: hsl(var(--primary) / 0.95);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid hsl(var(--primary-foreground) / 0.15);
+}
+
+/* Reduced motion: disable all animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-materialize,
+  .animate-slide-up-settle {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
   
   /* ============================================
    MARVIS-STYLE FEEL GOOD CLICKS & INTERACTIONS

@@ -9,7 +9,7 @@ import { StyledText } from "@/components/StyledText";
 import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { useHasBeenSeen, useStaggeredVisibility } from "@/hooks/useScrollProgress";
+import { useHasBeenSeen } from "@/hooks/useScrollProgress";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 
 export const InvestorSectionDesktop = () => {
@@ -19,9 +19,7 @@ export const InvestorSectionDesktop = () => {
   const prefersReducedMotion = useReducedMotion();
   
   const sectionRef = useRef<HTMLElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
   const hasBeenSeen = useHasBeenSeen(sectionRef, 0.1);
-  const statVisibility = useStaggeredVisibility(statsRef, 4, 100);
 
   const handleLorenzoWhatsApp = () => {
     const language = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
@@ -70,7 +68,7 @@ export const InvestorSectionDesktop = () => {
           {/* Problem Context Header */}
           <div 
             className={`text-center mb-12 ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
@@ -88,49 +86,39 @@ export const InvestorSectionDesktop = () => {
             </p>
           </div>
 
-          {/* Problem Stats Grid - Staggered Reveal */}
-          <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
-            {problemStats.map((stat, index) => {
-              const isVisible = statVisibility[index] || prefersReducedMotion;
-              const isFocused = statVisibility[index] && !statVisibility[index + 1] && index < 3;
-              
-              return (
-                <div 
-                  key={index}
-                  className={`bg-card border rounded-xl p-6 md:p-8 text-center transition-all duration-[var(--duration-transition)] ${
-                    isVisible 
-                      ? 'opacity-100 translate-y-0' 
-                      : 'opacity-0 translate-y-4'
-                  } ${
-                    isFocused && !prefersReducedMotion
-                      ? 'border-primary/30 shadow-[var(--shadow-focus-card)] -translate-y-1 scale-[1.02]' 
-                      : 'border-border/20'
-                  }`}
-                  style={{
-                    transitionDelay: prefersReducedMotion ? '0ms' : `${index * 80}ms`
-                  }}
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
-                    <stat.icon className="w-6 h-6" />
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs md:text-sm text-muted-foreground">
-                    {stat.label}
-                  </div>
-                  <div className="text-[10px] md:text-xs text-muted-foreground">
-                    {stat.sublabel}
-                  </div>
+          {/* Problem Stats Grid - CSS stagger */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            {problemStats.map((stat, index) => (
+              <div 
+                key={index}
+                className={`bg-card border border-border/20 rounded-xl p-6 md:p-8 text-center ${
+                  hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up' : ''
+                }`}
+                style={{
+                  opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
+                  animationDelay: prefersReducedMotion ? '0ms' : `${(index + 1) * 80}ms`
+                }}
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
+                  <stat.icon className="w-6 h-6" />
                 </div>
-              );
-            })}
+                <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-xs md:text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
+                <div className="text-[10px] md:text-xs text-muted-foreground">
+                  {stat.sublabel}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Source link */}
           <div 
             className={`text-center mb-12 ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-2' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-5' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
@@ -149,7 +137,7 @@ export const InvestorSectionDesktop = () => {
           {/* Solution Divider */}
           <div 
             className={`flex items-center gap-4 mb-12 ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-3' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-5' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
@@ -165,7 +153,7 @@ export const InvestorSectionDesktop = () => {
               <div className="flex items-center gap-2">
                 <Target className="w-4 h-4 text-primary" />
                 <span className="text-xs uppercase tracking-[0.15em] font-medium text-foreground">
-                  {i18n.language.startsWith('it') ? 'Jungle Rent' : 'Jungle Rent'}
+                  Jungle Rent
                 </span>
               </div>
             </div>
@@ -175,7 +163,7 @@ export const InvestorSectionDesktop = () => {
           {/* Investor Value Prop */}
           <div 
             className={`text-center mb-8 ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-4' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-5' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
@@ -201,20 +189,17 @@ export const InvestorSectionDesktop = () => {
             </div>
           </div>
 
-          {/* CTAs - materialize last */}
+          {/* CTAs */}
           <div 
             className={`flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-slide-up-settle' : ''
+              hasBeenSeen && !prefersReducedMotion ? 'animate-slide-up-settle stagger-5' : ''
             }`}
-            style={{ 
-              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
-              animationDelay: '500ms'
-            }}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
-              className="w-full sm:w-auto text-sm md:text-base group"
+              className="w-full sm:w-auto text-sm md:text-base"
             >
               <MessageCircle className="mr-2 w-4 h-4 md:w-5 md:h-5" />
               {t('investor.talkToLorenzo')}
@@ -227,7 +212,7 @@ export const InvestorSectionDesktop = () => {
               className="w-full sm:w-auto text-sm md:text-base group"
             >
               {t('investor.cta')}
-              <ArrowRight className={`ml-2 w-4 h-4 ${prefersReducedMotion ? '' : 'group-hover:translate-x-1 transition-transform'}`} />
+              <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
             
             {/* Calendly only on desktop */}
@@ -235,7 +220,7 @@ export const InvestorSectionDesktop = () => {
               onClick={() => openCalendly()}
               size="lg"
               variant="secondary"
-              className="hidden md:inline-flex w-auto text-base group"
+              className="hidden md:inline-flex w-auto text-base"
             >
               <Calendar className="mr-2 w-5 h-5" />
               {t('investor.scheduleCall')}
