@@ -34,13 +34,8 @@ export const ImmersiveHero = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       role="banner"
     >
-      {/* Gradient background with subtle scroll-settle effect */}
-      <div 
-        className="absolute inset-0 gradient-jungle-hero transition-[filter] duration-[var(--duration-view)]"
-        style={{
-          // Subtle hue shift could be added via CSS scroll-timeline when supported
-        }}
-      />
+      {/* Solid background */}
+      <div className="absolute inset-0 bg-background" />
 
       {/* Main content */}
       <div className="container relative z-10 px-4 md:px-8 py-12">
