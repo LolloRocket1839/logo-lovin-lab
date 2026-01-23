@@ -41,9 +41,7 @@ export const Footer = () => {
   };
   
   return (
-    <footer id="footer" className="hidden md:block bg-background section-fade-top relative overflow-hidden transition-spacing">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 gradient-jungle-footer" />
+    <footer id="footer" className="hidden md:block bg-background relative overflow-hidden transition-spacing">
       
       <div className="container px-4 md:px-8 py-16 md:py-24 relative z-10 transition-spacing">
         <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20 max-w-6xl mx-auto transition-spacing transition-layout">
