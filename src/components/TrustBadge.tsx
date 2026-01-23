@@ -27,15 +27,14 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex flex-row items-center gap-4 md:gap-5 bg-card border border-border/20 rounded-xl px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6 mb-4 hover:border-primary/30 transition-all duration-[var(--duration-transition)] hover:shadow-[0_16px_48px_hsla(142,76%,36%,0.25)] cursor-pointer active:scale-[0.98] ${
+            className={`inline-flex flex-row items-center gap-4 md:gap-5 bg-card border border-border/20 rounded-xl px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6 mb-4 hover:border-primary/30 transition-colors duration-[var(--duration-fast)] cursor-pointer ${
               hasBeenSeen && !prefersReducedMotion 
-                ? 'animate-materialize animate-spotlight' 
+                ? 'animate-fade-up' 
                 : prefersReducedMotion 
                   ? '' 
                   : 'opacity-0'
             }`}
             style={{
-              // Ensure visible when reduced motion is on
               opacity: prefersReducedMotion ? 1 : undefined
             }}
           >
@@ -64,8 +63,8 @@ export const TrustBadge = () => {
             href="https://2i3t.it"
             target="_blank"
             rel="noopener noreferrer"
-            className={`hidden sm:inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-all duration-[var(--duration-transition)] font-medium group ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-1' : prefersReducedMotion ? '' : 'opacity-0'
+            className={`hidden sm:inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors duration-[var(--duration-fast)] font-medium group ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-1' : prefersReducedMotion ? '' : 'opacity-0'
             }`}
           >
             <span>{t('trustBadge.learnMore')}</span>
@@ -73,7 +72,7 @@ export const TrustBadge = () => {
           </a>
           
           <p className={`hidden md:block text-xs text-muted-foreground/60 mt-4 font-light max-w-2xl mx-auto leading-relaxed ${
-            hasBeenSeen && !prefersReducedMotion ? 'animate-materialize animate-materialize-delay-2' : prefersReducedMotion ? '' : 'opacity-0'
+            hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-2' : prefersReducedMotion ? '' : 'opacity-0'
           }`}>
             {t('trustBadge.guarantee')}
           </p>

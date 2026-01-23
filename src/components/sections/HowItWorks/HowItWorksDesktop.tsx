@@ -4,7 +4,7 @@ import { Euro, Key, Users, TrendingUp, PiggyBank, CheckCircle, ArrowRight } from
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 import { WaitlistDialog } from "@/components/dialogs/WaitlistDialog";
-import { useHasBeenSeen, useStaggeredVisibility } from "@/hooks/useScrollProgress";
+import { useHasBeenSeen } from "@/hooks/useScrollProgress";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const steps = [
@@ -20,9 +20,7 @@ export const HowItWorksDesktop = () => {
   const [studentDialogOpen, setStudentDialogOpen] = useState(false);
   
   const sectionRef = useRef<HTMLElement>(null);
-  const stepsRef = useRef<HTMLDivElement>(null);
   const hasBeenSeen = useHasBeenSeen(sectionRef, 0.15);
-  const stepVisibility = useStaggeredVisibility(stepsRef, steps.length, 120);
   const prefersReducedMotion = useReducedMotion();
 
   return (
@@ -36,7 +34,7 @@ export const HowItWorksDesktop = () => {
         {/* Header */}
         <div
           className={`text-center mb-12 md:mb-16 ${
-            hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up' : ''
           }`}
           style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
         >
@@ -51,31 +49,25 @@ export const HowItWorksDesktop = () => {
           </p>
         </div>
 
-        {/* 4-Step Flow - Desktop Horizontal with staggered reveal */}
-        <div ref={stepsRef} className="mb-16">
+        {/* 4-Step Flow - CSS stagger */}
+        <div className="mb-16">
           <div className="flex items-center justify-center gap-2 lg:gap-4">
             {steps.map((step, index) => {
               const Icon = step.icon;
-              const isVisible = stepVisibility[index] || prefersReducedMotion;
               
               return (
                 <div
                   key={step.key}
-                  className={`flex items-center transition-all duration-[var(--duration-transition)] ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+                  className={`flex items-center ${
+                    hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up' : ''
                   }`}
                   style={{
-                    transitionDelay: prefersReducedMotion ? '0ms' : `${index * 80}ms`
+                    opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
+                    animationDelay: prefersReducedMotion ? '0ms' : `${index * 80}ms`
                   }}
                 >
                   <div className="flex flex-col items-center">
-                    <div 
-                      className={`w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-3 border-2 transition-all duration-[var(--duration-ui)] ${
-                        isVisible 
-                          ? 'border-primary/30 shadow-[var(--shadow-rest-card)]' 
-                          : 'border-primary/20'
-                      }`}
-                    >
+                    <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-3 border-2 border-primary/20">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="font-semibold text-foreground text-sm lg:text-base mb-1">
@@ -86,14 +78,7 @@ export const HowItWorksDesktop = () => {
                     </p>
                   </div>
                   {index < steps.length - 1 && (
-                    <ArrowRight 
-                      className={`w-4 h-4 text-primary/30 mx-2 lg:mx-4 flex-shrink-0 transition-opacity duration-[var(--duration-transition)] ${
-                        isVisible ? 'opacity-100' : 'opacity-0'
-                      }`}
-                      style={{
-                        transitionDelay: prefersReducedMotion ? '0ms' : `${index * 80 + 60}ms`
-                      }}
-                    />
+                    <ArrowRight className="w-4 h-4 text-primary/30 mx-2 lg:mx-4 flex-shrink-0" />
                   )}
                 </div>
               );
@@ -105,13 +90,10 @@ export const HowItWorksDesktop = () => {
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {/* Investors Box */}
           <div
-            className={`bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-[var(--duration-transition)] ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            className={`bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-2' : ''
             }`}
-            style={{ 
-              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
-              animationDelay: '200ms'
-            }}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -135,13 +117,10 @@ export const HowItWorksDesktop = () => {
 
           {/* Students Box */}
           <div
-            className={`bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-[var(--duration-transition)] ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            className={`bg-card border border-border/20 rounded-xl p-6 lg:p-8 shadow-sm ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-3' : ''
             }`}
-            style={{ 
-              opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
-              animationDelay: '280ms'
-            }}
+            style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
           >
             <div className="flex items-center gap-3 mb-5">
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
@@ -167,12 +146,9 @@ export const HowItWorksDesktop = () => {
         {/* Central Stat Highlight */}
         <div
           className={`text-center mb-12 py-8 px-6 bg-primary/5 rounded-xl border border-primary/20 ${
-            hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-4' : ''
           }`}
-          style={{ 
-            opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
-            animationDelay: '360ms'
-          }}
+          style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
         >
           <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2">
             25%
@@ -185,12 +161,9 @@ export const HowItWorksDesktop = () => {
         {/* Dual CTAs */}
         <div
           className={`flex flex-col sm:flex-row items-center justify-center gap-4 ${
-            hasBeenSeen && !prefersReducedMotion ? 'animate-materialize' : ''
+            hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-5' : ''
           }`}
-          style={{ 
-            opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0,
-            animationDelay: '440ms'
-          }}
+          style={{ opacity: prefersReducedMotion ? 1 : hasBeenSeen ? undefined : 0 }}
         >
           <Button
             size="lg"

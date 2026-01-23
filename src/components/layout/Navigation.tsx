@@ -97,9 +97,6 @@ export const Navigation = () => {
     { label: t("founders.title"), id: undefined, path: undefined, isFounders: true },
   ];
 
-  // Dynamic height based on scroll
-  const navHeight = isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20';
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 ${
@@ -112,8 +109,8 @@ export const Navigation = () => {
       role="navigation"
       aria-label="Navigazione principale"
     >
-      <div className="container mx-auto px-4 md:px-8 transition-spacing">
-        <div className={`flex items-center justify-between ${navHeight} transition-[height] duration-[var(--duration-ui)]`}>
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Mobile: Back Button + Logo | Desktop: Logo only */}
           <div className="flex items-center gap-3">
             {showBackButton && (
@@ -140,22 +137,21 @@ export const Navigation = () => {
               </>
             )}
 
-            {/* Logo - fades in on scroll when on homepage (since hero has the large logo) */}
+            {/* Logo - fades in on scroll when on homepage */}
             <Link
               to="/"
               onClick={handleLogoClick}
-              className="flex items-center gap-2 group transition-[transform,opacity] duration-[var(--duration-transition)] hover:scale-105"
+              className="flex items-center gap-2 group"
               aria-label="Torna alla home"
               style={{
                 opacity: isHomePage ? Math.min(scrollProgress * 1.5, 1) : 1,
-                transform: prefersReducedMotion ? undefined : `scale(${isHomePage ? (0.8 + (Math.min(scrollProgress, 1) * 0.2)) : 1})`,
                 pointerEvents: isHomePage && scrollProgress < 0.2 ? 'none' : 'auto'
               }}
             >
               <img
                 src={jungleRentLogo}
                 alt="Jungle Rent Logo"
-                className={`w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 transition-[width,height] duration-[var(--duration-ui)] ${prefersReducedMotion ? '' : 'group-hover:rotate-6'}`}
+                className="w-8 h-8 md:w-10 md:h-10"
               />
               <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:block">
                 Jungle Rent

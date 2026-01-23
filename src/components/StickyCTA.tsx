@@ -65,7 +65,7 @@ export const StickyCTA = () => {
         className={`fixed bottom-20 left-3 right-3 z-40 md:hidden
                     glass-sticky
                     shadow-lg rounded-xl safe-area-bottom
-                    ${hasAnimated && !prefersReducedMotion ? 'animate-slide-up-settle' : ''}`}
+                    ${hasAnimated && !prefersReducedMotion ? 'animate-fade-up' : ''}`}
       >
         <div className="px-3 py-2.5 flex items-center gap-2">
           <Button
@@ -106,7 +106,7 @@ export const StickyCTA = () => {
         className={`fixed bottom-4 left-0 right-0 z-40 hidden md:block
                     glass-sticky
                     shadow-lg rounded-t-xl
-                    ${hasAnimated && !prefersReducedMotion ? 'animate-slide-up-settle' : ''}`}
+                    ${hasAnimated && !prefersReducedMotion ? 'animate-fade-up' : ''}`}
       >
         <div className="container px-4 md:px-8 py-3 flex items-center justify-between gap-3">
           <Button
