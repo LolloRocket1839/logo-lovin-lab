@@ -25,37 +25,21 @@ All colors MUST be HSL.
     --foreground: 0 0% 9%;
     
     /* ============================================
-       PREMIUM MOTION TOKENS - Scroll-Directed Design
+       MINIMAL MOTION TOKENS
        ============================================ */
     
-    /* Timing */
-    --duration-micro: 120ms;
-    --duration-ui: 220ms;
-    --duration-transition: 400ms;
-    --duration-view: 500ms;
+    /* Essential timing */
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
     
-    /* Easing - Spring-like for premium feel */
-    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-    --ease-settle: cubic-bezier(0.16, 1, 0.3, 1);
-    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-    
-    /* Materialize effect values */
-    --materialize-translate: 8px;
-    --materialize-blur: 6px;
+    /* Single easing curve */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     
     /* Glass layer tokens */
     --glass-blur: 24px;
-    --glass-blur-scrolled: 40px;
-    --glass-bg: 44 65% 90% / 0.72;
-    --glass-bg-scrolled: 44 65% 90% / 0.88;
+    --glass-bg: 44 65% 90% / 0.85;
     --glass-border: 40 50% 83% / 0.25;
     --glass-shadow: 0 4px 24px hsl(0 0% 0% / 0.08);
-    --glass-shadow-scrolled: 0 8px 32px hsl(0 0% 0% / 0.12);
-    
-    /* Focus & spotlight shadows */
-    --shadow-focus-card: 0 8px 32px hsl(150 45% 18% / 0.15);
-    --shadow-rest-card: 0 2px 8px hsl(0 0% 0% / 0.06);
-    --shadow-spotlight: 0 0 0 2px hsl(150 45% 18% / 0.3), 0 8px 32px hsl(150 45% 18% / 0.15);
 
     --card: 42 60% 92%;
     --card-foreground: 0 0% 9%;
@@ -121,7 +105,7 @@ All colors MUST be HSL.
 }
 
 .animate-fade-up {
-  animation: fade-up 400ms var(--ease-settle) forwards;
+  animation: fade-up var(--duration-normal) var(--ease-out) forwards;
 }
 
 /* CSS-based stagger delays */
@@ -131,32 +115,6 @@ All colors MUST be HSL.
 .stagger-4 { animation-delay: 320ms; }
 .stagger-5 { animation-delay: 400ms; }
 
-/* Legacy aliases for gradual migration */
-.animate-materialize {
-  animation: fade-up 400ms var(--ease-settle) forwards;
-}
-.animate-materialize-delay-1 { animation-delay: 80ms; }
-.animate-materialize-delay-2 { animation-delay: 160ms; }
-.animate-materialize-delay-3 { animation-delay: 240ms; }
-.animate-materialize-delay-4 { animation-delay: 320ms; }
-.animate-materialize-delay-5 { animation-delay: 400ms; }
-
-/* Slide up for CTAs */
-@keyframes slide-up-settle {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-slide-up-settle {
-  animation: slide-up-settle 400ms var(--ease-settle) forwards;
-}
-
 /* Glass layer utilities */
 .glass-nav {
   background: hsl(var(--glass-bg));
@@ -164,13 +122,6 @@ All colors MUST be HSL.
   -webkit-backdrop-filter: blur(var(--glass-blur));
   border-bottom: 1px solid hsl(var(--glass-border));
   box-shadow: var(--glass-shadow);
-}
-
-.glass-nav-scrolled {
-  background: hsl(var(--glass-bg-scrolled));
-  backdrop-filter: blur(var(--glass-blur-scrolled));
-  -webkit-backdrop-filter: blur(var(--glass-blur-scrolled));
-  box-shadow: var(--glass-shadow-scrolled);
 }
 
 .glass-sticky {
@@ -182,9 +133,7 @@ All colors MUST be HSL.
 
 /* Reduced motion: disable all animations */
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-up,
-  .animate-materialize,
-  .animate-slide-up-settle {
+  .animate-fade-up {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
