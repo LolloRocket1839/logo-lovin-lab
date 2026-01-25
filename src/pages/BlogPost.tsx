@@ -337,8 +337,8 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                 {/* Featured Image with Parallax */}
                 <ParallaxHeroImage src={post.image} alt={translatedData.title} />
 
-                {/* Animated Content */}
-                <AnimatedBlogContent content={content} />
+                {/* Animated Content with Auto-Linking */}
+                <AnimatedBlogContent content={content} slug={post.slug} lang={currentLang} />
 
                 {/* Floating Table of Contents (Desktop) */}
                 <FloatingTableOfContents content={content} />
