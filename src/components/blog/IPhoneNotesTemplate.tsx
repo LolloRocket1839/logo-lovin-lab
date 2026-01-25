@@ -81,14 +81,16 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
                 components={{
+                  // Demote all headings by one level to preserve semantic hierarchy
+                  // (article title is the true H1)
                   h1: ({ children }) => (
-                    <h1 className="text-2xl font-bold mt-6 mb-2 text-[#1c1c1e]">{children}</h1>
+                    <h2 className="text-2xl font-bold mt-6 mb-2 text-[#1c1c1e]">{children}</h2>
                   ),
                   h2: ({ children }) => (
-                    <h2 className="text-lg font-semibold mt-6 mb-2 text-[#1c1c1e] tracking-tight">{children}</h2>
+                    <h3 className="text-lg font-semibold mt-6 mb-2 text-[#1c1c1e] tracking-tight">{children}</h3>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="text-base font-semibold mt-5 mb-2 text-[#1c1c1e]">{children}</h3>
+                    <h4 className="text-base font-semibold mt-5 mb-2 text-[#1c1c1e]">{children}</h4>
                   ),
                   p: ({ children }) => (
                     <p className="my-3 leading-[1.6] text-[#3a3a3c]">{children}</p>
