@@ -1,6 +1,8 @@
 // Markdown rendering utilities for blog posts
 import type { Components } from "react-markdown";
 import React from "react";
+import { detectLinkOpportunities, injectAutoLinks } from './autoLinking';
+import { autoLinkConfig } from '@/data/linkableContent';
 
 export const createMarkdownComponents = (): Components => ({
   h2: ({ children, ...props }) => {
@@ -41,3 +43,17 @@ export const createMarkdownComponents = (): Components => ({
     return React.createElement('a', { href, ...props }, children);
   },
 });
+
+// Preprocess markdown content with auto-links
+export function preprocessMarkdownWithAutoLinks(
+  content: string,
+  currentSlug: string,
+  lang: 'it' | 'en'
+): string {
+  if (!autoLinkConfig.enableInlineLinks) {
+    return content;
+  }
+  
+  const suggestions = detectLinkOpportunities(content, currentSlug, lang);
+  return injectAutoLinks(content, suggestions, lang);
+}
