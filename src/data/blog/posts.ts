@@ -6,7 +6,7 @@ export const blogPosts: BlogPost[] = [
     category: "investors",
     date: "2026-01-17",
     author: "Jungle Rent Team",
-    image: "/images/mortgage-investment.jpg",
+    image: "/images/mortgage-investment.webp",
     readTime: 15,
     content: "cedolare-secca-2026-investitori",
     translations: {
@@ -87,7 +87,7 @@ export const blogPosts: BlogPost[] = [
     category: "societa",
     date: "2026-01-09",
     author: "Jungle Rent Team",
-    image: "/images/torino-transport.jpg",
+    image: "/images/torino-transport.webp",
     readTime: 25,
     content: "sciopero-trasporti-italia-gennaio-2026",
     translations: {
@@ -154,7 +154,7 @@ export const blogPosts: BlogPost[] = [
     category: "investors",
     date: "2025-12-31",
     author: "Jungle Rent Team",
-    image: "/images/digital-nomad-torino.jpg",
+    image: "/images/digital-nomad-torino.webp",
     readTime: 12,
     content: "props-gestione-immobiliare-semplificata",
     translations: {
@@ -235,7 +235,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2026-01-01",
     author: "Jungle Rent Team",
-    image: "/images/digital-nomad-torino.jpg",
+    image: "/images/digital-nomad-torino.webp",
     readTime: 14,
     content: "palestre-torino-studenti-guida-completa",
     translations: {
@@ -306,7 +306,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-12-27",
     author: "Jungle Rent Team",
-    image: "/images/quadrilatero-notte-torino.jpg",
+    image: "/images/quadrilatero-notte-torino.webp",
     readTime: 18,
     content: "emergenze-affitti-torino-diritti-inquilini",
     translations: {
@@ -351,7 +351,7 @@ export const blogPosts: BlogPost[] = [
     category: "sellers",
     date: "2025-12-27",
     author: "Jungle Rent Team",
-    image: "/images/vendere-casa-torino.jpg",
+    image: "/images/vendere-casa-torino.webp",
     readTime: 12,
     content: "valutazione-immobiliare-torino-guida-completa",
     translations: {
@@ -392,7 +392,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-21",
     author: "Jungle Rent Team",
-    image: "/images/duomo-torino-natale.jpg",
+    image: "/images/duomo-torino-natale.webp",
     readTime: 45,
     content: "panettoni-pandori-torino-guida-2025",
     translations: {
@@ -489,7 +489,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-12",
     author: "Jungle Rent Team",
-    image: "/images/tajarin-tartufo-torino.jpg",
+    image: "/images/tajarin-tartufo-torino.webp",
     readTime: 40,
     content: "tajarin-piemontesi-guida-completa",
     translations: {
@@ -544,7 +544,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-12",
     author: "Jungle Rent Team",
-    image: "/images/cioccolato-gianduiotti-torino.jpg",
+    image: "/images/cioccolato-gianduiotti-torino.webp",
     readTime: 50,
     content: "cioccolaterie-torino-guida-completa",
     translations: {
@@ -685,7 +685,7 @@ export const blogPosts: BlogPost[] = [
     category: "sellers",
     date: "2025-12-12",
     author: "Jungle Rent Team",
-    image: "/images/vendere-casa-torino.jpg",
+    image: "/images/vendere-casa-torino.webp",
     readTime: 45,
     content: "vendere-casa-torino-guida-completa-2025",
     translations: {
@@ -798,7 +798,7 @@ export const blogPosts: BlogPost[] = [
     category: "investors",
     date: "2025-12-12",
     author: "Jungle Rent Team",
-    image: "/images/mortgage-investment.jpg",
+    image: "/images/mortgage-investment.webp",
     readTime: 20,
     content: "student-housing-italia-savills-2025",
     translations: {
@@ -895,7 +895,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-09",
     author: "Jungle Rent Team",
-    image: "/images/cioccolato-festival-torino.jpg",
+    image: "/images/cioccolato-festival-torino.webp",
     readTime: 25,
     content: "eventi-torino-febbraio-2026",
     translations: {
@@ -1000,7 +1000,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-09",
     author: "Jungle Rent Team",
-    image: "/images/torino-primavera-marzo.jpg",
+    image: "/images/torino-primavera-marzo.webp",
     readTime: 35,
     content: "eventi-torino-marzo-2026",
     translations: {
@@ -1107,7 +1107,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-06",
     author: "Jungle Rent Team",
-    image: "/images/portici-torino.jpg",
+    image: "/images/portici-torino.webp",
     readTime: 45,
     content: "viaggiare-sostenibile-torino-guida",
     translations: {
@@ -1204,7 +1204,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-03",
     author: "Jungle Rent Team",
-    image: "/images/battaglia-arance-ivrea.jpg",
+    image: "/images/battaglia-arance-ivrea.webp",
     readTime: 65,
     content: "carnevale-ivrea-battaglia-arance-2025",
     translations: {
@@ -1301,7 +1301,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-30",
     author: "Jungle Rent Team",
-    image: "/images/unito-campus-torino.jpg",
+    image: "/images/unito-campus-torino.webp",
     readTime: 55,
     content: "universita-torino-guida-completa",
     translations: {
@@ -1443,7 +1443,7 @@ export const blogPosts: BlogPost[] = [
     category: "societa",
     date: "2025-11-25",
     author: "Jungle Rent Team",
-    image: "/images/raccolta-differenziata-torino.jpg",
+    image: "/images/raccolta-differenziata-torino.webp",
     readTime: 50,
     content: "raccolta-differenziata-torino-guida",
     translations: {
@@ -1544,7 +1544,7 @@ export const blogPosts: BlogPost[] = [
     category: "societa",
     date: "2025-11-24",
     author: "Jungle Rent Team",
-    image: "/images/mercati-rionali-torino.jpg",
+    image: "/images/mercati-rionali-torino.webp",
     readTime: 45,
     content: "mercati-storici-torino-chiusure",
     translations: {
@@ -1647,7 +1647,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-23",
     author: "Jungle Rent Team",
-    image: "/images/duomo-torino-natale.jpg",
+    image: "/images/duomo-torino-natale.webp",
     readTime: 40,
     content: "eventi-torino-gennaio-2026",
     translations: {
@@ -1764,7 +1764,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-18",
     author: "Jungle Rent Team",
-    image: "/images/san-salvario-night.jpeg",
+    image: "/images/san-salvario-night.webp",
     readTime: 30,
     content: "guida-volontariato-torino",
     translations: {
@@ -1809,7 +1809,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-17",
     author: "Jungle Rent Team",
-    image: "/images/aule-studio-torino.jpg",
+    image: "/images/aule-studio-torino.webp",
     readTime: 25,
     content: "aule-studio-torino-guida-completa",
     translations: {
@@ -1858,7 +1858,7 @@ export const blogPosts: BlogPost[] = [
     category: "investors",
     date: "2025-11-14",
     author: "Jungle Rent Team",
-    image: "/images/mortgage-investment.jpg",
+    image: "/images/mortgage-investment.webp",
     readTime: 20,
     content: "investire-real-assets-torino-2025",
     translations: {
@@ -1903,7 +1903,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-17",
     author: "Jungle Rent Team",
-    image: "/images/quadrilatero-notte-torino.jpg",
+    image: "/images/quadrilatero-notte-torino.webp",
     readTime: 35,
     content: "torino-nightlife-guide",
     translations: {
@@ -1978,7 +1978,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-13",
     author: "Team Jungle Rent",
-    image: "/images/digital-nomad-torino.jpg",
+    image: "/images/digital-nomad-torino.webp",
     readTime: 15,
     content: "torino-digital-nomads-guide",
     translations: {
@@ -2117,7 +2117,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-11",
     author: "Team Jungle Rent",
-    image: "/images/san-salvario-night.jpeg",
+    image: "/images/san-salvario-night.webp",
     readTime: 32,
     content: "quartieri-sicuri-donne-torino",
     translations: {
@@ -2222,7 +2222,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-10",
     author: "Team Jungle Rent",
-    image: "/images/torino-autunno-novembre.jpg",
+    image: "/images/torino-autunno-novembre.webp",
     readTime: 28,
     content: "torino-novembre-turisti",
     translations: {
@@ -2369,7 +2369,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-11-10",
     author: "Team Jungle Rent",
-    image: "/images/duomo-torino-natale.jpg",
+    image: "/images/duomo-torino-natale.webp",
     readTime: 25,
     content: "torino-dicembre-turisti",
     translations: {
@@ -2484,7 +2484,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-08",
     author: "Team Jungle Rent",
-    image: "/images/torino-transport.jpg",
+    image: "/images/torino-transport.webp",
     readTime: 20,
     content: "mobilita-sostenibile-torino-studenti",
     translations: {
@@ -2623,7 +2623,7 @@ export const blogPosts: BlogPost[] = [
     category: "investors",
     date: "2025-11-07",
     author: "Team Jungle Rent",
-    image: "/images/mortgage-investment.jpg",
+    image: "/images/mortgage-investment.webp",
     readTime: 35,
     content: "mutui-investitori-immobiliari-guida-completa",
     translations: {
@@ -2737,7 +2737,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-07",
     author: "Team Jungle Rent",
-    image: "/images/gelato-italiano.jpg",
+    image: "/images/gelato-italiano.webp",
     readTime: 18,
     content: "migliori-gelaterie-torino-studenti",
     translations: {
@@ -2812,7 +2812,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-06",
     author: "Team Jungle Rent",
-    image: "/images/quartieri-studenti-torino.jpg",
+    image: "/images/quartieri-studenti-torino.webp",
     readTime: 15,
     content: "dove-vivere-torino-studenti-politecnico",
     translations: {
@@ -2857,7 +2857,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-12-27",
     author: "Team Jungle Rent",
-    image: "/images/caffe-vini-quadrilatero.jpg",
+    image: "/images/caffe-vini-quadrilatero.webp",
     readTime: 12,
     content: "dove-mangiare-torino-studenti",
     translations: {
@@ -2932,7 +2932,7 @@ export const blogPosts: BlogPost[] = [
     category: "students",
     date: "2025-11-03",
     author: "Team Jungle Rent",
-    image: "/images/san-salvario-night.jpeg",
+    image: "/images/san-salvario-night.webp",
     readTime: 10,
     content: "san-salvario-guida-studenti",
     translations: {
@@ -2977,7 +2977,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-17",
     author: "Jungle Rent Team",
-    image: "/images/parco-valentino-inverno.jpg",
+    image: "/images/parco-valentino-inverno.webp",
     readTime: 35,
     content: "torino-ogni-stagione-turisti",
     translations: {
@@ -3032,7 +3032,7 @@ export const blogPosts: BlogPost[] = [
     category: "turisti",
     date: "2025-12-18",
     author: "Jungle Rent",
-    image: "/images/cicloturismo-avanzato-torino.jpg",
+    image: "/images/cicloturismo-avanzato-torino.webp",
     readTime: 35,
     content: "cicloturismo-avanzato-torino",
     translations: {

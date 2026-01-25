@@ -60,6 +60,21 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Image Optimization
+
+To optimize all images in `public/images/` to WebP format (<100KB target):
+
+```sh
+# Run the optimization script (requires Node.js)
+node scripts/optimize-images.js
+```
+
+This will:
+- Convert all JPG/PNG/JPEG images to WebP format
+- Resize images larger than 1920px width
+- Target <100KB file size with adaptive quality
+- Generate a summary report with size reductions
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/646732bf-ba38-4283-ac24-283bf343395a) and click on Share -> Publish.
