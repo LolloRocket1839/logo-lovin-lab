@@ -119,26 +119,24 @@ export const OptimizedImage = ({
         />
       )}
       
-      {/* Actual image - only load when in view */}
-      {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          className={cn(
-            "w-full h-full object-cover transition-opacity duration-300",
-            isLoaded ? "opacity-100" : "opacity-0"
-          )}
-          width={width}
-          height={height}
-          loading={loadingAttr}
-          decoding="async"
-          fetchPriority={fetchPriority as "high" | "low" | "auto"}
-          sizes={sizes}
-          srcSet={srcSet}
-          onLoad={() => setIsLoaded(true)}
-          onError={() => setHasError(true)}
-        />
-      )}
+      {/* Actual image - load immediately for priority, otherwise when in view */}
+      <img
+        src={src}
+        alt={alt}
+        className={cn(
+          "w-full h-full object-cover transition-opacity duration-300",
+          isLoaded ? "opacity-100" : "opacity-0"
+        )}
+        width={width}
+        height={height}
+        loading={loadingAttr}
+        decoding="async"
+        fetchPriority={fetchPriority as "high" | "low" | "auto"}
+        sizes={sizes}
+        srcSet={srcSet}
+        onLoad={() => setIsLoaded(true)}
+        onError={() => setHasError(true)}
+      />
     </div>
   );
 };
