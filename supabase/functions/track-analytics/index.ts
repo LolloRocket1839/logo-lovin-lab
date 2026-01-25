@@ -43,7 +43,7 @@ const isValidSessionId = (sessionId: string): boolean => {
 };
 
 const isValidEventType = (eventType: string): boolean => {
-  const allowedTypes = ['page_view', 'click', 'form_submit', 'scroll', 'scroll_depth', 'page_exit_scroll', 'page_navigation_scroll', 'engagement', 'exit_intent_shown', 'exit_intent_submit'];
+  const allowedTypes = ['page_view', 'click', 'form_submit', 'scroll', 'scroll_depth', 'page_exit_scroll', 'page_navigation_scroll', 'engagement', 'exit_intent_shown', 'exit_intent_submit', 'investor_exit_intent_shown', 'investor_exit_intent_submit'];
   return allowedTypes.includes(eventType);
 };
 
