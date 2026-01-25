@@ -103,6 +103,41 @@ const Investors = () => {
     }
   ];
 
+  // Investment schema for SEO
+  const investmentSchema = {
+    "@context": "https://schema.org",
+    "@type": "InvestmentOrDeposit",
+    "name": currentLang === 'it' 
+      ? "Investimento Immobiliare Frazionato Torino" 
+      : "Fractional Real Estate Investment Turin",
+    "description": currentLang === 'it'
+      ? "Investi in immobili studenteschi a Torino a partire da €100. Rendimento target 7-9% annuo con gestione completa."
+      : "Invest in student housing in Turin starting from €100. Target yield 7-9% annually with full management.",
+    "url": "https://junglerent.it/investitori",
+    "provider": {
+      "@type": "Organization",
+      "name": "Jungle Rent S.r.l.",
+      "url": "https://junglerent.it",
+      "logo": "https://junglerent.it/jungle-rent-logo.svg"
+    },
+    "amount": {
+      "@type": "MonetaryAmount",
+      "minValue": 100,
+      "currency": "EUR"
+    },
+    "interestRate": {
+      "@type": "QuantitativeValue",
+      "minValue": 7,
+      "maxValue": 9,
+      "unitCode": "P1"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Torino"
+    },
+    "termsOfService": "https://junglerent.it/termini-condizioni"
+  };
+
   return (
     <main role="main" className="min-h-screen" id="main-content" tabIndex={-1}>
       {/* IMPORTANT: Dynamic canonical based on current language for IT/EN routes */}
@@ -127,6 +162,11 @@ const Investors = () => {
         
         {/* Content Language */}
         <meta httpEquiv="content-language" content="it-IT, en-US" />
+        
+        {/* Investment Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(investmentSchema)}
+        </script>
       </Helmet>
       
       <StructuredData />

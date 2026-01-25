@@ -21,6 +21,61 @@ const About = () => {
     openEmail(CONTACTS.email, MESSAGES.student.email[currentLang].subject, MESSAGES.student.email[currentLang].body);
   };
 
+  // Organization schema for About page
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": currentLang === 'it' ? "Chi Siamo - Jungle Rent" : "About Us - Jungle Rent",
+    "description": t("about.metaDescription"),
+    "url": `https://junglerent.it/${currentLang === 'en' ? 'about' : 'chi-siamo'}`,
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Jungle Rent S.r.l.",
+      "legalName": "JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA",
+      "url": "https://junglerent.it",
+      "logo": "https://junglerent.it/jungle-rent-logo.svg",
+      "foundingDate": "2025-10-24",
+      "taxID": "IT13333450016",
+      "naics": "531110",
+      "isicV4": "6820",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Gioacchino Quarello 15/A",
+        "addressLocality": "Torino",
+        "addressRegion": "Piemonte",
+        "postalCode": "10135",
+        "addressCountry": "IT"
+      },
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Lorenzo Oni-Joseph",
+          "jobTitle": currentLang === 'it' ? "Co-Fondatore & CEO" : "Co-Founder & CEO"
+        },
+        {
+          "@type": "Person",
+          "name": "Andrea Niccolaini",
+          "jobTitle": currentLang === 'it' ? "Co-Fondatore" : "Co-Founder"
+        }
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "2i3T - Incubatore Imprese Innovative Università di Torino"
+      },
+      "knowsAbout": [
+        "Student Housing",
+        "Real Estate Investment", 
+        "Property Management",
+        "Fractional Investment"
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Torino" },
+        { "@type": "Country", "name": "Italy" },
+        { "@type": "Country", "name": "Switzerland" }
+      ]
+    }
+  };
+
   return (
     <main role="main" className="min-h-screen bg-gradient-subtle" itemScope itemType="https://schema.org/Organization">
       <Helmet>
@@ -64,6 +119,11 @@ const About = () => {
         
         {/* Content Language */}
         <meta httpEquiv="content-language" content="it-IT, en-US" />
+        
+        {/* About Page Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(aboutSchema)}
+        </script>
       </Helmet>
 
       {/* Hidden Structured Data for Search Engines */}

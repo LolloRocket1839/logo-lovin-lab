@@ -9,9 +9,10 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 import { AISearchBox } from "@/components/AISearchBox";
 import { BlogCategory } from "@/types/blog";
-import { getPostsByCategory, searchPosts, filterPostsByTags } from "@/data/blog/posts";
+import { getPostsByCategory, searchPosts, filterPostsByTags, blogPosts } from "@/data/blog/posts";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { createBlogCollectionSchema } from "@/lib/schema";
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
@@ -35,6 +36,12 @@ const Blog = () => {
     : "Complete Turin guides: neighborhoods, rentals, universities, events, nightlife, real estate investments. Updated articles for Politecnico and UniTo students, investors and tourists.";
 
   const keywords = "blog torino, guida studenti torino, affitti torino, politecnico torino, università torino, quartieri torino, san salvario, crocetta, investimenti immobiliari torino, eventi torino, vita notturna torino, raccolta differenziata torino, mercati torino, volontariato torino, aule studio torino, digital nomad torino, gelaterie torino, mobilità sostenibile torino";
+
+  // Blog collection schema for SEO
+  const blogCollectionSchema = createBlogCollectionSchema(
+    blogPosts, 
+    isItalian ? 'it' : 'en'
+  );
 
   return (
     <main role="main" className="min-h-screen">
@@ -89,6 +96,11 @@ const Blog = () => {
         
         {/* AI Knowledge Base Links */}
         <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />
+        
+        {/* Blog Collection Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(blogCollectionSchema)}
+        </script>
       </Helmet>
       
       <StructuredData />
