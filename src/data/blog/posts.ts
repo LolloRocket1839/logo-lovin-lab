@@ -1996,20 +1996,62 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
-// Category labels and helper functions
+// Helper functions
 
-export const blogCategories: BlogCategory[] = [
-  { id: "investors", label: { it: "Investitori", en: "Investors" } },
-  { id: "societa", label: { it: "Società", en: "Society" } },
-  { id: "students", label: { it: "Studenti", en: "Students" } },
-  { id: "sellers", label: { it: "Venditori", en: "Sellers" } },
-  { id: "turisti", label: { it: "Turisti", en: "Tourists" } }
-];
-
-export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug);
 }
 
-export function getBlogPostsByCategory(categoryId: string): BlogPost[] {
-  return blogPosts.filter(post => post.category === categoryId);
+export function getPostsByCategory(category: BlogCategory): BlogPost[] {
+  if (category === 'all') return blogPosts;
+  return blogPosts.filter(post => post.category === category);
+}
+
+export function searchPosts(posts: BlogPost[], query: string, lang: 'it' | 'en'): BlogPost[] {
+  if (!query.trim()) return posts;
+  const lowerQuery = query.toLowerCase();
+  return posts.filter(post => {
+    const translation = post.translations[lang];
+    return (
+      translation.title.toLowerCase().includes(lowerQuery) ||
+      translation.excerpt.toLowerCase().includes(lowerQuery) ||
+      translation.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+    );
+  });
+}
+
+export function filterPostsByTags(posts: BlogPost[], tags: string[], lang: 'it' | 'en'): BlogPost[] {
+  if (tags.length === 0) return posts;
+  return posts.filter(post => {
+    const postTags = post.translations[lang].tags;
+    return tags.some(tag => postTags.includes(tag));
+  });
+}
+
+export function getAllTags(lang: 'it' | 'en'): string[] {
+  const tagsSet = new Set<string>();
+  blogPosts.forEach(post => {
+    post.translations[lang].tags.forEach(tag => tagsSet.add(tag));
+  });
+  return Array.from(tagsSet).sort();
+}
+
+export function getRelatedPosts(
+  currentSlug: string, 
+  category: string, 
+  currentTags: string[], 
+  lang: 'it' | 'en',
+  limit: number = 4
+): BlogPost[] {
+  return blogPosts
+    .filter(post => post.slug !== currentSlug)
+    .map(post => {
+      const postTags = post.translations[lang].tags;
+      const sharedTags = currentTags.filter(tag => postTags.includes(tag)).length;
+      const categoryMatch = post.category === category ? 10 : 0;
+      return { post, score: sharedTags * 2 + categoryMatch };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(item => item.post);
 }
