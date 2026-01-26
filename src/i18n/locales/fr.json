@@ -1124,10 +1124,141 @@
       "title": "Vendez Votre Bien à Turin Sans Frais | Jungle Rent - Acheteur Direct",
       "description": "Vendez votre bien à Turin directement à Jungle Rent. Zéro commission, 60-90 jours, acheteur garanti."
     },
-    "hero": { "badge": "Acheteur direct", "subtitle": "Nous ne sommes pas une agence. Nous achetons votre bien directement pour notre portefeuille de logements étudiants." },
-    "calculator": { "title": "Calculez vos économies", "subtitle": "Voyez combien vous économisez en vendant directement", "propertyValue": "Valeur du bien", "agency": "Agence traditionnelle", "directBuyer": "Acheteur direct", "yourSavings": "Vos économies", "savingsNote": "Économies par rapport à la commission d'agence (4% + TVA)", "cta": "Demander une évaluation gratuite" },
-    "timeline": { "title": "Notre processus en 4 étapes", "subtitle": "De l'évaluation à la clôture en 60-90 jours", "step1Desc": "Analyse basée sur les données du marché", "step2Desc": "Visite avec notre équipe technique", "step3Desc": "Offre d'achat écrite sans engagement", "step4Desc": "Signature notariale et paiement sécurisé" },
-    "faq": { "subtitle": "Tout ce que vous devez savoir sur la vente à Jungle Rent" },
-    "finalCta": { "title": "Prêt à vendre votre bien?", "subtitle": "Obtenez une évaluation gratuite sous 48 heures. Sans engagement." }
+    "hero": {
+      "badge": "Acheteur direct",
+      "subtitle": "Nous ne sommes pas une agence. Nous achetons votre bien directement pour notre portefeuille de logements étudiants. Zéro intermédiaires, zéro commissions, processus rapide."
+    },
+    "calculator": {
+      "title": "Calculez vos économies",
+      "subtitle": "Voyez combien vous économisez en vendant directement au lieu de passer par une agence",
+      "condition": {
+        "label": "État du bien",
+        "tooltip": "Sélectionnez l'état actuel de votre bien pour une estimation plus précise",
+        "daRistrutturare": "À rénover",
+        "daRistrutturareShort": "À rén.",
+        "buonoStato": "Bon état",
+        "buonoStatoShort": "Bon",
+        "ristrutturato": "Rénové",
+        "ristrutturatShort": "Neuf"
+      },
+      "propertyType": "Type de bien",
+      "propertyValue": "Valeur du bien",
+      "agency": "Agence traditionnelle",
+      "directBuyer": "Acheteur direct",
+      "yourSavings": "Vos économies",
+      "savingsNote": "Économies par rapport à la commission d'agence (4% + TVA)",
+      "dataSource": "Prix indicatifs zones semi-centrales Turin. Données : OMI, Immobiliare.it, nov 2025",
+      "cta": "Demander une évaluation gratuite",
+      "presets": {
+        "bilocale": "2 pièces",
+        "trilocale": "3 pièces",
+        "quadrilocale": "4 pièces"
+      },
+      "minimumFee": "Commission minimum agence",
+      "minimumFeeExplanation": "Minimum 5 000€ (4% serait inférieur)"
+    },
+    "timeline": {
+      "title": "Notre processus en 4 étapes",
+      "subtitle": "De l'évaluation à l'acte en 60-90 jours",
+      "step1Desc": "Analyse de votre bien basée sur les données de marché actualisées",
+      "step2Desc": "Visite du bien avec notre équipe technique",
+      "step3Desc": "Offre d'achat écrite sans engagement",
+      "step4Desc": "Signature chez le notaire et paiement sécurisé"
+    },
+    "faq": {
+      "subtitle": "Tout ce que vous devez savoir sur la vente à Jungle Rent"
+    },
+    "finalCta": {
+      "title": "Prêt à vendre votre bien ?",
+      "subtitle": "Obtenez une évaluation gratuite sous 48 heures. Sans engagement, zéro commissions."
+    },
+    "valuatorLink": "Calculez la valeur de votre bien"
+  },
+  "propertyValuation": {
+    "meta": {
+      "title": "Évaluation immobilière Turin | Calculez la valeur de votre bien",
+      "description": "Calculez gratuitement la valeur de votre bien à Turin. Données OMI 2025, coefficients FIAIP, 35+ zones. Estimation précise ±5%."
+    },
+    "breadcrumb": "Évaluation bien",
+    "badge": "Outil gratuit",
+    "title": "Évaluation immobilière",
+    "subtitle": "Calculez la valeur de votre bien avec les données OMI 2025 et les coefficients FIAIP. 35+ zones de Turin, estimation précise avec marge ±5%.",
+    "feature1": "35+ zones Turin",
+    "feature2": "Données OMI Nov 2025",
+    "feature3": "9 catégories coefficients",
+    "sources": {
+      "title": "Sources officielles",
+      "description": "Les données utilisées proviennent de sources officielles mises à jour en novembre 2025."
+    },
+    "structuredData": {
+      "name": "Calculateur évaluation immobilière Turin",
+      "description": "Outil gratuit pour calculer la valeur de marché d'un bien à Turin basé sur les données OMI et coefficients FIAIP 2024-2025."
+    }
+  },
+  "propertyValuator": {
+    "location": "Localisation",
+    "zone": "Zone",
+    "selectZone": "Sélectionner zone...",
+    "characteristics": "Caractéristiques",
+    "surface": "Surface (m²)",
+    "hasElevator": "Avec ascenseur",
+    "floor": "Étage",
+    "condition": "État de conservation",
+    "energySection": "Énergie et installations",
+    "energyClass": "Classe énergétique (DPE)",
+    "heating": "Chauffage",
+    "extrasSection": "Extras et facteurs additionnels",
+    "balcony": "Balcon / Terrasse",
+    "garage": "Garage / Box",
+    "exposure": "Exposition",
+    "premiums": "Facteurs positifs",
+    "penalties": "Facteurs négatifs",
+    "reset": "Réinitialiser",
+    "result": "Estimation",
+    "basePrice": "Prix de base",
+    "pricePerSqm": "€/m² zone",
+    "coefficients": "Coefficients",
+    "reliability": "Fiabilité",
+    "clampedWarning": "Coefficients limités pour contrôle de cohérence (-25% / +50%)",
+    "showBreakdown": "Détail coefficients",
+    "noCoefficients": "Aucun coefficient appliqué",
+    "variation2024": "Variation 2024",
+    "ctaProfessional": "Demander évaluation professionnelle",
+    "ctaSavings": "Combien économisez-vous avec Jungle Rent ?",
+    "emptyState": "Sélectionnez zone et entrez surface pour calculer l'estimation",
+    "disclaimer": "Ce calculateur fournit une estimation indicative basée sur les données OMI 2024-2025 et coefficients FIAIP. Il ne remplace pas les évaluations professionnelles d'experts certifiés. Marge d'erreur : ±5-12%."
+  },
+  "exitIntent": {
+    "badge": "Offre exclusive",
+    "title": "Vous partez déjà ?",
+    "subtitle": "Recevez une évaluation gratuite de votre bien sous 24 heures",
+    "emailPlaceholder": "Votre email *",
+    "phonePlaceholder": "Téléphone (optionnel)",
+    "cta": "Recevoir évaluation gratuite",
+    "submitting": "Envoi...",
+    "success": "Vous recevrez l'évaluation sous 24 heures !",
+    "error": "Erreur. Réessayez plus tard.",
+    "emailRequired": "Entrez un email valide",
+    "emailInvalid": "Email non valide",
+    "close": "Fermer",
+    "trust1": "Réponse en 24h",
+    "trust2": "Zéro engagement"
+  },
+  "investorExitIntent": {
+    "badge": "Avant de partir...",
+    "title": "Satisfaites votre curiosité, contactez Lorenzo !",
+    "subtitle": "Un appel sans engagement pour découvrir les opportunités d'investissement immobilier à Turin",
+    "whatsappCTA": "Écrire sur WhatsApp",
+    "emailCTA": "Envoyer un email",
+    "orSeparator": "ou laissez votre email",
+    "emailPlaceholder": "Votre email",
+    "submitCTA": "On vous recontacte",
+    "submitting": "Envoi...",
+    "trust1": "Zéro engagement",
+    "trust2": "Réponse sous 24h",
+    "success": "Parfait ! Lorenzo vous contactera bientôt.",
+    "errorSubmit": "Erreur lors de l'envoi. Réessayez.",
+    "emailError": "Entrez un email valide",
+    "close": "Fermer"
   }
 }
