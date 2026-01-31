@@ -4,7 +4,7 @@ Turin is emerging as a serious destination for advanced cycle tourism. The city'
 
 ---
 
-## Turin's Cycling Infrastructure: 290 km of Paths
+## Turin's cycling infrastructure: 290 km of paths
 
 Turin didn't become a cycling city by accident. Over the past two decades, the city has built a structured network of **290 km of cycling paths**, including cycle lanes, cycle-pedestrian routes, and green trails. This infrastructure allows cycle tourists to choose between easy urban routes, semi-rural itineraries, and challenging hill climbs.[1][2]
 
@@ -66,13 +66,13 @@ An article like "The 5 Best Multi-Stage E-Bike Tours from Turin" could address: 
 
 ---
 
-## Bike packing and cycle camping: a still-submerged practice
+## Bikepacking and cycle camping: a still-submerged practice
 
-**Bike packing** represents a frontier of bicycle tourism: carrying everything with you (tent, sleeping bag, minimal equipment) directly on the bicycle, for wild and self-sufficient adventures. Although it's a consolidated practice at European and global levels, it remains practically invisible in Turin's communication landscape.
+**Bikepacking** represents a frontier of bicycle tourism: carrying everything with you (tent, sleeping bag, minimal equipment) directly on the bicycle, for wild and self-sufficient adventures. Although it's a consolidated practice at European and global levels, it remains practically invisible in Turin's communication landscape.
 
 ### Regulations for cycle camping in Piedmont
 
-Piedmont allows **free camping for a maximum of 2 days** as long as it's not in an authorized camping area, and communication to the Mayor 24 hours in advance is required. This regulation is favorable compared to many other Italian regions, creating concrete opportunities for bike packing.[7]
+Piedmont allows **free camping for a maximum of 2 days** as long as it's not in an authorized camping area, and communication to the Mayor 24 hours in advance is required. This regulation is favorable compared to many other Italian regions, creating concrete opportunities for bikepacking.[7]
 
 **Night bivouac** (single night) is even more permissive, allowing ideal flexibility for cycle tourists pedaling toward specific destinations (mountain refuges, authorized bivouacs, agricultural areas with owner permission).
 
@@ -86,18 +86,18 @@ Although Piedmont doesn't have a network of "bicycle campgrounds" comparable to 
 
 ### Massive gap: absence of editorial and logistical narrative
 
-Bike packing is **completely absent from Turin's tourist communication**, yet represents an enormous opportunity for:
+Bikepacking is **completely absent from Turin's tourist communication**, yet represents an enormous opportunity for:
 
 - **Budget-limited cycle tourists**: enabling multi-stage experiences without hotel costs
 - **Radical adventurers**: those who want an immersive experience in nature and local communities
-- **Emerging global segment**: bike packing is rapidly growing among millennial and gen-z cycle tourists
+- **Emerging global segment**: bikepacking is rapidly growing among millennial and gen-z cycle tourists
 
 Potential articles on this topic could include:
-- "Bike Packing from Turin to Lake Candia: Complete Guide for First Trip"
-- "The Assietta Road on Gravel Bike: 56 km of Wild Adventure"
-- "Cycle Camping on the Po Banks: Where to Sleep in a Tent as a Cycle Tourist"
-- "Organizing a Multi-Stage Bike Packing Trip: Equipment and Logistics Checklist"
-- "The Best Piedmontese Farms Hosting Cycle Tourists Camping"
+- "Bikepacking from Turin to Lake Candia: complete guide for first trip"
+- "The Assietta Road on gravel bike: 56 km of wild adventure"
+- "Cycle camping on the Po banks: where to sleep in a tent as a cycle tourist"
+- "Organizing a multi-stage bikepacking trip: equipment and logistics checklist"
+- "The best Piedmontese farms hosting cycle tourists camping"
 
 ---
 
@@ -143,7 +143,7 @@ Turin's cycling activist community is **almost completely absent from tourist ed
 
 The most accessible itinerary for those approaching Turin cycle tourism. It crosses **Parco del Valentino**, **Parco Ruffini**, **Parco Pellerina**, and **Parco della Colletta**, offering a naturalistic experience without leaving urban boundaries. Ideal for families and beginners.
 
-### 2. Po River Cycleway (25-100 km, medium)
+### 2. Po River cycleway (25-100 km, medium)
 
 The route along the Po River represents the backbone of Turin cycle tourism. From the city, you can pedal east (Chivasso, Crescentino) or west (Moncalieri, Carignano). The most frequented section connects Parco Valentino to Parco della Mandria (25 km).
 
@@ -155,9 +155,9 @@ A cultural itinerary touching the **Savoy royal residences**: Reggia di Venaria,
 
 For trained cycle tourists, the climb to **Superga Basilica** (672 m) represents a classic challenge. 300 meters of elevation gain concentrated in few kilometers, with panoramic views of the Alps as reward. Ideal with e-bike for those who prefer enjoying the view without exhaustion.
 
-### 5. VENTO Cycleway toward Milan (100+ km, multi-stage)
+### 5. VENTO cycleway toward Milan (100+ km, multi-stage)
 
-The **VENTO Cycleway (VEnezia-TOrino)** crosses the Po Valley following the Po River. From Turin, you can head east, with planned stops at Casale Monferrato, Pavia, and beyond. A multi-day adventure requiring bike packing or accommodation booking along the route.[3]
+The **VENTO Cycleway (VEnezia-TOrino)** crosses the Po Valley following the Po River. From Turin, you can head east, with planned stops at Casale Monferrato, Pavia, and beyond. A multi-day adventure requiring bikepacking or accommodation booking along the route.[3]
 
 ---
 
@@ -240,16 +240,4 @@ The gap isn't infrastructural — it's narrative. Well-documented articles, prac
 
 [21] I 10 percorsi e itinerari ciclabili migliori a Torino - Komoot https://www.komoot.com/it-it/guide/64058/fantastici-percorsi-e-itinerari-ciclabili-a-torino
 
-[22] Campeggio con piste ciclabili a Dobbiaco - Camping Olympia https://www.camping-olympia.com/it/bikepacking-camping/
-
-[23] Pedalata lenta nella "Città delle Biciclette" - YouTube https://www.youtube.com/watch?v=znsduhdgVVo
-
-[24] Campeggi Cicloturismo Italia - CampingDirect https://www.campingdirect.com/it/cicloturismo-campeggio-italia
-
-[25] Limite dei 30 in città - GCN Italia Show - YouTube https://www.youtube.com/watch?v=z4QzjEZ3xhc
-
-[26] Dove Fare Sport, Torino, CICLISMO - DoveFareSport https://www.dovefaresport.it/TDatiDfsList/CICLISMOTorino
-
-[27] Gli italiani e la bicicletta: passione e cultura - Il Mio Angolo d'Italia https://www.ilmioangoloditaliano.com/post/gli-italiani-e-la-bicicletta-passione-e-cultura
-
-[28] Ciclovie in Italia: Scopri i migliori Percorsi per Bikepacking - Whip https://www.whip.live/it/ciclovie-italia-bikepacking-viaggi-bici
+[22] Bike Routes in and around Torino - AllTrails https://www.alltrails.com/it-it/italy/piedmont/turin/biking
