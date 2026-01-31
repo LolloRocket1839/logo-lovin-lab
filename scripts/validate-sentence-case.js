@@ -9,26 +9,66 @@ import path from 'path';
 
 // Proper nouns that should remain capitalized
 const PROPER_NOUNS = [
+  // Cities and regions
   'Turin', 'Torino', 'Italy', 'Italian', 'Piedmont', 'Piemonte', 'Piedmontese',
-  'San Salvario', 'Porta Palazzo', 'Quadrilatero', 'Vanchiglia',
-  'Aurora', 'Crocetta', 'Cenisia', 'Lingotto', 'Mirafiori',
-  'Politecnico', 'UniTo', 'EDISU', 'GTT', 'CUS',
-  'Po', 'Alps', 'Valentino', 'Superga',
-  'WiFi', 'FAQ', 'PDF', 'API',
-  'Jungle Rent', 'Jungle Control', 'Props',
+  'Alba', 'Langhe', 'Monferrato', 'Ivrea', 'Milano', 'Moncalieri',
+  
+  // Turin neighborhoods
+  'San Salvario', 'Porta Palazzo', 'Quadrilatero', 'Vanchiglia', 'Barriera',
+  'Aurora', 'Crocetta', 'Cenisia', 'Lingotto', 'Mirafiori', 'Rebaudengo',
+  'Santa Rita', 'Borgo', 'Parella', 'Lucento', 'Falchera',
+  
+  // Institutions and universities
+  'Politecnico', 'UniTo', 'EDISU', 'GTT', 'CUS', 'Amiat', 'CONAI', 'CONOE',
+  'CAMERA', 'Gallerie', 'Teatro Regio', 'Einaudi', 'Bobbio', 'Gabetti',
+  
+  // Libraries, museums and venues (proper names)
+  'National', 'Central', 'Public', 'Library', 'Reading', 'Room', 'Hall', 'Study',
+  'Passerin', 'Entrèves', 'Primo Levi', 'Alberto Geisser', 'Villa Amoretti',
+  'Norberto Bobbio', 'Economics', 'Management', 'Istoreto', 'Palazzo',
+  
+  // Landmarks
+  'Po', 'Alps', 'Valentino', 'Superga', 'Mole', 'Murazzi', 'Colletta',
+  
+  // Tech and acronyms
+  'WiFi', 'FAQ', 'PDF', 'API', 'WEEE', 'RAEE', 'LED', 'NFC', 'QR',
+  
+  // Brands
+  'Jungle Rent', 'Jungle Control', 'Props', 'JungleRent',
+  'Caffarel', 'Venchi', 'Baratti', 'Peyrano', 'Gobino', 'Stratta', 'Pfatisch',
+  'McFIT', 'FitActive', 'Virgin Active', 'GO Fit', 'Anytime Fitness',
+  'Trenitalia', 'Frecciarossa', 'Dott', 'Lime', 'Moovit',
+  
+  // Months and days
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
   'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
+  
+  // Organizations
   'Savills', 'OMI', 'PBSA', 'EU', 'Erasmus', 'Europe', 'European',
-  'McFIT', 'FitActive', 'Virgin Active', 'GO Fit', 'Anytime Fitness',
-  'Nobel', 'UNESCO', 'FIAT', 'Lavazza',
-  'Ivrea', 'Barriera', 'Milano', 'Crispi', 'Nitti',
-  'Christmas', 'New Year', 'Easter', 'Carnival',
-  'Baroque', 'Renaissance', 'Art Nouveau',
+  'Nobel', 'UNESCO', 'FIAT', 'Lavazza', 'Stellantis', 'Leonardo',
+  
+  // Events and cultural terms
+  'Christmas', 'New Year', 'Easter', 'Carnival', 'CioccolaTò', 'Macbeth',
+  'Baroque', 'Renaissance', 'Art Nouveau', 'Seicento',
+  
+  // Roman numerals and misc
   'I', 'II', 'III', 'IV', 'V',
   'Piazza', 'Via', 'Corso', 'Largo',
-  '2i3T', 'UNITA', 'University', 'Polytechnic', 'Battle',
-  'Langhe', 'Monferrato', 'Seicento', 'East'
+  '2i3T', 'UNITA', 'University', 'Polytechnic', 'Battle', 'Campus', 'Diffused',
+  'East', 'West', 'North', 'South',
+  
+  // Venues and spaces
+  'Comala', 'Off Topic', 'Youth', 'Centre', 'Imbarchino', 'Park',
+  'OGR', 'Officine', 'Circolo', 'Lettori', 'Artisti', 'Coworking',
+  'CAP10100', 'Arci', 'Bunker', 'Barrito',
+  
+  // Food and restaurants
+  'Gianduiotto', 'Bicerin', 'Cremino', 'Nutella',
+  
+  // People names (common in headings)
+  'Morricone', 'Muti', 'Bisio', 'Miller', 'Wall', 'Amadeus',
+  'Erasmus', 'Rotterdam', 'Cavour', 'Garibaldi'
 ];
 
 function isProperNoun(word) {
