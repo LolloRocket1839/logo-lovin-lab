@@ -1,168 +1,133 @@
 
-## Piano: miglioramento articolo marzo 2026 Torino
+
+## Piano: correzione sentence case in tutti gli articoli inglesi e nelle altre lingue (eccetto tedesco)
 
 ### Panoramica
-Il PDF fornisce informazioni molto più dettagliate rispetto agli articoli esistenti. L'obiettivo è integrare tutti i nuovi dati (telefoni, email, prezzi biglietti, orari, indirizzi completi) mantenendo uno stile naturale e conversazionale, rispettando rigorosamente il **sentence case** in italiano e in inglese.
+
+Il sentence case richiede che solo la **prima lettera** della frase sia maiuscola, insieme ai **nomi propri**. Questa regola si applica a tutte le lingue eccetto il tedesco (che capitalizza tutti i sostantivi secondo le regole grammaticali tedesche).
 
 ---
 
-### Nuove informazioni dal PDF da integrare
+### File da modificare
 
-**1. Chiharu Shiota al MAO**
-- Indirizzo: Via San Domenico 11, Torino (Palazzo Santo Stefano)
-- Telefono: +39 011 4436927
-- Email: info@maotorino.it
-- Biglietti: Intero €10, Ridotto €7 (under 26, over 65, studenti), Gratuito under 14
-- Orari: Mar-Dom 10:00-18:00, giovedì fino alle 20:00
-- Visite guidate: domenica ore 15:00 (prenotazione consigliata)
-- Opere principali: "The Key in the Hand", "In Silence", "The Corridor", "Accumulation"
+#### 1. Articoli blog inglesi (37 file)
 
-**2. Mostra Futurismo ai Musei Reali**
-- Indirizzo: Piazza Castello 191, Torino
-- Telefono: +39 011 5611696
-- Email: info.museireali@beniculturali.it
-- Biglietti: Intero €12, Ridotto €8 (18-25 anni, over 65), Gratuito under 18
-- Orari: Lun 14:00-19:00, Mar-Dom 08:30-19:00
-- Sezioni: Futurismo Classico, Aeropainting, Ceramica e Scultura, Fotografia d'Epoca
+I seguenti articoli contengono violazioni del sentence case nei titoli e nelle intestazioni:
 
-**3. Mika in concerto**
-- Luogo: Inalpi Arena (non OGR come nell'articolo attuale)
-- Indirizzo: Corso Sebastopoli 123, Torino
-- Telefono: +39 011 6503000
-- Biglietti: €35-65 (a seconda della zona)
-- Orario: 21:00 (porte 20:00)
-- Piattaforme: ticketmaster.it, vivaticket.com
+| File | Problemi principali |
+|------|---------------------|
+| `eventi-torino-marzo-2026.md` | "The Great Exhibitions: Between East and Italian Seicento" → "The great exhibitions" |
+| `eventi-torino-marzo-2026.md` | "Other Ongoing Exhibitions" → "Other ongoing exhibitions" |
+| `eventi-torino-marzo-2026.md` | "Concerts: From Pop Stars to Sound Installations" → "Concerts" |
+| `eventi-torino-marzo-2026.md` | "Musical Theater: Major Productions and Comedy Shows" → "Musical theater" |
+| `eventi-torino-marzo-2026.md` | "Conferences, Talk Shows and Intellectual Encounters" → "Conferences and talks" |
+| `eventi-torino-marzo-2026.md` | "How to Navigate Among So Many Events" → "How to navigate among events" |
+| `cicloturismo-avanzato-torino.md` | "Turin's Cycling Infrastructure: 290 km of Paths" → "Turin's cycling infrastructure" |
+| `carnevale-ivrea-battaglia-arance-2025.md` | "The History of the Ivrea Carnival" → "The history of the Ivrea Carnival" |
+| `carnevale-ivrea-battaglia-arance-2025.md` | "Medieval Origins and the Legend of Violetta" → "Medieval origins and the legend of Violetta" |
+| `carnevale-ivrea-battaglia-arance-2025.md` | "The Battle of Oranges: Historical Evolution" → "The battle of oranges: historical evolution" |
+| `torino-nightlife-guide.md` | "Premier Nightclubs and Dance Venues" → "Premier nightclubs and dance venues" |
+| `torino-nightlife-guide.md` | "Craft Beer Destinations and Gastropubs" → "Craft beer destinations and gastropubs" |
+| `torino-nightlife-guide.md` | "Live Music Venues and Cultural Spaces" → "Live music venues and cultural spaces" |
+| `torino-nightlife-guide.md` | "Neighborhood Nightlife Districts" → "Neighborhood nightlife districts" |
+| `torino-nightlife-guide.md` | "Cocktail Bars and Lounges" → "Cocktail bars and lounges" |
+| `politecnico-torino-guida-completa.md` | "History and Foundation: From Origins to Modernity" → "History and foundation" |
+| `politecnico-torino-guida-completa.md` | "Academic Programs and Departments: An Articulated Structure" → "Academic programs and departments" |
+| `dove-vivere-torino-studenti-politecnico.md` | "Related Articles" → "Related articles" |
+| `cioccolaterie-torino-guida-completa.md` | "Royal origins and the Royal Snack" → "Royal origins and the royal snack" |
+| E altri articoli... | Intestazioni con Title Case |
 
-**4. Renato Zero**
-- Date confermate: 7 e 8 marzo 2026
-- Luogo: Teatro Regio (non Inalpi Arena come in precedenza)
-- Indirizzo: Piazza Castello 215, Torino
-- Telefono: +39 011 8815241
-- Email: info@teatroregio.torino.it
-- Biglietti: €45-85
-
-**5. Subsonica 30 anni**
-- Date: 31 marzo, 1, 3 e 4 aprile 2026
-- Luogo: Inalpi Arena, Corso Sebastopoli 123
-- Telefono: +39 011 6503000
-- Biglietti: €40-70
-
-**6. Rocky Musical - Teatro Alfieri**
-- Date: 26-29 marzo 2026
-- Indirizzo: Piazza Solferino 1, Torino
-- Telefono: +39 011 562 3800
-- Email: info@fdfgestioniattivitateatrali.com
-- Biglietti: €35-65
-
-**7. Amadeus al Teatro Carignano**
-- Date: 1-8 marzo 2026
-- Indirizzo: Piazza Carignano 6, Torino
-- Telefono: +39 011 5169111
-- Calendario dettagliato con orari specifici per giorno
-- Sito: teatrostabiletorino.it
-
-**8. Fotografia Contemporanea alla GAM**
-- Indirizzo: Via Magenta 31, Torino
-- Telefono: +39 011 5629911
-- Biglietti: €8, Ridotto €5
-- Orari: Mar-Dom 10:00-18:00
-
-**9. Design e Sostenibilità - Palazzo Bricherasio**
-- Indirizzo: Via Accademia Albertina 8, Torino
-- Telefono: +39 011 546975
-- Biglietti: €10, Ridotto €7
-- Orari: Lun-Dom 10:00-19:00
-
-**10. Nuove sezioni da aggiungere**
-- **Festa della Donna (8 marzo)**: eventi, conferenze, spettacoli
-- **Attività outdoor**: Parco del Valentino, cicloturismo lungo il Po (50 km)
-- **Trasporti GTT**: abbonamenti giornaliero €5,50, 2 giorni €8,50, settimanale €14
-- **Ristorazione primaverile**: specialità stagionali, ristoranti consigliati
-- **Numeri emergenza**: 112, Carabinieri, Vigili del Fuoco
+**Correzioni da applicare a ogni intestazione:**
+- Solo prima lettera maiuscola
+- Nomi propri maiuscoli: Turin, Torino, San Salvario, Politecnico, UniTO, MAO, Mika, Subsonica, Gianduiotto, Bicerin, etc.
+- Acronimi maiuscoli: GTT, EDISU, WiFi, FAQ, UNESCO
+- Giorni e mesi maiuscoli: January, February, Sunday, etc.
 
 ---
 
-### Struttura modifiche
+#### 2. File `posts.ts` - Metadati SEO
 
-#### File 1: `src/data/blog/content/it/eventi-torino-marzo-2026.md`
-- Espandere significativamente l'articolo da ~100 righe a ~350 righe
-- Aggiungere tutte le info pratiche (telefoni, email, prezzi, orari)
-- Aggiungere nuove sezioni: mostre minori, attività outdoor, trasporti, ristorazione
-- Mantenere sentence case rigoroso in tutti i titoli
-
-#### File 2: `src/data/blog/content/en/eventi-torino-marzo-2026.md`
-- Stesso aggiornamento con traduzioni appropriate
-- Sentence case per inglese (solo prima lettera maiuscola + nomi propri)
-- Correggere headings attuali che violano sentence case (es. "The Great Exhibitions: Between East and Italian Seicento" → "The great exhibitions: between east and Italian Seicento")
-
-#### File 3: `src/data/blog/posts.ts`
-- Aggiornare titoli per sentence case
-- Espandere da 3 a 10 FAQs per voce (IT e EN)
-- Aggiornare keywords SEO con nuovi termini
-- Aggiornare excerpt con più dettagli
+Verificare e correggere i titoli e gli excerpt in inglese che violano il sentence case.
 
 ---
 
-### Correzioni sentence case necessarie
+#### 3. Locale files (`src/i18n/locales/`)
 
-**Articolo italiano (attuale già corretto)**:
-- ✅ "Marzo 2026 a Torino: arte, musica e spettacolo"
-- ✅ "Le grandi mostre"
-- ✅ "I concerti"
+**File da verificare:**
+- `en.json` - Inglese (verificare UI labels)
+- `es.json` - Spagnolo (sentence case)
+- `fr.json` - Francese (sentence case)
+- `sv.json` - Svedese (sentence case)
+- `zh.json` - Cinese (n/a - caratteri cinesi)
 
-**Articolo inglese (da correggere)**:
-| Attuale | Corretto |
-|---------|----------|
-| "The Great Exhibitions: Between East and Italian Seicento" | "The great exhibitions" |
-| "Other Ongoing Exhibitions" | "Other ongoing exhibitions" |
-| "Concerts: From Pop Stars to Sound Installations" | "Concerts" |
-| "Musical Theater: Major Productions and Comedy Shows" | "Musical theater" |
-| "Conferences, Talk Shows and Intellectual Encounters" | "Conferences and talks" |
-| "How to Navigate Among So Many Events" | "How to navigate among events" |
-| "Related Articles" | "Related articles" |
+**ESCLUSO:** `de.json` (Tedesco) - I sostantivi sono maiuscoli per regola grammaticale
 
-**posts.ts (da correggere)**:
-| Attuale | Corretto |
-|---------|----------|
-| "Events in Turin March 2026" | "Events in Turin March 2026" (già corretto) |
+**Esempi di correzioni nei locale:**
+- Verificare che tutti i titoli delle sezioni usino sentence case
+- Button labels e CTA già corretti (verificare)
 
 ---
 
-### FAQs migliorate (10 per lingua)
+### Dettagli tecnici implementazione
 
-**Italiano:**
-1. Quali sono le mostre principali a Torino a marzo 2026?
-2. Quanto costano i biglietti per la mostra di Chiharu Shiota al MAO?
-3. Quando si esibisce Renato Zero a Torino?
-4. Dove si tengono i concerti dei Subsonica per il trentennale?
-5. Quanto costa Rocky il Musical al Teatro Alfieri?
-6. Come posso prenotare i biglietti per Amadeus al Teatro Carignano?
-7. Quali eventi ci sono per la Festa della Donna a Torino?
-8. Come muoversi a Torino a marzo con i mezzi pubblici?
-9. Quali sono i ristoranti consigliati per la cucina primaverile piemontese?
-10. Qual è il numero di telefono del MAO per informazioni?
+**Passaggi per ogni file markdown inglese:**
 
-**Inglese:**
-1. What are the main exhibitions in Turin in March 2026?
-2. How much are tickets for the Chiharu Shiota exhibition at MAO?
-3. When does Renato Zero perform in Turin?
-4. Where are the Subsonica 30th anniversary concerts held?
-5. How much does Rocky the Musical cost at Teatro Alfieri?
-6. How can I book tickets for Amadeus at Teatro Carignano?
-7. What events are there for International Women's Day in Turin?
-8. How to get around Turin in March with public transport?
-9. What restaurants are recommended for Piedmontese spring cuisine?
-10. What is the MAO phone number for information?
+1. Aprire il file
+2. Identificare tutte le intestazioni (`#`, `##`, `###`, etc.)
+3. Convertire ogni intestazione a sentence case
+4. Preservare maiuscole per:
+   - Nomi propri di luoghi (Turin, San Salvario, Porta Palazzo, etc.)
+   - Nomi di istituzioni (Politecnico, UniTO, MAO, Teatro Regio)
+   - Nomi di persone (Mika, Renato Zero, Chiharu Shiota)
+   - Acronimi (GTT, EDISU, UNESCO, WiFi)
+   - Nomi di brand (Gianduiotto, Bicerin, Caffarel)
+   - Mesi e giorni (January, Sunday)
+
+**Stima modifiche:**
+- ~37 file markdown inglesi
+- ~5-15 intestazioni per file da correggere
+- ~200-400 correzioni totali
 
 ---
 
-### Checklist sentence case finale
+### Checklist finale
 
-Verifica che tutti i titoli seguano:
-- ✅ IT: "Marzo 2026 a Torino: arte, musica e rinascita primaverile"
-- ✅ IT: "Le grandi mostre di marzo"
-- ✅ IT: "Attività all'aperto e cicloturismo"
-- ✅ EN: "March 2026 in Turin: art, music and spring renewal"
-- ✅ EN: "The great exhibitions of March"
-- ✅ EN: "Outdoor activities and cycling"
-- ✅ Nomi propri maiuscoli: MAO, Mika, Subsonica, Teatro Regio, Chiharu Shiota, Renato Zero
+#### Inglese (EN)
+- [ ] `eventi-torino-marzo-2026.md` - 8+ intestazioni
+- [ ] `carnevale-ivrea-battaglia-arance-2025.md` - 15+ intestazioni
+- [ ] `cicloturismo-avanzato-torino.md` - 10+ intestazioni
+- [ ] `torino-nightlife-guide.md` - 12+ intestazioni
+- [ ] `politecnico-torino-guida-completa.md` - 20+ intestazioni
+- [ ] `cioccolaterie-torino-guida-completa.md` - 10+ intestazioni
+- [ ] `cedolare-secca-2026-investitori.md` - 15+ intestazioni
+- [ ] `dove-vivere-torino-studenti-politecnico.md` - 10+ intestazioni
+- [ ] E tutti gli altri 29 articoli...
+
+#### Spagnolo, Francese, Svedese
+- [ ] Verificare `es.json`, `fr.json`, `sv.json` per titoli UI
+
+---
+
+### Eccezioni confermate
+
+| Lingua | Regola |
+|--------|--------|
+| Italiano (IT) | Sentence case ✅ (già corretto) |
+| Inglese (EN) | Sentence case ✅ (da correggere) |
+| Spagnolo (ES) | Sentence case ✅ |
+| Francese (FR) | Sentence case ✅ |
+| Svedese (SV) | Sentence case ✅ |
+| Cinese (ZH) | N/A (caratteri cinesi) |
+| **Tedesco (DE)** | **Sostantivi maiuscoli** (regola grammaticale - ESCLUSO) |
+
+---
+
+### Risultato atteso
+
+Dopo l'implementazione:
+- ✅ Tutti i 37 articoli inglesi con intestazioni in sentence case
+- ✅ `posts.ts` metadati allineati
+- ✅ Locale files ES, FR, SV verificati
+- ✅ Validatore sentence case passa senza warning
+- ✅ Tedesco escluso (mantenere capitalizzazione corretta)
+
