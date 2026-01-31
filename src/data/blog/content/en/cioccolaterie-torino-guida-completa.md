@@ -8,7 +8,7 @@ Turin is not just the city of the Mole Antonelliana, the automotive industry and
 
 ## The fascinating history of chocolate in Turin
 
-### Royal origins and the Royal Snack
+### Royal origins and the royal snack
 
 The relationship between Turin and chocolate has its roots in a symbolic gesture of great historical significance. In **1560**, Duke Emanuele Filiberto of Savoy celebrated the transfer of the ducal capital from Chambéry to Turin by symbolically offering a steaming cup of chocolate to the city. This fundamental moment marked the beginning of a "sweet love story" between the Piedmontese capital and the exotic beverage that would forever transform the local gastronomic culture.[1]
 
@@ -110,7 +110,7 @@ The 2026 edition will be held from **February 13 to 17**, coinciding with **Vale
 
 ---
 
-## Piedmont IGP Hazelnut: the magic ingredient
+## Piedmont IGP hazelnut: the magic ingredient
 
 The **Piedmont IGP Hazelnut**, particularly the **Tonda Gentile Trilobata** variety, is a fundamental ingredient for all gianduja art. This hazelnut has gained worldwide reputation for its extraordinary quality, unique taste and culinary versatility.[35]
 
@@ -124,7 +124,7 @@ Although Ferrero is headquartered in **Alba**, its contribution to Piedmont's ch
 
 ## Where to buy the best chocolate in Turin
 
-| Chocolate Shop | Address | Specialty | Year Founded |
+| Chocolate shop | Address | Specialty | Year founded |
 |---------------|-----------|------------|-----------------|
 | Caffarel | Via Gioberti 23 | Original Gianduiotti | 1826 |
 | Venchi | Piazza San Carlo | Assorted chocolates | 1878 |
