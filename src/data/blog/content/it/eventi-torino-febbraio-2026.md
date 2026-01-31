@@ -15,9 +15,23 @@ Lee Miller (1907-1977) fu modella, artista e fotografa. A Parigi fu assistente d
 **Informazioni pratiche:**
 
 - **Indirizzo**: Via delle Rosine 18, Torino
+- **Telefono**: +39 011 8815241
+- **Email**: info@camera.to
 - **Sito ufficiale**: [camera.to/mostre/lee-miller-opere-1930-1955/](https://camera.to/mostre/lee-miller-opere-1930-1955/)
-- **Orari**: Verificare sul sito (generalmente 11:00-19:00, giovedì fino alle 21:00)
-- **Ingresso**: Verificare tariffe sul sito
+- **Orari**: Lun-Dom 11:00-19:00, giovedì fino alle 21:00
+- **Prenotazione**: Non necessaria
+
+**Biglietti:**
+
+| Categoria | Prezzo |
+| :-- | :-- |
+| Intero | €13 |
+| Ridotto (fino a 25 anni, over 70) | €10 |
+| Ridotto speciale (12-17 anni) | €6 |
+| Gratuito | Fino a 11 anni |
+
+**Visite guidate**: Domenica ore 17:00 (€5 + biglietto d'ingresso)
+
 - **Data di chiusura**: 1° febbraio 2026 – affrettatevi!
 - **Trasporti**: Facilmente raggiungibile a piedi dal centro
 
@@ -31,9 +45,13 @@ La mostra torinese presenta **27 opere** realizzate dalla fine degli anni Settan
 
 **Informazioni pratiche:**
 
-- **Indirizzo**: Piazza San Carlo, Torino (Palazzo Saluzzo-Paesaggini)
+- **Indirizzo**: Piazza San Carlo 156, Torino
+- **Telefono**: +39 011 5169001
+- **Numero verde**: 800.167619 (gratuito)
+- **Email**: torino@gallerieditalia.com
 - **Sito ufficiale**: [gallerieditalia.com](https://gallerieditalia.com/it/torino/mostre-e-iniziative/mostre/2025/10/09/jeff-wall-photographs-in-mostra-a-torino/)
 - **Orari**: 09:30-19:30 (mercoledì fino alle 20:30)
+- **Ultimo ingresso**: 1h30 prima della chiusura
 - **Biglietti**: Intero €10 | Ridotto €8 | Under 18 e prima domenica del mese: gratuito | Clienti Intesa Sanpaolo e under 26: €5
 - **Data di chiusura**: 1° febbraio 2026
 - **Trasporti**: Centro città, raggiungibile a piedi
@@ -46,7 +64,7 @@ La mostra torinese presenta **27 opere** realizzate dalla fine degli anni Settan
 
 La nuova edizione 2026 dura un giorno in più rispetto agli anni passati e abbraccia sia **San Valentino (14 febbraio)** sia il **Martedì Grasso (17 febbraio)**, intrecciando romanticismo e atmosfera carnevalesca. Gli stand sono riservati esclusivamente a **produttori che lavorano con metodologie tradizionali**, con particolare attenzione alla qualità delle materie prime e alla filiera artigianale.
 
-Oltre ai maestri cioccolatieri, partecipano anche **pasticceri, gelatai, panettieri e liquorifici** del Piemonte, d'Italia e dall'estero, per un'offerta che spazia dal cioccolato in tutte le sue declinazioni a dolci, gelati, lievitati e distillati.
+Partecipano circa **60 produttori con oltre 70 stand**. Oltre ai maestri cioccolatieri, ci sono anche **pasticceri, gelatai, panettieri e liquorifici** del Piemonte, d'Italia e dall'estero, per un'offerta che spazia dal cioccolato in tutte le sue declinazioni a dolci, gelati, lievitati e distillati.
 
 **Programma e attività:**
 
@@ -55,15 +73,31 @@ Oltre ai maestri cioccolatieri, partecipano anche **pasticceri, gelatai, panetti
 - **Laboratori per famiglie e bambini**, con attività creative nell'Area Kids
 - **Visite guidate** alla scoperta della storia del cioccolato torinese
 - **"Casa del Cioccolato"** – spazio dedicato a conferenze e incontri tematici
+- **"Fabbrica del Cioccolato"** – postazione dove osservare gli artigiani al lavoro dal vivo
 - **"Choco Tram"** – esperienza immersiva in cui cioccolato, storia e musica si intrecciano a bordo di un tram storico
+
+**Percorsi tematici in città:**
+
+- Circolo dei Lettori
+- Castello di Rivoli
+- Musei Reali
+- Cinema Massimo
+- Palazzo Barolo
+
+**Orari evento:**
+
+| Giorni | Orario |
+| :-- | :-- |
+| Venerdì e sabato | 10:00-21:00 |
+| Domenica, lunedì e martedì | 10:00-20:00 |
 
 **Informazioni pratiche:**
 
 - **Luogo**: Piazza Vittorio Veneto e sedi varie (Musei e Palazzi storici)
 - **Date**: 13-17 febbraio 2026
+- **Telefono Turismo Torino**: +39 011 535181
 - **Sito ufficiale**: [turismotorino.org](https://turismotorino.org/it/visita/eventi/cioccola-to-2026)
 - **Ingresso**: Gratuito
-- **Orari**: Verificare sul sito (generalmente dalle 10:00 alle 20:00)
 - **Informazioni aggiuntive**: [cioccolato.it](https://www.cioccolato.it/)
 - **Trasporti**: Centro città, facilmente raggiungibile con tram e metro
 
@@ -73,9 +107,23 @@ Oltre ai maestri cioccolatieri, partecipano anche **pasticceri, gelatai, panetti
 
 **Dal 20 febbraio al 7 marzo 2026** – Tra gli appuntamenti più attesi della stagione lirica torinese, il **Teatro Regio** presenta **"Macbeth" di Giuseppe Verdi** con la direzione di **Riccardo Muti**, maestro che dirige quest'opera da oltre cinquant'anni. Si tratta di un evento di rilievo internazionale: il nuovo allestimento torinese è frutto della regia di **Chiara Muti**, in una produzione pensata appositamente per il Regio.
 
-Le principali **recite si svolgono il 24 febbraio (ore 19:00), 26 febbraio (ore 20:00), 1° marzo (ore 15:00), 3 marzo (ore 20:00), 5 marzo e 7 marzo**. Nel ruolo del protagonista, il baritono **Luca Micheletti** debutta come Macbeth, affiancato da **Lidia Fridman**, **Giovanni Sala** e **Ildebrando D'Arcangelo**, tra gli altri interpreti.
+**Calendario completo rappresentazioni:**
 
-**Cast e equipe:**
+| Data | Orario |
+| :-- | :-- |
+| Venerdì 20 febbraio (Anteprima Giovani) | 20:00 |
+| Lunedì 24 febbraio | 19:00 |
+| Mercoledì 26 febbraio | 20:00 |
+| Domenica 1° marzo | 15:00 |
+| Lunedì 3 marzo | 20:00 |
+| Mercoledì 5 marzo | 20:00 |
+| Venerdì 7 marzo | 20:00 |
+
+**Biglietti**: da €50 a €230 (vari settori)
+
+Nel ruolo del protagonista, il baritono **Luca Micheletti** debutta come Macbeth, affiancato da **Lidia Fridman**, **Giovanni Sala** e **Ildebrando D'Arcangelo**, tra gli altri interpreti.
+
+**Cast e équipe:**
 
 - **Direttore d'orchestra**: Riccardo Muti
 - **Regia**: Chiara Muti
@@ -95,7 +143,7 @@ Le principali **recite si svolgono il 24 febbraio (ore 19:00), 26 febbraio (ore 
 - **Indirizzo**: Piazza Castello 215, Torino
 - **Sito ufficiale**: [teatroregio.torino.it](https://www.teatroregio.torino.it/opera-e-balletto-2025-2026/macbeth)
 - **Comunicato stampa**: [teatroregio.torino.it/area-stampa](https://www.teatroregio.torino.it/area-stampa/comunicato-stampa/riccardo-muti-dirige-macbeth-di-verdi)
-- **Biglietti**: Acquistabili online sul sito del Teatro Regio
+- **Biglietti**: Acquistabili su [teatroregio.torino.it](https://www.teatroregio.torino.it/) o [vivaticket.com](https://www.vivaticket.com/)
 - **Telefono**: +39 011 8815241 (centralino Teatro Regio)
 - **Email**: info@teatroregio.torino.it
 - **Trasporti**: Centro città, raggiungibile con metro, tram e bus
@@ -103,13 +151,15 @@ Le principali **recite si svolgono il 24 febbraio (ore 19:00), 26 febbraio (ore 
 
 ---
 
-## La Battaglia delle Arance a Ivrea
+## La battaglia delle arance a Ivrea
 
-**Domenica 15 febbraio 2026** – A pochi chilometri da Torino, il **Carnevale Storico di Ivrea** rappresenta uno degli appuntamenti più caratteristici del periodo carnevalesco italiano. Nel 2026, la spettacolare **Battaglia delle Arance** raggiunge il suo culmine nel "giorno di battaglia" della domenica 15 febbraio.
+**Domenica 15 febbraio 2026** – A pochi chilometri da Torino, il **Carnevale Storico di Ivrea** rappresenta uno degli appuntamenti più caratteristici del periodo carnevalesco italiano. Il Carnevale di Ivrea è **Patrimonio UNESCO dal 2023**, riconosciuto come patrimonio immateriale dell'umanità. Nel 2026, la spettacolare **Battaglia delle Arance** raggiunge il suo culmine nel "giorno di battaglia" della domenica 15 febbraio.
+
+La stagione carnevalesca inizia il **1° febbraio 2026** e si conclude il **18 febbraio 2026** (Mercoledì delle Ceneri).
 
 La rievocazione celebra la rivolta della **Mugnaia** e del popolo ivrese contro un tiranno medievale, trasformando le vie del centro in un grande teatro all'aperto. Nella battaglia si affrontano **nove squadre di aranceri a piedi** contro oltre **cinquanta carri trainati da cavalli**, in una coreografia di colori, rumori e profumi di agrumi.
 
-**Programma della giornata (15 febbraio - Domenica):**
+**Programma della giornata (15 febbraio, domenica):**
 
 | Orario | Evento |
 | :-- | :-- |
@@ -126,12 +176,21 @@ La rievocazione celebra la rivolta della **Mugnaia** e del popolo ivrese contro 
 | **20:15** | Corteo Storico per abbruciamento Scarli |
 | **22:45** | Tradizionale saluto finale in Piazza Ottinetti |
 
+**Biglietti:**
+
+| Categoria | Prezzo |
+| :-- | :-- |
+| Intero | €15 |
+| Ridotto (soci) | €10 |
+| Residenti Ivrea | Gratuito |
+| Bambini fino a 12 anni | Gratuito |
+
 **Informazioni pratiche:**
 
 - **Città**: Ivrea (circa 30-40 km a nord di Torino)
 - **Data evento principale**: 15 febbraio 2026 (domenica)
+- **Telefono Ufficio Turismo Ivrea**: +39 0125 618131
 - **Sito ufficiale**: [storicocarnevaleivrea.it](https://www.storicocarnevaleivrea.it/it/Edizione-2026/Programma/)
-- **Biglietti**: A partire da circa €16,50 a persona (vari settori e formula)
 - **Abbigliamento essenziale**: **Berretto frigio** (cappello rosso frigio) – necessario per assistere in sicurezza
 - **Food & Wine**: Villaggio Arancio con stand enogastronomici e specialità locali
 - **Guida turistica**: [guidatorino.com](https://www.guidatorino.com/eventi-torino/battaglia-arance-carnevaleivrea-2026/)
@@ -144,24 +203,28 @@ La rievocazione celebra la rivolta della **Mugnaia** e del popolo ivrese contro 
 
 ## Frecciarossa Final Eight 2026: grande basket all'Inalpi Arena
 
-**Dal 18 al 22 febbraio 2026** – Torino ospita la **Frecciarossa Final Eight 2026**, fase conclusiva della **Coppa Italia di basket** di Serie A, presso l'**Inalpi Arena**. Le **otto migliori squadre** del campionato si sfidano in cinque giorni ad alta intensità in una formula a eliminazione diretta.
+**Dal 18 al 22 febbraio 2026** – Torino ospita la **Frecciarossa Final Eight 2026**, fase conclusiva della **Coppa Italia di basket** di Serie A, presso l'**Inalpi Arena** (Corso Sebastopoli 123). Le **otto migliori squadre** del campionato si sfidano in cinque giorni ad alta intensità in una formula a eliminazione diretta.
 
 **Calendario gare:**
 
-- **18-19 febbraio** – Quarti di finale
-- **21 febbraio** – Semifinali
-- **22 febbraio** – Finale
+| Data | Evento | Orari partite |
+| :-- | :-- | :-- |
+| **18-19 febbraio** | Quarti di finale | 18:00 e 20:45 |
+| **21 febbraio** | Semifinali | 18:00 e 20:45 |
+| **22 febbraio** | Finale | 17:00 |
 
 Una novità di particolare rilievo è l'integrazione della **IBSA NextGen Cup**, competizione riservata alle migliori formazioni **Under 19** dei club di Serie A, che si disputa anch'essa a Torino in concomitanza con la Final Eight.
 
 Le edizioni precedenti hanno registrato **oltre 42.000-46.000 spettatori**, con una ricaduta importante in termini di turismo sportivo e visibilità per la città. L'**Inalpi Arena** è stata ampliata di ulteriori **500 posti** per l'occasione, raggiungendo una capacità complessiva eccezionale.
 
-**Biglietteria e formule di acquisto:**
+**Biglietti:**
 
+- **Biglietti singoli**: a partire da €15
 - **Full Pass**: Accesso a tutte le sette partite principali
 - **Abbonamento 2 Giorni**: Mercoledì 18 e giovedì 19 febbraio (Quarti di finale)
-- **Biglietti singoli**: Disponibili per ogni giornata
 - **Intrattenimento**: Foyer aperto dal pomeriggio con musica, cibo e attività collaterali
+
+**Offerta Trenitalia**: Usa il codice **"FINALEIGHT26"** per sconti dal 20% al 75% sui treni per Torino.
 
 **Corporate hospitality:**
 
@@ -170,12 +233,11 @@ Le edizioni precedenti hanno registrato **oltre 42.000-46.000 spettatori**, con 
 
 **Informazioni pratiche:**
 
-- **Indirizzo**: Inalpi Arena (Pala Alpitour), Torino
+- **Indirizzo**: Inalpi Arena, Corso Sebastopoli 123, Torino
+- **Telefono**: +39 011 6503000
 - **Sito ufficiale**: [legabasket.it](https://www.legabasket.it/landing/final-eight)
 - **Biglietti online**: [legabasket.it](https://www.legabasket.it/landing/final-eight) (sezione "ACQUISTA ORA")
-- **Orari**: Verificare sul sito (generalmente partite dalle 20:00-20:30)
 - **Trasporti**: Stazioni ferroviarie collegate, parcheggi disponibili
-- **Offerta Trenitalia**: Disponibile un "Speciale Eventi" per raggiungere Torino
 - **Consiglio**: Prenotare in anticipo, soprattutto semifinali e finale
 
 ---
@@ -246,21 +308,22 @@ Le edizioni precedenti hanno registrato **oltre 42.000-46.000 spettatori**, con 
 
 #### Claudio Bisio – "La mia vita raccontata male"
 
-**4-7 febbraio 2026** – L'attore e conduttore porta a Torino lo spettacolo **"La mia vita raccontata male"**, tratto dall'omonimo libro di Francesco Piccolo, con repliche al **Teatro Colosseo**.
+**6-8 febbraio 2026** – L'attore e conduttore porta a Torino lo spettacolo **"La mia vita raccontata male"**, tratto dall'omonimo libro di Francesco Piccolo, con repliche al **Teatro Colosseo** (Via Madama Cristina 71). Lo accompagnano i musicisti **Marco Bianchi** e **Pietro Guarracino**.
 
 **Rappresentazioni:**
 
-- **Mercoledì 4 febbraio** ore 20:30
-- **Giovedì 5 febbraio** ore 20:30
 - **Venerdì 6 febbraio** ore 20:30
+- **Sabato 7 febbraio** ore 20:30
+- **Domenica 8 febbraio** ore 17:00
 
 **Prezzo**: €31 a biglietto
 
 **Informazioni pratiche:**
 
-- **Indirizzo**: Teatro Colosseo, Torino
+- **Indirizzo**: Via Madama Cristina 71, Torino
+- **Telefono**: +39 011 651 0161
 - **Sito**: [teatrocolosseo.it](https://www.teatrocolosseo.it/)
-- **Biglietti**: [teatrocolosseo.it](https://www.teatrocolosseo.it/stagione/2026-02-05/2026-02-08/Claudio-Bisio)
+- **Biglietti**: [teatrocolosseo.it](https://www.teatrocolosseo.it/stagione/2026-02-06/2026-02-08/Claudio-Bisio)
 - **Guida**: [guidatorino.com](https://www.guidatorino.com/eventi-torino/claudio-bisio-torino-2026/)
 
 ---
@@ -283,14 +346,17 @@ Le edizioni precedenti hanno registrato **oltre 42.000-46.000 spettatori**, con 
 
 #### "Candlelight: Ennio Morricone e colonne sonore"
 
-**Giovedì 26 febbraio 2026** – Torino ospita un concerto **Candlelight** dedicato alle musiche di **Ennio Morricone** e alle grandi colonne sonore cinematografiche, organizzato in una location suggestiva illuminata da migliaia di candele.
+**Giovedì 26 febbraio 2026** – Torino ospita un concerto **Candlelight** dedicato alle musiche di **Ennio Morricone** e alle grandi colonne sonore cinematografiche, organizzato al **Palazzo della Luce** (Via Antonio Bertola 40), illuminato da migliaia di candele.
 
 **Data e orario:**
 
 - **26 febbraio 2026 ore 19:30**
+- **Durata**: Circa 65 minuti
+- **Porte**: Apertura 30 minuti prima dell'inizio
 
 **Programma musicale:**
-Brani iconici tratti da film come *C'era una volta il West*, *Nuovo Cinema Paradiso* e altri capolavori del compositore italiano.
+
+Brani iconici tra cui *C'era una volta il West*, *Nuovo Cinema Paradiso*, *La missione*, *Giù la testa*, oltre a celebri brani di **Nino Rota**.
 
 **Biglietti:**
 
@@ -298,7 +364,7 @@ Brani iconici tratti da film come *C'era una volta il West*, *Nuovo Cinema Parad
 
 **Informazioni pratiche:**
 
-- **Luogo**: Gallerie d'Italia o Palazzo della Luce (verificare)
+- **Luogo**: Palazzo della Luce, Via Antonio Bertola 40, Torino
 - **Sito ufficiale evento**: [concerti-italia.it](https://www.concerti-italia.it/concerti/candlelight-ennio-morricone-e-colonne-sonore-in-concerto-a-torino-26-febbraio-2026-biglietti-e-info/)
 - **Piattaforma biglietti**: [concerts50.com](https://concerts50.com/it/show/candlelight-ennio-morricone-e-altre-colonne-sonore-di-film-in-turin-tickets-feb-26-2026)
 - **Altra piattaforma**: [feverup.com](https://feverup.com/it/torino/candlelight)
@@ -359,16 +425,25 @@ Febbraio 2026 concentra molti eventi in pochi giorni, per cui è utile:
     - Final Eight: [legabasket.it](https://www.legabasket.it/landing/final-eight)
 3. Considerare che **CAMERA**, **Gallerie d'Italia**, **Teatro Regio**, **Teatro Carignano** e **Musei Reali** sono tutti raggiungibili facilmente a piedi o con poche fermate di tram/metro, rendendo pratico combinare più attività nella stessa giornata.
 
-### Trasporti
+### Trasporti e abbonamenti GTT
+
+**Abbonamenti turistici GTT:**
+
+| Tipo abbonamento | Prezzo |
+| :-- | :-- |
+| Giornaliero | €5,50 |
+| 2 giorni | €8,50 |
+| Settimanale | €14 |
+
+La rete GTT comprende tram, metro e bus ben collegati a tutti i siti. La **Metro Linea 2** (circonvallazione) migliora ulteriormente i collegamenti tra le varie zone della città.
 
 - **Torino Porta Susa e Porta Nuova**: Stazioni ferroviarie principali
-- **Rete GTT**: Tram, metro e bus ben collegati a tutti i siti
 - **Parcheggi**: Disponibili nelle zone centrali
 - **Trenitalia**: Offerta speciale per gli eventi (verificare su [trenitalia.com](https://www.trenitalia.com/))
 
 ### Contatti utili
 
-- **Turismo Torino**: [turismotorino.org](https://turismotorino.org/)
+- **Turismo Torino**: +39 011 535181 | [turismotorino.org](https://turismotorino.org/)
 - **Comune di Torino**: [comune.torino.it](https://www.comune.torino.it/)
 - **Numero unico emergenze**: 112
 
@@ -376,7 +451,7 @@ Febbraio 2026 concentra molti eventi in pochi giorni, per cui è utile:
 
 ## Conclusione
 
-Febbraio 2026 a Torino offre un ventaglio di esperienze che va dalla **grande fotografia internazionale** (Lee Miller e Jeff Wall agli ultimi giorni di mostra) alle **tradizioni popolari** più spettacolari (Battaglia delle Arance), passando per il **cioccolato artigianale** di qualità mondiale, l'**opera lirica di altissimo livello** con Riccardo Muti, il **basket d'élite** della Final Eight e un ricco cartellone di **teatro, musical e concerti** di rilievo.
+Febbraio 2026 a Torino offre un ventaglio di esperienze che va dalla **grande fotografia internazionale** (Lee Miller e Jeff Wall agli ultimi giorni di mostra) alle **tradizioni popolari** più spettacolari (Battaglia delle Arance, Patrimonio UNESCO dal 2023), passando per il **cioccolato artigianale** di qualità mondiale, l'**opera lirica di altissimo livello** con Riccardo Muti, il **basket d'élite** della Final Eight e un ricco cartellone di **teatro, musical e concerti** di rilievo.
 
 Non esiste un solo modo di vivere questo mese in città: si può costruire un percorso a misura di chi ama l'arte, di chi vuole scoprire i sapori torinesi, di chi cerca emozioni sportive o serate a teatro. L'importante è pianificare per tempo utilizzando i link, i contatti e le informazioni fornite in questa guida, lasciandosi comunque lo spazio per qualche scoperta improvvisata tra le vie eleganti del centro e le piazze piene di vita della città.
 
@@ -412,6 +487,6 @@ Non esiste un solo modo di vivere questo mese in città: si può costruire un pe
 12. Final Eight 2026 - Lega Basket https://www.legabasket.it/landing/final-eight
 13. Final Eight 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino/frecciarossa-final-eight-2026-torino/
 14. Teatro Alfieri https://www.teatroalfieritorino.it/
-15. Teatro Colosseo - Claudio Bisio https://www.teatrocolosseo.it/stagione/2026-02-05/2026-02-08/Claudio-Bisio
+15. Teatro Colosseo - Claudio Bisio https://www.teatrocolosseo.it/stagione/2026-02-06/2026-02-08/Claudio-Bisio
 16. Candlelight: Ennio Morricone https://www.concerti-italia.it/concerti/candlelight-ennio-morricone-e-colonne-sonore-in-concerto-a-torino-26-febbraio-2026-biglietti-e-info/
 17. Amadeus - Teatro Stabile https://www.teatrostabiletorino.it/cartellone/amadeus-24-feb-1-mar-26/
