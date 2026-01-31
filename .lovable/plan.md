@@ -1,164 +1,134 @@
 
-# Piano: Allineamento traduzioni tedesco (DE) e spagnolo (ES)
 
-## Panoramica
+## Piano: miglioramento articolo febbraio 2026 Torino
 
-Aggiornerò i file `de.json` e `es.json` aggiungendo tutte le chiavi mancanti rispetto al file di riferimento italiano (`it.json`), concentrandomi sulle sezioni critiche richieste.
-
----
-
-## Analisi chiavi mancanti
-
-### Sezioni da completare in DE e ES:
-
-| Sezione | Stato DE | Stato ES | Chiavi mancanti |
-|---------|----------|----------|-----------------|
-| `about.cycle` | ❌ Mancante | ❌ Mancante | 11 chiavi (step1Title, step2Title, etc.) |
-| `about.service*` | ❌ Mancante | ❌ Mancante | 8 chiavi (service1-4 Title/Desc) |
-| `about.whyChoose*` | ❌ Mancante | ❌ Mancante | 6 chiavi |
-| `hero.miniFaq` | Parziale | Parziale | 6 chiavi complete |
-| `hero.miniSteps` | ❌ Mancante | ❌ Mancante | 2 chiavi |
-| `hero.flowStep*` | ❌ Mancante | ❌ Mancante | 4 chiavi |
-| `studentSearch` validazione | ❌ Mancante | ❌ Mancante | ~20 chiavi (error messages) |
-| `studentSearch` opzioni | ❌ Mancante | ❌ Mancante | ~25 chiavi (roommatesOptions, areaOptions, etc.) |
-| `benefits` completo | Parziale | Parziale | ~15 chiavi (tooltips, how points) |
-| `investor` completo | Parziale | Parziale | ~25 chiavi (testimonials, marketStats, flowSteps) |
-| `student` completo | Parziale | Parziale | ~30 chiavi (whyJungle, comparison) |
-| `faq` completo | Parziale | Parziale | ~50 chiavi (Q4-Q11, student FAQs, voice FAQs) |
-| `propertyValuation` | ❌ Mancante | ❌ Mancante | ~25 chiavi intero modulo |
-| `propertyValuator` | ❌ Mancante | ❌ Mancante | ~35 chiavi |
+### Panoramica
+Il PDF fornito contiene informazioni molto più dettagliate e verificate rispetto all'articolo attuale. L'obiettivo è integrare i nuovi dati mantenendo uno stile naturale e conversazionale, rispettando rigorosamente il **sentence case** in italiano.
 
 ---
 
-## Implementazione
+### Nuove informazioni dal PDF da integrare
 
-### File da modificare:
-1. **`src/i18n/locales/de.json`** - Aggiunta ~200+ chiavi
-2. **`src/i18n/locales/es.json`** - Aggiunta ~200+ chiavi
+**1. Lee Miller (CAMERA)**
+- Telefono verificato: +39 011 8815241
+- Email: info@camera.to
+- Biglietti dettagliati: Intero €13, Ridotto €10 (fino a 25 anni, over 70), Ridotto speciale €6 (12-17 anni), Gratuito fino a 11 anni
+- Visite guidate: domenica ore 17:00 (€5 + biglietto)
+- Prenotazione non necessaria
 
-### Sezioni che aggiungerò:
+**2. Jeff Wall (Gallerie d'Italia)**
+- Indirizzo completo: Piazza San Carlo 156
+- Telefono: +39 011 5169001
+- Email: torino@gallerieditalia.com
+- Numero verde: 800.167619
+- Ultimo ingresso: 1h30 prima della chiusura
 
-#### 1. About - Ciclo del modello
-```
-about.cycle.title
-about.cycle.subtitle
-about.cycle.stepLabel
-about.cycle.step1Title/Desc
-about.cycle.step2Title/Desc
-about.cycle.step3Title/Desc
-about.cycle.step4Title/Desc
-about.cycle.reinvest
-about.service1-4 Title/Desc
-about.whyChooseTitle
-about.whyPoint1-5
-```
+**3. CioccolaTò 2026**
+- Orari specifici: Ven-Sab 10:00-21:00, Dom-Lun-Mar 10:00-20:00
+- Circa 60 produttori con oltre 70 stand
+- Telefono Turismo Torino: +39 011 535181
+- Nuove attività: "Fabbrica del Cioccolato" (osservazione artigiani dal vivo)
+- Percorsi tematici in: Circolo dei Lettori, Castello di Rivoli, Musei Reali, Cinema Massimo, Palazzo Barolo
 
-#### 2. Hero - Mini FAQ e Flow Steps
-```
-hero.miniSteps.step1/step2
-hero.flowStep1-4
-hero.invest
-hero.launchCountdown
-hero.days/hours/minutes/seconds
-hero.earlyBirdPerk
-hero.studentTitle/investorTitle/Subtitle
-hero.subheadline
-hero.questionnaire/quizCta/quizSubtitle
-hero.availableRooms
-hero.trustSafe/trustSupport/trustNoFees
-hero.seoH1
-hero.smartRentals/investmentOpportunities
-```
+**4. Macbeth (Teatro Regio)**
+- Prezzi biglietti: €50-230
+- Calendario completo con 8 date (incluse 5 e 7 marzo)
+- Piattaforma alternativa: vivaticket.com
 
-#### 3. StudentSearch - Validazione completa
-```
-nameErrorMin/Max/Format
-emailErrorRequired/Invalid/Max
-whatYouLookingForErrorMin/Max
-roommatesLabel/Placeholder + Options (5)
-areaLabel/Placeholder + Options (8)
-studyLabel/Placeholder/Error
-budgetLabel/Placeholder + Ranges (4)
-moveDateLabel/Placeholder + Dates (3)
-customMoveDate*
-consentLabel/Error
-resourcesTitle/Desc/Link
-draftFound*/loadDraft/draftLoaded*
-```
+**5. Battaglia delle Arance**
+- Patrimonio UNESCO dal 2023
+- Biglietti: €15 (non €16,50), gratuito residenti e bambini fino a 12 anni, ridotto €10 soci
+- Telefono Ufficio Turismo Ivrea: +39 0125 618131
+- Inizio stagione carnevalesca: 1° febbraio 2026
+- Fine stagione: 18 febbraio 2026 (Mercoledì delle Ceneri)
 
-#### 4. Benefits - Completo
-```
-whyJungleRent
-sectionTitle/Subtitle
-savingsHighlight/How1/How2/Tooltip
-investmentHighlight/How1/How2/Tooltip
-locationHighlight/How1/How2/Tooltip
-qualityHighlight/How1/How2/Tooltip
-studentCta/investorCta
-```
+**6. Final Eight 2026**
+- Indirizzo completo: Corso Sebastopoli 123
+- Orari semifinali: 18:00 e 20:45
+- Orario finale: 17:00
+- Biglietti singoli a partire da €15
+- Offerta Trenitalia: codice "FINALEIGHT26" sconti 20-75%
+- Telefono: +39 011 6503000
 
-#### 5. Investor - Completo
-```
-flowStep1-3 + Sub
-waitlistTitle/Subtitle/Cta
-priorityResponse
-feature1-3
-activeInvestors
-talkToAdvisor/scheduleCall
-incubatorTooltip
-marketStats (5 chiavi)
-testimonials (4 chiavi)
-```
+**7. Claudio Bisio**
+- Date corrette: 6-8 febbraio (non 4-7 febbraio)
+- Luogo: Via Madama Cristina 71
+- Accompagnamento musicale: Marco Bianchi e Pietro Guarracino
+- Telefono: +39 011 651 0161
 
-#### 6. Student - Completo
-```
-marketProof* (3 chiavi)
-sectionSubtitle
-benefit1-2 Title/Desc/Tooltip
-feature1-3
-separator
-whyJungle.* (~20 chiavi)
-comparison.* (~10 chiavi)
-```
+**8. Candlelight Morricone**
+- Luogo preciso: Palazzo della Luce, Via Antonio Bertola 40
+- Durata: circa 65 minuti
+- Porte: aprono 30 minuti prima
+- Programma dettagliato: "La missione", "Giù la testa", brani di Nino Rota
 
-#### 7. FAQ - Completo
-```
-studentCategory + studentQ1-5/A1-5
-voiceCategory + voiceQ1-15/A1-15
-investorQ4-11/A4-11
-sellerQ3-7/A3-7
-aboutQ3/A3
-```
-
-#### 8. PropertyValuation - Intero modulo
-```
-meta.title/description
-breadcrumb, badge, title, subtitle
-feature1-3
-sources.title/description
-structuredData.name/description
-```
-
-#### 9. PropertyValuator - Intero modulo
-```
-location, zone, selectZone
-characteristics, surface, hasElevator
-floor, condition
-energySection, energyClass, heating
-extrasSection, balcony, garage, exposure
-premiums, penalties, reset
-result, basePrice, pricePerSqm
-coefficients, reliability, clampedWarning
-showBreakdown, noCoefficients
-variation2024, ctaProfessional, ctaSavings
-emptyState, disclaimer
-```
+**9. Nuova sezione trasporti**
+- Abbonamenti GTT: giornaliero €5,50, 2 giorni €8,50, settimanale €14
+- Metro Linea 2 (circonvallazione) menzionata
 
 ---
 
-## Note tecniche
+### Correzioni sentence case necessarie
 
-- Le traduzioni rispetteranno lo stile esistente nei file DE/ES
-- I placeholder `{{count}}`, `{{query}}` saranno mantenuti
-- Sentence case applicato per DE/ES dove appropriato
-- Traduzione professionale (non letterale) per adattare il tono al mercato locale
+Gli articoli attuali presentano alcune violazioni del sentence case che verranno corrette:
+
+| Attuale | Corretto |
+|---------|----------|
+| "La Battaglia delle Arance" (titolo) | "La battaglia delle arance" |
+| "Programma della giornata (15 febbraio - Domenica)" | "Programma della giornata (15 febbraio, domenica)" |
+| "Approfondimento" | già corretto |
+
+---
+
+### Struttura modifiche
+
+#### File 1: `src/data/blog/content/it/eventi-torino-febbraio-2026.md`
+- Aggiornare tutti i dettagli pratici con telefoni, email, prezzi esatti
+- Aggiungere info UNESCO per Ivrea
+- Correggere date Bisio
+- Integrare sezione trasporti GTT con abbonamenti
+- Aggiungere Palazzo della Luce come location Candlelight
+- Mantenere sentence case rigoroso
+
+#### File 2: `src/data/blog/content/en/eventi-torino-febbraio-2026.md`  
+- Stesso aggiornamento con traduzioni appropriate
+- Sentence case per inglese (già standard)
+
+#### File 3: `src/data/blog/posts.ts`
+- Aggiornare FAQs con informazioni più specifiche
+- Aggiornare keywords SEO
+- Aggiungere nuove FAQ su prezzi biglietti, trasporti GTT, UNESCO
+
+---
+
+### Dettagli tecnici implementazione
+
+**Articolo italiano (~450 righe):**
+1. Sezione Lee Miller: aggiungere tabella prezzi completa, telefono, email
+2. Sezione Jeff Wall: numero verde, email, orari precisi
+3. Sezione CioccolaTò: orari per giorno, numero produttori, percorsi tematici
+4. Sezione Macbeth: range prezzi, piattaforme biglietti, calendario completo
+5. Sezione Ivrea: menzione UNESCO 2023, prezzi corretti, telefono ufficio turismo
+6. Sezione Final Eight: indirizzo completo, orari semifinali/finale, codice Trenitalia
+7. Sezione Bisio: correzione date 6-8 febbraio, via completa
+8. Sezione Candlelight: via precisa, durata, programma esteso
+9. Nuova sottosezione trasporti: abbonamenti GTT con prezzi
+
+**Articolo inglese (~100 righe):**
+- Stesso aggiornamento, traduzioni professionali
+
+**posts.ts:**
+- 10 FAQs migliorate per voce (Google Assistant, Alexa)
+- Keywords SEO aggiornate con UNESCO, prezzi, contatti
+
+---
+
+### Checklist sentence case
+
+Verifica che tutti i titoli seguano:
+- ✅ "Febbraio 2026 a Torino: tra amore, cioccolato, arte e palco lirico"
+- ✅ "Grandi mostre fotografiche agli ultimi giorni"
+- ✅ "La battaglia delle arance a Ivrea" (non "La Battaglia delle Arance")
+- ✅ "Consigli pratici per organizzare il soggiorno"
+- ✅ Nomi propri maiuscoli: CioccolaTò, Torino, Ivrea, Teatro Regio, UNESCO
+
