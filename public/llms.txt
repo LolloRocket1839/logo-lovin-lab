@@ -75,6 +75,15 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - GTT Under 26 Pass: €25/month or €258/year
 - Universities: Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
 
+## February 2026 Events
+
+- **CioccolaTò**: Feb 13-17, Piazza Vittorio Veneto - 60+ artisan chocolatiers, free entry
+- **Lee Miller Exhibition**: Until Feb 1 at CAMERA (€13/€10)
+- **Jeff Wall Photos**: Until Feb 1 at Gallerie d'Italia (€10/€8)
+- **Macbeth**: Feb 20 - Mar 7, Teatro Regio - Conducted by Riccardo Muti (€50-230)
+- **Battle of the Oranges**: Feb 15, Ivrea - UNESCO Heritage since 2023 (€15)
+- **Final Eight Basketball**: Feb 18-22, Inalpi Arena (from €15)
+
 ## Interactive Tools
 
 - [Property Valuation Calculator](https://junglerent.it/valutazione-immobile) - FREE, OMI data 2025, ±5% accuracy
@@ -121,5 +130,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: January 9, 2026
-Version: 3.0 - AEO 2026 Optimized
+Last Updated: January 31, 2026
+Version: 3.1 - February 2026 Events Added

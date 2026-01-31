@@ -199,7 +199,7 @@ STUDY SPACES DIRECTORY ⭐ EXPANDED (Interactive Tool):
   * "Biblioteche per studenti Torino"
   * "Where to study in Turin for free?"
 
-GYMS DIRECTORY ⭐ NEW:
+GYMS DIRECTORY:
 - URL IT: https://junglerent.it/strumenti/palestre-torino
 - URL EN: https://junglerent.it/tools/gyms-turin
 - Purpose: Find gyms and fitness centers with student discounts
@@ -350,6 +350,77 @@ SITEMAP:
 - Tools: https://junglerent.it/sitemap-tools.xml
 
 ================================================================================
-Last Updated: January 9, 2026
-Version: 3.0 - AEO 2026 Optimized
+SECTION 17: FEBRUARY 2026 EVENTS IN TURIN
+================================================================================
+
+CIOCCOLATÒ 2026 ⭐ FEATURED:
+- Dates: February 13-17, 2026
+- Location: Piazza Vittorio Veneto, Torino
+- Highlights: 60+ artisan chocolatiers, 70+ stands, includes Valentine's Day & Carnival
+- Hours: Fri-Sat 10:00-21:00, Sun-Mon-Tue 10:00-20:00
+- Admission: Free
+- Activities: Chocolate Factory, Choco Tram, tastings, masterclasses
+- Previous edition: 100,000+ visitors
+- Contact: Turismo Torino +39 011 535181
+- Website: https://turismotorino.org/it/visita/eventi/cioccola-to-2026
+
+MACBETH - TEATRO REGIO ⭐ FEATURED:
+- Dates: February 20 - March 7, 2026
+- Conductor: Riccardo Muti (50 years of experience with this masterpiece)
+- Director: Chiara Muti
+- Venue: Teatro Regio, Piazza Castello 215, Torino
+- Tickets: €50-230
+- Contact: +39 011 8815241 | info@teatroregio.torino.it
+- Website: https://www.teatroregio.torino.it/
+
+BATTLE OF THE ORANGES - IVREA CARNIVAL:
+- Date: February 15, 2026 (main battle)
+- Carnival Season: February 1-18, 2026
+- UNESCO World Heritage: Since 2023
+- Location: Ivrea (30 min from Turin by train or A5/E25)
+- Tickets: Full €15, Reduced €10, Ivrea residents free, Under 12 free
+- Contact: +39 0125 618131
+- Website: https://www.storicocarnevaleivrea.it/
+
+FRECCIAROSSA FINAL EIGHT 2026:
+- Dates: February 18-22, 2026
+- Venue: Inalpi Arena, Corso Sebastopoli 123, Torino
+- Schedule:
+  * Feb 18-19: Quarterfinals (18:00, 20:45)
+  * Feb 21: Semifinals (18:00, 20:45)
+  * Feb 22: Final (17:00)
+- Tickets: From €15
+- Trenitalia discount: Code "FINALEIGHT26" for 20-75% off
+- Contact: +39 011 6503000
+- Website: https://www.legabasket.it/landing/final-eight
+
+PHOTOGRAPHY EXHIBITIONS (Final Month):
+- Lee Miller at CAMERA: Until February 1, 2026
+  * Address: Via delle Rosine 18, Torino
+  * Hours: 11:00-19:00 (Thu until 21:00)
+  * Tickets: €13 full, €10 reduced (under 25, over 70)
+  * Contact: +39 011 8815241 | info@camera.to
+- Jeff Wall at Gallerie d'Italia: Until February 1, 2026
+  * Address: Piazza San Carlo 156, Torino
+  * Hours: 09:30-19:30 (Wed until 20:30)
+  * Tickets: €10 full, €8 reduced, Under 18 free
+  * Contact: +39 011 5169001
+
+CANDLELIGHT ENNIO MORRICONE:
+- Date: February 26, 2026 at 19:30
+- Venue: Palazzo della Luce, Via Antonio Bertola 40, Torino
+- Duration: ~65 minutes
+- Program: "The Mission", Nino Rota classics
+- Tickets: From €30
+
+VOICE QUERIES FOR FEBRUARY EVENTS:
+- "Cosa fare a Torino a febbraio 2026?" → CioccolaTò, Macbeth, Final Eight
+- "Events in Turin February 2026?" → Chocolate festival, opera, basketball
+- "CioccolaTò 2026 quando?" → 13-17 febbraio, Piazza Vittorio
+- "Carnevale di Ivrea 2026?" → 1-18 febbraio, Battaglia Arance 15 febbraio
+- "Macbeth Teatro Regio Torino?" → 20 feb - 7 mar, Riccardo Muti
+
+================================================================================
+Last Updated: January 31, 2026
+Version: 3.1 - February 2026 Events Added
 ================================================================================
