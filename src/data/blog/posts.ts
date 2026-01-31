@@ -752,49 +752,73 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-09",
     author: "Jungle Rent Team",
     image: "/images/torino-primavera-marzo.jpg",
-    readTime: 35,
+    readTime: 45,
     content: "eventi-torino-marzo-2026",
     translations: {
       it: {
         title: "Eventi a Torino marzo 2026",
-        excerpt: "Guida agli eventi da non perdere a Torino nel marzo 2026.",
+        excerpt: "Guida completa agli eventi di marzo 2026: Chiharu Shiota al MAO, Mika all'Inalpi Arena, Renato Zero al Teatro Regio, Subsonica 30 anni, Rocky il Musical.",
         seo: {
-          title: "Eventi Torino marzo 2026 | Guida completa",
-          description: "Scopri concerti, fiere e manifestazioni a Torino nel mese di marzo 2026.",
+          title: "Eventi Torino marzo 2026 | Mostre, concerti, teatro",
+          description: "Scopri concerti, mostre e spettacoli a Torino a marzo 2026: Chiharu Shiota, Mika, Renato Zero, Subsonica, Rocky Musical. Prezzi, orari e biglietti.",
           keywords: [
             "eventi torino marzo 2026",
             "concerti torino marzo",
-            "fiere torino",
-            "manifestazioni torino",
-            "turismo torino"
+            "chiharu shiota mao torino",
+            "mika torino 2026",
+            "renato zero teatro regio",
+            "subsonica 30 anni",
+            "rocky musical torino",
+            "mostre torino marzo",
+            "futurismo musei reali",
+            "orazio gentileschi torino"
           ]
         },
-        tags: ["Turisti", "Eventi", "Torino", "Concerti", "Fiere"],
+        tags: ["Turisti", "Eventi", "Torino", "Concerti", "Mostre", "Teatro"],
         faqs: [
-          { question: "Quali concerti sono previsti a marzo 2026?", answer: "Artisti nazionali e internazionali in vari teatri e palazzetti." },
-          { question: "Ci sono fiere di settore?", answer: "Sì, fiere dedicate a tecnologia, arte e gastronomia." },
-          { question: "Come acquistare i biglietti?", answer: "Online sui siti ufficiali degli eventi o presso punti vendita autorizzati." }
+          { question: "Quali sono le mostre principali a Torino a marzo 2026?", answer: "Le mostre principali sono Chiharu Shiota al MAO (fino al 28 giugno), Futurismo ai Musei Reali e Orazio Gentileschi alle Sale Chiablese (fino al 3 maggio)." },
+          { question: "Quanto costano i biglietti per la mostra di Chiharu Shiota al MAO?", answer: "Intero €10, ridotto €7 (under 26, over 65, studenti), gratuito under 14. Visite guidate domenica ore 15:00." },
+          { question: "Quando si esibisce Renato Zero a Torino?", answer: "Renato Zero si esibisce il 7 e 8 marzo 2026 al Teatro Regio con il tour L'ORAZERO IN TOUR. Biglietti da €45 a €85." },
+          { question: "Dove si tengono i concerti dei Subsonica per il trentennale?", answer: "I Subsonica celebrano 30 anni di carriera all'Inalpi Arena il 31 marzo, 1, 3 e 4 aprile 2026. Ogni data ha scaletta diversa." },
+          { question: "Quanto costa Rocky il Musical al Teatro Alfieri?", answer: "Rocky il Musical va in scena dal 26 al 29 marzo al Teatro Alfieri. Biglietti da €35 a €65." },
+          { question: "Come posso prenotare i biglietti per Amadeus al Teatro Carignano?", answer: "Amadeus è in scena dall'1 all'8 marzo. Prenotazioni su teatrostabiletorino.it o al telefono +39 011 5169111." },
+          { question: "Quali eventi ci sono per la Festa della Donna a Torino?", answer: "L'8 marzo 2026 ci sono conferenze, mostre dedicate ad artiste, concerti e ingressi ridotti nei musei per le visitatrici." },
+          { question: "Come muoversi a Torino a marzo con i mezzi pubblici?", answer: "GTT offre metro, tram e bus. Biglietto singolo €2, giornaliero €5,50, 2 giorni €8,50, settimanale €14." },
+          { question: "Qual è il numero di telefono del MAO per informazioni?", answer: "Il MAO è raggiungibile al +39 011 4436927 oppure via email info@maotorino.it. Orari: mar-dom 10-18, giovedì fino alle 20." },
+          { question: "Dove vedere Mika in concerto a marzo 2026?", answer: "Mika si esibisce il 4 marzo 2026 all'Inalpi Arena (Corso Sebastopoli 123). Biglietti da €35 a €65 su ticketmaster.it e vivaticket.com." }
         ]
       },
       en: {
         title: "Events in Turin March 2026",
-        excerpt: "Guide to unmissable events in Turin in March 2026.",
+        excerpt: "Complete guide to March 2026 events: Chiharu Shiota at MAO, Mika at Inalpi Arena, Renato Zero at Teatro Regio, Subsonica 30 years, Rocky the Musical.",
         seo: {
-          title: "Events Turin March 2026 | Complete guide",
-          description: "Discover concerts, fairs and events in Turin in March 2026.",
+          title: "Events Turin March 2026 | Exhibitions, concerts, theater",
+          description: "Discover concerts, exhibitions and shows in Turin in March 2026: Chiharu Shiota, Mika, Renato Zero, Subsonica, Rocky Musical. Prices, hours and tickets.",
           keywords: [
             "events turin march 2026",
             "concerts turin march",
-            "fairs turin",
-            "events turin",
-            "turin tourism"
+            "chiharu shiota mao turin",
+            "mika turin 2026",
+            "renato zero teatro regio",
+            "subsonica 30 years",
+            "rocky musical turin",
+            "exhibitions turin march",
+            "futurism royal museums",
+            "orazio gentileschi turin"
           ]
         },
-        tags: ["Tourists", "Events", "Turin", "Concerts", "Fairs"],
+        tags: ["Tourists", "Events", "Turin", "Concerts", "Exhibitions", "Theater"],
         faqs: [
-          { question: "What concerts are scheduled for March 2026?", answer: "National and international artists in various theaters and arenas." },
-          { question: "Are there sector fairs?", answer: "Yes, fairs dedicated to technology, art and gastronomy." },
-          { question: "How to buy tickets?", answer: "Online on official event websites or authorized sales points." }
+          { question: "What are the main exhibitions in Turin in March 2026?", answer: "The main exhibitions are Chiharu Shiota at MAO (until June 28), Futurism at the Royal Museums and Orazio Gentileschi at the Chiablese Halls (until May 3)." },
+          { question: "How much are tickets for the Chiharu Shiota exhibition at MAO?", answer: "Full €10, reduced €7 (under 26, over 65, students), free under 14. Guided tours on Sundays at 15:00." },
+          { question: "When does Renato Zero perform in Turin?", answer: "Renato Zero performs on March 7 and 8, 2026 at Teatro Regio with the L'ORAZERO IN TOUR tour. Tickets from €45 to €85." },
+          { question: "Where are the Subsonica 30th anniversary concerts held?", answer: "Subsonica celebrates 30 years at Inalpi Arena on March 31, April 1, 3 and 4, 2026. Each date has a different setlist." },
+          { question: "How much does Rocky the Musical cost at Teatro Alfieri?", answer: "Rocky the Musical runs from March 26 to 29 at Teatro Alfieri. Tickets from €35 to €65." },
+          { question: "How can I book tickets for Amadeus at Teatro Carignano?", answer: "Amadeus runs from March 1 to 8. Book on teatrostabiletorino.it or call +39 011 5169111." },
+          { question: "What events are there for International Women's Day in Turin?", answer: "On March 8, 2026 there are conferences, exhibitions dedicated to female artists, concerts and reduced museum admission for women." },
+          { question: "How to get around Turin in March with public transport?", answer: "GTT offers metro, tram and buses. Single ticket €2, daily €5.50, 2-day €8.50, weekly €14." },
+          { question: "What is the MAO phone number for information?", answer: "MAO can be reached at +39 011 4436927 or by email info@maotorino.it. Hours: Tue-Sun 10-18, Thursday until 20:00." },
+          { question: "Where to see Mika in concert in March 2026?", answer: "Mika performs on March 4, 2026 at Inalpi Arena (Corso Sebastopoli 123). Tickets from €35 to €65 on ticketmaster.it and vivaticket.com." }
         ]
       }
     }

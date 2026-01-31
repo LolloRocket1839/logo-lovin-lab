@@ -1,118 +1,270 @@
-# March 2026 in Turin: a month of discovery through art, music and entertainment
+# March 2026 in Turin: art, music and entertainment
 
-March 2026 promises to be an extraordinary month for Turin, with a packed calendar of events ranging from major artistic retrospectives to international concerts, iconic musicals to conferences by renowned intellectuals. The Piedmontese capital transforms into a widespread stage where culture, live entertainment and reflection intertwine to offer visitors unforgettable experiences.
+March 2026 will be an incredibly rich month for Turin. The calendar spans from major exhibitions to international concerts, iconic musicals to conferences with leading intellectuals.
 
-## The Great Exhibitions: Between East and Italian Seicento
-
-March 2026 represents a crucial moment in Turin's exhibition calendar, with the opening of a series of curatorially profound and internationally acclaimed shows that characterize the entire city.
+## The great exhibitions
 
 ### Chiharu Shiota at MAO
 
-One of the most anticipated exhibitions is undoubtedly **"Chiharu Shiota. The Soul Trembles"** at MAO – Museum of Oriental Art, where from October 22, 2025 until June 28, 2026 the most extensive retrospective ever dedicated to the Japanese artist in Italy is on display. Curated by **Mami Kataoka**, director of the prestigious Mori Art Museum in Tokyo, and **Davide Quadrio**, director of MAO, the exhibition represents an extraordinarily articulated project spanning over twenty years of the artist's creative research.
+From October 22, 2025 to June 28, 2026, MAO hosts **"Chiharu Shiota. The Soul Trembles"**. This is the most extensive Italian retrospective of the Japanese artist, curated by Mami Kataoka (director of the Mori Art Museum in Tokyo) and Davide Quadrio (director of MAO).
 
-The famous **environmental installations made with interwoven threads** — in highly complex red or black patterns — form the exhibition's core and transform the museum spaces into suspended scenarios between memory, emotion and imagination. Shiota's works address universal themes such as identity, human bonds, the fragility of life and the mystery of death. Drawings, photographs, sculptures and monumental installations guide visitors through a contemplative experience where **fascination alternates with unease, movement with stillness**, creating invisible connections between the physical and inner dimensions.
+The famous **interwoven thread installations** transform the museum spaces. The works address themes such as identity, human bonds, and the fragility of life. Drawings, photographs, sculptures and monumental installations guide visitors through a contemplative experience.
+
+**Main works:** "The Key in the Hand", "In Silence", "The Corridor", "Accumulation".
+
+**Practical information:**
+- **Address:** Via San Domenico 11, Turin (Palazzo Santo Stefano)
+- **Phone:** +39 011 4436927
+- **Email:** info@maotorino.it
+- **Hours:** Tuesday-Sunday 10:00-18:00, Thursday until 20:00
+- **Tickets:** full €10, reduced €7 (under 26, over 65, students), free under 14
+- **Guided tours:** Sunday at 15:00 (booking recommended)
+
+### Futurism at the Royal Museums
+
+At the Chiablese Halls of the Royal Museums, the **Futurism** exhibition explores one of the most revolutionary artistic movements of 20th-century Italy. The show presents four thematic sections.
+
+**Sections:**
+- **Classic Futurism:** the founding works of the movement
+- **Aeropainting:** aerial painting and the representation of flight
+- **Ceramics and sculpture:** Futurist applied arts
+- **Period photography:** visual documents of the avant-garde
+
+**Practical information:**
+- **Address:** Piazza Castello 191, Turin
+- **Phone:** +39 011 5611696
+- **Email:** info.museireali@beniculturali.it
+- **Hours:** Monday 14:00-19:00, Tuesday-Sunday 08:30-19:00
+- **Tickets:** full €12, reduced €8 (18-25 years, over 65), free under 18
 
 ### Orazio Gentileschi at the Royal Museums
 
-Another exhibition of extraordinary importance is **"Orazio Gentileschi. A Painter on a Journey"** at the Chiablese Halls of Turin's Royal Museums, running from November 22, 2025 to May 3, 2026. The show is dedicated to one of the **most important Italian artists of the Seventeenth Century**, whose success in his lifetime equaled that of **Caravaggio, Rubens and Van Dyck**. Curated by **Annamaria Bava** and **Gelsomina Spione**, the exhibition revolves around the theme of travel, retracing the Pisan artist's (1563-1639) journeys from Rome to Fabriano, from Genoa to Turin, Paris and London.
+Also at the Chiablese Halls, from November 22, 2025 to May 3, 2026, there is **"Orazio Gentileschi. A Painter on a Journey"**. The exhibition is dedicated to one of the most important 17th-century artists, whose success in his lifetime equaled that of Caravaggio, Rubens and Van Dyck.
 
-The centerpiece of the show is the **great altarpiece of the Annunciation created in 1623 for the Duke of Savoy**, now preserved at the Galleria Sabauda and considered **one of the absolute peaks of his art**. Alongside the core of Turin-owned paintings, the exhibition welcomes **exceptional loans from international institutions** such as the Louvre, the Prado and the Vatican Pinacoteca, underlining Gentileschi's relevance in the European art market of his time. The exhibition is also **an integral part of the Milano Cortina 2026 Cultural Olympiad**, the multidisciplinary program that promotes Olympic values through culture and heritage.
+Curated by Annamaria Bava and Gelsomina Spione, the show traces the Pisan painter's (1563-1639) journeys from Rome to London. The great Annunciation altarpiece, created in 1623 for the Duke of Savoy, is the centerpiece of the exhibition. Exceptional loans come from the Louvre, the Prado and the Vatican Pinacoteca. The exhibition is part of the **Milano Cortina 2026 Cultural Olympiad**.
 
-### Other Ongoing Exhibitions
+### Other ongoing exhibitions
 
-The GAM continues to host long-running shows such as **"Nights. Five Centuries of Stars, Dreams, Full Moons"**, which since October 29, 2025 explores the night as a space for technical experimentation, scientific reflection and poetic introspection from the early 17th century to contemporaneity. Alongside these world-class exhibitions, Turin's museum calendar hosts solo shows dedicated to **Elisabetta Di Maggio** (with the exhibition "Frangibile") and **Linda Fregni Nagler** ("Anger Pleasure Fear"), both at GAM, as well as projects at peripheral venues like the retrospective on **Enrico David** at Rivoli ("Domani torno").
+**GAM - Modern Art Gallery:**
+- **"Nights. Five centuries of stars, dreams, full moons"** (from October 29, 2025)
+- Solo shows by Elisabetta Di Maggio and Linda Fregni Nagler
 
-## Concerts: From Pop Stars to Sound Installations
+**GAM information:**
+- **Address:** Via Magenta 31, Turin
+- **Phone:** +39 011 5629911
+- **Hours:** Tuesday-Sunday 10:00-18:00
+- **Tickets:** full €8, reduced €5
 
-Turin's musical landscape in March 2026 is characterized by extraordinary variety embracing international pop, symphonic music and commemorative projects of absolute uniqueness.
+**Palazzo Bricherasio - Design and sustainability:**
+- **Address:** Via Accademia Albertina 8, Turin
+- **Phone:** +39 011 546975
+- **Hours:** Monday-Sunday 10:00-19:00
+- **Tickets:** full €10, reduced €7
 
-### Mika at OGR
+At Rivoli there is the Enrico David retrospective.
 
-Among the most anticipated names is **Mika**, who on **March 4, 2026 at OGR Turin** will bring his "Live 2026" show. The British singer, globally renowned for his vocal virtuosity and stage energy, will be on European tour with a new album project characterized by a **danceable and kaleidoscopic sound**, the result of a collaboration with producer **Nick Littlemore**. The tracks were recorded in various locations — from Montreal to the hills of Tuscany to Bangkok's skyscrapers — to capture a joyful and eclectic musical atmosphere.
+## Concerts
 
-### Renato Zero at Inalpi Arena
+### Mika at Inalpi Arena
 
-Equally anticipated is the arrival of **Renato Zero** in Turin for a **double date at Inalpi Arena on March 7 and 8, 2026** as part of the **"L'ORAZERO IN TOUR"** tour. The Roman artist, who will bring the hits of a fifty-year career, will also accompany his setlist with the **19 unreleased tracks from the new album "L'ORAZERO"**. Each evening promises to be a **rich and cross-generational celebration** of his artistic evolution, combining the audience's most beloved repertoire with new releases.
+On **March 4, 2026**, Mika brings his "Live 2026" show to Inalpi Arena. The new album project, produced with Nick Littlemore, mixes a danceable and kaleidoscopic sound. The tracks were recorded between Montreal, the Tuscan hills and Bangkok.
+
+**Practical information:**
+- **Venue:** Inalpi Arena, Corso Sebastopoli 123, Turin
+- **Phone:** +39 011 6503000
+- **Time:** 21:00 (doors 20:00)
+- **Tickets:** €35-65 depending on the zone
+- **Platforms:** ticketmaster.it, vivaticket.com
+
+### Renato Zero at Teatro Regio
+
+Double date on **March 7 and 8, 2026** with the **"L'ORAZERO IN TOUR"** tour. Renato Zero will bring the hits of a fifty-year career together with the 19 tracks from the new album "L'ORAZERO".
+
+**Practical information:**
+- **Venue:** Teatro Regio, Piazza Castello 215, Turin
+- **Phone:** +39 011 8815241
+- **Email:** info@teatroregio.torino.it
+- **Tickets:** €45-85
 
 ### Subsonica: Cieli su Torino 96-26
 
-But the project of greatest documentary and commemorative relevance is undoubtedly **"Cieli su Torino 96-26"** by **Subsonica**, four special concerts scheduled for **March 31, April 1, 3 and 4, 2026** at the Sala Fucine of OGR Turin. This is a unique series of events, aimed at celebrating the **thirtieth anniversary of the Piedmontese band's career** with a very particular configuration: each date will present a **completely different setlist**, offering the audience a true complete journey through Subsonica's discography.
+The most anticipated project: **four special concerts** on March 31, April 1, 3 and 4, 2026 at Inalpi Arena. They celebrate the **30th anniversary** of the Piedmontese band.
 
-Tickets will include access to an **immersive anthology exhibition in the OGR Dome**, which traces three decades of the band's history through photos, memorabilia, stage costumes, instruments and unpublished posters. At the end of each concert, the five band members will take turns for **unmissable DJ sets**, creating a space of continuity between the live performance and the post-show experience.
+Each date will have a **completely different setlist**. Tickets include access to an immersive anthology exhibition: photos, memorabilia, costumes, instruments and unpublished posters. After each concert, DJ sets by the five band members.
 
-A fundamental part of the project is the **transformation of Turin into a large open-air museum**: throughout the city, exhibitions, events and sound paths will pay tribute to the band in the urban context that saw them born, experiment and become legend. This integrated approach transforms the event from a simple concert to a **widespread cultural phenomenon**, capable of involving the entire Turin community.
+Turin will become a large open-air museum with exhibitions, events and sound paths dedicated to the band.
 
-## Musical Theater: Major Productions and Comedy Shows
+**Practical information:**
+- **Venue:** Inalpi Arena, Corso Sebastopoli 123, Turin
+- **Phone:** +39 011 6503000
+- **Tickets:** €40-70
 
-On the theatrical front, March 2026 sees the arrival of two major musical productions that will guarantee evenings of pure quality entertainment.
+## Musical theater
 
-### Rocky — The Musical
+### Rocky - The Musical
 
-**"Rocky — The Musical"**, the famous adaptation of the iconic Philadelphia boxer's story, will be on stage at the **Teatro Alfieri from March 26 to 29, 2026**. The production, directed by **Luciano Cannito**, transports the audience into an immersive experience where the cinematic legend transforms into a theatrical tale with dance, music and choreography of great visual impact.
+At **Teatro Alfieri from March 26 to 29, 2026**. The production, directed by Luciano Cannito, brings the legend of the Philadelphia boxer to the stage with dance, music and high-impact choreography.
+
+**Practical information:**
+- **Address:** Piazza Solferino 1, Turin
+- **Phone:** +39 011 562 3800
+- **Email:** info@fdfgestioniattivitateatrali.com
+- **Tickets:** €35-65
+- **Show times:** weekdays 20:30, holidays 16:00
+
+### Amadeus at Teatro Carignano
+
+From **March 1 to 8, 2026**, the theatrical show dedicated to composer Wolfgang Amadeus Mozart.
+
+**Practical information:**
+- **Address:** Piazza Carignano 6, Turin
+- **Phone:** +39 011 5169111
+- **Website:** teatrostabiletorino.it
+- **Schedule:**
+  - March 1: 19:30
+  - March 2: 15:30 and 19:30
+  - March 3-7: 19:30
+  - March 8: 15:30 and 19:30
 
 ### 7 Brides for 7 Brothers
 
-Equally anticipated is **"7 Brides for 7 Brothers"**, the musical that will return to Turin theaters during March with a cast of great charisma. These two titles represent an accessible and emotionally engaging entertainment proposal, capable of attracting both families and broad audiences.
+Returns to Turin theaters in March with a cast of great charisma.
 
-## Conferences, Talk Shows and Intellectual Encounters
+## Conferences and talks
 
-A peculiarity of Turin's cultural calendar in March 2026 is the concentration of **conferences and meetings with nationally and internationally renowned personalities**. These include appointments with:
+March 2026 concentrates appointments with prominent personalities:
 
-- **Vincenzo Schettini** ("La Fisica che ci piace"), who brings the fascinating language of science to a general audience
-- Philosopher **Umberto Galimberti** in a conference dedicated to **"The Utopia of Happiness"**
-- Psychiatrist and essayist **Paolo Crepet** with his provocative seminar **"The Crime of Thinking"**
-- Actress and monologist **Chiara Francini** with her intimate monologue **"Forte e Chiara"**
+- **Vincenzo Schettini** ("La Fisica che ci piace")
+- **Umberto Galimberti** ("The Utopia of Happiness")
+- **Paolo Crepet** ("The Crime of Thinking")
+- **Chiara Francini** ("Forte e Chiara")
 
-These appointments testify to Turin's ability to attract intellectuals and public figures who address deeply relevant themes, from scientific to philosophical, psychological and civic.
+## International Women's Day - March 8
 
-## How to Navigate Among So Many Events
+On March 8, 2026, Turin celebrates International Women's Day with special events:
 
-With such a dense calendar, it's advisable to approach March's programming with a targeted strategy:
+- **Conferences and debates** in major theaters and cultural centers
+- **Exhibitions dedicated** to contemporary female artists
+- **Concerts and shows** featuring women
+- **Reduced admission** to museums and galleries for female visitors
 
-1. **Identify the macro-themes of your interest**: those who love contemporary art can center their journey around MAO and GAM exhibitions; those who prefer live entertainment can build an itinerary based on concerts and musicals; those attracted to conferences have a series of relevant appointments available.
+Check the City of Turin calendar for the full program.
 
-2. **Check times and ticket availability**: many events, especially those with high-profile artists, sell out months in advance. The online calendars of the City of Turin and city portals allow filtering appointments by day and category.
+## Outdoor activities
 
-3. **Consider the geographical distribution**: OGR and MAO are just a few minutes apart, as are Teatro Alfieri and the Royal Museums. A day's planning can therefore include an exhibition in the morning, lunch in the area and an evening show, reducing travel time.
+March marks the arrival of spring. The milder weather allows you to explore Turin outdoors.
+
+### Parco del Valentino
+
+The city's green lung awakens. Days get longer and locals return to stroll along the Po. Ideal for jogging, picnics and relaxation.
+
+### Cycling along the Po
+
+The cycle path along the Po extends for **50 km**. You can rent bikes in the city with bike sharing services (ToBike, Dott, Lime).
+
+**Recommended routes:**
+- Murazzi → Parco del Valentino → Borgo Medievale (5 km)
+- Turin Center → Moncalieri → Superga (25 km)
+- Complete tour of the Turin hills (50 km)
+
+## Getting around Turin
+
+### GTT transport
+
+The GTT network (metro, tram, buses) covers the entire metropolitan area.
+
+**Fares:**
+- **Single ticket:** €2.00 (100 minutes)
+- **Daily:** €5.50
+- **2-day:** €8.50
+- **Weekly:** €14.00
+- **Under 26 annual:** €258 (ISEE reductions available)
+
+**Useful apps:** Moovit, Google Maps, GTT App
+
+### How to reach event venues
+
+**Inalpi Arena:** Metro line 1 Lingotto stop + 10 min walk, or bus 1, 35
+
+**Teatro Regio:** Historic center, 5 minutes from Piazza Castello
+
+**MAO:** Quadrilatero Romano, reachable on foot from the center
+
+**Teatro Alfieri:** Piazza Solferino, central pedestrian area
+
+## Where to eat in spring
+
+March brings the first spring specialties of Piedmontese cuisine.
+
+### Seasonal dishes
+
+- **Santena asparagus:** with fried eggs and fondue
+- **Piedmontese mixed fry:** spring version with fresh vegetables
+- **Agnolotti del plin:** fresh pasta with meat filling
+- **Finanziera:** ancient Turin recipe with offal
+
+### Recommended areas
+
+- **Quadrilatero Romano:** typical restaurants and historic trattorias
+- **San Salvario:** international cuisine and young venues
+- **Piazza Vittorio:** aperitifs with Po River view
+- **Vanchiglia:** traditional osterias and wine bars
+
+## Useful numbers
+
+- **Emergencies:** 112
+- **Carabinieri:** 112
+- **Fire Department:** 115
+- **Ambulance:** 118
+- **Turismo Torino:** +39 011 535181
+- **GTT Info:** +39 011 5764
+
+## How to navigate among events
+
+With such a dense calendar, here are some tips:
+
+1. **Choose your interests**: contemporary art (MAO, GAM), live shows (Inalpi Arena, Teatro Alfieri), conferences.
+
+2. **Book in advance**: many events sell out months in advance. Check the online calendars of the City of Turin.
+
+3. **Plan according to geography**: MAO and Quadrilatero are close together, as are Teatro Alfieri and the Royal Museums. You can combine a morning exhibition, lunch in the area and an evening show.
 
 ## Conclusion
 
-March 2026 represents a privileged window to experience Turin at its maximum cultural and creative expression. The convergence of **international retrospectives of contemporary artists**, **retrospectives of Seventeenth Century masters**, **world star concerts**, **musical celebrations linked to local memory**, and **conferences by renowned intellectuals** creates a panorama that will hardly be repeated.
-
-Whether arriving in the city as a tourist or as a resident, March 2026 offers the opportunity to renew contact with artistic heritage, discover contemporary expressions of extraordinary strength, and participate in moments of collective celebration of music and entertainment. The invitation is to consult the calendars, book tickets and let curiosity guide you through the multiple manifestations of beauty, music and thought that Turin offers in this memorable month.
+March 2026 offers international retrospectives, world star concerts, musical celebrations linked to local memory and conferences by renowned intellectuals. Whether you are a tourist or a resident, check the calendars, book tickets and let curiosity guide you.
 
 ---
 
-## Related Articles
+## Related articles
 
-- [Events in Turin in February 2026: Love, Chocolate, Art and Opera](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth with Riccardo Muti, Lee Miller and Jeff Wall exhibitions, Ivrea Carnival, Final Eight basketball
-- [Events in Turin in January 2026: Complete Guide](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza, Teatro Regio, Olympic Flame
-- [The Historic Ivrea Carnival: Complete Guide to the Battle of Oranges](/blog/carnevale-ivrea-battaglia-arance-2025) - March 1-5, 2025, Mugnaia legend, how to get there from Turin
-- [How to Get Sustainably to Turin: A Comprehensive Travel Guide](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, carbon-neutral airport
-- [San Salvario Neighborhood Guide](/blog/san-salvario-guida-studenti) - Where to stay and experience Turin's vibrant culture
-- [Turin Nightlife Guide](/blog/torino-nightlife-guide) - Best venues for after-show entertainment
-- [Turin in Every Season: Complete Tourist Guide](/blog/torino-ogni-stagione-turisti) - Spring, summer, autumn and winter in Turin
+- [Events in Turin in February 2026](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth, Lee Miller and Jeff Wall exhibitions, Ivrea Carnival
+- [Events in Turin in January 2026](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza, Olympic Flame
+- [The historic Ivrea Carnival](/blog/carnevale-ivrea-battaglia-arance-2025) - March 1-5, 2025, Mugnaia legend
+- [How to get to Turin sustainably](/blog/viaggiare-sostenibile-torino-guida)
+- [Turin in every season](/blog/torino-ogni-stagione-turisti)
+- [Turin nightlife guide](/blog/torino-nightlife-guide)
+- [San Salvario neighborhood guide](/blog/san-salvario-guida-studenti)
 
 ---
 
 ## Sources
 
-1. Chiharu Shiota. The Soul Trembles - Exhibition - Turin - MAO - Arte.it http://www.arte.it/calendario-arte/torino/mostra-chiharu-shiota-the-soul-trembles-102052
-2. Chiharu Shiota. The Soul Trembles: in Turin the exhibition - GuidaTorino https://www.guidatorino.com/eventi-torino/chiharu-shiota-mostra-torino-2025-2026/
-3. Chiharu Shiota. The Soul Trembles at MAO - City of Turin https://eventi.comune.torino.it/calendario/chiharu-shiota-the-soul-trembles-al-mao/
-4. Orazio Gentileschi: exhibition coming to Turin Royal Museums https://michelangelobuonarrotietornato.com/2025/10/24/orazio-gentileschi-in-arrivo-la-mostra-ai-musei-reali-di-torino/
-5. Seventeenth century painter Orazio Gentileschi on display in Turin until May 3, 2026 - PiemonteExpo https://www.piemonteexpo.it/2025/11/orazio-gentileschi-mostra-torino/
-6. Event Calendar – Turin Events https://eventi.comune.torino.it/calendario/2026-03-01/
+1. Chiharu Shiota. The Soul Trembles - Arte.it http://www.arte.it/calendario-arte/torino/mostra-chiharu-shiota-the-soul-trembles-102052
+2. Chiharu Shiota in Turin - GuidaTorino https://www.guidatorino.com/eventi-torino/chiharu-shiota-mostra-torino-2025-2026/
+3. Chiharu Shiota at MAO - City of Turin https://eventi.comune.torino.it/calendario/chiharu-shiota-the-soul-trembles-al-mao/
+4. Orazio Gentileschi at Turin Royal Museums https://michelangelobuonarrotietornato.com/2025/10/24/orazio-gentileschi-in-arrivo-la-mostra-ai-musei-reali-di-torino/
+5. Orazio Gentileschi exhibition in Turin - PiemonteExpo https://www.piemonteexpo.it/2025/11/orazio-gentileschi-mostra-torino/
+6. Events Calendar - City of Turin https://eventi.comune.torino.it/calendario/2026-03-01/
 7. Events in Turin: March 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino-marzo/
-8. Mika in concert in Turin - March 04, 2026 - Tickets and Info https://www.concerti-italia.it/concerti/mika-in-concerto-a-torino-to-04-marzo-2026-biglietti-e-info/
-9. MIKA live in Italy in 2026 - MusicaDalPalco https://www.musicadalpalco.com/2025/07/07/mika-live-in-italia-2026/
-10. Renato Zero in Turin in 2026: double date for "L'ORAZERO IN TOUR" - GuidaTorino https://www.guidatorino.com/eventi-torino/renato-zero-torino-2026/
-11. Renato Zero brings L'ORAZERO IN TOUR to Turin. March 7 and 8, 2026 - VivaTorino https://www.vivatorino.it/events/renato-zero-porta-lorazero-in-tour-a-torino-7-e-8-marzo-2026-allinalpi-arena/
-12. Subsonica | CIELI SU TORINO 96-26 @ OGR Turin https://ogrtorino.it/events/subsonica-cieli-su-torino-96-26-ogr-torino
-13. Subsonica - Cieli su Torino 96-26 - Live Nation https://www.livenation.it/subsonica-torino-2026
-14. Subsonica - Cieli su Torino 96-26 - Turismo Torino https://turismotorino.org/it/visita/eventi/subsonica-cieli-su-torino-96-26
+8. Mika in concert in Turin https://www.concerti-italia.it/concerti/mika-in-concerto-a-torino-to-04-marzo-2026-biglietti-e-info/
+9. MIKA live in Italy 2026 https://www.musicadalpalco.com/2025/07/07/mika-live-in-italia-2026/
+10. Renato Zero in Turin 2026 https://www.guidatorino.com/eventi-torino/renato-zero-torino-2026/
+11. Renato Zero L'ORAZERO IN TOUR Turin https://www.vivatorino.it/events/renato-zero-porta-lorazero-in-tour-a-torino-7-e-8-marzo-2026-allinalpi-arena/
+12. Subsonica CIELI SU TORINO 96-26 @ OGR https://ogrtorino.it/events/subsonica-cieli-su-torino-96-26-ogr-torino
+13. Subsonica - Live Nation https://www.livenation.it/subsonica-torino-2026
+14. Subsonica - Turismo Torino https://turismotorino.org/it/visita/eventi/subsonica-cieli-su-torino-96-26
 15. Rocky - Musical.it https://www.musical.it/spettacolo/rocky
-16. Rocky The Musical - Teatro Alfieri Turin https://www.teatroalfieritorino.it/rocky-the-musical-2/
-17. Events in Turin 2025 2026 - VisitareTorino https://www.visitaretorino.it/torino-eventi.php
-18. Concerts Turin 2026 - Concerti-Italia.it https://www.concerti-italia.it/concerti/piemonte/torino/2026/
-19. in Piemonte in Torino: Your Regional Event Calendar https://www.inpiemonteintorino.it
+16. Rocky at Teatro Alfieri https://www.teatroalfieritorino.it/rocky-the-musical-2/
+17. Events in Turin 2025-2026 https://www.visitaretorino.it/torino-eventi.php
+18. Concerts Turin 2026 https://www.concerti-italia.it/concerti/piemonte/torino/2026/
+19. Piedmont Events Calendar https://www.inpiemonteintorino.it
