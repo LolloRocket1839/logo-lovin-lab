@@ -675,49 +675,73 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-09",
     author: "Jungle Rent Team",
     image: "/images/cioccolato-festival-torino.jpg",
-    readTime: 25,
+    readTime: 28,
     content: "eventi-torino-febbraio-2026",
     translations: {
       it: {
-        title: "Eventi a Torino febbraio 2026",
-        excerpt: "Calendario degli eventi principali a Torino nel febbraio 2026.",
+        title: "Febbraio 2026 a Torino: tra amore, cioccolato, arte e palco lirico",
+        excerpt: "CioccolaTò, Macbeth di Muti, Battaglia delle Arance (UNESCO), Final Eight basket e mostre Lee Miller e Jeff Wall. Guida completa con prezzi, contatti e orari.",
         seo: {
-          title: "Eventi Torino febbraio 2026 | Calendario e info",
-          description: "Scopri gli eventi culturali, sportivi e di intrattenimento a Torino nel febbraio 2026.",
+          title: "Eventi Torino febbraio 2026 | CioccolaTò, Macbeth, Final Eight",
+          description: "Febbraio 2026 a Torino: CioccolaTò (60 stand), Macbeth con Riccardo Muti (€50-230), Battaglia delle Arance a Ivrea (UNESCO), Final Eight basket. Prezzi e contatti verificati.",
           keywords: [
             "eventi torino febbraio 2026",
-            "calendario eventi torino",
-            "manifestazioni torino",
-            "cultura torino",
-            "turismo torino"
+            "cioccolato torino 2026",
+            "macbeth teatro regio muti",
+            "battaglia arance ivrea unesco",
+            "final eight basket torino 2026",
+            "lee miller camera torino",
+            "jeff wall gallerie italia",
+            "carnevale ivrea 2026",
+            "san valentino torino",
+            "abbonamenti gtt torino"
           ]
         },
-        tags: ["Turisti", "Eventi", "Torino", "Cultura", "Calendario"],
+        tags: ["Turisti", "Eventi", "Torino", "CioccolaTò", "Opera", "Basket", "Ivrea", "UNESCO"],
         faqs: [
-          { question: "Quali sono gli eventi principali a febbraio 2026?", answer: "Festival del cioccolato, concerti e mostre d'arte." },
-          { question: "Dove trovare informazioni aggiornate?", answer: "Siti ufficiali del Comune di Torino e uffici turistici." },
-          { question: "Ci sono eventi per famiglie?", answer: "Sì, molte iniziative sono pensate anche per bambini e famiglie." }
+          { question: "Quando si tiene CioccolaTò 2026 a Torino?", answer: "Dal 13 al 17 febbraio 2026 in Piazza Vittorio Veneto. Orari: venerdì e sabato 10:00-21:00, altri giorni 10:00-20:00. Ingresso gratuito con circa 60 produttori e oltre 70 stand." },
+          { question: "Quanto costano i biglietti per Macbeth al Teatro Regio?", answer: "I biglietti per Macbeth diretto da Riccardo Muti vanno da €50 a €230 a seconda del settore. Acquistabili su teatroregio.torino.it o vivaticket.com." },
+          { question: "La Battaglia delle Arance è Patrimonio UNESCO?", answer: "Sì, il Carnevale Storico di Ivrea è Patrimonio UNESCO dal 2023. Il biglietto costa €15 (intero), €10 (ridotto soci), gratuito per residenti Ivrea e bambini fino a 12 anni." },
+          { question: "Dove si giocano le Final Eight di basket 2026?", answer: "All'Inalpi Arena, Corso Sebastopoli 123, Torino. Quarti 18-19 febbraio, semifinali 21 febbraio, finale 22 febbraio ore 17:00. Biglietti da €15." },
+          { question: "C'è un codice sconto Trenitalia per la Final Eight?", answer: "Sì, usa il codice FINALEIGHT26 per ottenere sconti dal 20% al 75% sui treni Trenitalia per Torino durante l'evento." },
+          { question: "Quanto costa l'abbonamento GTT giornaliero a Torino?", answer: "L'abbonamento turistico GTT costa €5,50 giornaliero, €8,50 per 2 giorni e €14 settimanale. Include tram, metro e bus." },
+          { question: "Dove si tiene il concerto Candlelight Morricone a Torino?", answer: "Al Palazzo della Luce, Via Antonio Bertola 40, il 26 febbraio 2026 ore 19:30. Durata circa 65 minuti, biglietti da €30." },
+          { question: "Quali sono le date di Claudio Bisio a Torino?", answer: "Claudio Bisio si esibisce al Teatro Colosseo (Via Madama Cristina 71) il 6, 7 e 8 febbraio 2026. Biglietti €31. Telefono: +39 011 651 0161." },
+          { question: "Quando chiudono le mostre di Lee Miller e Jeff Wall?", answer: "Entrambe chiudono il 1° febbraio 2026. Lee Miller a CAMERA (€13 intero), Jeff Wall alle Gallerie d'Italia (€10 intero, under 18 gratis)." },
+          { question: "Come contattare Turismo Torino per informazioni?", answer: "Telefono +39 011 535181, sito turismotorino.org. Per il Carnevale di Ivrea: Ufficio Turismo +39 0125 618131." }
         ]
       },
       en: {
-        title: "Events in Turin February 2026",
-        excerpt: "Calendar of main events in Turin in February 2026.",
+        title: "February 2026 in Turin: love, chocolate, art and opera",
+        excerpt: "CioccolaTò, Muti's Macbeth, Battle of the Oranges (UNESCO), Final Eight basketball and Lee Miller/Jeff Wall exhibitions. Complete guide with verified prices and contacts.",
         seo: {
-          title: "Events Turin February 2026 | Calendar and info",
-          description: "Discover cultural, sports and entertainment events in Turin in February 2026.",
+          title: "Turin events February 2026 | CioccolaTò, Macbeth, Final Eight",
+          description: "February 2026 in Turin: CioccolaTò (60 stands), Macbeth with Riccardo Muti (€50-230), Battle of the Oranges in Ivrea (UNESCO), Final Eight basketball. Verified prices and contacts.",
           keywords: [
-            "events turin february 2026",
-            "events calendar turin",
-            "turin happenings",
-            "culture turin",
-            "turin tourism"
+            "turin events february 2026",
+            "ciocolato turin 2026",
+            "macbeth teatro regio muti",
+            "battle oranges ivrea unesco",
+            "final eight basketball turin 2026",
+            "lee miller camera turin",
+            "jeff wall gallerie italia",
+            "ivrea carnival 2026",
+            "valentine turin",
+            "gtt turin passes"
           ]
         },
-        tags: ["Tourists", "Events", "Turin", "Culture", "Calendar"],
+        tags: ["Tourists", "Events", "Turin", "CioccolaTò", "Opera", "Basketball", "Ivrea", "UNESCO"],
         faqs: [
-          { question: "What are the main events in February 2026?", answer: "Chocolate festival, concerts and art exhibitions." },
-          { question: "Where to find updated information?", answer: "Official Turin Municipality websites and tourist offices." },
-          { question: "Are there family-friendly events?", answer: "Yes, many initiatives are designed also for children and families." }
+          { question: "When is CioccolaTò 2026 in Turin?", answer: "February 13-17, 2026 in Piazza Vittorio Veneto. Hours: Friday-Saturday 10:00-21:00, other days 10:00-20:00. Free entry with about 60 producers and over 70 stands." },
+          { question: "How much are Macbeth tickets at Teatro Regio?", answer: "Tickets for Macbeth conducted by Riccardo Muti range from €50 to €230 depending on section. Available on teatroregio.torino.it or vivaticket.com." },
+          { question: "Is the Battle of the Oranges a UNESCO World Heritage?", answer: "Yes, the Historic Ivrea Carnival has been UNESCO World Heritage since 2023. Tickets: €15 full, €10 reduced, free for Ivrea residents and children under 12." },
+          { question: "Where is the Final Eight basketball 2026?", answer: "At Inalpi Arena, Corso Sebastopoli 123, Turin. Quarterfinals Feb 18-19, semifinals Feb 21, final Feb 22 at 17:00. Tickets from €15." },
+          { question: "Is there a Trenitalia discount for Final Eight?", answer: "Yes, use code FINALEIGHT26 for 20-75% discounts on Trenitalia trains to Turin during the event." },
+          { question: "How much is a GTT day pass in Turin?", answer: "Tourist GTT passes cost €5.50 daily, €8.50 for 2 days, and €14 weekly. Includes tram, metro and bus." },
+          { question: "Where is the Candlelight Morricone concert?", answer: "At Palazzo della Luce, Via Antonio Bertola 40, February 26, 2026 at 19:30. Duration about 65 minutes, tickets from €30." },
+          { question: "What are Claudio Bisio's Turin dates?", answer: "Claudio Bisio performs at Teatro Colosseo (Via Madama Cristina 71) on February 6, 7 and 8, 2026. Tickets €31. Phone: +39 011 651 0161." },
+          { question: "When do the Lee Miller and Jeff Wall exhibitions close?", answer: "Both close February 1, 2026. Lee Miller at CAMERA (€13 full), Jeff Wall at Gallerie d'Italia (€10 full, under 18 free)." },
+          { question: "How to contact Turismo Torino for information?", answer: "Phone +39 011 535181, website turismotorino.org. For Ivrea Carnival: Tourism Office +39 0125 618131." }
         ]
       }
     }
