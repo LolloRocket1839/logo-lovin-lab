@@ -75,6 +75,17 @@ Interactive directory for transport strikes in Italy with emergency contacts, re
   - Jan 30: RFI Bologna, Sicilia bus (Gallo, Giamporcaro, Sais)
 - **February-March 2026**: Feb 16 (air), Mar 7 (air)
 
+## February 2026 events
+
+- **CioccolaTò**: Feb 13-17, Piazza Vittorio Veneto - 60+ artisan chocolatiers, free entry
+- **Lee Miller Exhibition**: Until Feb 1 at CAMERA (€13/€10)
+- **Jeff Wall Photos**: Until Feb 1 at Gallerie d'Italia (€10/€8)
+- **Macbeth**: Feb 20 - Mar 7, Teatro Regio - Conducted by Riccardo Muti (€50-230)
+- **Battle of the Oranges**: Feb 15, Ivrea - UNESCO Heritage since 2023 (€15)
+- **Final Eight Basketball**: Feb 18-22, Inalpi Arena (from €15)
+- **Claudio Bisio**: Feb 6-8, Teatro Colosseo (€31)
+- **Candlelight Ennio Morricone**: Feb 26, Palazzo della Luce (from €30)
+
 ## Optional
 
 For detailed information:
@@ -82,5 +93,5 @@ For detailed information:
 - Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: January 13, 2026
-Version: 3.1 - Strike Calendar Updated
+Last Updated: February 1, 2026
+Version: 3.2 - February 2026 events added
