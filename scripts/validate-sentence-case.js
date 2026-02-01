@@ -11,33 +11,43 @@ import path from 'path';
 const PROPER_NOUNS = [
   // Cities and regions
   'Turin', 'Torino', 'Italy', 'Italian', 'Piedmont', 'Piemonte', 'Piedmontese',
-  'Alba', 'Langhe', 'Monferrato', 'Ivrea', 'Milano', 'Moncalieri',
+  'Alba', 'Langhe', 'Monferrato', 'Ivrea', 'Milano', 'Moncalieri', 'Rome', 'Roma',
   
   // Turin neighborhoods
   'San Salvario', 'Porta Palazzo', 'Quadrilatero', 'Vanchiglia', 'Barriera',
   'Aurora', 'Crocetta', 'Cenisia', 'Lingotto', 'Mirafiori', 'Rebaudengo',
-  'Santa Rita', 'Borgo', 'Parella', 'Lucento', 'Falchera',
+  'Santa Rita', 'Borgo', 'Parella', 'Lucento', 'Falchera', 'Pozzo Strada',
+  'Borgo Vittoria', 'Madonna del Pilone', 'Sassi',
   
   // Institutions and universities
   'Politecnico', 'UniTo', 'EDISU', 'GTT', 'CUS', 'Amiat', 'CONAI', 'CONOE',
   'CAMERA', 'Gallerie', 'Teatro Regio', 'Einaudi', 'Bobbio', 'Gabetti',
+  'ESCP', 'SAA', 'IED', 'IAAD', 'IUSTO', 'LUISS', 'Bocconi',
   
   // Libraries, museums and venues (proper names)
   'National', 'Central', 'Public', 'Library', 'Reading', 'Room', 'Hall', 'Study',
   'Passerin', 'Entrèves', 'Primo Levi', 'Alberto Geisser', 'Villa Amoretti',
   'Norberto Bobbio', 'Economics', 'Management', 'Istoreto', 'Palazzo',
+  'Michelangelo', 'Buonarroti', 'Pietro Giuria', 'Cascina Giajone',
+  'Roberto Gabetti', 'Castello', 'Valentino',
+  
+  // Bars, cafés and venues
+  'Barney', 'Casa', 'Quartiere', 'Combo', 'Costadoro', 'Social', 'Coffee', 'Factory',
+  'Orso', 'Laboratorio', 'Caffè', 'Bar', 'Micca', 'Imbarchino',
   
   // Landmarks
-  'Po', 'Alps', 'Valentino', 'Superga', 'Mole', 'Murazzi', 'Colletta',
+  'Po', 'Alps', 'Superga', 'Mole', 'Murazzi', 'Colletta', 'Dora',
   
   // Tech and acronyms
-  'WiFi', 'FAQ', 'PDF', 'API', 'WEEE', 'RAEE', 'LED', 'NFC', 'QR',
+  'WiFi', 'Wi-Fi', 'FAQ', 'PDF', 'API', 'WEEE', 'RAEE', 'LED', 'NFC', 'QR', 'GPS',
+  'GDPR', 'FADP', 'RLS', 'SEO',
   
   // Brands
   'Jungle Rent', 'Jungle Control', 'Props', 'JungleRent',
   'Caffarel', 'Venchi', 'Baratti', 'Peyrano', 'Gobino', 'Stratta', 'Pfatisch',
   'McFIT', 'FitActive', 'Virgin Active', 'GO Fit', 'Anytime Fitness',
   'Trenitalia', 'Frecciarossa', 'Dott', 'Lime', 'Moovit',
+  'Savills', 'OMI', 'PBSA', 'MAO',
   
   // Months and days
   'January', 'February', 'March', 'April', 'May', 'June',
@@ -45,30 +55,42 @@ const PROPER_NOUNS = [
   'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday',
   
   // Organizations
-  'Savills', 'OMI', 'PBSA', 'EU', 'Erasmus', 'Europe', 'European',
+  'EU', 'Erasmus', 'Europe', 'European',
   'Nobel', 'UNESCO', 'FIAT', 'Lavazza', 'Stellantis', 'Leonardo',
+  'Fondazione', 'Time2', 'Circolo', 'Lettori', 'Artisti',
   
   // Events and cultural terms
   'Christmas', 'New Year', 'Easter', 'Carnival', 'CioccolaTò', 'Macbeth',
-  'Baroque', 'Renaissance', 'Art Nouveau', 'Seicento',
+  'Baroque', 'Renaissance', 'Art Nouveau', 'Seicento', 'Battle', 'Oranges',
+  'Chiharu', 'Shiota', 'Mika', 'Inalpi', 'Arena',
   
   // Roman numerals and misc
   'I', 'II', 'III', 'IV', 'V',
   'Piazza', 'Via', 'Corso', 'Largo',
-  '2i3T', 'UNITA', 'University', 'Polytechnic', 'Battle', 'Campus', 'Diffused',
+  '2i3T', 'UNITA', 'University', 'Polytechnic', 'Campus', 'Diffused',
   'East', 'West', 'North', 'South',
   
-  // Venues and spaces
-  'Comala', 'Off Topic', 'Youth', 'Centre', 'Imbarchino', 'Park',
-  'OGR', 'Officine', 'Circolo', 'Lettori', 'Artisti', 'Coworking',
-  'CAP10100', 'Arci', 'Bunker', 'Barrito',
+  // Coworking and cultural venues
+  'Comala', 'Off Topic', 'Youth', 'Centre', 'Park',
+  'OGR', 'Officine', 'Grandi', 'Riparazioni', 'Coworking',
+  'CAP10100', 'Arci', 'Bunker', 'Barrito', 'Open',
+  'Polo', '900', 'San Daniele',
   
   // Food and restaurants
-  'Gianduiotto', 'Bicerin', 'Cremino', 'Nutella',
+  'Gianduiotto', 'Bicerin', 'Cremino', 'Nutella', 'Tajarin',
   
   // People names (common in headings)
   'Morricone', 'Muti', 'Bisio', 'Miller', 'Wall', 'Amadeus',
-  'Erasmus', 'Rotterdam', 'Cavour', 'Garibaldi'
+  'Rotterdam', 'Cavour', 'Garibaldi',
+  
+  // Misc proper nouns from articles
+  'Definition', 'Agreement', 'Transition', 'Strategic', 'Administrative',
+  'Regulatory', 'Comparative', 'Summary', 'Recommended', 'Effect',
+  'Properties', 'Special', 'Future', 'Conclusions',
+  'Which', 'Are', 'Can', 'Where', 'What', 'Do', 'How', 'Why', 'When',
+  'Bonus', 'Student', 'Zone', 'Turin Student Zone',
+  'Bars', 'Parks', 'Outdoor',
+  'Frequently', 'Asked', 'Questions'
 ];
 
 function isProperNoun(word) {
