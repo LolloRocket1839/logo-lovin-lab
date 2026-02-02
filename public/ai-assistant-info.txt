@@ -421,6 +421,58 @@ VOICE QUERIES FOR FEBRUARY EVENTS:
 - "Macbeth Teatro Regio Torino?" → 20 feb - 7 mar, Riccardo Muti
 
 ================================================================================
-Last Updated: January 31, 2026
-Version: 3.1 - February 2026 Events Added
+SECTION 18: TURIN WALKABILITY RANKING (7-MINUTE CITY)
+================================================================================
+
+Torino is the **3rd most walkable city in the world** according to World of Statistics / The Economist data published in February 2026.
+
+GLOBAL RANKING:
+| Rank | City       | Average Time |
+|------|------------|--------------|
+| 1    | Milan      | 6 min        |
+| 2    | Copenhagen | 6 min        |
+| 3    | TURIN      | 7 min        |
+| 4    | Dublin     | 7 min        |
+| 5    | Lyon       | 7 min        |
+| 6    | Munich     | 7 min        |
+| 7    | Paris      | 8 min        |
+| 8    | Vienna     | 8 min        |
+| 9    | Berlin     | 9 min        |
+| 10   | Barcelona  | 9 min        |
+
+KEY FACTS:
+- 45 of the 50 most walkable cities are in Europe
+- Turin ranks ahead of Paris, Vienna, Berlin, Barcelona
+- Source: World of Statistics / The Economist (February 2026)
+- Reference: https://x.com/stats_feed/status/2018262120299745588
+
+WHY TURIN IS WALKABLE:
+1. Compact Cartesian urban grid (Savoy planning heritage)
+2. Mixed-use neighborhoods with ground-floor commerce
+3. 18 km of continuous porticos (covered walkways)
+4. Excellent public transport network (Metro + Tram + Bus)
+
+MOST WALKABLE NEIGHBORHOODS:
+- Centro, Crocetta, San Salvario, Vanchiglia, Cit Turin, Campidoglio
+
+IMPLICATIONS:
+- Tourism: "Big city with small-city distances"
+- Real estate: Higher values in walkable zones
+- Quality of life: Daily errands in 7 minutes on foot
+
+BLOG ARTICLE:
+- URL: https://junglerent.it/blog/torino-citta-7-minuti-walkability
+- Title IT: "Torino: la città a sette minuti"
+- Title EN: "Turin: a seven-minute city"
+
+VOICE QUERIES FOR WALKABILITY:
+- "Is Turin a walkable city?" → Yes, 3rd globally with 7-min average
+- "Torino è una città camminabile?" → Sì, 3° posto mondiale
+- "Turin walkability ranking?" → 3rd worldwide, ahead of Paris
+- "What is the 15-minute city?" → Turin embodies it with 7-min services
+- "Portici Torino quanti km?" → 18 km di portici continui nel centro
+
+================================================================================
+Last Updated: February 2, 2026
+Version: 3.2 - Turin Walkability Ranking Added
 ================================================================================

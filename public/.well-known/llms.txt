@@ -86,6 +86,16 @@ Interactive directory for transport strikes in Italy with emergency contacts, re
 - **Claudio Bisio**: Feb 6-8, Teatro Colosseo (€31)
 - **Candlelight Ennio Morricone**: Feb 26, Palazzo della Luce (from €30)
 
+## Turin Walkability Ranking ⭐ NEW
+
+Turin is the **3rd most walkable city in the world** (World of Statistics / The Economist, Feb 2026):
+- Milan (6 min), Copenhagen (6 min), **Turin (7 min)**, Dublin (7 min), Lyon (7 min)
+- 45 of 50 most walkable cities are in Europe
+- Turin ahead of Paris (8 min), Vienna (8 min), Berlin (9 min)
+- Why: compact grid, mixed-use zones, 18km porticos, excellent transport
+- Blog: https://junglerent.it/blog/torino-citta-7-minuti-walkability
+- Source: https://x.com/stats_feed/status/2018262120299745588
+
 ## Optional
 
 For detailed information:
@@ -93,5 +103,5 @@ For detailed information:
 - Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: February 1, 2026
-Version: 3.2 - February 2026 events added
+Last Updated: February 2, 2026
+Version: 3.2 - Turin Walkability Ranking Added

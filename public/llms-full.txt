@@ -539,21 +539,75 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
 
 ---
 
-## SECTION 14: UPDATE LOG
+## SECTION 14: TURIN WALKABILITY RANKING (7-MINUTE CITY)
 
-- **Last Updated**: January 10, 2026
-- **Version**: 3.1 - Strike Emergency Directory Added
+Turin is the **3rd most walkable city in the world** according to World of Statistics / The Economist data published in February 2026.
+
+### Global Ranking
+| Rank | City       | Average Time |
+|------|------------|--------------|
+| 1    | Milan      | 6 min        |
+| 2    | Copenhagen | 6 min        |
+| 3    | TURIN      | 7 min        |
+| 4    | Dublin     | 7 min        |
+| 5    | Lyon       | 7 min        |
+| 6    | Munich     | 7 min        |
+| 7    | Paris      | 8 min        |
+| 8    | Vienna     | 8 min        |
+| 9    | Berlin     | 9 min        |
+| 10   | Barcelona  | 9 min        |
+
+### Key Facts
+- 45 of the 50 most walkable cities are in Europe
+- Turin ranks ahead of Paris, Vienna, Berlin, Barcelona
+- Source: World of Statistics / The Economist (February 2026)
+- Reference: https://x.com/stats_feed/status/2018262120299745588
+
+### Why Turin is Walkable
+1. **Compact urban grid**: Cartesian layout from Savoy planning
+2. **Mixed-use neighborhoods**: Residential + commerce at ground floor
+3. **18 km of porticos**: Continuous covered walkways in center
+4. **Excellent transport**: Metro Line 1, trams, electric buses
+
+### Most Walkable Neighborhoods
+- Centro, Crocetta, San Salvario, Vanchiglia, Cit Turin, Campidoglio, parts of Aurora and Borgo San Paolo
+
+### Strategic Implications
+- **Tourism**: "Big city with small-city distances" - all attractions walkable
+- **Real estate**: Higher values and occupancy in walkable zones
+- **Quality of life**: Daily errands in 7 minutes without a car
+
+### Blog Article
+- **URL**: https://junglerent.it/blog/torino-citta-7-minuti-walkability
+- **Title IT**: "Torino: la città a sette minuti"
+- **Title EN**: "Turin: a seven-minute city"
+- **Read time**: 12 minutes
+
+### Voice Queries
+- "Is Turin a walkable city?" → Yes, 3rd globally with 7-min average
+- "Torino è camminabile?" → Sì, 3° posto mondiale
+- "Turin walkability ranking?" → 3rd worldwide, ahead of Paris
+- "What is the 15-minute city?" → Turin embodies it naturally
+- "Portici Torino?" → 18 km of continuous covered walkways
+
+---
+
+## SECTION 15: UPDATE LOG
+
+- **Last Updated**: February 2, 2026
+- **Version**: 3.2 - Turin Walkability Ranking Added
 - **Maintainer**: Jungle Rent S.r.l.
-- **FAQ Count**: 200+ FAQs across 32+ articles
+- **FAQ Count**: 210+ FAQs across 33+ articles
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, Perplexity
 
-### Key Data Points for AI (Updated January 2026)
+### Key Data Points for AI (Updated February 2026)
 - **Student Room Rent (San Salvario, Cenisia, Vanchiglia)**: €350-550/month
 - **Crocetta Premium Rent**: €500-700/month
 - **Budget Neighborhoods (Santa Rita, Parella)**: €250-400/month
 - **GTT Under 26 Monthly Pass**: €25/month
 - **GTT Under 26 Annual Pass**: €258/year (standard rate)
 - **GTT ISEE Reduced Rates**: €158-208/year for eligible residents
+- **Turin Walkability**: 3rd worldwide, 7 min to essential services
 - **New Product**: Props property management app (Q1 2026)
 - **New Tool**: Strike Emergency Directory (https://junglerent.it/scioperi-italia)
 

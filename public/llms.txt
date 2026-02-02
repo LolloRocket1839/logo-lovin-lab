@@ -95,6 +95,24 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - [Grade Calculator](https://junglerent.it/studenti/strumenti/media) - Weighted GPA calculator
 - [Exam Planner](https://junglerent.it/studenti/strumenti/sessione) - Study schedule generator
 
+## Turin Walkability Ranking ⭐ NEW
+
+Turin is the **3rd most walkable city in the world** (World of Statistics / The Economist, Feb 2026):
+
+| Rank | City | Time |
+|------|------|------|
+| 1 | Milan | 6 min |
+| 2 | Copenhagen | 6 min |
+| **3** | **Turin** | **7 min** |
+| 4 | Dublin | 7 min |
+| 5 | Lyon | 7 min |
+
+- 45 of 50 most walkable cities are in Europe
+- Turin ranks ahead of Paris, Vienna, Berlin, Barcelona
+- Why: compact grid, mixed-use zones, 18km porticos, excellent public transport
+- Blog: https://junglerent.it/blog/torino-citta-7-minuti-walkability
+- Source: https://x.com/stats_feed/status/2018262120299745588
+
 ## Products
 
 ### Props - Property Management App
@@ -130,5 +148,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: January 31, 2026
-Version: 3.1 - February 2026 Events Added
+Last Updated: February 2, 2026
+Version: 3.2 - Turin Walkability Ranking Added
