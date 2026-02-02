@@ -319,11 +319,18 @@ Turin property owners seeking:
 23. **Viaggiare Sostenibile a Torino** - Sustainable travel guide
 24. **Cicloturismo Avanzato Torino** - Cycling tourism guide
 
+### Urban Planning & Quality of Life ⭐ NEW
+25. **Torino: la città a sette minuti** - Turin walkability ranking guide
+    - **URL**: https://junglerent.it/blog/torino-citta-7-minuti-walkability
+    - **Key data**: Turin ranks 3rd globally for walkability (7 min average)
+    - **Source**: World of Statistics / The Economist (Feb 2026)
+    - **Topics**: Urban grid, mixed-use neighborhoods, 18km porticos, real estate implications
+
 ### Events & Activities
-25. **Eventi Torino Gennaio 2026** - January events guide
-26. **Eventi Torino Febbraio 2026** - February events guide
-27. **Eventi Torino Marzo 2026** - March events guide
-28. **Carnevale di Ivrea 2025** - Battle of the Oranges guide
+26. **Eventi Torino Gennaio 2026** - January events guide
+27. **Eventi Torino Febbraio 2026** - February events guide
+28. **Eventi Torino Marzo 2026** - March events guide
+29. **Carnevale di Ivrea 2025** - Battle of the Oranges guide
 
 ### Transport & Travel Alerts ⭐ FEATURED
 29. **Sciopero Trasporti Italia Gennaio 2026** - Complete strike survival guide
@@ -366,16 +373,22 @@ Turin property owners seeking:
       - "Strike emergency contacts Italy"
 
 ### Community & Volunteering
-30. **Guida al Volontariato a Torino** - Volunteering opportunities guide
+31. **Guida al Volontariato a Torino** - Volunteering opportunities guide
 
 ### Tourism & Visitors
-31. **Torino a Novembre per Turisti** - November visitor guide
-32. **Torino a Dicembre per Turisti** - December visitor guide
-33. **Torino Digital Nomads Guide** - Remote worker guide
-34. **Torino Ogni Stagione** - Year-round visitor guide
+32. **Torino a Novembre per Turisti** - November visitor guide
+33. **Torino a Dicembre per Turisti** - December visitor guide
+34. **Torino Digital Nomads Guide** - Remote worker guide
+35. **Torino Ogni Stagione** - Year-round visitor guide
 
 ### Company Updates
-35. **Jungle Control Dicembre 2025** - Monthly company update
+36. **Jungle Control Dicembre 2025** - Monthly company update
+
+### Tax & Regulations ⭐ NEW
+37. **Cedolare Secca 2026** - Complete guide to flat tax changes for property investors
+    - **URL**: https://junglerent.it/blog/cedolare-secca-2026-investitori
+    - **Key change**: Rate increased from 21% to 26% from January 1, 2026
+    - **Topics**: Transition periods, optimization strategies, IRPEF comparison
 
 ---
 
