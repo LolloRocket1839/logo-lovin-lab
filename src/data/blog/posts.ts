@@ -2,6 +2,83 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "torino-citta-7-minuti-walkability",
+    category: "societa",
+    date: "2026-02-02",
+    author: "Jungle Rent Team",
+    image: "/images/portici-torino.jpg",
+    readTime: 12,
+    content: "torino-citta-7-minuti-walkability",
+    translations: {
+      it: {
+        title: "Torino: la città a sette minuti",
+        excerpt: "Torino è la terza città più camminabile al mondo. 7 minuti per raggiungere scuole, negozi e servizi essenziali.",
+        seo: {
+          title: "Torino città 7 minuti | Walkability e qualità della vita",
+          description: "Torino al 3° posto mondiale per camminabilità. Analisi del ranking World of Statistics, implicazioni per immobiliare, turismo e vita quotidiana.",
+          keywords: [
+            "torino walkability",
+            "città 15 minuti torino",
+            "camminabilità torino",
+            "città camminabili europa",
+            "qualità vita torino",
+            "urbanistica torino",
+            "portici torino",
+            "torino vs milano walkability",
+            "investire torino walkability",
+            "15 minute city italia"
+          ]
+        },
+        tags: ["Società", "Urbanistica", "Qualità vita", "Torino", "Sostenibilità"],
+        faqs: [
+          { question: "Torino è una città camminabile?", answer: "Sì, Torino è la terza città più camminabile al mondo secondo World of Statistics / The Economist. In media servono solo 7 minuti a piedi per raggiungere scuole, negozi e servizi sanitari essenziali." },
+          { question: "Quanti minuti servono per raggiungere i servizi a Torino?", answer: "In media 7 minuti a piedi. Questo posiziona Torino al terzo posto mondiale per camminabilità, dopo Milano (6 min) e Copenaghen (6 min)." },
+          { question: "Qual è la posizione di Torino nella classifica delle città più camminabili?", answer: "Torino è al 3° posto mondiale per camminabilità, davanti a Parigi (8 min), Vienna (8 min), Berlino (9 min) e Barcellona (9 min)." },
+          { question: "Torino è più camminabile di Milano?", answer: "No, Milano è leggermente più camminabile con 6 minuti medi, rispetto ai 7 di Torino. Entrambe sono però nella top 3 mondiale." },
+          { question: "Perché Torino è così camminabile?", answer: "Quattro fattori: griglia urbana compatta e razionale, quartieri a uso misto con commercio al piano terra, 18 km di portici continui e un'eccellente rete di trasporto pubblico." },
+          { question: "Cosa sono i portici di Torino?", answer: "I portici sono camminamenti coperti che collegano le vie principali del centro. Torino ne ha oltre 18 km, che proteggono da pioggia e sole e rendono la passeggiata piacevole tutto l'anno." },
+          { question: "Torino è una città a 15 minuti?", answer: "Sì, Torino incarna naturalmente il concetto di 'città a 15 minuti'. La maggior parte dei servizi essenziali è raggiungibile in soli 7 minuti a piedi." },
+          { question: "La camminabilità influenza i prezzi degli immobili a Torino?", answer: "Sì, i quartieri più camminabili come Centro, Crocetta, San Salvario e Vanchiglia mostrano valori immobiliari più alti e tassi di occupazione superiori negli affitti." },
+          { question: "Quali quartieri di Torino sono più camminabili?", answer: "I più camminabili sono Centro, Crocetta, San Salvario, Vanchiglia, Cit Turin e Campidoglio. Le zone periferiche post-belliche tendono ad avere distanze maggiori." },
+          { question: "Torino è camminabile anche d'inverno?", answer: "Sì, grazie ai 18 km di portici coperti che proteggono dalla pioggia e dal freddo. Il sistema dei portici rende la camminata piacevole in ogni stagione." }
+        ]
+      },
+      en: {
+        title: "Turin: a seven-minute city",
+        excerpt: "Turin ranks 3rd globally for walkability. Just 7 minutes to reach schools, shops, and essential services.",
+        seo: {
+          title: "Turin walkability ranking | 7-minute city guide",
+          description: "Turin ranks 3rd worldwide for walkability. Analysis of World of Statistics ranking, implications for real estate, tourism, and daily life.",
+          keywords: [
+            "turin walkability",
+            "15 minute city turin",
+            "walkable cities europe",
+            "turin quality of life",
+            "turin urban planning",
+            "turin porticos",
+            "turin vs milan walkability",
+            "invest turin walkability",
+            "15 minute city italy",
+            "most walkable cities world"
+          ]
+        },
+        tags: ["Society", "Urban planning", "Quality of life", "Turin", "Sustainability"],
+        faqs: [
+          { question: "Is Turin a walkable city?", answer: "Yes, Turin is the third most walkable city in the world according to World of Statistics / The Economist. On average, it takes just 7 minutes on foot to reach schools, shops, and essential healthcare services." },
+          { question: "How long does it take to reach services in Turin?", answer: "On average 7 minutes on foot. This ranks Turin third worldwide for walkability, after Milan (6 min) and Copenhagen (6 min)." },
+          { question: "Where does Turin rank among the most walkable cities?", answer: "Turin ranks 3rd worldwide for walkability, ahead of Paris (8 min), Vienna (8 min), Berlin (9 min), and Barcelona (9 min)." },
+          { question: "Is Turin more walkable than Milan?", answer: "No, Milan is slightly more walkable with 6 minutes average, compared to Turin's 7. However, both are in the global top 3." },
+          { question: "Why is Turin so walkable?", answer: "Four factors: compact and rational urban grid, mixed-use neighborhoods with ground-floor commerce, 18 km of continuous porticos, and an excellent public transport network." },
+          { question: "What are Turin's porticos?", answer: "Porticos are covered walkways connecting the main streets of the city center. Turin has over 18 km of them, protecting from rain and sun and making walking pleasant year-round." },
+          { question: "Is Turin a 15-minute city?", answer: "Yes, Turin naturally embodies the '15-minute city' concept. Most essential services are reachable in just 7 minutes on foot." },
+          { question: "Does walkability affect property prices in Turin?", answer: "Yes, the most walkable neighborhoods like Centro, Crocetta, San Salvario, and Vanchiglia show higher property values and better occupancy rates for rentals." },
+          { question: "Which neighborhoods in Turin are most walkable?", answer: "The most walkable are Centro, Crocetta, San Salvario, Vanchiglia, Cit Turin, and Campidoglio. Post-war peripheral areas tend to have longer distances." },
+          { question: "Is Turin walkable in winter?", answer: "Yes, thanks to 18 km of covered porticos that protect from rain and cold. The portico system makes walking pleasant in any season." }
+        ]
+      }
+    }
+  },
+  {
     slug: "cedolare-secca-2026-investitori",
     category: "investors",
     date: "2026-01-17",

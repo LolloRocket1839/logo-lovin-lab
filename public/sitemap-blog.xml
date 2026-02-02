@@ -531,4 +531,19 @@
     </image:image>
   </url>
 
+  <!-- SOCIETA: Torino città 7 minuti walkability -->
+  <url>
+    <loc>https://junglerent.it/blog/torino-citta-7-minuti-walkability</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-citta-7-minuti-walkability" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-citta-7-minuti-walkability" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-citta-7-minuti-walkability" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
+      <image:title>Torino città 7 minuti walkability</image:title>
+    </image:image>
+  </url>
+
 </urlset>
