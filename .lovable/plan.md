@@ -1,133 +1,254 @@
 
 
-## Piano: correzione sentence case in tutti gli articoli inglesi e nelle altre lingue (eccetto tedesco)
+# Plan: Create standalone article "Turin: A Seven-Minute City"
 
-### Panoramica
+## Summary
 
-Il sentence case richiede che solo la **prima lettera** della frase sia maiuscola, insieme ai **nomi propri**. Questa regola si applica a tutte le lingue eccetto il tedesco (che capitalizza tutti i sostantivi secondo le regole grammaticali tedesche).
-
----
-
-### File da modificare
-
-#### 1. Articoli blog inglesi (37 file)
-
-I seguenti articoli contengono violazioni del sentence case nei titoli e nelle intestazioni:
-
-| File | Problemi principali |
-|------|---------------------|
-| `eventi-torino-marzo-2026.md` | "The Great Exhibitions: Between East and Italian Seicento" → "The great exhibitions" |
-| `eventi-torino-marzo-2026.md` | "Other Ongoing Exhibitions" → "Other ongoing exhibitions" |
-| `eventi-torino-marzo-2026.md` | "Concerts: From Pop Stars to Sound Installations" → "Concerts" |
-| `eventi-torino-marzo-2026.md` | "Musical Theater: Major Productions and Comedy Shows" → "Musical theater" |
-| `eventi-torino-marzo-2026.md` | "Conferences, Talk Shows and Intellectual Encounters" → "Conferences and talks" |
-| `eventi-torino-marzo-2026.md` | "How to Navigate Among So Many Events" → "How to navigate among events" |
-| `cicloturismo-avanzato-torino.md` | "Turin's Cycling Infrastructure: 290 km of Paths" → "Turin's cycling infrastructure" |
-| `carnevale-ivrea-battaglia-arance-2025.md` | "The History of the Ivrea Carnival" → "The history of the Ivrea Carnival" |
-| `carnevale-ivrea-battaglia-arance-2025.md` | "Medieval Origins and the Legend of Violetta" → "Medieval origins and the legend of Violetta" |
-| `carnevale-ivrea-battaglia-arance-2025.md` | "The Battle of Oranges: Historical Evolution" → "The battle of oranges: historical evolution" |
-| `torino-nightlife-guide.md` | "Premier Nightclubs and Dance Venues" → "Premier nightclubs and dance venues" |
-| `torino-nightlife-guide.md` | "Craft Beer Destinations and Gastropubs" → "Craft beer destinations and gastropubs" |
-| `torino-nightlife-guide.md` | "Live Music Venues and Cultural Spaces" → "Live music venues and cultural spaces" |
-| `torino-nightlife-guide.md` | "Neighborhood Nightlife Districts" → "Neighborhood nightlife districts" |
-| `torino-nightlife-guide.md` | "Cocktail Bars and Lounges" → "Cocktail bars and lounges" |
-| `politecnico-torino-guida-completa.md` | "History and Foundation: From Origins to Modernity" → "History and foundation" |
-| `politecnico-torino-guida-completa.md` | "Academic Programs and Departments: An Articulated Structure" → "Academic programs and departments" |
-| `dove-vivere-torino-studenti-politecnico.md` | "Related Articles" → "Related articles" |
-| `cioccolaterie-torino-guida-completa.md` | "Royal origins and the Royal Snack" → "Royal origins and the royal snack" |
-| E altri articoli... | Intestazioni con Title Case |
-
-**Correzioni da applicare a ogni intestazione:**
-- Solo prima lettera maiuscola
-- Nomi propri maiuscoli: Turin, Torino, San Salvario, Politecnico, UniTO, MAO, Mika, Subsonica, Gianduiotto, Bicerin, etc.
-- Acronimi maiuscoli: GTT, EDISU, WiFi, FAQ, UNESCO
-- Giorni e mesi maiuscoli: January, February, Sunday, etc.
+Create a comprehensive, well-researched bilingual article (IT/EN) analyzing Turin's global walkability ranking (3rd worldwide) based on World of Statistics / The Economist data. The article will explore why Turin is walkable, implications for real estate, tourism, and quality of life, positioning this as evergreen content for the "societa" category.
 
 ---
 
-#### 2. File `posts.ts` - Metadati SEO
+## Article specifications
 
-Verificare e correggere i titoli e gli excerpt in inglese che violano il sentence case.
-
----
-
-#### 3. Locale files (`src/i18n/locales/`)
-
-**File da verificare:**
-- `en.json` - Inglese (verificare UI labels)
-- `es.json` - Spagnolo (sentence case)
-- `fr.json` - Francese (sentence case)
-- `sv.json` - Svedese (sentence case)
-- `zh.json` - Cinese (n/a - caratteri cinesi)
-
-**ESCLUSO:** `de.json` (Tedesco) - I sostantivi sono maiuscoli per regola grammaticale
-
-**Esempi di correzioni nei locale:**
-- Verificare che tutti i titoli delle sezioni usino sentence case
-- Button labels e CTA già corretti (verificare)
+| Property | Value |
+|----------|-------|
+| Slug | `torino-citta-7-minuti-walkability` |
+| Category | `societa` |
+| Date | `2026-02-02` |
+| Author | Jungle Rent Team |
+| Image | `/images/portici-torino.jpg` (existing, shows porticos) |
+| Read time | 12 minutes |
 
 ---
 
-### Dettagli tecnici implementazione
+## Content structure
 
-**Passaggi per ogni file markdown inglese:**
+### Italian version: `src/data/blog/content/it/torino-citta-7-minuti-walkability.md`
 
-1. Aprire il file
-2. Identificare tutte le intestazioni (`#`, `##`, `###`, etc.)
-3. Convertire ogni intestazione a sentence case
-4. Preservare maiuscole per:
-   - Nomi propri di luoghi (Turin, San Salvario, Porta Palazzo, etc.)
-   - Nomi di istituzioni (Politecnico, UniTO, MAO, Teatro Regio)
-   - Nomi di persone (Mika, Renato Zero, Chiharu Shiota)
-   - Acronimi (GTT, EDISU, UNESCO, WiFi)
-   - Nomi di brand (Gianduiotto, Bicerin, Caffarel)
-   - Mesi e giorni (January, Sunday)
+```
+# Torino: la città a sette minuti
 
-**Stima modifiche:**
-- ~37 file markdown inglesi
-- ~5-15 intestazioni per file da correggere
-- ~200-400 correzioni totali
+## Hook
+Turin ranks 3rd globally for walkability. 7 minutes average to reach daily essentials.
+
+## Sections
+
+1. **What the ranking says**
+   - Global comparison table (Milan 6 min, Copenhagen 6 min, Turin 7 min...)
+   - Source: World of Statistics / The Economist
+   - 45 of 50 most walkable cities are in Europe
+
+2. **Why Turin is walkable**
+   - Compact Cartesian urban grid (Savoy planning)
+   - Mixed-use neighborhoods (residential + ground-floor commerce)
+   - 18 km of continuous porticos
+   - Public transport as walkability multiplier (Metro, trams, buses)
+
+3. **The lived experience**
+   - Daily routine without a car
+   - Urban atmosphere: quiet streets, active ground floors
+   - Neighborhood examples: San Salvario, Vanchiglia, Aurora
+
+4. **Implications for tourism**
+   - Most attractions within walking distance
+   - "Big city with small-city distances"
+   - Neighborhood exploration encouraged
+
+5. **Implications for real estate**
+   - "Seven-minute premium" on property values
+   - Rental demand correlation with walkability
+   - Investment due diligence: assess walkability radius
+   - Neighborhood differentiation (core vs peripheral)
+
+6. **Turin in European context**
+   - Competes with Copenhagen, Lyon, Munich, Vienna
+   - Industrial reputation underestimates livability
+   - EU funding advantage for low-emission compact cities
+
+7. **Challenges and next steps**
+   - Peripheral gaps in amenity density
+   - Public space quality variations
+   - Cycling network fragmentation
+
+8. **Conclusion**
+   - Turin already lives the 15-minute city philosophy
+   - Structural asset for long-term value
+```
+
+### English version: `src/data/blog/content/en/torino-citta-7-minuti-walkability.md`
+
+Mirror structure with proper sentence case headings.
 
 ---
 
-### Checklist finale
+## Posts.ts entry
 
-#### Inglese (EN)
-- [ ] `eventi-torino-marzo-2026.md` - 8+ intestazioni
-- [ ] `carnevale-ivrea-battaglia-arance-2025.md` - 15+ intestazioni
-- [ ] `cicloturismo-avanzato-torino.md` - 10+ intestazioni
-- [ ] `torino-nightlife-guide.md` - 12+ intestazioni
-- [ ] `politecnico-torino-guida-completa.md` - 20+ intestazioni
-- [ ] `cioccolaterie-torino-guida-completa.md` - 10+ intestazioni
-- [ ] `cedolare-secca-2026-investitori.md` - 15+ intestazioni
-- [ ] `dove-vivere-torino-studenti-politecnico.md` - 10+ intestazioni
-- [ ] E tutti gli altri 29 articoli...
-
-#### Spagnolo, Francese, Svedese
-- [ ] Verificare `es.json`, `fr.json`, `sv.json` per titoli UI
+```typescript
+{
+  slug: "torino-citta-7-minuti-walkability",
+  category: "societa",
+  date: "2026-02-02",
+  author: "Jungle Rent Team",
+  image: "/images/portici-torino.jpg",
+  readTime: 12,
+  content: "torino-citta-7-minuti-walkability",
+  translations: {
+    it: {
+      title: "Torino: la città a sette minuti",
+      excerpt: "Torino è la terza città più camminabile al mondo. 7 minuti per raggiungere scuole, negozi e servizi essenziali.",
+      seo: {
+        title: "Torino città 7 minuti | Walkability e qualità della vita",
+        description: "Torino al 3° posto mondiale per camminabilità. Analisi del ranking World of Statistics, implicazioni per immobiliare, turismo e vita quotidiana.",
+        keywords: [
+          "torino walkability",
+          "città 15 minuti torino",
+          "camminabilità torino",
+          "città camminabili europa",
+          "qualità vita torino",
+          "urbanistica torino",
+          "portici torino",
+          "torino vs milano walkability",
+          "investire torino walkability",
+          "15 minute city italia"
+        ]
+      },
+      tags: ["Società", "Urbanistica", "Qualità vita", "Torino", "Sostenibilità"],
+      faqs: [
+        // 10 voice-optimized FAQs
+      ]
+    },
+    en: {
+      title: "Turin: a seven-minute city",
+      excerpt: "Turin ranks 3rd globally for walkability. Just 7 minutes to reach schools, shops, and essential services.",
+      seo: {
+        title: "Turin walkability ranking | 7-minute city guide",
+        description: "Turin ranks 3rd worldwide for walkability. Analysis of World of Statistics ranking, implications for real estate, tourism, and daily life.",
+        keywords: [
+          "turin walkability",
+          "15 minute city turin",
+          "walkable cities europe",
+          "turin quality of life",
+          "turin urban planning",
+          "turin porticos",
+          "turin vs milan walkability",
+          "invest turin walkability",
+          "15 minute city italy",
+          "most walkable cities world"
+        ]
+      },
+      tags: ["Society", "Urban planning", "Quality of life", "Turin", "Sustainability"],
+      faqs: [
+        // 10 voice-optimized FAQs
+      ]
+    }
+  }
+}
+```
 
 ---
 
-### Eccezioni confermate
+## FAQs (voice-optimized)
 
-| Lingua | Regola |
-|--------|--------|
-| Italiano (IT) | Sentence case ✅ (già corretto) |
-| Inglese (EN) | Sentence case ✅ (da correggere) |
-| Spagnolo (ES) | Sentence case ✅ |
-| Francese (FR) | Sentence case ✅ |
-| Svedese (SV) | Sentence case ✅ |
-| Cinese (ZH) | N/A (caratteri cinesi) |
-| **Tedesco (DE)** | **Sostantivi maiuscoli** (regola grammaticale - ESCLUSO) |
+### Italian
+
+1. "Torino è una città camminabile?"
+2. "Quanti minuti servono per raggiungere i servizi a Torino?"
+3. "Qual è la posizione di Torino nella classifica delle città più camminabili?"
+4. "Torino è più camminabile di Milano?"
+5. "Perché Torino è così camminabile?"
+6. "Cosa sono i portici di Torino?"
+7. "Torino è una città a 15 minuti?"
+8. "La camminabilità influenza i prezzi degli immobili a Torino?"
+9. "Quali quartieri di Torino sono più camminabili?"
+10. "Torino è camminabile anche d'inverno?"
+
+### English
+
+1. "Is Turin a walkable city?"
+2. "How long does it take to reach services in Turin?"
+3. "Where does Turin rank among the most walkable cities?"
+4. "Is Turin more walkable than Milan?"
+5. "Why is Turin so walkable?"
+6. "What are Turin's porticos?"
+7. "Is Turin a 15-minute city?"
+8. "Does walkability affect property prices in Turin?"
+9. "Which neighborhoods in Turin are most walkable?"
+10. "Is Turin walkable in winter?"
 
 ---
 
-### Risultato atteso
+## Writing style requirements
 
-Dopo l'implementazione:
-- ✅ Tutti i 37 articoli inglesi con intestazioni in sentence case
-- ✅ `posts.ts` metadati allineati
-- ✅ Locale files ES, FR, SV verificati
-- ✅ Validatore sentence case passa senza warning
-- ✅ Tedesco escluso (mantenere capitalizzazione corretta)
+Per existing blog standards:
+
+- Sentence case for all headings (EN and IT)
+- Natural, conversational tone
+- Sentences under 25 words average
+- No em dashes
+- Active voice preferred
+- Direct address (tu/voi in Italian)
+- No AI-written patterns
+
+---
+
+## Internal linking
+
+| Link target | Context |
+|-------------|---------|
+| `/blog/san-salvario-guida-studenti` | Neighborhood example |
+| `/blog/viaggiare-sostenibile-torino-guida` | Sustainable mobility |
+| `/blog/torino-digital-nomads-guide` | Work-life quality |
+| `/blog/dove-vivere-torino-studenti-politecnico` | Neighborhood choice |
+| `/investitori` | Real estate investment |
+
+---
+
+## Sitemap updates
+
+Add to `public/sitemap-blog.xml`:
+
+```xml
+<url>
+  <loc>https://junglerent.it/blog/torino-citta-7-minuti-walkability</loc>
+  <lastmod>2026-02-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-citta-7-minuti-walkability?lang=it"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-citta-7-minuti-walkability?lang=en"/>
+</url>
+```
+
+---
+
+## AI knowledge base updates
+
+Also update the three AI knowledge base files with the walkability section as previously planned.
+
+---
+
+## Files to create
+
+| File | Description |
+|------|-------------|
+| `src/data/blog/content/it/torino-citta-7-minuti-walkability.md` | Italian article (~1,800 words) |
+| `src/data/blog/content/en/torino-citta-7-minuti-walkability.md` | English article (~1,800 words) |
+
+## Files to modify
+
+| File | Changes |
+|------|---------|
+| `src/data/blog/posts.ts` | Add new blog post entry at top |
+| `public/sitemap-blog.xml` | Add URL with hreflang |
+| `public/ai-assistant-info.txt` | Add walkability section |
+| `public/llms.txt` | Add walkability summary |
+| `public/llms-full.txt` | Add walkability section |
+
+---
+
+## Source attribution
+
+```
+Source: World of Statistics / The Economist (February 2026)
+Reference: https://x.com/stats_feed/status/2018262120299745588
+```
 
