@@ -3,6 +3,7 @@ import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFilters } from "@/components/blog/BlogFilters";
 import { BlogGrid } from "@/components/blog/BlogGrid";
+import { PillarArticlesSection } from "@/components/blog/PillarArticlesSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -120,6 +121,14 @@ const Blog = () => {
             <AISearchBox />
           </div>
         </section>
+        
+        {/* Pillar Articles Section - Guide Complete */}
+        <section className="px-4 md:px-8">
+          <div className="container mx-auto max-w-7xl">
+            <PillarArticlesSection />
+          </div>
+        </section>
+        
         <section className="py-8 md:py-12 px-4 md:px-8">
           <div className="container mx-auto max-w-7xl">
             <BlogFilters 
