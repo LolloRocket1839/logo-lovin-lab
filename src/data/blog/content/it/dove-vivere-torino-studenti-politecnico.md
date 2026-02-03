@@ -149,39 +149,7 @@ Il costo totale mensile può quindi variare dai 300€ (periferia, doppia) agli 
 
 ## Come trovare casa vicino al Politecnico
 
-### Residenze universitarie e studentati
-
-Rivolgersi alle residenze universitarie convenzionate con il Politecnico è una prima ottima opzione. Strutture come il **Collegio Trinitatis**, **Camplus Regio Parco** e il **Campus Sanpaolo** offrono soluzioni studentesche con servizi inclusi, un ambiente studiato appositamente per studenti e condizioni economiche trasparenti.
-
-**Vantaggi delle residenze:**
-- Contratti chiari e sicuri
-- Utenze incluse nel prezzo
-- Servizi extra (palestra, sale studio, lavanderia)
-- Community di altri studenti
-- Nessun problema con proprietari privati
-
-**Svantaggi:**
-- Liste d'attesa lunghe
-- Meno flessibilità e autonomia
-- Regole più rigide
-- Costi simili o superiori al mercato privato
-
-### Canali per la ricerca privata
-
-**Gruppi Facebook:**
-- "Affitti Studenti Torino"
-- "Stanze e Appartamenti Torino"
-- "Politecnico di Torino - Cerco/Offro Stanza"
-- "Student Housing Torino"
-
-**Siti web specializzati:**
-- TurinHouse.it
-- Uniplaces.com
-- HousingAnywhere.com
-- Immobiliare.it (sezione studenti)
-
-**Agenzie immobiliari:**
-Alcune agenzie si specializzano in affitti per studenti. Verifica sempre commissioni e servizi inclusi.
+Trovare la stanza giusta a Torino richiede attenzione e pazienza. Ecco i consigli fondamentali per una ricerca sicura.
 
 ### Consigli pratici per evitare truffe
 
