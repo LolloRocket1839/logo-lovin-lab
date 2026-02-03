@@ -123,6 +123,16 @@ export const Footer = () => {
                   {t('footer.howItWorksLink')}
                 </Link>
               </li>
+              <li>
+                <Link to="/blog/investire-real-assets-torino-2025" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Guida investimenti 2025' : 'Investment guide 2025'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/cedolare-secca-2026-investitori" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Cedolare secca 2026' : 'Flat tax 2026'}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -148,6 +158,16 @@ export const Footer = () => {
               <li>
                 <Link to={i18n.language.startsWith('it') ? '/strumenti/dove-mangiare-torino' : '/tools/cheap-eats-turin'} className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
                   {t('footer.cheapEats')}
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/dove-vivere-torino-studenti-politecnico" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Guida quartieri studenti' : 'Student neighborhoods guide'}
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog/quartieri-sicuri-donne-torino" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Quartieri sicuri Torino' : 'Safe neighborhoods Turin'}
                 </Link>
               </li>
             </ul>
