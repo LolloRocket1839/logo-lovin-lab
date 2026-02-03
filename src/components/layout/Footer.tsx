@@ -136,6 +136,45 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Popular Neighborhoods - SEO PageRank distribution */}
+          <div>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">
+              {i18n.language.startsWith('it') ? 'Quartieri popolari' : 'Popular neighborhoods'}
+            </h3>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>
+                <Link to="/affitto-stanza-torino/san-salvario" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  San Salvario
+                </Link>
+              </li>
+              <li>
+                <Link to="/affitto-stanza-torino/crocetta" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  Crocetta
+                </Link>
+              </li>
+              <li>
+                <Link to="/affitto-stanza-torino/cenisia" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  Cenisia
+                </Link>
+              </li>
+              <li>
+                <Link to="/affitto-stanza-torino/vanchiglia" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  Vanchiglia
+                </Link>
+              </li>
+              <li>
+                <Link to="/affitto-stanza-torino/aurora" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  Aurora
+                </Link>
+              </li>
+              <li>
+                <Link to="/affitto-stanza-torino" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Tutti i quartieri →' : 'All neighborhoods →'}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* For Students */}
           <div>
             <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">{t('footer.forStudentsTitle')}</h3>
@@ -160,23 +199,12 @@ export const Footer = () => {
                   {t('footer.cheapEats')}
                 </Link>
               </li>
-              <li>
-                <Link to="/blog/dove-vivere-torino-studenti-politecnico" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
-                  {i18n.language.startsWith('it') ? 'Guida quartieri studenti' : 'Student neighborhoods guide'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog/quartieri-sicuri-donne-torino" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
-                  {i18n.language.startsWith('it') ? 'Quartieri sicuri Torino' : 'Safe neighborhoods Turin'}
-                </Link>
-              </li>
             </ul>
             <div className="mt-6">
               <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3 font-medium">{t('footer.universitiesLabel')}</p>
               <div className="grid grid-cols-1 gap-y-2">
                 <a href="https://www.polito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Politecnico di Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
                 <a href="https://www.unito.it" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">Università di Torino<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
-                <a href="https://www.escp.eu" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-muted-foreground font-light hover:text-primary transition-colors duration-500 underline underline-offset-4 decoration-muted-foreground/30 hover:decoration-primary cursor-pointer">ESCP Business School<span className="sr-only"> {t('accessibility.opensNewWindow')}</span></a>
               </div>
             </div>
           </div>

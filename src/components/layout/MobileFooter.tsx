@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { MessageCircle, Calculator, Info, Utensils } from "lucide-react";
+import { MessageCircle, Calculator, Info, Utensils, MapPin } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 
@@ -11,7 +11,47 @@ export const MobileFooter = () => {
   return (
     <footer className="md:hidden bg-muted/30 border-t border-border/20 py-6 px-4">
       <div className="flex flex-col items-center gap-5">
-        {/* Quick Links for SEO - NEW */}
+        {/* Popular Neighborhoods for SEO */}
+        <div className="w-full">
+          <p className="text-xs font-medium text-muted-foreground text-center mb-2">
+            {isIt ? 'Quartieri popolari' : 'Popular neighborhoods'}
+          </p>
+          <div className="flex flex-wrap justify-center gap-2 text-xs">
+            <Link 
+              to="/affitto-stanza-torino/san-salvario"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              San Salvario
+            </Link>
+            <Link 
+              to="/affitto-stanza-torino/crocetta"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              Crocetta
+            </Link>
+            <Link 
+              to="/affitto-stanza-torino/cenisia"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              Cenisia
+            </Link>
+            <Link 
+              to="/affitto-stanza-torino/vanchiglia"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              Vanchiglia
+            </Link>
+            <Link 
+              to="/affitto-stanza-torino"
+              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium hover:bg-primary/20 transition-colors"
+            >
+              <MapPin className="w-3 h-3" />
+              {isIt ? 'Tutti' : 'All'}
+            </Link>
+          </div>
+        </div>
+
+        {/* Quick Links for SEO */}
         <div className="flex flex-wrap justify-center gap-3 text-xs">
           <Link 
             to={isIt ? '/chi-siamo' : '/about'}
