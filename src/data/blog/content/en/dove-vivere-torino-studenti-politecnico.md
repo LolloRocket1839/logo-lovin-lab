@@ -10,7 +10,7 @@ Studying at Politecnico di Torino is a fundamental milestone for thousands of It
 
 ### Crocetta: the ideal neighborhood for convenience and tranquility
 
-Crocetta is considered Turin's most elegant neighborhood, located just a few minutes' walk from Politecnico. This makes it a particularly sought-after area for those who want to be close to classes without sacrificing a safe and quiet zone. Here rents are on average higher, with single rooms ranging between 500 and 700 euros per month. The neighborhood offers numerous quality services, including supermarkets, pharmacies, gyms, and green areas like Crocetta park, perfect for relaxing or doing sports.
+[Crocetta](/affitto-stanza-torino/crocetta) is considered Turin's most elegant neighborhood, located just a few minutes' walk from Politecnico. This makes it a particularly sought-after area for those who want to be close to classes without sacrificing a safe and quiet zone. Here rents are on average higher, with single rooms ranging between 500 and 700 euros per month. The neighborhood offers numerous quality services, including supermarkets, pharmacies, gyms, and green areas like Crocetta park, perfect for relaxing or doing sports.
 
 **Main advantages:**
 - ✅ Immediate proximity to Politecnico (5-10 minutes walk)
@@ -25,7 +25,7 @@ Crocetta is considered Turin's most elegant neighborhood, located just a few min
 
 ### Cenisia: balance between price and proximity
 
-Adjacent to Crocetta, Cenisia is one of the most popular neighborhoods among students. Less formal and elegant compared to Crocetta, it still offers the convenience of a position close to Politecnico. Rents are more affordable, with single rooms between 350 and 500 euros, and the neighborhood is full of venues, bars, and shops frequented by young people. Perfect for those looking for a less formal environment but still convenient for studying.
+Adjacent to Crocetta, [Cenisia](/affitto-stanza-torino/cenisia) is one of the most popular neighborhoods among students. Less formal and elegant compared to Crocetta, it still offers the convenience of a position close to Politecnico. Rents are more affordable, with single rooms between 350 and 500 euros, and the neighborhood is full of venues, bars, and shops frequented by young people. Perfect for those looking for a less formal environment but still convenient for studying.
 
 **Main advantages:**
 - ✅ Excellent quality-price ratio
@@ -39,7 +39,7 @@ Adjacent to Crocetta, Cenisia is one of the most popular neighborhoods among stu
 
 ### Borgo San Paolo: authentic and affordable
 
-Borgo San Paolo is a more peripheral area but well served by public transport. Rents are lower (300-500 euros for single room) and the neighborhood maintains an authentic and lively atmosphere. It offers supermarkets, bars, and useful services, making it a practical choice for students with limited budgets willing to commute by public transport.
+[Borgo San Paolo](/affitto-stanza-torino/san-paolo) is a more peripheral area but well served by public transport. Rents are lower (300-500 euros for single room) and the neighborhood maintains an authentic and lively atmosphere. It offers supermarkets, bars, and useful services, making it a practical choice for students with limited budgets willing to commute by public transport.
 
 **Main advantages:**
 - ✅ Very competitive prices
@@ -53,7 +53,7 @@ Borgo San Paolo is a more peripheral area but well served by public transport. R
 
 ### San Salvario: movement and multiculturality
 
-The San Salvario neighborhood is particularly appreciated by university students, especially those who love an active social life and multiculturality. Here the evening nightlife is intense, with many bars, restaurants, and cultural venues. Rents for a single room are around **€350-550 per month**. San Salvario is perfect for those who want to experience the city's rhythm without giving up attending Politecnico.
+The [San Salvario](/affitto-stanza-torino/san-salvario) neighborhood is particularly appreciated by university students, especially those who love an active social life and multiculturality. Here the evening nightlife is intense, with many bars, restaurants, and cultural venues. Rents for a single room are around **€350-550 per month**. San Salvario is perfect for those who want to experience the city's rhythm without giving up attending Politecnico.
 
 **Main advantages:**
 - ✅ Very active nightlife and social scene
@@ -70,7 +70,7 @@ For more details on this neighborhood, read our [complete guide to San Salvario 
 
 ### Vanchiglia: creativity and cultural life
 
-Vanchiglia is a growing area, close to Campus Einaudi and the historic center. Known for its artistic and cultural scene, it's much loved by students looking for a creative and dynamic environment. Rent prices for single rooms range between 300 and 500 euros. Vanchiglia also offers multiple venues and spaces for cultural events, ideal for those seeking a stimulating lifestyle.
+[Vanchiglia](/affitto-stanza-torino/vanchiglia) is a growing area, close to Campus Einaudi and the historic center. Known for its artistic and cultural scene, it's much loved by students looking for a creative and dynamic environment. Rent prices for single rooms range between 300 and 500 euros. Vanchiglia also offers multiple venues and spaces for cultural events, ideal for those seeking a stimulating lifestyle.
 
 **Main advantages:**
 - ✅ Vibrant cultural and artistic scene
@@ -84,7 +84,7 @@ Vanchiglia is a growing area, close to Campus Einaudi and the historic center. K
 
 ### Budget neighborhoods: Santa Rita, Pozzo Strada and Parella
 
-For those with a more limited budget, neighborhoods like Santa Rita, Pozzo Strada, and Parella are excellent alternatives. These areas offer on average lower rents (250-400 euros for single) and are connected to the center and Politecnico via metro and bus. Although located farther away compared to other areas, efficient connections compensate for the distance, ensuring a good quality-price ratio.
+For those with a more limited budget, neighborhoods like [Santa Rita](/affitto-stanza-torino/santa-rita), Pozzo Strada, and Parella are excellent alternatives. These areas offer on average lower rents (250-400 euros for single) and are connected to the center and Politecnico via metro and bus. Although located farther away compared to other areas, efficient connections compensate for the distance, ensuring a good quality-price ratio.
 
 **Main advantages:**
 - ✅ Very affordable rents
@@ -381,9 +381,11 @@ To discover the best places to eat while saving money, read our [complete guide 
 
 ## Conclusions
 
-Choosing where to live in Turin as a Politecnico student means balancing prices, proximity to the university, and living environment. Neighborhoods like **Crocetta** offer convenience and tranquility but at higher prices (500-700€), while **Cenisia** and **Borgo San Paolo** are ideal for those seeking more affordable but convenient solutions (350-500€). Lively neighborhoods like **San Salvario** and **Vanchiglia** are perfect for those who don't give up socializing and culture (300-550€). Finally, **Santa Rita, Pozzo Strada, and Parella** are functional choices for students with more limited budgets (250-400€).
+Choosing where to live in Turin as a Politecnico student means balancing prices, proximity to the university, and living environment. Neighborhoods like **[Crocetta](/affitto-stanza-torino/crocetta)** offer convenience and tranquility but at higher prices (500-700€), while **[Cenisia](/affitto-stanza-torino/cenisia)** and **[Borgo San Paolo](/affitto-stanza-torino/san-paolo)** are ideal for those seeking more affordable but convenient solutions (350-500€). Lively neighborhoods like **[San Salvario](/affitto-stanza-torino/san-salvario)** and **[Vanchiglia](/affitto-stanza-torino/vanchiglia)** are perfect for those who don't give up socializing and culture (300-550€). Finally, **[Santa Rita](/affitto-stanza-torino/santa-rita)**, Pozzo Strada, and Parella are functional choices for students with more limited budgets (250-400€).
 
 The key is to visit different options, talk to other students already on-site, and choose based on your own priorities: do you want to be close to Politecnico? Do you prefer to save money? Do you need an active social life or tranquility to study?
+
+👉 **[Explore all Turin neighborhoods with prices and details →](/affitto-stanza-torino)**
 
 With this guide updated to 2025, every Politecnico student can navigate and find the perfect accommodation to make the most of the university experience in Turin.
 
