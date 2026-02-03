@@ -37,6 +37,8 @@ const Sellers = lazy(() => import("./pages/Sellers"));
 const PropertyValuation = lazy(() => import("./pages/PropertyValuation"));
 const StrikeEmergencyDirectory = lazy(() => import("./pages/StrikeEmergencyDirectory"));
 const SitemapDebug = lazy(() => import("./pages/SitemapDebug"));
+const NeighborhoodsIndex = lazy(() => import("./pages/NeighborhoodsIndex"));
+const NeighborhoodPage = lazy(() => import("./pages/NeighborhoodPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -96,6 +98,11 @@ const AppContent = () => {
         <Route path="/scioperi-italia" element={<StrikeEmergencyDirectory />} />
         <Route path="/italy-strikes" element={<StrikeEmergencyDirectory />} />
         <Route path="/sitemap-debug" element={<SitemapDebug />} />
+        {/* Neighborhood pages for SEO */}
+        <Route path="/affitto-stanza-torino" element={<NeighborhoodsIndex />} />
+        <Route path="/rooms-rent-turin" element={<NeighborhoodsIndex />} />
+        <Route path="/affitto-stanza-torino/:slug" element={<NeighborhoodPage />} />
+        <Route path="/rooms-rent-turin/:slug" element={<NeighborhoodPage />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
