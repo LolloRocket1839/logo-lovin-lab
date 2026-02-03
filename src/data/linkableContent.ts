@@ -134,21 +134,89 @@ const staticLinkableContent: LinkableContent[] = [
   }
 ];
 
-// Generate linkable content from blog posts
+// Enhanced keywords for high-value blog posts
+const enhancedBlogKeywords: Record<string, string[]> = {
+  'dove-vivere-torino-studenti-politecnico': [
+    'dove vivere torino', 'quartieri studenti', 'affitto politecnico', 
+    'stanza torino studenti', 'alloggi universitari torino'
+  ],
+  'san-salvario-guida-studenti': [
+    'san salvario', 'quartiere san salvario', 'vivere san salvario',
+    'affitto san salvario', 'studenti san salvario'
+  ],
+  'quartieri-sicuri-donne-torino': [
+    'quartieri sicuri torino', 'sicurezza torino', 'donne torino',
+    'zone sicure', 'quartieri tranquilli'
+  ],
+  'aule-studio-torino-guida-completa': [
+    'aule studio', 'biblioteche torino', 'dove studiare torino',
+    'spazi studio gratuiti', 'biblioteche universitarie'
+  ],
+  'cedolare-secca-2026-investitori': [
+    'cedolare secca', 'tasse affitto', 'investimento immobiliare',
+    '21%', '26%', 'fiscalità affitti'
+  ],
+  'investire-real-assets-torino-2025': [
+    'investire torino', 'rendimento affitto', 'real estate torino',
+    'comprare per affittare', 'buy to let'
+  ],
+  'torino-ogni-stagione-turisti': [
+    'visitare torino', 'quando visitare torino', 'torino turismo',
+    'cosa vedere torino', 'vacanza torino'
+  ],
+  'torino-citta-7-minuti-walkability': [
+    'camminabilità torino', 'walkability', '15 minute city',
+    'qualità vita torino', 'città camminabile'
+  ],
+  'eventi-torino-gennaio-2026': [
+    'eventi gennaio', 'cosa fare torino gennaio', 'mostre torino',
+    'concerti torino', 'luci artista'
+  ],
+  'eventi-torino-febbraio-2026': [
+    'eventi febbraio', 'carnevale torino', 'san valentino torino',
+    'cosa fare febbraio'
+  ],
+  'torino-digital-nomads-guide': [
+    'digital nomad torino', 'remote work torino', 'coworking torino',
+    'nomadi digitali', 'lavoro remoto italia'
+  ],
+  'torino-nightlife-guide': [
+    'vita notturna torino', 'nightlife torino', 'locali torino',
+    'discoteche torino', 'movida torino'
+  ]
+};
+
+// Generate linkable content from blog posts with enhanced keywords
 function generateBlogLinks(): LinkableContent[] {
-  return blogPosts.map(post => ({
-    url: `/blog/${post.slug}`,
-    titleIt: post.translations.it.title,
-    titleEn: post.translations.en.title,
-    type: 'blog' as const,
-    triggerKeywords: [
-      ...post.translations.it.seo.keywords.slice(0, 5),
-      ...post.translations.en.seo.keywords.slice(0, 5),
-      ...post.translations.it.tags,
-      ...post.translations.en.tags
-    ].filter((k, i, arr) => arr.indexOf(k) === i), // Dedupe
-    priority: 5
-  }));
+  return blogPosts.map(post => {
+    const enhancedKeys = enhancedBlogKeywords[post.slug] || [];
+    
+    // Higher priority for pillar articles
+    const isPillar = [
+      'dove-vivere-torino-studenti-politecnico',
+      'investire-real-assets-torino-2025',
+      'vendere-casa-torino-guida-completa-2025',
+      'torino-ogni-stagione-turisti',
+      'cioccolaterie-torino-guida-completa',
+      'mobilita-sostenibile-torino-studenti',
+      'torino-citta-7-minuti-walkability'
+    ].includes(post.slug);
+    
+    return {
+      url: `/blog/${post.slug}`,
+      titleIt: post.translations.it.title,
+      titleEn: post.translations.en.title,
+      type: 'blog' as const,
+      triggerKeywords: [
+        ...enhancedKeys,
+        ...post.translations.it.seo.keywords.slice(0, 5),
+        ...post.translations.en.seo.keywords.slice(0, 5),
+        ...post.translations.it.tags,
+        ...post.translations.en.tags
+      ].filter((k, i, arr) => arr.indexOf(k) === i), // Dedupe
+      priority: isPillar ? 8 : 5
+    };
+  });
 }
 
 // Combined registry
