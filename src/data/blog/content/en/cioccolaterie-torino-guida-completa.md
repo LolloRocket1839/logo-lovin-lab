@@ -145,6 +145,15 @@ Turin represents an essential destination for any chocolate lover, a place where
 
 ---
 
+> **Related guides:**
+> - [Best Gelato in Turin](/blog/migliori-gelaterie-torino-studenti) - Artisanal tradition and taste
+> - [Where to Eat Cheap in Turin](/blog/dove-mangiare-torino-studenti) - Best budget-friendly places
+> - [Turin's Historic Markets](/blog/mercati-storici-torino-chiusure) - Porta Palazzo and local markets
+> - [Tajarin Piemontesi](/blog/tajarin-piemontesi-guida-completa) - Traditional Langhe pasta
+> - [Panettoni and Pandori in Turin](/blog/panettoni-pandori-torino-guida-2025) - Best Christmas pastry shops
+
+---
+
 ## Sources
 
 [1] Turin and chocolate: history and traditions https://www.hotelplazatorino.it/torino-e-il-cioccolato-storia-e-tradizioni/

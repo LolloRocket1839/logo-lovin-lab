@@ -2,6 +2,8 @@
 
 Cedolare secca represents one of the most advantageous tax regimes for residential property owners in Italy. In 2026, the regulatory landscape has undergone significant changes that directly affect the convenience of this tax choice for real estate investors.
 
+> 📈 **For more insights:** read our complete guide to [investing in real assets in Turin 2025](/blog/investire-real-assets-torino-2025) and the [Savills report on student housing in Italy](/blog/student-housing-italia-savills-2025).
+
 This article analyzes the changes introduced by the **2026 Budget Law** and the latest implementing decrees, providing a comprehensive understanding of rates, applicability conditions, and strategic implications for those investing in the Italian real estate market.
 
 The changes involve an **increase in the standard rate from 21% to 26%** under specific conditions, with significant repercussions on net investment returns. Understanding these dynamics is essential for maximizing returns and properly planning investment strategies.

@@ -116,8 +116,13 @@ Per investitori abituati alla volatilità azionaria, gli asset tangibili fornisc
 ---
 
 > **Articoli correlati:**
+> - [Cedolare secca 2026: dal 21% al 26%](/blog/cedolare-secca-2026-investitori) - Cosa cambia per gli investitori
 > - [Props: Gestione Immobiliare Semplificata](/blog/props-gestione-immobiliare-semplificata) - Il software Jungle Rent per automatizzare affitti, spese e cash flow
-> - [Student Housing in Italia: Report Savills 2025](/blog/student-housing-italia-savills-2025)
-> - [Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa)
-> - [Università di Torino: guida completa](/blog/universita-torino-guida-completa)
-> - [San Salvario: guida per studenti](/blog/san-salvario-guida-studenti)
+> - [Student Housing in Italia: Report Savills 2025](/blog/student-housing-italia-savills-2025) - Dati e trend del mercato
+> - [Mutui per investitori immobiliari](/blog/mutui-investitori-immobiliari-guida-completa) - Guida completa al finanziamento
+> - [Valutazione immobiliare a Torino](/blog/valutazione-immobiliare-torino-guida-completa) - Come stimare il valore del tuo immobile
+
+---
+
+> **🏠 Opportunità di investimento**
+> Scopri i [quartieri di Torino più richiesti dagli studenti](/affitto-stanza-torino) con rendimenti medi e prezzi al metro quadro aggiornati.

@@ -113,8 +113,13 @@ Jungle Rent offers you direct access to this exceptional market through professi
 
 ## Related Articles
 
+- [Flat Tax 2026: from 21% to 26%](/blog/cedolare-secca-2026-investitori) - What changes for investors
 - [Props: Simplified Property Management](/blog/props-gestione-immobiliare-semplificata) - Jungle Rent's software to automate rentals, expenses, and cash flow
 - [Mortgages for Real Estate Investors: Complete Guide 2025](/blog/mutui-investitori-immobiliari-guida-completa) - Mortgage types, strategies, and best practices
 - [Student Housing in Italy: Savills Report 2025](/blog/student-housing-italia-savills-2025) - Market data and investment opportunities
-- [Polytechnic University of Turin: Complete Guide](/blog/politecnico-torino-guida-completa) - 38,000 students, programs, and campus life
-- [University of Turin: Complete Guide](/blog/universita-torino-guida-completa) - 83,000 students and 600 years of history
+- [Property Valuation in Turin](/blog/valutazione-immobiliare-torino-guida-completa) - How to estimate your property value
+
+---
+
+> **🏠 Investment opportunities**
+> Discover the [most in-demand Turin neighborhoods](/affitto-stanza-torino) with average yields and updated prices per square meter.
