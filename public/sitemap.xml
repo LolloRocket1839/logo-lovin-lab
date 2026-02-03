@@ -188,6 +188,174 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
   </url>
 
+  <!-- ========== NEIGHBORHOOD PAGES (Programmatic SEO) ========== -->
+  
+  <!-- Neighborhoods Index -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino" />
+  </url>
+
+  <!-- Neighborhood: San Salvario -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/san-salvario</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
+      <image:title>Affitto stanza San Salvario Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze a San Salvario: prezzi, vita notturna, trasporti</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: Vanchiglia -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/vanchiglia</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/quadrilatero-notte-torino.jpg</image:loc>
+      <image:title>Affitto stanza Vanchiglia Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze a Vanchiglia: quartiere artistico vicino al Po</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: Crocetta -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/crocetta</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/crocetta" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
+      <image:title>Affitto stanza Crocetta Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze alla Crocetta: vicino al Politecnico di Torino</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: Santa Rita -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/santa-rita</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercato-nitti-torino.jpg</image:loc>
+      <image:title>Affitto stanza Santa Rita Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze a Santa Rita: prezzi economici e metro</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: Cenisia -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/cenisia</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/cenisia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
+      <image:title>Affitto stanza Cenisia Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze a Cenisia: vicino al Politecnico a prezzi accessibili</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: Cit Turin -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/cit-turin</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
+  </url>
+
+  <!-- Neighborhood: Campidoglio -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/campidoglio</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
+      <image:title>Affitto stanza Campidoglio Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze al Campidoglio: mercato Balon e atmosfera autentica</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: Aurora -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/aurora</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/aurora" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/aurora" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/aurora" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercato-piazza-crispi.jpg</image:loc>
+      <image:title>Affitto stanza Aurora Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze ad Aurora: i prezzi più bassi vicino a Porta Palazzo</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: Lingotto -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/lingotto</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/lingotto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-transport.jpg</image:loc>
+      <image:title>Affitto stanza Lingotto Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze al Lingotto: ex FIAT, Eataly e metro</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Neighborhood: San Paolo -->
+  <url>
+    <loc>https://junglerent.it/affitto-stanza-torino/san-paolo</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/san-paolo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/parco-valentino-inverno.jpg</image:loc>
+      <image:title>Affitto stanza San Paolo Torino</image:title>
+      <image:caption>Guida completa all'affitto di stanze a San Paolo: quartiere tranquillo con metro</image:caption>
+    </image:image>
+  </url>
+
   <!-- Blog Page -->
   <url>
     <loc>https://junglerent.it/blog</loc>
