@@ -68,13 +68,13 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
       </Link>
 
       <div className="flex flex-col flex-1 p-4 sm:p-5 md:p-6">
-        <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-3">
-          <span className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" />
+        <div className="flex items-center gap-3 sm:gap-4 text-xs text-muted-foreground/80 mb-3">
+          <span className="flex items-center gap-1.5">
+            <Calendar className="w-3.5 h-3.5 opacity-60" strokeWidth={1.5} />
             {formatDate(post.date, currentLang)}
           </span>
-          <span className="flex items-center gap-1">
-            <Clock className="w-4 h-4" />
+          <span className="flex items-center gap-1.5">
+            <Clock className="w-3.5 h-3.5 opacity-60" strokeWidth={1.5} />
             {post.readTime} min
           </span>
         </div>

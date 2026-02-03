@@ -1,4 +1,4 @@
-import { Crown, Star } from 'lucide-react';
+import { BookOpen, Star } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { isPillarArticle } from '@/data/blog/contentClusters';
 import { cn } from '@/lib/utils';
@@ -18,14 +18,14 @@ export const PillarBadge = ({ slug, lang, className }: PillarBadgeProps) => {
     <Badge 
       variant="outline"
       className={cn(
-        "bg-gradient-to-r from-amber-500/10 to-yellow-500/10",
-        "border-amber-500/30 text-amber-700 dark:text-amber-400",
-        "font-semibold uppercase tracking-wider text-[10px]",
-        "flex items-center gap-1",
+        "bg-white/95 backdrop-blur-sm",
+        "border-primary/20 text-primary",
+        "font-bold uppercase tracking-wider text-[10px]",
+        "flex items-center gap-1.5 shadow-sm",
         className
       )}
     >
-      <Crown className="h-3 w-3" />
+      <BookOpen className="h-3 w-3" strokeWidth={2} />
       {label}
     </Badge>
   );

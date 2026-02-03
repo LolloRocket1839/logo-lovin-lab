@@ -186,36 +186,36 @@ All colors MUST be HSL.
     }
   }
 
-  /* Category Badge - Distintivo e Creativo */
+  /* Category Badge - Refined & High Contrast */
   .category-badge {
-    @apply px-3 py-1 rounded-full text-xs font-semibold;
+    @apply px-3 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wide;
+    @apply backdrop-blur-md shadow-sm;
     @apply transition-all duration-200;
-    @apply hover:scale-105;
   }
 
   .category-badge.investors {
-    @apply bg-gradient-to-r from-primary/20 to-primary/10;
-    @apply text-primary border border-primary/30;
+    background: hsl(150 45% 18% / 0.92);
+    @apply text-white border border-white/20;
   }
 
   .category-badge.students {
-    @apply bg-gradient-to-r from-blue-500/20 to-blue-500/10;
-    @apply text-blue-700 dark:text-blue-400 border border-blue-500/30;
+    background: hsl(217 91% 35% / 0.92);
+    @apply text-white border border-white/20;
   }
 
   .category-badge.turisti {
-    @apply bg-gradient-to-r from-orange-500/20 to-orange-500/10;
-    @apply text-orange-700 dark:text-orange-400 border border-orange-500/30;
+    background: hsl(25 95% 45% / 0.92);
+    @apply text-white border border-white/20;
   }
 
   .category-badge.sellers {
-    @apply bg-gradient-to-r from-purple-500/20 to-purple-500/10;
-    @apply text-purple-700 dark:text-purple-400 border border-purple-500/30;
+    background: hsl(270 50% 40% / 0.92);
+    @apply text-white border border-white/20;
   }
 
   .category-badge.societa {
-    @apply bg-gradient-to-r from-rose-500/20 to-rose-500/10;
-    @apply text-rose-700 dark:text-rose-400 border border-rose-500/30;
+    background: hsl(346 77% 40% / 0.92);
+    @apply text-white border border-white/20;
   }
 
   /* New Badge - Accattivante */
