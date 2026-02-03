@@ -149,39 +149,7 @@ The total monthly cost can therefore vary from 300€ (periphery, shared) to 800
 
 ## How to find accommodation near Politecnico
 
-### University residences and student halls
-
-Turning to university residences affiliated with Politecnico is an excellent first option. Facilities like **Collegio Trinitatis**, **Camplus Regio Parco**, and **Campus Sanpaolo** offer student solutions with included services, an environment specifically designed for students, and transparent economic conditions.
-
-**Advantages of residences:**
-- Clear and secure contracts
-- Utilities included in the price
-- Extra services (gym, study rooms, laundry)
-- Community of other students
-- No problems with private landlords
-
-**Disadvantages:**
-- Long waiting lists
-- Less flexibility and autonomy
-- More rigid rules
-- Costs similar to or higher than the private market
-
-### Channels for private search
-
-**Facebook groups:**
-- "Affitti Studenti Torino"
-- "Stanze e Appartamenti Torino"
-- "Politecnico di Torino - Cerco/Offro Stanza"
-- "Student Housing Torino"
-
-**Specialized websites:**
-- TurinHouse.it
-- Uniplaces.com
-- HousingAnywhere.com
-- Immobiliare.it (student section)
-
-**Real estate agencies:**
-Some agencies specialize in student rentals. Always check commissions and included services.
+Finding the right room in Turin requires attention and patience. Here are the essential tips for a safe search.
 
 ### Practical tips to avoid scams
 
