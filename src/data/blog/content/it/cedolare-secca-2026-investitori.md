@@ -2,6 +2,8 @@
 
 La cedolare secca rappresenta uno dei regimi fiscali più vantaggiosi per i proprietari di immobili residenziali in Italia. Nel 2026, il panorama normativo ha subito modifiche significative che influenzano direttamente la convenienza di questa scelta fiscale per gli investitori immobiliari.
 
+> 📈 **Per approfondire:** leggi la nostra guida completa a [investire in real assets a Torino nel 2025](/blog/investire-real-assets-torino-2025) e il [report Savills sullo student housing in Italia](/blog/student-housing-italia-savills-2025).
+
 Questo articolo analizza le novità introdotte dalla **Legge di Bilancio 2026** e dagli ultimi decreti attuativi, fornendo una comprensione completa delle aliquote, delle condizioni di applicabilità e delle implicazioni strategiche per chi investe nel mercato immobiliare italiano.
 
 Le modifiche apportate comportano un **aumento dell'aliquota ordinaria dal 21% al 26%** in specifiche condizioni, con ripercussioni rilevanti sulla redditività netta degli investimenti a reddito. Comprendere queste dinamiche è essenziale per massimizzare i rendimenti e pianificare correttamente le strategie di investimento.

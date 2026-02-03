@@ -276,6 +276,13 @@ Your Turin experience can balance sophisticated culture, authentic community, an
 - [San Salvario: Student Neighborhood Guide](/blog/san-salvario-guida-studenti) - The most vibrant student neighborhood in Turin
 - [Turin Nightlife Guide](/blog/torino-nightlife-guide) - Clubs, bars, and safe places to go out
 - [Where to Live in Turin: Guide for Politecnico Students](/blog/dove-vivere-torino-studenti-politecnico) - Best neighborhoods and housing options
+- [Sustainable Mobility in Turin](/blog/mobilita-sostenibile-torino-studenti) - Public transport, bikes and scooters
+- [Turin: The Seven-Minute City](/blog/torino-citta-7-minuti-walkability) - Walkability and livability
+
+---
+
+> **🏠 Find your room**
+> Compare [Turin neighborhoods for students](/affitto-stanza-torino) with prices, safety ratings and distances from universities.
 
 ---
 

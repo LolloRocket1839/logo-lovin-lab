@@ -392,6 +392,9 @@ Con questa guida aggiornata al 2025, ogni studente del Politecnico potrà orient
 > - [Il Politecnico di Torino: guida completa](/blog/politecnico-torino-guida-completa) - Storia, corsi e ammissione
 > - [L'Università di Torino: guida completa](/blog/universita-torino-guida-completa) - L'altro grande ateneo
 > - [I quartieri più sicuri a Torino](/blog/quartieri-sicuri-donne-torino) - Analisi dettagliata della sicurezza
+> - [Palestre a Torino per studenti](/blog/palestre-torino-studenti-guida-completa) - Abbonamenti economici e convenzionate
+> - [Dove mangiare a Torino spendendo poco](/blog/dove-mangiare-torino-studenti) - I migliori posti economici
+> - [Aule studio a Torino](/blog/aule-studio-torino-guida-completa) - 57 spazi gratuiti con orari e WiFi
 
 ---
 

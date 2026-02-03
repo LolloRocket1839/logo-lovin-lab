@@ -145,6 +145,15 @@ Torino è imperdibile per chi ama il cioccolato. Storia, tradizione e innovazion
 
 ---
 
+> **Guide correlate:**
+> - [Migliori gelaterie di Torino](/blog/migliori-gelaterie-torino-studenti) - Tradizione e gusto artigianale
+> - [Dove mangiare a Torino spendendo poco](/blog/dove-mangiare-torino-studenti) - I posti migliori per studenti
+> - [Mercati storici di Torino](/blog/mercati-storici-torino-chiusure) - Porta Palazzo e mercati rionali
+> - [Tajarin piemontesi](/blog/tajarin-piemontesi-guida-completa) - La pasta tradizionale delle Langhe
+> - [Panettoni e pandori a Torino](/blog/panettoni-pandori-torino-guida-2025) - Le migliori pasticcerie natalizie
+
+---
+
 ## Fonti
 
 [1] Torino e il cioccolato: storia e tradizioni https://www.hotelplazatorino.it/torino-e-il-cioccolato-storia-e-tradizioni/
