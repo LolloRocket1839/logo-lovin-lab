@@ -14,8 +14,8 @@ export const blogPosts: BlogPost[] = [
         title: "Torino: la città a sette minuti",
         excerpt: "Torino è la terza città più camminabile al mondo. 7 minuti per raggiungere scuole, negozi e servizi essenziali.",
         seo: {
-          title: "Torino città 7 minuti | Walkability e qualità della vita",
-          description: "Torino al 3° posto mondiale per camminabilità. Analisi del ranking World of Statistics, implicazioni per immobiliare, turismo e vita quotidiana.",
+          title: "Torino 3ª città più camminabile al mondo | Solo 7 minuti",
+          description: "Torino batte Parigi e Berlino: tutto a 7 minuti a piedi. Scopri i quartieri più walkable e perché conviene investire qui.",
           keywords: [
             "torino walkability",
             "città 15 minuti torino",
@@ -47,8 +47,8 @@ export const blogPosts: BlogPost[] = [
         title: "Turin: a seven-minute city",
         excerpt: "Turin ranks 3rd globally for walkability. Just 7 minutes to reach schools, shops, and essential services.",
         seo: {
-          title: "Turin walkability ranking | 7-minute city guide",
-          description: "Turin ranks 3rd worldwide for walkability. Analysis of World of Statistics ranking, implications for real estate, tourism, and daily life.",
+          title: "Turin: 3rd most walkable city in the world | 7 minutes",
+          description: "Turin beats Paris and Berlin: everything within 7 min walk. Discover the best neighborhoods and why investors love it.",
           keywords: [
             "turin walkability",
             "15 minute city turin",
@@ -91,8 +91,8 @@ export const blogPosts: BlogPost[] = [
         title: "Cedolare secca 2026: guida completa alle novità fiscali per investitori",
         excerpt: "Aumento aliquota dal 21% al 26%, periodi transitori e strategie di ottimizzazione fiscale per proprietari di immobili a reddito.",
         seo: {
-          title: "Cedolare secca 2026 | Guida novità fiscali investitori immobiliari",
-          description: "Cedolare secca 2026: aliquota aumentata dal 21% al 26%. Guida completa con fonti normative, strategie e confronti per investitori immobiliari.",
+          title: "Cedolare secca 2026: dal 21% al 26% | Cosa fare ora",
+          description: "Aumento tasse affitti 2026: come risparmiare €1.700/anno con le nuove regole. Strategie, scadenze e confronto IRPEF.",
           keywords: [
             "cedolare secca 2026",
             "cedolare secca 26%",
@@ -126,8 +126,8 @@ export const blogPosts: BlogPost[] = [
         title: "Cedolare secca 2026: complete guide to tax changes for property investors",
         excerpt: "Tax rate increase from 21% to 26%, transition periods and optimization strategies for rental property owners in Italy.",
         seo: {
-          title: "Cedolare secca 2026 | Tax guide for property investors Italy",
-          description: "Cedolare secca 2026: rate increased from 21% to 26%. Complete guide with regulatory sources, strategies and comparisons for property investors.",
+          title: "Cedolare secca 2026: 21% to 26% | What to do now",
+          description: "Italy rental tax increase 2026: save €1,700/year with new rules. Deadlines, strategies, and IRPEF comparison inside.",
           keywords: [
             "cedolare secca 2026",
             "cedolare secca 26%",
@@ -172,8 +172,8 @@ export const blogPosts: BlogPost[] = [
         title: "Sciopero trasporti Italia gennaio 2026: cosa sapere",
         excerpt: "Aggiornamenti sugli scioperi dei trasporti in Italia a gennaio 2026, impatti e consigli per spostamenti a Torino e altre città.",
         seo: {
-          title: "Sciopero trasporti Italia gennaio 2026 | Aggiornamenti e impatti",
-          description: "Informazioni sugli scioperi dei trasporti pubblici in Italia a gennaio 2026, con focus su Torino. Orari, modalità e alternative per viaggiare.",
+          title: "Sciopero trasporti 13-15 gennaio 2026 | Orari e alternative",
+          description: "Sciopero treni, bus e metro gennaio 2026: date confermate, fasce garantite e come muoversi. Aggiornato oggi.",
           keywords: [
             "sciopero trasporti 2026",
             "sciopero treni italia",
@@ -197,8 +197,8 @@ export const blogPosts: BlogPost[] = [
         title: "Transport strike Italy January 2026: what to know",
         excerpt: "Updates on transport strikes in Italy in January 2026, impacts and tips for traveling in Turin and other cities.",
         seo: {
-          title: "Transport strike Italy January 2026 | Updates and impacts",
-          description: "Information on public transport strikes in Italy in January 2026, focusing on Turin. Schedules, methods and travel alternatives.",
+          title: "Italy transport strike Jan 13-15, 2026 | Schedules & tips",
+          description: "Train, bus and metro strikes January 2026: confirmed dates, guaranteed hours and travel alternatives. Updated today.",
           keywords: [
             "transport strike 2026",
             "train strike italy",
@@ -547,8 +547,8 @@ export const blogPosts: BlogPost[] = [
         title: "Tajarin piemontesi: guida completa",
         excerpt: "Scopri la tradizione dei tajarin piemontesi, ricette e dove gustarli a Torino.",
         seo: {
-          title: "Tajarin piemontesi | Guida gastronomica Torino",
-          description: "Guida ai tajarin piemontesi, pasta tipica del Piemonte, con ricette e ristoranti consigliati a Torino.",
+          title: "Tajarin piemontesi: ricetta originale e dove mangiarli",
+          description: "La pasta con 40 tuorli al kg che ha conquistato il Piemonte. Ricetta della nonna e 8 ristoranti dove provarli a Torino.",
           keywords: [
             "tajarin piemontesi",
             "pasta piemontese",
@@ -568,8 +568,8 @@ export const blogPosts: BlogPost[] = [
         title: "Piedmontese Tajarin: complete guide",
         excerpt: "Discover the tradition of Piedmontese tajarin, recipes and where to taste them in Turin.",
         seo: {
-          title: "Piedmontese Tajarin | Gastronomic guide Turin",
-          description: "Guide to Piedmontese tajarin, typical Piedmont egg pasta, with recipes and recommended restaurants in Turin.",
+          title: "Piedmontese Tajarin: original recipe & where to eat",
+          description: "The pasta with 40 egg yolks per kg that conquered Piedmont. Grandma's recipe and 8 restaurants to try in Turin.",
           keywords: [
             "piedmontese tajarin",
             "piedmont pasta",
@@ -600,8 +600,8 @@ export const blogPosts: BlogPost[] = [
         title: "Cioccolaterie a Torino: guida completa",
         excerpt: "Le migliori cioccolaterie di Torino per gli amanti del cioccolato e del gianduiotto.",
         seo: {
-          title: "Cioccolaterie Torino | Guida al cioccolato artigianale",
-          description: "Scopri le cioccolaterie artigianali di Torino, con specialità come il gianduiotto e altre delizie al cioccolato.",
+          title: "12 cioccolaterie storiche di Torino | Gianduiotti e bicerin",
+          description: "La capitale del cioccolato: dove comprare i migliori gianduiotti dal 1826. Mappa, prezzi e orari delle botteghe storiche.",
           keywords: [
             "cioccolaterie torino",
             "gianduiotto torino",
@@ -621,8 +621,8 @@ export const blogPosts: BlogPost[] = [
         title: "Chocolate shops in Turin: complete guide",
         excerpt: "The best chocolate shops in Turin for chocolate and gianduiotto lovers.",
         seo: {
-          title: "Chocolate shops Turin | Guide to artisanal chocolate",
-          description: "Discover artisanal chocolate shops in Turin, with specialties like gianduiotto and other chocolate delights.",
+          title: "12 historic chocolate shops in Turin | Gianduiotti guide",
+          description: "The chocolate capital: where to buy the best gianduiotti since 1826. Map, prices and hours of historic shops.",
           keywords: [
             "chocolate shops turin",
             "gianduiotto turin",
@@ -653,8 +653,8 @@ export const blogPosts: BlogPost[] = [
         title: "Vendere casa a Torino: guida completa 2025",
         excerpt: "Tutto quello che devi sapere per vendere casa a Torino nel 2025, dalla preparazione alla conclusione della vendita.",
         seo: {
-          title: "Vendere casa Torino | Guida completa 2025",
-          description: "Consigli, documenti e strategie per vendere casa a Torino nel 2025 in modo efficace e sicuro.",
+          title: "Vendere casa a Torino nel 2025: evita questi 7 errori",
+          description: "Vendi al prezzo giusto in 60-90 giorni. Documenti, tasse e strategie per non perdere soldi. Valutazione gratuita inclusa.",
           keywords: [
             "vendere casa torino 2025",
             "guida vendita immobiliare",
@@ -674,8 +674,8 @@ export const blogPosts: BlogPost[] = [
         title: "Selling a house in Turin: complete guide 2025",
         excerpt: "Everything you need to know to sell a house in Turin in 2025, from preparation to closing the sale.",
         seo: {
-          title: "Sell house Turin | Complete guide 2025",
-          description: "Tips, documents and strategies to sell a house in Turin in 2025 effectively and safely.",
+          title: "Selling property in Turin 2025: avoid these 7 mistakes",
+          description: "Sell at the right price in 60-90 days. Documents, taxes and strategies to maximize value. Free valuation included.",
           keywords: [
             "sell house turin 2025",
             "real estate sale guide",
@@ -706,8 +706,8 @@ export const blogPosts: BlogPost[] = [
         title: "Student housing in Italia: report Savills 2025",
         excerpt: "Analisi del mercato dello student housing in Italia secondo il report Savills 2025.",
         seo: {
-          title: "Student housing Italia | Report Savills 2025",
-          description: "Approfondimento sul mercato dello student housing in Italia con dati e previsioni dal report Savills 2025.",
+          title: "Student housing Italia: +8% rendimenti | Report Savills 2025",
+          description: "127.000 posti letto mancanti in Italia. Perché gli investitori puntano sullo student housing e come entrare.",
           keywords: [
             "student housing italia",
             "mercato student housing",
@@ -727,8 +727,8 @@ export const blogPosts: BlogPost[] = [
         title: "Student housing in Italy: Savills report 2025",
         excerpt: "Analysis of the student housing market in Italy according to the Savills 2025 report.",
         seo: {
-          title: "Student housing Italy | Savills report 2025",
-          description: "Insight into the student housing market in Italy with data and forecasts from the Savills 2025 report.",
+          title: "Student housing Italy: +8% yields | Savills Report 2025",
+          description: "127,000 missing beds in Italy. Why investors bet on student housing and how to get in.",
           keywords: [
             "student housing italy",
             "student housing market",
@@ -759,8 +759,8 @@ export const blogPosts: BlogPost[] = [
         title: "Febbraio 2026 a Torino: tra amore, cioccolato, arte e palco lirico",
         excerpt: "CioccolaTò, Macbeth di Muti, Battaglia delle Arance (UNESCO), Final Eight basket e mostre Lee Miller e Jeff Wall. Guida completa con prezzi, contatti e orari.",
         seo: {
-          title: "Eventi Torino febbraio 2026 | CioccolaTò, Macbeth, Final Eight",
-          description: "Febbraio 2026 a Torino: CioccolaTò (60 stand), Macbeth con Riccardo Muti (€50-230), Battaglia delle Arance a Ivrea (UNESCO), Final Eight basket. Prezzi e contatti verificati.",
+          title: "Torino febbraio 2026: CioccolaTò, Macbeth e Final Eight",
+          description: "60 stand cioccolato gratis, Muti al Regio (€50-230), Battaglia Arance UNESCO. Prezzi e date verificate.",
           keywords: [
             "eventi torino febbraio 2026",
             "cioccolato torino 2026",
@@ -792,8 +792,8 @@ export const blogPosts: BlogPost[] = [
         title: "February 2026 in Turin: love, chocolate, art and opera",
         excerpt: "CioccolaTò, Muti's Macbeth, Battle of the Oranges (UNESCO), Final Eight basketball and Lee Miller/Jeff Wall exhibitions. Complete guide with verified prices and contacts.",
         seo: {
-          title: "Turin events February 2026 | CioccolaTò, Macbeth, Final Eight",
-          description: "February 2026 in Turin: CioccolaTò (60 stands), Macbeth with Riccardo Muti (€50-230), Battle of the Oranges in Ivrea (UNESCO), Final Eight basketball. Verified prices and contacts.",
+          title: "Turin February 2026: CioccolaTò, Macbeth & Final Eight",
+          description: "60 free chocolate stands, Muti at Teatro Regio (€50-230), Battle of Oranges UNESCO. Verified prices and dates.",
           keywords: [
             "turin events february 2026",
             "ciocolato turin 2026",
@@ -1019,8 +1019,8 @@ export const blogPosts: BlogPost[] = [
         title: "Università di Torino: guida completa per studenti",
         excerpt: "Informazioni utili per studenti che vogliono iscriversi o vivere l'esperienza universitaria a Torino.",
         seo: {
-          title: "Università Torino | Guida studenti",
-          description: "Tutto quello che devi sapere sull'Università di Torino: corsi, servizi, alloggi e vita studentesca.",
+          title: "UniTo: guida studenti 2026 | Corsi, alloggi e servizi",
+          description: "70.000 studenti, 120 corsi di laurea. Come iscriversi, trovare casa e vivere al meglio l'Università di Torino.",
           keywords: [
             "università torino",
             "studenti torino",
@@ -1040,8 +1040,8 @@ export const blogPosts: BlogPost[] = [
         title: "University of Turin: complete guide for students",
         excerpt: "Useful information for students who want to enroll or experience university life in Turin.",
         seo: {
-          title: "University Turin | Student guide",
-          description: "Everything you need to know about the University of Turin: courses, services, accommodation and student life.",
+          title: "UniTo: student guide 2026 | Courses, housing & services",
+          description: "70,000 students, 120 degree programs. How to enroll, find housing and make the most of University of Turin.",
           keywords: [
             "university turin",
             "students turin",
@@ -1072,8 +1072,8 @@ export const blogPosts: BlogPost[] = [
         title: "Politecnico di Torino: guida completa per studenti",
         excerpt: "Tutto quello che devi sapere sul Politecnico di Torino, corsi, servizi e vita studentesca.",
         seo: {
-          title: "Politecnico Torino | Guida studenti",
-          description: "Informazioni dettagliate sul Politecnico di Torino, con focus su ingegneria, architettura e design.",
+          title: "PoliTo: guida studenti 2026 | Top 50 mondiale ingegneria",
+          description: "35.000 studenti, 40 corsi. Come entrare al Politecnico di Torino, trovare casa vicino e vivere da studente.",
           keywords: [
             "politecnico torino",
             "studenti politecnico",
@@ -1093,8 +1093,8 @@ export const blogPosts: BlogPost[] = [
         title: "Polytechnic University of Turin: complete guide for students",
         excerpt: "Everything you need to know about the Polytechnic University of Turin, courses, services and student life.",
         seo: {
-          title: "Polytechnic Turin | Student guide",
-          description: "Detailed information about the Polytechnic University of Turin, focusing on engineering, architecture and design.",
+          title: "PoliTo: student guide 2026 | Top 50 engineering worldwide",
+          description: "35,000 students, 40 courses. How to get into Politecnico di Torino, find housing nearby and live as a student.",
           keywords: [
             "polytechnic turin",
             "polytechnic students",
@@ -1125,8 +1125,8 @@ export const blogPosts: BlogPost[] = [
         title: "Raccolta differenziata a Torino: guida completa",
         excerpt: "Come fare la raccolta differenziata a Torino, regole, calendari e consigli pratici.",
         seo: {
-          title: "Raccolta differenziata Torino | Guida pratica",
-          description: "Tutte le informazioni sulla raccolta differenziata a Torino, per contribuire a un ambiente più pulito.",
+          title: "Raccolta differenziata Torino 2026: calendario e regole",
+          description: "Quando passano? Cosa va dove? Guida zona per zona con calendario PDF scaricabile e numeri utili.",
           keywords: [
             "raccolta differenziata torino",
             "rifiuti torino",
@@ -1146,8 +1146,8 @@ export const blogPosts: BlogPost[] = [
         title: "Recycling in Turin: complete guide",
         excerpt: "How to recycle in Turin, rules, schedules and practical tips.",
         seo: {
-          title: "Recycling Turin | Practical guide",
-          description: "All information about recycling in Turin, to contribute to a cleaner environment.",
+          title: "Turin recycling guide 2026: schedule and rules",
+          description: "When do they collect? What goes where? Zone-by-zone guide with downloadable PDF calendar.",
           keywords: [
             "recycling turin",
             "waste turin",
@@ -1231,8 +1231,8 @@ export const blogPosts: BlogPost[] = [
         title: "Eventi a Torino gennaio 2026",
         excerpt: "Panoramica degli eventi culturali e di intrattenimento a Torino nel gennaio 2026.",
         seo: {
-          title: "Eventi Torino gennaio 2026 | Calendario",
-          description: "Scopri cosa fare a Torino nel gennaio 2026 con concerti, mostre e attività per tutti.",
+          title: "Eventi Torino gennaio 2026: Luci d'Artista e 47 cose da fare",
+          description: "Fiamma Olimpica, mostre Gentileschi e Jeff Wall, concerti Lazza sold-out. Calendario completo con prezzi.",
           keywords: [
             "eventi torino gennaio 2026",
             "concerti torino gennaio",
@@ -1252,8 +1252,8 @@ export const blogPosts: BlogPost[] = [
         title: "Events in Turin January 2026",
         excerpt: "Overview of cultural and entertainment events in Turin in January 2026.",
         seo: {
-          title: "Events Turin January 2026 | Calendar",
-          description: "Discover what to do in Turin in January 2026 with concerts, exhibitions and activities for all.",
+          title: "Turin events January 2026: Luci d'Artista & 47 things to do",
+          description: "Olympic Flame, Gentileschi and Jeff Wall exhibitions, Lazza sold-out concert. Full calendar with prices.",
           keywords: [
             "events turin january 2026",
             "concerts turin january",
@@ -1284,8 +1284,8 @@ export const blogPosts: BlogPost[] = [
         title: "Guida al volontariato a Torino",
         excerpt: "Come partecipare al volontariato a Torino: associazioni, opportunità e benefici.",
         seo: {
-          title: "Volontariato Torino | Guida completa",
-          description: "Scopri le associazioni di volontariato a Torino e come contribuire attivamente alla comunità.",
+          title: "Volontariato Torino: 23 associazioni che cercano te",
+          description: "Dalla Croce Rossa al Banco Alimentare. Trova l'associazione giusta per la tua età e interessi. Contatti diretti.",
           keywords: [
             "volontariato torino",
             "associazioni torino",
@@ -1305,8 +1305,8 @@ export const blogPosts: BlogPost[] = [
         title: "Volunteer guide in Turin",
         excerpt: "How to participate in volunteering in Turin: associations, opportunities and benefits.",
         seo: {
-          title: "Volunteering Turin | Complete guide",
-          description: "Discover volunteering associations in Turin and how to actively contribute to the community.",
+          title: "Volunteering in Turin: 23 organizations looking for you",
+          description: "From Red Cross to Food Bank. Find the right association for your age and interests. Direct contacts.",
           keywords: [
             "volunteering turin",
             "associations turin",
@@ -1337,8 +1337,8 @@ export const blogPosts: BlogPost[] = [
         title: "Aule studio a Torino: guida completa",
         excerpt: "Dove trovare le migliori aule studio a Torino per studenti universitari.",
         seo: {
-          title: "Aule studio Torino | Guida per studenti",
-          description: "Elenco e descrizione delle aule studio pubbliche e private a Torino, con orari e servizi.",
+          title: "Aule studio Torino: 18 posti gratis con orari e WiFi",
+          description: "Biblioteche aperte fino a mezzanotte, sale studio 24/7 e spazi silenziosi. Mappa interattiva e prenotazioni.",
           keywords: [
             "aule studio torino",
             "spazi studio torino",
@@ -1358,8 +1358,8 @@ export const blogPosts: BlogPost[] = [
         title: "Study rooms in Turin: complete guide",
         excerpt: "Where to find the best study rooms in Turin for university students.",
         seo: {
-          title: "Study rooms Turin | Student guide",
-          description: "List and description of public and private study rooms in Turin, with schedules and services.",
+          title: "Study spaces Turin: 18 free spots with hours & WiFi",
+          description: "Libraries open until midnight, 24/7 study rooms and quiet spaces. Interactive map and booking info.",
           keywords: [
             "study rooms turin",
             "study spaces turin",
@@ -1496,8 +1496,8 @@ export const blogPosts: BlogPost[] = [
         title: "Guida per digital nomads a Torino",
         excerpt: "Consigli e risorse per digital nomads che vogliono vivere e lavorare a Torino.",
         seo: {
-          title: "Digital nomads Torino | Guida completa",
-          description: "Scopri spazi di coworking, eventi e servizi per digital nomads a Torino.",
+          title: "Digital nomad a Torino: coworking, visto e costo vita",
+          description: "€1.200/mese tutto incluso. Coworking da €150, WiFi veloce ovunque. Come lavorare da remoto a Torino.",
           keywords: [
             "digital nomads torino",
             "coworking torino",
@@ -1517,8 +1517,8 @@ export const blogPosts: BlogPost[] = [
         title: "Guide for digital nomads in Turin",
         excerpt: "Tips and resources for digital nomads who want to live and work in Turin.",
         seo: {
-          title: "Digital nomads Turin | Complete guide",
-          description: "Discover coworking spaces, events and services for digital nomads in Turin.",
+          title: "Digital nomad in Turin: coworking, visa & cost of living",
+          description: "€1,200/month all-in. Coworking from €150, fast WiFi everywhere. How to work remotely in Turin.",
           keywords: [
             "digital nomads turin",
             "coworking turin",
@@ -1549,8 +1549,8 @@ export const blogPosts: BlogPost[] = [
         title: "Quartieri sicuri per donne a Torino",
         excerpt: "Analisi e consigli sui quartieri più sicuri per donne a Torino.",
         seo: {
-          title: "Quartieri sicuri donne Torino | Guida",
-          description: "Scopri quali sono i quartieri più sicuri per donne a Torino e come muoversi in sicurezza.",
+          title: "Quartieri sicuri per donne a Torino: classifica 2026",
+          description: "Dove vivere da sola senza paura. Dati reali su sicurezza, illuminazione e trasporti per ogni zona.",
           keywords: [
             "quartieri sicuri donne torino",
             "sicurezza torino",
@@ -1570,8 +1570,8 @@ export const blogPosts: BlogPost[] = [
         title: "Safe neighborhoods for women in Turin",
         excerpt: "Analysis and tips on the safest neighborhoods for women in Turin.",
         seo: {
-          title: "Safe neighborhoods women Turin | Guide",
-          description: "Discover which neighborhoods are safest for women in Turin and how to move safely.",
+          title: "Safest neighborhoods for women in Turin: 2026 ranking",
+          description: "Where to live alone without fear. Real data on safety, lighting and transport for each area.",
           keywords: [
             "safe neighborhoods women turin",
             "safety turin",
@@ -1602,8 +1602,8 @@ export const blogPosts: BlogPost[] = [
         title: "Torino a novembre: guida per turisti",
         excerpt: "Cosa fare e vedere a Torino nel mese di novembre per i turisti.",
         seo: {
-          title: "Torino novembre | Guida turistica",
-          description: "Scopri eventi, attrazioni e consigli per visitare Torino a novembre.",
+          title: "Torino novembre 2026: eventi, mostre e cosa fare",
+          description: "Artissima, Luci d'Artista accese, tartufo d'Alba. Meteo, hotel e calendario eventi completo.",
           keywords: [
             "torino novembre",
             "turismo torino novembre",
@@ -1623,8 +1623,8 @@ export const blogPosts: BlogPost[] = [
         title: "Turin in November: tourist guide",
         excerpt: "What to do and see in Turin in November for tourists.",
         seo: {
-          title: "Turin November | Tourist guide",
-          description: "Discover events, attractions and tips to visit Turin in November.",
+          title: "Turin November 2026: events, exhibitions & things to do",
+          description: "Artissima, Luci d'Artista lit up, Alba truffle. Weather, hotels and complete events calendar.",
           keywords: [
             "turin november",
             "tourism turin november",
@@ -1655,8 +1655,8 @@ export const blogPosts: BlogPost[] = [
         title: "Torino a dicembre: guida per turisti",
         excerpt: "Eventi natalizi e attrazioni da non perdere a Torino nel mese di dicembre.",
         seo: {
-          title: "Torino dicembre | Guida turistica",
-          description: "Scopri mercatini di Natale, luci e attività per turisti a Torino a dicembre.",
+          title: "Torino Natale 2026: mercatini, Luci d'Artista e cosa fare",
+          description: "Mercatini in piazza Castello, pista di pattinaggio, 28ª edizione Luci d'Artista. Calendario completo.",
           keywords: [
             "torino dicembre",
             "natale torino",
@@ -1676,8 +1676,8 @@ export const blogPosts: BlogPost[] = [
         title: "Turin in December: tourist guide",
         excerpt: "Christmas events and attractions not to miss in Turin in December.",
         seo: {
-          title: "Turin December | Tourist guide",
-          description: "Discover Christmas markets, lights and activities for tourists in Turin in December.",
+          title: "Turin Christmas 2026: markets, Luci d'Artista & things to do",
+          description: "Christmas markets in Piazza Castello, ice rink, 28th edition Luci d'Artista. Full calendar.",
           keywords: [
             "turin december",
             "christmas turin",
@@ -1708,8 +1708,8 @@ export const blogPosts: BlogPost[] = [
         title: "Mobilità sostenibile a Torino per studenti",
         excerpt: "Soluzioni e consigli per una mobilità sostenibile dedicata agli studenti a Torino.",
         seo: {
-          title: "Mobilità sostenibile Torino studenti | Guida",
-          description: "Come muoversi in modo sostenibile a Torino per studenti universitari e giovani.",
+          title: "Abbonamento GTT studenti €19/mese: come ottenerlo",
+          description: "Bici gratis, metro illimitata, bonus mobilità. Tutti gli sconti trasporti per universitari a Torino.",
           keywords: [
             "mobilità sostenibile torino",
             "studenti torino",
@@ -1729,8 +1729,8 @@ export const blogPosts: BlogPost[] = [
         title: "Sustainable mobility in Turin for students",
         excerpt: "Solutions and tips for sustainable mobility dedicated to students in Turin.",
         seo: {
-          title: "Sustainable mobility Turin students | Guide",
-          description: "How to move sustainably in Turin for university students and young people.",
+          title: "GTT student pass €19/month: how to get it",
+          description: "Free bikes, unlimited metro, mobility bonus. All transport discounts for students in Turin.",
           keywords: [
             "sustainable mobility turin",
             "students turin",
@@ -1761,8 +1761,8 @@ export const blogPosts: BlogPost[] = [
         title: "Mutui per investitori immobiliari: guida completa",
         excerpt: "Come ottenere mutui vantaggiosi per investimenti immobiliari, con consigli e requisiti.",
         seo: {
-          title: "Mutui investitori immobiliari | Guida completa",
-          description: "Informazioni su mutui dedicati a investitori immobiliari, tassi, condizioni e documentazione necessaria.",
+          title: "Mutuo per investimento immobiliare: tassi 2026 e requisiti",
+          description: "Confronto mutui buy-to-let: tasso fisso vs variabile, LTV 60-80%, banche che finanziano investitori.",
           keywords: [
             "mutui investitori immobiliari",
             "finanziamenti immobiliari",
@@ -1782,8 +1782,8 @@ export const blogPosts: BlogPost[] = [
         title: "Mortgages for real estate investors: complete guide",
         excerpt: "How to get advantageous mortgages for real estate investments, with tips and requirements.",
         seo: {
-          title: "Mortgages real estate investors | Complete guide",
-          description: "Information on mortgages dedicated to real estate investors, rates, conditions and required documentation.",
+          title: "Buy-to-let mortgage Italy: 2026 rates and requirements",
+          description: "BTL mortgage comparison: fixed vs variable, 60-80% LTV, banks that lend to property investors.",
           keywords: [
             "mortgages real estate investors",
             "real estate financing",
@@ -1814,8 +1814,8 @@ export const blogPosts: BlogPost[] = [
         title: "Migliori gelaterie a Torino per studenti",
         excerpt: "Le gelaterie più apprezzate dagli studenti a Torino, con gusti e prezzi accessibili.",
         seo: {
-          title: "Gelaterie Torino studenti | Guida",
-          description: "Scopri dove gustare il miglior gelato a Torino senza spendere troppo, ideale per studenti.",
+          title: "Miglior gelato Torino: 8 gelaterie da €2 provate da studenti",
+          description: "Gusti artigianali, porzioni generose, prezzi da universitario. Mappa e recensioni delle gelaterie top.",
           keywords: [
             "gelaterie torino",
             "gelato studenti torino",
@@ -1835,8 +1835,8 @@ export const blogPosts: BlogPost[] = [
         title: "Best ice cream shops in Turin for students",
         excerpt: "The most appreciated ice cream shops by students in Turin, with flavors and affordable prices.",
         seo: {
-          title: "Ice cream shops Turin students | Guide",
-          description: "Discover where to enjoy the best ice cream in Turin without spending too much, ideal for students.",
+          title: "Best gelato Turin: 8 shops from €2 tested by students",
+          description: "Artisan flavors, generous portions, student-friendly prices. Map and reviews of top gelato spots.",
           keywords: [
             "ice cream shops turin",
             "ice cream students turin",
@@ -1867,8 +1867,8 @@ export const blogPosts: BlogPost[] = [
         title: "Dove vivere a Torino per studenti del Politecnico",
         excerpt: "Quartieri consigliati per studenti del Politecnico di Torino, con servizi e trasporti.",
         seo: {
-          title: "Dove vivere Torino studenti Politecnico | Guida",
-          description: "Scopri i quartieri migliori per studenti del Politecnico di Torino, con informazioni su affitti e servizi.",
+          title: "Dove vivere vicino al Politecnico: 5 quartieri da €300/mese",
+          description: "Crocetta, San Salvario, Cenisia... Affitti, trasporti e vita notturna zona per zona. Con mappa.",
           keywords: [
             "dove vivere torino studenti",
             "quartieri studenti politecnico",
@@ -1888,8 +1888,8 @@ export const blogPosts: BlogPost[] = [
         title: "Where to live in Turin for Polytechnic students",
         excerpt: "Recommended neighborhoods for Polytechnic University of Turin students, with services and transport.",
         seo: {
-          title: "Where to live Turin Polytechnic students | Guide",
-          description: "Discover the best neighborhoods for Polytechnic students in Turin, with information on rents and services.",
+          title: "Where to live near Politecnico: 5 areas from €300/month",
+          description: "Crocetta, San Salvario, Cenisia... Rents, transport and nightlife area by area. With map.",
           keywords: [
             "where to live turin students",
             "neighborhoods students polytechnic",
@@ -1920,8 +1920,8 @@ export const blogPosts: BlogPost[] = [
         title: "Dove mangiare a Torino per studenti",
         excerpt: "I migliori posti economici e gustosi dove mangiare a Torino per studenti.",
         seo: {
-          title: "Dove mangiare Torino studenti | Guida",
-          description: "Scopri ristoranti, pizzerie e locali con prezzi accessibili per studenti a Torino.",
+          title: "Mangiare a Torino con €5: 15 posti testati da studenti",
+          description: "Mense, pizzerie a taglio, kebab gourmet. Dove mangiare bene spendendo poco in ogni quartiere.",
           keywords: [
             "dove mangiare torino studenti",
             "ristoranti economici torino",
@@ -1941,8 +1941,8 @@ export const blogPosts: BlogPost[] = [
         title: "Where to eat in Turin for students",
         excerpt: "The best cheap and tasty places to eat in Turin for students.",
         seo: {
-          title: "Where to eat Turin students | Guide",
-          description: "Discover restaurants, pizzerias and venues with affordable prices for students in Turin.",
+          title: "Eating in Turin on €5: 15 places tested by students",
+          description: "Canteens, pizza by slice, gourmet kebab. Where to eat well spending little in every neighborhood.",
           keywords: [
             "where to eat turin students",
             "cheap restaurants turin",
@@ -1973,8 +1973,8 @@ export const blogPosts: BlogPost[] = [
         title: "San Salvario: guida per studenti",
         excerpt: "Perché San Salvario è il quartiere ideale per studenti a Torino.",
         seo: {
-          title: "San Salvario Torino | Guida studenti",
-          description: "Scopri i motivi per cui San Salvario è il quartiere preferito dagli studenti a Torino.",
+          title: "San Salvario: vivere nel quartiere più vivo di Torino",
+          description: "Affitti da €350, aperitivi a €5, metro a 2 min. Perché 8.000 studenti scelgono San Salvario.",
           keywords: [
             "san salvario torino",
             "quartiere studenti torino",
@@ -1994,8 +1994,8 @@ export const blogPosts: BlogPost[] = [
         title: "San Salvario: guide for students",
         excerpt: "Why San Salvario is the ideal neighborhood for students in Turin.",
         seo: {
-          title: "San Salvario Turin | Student guide",
-          description: "Discover why San Salvario is the preferred neighborhood for students in Turin.",
+          title: "San Salvario: living in Turin's liveliest neighborhood",
+          description: "Rents from €350, €5 aperitivo, metro 2 min away. Why 8,000 students choose San Salvario.",
           keywords: [
             "san salvario turin",
             "student neighborhood turin",
@@ -2026,8 +2026,8 @@ export const blogPosts: BlogPost[] = [
         title: "Torino in ogni stagione: guida per turisti",
         excerpt: "Cosa fare e vedere a Torino durante tutte le stagioni dell'anno.",
         seo: {
-          title: "Torino ogni stagione | Guida turistica",
-          description: "Scopri le attrazioni e gli eventi di Torino in primavera, estate, autunno e inverno.",
+          title: "Quando visitare Torino: guida mese per mese con eventi",
+          description: "Luci d'Artista, Salone del Libro, tartufo d'Alba. Il momento perfetto per ogni tipo di viaggio.",
           keywords: [
             "torino ogni stagione",
             "turismo torino",
@@ -2047,8 +2047,8 @@ export const blogPosts: BlogPost[] = [
         title: "Turin in every season: tourist guide",
         excerpt: "What to do and see in Turin during all seasons of the year.",
         seo: {
-          title: "Turin every season | Tourist guide",
-          description: "Discover attractions and events in Turin in spring, summer, autumn and winter.",
+          title: "When to visit Turin: month-by-month guide with events",
+          description: "Luci d'Artista, Book Fair, Alba truffle. The perfect time for every type of trip.",
           keywords: [
             "turin every season",
             "tourism turin",
@@ -2079,8 +2079,8 @@ export const blogPosts: BlogPost[] = [
         title: "Cicloturismo avanzato a Torino",
         excerpt: "Percorsi e consigli per cicloturisti esperti che vogliono esplorare Torino e dintorni.",
         seo: {
-          title: "Cicloturismo Torino | Guida avanzata",
-          description: "Scopri itinerari, servizi e strutture per cicloturismo avanzato a Torino.",
+          title: "Cicloturismo Torino: 5 percorsi GPX da scaricare gratis",
+          description: "Dalle colline al Po, 50-120 km. Noleggio, officine e hotel bike-friendly lungo il percorso.",
           keywords: [
             "cicloturismo torino",
             "percorsi bici torino",
@@ -2100,8 +2100,8 @@ export const blogPosts: BlogPost[] = [
         title: "Advanced bike tourism in Turin",
         excerpt: "Routes and tips for expert bike tourists who want to explore Turin and surroundings.",
         seo: {
-          title: "Bike tourism Turin | Advanced guide",
-          description: "Discover routes, services and facilities for advanced bike tourism in Turin.",
+          title: "Bike tourism Turin: 5 GPX routes free download",
+          description: "From hills to Po river, 50-120 km. Rentals, workshops and bike-friendly hotels along the way.",
           keywords: [
             "bike tourism turin",
             "bike routes turin",
