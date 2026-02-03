@@ -10,7 +10,9 @@ import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
 import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
+import { ClusterSidebar, ClusterSidebarTrigger } from "@/components/blog/ClusterSidebar";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
+import { getClusterForArticle } from "@/data/blog/contentClusters";
 import { Calendar, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
@@ -23,53 +25,17 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
   const [content, setContent] = useState<string>("");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const currentLang = useBlogLanguage();
   
-  if (!slug) return <Navigate to="/blog" replace />;
-  
-  const post = getPostBySlug(slug);
-  
-  if (!post) return <Navigate to="/blog" replace />;
-  
-  const translatedData = post.translations[currentLang];
+  const post = slug ? getPostBySlug(slug) : null;
+  const translatedData = post?.translations[currentLang];
   const currentTags = translatedData?.tags || [];
-  const relatedPosts = getRelatedPosts(post.slug, post.category, currentTags, currentLang);
+  const relatedPosts = post ? getRelatedPosts(post.slug, post.category, currentTags, currentLang) : [];
 
   useEffect(() => {
     const loadContent = async () => {
-      if (post.content) {
-        try {
-          const contentModule = await import(`@/data/blog/content/${currentLang}/${post.content}.md?raw`);
-          setContent(contentModule.default);
-        } catch (error) {
-          console.error("Error loading blog content:", error);
-          // Fallback to Italian if translation not available
-          try {
-            const fallbackModule = await import(`@/data/blog/content/it/${post.content}.md?raw`);
-            setContent(fallbackModule.default);
-          } catch (fallbackError) {
-            setContent(`
-## Introduzione
-
-Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
-
-### Punti Chiave
-
-- **Informazioni verificate**: Tutti i dati sono aggiornati al 2025
-- **Consigli pratici**: Suggerimenti applicabili immediatamente
-- **Risorse utili**: Link e strumenti per approfondire
-
-## Sezione Principale
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Conclusioni
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          `);
-          }
-        }
-      } else {
+      if (!post?.content) {
         setContent(`
 ## Introduzione
 
@@ -89,11 +55,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         `);
+        return;
+      }
+      
+      try {
+        const contentModule = await import(`@/data/blog/content/${currentLang}/${post.content}.md?raw`);
+        setContent(contentModule.default);
+      } catch (error) {
+        console.error("Error loading blog content:", error);
+        try {
+          const fallbackModule = await import(`@/data/blog/content/it/${post.content}.md?raw`);
+          setContent(fallbackModule.default);
+        } catch (fallbackError) {
+          setContent(`
+## Introduzione
+
+Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
+          `);
+        }
       }
     };
 
     loadContent();
-  }, [post.content, currentLang]);
+  }, [post?.content, currentLang]);
+
+  // Guard clauses after hooks
+  if (!slug) return <Navigate to="/blog" replace />;
+  if (!post || !translatedData) return <Navigate to="/blog" replace />;
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -272,8 +260,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
           ]}
         />
         
-        <article className="py-12 md:py-16 px-4 md:px-8">
-          <div className="container mx-auto max-w-4xl">
+        {/* Main layout with optional sidebar */}
+        <div className="lg:flex lg:gap-8 lg:px-8">
+          {/* Main article content */}
+          <article className="py-12 md:py-16 px-4 md:px-0 flex-1 lg:max-w-4xl">
+            <div className="container mx-auto lg:mx-0">
             {/* iPhone Notes Template for special posts */}
             {post.noteStyle ? (
               <>
@@ -358,9 +349,32 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             )}
           </div>
         </article>
+          
+          {/* Cluster Sidebar - Desktop */}
+          {getClusterForArticle(slug) && (
+            <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12">
+              <ClusterSidebar 
+                currentSlug={slug} 
+                isOpen={true} 
+                onClose={() => {}} 
+              />
+            </div>
+          )}
+        </div>
 
         {/* Related Posts */}
         <RelatedPosts posts={relatedPosts} currentTags={currentTags} />
+        
+        {/* Mobile Sidebar Trigger & Sidebar */}
+        <ClusterSidebarTrigger 
+          currentSlug={slug} 
+          onClick={() => setSidebarOpen(true)} 
+        />
+        <ClusterSidebar 
+          currentSlug={slug} 
+          isOpen={sidebarOpen} 
+          onClose={() => setSidebarOpen(false)} 
+        />
       </div>
       
       <Footer />
