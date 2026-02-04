@@ -72,8 +72,228 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
   </url>
 
-  <!-- Investor Form Page - Redirect to Investors -->
-  <!-- REMOVED: /invest was a soft 404, investors page is the main entry point -->
+  <!-- ========== INVESTOR ZONE PAGES (Market Analysis) ========== -->
+  
+  <!-- Investor Zones Index -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone" />
+  </url>
+
+  <!-- Investor Zone: Cenisia -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/cenisia</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cenisia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cenisia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cenisia" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
+      <image:title>Investire a Cenisia Torino</image:title>
+      <image:caption>Rendimento 6-7%, sfitto 3%. Vicino al Politecnico, alta domanda studentesca.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Aurora -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/aurora</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/aurora" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/aurora" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/aurora" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercato-piazza-crispi.jpg</image:loc>
+      <image:title>Investire ad Aurora Torino</image:title>
+      <image:caption>Rendimento 7-8%, massima crescita. Zona in forte riqualificazione urbana.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: San Salvario -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/san-salvario</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-salvario" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
+      <image:title>Investire a San Salvario Torino</image:title>
+      <image:caption>Rendimento 5.8-6.5%, sfitto 2-4%. Il quartiere studentesco piu richiesto di Torino.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Vanchiglia -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/vanchiglia</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/vanchiglia" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/quadrilatero-notte-torino.jpg</image:loc>
+      <image:title>Investire a Vanchiglia Torino</image:title>
+      <image:caption>Rendimento 5.5-6.2%, sfitto basso. Quartiere artistico vicino al centro e al Po.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Lingotto -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/lingotto</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/lingotto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/lingotto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/lingotto" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-transport.jpg</image:loc>
+      <image:title>Investire al Lingotto Torino</image:title>
+      <image:caption>Rendimento 5-6%, crescita +3.8%. Metro 2 in arrivo, Eataly e campus universitario.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Barriera di Milano -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/barriera-di-milano</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/barriera-di-milano" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
+      <image:title>Investire a Barriera di Milano Torino</image:title>
+      <image:caption>Rendimento 7-9%, prezzi bassi. Massimo potenziale di rivalutazione con Metro 2.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Crocetta -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/crocetta</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/crocetta" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/crocetta" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/crocetta" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
+      <image:title>Investire alla Crocetta Torino</image:title>
+      <image:caption>Rendimento 4.5-5.5%, sfitto 1-2%. Quartiere premium vicino al Politecnico.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Borgo Vittoria -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/borgo-vittoria</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/borgo-vittoria" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/parco-valentino-inverno.jpg</image:loc>
+      <image:title>Investire a Borgo Vittoria Torino</image:title>
+      <image:caption>Rendimento 6-7%, prezzi accessibili. Quartiere familiare con servizi.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: San Donato -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/san-donato</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-donato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-donato" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-donato" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
+      <image:title>Investire a San Donato Torino</image:title>
+      <image:caption>Rendimento 6-7%, metro. Buon rapporto qualita-prezzo per investitori.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Parella -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/parella</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/parella" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/parella" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/parella" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/viale-alberato-torino.jpeg</image:loc>
+      <image:title>Investire a Parella Torino</image:title>
+      <image:caption>Rendimento 5.5-6.5%, residenziale. Quartiere tranquillo, famiglie e giovani coppie.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Santa Rita -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/santa-rita</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/santa-rita" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercato-nitti-torino.jpg</image:loc>
+      <image:title>Investire a Santa Rita Torino</image:title>
+      <image:caption>Rendimento 5-6%, metro. Quartiere servito, mercato stabile e affidabile.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Cit Turin -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/cit-turin</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cit-turin" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
+      <image:title>Investire a Cit Turin Torino</image:title>
+      <image:caption>Rendimento 5.5-6.5%, architettura liberty. Quartiere elegante vicino al centro.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Investor Zone: Campidoglio -->
+  <url>
+    <loc>https://junglerent.it/investitori/zone/campidoglio</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/campidoglio" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
+      <image:title>Investire al Campidoglio Torino</image:title>
+      <image:caption>Rendimento 6-7%, atmosfera autentica. Mercato Balon, prezzi in crescita.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ========== END INVESTOR ZONE PAGES ========== -->
 
   <!-- Sell Property Page - FEATURED SERVICE -->
   <url>
