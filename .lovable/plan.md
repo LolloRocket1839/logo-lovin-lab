@@ -1,145 +1,108 @@
 
 
-# Piano: miglioramento layout Budget Calculator mobile
+# Piano: aggiungere pagine zone investitori alla sitemap XML
 
-## Problemi identificati dagli screenshot
+## Obiettivo
 
-| Screenshot | Problema |
-|------------|----------|
-| 1 | Grande spazio vuoto tra i tab Semplice/Avanzato e la card Quartiere |
-| 2 | Etichette del grafico a torta sovrapposte e difficili da leggere su mobile |
-| 3 | Spaziatura verticale eccessiva tra le sezioni |
+Aggiungere le 12 pagine quartiere per investitori (+ pagina indice) alla sitemap XML per garantire l'indicizzazione SEO corretta.
 
 ---
 
-## Modifiche proposte
+## Pagine da aggiungere
 
-### 1. Header piu compatto su mobile
+### Pagina indice
 
-Ridurre il padding della sezione header da `py-8 md:py-12` a `py-4 md:py-12` e lo spazio tra elementi:
+| URL IT | URL EN | Priorita |
+|--------|--------|----------|
+| `/investitori/zone` | `/investors/zones` | 0.85 |
 
-```text
-Attuale:
-- py-8 per header section
-- mb-6 per title block
-- mb-6 per collapsible presets
+### Pagine singole quartieri (12)
 
-Nuovo:
-- py-4 md:py-8 per header section
-- mb-4 per title block
-- mb-4 per collapsible presets
+| Quartiere | Slug | URL IT | URL EN |
+|-----------|------|--------|--------|
+| Cenisia | cenisia | `/investitori/zone/cenisia` | `/investors/zones/cenisia` |
+| Aurora | aurora | `/investitori/zone/aurora` | `/investors/zones/aurora` |
+| San Salvario | san-salvario | `/investitori/zone/san-salvario` | `/investors/zones/san-salvario` |
+| Vanchiglia | vanchiglia | `/investitori/zone/vanchiglia` | `/investors/zones/vanchiglia` |
+| Lingotto | lingotto | `/investitori/zone/lingotto` | `/investors/zones/lingotto` |
+| Barriera di Milano | barriera-di-milano | `/investitori/zone/barriera-di-milano` | `/investors/zones/barriera-di-milano` |
+| Crocetta | crocetta | `/investitori/zone/crocetta` | `/investors/zones/crocetta` |
+| Borgo Vittoria | borgo-vittoria | `/investitori/zone/borgo-vittoria` | `/investors/zones/borgo-vittoria` |
+| San Donato | san-donato | `/investitori/zone/san-donato` | `/investors/zones/san-donato` |
+| Parella | parella | `/investitori/zone/parella` | `/investors/zones/parella` |
+| Santa Rita | santa-rita | `/investitori/zone/santa-rita` | `/investors/zones/santa-rita` |
+| Cit Turin | cit-turin | `/investitori/zone/cit-turin` | `/investors/zones/cit-turin` |
+| Campidoglio | campidoglio | `/investitori/zone/campidoglio` | `/investors/zones/campidoglio` |
+
+---
+
+## Struttura XML per ogni entry
+
+Ogni pagina zona investitori includera:
+- `loc`: URL principale in italiano
+- `lastmod`: 2026-02-04 (data odierna)
+- `changefreq`: monthly (dati di mercato aggiornati periodicamente)
+- `priority`: 0.8 (alta priorita per traffico investitori)
+- `xhtml:link` hreflang: IT, EN, x-default
+- `image:image`: immagine del quartiere con caption SEO
+
+---
+
+## Posizione nel sitemap
+
+Le nuove entry verranno inserite dopo la sezione "Investors Page" (riga 73) e prima di "Sell Property Page" (riga 78), creando una nuova sezione:
+
+```xml
+<!-- ========== INVESTOR ZONE PAGES (Market Analysis) ========== -->
 ```
-
-### 2. Grafico a torta ottimizzato per mobile
-
-Sostituire le label inline (che si sovrappongono) con una legenda sotto il grafico:
-
-```text
-Attuale:
-- Labels sulla torta: "Affitto 55%", "Spesa 22%"
-- Sovrapposizione su schermi piccoli
-
-Nuovo:
-- Torta senza label inline
-- Legenda compatta sotto il grafico
-- Grid 2 colonne per gli elementi legenda
-```
-
-### 3. Card totale budget sticky su mobile
-
-Rendere la card con il totale budget sticky in alto su mobile per dare feedback immediato mentre l'utente modifica i parametri:
-
-```text
-Nuovo comportamento mobile:
-- Card totale: position sticky, top sotto header
-- Background opaco per leggibilita
-- Compatta (solo totale, no lista breakdown)
-```
-
-### 4. Spaziatura ridotta
-
-| Elemento | Attuale | Nuovo |
-|----------|---------|-------|
-| Section padding | py-8 md:py-10 | py-4 md:py-10 |
-| Card spacing | space-y-6 | space-y-4 md:space-y-6 |
-| CardHeader padding | pb-4 | pb-2 md:pb-4 |
-| CardContent padding | p-6 | p-4 md:p-6 |
-
-### 5. Nascondere elementi secondari su mobile
-
-Usare `hidden md:block` per:
-- Collapsible presets (profili predefiniti)
-- Related tools card
-- 12-month projection chart
 
 ---
 
 ## File da modificare
 
-| File | Modifiche |
-|------|-----------|
-| `src/pages/tools/BudgetCalculator.tsx` | Header compatto, spacing ridotto, sticky total, chart legend, elementi nascosti su mobile |
+| File | Modifica |
+|------|----------|
+| `public/sitemap.xml` | Aggiungere 13 nuove entry (1 indice + 12 zone) |
 
 ---
 
-## Dettaglio tecnico
+## Esempio entry XML
 
-### Grafico a torta con legenda (invece di label inline)
+```xml
+<!-- Investor Zones Index -->
+<url>
+  <loc>https://junglerent.it/investitori/zone</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone" />
+  <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones" />
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone" />
+</url>
 
-```tsx
-// Rimuovere label dalla Pie
-<Pie
-  data={budgetBreakdown}
-  label={false}  // Disabilita label inline
-  labelLine={false}
-/>
-
-// Aggiungere legenda compatta sotto
-<div className="grid grid-cols-2 gap-1 mt-2 text-xs">
-  {budgetBreakdown.map((item, i) => (
-    <div className="flex items-center gap-1">
-      <div className="w-2 h-2 rounded-full" style={{ bg: CHART_COLORS[i] }} />
-      <span>{item.name}: {Math.round(item.value / totalBudget * 100)}%</span>
-    </div>
-  ))}
-</div>
+<!-- Investor Zone: San Salvario -->
+<url>
+  <loc>https://junglerent.it/investitori/zone/san-salvario</loc>
+  <lastmod>2026-02-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
+  <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-salvario" />
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-salvario" />
+  <image:image>
+    <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
+    <image:title>Investire a San Salvario Torino</image:title>
+    <image:caption>Rendimento 5.8-6.5%, sfitto 2-4%. Il quartiere studentesco piu richiesto di Torino.</image:caption>
+  </image:image>
+</url>
 ```
-
-### Card totale sticky su mobile
-
-```tsx
-<Card className="lg:relative sticky top-16 z-10 border-primary/20 bg-background/95 backdrop-blur-sm">
-  {/* Versione compatta su mobile, completa su desktop */}
-  <CardContent className="pt-4 md:pt-6">
-    <div className="text-center">
-      <p className="text-sm text-muted-foreground hidden md:block">
-        Budget mensile per vivere a {selectedArea}
-      </p>
-      <div className="text-3xl md:text-5xl font-bold text-primary">
-        €{totalBudget}
-      </div>
-      <span className="text-xs md:text-sm text-muted-foreground">/mese</span>
-    </div>
-    
-    {/* Breakdown list nascosto su mobile */}
-    <div className="hidden md:block mt-4 space-y-1.5">
-      {/* lista breakdown */}
-    </div>
-  </CardContent>
-</Card>
-```
-
-### Riorganizzazione layout mobile
-
-Su mobile, posizionare la card totale sticky prima degli input, cosi l'utente vede sempre il risultato mentre modifica i parametri.
 
 ---
 
 ## Risultato atteso
 
-- Header 40% piu compatto su mobile
-- Grafico leggibile senza sovrapposizioni
-- Totale budget sempre visibile durante lo scroll
-- Meno scroll verticale complessivo
-- Esperienza piu fluida e professionale
+- 13 nuove URL indicizzate per Google
+- Hreflang corretto IT/EN per ogni pagina
+- Immagini con alt text SEO-friendly
+- Priorita alta (0.8-0.85) per traffico investitori
 
