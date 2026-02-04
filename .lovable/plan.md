@@ -1,39 +1,49 @@
 
-# Piano: rimozione info competitor e studentati
+
+# Piano: integrazione foto Torino nel progetto
 
 ## Obiettivo
-Eliminare dall'articolo `dove-vivere-torino-studenti-politecnico` (IT e EN) le sezioni che menzionano competitor e studentati, come richiesto dagli screenshot.
+Ottimizzare e integrare 8 nuove foto di Torino nel progetto per migliorare la qualità visiva delle pagine quartieri e degli articoli del blog.
 
 ---
 
-## Contenuto da rimuovere
+## Foto e destinazione
 
-### 1. Sezione "Residenze universitarie e studentati" (righe 152-167 IT / 152-167 EN)
-Menzioni specifiche di:
-- Collegio Trinitatis
-- Camplus Regio Parco
-- Campus Sanpaolo
-- Lista vantaggi/svantaggi degli studentati
-
-### 2. Sezione "Canali per la ricerca privata" (righe 169-184 IT / 169-184 EN)
-Menzioni specifiche di competitor:
-- TurinHouse.it
-- Uniplaces.com
-- HousingAnywhere.com
-- Immobiliare.it (sezione studenti)
-- Gruppi Facebook specifici
-- Agenzie immobiliari
+| File originale | Nome ottimizzato | Utilizzo principale |
+|----------------|------------------|---------------------|
+| IMG_0455.jpeg | `mole-tramonto-torino.webp` | Homepage hero alternativo, articoli turistici |
+| IMG_0453.jpeg | `mole-inverno-torino.webp` | Articoli stagionali (gennaio, febbraio) |
+| IMG_0452.jpeg | `cappuccini-notte-torino.webp` | Articoli vita notturna, eventi serali |
+| IMG_0446.jpeg | `viale-alberato-torino.webp` | Pagina Cenisia o Cit Turin |
+| IMG_0458.jpeg | `strada-alpi-torino.webp` | Articoli mobilita, vista panoramica |
+| IMG_0434.jpeg | `tramonto-po-torino.webp` | Pagina Vanchiglia, articoli turistici |
+| IMG_0433.jpeg | `ponte-vittorio-torino.webp` | Centro storico, articoli turistici |
+| IMG_0424.jpeg | `arco-valentino-torino.webp` | Pagina Crocetta, zona Valentino |
 
 ---
 
-## Nuova struttura della sezione
+## Passaggi implementazione
 
-La sezione "Come trovare casa vicino al Politecnico" sara sostituita con una versione semplificata che rimanda direttamente a Jungle Rent senza menzionare competitor:
+### 1. Copia e ottimizzazione immagini
+Copiare le 8 foto nella cartella `public/images/` con nomi descrittivi per SEO. Le immagini verranno automaticamente ottimizzate dallo script esistente (`scripts/optimize-images.js`) che converte in WebP e riduce le dimensioni.
 
-**Struttura proposta:**
-1. Introduzione generale sulla ricerca casa
-2. Consigli pratici per evitare truffe (mantenere)
-3. CTA verso Jungle Rent come soluzione sicura
+### 2. Aggiornamento pagine quartieri
+Sostituire le immagini placeholder con le nuove foto:
+
+| Quartiere | Immagine attuale | Nuova immagine |
+|-----------|------------------|----------------|
+| Cenisia | `portici-torino.jpg` | `viale-alberato-torino.webp` |
+| Vanchiglia | `quadrilatero-notte-torino.jpg` | `tramonto-po-torino.webp` |
+| Crocetta | `politecnico-torino.avif` | `arco-valentino-torino.webp` (opzionale) |
+
+### 3. Utilizzo negli articoli blog
+Le foto con la Mole Antonelliana e il Monte dei Cappuccini sono perfette per:
+- Articoli eventi Torino (gennaio, febbraio, marzo 2026)
+- Articoli vita notturna
+- Articoli turistici stagionali
+
+### 4. Aggiornamento sitemap immagini
+Aggiungere le nuove immagini a `public/sitemap-images.xml` per indicizzazione Google Images.
 
 ---
 
@@ -41,23 +51,16 @@ La sezione "Come trovare casa vicino al Politecnico" sara sostituita con una ver
 
 | File | Azione |
 |------|--------|
-| `src/data/blog/content/it/dove-vivere-torino-studenti-politecnico.md` | Rimuovere righe 152-184, riscrivere sezione |
-| `src/data/blog/content/en/dove-vivere-torino-studenti-politecnico.md` | Rimuovere righe 152-184, riscrivere sezione |
+| `public/images/` | Aggiungere 8 nuove immagini |
+| `src/data/neighborhoods.ts` | Aggiornare campo `image` per Cenisia e Vanchiglia |
+| `public/sitemap-images.xml` | Aggiungere entries per le nuove immagini |
 
 ---
 
-## Dettagli tecnici
+## Note tecniche
 
-### Testo da eliminare (IT)
-```markdown
-### Residenze universitarie e studentati
-[...tutto il blocco fino a...]
-Alcune agenzie si specializzano in affitti per studenti. Verifica sempre commissioni e servizi inclusi.
-```
+- Le immagini originali sono in formato JPEG con risoluzione alta
+- Lo script di ottimizzazione convertira in WebP con qualita 80% e max 1920px
+- I nomi file seguono la convenzione esistente: `soggetto-citta.webp`
+- Le foto notturne (tramonto, Cappuccini) hanno buona esposizione e non richiedono editing
 
-### Nuovo testo (IT)
-```markdown
-Trovare la stanza giusta a Torino richiede attenzione e pazienza. Ecco i consigli fondamentali per una ricerca sicura.
-```
-
-La sezione "Consigli pratici per evitare truffe" rimane invariata, seguita dalla sezione Mobilita gia esistente.
