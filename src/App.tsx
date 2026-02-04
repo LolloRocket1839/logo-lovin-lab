@@ -39,6 +39,8 @@ const StrikeEmergencyDirectory = lazy(() => import("./pages/StrikeEmergencyDirec
 const SitemapDebug = lazy(() => import("./pages/SitemapDebug"));
 const NeighborhoodsIndex = lazy(() => import("./pages/NeighborhoodsIndex"));
 const NeighborhoodPage = lazy(() => import("./pages/NeighborhoodPage"));
+const InvestorZonesIndex = lazy(() => import("./pages/InvestorZonesIndex"));
+const InvestorZonePage = lazy(() => import("./pages/InvestorZonePage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -98,6 +100,11 @@ const AppContent = () => {
         <Route path="/scioperi-italia" element={<StrikeEmergencyDirectory />} />
         <Route path="/italy-strikes" element={<StrikeEmergencyDirectory />} />
         <Route path="/sitemap-debug" element={<SitemapDebug />} />
+        {/* Investor zone pages for SEO */}
+        <Route path="/investitori/zone" element={<InvestorZonesIndex />} />
+        <Route path="/investors/zones" element={<InvestorZonesIndex />} />
+        <Route path="/investitori/zone/:slug" element={<InvestorZonePage />} />
+        <Route path="/investors/zones/:slug" element={<InvestorZonePage />} />
         {/* Neighborhood pages for SEO */}
         <Route path="/affitto-stanza-torino" element={<NeighborhoodsIndex />} />
         <Route path="/rooms-rent-turin" element={<NeighborhoodsIndex />} />
