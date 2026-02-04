@@ -20,7 +20,8 @@ import {
   Hammer,
   ChevronLeft,
   Home,
-  Target
+  Target,
+  GitCompare
 } from "lucide-react";
 import { 
   getZoneBySlug, 
@@ -32,6 +33,7 @@ import {
   InvestorZone
 } from "@/data/investorZoneData";
 import { ZoneMetricCard } from "@/components/investor/ZoneMetricCard";
+import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
 const InvestorZonePage = () => {
@@ -384,6 +386,19 @@ const InvestorZonePage = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {zone.investorNote[lang]}
               </p>
+            </Card>
+
+            {/* Compare with other zones */}
+            <Card className="p-6 md:p-8 rounded-xl border-border/20">
+              <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <GitCompare className="w-5 h-5 text-primary" />
+                {lang === 'it' ? 'Confronta con altri quartieri' : 'Compare with other neighborhoods'}
+              </h2>
+              <ZoneComparisonTool 
+                lang={lang}
+                preselectedZones={[zone.id]}
+                embedded
+              />
             </Card>
 
             {/* Disclaimer */}

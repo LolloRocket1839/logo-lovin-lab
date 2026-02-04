@@ -7,6 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { 
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+  DrawerClose,
+} from "@/components/ui/drawer";
+import { 
   TrendingUp, 
   Percent, 
   Building2, 
@@ -15,7 +23,9 @@ import {
   MapPin,
   MessageCircle,
   ArrowRight,
-  Hammer
+  Hammer,
+  GitCompare,
+  X
 } from "lucide-react";
 import { 
   investorZones, 
@@ -24,6 +34,7 @@ import {
   InvestorZone
 } from "@/data/investorZoneData";
 import { ZoneCard } from "@/components/investor/ZoneCard";
+import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
 type SortOption = 'yield' | 'price_asc' | 'price_desc' | 'growth';
@@ -98,6 +109,7 @@ const InvestorZonesIndex = () => {
       filterPeriphery: 'Periferia',
       filterRenewal: 'Riqualificazione',
       zonesCount: 'quartieri',
+      compareZones: 'Confronta zone',
       ctaTitle: 'Vuoi investire?',
       ctaSubtitle: 'Parla direttamente con Lorenzo per una consulenza personalizzata',
       ctaButton: 'Parla con Lorenzo',
@@ -124,6 +136,7 @@ const InvestorZonesIndex = () => {
       filterPeriphery: 'Periphery',
       filterRenewal: 'Renewal',
       zonesCount: 'neighborhoods',
+      compareZones: 'Compare zones',
       ctaTitle: 'Want to invest?',
       ctaSubtitle: 'Talk directly with Lorenzo for personalized advice',
       ctaButton: 'Talk to Lorenzo',
@@ -290,6 +303,32 @@ const InvestorZonesIndex = () => {
                   </Button>
                 ))}
               </div>
+
+              {/* Compare button */}
+              <Drawer>
+                <DrawerTrigger asChild>
+                  <Button variant="outline" className="gap-2 h-8">
+                    <GitCompare className="w-4 h-4" />
+                    {t2.compareZones}
+                  </Button>
+                </DrawerTrigger>
+                <DrawerContent className="max-h-[85vh]">
+                  <DrawerHeader className="flex items-center justify-between">
+                    <DrawerTitle className="flex items-center gap-2">
+                      <GitCompare className="w-5 h-5 text-primary" />
+                      {t2.compareZones}
+                    </DrawerTitle>
+                    <DrawerClose asChild>
+                      <Button variant="ghost" size="icon">
+                        <X className="w-5 h-5" />
+                      </Button>
+                    </DrawerClose>
+                  </DrawerHeader>
+                  <div className="overflow-y-auto px-4 pb-6">
+                    <ZoneComparisonTool lang={lang} embedded />
+                  </div>
+                </DrawerContent>
+              </Drawer>
             </div>
           </div>
 
