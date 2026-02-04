@@ -274,6 +274,35 @@ const Investors = () => {
         </div>
       </section>
 
+      {/* Zones Section - Link to market analysis */}
+      <section className="py-16 md:py-24 bg-muted/30 border-t border-border/20">
+        <div className="container px-8">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <p className="text-xs uppercase tracking-[0.15em] font-medium text-muted-foreground mb-4">
+              {t('investors.zonesLabel', 'Market Analysis')}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-foreground">
+              {currentLang === 'it' ? 'Zone di investimento' : 'Investment zones'}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              {currentLang === 'it' 
+                ? 'Analisi di mercato 2025 per ogni quartiere di Torino: rendimenti, prezzi e progetti di riqualificazione.'
+                : '2025 market analysis for every Turin neighborhood: yields, prices and urban renewal projects.'}
+            </p>
+            <Button 
+              asChild
+              size="lg"
+              variant="outline"
+              className="px-8 py-6 text-lg"
+            >
+              <Link to={currentLang === 'en' ? '/investors/zones' : '/investitori/zone'}>
+                {currentLang === 'it' ? 'Esplora le zone →' : 'Explore zones →'}
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Resource Library Section */}
       <ResourceLibrary />
 
