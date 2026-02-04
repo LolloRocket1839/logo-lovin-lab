@@ -289,4 +289,69 @@
     </image:image>
   </url>
 
+  <!-- NUOVE FOTO TORINO -->
+  <url>
+    <loc>https://junglerent.it/quartieri/vanchiglia</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/tramonto-po-torino.jpeg</image:loc>
+      <image:title>Tramonto sul fiume Po a Torino - Quartiere Vanchiglia</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://junglerent.it/quartieri/cenisia</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/viale-alberato-torino.jpeg</image:loc>
+      <image:title>Viale alberato Torino - Quartiere Cenisia</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://junglerent.it/blog/torino-ogni-stagione-turisti</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/mole-tramonto-torino.jpeg</image:loc>
+      <image:title>Mole Antonelliana al tramonto - Torino panorama</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://junglerent.it/blog/eventi-torino-gennaio-2026</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/mole-inverno-torino.jpeg</image:loc>
+      <image:title>Mole Antonelliana in inverno - Torino gennaio</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://junglerent.it/blog/torino-nightlife-guide</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/cappuccini-notte-torino.jpeg</image:loc>
+      <image:title>Monte dei Cappuccini di notte - Vita notturna Torino</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://junglerent.it/blog/mobilita-sostenibile-torino-studenti</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/strada-alpi-torino.jpeg</image:loc>
+      <image:title>Strada con vista Alpi - Mobilità sostenibile Torino</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://junglerent.it</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/ponte-vittorio-torino.jpeg</image:loc>
+      <image:title>Ponte Vittorio Emanuele I - Centro storico Torino</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://junglerent.it/quartieri/crocetta</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/arco-valentino-torino.jpeg</image:loc>
+      <image:title>Arco Parco Valentino - Quartiere Crocetta Torino</image:title>
+    </image:image>
+  </url>
+
 </urlset>

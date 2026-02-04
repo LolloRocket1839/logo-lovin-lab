@@ -103,7 +103,7 @@ export const neighborhoods: Neighborhood[] = [
     greenSpaces: 3,
     studentDensity: 4,
     coordinates: { lat: 45.0712, lng: 7.6956 },
-    image: "/images/quadrilatero-notte-torino.jpg",
+    image: "/images/tramonto-po-torino.jpeg",
     seo: {
       it: {
         title: "Affitto stanza Vanchiglia Torino | Prezzi 2026 da €280",
@@ -217,7 +217,7 @@ export const neighborhoods: Neighborhood[] = [
     greenSpaces: 2,
     studentDensity: 4,
     coordinates: { lat: 45.0634, lng: 7.6489 },
-    image: "/images/portici-torino.jpg",
+    image: "/images/viale-alberato-torino.jpeg",
     seo: {
       it: {
         title: "Affitto stanza Cenisia Torino | Vicino Politecnico da €230",
