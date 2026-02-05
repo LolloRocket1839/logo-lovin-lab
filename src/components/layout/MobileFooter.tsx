@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { MessageCircle, Calculator, Info, Utensils, MapPin } from "lucide-react";
+import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 
@@ -47,6 +47,46 @@ export const MobileFooter = () => {
             >
               <MapPin className="w-3 h-3" />
               {isIt ? 'Tutti' : 'All'}
+            </Link>
+          </div>
+        </div>
+
+        {/* Investment Zones for SEO */}
+        <div className="w-full">
+          <p className="text-xs font-medium text-muted-foreground text-center mb-2">
+            {isIt ? 'Zone investimento' : 'Investment zones'}
+          </p>
+          <div className="flex flex-wrap justify-center gap-2 text-xs">
+            <Link 
+              to="/investitori/zone/aurora"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              Aurora
+            </Link>
+            <Link 
+              to="/investitori/zone/barriera-di-milano"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              Barriera
+            </Link>
+            <Link 
+              to="/investitori/zone/cenisia"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              Cenisia
+            </Link>
+            <Link 
+              to="/investitori/zone/san-salvario"
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              San Salvario
+            </Link>
+            <Link 
+              to="/investitori/zone"
+              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium hover:bg-primary/20 transition-colors"
+            >
+              <TrendingUp className="w-3 h-3" />
+              {isIt ? 'Tutte' : 'All'}
             </Link>
           </div>
         </div>
