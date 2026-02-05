@@ -1,211 +1,279 @@
 
-# Piano: strumento confronto side-by-side zone investitori
+# Piano: mappa interattiva quartieri investitori con marker colorati per rendimento
 
 ## Obiettivo
 
-Creare un componente interattivo che permetta agli investitori di confrontare 2-3 quartieri di Torino affiancati, visualizzando tutte le metriche chiave (rendimento, prezzo, domanda, sfitto, trend) in modo comparativo.
+Creare un componente mappa Leaflet che visualizza tutti i 12+ quartieri di Torino con marker colorati in base al rendimento lordo, permettendo agli investitori di identificare visivamente le zone piu redditizie.
 
 ---
 
 ## Architettura
 
+### Pattern esistente
+
+Il progetto utilizza gia Leaflet per mappe interattive (es. `GymsMap.tsx`, `StudySpacesMap.tsx`). Seguiro lo stesso pattern:
+- Uso diretto di `L.map()` con `useRef`
+- Custom `L.divIcon` per marker colorati
+- Legenda overlay con `z-[1000]`
+- Popup con dettagli al click
+
 ### Posizionamento
 
-Lo strumento sara accessibile in due modi:
-1. **Pagina indice** (`InvestorZonesIndex.tsx`): Pulsante "Confronta zone" che apre un drawer/modal
-2. **Pagina singola zona** (`InvestorZonePage.tsx`): Sezione "Confronta con altri quartieri" dopo la nota investitori
-
-### Componente principale
-
-Nuovo file: `src/components/investor/ZoneComparisonTool.tsx`
+Il componente sara integrato in:
+1. **InvestorZonesIndex.tsx** - Sezione mappa tra Quick Stats e griglia zone
+2. Opzionale: toggle Lista/Mappa per visualizzazione alternativa
 
 ---
 
-## Struttura dati per confronto
+## Design marker colorati per rendimento
 
-Le metriche da confrontare per ogni zona (gia disponibili in `InvestorZone`):
+### Scala colori rendimento lordo
 
-| Metrica | Campo | Formato |
-|---------|-------|---------|
-| Prezzo medio | `pricePerSqm.avg` | €X.XXX/mq |
-| Rendimento lordo | `grossYield.min-max` | X.X-X.X% |
-| Rendimento netto | `netYield.min-max` | X.X-X.X% |
-| Tasso sfitto | `vacancyRate.min-max` | X-X% |
-| Trend 2024 | `variation2024` | +X% |
-| Affitto stanza | `rentRoom.min-max` | €XXX-XXX |
-| Affitto bilocale | `rentApartment.min-max` | €XXX-XXX |
-| Livello domanda | `demand` | Alta/Molto alta |
-| Tempo affitto | `rentingTime` | 2-3 settimane |
-| Riqualificazione | `urbanRenewal.active` | Si/No + progetti |
+| Rendimento | Colore | Hex | Descrizione |
+|------------|--------|-----|-------------|
+| 6.5%+ | Verde scuro | `#16a34a` | Rendimento eccellente |
+| 5.5-6.5% | Verde | `#22c55e` | Rendimento alto |
+| 5-5.5% | Giallo | `#eab308` | Rendimento medio |
+| < 5% | Arancione | `#f97316` | Rendimento basso |
 
----
-
-## UI Design
-
-### Layout tabella comparativa (Desktop)
+### Marker design
 
 ```text
-┌──────────────────────────────────────────────────────────────────────────┐
-│  CONFRONTA ZONE                                        [X] Chiudi        │
-├──────────────────────────────────────────────────────────────────────────┤
-│                                                                          │
-│  [Select zona 1 ▼]    [Select zona 2 ▼]    [+ Aggiungi zona]            │
-│                                                                          │
-├──────────────────────────────────────────────────────────────────────────┤
-│                   │ San Salvario      │ Aurora            │ Cenisia      │
-│───────────────────┼───────────────────┼───────────────────┼──────────────│
-│  Prezzo medio     │ €2.650/mq         │ €1.520/mq ★ MIN   │ €2.200/mq    │
-│  Rend. lordo      │ 5.8-6.5%          │ 5.5-7% ★ MAX      │ 6-7% ★ MAX   │
-│  Rend. netto      │ 4.1-4.8%          │ 3.8-5%            │ 4.4-5.1% ★   │
-│  Sfitto           │ 2-4% ★ MIN        │ 5-8%              │ 3-5%         │
-│  Trend 2024       │ +5.5%             │ +7% ★ MAX         │ +4%          │
-│  Affitto stanza   │ €400-500          │ €350-450          │ €380-470     │
-│  Affitto biloc.   │ €700-850          │ €500-600          │ €550-700     │
-│  Domanda          │ MOLTO ALTA ★      │ ALTA              │ ALTA         │
-│  Tempo affitto    │ 2-3 sett ★ MIN    │ 2-4 sett          │ 2-4 sett     │
-│  Riqualificazione │ Scalo Nizza       │ Masterplan Ratti  │ Metro 2      │
-├──────────────────────────────────────────────────────────────────────────┤
-│  [Vedi San Salvario]  [Vedi Aurora]     [Vedi Cenisia]                   │
-└──────────────────────────────────────────────────────────────────────────┘
+┌─────────────────┐
+│   ●             │  Cerchio colorato (rendimento)
+│   6.5%          │  Percentuale rendimento max
+│   Cenisia       │  Nome quartiere
+└─────────────────┘
 ```
 
-### Layout card (Mobile)
-
-Su mobile, le zone vengono visualizzate come card scorrevoli orizzontalmente con le stesse metriche in formato verticale.
-
-### Indicatori visivi
-
-- **★ Best value**: Evidenziato in verde per il valore migliore (es. rendimento piu alto, sfitto piu basso)
-- **Badge colorati**: Trend alto (verde), medio (giallo), stabile (grigio)
-- **Barra comparativa**: Per prezzo e rendimento, barra orizzontale proporzionale al valore
+Il marker sara un `divIcon` con:
+- Cerchio 32-40px colorato per rendimento
+- Percentuale rendimento max al centro
+- Bordo bianco + ombra per contrasto
+- Animazione scale al hover/selection
 
 ---
 
-## Componenti da creare
+## Popup dettagli
 
-| File | Descrizione |
-|------|-------------|
-| `src/components/investor/ZoneComparisonTool.tsx` | Componente principale con logica selezione e tabella |
-| `src/components/investor/ComparisonRow.tsx` | Singola riga della tabella con evidenziazione best value |
-| `src/components/investor/ComparisonMobileCard.tsx` | Versione card per mobile |
-
----
-
-## Integrazioni
-
-### 1. InvestorZonesIndex.tsx
-
-Aggiungere un pulsante sticky "Confronta zone" che apre un Drawer con il tool:
+Al click sul marker, popup con:
 
 ```text
-// Nuovo import
-import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
-import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
-
-// Nel JSX, dopo i filtri
-<Button variant="outline" className="gap-2">
-  <GitCompare className="w-4 h-4" />
-  Confronta zone
-</Button>
+┌──────────────────────────────────────┐
+│  CENISIA                    [Centro] │
+│  ────────────────────────────────────│
+│  💰 €2.200/mq      📈 +4% (2024)     │
+│  📊 6-7% lordo     🏠 4.4-5.1% netto │
+│  ⏱️ 2-4 settimane  📍 Alta domanda   │
+│  ────────────────────────────────────│
+│  🏗️ Metro 2 in arrivo               │
+│  ────────────────────────────────────│
+│           [Vedi dettagli →]          │
+└──────────────────────────────────────┘
 ```
 
-### 2. InvestorZonePage.tsx
+---
 
-Aggiungere sezione "Confronta con altri quartieri" che mostra il tool inline con la zona corrente pre-selezionata:
+## Componente principale
+
+### File: `src/components/investor/InvestorZonesMap.tsx`
 
 ```text
-// Nuova sezione dopo "Nota investitori"
-<Card className="p-6">
-  <h2>Confronta con altri quartieri</h2>
-  <ZoneComparisonTool 
-    preselectedZones={[zone.id]} 
-    lang={lang}
-    embedded={true}
-  />
-</Card>
+Props:
+- zones: InvestorZone[]
+- lang: 'it' | 'en'
+- onZoneClick?: (zone: InvestorZone) => void
+- selectedZoneId?: string
+- showYieldMode?: 'gross' | 'net' (default: 'gross')
+```
+
+### Funzionalita
+
+1. **Visualizzazione tutti i quartieri** su mappa Torino
+2. **Marker colorati** in base al rendimento
+3. **Popup informativi** con metriche chiave
+4. **Selezione zona** con evidenziazione marker
+5. **Legenda interattiva** con filtri colore
+6. **Link a pagina dettaglio** nel popup
+7. **Responsive**: full-width su mobile, aspect-ratio su desktop
+
+---
+
+## Legenda
+
+```text
+┌─────────────────────────────┐
+│  RENDIMENTO LORDO           │
+│  ────────────────────────── │
+│  ● 6.5%+    Eccellente      │
+│  ● 5.5-6.5% Alto            │
+│  ● 5-5.5%   Medio           │
+│  ● < 5%     Basso           │
+│  ────────────────────────── │
+│  12 quartieri               │
+│  ────────────────────────── │
+│  🏗️ = Riqualificazione      │
+└─────────────────────────────┘
 ```
 
 ---
 
-## Logica evidenziazione "Best Value"
+## Integrazione in InvestorZonesIndex
 
-Per ogni metrica, calcolare quale zona ha il valore migliore:
+### Opzione 1: Sezione mappa dedicata (consigliata)
 
-| Metrica | Logica best value |
-|---------|-------------------|
-| Prezzo medio | MIN (piu economico = migliore entry point) |
-| Rendimento lordo/netto | MAX (piu alto = migliore) |
-| Sfitto | MIN (piu basso = meno rischio) |
-| Trend 2024 | MAX (crescita maggiore = migliore) |
-| Domanda | very_high > high > medium > low |
-| Tempo affitto | Parsing settimane, MIN = migliore |
+Aggiungere nuova sezione tra Quick Stats e Filters:
 
----
-
-## Traduzioni
-
-Nuove chiavi per `it.json` e `en.json`:
-
-```json
-{
-  "investorZones": {
-    "compare": {
-      "title": "Confronta zone",
-      "addZone": "Aggiungi zona",
-      "removeZone": "Rimuovi",
-      "selectZone": "Seleziona quartiere...",
-      "maxZones": "Max 3 zone",
-      "bestValue": "Migliore",
-      "viewZone": "Vedi dettagli",
-      "pricePerSqm": "Prezzo medio",
-      "grossYield": "Rend. lordo",
-      "netYield": "Rend. netto",
-      "vacancy": "Tasso sfitto",
-      "trend": "Trend 2024",
-      "roomRent": "Affitto stanza",
-      "aptRent": "Affitto bilocale",
-      "demand": "Domanda",
-      "rentingTime": "Tempo affitto",
-      "renewal": "Riqualificazione",
-      "noRenewal": "Nessuna"
-    }
-  }
-}
+```tsx
+{/* Map Section */}
+<section className="pb-12 md:pb-16">
+  <div className="container px-6">
+    <Card className="overflow-hidden border-border/20">
+      <div className="p-4 border-b border-border/20 flex items-center justify-between">
+        <h2 className="font-semibold flex items-center gap-2">
+          <MapPin className="w-4 h-4 text-primary" />
+          Mappa rendimenti
+        </h2>
+        <div className="flex gap-2">
+          <Button variant="ghost" size="sm">Lordo</Button>
+          <Button variant="ghost" size="sm">Netto</Button>
+        </div>
+      </div>
+      <InvestorZonesMap
+        zones={investorZones}
+        lang={lang}
+        onZoneClick={(zone) => navigate(`${zonesPath}/${zone.slug}`)}
+      />
+    </Card>
+  </div>
+</section>
 ```
+
+### Opzione 2: Toggle Lista/Mappa
+
+Aggiungere toggle nei filtri per alternare tra vista griglia e vista mappa.
 
 ---
 
 ## File da creare/modificare
 
-| File | Azione | Priorita |
-|------|--------|----------|
-| `src/components/investor/ZoneComparisonTool.tsx` | NUOVO - Componente principale | Alta |
-| `src/components/investor/ComparisonRow.tsx` | NUOVO - Riga tabella | Alta |
-| `src/pages/InvestorZonesIndex.tsx` | Aggiungere pulsante + Drawer | Media |
-| `src/pages/InvestorZonePage.tsx` | Aggiungere sezione confronto | Media |
-| `src/i18n/locales/it.json` | Traduzioni compare | Media |
-| `src/i18n/locales/en.json` | Traduzioni compare | Media |
+| File | Azione |
+|------|--------|
+| `src/components/investor/InvestorZonesMap.tsx` | NUOVO - Componente mappa |
+| `src/pages/InvestorZonesIndex.tsx` | Integrare mappa nella pagina |
 
 ---
 
-## Stima implementazione
+## Dettaglio tecnico: funzione colore rendimento
 
-| Fase | Attivita | Complessita |
-|------|----------|-------------|
-| 1 | Creare `ZoneComparisonTool.tsx` con logica selezione e tabella | Alta |
-| 2 | Creare `ComparisonRow.tsx` con evidenziazione best value | Media |
-| 3 | Integrare in `InvestorZonesIndex.tsx` con Drawer | Media |
-| 4 | Integrare in `InvestorZonePage.tsx` embedded | Bassa |
-| 5 | Aggiungere traduzioni | Bassa |
+```typescript
+const getYieldColor = (yieldMax: number): string => {
+  if (yieldMax >= 6.5) return '#16a34a'; // green-600
+  if (yieldMax >= 5.5) return '#22c55e'; // green-500
+  if (yieldMax >= 5) return '#eab308';   // yellow-500
+  return '#f97316';                       // orange-500
+};
 
-**Totale: 2-3 messaggi per implementazione completa**
+const getYieldLabel = (yieldMax: number, lang: 'it' | 'en'): string => {
+  if (yieldMax >= 6.5) return lang === 'it' ? 'Eccellente' : 'Excellent';
+  if (yieldMax >= 5.5) return lang === 'it' ? 'Alto' : 'High';
+  if (yieldMax >= 5) return lang === 'it' ? 'Medio' : 'Medium';
+  return lang === 'it' ? 'Basso' : 'Low';
+};
+```
 
 ---
 
-## Note tecniche
+## Dettaglio tecnico: marker custom
 
-- Riutilizzare le funzioni helper da `investorZoneData.ts` (`formatPrice`, `formatYield`, `getDemandLabel`)
-- Usare `motion.div` per animazioni fluide quando si aggiungono/rimuovono zone
-- La tabella usa `overflow-x-auto` su mobile per scroll orizzontale
-- I Select usano il componente shadcn esistente (`@/components/ui/select`)
-- Il Drawer usa il componente shadcn esistente (`@/components/ui/drawer`)
+```typescript
+const createZoneMarker = (zone: InvestorZone, isSelected: boolean): L.DivIcon => {
+  const color = getYieldColor(zone.grossYield.max);
+  const size = isSelected ? 44 : 36;
+  const hasRenewal = zone.urbanRenewal.active;
+  
+  return L.divIcon({
+    className: 'investor-zone-marker',
+    html: `
+      <div style="
+        width: ${size}px;
+        height: ${size}px;
+        border-radius: 50%;
+        background: ${color};
+        border: 3px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 700;
+        color: white;
+        position: relative;
+        ${isSelected ? 'transform: scale(1.15); z-index: 1000;' : ''}
+      ">
+        ${zone.grossYield.max}%
+        ${hasRenewal ? '<span style="position:absolute;top:-4px;right:-4px;font-size:10px;">🏗️</span>' : ''}
+      </div>
+    `,
+    iconSize: [size, size],
+    iconAnchor: [size/2, size/2],
+    popupAnchor: [0, -size/2]
+  });
+};
+```
+
+---
+
+## Traduzioni da aggiungere
+
+```typescript
+const texts = {
+  it: {
+    mapTitle: 'Mappa rendimenti',
+    legend: 'Legenda rendimento',
+    excellent: 'Eccellente',
+    high: 'Alto',
+    medium: 'Medio',
+    low: 'Basso',
+    viewDetails: 'Vedi dettagli',
+    grossYield: 'Lordo',
+    netYield: 'Netto',
+    renewal: 'Riqualificazione',
+    zones: 'quartieri'
+  },
+  en: {
+    mapTitle: 'Yield map',
+    legend: 'Yield legend',
+    excellent: 'Excellent',
+    high: 'High',
+    medium: 'Medium',
+    low: 'Low',
+    viewDetails: 'View details',
+    grossYield: 'Gross',
+    netYield: 'Net',
+    renewal: 'Urban renewal',
+    zones: 'neighborhoods'
+  }
+};
+```
+
+---
+
+## Risultato atteso
+
+- Mappa interattiva con tutti i 12+ quartieri
+- Colori marker immediatamente comprensibili (verde = alto rendimento)
+- Popup informativi con metriche chiave
+- Click per navigare alla pagina dettaglio
+- Legenda chiara con scala colori
+- Indicatore 🏗️ per zone con riqualificazione
+- Responsive: scroll touch su mobile
+
+---
+
+## Considerazioni UX
+
+1. **First impression**: la mappa offre una panoramica visiva immediata delle opportunita
+2. **Colori intuitivi**: verde = buono, giallo = attenzione, arancione = da valutare
+3. **Progressione**: mappa overview -> click popup -> pagina dettaglio
+4. **Mobile-first**: mappa full-width, legenda compatta, popup adattivi
