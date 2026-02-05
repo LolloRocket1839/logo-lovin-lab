@@ -54,7 +54,9 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Navigation, Footer, BottomNav } from "@/components/layout";
+import { motion, AnimatePresence } from "framer-motion";
 import { turinAreas } from "@/constants";
+import { MobileStickyBudget } from "@/components/tools/MobileStickyBudget";
 import { 
   PieChart, 
   Pie, 
@@ -485,20 +487,15 @@ const BudgetCalculator = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
               {/* Mobile: Sticky Total Card first */}
-              <div className="lg:hidden sticky top-16 z-10 -mx-4 px-4 py-2 bg-background/95 backdrop-blur-sm border-b">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xs text-muted-foreground">{selectedArea}</p>
-                    <div className="text-2xl font-bold text-primary">€{totalBudget}<span className="text-sm font-normal text-muted-foreground">/mese</span></div>
-                  </div>
-                  {mode === "advanced" && savingTarget[0] > 0 && (
-                    <div className="text-right">
-                      <p className="text-xs text-muted-foreground">{currentLang === 'it' ? 'Con risparmio' : 'With savings'}</p>
-                      <p className="text-sm font-semibold text-emerald-600">€{totalWithSaving}</p>
-                    </div>
-                  )}
-                </div>
-              </div>
+              <MobileStickyBudget 
+                selectedArea={selectedArea}
+                totalBudget={totalBudget}
+                totalWithSaving={totalWithSaving}
+                savingTarget={savingTarget[0]}
+                mode={mode}
+                budgetBreakdown={budgetBreakdown}
+                currentLang={currentLang}
+              />
 
               {/* Left: Inputs */}
               <div className="space-y-4 md:space-y-6">
