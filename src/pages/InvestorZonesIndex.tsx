@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Navigation, Footer } from "@/components/layout";
@@ -47,6 +48,22 @@ const InvestorZonesIndex = () => {
   
   const [sortBy, setSortBy] = useState<SortOption>('yield');
   const [filterBy, setFilterBy] = useState<FilterOption>('all');
+  const [comparisonZoneIds, setComparisonZoneIds] = useLocalStorage<string[]>('investor-comparison-zones', []);
+  const [isCompareDrawerOpen, setIsCompareDrawerOpen] = useState(false);
+
+  // Handle zone selection from map
+  const handleMapZoneSelect = (zone: InvestorZone) => {
+    setComparisonZoneIds(prev => {
+      if (prev.includes(zone.id)) {
+        // Remove if already selected
+        return prev.filter(id => id !== zone.id);
+      } else if (prev.length < 3) {
+        // Add if under limit
+        return [...prev, zone.id];
+      }
+      return prev;
+    });
+  };
 
   // Get top zones for highlights
   const topYieldZones = getZonesByRanking('netYieldRank', 3);
@@ -264,11 +281,38 @@ const InvestorZonesIndex = () => {
                 <MapPin className="w-4 h-4 text-primary" />
                 {lang === 'it' ? 'Mappa rendimenti' : 'Yield map'}
               </h2>
+              {comparisonZoneIds.length > 0 && (
+                <div className="flex items-center gap-2">
+                  <Badge variant="secondary" className="text-xs">
+                    {comparisonZoneIds.length}/3 {lang === 'it' ? 'selezionate' : 'selected'}
+                  </Badge>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="h-7 text-xs gap-1"
+                    onClick={() => setIsCompareDrawerOpen(true)}
+                  >
+                    <GitCompare className="w-3 h-3" />
+                    {t2.compareZones}
+                  </Button>
+                </div>
+              )}
             </div>
             <InvestorZonesMap
               zones={investorZones}
               lang={lang}
+              onZoneClick={handleMapZoneSelect}
+              selectedZoneIds={comparisonZoneIds}
             />
+            {comparisonZoneIds.length === 0 && (
+              <div className="p-3 bg-muted/50 border-t border-border/20 text-center">
+                <p className="text-xs text-muted-foreground">
+                  {lang === 'it' 
+                    ? '💡 Clicca sui marker per selezionare zone da confrontare (max 3)' 
+                    : '💡 Click markers to select zones to compare (max 3)'}
+                </p>
+              </div>
+            )}
           </Card>
         </div>
       </section>
@@ -324,11 +368,16 @@ const InvestorZonesIndex = () => {
               </div>
 
               {/* Compare button */}
-              <Drawer>
-                <DrawerTrigger asChild>
+              <Drawer open={isCompareDrawerOpen} onOpenChange={setIsCompareDrawerOpen}>
+                <DrawerTrigger asChild onClick={() => setIsCompareDrawerOpen(true)}>
                   <Button variant="outline" className="gap-2 h-8">
                     <GitCompare className="w-4 h-4" />
                     {t2.compareZones}
+                    {comparisonZoneIds.length > 0 && (
+                      <Badge variant="secondary" className="ml-1 h-5 px-1.5 text-xs">
+                        {comparisonZoneIds.length}
+                      </Badge>
+                    )}
                   </Button>
                 </DrawerTrigger>
                 <DrawerContent className="max-h-[85vh]">
@@ -344,7 +393,12 @@ const InvestorZonesIndex = () => {
                     </DrawerClose>
                   </DrawerHeader>
                   <div className="overflow-y-auto px-4 pb-6">
-                    <ZoneComparisonTool lang={lang} embedded />
+                    <ZoneComparisonTool 
+                      lang={lang} 
+                      embedded 
+                      preselectedZones={comparisonZoneIds}
+                      onZonesChange={setComparisonZoneIds}
+                    />
                   </div>
                 </DrawerContent>
               </Drawer>

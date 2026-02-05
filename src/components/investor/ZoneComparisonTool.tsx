@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Plus, GitCompare, ArrowRight, Star } from "lucide-react";
@@ -25,6 +25,7 @@ interface ZoneComparisonToolProps {
   lang: "it" | "en";
   preselectedZones?: string[];
   embedded?: boolean;
+  onZonesChange?: (zones: string[]) => void;
 }
 
 const MAX_ZONES = 3;
@@ -33,11 +34,25 @@ export const ZoneComparisonTool = ({
   lang,
   preselectedZones = [],
   embedded = false,
+  onZonesChange,
 }: ZoneComparisonToolProps) => {
   const isMobile = useIsMobile();
   const [selectedZoneIds, setSelectedZoneIds] = useState<string[]>(
     preselectedZones.slice(0, MAX_ZONES)
   );
+
+  // Sync with parent when preselectedZones changes
+  useEffect(() => {
+    if (preselectedZones.length > 0) {
+      setSelectedZoneIds(preselectedZones.slice(0, MAX_ZONES));
+    }
+  }, [preselectedZones]);
+
+  // Notify parent of changes
+  const updateZones = (newZones: string[]) => {
+    setSelectedZoneIds(newZones);
+    onZonesChange?.(newZones);
+  };
 
   const selectedZones = useMemo(() => {
     return selectedZoneIds
@@ -103,12 +118,12 @@ export const ZoneComparisonTool = ({
 
   const handleAddZone = (zoneId: string) => {
     if (selectedZoneIds.length < MAX_ZONES && !selectedZoneIds.includes(zoneId)) {
-      setSelectedZoneIds([...selectedZoneIds, zoneId]);
+      updateZones([...selectedZoneIds, zoneId]);
     }
   };
 
   const handleRemoveZone = (zoneId: string) => {
-    setSelectedZoneIds(selectedZoneIds.filter((id) => id !== zoneId));
+    updateZones(selectedZoneIds.filter((id) => id !== zoneId));
   };
 
   // Calculate best values
