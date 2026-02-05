@@ -274,7 +274,7 @@ const Investors = () => {
         </div>
       </section>
 
-      {/* Zones Section - Link to market analysis */}
+      {/* Zones Section - Link to market analysis with preview cards */}
       <section className="py-16 md:py-24 bg-muted/30 border-t border-border/20">
         <div className="container px-8">
           <div className="text-center max-w-2xl mx-auto mb-8">
@@ -289,6 +289,52 @@ const Investors = () => {
                 ? 'Analisi di mercato 2025 per ogni quartiere di Torino: rendimenti, prezzi e progetti di riqualificazione.'
                 : '2025 market analysis for every Turin neighborhood: yields, prices and urban renewal projects.'}
             </p>
+          </div>
+          
+          {/* Zone preview cards for SEO internal linking */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+            <Link to="/investitori/zone/aurora">
+              <Card className="p-5 hover:border-primary/50 transition-colors h-full">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground">Aurora</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {currentLang === 'it' ? '7-9% lordo • Riqualificazione in corso' : '7-9% gross • Urban renewal'}
+                </p>
+              </Card>
+            </Link>
+            <Link to="/investitori/zone/cenisia">
+              <Card className="p-5 hover:border-primary/50 transition-colors h-full">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground">Cenisia</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {currentLang === 'it' ? '6-7% lordo • Vicino Politecnico' : '6-7% gross • Near Politecnico'}
+                </p>
+              </Card>
+            </Link>
+            <Link to="/investitori/zone/san-salvario">
+              <Card className="p-5 hover:border-primary/50 transition-colors h-full">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="w-4 h-4 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground">San Salvario</h3>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {currentLang === 'it' ? '6-8% lordo • Alta domanda studenti' : '6-8% gross • High student demand'}
+                </p>
+              </Card>
+            </Link>
+          </div>
+
+          <div className="text-center">
             <Button 
               asChild
               size="lg"
@@ -296,7 +342,7 @@ const Investors = () => {
               className="px-8 py-6 text-lg"
             >
               <Link to={currentLang === 'en' ? '/investors/zones' : '/investitori/zone'}>
-                {currentLang === 'it' ? 'Esplora le zone →' : 'Explore zones →'}
+                {currentLang === 'it' ? 'Esplora tutte le zone →' : 'Explore all zones →'}
               </Link>
             </Button>
           </div>

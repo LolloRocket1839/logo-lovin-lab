@@ -136,10 +136,10 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Popular Neighborhoods - SEO PageRank distribution */}
+          {/* Popular Neighborhoods - SEO PageRank distribution (Students) */}
           <div>
             <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">
-              {i18n.language.startsWith('it') ? 'Quartieri popolari' : 'Popular neighborhoods'}
+              {i18n.language.startsWith('it') ? 'Quartieri studenti' : 'Student neighborhoods'}
             </h3>
             <ul className="space-y-3 text-muted-foreground">
               <li>
@@ -163,13 +163,47 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/affitto-stanza-torino/aurora" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                <Link to="/affitto-stanza-torino" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Tutti i quartieri →' : 'All neighborhoods →'}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Investment Zones - SEO PageRank distribution (Investors) */}
+          <div>
+            <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">
+              {i18n.language.startsWith('it') ? 'Zone investimento' : 'Investment zones'}
+            </h3>
+            <ul className="space-y-3 text-muted-foreground">
+              <li>
+                <Link to="/investitori/zone/aurora" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
                   Aurora
                 </Link>
               </li>
               <li>
-                <Link to="/affitto-stanza-torino" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-500 link-elegant">
-                  {i18n.language.startsWith('it') ? 'Tutti i quartieri →' : 'All neighborhoods →'}
+                <Link to="/investitori/zone/barriera-di-milano" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  Barriera di Milano
+                </Link>
+              </li>
+              <li>
+                <Link to="/investitori/zone/cenisia" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  Cenisia
+                </Link>
+              </li>
+              <li>
+                <Link to="/investitori/zone/san-salvario" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  San Salvario
+                </Link>
+              </li>
+              <li>
+                <Link to="/investitori/zone/vanchiglia" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  Vanchiglia
+                </Link>
+              </li>
+              <li>
+                <Link to="/investitori/zone" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Tutte le zone →' : 'All zones →'}
                 </Link>
               </li>
             </ul>
