@@ -35,6 +35,7 @@ import {
 } from "@/data/investorZoneData";
 import { ZoneCard } from "@/components/investor/ZoneCard";
 import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
+import InvestorZonesMap from "@/components/investor/InvestorZonesMap";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
 type SortOption = 'yield' | 'price_asc' | 'price_desc' | 'growth';
@@ -251,6 +252,24 @@ const InvestorZonesIndex = () => {
               </p>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="pb-12 md:pb-16">
+        <div className="container px-6">
+          <Card className="overflow-hidden border-border/20">
+            <div className="p-4 border-b border-border/20 flex items-center justify-between">
+              <h2 className="font-semibold flex items-center gap-2 text-foreground">
+                <MapPin className="w-4 h-4 text-primary" />
+                {lang === 'it' ? 'Mappa rendimenti' : 'Yield map'}
+              </h2>
+            </div>
+            <InvestorZonesMap
+              zones={investorZones}
+              lang={lang}
+            />
+          </Card>
         </div>
       </section>
 
