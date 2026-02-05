@@ -39,12 +39,14 @@ import { SessionPlanOutput } from "@/components/tools/SessionPlanOutput";
 import { SessionShareExport } from "@/components/tools/SessionShareExport";
 import { ExamSessionPlannerSchema, ExamSessionPlannerHowTo } from "@/components/tools/ToolStructuredData";
 import { toast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const STORAGE_KEY = "junglerent_exam_session_v1";
 
 const ExamSessionPlanner = () => {
   const { i18n, t } = useTranslation();
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
+  const isMobile = useIsMobile();
   
   const [exams, setExams] = useState<SessionExam[]>([]);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
@@ -287,37 +289,68 @@ const ExamSessionPlanner = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-background pt-20 pb-24">
+      <main className="min-h-screen bg-background pt-20 pb-24 md:pb-8">
         {/* Header */}
-        <section className="py-8 md:py-12 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-4 md:py-12 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <Link 
               to="/studenti/strumenti" 
-              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-4 transition-colors"
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-3 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-1" />
               {c.backToTools}
             </Link>
             
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <Calendar className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <Calendar className="w-5 h-5 md:w-6 md:h-6 text-primary" />
               </div>
               <div>
-                <h1 className="text-2xl md:text-3xl font-bold text-foreground">
+                <h1 className="text-xl md:text-3xl font-bold text-foreground">
                   {c.title}
                 </h1>
-                <p className="text-muted-foreground">{c.subtitle}</p>
+                <p className="text-sm text-muted-foreground hidden md:block">{c.subtitle}</p>
               </div>
             </div>
           </div>
         </section>
         
-        {/* Stats Bar */}
-        {exams.length > 0 && (
+        {/* Mobile Sticky Stats Header */}
+        {exams.length > 0 && isMobile && (
+          <div className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50 py-3 px-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="text-center">
+                  <div className="text-xl font-bold text-primary">{exams.length}</div>
+                  <div className="text-xs text-muted-foreground">{c.stats.exams}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl font-bold flex items-center gap-1">
+                    {totalCfu}
+                    {totalCfu > 36 && <AlertTriangle className="w-3 h-3 text-amber-500" />}
+                  </div>
+                  <div className="text-xs text-muted-foreground">CFU</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="text-center">
+                  <div className="text-lg font-semibold">{difficultyEmojis[Math.round(avgDifficulty)]}</div>
+                  <div className="text-xs text-muted-foreground">{avgDifficulty.toFixed(1)}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-semibold">{totalCfu * 25}h</div>
+                  <div className="text-xs text-muted-foreground">{currentLang === 'it' ? 'Studio' : 'Study'}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Desktop Stats Bar */}
+        {exams.length > 0 && !isMobile && (
           <section className="border-b border-border/50 bg-muted/30">
             <div className="container mx-auto px-4 py-4">
-              <div className="flex flex-wrap gap-4 md:gap-8 justify-center">
+              <div className="flex gap-8 justify-center">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-foreground">{exams.length}</div>
                   <div className="text-xs text-muted-foreground">{c.stats.exams}</div>
@@ -345,29 +378,29 @@ const ExamSessionPlanner = () => {
         )}
         
         {/* Main Content */}
-        <section className="py-6 md:py-8">
+        <section className="py-4 md:py-8">
           <div className="container mx-auto px-4">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <div className="flex items-center justify-between gap-4 mb-6">
-                <TabsList className="grid w-full md:w-auto grid-cols-3 sticky top-16 z-40 bg-background/95 backdrop-blur-sm">
-                  <TabsTrigger value="input" className="gap-1.5">
+              <div className="flex items-center justify-between gap-2 mb-4 md:mb-6">
+                <TabsList className="grid w-full md:w-auto grid-cols-3">
+                  <TabsTrigger value="input" className="gap-1 text-xs md:text-sm px-2 md:px-4">
                     <GraduationCap className="w-4 h-4" />
-                    <span className="text-xs sm:text-sm">{currentLang === 'it' ? 'Esami' : 'Exams'}</span>
+                    <span className="hidden xs:inline">{currentLang === 'it' ? 'Esami' : 'Exams'}</span>
                   </TabsTrigger>
-                  <TabsTrigger value="calendar" className="gap-1.5">
+                  <TabsTrigger value="calendar" className="gap-1 text-xs md:text-sm px-2 md:px-4">
                     <Calendar className="w-4 h-4" />
-                    <span className="text-xs sm:text-sm">{currentLang === 'it' ? 'Calendario' : 'Calendar'}</span>
+                    <span className="hidden xs:inline">{currentLang === 'it' ? 'Cal.' : 'Cal.'}</span>
                   </TabsTrigger>
-                  <TabsTrigger value="plan" className="gap-1.5">
+                  <TabsTrigger value="plan" className="gap-1 text-xs md:text-sm px-2 md:px-4">
                     <Sparkles className="w-4 h-4" />
-                    <span className="text-xs sm:text-sm">{currentLang === 'it' ? 'Piano' : 'Plan'}</span>
+                    <span className="hidden xs:inline">{currentLang === 'it' ? 'Piano' : 'Plan'}</span>
                   </TabsTrigger>
                 </TabsList>
                 
                 {exams.length > 0 && (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon" className="shrink-0">
+                      <Button variant="ghost" size="icon" className="shrink-0 h-9 w-9">
                         <MoreHorizontal className="w-5 h-5" />
                       </Button>
                     </DropdownMenuTrigger>

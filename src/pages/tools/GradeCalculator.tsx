@@ -54,6 +54,7 @@ import {
 import jsPDF from "jspdf";
 import jungleRentLogo from "@/assets/jungle-rent-logo.png";
 import { PDFPreviewModal } from "@/components/tools/PDFPreviewModal";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export interface Exam {
   id: string;
@@ -71,6 +72,7 @@ const GradeCalculator = () => {
   const [copied, setCopied] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [pdfBlob, setPdfBlob] = useState<Blob | null>(null);
+  const isMobile = useIsMobile();
   
   const [exams, setExams] = useState<Exam[]>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -397,27 +399,27 @@ const GradeCalculator = () => {
 
       <Navigation />
 
-      <main className="min-h-screen bg-background pt-20 pb-24 md:pb-8">
+      <main className="min-h-screen bg-background pt-20 pb-24">
         {/* Header */}
-        <section className="py-6 md:py-10 bg-gradient-to-b from-primary/5 to-background">
+        <section className="py-4 md:py-10 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <Link 
               to="/studenti/strumenti" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-4 transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-3 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               {t.backToTools}
             </Link>
             
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <GraduationCap className="w-6 h-6 text-primary" />
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-primary" />
               </div>
               <div>
-                <h1 className="text-2xl md:text-3xl font-bold text-foreground">
+                <h1 className="text-xl md:text-3xl font-bold text-foreground">
                   {t.title}
                 </h1>
-                <p className="text-muted-foreground">
+                <p className="text-sm text-muted-foreground hidden md:block">
                   {t.subtitle}
                 </p>
               </div>
@@ -425,8 +427,30 @@ const GradeCalculator = () => {
           </div>
         </section>
 
+        {/* Mobile Sticky Stats Header */}
+        {exams.length > 0 && isMobile && (
+          <div className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50 py-3 px-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <span className="text-xs text-muted-foreground">{t.stats.weightedAvg}</span>
+                <div className="text-2xl font-bold text-primary">{stats.weightedAvg.toFixed(2)}</div>
+              </div>
+              <div className="flex gap-4 text-center">
+                <div>
+                  <div className="text-lg font-semibold">{stats.totalCfu}</div>
+                  <div className="text-xs text-muted-foreground">CFU</div>
+                </div>
+                <div>
+                  <div className="text-lg font-semibold">{stats.totalExams}</div>
+                  <div className="text-xs text-muted-foreground">{currentLang === 'it' ? 'Esami' : 'Exams'}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Stats Cards */}
-        {exams.length > 0 && (
+        {exams.length > 0 && !isMobile && (
           <section className="py-4">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -485,49 +509,52 @@ const GradeCalculator = () => {
         )}
 
         {/* Main Content with Tabs */}
-        <section className="py-6">
+        <section className="py-4 md:py-6">
           <div className="container mx-auto px-4">
             <Tabs defaultValue="exams" className="space-y-6">
-              <div className="flex items-center justify-between flex-wrap gap-4">
-                <TabsList>
-                  <TabsTrigger value="exams" className="gap-2">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <TabsList className="w-full md:w-auto grid grid-cols-3">
+                  <TabsTrigger value="exams" className="gap-1.5 text-xs md:text-sm">
                     <BarChart3 className="w-4 h-4" />
-                    {t.tabExams}
+                    <span className="hidden sm:inline">{t.tabExams}</span>
+                    <span className="sm:hidden">{currentLang === 'it' ? 'Esami' : 'Exams'}</span>
                   </TabsTrigger>
-                  <TabsTrigger value="simulator" className="gap-2">
+                  <TabsTrigger value="simulator" className="gap-1.5 text-xs md:text-sm">
                     <TrendingUp className="w-4 h-4" />
-                    {t.tabSimulator}
+                    <span className="hidden sm:inline">{t.tabSimulator}</span>
+                    <span className="sm:hidden">{currentLang === 'it' ? 'Simula' : 'Simulate'}</span>
                   </TabsTrigger>
-                  <TabsTrigger value="graduation" className="gap-2">
+                  <TabsTrigger value="graduation" className="gap-1.5 text-xs md:text-sm">
                     <Award className="w-4 h-4" />
-                    {t.tabGraduation}
+                    <span className="hidden sm:inline">{t.tabGraduation}</span>
+                    <span className="sm:hidden">{currentLang === 'it' ? 'Laurea' : 'Grad'}</span>
                   </TabsTrigger>
                 </TabsList>
 
                 {exams.length > 0 && (
-                  <div className="flex gap-2 flex-wrap">
-                    <Button variant="outline" size="sm" onClick={handlePreviewPDF} className="gap-2">
+                  <div className="flex gap-2 flex-wrap justify-center md:justify-end">
+                    <Button variant="outline" size="sm" onClick={handlePreviewPDF} className="gap-1.5 text-xs md:text-sm">
                       <Eye className="w-4 h-4" />
-                      {currentLang === 'it' ? 'Anteprima' : 'Preview'}
+                      <span className="hidden sm:inline">{currentLang === 'it' ? 'Anteprima' : 'Preview'}</span>
                     </Button>
-                    <Button variant="outline" size="sm" onClick={exportPDF} className="gap-2">
+                    <Button variant="outline" size="sm" onClick={exportPDF} className="gap-1.5 text-xs md:text-sm">
                       <Download className="w-4 h-4" />
-                      {t.exportPdf}
+                      <span className="hidden sm:inline">{t.exportPdf}</span>
                     </Button>
-                    <Button variant="outline" size="sm" onClick={shareWhatsApp} className="gap-2">
+                    <Button variant="outline" size="sm" onClick={shareWhatsApp} className="gap-1.5 text-xs md:text-sm">
                       <MessageCircle className="w-4 h-4" />
-                      {t.shareWhatsApp}
+                      <span className="hidden sm:inline">{t.shareWhatsApp}</span>
                     </Button>
-                    <Button variant="outline" size="sm" onClick={copyLink} className="gap-2">
+                    <Button variant="outline" size="sm" onClick={copyLink} className="gap-1.5 text-xs md:text-sm">
                       {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                      {copied ? t.linkCopied : t.copyLink}
+                      <span className="hidden sm:inline">{copied ? t.linkCopied : t.copyLink}</span>
                     </Button>
                   </div>
                 )}
               </div>
 
               {/* Exams Tab */}
-              <TabsContent value="exams" className="space-y-6">
+              <TabsContent value="exams" className="space-y-4 md:space-y-6">
                 <div className="grid lg:grid-cols-2 gap-6">
                   {/* Add Exam Form */}
                   <ExamForm onAddExam={handleAddExam} language={currentLang} />
@@ -573,35 +600,35 @@ const GradeCalculator = () => {
                 {/* Exams List */}
                 {exams.length > 0 ? (
                   <Card>
-                    <CardHeader>
-                      <CardTitle className="text-lg">
+                    <CardHeader className="pb-2 md:pb-4">
+                      <CardTitle className="text-base md:text-lg">
                         {currentLang === 'it' ? 'I tuoi esami' : 'Your exams'}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <div className="space-y-2">
+                    <CardContent className="pt-0">
+                      <div className="space-y-1.5 md:space-y-2">
                         {exams.map((exam, index) => (
                           <div 
                             key={exam.id}
-                            className="flex items-center justify-between p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                            className="flex items-center justify-between p-2 md:p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
                           >
-                            <div className="flex items-center gap-4">
-                              <span className="text-sm text-muted-foreground w-6">
+                            <div className="flex items-center gap-2 md:gap-4 min-w-0 flex-1">
+                              <span className="text-xs md:text-sm text-muted-foreground w-5 md:w-6 shrink-0">
                                 {index + 1}.
                               </span>
-                              <div>
-                                <p className="font-medium">
+                              <div className="min-w-0">
+                                <p className="font-medium text-sm md:text-base truncate">
                                   {exam.name || `Esame ${index + 1}`}
                                 </p>
-                                <p className="text-sm text-muted-foreground">
+                                <p className="text-xs md:text-sm text-muted-foreground">
                                   {exam.cfu} CFU
                                 </p>
                               </div>
                             </div>
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-2 md:gap-3 shrink-0">
                               <Badge 
                                 variant={exam.grade >= 27 ? "default" : exam.grade >= 24 ? "secondary" : "outline"}
-                                className="text-base font-bold"
+                                className="text-sm md:text-base font-bold"
                               >
                                 {exam.grade === 31 ? "30L" : exam.grade}
                               </Badge>
@@ -609,7 +636,7 @@ const GradeCalculator = () => {
                                 variant="ghost"
                                 size="icon"
                                 onClick={() => handleRemoveExam(exam.id)}
-                                className="text-destructive hover:text-destructive hover:bg-destructive/10"
+                                className="text-destructive hover:text-destructive hover:bg-destructive/10 h-8 w-8"
                               >
                                 <Trash2 className="w-4 h-4" />
                               </Button>
