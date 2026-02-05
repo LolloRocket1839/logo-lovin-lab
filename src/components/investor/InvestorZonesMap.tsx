@@ -9,7 +9,7 @@
    zones?: InvestorZone[];
    lang: 'it' | 'en';
    onZoneClick?: (zone: InvestorZone) => void;
-   selectedZoneId?: string;
+  selectedZoneIds?: string[];
    showYieldMode?: 'gross' | 'net';
  }
  
@@ -38,11 +38,14 @@
    return labels[demand]?.[lang] || demand;
  };
  
- const createZoneIcon = (zone: InvestorZone, isSelected: boolean, yieldMode: 'gross' | 'net'): L.DivIcon => {
+const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex: number, yieldMode: 'gross' | 'net'): L.DivIcon => {
    const yieldValue = yieldMode === 'gross' ? zone.grossYield.max : zone.netYield.max;
    const color = getYieldColor(yieldValue);
    const size = isSelected ? 44 : 36;
    const hasRenewal = zone.urbanRenewal.active;
+  const selectionBadge = isSelected && selectionIndex >= 0 
+    ? `<span style="position:absolute;top:-8px;left:-8px;font-size:10px;background:hsl(var(--primary));color:white;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,0.3);border:2px solid white;">${selectionIndex + 1}</span>`
+    : '';
    
    return L.divIcon({
      className: 'investor-zone-marker',
@@ -52,7 +55,7 @@
          height: ${size}px;
          border-radius: 50%;
          background: ${color};
-         border: 3px solid white;
+        border: 3px solid ${isSelected ? 'hsl(var(--primary))' : 'white'};
          box-shadow: 0 2px 8px rgba(0,0,0,0.3);
          display: flex;
          align-items: center;
@@ -67,6 +70,7 @@
        ">
          ${yieldValue}%
          ${hasRenewal ? '<span style="position:absolute;top:-6px;right:-6px;font-size:10px;background:white;border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.2);">🏗️</span>' : ''}
+        ${selectionBadge}
        </div>
      `,
      iconSize: [size, size],
@@ -116,7 +120,7 @@
    zones = investorZones, 
    lang, 
    onZoneClick,
-   selectedZoneId,
+  selectedZoneIds = [],
    showYieldMode = 'gross'
  }) => {
    const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -156,12 +160,13 @@
      zones.forEach(zone => {
        if (!mapRef.current) return;
  
-       const isSelected = zone.id === selectedZoneId;
+      const isSelected = selectedZoneIds.includes(zone.id);
+      const selectionIndex = selectedZoneIds.indexOf(zone.id);
        const yieldValue = yieldMode === 'gross' ? zone.grossYield : zone.netYield;
        
        const marker = L.marker(
          [zone.coordinates.lat, zone.coordinates.lng], 
-         { icon: createZoneIcon(zone, isSelected, yieldMode) }
+        { icon: createZoneIcon(zone, isSelected, selectionIndex, yieldMode) }
        ).addTo(mapRef.current);
  
        // Popup content
@@ -241,7 +246,7 @@
        const bounds = L.latLngBounds(zones.map(z => [z.coordinates.lat, z.coordinates.lng]));
        mapRef.current.fitBounds(bounds, { padding: [50, 50] });
      }
-   }, [zones, lang, selectedZoneId, yieldMode, onZoneClick, navigate, zonesPath, t]);
+  }, [zones, lang, selectedZoneIds, yieldMode, onZoneClick, navigate, zonesPath, t]);
  
    return (
      <div className="relative w-full h-[450px] md:h-[500px] rounded-lg overflow-hidden">
