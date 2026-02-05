@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { TrendingUp, ArrowRight, Users, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,7 +8,7 @@ import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 
 export const InvestorSectionMobile = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
   const { count } = useWaitlistCounter();
 
@@ -66,6 +67,17 @@ export const InvestorSectionMobile = () => {
             {t("investor.cta")}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
+
+          {/* Link to zones - SEO internal linking */}
+          <div className="text-center mt-4">
+            <Link 
+              to={i18n.language.startsWith('en') ? '/investors/zones' : '/investitori/zone'}
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              {i18n.language.startsWith('it') ? 'Esplora i quartieri di Torino' : 'Explore Turin neighborhoods'}
+              <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
         </div>
       </div>
 

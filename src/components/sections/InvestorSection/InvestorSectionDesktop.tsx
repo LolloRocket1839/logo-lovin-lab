@@ -227,6 +227,17 @@ export const InvestorSectionDesktop = () => {
             </Button>
           </div>
 
+          {/* Link to zones - SEO internal linking */}
+          <div className="text-center mt-6">
+            <Link 
+              to={i18n.language.startsWith('en') ? '/investors/zones' : '/investitori/zone'}
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              {i18n.language.startsWith('it') ? 'Esplora i quartieri di Torino' : 'Explore Turin neighborhoods'}
+              <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
+
         </div>
       </div>
       
