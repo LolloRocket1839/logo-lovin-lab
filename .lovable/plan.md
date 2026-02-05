@@ -1,279 +1,92 @@
 
-# Piano: mappa interattiva quartieri investitori con marker colorati per rendimento
+
+# Piano: Migliorare Visibilità SEO delle Zone Investitori
 
 ## Obiettivo
+Aumentare il "PageRank" interno delle pagine `/investitori/zone` e `/investitori/zone/{quartiere}` attraverso internal linking strategico da pagine ad alta autorità (homepage, footer, pagina investitori).
 
-Creare un componente mappa Leaflet che visualizza tutti i 12+ quartieri di Torino con marker colorati in base al rendimento lordo, permettendo agli investitori di identificare visivamente le zone piu redditizie.
+## Modifiche Pianificate
 
----
+### 1. Aggiungere Link nella InvestorSection Homepage
+**File:** `src/components/sections/InvestorSection/InvestorSectionDesktop.tsx`
+- Aggiungere un link "Esplora i quartieri" sotto i CTA esistenti
+- Stile discreto ma visibile (text link con freccia)
 
-## Architettura
+**File:** `src/components/sections/InvestorSection/InvestorSectionMobile.tsx`
+- Stesso link aggiunto sotto il bottone CTA principale
 
-### Pattern esistente
+### 2. Aggiungere Sezione "Zone Investimento" nel Footer
+**File:** `src/components/layout/Footer.tsx`
+- Nuova colonna "Zone popolari investitori" accanto a "Quartieri popolari" (studenti)
+- Link ai 5 quartieri top per rendimento: Aurora, Barriera di Milano, Cenisia, San Salvario, Vanchiglia
+- Link finale "Tutte le zone →" che porta a `/investitori/zone`
 
-Il progetto utilizza gia Leaflet per mappe interattive (es. `GymsMap.tsx`, `StudySpacesMap.tsx`). Seguiro lo stesso pattern:
-- Uso diretto di `L.map()` con `useRef`
-- Custom `L.divIcon` per marker colorati
-- Legenda overlay con `z-[1000]`
-- Popup con dettagli al click
+### 3. Aggiungere Link Contestuali nella Pagina Investitori
+**File:** `src/pages/Investors.tsx`
+- Nella sezione "Zones Section" esistente, aggiungere 3 card preview dei quartieri top
+- Ogni card ha link diretto alla pagina specifica del quartiere
+- Questo crea link diretti alle pagine foglia (non solo all'indice)
 
-### Posizionamento
-
-Il componente sara integrato in:
-1. **InvestorZonesIndex.tsx** - Sezione mappa tra Quick Stats e griglia zone
-2. Opzionale: toggle Lista/Mappa per visualizzazione alternativa
-
----
-
-## Design marker colorati per rendimento
-
-### Scala colori rendimento lordo
-
-| Rendimento | Colore | Hex | Descrizione |
-|------------|--------|-----|-------------|
-| 6.5%+ | Verde scuro | `#16a34a` | Rendimento eccellente |
-| 5.5-6.5% | Verde | `#22c55e` | Rendimento alto |
-| 5-5.5% | Giallo | `#eab308` | Rendimento medio |
-| < 5% | Arancione | `#f97316` | Rendimento basso |
-
-### Marker design
-
-```text
-┌─────────────────┐
-│   ●             │  Cerchio colorato (rendimento)
-│   6.5%          │  Percentuale rendimento max
-│   Cenisia       │  Nome quartiere
-└─────────────────┘
-```
-
-Il marker sara un `divIcon` con:
-- Cerchio 32-40px colorato per rendimento
-- Percentuale rendimento max al centro
-- Bordo bianco + ombra per contrasto
-- Animazione scale al hover/selection
+## Impatto SEO Atteso
+- Homepage (alta autorità) → distribuisce PageRank a `/investitori/zone`
+- Footer (presente su tutte le pagine) → segnale di rilevanza per i crawler
+- Link diretti ai singoli quartieri → indicizzazione più veloce delle pagine dettaglio
 
 ---
 
-## Popup dettagli
+## Dettagli Tecnici
 
-Al click sul marker, popup con:
-
-```text
-┌──────────────────────────────────────┐
-│  CENISIA                    [Centro] │
-│  ────────────────────────────────────│
-│  💰 €2.200/mq      📈 +4% (2024)     │
-│  📊 6-7% lordo     🏠 4.4-5.1% netto │
-│  ⏱️ 2-4 settimane  📍 Alta domanda   │
-│  ────────────────────────────────────│
-│  🏗️ Metro 2 in arrivo               │
-│  ────────────────────────────────────│
-│           [Vedi dettagli →]          │
-└──────────────────────────────────────┘
-```
-
----
-
-## Componente principale
-
-### File: `src/components/investor/InvestorZonesMap.tsx`
-
-```text
-Props:
-- zones: InvestorZone[]
-- lang: 'it' | 'en'
-- onZoneClick?: (zone: InvestorZone) => void
-- selectedZoneId?: string
-- showYieldMode?: 'gross' | 'net' (default: 'gross')
-```
-
-### Funzionalita
-
-1. **Visualizzazione tutti i quartieri** su mappa Torino
-2. **Marker colorati** in base al rendimento
-3. **Popup informativi** con metriche chiave
-4. **Selezione zona** con evidenziazione marker
-5. **Legenda interattiva** con filtri colore
-6. **Link a pagina dettaglio** nel popup
-7. **Responsive**: full-width su mobile, aspect-ratio su desktop
-
----
-
-## Legenda
-
-```text
-┌─────────────────────────────┐
-│  RENDIMENTO LORDO           │
-│  ────────────────────────── │
-│  ● 6.5%+    Eccellente      │
-│  ● 5.5-6.5% Alto            │
-│  ● 5-5.5%   Medio           │
-│  ● < 5%     Basso           │
-│  ────────────────────────── │
-│  12 quartieri               │
-│  ────────────────────────── │
-│  🏗️ = Riqualificazione      │
-└─────────────────────────────┘
-```
-
----
-
-## Integrazione in InvestorZonesIndex
-
-### Opzione 1: Sezione mappa dedicata (consigliata)
-
-Aggiungere nuova sezione tra Quick Stats e Filters:
-
+### InvestorSectionDesktop.tsx - Aggiunta dopo i CTA
 ```tsx
-{/* Map Section */}
-<section className="pb-12 md:pb-16">
-  <div className="container px-6">
-    <Card className="overflow-hidden border-border/20">
-      <div className="p-4 border-b border-border/20 flex items-center justify-between">
-        <h2 className="font-semibold flex items-center gap-2">
-          <MapPin className="w-4 h-4 text-primary" />
-          Mappa rendimenti
-        </h2>
-        <div className="flex gap-2">
-          <Button variant="ghost" size="sm">Lordo</Button>
-          <Button variant="ghost" size="sm">Netto</Button>
-        </div>
-      </div>
-      <InvestorZonesMap
-        zones={investorZones}
-        lang={lang}
-        onZoneClick={(zone) => navigate(`${zonesPath}/${zone.slug}`)}
-      />
+{/* Link to zones */}
+<div className="text-center mt-6">
+  <Link 
+    to={i18n.language.startsWith('en') ? '/investors/zones' : '/investitori/zone'}
+    className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+  >
+    {i18n.language.startsWith('it') ? 'Esplora i quartieri di Torino' : 'Explore Turin neighborhoods'}
+    <ArrowRight className="w-4 h-4 ml-1" />
+  </Link>
+</div>
+```
+
+### Footer.tsx - Nuova colonna
+```tsx
+{/* Investment Zones - SEO PageRank distribution */}
+<div>
+  <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">
+    {i18n.language.startsWith('it') ? 'Zone investimento' : 'Investment zones'}
+  </h3>
+  <ul className="space-y-3 text-muted-foreground">
+    <li><Link to="/investitori/zone/aurora">Aurora</Link></li>
+    <li><Link to="/investitori/zone/barriera-di-milano">Barriera di Milano</Link></li>
+    <li><Link to="/investitori/zone/cenisia">Cenisia</Link></li>
+    <li><Link to="/investitori/zone/san-salvario">San Salvario</Link></li>
+    <li><Link to="/investitori/zone/vanchiglia">Vanchiglia</Link></li>
+    <li>
+      <Link to="/investitori/zone" className="text-primary">
+        Tutte le zone →
+      </Link>
+    </li>
+  </ul>
+</div>
+```
+
+### Investors.tsx - Zone Preview Cards
+Nella sezione esistente "Zones Section", sostituire il semplice link con 3 card preview:
+```tsx
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
+  {/* Aurora */}
+  <Link to="/investitori/zone/aurora">
+    <Card className="p-4 hover:border-primary/50 transition-colors">
+      <h3 className="font-semibold">Aurora</h3>
+      <p className="text-sm text-muted-foreground">7-9% lordo</p>
     </Card>
-  </div>
-</section>
+  </Link>
+  {/* Cenisia */}
+  <Link to="/investitori/zone/cenisia">...</Link>
+  {/* San Salvario */}
+  <Link to="/investitori/zone/san-salvario">...</Link>
+</div>
 ```
 
-### Opzione 2: Toggle Lista/Mappa
-
-Aggiungere toggle nei filtri per alternare tra vista griglia e vista mappa.
-
----
-
-## File da creare/modificare
-
-| File | Azione |
-|------|--------|
-| `src/components/investor/InvestorZonesMap.tsx` | NUOVO - Componente mappa |
-| `src/pages/InvestorZonesIndex.tsx` | Integrare mappa nella pagina |
-
----
-
-## Dettaglio tecnico: funzione colore rendimento
-
-```typescript
-const getYieldColor = (yieldMax: number): string => {
-  if (yieldMax >= 6.5) return '#16a34a'; // green-600
-  if (yieldMax >= 5.5) return '#22c55e'; // green-500
-  if (yieldMax >= 5) return '#eab308';   // yellow-500
-  return '#f97316';                       // orange-500
-};
-
-const getYieldLabel = (yieldMax: number, lang: 'it' | 'en'): string => {
-  if (yieldMax >= 6.5) return lang === 'it' ? 'Eccellente' : 'Excellent';
-  if (yieldMax >= 5.5) return lang === 'it' ? 'Alto' : 'High';
-  if (yieldMax >= 5) return lang === 'it' ? 'Medio' : 'Medium';
-  return lang === 'it' ? 'Basso' : 'Low';
-};
-```
-
----
-
-## Dettaglio tecnico: marker custom
-
-```typescript
-const createZoneMarker = (zone: InvestorZone, isSelected: boolean): L.DivIcon => {
-  const color = getYieldColor(zone.grossYield.max);
-  const size = isSelected ? 44 : 36;
-  const hasRenewal = zone.urbanRenewal.active;
-  
-  return L.divIcon({
-    className: 'investor-zone-marker',
-    html: `
-      <div style="
-        width: ${size}px;
-        height: ${size}px;
-        border-radius: 50%;
-        background: ${color};
-        border: 3px solid white;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 11px;
-        font-weight: 700;
-        color: white;
-        position: relative;
-        ${isSelected ? 'transform: scale(1.15); z-index: 1000;' : ''}
-      ">
-        ${zone.grossYield.max}%
-        ${hasRenewal ? '<span style="position:absolute;top:-4px;right:-4px;font-size:10px;">🏗️</span>' : ''}
-      </div>
-    `,
-    iconSize: [size, size],
-    iconAnchor: [size/2, size/2],
-    popupAnchor: [0, -size/2]
-  });
-};
-```
-
----
-
-## Traduzioni da aggiungere
-
-```typescript
-const texts = {
-  it: {
-    mapTitle: 'Mappa rendimenti',
-    legend: 'Legenda rendimento',
-    excellent: 'Eccellente',
-    high: 'Alto',
-    medium: 'Medio',
-    low: 'Basso',
-    viewDetails: 'Vedi dettagli',
-    grossYield: 'Lordo',
-    netYield: 'Netto',
-    renewal: 'Riqualificazione',
-    zones: 'quartieri'
-  },
-  en: {
-    mapTitle: 'Yield map',
-    legend: 'Yield legend',
-    excellent: 'Excellent',
-    high: 'High',
-    medium: 'Medium',
-    low: 'Low',
-    viewDetails: 'View details',
-    grossYield: 'Gross',
-    netYield: 'Net',
-    renewal: 'Urban renewal',
-    zones: 'neighborhoods'
-  }
-};
-```
-
----
-
-## Risultato atteso
-
-- Mappa interattiva con tutti i 12+ quartieri
-- Colori marker immediatamente comprensibili (verde = alto rendimento)
-- Popup informativi con metriche chiave
-- Click per navigare alla pagina dettaglio
-- Legenda chiara con scala colori
-- Indicatore 🏗️ per zone con riqualificazione
-- Responsive: scroll touch su mobile
-
----
-
-## Considerazioni UX
-
-1. **First impression**: la mappa offre una panoramica visiva immediata delle opportunita
-2. **Colori intuitivi**: verde = buono, giallo = attenzione, arancione = da valutare
-3. **Progressione**: mappa overview -> click popup -> pagina dettaglio
-4. **Mobile-first**: mappa full-width, legenda compatta, popup adattivi
