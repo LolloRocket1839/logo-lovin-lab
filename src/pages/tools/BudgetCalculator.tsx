@@ -24,7 +24,8 @@ import {
   Globe,
   Wallet,
   Lightbulb,
-  ChevronDown
+  ChevronDown,
+  Share2
 } from "lucide-react";
 import { AIBudgetAdvisor } from "@/components/tools/AIBudgetAdvisor";
 import { RentPriceHistory } from "@/components/tools/RentPriceHistory";
@@ -46,6 +47,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import {
   Tooltip,
   TooltipContent,
@@ -273,6 +280,9 @@ const BudgetCalculator = () => {
   
   // Saving target
   const [savingTarget, setSavingTarget] = useState([50]);
+
+  // Mobile share dialog
+  const [shareDialogOpen, setShareDialogOpen] = useState(false);
   
   // Get selected area data
   const areaData = useMemo(() => {
@@ -495,6 +505,7 @@ const BudgetCalculator = () => {
                 mode={mode}
                 budgetBreakdown={budgetBreakdown}
                 currentLang={currentLang}
+                onShareClick={() => setShareDialogOpen(true)}
               />
 
               {/* Left: Inputs */}
@@ -1178,6 +1189,29 @@ const BudgetCalculator = () => {
 
       <Footer />
       <BottomNav />
+
+      {/* Mobile Share Dialog */}
+      <Dialog open={shareDialogOpen} onOpenChange={setShareDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Share2 className="w-5 h-5 text-primary" />
+              {currentLang === 'it' ? 'Condividi budget' : 'Share budget'}
+            </DialogTitle>
+          </DialogHeader>
+          <BudgetShareExport
+            selectedArea={selectedArea}
+            housingType={housingType}
+            totalBudget={totalBudget}
+            breakdown={budgetBreakdown}
+            hasGTT={hasGTT}
+            isUnder26={isUnder26}
+            groceries={groceries[0]}
+            extras={extras[0]}
+            language={currentLang}
+          />
+        </DialogContent>
+      </Dialog>
     </>
   );
 };

@@ -1,6 +1,7 @@
  import { useState, memo } from "react";
  import { motion, AnimatePresence } from "framer-motion";
- import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Share2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
  import { cn } from "@/lib/utils";
  
  interface BudgetItem {
@@ -17,6 +18,7 @@
    mode: "simple" | "advanced";
    budgetBreakdown: BudgetItem[];
    currentLang: "it" | "en";
+  onShareClick?: () => void;
  }
  
  const MobileStickyBudgetComponent = ({
@@ -26,7 +28,8 @@
    savingTarget,
    mode,
    budgetBreakdown,
-   currentLang
+  currentLang,
+  onShareClick
  }: MobileStickyBudgetProps) => {
    const [isExpanded, setIsExpanded] = useState(false);
  
@@ -68,6 +71,20 @@
              </div>
            )}
            
+            {onShareClick && (
+              <Button
+                variant="outline"
+                size="icon"
+                className="h-8 w-8 shrink-0"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onShareClick();
+                }}
+              >
+                <Share2 className="w-4 h-4" />
+              </Button>
+            )}
+
            <div className={cn(
              "w-8 h-8 rounded-full bg-muted flex items-center justify-center transition-transform duration-200",
              isExpanded && "bg-primary/10"
