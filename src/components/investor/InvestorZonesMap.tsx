@@ -3,8 +3,25 @@
  import 'leaflet/dist/leaflet.css';
  import { InvestorZone, investorZones } from '@/data/investorZoneData';
  import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuCheckboxItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+} from '@/components/ui/dropdown-menu';
+import { Filter, X } from 'lucide-react';
  import { useNavigate } from 'react-router-dom';
  
+type ZoneType = 'Centro' | 'Semicentro' | 'Periferia';
+
+interface MapFilters {
+  types: ZoneType[];
+  renewalOnly: boolean;
+}
+
  interface InvestorZonesMapProps {
    zones?: InvestorZone[];
    lang: 'it' | 'en';
@@ -115,6 +132,27 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
      trend: '2024 trend'
    }
  };
+
+const filterTexts = {
+  it: {
+    filters: 'Filtri',
+    allTypes: 'Tipo zona',
+    center: 'Centro',
+    semicenter: 'Semicentro',
+    periphery: 'Periferia',
+    renewalOnly: 'Solo riqualificazione',
+    clearFilters: 'Reset'
+  },
+  en: {
+    filters: 'Filters',
+    allTypes: 'Zone type',
+    center: 'Center',
+    semicenter: 'Semi-center',
+    periphery: 'Periphery',
+    renewalOnly: 'Renewal only',
+    clearFilters: 'Clear'
+  }
+};
  
  const InvestorZonesMap: React.FC<InvestorZonesMapProps> = ({ 
    zones = investorZones, 
@@ -127,10 +165,42 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
    const mapRef = useRef<L.Map | null>(null);
    const markersRef = useRef<L.Marker[]>([]);
    const [yieldMode, setYieldMode] = useState<'gross' | 'net'>(showYieldMode);
+  const [filters, setFilters] = useState<MapFilters>({
+    types: ['Centro', 'Semicentro', 'Periferia'],
+    renewalOnly: false
+  });
    const navigate = useNavigate();
    
    const t = texts[lang];
+  const ft = filterTexts[lang];
    const zonesPath = lang === 'it' ? '/investitori/zone' : '/investors/zones';
+
+  // Filter zones based on current filters
+  const filteredZones = React.useMemo(() => {
+    return zones.filter(zone => {
+      const matchesType = filters.types.includes(zone.zone as ZoneType);
+      const matchesRenewal = !filters.renewalOnly || zone.urbanRenewal.active;
+      return matchesType && matchesRenewal;
+    });
+  }, [zones, filters]);
+
+  const activeFilterCount = (3 - filters.types.length) + (filters.renewalOnly ? 1 : 0);
+
+  const toggleType = (type: ZoneType) => {
+    setFilters(prev => ({
+      ...prev,
+      types: prev.types.includes(type)
+        ? prev.types.filter(t => t !== type)
+        : [...prev.types, type]
+    }));
+  };
+
+  const clearFilters = () => {
+    setFilters({
+      types: ['Centro', 'Semicentro', 'Periferia'],
+      renewalOnly: false
+    });
+  };
  
    // Initialize map
    useEffect(() => {
@@ -157,7 +227,7 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
      markersRef.current = [];
  
      // Add new markers
-     zones.forEach(zone => {
+    filteredZones.forEach(zone => {
        if (!mapRef.current) return;
  
       const isSelected = selectedZoneIds.includes(zone.id);
@@ -242,18 +312,81 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
      });
  
      // Fit bounds
-     if (zones.length > 0) {
-       const bounds = L.latLngBounds(zones.map(z => [z.coordinates.lat, z.coordinates.lng]));
+    if (filteredZones.length > 0) {
+      const bounds = L.latLngBounds(filteredZones.map(z => [z.coordinates.lat, z.coordinates.lng]));
        mapRef.current.fitBounds(bounds, { padding: [50, 50] });
      }
-  }, [zones, lang, selectedZoneIds, yieldMode, onZoneClick, navigate, zonesPath, t]);
+  }, [filteredZones, lang, selectedZoneIds, yieldMode, onZoneClick, navigate, zonesPath, t]);
  
    return (
      <div className="relative w-full h-[450px] md:h-[500px] rounded-lg overflow-hidden">
        <div ref={mapContainerRef} className="absolute inset-0" />
        
        {/* Yield mode toggle */}
-       <div className="absolute top-4 right-4 z-[1000] flex gap-1 bg-background/95 backdrop-blur-sm rounded-lg p-1 shadow-lg">
+      <div className="absolute top-4 right-4 z-[1000] flex items-center gap-2">
+        {/* Filters dropdown */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="h-7 text-xs bg-background/95 backdrop-blur-sm shadow-lg gap-1"
+            >
+              <Filter className="w-3 h-3" />
+              {ft.filters}
+              {activeFilterCount > 0 && (
+                <Badge variant="secondary" className="h-4 px-1 text-[10px] ml-1">
+                  {activeFilterCount}
+                </Badge>
+              )}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-48">
+            <DropdownMenuLabel className="text-xs">{ft.allTypes}</DropdownMenuLabel>
+            <DropdownMenuCheckboxItem
+              checked={filters.types.includes('Centro')}
+              onCheckedChange={() => toggleType('Centro')}
+            >
+              {ft.center}
+            </DropdownMenuCheckboxItem>
+            <DropdownMenuCheckboxItem
+              checked={filters.types.includes('Semicentro')}
+              onCheckedChange={() => toggleType('Semicentro')}
+            >
+              {ft.semicenter}
+            </DropdownMenuCheckboxItem>
+            <DropdownMenuCheckboxItem
+              checked={filters.types.includes('Periferia')}
+              onCheckedChange={() => toggleType('Periferia')}
+            >
+              {ft.periphery}
+            </DropdownMenuCheckboxItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuCheckboxItem
+              checked={filters.renewalOnly}
+              onCheckedChange={(checked) => setFilters(prev => ({ ...prev, renewalOnly: !!checked }))}
+            >
+              🏗️ {ft.renewalOnly}
+            </DropdownMenuCheckboxItem>
+            {activeFilterCount > 0 && (
+              <>
+                <DropdownMenuSeparator />
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="w-full h-7 text-xs justify-start gap-1 text-muted-foreground"
+                  onClick={clearFilters}
+                >
+                  <X className="w-3 h-3" />
+                  {ft.clearFilters}
+                </Button>
+              </>
+            )}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        {/* Yield mode toggle */}
+        <div className="flex gap-1 bg-background/95 backdrop-blur-sm rounded-lg p-1 shadow-lg">
          <Button
            variant={yieldMode === 'gross' ? 'default' : 'ghost'}
            size="sm"
@@ -270,6 +403,7 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
          >
            {t.netYield}
          </Button>
+        </div>
        </div>
        
        {/* Legend */}
@@ -302,7 +436,7 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
            </div>
          </div>
          <p className="text-[10px] text-muted-foreground mt-2">
-           {zones.length} {t.zones}
+          {filteredZones.length}/{zones.length} {t.zones}
          </p>
        </div>
      </div>
