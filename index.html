@@ -15,13 +15,13 @@
     <link rel="dns-prefetch" href="https://formspree.io">
     <link rel="dns-prefetch" href="https://wa.me">
     
-    <!-- Load Inter font with optimal loading -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <!-- Load Inter font with font-display: swap for better LCP -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     
     <!-- Preload critical above-the-fold assets for LCP -->
-    <link rel="preload" href="/src/assets/jungle-rent-logo-new.svg" as="image" type="image/svg+xml">
-    
+    <link rel="preload" href="/src/assets/jungle-rent-logo-new.svg" as="image" type="image/svg+xml" fetchpriority="high">
     <!-- Prefetch likely next navigations -->
     <link rel="prefetch" href="/blog" as="document">
     <link rel="prefetch" href="/investitori" as="document">

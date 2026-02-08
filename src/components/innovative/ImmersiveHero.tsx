@@ -117,7 +117,15 @@ export const ImmersiveHero = () => {
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
             onClick={() => trackClick('hero_2i3t_badge')}
           >
-            <img src={logo2i3t} alt="2i3T" className="h-7 w-auto" />
+            <img 
+              src={logo2i3t} 
+              alt="2i3T" 
+              className="h-7 w-auto" 
+              width={70} 
+              height={28}
+              loading="lazy"
+              decoding="async"
+            />
             <div className="text-left">
               <p className="text-sm font-medium text-foreground">Incubatore Imprese UniTO</p>
               <p className="text-xs text-primary font-medium">Startup Innovativa</p>

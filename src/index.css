@@ -131,6 +131,17 @@ All colors MUST be HSL.
   border-top: 1px solid hsl(var(--primary-foreground) / 0.15);
 }
 
+/* CLS Prevention - Reserve space for lazy content */
+.lazy-section-placeholder {
+  min-height: 400px;
+  contain: layout style;
+}
+
+/* LCP Optimization - Critical image hints */
+img[fetchpriority="high"] {
+  content-visibility: auto;
+}
+
 /* Reduced motion: disable all animations */
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up {
