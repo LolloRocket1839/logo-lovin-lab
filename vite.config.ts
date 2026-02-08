@@ -68,9 +68,15 @@ export default defineConfig(({ mode }) => ({
           'vendor-i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
           'vendor-charts': ['recharts'],
           'vendor-markdown': ['react-markdown', 'remark-gfm', 'rehype-raw'],
+          'vendor-maps': ['leaflet', 'react-leaflet'],
+          'vendor-pdf': ['jspdf'],
         },
       },
     },
     chunkSizeWarningLimit: 500,
+    // Tree shaking optimization
+    treeshake: {
+      moduleSideEffects: false,
+    },
   },
 }));
