@@ -11,11 +11,13 @@ import { FORMSPREE_ENDPOINTS } from "@/constants";
 
 interface ExitIntentPopupProps {
   source?: string;
+  /** Prefix for tracking events (e.g., "seller" → "seller_exit_intent_shown") */
+  trackingPrefix?: string;
 }
 
 const STORAGE_KEY = "exitIntentShown";
 
-export const ExitIntentPopup = ({ source = "exit-intent" }: ExitIntentPopupProps) => {
+export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix }: ExitIntentPopupProps) => {
   const { t } = useTranslation();
   const { trackEvent } = useAnalytics();
   const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +25,20 @@ export const ExitIntentPopup = ({ source = "exit-intent" }: ExitIntentPopupProps
   const [phone, setPhone] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Generate event names based on prefix
+  const getEventName = (eventType: 'shown' | 'closed' | 'submit') => {
+    const base = trackingPrefix ? `${trackingPrefix}_exit_intent` : 'exit_intent';
+    return `${base}_${eventType === 'submit' ? 'submit' : eventType}`;
+  };
+
   const showPopup = useCallback(() => {
     const alreadyShown = sessionStorage.getItem(STORAGE_KEY);
     if (alreadyShown) return;
     
     setIsOpen(true);
     sessionStorage.setItem(STORAGE_KEY, "true");
-    trackEvent("exit_intent_shown", { source });
-  }, [source, trackEvent]);
+    trackEvent(getEventName('shown'), { source });
+  }, [source, trackEvent, trackingPrefix]);
 
   useEffect(() => {
     // Desktop: Mouse leave detection
@@ -70,7 +78,7 @@ export const ExitIntentPopup = ({ source = "exit-intent" }: ExitIntentPopupProps
 
   const handleClose = () => {
     setIsOpen(false);
-    trackEvent("exit_intent_closed", { source });
+    trackEvent(getEventName('closed'), { source });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -106,7 +114,7 @@ export const ExitIntentPopup = ({ source = "exit-intent" }: ExitIntentPopupProps
       });
 
       if (response.ok) {
-        trackEvent("exit_intent_submitted", { source, hasPhone: !!phone.trim() });
+        trackEvent(getEventName('submit'), { source, hasPhone: !!phone.trim() });
         toast.success(t("exitIntent.success", "Riceverai la valutazione entro 24 ore!"));
         setIsOpen(false);
       } else {
