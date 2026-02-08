@@ -49,7 +49,7 @@ const isValidEventType = (eventType: string): boolean => {
     // Generic exit intent
     'exit_intent_shown', 'exit_intent_submit', 'exit_intent_closed',
     // Investor exit intent
-    'investor_exit_intent_shown', 'investor_exit_intent_submit',
+    'investor_exit_intent_shown', 'investor_exit_intent_submit', 'investor_exit_intent_closed',
     // Seller exit intent (dedicated for /vendi page)
     'seller_exit_intent_shown', 'seller_exit_intent_submit', 'seller_exit_intent_closed'
   ];
