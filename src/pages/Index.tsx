@@ -103,7 +103,7 @@ const Index = () => {
       {/* TrustBadge - now visible on all devices */}
       <TrustBadge />
 
-      <Suspense fallback={<div className="min-h-[200px]" />}>
+      <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
         
         {/* How It Works Section - unified component handles desktop/mobile */}
         <HowItWorks />

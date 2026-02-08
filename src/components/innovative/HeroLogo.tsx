@@ -18,7 +18,11 @@ export const HeroLogo = () => {
         <img
           src={jungleRentLogo}
           alt="Jungle Rent"
+          width={160}
+          height={160}
           className="w-20 h-20 md:w-40 md:h-40 mx-auto block"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
     );
@@ -36,10 +40,14 @@ export const HeroLogo = () => {
       <motion.img
         src={jungleRentLogo}
         alt="Jungle Rent"
+        width={160}
+        height={160}
         className="w-20 h-20 md:w-40 md:h-40 mx-auto block"
-        initial={{ scale: 0.8, opacity: 0 }}
+        fetchPriority="high"
+        decoding="async"
+        initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       />
     </motion.div>
   );
