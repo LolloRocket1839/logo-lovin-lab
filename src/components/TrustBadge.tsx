@@ -50,9 +50,9 @@ export const TrustBadge = () => {
               />
             </div>
             <div className="text-left max-w-sm">
-              <h3 className="text-sm sm:text-lg md:text-xl font-display font-bold text-foreground mb-0.5 md:mb-1 leading-tight">
+              <p className="text-sm sm:text-lg md:text-xl font-display font-bold text-foreground mb-0.5 md:mb-1 leading-tight">
                 {t('trustBadge.supportedBy')}
-              </h3>
+              </p>
               <p className="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
                 {t('trustBadge.incubator')}
               </p>

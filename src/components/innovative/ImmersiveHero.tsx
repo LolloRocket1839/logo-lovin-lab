@@ -30,9 +30,9 @@ export const ImmersiveHero = () => {
   const headline = t('hero.mainHeadline');
 
   return (
-    <header 
+    <section 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      role="banner"
+      aria-labelledby="hero-heading"
     >
       {/* Solid background */}
       <div className="absolute inset-0 bg-background" />
@@ -45,6 +45,7 @@ export const ImmersiveHero = () => {
 
           {/* Headline - fade up on load */}
           <h1 
+            id="hero-heading"
             className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-extrabold mb-4 md:mb-6 leading-tight text-foreground tracking-tight ${
               hasLoaded && !prefersReducedMotion ? 'animate-fade-up' : ''
             }`}
@@ -138,6 +139,6 @@ export const ImmersiveHero = () => {
       </div>
 
       <QuickInvestorLeadDialog open={investDialogOpen} onOpenChange={setInvestDialogOpen} source="hero" />
-    </header>
+    </section>
   );
 };
