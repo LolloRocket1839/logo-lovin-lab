@@ -1,92 +1,56 @@
 
 
-# Piano: Migliorare Visibilità SEO delle Zone Investitori
+# MCP Server per Jungle Rent
 
-## Obiettivo
-Aumentare il "PageRank" interno delle pagine `/investitori/zone` e `/investitori/zone/{quartiere}` attraverso internal linking strategico da pagine ad alta autorità (homepage, footer, pagina investitori).
+Creare un MCP (Model Context Protocol) server come edge function per esporre i dati di Jungle Rent ad agenti AI esterni.
 
-## Modifiche Pianificate
+## Cosa fa
 
-### 1. Aggiungere Link nella InvestorSection Homepage
-**File:** `src/components/sections/InvestorSection/InvestorSectionDesktop.tsx`
-- Aggiungere un link "Esplora i quartieri" sotto i CTA esistenti
-- Stile discreto ma visibile (text link con freccia)
+Il server MCP permette ad agenti AI (come Claude, ChatGPT con plugins, o qualsiasi client MCP-compatibile) di interrogare programmaticamente i dati Jungle Rent: articoli del blog, quartieri, FAQ, servizi e informazioni aziendali.
 
-**File:** `src/components/sections/InvestorSection/InvestorSectionMobile.tsx`
-- Stesso link aggiunto sotto il bottone CTA principale
+## Tools esposti dal server
 
-### 2. Aggiungere Sezione "Zone Investimento" nel Footer
-**File:** `src/components/layout/Footer.tsx`
-- Nuova colonna "Zone popolari investitori" accanto a "Quartieri popolari" (studenti)
-- Link ai 5 quartieri top per rendimento: Aurora, Barriera di Milano, Cenisia, San Salvario, Vanchiglia
-- Link finale "Tutte le zone →" che porta a `/investitori/zone`
+Il server esporra questi "tools" MCP:
 
-### 3. Aggiungere Link Contestuali nella Pagina Investitori
-**File:** `src/pages/Investors.tsx`
-- Nella sezione "Zones Section" esistente, aggiungere 3 card preview dei quartieri top
-- Ogni card ha link diretto alla pagina specifica del quartiere
-- Questo crea link diretti alle pagine foglia (non solo all'indice)
+1. **search_articles** - Cerca tra gli articoli del blog per keyword, categoria o lingua
+2. **get_neighborhoods** - Restituisce info sui quartieri di Torino (affitti, sicurezza, trasporti, vita notturna)
+3. **get_company_info** - Restituisce informazioni aziendali strutturate (contatti, servizi, founders)
+4. **get_faq** - Cerca nelle FAQ per argomento
+5. **get_events** - Restituisce eventi correnti a Torino
+6. **get_rent_prices** - Restituisce prezzi medi affitto per zona
 
-## Impatto SEO Atteso
-- Homepage (alta autorità) → distribuisce PageRank a `/investitori/zone`
-- Footer (presente su tutte le pagine) → segnale di rilevanza per i crawler
-- Link diretti ai singoli quartieri → indicizzazione più veloce delle pagine dettaglio
+## Dettagli tecnici
 
----
+### Struttura file
 
-## Dettagli Tecnici
+- `supabase/functions/mcp-server/index.ts` - Edge function con Hono + mcp-lite
 
-### InvestorSectionDesktop.tsx - Aggiunta dopo i CTA
-```tsx
-{/* Link to zones */}
-<div className="text-center mt-6">
-  <Link 
-    to={i18n.language.startsWith('en') ? '/investors/zones' : '/investitori/zone'}
-    className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
-  >
-    {i18n.language.startsWith('it') ? 'Esplora i quartieri di Torino' : 'Explore Turin neighborhoods'}
-    <ArrowRight className="w-4 h-4 ml-1" />
-  </Link>
-</div>
-```
+### Dipendenze
 
-### Footer.tsx - Nuova colonna
-```tsx
-{/* Investment Zones - SEO PageRank distribution */}
-<div>
-  <h3 className="font-display text-base sm:text-lg font-bold mb-6 text-foreground">
-    {i18n.language.startsWith('it') ? 'Zone investimento' : 'Investment zones'}
-  </h3>
-  <ul className="space-y-3 text-muted-foreground">
-    <li><Link to="/investitori/zone/aurora">Aurora</Link></li>
-    <li><Link to="/investitori/zone/barriera-di-milano">Barriera di Milano</Link></li>
-    <li><Link to="/investitori/zone/cenisia">Cenisia</Link></li>
-    <li><Link to="/investitori/zone/san-salvario">San Salvario</Link></li>
-    <li><Link to="/investitori/zone/vanchiglia">Vanchiglia</Link></li>
-    <li>
-      <Link to="/investitori/zone" className="text-primary">
-        Tutte le zone →
-      </Link>
-    </li>
-  </ul>
-</div>
-```
+- `mcp-lite` (npm:mcp-lite@^0.10.0) - Libreria leggera per MCP servers
+- `hono` - Web framework per il routing (gia disponibile in Deno)
 
-### Investors.tsx - Zone Preview Cards
-Nella sezione esistente "Zones Section", sostituire il semplice link con 3 card preview:
-```tsx
-<div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8">
-  {/* Aurora */}
-  <Link to="/investitori/zone/aurora">
-    <Card className="p-4 hover:border-primary/50 transition-colors">
-      <h3 className="font-semibold">Aurora</h3>
-      <p className="text-sm text-muted-foreground">7-9% lordo</p>
-    </Card>
-  </Link>
-  {/* Cenisia */}
-  <Link to="/investitori/zone/cenisia">...</Link>
-  {/* San Salvario */}
-  <Link to="/investitori/zone/san-salvario">...</Link>
-</div>
-```
+### Configurazione
+
+- Aggiunta entry `[functions.mcp-server]` in `supabase/config.toml` con `verify_jwt = false` (il server deve essere pubblico per gli agenti AI)
+
+### Implementazione
+
+L'edge function usera `McpServer` e `StreamableHttpTransport` di mcp-lite per gestire le richieste MCP over HTTP. I dati saranno embedded direttamente nella function (come gia fatto in `perplexity-search`), includendo:
+
+- Indice degli articoli blog (~30 articoli con titoli IT/EN, excerpt, categorie, keyword)
+- Dati quartieri (6 quartieri principali con affitti, rating, coordinate)
+- FAQ principali (~20 domande/risposte bilingue)
+- Info aziendali statiche (P.IVA, contatti, founders, servizi)
+- Prezzi affitto per zona da `turinZonePrices`
+
+### Endpoint
+
+Il server sara raggiungibile a:
+`https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server`
+
+### Aggiornamenti al sito
+
+- Aggiunta del link al MCP server nei file `llms.txt`, `llms-full.txt` e `ai-assistant-info.txt` nella sezione dedicata ai file AI
+- Aggiunta di un commento nel `robots.txt` con l'URL del server MCP
 
