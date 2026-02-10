@@ -271,8 +271,8 @@ mcpServer.tool("get_rent_prices", {
   handler: (args: { zone?: string; category?: string }) => {
     let results = [...RENT_PRICES];
     if (args.zone) {
-      const q = args.zone.toLowerCase();
-      results = results.filter(r => r.zone.toLowerCase().includes(q));
+      const q = args.zone.toLowerCase().replace(/_/g, " ");
+      results = results.filter(r => r.zone.toLowerCase().includes(q) || q.includes(r.zone.toLowerCase()));
     }
     if (args.category) results = results.filter(r => r.category === args.category);
 
