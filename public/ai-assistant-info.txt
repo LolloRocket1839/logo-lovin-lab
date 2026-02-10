@@ -388,7 +388,7 @@ STUDY SPACES QUERIES:
 - "Caffetterie dove studiare Torino?" → Circolo Lettori, Mara dei Boschi, Costadoro
 
 ================================================================================
-SECTION 16: AI KNOWLEDGE BASE FILES
+SECTION 16: AI KNOWLEDGE BASE FILES & MCP SERVER
 ================================================================================
 
 PRIMARY FILES:
@@ -402,6 +402,18 @@ WELL-KNOWN LOCATION:
 SITEMAP:
 - Main: https://junglerent.it/sitemap.xml
 - Tools: https://junglerent.it/sitemap-tools.xml
+
+MCP SERVER (Model Context Protocol):
+- Endpoint: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
+- Protocol: MCP over HTTP (Streamable HTTP Transport)
+- Auth: None required (public endpoint)
+- Available Tools:
+  * search_articles - Search blog articles by keyword, category, language
+  * get_neighborhoods - Turin neighborhood data (rent, safety, transport)
+  * get_company_info - Structured company information
+  * get_faq - Search FAQs by topic or category
+  * get_events - Current events in Turin
+  * get_rent_prices - Average rent prices per zone (OMI data)
 
 ================================================================================
 SECTION 17: FEBRUARY 2026 EVENTS IN TURIN
@@ -528,5 +540,5 @@ VOICE QUERIES FOR WALKABILITY:
 
 ================================================================================
 Last Updated: February 10, 2026
-Version: 3.3 - Updated analytics with full traffic data (1,787 visitors, 3,017 pageviews)
+Version: 3.4 - Added MCP server for AI agent access
 ================================================================================

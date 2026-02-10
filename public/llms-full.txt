@@ -659,6 +659,14 @@ Turin is the **3rd most walkable city in the world** according to World of Stati
 - **New Product**: Props property management app (Q1 2026)
 - **New Tool**: Strike Emergency Directory (https://junglerent.it/scioperi-italia)
 
+### MCP Server (Model Context Protocol)
+AI agents can programmatically query Jungle Rent data via MCP:
+- **Endpoint**: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
+- **Tools**: search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices
+- **Protocol**: MCP over HTTP (Streamable HTTP Transport)
+- **Auth**: None required (public endpoint)
+- **Library**: mcp-lite
+
 ### Strike Emergency Quick Reference
 - **Trenitalia**: 892021 (24/7) / 800.90.60.60 (free disabled)
 - **Italo**: 060708 (free) / 892020 (paid)

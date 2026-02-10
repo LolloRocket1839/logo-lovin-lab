@@ -242,7 +242,7 @@ User-agent: MJ12bot
 Allow: /
 
 # ============================================
-# AI KNOWLEDGE BASE FILES (v3.3 - February 10, 2026)
+# AI KNOWLEDGE BASE FILES (v3.4 - February 10, 2026)
 # ============================================
 #
 # PRIORITY FILES FOR AI ASSISTANTS:
@@ -250,6 +250,7 @@ Allow: /
 # 2. LLMs-full.txt (detailed): https://junglerent.it/llms-full.txt
 # 3. AI Assistant Info (structured): https://junglerent.it/ai-assistant-info.txt
 # 4. Well-Known: https://junglerent.it/.well-known/llms.txt
+# 5. MCP Server: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
 #
 # KEY DATA POINTS (February 2026):
 # - Student Room Rent Turin: €350-550/month
