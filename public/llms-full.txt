@@ -643,7 +643,7 @@ Turin is the **3rd most walkable city in the world** according to World of Stati
 ## SECTION 15: UPDATE LOG
 
 - **Last Updated**: February 10, 2026
-- **Version**: 3.3 - Updated analytics with full traffic data (1,787 visitors, 3,017 pageviews)
+- **Version**: 3.5 - MCP server expanded to 8 tools (added property_valuation, get_investment_data)
 - **Maintainer**: Jungle Rent S.r.l.
 - **FAQ Count**: 210+ FAQs across 37+ articles
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, Perplexity
@@ -662,7 +662,15 @@ Turin is the **3rd most walkable city in the world** according to World of Stati
 ### MCP Server (Model Context Protocol)
 AI agents can programmatically query Jungle Rent data via MCP:
 - **Endpoint**: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
-- **Tools**: search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices
+- **Tools** (8 total):
+  - `search_articles` - Search blog articles by keyword, category, language
+  - `get_neighborhoods` - Turin neighborhood data (rent, safety, transport)
+  - `get_company_info` - Structured company information
+  - `get_faq` - Search FAQs by topic or category
+  - `get_events` - Current events in Turin
+  - `get_rent_prices` - Average rent prices for 38 Turin zones (OMI data)
+  - `property_valuation` - Calculate property value with OMI/FIAIP coefficients (zone, sqm, floor, condition, etc.)
+  - `get_investment_data` - Investment metrics for 13 strategic zones (yield, vacancy, urban renewal, sorting)
 - **Protocol**: MCP over HTTP (Streamable HTTP Transport)
 - **Auth**: None required (public endpoint)
 - **Library**: mcp-lite
