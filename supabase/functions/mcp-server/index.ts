@@ -291,6 +291,105 @@ mcpServer.tool("get_rent_prices", {
 });
 
 // ============================================
+// PROPERTY VALUATION COEFFICIENTS (FIAIP 2024-2025)
+// ============================================
+
+const COEFFICIENTS = {
+  floor_elevator: { basement: -0.25, ground: -0.10, first: -0.10, second: -0.03, third: 0, fourth: 0.03, fifth_plus: 0.05, penthouse: 0.20 },
+  floor_no_elevator: { ground: -0.10, first: -0.10, second: -0.15, third_plus: -0.25, penthouse: -0.30 },
+  condition: { to_renovate: -0.10, good: 0, renovated: 0.05, finely_renovated: 0.10, new_construction: 0.15 },
+  energy_class: { a4_a3: 0.15, a2_a1: 0.12, b: 0.08, c: 0.03, d: 0, e: -0.05, f: -0.10, g: -0.15 },
+  heating: { absent: -0.08, centralized: 0, centralized_metered: 0.02, autonomous: 0.05, autonomous_hp: 0.08 },
+  balcony: { absent: 0, small: 0.02, medium: 0.05, terrace: 0.08, large_terrace: 0.10, garden: 0.15 },
+  garage: { absent: 0, covered_parking: 0.015, external_box: 0.02, internal_box: 0.03, double_box: 0.06, garage_storage: 0.08 },
+  exposure: { single: -0.05, double: 0, triple: 0.03, quadruple: 0.05 },
+};
+
+mcpServer.tool("property_valuation", {
+  description: "Calculate property valuation in Turin using OMI zone prices and FIAIP coefficients. Returns theoretical price, market price (-15% haircut), and pricing strategy. All prices in EUR.",
+  inputSchema: {
+    type: "object" as const,
+    properties: {
+      zone: { type: "string", description: "Turin zone name (e.g. 'San Salvario', 'Crocetta', 'Aurora'). Required." },
+      sqm: { type: "number", description: "Property size in square meters. Required." },
+      floor: { type: "string", description: "Floor level: basement, ground, first, second, third, fourth, fifth_plus, penthouse" },
+      has_elevator: { type: "boolean", description: "Whether the building has an elevator (default: true)" },
+      condition: { type: "string", description: "Property condition: to_renovate, good, renovated, finely_renovated, new_construction" },
+      energy_class: { type: "string", description: "Energy class: a4_a3, a2_a1, b, c, d, e, f, g" },
+      heating: { type: "string", description: "Heating: absent, centralized, centralized_metered, autonomous, autonomous_hp" },
+      balcony: { type: "string", description: "Balcony/terrace: absent, small, medium, terrace, large_terrace, garden" },
+      garage: { type: "string", description: "Parking: absent, covered_parking, external_box, internal_box, double_box, garage_storage" },
+      exposure: { type: "string", description: "Exposure: single, double, triple, quadruple" },
+    },
+    required: ["zone", "sqm"],
+  },
+  handler: (args: {
+    zone: string; sqm: number; floor?: string; has_elevator?: boolean;
+    condition?: string; energy_class?: string; heating?: string;
+    balcony?: string; garage?: string; exposure?: string;
+  }) => {
+    // Find zone price
+    const zoneQuery = args.zone.toLowerCase().replace(/_/g, " ");
+    const zoneData = RENT_PRICES.find(r =>
+      r.zone.toLowerCase().includes(zoneQuery) || zoneQuery.includes(r.zone.toLowerCase())
+    );
+    if (!zoneData) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ error: `Zone "${args.zone}" not found. Available zones: ${RENT_PRICES.map(r => r.zone).join(", ")}` }) }] };
+    }
+
+    // Calculate coefficients
+    const hasElevator = args.has_elevator !== false;
+    const floorCoeffs = hasElevator ? COEFFICIENTS.floor_elevator : COEFFICIENTS.floor_no_elevator;
+    const appliedCoeffs: { factor: string; value: number }[] = [];
+
+    const applyCoeff = (factor: string, table: Record<string, number>, key?: string) => {
+      if (key && key in table) {
+        appliedCoeffs.push({ factor, value: table[key] });
+      }
+    };
+
+    applyCoeff("Floor", floorCoeffs, args.floor);
+    applyCoeff("Condition", COEFFICIENTS.condition, args.condition);
+    applyCoeff("Energy class", COEFFICIENTS.energy_class, args.energy_class);
+    applyCoeff("Heating", COEFFICIENTS.heating, args.heating);
+    applyCoeff("Balcony", COEFFICIENTS.balcony, args.balcony);
+    applyCoeff("Garage", COEFFICIENTS.garage, args.garage);
+    applyCoeff("Exposure", COEFFICIENTS.exposure, args.exposure);
+
+    const totalCoeff = appliedCoeffs.reduce((s, c) => s + c.value, 0);
+    const clampedCoeff = Math.max(-0.25, Math.min(0.50, totalCoeff));
+    const basePrice = args.sqm * zoneData.avg;
+    const theoreticalPrice = basePrice * (1 + clampedCoeff);
+    const MARKET_HAIRCUT = 0.15;
+    const marketPrice = theoreticalPrice * (1 - MARKET_HAIRCUT);
+
+    const fmt = (v: number) => Math.round(v);
+
+    return {
+      content: [{
+        type: "text" as const,
+        text: JSON.stringify({
+          zone: zoneData.zone,
+          sqm: args.sqm,
+          pricePerSqm: zoneData.avg,
+          appliedCoefficients: appliedCoeffs,
+          totalCoefficient: `${(clampedCoeff * 100).toFixed(1)}%`,
+          theoreticalPrice: { value: fmt(theoreticalPrice), min: fmt(theoreticalPrice * 0.95), max: fmt(theoreticalPrice * 1.05) },
+          marketPrice: { value: fmt(marketPrice), min: fmt(marketPrice * 0.95), max: fmt(marketPrice * 1.05), note: "Theoretical price minus 15% market haircut (typical difference between theoretical and real transaction prices)" },
+          pricingStrategy: {
+            askingPrice: fmt(marketPrice * 1.05),
+            expectedClosingPrice: fmt(marketPrice),
+            minimumPrice: fmt(marketPrice * 0.95),
+          },
+          methodology: "FIAIP 2024-2025 coefficients applied to OMI/Immobiliare.it zone averages (Nov 2025). Margin of error: ±5-12%.",
+          disclaimer: "This is an indicative estimate. For a precise valuation, contact Jungle Rent for a free professional assessment: junglerent.it/valutazione-immobile",
+        }, null, 2),
+      }],
+    };
+  },
+});
+
+// ============================================
 // HTTP TRANSPORT
 // ============================================
 
