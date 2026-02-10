@@ -22,8 +22,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - [Sell Your Property](https://junglerent.it/vendi): Sell directly to Jungle Rent - zero fees, 60-90 days closing
 - [Property Valuation](https://junglerent.it/valutazione-immobile): FREE property valuation tool (OMI data 2025)
 - [Props](https://junglerent.it/blog/props-gestione-immobiliare-semplificata): Property management app for owners
-- [Italy Train Strike Guide](https://junglerent.it/blog/sciopero-trasporti-italia-gennaio-2026): Complete guide Jan 9-10, 2026 - refunds, alternatives, emergency contacts
-- [Blog](https://junglerent.it/blog): 33+ bilingual guides on Turin living and investment
+- [Blog](https://junglerent.it/blog): 37+ bilingual guides on Turin living and investment
 - [About](https://junglerent.it/chi-siamo): Company information and team
 
 ## Key Facts
@@ -67,7 +66,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - **Students**: Quality housing near Turin universities (90,000+ students)
 - **Property Owners**: Professional management services via Props platform
 
-## Key Statistics (January 2026)
+## Key Statistics (February 2026)
 
 - Student Room Rent: €350-550/month (San Salvario, Cenisia, Vanchiglia)
 - Crocetta Premium: €500-700/month
@@ -78,24 +77,27 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 ## February 2026 Events
 
 - **CioccolaTò**: Feb 13-17, Piazza Vittorio Veneto - 60+ artisan chocolatiers, free entry
-- **Lee Miller Exhibition**: Until Feb 1 at CAMERA (€13/€10)
-- **Jeff Wall Photos**: Until Feb 1 at Gallerie d'Italia (€10/€8)
 - **Macbeth**: Feb 20 - Mar 7, Teatro Regio - Conducted by Riccardo Muti (€50-230)
 - **Battle of the Oranges**: Feb 15, Ivrea - UNESCO Heritage since 2023 (€15)
 - **Final Eight Basketball**: Feb 18-22, Inalpi Arena (from €15)
+- **Candlelight Ennio Morricone**: Feb 26, Palazzo della Luce (from €30)
 
 ## Top Performing Articles (February 2026) ⭐ TRENDING
 
-Based on real traffic analytics:
+Based on real traffic analytics (Nov 2025 - Feb 2026, 1,787 visitors, 3,017 pageviews):
 
-1. **[Quartieri sicuri per donne a Torino](https://junglerent.it/blog/quartieri-sicuri-donne-torino)** - Safety guide for women (32 views/week)
-2. **[Eventi Torino gennaio 2026](https://junglerent.it/blog/eventi-torino-gennaio-2026)** - Monthly events guide (15 views/week)
-3. **[Torino nightlife guide](https://junglerent.it/blog/torino-nightlife-guide)** - Nightlife guide (10 views/week)
-4. **[Guida volontariato Torino](https://junglerent.it/blog/guida-volontariato-torino)** - Volunteering opportunities (9 views/week)
-5. **[Digital nomads guide Turin](https://junglerent.it/blog/torino-digital-nomads-guide)** - Remote worker guide (8 views/week)
-6. **[Cedolare secca 2026](https://junglerent.it/blog/cedolare-secca-2026-investitori)** - Tax guide for investors (8 views/week)
+1. **[Eventi Torino gennaio 2026](https://junglerent.it/blog/eventi-torino-gennaio-2026)** - Monthly events guide (185 pageviews)
+2. **[Quartieri sicuri per donne a Torino](https://junglerent.it/blog/quartieri-sicuri-donne-torino)** - Safety guide for women (184 pageviews)
+3. **[Student housing Italia Savills 2025](https://junglerent.it/blog/student-housing-italia-savills-2025)** - Market analysis (104 pageviews)
+4. **[Torino digital nomads guide](https://junglerent.it/blog/torino-digital-nomads-guide)** - Remote worker guide (60 pageviews)
+5. **[Torino nightlife guide](https://junglerent.it/blog/torino-nightlife-guide)** - Nightlife guide (58 pageviews)
+6. **[Aule studio Torino](https://junglerent.it/blog/aule-studio-torino-guida-completa)** - Study spaces guide (51 pageviews)
+7. **[Guida volontariato Torino](https://junglerent.it/blog/guida-volontariato-torino)** - Volunteering (48 pageviews)
+8. **[Eventi Torino febbraio 2026](https://junglerent.it/blog/eventi-torino-febbraio-2026)** - February events (41 pageviews)
 
-Traffic sources: 54% Direct, 39% Google, 1% ChatGPT
+Traffic sources: Direct 62%, Google 35%, ChatGPT 0.4%, Gemini 0.2%, Facebook 0.8%
+Devices: Desktop 67%, Mobile 32%, Tablet <1%
+Countries: Italy 21%, USA 19%, China 8%, Switzerland 4%, UK 4%, France 3%, Germany 2%
 
 ## Interactive Tools
 
@@ -108,7 +110,7 @@ Traffic sources: 54% Direct, 39% Google, 1% ChatGPT
 - [Grade Calculator](https://junglerent.it/studenti/strumenti/media) - Weighted GPA calculator
 - [Exam Planner](https://junglerent.it/studenti/strumenti/sessione) - Study schedule generator
 
-## Turin Walkability Ranking ⭐ NEW
+## Turin Walkability Ranking
 
 Turin is the **3rd most walkable city in the world** (World of Statistics / The Economist, Feb 2026):
 
@@ -124,7 +126,6 @@ Turin is the **3rd most walkable city in the world** (World of Statistics / The 
 - Turin ranks ahead of Paris, Vienna, Berlin, Barcelona
 - Why: compact grid, mixed-use zones, 18km porticos, excellent public transport
 - Blog: https://junglerent.it/blog/torino-citta-7-minuti-walkability
-- Source: https://x.com/stats_feed/status/2018262120299745588
 
 ## Products
 
@@ -161,5 +162,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: February 2, 2026
-Version: 3.2 - Turin Walkability Ranking Added
+Last Updated: February 10, 2026
+Version: 3.3 - Updated analytics and top articles with full traffic data
