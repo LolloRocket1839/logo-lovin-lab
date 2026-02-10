@@ -98,20 +98,49 @@ const NEIGHBORHOODS = [
 ];
 
 const RENT_PRICES = [
+  // Central
   { zone: "Centro Storico", category: "central", min: 3500, avg: 4065, max: 4600, variation: "+1.5%" },
   { zone: "Piazza San Carlo", category: "central", min: 4200, avg: 4560, max: 4900, variation: "+2.0%" },
-  { zone: "San Salvario", category: "central", min: 2400, avg: 2731, max: 3100, variation: "+8.46%" },
+  { zone: "Piazza Vittorio", category: "central", min: 3300, avg: 3620, max: 3900, variation: "+1.2%" },
+  { zone: "Piazza Statuto", category: "central", min: 2700, avg: 3000, max: 3300, variation: "+1.5%" },
   { zone: "Crocetta", category: "central", min: 2700, avg: 2995, max: 3300, variation: "+3.5%" },
+  { zone: "San Secondo", category: "central", min: 2700, avg: 2995, max: 3300, variation: "+3.5%" },
+  { zone: "San Salvario", category: "central", min: 2400, avg: 2731, max: 3100, variation: "+8.46%" },
   { zone: "Vanchiglia", category: "central", min: 2400, avg: 2680, max: 2950, variation: "+3.0%" },
+  { zone: "Vanchiglietta", category: "central", min: 2000, avg: 2250, max: 2500, variation: "+2.3%" },
+  // Semicentral
   { zone: "Cit Turin", category: "semicentral", min: 2200, avg: 2501, max: 2800, variation: "+4.3%" },
   { zone: "San Donato", category: "semicentral", min: 2200, avg: 2501, max: 2800, variation: "+4.3%" },
+  { zone: "Campidoglio", category: "semicentral", min: 2200, avg: 2501, max: 2800, variation: "+4.0%" },
   { zone: "Cenisia", category: "semicentral", min: 1700, avg: 1950, max: 2200, variation: "+3.5%" },
+  { zone: "San Paolo", category: "semicentral", min: 1700, avg: 1950, max: 2200, variation: "+3.0%" },
+  { zone: "Pozzo Strada", category: "semicentral", min: 1650, avg: 1900, max: 2150, variation: "+5.0%" },
+  { zone: "Parella", category: "semicentral", min: 1600, avg: 1825, max: 2050, variation: "+5.5%" },
+  { zone: "Aeronautica", category: "semicentral", min: 1600, avg: 1825, max: 2050, variation: "+5.5%" },
   { zone: "Santa Rita", category: "semicentral", min: 1500, avg: 1700, max: 1900, variation: "+7.8%" },
+  { zone: "Mirafiori Nord", category: "semicentral", min: 1500, avg: 1700, max: 1900, variation: "+7.8%" },
   { zone: "Lingotto", category: "semicentral", min: 1450, avg: 1650, max: 1850, variation: "+7.8%" },
+  { zone: "Nizza Millefonti", category: "semicentral", min: 1450, avg: 1650, max: 1850, variation: "+7.8%" },
+  // Peripheral North
   { zone: "Aurora", category: "peripheral_north", min: 1300, avg: 1520, max: 1750, variation: "+7.0%" },
+  { zone: "Borgo Valdocco", category: "peripheral_north", min: 1300, avg: 1520, max: 1750, variation: "+7.0%" },
+  { zone: "Madonna di Campagna", category: "peripheral_north", min: 1200, avg: 1350, max: 1500, variation: "+3.0%" },
+  { zone: "Borgo Vittoria", category: "peripheral_north", min: 1150, avg: 1300, max: 1450, variation: "+4.0%" },
+  { zone: "Lucento", category: "peripheral_north", min: 1150, avg: 1300, max: 1450, variation: "+4.0%" },
+  { zone: "Rebaudengo", category: "peripheral_north", min: 1100, avg: 1250, max: 1400, variation: "+2.0%" },
+  { zone: "Falchera", category: "peripheral_north", min: 1000, avg: 1150, max: 1300, variation: "+3.5%" },
+  { zone: "Villaretto", category: "peripheral_north", min: 1000, avg: 1150, max: 1300, variation: "+3.5%" },
   { zone: "Barriera di Milano", category: "peripheral_north", min: 900, avg: 1080, max: 1250, variation: "+5.4%" },
+  // Peripheral South
   { zone: "Mirafiori Sud", category: "peripheral_south", min: 1200, avg: 1350, max: 1500, variation: "+3.5%" },
-  { zone: "Crimea / Gran Madre", category: "hill", min: 2650, avg: 2950, max: 3300, variation: "+2.4%" },
+  { zone: "Barca", category: "peripheral_south", min: 1100, avg: 1232, max: 1350, variation: "+2.0%" },
+  { zone: "Bertolla", category: "peripheral_south", min: 1100, avg: 1232, max: 1350, variation: "+2.0%" },
+  { zone: "Vallette", category: "peripheral_south", min: 1050, avg: 1200, max: 1350, variation: "+3.5%" },
+  // Hill
+  { zone: "Crimea", category: "hill", min: 2650, avg: 2950, max: 3300, variation: "+2.4%" },
+  { zone: "Gran Madre", category: "hill", min: 2650, avg: 2950, max: 3300, variation: "+2.4%" },
+  { zone: "Borgo Po", category: "hill", min: 2650, avg: 2950, max: 3300, variation: "+2.4%" },
+  { zone: "Cavoretto", category: "hill", min: 2100, avg: 2310, max: 2500, variation: "+2.7%" },
 ];
 
 const FAQS = [
