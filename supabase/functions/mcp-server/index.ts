@@ -419,6 +419,88 @@ mcpServer.tool("property_valuation", {
 });
 
 // ============================================
+// INVESTOR ZONE DATA (13 neighborhoods)
+// ============================================
+
+const INVESTOR_ZONES = [
+  { id: "cenisia", name: "Cenisia", zone: "Semicentro", pricePerSqm: { min: 1940, avg: 2200, max: 2285 }, variation2024: 4, trend: "growth", grossYield: { min: 6, max: 7 }, netYield: { min: 4.4, max: 5.1 }, demand: "high", vacancyRate: { min: 3, max: 5 }, rentRoom: { min: 380, max: 470 }, rentApartment: { min: 550, max: 700 }, rentingTime: "2-4 weeks", targetTenant: ["Politecnico students", "Young professionals"], urbanRenewal: [{ name: "Metro 2", investment: "€2+ bln", impact: "Strong revaluation expected" }], rankings: { netYieldRank: 1, growthPotentialRank: 4, entryPriceRank: 6 }, note: "Best yield/risk ratio. Proximity to Politecnico ensures constant demand." },
+  { id: "aurora", name: "Aurora", zone: "Periferia", pricePerSqm: { min: 1000, avg: 1520, max: 1800 }, variation2024: 7, trend: "strong_growth", grossYield: { min: 5.5, max: 7 }, netYield: { min: 3.8, max: 5 }, demand: "high", vacancyRate: { min: 5, max: 8 }, rentRoom: { min: 350, max: 450 }, rentApartment: { min: 500, max: 600 }, rentingTime: "2-4 weeks", targetTenant: ["Campus Einaudi students", "Value-add investors"], urbanRenewal: [{ name: "Masterplan Carlo Ratti", investment: "€25.8M", impact: "+15-25% in 5-7 years" }, { name: "Porta Palazzo renewal", investment: "Multi-million", impact: "General area improvement" }], rankings: { netYieldRank: 2, growthPotentialRank: 2, entryPriceRank: 2 }, note: "High appreciation potential. Medium-high risk offset by entry-level prices. Perfect for value-add investors." },
+  { id: "san_salvario", name: "San Salvario", zone: "Centro", pricePerSqm: { min: 2050, avg: 2650, max: 2710 }, variation2024: 5.5, trend: "stable", grossYield: { min: 5.8, max: 6.5 }, netYield: { min: 4.1, max: 4.8 }, demand: "very_high", vacancyRate: { min: 2, max: 4 }, rentRoom: { min: 400, max: 500 }, rentApartment: { min: 700, max: 850 }, rentingTime: "2-3 weeks", targetTenant: ["Medical students", "Young professionals", "Expats"], urbanRenewal: [{ name: "Scalo Nizza", investment: "€105M", impact: "+10-15% consolidation" }], rankings: { netYieldRank: 3, growthPotentialRank: 6 }, note: "Most established student neighborhood. Very high demand, almost zero vacancy. Ideal for conservative investors." },
+  { id: "vanchiglia", name: "Vanchiglia", zone: "Centro", pricePerSqm: { min: 2070, avg: 2600, max: 2680 }, variation2024: 2.5, trend: "moderate", grossYield: { min: 5.5, max: 6.2 }, netYield: { min: 4, max: 4.5 }, demand: "high", vacancyRate: { min: 3, max: 5 }, rentRoom: { min: 350, max: 480 }, rentApartment: { min: 600, max: 750 }, rentingTime: "2-4 weeks", targetTenant: ["Humanities students", "Artists and creatives"], urbanRenewal: [], rankings: { netYieldRank: 4 }, note: "Artistic neighborhood with strong identity. Niche but loyal target. Great for diversifying student portfolio." },
+  { id: "lingotto", name: "Lingotto", zone: "Periferia", pricePerSqm: { min: 1200, avg: 1650, max: 3000 }, variation2024: 7.8, trend: "strong_growth", grossYield: { min: 5, max: 6.5 }, netYield: { min: 3.5, max: 4.5 }, demand: "high", vacancyRate: { min: 4, max: 6 }, rentRoom: { min: 400, max: 500 }, rentApartment: { min: 600, max: 700 }, rentingTime: "3-4 weeks", targetTenant: ["Professionals", "Metro-dependent students"], urbanRenewal: [{ name: "Parco della Salute", investment: "Multi-billion", impact: "Positive trend consolidation" }, { name: "Città della Salute", investment: "€450M", impact: "Regional healthcare hub" }], rankings: { netYieldRank: 5, growthPotentialRank: 3 }, note: "Former FIAT hub undergoing major transformation. Great for medium-long term investment." },
+  { id: "barriera_di_milano", name: "Barriera di Milano", zone: "Periferia", pricePerSqm: { min: 860, avg: 1150, max: 1600 }, variation2024: 3, trend: "max_growth", grossYield: { min: 5.5, max: 7 }, netYield: { min: 3.8, max: 4.1 }, demand: "medium", vacancyRate: { min: 8, max: 12 }, rentRoom: { min: 250, max: 380 }, rentApartment: { min: 380, max: 500 }, rentingTime: "4-6 weeks", targetTenant: ["Budget-conscious students", "Workers"], urbanRenewal: [{ name: "Metro 2 - Rebaudengo", investment: "€2+ bln", impact: "Maximum revaluation expected" }, { name: "Ex Manifattura Tabacchi", investment: "€200+ M", impact: "New cultural hub" }, { name: "Masterplan Carlo Ratti", investment: "€25.8M", impact: "+15-25% in 5-7 years" }], rankings: { growthPotentialRank: 1, entryPriceRank: 1, netYieldRank: 6 }, note: "MAXIMUM POTENTIAL. Lowest prices in Turin (€1,150/sqm) with Metro 2 coming. High risk but huge upside. 5+ year horizon." },
+  { id: "crocetta", name: "Crocetta", zone: "Semicentro", pricePerSqm: { min: 2750, avg: 3000, max: 3500 }, variation2024: 10, trend: "strong_growth", grossYield: { min: 5, max: 5.5 }, netYield: { min: 3.6, max: 4 }, demand: "high", vacancyRate: { min: 4, max: 6 }, rentRoom: { min: 450, max: 550 }, rentApartment: { min: 750, max: 900 }, rentingTime: "3-4 weeks", targetTenant: ["Politecnico students", "Families", "Professionals"], urbanRenewal: [], rankings: { growthPotentialRank: 5 }, note: "Premium neighborhood home to Politecnico. High prices but guaranteed demand. +10% in 2024." },
+  { id: "borgo_vittoria", name: "Borgo Vittoria", zone: "Periferia", pricePerSqm: { min: 1200, avg: 1370, max: 1755 }, variation2024: 8, trend: "growth", grossYield: { min: 5, max: 6 }, netYield: { min: 3.5, max: 4.2 }, demand: "medium", vacancyRate: { min: 6, max: 10 }, rentRoom: { min: 300, max: 400 }, rentApartment: { min: 450, max: 550 }, rentingTime: "3-5 weeks", targetTenant: ["Students", "Young workers"], urbanRenewal: [], rankings: { entryPriceRank: 3 }, note: "Low entry price with decent yields. Stable residential. Good value for first investments." },
+  { id: "san_donato", name: "San Donato", zone: "Periferia", pricePerSqm: { min: 1500, avg: 1700, max: 2000 }, variation2024: 4.3, trend: "moderate", grossYield: { min: 5, max: 5.8 }, netYield: { min: 3.5, max: 4.1 }, demand: "medium", vacancyRate: { min: 5, max: 8 }, rentRoom: { min: 320, max: 420 }, rentApartment: { min: 480, max: 600 }, rentingTime: "3-5 weeks", targetTenant: ["Students", "Families", "Workers"], urbanRenewal: [], rankings: { entryPriceRank: 4 }, note: "Working-class neighborhood with good connections. Accessible prices and stable demand." },
+  { id: "parella", name: "Parella", zone: "Periferia", pricePerSqm: { min: 1575, avg: 1960, max: 2605 }, variation2024: 5.5, trend: "growth", grossYield: { min: 5, max: 5.5 }, netYield: { min: 3.5, max: 4 }, demand: "medium", vacancyRate: { min: 5, max: 7 }, rentRoom: { min: 320, max: 430 }, rentApartment: { min: 500, max: 620 }, rentingTime: "3-4 weeks", targetTenant: ["Families", "Workers", "Students"], urbanRenewal: [{ name: "Metro 2 - Parella", investment: "€2+ bln", impact: "Revaluation with metro arrival" }], rankings: { entryPriceRank: 5 }, note: "Residential with Metro 2 coming. Prices still contained, great time to enter before revaluation." },
+  { id: "santa_rita", name: "Santa Rita", zone: "Semicentro", pricePerSqm: { min: 1200, avg: 1910, max: 2000 }, variation2024: 4.5, trend: "stable", grossYield: { min: 5, max: 5.5 }, netYield: { min: 3.5, max: 4 }, demand: "medium", vacancyRate: { min: 4, max: 6 }, rentRoom: { min: 320, max: 420 }, rentApartment: { min: 500, max: 650 }, rentingTime: "3-4 weeks", targetTenant: ["Families", "Workers", "Students"], urbanRenewal: [], rankings: {}, note: "Stable residential with good services. Moderate yields but low risk. Ideal for conservative investors." },
+  { id: "cit_turin", name: "Cit Turin", zone: "Semicentro", pricePerSqm: { min: 2400, avg: 2680, max: 4000 }, variation2024: 3, trend: "moderate", grossYield: { min: 4.5, max: 5.2 }, netYield: { min: 3.2, max: 3.8 }, demand: "high", vacancyRate: { min: 3, max: 5 }, rentRoom: { min: 380, max: 480 }, rentApartment: { min: 600, max: 750 }, rentingTime: "2-4 weeks", targetTenant: ["Professionals", "Students", "Families"], urbanRenewal: [], rankings: {}, note: "Elegant Art Nouveau neighborhood. Premium prices but high tenant quality. Prestige asset." },
+  { id: "campidoglio", name: "Campidoglio", zone: "Semicentro", pricePerSqm: { min: 1850, avg: 2325, max: 2600 }, variation2024: 4.75, trend: "stable", grossYield: { min: 5, max: 5.8 }, netYield: { min: 3.5, max: 4.2 }, demand: "medium", vacancyRate: { min: 4, max: 7 }, rentRoom: { min: 320, max: 420 }, rentApartment: { min: 500, max: 650 }, rentingTime: "3-4 weeks", targetTenant: ["Creative students", "Young professionals"], urbanRenewal: [], rankings: {}, note: "Gentrifying neighborhood with Balon market. Authentic atmosphere, still accessible prices." },
+];
+
+mcpServer.tool("get_investment_data", {
+  description: "Get detailed investment data for Turin neighborhoods: purchase prices, rental yields (gross/net), vacancy rates, demand levels, urban renewal projects, and investor notes. Data from OMI/Immobiliare.it/FIAIP/Nomisma 2025.",
+  inputSchema: {
+    type: "object" as const,
+    properties: {
+      zone: { type: "string", description: "Filter by zone name (e.g. 'Cenisia', 'Aurora', 'San Salvario')" },
+      zone_type: { type: "string", enum: ["Centro", "Semicentro", "Periferia"], description: "Filter by zone type" },
+      sort_by: { type: "string", enum: ["net_yield", "growth_potential", "entry_price", "vacancy_low"], description: "Sort results by metric" },
+      urban_renewal_only: { type: "boolean", description: "Show only zones with active urban renewal projects" },
+    },
+  },
+  handler: (args: { zone?: string; zone_type?: string; sort_by?: string; urban_renewal_only?: boolean }) => {
+    let results = [...INVESTOR_ZONES];
+
+    if (args.zone) {
+      const q = args.zone.toLowerCase().replace(/_/g, " ");
+      results = results.filter(z => z.name.toLowerCase().includes(q) || q.includes(z.name.toLowerCase()));
+    }
+    if (args.zone_type) results = results.filter(z => z.zone === args.zone_type);
+    if (args.urban_renewal_only) results = results.filter(z => z.urbanRenewal.length > 0);
+
+    if (args.sort_by) {
+      switch (args.sort_by) {
+        case "net_yield": results.sort((a, b) => b.netYield.max - a.netYield.max); break;
+        case "growth_potential": results.sort((a, b) => b.variation2024 - a.variation2024); break;
+        case "entry_price": results.sort((a, b) => a.pricePerSqm.avg - b.pricePerSqm.avg); break;
+        case "vacancy_low": results.sort((a, b) => a.vacancyRate.min - b.vacancyRate.min); break;
+      }
+    }
+
+    return {
+      content: [{
+        type: "text" as const,
+        text: JSON.stringify({
+          count: results.length,
+          source: "OMI Agenzia Entrate, Immobiliare.it, FIAIP, Nomisma (2025)",
+          zones: results.map(z => ({
+            name: z.name,
+            zoneType: z.zone,
+            purchasePrice: { min: z.pricePerSqm.min, avg: z.pricePerSqm.avg, max: z.pricePerSqm.max, unit: "€/sqm" },
+            variation2024: `${z.variation2024}%`,
+            trend: z.trend,
+            grossYield: `${z.grossYield.min}-${z.grossYield.max}%`,
+            netYield: `${z.netYield.min}-${z.netYield.max}%`,
+            demand: z.demand,
+            vacancyRate: `${z.vacancyRate.min}-${z.vacancyRate.max}%`,
+            rentRoom: `€${z.rentRoom.min}-${z.rentRoom.max}/month`,
+            rentApartment: `€${z.rentApartment.min}-${z.rentApartment.max}/month`,
+            rentingTime: z.rentingTime,
+            targetTenant: z.targetTenant,
+            urbanRenewal: z.urbanRenewal.length > 0 ? z.urbanRenewal : undefined,
+            rankings: Object.keys(z.rankings).length > 0 ? z.rankings : undefined,
+            investorNote: z.note,
+            detailPage: `https://junglerent.it/investitori/zone/${z.id.replace(/_/g, "-")}`,
+          })),
+          disclaimer: "Yields are estimates based on market analysis. Net yields calculated with 0.76% IMU and 21% cedolare secca. Past performance does not guarantee future results.",
+        }, null, 2),
+      }],
+    };
+  },
+});
+
+// ============================================
 // HTTP TRANSPORT
 // ============================================
 
