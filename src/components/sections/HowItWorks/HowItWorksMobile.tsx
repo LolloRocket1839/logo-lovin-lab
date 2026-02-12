@@ -45,15 +45,15 @@ export const HowItWorksMobile = () => {
         {/* Larger horizontal scroll cards with better touch targets */}
         <div 
           ref={scrollContainerRef}
-          className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4"
+          className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 pl-4"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
-          {steps.map((step) => {
+          {steps.map((step, index) => {
             const Icon = step.icon;
             return (
               <div
                 key={step.key}
-                className="flex-shrink-0 w-[168px] snap-center bg-card border border-border/30 rounded-xl p-5 text-center shadow-sm active:scale-[0.98] transition-transform"
+                className={`flex-shrink-0 w-[168px] snap-center bg-card border border-border/30 rounded-xl p-5 text-center shadow-sm active:scale-[0.98] transition-transform ${index === steps.length - 1 ? 'mr-4' : ''}`}
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
                   <Icon className="w-6 h-6 text-primary" />
