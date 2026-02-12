@@ -21,6 +21,12 @@ export const HowItWorksMobile = () => {
 
     const handleScroll = () => {
       const scrollLeft = container.scrollLeft;
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      // If near the end, select the last dot
+      if (maxScroll - scrollLeft < 20) {
+        setActiveIndex(steps.length - 1);
+        return;
+      }
       const cardWidth = 168 + 12; // card width + gap
       const index = Math.round(scrollLeft / cardWidth);
       setActiveIndex(Math.min(index, steps.length - 1));
