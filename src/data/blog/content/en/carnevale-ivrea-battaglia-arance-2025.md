@@ -320,3 +320,9 @@ For students coming from Turin, the Ivrea Carnival represents an **unmissable cu
 [20] Parcheggi e viabilità Carnevale https://www.comune.ivrea.to.it/carnevale-parcheggi/
 [21] Treni Torino-Ivrea - Trenitalia https://www.trenitalia.com/
 [22] Come arrivare a Ivrea da Torino https://www.rome2rio.com/it/s/Torino/Ivrea
+
+---
+
+## Downloadable resources
+
+📥 [Download the complete guide as PDF](/resources/Carnevale_Ivrea_Guida_Completa.pdf) — Full document with program, rules, practical tips and all the information to attend the Ivrea Carnival.
