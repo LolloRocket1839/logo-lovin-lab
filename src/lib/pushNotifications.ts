@@ -42,9 +42,9 @@ export const subscribeToPush = async (areas: string[] = []): Promise<boolean> =>
       const vapidKey = 'BEl62iUYgUivxIkv69yViEuiBIa-Ib9-SkvMeAtA3LFgDzkrxZJjSgSnfckjBJuBkr3qBUYIHBQFLXYp5Nksh8U';
       const applicationServerKey = urlBase64ToUint8Array(vapidKey);
       
-      subscription = await registration.pushManager.subscribe({
+      subscription = await (registration as any).pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: applicationServerKey as BufferSource
+        applicationServerKey: applicationServerKey
       });
     }
     
