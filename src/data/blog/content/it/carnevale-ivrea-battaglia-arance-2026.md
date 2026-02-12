@@ -393,12 +393,6 @@ Indossate il vostro berretto frigio rosso, preparatevi a schivare arance, assapo
 
 ---
 
-## Risorse scaricabili
-
-📥 [Scarica la guida completa in PDF](/resources/Carnevale_Ivrea_Guida_Completa.pdf) — Documento completo con programma, regole, consigli pratici e tutte le informazioni per partecipare al Carnevale di Ivrea.
-
----
-
 ## Articoli correlati
 
 - [Eventi a Torino a febbraio 2026: amore, cioccolato, arte e opera](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth, mostre e Carnevale
