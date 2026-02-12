@@ -5,8 +5,38 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Only allow checking URLs on known safe domains (prevent SSRF)
+const ALLOWED_DOMAINS = [
+  'junglerent.it',
+  'junglerent.lovable.app',
+  'junglerent.com',
+  'immobiliare.it',
+  'idealista.it',
+  'comune.torino.it',
+  'polito.it',
+  'unito.it',
+  'edisu.piemonte.it',
+  'wikipedia.org',
+  'en.wikipedia.org',
+  'it.wikipedia.org',
+];
+
+function isAllowedUrl(urlStr: string): boolean {
+  try {
+    const url = new URL(urlStr);
+    // Only allow http/https
+    if (url.protocol !== 'http:' && url.protocol !== 'https:') return false;
+    // Check against allowed domains
+    const hostname = url.hostname.toLowerCase();
+    return ALLOWED_DOMAINS.some(domain => 
+      hostname === domain || hostname.endsWith('.' + domain)
+    );
+  } catch {
+    return false;
+  }
+}
+
 serve(async (req) => {
-  // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
@@ -21,17 +51,26 @@ serve(async (req) => {
       );
     }
 
-    // Limit to 20 URLs per request to avoid timeout
+    // Limit to 20 URLs per request
     const urlsToCheck = urls.slice(0, 20);
     
     const results = await Promise.all(
       urlsToCheck.map(async (url: string) => {
+        // Validate URL
+        if (typeof url !== 'string' || url.length > 2000) {
+          return { url: typeof url === 'string' ? url.substring(0, 100) : '', status: 0, ok: false, error: 'Invalid URL' };
+        }
+
+        if (!isAllowedUrl(url)) {
+          return { url: url.substring(0, 100), status: 0, ok: false, error: 'Domain not allowed' };
+        }
+
         try {
           const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+          const timeoutId = setTimeout(() => controller.abort(), 5000);
           
           const response = await fetch(url, {
-            method: 'HEAD', // Use HEAD to avoid downloading body
+            method: 'HEAD',
             signal: controller.signal,
             redirect: 'follow',
           });
