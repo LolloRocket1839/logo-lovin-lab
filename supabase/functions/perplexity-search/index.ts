@@ -525,12 +525,37 @@ function generateLocalAnswer(results: SearchableItem[], query: string, language:
   return excerpt;
 }
 
+// Rate limiting for perplexity-search
+const rateLimitMap = new Map<string, { count: number; timestamp: number }>();
+const RATE_LIMIT_WINDOW = 60000;
+const MAX_REQUESTS_PER_WINDOW = 10; // 10 searches per minute per IP
+
+const isRateLimited = (clientIP: string): boolean => {
+  const now = Date.now();
+  const record = rateLimitMap.get(clientIP);
+  if (!record || now - record.timestamp > RATE_LIMIT_WINDOW) {
+    rateLimitMap.set(clientIP, { count: 1, timestamp: now });
+    return false;
+  }
+  if (record.count >= MAX_REQUESTS_PER_WINDOW) return true;
+  record.count++;
+  return false;
+};
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    const clientIP = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || 
+                     req.headers.get("cf-connecting-ip") || "unknown";
+    if (isRateLimited(clientIP)) {
+      return new Response(
+        JSON.stringify({ error: 'rate_limit', message: 'Too many requests. Please wait a moment.' }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
     const body = await req.json();
     const query = body?.query;
     const language = body?.language || 'it';
@@ -833,7 +858,7 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in perplexity-search:', error);
     return new Response(
-      JSON.stringify({ error: 'server_error', message: error instanceof Error ? error.message : 'Unknown error' }),
+      JSON.stringify({ error: 'server_error', message: 'An unexpected error occurred. Please try again.' }),
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
