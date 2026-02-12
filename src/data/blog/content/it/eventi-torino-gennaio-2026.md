@@ -148,5 +148,5 @@ Gennaio 2026 offre Luci d'Artista, grandi mostre internazionali, concerti sold-o
 - [Eventi a Torino a marzo 2026](/blog/eventi-torino-marzo-2026)
 - [Come raggiungere Torino in modo sostenibile](/blog/viaggiare-sostenibile-torino-guida)
 - [Mobilità sostenibile a Torino per studenti](/blog/mobilita-sostenibile-torino-studenti)
-- [Carnevale di Ivrea](/blog/carnevale-ivrea-battaglia-arance-2025)
+- [Carnevale di Ivrea](/blog/carnevale-ivrea-battaglia-arance-2026)
 - [Torino in ogni stagione](/blog/torino-ogni-stagione-turisti)

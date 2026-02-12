@@ -954,22 +954,22 @@ export const blogPosts: BlogPost[] = [
     }
   },
   {
-    slug: "carnevale-ivrea-battaglia-arance-2025",
+    slug: "carnevale-ivrea-battaglia-arance-2026",
     category: "turisti",
-    date: "2025-12-03",
+    date: "2026-01-15",
     author: "Jungle Rent Team",
     image: "/images/battaglia-arance-ivrea.jpg",
     readTime: 65,
-    content: "carnevale-ivrea-battaglia-arance-2025",
+    content: "carnevale-ivrea-battaglia-arance-2026",
     translations: {
       it: {
-        title: "Carnevale di Ivrea: battaglia delle arance 2025",
-        excerpt: "Tutto sul Carnevale di Ivrea e la tradizionale battaglia delle arance del 2025.",
+        title: "Carnevale di Ivrea: battaglia delle arance 2026",
+        excerpt: "Tutto sul Carnevale di Ivrea e la tradizionale battaglia delle arance del 2026. Date, programma completo e consigli pratici.",
         seo: {
-          title: "Carnevale Ivrea 2025 | Battaglia delle arance",
-          description: "Guida completa al Carnevale di Ivrea 2025, con storia, eventi e consigli per partecipare alla battaglia delle arance.",
+          title: "Carnevale Ivrea 2026 | Battaglia delle arance",
+          description: "Guida completa al Carnevale di Ivrea 2026 (14-18 febbraio), con storia, eventi e consigli per partecipare alla battaglia delle arance.",
           keywords: [
-            "carnevale ivrea 2025",
+            "carnevale ivrea 2026",
             "battaglia arance ivrea",
             "eventi carnevale piemonte",
             "tradizioni ivrea",
@@ -978,19 +978,26 @@ export const blogPosts: BlogPost[] = [
         },
         tags: ["Turisti", "Carnevale", "Ivrea", "Tradizioni", "Eventi"],
         faqs: [
-          { question: "Quando si svolge la battaglia delle arance?", answer: "Dal 15 al 18 febbraio 2025." },
-          { question: "Come partecipare in sicurezza?", answer: "Indossare abiti protettivi e seguire le indicazioni degli organizzatori." },
-          { question: "Qual è la storia del Carnevale di Ivrea?", answer: "Una tradizione secolare che celebra la rivolta popolare con la simbolica battaglia." }
+          { question: "Quando si svolge il Carnevale di Ivrea 2026?", answer: "Dal 14 al 18 febbraio 2026, con il sabato grasso il 14 febbraio e il martedì grasso il 17 febbraio." },
+          { question: "Quando si svolge la battaglia delle arance?", answer: "La Battaglia delle Arance si tiene domenica 15, lunedì 16 e martedì 17 febbraio 2026." },
+          { question: "Come partecipare in sicurezza?", answer: "Indossare il berretto frigio rosso, abiti protettivi e scarpe antiscivolo. Seguire le indicazioni degli organizzatori e mantenersi a distanza dai cavalli." },
+          { question: "Quanto costa il biglietto per il Carnevale di Ivrea?", answer: "Il biglietto ordinario costa 15 euro. Sono disponibili biglietti promozionali a 10 euro dal 24 novembre 2025 al 6 gennaio 2026." },
+          { question: "Come raggiungere Ivrea da Torino?", answer: "Il treno è il mezzo consigliato: 40-49 minuti di viaggio da Torino Porta Nuova o Porta Susa, con biglietti da circa 5 euro." },
+          { question: "Qual è la storia del Carnevale di Ivrea?", answer: "Una tradizione secolare che celebra la rivolta popolare contro la tirannia, simboleggiata dalla leggenda della Mugnaia Violetta e dalla battaglia delle arance." },
+          { question: "Dove parcheggiare durante il Carnevale di Ivrea?", answer: "Il centro storico è chiuso al traffico. Parcheggi gratuiti sono disponibili a Piazza del Mercato, Cimitero di Ivrea, Piazza Pistoni e Movicentro." },
+          { question: "Cosa mangiare al Carnevale di Ivrea?", answer: "I faseuj grass (fagioli grassi) la domenica, polenta e merluzzo il mercoledì delle ceneri, e vin brulè durante tutti i giorni." },
+          { question: "Chi può partecipare alla battaglia delle arance?", answer: "Solo gli aranceri iscritti presso una delle nove squadre storiche possono lanciare arance. Gli spettatori devono indossare il berretto frigio rosso." },
+          { question: "Il Carnevale di Ivrea è adatto ai bambini?", answer: "Sì, i minori di 12 anni entrano gratis. Tuttavia, passeggini e carrozzine sono vietati nelle aree della battaglia per motivi di sicurezza." }
         ]
       },
       en: {
-        title: "Ivrea Carnival: orange battle 2025",
-        excerpt: "All about the Ivrea Carnival and the traditional orange battle of 2025.",
+        title: "Ivrea Carnival: orange battle 2026",
+        excerpt: "All about the Ivrea Carnival and the traditional orange battle of 2026. Dates, complete program and practical tips.",
         seo: {
-          title: "Ivrea Carnival 2025 | Orange battle",
-          description: "Complete guide to Ivrea Carnival 2025, with history, events and tips to participate in the orange battle.",
+          title: "Ivrea Carnival 2026 | Orange battle",
+          description: "Complete guide to Ivrea Carnival 2026 (February 14-18), with history, events and tips to participate in the orange battle.",
           keywords: [
-            "ivrea carnival 2025",
+            "ivrea carnival 2026",
             "orange battle ivrea",
             "carnival events piedmont",
             "ivrea traditions",
@@ -999,9 +1006,16 @@ export const blogPosts: BlogPost[] = [
         },
         tags: ["Tourists", "Carnival", "Ivrea", "Traditions", "Events"],
         faqs: [
-          { question: "When is the orange battle held?", answer: "From February 15 to 18, 2025." },
-          { question: "How to participate safely?", answer: "Wear protective clothing and follow organizers' instructions." },
-          { question: "What is the history of Ivrea Carnival?", answer: "A centuries-old tradition celebrating popular revolt with the symbolic battle." }
+          { question: "When is the Ivrea Carnival 2026?", answer: "From February 14 to 18, 2026, with Carnival Saturday on February 14 and Shrove Tuesday on February 17." },
+          { question: "When is the Battle of Oranges held?", answer: "The Battle of Oranges takes place on Sunday February 15, Monday 16, and Tuesday February 17, 2026." },
+          { question: "How to participate safely?", answer: "Wear the red Phrygian cap, protective clothing and non-slip shoes. Follow organizers' instructions and keep distance from horses." },
+          { question: "How much do tickets cost?", answer: "Regular tickets cost 15 euros. Promotional tickets at 10 euros are available from November 24, 2025 to January 6, 2026." },
+          { question: "How to reach Ivrea from Turin?", answer: "Train is recommended: 40-49 minutes from Turin Porta Nuova or Porta Susa, tickets from about 5 euros." },
+          { question: "What is the history of the Ivrea Carnival?", answer: "A centuries-old tradition celebrating popular revolt against tyranny, symbolized by the legend of Mugnaia Violetta and the orange battle." },
+          { question: "Where to park during the Ivrea Carnival?", answer: "The historic center is closed to traffic. Free parking is available at Piazza del Mercato, Ivrea Cemetery, Piazza Pistoni and Movicentro." },
+          { question: "What to eat at the Ivrea Carnival?", answer: "Faseuj grass (fat beans) on Sunday, polenta and cod on Ash Wednesday, and vin brulè throughout all days." },
+          { question: "Who can participate in the orange battle?", answer: "Only registered orange throwers with one of the nine historical teams can throw oranges. Spectators must wear the red Phrygian cap." },
+          { question: "Is the Ivrea Carnival suitable for children?", answer: "Yes, children under 12 enter free. However, strollers are prohibited in battle areas for safety reasons." }
         ]
       }
     }

@@ -98,7 +98,7 @@ The carnival season runs from **February 1 to February 18, 2026** (Ash Wednesday
 - **Website**: [storicocarnevaleivrea.it](https://www.storicocarnevaleivrea.it/)
 - **From Turin**: 30 min by train or A5/E25 highway
 
-> **In-depth**: Read the [complete guide to the Ivrea Carnival](/blog/carnevale-ivrea-battaglia-arance-2025).
+> **In-depth**: Read the [complete guide to the Ivrea Carnival](/blog/carnevale-ivrea-battaglia-arance-2026).
 
 ## The Frecciarossa Final Eight: top basketball in February
 
@@ -162,7 +162,7 @@ February 2026 offers Turin visitors the chance to experience the city through mu
 
 - [Turin events January 2026: complete guide](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza, Teatro Regio, Olympic Flame
 - [Turin events March 2026: art, music and entertainment](/blog/eventi-torino-marzo-2026) - Chiharu Shiota at MAO, Mika, Renato Zero, Subsonica 30 years, Rocky Musical
-- [The Historic Ivrea Carnival: Guide to the Battle of the Oranges](/blog/carnevale-ivrea-battaglia-arance-2025) - Story of the Mugnaia, complete program, how to get there from Turin
+- [The Historic Ivrea Carnival: Guide to the Battle of the Oranges](/blog/carnevale-ivrea-battaglia-arance-2026) - Story of the Mugnaia, complete program, how to get there from Turin
 - [How to get sustainably to Turin: complete guide](/blog/viaggiare-sostenibile-torino-guida) - Frecciarossa trains, FlixBus, carbon-neutral airport
 - [Turin in November 2025: Tennis, Cinema, Art, and Truffles](/blog/torino-novembre-turisti) - ATP Finals, Film Festival, and Artissima
 - [The best gelato shops in Turin](/blog/migliori-gelaterie-torino-studenti) - Perfect after CioccolaTò for more sweet treats
