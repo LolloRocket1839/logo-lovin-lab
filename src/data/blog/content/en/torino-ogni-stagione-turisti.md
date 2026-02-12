@@ -50,7 +50,7 @@ A peculiar element of Turin's winter climate is **fog**, which has lessened in r
 
 December and January also see less rain and precipitation compared to other seasons, thus allowing sunny days that, although cold, offer unforgettable moments of luminous beauty. Snow precipitation is rare, while rain drops to about 42 mm in December and 71 mm in January, well below the autumn average.[1][2]
 
-> **Winter events**: discover our complete guide to [January 2026 events](/blog/eventi-torino-gennaio-2026) and [winter Turin visit](/blog/torino-dicembre-turisti) for museums, historic cafés and Luci d'Artista.
+> **Winter events**: discover our complete guide to [January 2026 events](/blog/eventi-torino-gennaio-2026) and [winter Turin visit](/blog/torino-dicembre-turisti) for museums, historic cafés and Luci d'Artista. In February, don't miss the historic [Ivrea Carnival and Battle of the Oranges](/blog/carnevale-ivrea-battaglia-arance-2026), reachable by train from Turin in about one hour.
 
 The most extraordinary aspect of Turin's winter is the **"Luci d'Artista" festival**, which from late October to January transforms the city into an open-air museum with light installations by international artists. The squares and streets of the center light up with soft and fascinating colors, creating a magical atmosphere perfect for evening walks. The **Mole Antonelliana**, symbol of the city, shines with its own light, while **Piazza Castello and Piazza San Carlo** become gathering centers with live music.[5][19][21][22][23]
 
