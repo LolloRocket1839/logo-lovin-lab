@@ -1,24 +1,19 @@
 
 
-## Reduce whitespace between hero and How It Works
+## Remove standalone PDF and keep content within the article
 
-### Problem
-The hero section uses `min-h-screen` which pushes content far down. Combined with generous padding on TrustBadge (`py-8 md:py-16`) and HowItWorks (`py-16 md:py-24` desktop, `py-10` mobile), there's excessive white space before the user reaches meaningful content.
+The PDF content is already fully integrated into both the Italian and English blog articles. The only change needed is to remove the "downloadable resources" sections that link to the PDF, since all information is already in the article body.
 
 ### Changes
 
-**1. `src/components/innovative/ImmersiveHero.tsx`**
-- Change `min-h-screen` to `min-h-[85vh] md:min-h-[90vh]` so the hero doesn't consume the entire viewport, letting the next section peek through.
+**1. Italian article** (`src/data/blog/content/it/carnevale-ivrea-battaglia-arance-2026.md`)
+- Remove lines 394-400 (the "Risorse scaricabili" section with the PDF download link)
 
-**2. `src/components/TrustBadge.tsx`**
-- Reduce padding from `py-8 md:py-16` to `py-6 md:py-10` to tighten the gap.
+**2. English article** (`src/data/blog/content/en/carnevale-ivrea-battaglia-arance-2026.md`)
+- Remove lines 324-328 (the "Downloadable resources" section with the PDF download link)
 
-**3. `src/components/sections/HowItWorks/HowItWorksDesktop.tsx`**
-- Reduce top padding from `py-16 md:py-24` to `py-12 md:py-16`.
+**3. Delete the PDF file**
+- Remove `public/resources/Carnevale_Ivrea_Guida_Completa.pdf` since it is no longer referenced anywhere
 
-**4. `src/components/sections/HowItWorks/HowItWorksMobile.tsx`**
-- Reduce padding from `py-10` to `py-8`.
-
-### Result
-The visual flow from Hero to TrustBadge to How It Works will feel tighter and more intentional, reducing approximately 150-200px of empty space on desktop and 80-100px on mobile.
+No content needs to be added to the articles as the PDF information is already present in both versions.
 
