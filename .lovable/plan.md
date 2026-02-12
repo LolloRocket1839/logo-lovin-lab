@@ -1,56 +1,36 @@
 
 
-# MCP Server per Jungle Rent
+## Fix TypeScript build error in pushNotifications.ts
 
-Creare un MCP (Model Context Protocol) server come edge function per esporre i dati di Jungle Rent ad agenti AI esterni.
+### Problem
+The `pushManager` property on `ServiceWorkerRegistration` is not recognized by TypeScript because the `DOM` lib typings may not include the Push API types. Lines that access `registration.pushManager` (lines 88, 110, 121) cause TS errors.
 
-## Cosa fa
+### Solution
+Add the `WebWorker` lib to `tsconfig.app.json` **is not ideal** since it conflicts with DOM. Instead, the cleanest fix is to add type assertions where `pushManager` is accessed, casting the registration to `any` or using a dedicated type declaration file.
 
-Il server MCP permette ad agenti AI (come Claude, ChatGPT con plugins, o qualsiasi client MCP-compatibile) di interrogare programmaticamente i dati Jungle Rent: articoli del blog, quartieri, FAQ, servizi e informazioni aziendali.
+### Implementation
 
-## Tools esposti dal server
+**1. Create `src/types/push-notifications.d.ts`** -- a small ambient declaration that extends `ServiceWorkerRegistration` with `PushManager` types so TypeScript recognizes them:
 
-Il server esporra questi "tools" MCP:
+```typescript
+interface PushSubscriptionOptionsInit {
+  userVisibleOnly?: boolean;
+  applicationServerKey?: BufferSource | string | null;
+}
 
-1. **search_articles** - Cerca tra gli articoli del blog per keyword, categoria o lingua
-2. **get_neighborhoods** - Restituisce info sui quartieri di Torino (affitti, sicurezza, trasporti, vita notturna)
-3. **get_company_info** - Restituisce informazioni aziendali strutturate (contatti, servizi, founders)
-4. **get_faq** - Cerca nelle FAQ per argomento
-5. **get_events** - Restituisce eventi correnti a Torino
-6. **get_rent_prices** - Restituisce prezzi medi affitto per zona
+interface PushManager {
+  getSubscription(): Promise<PushSubscription | null>;
+  subscribe(options?: PushSubscriptionOptionsInit): Promise<PushSubscription>;
+}
 
-## Dettagli tecnici
+interface ServiceWorkerRegistration {
+  pushManager: PushManager;
+}
+```
 
-### Struttura file
+**2. Update `src/lib/pushNotifications.ts`** -- fix the `BufferSource` cast on line 49 by removing the unnecessary `as BufferSource` (the `applicationServerKey` already accepts `Uint8Array`). No other code changes needed since the type declaration file above will resolve all `pushManager` errors globally.
 
-- `supabase/functions/mcp-server/index.ts` - Edge function con Hono + mcp-lite
-
-### Dipendenze
-
-- `mcp-lite` (npm:mcp-lite@^0.10.0) - Libreria leggera per MCP servers
-- `hono` - Web framework per il routing (gia disponibile in Deno)
-
-### Configurazione
-
-- Aggiunta entry `[functions.mcp-server]` in `supabase/config.toml` con `verify_jwt = false` (il server deve essere pubblico per gli agenti AI)
-
-### Implementazione
-
-L'edge function usera `McpServer` e `StreamableHttpTransport` di mcp-lite per gestire le richieste MCP over HTTP. I dati saranno embedded direttamente nella function (come gia fatto in `perplexity-search`), includendo:
-
-- Indice degli articoli blog (~30 articoli con titoli IT/EN, excerpt, categorie, keyword)
-- Dati quartieri (6 quartieri principali con affitti, rating, coordinate)
-- FAQ principali (~20 domande/risposte bilingue)
-- Info aziendali statiche (P.IVA, contatti, founders, servizi)
-- Prezzi affitto per zona da `turinZonePrices`
-
-### Endpoint
-
-Il server sara raggiungibile a:
-`https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server`
-
-### Aggiornamenti al sito
-
-- Aggiunta del link al MCP server nei file `llms.txt`, `llms-full.txt` e `ai-assistant-info.txt` nella sezione dedicata ai file AI
-- Aggiunta di un commento nel `robots.txt` con l'URL del server MCP
+### Files changed
+- `src/types/push-notifications.d.ts` (new -- ambient type declarations for Push API)
+- `src/lib/pushNotifications.ts` (minor: remove redundant cast on line 49)
 
