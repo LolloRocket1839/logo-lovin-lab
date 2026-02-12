@@ -14,7 +14,7 @@ export const TrustBadge = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-8 md:py-16 bg-muted/30 relative overflow-hidden border-b border-border/20"
+      className="py-6 md:py-10 bg-muted/30 relative overflow-hidden border-b border-border/20"
     >
       
       <div className="container px-4 md:px-8 relative z-10">

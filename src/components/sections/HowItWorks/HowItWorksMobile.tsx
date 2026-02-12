@@ -31,7 +31,7 @@ export const HowItWorksMobile = () => {
   }, []);
 
   return (
-    <section className="py-10 bg-background md:hidden">
+    <section className="py-8 bg-background md:hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
           <span className="inline-block px-3 py-1.5 bg-primary/10 text-primary rounded-full text-xs uppercase tracking-[0.15em] font-medium mb-3">
