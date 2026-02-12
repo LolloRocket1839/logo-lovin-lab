@@ -86,6 +86,7 @@ export const contentClusters: ContentCluster[] = [
       'eventi-torino-gennaio-2026',
       'eventi-torino-febbraio-2026',
       'eventi-torino-marzo-2026',
+      'carnevale-ivrea-battaglia-arance-2026',
       'torino-nightlife-guide',
       'torino-digital-nomads-guide'
     ],
@@ -150,6 +151,9 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'eventi-torino-gennaio-2026', to: 'eventi-torino-febbraio-2026', relevance: 'high', bidirectional: true },
   { from: 'eventi-torino-febbraio-2026', to: 'eventi-torino-marzo-2026', relevance: 'high', bidirectional: true },
   { from: 'eventi-torino-febbraio-2026', to: 'carnevale-ivrea-battaglia-arance-2026', relevance: 'high', bidirectional: true },
+  { from: 'carnevale-ivrea-battaglia-arance-2026', to: 'torino-ogni-stagione-turisti', relevance: 'medium', bidirectional: true },
+  { from: 'carnevale-ivrea-battaglia-arance-2026', to: 'viaggiare-sostenibile-torino-guida', relevance: 'medium', bidirectional: true },
+  { from: 'carnevale-ivrea-battaglia-arance-2026', to: 'mobilita-sostenibile-torino-studenti', relevance: 'medium', bidirectional: true },
   
   // Food cluster interconnections
   { from: 'cioccolaterie-torino-guida-completa', to: 'panettoni-pandori-torino-guida-2025', relevance: 'high', bidirectional: true },
