@@ -531,12 +531,30 @@ serve(async (req) => {
   }
 
   try {
-    const { query, language = 'it' } = await req.json();
+    const body = await req.json();
+    const query = body?.query;
+    const language = body?.language || 'it';
 
+    // Validate query
     if (!query || typeof query !== 'string' || query.trim().length < 3) {
-      console.error('Invalid query:', query);
       return new Response(
         JSON.stringify({ error: 'Query must be at least 3 characters' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Enforce max length to prevent abuse
+    if (query.length > 500) {
+      return new Response(
+        JSON.stringify({ error: 'Query too long. Maximum 500 characters.' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Validate language
+    if (language !== 'it' && language !== 'en') {
+      return new Response(
+        JSON.stringify({ error: 'Invalid language. Must be it or en.' }),
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }

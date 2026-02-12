@@ -20,20 +20,99 @@ interface BudgetRequest {
   savingTarget?: number;
 }
 
+// Input validation
+const ALLOWED_AREAS = [
+  "San Salvario", "Crocetta", "Centro", "Aurora", "Vanchiglia",
+  "Santa Rita", "Cenisia", "Lingotto", "San Paolo", "Campidoglio",
+  "Cit Turin", "Parella", "Pozzo Strada", "Mirafiori", "Borgo Vittoria",
+  "Madonna di Campagna", "Barriera di Milano", "Nizza Millefonti",
+  "San Donato", "Lucento", "Rebaudengo", "Falchera", "Borgo Po",
+];
+
+const ALLOWED_HOUSING_TYPES = ["shared", "single", "studio"];
+const ALLOWED_LANGUAGES = ["it", "en"];
+
+function validateBudgetRequest(body: any): { valid: boolean; error?: string } {
+  if (!body || typeof body !== "object") {
+    return { valid: false, error: "Invalid request body" };
+  }
+
+  const { selectedArea, housingType, totalBudget, breakdown, language, savingTarget } = body;
+
+  // Validate selectedArea
+  if (!selectedArea || typeof selectedArea !== "string" || selectedArea.length > 100) {
+    return { valid: false, error: "Invalid selectedArea" };
+  }
+
+  // Validate housingType
+  if (!housingType || !ALLOWED_HOUSING_TYPES.includes(housingType)) {
+    return { valid: false, error: "Invalid housingType. Must be: shared, single, or studio" };
+  }
+
+  // Validate language
+  if (language && !ALLOWED_LANGUAGES.includes(language)) {
+    return { valid: false, error: "Invalid language. Must be: it or en" };
+  }
+
+  // Validate totalBudget
+  if (typeof totalBudget !== "number" || totalBudget < 100 || totalBudget > 10000 || !isFinite(totalBudget)) {
+    return { valid: false, error: "Invalid totalBudget. Must be between 100 and 10000" };
+  }
+
+  // Validate breakdown
+  if (!breakdown || typeof breakdown !== "object") {
+    return { valid: false, error: "Invalid breakdown object" };
+  }
+
+  const requiredFields = ["affitto", "bollette", "trasporti", "spesa", "extra"];
+  for (const field of requiredFields) {
+    const val = breakdown[field];
+    if (typeof val !== "number" || val < 0 || val > 10000 || !isFinite(val)) {
+      return { valid: false, error: `Invalid breakdown.${field}. Must be a number between 0 and 10000` };
+    }
+  }
+
+  // Validate savingTarget
+  if (savingTarget !== undefined && savingTarget !== null) {
+    if (typeof savingTarget !== "number" || savingTarget < 0 || savingTarget > 10000 || !isFinite(savingTarget)) {
+      return { valid: false, error: "Invalid savingTarget. Must be between 0 and 10000" };
+    }
+  }
+
+  return { valid: true };
+}
+
+// Sanitize string for use in prompts (prevent prompt injection)
+function sanitizeForPrompt(str: string): string {
+  return str.replace(/[^\p{L}\p{N}\s\-']/gu, "").substring(0, 100).trim();
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { selectedArea, housingType, totalBudget, breakdown, language = "it", savingTarget = 0 }: BudgetRequest = await req.json();
+    const body = await req.json();
+
+    // Validate inputs
+    const validation = validateBudgetRequest(body);
+    if (!validation.valid) {
+      return new Response(
+        JSON.stringify({ error: "validation_error", message: validation.error }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const { housingType, totalBudget, breakdown, language = "it", savingTarget = 0 }: BudgetRequest = body;
+    const selectedArea = sanitizeForPrompt(body.selectedArea);
     
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
-    console.log("Analyzing budget for:", { selectedArea, housingType, totalBudget, breakdown, savingTarget });
+    console.log("Analyzing budget for:", { selectedArea, housingType, totalBudget });
 
     const systemPrompt = language === "it" 
       ? `Sei un esperto consulente per studenti universitari che vivono a Torino. Conosci perfettamente:
@@ -61,11 +140,15 @@ IMPORTANT: Respond ONLY using the suggest_budget_tips function, don't add any ot
           : `\nSaving goal: €${savingTarget}/month (required income: €${totalBudget + savingTarget})`)
       : '';
 
+    const housingLabel = language === "it"
+      ? (housingType === "shared" ? "Stanza doppia" : housingType === "single" ? "Stanza singola" : "Monolocale")
+      : (housingType === "shared" ? "Shared room" : housingType === "single" ? "Single room" : "Studio apartment");
+
     const userPrompt = language === "it"
       ? `Analizza questo budget mensile dettagliato per uno studente a Torino:
 
 Quartiere: ${selectedArea}
-Tipo alloggio: ${housingType === "shared" ? "Stanza doppia" : housingType === "single" ? "Stanza singola" : "Monolocale"}
+Tipo alloggio: ${housingLabel}
 Budget totale: €${totalBudget}/mese${savingInfo}
 
 Dettaglio spese:
@@ -84,7 +167,7 @@ Genera:
       : `Analyze this detailed monthly budget for a student in Turin:
 
 Neighborhood: ${selectedArea}
-Housing type: ${housingType === "shared" ? "Shared room" : housingType === "single" ? "Single room" : "Studio apartment"}
+Housing type: ${housingLabel}
 Total budget: €${totalBudget}/month${savingInfo}
 
 Expense breakdown:
@@ -197,7 +280,6 @@ Generate:
     }
 
     const data = await response.json();
-    console.log("AI response:", JSON.stringify(data, null, 2));
 
     // Extract the tool call arguments
     const toolCall = data.choices?.[0]?.message?.tool_calls?.[0];
@@ -206,7 +288,6 @@ Generate:
     }
 
     const advice = JSON.parse(toolCall.function.arguments);
-    console.log("Parsed advice:", advice);
 
     return new Response(JSON.stringify(advice), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -217,7 +298,7 @@ Generate:
     return new Response(
       JSON.stringify({ 
         error: "internal_error", 
-        message: error instanceof Error ? error.message : "Errore durante l'analisi del budget" 
+        message: "An error occurred while analyzing the budget" 
       }),
       {
         status: 500,
