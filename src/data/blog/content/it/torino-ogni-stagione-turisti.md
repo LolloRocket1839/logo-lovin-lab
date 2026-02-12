@@ -89,7 +89,7 @@ L'inverno torinese (dicembre-febbraio) è complesso e affascinante.
 - Il **Föhn**, vento caldo dalle Alpi, può portare temperature improvvisamente primaverili (fino a 20°C) per 1-3 giorni
 - Dicembre e gennaio sono i mesi meno piovosi
 
-> **Eventi invernali:** scopri la guida agli [eventi di gennaio 2026](/blog/eventi-torino-gennaio-2026) e alla [visita invernale di Torino](/blog/torino-dicembre-turisti).
+> **Eventi invernali:** scopri la guida agli [eventi di gennaio 2026](/blog/eventi-torino-gennaio-2026) e alla [visita invernale di Torino](/blog/torino-dicembre-turisti). A febbraio, non perdere lo storico [Carnevale di Ivrea con la Battaglia delle Arance](/blog/carnevale-ivrea-battaglia-arance-2026), raggiungibile in treno da Torino in circa un'ora.
 
 ### Luci d'Artista
 
