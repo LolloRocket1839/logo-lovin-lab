@@ -26,7 +26,7 @@ The nineteenth century represented the century of transformation and creative ex
 
 The decisive moment came in **1852**, when the Caffarel house began experimenting with combining cocoa with the precious Tonda Gentile hazelnuts from the Langhe. In **1865**, precisely during the Turin Carnival, Prochet and Caffarel officially presented the **Gianduiotto** to the public. The presentation was made by the famous Turin mask Gianduja, who distributed the new delicacy to revelers in the city streets.[7][8]
 
-> 🎭 **Turin traditions:** also discover the [Ivrea Carnival with the Battle of the Oranges](/blog/carnevale-ivrea-battaglia-arance-2025).
+> 🎭 **Turin traditions:** also discover the [Ivrea Carnival with the Battle of the Oranges](/blog/carnevale-ivrea-battaglia-arance-2026).
 
 ---
 

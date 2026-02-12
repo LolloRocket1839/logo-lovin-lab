@@ -114,7 +114,7 @@ const siteUrls: SiteUrl[] = [
   { path: '/blog/torino-dicembre-turisti', title: 'Torino Dicembre Turisti', category: 'blog', priority: 0.6, hasHreflang: true },
   { path: '/blog/torino-novembre-turisti', title: 'Torino Novembre Turisti', category: 'blog', priority: 0.6, hasHreflang: true },
   { path: '/blog/torino-ogni-stagione-turisti', title: 'Torino Ogni Stagione', category: 'blog', priority: 0.7, hasHreflang: true },
-  { path: '/blog/carnevale-ivrea-battaglia-arance-2025', title: 'Carnevale Ivrea 2025', category: 'blog', priority: 0.7, hasHreflang: true },
+  { path: '/blog/carnevale-ivrea-battaglia-arance-2026', title: 'Carnevale Ivrea 2026', category: 'blog', priority: 0.7, hasHreflang: true },
 ];
 
 const categoryConfig = {

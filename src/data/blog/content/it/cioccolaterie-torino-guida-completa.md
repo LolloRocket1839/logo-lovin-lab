@@ -26,7 +26,7 @@ Nel **1826**, Pier Paul Caffarel aprì il primo laboratorio industriale di ciocc
 
 Nel **1852** iniziò la sperimentazione con le nocciole delle Langhe. Nel **1865**, durante il Carnevale, nacque il **Gianduiotto**. La maschera Gianduja lo distribuiva per le strade ai festaioli.[7][8]
 
-> 🎭 **Tradizioni torinesi:** scopri anche il [Carnevale di Ivrea con la Battaglia delle Arance](/blog/carnevale-ivrea-battaglia-arance-2025).
+> 🎭 **Tradizioni torinesi:** scopri anche il [Carnevale di Ivrea con la Battaglia delle Arance](/blog/carnevale-ivrea-battaglia-arance-2026).
 
 ---
 

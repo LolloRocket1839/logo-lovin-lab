@@ -1,6 +1,6 @@
 # Lo storico carnevale di Ivrea: guida completa alla battaglia delle arance da Torino
 
-Il **Carnevale di Ivrea**, ufficialmente noto come **Storico Carnevale di Ivrea**, è una delle manifestazioni carnevalesche più antiche, affascinanti e singolari d'Italia, celebre in tutto il mondo per la sua **Battaglia delle Arance**. Questo articolo fornisce una guida completa per turisti e studenti che desiderano partecipare a questa straordinaria celebrazione, spiegando come raggiungerla da Torino, cosa aspettarsi e come prepararsi. Per l'edizione 2025, l'evento raggiunge il suo apice **dal 1° al 5 marzo**, con cinque giorni ricchi di eventi storici, cortei suggestivi e la spettacolare battaglia che richiama migliaia di visitatori.[1][2]
+Il **Carnevale di Ivrea**, ufficialmente noto come **Storico Carnevale di Ivrea**, è una delle manifestazioni carnevalesche più antiche, affascinanti e singolari d'Italia, celebre in tutto il mondo per la sua **Battaglia delle Arance**. Questo articolo fornisce una guida completa per turisti e studenti che desiderano partecipare a questa straordinaria celebrazione, spiegando come raggiungerla da Torino, cosa aspettarsi e come prepararsi. Per l'edizione 2026, l'evento raggiunge il suo apice **dal 14 al 18 febbraio**, con cinque giorni ricchi di eventi storici, cortei suggestivi e la spettacolare battaglia che richiama migliaia di visitatori.[1][2]
 
 ## La storia leggendaria del carnevale di Ivrea
 
@@ -18,17 +18,17 @@ Verso il **XIX secolo**, il Carnevale si arricchì di nuove connotazioni simboli
 
 Nel moderno Carnevale di Ivrea, la **Battaglia delle Arance** rappresenta simbolicamente questa lotta popolare: gli **aranceri a piedi** (che rappresentano il popolo in rivolta) affrontano gli **aranceri sui carri trainati da cavalli** (che incarnano la tirannia feudale e le forze oppressive). Ogni colpo di arancia scambiato è un richiamo simbolico e metaforico a quella ribellione medievale, a quel diritto imprescindibile alla libertà e alla dignità umana che i cittadini rivendicarono contro i loro oppressori.[3][7]
 
-## Il programma completo del carnevale 2025
+## Il programma completo del carnevale 2026
 
-### Gli eventi iniziali (6 gennaio - fine febbraio)
+### Gli eventi iniziali (6 gennaio - inizio febbraio)
 
-Il Carnevale di Ivrea 2025 non è un evento concentrato solo nei cinque giorni di marzo. Le celebrazioni iniziano ufficialmente il **6 gennaio 2025** con l'uscita dei **Pifferi e Tamburi** in Piazza di Città alle ore 09:00. Questi musicisti tradizionali in costume storico, suonando i tradizionali strumenti folkloristici, segnano simbolicamente l'inizio della stagione carnevalesca. Il loro arrivo è accompagnato da rituali e cerimonie che rievocano le usanze medievali e rinascimentali della città.[1]
+Il Carnevale di Ivrea 2026 non è un evento concentrato solo nei cinque giorni di febbraio. Le celebrazioni iniziano ufficialmente il **6 gennaio 2026** con l'uscita dei **Pifferi e Tamburi** in Piazza di Città alle ore 09:00. Questi musicisti tradizionali in costume storico, suonando i tradizionali strumenti folkloristici, segnano simbolicamente l'inizio della stagione carnevalesca. Il loro arrivo è accompagnato da rituali e cerimonie che rievocano le usanze medievali e rinascimentali della città.[1]
 
 Nel corso dei mesi precedenti marzo, si svolgono numerosissimi appuntamenti preparatori: tra questi la storica investitura del **Generale** (figura di origine napoleonica che rappresenta l'autorità civile), una messa al Duomo e vari incontri delle componenti storiche del Carnevale per prepararsi al gran finale.[2][1]
 
-### Il sabato di carnevale (1° marzo 2025)
+### Il sabato di carnevale (14 febbraio 2026)
 
-Il sabato che inaugura la settimana principale (1° marzo) è dedicato principalmente alla **presentazione della Vezzosa Mugnaia**, il momento culminante e più suggestivo della celebrazione preliminare. La sera si svolge:
+Il sabato che inaugura la settimana principale (14 febbraio) è dedicato principalmente alla **presentazione della Vezzosa Mugnaia**, il momento culminante e più suggestivo della celebrazione preliminare. La sera si svolge:
 
 - **Ore 21:30**: Marcia del Corteo Storico con fiaccolata goliardica e sfilata delle squadre degli aranceri a piedi. Il percorso attraversa le principali vie della città: partendo da Piazza di Città, via Arduino, Piazza Maretta, via Guarnotta, Ponte Vecchio, via Gozzano, Piazza Lamarmora, corso Nigra, corso Cavour, corso Gallo, corso Botta, Piazza Balla, via Palestro, Piazza Castello, tornando a Piazza di Città[2]
 
@@ -36,7 +36,7 @@ Il sabato che inaugura la settimana principale (1° marzo) è dedicato principal
 
 - **Ore 23:00**: Termine del Corteo Storico con il ballo solenne della Mugnaia e del Generale in Piazza di Città, momento rituale che rappresenta l'alleanza simbolica tra il popolo (rappresentato dalla Mugnaia) e l'autorità civile (il Generale)[2]
 
-### La domenica di carnevale (2 marzo 2025)
+### La domenica di carnevale (15 febbraio 2026)
 
 La domenica rappresenta il primo dei tre giorni dedicati alla **Battaglia delle Arance** vera e propria. Il programma è intenso e completo:
 
@@ -56,7 +56,7 @@ La domenica rappresenta il primo dei tre giorni dedicati alla **Battaglia delle 
 
 - **Ore 17:30**: Generala in Piazza di Città, cerimonia conclusiva della giornata di battaglia
 
-### Il lunedì di carnevale (3 marzo 2025)
+### Il lunedì di carnevale (16 febbraio 2026)
 
 Il lunedì è dedicato alle **Zappate degli Scarli**, un rituale carico di significato simbolico legato alla fertilità e alle antiche usanze pagane:
 
@@ -66,7 +66,7 @@ Il lunedì è dedicato alle **Zappate degli Scarli**, un rituale carico di signi
 
 - **Ore 17:30**: Generala in Piazza di Città
 
-### Il martedì grasso (4 marzo 2025)
+### Il martedì grasso (17 febbraio 2026)
 
 Il martedì è il culmine della manifestazione, il momento di massima intensità della battaglia:
 
@@ -80,7 +80,7 @@ Il martedì è il culmine della manifestazione, il momento di massima intensità
 
 - **Ore 20:00**: Abbruciamento degli Scarli delle Parrocchie. Il corteo si reca presso le varie parrocchie (San Maurizio, Sant'Ulderico e San Lorenzo) per bruciare gli scarli innalzati il lunedì. Il fuoco che consuma questi pali di legno segna simbolicamente il passaggio dalla stagione grassa e festiva alla Quaresima austera
 
-### Il mercoledì delle ceneri (5 marzo 2025)
+### Il mercoledì delle ceneri (18 febbraio 2026)
 
 L'ultimo giorno del Carnevale è dedicato a un momento di transizione spirituale e culinaria:
 
@@ -126,10 +126,10 @@ La battaglia è accompagnata da **musica, cori e un'atmosfera di grande entusias
 
 ### Costi di partecipazione e biglietti
 
-**Per gli spettatori**: È importante notare che la **maggior parte degli eventi del Carnevale sono completamente gratuiti**. Tuttavia, per accedere alle aree controllate durante la **Domenica di Carnevale (2 marzo)** e partecipare pienamente alla Battaglia delle Arance, è necessario acquistare un biglietto d'ingresso.[16]
+**Per gli spettatori**: È importante notare che la **maggior parte degli eventi del Carnevale sono completamente gratuiti**. Tuttavia, per accedere alle aree controllate durante la **Domenica di Carnevale (15 febbraio)** e partecipare pienamente alla Battaglia delle Arance, è necessario acquistare un biglietto d'ingresso.[16]
 
 - **Biglietti ordinari**: 15 euro per adulti[17][16]
-- **Biglietti promozionali**: 10 euro (validi dal 24 novembre 2024 al 6 gennaio 2025 come parte della campagna "Regala il Carnevale")[17]
+- **Biglietti promozionali**: 10 euro (validi dal 24 novembre 2025 al 6 gennaio 2026 come parte della campagna "Regala il Carnevale")[17]
 - **Gratuità**: Minori di 12 anni, residenti di Ivrea, persone con disabilità, Aranceri muniti di regolare toppa di iscrizione valida per l'anno in corso, e personaggi che fanno parte delle Componenti storiche[16][17][8]
 - **Sconto di gruppo**: 1 ingresso omaggio ogni 20 biglietti acquistati[8]
 
@@ -269,7 +269,7 @@ La tradizione enogastronomica del Carnevale di Ivrea è parte integrante della m
 
 I **faseuj grass** (nella dialetto canavesese significa "fagioli grassi") sono il piatto più iconico e celebrato durante il Carnevale di Ivrea. Questa ricetta ha origini che si perdono nel Medioevo, quando i fagioli di Saluggia (varietà locale rinomata) erano considerati un alimento prezioso e venivano distribuiti gratuitamente ai bisognosi della città in segno di elemosina.[11]
 
-La preparazione dei faseuj grass è un'impresa colossale di coordinamento e dedizione. Durante il Carnevale 2025, verranno preparati circa **12 quintali (1.200 kg) di fagioli** dalla comunità. Il processo inizia una settimana prima, quando:[11]
+La preparazione dei faseuj grass è un'impresa colossale di coordinamento e dedizione. Durante il Carnevale 2026, verranno preparati circa **12 quintali (1.200 kg) di fagioli** dalla comunità. Il processo inizia una settimana prima, quando:[11]
 
 - I fagioli vengono messi a bagno overnight per ammorbidirsi
 - **400 kg di preive (cotiche di maiale)** vengono pulite, tagliate e impanate in una "mistura segreta" da volontari esperti
@@ -279,11 +279,11 @@ Il risultato è un piatto ricco e sostanzioso composto da fagioli bolliti, carne
 
 ### Polenta e merluzzo
 
-Mentre i faseuj rappresentano il "grasso" del Carnevale, la **polenta e merluzzo** rappresenta il momento di transizione verso l'austerità della Quaresima. Questo piatto tradizionale viene consumato il **Mercoledì delle Ceneri** (5 marzo 2025) ed è un simbolo di spiritualità e penitenza cristiana.[12][11]
+Mentre i faseuj rappresentano il "grasso" del Carnevale, la **polenta e merluzzo** rappresenta il momento di transizione verso l'austerità della Quaresima. Questo piatto tradizionale viene consumato il **Mercoledì delle Ceneri** (18 febbraio 2026) ed è un simbolo di spiritualità e penitenza cristiana.[12][11]
 
 L'usanza risale alla **seconda metà del Cinquecento**, quando la Controriforma stabilì l'obbligo del digiuno e del "mangiare di magro" nel primo giorno di Quaresima. Nel corso dei secoli, la tradizione si è conservata ed è diventata un momento di comunione civica e spirituale.[12][11]
 
-Per il Mercoledì delle Ceneri 2025, il **Comitato della Croazia** preparerà:[12]
+Per il Mercoledì delle Ceneri 2026, il **Comitato della Croazia** preparerà:[12]
 - **1.200 kg di polenta** (cotta nel tradizionale metodo con brodo vegetale e mantequilla)
 - **900 kg di merluzzo** (di alta qualità, precedentemente posto in acqua salata)
 - **1.100 kg di cipolle** (sbucciate e tagliate dalle sapienti mani di dieci donne volontarie)
@@ -292,7 +292,7 @@ La preparazione inizia lunedì sera con la cottura che prosegue **no-stop per 24
 
 ### Vin brulè e altre specialità
 
-Durante tutti i giorni di Carnevale, in ogni angolo della città è possibile degustare il **vin brulè** (vino caldo speziato) preparato dalle associazioni rionali. Questo bevanda calda è perfetta per scaldarsi tra una battaglia e l'altra durante le giornate di marzo che possono ancora essere fredde e umide.[11]
+Durante tutti i giorni di Carnevale, in ogni angolo della città è possibile degustare il **vin brulè** (vino caldo speziato) preparato dalle associazioni rionali. Questa bevanda calda è perfetta per scaldarsi tra una battaglia e l'altra durante le giornate di febbraio che possono essere fredde e umide.[11]
 
 Inoltre, nel **Villaggio Arancio** (area enogastronomica allestita in Piazza Ottinetti dalle 11:00 alle 17:00), i visitatori possono scoprire e degustare **sapori del Canavese**, specialità locali, vini piemontesi e prodotti tipici della regione. È un'opportunità per assaporare l'autentica cucina piemontese in un contesto festivo e conviviale.[8][1]
 
@@ -352,14 +352,14 @@ Lo **Storico Carnevale di Ivrea** rappresenta molto più di una semplice festa p
 
 Per **studenti universitari di Torino**, il Carnevale di Ivrea è un'occasione straordinaria di apprendimento culturale e di divertimento a breve distanza dalla città. Con il treno raggiungibile in meno di 50 minuti e con un costo di biglietto inferiore a 15 euro, è una meta perfetta per un'escursione nel fine settimana. L'abbonamento **Piemove** può contribuire a ridurre i costi di trasporto urbano per raggiungere la stazione.[23][24][22][21]
 
-Per **turisti italiani e internazionali**, il Carnevale offre un'immersione autentica nella cultura piemontese, un'occasione per comprendere le radici storiche dell'Italia e di partecipare a celebrazioni che affondano le radici in secoli di tradizione. Le date del **1-5 marzo 2025** sono da segnare in rosso nel calendario per chi desidera vivere questo straordinario evento.[2][1]
+Per **turisti italiani e internazionali**, il Carnevale offre un'immersione autentica nella cultura piemontese, un'occasione per comprendere le radici storiche dell'Italia e di partecipare a celebrazioni che affondano le radici in secoli di tradizione. Le date del **14-18 febbraio 2026** sono da segnare in rosso nel calendario per chi desidera vivere questo straordinario evento.[2][1]
 
 Indossate il vostro berretto frigio rosso, preparatevi a schivare arance, assaporate i faseuj grassi e i sapori autentici, immergetevi nella folla festosa e nella storia viva di questa città straordinaria. Il Carnevale di Ivrea vi aspetta per trasformarvi in testimoni e partecipanti di una delle manifestazioni più affascinanti e significative d'Europa.
 
 ## Fonti
 
-[1] Storico Carnevale di Ivrea - Programma 2025 | IT https://www.storicocarnevaleivrea.it/it/Edizione-2025/
-[2] Carnevale di Ivrea 2025: date e programma dello storico ... https://www.guidatorino.com/eventi-torino/carnevale-ivrea-2025/
+[1] Storico Carnevale di Ivrea - Programma 2026 | IT https://www.storicocarnevaleivrea.it/it/Edizione-2026/Programma/
+[2] Carnevale di Ivrea 2026: date e programma dello storico ... https://www.guidatorino.com/eventi-torino/storico-carnevale-ivrea-2026/
 [3] Storia carnevale Ivrea: origini, evoluzione e significati della ... https://www.cascina6b.com/storia-carnevale-ivrea/
 [4] Il famoso carnevale di Ivrea: perché la battaglia delle ... http://www.somewhere.it/curiosita/storie/il-famoso-carnevale-di-ivrea-perche-la-battaglia-delle-arance/
 [5] Carnevale di Ivrea https://it.wikipedia.org/wiki/Carnevale_di_Ivrea

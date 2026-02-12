@@ -149,7 +149,7 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'torino-dicembre-turisti', to: 'eventi-torino-gennaio-2026', relevance: 'high', bidirectional: true },
   { from: 'eventi-torino-gennaio-2026', to: 'eventi-torino-febbraio-2026', relevance: 'high', bidirectional: true },
   { from: 'eventi-torino-febbraio-2026', to: 'eventi-torino-marzo-2026', relevance: 'high', bidirectional: true },
-  { from: 'eventi-torino-febbraio-2026', to: 'carnevale-ivrea-battaglia-arance-2025', relevance: 'high', bidirectional: true },
+  { from: 'eventi-torino-febbraio-2026', to: 'carnevale-ivrea-battaglia-arance-2026', relevance: 'high', bidirectional: true },
   
   // Food cluster interconnections
   { from: 'cioccolaterie-torino-guida-completa', to: 'panettoni-pandori-torino-guida-2025', relevance: 'high', bidirectional: true },

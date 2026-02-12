@@ -239,7 +239,7 @@ March 2026 offers international retrospectives, world star concerts, musical cel
 
 - [Events in Turin in February 2026](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth, Lee Miller and Jeff Wall exhibitions, Ivrea Carnival
 - [Events in Turin in January 2026](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza, Olympic Flame
-- [The historic Ivrea Carnival](/blog/carnevale-ivrea-battaglia-arance-2025) - March 1-5, 2025, Mugnaia legend
+- [The historic Ivrea Carnival](/blog/carnevale-ivrea-battaglia-arance-2026) - February 14-18, 2026, Mugnaia legend
 - [How to get to Turin sustainably](/blog/viaggiare-sostenibile-torino-guida)
 - [Turin in every season](/blog/torino-ogni-stagione-turisti)
 - [Turin nightlife guide](/blog/torino-nightlife-guide)

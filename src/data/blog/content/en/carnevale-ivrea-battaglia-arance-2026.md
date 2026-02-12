@@ -1,6 +1,6 @@
 # The historic Ivrea Carnival: complete guide to the Battle of Oranges from Turin
 
-The **Ivrea Carnival**, officially the **Historic Carnival of Ivrea**, ranks among Italy's oldest and most distinctive carnival celebrations. Its fame rests on the **Battle of Oranges**, a controlled citrus fight that draws thousands of visitors each year. This guide covers everything tourists and students need to know: history, getting there from Turin, what to expect, and how to prepare. The 2025 edition runs **from March 1-5**, with five days of historical ceremonies, processions, and the spectacular battle itself.[1][2]
+The **Ivrea Carnival**, officially the **Historic Carnival of Ivrea**, ranks among Italy's oldest and most distinctive carnival celebrations. Its fame rests on the **Battle of Oranges**, a controlled citrus fight that draws thousands of visitors each year. This guide covers everything tourists and students need to know: history, getting there from Turin, what to expect, and how to prepare. The 2026 edition runs **from February 14-18**, with five days of historical ceremonies, processions, and the spectacular battle itself.[1][2]
 
 ## The history of the Ivrea Carnival
 
@@ -18,17 +18,17 @@ The **19th century** brought new symbolic elements. The figure of the **Mugnaia*
 
 Today, the **Battle of Oranges** symbolizes this popular struggle: **foot orange throwers** (representing the people in revolt) face off against **orange throwers on horse-drawn carts** (representing feudal tyranny). Every orange thrown references that medieval rebellion and the citizens' claim to freedom and dignity.[3][7]
 
-## Complete program for the 2025 carnival
+## Complete program for the 2026 carnival
 
-### Initial events (January 6 - end of February)
+### Initial events (January 6 - early February)
 
-The 2025 Ivrea Carnival is not concentrated only in the five days of March. Celebrations officially begin on **January 6, 2025** with the emergence of the **Pifferi e Tamburi** (Fifes and Drums) in Piazza di Città at 09:00. These traditional musicians in historical costume, playing traditional folk instruments, symbolically mark the beginning of the carnival season. Their arrival is accompanied by rituals and ceremonies that evoke the medieval and Renaissance customs of the city.[1]
+The 2026 Ivrea Carnival is not concentrated only in the five days of February. Celebrations officially begin on **January 6, 2026** with the emergence of the **Pifferi e Tamburi** (Fifes and Drums) in Piazza di Città at 09:00. These traditional musicians in historical costume, playing traditional folk instruments, symbolically mark the beginning of the carnival season. Their arrival is accompanied by rituals and ceremonies that evoke the medieval and Renaissance customs of the city.[1]
 
 In the months preceding March, numerous preparatory events take place: among these the historic investiture of the **General** (a figure of Napoleonic origin representing civil authority), a mass at the Cathedral, and various meetings of the historical components of the Carnival to prepare for the grand finale.[2][1]
 
-### Carnival Saturday (March 1, 2025)
+### Carnival Saturday (February 14, 2026)
 
-The Saturday that inaugurates the main week (March 1) is primarily dedicated to the **presentation of the Lovely Mugnaia**, the culminating and most evocative moment of the preliminary celebration. In the evening:
+The Saturday that inaugurates the main week (February 14) is primarily dedicated to the **presentation of the Lovely Mugnaia**, the culminating and most evocative moment of the preliminary celebration. In the evening:
 
 - **9:30 PM**: March of the Historical Procession with torchlight parade and parade of the foot orange thrower teams. The route crosses the main streets of the city: starting from Piazza di Città, via Arduino, Piazza Maretta, via Guarnotta, Ponte Vecchio, via Gozzano, Piazza Lamarmora, corso Nigra, corso Cavour, corso Gallo, corso Botta, Piazza Balla, via Palestro, Piazza Castello, returning to Piazza di Città[2]
 
@@ -36,7 +36,7 @@ The Saturday that inaugurates the main week (March 1) is primarily dedicated to 
 
 - **11:00 PM**: End of the Historical Procession with the solemn dance of the Mugnaia and the General in Piazza di Città, a ritual moment representing the symbolic alliance between the people (represented by the Mugnaia) and civil authority (the General)[2]
 
-### Carnival Sunday (March 2, 2025)
+### Carnival Sunday (February 15, 2026)
 
 Sunday represents the first of the three days dedicated to the actual **Battle of Oranges**. The program is intense and complete:
 
@@ -56,7 +56,7 @@ Sunday represents the first of the three days dedicated to the actual **Battle o
 
 - **5:30 PM**: Generala in Piazza di Città, closing ceremony of the battle day
 
-### Carnival Monday (March 3, 2025)
+### Carnival Monday (February 16, 2026)
 
 Monday is dedicated to the **Zappate degli Scarli**, a ritual charged with symbolic meaning related to fertility and ancient pagan customs:
 
@@ -66,7 +66,7 @@ Monday is dedicated to the **Zappate degli Scarli**, a ritual charged with symbo
 
 - **5:30 PM**: Generala in Piazza di Città
 
-### Shrove Tuesday (March 4, 2025)
+### Shrove Tuesday (February 17, 2026)
 
 Tuesday is the climax of the event, the moment of maximum battle intensity:
 
@@ -80,7 +80,7 @@ Tuesday is the climax of the event, the moment of maximum battle intensity:
 
 - **8:00 PM**: Burning of the Parish Scarli. The procession goes to the various parishes (San Maurizio, Sant'Ulderico, and San Lorenzo) to burn the scarli raised on Monday. The fire consuming these wooden poles symbolically marks the transition from the festive carnival season to the austere Lent
 
-### Ash Wednesday (March 5, 2025)
+### Ash Wednesday (February 18, 2026)
 
 The last day of Carnival is dedicated to a moment of spiritual and culinary transition:
 
@@ -126,10 +126,10 @@ The battle is accompanied by **music, chanting, and an atmosphere of great enthu
 
 ### Participation costs and tickets
 
-**For spectators**: It is important to note that **most Carnival events are completely free**. However, to access controlled areas during **Carnival Sunday (March 2)** and fully participate in the Battle of Oranges, you need to purchase an entrance ticket.[16]
+**For spectators**: It is important to note that **most Carnival events are completely free**. However, to access controlled areas during **Carnival Sunday (February 15)** and fully participate in the Battle of Oranges, you need to purchase an entrance ticket.[16]
 
 - **Regular tickets**: 15 euros for adults[17][16]
-- **Promotional tickets**: 10 euros (valid from November 24, 2024 to January 6, 2025 as part of the "Gift the Carnival" campaign)[17]
+- **Promotional tickets**: 10 euros (valid from November 24, 2025 to January 6, 2026 as part of the "Gift the Carnival" campaign)[17]
 - **Free entry**: Children under 12, Ivrea residents, people with disabilities, Orange Throwers with valid registration patches for the current year, and characters who are part of the Historical Components[16][17][8]
 - **Group discount**: 1 free entry for every 20 tickets purchased[8]
 
@@ -282,7 +282,7 @@ For students coming from Turin, the Ivrea Carnival represents an **unmissable cu
 - Camera or smartphone for photos
 - Cash for small purchases
 
-**Best day to visit**: If you can only go one day, choose **Shrove Tuesday (March 4)** for the most intense battle experience, or **Carnival Sunday (March 2)** for a complete program including bean distribution and the first battle day.
+**Best day to visit**: If you can only go one day, choose **Shrove Tuesday (February 17)** for the most intense battle experience, or **Carnival Sunday (February 15)** for a complete program including bean distribution and the first battle day.
 
 ---
 
@@ -298,8 +298,8 @@ For students coming from Turin, the Ivrea Carnival represents an **unmissable cu
 
 ## Sources
 
-[1] Storico Carnevale di Ivrea - Programma 2025 https://www.storicocarnevaleivrea.it/programma/
-[2] Carnevale di Ivrea 2025 - Turismo Torino https://turismotorino.org/it/visita/eventi/carnevale-di-ivrea-2025/
+[1] Storico Carnevale di Ivrea - Programma 2026 https://www.storicocarnevaleivrea.it/it/Edizione-2026/Programma/
+[2] Carnevale di Ivrea 2026 - Turismo Torino https://turismotorino.org/it/visita/eventi/storico-carnevale-di-ivrea-2026/
 [3] La leggenda della Mugnaia - Storico Carnevale https://www.storicocarnevaleivrea.it/la-mugnaia/
 [4] Storia del Carnevale di Ivrea - Wikipedia https://it.wikipedia.org/wiki/Carnevale_di_Ivrea
 [5] Gli Abbà e le tradizioni - Storico Carnevale https://www.storicocarnevaleivrea.it/gli-abba/

@@ -239,7 +239,7 @@ Marzo 2026 offre retrospettive internazionali, concerti di star mondiali, celebr
 
 - [Eventi a Torino a febbraio 2026](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth, mostre Lee Miller e Jeff Wall, Carnevale di Ivrea
 - [Eventi a Torino a gennaio 2026](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza, Fiamma Olimpica
-- [Lo storico carnevale di Ivrea](/blog/carnevale-ivrea-battaglia-arance-2025) - 1-5 marzo 2025, storia della Mugnaia
+- [Lo storico carnevale di Ivrea](/blog/carnevale-ivrea-battaglia-arance-2026) - 14-18 febbraio 2026, storia della Mugnaia
 - [Come raggiungere Torino in modo sostenibile](/blog/viaggiare-sostenibile-torino-guida)
 - [Torino in ogni stagione](/blog/torino-ogni-stagione-turisti)
 - [Guida alla vita notturna di Torino](/blog/torino-nightlife-guide)
