@@ -324,7 +324,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
     return new Response(
       JSON.stringify({ 
         success: false, 
-        error: error.message 
+        error: "Failed to send guide. Please try again later." 
       }),
       {
         status: 500,
