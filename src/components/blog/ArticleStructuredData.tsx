@@ -1,6 +1,26 @@
 import { Helmet } from 'react-helmet';
 import { BlogPost } from '@/types/blog';
 
+const CANONICAL_DOMAIN = 'junglerent.it';
+
+/**
+ * Deployment guard: validates all URLs in structured data point to the canonical domain.
+ * Logs warnings in development; silently passes in production.
+ */
+function assertCanonicalDomain(schema: Record<string, unknown>, label: string) {
+  if (import.meta.env.PROD) return;
+  const json = JSON.stringify(schema);
+  const urlMatches = json.match(/https?:\/\/[^"\\]+/g) || [];
+  for (const url of urlMatches) {
+    if (url.includes('schema.org')) continue;
+    if (!url.includes(CANONICAL_DOMAIN)) {
+      console.warn(
+        `[SEO Guard] Non-canonical URL in ${label}: "${url}" — expected domain "${CANONICAL_DOMAIN}"`
+      );
+    }
+  }
+}
+
 interface ArticleStructuredDataProps {
   post: BlogPost;
   language: 'it' | 'en';
@@ -52,7 +72,8 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
     }
   };
 
-  // Add breadcrumb for better SEO
+  // Deployment domain guard
+  assertCanonicalDomain(articleSchema as Record<string, unknown>, `Article: ${post.slug}`);
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -77,6 +98,9 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
       }
     ]
   };
+
+  // Deployment domain guard
+  assertCanonicalDomain(breadcrumbSchema as Record<string, unknown>, `Breadcrumb: ${post.slug}`);
 
   return (
     <Helmet>
