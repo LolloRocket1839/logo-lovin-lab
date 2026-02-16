@@ -15,7 +15,7 @@ const ORGANIZATION_BASE = {
     "streetAddress": "Via Gioacchino Quarello 15/A",
     "addressLocality": "Torino",
     "addressRegion": "Piemonte",
-    "postalCode": "10135",
+    "postalCode": "10137",
     "addressCountry": "IT"
   },
   "areaServed": [
@@ -237,7 +237,7 @@ export const createAboutPageSchema = (language: 'it' | 'en' = 'it') => ({
     ],
     "memberOf": {
       "@type": "Organization",
-      "name": "2i3T - Incubatore Imprese Innovative Politecnico di Torino"
+      "name": "2i3T - Incubatore di Imprese Innovative dell'Università di Torino"
     }
   }
 });
