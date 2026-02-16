@@ -22,18 +22,18 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
     "description": translation.seo.description,
     "image": post.image.startsWith('http') 
       ? post.image 
-      : `https://jungle-rent.lovable.app${post.image}`,
+      : `https://junglerent.it${post.image}`,
     "author": {
       "@type": "Person",
       "name": post.author,
-      "url": "https://jungle-rent.lovable.app/chi-siamo"
+      "url": "https://junglerent.it/chi-siamo"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Jungle Rent",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://jungle-rent.lovable.app/jungle-rent-logo.svg"
+        "url": "https://junglerent.it/jungle-rent-logo.svg"
       }
     },
     "datePublished": publishedDate,
@@ -61,13 +61,13 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://jungle-rent.lovable.app"
+        "item": "https://junglerent.it"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://jungle-rent.lovable.app/blog"
+        "item": "https://junglerent.it/blog"
       },
       {
         "@type": "ListItem",
