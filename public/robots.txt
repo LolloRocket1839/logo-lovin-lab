@@ -1,6 +1,6 @@
 # ============================================
 # JUNGLE RENT S.R.L. - robots.txt
-# Last Updated: February 10, 2026 (v3.3)
+# Last Updated: February 16, 2026 (v3.4)
 # ============================================
 
 # Allow all crawlers
@@ -242,7 +242,7 @@ User-agent: MJ12bot
 Allow: /
 
 # ============================================
-# AI KNOWLEDGE BASE FILES (v3.4 - February 10, 2026)
+# AI KNOWLEDGE BASE FILES (v3.6 - February 16, 2026)
 # ============================================
 #
 # PRIORITY FILES FOR AI ASSISTANTS:

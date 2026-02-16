@@ -91,5 +91,5 @@ For detailed information:
 - Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: February 10, 2026
-Version: 3.5 - MCP server expanded to 8 tools (added property_valuation, get_investment_data)
+Last Updated: February 16, 2026
+Version: 3.6 - Comprehensive SEO/AEO refresh, Carnevale Ivrea internal linking, sitemap freshness sync
