@@ -73,6 +73,23 @@ function auditLinkableContent(): AuditIssue[] {
   return issues;
 }
 
+function auditStructuredDataUrls(): AuditIssue[] {
+  const issues: AuditIssue[] = [];
+  // Simulate the URLs that ArticleStructuredData.tsx would generate
+  for (const post of blogPosts) {
+    const label = `Schema: ${post.slug}`;
+    const imageUrl = post.image.startsWith('http')
+      ? post.image
+      : `https://junglerent.it${post.image}`;
+    issues.push(...auditValue(label, 'image', imageUrl));
+    issues.push(...auditValue(label, 'author.url', 'https://junglerent.it/chi-siamo'));
+    issues.push(...auditValue(label, 'publisher.logo', 'https://junglerent.it/jungle-rent-logo.svg'));
+    issues.push(...auditValue(label, 'breadcrumb.home', 'https://junglerent.it'));
+    issues.push(...auditValue(label, 'breadcrumb.blog', 'https://junglerent.it/blog'));
+  }
+  return issues;
+}
+
 function auditStaticAssets(): { file: string; status: 'ok' | 'check' }[] {
   return [
     { file: 'public/robots.txt', status: 'check' },
@@ -90,7 +107,8 @@ const ContentAudit = () => {
 
   const blogIssues = useMemo(() => auditBlogPosts(), []);
   const linkIssues = useMemo(() => auditLinkableContent(), []);
-  const allIssues = useMemo(() => [...blogIssues, ...linkIssues], [blogIssues, linkIssues]);
+  const schemaIssues = useMemo(() => auditStructuredDataUrls(), []);
+  const allIssues = useMemo(() => [...blogIssues, ...linkIssues, ...schemaIssues], [blogIssues, linkIssues, schemaIssues]);
   const staticFiles = useMemo(() => auditStaticAssets(), []);
 
   const filtered = useMemo(() => {
