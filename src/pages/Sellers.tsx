@@ -388,24 +388,25 @@ const Sellers = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+            <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto mb-10">
               {[
-                { key: 'heir', icon: KeyRound, color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-500/10' },
-                { key: 'urgent', icon: Zap, color: 'text-red-600 dark:text-red-400', bg: 'bg-red-500/10' },
-                { key: 'tired', icon: UserCheck, color: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-500/10' },
-              ].map((scenario) => (
+                { key: 'heir', icon: KeyRound, color: 'text-primary', bg: 'bg-primary/8' },
+                { key: 'urgent', icon: Zap, color: 'text-primary', bg: 'bg-primary/8' },
+                { key: 'tired', icon: UserCheck, color: 'text-primary', bg: 'bg-primary/8' },
+              ].map((scenario, i) => (
                 <motion.div
                   key={scenario.key}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.3 }}
                 >
-                  <Card className="h-full hover:shadow-md transition-shadow border-border">
-                    <CardContent className="p-6">
-                      <div className={`w-10 h-10 rounded-full ${scenario.bg} flex items-center justify-center mb-4`}>
-                        <scenario.icon className={`w-5 h-5 ${scenario.color}`} />
+                  <Card className="h-full border-0 bg-card/60 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300">
+                    <CardContent className="p-6 md:p-7">
+                      <div className={`w-9 h-9 rounded-full ${scenario.bg} flex items-center justify-center mb-5`}>
+                        <scenario.icon className={`w-4 h-4 ${scenario.color}`} strokeWidth={1.5} />
                       </div>
-                      <h3 className="font-display font-bold text-lg mb-2 text-foreground">
+                      <h3 className="font-display font-semibold text-base mb-2.5 text-foreground tracking-tight">
                         {t(`sellerScenarios.${scenario.key}.title`)}
                       </h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">
