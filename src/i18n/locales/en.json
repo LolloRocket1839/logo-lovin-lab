@@ -653,6 +653,8 @@
     "title": "Is your property a fit?",
     "subtitle": "Find out in 30 seconds",
     "zoneLabel": "Property area",
+    "zoneTooltip": "We buy in university and hospital areas of Turin. The average price per sqm varies by zone and influences our evaluation.",
+    "zoneContext": "{{zone}}: avg €{{price}}/sqm (source OMI/Immobiliare.it 2025)",
     "zonePlaceholder": "Select area...",
     "sqmLabel": "Surface area (sqm)",
     "conditionLabel": "Property condition",

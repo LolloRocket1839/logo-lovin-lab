@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, Loader2, Check, Clock, MapPin, Zap, CheckCircle, Info } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -143,7 +144,19 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
 
         {/* Zone Select */}
         <div className="space-y-2">
-          <Label className="text-sm font-medium">{t("offerSimulator.zoneLabel")}</Label>
+          <div className="flex items-center gap-1.5">
+            <Label className="text-sm font-medium">{t("offerSimulator.zoneLabel")}</Label>
+            <TooltipProvider delayDuration={200}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Info className="w-3.5 h-3.5 text-muted-foreground cursor-help" />
+                </TooltipTrigger>
+                <TooltipContent side="top" className="max-w-[240px] text-xs">
+                  {t("offerSimulator.zoneTooltip")}
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
           <Select value={zone} onValueChange={(v) => { setZone(v); setIsUnlocked(false); }}>
             <SelectTrigger>
               <SelectValue placeholder={t("offerSimulator.zonePlaceholder")} />
@@ -163,6 +176,12 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
               })}
             </SelectContent>
           </Select>
+          {zone && calculation?.zoneData && (
+            <p className="text-[11px] text-muted-foreground flex items-center gap-1">
+              <Info className="w-3 h-3 shrink-0" />
+              {t("offerSimulator.zoneContext", { zone: calculation.zoneData.name, price: calculation.zoneData.avgPrice.toLocaleString("it-IT") })}
+            </p>
+          )}
         </div>
 
         {/* SQM Slider */}
