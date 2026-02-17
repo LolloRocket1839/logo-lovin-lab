@@ -657,6 +657,8 @@
     "title": "Il tuo immobile ci interessa?",
     "subtitle": "Scoprilo in 30 secondi",
     "zoneLabel": "Zona dell'immobile",
+    "zoneTooltip": "Acquistiamo in zone universitarie e ospedaliere di Torino. Il prezzo medio al mq varia per zona e influenza la nostra valutazione.",
+    "zoneContext": "{{zone}}: media €{{price}}/mq (fonte OMI/Immobiliare.it 2025)",
     "zonePlaceholder": "Seleziona zona...",
     "sqmLabel": "Superficie (mq)",
     "conditionLabel": "Stato dell'immobile",
