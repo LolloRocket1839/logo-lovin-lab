@@ -1,80 +1,66 @@
 
+# Simulatore offerta qualitativo con budget 130k
 
-# Funnel venditori: dare valore per convertire
+## Cosa cambia
 
-## Il problema
+Il simulatore attuale mostra range di prezzo numerici. Va trasformato in un tool qualitativo che dice solo "il tuo immobile ci interessa" o "contattaci per una valutazione personalizzata", senza mai mostrare cifre all'utente.
 
-Oggi il sito chiede un'email al venditore senza dare nulla in cambio. Il venditore target (erede, anziano, chi ha fretta) non ha motivo per lasciare i propri dati. Manca uno scambio di valore chiaro: "tu mi dai la tua email, io ti do qualcosa di utile subito".
+La logica interna: `prezzo = mq x prezzo_medio_zona x 0.70` (sconto 30%). Se il risultato e sotto 130k e i mq rientrano nel range della zona, l'immobile e "qualificato".
 
-## La soluzione: "Scopri quanto offriamo per il tuo immobile"
+## Criteri interni per zona
 
-Il concetto chiave e trasformare il tool di valutazione esistente in un simulatore di offerta Jungle Rent. Non "quanto vale la tua casa" (generico), ma "quanto ti offriremmo noi" (specifico e azionabile). Questo crea urgenza e curiosita.
+| Zona | Prezzo medio/mq | Mq max accettati | Range mq nel form |
+|------|----------------|-----------------|-------------------|
+| Aurora | 1.520 | 120 | 35-120 |
+| Lingotto | 1.650 | 110 | 35-110 |
+| Santa Rita | 1.700 | 105 | 35-105 |
+| Cenisia | 1.950 | 95 | 35-95 |
+| Cit Turin | 2.501 | 75 | 35-75 |
+| Campidoglio | 2.501 | 75 | 35-75 |
+| San Salvario | 2.731 | 65 | 35-65 |
+| Vanchiglia | 2.680 | 70 | 35-70 |
+| Crocetta | 2.995 | 60 | 35-60 |
+| Zona ospedali | 1.975 | 90 | 35-90 |
 
----
+## Output visibile all'utente
 
-## Interventi previsti
+**Qualificato (verde):**
+"Il tuo immobile rientra nei nostri criteri di acquisto. Ti contattiamo entro 48 ore con un'offerta concreta."
+- CTA: "Richiedi offerta" + WhatsApp
 
-### 1. Simulatore di offerta rapida (nuovo componente)
+**Non qualificato (giallo):**
+"Al momento il tuo immobile non rientra nei parametri standard, ma ogni caso e diverso. Contattaci per una valutazione personalizzata."
+- CTA: "Contattaci comunque" + WhatsApp
 
-Un componente semplice e veloce, diverso dal PropertyValuator completo, pensato per chi ha fretta. L'utente seleziona:
-- Zona (dropdown con le 9 zone target)
-- Metratura approssimativa (slider 30-150 mq)
-- Stato (da ristrutturare / abitabile / ristrutturato)
-
-In 3 click riceve: "Per un trilocale di 70mq in San Salvario, la nostra offerta indicativa sarebbe 65.000-75.000 euro. Vuoi ricevere un'offerta concreta?"
-
-Il risultato e visibile SOLO dopo che l'utente inserisce l'email. Questo e il "gate": il valore (la stima) in cambio del lead.
-
-Posizionamento: above-the-fold nella pagina `/vendi`, sostituisce la posizione attuale del SavingsCalculator nella colonna destra dell'hero.
-
-### 2. Sezione "storie" che parlano ai venditori target
-
-Tre scenari brevi, non testimonianze inventate, ma situazioni reali che il venditore target riconosce:
-
-- **L'erede**: "Hai ereditato un appartamento a Torino ma vivi altrove? Gestire un immobile da lontano costa tempo, tasse e stress. Noi acquistiamo in 60-90 giorni, senza visite infinite."
-- **Chi ha fretta**: "Devi vendere velocemente per un trasferimento, una separazione o necessita economica? Le agenzie impiegano 6-12 mesi. Noi facciamo un'offerta scritta in 48 ore."
-- **Il proprietario stanco**: "Il tuo appartamento e sfitto da mesi? Noi acquistiamo anche immobili da ristrutturare nelle zone universitarie."
-
-Posizionamento: nuova sezione nella pagina `/vendi`, dopo la comparison table e prima della timeline.
-
-### 3. CTA post-valutazione nel PropertyValuator
-
-Quando un utente completa la valutazione nel tool `/valutazione-immobile`, mostrare un banner:
-
-"Il tuo immobile vale circa X euro. Vuoi ricevere un'offerta concreta da Jungle Rent? Acquistiamo direttamente in 60-90 giorni, senza commissioni."
-
-Il click apre il QuickSellerLeadDialog con il valore stimato gia pre-compilato nel messaggio.
-
-### 4. WhatsApp come CTA alternativo
-
-Per i venditori target (anziani, eredi), WhatsApp e piu naturale di un form email. Aggiungere un bottone "Scrivici su WhatsApp" come alternativa al form, sia nella pagina `/vendi` che nel post-valutazione.
-
-### 5. Lead form migliorato (step 2 opzionale)
-
-Dopo l'invio dell'email, mostrare uno step 2 NON obbligatorio:
-- Indirizzo o zona dell'immobile (testo libero)
-- "Perche vuoi vendere?" (select: eredita / trasferimento / necessita / altro)
-
-Questo qualifica il lead senza bloccare la conversione. Chi ha fretta salta e va al Calendly. Chi vuole puo dare dettagli.
-
----
+L'utente non vede mai numeri. Il prezzo calcolato viene inviato internamente via Formspree per il team.
 
 ## Dettagli tecnici
 
-### File da creare
-- `src/components/tools/QuickOfferSimulator.tsx` — simulatore offerta rapida con gate email (usa i dati di `turinZonePrices.ts` per calcolare range offerta nelle 9 zone target, applica un discount del 10-15% rispetto al valore OMI per simulare un'offerta realistica di acquisto diretto)
-
 ### File da modificare
-- `src/pages/Sellers.tsx` — integrare QuickOfferSimulator nell'hero (al posto o accanto al SavingsCalculator), aggiungere sezione scenari venditori, aggiungere CTA WhatsApp
-- `src/components/dialogs/QuickSellerLeadDialog.tsx` — aggiungere step 2 opzionale (indirizzo + motivazione vendita), accettare prop opzionale `estimatedValue` per pre-compilare il contesto
-- `src/components/tools/PropertyValuator.tsx` — aggiungere banner CTA post-valutazione che apre QuickSellerLeadDialog con valore stimato
-- `src/i18n/locales/it.json` — chiavi traduzione per scenari, simulatore offerta, CTA WhatsApp, step 2 form
-- `src/i18n/locales/en.json` — stesse chiavi in inglese
 
-### Sequenza di implementazione
-1. QuickOfferSimulator (componente standalone con gate email)
-2. Integrazione nell'hero della pagina venditori
-3. Sezione scenari venditori
-4. CTA WhatsApp
-5. Step 2 opzionale nel lead dialog
-6. CTA post-valutazione nel PropertyValuator
+**`src/components/tools/QuickOfferSimulator.tsx`**
+- Rimuovere `CONDITION_DISCOUNTS`, `MARKET_HAIRCUT`, `formatCurrency` (non serve piu mostrare prezzi)
+- Aggiungere costante `MAX_BUDGET = 130_000` e mappa `ZONE_MAX_SQM` con il range mq massimo per zona
+- La logica diventa: `qualificato = (mq * avgPrice * 0.70 <= 130000) AND (mq <= zoneMaxSqm)`
+- Rimuovere il rendering numerico del range prezzo
+- Due stati UI: qualificato (verde con CheckCircle) e non qualificato (giallo con Info)
+- Il form Formspree continua a inviare il prezzo calcolato internamente (il team lo vede, l'utente no)
+- Aggiungere "zona_ospedali" nel dropdown delle zone target
+
+**`src/data/turinZonePrices.ts`**
+- Aggiungere la zona `zona_ospedali` con nome "Zona ospedali (Molinette/Carducci)", avgPrice 1975, category "semicentral"
+
+**`src/i18n/locales/it.json`**
+- Cambiare `offerSimulator.title` in "Il tuo immobile ci interessa?"
+- Cambiare `offerSimulator.subtitle` in "Scoprilo in 30 secondi"
+- Aggiungere: `offerSimulator.qualifiedTitle` ("Ottima notizia!"), `offerSimulator.qualifiedDescription` ("Il tuo immobile rientra nei nostri criteri di acquisto. Ti contattiamo entro 48 ore con un'offerta concreta."), `offerSimulator.notQualifiedTitle` ("Valutazione personalizzata"), `offerSimulator.notQualifiedDescription` ("Al momento il tuo immobile non rientra nei parametri standard, ma ogni caso e diverso. Contattaci per una valutazione personalizzata.")
+- Aggiornare `offerSimulator.emailGateTitle` in "Inserisci la tua email per scoprire se il tuo immobile ci interessa"
+- Rimuovere chiavi non piu usate: `resultDescription`
+
+**`src/i18n/locales/en.json`**
+- Stesse modifiche tradotte in inglese
+
+### Cosa NON cambia
+- `src/pages/Sellers.tsx` (il componente e gia integrato)
+- `src/components/dialogs/QuickSellerLeadDialog.tsx`
+- `src/components/tools/PropertyValuator.tsx`
