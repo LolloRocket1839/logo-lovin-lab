@@ -6,15 +6,17 @@ import { Link } from "react-router-dom";
 import { 
   Building2, Clock, Check, X, MapPin, FileText, 
   Handshake, Shield, ArrowRight, Phone, CalendarCheck,
-  Home, Users, TrendingUp, Star, Calculator
+  Home, Users, TrendingUp, Star, Calculator, MessageCircle,
+  UserCheck, Zap, KeyRound
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuickSellerLeadDialog } from "@/components/dialogs";
-import { SavingsCalculator } from "@/components/tools/SavingsCalculator";
+import { QuickOfferSimulator } from "@/components/tools/QuickOfferSimulator";
 import { StyledText } from "@/components/StyledText";
+import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { motion } from "framer-motion";
 import {
   Accordion,
@@ -281,14 +283,14 @@ const Sellers = () => {
                 </div>
               </motion.div>
 
-              {/* Right: Calculator */}
+              {/* Right: Offer Simulator */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="lg:sticky lg:top-24 lg:self-start"
               >
-                <SavingsCalculator onContactClick={handleOpenDialog} />
+                <QuickOfferSimulator onContactClick={handleOpenDialog} />
               </motion.div>
             </div>
           </div>
@@ -370,6 +372,65 @@ const Sellers = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Seller Scenarios Section */}
+        <section className="py-12 md:py-16">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                {t('sellerScenarios.title')}
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                {t('sellerScenarios.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+              {[
+                { key: 'heir', icon: KeyRound, color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-500/10' },
+                { key: 'urgent', icon: Zap, color: 'text-red-600 dark:text-red-400', bg: 'bg-red-500/10' },
+                { key: 'tired', icon: UserCheck, color: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-500/10' },
+              ].map((scenario) => (
+                <motion.div
+                  key={scenario.key}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full hover:shadow-md transition-shadow border-border">
+                    <CardContent className="p-6">
+                      <div className={`w-10 h-10 rounded-full ${scenario.bg} flex items-center justify-center mb-4`}>
+                        <scenario.icon className={`w-5 h-5 ${scenario.color}`} />
+                      </div>
+                      <h3 className="font-display font-bold text-lg mb-2 text-foreground">
+                        {t(`sellerScenarios.${scenario.key}.title`)}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {t(`sellerScenarios.${scenario.key}.description`)}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* WhatsApp CTA */}
+            <div className="text-center">
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => {
+                  const msg = t('sellerScenarios.whatsappMessage');
+                  openWhatsApp(CONTACTS.lorenzo.phone, msg);
+                }}
+                className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                {t('sellerScenarios.whatsappCta')}
+              </Button>
             </div>
           </div>
         </section>

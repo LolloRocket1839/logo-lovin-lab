@@ -636,7 +636,67 @@
     "errorDescription": "Something went wrong. Please try again later.",
     "emailRequired": "Please enter your email",
     "invalidEmail": "Please enter a valid email",
-    "privacy": "Your data is safe. We'll never share it with third parties."
+    "privacy": "Your data is safe. We'll never share it with third parties.",
+    "step2Title": "Help us prepare a better offer",
+    "step2Skip": "Skip to Calendly",
+    "step2Submit": "Send details",
+    "addressLabel": "Property address or area",
+    "addressPlaceholderStep2": "E.g. Via Roma 10, San Salvario",
+    "reasonLabel": "Why are you selling?",
+    "reasonInheritance": "Inheritance",
+    "reasonRelocation": "Relocation",
+    "reasonNecessity": "Financial necessity",
+    "reasonOther": "Other",
+    "estimatedValueContext": "Estimated value: {{value}}"
+  },
+  "offerSimulator": {
+    "title": "See how much we'd offer",
+    "subtitle": "Jungle Rent offer simulation in 3 clicks",
+    "zoneLabel": "Property area",
+    "zonePlaceholder": "Select area...",
+    "sqmLabel": "Surface area (sqm)",
+    "conditionLabel": "Property condition",
+    "conditionToRenovate": "Needs renovation",
+    "conditionGood": "Liveable",
+    "conditionRenovated": "Renovated",
+    "calculateButton": "Calculate indicative offer",
+    "resultTitle": "Our indicative offer",
+    "resultDescription": "For a {{sqm}} sqm property in {{zone}}, our offer would be:",
+    "emailGateTitle": "Enter your email to see the offer",
+    "emailGatePlaceholder": "your@email.com",
+    "emailGateButton": "Show offer",
+    "emailGateSending": "Sending...",
+    "wantConcreteOffer": "Want a concrete offer?",
+    "concreteOfferCta": "Request binding offer",
+    "customEvaluation": "This property requires a dedicated evaluation",
+    "customEvaluationCta": "Request free evaluation",
+    "disclaimer": "Indicative offer based on market data. Binding offer after property inspection.",
+    "speed": "Closing in 60-90 days",
+    "noFees": "Zero commissions"
+  },
+  "sellerScenarios": {
+    "title": "Do you recognize yourself in one of these situations?",
+    "subtitle": "Jungle Rent buys directly. No intermediaries.",
+    "heir": {
+      "title": "You inherited a property",
+      "description": "Inherited an apartment in Turin but live elsewhere? Managing a property remotely costs time, taxes and stress. We buy in 60-90 days, no endless viewings."
+    },
+    "urgent": {
+      "title": "You need to sell fast",
+      "description": "Relocation, separation or financial need? Agencies take 6-12 months. We make a written offer in 48 hours."
+    },
+    "tired": {
+      "title": "Tired landlord",
+      "description": "Your apartment has been vacant for months? We also buy properties needing renovation in university areas."
+    },
+    "whatsappCta": "Write us on WhatsApp",
+    "whatsappMessage": "Hi, I have a property in Turin I'd like to sell. Can you make me an offer?"
+  },
+  "postValuation": {
+    "title": "Want a concrete offer from Jungle Rent?",
+    "description": "Your property is worth approximately {{value}}. We buy directly in 60-90 days, no commissions.",
+    "cta": "Request free offer",
+    "whatsapp": "Or write us on WhatsApp"
   },
   "tourist": {
     "sectionLabel": "For Tourists & Digital Nomads",

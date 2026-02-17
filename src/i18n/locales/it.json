@@ -640,7 +640,67 @@
     "errorDescription": "Si è verificato un errore. Riprova più tardi.",
     "emailRequired": "Inserisci la tua email",
     "invalidEmail": "Inserisci un'email valida",
-    "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi."
+    "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi.",
+    "step2Title": "Aiutaci a preparare un'offerta migliore",
+    "step2Skip": "Salta e vai al Calendly",
+    "step2Submit": "Invia dettagli",
+    "addressLabel": "Indirizzo o zona dell'immobile",
+    "addressPlaceholderStep2": "Es. Via Roma 10, San Salvario",
+    "reasonLabel": "Perché vuoi vendere?",
+    "reasonInheritance": "Eredità",
+    "reasonRelocation": "Trasferimento",
+    "reasonNecessity": "Necessità economica",
+    "reasonOther": "Altro",
+    "estimatedValueContext": "Valore stimato: {{value}}"
+  },
+  "offerSimulator": {
+    "title": "Scopri quanto offriamo",
+    "subtitle": "Simulazione offerta Jungle Rent in 3 click",
+    "zoneLabel": "Zona dell'immobile",
+    "zonePlaceholder": "Seleziona zona...",
+    "sqmLabel": "Superficie (mq)",
+    "conditionLabel": "Stato dell'immobile",
+    "conditionToRenovate": "Da ristrutturare",
+    "conditionGood": "Abitabile",
+    "conditionRenovated": "Ristrutturato",
+    "calculateButton": "Calcola offerta indicativa",
+    "resultTitle": "La nostra offerta indicativa",
+    "resultDescription": "Per un immobile di {{sqm}} mq in {{zone}}, la nostra offerta sarebbe:",
+    "emailGateTitle": "Inserisci la tua email per vedere l'offerta",
+    "emailGatePlaceholder": "tuo@email.com",
+    "emailGateButton": "Mostra offerta",
+    "emailGateSending": "Invio...",
+    "wantConcreteOffer": "Vuoi un'offerta concreta?",
+    "concreteOfferCta": "Richiedi offerta vincolante",
+    "customEvaluation": "Questo immobile richiede una valutazione dedicata",
+    "customEvaluationCta": "Richiedi valutazione gratuita",
+    "disclaimer": "Offerta indicativa basata su dati di mercato. L'offerta vincolante verrà formulata dopo sopralluogo.",
+    "speed": "Chiusura in 60-90 giorni",
+    "noFees": "Zero commissioni"
+  },
+  "sellerScenarios": {
+    "title": "Ti riconosci in una di queste situazioni?",
+    "subtitle": "Jungle Rent acquista direttamente. Nessun intermediario.",
+    "heir": {
+      "title": "Hai ereditato un immobile",
+      "description": "Hai ereditato un appartamento a Torino ma vivi altrove? Gestire un immobile da lontano costa tempo, tasse e stress. Noi acquistiamo in 60-90 giorni, senza visite infinite."
+    },
+    "urgent": {
+      "title": "Devi vendere in fretta",
+      "description": "Trasferimento, separazione o necessità economica? Le agenzie impiegano 6-12 mesi. Noi facciamo un'offerta scritta in 48 ore."
+    },
+    "tired": {
+      "title": "Proprietario stanco",
+      "description": "Il tuo appartamento è sfitto da mesi? Noi acquistiamo anche immobili da ristrutturare nelle zone universitarie."
+    },
+    "whatsappCta": "Scrivici su WhatsApp",
+    "whatsappMessage": "Ciao, ho un immobile a Torino che vorrei vendere. Potete farmi un'offerta?"
+  },
+  "postValuation": {
+    "title": "Vuoi un'offerta concreta da Jungle Rent?",
+    "description": "Il tuo immobile vale circa {{value}}. Acquistiamo direttamente in 60-90 giorni, senza commissioni.",
+    "cta": "Richiedi offerta gratuita",
+    "whatsapp": "Oppure scrivici su WhatsApp"
   },
   "tourist": {
     "sectionLabel": "Per turisti & digital nomad",
