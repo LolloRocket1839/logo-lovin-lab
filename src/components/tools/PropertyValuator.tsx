@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   MapPin, Home, Zap, Car, ChevronDown, ChevronUp, 
   Calculator, Info, Building2, TrendingUp, AlertTriangle,
-  Target, TrendingDown, Lightbulb, Clock, BadgeCheck, Users, Flame
+  Target, TrendingDown, Lightbulb, Clock, BadgeCheck, Users, Flame,
+  MessageCircle, ArrowRight
 } from "lucide-react";
 import { useValuationCount } from "@/hooks/useValuationCount";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -47,6 +48,8 @@ import {
   type CoefficientOption
 } from "@/data/propertyCoefficients";
 import { SellerLeadFormWithPhotos } from "./SellerLeadFormWithPhotos";
+import { QuickSellerLeadDialog } from "@/components/dialogs";
+import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 
 interface PropertyValuatorProps {
   onValueCalculated?: (value: number) => void;
@@ -95,6 +98,7 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
   const [showBreakdown, setShowBreakdown] = useState(false);
   const [showTheoreticalPrice, setShowTheoreticalPrice] = useState(false);
   const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
+  const [isQuickLeadOpen, setIsQuickLeadOpen] = useState(false);
 
   // Handler for opening lead form with property data
   const handleOpenLeadForm = useCallback(() => {
@@ -1013,7 +1017,7 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                     </div>
 
                     {/* CTA */}
-                    <div className="pt-2">
+                    <div className="pt-2 space-y-3">
                       <Button 
                         variant="premium" 
                         className="w-full"
@@ -1022,9 +1026,42 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                         <Building2 className="w-4 h-4 mr-2" />
                         {t('propertyValuator.ctaOffer', 'Richiedi offerta gratuita')}
                       </Button>
-                      <p className="text-xs text-center text-muted-foreground mt-2">
+                      <p className="text-xs text-center text-muted-foreground">
                         {t('propertyValuator.ctaSubtext', 'Valutazione in 24h • Offerta vincolante in 7 giorni')}
                       </p>
+
+                      {/* Post-valuation banner */}
+                      <div className="p-3 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 space-y-2">
+                        <p className="text-sm font-medium text-foreground">
+                          {t('postValuation.title')}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {t('postValuation.description', { value: formatCurrency(calculation.marketPrice) })}
+                        </p>
+                        <div className="flex gap-2">
+                          <Button 
+                            size="sm" 
+                            variant="default" 
+                            className="flex-1 text-xs"
+                            onClick={() => setIsQuickLeadOpen(true)}
+                          >
+                            <ArrowRight className="w-3.5 h-3.5 mr-1" />
+                            {t('postValuation.cta')}
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="text-xs border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
+                            onClick={() => {
+                              const msg = t('sellerScenarios.whatsappMessage');
+                              openWhatsApp(CONTACTS.lorenzo.phone, msg);
+                            }}
+                          >
+                            <MessageCircle className="w-3.5 h-3.5 mr-1" />
+                            WhatsApp
+                          </Button>
+                        </div>
+                      </div>
                     </div>
                   </motion.div>
                 ) : (
@@ -1077,6 +1114,14 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
           condition: condition || undefined,
           estimatedValue: calculation?.marketPrice || undefined,
         }}
+      />
+
+      {/* Post-valuation Quick Lead Dialog */}
+      <QuickSellerLeadDialog
+        open={isQuickLeadOpen}
+        onOpenChange={setIsQuickLeadOpen}
+        source="post-valuation"
+        estimatedValue={calculation?.marketPrice}
       />
     </div>
   );
