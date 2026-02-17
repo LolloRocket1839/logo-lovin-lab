@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { Building2, Send, Loader2, Check, Clock, MapPin, Zap } from "lucide-react";
+import { Send, Loader2, Check, Clock, MapPin, Zap, CheckCircle, Info } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,28 +18,31 @@ import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { getUTMParams } from "@/hooks/useUTMTracking";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
-import { getZoneById, type ZonePrice } from "@/data/turinZonePrices";
+import { getZoneById } from "@/data/turinZonePrices";
 
-// 9 target zones for Jungle Rent acquisitions
-const TARGET_ZONES = [
-  "san_salvario",
-  "vanchiglia",
-  "aurora",
-  "santa_rita",
-  "cit_turin",
-  "campidoglio",
-  "cenisia",
-  "lingotto",
-  "crocetta",
-];
+// Internal budget cap – never shown to user
+const MAX_BUDGET = 130_000;
+const DISCOUNT = 0.70;
+
+// Zone criteria: maxSqm derived from floor(130000 / (avgPrice * 0.70))
+const ZONE_CRITERIA: Record<string, { maxSqm: number }> = {
+  aurora:        { maxSqm: 120 },
+  lingotto:      { maxSqm: 110 },
+  santa_rita:    { maxSqm: 105 },
+  cenisia:       { maxSqm: 95 },
+  zona_ospedali: { maxSqm: 90 },
+  cit_turin:     { maxSqm: 75 },
+  campidoglio:   { maxSqm: 75 },
+  vanchiglia:    { maxSqm: 70 },
+  san_salvario:  { maxSqm: 65 },
+  crocetta:      { maxSqm: 60 },
+};
+
+const TARGET_ZONES = Object.keys(ZONE_CRITERIA);
+
+const MIN_SQM = 35;
 
 type PropertyCondition = "to_renovate" | "good" | "renovated";
-
-const CONDITION_DISCOUNTS: Record<PropertyCondition, { min: number; max: number } | null> = {
-  to_renovate: null, // requires custom evaluation
-  good: { min: 0.06, max: 0.10 },
-  renovated: { min: 0.03, max: 0.06 },
-};
 
 const formatCurrency = (value: number): string =>
   new Intl.NumberFormat("it-IT", {
@@ -58,28 +61,27 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
   const { trackClick } = useAnalytics();
 
   const [zone, setZone] = useState("");
-  const [sqm, setSqm] = useState(70);
+  const [sqm, setSqm] = useState(55);
   const [condition, setCondition] = useState<PropertyCondition>("good");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
 
+  const zoneCriteria = ZONE_CRITERIA[zone];
+  const sliderMax = zoneCriteria?.maxSqm ?? 120;
+
+  // Clamp sqm when zone changes
+  const effectiveSqm = Math.min(sqm, sliderMax);
+
   const calculation = useMemo(() => {
     const zoneData = getZoneById(zone);
-    if (!zoneData || sqm <= 0) return null;
+    if (!zoneData || effectiveSqm <= 0 || !zoneCriteria) return null;
 
-    const MARKET_HAIRCUT = 0.15;
-    const marketPrice = sqm * zoneData.avgPrice * (1 - MARKET_HAIRCUT);
-    const discounts = CONDITION_DISCOUNTS[condition];
+    const internalPrice = effectiveSqm * zoneData.avgPrice * DISCOUNT;
+    const isQualified = internalPrice <= MAX_BUDGET && effectiveSqm <= zoneCriteria.maxSqm;
 
-    if (!discounts) {
-      return { zoneData, marketPrice, requiresCustom: true as const, offerMin: 0, offerMax: 0 };
-    }
-
-    const offerMin = marketPrice * (1 - discounts.max);
-    const offerMax = marketPrice * (1 - discounts.min);
-    return { zoneData, marketPrice, requiresCustom: false as const, offerMin, offerMax };
-  }, [zone, sqm, condition]);
+    return { zoneData, internalPrice, isQualified };
+  }, [zone, effectiveSqm, zoneCriteria]);
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -89,7 +91,7 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
     }
 
     setIsSubmitting(true);
-    trackClick("offer_simulator_email_gate", { zone, sqm, condition, email: email.trim() });
+    trackClick("offer_simulator_email_gate", { zone, sqm: effectiveSqm, condition, email: email.trim() });
 
     try {
       const utmParams = getUTMParams();
@@ -97,15 +99,15 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          _subject: `🏠 OFFER SIMULATOR - ${email.trim()} - ${zone} ${sqm}mq`,
+          _subject: `🏠 OFFER SIMULATOR - ${email.trim()} - ${zone} ${effectiveSqm}mq`,
           email: email.trim(),
           source: "offer_simulator",
           zone,
-          sqm,
+          sqm: effectiveSqm,
           condition,
-          estimated_offer: calculation && !calculation.requiresCustom
-            ? `${formatCurrency(calculation.offerMin)} - ${formatCurrency(calculation.offerMax)}`
-            : "Valutazione ad hoc",
+          // Internal price for the team – never shown to user
+          internal_estimated_price: calculation ? formatCurrency(calculation.internalPrice) : "N/A",
+          qualified: calculation?.isQualified ? "YES" : "NO",
           timestamp: new Date().toISOString(),
           ...utmParams,
         }),
@@ -123,7 +125,7 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
     }
   };
 
-  const isFormComplete = zone && sqm > 0;
+  const isFormComplete = zone && effectiveSqm >= MIN_SQM;
 
   return (
     <Card className="border-2 border-primary/30 bg-gradient-to-br from-background via-background to-primary/5 shadow-lg">
@@ -142,7 +144,7 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
         {/* Zone Select */}
         <div className="space-y-2">
           <Label className="text-sm font-medium">{t("offerSimulator.zoneLabel")}</Label>
-          <Select value={zone} onValueChange={setZone}>
+          <Select value={zone} onValueChange={(v) => { setZone(v); setIsUnlocked(false); }}>
             <SelectTrigger>
               <SelectValue placeholder={t("offerSimulator.zonePlaceholder")} />
             </SelectTrigger>
@@ -166,18 +168,18 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
         {/* SQM Slider */}
         <div className="space-y-2">
           <Label className="text-sm font-medium">
-            {t("offerSimulator.sqmLabel")}: <span className="text-primary font-bold">{sqm} mq</span>
+            {t("offerSimulator.sqmLabel")}: <span className="text-primary font-bold">{effectiveSqm} mq</span>
           </Label>
           <Slider
-            value={[sqm]}
-            onValueChange={([val]) => setSqm(val)}
-            min={30}
-            max={150}
+            value={[effectiveSqm]}
+            onValueChange={([val]) => { setSqm(val); setIsUnlocked(false); }}
+            min={MIN_SQM}
+            max={sliderMax}
             step={5}
           />
           <div className="flex justify-between text-xs text-muted-foreground">
-            <span>30 mq</span>
-            <span>150 mq</span>
+            <span>{MIN_SQM} mq</span>
+            <span>{sliderMax} mq</span>
           </div>
         </div>
 
@@ -190,7 +192,7 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
                 key={c}
                 variant={condition === c ? "default" : "outline"}
                 size="sm"
-                onClick={() => setCondition(c)}
+                onClick={() => { setCondition(c); setIsUnlocked(false); }}
                 className="text-xs"
               >
                 {t(`offerSimulator.condition${c === "to_renovate" ? "ToRenovate" : c === "good" ? "Good" : "Renovated"}`)}
@@ -199,7 +201,7 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
           </div>
         </div>
 
-        {/* Result / Email Gate */}
+        {/* Email Gate / Result */}
         <AnimatePresence mode="wait">
           {isFormComplete && !isUnlocked && (
             <motion.form
@@ -240,24 +242,15 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
               animate={{ opacity: 1, scale: 1 }}
               className="space-y-4"
             >
-              {calculation.requiresCustom ? (
-                <div className="p-4 rounded-lg bg-amber-500/10 border border-amber-500/20 text-center space-y-3">
-                  <p className="text-sm font-medium text-amber-800 dark:text-amber-200">
-                    {t("offerSimulator.customEvaluation")}
+              {calculation.isQualified ? (
+                <div className="p-4 rounded-lg bg-green-500/10 border-2 border-green-500/30 text-center space-y-3">
+                  <CheckCircle className="w-8 h-8 text-green-600 mx-auto" />
+                  <p className="text-base font-bold text-green-800 dark:text-green-200">
+                    {t("offerSimulator.qualifiedTitle")}
                   </p>
-                  <Button onClick={onContactClick} className="w-full bg-amber-600 hover:bg-amber-700 text-white">
-                    <Building2 className="w-4 h-4 mr-2" />
-                    {t("offerSimulator.customEvaluationCta")}
-                  </Button>
-                </div>
-              ) : (
-                <div className="p-4 rounded-lg bg-primary/10 border-2 border-primary/30 text-center space-y-3">
-                  <p className="text-xs text-muted-foreground">
-                    {t("offerSimulator.resultDescription", { sqm, zone: calculation.zoneData.name })}
+                  <p className="text-sm text-green-700 dark:text-green-300">
+                    {t("offerSimulator.qualifiedDescription")}
                   </p>
-                  <div className="text-2xl md:text-3xl font-bold text-primary">
-                    {formatCurrency(calculation.offerMin)} — {formatCurrency(calculation.offerMax)}
-                  </div>
                   <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
                     <span className="flex items-center gap-1">
                       <Clock className="w-3.5 h-3.5 text-primary" />
@@ -269,7 +262,20 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
                     </span>
                   </div>
                   <Button onClick={onContactClick} variant="premium" className="w-full h-12 text-sm font-semibold">
-                    {t("offerSimulator.concreteOfferCta")}
+                    {t("offerSimulator.qualifiedCta")}
+                  </Button>
+                </div>
+              ) : (
+                <div className="p-4 rounded-lg bg-amber-500/10 border-2 border-amber-500/30 text-center space-y-3">
+                  <Info className="w-8 h-8 text-amber-600 mx-auto" />
+                  <p className="text-base font-bold text-amber-800 dark:text-amber-200">
+                    {t("offerSimulator.notQualifiedTitle")}
+                  </p>
+                  <p className="text-sm text-amber-700 dark:text-amber-300">
+                    {t("offerSimulator.notQualifiedDescription")}
+                  </p>
+                  <Button onClick={onContactClick} className="w-full h-12 text-sm font-semibold bg-amber-600 hover:bg-amber-700 text-white">
+                    {t("offerSimulator.notQualifiedCta")}
                   </Button>
                 </div>
               )}

@@ -60,6 +60,9 @@ export const turinZonePrices: ZonePrice[] = [
   { id: 'gran_madre', name: 'Gran Madre', minPrice: 2650, avgPrice: 2950, maxPrice: 3300, variation2024: 2.4, category: 'hill' },
   { id: 'borgo_po', name: 'Borgo Po', minPrice: 2650, avgPrice: 2950, maxPrice: 3300, variation2024: 2.4, category: 'hill' },
   { id: 'cavoretto', name: 'Cavoretto', minPrice: 2100, avgPrice: 2310, maxPrice: 2500, variation2024: 2.7, category: 'hill', note: 'Collina prestigiosa' },
+  
+  // Zona Ospedali
+  { id: 'zona_ospedali', name: 'Zona ospedali (Molinette/Carducci)', minPrice: 1900, avgPrice: 1975, maxPrice: 2050, variation2024: 3.0, category: 'semicentral', note: 'Cluster Molinette/Nizza Millefonti' },
 ];
 
 // Quick select zones for UI (most popular for students/investors)
