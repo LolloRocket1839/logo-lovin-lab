@@ -211,7 +211,12 @@ const Sellers = () => {
       <MobileHeader variant="seller" />
       
       {/* Seller-specific exit intent with dedicated tracking */}
-      <ExitIntentPopup source="seller-vendi-page" trackingPrefix="seller" />
+      <ExitIntentPopup 
+        source="seller-vendi-page" 
+        trackingPrefix="seller"
+        title={t('sellersPage.exitIntent.title', 'Vendi senza agenzia, anche da casa')}
+        subtitle={t('sellersPage.exitIntent.subtitle', 'Ricevi un\'offerta reale in 48 ore. Zero visite, zero commissioni.')}
+      />
 
       <main role="main" id="main-content" className="min-h-screen bg-background pt-20 md:pt-24 overflow-x-hidden" tabIndex={-1}>
         <div className="container px-4 md:px-8 mx-auto">
@@ -275,12 +280,25 @@ const Sellers = () => {
                   <Button 
                     size="lg" 
                     variant="outline"
-                    onClick={() => window.open('https://calendly.com/junglerent/vendere', '_blank')}
+                    onClick={() => {
+                      const msg = t('sellerScenarios.whatsappMessage');
+                      openWhatsApp(CONTACTS.lorenzo.phone, msg);
+                    }}
+                    className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
                   >
-                    <Phone className="w-4 h-4 mr-2" />
-                    {t('seller.scheduleCall')}
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    {t('sellersPage.hero.whatsappCta', 'Scrivi su WhatsApp')}
                   </Button>
                 </div>
+                <p className="text-xs text-muted-foreground mt-3">
+                  {t('sellersPage.hero.orCall', 'Preferisci parlare?')}{' '}
+                  <button
+                    onClick={() => window.open('https://calendly.com/junglerent/vendere', '_blank')}
+                    className="underline hover:text-foreground transition-colors"
+                  >
+                    {t('seller.scheduleCall')}
+                  </button>
+                </p>
               </motion.div>
 
               {/* Right: Offer Simulator */}
@@ -292,6 +310,34 @@ const Sellers = () => {
               >
                 <QuickOfferSimulator onContactClick={handleOpenDialog} />
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof Strip */}
+        <section className="py-10 md:py-12 border-y border-border/50 bg-muted/20">
+          <div className="container px-4 md:px-8 mx-auto">
+            <p className="text-center text-xs uppercase tracking-widest text-muted-foreground mb-8 font-medium">
+              {t('sellersPage.stats.label', 'Numeri che parlano')}
+            </p>
+            <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto text-center">
+              {[
+                { value: '22.000+', label: t('sellersPage.stats.stat1', 'immobili sfitti a Torino'), sub: t('sellersPage.stats.stat1sub', 'contesto di mercato') },
+                { value: '60–90 gg', label: t('sellersPage.stats.stat2', 'dalla valutazione al rogito'), sub: t('sellersPage.stats.stat2sub', 'il nostro impegno') },
+                { value: '0%', label: t('sellersPage.stats.stat3', 'commissioni per il venditore'), sub: t('sellersPage.stats.stat3sub', 'nessun costo nascosto') },
+              ].map((stat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className="text-3xl md:text-4xl font-display font-extrabold text-primary mb-1">{stat.value}</div>
+                  <div className="text-sm font-medium text-foreground leading-snug">{stat.label}</div>
+                  <div className="text-xs text-muted-foreground mt-0.5">{stat.sub}</div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -615,11 +661,33 @@ const Sellers = () => {
                   <Button 
                     size="lg" 
                     variant="outline"
-                    onClick={() => window.open('https://calendly.com/junglerent/vendere', '_blank')}
+                    onClick={() => {
+                      const msg = t('sellerScenarios.whatsappMessage');
+                      openWhatsApp(CONTACTS.lorenzo.phone, msg);
+                    }}
+                    className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
                   >
-                    <Phone className="w-4 h-4 mr-2" />
-                    {t('seller.scheduleCall')}
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    {t('sellersPage.hero.whatsappCta', 'Scrivi su WhatsApp')}
                   </Button>
+                </div>
+
+                {/* Trust signals row */}
+                <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-8 pt-6 border-t border-primary/20">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Shield className="w-3.5 h-3.5 text-green-600 dark:text-green-400" />
+                    <span>{t('sellersPage.trust.startup', 'Startup Innovativa certificata')}</span>
+                  </div>
+                  <span className="text-border hidden sm:block">·</span>
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Building2 className="w-3.5 h-3.5 text-primary" />
+                    <span>{t('sellersPage.trust.cciaa', 'Iscritti CCIAA Torino')}</span>
+                  </div>
+                  <span className="text-border hidden sm:block">·</span>
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Shield className="w-3.5 h-3.5 text-primary" />
+                    <span>{t('sellersPage.trust.gdpr', 'Dati protetti GDPR')}</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
