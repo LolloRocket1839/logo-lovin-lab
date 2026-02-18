@@ -7,6 +7,7 @@ import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 import { CONTACTS, openQuickContact, type SupportedLanguage } from "@/constants";
+import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
   const { t } = useTranslation();
@@ -159,7 +160,7 @@ export const Navigation = () => {
             </Link>
           </div>
 
-          {/* Desktop Menu - 4 items */}
+          {/* Desktop Menu - 4 items + CTA */}
           <div className="hidden lg:flex items-center gap-1">
             {menuItems.map((item, index) => {
               const href = item.path || (item.id ? `/#${item.id}` : '/');
@@ -176,6 +177,17 @@ export const Navigation = () => {
                 </Link>
               );
             })}
+            <Button
+              size="sm"
+              variant="default"
+              className="ml-2"
+              onClick={() => {
+                trackClick('nav_desktop_invest_cta');
+                setInvestDialogOpen(true);
+              }}
+            >
+              {t("nav.investors")} →
+            </Button>
           </div>
 
 

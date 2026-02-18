@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { 
   Building2, Clock, Check, X, MapPin, FileText, 
   Handshake, Shield, ArrowRight, Phone, CalendarCheck,
-  Home, Users, TrendingUp, Star, Calculator, MessageCircle,
+  Star, MessageCircle,
   UserCheck, Zap, KeyRound
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,55 +30,25 @@ const Sellers = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const lang = i18n.language;
 
-  // Timeline steps
-  const timelineSteps = [
-    { 
-      icon: FileText, 
-      title: t('seller.timelineValuation'), 
+  // Come funziona - 3 compact steps
+  const howItWorksSteps = [
+    {
+      icon: FileText,
+      step: '01',
+      title: t('seller.timelineValuation'),
       time: t('seller.timelineValuationTime'),
-      desc: t('sellersPage.timeline.step1Desc')
     },
-    { 
-      icon: Home, 
-      title: t('seller.timelineInspection'), 
-      time: t('seller.timelineInspectionTime'),
-      desc: t('sellersPage.timeline.step2Desc')
-    },
-    { 
-      icon: Handshake, 
-      title: t('seller.timelineOffer'), 
+    {
+      icon: Handshake,
+      step: '02',
+      title: t('seller.timelineOffer'),
       time: t('seller.timelineOfferTime'),
-      desc: t('sellersPage.timeline.step3Desc')
     },
-    { 
-      icon: CalendarCheck, 
-      title: t('seller.timelineClosing'), 
+    {
+      icon: CalendarCheck,
+      step: '03',
+      title: t('seller.timelineClosing'),
       time: t('seller.timelineClosingTime'),
-      desc: t('sellersPage.timeline.step4Desc')
-    },
-  ];
-
-  // Benefits
-  const benefits = [
-    { 
-      icon: Building2, 
-      title: t('seller.benefit1Title'), 
-      desc: t('seller.benefit1Desc') 
-    },
-    { 
-      icon: Clock, 
-      title: t('seller.benefit2Title'), 
-      desc: t('seller.benefit2Desc') 
-    },
-    { 
-      icon: Shield, 
-      title: t('seller.benefit3Title'), 
-      desc: t('seller.benefit3Desc') 
-    },
-    { 
-      icon: TrendingUp, 
-      title: t('seller.benefit4Title'), 
-      desc: t('seller.benefit4Desc') 
     },
   ];
 
@@ -482,11 +452,11 @@ const Sellers = () => {
           </div>
         </section>
 
-        {/* Timeline */}
-        <section className="py-12 md:py-16">
+        {/* Come funziona - compact 3-step block */}
+        <section className="py-12 md:py-16 bg-muted/30">
           <div className="container px-4 md:px-8 mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">
                 {t('sellersPage.timeline.title')}
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -494,75 +464,23 @@ const Sellers = () => {
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
-              <div className="relative">
-                {/* Timeline line */}
-                <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
-
-                {timelineSteps.map((step, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className={`relative flex items-start gap-6 mb-8 ${
-                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
-                  >
-                    {/* Icon */}
-                    <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg md:absolute md:left-1/2 md:-translate-x-1/2">
-                      <step.icon className="w-5 h-5" />
-                    </div>
-
-                    {/* Content */}
-                    <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'} pl-2 md:pl-0`}>
-                      <Card className="inline-block">
-                        <CardContent className="p-4">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary">
-                              {step.time}
-                            </span>
-                          </div>
-                          <h3 className="font-display font-bold text-lg mb-1">{step.title}</h3>
-                          <p className="text-sm text-muted-foreground">{step.desc}</p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Grid */}
-        <section className="py-12 md:py-16 bg-muted/30">
-          <div className="container px-4 md:px-8 mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-                {t('seller.advantagesTitle')}
-              </h2>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {benefits.map((benefit, index) => (
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {howItWorksSteps.map((step, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
+                  className="flex flex-col items-center text-center"
                 >
-                  <Card className="h-full hover:shadow-md transition-shadow">
-                    <CardContent className="p-6 text-center">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                        <benefit.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <h3 className="font-display font-bold mb-2">{benefit.title}</h3>
-                      <p className="text-sm text-muted-foreground">{benefit.desc}</p>
-                    </CardContent>
-                  </Card>
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4 shadow-sm">
+                    <step.icon className="w-5 h-5" />
+                  </div>
+                  <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary mb-2">
+                    {step.time}
+                  </span>
+                  <h3 className="font-display font-semibold text-base text-foreground">{step.title}</h3>
                 </motion.div>
               ))}
             </div>
