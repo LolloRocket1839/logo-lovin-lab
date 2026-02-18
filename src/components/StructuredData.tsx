@@ -404,7 +404,7 @@ export const StructuredData = () => {
           name: "Come posso investire in immobili a Torino con pochi soldi?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Con Jungle Rent puoi investire nel mercato immobiliare torinese a partire da soli 100 euro. Acquisti una quota del portafoglio immobiliare e partecipi ai risultati della gestione. È il modo più accessibile per entrare nel real estate senza comprare un intero appartamento.",
+            text: "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi nelle zone universitarie di Torino. A partire da €100, sai esattamente dove va il tuo capitale.",
           },
         },
         {
