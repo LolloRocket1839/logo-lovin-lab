@@ -1,99 +1,71 @@
+# Business Model Messaging Correction: Per-Apartment Investment
 
-# Website Optimization & Simplification Audit
+## What the user is clarifying
 
-## What's working well
+The current site describes investors as buying "quote del portafoglio immobiliare" (portfolio shares) — implying a blind-pool fund where money is mixed across all properties. The actual model is different:
 
-- Homepage is already reduced to 5 core sections (Hero, HowItWorks, InvestorSection, SellerSection, Footer) — the right structure.
-- Motion system is minimalist and consistent (fade-up, 300ms, stagger classes).
-- Lead forms are email-first with low friction.
-- Mobile BottomNav focuses on 4 conversion-oriented items.
-- Seller page now has WhatsApp as primary CTA, social proof strip, and trust signals — all recently implemented.
+- Jungle Rent identifies and acquires a **specific apartment**
+- Investors invest in **Jungle Rent** for that **specific apartment**
+- Jungle Rent manages the apartment (contracts, tenants, maintenance)
+- Investors earn returns from that specific apartment's rental income
 
----
-
-## Issues & Recommendations (Priority Order)
-
-### 1. Homepage — The "Useful resources" section is dead weight (HIGH)
-
-The homepage currently has a generic "Risorse utili" grid between the FAQ and the BlogBanner (lines 120–167 in `Index.tsx`). It links to Chi siamo, Valuta immobile, Dove mangiare, and Blog — four things that are already in the Navigation and Footer. It adds scroll length with zero conversion value and dilutes the scroll-directed narrative.
-
-**Fix:** Remove this section entirely from `src/pages/Index.tsx`. The BlogBanner immediately below it already handles the blog link, and the footer covers the rest.
+This is a deal-by-deal structure, not a diversified fund. The distinction matters both for investor trust (you know exactly what you're investing in) and for legal/regulatory clarity.
 
 ---
 
-### 2. Homepage — Two footers are rendered simultaneously (HIGH)
+## Where the wrong copy lives today
 
-`Index.tsx` renders both `<Footer />` (desktop only, `hidden md:block`) and `<MobileFooter />` (no explicit display logic — always rendered). This is redundant and adds DOM weight. `MobileFooter` also adds `pb-20` padding that may stack unnecessarily on desktop.
+The phrase "acquisti quote del portafoglio immobiliare" (you buy portfolio shares) appears across:
 
-**Fix:** Wrap `<MobileFooter />` in `<div className="md:hidden">` to ensure it only renders in the DOM on mobile, matching the existing desktop Footer behavior.
-
----
-
-### 3. BottomNav — 5 items is one too many for mobile (MEDIUM)
-
-The BottomNav currently has 5 items: Investi, Vendi, Studenti, Info, Fondatori. Five items on a mobile nav creates visual crowding and the "Fondatori" item (which opens a drawer to call/WhatsApp Lorenzo) duplicates what "Investi" and "Vendi" already accomplish. The Founders drawer is a nice touch, but it competes for attention with the primary CTAs.
-
-**Fix:** Merge "Fondatori" into the "Info" drawer (it already has FAQ, blog articles, and AI search). The BottomNav becomes 4 clean items: Investi, Vendi, Studenti, Info — matching the design memory that says "4 essential lead conversion items."
+- `src/i18n/locales/it.json` — hero badgeExplanation, miniFaq.whatBuyAnswer, howItWorks.steps.invest.desc, investor FAQs (investorA2, investorA9, voiceA1), about.service4Desc
+- `src/i18n/locales/en.json` — same keys in English
+- `src/components/StructuredData.tsx` — FAQ schema answer about investing from €100
 
 ---
 
-### 4. Sellers page — Too many separate sections create scroll fatigue (MEDIUM)
+## Proposed copy changes
 
-The `/vendi` page currently has 9 distinct sections:
-1. Hero (with QuickOfferSimulator)
-2. Social Proof Strip (Numbers)
-3. Comparison Table
-4. Seller Scenarios (3 cards)
-5. Timeline (4 steps)
-6. Benefits Grid (4 cards)
-7. Interest Zones (zone pills)
-8. FAQ
-9. Final CTA
+The new framing: **"Investi in Jungle Rent per un appartamento specifico"** — you know which apartment your money goes into, Jungle Rent handles everything.
 
-Sections 4 (Scenarios), 5 (Timeline), and 6 (Benefits) overlap heavily in message — all three explain "why Jungle Rent is good." The Timeline is visually complex and rarely read fully. The Benefits grid repeats information already in the comparison table.
+### Key string replacements (Italian)
 
-**Fix:** Collapse the Timeline and Benefits Grid into a single compact "Come funziona" block (3 steps inline, no cards) and remove the Benefits Grid section entirely. This reduces the page from 9 to 7 sections. Seller Scenarios can remain as they address distinct personas.
 
----
+| Location                       | Current                                                                                                                                               | New                                                                                                                                                                                                                                                                    |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `hero.badgeExplanation`        | "Acquisti quote del nostro portafoglio immobiliare. Zero gestione, rendite trimestrali."                                                              | "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite trimestrali."                                                                                                                                                                  |
+| `hero.miniFaq.whatBuyAnswer`   | "Acquisti quote di partecipazione nel portafoglio immobiliare di Jungle Rent. Non un immobile intero, ma una frazione del nostro patrimonio gestito." | "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi. Sai esattamente dove va il tuo capitale."                                                                                                                                        |
+| `howItWorks.steps.invest.desc` | "A partire da €100, acquisti quote del nostro portafoglio immobiliare"                                                                                | "A partire da €100, investi in Jungle Rent per un appartamento specifico"                                                                                                                                                                                              |
+| `howItWorks.investors.point4`  | "Portafoglio diversificato"                                                                                                                           | "Appartamento specifico e trasparente"                                                                                                                                                                                                                                 |
+| `faq.investorA2`               | "Investi in quote del portafoglio immobiliare di Jungle Rent..."                                                                                      | "Investi in Jungle Rent per un appartamento specifico che selezioniamo e acquistiamo noi. Sai esattamente in quale immobile entra il tuo capitale. Poi gestiamo tutto: inquilini, contratti, manutenzione. I risultati di quell'appartamento generano le tue rendite." |
+| `faq.investorA9`               | "Puoi investire nel portafoglio immobiliare di Jungle Rent a partire da €100..."                                                                      | "Puoi investire in Jungle Rent a partire da €100 per un appartamento specifico. Non un fondo anonimo: sai quale immobile stai finanziando. Jungle Rent acquisisce, gestisce e distribuisce le rendite."                                                                |
+| `faq.voiceA1`                  | "Acquisti una quota del portafoglio immobiliare..."                                                                                                   | "Investi in Jungle Rent per un appartamento specifico che selezioniamo nelle zone universitarie di Torino. Sai dove va il tuo capitale, noi gestiamo il resto."                                                                                                        |
+| `about.service4Desc`           | "investire nel nostro portafoglio immobiliare a partire da €100"                                                                                      | "investire in Jungle Rent per un appartamento specifico a partire da €100"                                                                                                                                                                                             |
 
-### 5. Navigation — Desktop nav has no CTA button (MEDIUM)
 
-The desktop navigation (4 text links: Investitori, Vendi, Studenti, Fondatori) has no call-to-action button on the right side. Every competitor in the proptech space has a "Get started" or "Investi ora" button in the nav. The current nav relies entirely on the page content and StickyCTA bar to convert, which only appears after scrolling past the hero.
+Same changes mirrored into `en.json`.
 
-**Fix:** Add a compact "Investi →" button (variant="default", size="sm") to the right side of the desktop nav that opens `QuickInvestorLeadDialog`. This appears immediately on load and persists through all pages.
+### StructuredData.tsx FAQ answer
 
----
-
-### 6. Exit intent popup — Uses `framer-motion` with spring animation for a modal (LOW)
-
-The exit intent popup uses `framer-motion` with `type: "spring"` animation. For a popup that appears rarely and on exit, this is library overhead that could be replaced with a simple CSS transition. However, `framer-motion` is already used on the Sellers page for other animations, so the bundle cost is already paid — this is a low-priority cleanup.
+Current: "Acquisti una quota del portafoglio immobiliare e partecipi ai risultati della gestione."
+New: "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi nelle zone universitarie di Torino."
 
 ---
 
-### 7. `src/pages/Index.tsx` — Two `<div>` wrappers around the Footer add unnecessary DOM nesting (LOW)
+## Technical scope
 
-```tsx
-// Current — wraps both footers in extra divs
-<div className="pb-16 lg:pb-0">
-  <Footer />
-</div>
-<div className="pb-20">
-  <MobileFooter />
-</div>
-```
+- `**src/i18n/locales/it.json**` — update 8 string values across hero, howItWorks, faq, about sections
+- `**src/i18n/locales/en.json**` — mirror the same 8 changes in English
+- `**src/components/StructuredData.tsx**` — update 1 FAQ schema answer
 
-The padding-bottom classes should live on the Footer components themselves or be handled via `safe-area-bottom`, not wrapper divs. Low visual impact, but cleaner.
+No component restructuring needed. No new dependencies. These are pure copy changes within existing translation keys.
 
 ---
 
-## Summary of Proposed Changes
+## What does NOT change
 
-| Priority | Change | File | Impact |
-|---|---|---|---|
-| HIGH | Remove "Risorse utili" section from homepage | `src/pages/Index.tsx` | Reduces homepage length, sharpens narrative |
-| HIGH | Wrap MobileFooter in `md:hidden` | `src/pages/Index.tsx` | Eliminates DOM duplication |
-| MEDIUM | Add "Investi →" CTA button to desktop nav | `src/components/layout/Navigation.tsx` | Adds always-visible primary CTA |
-| MEDIUM | Merge Fondatori drawer into Info in BottomNav | `src/components/layout/BottomNav.tsx` | Cleaner 4-item mobile nav |
-| MEDIUM | Collapse Timeline + Benefits into single "Come funziona" block, remove Benefits Grid | `src/pages/Sellers.tsx` | Reduces seller page from 9 to 7 sections |
-
-No backend changes. No new dependencies. All changes are frontend-only and reversible.
+- The €100 minimum investment figure
+- The "Zero gestione" positioning
+- The quarterly returns messaging
+- All CTA buttons and dialog flows
+- The HowItWorks 4-step visual structure (Investi → Acquistiamo → Gestiamo → Guadagni)
+- The Sellers page (unrelated to this model clarification)
