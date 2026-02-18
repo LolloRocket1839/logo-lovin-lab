@@ -6,7 +6,7 @@ import { ArrowRight, MessageCircle, Users, Calendar, Heart, Target, AlertTriangl
 import { MESSAGES, openWhatsApp, CONTACTS } from "@/constants";
 import { openCalendly } from "@/lib/calendly";
 import { StyledText } from "@/components/StyledText";
-import { Badge } from "@/components/ui/badge";
+
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useHasBeenSeen } from "@/hooks/useScrollProgress";
@@ -177,15 +177,12 @@ export const InvestorSectionDesktop = () => {
               <StyledText>{t('investor.compactDesc')}</StyledText>
             </p>
             
-            {/* Active Investors Badge */}
-            <div className="flex justify-center mb-8">
-              <Badge 
-                variant="secondary" 
-                className="px-4 py-2 text-sm font-medium"
-              >
-                <Users className="w-4 h-4 mr-2" />
+            {/* Active Investors compact indicator */}
+            <div className="flex justify-center mb-6">
+              <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                 {count}+ {t('investor.activeInvestors')}
-              </Badge>
+              </span>
             </div>
           </div>
 
