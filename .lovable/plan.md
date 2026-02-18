@@ -1,73 +1,99 @@
 
-# Seller Funnel: What's Working and What's Missing
+# Website Optimization & Simplification Audit
 
-## Current State Assessment
+## What's working well
 
-The seller funnel is already well-structured with multiple conversion touchpoints:
-
-**What's in place:**
-- Hero with `QuickOfferSimulator` (interest qualification, email gate)
-- Comparison table (Agency vs Jungle Rent)
-- Scenario cards (L'erede, L'urgente, Il proprietario stanco)
-- 4-step timeline (Valutation → Visit → Offer → Closing)
-- Benefits grid (4 cards)
-- Interest zones section
-- FAQ accordion (7 questions)
-- Final CTA with two options (form + Calendly)
-- Exit intent popup (captures email + phone on abandonment)
-- Sticky CTA bar (Invest + Sell buttons)
-- Seller-specific MobileHeader (scrolls in with "Valutazione" button)
-
-**What's missing or could be stronger:**
-
-### 1. Social proof / Trust gap (highest impact)
-There is no testimonial, review, or "X immobili acquistati" counter anywhere on the page. For a seller handing over a major asset, seeing real social proof or a concrete transaction count is essential to trust.
-
-### 2. WhatsApp is buried
-WhatsApp is the preferred contact channel for less tech-savvy sellers (elderly owners, heirs), but on the page it only appears as a secondary button under the Scenarios section. It should be more prominent — especially in the hero area and the final CTA.
-
-### 3. The "Zona ospedali" zone in the simulator is named `zona_ospedali` in the key but wasn't cross-checked in the Interest Zones section, which still lists generic names (San Paolo, Campus Einaudi) that don't match the simulator zones, creating inconsistency.
-
-### 4. No trust badge / company legitimacy signal
-No "Startup Innovativa" badge, no company registration number, no "recognized by" logo. For sellers, legitimacy signals reduce friction significantly since they're dealing with their most valuable asset.
-
-### 5. Exit intent popup is generic
-The exit intent popup on `/vendi` shows a generic "Ricevi valutazione gratuita" message — not seller-specific enough. A seller who almost left needs different copy than an investor.
-
-## Proposed Plan
-
-### Priority 1 — Add a social proof strip (new section)
-Insert a minimal, elegant "Numeri che parlano" strip between the Hero and the Comparison Table. This would show 3 hard stats as animated counters:
-- `22.000+` immobili sfitti a Torino (market context, creates urgency)
-- `60–90 gg` tempo medio di chiusura (our promise)
-- `0%` commissioni (key differentiator)
-
-**File:** `src/pages/Sellers.tsx` — add a new `<section>` between lines 297–299 (after the hero, before the comparison table).
-
-### Priority 2 — Make WhatsApp the hero's secondary CTA
-Replace the Calendly "Prenota chiamata" button in the hero with WhatsApp as the primary secondary option, and move Calendly to a smaller "or schedule a call" link below. WhatsApp is lower friction for the target persona (elderly, heirs).
-
-**File:** `src/pages/Sellers.tsx` — modify lines 265–283.
-
-### Priority 3 — Add a legitimacy trust row under the Final CTA
-Below the two CTA buttons in the Final CTA section, add a row of small trust signals: "Startup Innovativa certificata · Iscritti CCIAA Torino · Dati protetti GDPR". This directly addresses the "is this company real?" objection at the moment of decision.
-
-**File:** `src/pages/Sellers.tsx` — modify the Final CTA section around lines 593–626.
-
-### Priority 4 — Seller-specific exit intent copy
-Customize the exit intent popup copy for the seller page. Currently it says "Stai andando via? Ricevi valutazione gratuita" — on the seller page it should say "Vendi senza agenzia, anche da casa" with a more seller-specific subtitle.
-
-**File:** `src/components/ExitIntentPopup.tsx` — accept a `title` / `subtitle` prop so the seller page can pass custom copy, while the investor page keeps the default.
+- Homepage is already reduced to 5 core sections (Hero, HowItWorks, InvestorSection, SellerSection, Footer) — the right structure.
+- Motion system is minimalist and consistent (fade-up, 300ms, stagger classes).
+- Lead forms are email-first with low friction.
+- Mobile BottomNav focuses on 4 conversion-oriented items.
+- Seller page now has WhatsApp as primary CTA, social proof strip, and trust signals — all recently implemented.
 
 ---
 
-## Technical Scope
+## Issues & Recommendations (Priority Order)
 
-| File | Change |
-|---|---|
-| `src/pages/Sellers.tsx` | Add stats strip, swap WhatsApp/Calendly CTA order, add trust row |
-| `src/components/ExitIntentPopup.tsx` | Add optional `title`/`subtitle` props |
-| `src/i18n/locales/it.json` | Add new keys for stats strip and trust row |
-| `src/i18n/locales/en.json` | Same in English |
+### 1. Homepage — The "Useful resources" section is dead weight (HIGH)
 
-No new components needed. No backend changes. Scope is frontend-only and conservative.
+The homepage currently has a generic "Risorse utili" grid between the FAQ and the BlogBanner (lines 120–167 in `Index.tsx`). It links to Chi siamo, Valuta immobile, Dove mangiare, and Blog — four things that are already in the Navigation and Footer. It adds scroll length with zero conversion value and dilutes the scroll-directed narrative.
+
+**Fix:** Remove this section entirely from `src/pages/Index.tsx`. The BlogBanner immediately below it already handles the blog link, and the footer covers the rest.
+
+---
+
+### 2. Homepage — Two footers are rendered simultaneously (HIGH)
+
+`Index.tsx` renders both `<Footer />` (desktop only, `hidden md:block`) and `<MobileFooter />` (no explicit display logic — always rendered). This is redundant and adds DOM weight. `MobileFooter` also adds `pb-20` padding that may stack unnecessarily on desktop.
+
+**Fix:** Wrap `<MobileFooter />` in `<div className="md:hidden">` to ensure it only renders in the DOM on mobile, matching the existing desktop Footer behavior.
+
+---
+
+### 3. BottomNav — 5 items is one too many for mobile (MEDIUM)
+
+The BottomNav currently has 5 items: Investi, Vendi, Studenti, Info, Fondatori. Five items on a mobile nav creates visual crowding and the "Fondatori" item (which opens a drawer to call/WhatsApp Lorenzo) duplicates what "Investi" and "Vendi" already accomplish. The Founders drawer is a nice touch, but it competes for attention with the primary CTAs.
+
+**Fix:** Merge "Fondatori" into the "Info" drawer (it already has FAQ, blog articles, and AI search). The BottomNav becomes 4 clean items: Investi, Vendi, Studenti, Info — matching the design memory that says "4 essential lead conversion items."
+
+---
+
+### 4. Sellers page — Too many separate sections create scroll fatigue (MEDIUM)
+
+The `/vendi` page currently has 9 distinct sections:
+1. Hero (with QuickOfferSimulator)
+2. Social Proof Strip (Numbers)
+3. Comparison Table
+4. Seller Scenarios (3 cards)
+5. Timeline (4 steps)
+6. Benefits Grid (4 cards)
+7. Interest Zones (zone pills)
+8. FAQ
+9. Final CTA
+
+Sections 4 (Scenarios), 5 (Timeline), and 6 (Benefits) overlap heavily in message — all three explain "why Jungle Rent is good." The Timeline is visually complex and rarely read fully. The Benefits grid repeats information already in the comparison table.
+
+**Fix:** Collapse the Timeline and Benefits Grid into a single compact "Come funziona" block (3 steps inline, no cards) and remove the Benefits Grid section entirely. This reduces the page from 9 to 7 sections. Seller Scenarios can remain as they address distinct personas.
+
+---
+
+### 5. Navigation — Desktop nav has no CTA button (MEDIUM)
+
+The desktop navigation (4 text links: Investitori, Vendi, Studenti, Fondatori) has no call-to-action button on the right side. Every competitor in the proptech space has a "Get started" or "Investi ora" button in the nav. The current nav relies entirely on the page content and StickyCTA bar to convert, which only appears after scrolling past the hero.
+
+**Fix:** Add a compact "Investi →" button (variant="default", size="sm") to the right side of the desktop nav that opens `QuickInvestorLeadDialog`. This appears immediately on load and persists through all pages.
+
+---
+
+### 6. Exit intent popup — Uses `framer-motion` with spring animation for a modal (LOW)
+
+The exit intent popup uses `framer-motion` with `type: "spring"` animation. For a popup that appears rarely and on exit, this is library overhead that could be replaced with a simple CSS transition. However, `framer-motion` is already used on the Sellers page for other animations, so the bundle cost is already paid — this is a low-priority cleanup.
+
+---
+
+### 7. `src/pages/Index.tsx` — Two `<div>` wrappers around the Footer add unnecessary DOM nesting (LOW)
+
+```tsx
+// Current — wraps both footers in extra divs
+<div className="pb-16 lg:pb-0">
+  <Footer />
+</div>
+<div className="pb-20">
+  <MobileFooter />
+</div>
+```
+
+The padding-bottom classes should live on the Footer components themselves or be handled via `safe-area-bottom`, not wrapper divs. Low visual impact, but cleaner.
+
+---
+
+## Summary of Proposed Changes
+
+| Priority | Change | File | Impact |
+|---|---|---|---|
+| HIGH | Remove "Risorse utili" section from homepage | `src/pages/Index.tsx` | Reduces homepage length, sharpens narrative |
+| HIGH | Wrap MobileFooter in `md:hidden` | `src/pages/Index.tsx` | Eliminates DOM duplication |
+| MEDIUM | Add "Investi →" CTA button to desktop nav | `src/components/layout/Navigation.tsx` | Adds always-visible primary CTA |
+| MEDIUM | Merge Fondatori drawer into Info in BottomNav | `src/components/layout/BottomNav.tsx` | Cleaner 4-item mobile nav |
+| MEDIUM | Collapse Timeline + Benefits into single "Come funziona" block, remove Benefits Grid | `src/pages/Sellers.tsx` | Reduces seller page from 9 to 7 sections |
+
+No backend changes. No new dependencies. All changes are frontend-only and reversible.
