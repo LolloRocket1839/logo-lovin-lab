@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { TrendingUp, ArrowRight, Users, AlertTriangle } from "lucide-react";
+import { TrendingUp, ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 
@@ -52,11 +51,11 @@ export const InvestorSectionMobile = () => {
             {t("investor.compactDesc")}
           </p>
 
-          <div className="flex justify-center mb-5">
-            <Badge variant="secondary" className="px-4 py-2 text-sm">
-              <Users className="w-4 h-4 mr-1.5" />
+          <div className="flex justify-center mb-4">
+            <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               {count}+ {t("investor.activeInvestors")}
-            </Badge>
+            </span>
           </div>
 
           <Button
