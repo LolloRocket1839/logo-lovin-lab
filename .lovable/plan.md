@@ -1,66 +1,73 @@
 
-# Simulatore offerta qualitativo con budget 130k
+# Seller Funnel: What's Working and What's Missing
 
-## Cosa cambia
+## Current State Assessment
 
-Il simulatore attuale mostra range di prezzo numerici. Va trasformato in un tool qualitativo che dice solo "il tuo immobile ci interessa" o "contattaci per una valutazione personalizzata", senza mai mostrare cifre all'utente.
+The seller funnel is already well-structured with multiple conversion touchpoints:
 
-La logica interna: `prezzo = mq x prezzo_medio_zona x 0.70` (sconto 30%). Se il risultato e sotto 130k e i mq rientrano nel range della zona, l'immobile e "qualificato".
+**What's in place:**
+- Hero with `QuickOfferSimulator` (interest qualification, email gate)
+- Comparison table (Agency vs Jungle Rent)
+- Scenario cards (L'erede, L'urgente, Il proprietario stanco)
+- 4-step timeline (Valutation → Visit → Offer → Closing)
+- Benefits grid (4 cards)
+- Interest zones section
+- FAQ accordion (7 questions)
+- Final CTA with two options (form + Calendly)
+- Exit intent popup (captures email + phone on abandonment)
+- Sticky CTA bar (Invest + Sell buttons)
+- Seller-specific MobileHeader (scrolls in with "Valutazione" button)
 
-## Criteri interni per zona
+**What's missing or could be stronger:**
 
-| Zona | Prezzo medio/mq | Mq max accettati | Range mq nel form |
-|------|----------------|-----------------|-------------------|
-| Aurora | 1.520 | 120 | 35-120 |
-| Lingotto | 1.650 | 110 | 35-110 |
-| Santa Rita | 1.700 | 105 | 35-105 |
-| Cenisia | 1.950 | 95 | 35-95 |
-| Cit Turin | 2.501 | 75 | 35-75 |
-| Campidoglio | 2.501 | 75 | 35-75 |
-| San Salvario | 2.731 | 65 | 35-65 |
-| Vanchiglia | 2.680 | 70 | 35-70 |
-| Crocetta | 2.995 | 60 | 35-60 |
-| Zona ospedali | 1.975 | 90 | 35-90 |
+### 1. Social proof / Trust gap (highest impact)
+There is no testimonial, review, or "X immobili acquistati" counter anywhere on the page. For a seller handing over a major asset, seeing real social proof or a concrete transaction count is essential to trust.
 
-## Output visibile all'utente
+### 2. WhatsApp is buried
+WhatsApp is the preferred contact channel for less tech-savvy sellers (elderly owners, heirs), but on the page it only appears as a secondary button under the Scenarios section. It should be more prominent — especially in the hero area and the final CTA.
 
-**Qualificato (verde):**
-"Il tuo immobile rientra nei nostri criteri di acquisto. Ti contattiamo entro 48 ore con un'offerta concreta."
-- CTA: "Richiedi offerta" + WhatsApp
+### 3. The "Zona ospedali" zone in the simulator is named `zona_ospedali` in the key but wasn't cross-checked in the Interest Zones section, which still lists generic names (San Paolo, Campus Einaudi) that don't match the simulator zones, creating inconsistency.
 
-**Non qualificato (giallo):**
-"Al momento il tuo immobile non rientra nei parametri standard, ma ogni caso e diverso. Contattaci per una valutazione personalizzata."
-- CTA: "Contattaci comunque" + WhatsApp
+### 4. No trust badge / company legitimacy signal
+No "Startup Innovativa" badge, no company registration number, no "recognized by" logo. For sellers, legitimacy signals reduce friction significantly since they're dealing with their most valuable asset.
 
-L'utente non vede mai numeri. Il prezzo calcolato viene inviato internamente via Formspree per il team.
+### 5. Exit intent popup is generic
+The exit intent popup on `/vendi` shows a generic "Ricevi valutazione gratuita" message — not seller-specific enough. A seller who almost left needs different copy than an investor.
 
-## Dettagli tecnici
+## Proposed Plan
 
-### File da modificare
+### Priority 1 — Add a social proof strip (new section)
+Insert a minimal, elegant "Numeri che parlano" strip between the Hero and the Comparison Table. This would show 3 hard stats as animated counters:
+- `22.000+` immobili sfitti a Torino (market context, creates urgency)
+- `60–90 gg` tempo medio di chiusura (our promise)
+- `0%` commissioni (key differentiator)
 
-**`src/components/tools/QuickOfferSimulator.tsx`**
-- Rimuovere `CONDITION_DISCOUNTS`, `MARKET_HAIRCUT`, `formatCurrency` (non serve piu mostrare prezzi)
-- Aggiungere costante `MAX_BUDGET = 130_000` e mappa `ZONE_MAX_SQM` con il range mq massimo per zona
-- La logica diventa: `qualificato = (mq * avgPrice * 0.70 <= 130000) AND (mq <= zoneMaxSqm)`
-- Rimuovere il rendering numerico del range prezzo
-- Due stati UI: qualificato (verde con CheckCircle) e non qualificato (giallo con Info)
-- Il form Formspree continua a inviare il prezzo calcolato internamente (il team lo vede, l'utente no)
-- Aggiungere "zona_ospedali" nel dropdown delle zone target
+**File:** `src/pages/Sellers.tsx` — add a new `<section>` between lines 297–299 (after the hero, before the comparison table).
 
-**`src/data/turinZonePrices.ts`**
-- Aggiungere la zona `zona_ospedali` con nome "Zona ospedali (Molinette/Carducci)", avgPrice 1975, category "semicentral"
+### Priority 2 — Make WhatsApp the hero's secondary CTA
+Replace the Calendly "Prenota chiamata" button in the hero with WhatsApp as the primary secondary option, and move Calendly to a smaller "or schedule a call" link below. WhatsApp is lower friction for the target persona (elderly, heirs).
 
-**`src/i18n/locales/it.json`**
-- Cambiare `offerSimulator.title` in "Il tuo immobile ci interessa?"
-- Cambiare `offerSimulator.subtitle` in "Scoprilo in 30 secondi"
-- Aggiungere: `offerSimulator.qualifiedTitle` ("Ottima notizia!"), `offerSimulator.qualifiedDescription` ("Il tuo immobile rientra nei nostri criteri di acquisto. Ti contattiamo entro 48 ore con un'offerta concreta."), `offerSimulator.notQualifiedTitle` ("Valutazione personalizzata"), `offerSimulator.notQualifiedDescription` ("Al momento il tuo immobile non rientra nei parametri standard, ma ogni caso e diverso. Contattaci per una valutazione personalizzata.")
-- Aggiornare `offerSimulator.emailGateTitle` in "Inserisci la tua email per scoprire se il tuo immobile ci interessa"
-- Rimuovere chiavi non piu usate: `resultDescription`
+**File:** `src/pages/Sellers.tsx` — modify lines 265–283.
 
-**`src/i18n/locales/en.json`**
-- Stesse modifiche tradotte in inglese
+### Priority 3 — Add a legitimacy trust row under the Final CTA
+Below the two CTA buttons in the Final CTA section, add a row of small trust signals: "Startup Innovativa certificata · Iscritti CCIAA Torino · Dati protetti GDPR". This directly addresses the "is this company real?" objection at the moment of decision.
 
-### Cosa NON cambia
-- `src/pages/Sellers.tsx` (il componente e gia integrato)
-- `src/components/dialogs/QuickSellerLeadDialog.tsx`
-- `src/components/tools/PropertyValuator.tsx`
+**File:** `src/pages/Sellers.tsx` — modify the Final CTA section around lines 593–626.
+
+### Priority 4 — Seller-specific exit intent copy
+Customize the exit intent popup copy for the seller page. Currently it says "Stai andando via? Ricevi valutazione gratuita" — on the seller page it should say "Vendi senza agenzia, anche da casa" with a more seller-specific subtitle.
+
+**File:** `src/components/ExitIntentPopup.tsx` — accept a `title` / `subtitle` prop so the seller page can pass custom copy, while the investor page keeps the default.
+
+---
+
+## Technical Scope
+
+| File | Change |
+|---|---|
+| `src/pages/Sellers.tsx` | Add stats strip, swap WhatsApp/Calendly CTA order, add trust row |
+| `src/components/ExitIntentPopup.tsx` | Add optional `title`/`subtitle` props |
+| `src/i18n/locales/it.json` | Add new keys for stats strip and trust row |
+| `src/i18n/locales/en.json` | Same in English |
+
+No new components needed. No backend changes. Scope is frontend-only and conservative.
