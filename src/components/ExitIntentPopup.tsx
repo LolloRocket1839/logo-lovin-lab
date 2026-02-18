@@ -13,11 +13,15 @@ interface ExitIntentPopupProps {
   source?: string;
   /** Prefix for tracking events (e.g., "seller" → "seller_exit_intent_shown") */
   trackingPrefix?: string;
+  /** Override the default popup title */
+  title?: string;
+  /** Override the default popup subtitle */
+  subtitle?: string;
 }
 
 const STORAGE_KEY = "exitIntentShown";
 
-export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix }: ExitIntentPopupProps) => {
+export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title, subtitle }: ExitIntentPopupProps) => {
   const { t } = useTranslation();
   const { trackEvent } = useAnalytics();
   const [isOpen, setIsOpen] = useState(false);
@@ -170,10 +174,10 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix }: Exit
               </div>
 
               <h2 className="text-xl font-display font-bold text-foreground">
-                {t("exitIntent.title", "Stai andando via?")}
+                {title ?? t("exitIntent.title", "Stai andando via?")}
               </h2>
               <p className="text-muted-foreground text-sm mt-1">
-                {t("exitIntent.subtitle", "Ricevi una valutazione gratuita del tuo immobile in 24 ore")}
+                {subtitle ?? t("exitIntent.subtitle", "Ricevi una valutazione gratuita del tuo immobile in 24 ore")}
               </p>
             </div>
 

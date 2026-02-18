@@ -1703,7 +1703,27 @@
     },
     "hero": {
       "badge": "Direct buyer",
-      "subtitle": "We're not an agency. We buy your property directly for our student housing portfolio. No intermediaries, no commissions, fast process."
+      "subtitle": "We're not an agency. We buy your property directly for our student housing portfolio. No intermediaries, no commissions, fast process.",
+      "whatsappCta": "Message on WhatsApp",
+      "orCall": "Prefer to talk?"
+    },
+    "stats": {
+      "label": "Numbers that speak",
+      "stat1": "vacant properties in Turin",
+      "stat1sub": "market context",
+      "stat2": "from valuation to closing",
+      "stat2sub": "our commitment",
+      "stat3": "seller commissions",
+      "stat3sub": "no hidden costs"
+    },
+    "trust": {
+      "startup": "Certified Innovative Startup",
+      "cciaa": "Registered CCIAA Turin",
+      "gdpr": "GDPR protected data"
+    },
+    "exitIntent": {
+      "title": "Sell without an agency, from home",
+      "subtitle": "Get a real offer in 48 hours. No visits, zero commissions."
     },
     "calculator": {
       "title": "Calculate your savings",

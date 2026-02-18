@@ -1511,7 +1511,27 @@
     },
     "hero": {
       "badge": "Acquirente diretto",
-      "subtitle": "Non siamo un'agenzia. Acquistiamo direttamente il tuo immobile per il nostro portafoglio di student housing. Zero intermediari, zero commissioni, processo rapido."
+      "subtitle": "Non siamo un'agenzia. Acquistiamo direttamente il tuo immobile per il nostro portafoglio di student housing. Zero intermediari, zero commissioni, processo rapido.",
+      "whatsappCta": "Scrivi su WhatsApp",
+      "orCall": "Preferisci parlare?"
+    },
+    "stats": {
+      "label": "Numeri che parlano",
+      "stat1": "immobili sfitti a Torino",
+      "stat1sub": "contesto di mercato",
+      "stat2": "dalla valutazione al rogito",
+      "stat2sub": "il nostro impegno",
+      "stat3": "commissioni per il venditore",
+      "stat3sub": "nessun costo nascosto"
+    },
+    "trust": {
+      "startup": "Startup Innovativa certificata",
+      "cciaa": "Iscritti CCIAA Torino",
+      "gdpr": "Dati protetti GDPR"
+    },
+    "exitIntent": {
+      "title": "Vendi senza agenzia, anche da casa",
+      "subtitle": "Ricevi un'offerta reale in 48 ore. Zero visite, zero commissioni."
     },
     "calculator": {
       "title": "Calcola il tuo risparmio",
