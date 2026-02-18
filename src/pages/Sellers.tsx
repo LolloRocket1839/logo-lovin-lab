@@ -703,8 +703,6 @@ const Sellers = () => {
         onOpenChange={setIsDialogOpen} 
         source="sellers_page" 
       />
-      
-      <ExitIntentPopup source="exit-intent-sellers" />
     </>
   );
 };
