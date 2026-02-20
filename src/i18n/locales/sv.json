@@ -26,7 +26,7 @@
     "steps": {
       "invest": {
         "title": "Investera",
-        "desc": "Från €100, köp andelar i vår fastighetsportfölj"
+        "desc": "Från €100, investera i Jungle Rent för en specifik lägenhet"
       },
       "acquire": {
         "title": "Vi förvärvar",
@@ -46,7 +46,7 @@
       "point1": "Utbetalning varannan månad",
       "point2": "Avkastning över marknadssnittet",
       "point3": "Ingen förvaltning",
-      "point4": "Diversifierad portfölj"
+      "point4": "Specifik och transparent lägenhet"
     },
     "students": {
       "title": "För studenter",
@@ -132,7 +132,7 @@
     "service3Title": "Vi hanterar allt internt",
     "service3Desc": "Underhåll, kontrakt, support 24/7, städning: vi hanterar varje aspekt av våra fastigheter direkt.",
     "service4Title": "Tillgängliga investeringar",
-    "service4Desc": "Vi erbjuder möjligheten att investera i vår fastighetsportfölj från €100, och demokratiserar tillgången till fastighetsmarknaden.",
+    "service4Desc": "Från €100 kan du investera i Jungle Rent för en specifik lägenhet och demokratisera tillgången till fastighetsmarknaden.",
     "whyChooseTitle": "Varför välja JungleRent",
     "whyPoint1": "Direkta ägare: inte mellanhänder, utan långsiktiga investerare",
     "whyPoint2": "Exklusivt fokus på universitetsstudenter",
@@ -150,7 +150,7 @@
     "tagline": "Trygg hyra i fastighetsdjungeln",
     "mainHeadline": "Investera i studentbostäder i Turin",
     "mainSubheadline": "Investera från €100 i Jungle Rent. Vi köper och förvaltar, du tjänar.",
-    "badgeExplanation": "Du köper andelar i vår fastighetsportfölj. Ingen förvaltning, kvartalsvis avkastning.",
+    "badgeExplanation": "Du investerar i en specifik lägenhet som förvärvas av Jungle Rent. Ingen förvaltning, kvartalsvis avkastning.",
     "discoverOpportunity": "Upptäck möjligheten",
     "talkToLorenzo": "Prata med Lorenzo",
     "startInvesting": "Börja investera",
@@ -158,7 +158,7 @@
     "howItWorks": "Hur fungerar det?",
     "miniFaq": {
       "whatBuy": "Vad köper jag för €100?",
-      "whatBuyAnswer": "Du köper andelar i Jungle Rents fastighetsportfölj. Inte en hel fastighet, utan en andel av vårt förvaltade kapital.",
+      "whatBuyAnswer": "Du investerar i Jungle Rent för en specifik lägenhet som vi förvärvar och förvaltar. Du vet exakt vart ditt kapital går.",
       "howEarn": "Hur får jag avkastning?",
       "howEarnAnswer": "Varje kvartal får du din andel av inkasserade hyror, proportionellt till din investering. Transparenta rapporter och personlig dashboard.",
       "whoManages": "Vem förvaltar fastigheterna?",
@@ -663,7 +663,7 @@
     "investorQ1": "Vad är den minsta investeringen?",
     "investorA1": "Minsta investering i Jungle Rent börjar från €100, vilket ger tillgång till Turins fastighetsmarknad även med begränsat kapital. För den som vill investera mer beror möjligheterna på fastigheterna vi har tillgängliga och vill förvärva.",
     "investorQ2": "Hur fungerar investeringen?",
-    "investorA2": "Du investerar i andelar av Jungle Rents fastighetsportfölj. Du deltar i förvaltningsresultaten proportionellt till din andel. OBS: investeringar innebär risker, inklusive möjlig partiell eller total förlust av investerat kapital. Resultaten beror på marknadsutvecklingen.",
+    "investorA2": "Du investerar i Jungle Rent för en specifik lägenhet som vi väljer ut och förvärvar. Du vet exakt vilken fastighet ditt kapital går till. Vi hanterar allt: hyresgäster, kontrakt, underhåll. Resultaten från den lägenheten genererar din avkastning.",
     "investorQ3": "Förvaltar Jungle Rent fastigheterna helt?",
     "investorA3": "Ja, vi erbjuder fullservice-förvaltning som inkluderar: sökning och urval av hyresgäster, kontraktshantering och registrering, ordinarie och extraordinärt underhåll, hyresindrivning, hantering av uteblivna betalningar, juridisk hjälp och detaljerad kvartalsrapportering. Investeraren deltar i resultaten utan att behöva oroa sig för något.",
     "investorQ4": "Hur lång tid tar det att se de första resultaten?",
@@ -677,7 +677,7 @@
     "investorQ8": "Kan jag besöka fastigheterna innan jag investerar?",
     "investorA8": "Ja, vi organiserar besök på fastigheterna på bokning för intresserade investerare. Du kan se fastigheterna personligen, bedöma renoveringskvaliteten och prata direkt med vårt förvaltningsteam.",
     "investorQ9": "Hur kan jag investera med Jungle Rent?",
-    "investorA9": "Du kan investera i Jungle Rents fastighetsportfölj från €100. Du köper en andel av portföljen och deltar i resultaten från hyrorna, proportionellt till din andel. Det är ett sätt att få tillgång till fastighetsmarknaden med begränsat kapital utan att behöva hantera förvaltning, underhåll eller byråkrati.",
+    "investorA9": "Du kan investera i Jungle Rent från €100 för en specifik lägenhet. Inte en anonym fond: du vet vilken fastighet du finansierar. Jungle Rent förvärvar, förvaltar och fördelar avkastningen.",
     "investorQ10": "Hur beräknas resultaten?",
     "investorA10": "Resultaten beräknas baserat på vår hybridmodell: hyror till universitetsstudenter under läsåret och korttidsuthyrning till turister under sommarmånaderna. Denna modell optimerar beläggningen jämfört med traditionella hyror med fast avgift. Resultaten är netto efter förvaltningskostnader men före personliga skatter. OBS: resultaten beror på marknadsutvecklingen och är inte garanterade. Investeringar innebär risker, inklusive möjlig partiell eller total kapitalförlust.",
     "investorQ11": "Vad är hybridmodellen studenter/turister?",
@@ -715,7 +715,7 @@
     "aboutA3": "Nej. Jungle Rent är ett fastighets-startup med dubbelt uppdrag: lösa studentbostadskrisen och demokratisera tillgången till fastighetsmarknaden — en historiskt säker tillgångsklass som, till skillnad från förr, har blivit otillgänglig för många. Vi förvärvar, renoverar och förvaltar fastigheter för uthyrning till universitetsstudenter och turister.",
     "voiceCategory": "Vanliga röstfrågor",
     "voiceQ1": "Hur kan jag investera i fastigheter i Turin med lite pengar?",
-    "voiceA1": "Med Jungle Rent kan du investera på Turins fastighetsmarknad från endast 100 euro. Du köper en andel av fastighetsportföljen och deltar i förvaltningsresultaten. Det är det mest tillgängliga sättet att komma in på fastighetsmarknaden utan att köpa en hel lägenhet.",
+    "voiceA1": "Du investerar i Jungle Rent för en specifik lägenhet som vi väljer ut i Turins universitetsområden. Du vet vart ditt kapital går, vi hanterar resten.",
     "voiceQ2": "Är det säkert att investera i Jungle Rent?",
     "voiceA2": "Jungle Rent är ett certifierat innovativt startup, registrerat vid Handelskammaren i Turin med organisationsnummer 13333450016. Vi är inkuberade av 2i3T, Turin universitets inkubator. Dock innebär det, som alla investeringar, risker inklusive möjlig kapitalförlust.",
     "voiceQ3": "Hur mycket kan man tjäna på att investera i studentlägenheter i Turin?",
