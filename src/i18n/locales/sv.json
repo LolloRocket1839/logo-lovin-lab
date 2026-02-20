@@ -146,6 +146,11 @@
   "breadcrumbs": {
     "home": "Hem"
   },
+  "scrollToTop": {
+    "tooltip": "Granska modellen",
+    "label": "Granska modellen",
+    "backToTop": "Tillbaka upp"
+  },
   "hero": {
     "tagline": "Trygg hyra i fastighetsdjungeln",
     "mainHeadline": "Investera i studentbostäder i Turin",

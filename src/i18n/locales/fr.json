@@ -147,6 +147,11 @@
   "breadcrumbs": {
     "home": "Accueil"
   },
+  "scrollToTop": {
+    "tooltip": "Revoir le modèle",
+    "label": "Revoir le modèle",
+    "backToTop": "Retour en haut"
+  },
   "hero": {
     "tagline": "La location sûre dans la jungle immobilière",
     "mainHeadline": "Investissez dans le logement étudiant à Turin",

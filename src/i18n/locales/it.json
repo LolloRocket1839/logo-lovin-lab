@@ -146,6 +146,11 @@
   "breadcrumbs": {
     "home": "Home"
   },
+  "scrollToTop": {
+    "tooltip": "Rivedi il modello",
+    "label": "Rivedi il modello",
+    "backToTop": "Torna su"
+  },
   "hero": {
     "tagline": "L'affitto sicuro nella giungla immobiliare",
     "mainHeadline": "Investi in student housing a Torino",
