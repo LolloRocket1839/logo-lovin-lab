@@ -147,6 +147,11 @@
   "breadcrumbs": {
     "home": "Startseite"
   },
+  "scrollToTop": {
+    "tooltip": "Modell ansehen",
+    "label": "Modell ansehen",
+    "backToTop": "Nach oben"
+  },
   "hero": {
     "tagline": "Die sichere Miete im Immobiliendschungel",
     "mainHeadline": "Investieren Sie in Studentenwohnungen in Turin",

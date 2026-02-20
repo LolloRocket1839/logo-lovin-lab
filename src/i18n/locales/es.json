@@ -147,6 +147,11 @@
   "breadcrumbs": {
     "home": "Inicio"
   },
+  "scrollToTop": {
+    "tooltip": "Revisar el modelo",
+    "label": "Revisar el modelo",
+    "backToTop": "Volver arriba"
+  },
   "hero": {
     "tagline": "El alquiler seguro en la jungla inmobiliaria",
     "mainHeadline": "Invierte en vivienda estudiantil en Turín",

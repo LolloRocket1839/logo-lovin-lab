@@ -1048,7 +1048,9 @@
     "home": "Home"
   },
   "scrollToTop": {
-    "tooltip": "Back to top"
+    "tooltip": "Back to top",
+    "label": "Review the model",
+    "backToTop": "Back to top"
   },
   "cta": {
     "learnMore": "Learn more",

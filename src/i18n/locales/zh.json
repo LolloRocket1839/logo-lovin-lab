@@ -146,6 +146,11 @@
   "breadcrumbs": {
     "home": "首页"
   },
+  "scrollToTop": {
+    "tooltip": "查看模型",
+    "label": "查看模型",
+    "backToTop": "返回顶部"
+  },
   "hero": {
     "tagline": "房地产丛林中的安全租赁",
     "mainHeadline": "投资都灵学生公寓",
