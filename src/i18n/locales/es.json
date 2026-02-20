@@ -26,7 +26,7 @@
     "steps": {
       "invest": {
         "title": "Invierte",
-        "desc": "Desde €100, compra acciones de nuestra cartera inmobiliaria"
+        "desc": "Desde €100, invierte en Jungle Rent para un apartamento específico"
       },
       "acquire": {
         "title": "Adquirimos",
@@ -46,7 +46,7 @@
       "point1": "Pagos bimestrales",
       "point2": "Rendimientos por encima del mercado",
       "point3": "Cero gestión",
-      "point4": "Cartera diversificada"
+      "point4": "Apartamento específico y transparente"
     },
     "students": {
       "title": "Para estudiantes",
@@ -133,7 +133,7 @@
     "service3Title": "Gestión interna completa",
     "service3Desc": "Mantenimiento, contratos, soporte 24/7, limpieza: gestionamos cada aspecto de nuestras propiedades directamente, sin delegar.",
     "service4Title": "Inversiones accesibles",
-    "service4Desc": "Ofrecemos la posibilidad de invertir en nuestra cartera inmobiliaria desde €100, democratizando el acceso al mercado inmobiliario.",
+    "service4Desc": "Desde €100 puedes invertir en Jungle Rent para un apartamento específico, democratizando el acceso al mercado inmobiliario.",
     "whyChooseTitle": "Por qué elegir JungleRent",
     "whyPoint1": "Propietarios directos: no intermediarios, sino inversores a largo plazo",
     "whyPoint2": "Enfoque exclusivo en estudiantes universitarios",
@@ -151,7 +151,7 @@
     "tagline": "El alquiler seguro en la jungla inmobiliaria",
     "mainHeadline": "Invierte en vivienda estudiantil en Turín",
     "mainSubheadline": "Invierte desde €100 en Jungle Rent. Nosotros compramos y gestionamos, tú ganas.",
-    "badgeExplanation": "Compras acciones de nuestra cartera inmobiliaria. Cero gestión, rentas trimestrales.",
+    "badgeExplanation": "Inviertes en un apartamento específico adquirido por Jungle Rent. Cero gestión, rentas trimestrales.",
     "discoverOpportunity": "Descubre la oportunidad",
     "talkToLorenzo": "Habla con Lorenzo",
     "startInvesting": "Empieza a invertir",
@@ -159,7 +159,7 @@
     "howItWorks": "¿Cómo funciona?",
     "miniFaq": {
       "whatBuy": "¿Qué compro con €100?",
-      "whatBuyAnswer": "Compras participaciones en la cartera inmobiliaria de Jungle Rent. No un inmueble entero, sino una fracción de nuestro patrimonio gestionado.",
+      "whatBuyAnswer": "Inviertes en Jungle Rent para un apartamento específico que adquirimos y gestionamos nosotros. Sabes exactamente dónde va tu capital.",
       "howEarn": "¿Cómo recibo los rendimientos?",
       "howEarnAnswer": "Cada trimestre recibes tu cuota de los alquileres cobrados, proporcional a tu inversión.",
       "whoManages": "¿Quién gestiona los inmuebles?",
@@ -688,7 +688,7 @@
     "investorQ1": "¿Cuál es la inversión mínima requerida?",
     "investorA1": "La inversión mínima en Jungle Rent parte de €100, permitiendo acceder al mercado inmobiliario turinés incluso con capitales limitados.",
     "investorQ2": "¿Cómo funciona la inversión?",
-    "investorA2": "Inviertes en cuotas de la cartera inmobiliaria de Jungle Rent. Participas en los resultados de la gestión proporcionalmente a tu cuota.",
+    "investorA2": "Inviertes en Jungle Rent para un apartamento específico que seleccionamos y adquirimos nosotros. Sabes exactamente en qué inmueble entra tu capital. Gestionamos todo: inquilinos, contratos, mantenimiento. Los resultados de ese apartamento generan tus rentas.",
     "investorQ3": "¿Jungle Rent gestiona completamente el inmueble?",
     "investorA3": "Sí, ofrecemos un servicio de gestión full-service que incluye: búsqueda y selección de inquilinos, gestión de contratos, mantenimiento, cobro de alquileres y reportes trimestrales.",
     "investorQ4": "¿Cuánto tiempo se tarda en ver los primeros resultados?",
@@ -702,7 +702,7 @@
     "investorQ8": "¿Qué pasa si un inquilino no paga?",
     "investorA8": "Nos encargamos de toda la gestión de impagos con soporte legal incluido. El riesgo se distribuye entre múltiples inquilinos en cartera.",
     "investorQ9": "¿Puedo vender en cualquier momento?",
-    "investorA9": "Las modalidades de salida de la inversión están definidas contractualmente. Contáctanos para más detalles.",
+    "investorA9": "Puedes invertir en Jungle Rent desde €100 para un apartamento específico. No un fondo anónimo: sabes qué inmueble estás financiando. Jungle Rent adquiere, gestiona y distribuye las rentas.",
     "investorQ10": "¿Qué garantías ofrecéis?",
     "investorA10": "Ofrecemos total transparencia con informes trimestrales, contratos regulares e incubación en 2i3T, la incubadora de la Universidad de Turín.",
     "investorQ11": "¿Cómo se protege mi inversión?",
@@ -738,7 +738,7 @@
     "aboutQ3": "¿Cuál es vuestra misión?",
     "aboutA3": "Nuestra doble misión: resolver la crisis habitacional estudiantil y democratizar el acceso al mercado inmobiliario.",
     "voiceQ1": "¿Qué es Jungle Rent?",
-    "voiceA1": "Jungle Rent es una startup innovadora que compra inmuebles en zonas universitarias de Turín y los alquila a estudiantes.",
+    "voiceA1": "Inviertes en Jungle Rent para un apartamento específico que seleccionamos en zonas universitarias de Turín. Sabes dónde va tu capital, nosotros gestionamos el resto.",
     "voiceQ2": "¿Cómo invierto en Jungle Rent?",
     "voiceA2": "Puedes invertir desde €100 en nuestra cartera inmobiliaria. Contáctanos para todos los detalles.",
     "voiceQ3": "¿Cuánto cuesta una habitación con Jungle Rent?",
