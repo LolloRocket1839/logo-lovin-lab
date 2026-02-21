@@ -2,6 +2,83 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "torino-citta-campus-atenei-immobiliare-2026",
+    category: "sellers",
+    date: "2026-02-21",
+    author: "Jungle Rent Team",
+    image: "/images/politecnico-torino.avif",
+    readTime: 20,
+    content: "torino-citta-campus-atenei-immobiliare-2026",
+    translations: {
+      it: {
+        title: "Torino città campus: come atenei e nuovi poli ridisegnano la mappa immobiliare",
+        excerpt: "300 milioni del Politecnico, città delle scienze a Grugliasco, Metro 2: dove salgono i prezzi quartiere per quartiere.",
+        seo: {
+          title: "Torino città campus: atenei e mappa immobiliare 2026",
+          description: "Masterplan Politecnico 300M, città delle scienze Grugliasco, Metro 2: come l'espansione universitaria ridisegna i prezzi immobiliari a Torino quartiere per quartiere.",
+          keywords: [
+            "masterplan politecnico torino",
+            "città delle scienze grugliasco",
+            "metro 2 torino immobiliare",
+            "campus valentino torino",
+            "manifattura tabacchi torino",
+            "prezzi immobili torino 2026",
+            "investire torino università",
+            "studentati PNRR torino",
+            "innovation hub politecnico",
+            "vendere casa torino zona universitaria"
+          ]
+        },
+        tags: ["Venditori", "Mercato immobiliare", "Politecnico", "Torino", "Urbanistica"],
+        faqs: [
+          { question: "Quanto investe il Politecnico di Torino nel masterplan 2030?", answer: "Il Politecnico ha presentato un masterplan da oltre 300 milioni di euro con orizzonte 2030. Include due torri da 56-60 milioni, tre Innovation Hub tematici e l'obiettivo di raggiungere 300.000 mq di superficie complessiva." },
+          { question: "Cosa sono le nuove torri di Corso Castelfidardo?", answer: "Sono due torri da dieci piani ciascuna nella Cittadella Politecnica, per un totale di 14.000 mq. Ospiteranno i dipartimenti di ingegneria gestionale, meccanica ed energetica. Investimento tra 56 e 60 milioni di euro." },
+          { question: "Quando apre la città delle scienze a Grugliasco?", answer: "L'inaugurazione ufficiale del Polo Scientifico di Grugliasco è prevista per l'autunno 2026. L'investimento è di 160 milioni di euro finanziati da Intesa Sanpaolo. La popolazione universitaria passerà da 5.000 a oltre 10.000 studenti." },
+          { question: "Quali quartieri di Torino crescono di più nel 2026?", answer: "Le zone con la crescita maggiore sono: Lingotto e Mirafiori Nord (+7,8%), Aurora (+7%), Mirafiori Sud (+6,8%), Barriera di Milano (+5,4%), San Salvario (+3,5%) e Vanchiglia (+3%)." },
+          { question: "Come influisce la Metro 2 sui prezzi degli immobili?", answer: "La Metro 2 (1,83 miliardi, 7,7 km, 10 stazioni) collegherà Rebaudengo a Porta Nuova entro il 2032-2033. Le zone lungo il tracciato, come Aurora e Regio Parco, stanno già registrando aumenti di valore significativi." },
+          { question: "Quanto costa al mq un immobile a Torino nel 2026?", answer: "A gennaio 2026 il prezzo medio di vendita a Torino è di 2.154 €/mq, con un incremento del 5,54% su base annua. Gli affitti residenziali sono a 12,47 €/mq/mese. Torino resta il 62% più economica di Milano." },
+          { question: "Quanti posti letto studenteschi prevede il PNRR?", answer: "L'obiettivo nazionale è di 60.000 nuovi posti letto con 1,2 miliardi di euro. A Torino sono in cantiere diversi progetti: Manifattura Tabacchi, Mirafiori e area Grandi Motori. La cooperativa HOMA ha 622 posti letto in pipeline." },
+          { question: "Cosa succede nell'area della Manifattura Tabacchi?", answer: "L'ex Manifattura Tabacchi (46.000 mq, 25 fabbricati) nel quartiere Regio Parco diventerà un polo culturale, archivistico e universitario. Il progetto è firmato da Eutropia Architettura e Pininfarina Architecture." },
+          { question: "Torino conviene rispetto a Milano per investire?", answer: "Sì. Il prezzo medio al mq torinese (2.154 €) è circa il 62% inferiore a quello milanese (5.615 €). Il rendimento lordo da affitto a Torino è intorno al 5,1%, con una domanda cresciuta del 37% nel primo semestre 2025." },
+          { question: "Dove si trovano gli Innovation Hub del Politecnico?", answer: "I tre Innovation Hub del masterplan del Politecnico saranno dedicati a digitalizzazione, aerospazio e mobilità sostenibile. Sorgeranno nell'area della Cittadella Politecnica, tra Cenisia e Cit Turin." }
+        ]
+      },
+      en: {
+        title: "Turin campus city: how universities and new hubs are reshaping the property map",
+        excerpt: "Politecnico's 300M masterplan, Grugliasco science campus, Metro 2: where prices are rising neighborhood by neighborhood.",
+        seo: {
+          title: "Turin campus city: universities reshaping property map 2026",
+          description: "Politecnico 300M masterplan, Grugliasco science campus, Metro Line 2: how university expansion is reshaping Turin property prices neighborhood by neighborhood.",
+          keywords: [
+            "politecnico torino masterplan",
+            "grugliasco science campus",
+            "metro 2 turin real estate",
+            "valentino campus turin",
+            "manifattura tabacchi turin",
+            "turin property prices 2026",
+            "invest turin university",
+            "PNRR student housing turin",
+            "innovation hub politecnico",
+            "sell property turin university area"
+          ]
+        },
+        tags: ["Sellers", "Real estate", "Politecnico", "Turin", "Urban planning"],
+        faqs: [
+          { question: "How much is Politecnico di Torino investing in its 2030 masterplan?", answer: "Politecnico presented a masterplan worth over 300 million euros targeting 2030. It includes two towers costing 56-60 million, three thematic Innovation Hubs, and aims to reach 300,000 sqm of total campus area." },
+          { question: "What are the new towers on Corso Castelfidardo?", answer: "They are two ten-story towers in the Politecnico campus, totaling 14,000 sqm. They'll house the management, mechanical, and energy engineering departments. Investment: 56-60 million euros." },
+          { question: "When does the Grugliasco science campus open?", answer: "The official opening of the Grugliasco Science Campus is planned for autumn 2026. The investment is 160 million euros funded by Intesa Sanpaolo. The student population will grow from 5,000 to over 10,000." },
+          { question: "Which Turin neighborhoods are growing fastest in 2026?", answer: "The fastest-growing areas are: Lingotto and Mirafiori North (+7.8%), Aurora (+7%), Mirafiori South (+6.8%), Barriera di Milano (+5.4%), San Salvario (+3.5%), and Vanchiglia (+3%)." },
+          { question: "How does Metro Line 2 affect property prices?", answer: "Metro Line 2 (1.83 billion euros, 7.7 km, 10 stations) will connect Rebaudengo to Porta Nuova by 2032-2033. Areas along the route, like Aurora and Regio Parco, are already seeing significant value increases." },
+          { question: "How much does property cost per sqm in Turin in 2026?", answer: "As of January 2026, the average sale price in Turin is 2,154 €/sqm, up 5.54% year-over-year. Residential rents are at 12.47 €/sqm/month. Turin remains 62% cheaper than Milan." },
+          { question: "How many student beds does the PNRR plan include?", answer: "The national target is 60,000 new beds with 1.2 billion euros. In Turin, several projects are underway: Manifattura Tabacchi, Mirafiori, and Grandi Motori area. The HOMA cooperative has 622 beds in its pipeline." },
+          { question: "What's happening at the Manifattura Tabacchi site?", answer: "The former Manifattura Tabacchi (46,000 sqm, 25 buildings) in Regio Parco will become a cultural, archival, and university hub. The project is by Eutropia Architettura and Pininfarina Architecture." },
+          { question: "Is Turin a better investment than Milan?", answer: "Yes. Turin's average price per sqm (2,154 €) is about 62% lower than Milan's (5,615 €). Gross rental yield in Turin is around 5.1%, with demand up 37% in the first half of 2025." },
+          { question: "Where are Politecnico's Innovation Hubs located?", answer: "The three Innovation Hubs from Politecnico's masterplan focus on digitalization, aerospace, and sustainable mobility. They'll be built in the Cittadella Politecnica area, between Cenisia and Cit Turin." }
+        ]
+      }
+    }
+  },
+  {
     slug: "torino-citta-7-minuti-walkability",
     category: "societa",
     date: "2026-02-02",

@@ -136,10 +136,14 @@ SECTION 8: KEY NEIGHBORHOODS
 SECTION 9: TOP PERFORMING ARTICLES (February 2026 Analytics)
 ================================================================================
 
-Based on real traffic analytics (Nov 2025 - Feb 10, 2026):
+Based on real traffic analytics (Nov 2025 - Feb 2026):
 Total: 1,787 visitors | 3,017 pageviews | 1.69 pages/visit | 84% bounce rate
 
 TOP ARTICLES BY PAGEVIEWS:
+0. Torino città campus: atenei e mappa immobiliare 2026 - NEW
+   URL: https://junglerent.it/blog/torino-citta-campus-atenei-immobiliare-2026
+   Topic: How university masterplans (Politecnico 300M, UniTo Grugliasco) and Metro 2 reshape property values
+
 1. Eventi Torino gennaio 2026 - 185 pageviews
    URL: https://junglerent.it/blog/eventi-torino-gennaio-2026
    Topic: Monthly events and activities guide
@@ -541,6 +545,6 @@ VOICE QUERIES FOR WALKABILITY:
 - "Portici Torino quanti km?" → 18 km di portici continui nel centro
 
 ================================================================================
-Last Updated: February 16, 2026
-Version: 3.6 - Comprehensive SEO/AEO refresh, Carnevale Ivrea internal linking, sitemap freshness sync
+Last Updated: February 21, 2026
+Version: 3.7 - Added Torino città campus article (university expansion + real estate map)
 ================================================================================

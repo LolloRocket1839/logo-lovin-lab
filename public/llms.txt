@@ -17,6 +17,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 
 ## Priority URLs
 
+- [Torino città campus: atenei e mappa immobiliare](https://junglerent.it/blog/torino-citta-campus-atenei-immobiliare-2026): How university masterplans and Metro 2 reshape Turin property values
 - [Home](https://junglerent.it): Main landing page with investment and housing info
 - [Investors](https://junglerent.it/investitori): Investment opportunities from €100
 - [Sell Your Property](https://junglerent.it/vendi): Sell directly to Jungle Rent - zero fees, 60-90 days closing
@@ -170,5 +171,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: February 16, 2026
-Version: 3.6 - Comprehensive SEO/AEO refresh, Carnevale Ivrea internal linking, sitemap freshness sync
+Last Updated: February 21, 2026
+Version: 3.7 - Added Torino città campus article (university expansion + real estate map)

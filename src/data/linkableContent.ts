@@ -183,6 +183,11 @@ const enhancedBlogKeywords: Record<string, string[]> = {
   'torino-nightlife-guide': [
     'vita notturna torino', 'nightlife torino', 'locali torino',
     'discoteche torino', 'movida torino'
+  ],
+  'torino-citta-campus-atenei-immobiliare-2026': [
+    'masterplan politecnico', 'città delle scienze', 'metro 2 torino',
+    'grugliasco campus', 'manifattura tabacchi', 'innovation hub',
+    'campus valentino', 'torri politecnico', 'PNRR studentati'
   ]
 };
 
