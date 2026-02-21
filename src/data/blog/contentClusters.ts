@@ -58,7 +58,8 @@ export const contentClusters: ContentCluster[] = [
       'cedolare-secca-2026-investitori',
       'mutui-investitori-immobiliari-guida-completa',
       'student-housing-italia-savills-2025',
-      'valutazione-immobiliare-torino-guida-completa'
+      'valutazione-immobiliare-torino-guida-completa',
+      'torino-citta-campus-atenei-immobiliare-2026'
     ],
     keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire']
   },
@@ -70,7 +71,8 @@ export const contentClusters: ContentCluster[] = [
     pillarTitleEn: 'Selling property in Turin: complete guide 2025',
     satellites: [
       'valutazione-immobiliare-torino-guida-completa',
-      'props-gestione-immobiliare-semplificata'
+      'props-gestione-immobiliare-semplificata',
+      'torino-citta-campus-atenei-immobiliare-2026'
     ],
     keywords: ['vendere casa torino', 'valutazione immobile', 'mercato immobiliare torino']
   },
@@ -172,6 +174,11 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'torino-digital-nomads-guide', to: 'aule-studio-torino-guida-completa', relevance: 'high', bidirectional: true },
   { from: 'torino-digital-nomads-guide', to: 'torino-citta-7-minuti-walkability', relevance: 'medium', bidirectional: true },
   { from: 'torino-digital-nomads-guide', to: 'torino-nightlife-guide', relevance: 'medium', bidirectional: true },
+  
+  // Campus city article connections
+  { from: 'torino-citta-campus-atenei-immobiliare-2026', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
+  { from: 'torino-citta-campus-atenei-immobiliare-2026', to: 'politecnico-torino-guida-completa', relevance: 'high', bidirectional: true },
+  { from: 'torino-citta-campus-atenei-immobiliare-2026', to: 'universita-torino-guida-completa', relevance: 'high', bidirectional: true },
 ];
 
 // Get cluster for a given article

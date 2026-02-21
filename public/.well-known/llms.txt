@@ -91,5 +91,5 @@ For detailed information:
 - Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: February 16, 2026
-Version: 3.6 - Comprehensive SEO/AEO refresh, Carnevale Ivrea internal linking, sitemap freshness sync
+Last Updated: February 21, 2026
+Version: 3.7 - Added Torino città campus article (university expansion + real estate map)
