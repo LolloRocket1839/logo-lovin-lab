@@ -1,71 +1,119 @@
-# Business Model Messaging Correction: Per-Apartment Investment
 
-## What the user is clarifying
+# New blog article: "Torino citta campus" — university expansion and real estate map
 
-The current site describes investors as buying "quote del portafoglio immobiliare" (portfolio shares) — implying a blind-pool fund where money is mixed across all properties. The actual model is different:
+## Overview
 
-- Jungle Rent identifies and acquires a **specific apartment**
-- Investors invest in **Jungle Rent** for that **specific apartment**
-- Jungle Rent manages the apartment (contracts, tenants, maintenance)
-- Investors earn returns from that specific apartment's rental income
+Publish the uploaded PDF as a bilingual blog article (IT + EN) targeting property sellers in Turin's transformation zones. The article explains how university masterplans (Politecnico 300M, UniTo Citta delle Scienze) and infrastructure projects (Metro 2, Manifattura Tabacchi) are reshaping neighborhood values — giving sellers evidence that their property sits in a high-demand area.
 
-This is a deal-by-deal structure, not a diversified fund. The distinction matters both for investor trust (you know exactly what you're investing in) and for legal/regulatory clarity.
+## Article metadata
 
----
+- **Slug**: `torino-citta-campus-atenei-immobiliare-2026`
+- **Category**: `sellers` (targets owners in transformation zones)
+- **Date**: `2026-02-21`
+- **Read time**: 20 min
+- **Author**: Jungle Rent Team
+- **Image**: reuse `/images/politecnico-torino.avif` (already in project)
 
-## Where the wrong copy lives today
+## Content structure (sentence case enforced)
 
-The phrase "acquisti quote del portafoglio immobiliare" (you buy portfolio shares) appears across:
+The markdown will be rewritten from the PDF in natural conversational style (short sentences, no em dashes, active voice) with these sections:
 
-- `src/i18n/locales/it.json` — hero badgeExplanation, miniFaq.whatBuyAnswer, howItWorks.steps.invest.desc, investor FAQs (investorA2, investorA9, voiceA1), about.service4Desc
-- `src/i18n/locales/en.json` — same keys in English
-- `src/components/StructuredData.tsx` — FAQ schema answer about investing from €100
+1. **Intro** — Torino is transforming. Universities and new industrial hubs are redrawing the real estate map.
+2. **Il masterplan del Politecnico: 300 milioni per un ecosistema dell'innovazione** — new towers, Innovation Hubs, 300k sqm target
+3. **Il campus del Valentino: architettura, design e PNRR** — 50M campus, 100M park renovation, City'Scape Award
+4. **La cittadella del design a Mirafiori** — ex-Fiat area, automotive/design courses
+5. **L'universita di Torino: la citta delle scienze** — Grugliasco 160M, Palazzo Nuovo, Biotecnologie Via Nizza
+6. **I nuovi poli industriali** — Metro 2 (1.83B), Manifattura Tabacchi, ex-RAI tower
+7. **L'impatto sul mercato immobiliare** — zone-by-zone data (Cenisia +2.6%, Lingotto +7.8%, Aurora +7%)
+8. **Studentati e PNRR** — 60k beds target, HOMA 622 beds pipeline
+9. **Torino 2030** — closing vision + Jungle Rent CTA
 
----
+Each section will include 3-5 internal links to existing articles and tools.
 
-## Proposed copy changes
+## Internal links to inject
 
-The new framing: **"Investi in Jungle Rent per un appartamento specifico"** — you know which apartment your money goes into, Jungle Rent handles everything.
+| Target | Context |
+|--------|---------|
+| `/blog/investire-real-assets-torino-2025` | When discussing investment opportunity / market data |
+| `/blog/dove-vivere-torino-studenti-politecnico` | When mentioning student neighborhoods |
+| `/blog/cedolare-secca-2026-investitori` | When discussing rental yields |
+| `/blog/politecnico-torino-guida-completa` | When referencing Politecnico expansion |
+| `/blog/universita-torino-guida-completa` | When referencing UniTo |
+| `/blog/san-salvario-guida-studenti` | When mentioning San Salvario-Valentino zone |
+| `/blog/student-housing-italia-savills-2025` | When discussing PNRR studentati |
+| `/valutazione-immobile` | CTA: "Scopri quanto vale il tuo immobile" |
+| `/venditori` | Final CTA |
+| `/investitori/zone` | When listing neighborhood data |
 
-### Key string replacements (Italian)
+## Files to create
 
+### 1. `src/data/blog/content/it/torino-citta-campus-atenei-immobiliare-2026.md`
+Full Italian article rewritten from PDF in natural language style with internal links and sentence case headings.
 
-| Location                       | Current                                                                                                                                               | New                                                                                                                                                                                                                                                                    |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hero.badgeExplanation`        | "Acquisti quote del nostro portafoglio immobiliare. Zero gestione, rendite trimestrali."                                                              | "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite trimestrali."                                                                                                                                                                  |
-| `hero.miniFaq.whatBuyAnswer`   | "Acquisti quote di partecipazione nel portafoglio immobiliare di Jungle Rent. Non un immobile intero, ma una frazione del nostro patrimonio gestito." | "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi. Sai esattamente dove va il tuo capitale."                                                                                                                                        |
-| `howItWorks.steps.invest.desc` | "A partire da €100, acquisti quote del nostro portafoglio immobiliare"                                                                                | "A partire da €100, investi in Jungle Rent per un appartamento specifico"                                                                                                                                                                                              |
-| `howItWorks.investors.point4`  | "Portafoglio diversificato"                                                                                                                           | "Appartamento specifico e trasparente"                                                                                                                                                                                                                                 |
-| `faq.investorA2`               | "Investi in quote del portafoglio immobiliare di Jungle Rent..."                                                                                      | "Investi in Jungle Rent per un appartamento specifico che selezioniamo e acquistiamo noi. Sai esattamente in quale immobile entra il tuo capitale. Poi gestiamo tutto: inquilini, contratti, manutenzione. I risultati di quell'appartamento generano le tue rendite." |
-| `faq.investorA9`               | "Puoi investire nel portafoglio immobiliare di Jungle Rent a partire da €100..."                                                                      | "Puoi investire in Jungle Rent a partire da €100 per un appartamento specifico. Non un fondo anonimo: sai quale immobile stai finanziando. Jungle Rent acquisisce, gestisce e distribuisce le rendite."                                                                |
-| `faq.voiceA1`                  | "Acquisti una quota del portafoglio immobiliare..."                                                                                                   | "Investi in Jungle Rent per un appartamento specifico che selezioniamo nelle zone universitarie di Torino. Sai dove va il tuo capitale, noi gestiamo il resto."                                                                                                        |
-| `about.service4Desc`           | "investire nel nostro portafoglio immobiliare a partire da €100"                                                                                      | "investire in Jungle Rent per un appartamento specifico a partire da €100"                                                                                                                                                                                             |
+### 2. `src/data/blog/content/en/torino-citta-campus-atenei-immobiliare-2026.md`
+English translation, same structure and internal links.
 
+## Files to modify
 
-Same changes mirrored into `en.json`.
+### 3. `src/data/blog/posts.ts`
+Add new entry at position 0 (latest article):
 
-### StructuredData.tsx FAQ answer
+```typescript
+{
+  slug: "torino-citta-campus-atenei-immobiliare-2026",
+  category: "sellers",
+  date: "2026-02-21",
+  author: "Jungle Rent Team",
+  image: "/images/politecnico-torino.avif",
+  readTime: 20,
+  content: "torino-citta-campus-atenei-immobiliare-2026",
+  translations: {
+    it: {
+      title: "Torino citta campus: come atenei e nuovi poli ridisegnano la mappa immobiliare",
+      excerpt: "300 milioni del Politecnico, citta delle scienze a Grugliasco, Metro 2: dove salgono i prezzi quartiere per quartiere.",
+      seo: { title, description, 10 keywords },
+      tags: ["Venditori", "Mercato immobiliare", "Politecnico", "Torino", "Urbanistica"],
+      faqs: [10 voice-optimized FAQs covering masterplan, zones, prices, Metro 2, PNRR beds]
+    },
+    en: { /* mirror */ }
+  }
+}
+```
 
-Current: "Acquisti una quota del portafoglio immobiliare e partecipi ai risultati della gestione."
-New: "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi nelle zone universitarie di Torino."
+### 4. `src/data/blog/contentClusters.ts`
+- Add `torino-citta-campus-atenei-immobiliare-2026` as satellite in the **Investors cluster** (pillar: `investire-real-assets-torino-2025`)
+- Add `torino-citta-campus-atenei-immobiliare-2026` as satellite in the **Sellers cluster** (pillar: `vendere-casa-torino-guida-completa-2025`)
+- Add 3 new `articleRelationships`:
+  - to `investire-real-assets-torino-2025` (high, bidirectional)
+  - to `politecnico-torino-guida-completa` (high, bidirectional)
+  - to `universita-torino-guida-completa` (high, bidirectional)
 
----
+### 5. `src/data/linkableContent.ts`
+Add enhanced keywords entry in `enhancedBlogKeywords` for the new slug with triggers like `masterplan politecnico`, `citta delle scienze`, `metro 2 torino`, `grugliasco`, `manifattura tabacchi`.
 
-## Technical scope
+### 6. `public/sitemap-blog.xml`
+Add entry with hreflang for `it` and `en`.
 
-- `**src/i18n/locales/it.json**` — update 8 string values across hero, howItWorks, faq, about sections
-- `**src/i18n/locales/en.json**` — mirror the same 8 changes in English
-- `**src/components/StructuredData.tsx**` — update 1 FAQ schema answer
+### 7. `public/llms.txt` and `public/ai-assistant-info.txt`
+Add the new article to the resource listings.
 
-No component restructuring needed. No new dependencies. These are pure copy changes within existing translation keys.
+## 10 FAQs (Italian, to include in posts.ts)
 
----
+1. Quanto investe il Politecnico di Torino nel masterplan 2030?
+2. Cosa sono le nuove torri di Corso Castelfidardo?
+3. Quando apre la citta delle scienze a Grugliasco?
+4. Quali quartieri di Torino crescono di piu nel 2026?
+5. Come influisce la Metro 2 sui prezzi degli immobili?
+6. Quanto costa al mq un immobile a Torino nel 2026?
+7. Quanti posti letto studenteschi prevede il PNRR?
+8. Cosa succede nell'area della Manifattura Tabacchi?
+9. Torino conviene rispetto a Milano per investire?
+10. Dove si trovano gli Innovation Hub del Politecnico?
 
-## What does NOT change
+## Quality checklist
 
-- The €100 minimum investment figure
-- The "Zero gestione" positioning
-- The quarterly returns messaging
-- All CTA buttons and dialog flows
-- The HowItWorks 4-step visual structure (Investi → Acquistiamo → Gestiamo → Guadagni)
-- The Sellers page (unrelated to this model clarification)
+- All headings in sentence case (only first word + proper nouns capitalized)
+- Natural conversational style: sentences under 25 words, no em dashes, active voice
+- All 24+ sources from the PDF cited inline
+- Jungle Rent CTA positioned at market data section and closing
+- No "portfolio shares" language — uses corrected "appartamento specifico" model
