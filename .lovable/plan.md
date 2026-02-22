@@ -1,119 +1,56 @@
 
-# New blog article: "Torino citta campus" — university expansion and real estate map
 
-## Overview
+# Update "Eventi Torino marzo 2026" article with expanded content
 
-Publish the uploaded PDF as a bilingual blog article (IT + EN) targeting property sellers in Turin's transformation zones. The article explains how university masterplans (Politecnico 300M, UniTo Citta delle Scienze) and infrastructure projects (Metro 2, Manifattura Tabacchi) are reshaping neighborhood values — giving sellers evidence that their property sits in a high-demand area.
+## What changes
 
-## Article metadata
-
-- **Slug**: `torino-citta-campus-atenei-immobiliare-2026`
-- **Category**: `sellers` (targets owners in transformation zones)
-- **Date**: `2026-02-21`
-- **Read time**: 20 min
-- **Author**: Jungle Rent Team
-- **Image**: reuse `/images/politecnico-torino.avif` (already in project)
-
-## Content structure (sentence case enforced)
-
-The markdown will be rewritten from the PDF in natural conversational style (short sentences, no em dashes, active voice) with these sections:
-
-1. **Intro** — Torino is transforming. Universities and new industrial hubs are redrawing the real estate map.
-2. **Il masterplan del Politecnico: 300 milioni per un ecosistema dell'innovazione** — new towers, Innovation Hubs, 300k sqm target
-3. **Il campus del Valentino: architettura, design e PNRR** — 50M campus, 100M park renovation, City'Scape Award
-4. **La cittadella del design a Mirafiori** — ex-Fiat area, automotive/design courses
-5. **L'universita di Torino: la citta delle scienze** — Grugliasco 160M, Palazzo Nuovo, Biotecnologie Via Nizza
-6. **I nuovi poli industriali** — Metro 2 (1.83B), Manifattura Tabacchi, ex-RAI tower
-7. **L'impatto sul mercato immobiliare** — zone-by-zone data (Cenisia +2.6%, Lingotto +7.8%, Aurora +7%)
-8. **Studentati e PNRR** — 60k beds target, HOMA 622 beds pipeline
-9. **Torino 2030** — closing vision + Jungle Rent CTA
-
-Each section will include 3-5 internal links to existing articles and tools.
-
-## Internal links to inject
-
-| Target | Context |
-|--------|---------|
-| `/blog/investire-real-assets-torino-2025` | When discussing investment opportunity / market data |
-| `/blog/dove-vivere-torino-studenti-politecnico` | When mentioning student neighborhoods |
-| `/blog/cedolare-secca-2026-investitori` | When discussing rental yields |
-| `/blog/politecnico-torino-guida-completa` | When referencing Politecnico expansion |
-| `/blog/universita-torino-guida-completa` | When referencing UniTo |
-| `/blog/san-salvario-guida-studenti` | When mentioning San Salvario-Valentino zone |
-| `/blog/student-housing-italia-savills-2025` | When discussing PNRR studentati |
-| `/valutazione-immobile` | CTA: "Scopri quanto vale il tuo immobile" |
-| `/venditori` | Final CTA |
-| `/investitori/zone` | When listing neighborhood data |
-
-## Files to create
-
-### 1. `src/data/blog/content/it/torino-citta-campus-atenei-immobiliare-2026.md`
-Full Italian article rewritten from PDF in natural language style with internal links and sentence case headings.
-
-### 2. `src/data/blog/content/en/torino-citta-campus-atenei-immobiliare-2026.md`
-English translation, same structure and internal links.
+The existing March 2026 events article gets a major content upgrade. Both the Italian and English markdown files will be rewritten with the much richer, more detailed content the user provided. The posts.ts metadata stays the same (slug, FAQs, SEO already correct).
 
 ## Files to modify
 
+### 1. `src/data/blog/content/it/eventi-torino-marzo-2026.md`
+Full rewrite with the expanded content. Key improvements over current version:
+- Detailed exhibition descriptions (Chiharu Shiota works list, Futurismo 4 sections, Gentileschi international loans)
+- Richer concert sections (Mika production details, Renato Zero setlist, Subsonica immersive exhibition + DJ sets + city-wide installations)
+- Musical theater calendar (Rocky, Amadeus with full schedule, 7 Spose per 7 Fratelli)
+- New section: conferences (Schettini, Galimberti, Crepet, Francini)
+- New section: Festa della Donna March 8
+- Expanded outdoor activities with cycling routes (3 difficulty levels)
+- Transport table: how to reach each venue
+- Spring cuisine section with seasonal dishes and recommended zones
+- Emergency numbers table
+- Practical visit planning tips with geographic clusters
+
+Sentence case enforced on all headings. Internal links corrected to use actual slugs:
+- `/blog/eventi-torino-febbraio-2026`
+- `/blog/eventi-torino-gennaio-2026`
+- `/blog/carnevale-ivrea-battaglia-arance-2026`
+- `/blog/viaggiare-sostenibile-torino-guida`
+- `/blog/torino-ogni-stagione-turisti`
+- `/blog/torino-nightlife-guide`
+- `/blog/san-salvario-guida-studenti`
+- `/blog/cicloturismo-avanzato-torino`
+- `/blog/dove-mangiare-torino-studenti`
+
+All 19 sources cited at the bottom.
+
+### 2. `src/data/blog/content/en/eventi-torino-marzo-2026.md`
+Full English translation of the expanded content, same structure, same internal links, same sources. Sentence case enforced.
+
 ### 3. `src/data/blog/posts.ts`
-Add new entry at position 0 (latest article):
+Update `readTime` from 45 to 25 (the expanded article is detailed but reads naturally, ~25 min is more accurate than 45).
 
-```typescript
-{
-  slug: "torino-citta-campus-atenei-immobiliare-2026",
-  category: "sellers",
-  date: "2026-02-21",
-  author: "Jungle Rent Team",
-  image: "/images/politecnico-torino.avif",
-  readTime: 20,
-  content: "torino-citta-campus-atenei-immobiliare-2026",
-  translations: {
-    it: {
-      title: "Torino citta campus: come atenei e nuovi poli ridisegnano la mappa immobiliare",
-      excerpt: "300 milioni del Politecnico, citta delle scienze a Grugliasco, Metro 2: dove salgono i prezzi quartiere per quartiere.",
-      seo: { title, description, 10 keywords },
-      tags: ["Venditori", "Mercato immobiliare", "Politecnico", "Torino", "Urbanistica"],
-      faqs: [10 voice-optimized FAQs covering masterplan, zones, prices, Metro 2, PNRR beds]
-    },
-    en: { /* mirror */ }
-  }
-}
-```
+## What does NOT change
+- Slug, category, date, image, author
+- FAQs (already comprehensive and correct)
+- SEO metadata (already covers all events)
+- Content clusters and linkable content (already configured)
+- Sitemap entries
 
-### 4. `src/data/blog/contentClusters.ts`
-- Add `torino-citta-campus-atenei-immobiliare-2026` as satellite in the **Investors cluster** (pillar: `investire-real-assets-torino-2025`)
-- Add `torino-citta-campus-atenei-immobiliare-2026` as satellite in the **Sellers cluster** (pillar: `vendere-casa-torino-guida-completa-2025`)
-- Add 3 new `articleRelationships`:
-  - to `investire-real-assets-torino-2025` (high, bidirectional)
-  - to `politecnico-torino-guida-completa` (high, bidirectional)
-  - to `universita-torino-guida-completa` (high, bidirectional)
-
-### 5. `src/data/linkableContent.ts`
-Add enhanced keywords entry in `enhancedBlogKeywords` for the new slug with triggers like `masterplan politecnico`, `citta delle scienze`, `metro 2 torino`, `grugliasco`, `manifattura tabacchi`.
-
-### 6. `public/sitemap-blog.xml`
-Add entry with hreflang for `it` and `en`.
-
-### 7. `public/llms.txt` and `public/ai-assistant-info.txt`
-Add the new article to the resource listings.
-
-## 10 FAQs (Italian, to include in posts.ts)
-
-1. Quanto investe il Politecnico di Torino nel masterplan 2030?
-2. Cosa sono le nuove torri di Corso Castelfidardo?
-3. Quando apre la citta delle scienze a Grugliasco?
-4. Quali quartieri di Torino crescono di piu nel 2026?
-5. Come influisce la Metro 2 sui prezzi degli immobili?
-6. Quanto costa al mq un immobile a Torino nel 2026?
-7. Quanti posti letto studenteschi prevede il PNRR?
-8. Cosa succede nell'area della Manifattura Tabacchi?
-9. Torino conviene rispetto a Milano per investire?
-10. Dove si trovano gli Innovation Hub del Politecnico?
-
-## Quality checklist
-
+## Quality standards applied
 - All headings in sentence case (only first word + proper nouns capitalized)
-- Natural conversational style: sentences under 25 words, no em dashes, active voice
-- All 24+ sources from the PDF cited inline
-- Jungle Rent CTA positioned at market data section and closing
-- No "portfolio shares" language — uses corrected "appartamento specifico" model
+- Natural conversational style, short sentences, no em dashes
+- All internal links use verified existing slugs
+- 19 cited sources preserved
+- No emojis in the final markdown (plain text formatting)
+
