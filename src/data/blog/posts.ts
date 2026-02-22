@@ -906,7 +906,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-09",
     author: "Jungle Rent Team",
     image: "/images/torino-primavera-marzo.jpg",
-    readTime: 45,
+    readTime: 25,
     content: "eventi-torino-marzo-2026",
     translations: {
       it: {
