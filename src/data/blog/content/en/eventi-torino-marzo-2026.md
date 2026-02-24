@@ -1,232 +1,217 @@
 # March 2026 in Turin: art, music and entertainment
 
-March 2026 will be an incredibly rich month for Turin. The calendar spans from major exhibitions to international concerts, iconic musicals to conferences with leading intellectuals.
+If you're thinking about visiting Turin in March, you picked the right month. Four international exhibitions open at the same time. Mika, Renato Zero and Subsonica celebrating thirty years. Musicals in historic theatres, talks with names that fill every seat, and a city waking up after winter with the first outdoor aperitifs along the Po.
+
+Here's everything worth seeing, hearing and doing.
 
 ## The great exhibitions
 
 ### Chiharu Shiota at MAO: "The Soul Trembles"
 
-From October 22, 2025 to June 28, 2026, MAO hosts the most extensive Italian retrospective of Japanese artist Chiharu Shiota. Curated by Mami Kataoka (director of the Mori Art Museum in Tokyo) and Davide Quadrio (director of MAO), the exhibition presents over 70 works.
+This exhibition alone justifies a trip to Turin. MAO gave Chiharu Shiota free rein. The Japanese artist, famous for her interwoven thread installations that fill entire rooms, presents over 70 works across multiple halls. Curated by Mami Kataoka (director of the Mori Art Museum in Tokyo) and Davide Quadrio (MAO director).
 
-The central themes are identity, human fragility, memory and emotional connections. The famous interwoven thread installations transform the museum spaces into contemplative, immersive environments.
+This isn't a look-and-walk-past kind of show. You walk inside it. Red and black threads create labyrinths, corridors, human silhouettes suspended in the void. The most powerful installations:
 
-**Signature installations:**
-- "The Key in the Hand": interwoven threads forming suspended human silhouettes
-- "In Silence": corridors of threads creating sensory labyrinths
-- "The Corridor": an immersive path through layers of material
-- "Accumulation": personal objects woven into monumental compositions
+- "The Key in the Hand": thousands of keys hanging from red threads raining down from the ceiling. Each key represents a memory.
+- "In Silence": a burnt piano wrapped in black threads. Visual silence that speaks louder than any sound.
+- "The Corridor": you walk through it, literally. Layers of material filtering the light.
+- "Accumulation": suitcases, shoes, clothes. Real people's objects woven into massive compositions.
 
-Drawings, photographs, sculptures and video art complete the exhibition.
+Drawings, photographs, sculptures and video art complete the exhibition. Go on Thursday if you can: the museum stays open until 20:00 and it's less crowded.
 
-**Practical information:**
-- **Address:** Via San Domenico 11, Turin (Palazzo Santo Stefano)
-- **Hours:** Tuesday-Sunday 10:00-18:00, Thursday until 20:00
-- **Tickets:** full €10, reduced €7 (under 26, over 65, students), free under 14
-- **Guided tours:** Sunday at 15:00 (booking recommended)
-- **Contacts:** +39 011 4436927 | info@maotorino.it
+**Where and when:**
+- Via San Domenico 11 (Palazzo Santo Stefano)
+- Tuesday-Sunday 10:00-18:00, Thursday until 20:00
+- Full €10, reduced €7 (under 26, over 65, students), free under 14
+- Guided tours on Sundays at 15:00 (book ahead)
+- +39 011 4436927 | info@maotorino.it
 
 ### Futurism at the Royal Museums
 
-At the Chiablese Halls of the Royal Museums, an exhibition that reinterprets one of the most revolutionary artistic movements of 20th-century Italy. The show is organised into four thematic sections.
+If you like art that screams speed and rupture, this one's for you. At the Chiablese Halls of the Royal Museums, Italian Futurism is reinterpreted through four sections that show just how radical this movement was.
 
-**The four sections:**
-1. **Classic Futurism:** the founding works by Marinetti, Boccioni, Severini and Sant'Elia
-2. **Aeropainting:** aerial painting representing flight and speed as metaphors for modernity
-3. **Ceramics and sculpture:** Futurist applied arts, with attention to dynamic forms
-4. **Period photography:** visual documents, manifestos and photographs capturing the energy of the avant-garde
+1. **Classic Futurism:** the bombs of Marinetti, Boccioni, Severini and Sant'Elia. The works that changed the rules.
+2. **Aeropainting:** painting as if you were flying. Flight as obsession, speed as religion.
+3. **Ceramics and sculpture:** Futurism didn't stop at canvas. Forms exploding in three dimensions.
+4. **Period photography:** original manifestos, performance photos, documents capturing the energy of an avant-garde that wanted to burn down museums (and now ends up in them).
 
-**Practical information:**
-- **Address:** Piazza Castello 191, Turin (Royal Museums)
-- **Hours:** Monday 14:00-19:00, Tuesday-Sunday 08:30-19:00
-- **Tickets:** full €12, reduced €8 (18-25 years, over 65), free under 18
-- **Contacts:** +39 011 5611696 | info.museireali@beniculturali.it
+**Where and when:**
+- Piazza Castello 191 (Royal Museums)
+- Monday 14:00-19:00, Tuesday-Sunday 08:30-19:00
+- Full €12, reduced €8 (18-25 years, over 65), free under 18
+- +39 011 5611696 | info.museireali@beniculturali.it
 
 ### Orazio Gentileschi: "A painter on a journey"
 
-Also at the Chiablese Halls, from November 22, 2025 to May 3, 2026. A celebration of Baroque master Orazio Gentileschi (1563-1639), a Pisan painter whose fame in his lifetime rivalled that of Caravaggio, Rubens and Van Dyck.
+Same building, different exhibition. Orazio Gentileschi was a Pisan painter from the 1600s who in his lifetime stood at the same level as Caravaggio, Rubens and Van Dyck. Almost nobody knows him. This exhibition corrects that.
 
-Curated by Annamaria Bava and Gelsomina Spione, the exhibition traces the artist's journeys from Rome to London, via Genoa and the Savoyard courts.
+Curated by Annamaria Bava and Gelsomina Spione, it traces the artist's journeys from Rome to London, via Genoa and the Savoyard courts. The centrepiece is the 1623 Annunciation, painted for the Duke of Savoy. Loans from the Louvre, the Prado and the Vatican Pinacoteca. It's rare to see works of this calibre together in one place.
 
-The great Annunciation altarpiece, created in 1623 for the Duke of Savoy, is the centrepiece of the exhibition. Exceptional loans come from the Louvre (Paris), the Prado (Madrid) and the Vatican Pinacoteca. The exhibition is part of the **Milano Cortina 2026 Cultural Olympiad**.
+The exhibition is part of the Milano Cortina 2026 Cultural Olympiad.
 
-**Practical information:**
-- **Address:** Piazza Castello 191, Turin (Chiablese Halls)
-- **Contacts:** +39 011 5611696 | info.museireali@beniculturali.it
+**Where and when:**
+- Piazza Castello 191 (Chiablese Halls)
+- +39 011 5611696 | info.museireali@beniculturali.it
 
 ### Other ongoing exhibitions
 
-**GAM - Modern Art Gallery (Via Magenta 31):**
-- "Nights. Five centuries of stars, dreams, full moons" (from October 29, 2025)
-- Solo shows by Elisabetta Di Maggio and Linda Fregni Nagler
-- Hours: Tuesday-Sunday 10:00-18:00
-- Tickets: full €8, reduced €5
+**GAM (Via Magenta 31):** "Nights. Five centuries of stars, dreams, full moons" from October 29, 2025. Plus solo shows by Elisabetta Di Maggio and Linda Fregni Nagler. Tuesday-Sunday 10:00-18:00. Full €8, reduced €5.
 
-**Palazzo Bricherasio (Via Accademia Albertina 8):**
-- Exhibition dedicated to sustainable design and eco-conscious innovations
-- Hours: Monday-Sunday 10:00-19:00
-- Tickets: full €10, reduced €7
+**Palazzo Bricherasio (Via Accademia Albertina 8):** sustainable design and eco-conscious innovations. Monday-Sunday 10:00-19:00. Full €10, reduced €7.
 
-**Castello di Rivoli:** Enrico David retrospective.
+**Castello di Rivoli:** Enrico David retrospective. Worth the trip outside the city.
 
 ## Concerts
 
 ### Mika at Inalpi Arena
 
-On **March 4, 2026**, Mika brings his "Live 2026" show to Inalpi Arena. The new album project, produced with Nick Littlemore (Purity Ring, Cut Copy), blends electronic dance, synthpop and psychedelic atmospheres.
+March 4, Mika returns to Turin. Not with the usual pop concert: the new album was produced with Nick Littlemore (Purity Ring, Cut Copy) and blends electronic dance, synthpop and psychedelic atmospheres. The tracks were recorded between Montreal, the Tuscan hills and Bangkok. The result is a sound you don't expect.
 
-The tracks were recorded between Montreal, the Tuscan hills and Bangkok. The setlist alternates classic hits with new compositions in a kaleidoscopic sound.
+The setlist alternates classic hits with new compositions. If you've seen him live, you already know he's a born showman.
 
-**Practical information:**
-- **Venue:** Inalpi Arena, Corso Sebastopoli 123, Turin
-- **Time:** 21:00 (doors 20:00)
-- **Tickets:** €35-65 depending on the zone
-- **Platforms:** ticketmaster.it, vivaticket.com
-- **Contacts:** +39 011 6503000
+**Where and when:**
+- Inalpi Arena, Corso Sebastopoli 123
+- 21:00 (doors 20:00)
+- Tickets €35-65
+- ticketmaster.it | vivaticket.com
+- +39 011 6503000
 
 ### Renato Zero at Teatro Regio
 
-Double date on **March 7 and 8, 2026** with the **"L'ORAZERO IN TOUR"** tour. Renato Zero brings the hits of a fifty-year career together with the 19 tracks from the new album "L'ORAZERO".
+Two nights, March 7 and 8. The tour is called "L'ORAZERO IN TOUR" and celebrates over fifty years of career plus the 19 tracks from the new album "L'ORAZERO".
 
-Expected setlist: timeless classics ("Zerolandia", "Triangolo", "Non Mi Dire"), tracks from the new album and special surprises.
+Setlist: the classics you know even if you're not a fan ("Zerolandia", "Triangolo", "Non Mi Dire"), new tracks and some surprises. At Teatro Regio, not the arena. That means perfect acoustics and an intimate atmosphere.
 
-**Practical information:**
-- **Venue:** Teatro Regio, Piazza Castello 215, Turin
-- **Dates:** March 7 and 8, 2026, at 20:30
-- **Tickets:** €45-85
-- **Contacts:** +39 011 8815241 | info@teatroregio.torino.it
+**Where and when:**
+- Teatro Regio, Piazza Castello 215
+- March 7 and 8, 20:30
+- Tickets €45-85
+- +39 011 8815241 | info@teatroregio.torino.it
 
 ### Subsonica: Cieli su Torino 96-26
 
-The most anticipated project of the year. The Piedmontese band celebrates its **30th anniversary** with four special concerts at Inalpi Arena: March 31, April 1, 3 and 4, 2026.
+This is the event of the year. Subsonica turn thirty and celebrate with four concerts at Inalpi Arena: March 31, April 1, 3 and 4.
 
-Each date will have a **completely different setlist**, encouraging fans to attend multiple shows. Tickets include access to an immersive anthology exhibition featuring unseen photos, memorabilia, iconic stage costumes, original instruments and rare posters.
+But these aren't four repeats. Each night has a completely different setlist. If you go to all four, you'll hear different music every time. Tickets include access to an anthology exhibition with never-seen photos, memorabilia, stage costumes, original instruments and rare posters.
 
-After each concert, DJ sets by the five band members. Turin will become a large open-air museum with dedicated exhibitions in major squares, interactive sound installations, thematic paths through historic neighbourhoods, and special lights and projections.
+After each concert, the five band members do a DJ set. And the whole city transforms: exhibitions in main squares, interactive sound installations, thematic paths through historic neighbourhoods, special lights and projections. Turin becomes an open-air museum dedicated to Subsonica.
 
-**Practical information:**
-- **Venue:** Inalpi Arena, Corso Sebastopoli 123, Turin
-- **Dates:** March 31, April 1, 3, 4, 2026
-- **Tickets:** €40-70 per show
-- **Contacts:** +39 011 6503000
+If you're from Turin, you already know what this band means to the city. If you're not, this is the right time to find out.
+
+**Where and when:**
+- Inalpi Arena, Corso Sebastopoli 123
+- March 31, April 1, 3, 4
+- Tickets €40-70 per night
+- +39 011 6503000
 
 ## Musical theatre
 
 ### Rocky - The Musical
 
-At **Teatro Alfieri from March 26 to 29, 2026**. The production, directed by Luciano Cannito, brings the legend of the Philadelphia boxer to the stage with dance, live music and high-impact choreography.
+At Teatro Alfieri from March 26 to 29. Luciano Cannito directs a production with dance, live music and choreography that brings Rocky Balboa's story from the streets to the spotlight. It works even if you've never seen the film.
 
-**Practical information:**
-- **Address:** Piazza Solferino 1, Turin
-- **Dates:** March 26-29, 2026
-- **Show times:** weekdays 20:30, holidays 16:00
-- **Tickets:** €35-65
-- **Contacts:** +39 011 562 3800 | info@fdfgestioniattivitateatrali.com
+**Where and when:**
+- Piazza Solferino 1
+- Weekdays 20:30, holidays 16:00
+- Tickets €35-65
+- +39 011 562 3800 | info@fdfgestioniattivitateatrali.com
 
 ### Amadeus at Teatro Carignano
 
-From **March 1 to 8, 2026**, the theatrical show dedicated to composer Wolfgang Amadeus Mozart. The production blends theatre, music and drama to tell the story of the Salzburg genius.
+March 1 to 8. Mozart's life told through theatre, music and drama. Eight performances with varying times:
 
-**Show schedule:**
 - March 1: 19:30
 - March 2: 15:30 and 19:30
 - March 3-7: 19:30
 - March 8: 15:30 and 19:30
 
-**Practical information:**
-- **Address:** Piazza Carignano 6, Turin
-- **Contacts:** +39 011 5169111 | teatrostabiletorino.it
+**Where:** Piazza Carignano 6. Contacts: +39 011 5169111 | teatrostabiletorino.it
 
 ### 7 Brides for 7 Brothers
 
-Returns to Turin theatres in March with a cast of great charisma. An opportunity to relive the classics of musical theatre.
+Returns to Turin theatres in March. A classic musical with a cast that knows what it's doing.
 
 ## Conferences and talks
 
-March 2026 gathers appointments with prominent national figures:
+March brings four names to Turin that fill any room:
 
-- **Vincenzo Schettini** ("La Fisica che ci piace"): a physicist who makes science fascinating through experiments and outreach
-- **Umberto Galimberti** ("The Utopia of Happiness"): the philosopher reflects on the conditions of contemporary happiness
-- **Paolo Crepet** ("The Crime of Thinking"): psychiatry, society and the right to critical thought
-- **Chiara Francini** ("Forte e Chiara"): the actress discusses her career and female representation in cinema
+- **Vincenzo Schettini** ("La Fisica che ci piace"): the teacher who made physics go viral. Live experiments and outreach with rhythm.
+- **Umberto Galimberti** ("The Utopia of Happiness"): the philosopher tackles the question everyone asks and nobody can answer.
+- **Paolo Crepet** ("The Crime of Thinking"): psychiatry, society and the right to hold uncomfortable opinions.
+- **Chiara Francini** ("Forte e Chiara"): career, female representation in cinema and plenty of humour.
 
 ## International Women's Day - March 8
 
-On March 8, 2026, Turin celebrates International Women's Day with a city-wide programme:
+On March 8, Turin puts together a city-wide programme for International Women's Day:
 
-- Conferences and debates in major theatres (Teatro Regio, Carignano, Alfieri)
+- Conferences and debates in major theatres (Regio, Carignano, Alfieri)
 - Exhibitions dedicated to contemporary female artists (GAM, MAO, Royal Museums)
 - Concerts and shows featuring women
-- Reduced admission to museums and galleries for female visitors
+- Reduced museum admission for female visitors
 
-Check the [City of Turin events calendar](https://eventi.comune.torino.it/) for the full programme.
+Full programme on the [City of Turin events calendar](https://eventi.comune.torino.it/).
 
 ## Outdoor activities
 
-March marks the arrival of spring. With milder temperatures and longer days, you can explore Turin outdoors.
+March in Turin means spring. Temperatures rise, days get longer, and being outside feels good again.
 
 ### Parco del Valentino
 
-The city's green lung (about 60 hectares) awakens after winter. Days get longer and locals return to stroll along the Po. Ideal for jogging on dedicated paths, picnics in equipped areas and relaxation.
+Sixty hectares of green along the Po. After months of grey, the park fills with people. Jogging on dedicated paths, picnics in equipped areas, walks along the river. The perfect place to decompress between an exhibition and a concert.
 
 ### Cycling along the Po
 
-The cycle path along the Po extends for over **50 km** in the Turin area. You can rent bikes with sharing services: ToBike, Dott and Lime.
+The cycle path along the Po covers over 50 km in the Turin area. Rent a bike with ToBike, Dott or Lime. For advanced routes, read our [cycling guide for Turin](/blog/cicloturismo-avanzato-torino).
 
-For more advanced routes, read our [cycling guide for Turin](/blog/cicloturismo-avanzato-torino).
+Three recommended routes in March:
 
-**Recommended routes in March:**
-
-1. **Murazzi, Parco del Valentino, Borgo Medievale (5 km):** easy, about 30 minutes. Ideal for beginners, with panoramic rest stops.
-
-2. **Turin centre, Moncalieri, Superga (25 km):** medium difficulty, 2-3 hours. Climb towards the Basilica of Superga with city views.
-
-3. **Complete tour of the Turin hills (50 km):** hard, 5-6 hours. Full circular route, suited for experienced cyclists.
+1. **Murazzi, Parco del Valentino, Borgo Medievale (5 km):** easy, 30 minutes. Perfect for warming up with panoramic stops.
+2. **Turin centre, Moncalieri, Superga (25 km):** medium, 2-3 hours. The climb to Superga rewards you with a view you won't forget.
+3. **Complete hill circuit (50 km):** hard, 5-6 hours. Full loop for serious cyclists.
 
 ## Getting around Turin
 
 ### GTT transport
 
-The GTT network (metro, tram, buses) covers the entire metropolitan area.
-
-If you are arriving from outside the city, read our guide on [how to reach Turin sustainably](/blog/viaggiare-sostenibile-torino-guida).
+Metro, tram, buses. The GTT network covers the entire metropolitan area. If you're arriving from outside the city, check our guide on [how to reach Turin sustainably](/blog/viaggiare-sostenibile-torino-guida).
 
 **Fares:**
-- **Single ticket:** €2.00 (100 minutes)
-- **Daily:** €5.50
-- **2-day:** €8.50
-- **Weekly:** €14.00
-- **Under 26 annual:** €258 (ISEE reductions available)
+- Single ticket: €2.00 (100 minutes)
+- Daily: €5.50
+- 2-day: €8.50
+- Weekly: €14.00
+- Under 26 annual: €258 (ISEE reductions available)
 
 **Useful apps:** Moovit, Google Maps, GTT App
 
 ### How to reach event venues
 
-| Venue | Transport | Directions |
-|-------|-----------|------------|
-| Inalpi Arena | Metro + walk | Line 1 Lingotto stop + 10 min walk, or bus 1, 35 |
-| Teatro Regio | On foot | Historic centre, 5 minutes from Piazza Castello |
-| MAO | On foot | Quadrilatero Romano, walkable from the centre |
-| Teatro Alfieri | On foot | Piazza Solferino, central pedestrian area |
-| Royal Museums | Tram/Metro | Piazza Castello, well connected |
-| GAM | Tram | Via Magenta, line 15 |
+| Venue | How to get there |
+|-------|-----------------|
+| Inalpi Arena | Metro line 1, Lingotto stop + 10 min walk. Or bus 1, 35 |
+| Teatro Regio | Walk from the centre, 5 minutes from Piazza Castello |
+| MAO | Walk through the Quadrilatero Romano |
+| Teatro Alfieri | Piazza Solferino, pedestrian zone |
+| Royal Museums | Piazza Castello, tram or metro |
+| GAM | Via Magenta, tram line 15 |
 
 ## Where to eat in spring
 
-March brings the first spring specialties of Piedmontese cuisine. For more suggestions, read our guide on [where to eat in Turin on a budget](/blog/dove-mangiare-torino-studenti).
+March brings the first seasonal produce. For a full guide to affordable spots, read [where to eat in Turin on a budget](/blog/dove-mangiare-torino-studenti).
 
-### Seasonal dishes
+### Dishes to try
 
-- **Santena asparagus:** with fried eggs and Fontina fondue
-- **Piedmontese mixed fry:** spring version with fresh vegetables, artichokes and asparagus
-- **Agnolotti del plin:** fresh pasta filled with meat, herbs and parmesan
-- **Finanziera:** ancient Turin recipe with veal offal, sweetbreads, liver and mushrooms
+- **Santena asparagus** with fried eggs and Fontina fondue. The taste of Piedmontese spring on a plate.
+- **Piedmontese mixed fry** spring version: with artichokes, asparagus and fresh vegetables instead of the usual winter offal.
+- **Agnolotti del plin:** fresh pasta filled with meat, herbs and parmesan. The dish every Turin restaurant makes its own way.
+- **Finanziera:** ancient recipe with veal offal, sweetbreads, liver and mushrooms. Not for everyone, but those who love it never go back.
 
-### Recommended areas
+### Where to eat
 
-- **Quadrilatero Romano:** traditional restaurants and historic trattorias. Close to MAO: perfect combo with a morning exhibition and lunch nearby
-- **[San Salvario](/blog/san-salvario-guida-studenti):** international cuisine, young venues and sunset aperitifs
-- **Piazza Vittorio Veneto:** aperitifs with Po River and hills views
-- **Vanchiglia:** traditional osterias and authentic wine bars
+- **Quadrilatero Romano:** historic trattorias and traditional restaurants. Steps from MAO. Exhibition in the morning, lunch here, tram to the theatre in the evening.
+- **[San Salvario](/blog/san-salvario-guida-studenti):** international cuisine, young venues, sunset aperitifs.
+- **Piazza Vittorio Veneto:** aperitifs overlooking the Po and the hills. Turin's most beautiful spot at sunset.
+- **Vanchiglia:** traditional osterias and authentic wine bars. The bohemian atmosphere you won't find anywhere else.
 
 ## Useful numbers
 
@@ -239,27 +224,27 @@ March brings the first spring specialties of Piedmontese cuisine. For more sugge
 | Turismo Torino | +39 011 535181 |
 | GTT Info | +39 011 5764 |
 
-## How to navigate among events
+## How to plan your Turin March
 
-With such a dense calendar, here are some practical tips:
+The calendar is packed. Here's how not to get lost in the details:
 
-1. **Choose your interests.** Contemporary art? Head to MAO and GAM. Historic art? Royal Museums with Futurism and Gentileschi. Live music? Inalpi Arena for Mika and Subsonica, Teatro Regio for Renato Zero. Musical theatre? Alfieri for Rocky, Carignano for Amadeus.
+1. **Start from your interests.** Contemporary art? MAO and GAM. Classical art? Royal Museums with Futurism and Gentileschi. Live music? Inalpi Arena for Mika and Subsonica, Teatro Regio for Renato Zero. Musicals? Alfieri for Rocky, Carignano for Amadeus.
 
-2. **Book in advance.** Many events sell out months ahead. Subsonica concerts require immediate booking. Exhibitions are busiest on weekends.
+2. **Book now.** Subsonica will sell out. Renato Zero is nearly gone. Exhibitions are best visited on weekdays.
 
-3. **Plan by geography.** The Quadrilatero Romano clusters MAO, Royal Museums and traditional restaurants. The historic centre concentrates Teatro Regio, Carignano and Alfieri within walking distance. Inalpi Arena at Lingotto is reachable by metro.
+3. **Think in zones.** The Quadrilatero Romano groups MAO, Royal Museums and the best restaurants. The historic centre concentrates Teatro Regio, Carignano and Alfieri within walking distance. Inalpi Arena is a metro ride from Lingotto.
 
-4. **Use public transport.** Buy the GTT daily pass (€5.50) if visiting multiple zones. Use bike sharing for short distances.
+4. **Use public transport.** The GTT daily pass costs €5.50 and gets you everywhere. For short distances, grab a sharing bike.
 
-Ideal combo: morning exhibition, lunch nearby, Po River walk, evening show.
+The perfect plan: exhibition in the morning, lunch in the neighbourhood, walk along the Po, concert or show in the evening.
 
-To discover [Turin nightlife](/blog/torino-nightlife-guide), read our dedicated guide.
+To find out what happens after dinner, read our guide to [Turin nightlife](/blog/torino-nightlife-guide).
 
 ## Conclusion
 
-March 2026 offers international retrospectives, world star concerts, musical celebrations tied to local memory and conferences by leading intellectuals. With the Subsonica 30th anniversary, the Shiota and Gentileschi exhibitions and musicals in historic theatres, the city delivers a cultural programme rare in its intensity and variety.
+March 2026 is the month Turin brings out its best. Four international exhibitions, three unmissable concerts, musicals in historic theatres and a city reborn with spring. The Subsonica 30th anniversary alone is worth the trip. Add Shiota at MAO and Gentileschi at the Royal Museums, and you have a cultural programme few European cities can match in the same month.
 
-Check the official calendars, book your tickets and let curiosity guide you. To explore Turin throughout the year, read our complete guide to [Turin in every season](/blog/torino-ogni-stagione-turisti).
+Check the calendars, book the tickets and come. To discover Turin throughout the year, read our guide to [Turin in every season](/blog/torino-ogni-stagione-turisti).
 
 ---
 
