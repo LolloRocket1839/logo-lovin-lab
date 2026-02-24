@@ -18,7 +18,8 @@ import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
-import { useBlogLanguage } from "@/hooks/useBlogLanguage";
+import { useBlogLanguage, type BlogLanguage } from "@/hooks/useBlogLanguage";
+import { BlogLanguageToggle } from "@/components/blog/BlogLanguageToggle";
 import { getCategoryColor, getAbsoluteImageUrl, formatDate } from "@/lib/blog";
 
 const BlogPost = () => {
@@ -26,7 +27,9 @@ const BlogPost = () => {
   const { t } = useTranslation();
   const [content, setContent] = useState<string>("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const currentLang = useBlogLanguage();
+  const globalLang = useBlogLanguage();
+  const [langOverride, setLangOverride] = useState<BlogLanguage | null>(null);
+  const currentLang = langOverride ?? globalLang;
   
   const post = slug ? getPostBySlug(slug) : null;
   const translatedData = post?.translations[currentLang];
@@ -318,11 +321,14 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
                     <span>{post.author}</span>
                   </div>
 
-                  <ShareButton 
-                    title={translatedData.title}
-                    excerpt={translatedData.excerpt}
-                    url={window.location.href}
-                  />
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <ShareButton 
+                      title={translatedData.title}
+                      excerpt={translatedData.excerpt}
+                      url={window.location.href}
+                    />
+                    <BlogLanguageToggle currentLang={currentLang} onToggle={setLangOverride} />
+                  </div>
                 </header>
 
                 {/* Featured Image with Parallax */}
