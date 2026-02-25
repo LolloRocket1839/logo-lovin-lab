@@ -2,10 +2,10 @@ import { Helmet } from 'react-helmet';
 import { BlogPost } from '@/types/blog';
 
 const CANONICAL_DOMAIN = 'junglerent.it';
+const BASE_URL = `https://${CANONICAL_DOMAIN}`;
 
 /**
  * Deployment guard: validates all URLs in structured data point to the canonical domain.
- * Logs warnings in development; silently passes in production.
  */
 function assertCanonicalDomain(schema: Record<string, unknown>, label: string) {
   if (import.meta.env.PROD) return;
@@ -30,10 +30,9 @@ interface ArticleStructuredDataProps {
 const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataProps) => {
   const translation = post.translations[language];
   
-  // Parse date for ISO format
   const publishedDate = new Date(post.date).toISOString();
-  // Use current date as modified date if not specified
-  const modifiedDate = new Date().toISOString().split('T')[0] + 'T00:00:00.000Z';
+  // Use published date as modified date (stable, doesn't change on every render)
+  const modifiedDate = publishedDate;
   
   const articleSchema = {
     "@context": "https://schema.org",
@@ -42,18 +41,18 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
     "description": translation.seo.description,
     "image": post.image.startsWith('http') 
       ? post.image 
-      : `https://junglerent.it${post.image}`,
+      : `${BASE_URL}${post.image}`,
     "author": {
       "@type": "Person",
       "name": post.author,
-      "url": "https://junglerent.it/chi-siamo"
+      "url": `${BASE_URL}/chi-siamo`
     },
     "publisher": {
       "@type": "Organization",
       "name": "Jungle Rent",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://junglerent.it/jungle-rent-logo.svg"
+        "url": `${BASE_URL}/jungle-rent-logo.svg`
       }
     },
     "datePublished": publishedDate,
@@ -61,6 +60,11 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": url
+    },
+    "isPartOf": {
+      "@type": "CollectionPage",
+      "@id": `${BASE_URL}/blog`,
+      "name": "Jungle Rent Blog"
     },
     "articleSection": getCategoryLabel(post.category, language),
     "keywords": translation.seo.keywords.join(', '),
@@ -72,8 +76,8 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
     }
   };
 
-  // Deployment domain guard
   assertCanonicalDomain(articleSchema as Record<string, unknown>, `Article: ${post.slug}`);
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -82,13 +86,13 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://junglerent.it"
+        "item": BASE_URL
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://junglerent.it/blog"
+        "item": `${BASE_URL}/blog`
       },
       {
         "@type": "ListItem",
@@ -99,8 +103,21 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
     ]
   };
 
-  // Deployment domain guard
   assertCanonicalDomain(breadcrumbSchema as Record<string, unknown>, `Breadcrumb: ${post.slug}`);
+
+  // FAQ schema from post translations
+  const faqSchema = translation.faqs && translation.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": translation.faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
 
   return (
     <Helmet>
@@ -113,6 +130,13 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
       </script>
+
+      {/* FAQ Schema (if available) */}
+      {faqSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      )}
       
       {/* AI-specific meta tags for AEO */}
       <meta name="article:published_time" content={publishedDate} />
@@ -131,7 +155,6 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
   );
 };
 
-// Helper function to get category label
 function getCategoryLabel(category: string, language: 'it' | 'en'): string {
   const labels: Record<string, Record<string, string>> = {
     students: { it: 'Studenti', en: 'Students' },
@@ -143,7 +166,6 @@ function getCategoryLabel(category: string, language: 'it' | 'en'): string {
   return labels[category]?.[language] || category;
 }
 
-// Estimate word count from read time (assuming 200 words per minute)
 function estimateWordCount(readTime: number): number {
   return readTime * 200;
 }

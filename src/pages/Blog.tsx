@@ -5,7 +5,6 @@ import { BlogFilters } from "@/components/blog/BlogFilters";
 import { BlogGrid } from "@/components/blog/BlogGrid";
 import { PillarArticlesSection } from "@/components/blog/PillarArticlesSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { StructuredData } from "@/components/StructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 import { AISearchBox } from "@/components/AISearchBox";
@@ -104,7 +103,6 @@ const Blog = () => {
         </script>
       </Helmet>
       
-      <StructuredData />
       <Navigation />
       
       <div className="pt-16">

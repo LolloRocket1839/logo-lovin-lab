@@ -1,7 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { StructuredData } from "@/components/StructuredData";
+import ArticleStructuredData from "@/components/blog/ArticleStructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCTA } from "@/components/blog/BlogCTA";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
@@ -101,83 +101,7 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
   };
 
   const absoluteImageUrl = getAbsoluteImageUrl(post.image);
-
-  // Structured Data Schemas
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": translatedData.title,
-    "description": translatedData.excerpt,
-    "image": absoluteImageUrl,
-    "author": {
-      "@type": "Person",
-      "name": post.author
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Jungle Rent",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://junglerent.it/jungle-rent-logo.svg"
-      }
-    },
-    "datePublished": post.date,
-    "dateModified": post.date,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://junglerent.it/blog/${post.slug}`
-    },
-    "keywords": translatedData.seo.keywords.join(", "),
-    "articleSection": post.category,
-    "inLanguage": currentLang
-  };
-
-  const categoryName = t(`blog.categories.${post.category}`);
-  
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://junglerent.it/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://junglerent.it/blog"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": categoryName,
-        "item": `https://junglerent.it/blog?category=${post.category}`
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "name": translatedData.title,
-        "item": `https://junglerent.it/blog/${post.slug}`
-      }
-    ]
-  };
-
-  // FAQPage schema - dynamically generated from post.translations[lang].faqs
-  const faqSchema = translatedData.faqs && translatedData.faqs.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": translatedData.faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  } : null;
+  const canonicalUrl = `https://junglerent.it/blog/${post.slug}`;
 
   return (
     <main role="main" className="min-h-screen">
@@ -185,12 +109,12 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
         <title>{translatedData.seo.title}</title>
         <meta name="description" content={translatedData.seo.description} />
         <meta name="keywords" content={translatedData.seo.keywords.join(', ')} />
-        <link rel="canonical" href={`https://junglerent.it/blog/${post.slug}`} />
+        <link rel="canonical" href={canonicalUrl} />
         
         {/* Hreflang for multilingual SEO */}
-        <link rel="alternate" hrefLang="it" href={`https://junglerent.it/blog/${post.slug}`} />
-        <link rel="alternate" hrefLang="en" href={`https://junglerent.it/blog/${post.slug}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://junglerent.it/blog/${post.slug}`} />
+        <link rel="alternate" hrefLang="it" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
         
         {/* Open Graph */}
         <meta property="og:title" content={translatedData.seo.title} />
@@ -198,7 +122,7 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
         <meta property="og:image" content={absoluteImageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:url" content={`https://junglerent.it/blog/${post.slug}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Jungle Rent" />
         <meta property="og:locale" content={currentLang === 'it' ? "it_IT" : "en_US"} />
@@ -218,39 +142,17 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
         <meta name="twitter:image" content={absoluteImageUrl} />
         <meta name="twitter:image:alt" content={translatedData.title} />
 
-        {/* AI Crawlers - Citation & Attribution for Articles */}
-        <meta name="citation_title" content={translatedData.seo.title} />
-        <meta name="citation_author" content={post.author} />
-        <meta name="citation_publication_date" content={post.date} />
-        <meta name="citation_online_date" content={post.date} />
-        <meta name="citation_publisher" content="Jungle Rent S.r.l." />
-        <meta name="citation_language" content={currentLang} />
-        <meta name="citation_keywords" content={translatedData.seo.keywords.join('; ')} />
-        <meta name="citation_abstract" content={translatedData.excerpt} />
-        <meta name="citation_fulltext_html_url" content={`https://junglerent.it/blog/${post.slug}`} />
-        
         {/* AI Knowledge Base Links */}
         <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />
-
-        {/* Structured Data - Article Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify(articleSchema)}
-        </script>
-        
-        {/* Structured Data - Breadcrumb Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        
-        {/* Structured Data - FAQ Schema */}
-        {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
-        )}
       </Helmet>
       
-      <StructuredData />
+      {/* Page-specific structured data: Article + Breadcrumb + FAQ */}
+      <ArticleStructuredData 
+        post={post} 
+        language={currentLang} 
+        url={canonicalUrl} 
+      />
+      
       <Navigation />
       
       

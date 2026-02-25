@@ -171,5 +171,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: February 21, 2026
-Version: 3.7 - Added Torino città campus article (university expansion + real estate map)
+Last Updated: February 25, 2026
+Version: 3.8 - Drastic SEO/AEO overhaul, March 2026 events, schema refactor
