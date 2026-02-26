@@ -6,21 +6,21 @@
   <!-- AI Knowledge Base Files -->
   <url>
     <loc>https://junglerent.it/llms.txt</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://junglerent.it/llms-full.txt</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://junglerent.it/ai-assistant-info.txt</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -28,7 +28,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://junglerent.it/</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/" />
@@ -47,7 +47,7 @@
   <!-- About Page -->
   <url>
     <loc>https://junglerent.it/chi-siamo</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
@@ -61,7 +61,7 @@
   <!-- Investors Page -->
   <url>
     <loc>https://junglerent.it/investitori</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
@@ -77,7 +77,7 @@
   <!-- Investor Zones Index -->
   <url>
     <loc>https://junglerent.it/investitori/zone</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone" />
@@ -88,7 +88,7 @@
   <!-- Investor Zone: Cenisia -->
   <url>
     <loc>https://junglerent.it/investitori/zone/cenisia</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cenisia" />
@@ -104,7 +104,7 @@
   <!-- Investor Zone: Aurora -->
   <url>
     <loc>https://junglerent.it/investitori/zone/aurora</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/aurora" />
@@ -120,7 +120,7 @@
   <!-- Investor Zone: San Salvario -->
   <url>
     <loc>https://junglerent.it/investitori/zone/san-salvario</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
@@ -136,7 +136,7 @@
   <!-- Investor Zone: Vanchiglia -->
   <url>
     <loc>https://junglerent.it/investitori/zone/vanchiglia</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/vanchiglia" />
@@ -152,7 +152,7 @@
   <!-- Investor Zone: Lingotto -->
   <url>
     <loc>https://junglerent.it/investitori/zone/lingotto</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/lingotto" />
@@ -168,7 +168,7 @@
   <!-- Investor Zone: Barriera di Milano -->
   <url>
     <loc>https://junglerent.it/investitori/zone/barriera-di-milano</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
@@ -184,7 +184,7 @@
   <!-- Investor Zone: Crocetta -->
   <url>
     <loc>https://junglerent.it/investitori/zone/crocetta</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/crocetta" />
@@ -200,7 +200,7 @@
   <!-- Investor Zone: Borgo Vittoria -->
   <url>
     <loc>https://junglerent.it/investitori/zone/borgo-vittoria</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
@@ -216,7 +216,7 @@
   <!-- Investor Zone: San Donato -->
   <url>
     <loc>https://junglerent.it/investitori/zone/san-donato</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-donato" />
@@ -232,7 +232,7 @@
   <!-- Investor Zone: Parella -->
   <url>
     <loc>https://junglerent.it/investitori/zone/parella</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/parella" />
@@ -248,7 +248,7 @@
   <!-- Investor Zone: Santa Rita -->
   <url>
     <loc>https://junglerent.it/investitori/zone/santa-rita</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/santa-rita" />
@@ -264,7 +264,7 @@
   <!-- Investor Zone: Cit Turin -->
   <url>
     <loc>https://junglerent.it/investitori/zone/cit-turin</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cit-turin" />
@@ -280,7 +280,7 @@
   <!-- Investor Zone: Campidoglio -->
   <url>
     <loc>https://junglerent.it/investitori/zone/campidoglio</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/campidoglio" />
@@ -298,7 +298,7 @@
   <!-- Sell Property Page - FEATURED SERVICE -->
   <url>
     <loc>https://junglerent.it/vendi</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendi" />
@@ -309,7 +309,7 @@
   <!-- Students Page -->
   <url>
     <loc>https://junglerent.it/studenti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti" />
@@ -323,7 +323,7 @@
   <!-- Student Tools - Budget Calculator -->
   <url>
     <loc>https://junglerent.it/studenti/strumenti/budget</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti/strumenti/budget" />
@@ -334,7 +334,7 @@
   <!-- Student Tools - Grade Calculator -->
   <url>
     <loc>https://junglerent.it/studenti/strumenti/media</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti/strumenti/media" />
@@ -345,7 +345,7 @@
   <!-- Student Tools - Exam Session Planner -->
   <url>
     <loc>https://junglerent.it/studenti/strumenti/sessione</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti/strumenti/sessione" />
@@ -356,7 +356,7 @@
   <!-- Gyms Directory -->
   <url>
     <loc>https://junglerent.it/strumenti/palestre-torino-studenti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
@@ -367,7 +367,7 @@
   <!-- Property Valuation Tool -->
   <url>
     <loc>https://junglerent.it/valutazione-immobile</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/valutazione-immobile" />
@@ -378,7 +378,7 @@
   <!-- Study Spaces Directory -->
   <url>
     <loc>https://junglerent.it/strumenti/aule-studio-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/aule-studio-torino" />
@@ -389,7 +389,7 @@
   <!-- Cheap Eats Directory -->
   <url>
     <loc>https://junglerent.it/strumenti/dove-mangiare-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/dove-mangiare-torino" />
@@ -400,7 +400,7 @@
   <!-- Student Services Directory -->
   <url>
     <loc>https://junglerent.it/strumenti/sportelli-studenti-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
@@ -413,7 +413,7 @@
   <!-- Neighborhoods Index -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
@@ -424,7 +424,7 @@
   <!-- Neighborhood: San Salvario -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/san-salvario</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
@@ -440,7 +440,7 @@
   <!-- Neighborhood: Vanchiglia -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/vanchiglia</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
@@ -456,7 +456,7 @@
   <!-- Neighborhood: Crocetta -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/crocetta</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
@@ -472,7 +472,7 @@
   <!-- Neighborhood: Santa Rita -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/santa-rita</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
@@ -488,7 +488,7 @@
   <!-- Neighborhood: Cenisia -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/cenisia</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
@@ -504,7 +504,7 @@
   <!-- Neighborhood: Cit Turin -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/cit-turin</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
@@ -515,7 +515,7 @@
   <!-- Neighborhood: Campidoglio -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/campidoglio</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
@@ -531,7 +531,7 @@
   <!-- Neighborhood: Aurora -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/aurora</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/aurora" />
@@ -547,7 +547,7 @@
   <!-- Neighborhood: Lingotto -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/lingotto</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
@@ -563,7 +563,7 @@
   <!-- Neighborhood: San Paolo -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/san-paolo</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
@@ -579,7 +579,7 @@
   <!-- Blog Page -->
   <url>
     <loc>https://junglerent.it/blog</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
@@ -593,7 +593,7 @@
   <!-- Blog Post: Jungle Control December 2025 -->
   <url>
     <loc>https://junglerent.it/blog/jungle-control-dicembre-2025</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/jungle-control-dicembre-2025" />
@@ -604,7 +604,7 @@
   <!-- Blog Post: Props Gestione Immobiliare Semplificata - FEATURED -->
   <url>
     <loc>https://junglerent.it/blog/props-gestione-immobiliare-semplificata</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/props-gestione-immobiliare-semplificata" />
@@ -615,7 +615,7 @@
   <!-- Blog Post: Palestre Torino studenti guida completa -->
   <url>
     <loc>https://junglerent.it/blog/palestre-torino-studenti-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/palestre-torino-studenti-guida-completa" />
@@ -626,7 +626,7 @@
   <!-- Blog Post: Tajarin piemontesi guida completa -->
   <url>
     <loc>https://junglerent.it/blog/tajarin-piemontesi-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
@@ -645,7 +645,7 @@
   <!-- Blog Post: Cioccolaterie Torino guida completa -->
   <url>
     <loc>https://junglerent.it/blog/cioccolaterie-torino-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
@@ -664,7 +664,7 @@
   <!-- Blog Post: Panettoni e Pandori Torino guida 2025 -->
   <url>
     <loc>https://junglerent.it/blog/panettoni-pandori-torino-guida-2025</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/panettoni-pandori-torino-guida-2025" />
@@ -675,7 +675,7 @@
   <!-- Blog Post: Vendere casa Torino guida completa 2025 -->
   <url>
     <loc>https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
@@ -694,7 +694,7 @@
   <!-- Blog Post: Valutazione immobiliare Torino guida completa -->
   <url>
     <loc>https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa" />
@@ -705,7 +705,7 @@
   <!-- Blog Post: Eventi Torino gennaio 2026 -->
   <url>
     <loc>https://junglerent.it/blog/eventi-torino-gennaio-2026</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-gennaio-2026" />
@@ -721,7 +721,7 @@
   <!-- Blog Post: Eventi Torino febbraio 2026 -->
   <url>
     <loc>https://junglerent.it/blog/eventi-torino-febbraio-2026</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
@@ -740,7 +740,7 @@
   <!-- Blog Post: Eventi Torino marzo 2026 -->
   <url>
     <loc>https://junglerent.it/blog/eventi-torino-marzo-2026</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
@@ -759,7 +759,7 @@
   <!-- Blog Post: Cicloturismo avanzato Torino -->
   <url>
     <loc>https://junglerent.it/blog/cicloturismo-avanzato-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
@@ -778,7 +778,7 @@
   <!-- Blog Post: Viaggiare sostenibile Torino guida -->
   <url>
     <loc>https://junglerent.it/blog/viaggiare-sostenibile-torino-guida</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
@@ -797,7 +797,7 @@
   <!-- Blog Post: Carnevale Ivrea Battaglia Arance 2026 -->
   <url>
     <loc>https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026" />
@@ -816,7 +816,7 @@
   <!-- Blog Post: Università di Torino guida completa -->
   <url>
     <loc>https://junglerent.it/blog/universita-torino-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/universita-torino-guida-completa" />
@@ -832,7 +832,7 @@
   <!-- Blog Post: Politecnico di Torino guida completa -->
   <url>
     <loc>https://junglerent.it/blog/politecnico-torino-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/politecnico-torino-guida-completa" />
@@ -848,7 +848,7 @@
   <!-- Blog Post: Raccolta differenziata Torino guida -->
   <url>
     <loc>https://junglerent.it/blog/raccolta-differenziata-torino-guida</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/raccolta-differenziata-torino-guida" />
@@ -864,7 +864,7 @@
   <!-- Blog Post: Mercati storici Torino chiusure -->
   <url>
     <loc>https://junglerent.it/blog/mercati-storici-torino-chiusure</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mercati-storici-torino-chiusure" />
@@ -880,7 +880,7 @@
   <!-- Blog Post: Guida volontariato Torino -->
   <url>
     <loc>https://junglerent.it/blog/guida-volontariato-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/guida-volontariato-torino" />
@@ -896,7 +896,7 @@
   <!-- Blog Post: Aule studio Torino guida completa -->
   <url>
     <loc>https://junglerent.it/blog/aule-studio-torino-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/aule-studio-torino-guida-completa" />
@@ -912,7 +912,7 @@
   <!-- Blog Post: Torino nightlife guide -->
   <url>
     <loc>https://junglerent.it/blog/torino-nightlife-guide</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-nightlife-guide" />
@@ -928,7 +928,7 @@
   <!-- Blog Post: Student Housing Italia Savills 2025 -->
   <url>
     <loc>https://junglerent.it/blog/student-housing-italia-savills-2025</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
@@ -947,7 +947,7 @@
   <!-- Blog Post: Investire real assets Torino 2025 -->
   <url>
     <loc>https://junglerent.it/blog/investire-real-assets-torino-2025</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/investire-real-assets-torino-2025" />
@@ -963,7 +963,7 @@
   <!-- Blog Post: Torino digital nomads guide -->
   <url>
     <loc>https://junglerent.it/blog/torino-digital-nomads-guide</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-digital-nomads-guide" />
@@ -979,7 +979,7 @@
   <!-- Blog Post: Quartieri sicuri donne Torino -->
   <url>
     <loc>https://junglerent.it/blog/quartieri-sicuri-donne-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/quartieri-sicuri-donne-torino" />
@@ -995,7 +995,7 @@
   <!-- Blog Post: Torino ogni stagione turisti -->
   <url>
     <loc>https://junglerent.it/blog/torino-ogni-stagione-turisti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
@@ -1011,7 +1011,7 @@
   <!-- Blog Post: Torino novembre turisti -->
   <url>
     <loc>https://junglerent.it/blog/torino-novembre-turisti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-novembre-turisti" />
@@ -1027,7 +1027,7 @@
   <!-- Blog Post: Torino dicembre turisti -->
   <url>
     <loc>https://junglerent.it/blog/torino-dicembre-turisti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-dicembre-turisti" />
@@ -1043,7 +1043,7 @@
   <!-- Blog Post: Mobilità sostenibile Torino studenti -->
   <url>
     <loc>https://junglerent.it/blog/mobilita-sostenibile-torino-studenti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mobilita-sostenibile-torino-studenti" />
@@ -1059,7 +1059,7 @@
   <!-- Blog Post: Mutui investitori immobiliari guida completa -->
   <url>
     <loc>https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa" />
@@ -1075,7 +1075,7 @@
   <!-- Blog Post: Migliori gelaterie Torino studenti -->
   <url>
     <loc>https://junglerent.it/blog/migliori-gelaterie-torino-studenti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/migliori-gelaterie-torino-studenti" />
@@ -1091,7 +1091,7 @@
   <!-- Blog Post: Dove vivere Torino studenti Politecnico -->
   <url>
     <loc>https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico" />
@@ -1107,7 +1107,7 @@
   <!-- Blog Post: Dove mangiare a Torino da studente -->
   <url>
     <loc>https://junglerent.it/blog/dove-mangiare-torino-studenti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
@@ -1123,7 +1123,7 @@
   <!-- Blog Post: San Salvario guida studenti -->
   <url>
     <loc>https://junglerent.it/blog/san-salvario-guida-studenti</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
@@ -1139,7 +1139,7 @@
   <!-- Blog Post: Emergenze affitti Torino diritti inquilini -->
   <url>
     <loc>https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini" />
@@ -1150,7 +1150,7 @@
   <!-- Neighborhood Pages - Room Rentals Turin -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
@@ -1160,7 +1160,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/san-salvario</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
@@ -1175,7 +1175,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/vanchiglia</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
@@ -1185,7 +1185,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/crocetta</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
@@ -1200,7 +1200,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/santa-rita</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
@@ -1210,7 +1210,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/cenisia</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
@@ -1220,7 +1220,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/cit-turin</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
@@ -1230,7 +1230,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/campidoglio</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
@@ -1240,7 +1240,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/aurora</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/aurora" />
@@ -1250,7 +1250,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/lingotto</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
@@ -1260,7 +1260,7 @@
 
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino/san-paolo</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
@@ -1271,7 +1271,7 @@
   <!-- Privacy Policy -->
   <url>
     <loc>https://junglerent.it/privacy</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/privacy" />
@@ -1282,7 +1282,7 @@
   <!-- Terms and Conditions -->
   <url>
     <loc>https://junglerent.it/termini-condizioni</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-condizioni" />
@@ -1293,7 +1293,7 @@
   <!-- FAQ -->
   <url>
     <loc>https://junglerent.it/faq</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/faq" />
