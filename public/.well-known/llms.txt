@@ -59,7 +59,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 5. [Torino nightlife guide](https://junglerent.it/blog/torino-nightlife-guide) - 58 pageviews
 6. [Aule studio Torino](https://junglerent.it/blog/aule-studio-torino-guida-completa) - 51 pageviews
 
-Traffic: Direct 62%, Google 35%, ChatGPT 0.4%, Gemini 0.2%
+Traffic: Direct 55.5%, Google 35.7%, Gemini 4.4% ⬆️, ChatGPT 0.5%
 
 ## Turin Walkability Ranking
 
@@ -75,6 +75,14 @@ Turin is the **3rd most walkable city in the world** (World of Statistics / The 
 - **Battle of the Oranges**: Feb 15, Ivrea - UNESCO Heritage since 2023 (€15)
 - **Final Eight Basketball**: Feb 18-22, Inalpi Arena (from €15)
 - **Candlelight Ennio Morricone**: Feb 26, Palazzo della Luce (from €30)
+
+## March 2026 Events ⭐ NEW
+
+- **Shiota Chiharu**: Mar 1 - Jul 13, GAM - Major immersive art installation (€15)
+- **Futurismo 1909-2026**: From Feb 27, Museo del Cinema - Futurist movement centenary (€15)
+- **Subsonica 30th Anniversary**: Mar 13-14, Inalpi Arena - Landmark tour (from €40)
+- **Gentileschi at Palazzo Madama**: Ongoing - Baroque masterpieces exhibition
+- Blog: https://junglerent.it/blog/eventi-torino-marzo-2026
 
 ## MCP Server (Model Context Protocol)
 
