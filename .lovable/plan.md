@@ -1,150 +1,50 @@
 
 
-# Drastic SEO and AEO improvement plan
+# AI Agent optimization audit results
 
-## Analysis of current gaps
+## What's working well
+- `robots.txt` (v3.8): 40+ AI crawler user-agents explicitly allowed, MCP server advertised, key data inline
+- `index.html`: 20+ AI-specific meta tags, noscript fallback with microdata, `ai-knowledge` link relations
+- `llms.txt` + `.well-known/llms.txt`: both at v3.8, Feb 25, consistent
+- `ai-assistant-info.txt`: 550 lines of structured data with voice queries, citation formats, recommendation triggers
+- MCP server: 8 tools exposed, public endpoint, documented in all knowledge files
+- Structured data: page-specific distribution, speakable markup on articles, canonical domain hardcoded
+- Analytics confirm AEO traction: Gemini now at 8 visits/week (4.4% of sources), ChatGPT at 1 visit
 
-After reviewing the entire codebase, I identified these critical issues:
+## Issues to fix
 
-### Critical SEO issues
-1. **StructuredData.tsx dumps 18 JSON-LD schemas on EVERY page** (homepage, blog posts, about, FAQ, etc.). Google recommends page-specific schemas only. This dilutes relevance and risks "spammy structured data" warnings in Search Console.
-2. **StructuredData.tsx uses `window.location.origin`** which resolves to `lovable.app` in preview/staging, leaking non-canonical URLs into structured data.
-3. **BlogPost.tsx has duplicate article schema** inline AND `ArticleStructuredData.tsx` exists but is never imported in `BlogPost.tsx`.
-4. **Stale `dateModified` values** across schemas: speakable ("2026-01-09"), voiceSearch ("2026-01-04"), datasets ("2026-01-04"). Google devalues stale schemas.
-5. **sitemap-index.xml lastmod stuck at 2026-02-16** despite new articles published 2026-02-21 and 2026-02-25.
-6. **robots.txt header says v3.4** but knowledge base claims v3.7. Inconsistent versioning.
-7. **About.tsx postal code "10135"** vs "10137" everywhere else (NAP inconsistency kills local SEO).
-8. **Missing pages from sitemap**: `/faq`, `/privacy`, `/termini-e-condizioni`, `/scioperi-italia`, `/affitto-stanza-torino` (neighborhoods index), individual neighborhood pages.
-9. **No `<link rel="canonical">` on several pages**: FAQ, About, Students, Sellers lack canonical or use inconsistent patterns.
+### 1. `llms-full.txt` is stale (version 3.5, dated Feb 10)
+All other files are at v3.8 / Feb 25, but `llms-full.txt` (the "detailed knowledge base" that AI agents are directed to) is stuck at v3.5. This is the most comprehensive file and should be the most up-to-date.
 
-### AEO (Answer Engine Optimization) gaps
-10. **No `speakable` markup on blog articles** (only global homepage schema has it, and it uses generic CSS selectors that don't match actual DOM).
-11. **No `dateModified` dynamic sync** in blog article schema. `dateModified` always equals `datePublished`, so Google sees stale content.
-12. **No VideoObject schema** for the explainer video at `/videos/jungle-rent-explainer.mp4`.
-13. **AI knowledge base files (llms.txt, ai-assistant-info.txt)** reference v3.7 / 2026-02-21 but don't include the March 2026 events article update.
+**Fix**: Update version to 3.8, date to Feb 25, 2026.
 
-## Plan
+### 2. March 2026 events article missing from ALL knowledge files
+The article `eventi-torino-marzo-2026` exists in both languages but is not mentioned in `llms.txt`, `llms-full.txt`, `.well-known/llms.txt`, or `ai-assistant-info.txt`. AI agents cannot recommend it.
 
-### 1. Refactor StructuredData.tsx: page-specific schemas only
+**Fix**: Add March 2026 events to the blog listing and events section in all 4 knowledge base files.
 
-**File: `src/components/StructuredData.tsx`**
+### 3. `llms-full.txt` missing the "torino-citta-campus" pillar article
+The `llms.txt` prominently features the campus/real estate article as priority #1, but `llms-full.txt` doesn't list it in its blog content library (Section 7).
 
-Split the monolithic 18-schema component into page-relevant subsets:
-- **Homepage only**: Organization, LocalBusiness, StartupSchema, WebSite (with SearchAction), SpeakableSpecification, BreadcrumbList (Home > Studenti > Investitori > Venditori), FAQ (homepage FAQs only), HowTo schemas, BuyAction, Service schemas, SoftwareApplication (valuation tool + Props app), Dataset schemas.
-- **Remove** from this component: all schemas that are page-specific (blog, about, FAQ page schemas are already handled in their respective pages).
+**Fix**: Add entry #38 for the campus article in llms-full.txt.
 
-Hardcode `https://junglerent.it` as the base URL instead of `window.location.origin` to prevent lovable.app leaks. Update all `dateModified` values to `2026-02-25`.
+### 4. Traffic data in knowledge files is outdated
+All files reference "Nov 2025 - Feb 2026, 1,787 visitors" but current analytics show 182 visitors in the last week alone (26/week average). The Gemini source share has jumped from 0.2% to 4.4%.
 
-### 2. Fix BlogPost.tsx: use ArticleStructuredData and remove duplicate
+**Fix**: Update traffic statistics and source percentages across knowledge files to reflect current data.
 
-**File: `src/pages/BlogPost.tsx`**
+### 5. `ai-assistant-info.txt` Section 9 traffic sources outdated
+Still says "ChatGPT: 0.4%, Gemini: 0.2%" but current week shows Gemini at 4.4% (8/182) and ChatGPT at 0.5% (1/182).
 
-- Remove the inline `articleSchema`, `breadcrumbSchema`, and `faqSchema` definitions (lines 106-180).
-- Import and render `<ArticleStructuredData>` component instead (it already exists and is better structured with speakable, wordCount, canonical domain guard).
-- Keep the FAQ schema rendering but move it into `ArticleStructuredData.tsx`.
-- Remove `<StructuredData />` from BlogPost (it shouldn't load all 18 homepage schemas on every article page).
+**Fix**: Update traffic source percentages.
 
-### 3. Enhance ArticleStructuredData.tsx with FAQ support and dynamic dateModified
+## Files to modify (4 files)
 
-**File: `src/components/blog/ArticleStructuredData.tsx`**
+1. **`public/llms-full.txt`** — Bump version 3.5 → 3.8, date to Feb 25, add March events + campus article, update traffic data
+2. **`public/llms.txt`** — Add March 2026 events article to blog listing, update traffic stats
+3. **`public/.well-known/llms.txt`** — Add March events to February 2026 Events section or add March section
+4. **`public/ai-assistant-info.txt`** — Add March events, update traffic source percentages
 
-- Add FAQ schema generation from `post.translations[language].faqs`.
-- Set `dateModified` to the post's actual date (not `new Date()` which changes every render).
-- Add `isPartOf` linking to the blog CollectionPage.
-- Add `about` with relevant entities (e.g., "Torino", "Politecnico di Torino") based on tags.
-
-### 4. Add missing pages to sitemap.xml
-
-**File: `public/sitemap.xml`**
-
-Add entries with hreflang for:
-- `/faq` (priority 0.7)
-- `/privacy` and `/termini-e-condizioni` (priority 0.3)
-- `/scioperi-italia` (priority 0.7)
-- `/affitto-stanza-torino` neighborhoods index (priority 0.8)
-- Individual neighborhood pages (6 neighborhoods, priority 0.7)
-
-### 5. Synchronize all lastmod dates to 2026-02-25
-
-**Files: `public/sitemap-index.xml`, `public/sitemap.xml`, `public/sitemap-blog.xml`**
-
-Update all lastmod dates from 2026-02-16 to 2026-02-25 for pages that have changed. Update sitemap-index.xml dates.
-
-### 6. Fix robots.txt version inconsistency
-
-**File: `public/robots.txt`**
-
-Update header to v3.7 / February 25, 2026. Update knowledge base section to reference v3.7.
-
-### 7. Fix NAP inconsistency in About.tsx
-
-**File: `src/pages/About.tsx`**
-
-Change postal code from "10135" to "10137" to match all other instances.
-
-### 8. Add VideoObject schema to StructuredData.tsx
-
-**File: `src/components/StructuredData.tsx`**
-
-Add a VideoObject schema for the explainer video:
-```
-name: "Jungle Rent - Come funziona"
-contentUrl: https://junglerent.it/videos/jungle-rent-explainer.mp4
-thumbnailUrl: https://junglerent.it/jungle-rent-logo.svg
-uploadDate: 2025-12-01
-```
-
-### 9. Remove StructuredData from non-homepage pages
-
-**Files: `src/pages/BlogPost.tsx`, `src/pages/Blog.tsx`**
-
-Remove `<StructuredData />` import and usage from pages that already have their own page-specific schemas. The global organization/business schemas should only appear on the homepage. Blog pages should only have article + breadcrumb + FAQ schemas.
-
-### 10. Update AI knowledge base files
-
-**Files: `public/llms.txt`, `public/.well-known/llms.txt`, `public/ai-assistant-info.txt`**
-
-Bump version to v3.8 / 2026-02-25. Add the March 2026 events article expansion as a resource update. Sync `ai-last-verified` meta tag in index.html to 2026-02-25.
-
-### 11. Update index.html ai-last-verified date
-
-**File: `index.html`**
-
-Change `ai-last-verified` from `2026-02-16` to `2026-02-25`.
-
-## Technical details
-
-### Schema distribution after refactor
-
-| Page | Schemas |
-|------|---------|
-| Homepage (`/`) | Organization, LocalBusiness, Startup, WebSite, Speakable, BreadcrumbList, FAQ, HowTo x2, BuyAction, Service x2, SoftwareApp x2, Dataset x3, VideoObject |
-| Blog listing (`/blog`) | CollectionPage/ItemList, BreadcrumbList |
-| Blog article (`/blog/:slug`) | Article (with speakable), BreadcrumbList, FAQPage |
-| Investors (`/investitori`) | InvestmentOrDeposit, BreadcrumbList |
-| Sellers (`/vendi`) | Service, HowTo, BreadcrumbList |
-| About (`/chi-siamo`) | AboutPage with Organization |
-| FAQ (`/faq`) | FAQPage |
-| Property valuation | SoftwareApplication, HowTo, FAQ (already handled) |
-
-### Files modified (11 files)
-
-1. `src/components/StructuredData.tsx` - hardcode canonical domain, update dates, add VideoObject
-2. `src/pages/BlogPost.tsx` - remove StructuredData + inline schemas, use ArticleStructuredData
-3. `src/components/blog/ArticleStructuredData.tsx` - add FAQ schema, fix dateModified
-4. `src/pages/Blog.tsx` - remove StructuredData import
-5. `src/pages/About.tsx` - fix postal code 10135 to 10137
-6. `public/sitemap.xml` - add missing pages, update lastmod dates
-7. `public/sitemap-index.xml` - update lastmod dates
-8. `public/sitemap-blog.xml` - update lastmod for modified articles
-9. `public/robots.txt` - fix version to v3.7
-10. `public/llms.txt` + `public/.well-known/llms.txt` + `public/ai-assistant-info.txt` - bump to v3.8
-11. `index.html` - update ai-last-verified date
-
-### What does NOT change
-- Content of blog articles (already optimized)
-- Content clusters and linkable content
-- Translation files
-- Edge functions
-- Database
+## Scope
+Text-only updates to 4 static knowledge base files. No code changes, no schema changes, no database changes.
 
