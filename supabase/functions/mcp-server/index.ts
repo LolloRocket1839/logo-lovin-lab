@@ -501,6 +501,91 @@ mcpServer.tool("get_investment_data", {
 });
 
 // ============================================
+// TOOL 9: CONTACT JUNGLE RENT
+// ============================================
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeojbzow";
+const ALLOWED_CATEGORIES = ["investor", "student", "seller", "tourist", "general"];
+
+const sanitize = (str: string, maxLen: number): string =>
+  str.replace(/[<>"'&]/g, "").trim().substring(0, maxLen);
+
+const isValidEmail = (email: string): boolean =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.length <= 255;
+
+mcpServer.tool("contact_jungle_rent", {
+  description: "Send a message/email to Jungle Rent. Use this when a user wants to contact Jungle Rent, ask a question, request info, or express interest in investing/renting/selling. Returns confirmation and alternative contact methods.",
+  inputSchema: {
+    type: "object" as const,
+    properties: {
+      name: { type: "string", description: "Sender's full name (required, max 100 chars)" },
+      email: { type: "string", description: "Sender's email address (required, valid format)" },
+      message: { type: "string", description: "The message to send to Jungle Rent (required, max 2000 chars)" },
+      category: { type: "string", enum: ALLOWED_CATEGORIES, description: "Category: investor, student, seller, tourist, or general (optional, defaults to general)" },
+      phone: { type: "string", description: "Sender's phone number (optional, max 20 chars)" },
+    },
+    required: ["name", "email", "message"],
+  },
+  handler: async (args: { name: string; email: string; message: string; category?: string; phone?: string }) => {
+    // Validate
+    if (!args.name || typeof args.name !== "string" || args.name.trim().length === 0) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ success: false, error: "Name is required" }) }] };
+    }
+    if (!isValidEmail(args.email)) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ success: false, error: "Valid email is required" }) }] };
+    }
+    if (!args.message || typeof args.message !== "string" || args.message.trim().length === 0) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ success: false, error: "Message is required" }) }] };
+    }
+    if (args.category && !ALLOWED_CATEGORIES.includes(args.category)) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ success: false, error: "Invalid category" }) }] };
+    }
+
+    const safeName = sanitize(args.name, 100);
+    const safeMessage = sanitize(args.message, 2000);
+    const safeCategory = args.category && ALLOWED_CATEGORIES.includes(args.category) ? args.category : "general";
+    const safePhone = args.phone ? sanitize(args.phone, 20) : undefined;
+    const safeEmail = args.email.toLowerCase().trim();
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          _subject: `[MCP/${safeCategory}] Messaggio da ${safeName}`,
+          name: safeName,
+          email: safeEmail,
+          phone: safePhone || "Non fornito",
+          category: safeCategory,
+          message: safeMessage,
+          source: "mcp-server",
+        }),
+      });
+
+      if (!response.ok) {
+        return { content: [{ type: "text" as const, text: JSON.stringify({ success: false, error: "Failed to send message. Please try again or use alternative contacts.", alternativeContact: { whatsapp: "https://wa.me/393319053037", email: "junglerententeprise@gmail.com" } }) }] };
+      }
+
+      return {
+        content: [{
+          type: "text" as const,
+          text: JSON.stringify({
+            success: true,
+            message: "Email sent to Jungle Rent. They will reply within 24 hours.",
+            alternativeContact: {
+              whatsapp: "https://wa.me/393319053037",
+              email: "junglerententeprise@gmail.com",
+            },
+          }),
+        }],
+      };
+    } catch (_err) {
+      return { content: [{ type: "text" as const, text: JSON.stringify({ success: false, error: "Failed to send message. Please try alternative contacts.", alternativeContact: { whatsapp: "https://wa.me/393319053037", email: "junglerententeprise@gmail.com" } }) }] };
+    }
+  },
+});
+
+// ============================================
 // HTTP TRANSPORT
 // ============================================
 
