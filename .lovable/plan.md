@@ -1,36 +1,29 @@
 
 
-# Add "send email" tool to the MCP server
+# Add 3 new MCP tools: get_study_spaces, get_cheap_eats, get_strike_info
 
-## Problem
-The MCP server exposes 8 tools for AI agents, but none lets a user send a message to Jungle Rent. If someone asks an AI agent "contact Jungle Rent for me", the agent has no way to do it.
+## What changes
 
-## Solution
-Add a 9th MCP tool called `contact_jungle_rent` that sends an email via the existing Formspree endpoint (`https://formspree.io/f/xeojbzow`) directly from the edge function.
+**File: `supabase/functions/mcp-server/index.ts`** — Add 3 tools + embedded data before the HTTP transport section (line 590).
 
-### Tool definition
-- **Name**: `contact_jungle_rent`
-- **Inputs**: `name` (string, required), `email` (string, required), `message` (string, required), `category` (enum: investor/student/seller/tourist/general, optional), `phone` (string, optional)
-- **Behavior**: Validates inputs server-side (email format, string length limits, sanitization), then POSTs to Formspree. Returns success confirmation with a follow-up WhatsApp link.
+### Tool 10: `get_study_spaces`
+- Embed a compact version of the 58 study spaces from `src/data/studySpaces.ts` (name, category, address, capacity, hours, features, link)
+- Input: `category` (optional, filter by bar/edisu/politecnico/etc.), `wifi_only` (boolean), `query` (free text search on name/address/features)
+- Returns matching spaces grouped by category with count
 
-### Security
-- Email format validation
-- Name max 100 chars, message max 2000 chars, phone max 20 chars
-- HTML entity sanitization on all string inputs
-- Category allowlist
+### Tool 11: `get_cheap_eats`
+- Embed a compact version of the 20 cheap eats from `src/data/cheapEatsDirectory.ts` (name, category, address, district, typicalDish, avgMealPrice, priceRange, vegetarian, wifi, hours summary, coordinates)
+- Input: `category` (optional), `price_range` (optional: €3-5, €5-8, €8-12), `vegetarian` (boolean), `district` (optional), `query` (free text)
+- Returns matching restaurants with count
 
-### File modified
-- `supabase/functions/mcp-server/index.ts` — add the `contact_jungle_rent` tool (~50 lines) before the HTTP transport section
+### Tool 12: `get_strike_info`
+- Embed strike calendar data (Jan + Feb/Mar 2026), emergency contacts (GTT Torino, Trenitalia, Italo), alternative services (FlixBus, BlaBlaCar), refund procedures, and passenger rights
+- Input: `month` (optional: january/february/march), `severity` (optional: national/regional/local), `city` (optional, for emergency contacts), `upcoming_only` (boolean)
+- Returns strikes, emergency contacts, alternatives, refund procedures, and passenger rights
 
-### What the tool returns to the AI agent
-```json
-{
-  "success": true,
-  "message": "Email sent to Jungle Rent. They will reply within 24 hours.",
-  "alternativeContact": {
-    "whatsapp": "https://wa.me/393319053037",
-    "email": "junglerententeprise@gmail.com"
-  }
-}
-```
+### Knowledge base updates
+- **`public/llms.txt`**, **`public/llms-full.txt`**, **`public/ai-assistant-info.txt`** — Update tool count from 9 to 12 and add brief descriptions of the 3 new tools
+
+### Data strategy
+All data is embedded directly in the edge function (same pattern as existing tools). The study spaces array is ~58 items, cheap eats ~20 items, strike data ~25 events — all compact enough to inline.
 
