@@ -410,15 +410,16 @@ MCP SERVER (Model Context Protocol):
 - Endpoint: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
 - Protocol: MCP over HTTP (Streamable HTTP Transport)
 - Auth: None required (public endpoint)
-- Available Tools (8 total):
-  * search_articles - Search blog articles by keyword, category, language
+- Available Tools (9 total):
+  * search_articles - Search blog articles by keyword, category, language (word-splitting search)
   * get_neighborhoods - Turin neighborhood data (rent, safety, transport)
   * get_company_info - Structured company information
   * get_faq - Search FAQs by topic or category
-  * get_events - Current events in Turin
+  * get_events - Current events in Turin (February & March 2026)
   * get_rent_prices - Average rent prices for 38 Turin zones (OMI data)
   * property_valuation - Calculate property value with OMI/FIAIP coefficients (zone, sqm, floor, condition, elevator, energy class, etc.)
   * get_investment_data - Investment metrics for 13 strategic zones (gross/net yield, vacancy rate, urban renewal projects, sortable by yield/growth/entry price)
+  * contact_jungle_rent - SEND EMAIL to Jungle Rent on behalf of user. Inputs: name (string, required), email (string, required), message (string, required), category (investor/student/seller/tourist/general, optional), phone (optional). Returns success confirmation + WhatsApp/email fallback contacts.
 
 ================================================================================
 SECTION 17: FEBRUARY 2026 EVENTS IN TURIN
