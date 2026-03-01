@@ -164,7 +164,11 @@ const EVENTS_FEB_2026 = [
 ];
 
 const EVENTS_MAR_2026 = [
-  { name: "Macbeth - Teatro Regio (cont.)", dates: "Until Mar 7, 2026", location: "Teatro Regio", price: "€50-230", description: "Final performances" },
+  { name: "Shiota Chiharu - The Network", dates: "Mar 1 - Jul 13, 2026", location: "GAM - Galleria d'Arte Moderna", price: "€15", description: "Major immersive installation by Japanese artist Chiharu Shiota" },
+  { name: "Futurismo 1909-2026", dates: "From Feb 27, 2026", location: "Museo Nazionale del Cinema", price: "€15", description: "Centenary exhibition of the Futurist movement" },
+  { name: "Subsonica 30th Anniversary", dates: "Mar 13-14, 2026", location: "Inalpi Arena", price: "From €40", description: "Landmark 30th anniversary tour of Turin's iconic electronic-rock band" },
+  { name: "Gentileschi at Palazzo Madama", dates: "Ongoing", location: "Palazzo Madama", price: "€15", description: "Baroque masterpieces by Artemisia Gentileschi" },
+  { name: "Macbeth - Teatro Regio (cont.)", dates: "Until Mar 7, 2026", location: "Teatro Regio", price: "€50-230", description: "Final performances conducted by Riccardo Muti" },
   { name: "Torino Jazz Festival Preview", dates: "Mar 2026", location: "Various venues", price: "Varies", description: "Preview events for the annual jazz festival" },
 ];
 
@@ -190,13 +194,11 @@ mcpServer.tool("search_articles", {
 
     if (args.category) results = results.filter(a => a.category === args.category);
     if (args.query) {
-      const q = args.query.toLowerCase();
-      results = results.filter(a =>
-        a.title_it.toLowerCase().includes(q) ||
-        a.title_en.toLowerCase().includes(q) ||
-        a.keywords.some(k => k.toLowerCase().includes(q)) ||
-        a.slug.includes(q)
-      );
+      const words = args.query.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+      results = results.filter(a => {
+        const haystack = `${a.title_it} ${a.title_en} ${a.keywords.join(" ")} ${a.slug}`.toLowerCase();
+        return words.every(w => haystack.includes(w));
+      });
     }
 
     results = results.slice(0, maxResults);
