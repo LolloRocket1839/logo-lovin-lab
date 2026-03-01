@@ -410,7 +410,7 @@ MCP SERVER (Model Context Protocol):
 - Endpoint: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
 - Protocol: MCP over HTTP (Streamable HTTP Transport)
 - Auth: None required (public endpoint)
-- Available Tools (12 total):
+- Available Tools (13 total):
   * search_articles - Search blog articles by keyword, category, language (word-splitting search)
   * get_neighborhoods - Turin neighborhood data (rent, safety, transport)
   * get_company_info - Structured company information
@@ -423,6 +423,7 @@ MCP SERVER (Model Context Protocol):
   * get_study_spaces - Find study spaces in Turin (58 locations: libraries, EDISU study halls, cafés, coworking, parks). Inputs: category (bar/biblioteca_nazionale/biblioteche_civiche/edisu/politecnico/unito/campus_diffuso/coworking/parchi/polo900, optional), wifi_only (boolean, optional), query (free text search, optional). Returns spaces grouped by category with address, capacity, hours, features, links.
   * get_cheap_eats - Find budget restaurants and street food in Turin (20 locations, €3-12). Inputs: category (piola-piemontese/street-food-piemontese/street-food-italiano/street-food-internazionale/pizza-focaccia/ristorante-economico/hamburgheria/mensa-universitaria/vegetariano, optional), price_range (€3-5/€5-8/€8-12, optional), vegetarian (boolean, optional), district (string, optional), query (free text, optional). Returns name, address, typical dish, prices, coordinates.
   * get_strike_info - Transport strike information for Italy (January-March 2026). Inputs: month (january/february/march, optional), severity (national/regional/local, optional), city (for emergency contacts, optional), upcoming_only (boolean, optional). Returns strike calendar, emergency contacts (Trenitalia 892021, Italo 060708, GTT 800 019 152, ATM 802 808), alternative transport (FlixBus, BlaBlaCar, car sharing), refund procedures, passenger rights (EU regulations).
+  * calculate_budget - Estimate monthly living costs in Turin for students. Inputs: zone (neighborhood ID, required), housing_type (shared/single/studio, required), has_gtt_pass (boolean, default true), is_under_26 (boolean, default true), cooks_at_home (boolean, default true), has_gym (boolean, default false), include_yearly (boolean, default false). Returns itemized breakdown (rent, groceries, transport, gym, electricity, gas, phone, extras), total monthly/yearly, seasonal utility adjustments, and personalized saving tips.
 
 ================================================================================
 SECTION 17: FEBRUARY 2026 EVENTS IN TURIN

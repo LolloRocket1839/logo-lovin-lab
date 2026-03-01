@@ -896,6 +896,124 @@ mcpServer.tool("get_strike_info", {
 });
 
 // ============================================
+// TOOL 13: CALCULATE BUDGET
+// ============================================
+
+const ZONE_RENTS: Record<string, { shared: number; single: number; studio: number }> = {
+  centro_storico: { shared: 280, single: 450, studio: 650 },
+  san_salvario: { shared: 250, single: 400, studio: 580 },
+  vanchiglia: { shared: 240, single: 390, studio: 560 },
+  crocetta: { shared: 260, single: 420, studio: 600 },
+  cit_turin: { shared: 230, single: 370, studio: 530 },
+  san_donato: { shared: 220, single: 360, studio: 520 },
+  campidoglio: { shared: 220, single: 360, studio: 520 },
+  cenisia: { shared: 200, single: 330, studio: 480 },
+  san_paolo: { shared: 200, single: 330, studio: 480 },
+  parella: { shared: 190, single: 310, studio: 460 },
+  santa_rita: { shared: 190, single: 310, studio: 450 },
+  lingotto: { shared: 200, single: 320, studio: 470 },
+  aurora: { shared: 180, single: 290, studio: 420 },
+  barriera_milano: { shared: 160, single: 260, studio: 380 },
+  borgo_vittoria: { shared: 170, single: 280, studio: 400 },
+  mirafiori_sud: { shared: 170, single: 280, studio: 400 },
+  falchera: { shared: 150, single: 240, studio: 350 },
+  pozzo_strada: { shared: 200, single: 320, studio: 470 },
+  borgo_po: { shared: 270, single: 430, studio: 620 },
+};
+
+mcpServer.tool("calculate_budget", {
+  description: "Estimate monthly living costs for a student in Turin. Calculates rent, groceries, transport, utilities, and extras based on neighborhood, housing type, and lifestyle. Returns itemized breakdown with saving tips.",
+  inputSchema: {
+    type: "object" as const,
+    properties: {
+      zone: { type: "string", description: "Turin neighborhood ID (e.g. 'san_salvario', 'cenisia', 'aurora'). Use get_rent_prices to see all zones." },
+      housing_type: { type: "string", enum: ["shared", "single", "studio"], description: "shared = shared room, single = single room, studio = studio apartment" },
+      has_gtt_pass: { type: "boolean", description: "Has GTT monthly transport pass (default true)" },
+      is_under_26: { type: "boolean", description: "Under 26 for discounted GTT pass (default true)" },
+      cooks_at_home: { type: "boolean", description: "Cooks at home vs eating out more (default true)" },
+      has_gym: { type: "boolean", description: "Has gym membership (default false)" },
+      include_yearly: { type: "boolean", description: "Include yearly projection with seasonal variations (default false)" },
+    },
+    required: ["zone", "housing_type"],
+  },
+  handler: (args: { zone: string; housing_type: string; has_gtt_pass?: boolean; is_under_26?: boolean; cooks_at_home?: boolean; has_gym?: boolean; include_yearly?: boolean }) => {
+    const zone = args.zone.toLowerCase().replace(/\s+/g, '_');
+    const zoneData = ZONE_RENTS[zone];
+    const housingType = args.housing_type as "shared" | "single" | "studio";
+    const hasGTT = args.has_gtt_pass !== false;
+    const isUnder26 = args.is_under_26 !== false;
+    const cooksAtHome = args.cooks_at_home !== false;
+    const hasGym = args.has_gym === true;
+
+    if (!zoneData) {
+      return {
+        content: [{ type: "text" as const, text: JSON.stringify({
+          error: "Zone not found",
+          availableZones: Object.keys(ZONE_RENTS),
+          hint: "Use get_rent_prices tool to see all 38 zones with prices",
+        }, null, 2) }],
+      };
+    }
+
+    const rent = zoneData[housingType];
+    const groceries = cooksAtHome ? 200 : 300;
+    const transport = hasGTT ? (isUnder26 ? 25 : 42) : 0;
+    const gym = hasGym ? 35 : 0;
+
+    // Seasonal utilities (current month)
+    const month = new Date().getMonth();
+    let electricity: number, gas: number, season: string;
+    if (month >= 10 || month <= 1) { electricity = 55; gas = 75; season = "winter"; }
+    else if (month >= 5 && month <= 7) { electricity = 40; gas = 15; season = "summer"; }
+    else { electricity = 45; gas = 35; season = "spring/fall"; }
+
+    const phone = 10;
+    const extras = 80;
+    const total = rent + groceries + transport + gym + electricity + gas + phone + extras;
+
+    const tips: string[] = [];
+    if (rent > 400) tips.push("💡 Consider a shared room to save €100-200/month");
+    if (groceries > 250) tips.push("💡 Porta Palazzo market saves up to 40% on groceries");
+    if (!hasGTT) tips.push("💡 GTT Under 26 pass: only €25/month for unlimited metro+bus");
+    if (hasGym) tips.push("💡 CUS Torino gym is free for university students");
+    if (gas > 50) tips.push("💡 Many university buildings have central heating included in rent");
+    tips.push("💡 EDISU canteen meals cost €3-7 for a full meal");
+
+    const result: Record<string, unknown> = {
+      zone: zone,
+      zoneName: zone.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+      housingType: housingType,
+      currentSeason: season,
+      breakdown: {
+        rent, groceries, transport, gym, electricity, gas, phone, extras,
+      },
+      totalMonthly: total,
+      totalYearly: total * 12,
+      savingTips: tips,
+      toolUrl: "https://junglerent.it/strumenti/budget-studente-torino",
+    };
+
+    if (args.include_yearly) {
+      const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const seasonalGas = [75,70,50,30,15,10,10,10,25,45,65,75];
+      const seasonalElec = [55,55,50,45,40,35,40,40,45,50,55,55];
+      const specialCosts = [0,0,0,0,0,0,0,0,80,0,0,50]; // Sep=move-in, Dec=holidays
+      result.yearlyProjection = monthNames.map((m, i) => ({
+        month: m,
+        total: rent + groceries + transport + gym + seasonalGas[i] + seasonalElec[i] + phone + extras + specialCosts[i],
+        gas: seasonalGas[i],
+        electricity: seasonalElec[i],
+        special: specialCosts[i] > 0 ? (i === 8 ? "Move-in costs" : "Holiday gifts") : undefined,
+      }));
+    }
+
+    return {
+      content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }],
+    };
+  },
+});
+
+// ============================================
 // HTTP TRANSPORT
 // ============================================
 
