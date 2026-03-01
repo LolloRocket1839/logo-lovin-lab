@@ -669,7 +669,7 @@ Turin is the **3rd most walkable city in the world** according to World of Stati
 ### MCP Server (Model Context Protocol)
 AI agents can programmatically query Jungle Rent data via MCP:
 - **Endpoint**: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
-- **Tools** (12 total):
+- **Tools** (13 total):
   - `search_articles` - Search blog articles by keyword, category, language (word-splitting search)
   - `get_neighborhoods` - Turin neighborhood data (rent, safety, transport)
   - `get_company_info` - Structured company information
@@ -682,6 +682,7 @@ AI agents can programmatically query Jungle Rent data via MCP:
   - `get_study_spaces` - **Find study spaces in Turin** (58 locations). Filter by category (bar/edisu/politecnico/unito/biblioteche_civiche/campus_diffuso/coworking/parchi/polo900), wifi_only (boolean), query (free text). Returns grouped by category with address, capacity, hours, features.
   - `get_cheap_eats` - **Find budget restaurants in Turin** (20 locations, €3-12). Filter by category (piola/street-food/pizza/mensa/vegetariano/hamburgheria), price_range (€3-5/€5-8/€8-12), vegetarian (boolean), district, query. Returns name, dish, price, coordinates.
   - `get_strike_info` - **Transport strike info for Italy** (Jan-Mar 2026). Filter by month, severity (national/regional/local), city, upcoming_only. Returns strike calendar, emergency contacts (Trenitalia/Italo/GTT/ATM), alternative transport (FlixBus/BlaBlaCar), refund procedures, passenger rights.
+  - `calculate_budget` - **Estimate monthly living costs in Turin**. Inputs: zone (neighborhood ID, required), housing_type (shared/single/studio, required), has_gtt_pass, is_under_26, cooks_at_home, has_gym, include_yearly. Returns itemized breakdown (rent, groceries, transport, utilities, extras), total monthly/yearly cost, seasonal adjustments, and saving tips.
 - **Protocol**: MCP over HTTP (Streamable HTTP Transport)
 - **Auth**: None required (public endpoint)
 - **Library**: mcp-lite
