@@ -647,10 +647,32 @@ Turin is the **3rd most walkable city in the world** according to World of Stati
 
 ---
 
-## SECTION 15: UPDATE LOG
+## SECTION 15: AGENT DISCOVERY PROTOCOLS
 
-- **Last Updated**: February 25, 2026
-- **Version**: 3.8 - Drastic SEO/AEO overhaul, March 2026 events, campus pillar article, schema refactor
+### Available Endpoints
+| Protocol | URL |
+|----------|-----|
+| A2A Agent Card (Google A2A) | https://junglerent.it/.well-known/agent-card.json |
+| Agent Workflows (multi-step flows) | https://junglerent.it/.well-known/agents.json |
+| MCP Server (13 tools) | https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server |
+| RSS Feed (38+ articles) | https://junglerent.it/rss.xml |
+| LLMs.txt (concise) | https://junglerent.it/llms.txt |
+| LLMs-full.txt (this file) | https://junglerent.it/llms-full.txt |
+| AI Assistant Info | https://junglerent.it/ai-assistant-info.txt |
+
+### Agent Workflows (agents.json)
+Pre-defined multi-step flows for AI agents:
+1. **find-student-housing**: neighborhoods → rent prices → budget → contact
+2. **plan-turin-visit**: events → cheap eats → strike info
+3. **property-valuation**: valuation → investment data → contact
+4. **student-life**: study spaces → cheap eats → budget
+
+---
+
+## SECTION 16: UPDATE LOG
+
+- **Last Updated**: March 2, 2026
+- **Version**: 3.9 - Agent discovery protocols (A2A Agent Card, agents.json, RSS feed)
 - **Maintainer**: Jungle Rent S.r.l.
 - **FAQ Count**: 210+ FAQs across 38+ articles
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, Perplexity, Gemini

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Jungle Rent Blog - Turin Student Housing &amp; Real Estate</title>
+    <link>https://junglerent.it/blog</link>
+    <description>Bilingual guides on Turin living, student housing, real estate investment, events, and local culture. By Jungle Rent S.r.l., a certified Start-up Innovativa.</description>
+    <language>it</language>
+    <lastBuildDate>Mon, 02 Mar 2026 00:00:00 +0100</lastBuildDate>
+    <managingEditor>junglerententeprise@gmail.com (Jungle Rent Team)</managingEditor>
+    <webMaster>junglerententeprise@gmail.com (Jungle Rent Team)</webMaster>
+    <copyright>Copyright 2025-2026 Jungle Rent S.r.l.</copyright>
+    <atom:link href="https://junglerent.it/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://junglerent.it/jungle-rent-logo.svg</url>
+      <title>Jungle Rent Blog</title>
+      <link>https://junglerent.it/blog</link>
+    </image>
+
+    <item>
+      <title>Torino città campus: come atenei e nuovi poli ridisegnano la mappa immobiliare</title>
+      <link>https://junglerent.it/blog/torino-citta-campus-atenei-immobiliare-2026</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/torino-citta-campus-atenei-immobiliare-2026</guid>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 +0100</pubDate>
+      <description>300 milioni del Politecnico, città delle scienze a Grugliasco, Metro 2: dove salgono i prezzi quartiere per quartiere.</description>
+      <category>sellers</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Torino è la 3ª città più camminabile al mondo: tutto a 7 minuti</title>
+      <link>https://junglerent.it/blog/torino-citta-7-minuti-walkability</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/torino-citta-7-minuti-walkability</guid>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0100</pubDate>
+      <description>Torino batte Parigi e Berlino: scuole, negozi e servizi essenziali sono a soli 7 minuti a piedi.</description>
+      <category>societa</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Cedolare secca 2026: dal 21% al 26%, cosa fare ora</title>
+      <link>https://junglerent.it/blog/cedolare-secca-2026-investitori</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/cedolare-secca-2026-investitori</guid>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0100</pubDate>
+      <description>Aumento tasse affitti: come risparmiare €1.700/anno con le nuove regole. Strategie, scadenze e confronto IRPEF.</description>
+      <category>investors</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Carnevale di Ivrea 2026: la battaglia delle arance (UNESCO)</title>
+      <link>https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0100</pubDate>
+      <description>Guida alla Battaglia delle Arance di Ivrea, patrimonio UNESCO dal 2023.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Sciopero trasporti 13-15 gennaio 2026: orari e alternative</title>
+      <link>https://junglerent.it/blog/sciopero-trasporti-italia-gennaio-2026</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/sciopero-trasporti-italia-gennaio-2026</guid>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0100</pubDate>
+      <description>Date confermate, fasce garantite e come muoversi a Torino durante lo sciopero. Aggiornato oggi.</description>
+      <category>societa</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Palestre Torino studenti: 24 strutture da €10/mese</title>
+      <link>https://junglerent.it/blog/palestre-torino-studenti-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/palestre-torino-studenti-guida-completa</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0100</pubDate>
+      <description>FitActive, McFIT, Virgin Active e CUS: prezzi, orari e convenzioni universitarie a confronto.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Props: gestione immobiliare semplificata per investitori</title>
+      <link>https://junglerent.it/blog/props-gestione-immobiliare-semplificata</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/props-gestione-immobiliare-semplificata</guid>
+      <pubDate>Wed, 31 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Come utilizzare Props per una gestione immobiliare efficiente e semplificata, ottimizzando tempi e costi.</description>
+      <category>investors</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Emergenze affitti a Torino: diritti degli inquilini</title>
+      <link>https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini</guid>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Come tutelare i diritti degli inquilini durante le emergenze abitative a Torino.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Valutazione immobiliare Torino: quanto vale casa tua nel 2026</title>
+      <link>https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa</guid>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Strumenti e metodi per stimare il valore reale del tuo immobile prima della vendita.</description>
+      <category>sellers</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Panettoni e pandori a Torino: guida 2025</title>
+      <link>https://junglerent.it/blog/panettoni-pandori-torino-guida-2025</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/panettoni-pandori-torino-guida-2025</guid>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Dove trovare i migliori panettoni e pandori artigianali a Torino per le feste natalizie 2025.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Cicloturismo Torino: 5 percorsi GPX da scaricare gratis</title>
+      <link>https://junglerent.it/blog/cicloturismo-avanzato-torino</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/cicloturismo-avanzato-torino</guid>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Dalle colline al Po, 50-120 km. Noleggio, officine e hotel bike-friendly lungo il percorso.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Quando visitare Torino: guida mese per mese con eventi</title>
+      <link>https://junglerent.it/blog/torino-ogni-stagione-turisti</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/torino-ogni-stagione-turisti</guid>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Luci d'Artista, Salone del Libro, tartufo d'Alba. Il momento perfetto per ogni viaggio.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Jungle Control dicembre 2025: aggiornamenti e novità</title>
+      <link>https://junglerent.it/blog/jungle-control-dicembre-2025</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/jungle-control-dicembre-2025</guid>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Le ultime novità di Jungle Control a dicembre 2025, con focus su funzionalità e miglioramenti.</description>
+      <category>societa</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Tajarin piemontesi: la pasta con 40 tuorli al kg</title>
+      <link>https://junglerent.it/blog/tajarin-piemontesi-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/tajarin-piemontesi-guida-completa</guid>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Ricetta originale della nonna e 8 ristoranti dove provarli a Torino. La tradizione delle Langhe.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>12 cioccolaterie storiche di Torino: gianduiotti e bicerin</title>
+      <link>https://junglerent.it/blog/cioccolaterie-torino-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/cioccolaterie-torino-guida-completa</guid>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Dove comprare i migliori gianduiotti dal 1826. Mappa, prezzi e orari delle botteghe storiche.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Vendere casa a Torino nel 2025: evita questi 7 errori</title>
+      <link>https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025</guid>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Vendi al prezzo giusto in 60-90 giorni. Documenti, tasse e strategie per non perdere soldi.</description>
+      <category>sellers</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Student housing Italia: +8% rendimenti, report Savills 2025</title>
+      <link>https://junglerent.it/blog/student-housing-italia-savills-2025</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/student-housing-italia-savills-2025</guid>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate>
+      <description>127.000 posti letto mancanti in Italia. Perché gli investitori puntano sullo student housing.</description>
+      <category>investors</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Febbraio 2026 a Torino: tra amore, cioccolato, arte e palco lirico</title>
+      <link>https://junglerent.it/blog/eventi-torino-febbraio-2026</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/eventi-torino-febbraio-2026</guid>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0100</pubDate>
+      <description>CioccolaTò, Macbeth di Muti, Battaglia delle Arance (UNESCO), Final Eight basket e mostre Lee Miller e Jeff Wall.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Marzo 2026 a Torino: arte, musica e primavera</title>
+      <link>https://junglerent.it/blog/eventi-torino-marzo-2026</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/eventi-torino-marzo-2026</guid>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Shiota al GAM, Futurismo alla Mole, Subsonica 30° anniversario. Guida completa eventi marzo 2026.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Viaggiare sostenibile a Torino: guida completa</title>
+      <link>https://junglerent.it/blog/viaggiare-sostenibile-torino-guida</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/viaggiare-sostenibile-torino-guida</guid>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 +0100</pubDate>
+      <description>Come visitare Torino in modo sostenibile: trasporti verdi, alloggi eco-friendly e itinerari green.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Università di Torino: guida completa per studenti</title>
+      <link>https://junglerent.it/blog/universita-torino-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/universita-torino-guida-completa</guid>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Tutto su UniTo: facoltà, campus, servizi e vita studentesca.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Politecnico di Torino: guida completa per studenti</title>
+      <link>https://junglerent.it/blog/politecnico-torino-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/politecnico-torino-guida-completa</guid>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Guida completa al Politecnico di Torino: corsi, campus, servizi e vita studentesca.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Raccolta differenziata a Torino: guida pratica</title>
+      <link>https://junglerent.it/blog/raccolta-differenziata-torino-guida</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/raccolta-differenziata-torino-guida</guid>
+      <pubDate>Tue, 25 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Come fare la raccolta differenziata a Torino: calendari, regole e consigli pratici.</description>
+      <category>societa</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Mercati storici di Torino: orari e chiusure</title>
+      <link>https://junglerent.it/blog/mercati-storici-torino-chiusure</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/mercati-storici-torino-chiusure</guid>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Guida ai mercati rionali di Torino: Porta Palazzo, Crocetta, e altri con orari aggiornati.</description>
+      <category>societa</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Eventi Torino gennaio 2026: guida completa</title>
+      <link>https://junglerent.it/blog/eventi-torino-gennaio-2026</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/eventi-torino-gennaio-2026</guid>
+      <pubDate>Sun, 23 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Luci d'Artista, concerti, mostre e mercatini: tutto quello che c'è da fare a Torino a gennaio 2026.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Guida al volontariato a Torino per studenti</title>
+      <link>https://junglerent.it/blog/guida-volontariato-torino</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/guida-volontariato-torino</guid>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0100</pubDate>
+      <description>23 organizzazioni di volontariato a Torino: come contribuire alla comunità locale.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Aule studio a Torino: guida completa con mappa</title>
+      <link>https://junglerent.it/blog/aule-studio-torino-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/aule-studio-torino-guida-completa</guid>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0100</pubDate>
+      <description>30+ aule studio gratuite e a pagamento con mappa interattiva, orari e servizi.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Torino nightlife guide: la guida alla vita notturna</title>
+      <link>https://junglerent.it/blog/torino-nightlife-guide</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/torino-nightlife-guide</guid>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Locali, aperitivi, discoteche e serate: guida completa alla nightlife torinese.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Investire in real assets a Torino nel 2025</title>
+      <link>https://junglerent.it/blog/investire-real-assets-torino-2025</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/investire-real-assets-torino-2025</guid>
+      <pubDate>Fri, 14 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Guida completa agli investimenti immobiliari a Torino: rendimenti, zone e strategie.</description>
+      <category>investors</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Torino digital nomads guide: lavorare da remoto</title>
+      <link>https://junglerent.it/blog/torino-digital-nomads-guide</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/torino-digital-nomads-guide</guid>
+      <pubDate>Thu, 13 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Coworking, visto, quartieri e costi: guida completa per nomadi digitali a Torino.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Quartieri sicuri per donne a Torino: guida completa</title>
+      <link>https://junglerent.it/blog/quartieri-sicuri-donne-torino</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/quartieri-sicuri-donne-torino</guid>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0100</pubDate>
+      <description>I quartieri più sicuri di Torino per donne: dati, consigli e servizi di emergenza.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Torino a novembre per turisti</title>
+      <link>https://junglerent.it/blog/torino-novembre-turisti</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/torino-novembre-turisti</guid>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Cosa fare a Torino a novembre: eventi, mostre e attività per turisti.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Torino a dicembre per turisti</title>
+      <link>https://junglerent.it/blog/torino-dicembre-turisti</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/torino-dicembre-turisti</guid>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Mercatini di Natale, Luci d'Artista, cioccolata calda: guida a Torino a dicembre.</description>
+      <category>turisti</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Mobilità sostenibile a Torino per studenti</title>
+      <link>https://junglerent.it/blog/mobilita-sostenibile-torino-studenti</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/mobilita-sostenibile-torino-studenti</guid>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0100</pubDate>
+      <description>GTT, bike sharing, monopattini: come muoversi a Torino in modo sostenibile ed economico.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Mutui per investitori immobiliari: guida completa</title>
+      <link>https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa</guid>
+      <pubDate>Fri, 07 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Tassi, requisiti e strategie per ottenere un mutuo per investimento immobiliare.</description>
+      <category>investors</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Migliori gelaterie di Torino per studenti</title>
+      <link>https://junglerent.it/blog/migliori-gelaterie-torino-studenti</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/migliori-gelaterie-torino-studenti</guid>
+      <pubDate>Fri, 07 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Le gelaterie più buone e economiche di Torino: guida per studenti golosi.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Dove vivere a Torino per studenti del Politecnico</title>
+      <link>https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico</guid>
+      <pubDate>Thu, 06 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Quartieri, affitti e trasporti: dove vivere vicino al Politecnico di Torino.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>Mangiare a Torino con €5: 15 posti testati da studenti</title>
+      <link>https://junglerent.it/blog/dove-mangiare-torino-studenti</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/dove-mangiare-torino-studenti</guid>
+      <pubDate>Wed, 05 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Mense, pizzerie a taglio, kebab gourmet. Dove mangiare bene spendendo poco.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+    <item>
+      <title>San Salvario: vivere nel quartiere più vivo di Torino</title>
+      <link>https://junglerent.it/blog/san-salvario-guida-studenti</link>
+      <guid isPermaLink="true">https://junglerent.it/blog/san-salvario-guida-studenti</guid>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0100</pubDate>
+      <description>Affitti da €350, aperitivi a €5, metro a 2 min. Perché 8.000 studenti lo scelgono.</description>
+      <category>students</category>
+      <dc:creator>Jungle Rent Team</dc:creator>
+    </item>
+
+  </channel>
+</rss>

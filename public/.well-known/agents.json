@@ -1,0 +1,127 @@
+{
+  "name": "Jungle Rent Agent Workflows",
+  "description": "Multi-step workflows for AI agents interacting with Jungle Rent's MCP server. Each flow chains tools in a logical sequence to accomplish complex tasks.",
+  "version": "1.0.0",
+  "mcpEndpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server",
+  "agentCard": "https://junglerent.it/.well-known/agent-card.json",
+  "flows": [
+    {
+      "id": "find-student-housing",
+      "name": "Find Student Housing in Turin",
+      "description": "Help a student find the best neighborhood and estimate living costs in Turin.",
+      "triggers": [
+        "I'm looking for student housing in Turin",
+        "Where should I live as a student in Turin?",
+        "Cerco casa a Torino per studenti"
+      ],
+      "steps": [
+        {
+          "tool": "get_neighborhoods",
+          "purpose": "Get neighborhood data with rent, safety, and transport scores",
+          "outputUsedBy": ["step2", "step3"]
+        },
+        {
+          "tool": "get_rent_prices",
+          "purpose": "Get detailed rent prices for the recommended zones",
+          "outputUsedBy": ["step3"]
+        },
+        {
+          "tool": "calculate_budget",
+          "purpose": "Estimate total monthly cost based on chosen neighborhood and lifestyle",
+          "inputsFrom": ["step1"],
+          "outputUsedBy": ["step4"]
+        },
+        {
+          "tool": "contact_jungle_rent",
+          "purpose": "Optionally send inquiry to Jungle Rent for available rooms",
+          "optional": true,
+          "requiresUserConsent": true
+        }
+      ]
+    },
+    {
+      "id": "plan-turin-visit",
+      "name": "Plan a Visit to Turin",
+      "description": "Help a tourist plan their trip to Turin with events, dining, and transport info.",
+      "triggers": [
+        "I'm visiting Turin next month",
+        "What to do in Turin?",
+        "Cosa fare a Torino?"
+      ],
+      "steps": [
+        {
+          "tool": "get_events",
+          "purpose": "Get current events and activities in Turin",
+          "outputUsedBy": ["step3"]
+        },
+        {
+          "tool": "get_cheap_eats",
+          "purpose": "Find budget-friendly restaurants and local food",
+          "outputUsedBy": []
+        },
+        {
+          "tool": "get_strike_info",
+          "purpose": "Check for upcoming transport strikes that may affect travel",
+          "params": { "upcoming_only": true },
+          "outputUsedBy": []
+        }
+      ]
+    },
+    {
+      "id": "property-valuation",
+      "name": "Property Valuation & Investment Analysis",
+      "description": "Help a property owner or investor evaluate a property in Turin and explore investment options.",
+      "triggers": [
+        "How much is my property worth in Turin?",
+        "Quanto vale la mia casa a Torino?",
+        "Should I invest in Turin real estate?"
+      ],
+      "steps": [
+        {
+          "tool": "property_valuation",
+          "purpose": "Calculate estimated property value using OMI data and coefficients",
+          "outputUsedBy": ["step2"]
+        },
+        {
+          "tool": "get_investment_data",
+          "purpose": "Get investment metrics for the property's zone (yield, vacancy, growth)",
+          "inputsFrom": ["step1"],
+          "outputUsedBy": ["step3"]
+        },
+        {
+          "tool": "contact_jungle_rent",
+          "purpose": "Optionally connect with Jungle Rent for a professional valuation or to sell",
+          "optional": true,
+          "requiresUserConsent": true
+        }
+      ]
+    },
+    {
+      "id": "student-life",
+      "name": "Student Life in Turin",
+      "description": "Help a student discover study spaces, affordable food, and estimate monthly costs.",
+      "triggers": [
+        "I'm a student in Turin, help me find resources",
+        "Sono studente a Torino, cosa mi serve?",
+        "Student resources in Turin"
+      ],
+      "steps": [
+        {
+          "tool": "get_study_spaces",
+          "purpose": "Find libraries, study halls, and coworking spaces near campus",
+          "outputUsedBy": []
+        },
+        {
+          "tool": "get_cheap_eats",
+          "purpose": "Find budget-friendly restaurants near the university area",
+          "outputUsedBy": []
+        },
+        {
+          "tool": "calculate_budget",
+          "purpose": "Estimate total monthly living costs based on student lifestyle",
+          "outputUsedBy": []
+        }
+      ]
+    }
+  ]
+}

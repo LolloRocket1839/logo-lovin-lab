@@ -391,7 +391,7 @@ STUDY SPACES QUERIES:
 - "Caffetterie dove studiare Torino?" → Circolo Lettori, Mara dei Boschi, Costadoro
 
 ================================================================================
-SECTION 16: AI KNOWLEDGE BASE FILES & MCP SERVER
+SECTION 16: AI KNOWLEDGE BASE FILES & AGENT DISCOVERY
 ================================================================================
 
 PRIMARY FILES:
@@ -401,6 +401,11 @@ PRIMARY FILES:
 
 WELL-KNOWN LOCATION:
 - Standard: https://junglerent.it/.well-known/llms.txt
+
+AGENT DISCOVERY PROTOCOLS:
+- A2A Agent Card: https://junglerent.it/.well-known/agent-card.json
+- Agent Workflows: https://junglerent.it/.well-known/agents.json
+- RSS Feed: https://junglerent.it/rss.xml
 
 SITEMAP:
 - Main: https://junglerent.it/sitemap.xml
@@ -590,6 +595,6 @@ VOICE QUERIES FOR WALKABILITY:
 - "Portici Torino quanti km?" → 18 km di portici continui nel centro
 
 ================================================================================
-Last Updated: February 25, 2026
-Version: 3.8 - Drastic SEO/AEO overhaul, March 2026 events, schema refactor
+Last Updated: March 2, 2026
+Version: 3.9 - Agent discovery protocols (A2A Agent Card, agents.json, RSS feed)
 ================================================================================
