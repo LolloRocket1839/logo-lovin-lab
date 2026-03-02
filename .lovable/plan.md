@@ -1,29 +1,77 @@
 
 
-# Add 3 new MCP tools: get_study_spaces, get_cheap_eats, get_strike_info
+# Implement agent discovery protocols from the research document
 
-## What changes
+## Analysis: what's done vs what's actionable
 
-**File: `supabase/functions/mcp-server/index.ts`** — Add 3 tools + embedded data before the HTTP transport section (line 590).
+The document describes 6 layers. Here's the current status:
 
-### Tool 10: `get_study_spaces`
-- Embed a compact version of the 58 study spaces from `src/data/studySpaces.ts` (name, category, address, capacity, hours, features, link)
-- Input: `category` (optional, filter by bar/edisu/politecnico/etc.), `wifi_only` (boolean), `query` (free text search on name/address/features)
-- Returns matching spaces grouped by category with count
+| Layer | Status | Notes |
+|-------|--------|-------|
+| 1. llms.txt / llms-full.txt | ✅ Done | v3.8, 13 MCP tools documented |
+| 2. Schema.org / JSON-LD | ✅ Done | StructuredData component exists |
+| 3. Sitemaps | ✅ Done | 5 sitemaps in place |
+| 3. RSS feed | ❌ Missing | Blog articles feed |
+| 3. Semantic HTML | ✅ Done | Proper structure |
+| 4. MCP server | ✅ Done | 13 tools |
+| 4. OpenAPI spec | ❌ Not applicable | MCP replaces REST API for agents |
+| 5A. A2A Agent Card | ❌ Missing | `/.well-known/agent-card.json` |
+| 5B. MCP | ✅ Done | Fully operational |
+| 5C. agents.json | ❌ Missing | `/.well-known/agents.json` |
+| 6. NLWeb / ACP / AG-UI | ❌ Future | Not implementable now |
 
-### Tool 11: `get_cheap_eats`
-- Embed a compact version of the 20 cheap eats from `src/data/cheapEatsDirectory.ts` (name, category, address, district, typicalDish, avgMealPrice, priceRange, vegetarian, wifi, hours summary, coordinates)
-- Input: `category` (optional), `price_range` (optional: €3-5, €5-8, €8-12), `vegetarian` (boolean), `district` (optional), `query` (free text)
-- Returns matching restaurants with count
+## What to implement now (3 items)
 
-### Tool 12: `get_strike_info`
-- Embed strike calendar data (Jan + Feb/Mar 2026), emergency contacts (GTT Torino, Trenitalia, Italo), alternative services (FlixBus, BlaBlaCar), refund procedures, and passenger rights
-- Input: `month` (optional: january/february/march), `severity` (optional: national/regional/local), `city` (optional, for emergency contacts), `upcoming_only` (boolean)
-- Returns strikes, emergency contacts, alternatives, refund procedures, and passenger rights
+### 1. A2A Agent Card — `public/.well-known/agent-card.json`
 
-### Knowledge base updates
-- **`public/llms.txt`**, **`public/llms-full.txt`**, **`public/ai-assistant-info.txt`** — Update tool count from 9 to 12 and add brief descriptions of the 3 new tools
+Static JSON file following Google's A2A spec. Maps the 13 MCP tools as "skills" with structured descriptions. Includes Jungle Rent identity, endpoint URL, authentication (none), and supported protocols.
 
-### Data strategy
-All data is embedded directly in the edge function (same pattern as existing tools). The study spaces array is ~58 items, cheap eats ~20 items, strike data ~25 events — all compact enough to inline.
+```text
+/.well-known/agent-card.json
+├── name, description, url, provider
+├── capabilities: ["streaming", "pushNotifications": false]
+├── defaultInputModes: ["application/json"]
+├── skills: (13 entries mapped from MCP tools)
+│   ├── search_articles
+│   ├── get_neighborhoods
+│   ├── property_valuation
+│   ├── contact_jungle_rent
+│   ├── get_study_spaces
+│   ├── get_cheap_eats
+│   ├── get_strike_info
+│   ├── calculate_budget
+│   └── ... (5 more)
+└── authentication: { schemes: ["none"] }
+```
+
+### 2. agents.json — `public/.well-known/agents.json`
+
+Describes multi-step workflows (flows) for AI agents. Key flows:
+- **find-student-housing**: `get_neighborhoods` → `get_rent_prices` → `calculate_budget` → `contact_jungle_rent`
+- **plan-turin-visit**: `get_events` → `get_cheap_eats` → `get_strike_info`
+- **property-valuation**: `property_valuation` → `get_investment_data` → `contact_jungle_rent`
+- **student-life**: `get_study_spaces` → `get_cheap_eats` → `calculate_budget`
+
+### 3. Blog RSS feed — `public/rss.xml`
+
+Static RSS 2.0 feed listing all 37 blog articles with title, link, description, pubDate, and category. Referenced from robots.txt and `<link rel="alternate">` in index.html.
+
+### 4. Documentation updates
+
+- **robots.txt**: Add references to agent-card.json, agents.json, and rss.xml
+- **llms.txt** and **llms-full.txt**: Document A2A Agent Card and agents.json endpoints
+- **ai-assistant-info.txt**: Add agent discovery protocol section
+
+## Files changed
+
+| File | Action |
+|------|--------|
+| `public/.well-known/agent-card.json` | Create |
+| `public/.well-known/agents.json` | Create |
+| `public/rss.xml` | Create |
+| `public/robots.txt` | Update — add new file references |
+| `public/llms.txt` | Update — document new protocols |
+| `public/llms-full.txt` | Update — document new protocols |
+| `public/ai-assistant-info.txt` | Update — document new protocols |
+| `index.html` | Update — add `<link rel="alternate" type="application/rss+xml">` |
 
