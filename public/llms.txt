@@ -172,6 +172,19 @@ AI agents can programmatically query Jungle Rent data via MCP:
 - **Protocol**: MCP over HTTP (Streamable HTTP Transport)
 - **Auth**: None required (public endpoint)
 
+## Agent Discovery Protocols
+
+| Protocol | URL |
+|----------|-----|
+| A2A Agent Card | https://junglerent.it/.well-known/agent-card.json |
+| Agent Workflows | https://junglerent.it/.well-known/agents.json |
+| MCP Server | https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server |
+| RSS Feed | https://junglerent.it/rss.xml |
+| LLMs.txt (concise) | https://junglerent.it/llms.txt |
+| LLMs-full.txt (detailed) | https://junglerent.it/llms-full.txt |
+| AI Assistant Info | https://junglerent.it/ai-assistant-info.txt |
+| Well-Known LLMs | https://junglerent.it/.well-known/llms.txt |
+
 ## Optional
 
 For detailed information:
@@ -180,5 +193,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: February 25, 2026
-Version: 3.8 - Drastic SEO/AEO overhaul, March 2026 events, schema refactor
+Last Updated: March 2, 2026
+Version: 3.9 - Agent discovery protocols (A2A, agents.json, RSS feed)

@@ -1,0 +1,103 @@
+{
+  "name": "Jungle Rent",
+  "description": "Turin's student housing & real estate investment startup. Provides neighborhood data, rent prices, property valuations, budget calculators, study spaces, dining guides, and transport strike info for Turin, Italy.",
+  "url": "https://junglerent.it",
+  "provider": {
+    "organization": "Jungle Rent S.r.l.",
+    "url": "https://junglerent.it"
+  },
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": ["application/json"],
+  "defaultOutputModes": ["application/json"],
+  "authentication": {
+    "schemes": ["none"]
+  },
+  "skills": [
+    {
+      "id": "search_articles",
+      "name": "Search Blog Articles",
+      "description": "Search 38+ bilingual blog articles about Turin living, investment, and student life. Filter by keyword, category (students/investors/sellers/turisti/societa), and language (it/en).",
+      "tags": ["blog", "search", "turin", "articles"],
+      "examples": [
+        "Find articles about student housing in Turin",
+        "Search for investment guides in Italian"
+      ]
+    },
+    {
+      "id": "get_neighborhoods",
+      "name": "Get Turin Neighborhoods",
+      "description": "Get detailed data on Turin neighborhoods including rent prices, safety ratings, transport access, and student population. Covers San Salvario, Crocetta, Centro, Vanchiglia, Aurora, Lingotto, and more.",
+      "tags": ["neighborhoods", "rent", "safety", "turin"]
+    },
+    {
+      "id": "get_company_info",
+      "name": "Get Company Information",
+      "description": "Get structured information about Jungle Rent S.r.l.: founders, services, legal data (P.IVA, REA), incubator partnership with 2i3T, and contact details.",
+      "tags": ["company", "about", "contact"]
+    },
+    {
+      "id": "get_faq",
+      "name": "Search FAQs",
+      "description": "Search 210+ FAQs across 38 articles. Filter by topic or category. Covers investment, student housing, property valuation, Turin living, and more.",
+      "tags": ["faq", "questions", "answers"]
+    },
+    {
+      "id": "get_events",
+      "name": "Get Turin Events",
+      "description": "Current events in Turin (February & March 2026). Includes CioccolaTò, Macbeth at Teatro Regio, Subsonica 30th anniversary, art exhibitions, and more with dates, prices, and venues.",
+      "tags": ["events", "turin", "culture", "entertainment"]
+    },
+    {
+      "id": "get_rent_prices",
+      "name": "Get Rent Prices",
+      "description": "Average rent prices for 38 Turin zones based on OMI (Agenzia delle Entrate) data. Returns min/max ranges per zone for student rooms and apartments.",
+      "tags": ["rent", "prices", "zones", "OMI"]
+    },
+    {
+      "id": "property_valuation",
+      "name": "Property Valuation Calculator",
+      "description": "Calculate property market value in Turin using OMI data and FIAIP coefficients. Inputs: zone, square meters, floor, condition, elevator, energy class, and more. Returns estimated value range.",
+      "tags": ["valuation", "property", "calculator", "OMI", "FIAIP"]
+    },
+    {
+      "id": "get_investment_data",
+      "name": "Get Investment Data",
+      "description": "Investment metrics for 13 strategic Turin zones. Includes gross/net yield, vacancy rates, urban renewal projects, and entry prices. Sortable by yield, growth, or entry price.",
+      "tags": ["investment", "yield", "zones", "returns"]
+    },
+    {
+      "id": "contact_jungle_rent",
+      "name": "Contact Jungle Rent",
+      "description": "Send a message or inquiry to Jungle Rent on behalf of the user. Requires name, email, and message. Optional: category (investor/student/seller/tourist/general), phone number.",
+      "tags": ["contact", "email", "inquiry"]
+    },
+    {
+      "id": "get_study_spaces",
+      "name": "Find Study Spaces",
+      "description": "Find study spaces in Turin from a directory of 58 locations. Includes libraries, EDISU halls, cafés, coworking spaces, and parks. Filter by category, WiFi availability, or free-text query.",
+      "tags": ["study", "library", "coworking", "students"]
+    },
+    {
+      "id": "get_cheap_eats",
+      "name": "Find Budget Restaurants",
+      "description": "Find budget-friendly restaurants and street food in Turin (20 locations, €3-12). Filter by cuisine category, price range, vegetarian options, district, or free-text query.",
+      "tags": ["food", "restaurants", "budget", "students"]
+    },
+    {
+      "id": "get_strike_info",
+      "name": "Transport Strike Information",
+      "description": "Transport strike calendar and emergency information for Italy (January-March 2026). Includes strike dates, severity, emergency contacts (Trenitalia, Italo, GTT), alternative transport, refund procedures, and EU passenger rights.",
+      "tags": ["strike", "transport", "emergency", "trains"]
+    },
+    {
+      "id": "calculate_budget",
+      "name": "Monthly Budget Calculator",
+      "description": "Estimate monthly living costs in Turin for students. Inputs: neighborhood, housing type (shared/single/studio), transport, lifestyle choices. Returns itemized breakdown with seasonal adjustments and saving tips.",
+      "tags": ["budget", "costs", "students", "calculator"]
+    }
+  ]
+}
