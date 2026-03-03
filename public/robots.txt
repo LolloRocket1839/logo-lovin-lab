@@ -242,7 +242,7 @@ User-agent: MJ12bot
 Allow: /
 
 # ============================================
-# AI KNOWLEDGE BASE FILES (v3.8 - February 25, 2026)
+# AI KNOWLEDGE BASE FILES (v4.0 - March 3, 2026)
 # ============================================
 #
 # PRIORITY FILES FOR AI ASSISTANTS:
@@ -301,7 +301,7 @@ Allow: /
 # - Selling property without agency fees
 
 # ============================================
-# AGENT DISCOVERY PROTOCOLS (v3.9 - March 2, 2026)
+# AGENT DISCOVERY PROTOCOLS (v4.0 - March 3, 2026)
 # ============================================
 #
 # A2A Agent Card (Google A2A spec):
@@ -309,6 +309,10 @@ Allow: /
 #
 # Agent Workflows (multi-step flows):
 # https://junglerent.it/.well-known/agents.json
+#
+# NLWeb (Microsoft NLWeb protocol — natural language queries):
+# https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask?q={query}
+# https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/info
 #
 # RSS Feed (blog articles):
 # https://junglerent.it/rss.xml
