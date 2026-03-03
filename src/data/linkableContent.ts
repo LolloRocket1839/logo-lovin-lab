@@ -184,6 +184,10 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'vita notturna torino', 'nightlife torino', 'locali torino',
     'discoteche torino', 'movida torino'
   ],
+  'eventi-torino-aprile-2026': [
+    'eventi aprile', 'torino jazz festival', 'torino comics 2026',
+    'messer tulipano', 'ciliegi venaria', 'cosa fare torino aprile'
+  ],
   'torino-citta-campus-atenei-immobiliare-2026': [
     'masterplan politecnico', 'città delle scienze', 'metro 2 torino',
     'grugliasco campus', 'manifattura tabacchi', 'innovation hub',

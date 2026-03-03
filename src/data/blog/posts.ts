@@ -2,6 +2,83 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "eventi-torino-aprile-2026",
+    category: "turisti",
+    date: "2026-03-03",
+    author: "Jungle Rent Team",
+    image: "/images/torino-primavera-marzo.jpg",
+    readTime: 30,
+    content: "eventi-torino-aprile-2026",
+    translations: {
+      it: {
+        title: "Eventi a Torino aprile 2026",
+        excerpt: "Guida completa agli eventi di aprile 2026: Torino Jazz Festival, Torino Comics 30ª edizione, Vermeer a Palazzo Madama, Messer Tulipano, ciliegi in fiore alla Reggia di Venaria.",
+        seo: {
+          title: "Eventi Torino aprile 2026 | Jazz Festival, mostre, teatro",
+          description: "Scopri eventi, concerti e mostre a Torino ad aprile 2026: Torino Jazz Festival, Torino Comics, Vermeer, Messer Tulipano, ciliegi Venaria. Prezzi, orari e biglietti.",
+          keywords: [
+            "eventi torino aprile 2026",
+            "torino jazz festival 2026",
+            "torino comics 2026",
+            "messer tulipano 2026",
+            "mostre torino aprile",
+            "ciliegi venaria 2026",
+            "concerti torino aprile",
+            "vermeer palazzo madama torino",
+            "be comics torino",
+            "teatro torino aprile 2026"
+          ]
+        },
+        tags: ["Turisti", "Eventi", "Torino", "Concerti", "Mostre", "Teatro", "Festival"],
+        faqs: [
+          { question: "Quando si tiene il Torino Jazz Festival 2026?", answer: "Il Torino Jazz Festival 2026, alla sua 14ª edizione, si tiene dal 25 aprile al 2 maggio. Otto giorni di concerti in teatri, club e spazi urbani con nomi come Fabrizio Bosso, Bill Frisell e John Scofield." },
+          { question: "Dove si tiene Torino Comics 2026?", answer: "Torino Comics 2026 cambia sede per la 30ª edizione: si sposta alla Certosa Reale di Collegno, diventando un evento completamente outdoor. Date: 17-19 aprile." },
+          { question: "Quando finisce Messer Tulipano 2026 a Pralormo?", answer: "Messer Tulipano 2026 al Castello di Pralormo è aperto dal 28 marzo al 26 aprile. Trovi oltre 100.000 tulipani e narcisi in fiore, allestimenti tematici e mercatino." },
+          { question: "Si possono vedere i ciliegi in fiore a Torino ad aprile?", answer: "Sì, alla Reggia di Venaria l'evento 'All'ombra dei ciliegi in fiore' si tiene dal 21 marzo al 6 aprile 2026. Circa 100 ciliegi, peri e meli in fiore nel Potager Royal, con aperture serali." },
+          { question: "Quali mostre sono aperte a Torino ad aprile 2026?", answer: "Le principali: Vermeer a Palazzo Madama, Orazio Gentileschi ai Musei Reali, Edward Weston a CAMERA, Chiharu Shiota al MAO, Pyramidion di Kha al Museo Egizio e MonumenTO a Palazzo Madama." },
+          { question: "Quali concerti ci sono a Torino ad aprile 2026?", answer: "All'Inalpi Arena: Tame Impala, Blanco, Elisa, Annalisa, Gianni Morandi. Tra OGR e club: Frah Quintale, Chiello, Venerus, Sergio Cammariere. Più il Torino Jazz Festival dal 25 aprile." },
+          { question: "Quali spettacoli teatrali ci sono a Torino ad aprile?", answer: "Al Teatro Regio: Dialoghi delle carmelitane. Al Teatro Alfieri: Cabaret con Arturo Brachetti. Al Carignano: Circle Mirror Transformation e Il berretto a sonagli con Silvio Orlando." },
+          { question: "Come raggiungere la Certosa di Collegno per Torino Comics?", answer: "Con il bus linea 36 o il treno SFM3. La Certosa Reale si trova nella prima cintura ovest di Torino, facilmente raggiungibile con i mezzi pubblici." },
+          { question: "Quanto costa il biglietto giornaliero GTT a Torino?", answer: "Il biglietto giornaliero GTT costa €5,50 e include metro, tram e autobus per tutta la giornata. Il biglietto singolo costa €2,00 per 100 minuti." },
+          { question: "Cos'è Be Comics! Be Games! Torino?", answer: "È un nuovo format al Lingotto Fiere dedicato a fumetto, manga, gaming e cultura pop. Si tiene il 18-19 aprile 2026, in parziale sovrapposizione con Torino Comics a Collegno." }
+        ]
+      },
+      en: {
+        title: "Events in Turin April 2026",
+        excerpt: "Complete guide to April 2026 events: Turin Jazz Festival, Turin Comics 30th edition, Vermeer at Palazzo Madama, Messer Tulipano, cherry blossoms at the Reggia di Venaria.",
+        seo: {
+          title: "Events Turin April 2026 | Jazz Festival, exhibitions, theatre",
+          description: "Discover events, concerts and exhibitions in Turin in April 2026: Turin Jazz Festival, Turin Comics, Vermeer, Messer Tulipano, Venaria cherry blossoms. Prices, hours and tickets.",
+          keywords: [
+            "events turin april 2026",
+            "turin jazz festival 2026",
+            "torino comics 2026",
+            "messer tulipano 2026",
+            "exhibitions turin april",
+            "venaria cherry blossoms 2026",
+            "concerts turin april",
+            "vermeer palazzo madama turin",
+            "be comics turin",
+            "theatre turin april 2026"
+          ]
+        },
+        tags: ["Tourists", "Events", "Turin", "Concerts", "Exhibitions", "Theater", "Festival"],
+        faqs: [
+          { question: "When is the Turin Jazz Festival 2026?", answer: "The Turin Jazz Festival 2026, in its 14th edition, runs from April 25 to May 2. Eight days of concerts in theatres, clubs and urban spaces with names like Fabrizio Bosso, Bill Frisell and John Scofield." },
+          { question: "Where is Turin Comics 2026 held?", answer: "Turin Comics 2026 changes venue for its 30th edition: it moves to the Certosa Reale di Collegno, becoming a fully outdoor event for the first time. Dates: April 17-19." },
+          { question: "When does Messer Tulipano 2026 end at Pralormo?", answer: "Messer Tulipano 2026 at Castello di Pralormo runs from March 28 to April 26. You'll find over 100,000 tulips and daffodils in bloom, themed displays and a market." },
+          { question: "Can you see cherry blossoms in Turin in April?", answer: "Yes, at the Reggia di Venaria the 'Under the cherry blossoms' event runs from March 21 to April 6, 2026. Around 100 cherry, pear and apple trees bloom in the Potager Royal, with evening openings." },
+          { question: "What exhibitions are open in Turin in April 2026?", answer: "The main ones: Vermeer at Palazzo Madama, Orazio Gentileschi at the Royal Museums, Edward Weston at CAMERA, Chiharu Shiota at MAO, Kha's Pyramidion at the Egyptian Museum and MonumenTO at Palazzo Madama." },
+          { question: "What concerts are in Turin in April 2026?", answer: "At Inalpi Arena: Tame Impala, Blanco, Elisa, Annalisa, Gianni Morandi. At OGR and clubs: Frah Quintale, Chiello, Venerus, Sergio Cammariere. Plus the Turin Jazz Festival from April 25." },
+          { question: "What theatre shows are in Turin in April?", answer: "At Teatro Regio: Dialogues of the Carmelites. At Teatro Alfieri: Cabaret with Arturo Brachetti. At Carignano: Circle Mirror Transformation and Cap and Bells with Silvio Orlando." },
+          { question: "How to reach the Certosa di Collegno for Turin Comics?", answer: "By bus line 36 or SFM3 train. The Certosa Reale is in Turin's western inner belt, easily reachable by public transport." },
+          { question: "How much is the GTT daily ticket in Turin?", answer: "The GTT daily ticket costs €5.50 and includes metro, tram and buses for the whole day. A single ticket costs €2.00 for 100 minutes." },
+          { question: "What is Be Comics! Be Games! Torino?", answer: "It's a new format at Lingotto Fiere dedicated to comics, manga, gaming and pop culture. It runs April 18-19, 2026, partially overlapping with Turin Comics at Collegno." }
+        ]
+      }
+    }
+  },
+  {
     slug: "torino-citta-campus-atenei-immobiliare-2026",
     category: "sellers",
     date: "2026-02-21",
