@@ -99,5 +99,10 @@
       "description": "Estimate monthly living costs in Turin for students. Inputs: neighborhood, housing type (shared/single/studio), transport, lifestyle choices. Returns itemized breakdown with seasonal adjustments and saving tips.",
       "tags": ["budget", "costs", "students", "calculator"]
     }
-  ]
+  ],
+  "nlweb": {
+    "endpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb",
+    "description": "Natural language query endpoint (Microsoft NLWeb protocol). GET ?q={query}&lang={language} for Schema.org structured answers.",
+    "info": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb?action=info"
+  }
 }

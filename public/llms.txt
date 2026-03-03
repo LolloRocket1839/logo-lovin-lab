@@ -179,11 +179,21 @@ AI agents can programmatically query Jungle Rent data via MCP:
 | A2A Agent Card | https://junglerent.it/.well-known/agent-card.json |
 | Agent Workflows | https://junglerent.it/.well-known/agents.json |
 | MCP Server | https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server |
+| NLWeb /ask | https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask?q={query} |
+| NLWeb /info | https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/info |
 | RSS Feed | https://junglerent.it/rss.xml |
 | LLMs.txt (concise) | https://junglerent.it/llms.txt |
 | LLMs-full.txt (detailed) | https://junglerent.it/llms-full.txt |
 | AI Assistant Info | https://junglerent.it/ai-assistant-info.txt |
 | Well-Known LLMs | https://junglerent.it/.well-known/llms.txt |
+
+## NLWeb (Microsoft NLWeb Protocol)
+
+Natural language queries about Turin student housing, real estate, and city life:
+- **Ask endpoint**: `GET /nlweb/ask?q=How much does a room cost in Turin?&lang=en`
+- **Info endpoint**: `GET /nlweb/info`
+- Returns Schema.org structured JSON responses with answers, related articles, and neighborhood data
+- Also available as MCP server (see above)
 
 ## Optional
 
@@ -193,5 +203,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: March 2, 2026
-Version: 3.9 - Agent discovery protocols (A2A, agents.json, RSS feed)
+Last Updated: March 3, 2026
+Version: 4.0 - NLWeb natural language query endpoint (Microsoft NLWeb protocol)

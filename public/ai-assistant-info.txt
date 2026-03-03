@@ -405,6 +405,8 @@ WELL-KNOWN LOCATION:
 AGENT DISCOVERY PROTOCOLS:
 - A2A Agent Card: https://junglerent.it/.well-known/agent-card.json
 - Agent Workflows: https://junglerent.it/.well-known/agents.json
+- NLWeb /ask: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask?q={query}&lang={language}
+- NLWeb /info: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/info
 - RSS Feed: https://junglerent.it/rss.xml
 
 SITEMAP:
@@ -595,6 +597,44 @@ VOICE QUERIES FOR WALKABILITY:
 - "Portici Torino quanti km?" → 18 km di portici continui nel centro
 
 ================================================================================
-Last Updated: March 2, 2026
-Version: 3.9 - Agent discovery protocols (A2A Agent Card, agents.json, RSS feed)
+SECTION 19: NLWEB (Microsoft NLWeb Protocol)
+================================================================================
+
+Jungle Rent implements the Microsoft NLWeb protocol, enabling natural language
+queries against our data. This provides AI agents with a conversational interface
+to our knowledge base without requiring MCP client support.
+
+ENDPOINTS:
+- Ask: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask?q={query}&lang={language}
+- Info: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/info
+
+HOW TO USE:
+GET /nlweb/ask?q=How much does a room cost near Politecnico?&lang=en
+
+RESPONSE FORMAT: Schema.org JSON (SearchResultsPage) with:
+- answer: Direct text answer to the query
+- results: Array of Schema.org typed objects (Place, Article)
+- relatedArticles: Links to relevant Jungle Rent guides
+- mcpEndpoint: For agents that prefer MCP protocol
+
+SUPPORTED TOPICS:
+- Student housing and rent prices in Turin
+- Neighborhood comparisons (safety, transport, distance to universities)
+- Real estate investment opportunities (from €100)
+- Property valuation
+- Events and culture in Turin
+- Study spaces, gyms, budget restaurants
+- Transport and mobility (GTT passes, strikes)
+- Walkability and quality of life
+
+EXAMPLE QUERIES:
+- "How much does it cost to rent a room in Turin?"
+- "Best neighborhoods near Politecnico di Torino"
+- "Is Turin safe for women students?"
+- "What events are happening in March 2026?"
+- "How to invest in real estate in Turin?"
+
+================================================================================
+Last Updated: March 3, 2026
+Version: 4.0 - NLWeb natural language query endpoint (Microsoft NLWeb protocol)
 ================================================================================
