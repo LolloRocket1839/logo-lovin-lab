@@ -250,6 +250,7 @@ Check the calendars, book the tickets and come. To discover Turin throughout the
 
 ## Related articles
 
+- [Events in Turin in April 2026](/blog/eventi-torino-aprile-2026) - Jazz Festival, Turin Comics 30 years, Vermeer, Messer Tulipano, cherry blossoms
 - [Events in Turin in February 2026](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth, Lee Miller and Jeff Wall exhibitions, Ivrea Carnival
 - [Events in Turin in January 2026](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza, Olympic Flame
 - [The historic Ivrea Carnival](/blog/carnevale-ivrea-battaglia-arance-2026) - February 14-18, 2026, Mugnaia legend
