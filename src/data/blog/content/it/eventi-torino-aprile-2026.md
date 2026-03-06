@@ -247,6 +247,7 @@ Consulta i calendari, prenota i biglietti e vieni. Per scoprire Torino in ogni p
 
 ## Articoli correlati
 
+- [Eventi a Torino a maggio 2026](/blog/eventi-torino-maggio-2026) — Salone del Libro, TWICE, Rockin'1000, mostre OGR, teatro
 - [Eventi a Torino a marzo 2026](/blog/eventi-torino-marzo-2026) - Chiharu Shiota al MAO, Mika, Subsonica 30 anni, Rocky il Musical
 - [Eventi a Torino a febbraio 2026](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth, mostre Lee Miller e Jeff Wall
 - [Eventi a Torino a gennaio 2026](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza
