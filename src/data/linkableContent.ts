@@ -192,6 +192,11 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'masterplan politecnico', 'città delle scienze', 'metro 2 torino',
     'grugliasco campus', 'manifattura tabacchi', 'innovation hub',
     'campus valentino', 'torri politecnico', 'PNRR studentati'
+  ],
+  'eventi-torino-maggio-2026': [
+    'eventi maggio', 'salone del libro 2026', 'concerti torino maggio',
+    'mostre torino maggio', 'twice torino', 'rockin 1000 torino',
+    'cosa fare torino maggio', 'teatro torino maggio'
   ]
 };
 

@@ -2,6 +2,83 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "eventi-torino-maggio-2026",
+    category: "turisti",
+    date: "2026-03-06",
+    author: "Jungle Rent Team",
+    image: "/images/torino-primavera-marzo.jpg",
+    readTime: 10,
+    content: "eventi-torino-maggio-2026",
+    translations: {
+      it: {
+        title: "Eventi a Torino maggio 2026",
+        excerpt: "Guida completa agli eventi di maggio 2026: Salone del Libro, Jazz Festival, TWICE all'Inalpi Arena, Rockin'1000, mostre a Palazzo Madama e OGR, teatro e musical.",
+        seo: {
+          title: "Eventi Torino maggio 2026 | Salone del Libro, concerti, mostre",
+          description: "Scopri eventi, concerti e mostre a Torino a maggio 2026: Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, teatro. Date, prezzi e biglietti.",
+          keywords: [
+            "eventi torino maggio 2026",
+            "salone del libro 2026",
+            "concerti torino maggio",
+            "mostre torino maggio",
+            "torino jazz festival 2026",
+            "twice torino 2026",
+            "rockin 1000 torino",
+            "teatro torino maggio 2026",
+            "palazzo madama mostra",
+            "ogr torino mostre"
+          ]
+        },
+        tags: ["Turisti", "Eventi", "Torino", "Concerti", "Mostre", "Teatro", "Festival"],
+        faqs: [
+          { question: "Quando si tiene il Salone del Libro 2026?", answer: "Il Salone Internazionale del Libro 2026 si tiene indicativamente dal 14 al 18 maggio al Lingotto Fiere. Ogni anno attira più di 200.000 visitatori. Consigliamo di prenotare l'alloggio con largo anticipo." },
+          { question: "Il Torino Jazz Festival è ancora attivo a maggio?", answer: "Sì, il Torino Jazz Festival 2026 va dal 25 aprile al 2 maggio. I primi due giorni di maggio rientrano nel programma. Molti concerti sono gratuiti e all'aperto." },
+          { question: "Quando suonano le TWICE a Torino?", answer: "Le TWICE si esibiscono all'Inalpi Arena il 20 maggio 2026 con il 'This Is For World Tour'. I biglietti sono disponibili su Ticketone." },
+          { question: "Cos'è il Rockin'1000 a Torino?", answer: "Rockin'1000 è un evento in cui mille musicisti suonano insieme in uno stadio. A Torino si tiene il 30 maggio 2026 all'Allianz Stadium. I biglietti sono su Vivaticket." },
+          { question: "Quali mostre sono aperte a Torino a maggio 2026?", answer: "Le principali: 'MonumenTO, Torino Capitale' a Palazzo Madama, mostre alla GAM e al MAO, e installazioni multimediali alle OGR come 'WE FELT A STAR DYING' ed 'ELECTRIC DREAMS'." },
+          { question: "Le OGR Torino cosa propongono a maggio?", answer: "Le OGR propongono progetti all'incrocio tra arte e tecnologia. A maggio le installazioni 'WE FELT A STAR DYING' ed 'ELECTRIC DREAMS' restano attive fino al 10 maggio." },
+          { question: "Quali spettacoli teatrali ci sono a Torino a maggio?", answer: "Al Teatro Alfieri: Aladin il Musical (15-17 maggio), Caveman (24 maggio), Cicchella (25-27 maggio), Lupin il Musical (29-31 maggio). Al Teatro Regio: I Puritani e altre produzioni d'opera." },
+          { question: "Dove si tiene la rassegna Onde a Torino?", answer: "La rassegna Onde si tiene al Museo Egizio, in via Accademia delle Scienze 6. Propone concerti gratuiti o a prezzo contenuto tra le sale del museo. Date specifiche da verificare sul sito." },
+          { question: "Come muoversi a Torino durante gli eventi di maggio?", answer: "Il biglietto giornaliero GTT costa €5,50 e include metro, tram e autobus. Il biglietto singolo costa €2,00 per 100 minuti. Il centro si gira facilmente a piedi." },
+          { question: "È meglio visitare Torino ad aprile o a maggio?", answer: "Entrambi i mesi sono ottimi. Aprile ha Torino Comics e i ciliegi in fiore. Maggio offre il Salone del Libro, concerti negli stadi e il clima migliore. Il Jazz Festival li collega entrambi." }
+        ]
+      },
+      en: {
+        title: "Events in Turin May 2026",
+        excerpt: "Complete guide to May 2026 events: Salone del Libro, Jazz Festival, TWICE at Inalpi Arena, Rockin'1000, exhibitions at Palazzo Madama and OGR, theatre and musicals.",
+        seo: {
+          title: "Events Turin May 2026 | Salone del Libro, concerts, exhibitions",
+          description: "Discover events, concerts and exhibitions in Turin in May 2026: Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, theatre. Dates, prices and tickets.",
+          keywords: [
+            "events turin may 2026",
+            "salone del libro 2026",
+            "concerts turin may",
+            "exhibitions turin may",
+            "turin jazz festival 2026",
+            "twice turin 2026",
+            "rockin 1000 turin",
+            "theatre turin may 2026",
+            "palazzo madama exhibition",
+            "ogr turin exhibitions"
+          ]
+        },
+        tags: ["Tourists", "Events", "Turin", "Concerts", "Exhibitions", "Theater", "Festival"],
+        faqs: [
+          { question: "When is the Salone del Libro 2026?", answer: "The Salone Internazionale del Libro 2026 is expected to run from May 14 to 18 at Lingotto Fiere. It attracts over 200,000 visitors every year. We recommend booking accommodation well in advance." },
+          { question: "Is the Turin Jazz Festival still on in May?", answer: "Yes, the Turin Jazz Festival 2026 runs from April 25 to May 2. The first two days of May are part of the programme. Many concerts are free and outdoors." },
+          { question: "When do TWICE perform in Turin?", answer: "TWICE perform at Inalpi Arena on May 20, 2026 as part of their 'This Is For World Tour'. Tickets are available on Ticketone." },
+          { question: "What is Rockin'1000 in Turin?", answer: "Rockin'1000 is an event where a thousand musicians play together in a stadium. In Turin it takes place on May 30, 2026 at Allianz Stadium. Tickets are on Vivaticket." },
+          { question: "What exhibitions are open in Turin in May 2026?", answer: "The main ones: 'MonumenTO, Torino Capitale' at Palazzo Madama, exhibitions at GAM and MAO, and multimedia installations at OGR like 'WE FELT A STAR DYING' and 'ELECTRIC DREAMS'." },
+          { question: "What do OGR Torino offer in May?", answer: "OGR presents projects at the intersection of art and technology. In May, the installations 'WE FELT A STAR DYING' and 'ELECTRIC DREAMS' run until May 10." },
+          { question: "What theatre shows are in Turin in May?", answer: "At Teatro Alfieri: Aladdin the Musical (May 15-17), Caveman (May 24), Cicchella (May 25-27), Lupin the Musical (May 29-31). At Teatro Regio: I Puritani and other opera productions." },
+          { question: "Where is the Onde music series in Turin?", answer: "The Onde series takes place at the Egyptian Museum, via Accademia delle Scienze 6. It offers free or low-cost concerts among the museum halls. Check the website for specific dates." },
+          { question: "How to get around Turin during May events?", answer: "The GTT daily ticket costs €5.50 and includes metro, tram and buses. A single ticket costs €2.00 for 100 minutes. The city centre is easily walkable." },
+          { question: "Is it better to visit Turin in April or May?", answer: "Both months are excellent. April has Turin Comics and cherry blossoms. May offers the Salone del Libro, stadium concerts and the best weather. The Jazz Festival bridges both." }
+        ]
+      }
+    }
+  },
+  {
     slug: "eventi-torino-aprile-2026",
     category: "turisti",
     date: "2026-03-03",

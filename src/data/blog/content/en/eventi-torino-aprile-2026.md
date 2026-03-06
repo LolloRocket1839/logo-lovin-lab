@@ -247,6 +247,7 @@ Check the calendars, book the tickets and come. To discover Turin throughout the
 
 ## Related articles
 
+- [Events in Turin in May 2026](/blog/eventi-torino-maggio-2026) — Salone del Libro, TWICE, Rockin'1000, OGR exhibitions, theatre
 - [Events in Turin in March 2026](/blog/eventi-torino-marzo-2026) - Chiharu Shiota at MAO, Mika, Subsonica 30 years, Rocky the Musical
 - [Events in Turin in February 2026](/blog/eventi-torino-febbraio-2026) - CioccolaTò, Macbeth, Lee Miller and Jeff Wall exhibitions
 - [Events in Turin in January 2026](/blog/eventi-torino-gennaio-2026) - Luci d'Artista, Orazio Gentileschi, Lazza
