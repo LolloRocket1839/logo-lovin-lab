@@ -108,11 +108,11 @@ export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProp
               <button
                 onClick={() => handleClick(id)}
                 className={cn(
-                  "text-left text-xs transition-colors duration-200 line-clamp-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary rounded px-1 -ml-1",
+                  "text-left text-xs transition-all duration-200 line-clamp-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary rounded px-1.5 py-0.5 -ml-1",
                   level === 3 && "pl-3",
                   activeId === id
-                    ? "text-primary font-medium"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-primary font-medium bg-primary/10"
+                    : "text-muted-foreground hover:text-primary hover:bg-primary/5 hover:translate-x-0.5"
                 )}
                 aria-current={activeId === id ? "location" : undefined}
               >
