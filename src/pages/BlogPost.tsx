@@ -166,7 +166,7 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
         />
         
         {/* Main layout with optional sidebar */}
-        <div className="lg:flex lg:gap-8 lg:px-8">
+        <div className="max-w-7xl mx-auto lg:flex lg:gap-8 lg:px-8">
           {/* Main article content */}
           <article className="py-12 md:py-16 px-4 md:px-0 flex-1 lg:max-w-4xl">
             <div className="container mx-auto lg:mx-0">
