@@ -259,6 +259,8 @@ export const QuickSellerLeadDialog = ({
                 <Input
                   id="seller-email"
                   type="email"
+                  name="email"
+                  autoComplete="email"
                   placeholder="tuo@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
