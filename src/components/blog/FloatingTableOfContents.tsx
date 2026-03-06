@@ -96,7 +96,7 @@ export const FloatingTableOfContents = ({ content }: FloatingTableOfContentsProp
   return (
     <nav
       className={cn(
-        "fixed left-6 top-1/2 -translate-y-1/2 z-30 hidden xl:block max-w-[200px] transition-opacity duration-300",
+        "fixed left-4 top-1/2 -translate-y-1/2 z-30 hidden 2xl:block max-w-[180px] transition-opacity duration-300",
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
       aria-label="Table of contents"
