@@ -236,6 +236,8 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
               <form onSubmit={handleFormSubmit} className="space-y-3">
                 <Input
                   type="email"
+                  name="email"
+                  autoComplete="email"
                   placeholder={t("investorExitIntent.emailPlaceholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}

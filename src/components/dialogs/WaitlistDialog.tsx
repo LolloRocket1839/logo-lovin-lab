@@ -167,9 +167,11 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
                     <FormItem>
                       <FormLabel className="text-sm font-medium text-foreground">{t("waitlist.emailLabel")}</FormLabel>
                       <FormControl>
-                        <Input
-                          type="email"
-                          placeholder={t("waitlist.emailPlaceholder")}
+                         <Input
+                           type="email"
+                           name="email"
+                           autoComplete="email"
+                           placeholder={t("waitlist.emailPlaceholder")}
                           {...field}
                           className="h-10
                                      bg-background

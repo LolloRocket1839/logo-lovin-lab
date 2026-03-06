@@ -119,6 +119,8 @@ export const QuickInvestorLeadDialog = ({
           <div className="space-y-2">
             <Input
               type="email"
+              name="email"
+              autoComplete="email"
               placeholder="tuo@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}

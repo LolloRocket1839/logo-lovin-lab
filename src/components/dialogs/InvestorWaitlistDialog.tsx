@@ -189,9 +189,11 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
                     <FormItem>
                       <FormLabel className="text-sm font-medium text-foreground">{t("investorWaitlist.emailLabel")}</FormLabel>
                       <FormControl>
-                        <Input
-                          type="email"
-                          placeholder={t("investorWaitlist.emailPlaceholder")}
+                         <Input
+                           type="email"
+                           name="email"
+                           autoComplete="email"
+                           placeholder={t("investorWaitlist.emailPlaceholder")}
                           {...field}
                           className="h-10 bg-background border-border focus:border-primary focus:ring-1 focus:ring-primary/20 transition-colors"
                         />
