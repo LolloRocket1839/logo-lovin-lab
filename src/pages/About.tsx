@@ -49,11 +49,13 @@ const About = () => {
       "founder": [
         {
           "@type": "Person",
+          "@id": "https://junglerent.it/#founder-lorenzo",
           "name": "Lorenzo Oni-Joseph",
           "jobTitle": currentLang === 'it' ? "Co-Fondatore & CEO" : "Co-Founder & CEO"
         },
         {
           "@type": "Person",
+          "@id": "https://junglerent.it/#founder-andrea",
           "name": "Andrea Niccolaini",
           "jobTitle": currentLang === 'it' ? "Co-Fondatore" : "Co-Founder"
         }
