@@ -4,10 +4,11 @@ const BASE_URL = "https://junglerent.it";
 
 export const StructuredData = () => {
   useEffect(() => {
-    // Organization Schema with sameAs for trust graph
+    // Organization Schema with @id for entity linking
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
       name: "Jungle Rent",
       legalName: "JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA",
       alternateName: ["JungleRent", "JUNGLE RENT S.R.L.", "Jungle Rent Torino", "JungleRent Property Management", "Jungle Rent Italia"],
@@ -17,18 +18,35 @@ export const StructuredData = () => {
       foundingDate: "2025-10-24",
       taxID: "13333450016",
       vatID: "IT13333450016",
+      // Startup Innovativa fields merged
+      additionalType: "https://schema.org/Corporation",
+      naics: "531110",
+      isicV4: "6820",
+      foundingLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Torino",
+          addressCountry: "IT",
+        },
+      },
       sameAs: [
         "https://www.instagram.com/junglerent",
         "https://www.2i3t.it"
       ],
       founders: [
-        { "@type": "Person", name: "Lorenzo Oni-Joseph", jobTitle: "Founder" },
-        { "@type": "Person", name: "Andrea Niccolaini", jobTitle: "Co-Founder" }
+        { "@type": "Person", "@id": `${BASE_URL}/#founder-lorenzo`, name: "Lorenzo Oni-Joseph", jobTitle: "Founder" },
+        { "@type": "Person", "@id": `${BASE_URL}/#founder-andrea`, name: "Andrea Niccolaini", jobTitle: "Co-Founder" }
       ],
       parentOrganization: {
         "@type": "Organization",
         name: "2i3T - Incubatore di Imprese Innovative dell'Università di Torino",
         url: "https://www.2i3t.it"
+      },
+      memberOf: {
+        "@type": "Organization",
+        name: "2i3T - Incubatore di Imprese Innovative dell'Università di Torino",
+        url: "https://www.2i3t.it",
       },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -81,7 +99,11 @@ export const StructuredData = () => {
         "Gestione immobiliare professionale Torino",
         "Property valuation Turin",
         "Valutazione immobile Torino",
-        "Props property management app"
+        "Props property management app",
+        "Property Management",
+        "Fractional Real Estate Investment",
+        "Student Housing",
+        "Short Term Rentals"
       ],
       areaServed: [
         {
@@ -159,46 +181,13 @@ export const StructuredData = () => {
       },
     };
 
-    // Startup Innovativa Schema
-    const startupSchema = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": `${BASE_URL}/#startup`,
-      additionalType: "https://schema.org/Corporation",
-      name: "Jungle Rent S.r.l.",
-      foundingDate: "2025-10-24",
-      foundingLocation: {
-        "@type": "Place",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Torino",
-          addressCountry: "IT",
-        },
-      },
-      memberOf: {
-        "@type": "Organization",
-        name: "2i3T - Incubatore di Imprese Innovative dell'Università di Torino",
-        url: "https://www.2i3t.it",
-      },
-      naics: "531110",
-      isicV4: "6820",
-      knowsAbout: [
-        "Property Management",
-        "Fractional Real Estate Investment",
-        "Student Housing",
-        "Short Term Rentals",
-      ],
-    };
-
     // Service Schema - Studenti
     const studentServiceSchema = {
       "@context": "https://schema.org",
       "@type": "Service",
+      "@id": `${BASE_URL}/#service-students`,
       serviceType: "Ottimizzazione Affitti Studenti",
-      provider: {
-        "@type": "Organization",
-        name: "Jungle Rent",
-      },
+      provider: { "@id": `${BASE_URL}/#organization` },
       areaServed: "Torino",
       audience: {
         "@type": "EducationalAudience",
@@ -215,11 +204,9 @@ export const StructuredData = () => {
     const investorServiceSchema = {
       "@context": "https://schema.org",
       "@type": "Service",
+      "@id": `${BASE_URL}/#service-investors`,
       serviceType: "Opportunità Investimento Immobiliare",
-      provider: {
-        "@type": "Organization",
-        name: "Jungle Rent",
-      },
+      provider: { "@id": `${BASE_URL}/#organization` },
       areaServed: "Torino",
       offers: {
         "@type": "Offer",
@@ -243,11 +230,7 @@ export const StructuredData = () => {
           addressCountry: "IT"
         }
       },
-      agent: {
-        "@type": "Organization",
-        name: "Jungle Rent S.r.l.",
-        url: BASE_URL,
-      },
+      agent: { "@id": `${BASE_URL}/#organization` },
       target: {
         "@type": "EntryPoint",
         urlTemplate: `${BASE_URL}/#vendi-casa`
@@ -445,6 +428,7 @@ export const StructuredData = () => {
     const propertyValuationToolSchema = {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
+      "@id": `${BASE_URL}/#valuation-tool`,
       name: "Calcolatore Valutazione Immobile Torino",
       alternateName: "Property Valuation Calculator Turin",
       applicationCategory: "FinanceApplication",
@@ -464,16 +448,14 @@ export const StructuredData = () => {
         "Confronto commissioni agenzia",
         "Upload foto/video per valutazione professionale"
       ],
-      provider: {
-        "@type": "Organization",
-        name: "Jungle Rent S.r.l."
-      }
+      provider: { "@id": `${BASE_URL}/#organization` }
     };
 
     // SoftwareApplication Schema for Props App
     const propsAppSchema = {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
+      "@id": `${BASE_URL}/#props-app`,
       name: "Props - Gestione Immobiliare Semplificata",
       alternateName: "Props Property Management App",
       applicationCategory: "BusinessApplication",
@@ -494,20 +476,19 @@ export const StructuredData = () => {
         "Archiviazione documenti",
         "Report finanziari automatici"
       ],
-      provider: {
-        "@type": "Organization",
-        name: "Jungle Rent S.r.l."
-      },
+      provider: { "@id": `${BASE_URL}/#organization` },
       releaseNotes: "Lancio previsto Q1 2026"
     };
 
-    // WebSite Schema with SearchAction (voice search)
+    // WebSite Schema with SearchAction and @id
     const webSiteSchema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
       "name": "Jungle Rent",
       "url": BASE_URL,
-      "dateModified": "2026-02-25",
+      "publisher": { "@id": `${BASE_URL}/#organization` },
+      "dateModified": "2026-03-07",
       "inLanguage": ["it-IT", "en-US"],
       "potentialAction": [
         {
@@ -525,6 +506,23 @@ export const StructuredData = () => {
       }
     };
 
+    // WebPage Schema for homepage
+    const webPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/#webpage`,
+      "url": BASE_URL,
+      "name": "Jungle Rent - Affitti Smart e Investimenti Immobiliari a Torino",
+      "isPartOf": { "@id": `${BASE_URL}/#website` },
+      "about": { "@id": `${BASE_URL}/#organization` },
+      "dateModified": "2026-03-07",
+      "inLanguage": "it-IT",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "[data-speakable='true']", ".hero-title", ".hero-subtitle"]
+      }
+    };
+
     // VideoObject Schema for explainer video
     const videoSchema = {
       "@context": "https://schema.org",
@@ -535,14 +533,7 @@ export const StructuredData = () => {
       "uploadDate": "2025-12-01",
       "contentUrl": `${BASE_URL}/videos/jungle-rent-explainer.mp4`,
       "embedUrl": `${BASE_URL}/videos/jungle-rent-explainer.mp4`,
-      "publisher": {
-        "@type": "Organization",
-        "name": "Jungle Rent S.r.l.",
-        "logo": {
-          "@type": "ImageObject",
-          "url": `${BASE_URL}/jungle-rent-logo.svg`
-        }
-      },
+      "publisher": { "@id": `${BASE_URL}/#organization` },
       "inLanguage": "it-IT"
     };
 
@@ -554,11 +545,8 @@ export const StructuredData = () => {
       "alternateName": "Turin Study Spaces Directory",
       "description": "Directory completa delle aule studio a Torino: 30+ location tra biblioteche, sale EDISU, caffetterie e coworking per studenti universitari.",
       "url": `${BASE_URL}/strumenti/aule-studio-torino`,
-      "creator": {
-        "@type": "Organization",
-        "name": "Jungle Rent S.r.l."
-      },
-      "dateModified": "2026-02-25",
+      "creator": { "@id": `${BASE_URL}/#organization` },
+      "dateModified": "2026-03-07",
       "keywords": ["aule studio torino", "biblioteche torino studenti", "dove studiare torino", "sale studio università torino"],
       "spatialCoverage": {
         "@type": "Place",
@@ -576,11 +564,8 @@ export const StructuredData = () => {
       "alternateName": "Turin Budget Restaurants Directory",
       "description": "Directory completa dei ristoranti economici a Torino per studenti: 20+ location con prezzi €3-15, menu studenti, e recensioni.",
       "url": `${BASE_URL}/strumenti/dove-mangiare-torino`,
-      "creator": {
-        "@type": "Organization",
-        "name": "Jungle Rent S.r.l."
-      },
-      "dateModified": "2026-02-25",
+      "creator": { "@id": `${BASE_URL}/#organization` },
+      "dateModified": "2026-03-07",
       "keywords": ["ristoranti economici torino", "dove mangiare torino studenti", "pranzo economico torino", "menu studenti torino"],
       "spatialCoverage": {
         "@type": "Place",
@@ -597,11 +582,8 @@ export const StructuredData = () => {
       "alternateName": "Turin Gyms Directory for Students",
       "description": "Directory completa delle palestre a Torino per studenti: 25+ location con prezzi scontati, orari, e servizi.",
       "url": `${BASE_URL}/strumenti/palestre-torino`,
-      "creator": {
-        "@type": "Organization",
-        "name": "Jungle Rent S.r.l."
-      },
-      "dateModified": "2026-02-25",
+      "creator": { "@id": `${BASE_URL}/#organization` },
+      "dateModified": "2026-03-07",
       "keywords": ["palestre torino studenti", "fitness torino", "abbonamento palestra studenti", "gym torino"],
       "spatialCoverage": {
         "@type": "Place",
@@ -610,11 +592,10 @@ export const StructuredData = () => {
       "isAccessibleForFree": true
     };
 
-    // Insert all schemas into head
+    // Insert all schemas into head (consolidated: Organization+Startup merged)
     const schemas = [
       organizationSchema, 
       localBusinessSchema,
-      startupSchema,
       studentServiceSchema, 
       investorServiceSchema, 
       buyActionSchema, 
@@ -625,6 +606,7 @@ export const StructuredData = () => {
       propertyValuationToolSchema,
       propsAppSchema,
       webSiteSchema,
+      webPageSchema,
       videoSchema,
       studySpacesDatasetSchema,
       cheapEatsDatasetSchema,

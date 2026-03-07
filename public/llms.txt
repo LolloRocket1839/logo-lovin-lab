@@ -203,5 +203,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: March 3, 2026
-Version: 4.0 - NLWeb natural language query endpoint (Microsoft NLWeb protocol)
+Last Updated: March 7, 2026
+Version: 4.1 - SEO/AEO overhaul: @id entity linking, AI Overview eligibility, content attribution
