@@ -530,7 +530,7 @@ export const StructuredData = () => {
       "name": "Jungle Rent - Come funziona",
       "description": "Video esplicativo su Jungle Rent: come funziona l'investimento immobiliare studentesco a Torino da €100.",
       "thumbnailUrl": `${BASE_URL}/jungle-rent-logo.svg`,
-      "uploadDate": "2025-12-01",
+      "uploadDate": "2025-12-01T00:00:00+01:00",
       "contentUrl": `${BASE_URL}/videos/jungle-rent-explainer.mp4`,
       "embedUrl": `${BASE_URL}/videos/jungle-rent-explainer.mp4`,
       "publisher": { "@id": `${BASE_URL}/#organization` },
