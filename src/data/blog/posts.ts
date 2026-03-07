@@ -2,6 +2,83 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vendere-immobile-investitori-torino",
+    category: "sellers",
+    date: "2026-03-07",
+    author: "Jungle Rent Team",
+    image: "/images/torino-mercato-immobiliare.jpg",
+    readTime: 14,
+    content: "vendere-immobile-investitori-torino",
+    translations: {
+      it: {
+        title: "Vendere il tuo immobile a investitori a Torino: guida completa",
+        excerpt: "Come presentare il tuo appartamento agli investitori immobiliari: calcolo del rendimento, annunci efficaci, yield-driven pricing e vendita diretta senza commissioni.",
+        seo: {
+          title: "Vendere immobile a investitori Torino: guida completa 2026",
+          description: "Come vendere il tuo appartamento a investitori a Torino: calcolo rendimento lordo, strategia di prezzo yield-driven, documentazione e vendita diretta a Jungle Rent senza commissioni.",
+          keywords: [
+            "vendere a investitori torino",
+            "rendimento lordo immobiliare",
+            "rental ready",
+            "yield driven pricing",
+            "vendere casa investitore",
+            "vendita immobile a reddito",
+            "cap rate torino",
+            "vendere appartamento affittato",
+            "student housing investimento",
+            "vendita diretta immobile torino"
+          ]
+        },
+        tags: ["Venditori", "Investitori", "Immobiliare", "Torino", "Rendimento"],
+        faqs: [
+          { question: "Cosa guardano gli investitori quando valutano un immobile?", answer: "Gli investitori guardano prima di tutto il rendimento lordo (canone annuo / prezzo × 100), poi lo stato degli impianti, la conformità catastale e urbanistica, le spese condominiali e la vicinanza a università o trasporti. L'estetica conta poco: contano i numeri." },
+          { question: "Come si calcola il rendimento lordo?", answer: "Rendimento lordo = (canone annuo / prezzo di acquisto) × 100. Per esempio, un appartamento da €85.000 con affitto di €450/mese (€5.400/anno) ha un rendimento lordo del 6,35%." },
+          { question: "Cosa significa 'rental ready'?", answer: "Un immobile rental ready è pronto per essere affittato dal giorno del rogito: impianti certificati, conformità urbanistica, APE valido e arredi funzionali. Per l'investitore significa zero giorni di vacanza locativa." },
+          { question: "Conviene vendere un appartamento già affittato?", answer: "Sì, per molti investitori è un vantaggio: offre cash flow immediato, rendimento reale (non teorico) e nessun costo di avviamento. L'inquilino ha diritto di prelazione solo nei contratti 4+4." },
+          { question: "Come si fissa il prezzo per un investitore?", answer: "Con il yield-driven pricing: prezzo = canone annuo / rendimento obiettivo. Se il canone è €6.000 e l'investitore cerca il 7%, il prezzo è €85.714. È il metodo usato dai fondi professionali." },
+          { question: "Quali documenti servono per vendere a un investitore?", answer: "Visura e planimetria catastale, APE, certificazioni impianti, regolamento condominiale, conteggio spese, contratto di locazione in corso, ricevute F24, atto di provenienza e visura ipotecaria." },
+          { question: "Dove trovo investitori interessati a comprare?", answer: "Community di investitori su Facebook e Telegram, agenzie specializzate in immobili a reddito, piattaforme di crowdfunding, commercialisti e consulenti patrimoniali, e frequentatori di aste giudiziarie." },
+          { question: "Quanto rende un immobile in zona universitaria a Torino?", answer: "Nelle zone come Cenisia, San Salvario e Vanchiglia, i rendimenti lordi oscillano tra il 6% e il 9%. Con la strategia doppia stagione (studenti + affitti brevi estivi), si può arrivare all'11-12% lordo." },
+          { question: "Posso vendere direttamente a Jungle Rent?", answer: "Sì. Jungle Rent acquista immobili a Torino per il proprio portafoglio di student housing. Zero commissioni, 60-90 giorni per la chiusura, 1-2 sopralluoghi. Puoi richiedere una valutazione gratuita sul sito o tramite l'agente AI." },
+          { question: "Come scrivo un annuncio che attiri investitori?", answer: "Inserisci il rendimento lordo nel titolo, specifica canone attuale o stimato, stato locativo, spese condominiali, IMU, classe energetica e vicinanza a università. Evita descrizioni emotive e focus su finiture estetiche." }
+        ]
+      },
+      en: {
+        title: "Selling your property to investors in Turin: complete guide",
+        excerpt: "How to present your apartment to real estate investors: yield calculation, effective listings, yield-driven pricing, and direct sale with zero commissions.",
+        seo: {
+          title: "Sell property to investors Turin: complete guide 2026",
+          description: "How to sell your apartment to investors in Turin: gross yield calculation, yield-driven pricing strategy, documentation, and direct sale to Jungle Rent with zero commissions.",
+          keywords: [
+            "sell to investors turin",
+            "gross rental yield",
+            "rental ready property",
+            "yield driven pricing",
+            "sell property to investor",
+            "income property sale",
+            "cap rate turin",
+            "sell tenanted property",
+            "student housing investment",
+            "direct property sale turin"
+          ]
+        },
+        tags: ["Sellers", "Investors", "Real Estate", "Turin", "Yield"],
+        faqs: [
+          { question: "What do investors look at when evaluating a property?", answer: "Investors primarily look at gross yield (annual rent / price × 100), then system compliance, cadastral conformity, condo fees, and proximity to universities or transport. Aesthetics matter little: numbers matter." },
+          { question: "How do you calculate gross yield?", answer: "Gross yield = (annual rent / purchase price) × 100. For example, an €85,000 apartment with €450/month rent (€5,400/year) has a 6.35% gross yield." },
+          { question: "What does 'rental ready' mean?", answer: "A rental ready property is ready to be rented from the day of closing: certified systems, urban planning conformity, valid EPC, and functional furnishings. For investors, this means zero vacancy days." },
+          { question: "Is it worth selling a tenanted apartment?", answer: "Yes, for many investors it's an advantage: it offers immediate cash flow, real (not theoretical) yield, and no startup costs. The tenant has pre-emption rights only in 4+4 contracts." },
+          { question: "How do you set the price for an investor?", answer: "With yield-driven pricing: price = annual rent / target yield. If rent is €6,000 and the investor targets 7%, the price is €85,714. This is the method used by professional funds." },
+          { question: "What documents are needed to sell to an investor?", answer: "Cadastral survey and floor plan, EPC, system certifications, condo regulations, expense statements, current lease, F24 receipts, title deed, and mortgage registry search." },
+          { question: "Where can I find investors interested in buying?", answer: "Investor communities on Facebook and Telegram, agencies specialising in income properties, crowdfunding platforms, accountants and wealth advisors, and judicial auction attendees." },
+          { question: "What returns does a property in Turin's university area generate?", answer: "In areas like Cenisia, San Salvario, and Vanchiglia, gross yields range between 6% and 9%. With the dual-season strategy (students + summer short-term rentals), you can reach 11-12% gross." },
+          { question: "Can I sell directly to Jungle Rent?", answer: "Yes. Jungle Rent buys properties in Turin for its own student housing portfolio. Zero commissions, 60-90 days to close, 1-2 inspections. You can request a free valuation on the website or through the AI agent." },
+          { question: "How do I write a listing that attracts investors?", answer: "Include gross yield in the title, specify current or estimated rent, occupancy status, condo fees, property tax, energy class, and proximity to universities. Avoid emotional descriptions and focus on aesthetic finishes." }
+        ]
+      }
+    }
+  },
+  {
     slug: "contratto-studenti-affitto-breve-strategia",
     category: "investors",
     date: "2026-03-07",

@@ -214,6 +214,12 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'diritto reale godimento', 'comodatario locazione', 'trasparenza fiscale',
     'locazioni brevi comodatario', 'redditi diversi comodato',
     'comodato flat tax', 'società semplice rental'
+  ],
+  'vendere-immobile-investitori-torino': [
+    'vendere a investitori', 'rendimento lordo', 'rental ready',
+    'yield driven pricing', 'sell to investors', 'cap rate',
+    'vendere appartamento affittato', 'income property sale',
+    'vendita diretta immobile', 'cash flow immediato'
   ]
 };
 
