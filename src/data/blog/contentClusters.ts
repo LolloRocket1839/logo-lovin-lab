@@ -60,9 +60,11 @@ export const contentClusters: ContentCluster[] = [
       'student-housing-italia-savills-2025',
       'valutazione-immobiliare-torino-guida-completa',
       'torino-citta-campus-atenei-immobiliare-2026',
-      'guida-investitori-stranieri-comprare-casa-torino'
+      'guida-investitori-stranieri-comprare-casa-torino',
+      'contratto-studenti-affitto-breve-strategia',
+      'comodato-cedolare-secca-aidc-2025'
     ],
-    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire']
+    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire', 'affitto breve', 'comodato']
   },
   
   // SELLERS CLUSTER - Property Sales
@@ -189,6 +191,17 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'guida-investitori-stranieri-comprare-casa-torino', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
   { from: 'guida-investitori-stranieri-comprare-casa-torino', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
   { from: 'guida-investitori-stranieri-comprare-casa-torino', to: 'mutui-investitori-immobiliari-guida-completa', relevance: 'high', bidirectional: true },
+  
+  // Dual-season strategy connections
+  { from: 'contratto-studenti-affitto-breve-strategia', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'contratto-studenti-affitto-breve-strategia', to: 'guida-investitori-stranieri-comprare-casa-torino', relevance: 'high', bidirectional: true },
+  { from: 'contratto-studenti-affitto-breve-strategia', to: 'comodato-cedolare-secca-aidc-2025', relevance: 'high', bidirectional: true },
+  { from: 'contratto-studenti-affitto-breve-strategia', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
+  { from: 'contratto-studenti-affitto-breve-strategia', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'medium', bidirectional: true },
+  
+  // Comodato article connections
+  { from: 'comodato-cedolare-secca-aidc-2025', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'comodato-cedolare-secca-aidc-2025', to: 'mutui-investitori-immobiliari-guida-completa', relevance: 'medium', bidirectional: true },
 ];
 
 // Get cluster for a given article
