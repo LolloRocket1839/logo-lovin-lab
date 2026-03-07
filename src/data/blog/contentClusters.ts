@@ -59,7 +59,8 @@ export const contentClusters: ContentCluster[] = [
       'mutui-investitori-immobiliari-guida-completa',
       'student-housing-italia-savills-2025',
       'valutazione-immobiliare-torino-guida-completa',
-      'torino-citta-campus-atenei-immobiliare-2026'
+      'torino-citta-campus-atenei-immobiliare-2026',
+      'guida-investitori-stranieri-comprare-casa-torino'
     ],
     keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire']
   },
@@ -183,6 +184,11 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'torino-citta-campus-atenei-immobiliare-2026', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
   { from: 'torino-citta-campus-atenei-immobiliare-2026', to: 'politecnico-torino-guida-completa', relevance: 'high', bidirectional: true },
   { from: 'torino-citta-campus-atenei-immobiliare-2026', to: 'universita-torino-guida-completa', relevance: 'high', bidirectional: true },
+  
+  // Foreign investor guide connections
+  { from: 'guida-investitori-stranieri-comprare-casa-torino', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
+  { from: 'guida-investitori-stranieri-comprare-casa-torino', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'guida-investitori-stranieri-comprare-casa-torino', to: 'mutui-investitori-immobiliari-guida-completa', relevance: 'high', bidirectional: true },
 ];
 
 // Get cluster for a given article
