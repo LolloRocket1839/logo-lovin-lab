@@ -1,54 +1,45 @@
 
 
-# Add two new investor blog articles
+# Add May 2026 events blog article
 
-## Article 1: "Contratto studenti + affitto breve estivo"
-Dual-season rental strategy guide: student contracts (cedolare secca 10%) during academic year + short-term tourist rentals (21%) in summer. Covers legal basis (L. 431/1998, D.L. 50/2017), CIN requirements, SCIA, safety regulations, Turin tourist tax rates, and a complete operational checklist. Category: investors. ~15 min read.
+## What changes
 
-## Article 2: "Comodato e cedolare secca: il caso AIDC 2025"
-Technical legal analysis of why comodatari cannot use cedolare secca on long-term leases (only ≤30 days per D.L. 50/2017), plus the 2025 AIDC Norma 233 doctrinal challenge. Category: investors (societá subcategory fits but investors is the correct match). ~12 min read.
+### 1. Create Italian markdown — `src/data/blog/content/it/eventi-torino-maggio-2026.md`
+Convert the user-provided HTML content into markdown following the established natural language style (sentences under 25 words, active voice, no em dashes). Sections: grandi eventi (Jazz Festival, Salone del Libro, Onde), mostre (MonumenTO, GAM, MAO, OGR), concerti (TWICE, Rockin'1000, Mario Biondi, Sarah Toscano), teatro (Aladin, Lupin, Caveman, Cicchella, Teatro Regio), risorse utili, articoli correlati, fonti.
 
-## Changes per article (×2)
+### 2. Create English markdown — `src/data/blog/content/en/eventi-torino-maggio-2026.md`
+Full English translation, same structure.
 
-### 1. Create IT markdown
-Rewrite PDF content into natural Italian blog style (sentences <25 words, active voice, no em dashes, sentence case headings). Add internal links to cedolare secca, investire real assets, guida investitori stranieri articles.
+### 3. Register post in `src/data/blog/posts.ts`
+Insert at position 0 (most recent) with:
+- `slug: "eventi-torino-maggio-2026"`
+- `category: "turisti"`
+- `date: "2026-03-06"`
+- `readTime: 10`
+- `image: "/images/torino-primavera-marzo.jpg"`
+- `content: "eventi-torino-maggio-2026"`
+- 10 FAQs per language covering Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, teatro, transport
+- SEO keywords: "eventi torino maggio 2026", "salone del libro 2026", "concerti torino maggio", "mostre torino maggio", etc.
 
-### 2. Create EN markdown
-Full English translation, same structure and internal links.
+### 4. Update content clusters — `src/data/blog/contentClusters.ts`
+- Add `'eventi-torino-maggio-2026'` to Turin Experience satellites (after aprile)
+- Add temporal chain: `{ from: 'eventi-torino-aprile-2026', to: 'eventi-torino-maggio-2026', relevance: 'high', bidirectional: true }`
 
-### 3. Register in `posts.ts`
-Insert at positions 0-1 (most recent). 10 FAQs per language each.
+### 5. Update April article related articles
+Add May link at top of "Articoli correlati" in both IT and EN April markdown files.
 
-**Article 1:**
-- `slug: "contratto-studenti-affitto-breve-strategia"`
-- `category: "investors"`, `date: "2026-03-07"`, `readTime: 15`
-- `image: "/images/quartieri-studenti-torino.jpg"`
-- SEO keywords: "contratto studenti torino", "affitto breve estivo", "cedolare secca 10% 21%", "CIN affitti brevi", "strategia doppia stagione"
-
-**Article 2:**
-- `slug: "comodato-cedolare-secca-aidc-2025"`
-- `category: "investors"`, `date: "2026-03-07"`, `readTime: 12`
-- `image: "/images/mortgage-investment.jpg"` (reuse)
-- SEO keywords: "comodato cedolare secca", "AIDC norma 233", "società semplice cedolare secca", "diritto reale godimento", "locazioni brevi comodatario"
-
-### 4. Update `contentClusters.ts`
-Add both slugs to Investors cluster satellites. Add relationships:
-- Both → `cedolare-secca-2026-investitori` (high, bidirectional)
-- Article 1 → `guida-investitori-stranieri-comprare-casa-torino` (high, bidirectional)
-- Article 1 → Article 2 (high, bidirectional)
-
-### 5. Update `linkableContent.ts`
-Add enhanced keyword entries for both slugs.
+### 6. Update linkable content — `src/data/linkableContent.ts`
+Add keywords entry for `'eventi-torino-maggio-2026'`.
 
 ## Files changed
 
 | File | Action |
 |------|--------|
-| `src/data/blog/content/it/contratto-studenti-affitto-breve-strategia.md` | Create |
-| `src/data/blog/content/en/contratto-studenti-affitto-breve-strategia.md` | Create |
-| `src/data/blog/content/it/comodato-cedolare-secca-aidc-2025.md` | Create |
-| `src/data/blog/content/en/comodato-cedolare-secca-aidc-2025.md` | Create |
-| `src/data/blog/posts.ts` | Add 2 post entries at top |
-| `src/data/blog/contentClusters.ts` | Add to investors cluster + relationships |
-| `src/data/linkableContent.ts` | Add enhanced keywords for both |
+| `src/data/blog/content/it/eventi-torino-maggio-2026.md` | Create |
+| `src/data/blog/content/en/eventi-torino-maggio-2026.md` | Create |
+| `src/data/blog/posts.ts` | Add post entry at top |
+| `src/data/blog/contentClusters.ts` | Add to cluster + relationship |
+| `src/data/linkableContent.ts` | Add enhanced keywords |
+| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Add May link |
+| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Add May link |
 

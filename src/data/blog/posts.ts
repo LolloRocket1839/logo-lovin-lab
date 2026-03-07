@@ -2,6 +2,160 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "contratto-studenti-affitto-breve-strategia",
+    category: "investors",
+    date: "2026-03-07",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 15,
+    content: "contratto-studenti-affitto-breve-strategia",
+    translations: {
+      it: {
+        title: "Contratto studenti + affitto breve estivo: cosa dice la legge",
+        excerpt: "Guida completa alla strategia doppia stagione: locazione transitoria per studenti (cedolare secca 10%) durante l'anno accademico e affitti brevi turistici (21%) in estate.",
+        seo: {
+          title: "Contratto studenti + affitto breve estivo: guida legale e fiscale 2026",
+          description: "Come combinare contratto studenti (cedolare secca 10%) e affitti brevi estivi (21%) sullo stesso immobile a Torino. Requisiti CIN, SCIA, sicurezza e checklist operativa.",
+          keywords: [
+            "contratto studenti torino",
+            "affitto breve estivo",
+            "cedolare secca 10% 21%",
+            "CIN affitti brevi",
+            "strategia doppia stagione",
+            "locazione transitoria studenti",
+            "imposta soggiorno torino",
+            "SCIA affitti brevi",
+            "canone concordato studenti",
+            "dual season rental strategy"
+          ]
+        },
+        tags: ["Investitori", "Fiscalità", "Affitti brevi", "Studenti", "Torino"],
+        faqs: [
+          { question: "È legale affittare a studenti durante l'anno e a turisti in estate?", answer: "Sì, non esiste un divieto normativo esplicito. Si tratta di due contratti distinti con basi giuridiche diverse: il contratto studenti (L. 431/1998) e la locazione breve (D.L. 50/2017). L'importante è che la transitorietà studentesca sia genuina." },
+          { question: "Si possono applicare sia il 10% che il 21% di cedolare secca sullo stesso immobile?", answer: "Sì. La cedolare secca si esercita separatamente per ciascun contratto. Il 10% si applica al contratto studenti a canone concordato, il 21% alle locazioni brevi estive. Non esiste divieto di applicare regimi diversi in periodi diversi." },
+          { question: "Quanto dura il contratto studenti universitari?", answer: "La durata minima è 6 mesi, quella massima 36 mesi (3 anni). Alla scadenza si rinnova automaticamente per un periodo uguale. Solo lo studente può recedere anticipatamente, per gravi motivi documentati con 3 mesi di preavviso." },
+          { question: "Cos'è il CIN e quando è obbligatorio?", answer: "Il CIN (Codice Identificativo Nazionale) è un codice alfanumerico obbligatorio dal 1° gennaio 2025 per tutti gli immobili usati per affitti brevi e locazioni turistiche. Si ottiene tramite il portale BDSR del Ministero del Turismo." },
+          { question: "Quali dispositivi di sicurezza servono per gli affitti brevi?", answer: "Servono rilevatori di gas combustibili (EN 50194), rilevatori di monossido di carbonio (EN 50291-1:2010) se presenti apparecchi a combustione, ed estintori portatili certificati (minimo 1 ogni 200 m², capacità minima 13A)." },
+          { question: "Qual è la soglia imprenditoriale per gli affitti brevi dal 2026?", answer: "Dal 2026 la gestione di più di 2 appartamenti per affitti brevi crea una presunzione di attività imprenditoriale (precedentemente erano 4). Serve partita IVA, iscrizione alla Camera di Commercio e SCIA." },
+          { question: "Quanto rende la strategia doppia stagione?", answer: "Su un trilocale da €90.000 in zona Cenisia: €12.000 da studenti (10 mesi) + €3.360 da affitti brevi (2 mesi estivi) = €15.360 lordi con €1.906 di imposte totali. Rendimento netto intorno all'11-12% considerando tutti i costi." },
+          { question: "Qual è la durata del contratto studenti più adatta alla strategia?", answer: "Il contratto da 10 mesi (ottobre-luglio) è il più realistico: segue il calendario accademico naturale e lascia agosto-settembre per gli affitti brevi. Lo studente ha un motivo genuino per non rinnovare." },
+          { question: "Quanto è l'imposta di soggiorno a Torino per gli affitti brevi?", answer: "Dal 1° aprile 2026, circa €3,80 per persona/notte per le locazioni turistiche. Massimo 7 pernottamenti per anno solare soggetti all'imposta. Esenti minori e persone con disabilità grave." },
+          { question: "Cosa rischio se l'alternanza studenti-turisti è troppo sistematica?", answer: "L'Agenzia delle Entrate potrebbe contestare la genuinità dell'esigenza transitoria studentesca e riqualificare il contratto come ordinario 4+4, facendo perdere la cedolare secca al 10%. La transitorietà deve essere genuina e documentata." }
+        ]
+      },
+      en: {
+        title: "Student contract + summer short-term rental: what Italian law actually says",
+        excerpt: "Complete guide to the dual-season strategy: transitional student lease (10% cedolare secca) during the academic year and short-term tourist rentals (21%) in summer.",
+        seo: {
+          title: "Student contract + summer short-term rental: legal and tax guide 2026",
+          description: "How to combine student contracts (10% cedolare secca) and summer short-term rentals (21%) on the same property in Turin. CIN requirements, safety rules, and operational checklist.",
+          keywords: [
+            "student rental contract italy",
+            "summer short-term rental",
+            "cedolare secca 10% 21%",
+            "CIN short-term rentals",
+            "dual season rental strategy",
+            "transitional student lease",
+            "tourist tax turin",
+            "SCIA short-term rentals",
+            "agreed rent students",
+            "strategia doppia stagione"
+          ]
+        },
+        tags: ["Investors", "Tax", "Short-term rentals", "Students", "Turin"],
+        faqs: [
+          { question: "Is it legal to rent to students during the year and to tourists in summer?", answer: "Yes, there is no explicit legal prohibition. These are two distinct contracts with different legal bases: the student contract (Law 431/1998) and the short-term lease (Decree Law 50/2017). The key is that the student's transitional need must be genuine." },
+          { question: "Can you apply both 10% and 21% cedolare secca on the same property?", answer: "Yes. The cedolare secca option is exercised separately for each contract. The 10% applies to the student agreed-rent contract, the 21% to summer short-term lets. There is no prohibition on applying different regimes in different periods." },
+          { question: "How long does a university student contract last?", answer: "Minimum duration is 6 months, maximum 36 months (3 years). At expiry it renews automatically for an equal period. Only the student can terminate early, for documented serious reasons with 3 months' notice." },
+          { question: "What is the CIN and when is it mandatory?", answer: "The CIN (National Identification Code) is an alphanumeric code mandatory since 1 January 2025 for all properties used for short-term and tourist rentals. It is obtained through the BDSR portal of the Ministry of Tourism." },
+          { question: "What safety devices are required for short-term rentals?", answer: "Combustible gas detectors (EN 50194), carbon monoxide detectors (EN 50291-1:2010) if combustion appliances are present, and certified portable fire extinguishers (minimum 1 per 200 m², minimum capacity 13A)." },
+          { question: "What is the commercial threshold for short-term rentals from 2026?", answer: "From 2026, managing more than 2 properties for short-term rentals creates a presumption of commercial activity (previously 4). A VAT number, Chamber of Commerce registration, and SCIA are required." },
+          { question: "What does the dual-season strategy yield?", answer: "On a €90,000 three-room apartment in Cenisia: €12,000 from students (10 months) + €3,360 from short-term lets (2 summer months) = €15,360 gross with €1,906 total tax. Net yield around 11-12% after all costs." },
+          { question: "Which student contract duration is best for this strategy?", answer: "The 10-month contract (October-July) is most realistic: it follows the natural academic calendar and leaves August-September for short-term lets. The student has a genuine reason not to renew." },
+          { question: "How much is the tourist tax in Turin for short-term rentals?", answer: "From 1 April 2026, approximately €3.80 per person/night for tourist rentals. Maximum 7 overnight stays per calendar year are subject to the tax. Minors and persons with severe disabilities are exempt." },
+          { question: "What's the risk if the student-tourist alternation is too systematic?", answer: "The Agenzia delle Entrate could challenge the genuineness of the transitional need and reclassify the contract as a standard 4+4, losing the 10% cedolare secca. The transitional nature must be genuine and documented." }
+        ]
+      }
+    }
+  },
+  {
+    slug: "comodato-cedolare-secca-aidc-2025",
+    category: "investors",
+    date: "2026-03-07",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 12,
+    content: "comodato-cedolare-secca-aidc-2025",
+    translations: {
+      it: {
+        title: "Comodato e cedolare secca: perché non funziona per le locazioni lunghe",
+        excerpt: "Analisi legale: perché il comodatario non può usare la cedolare secca sui contratti ordinari (solo ≤30 giorni). E cosa cambia con la Norma AIDC 233/2025.",
+        seo: {
+          title: "Comodato e cedolare secca: il caso AIDC 2025 e i limiti per le locazioni lunghe",
+          description: "Perché il comodatario non può usare la cedolare secca per locazioni ordinarie (4+4, 3+2). Analisi dell'Art. 3 D.Lgs. 23/2011, D.L. 50/2017 e la Norma AIDC 233/2025.",
+          keywords: [
+            "comodato cedolare secca",
+            "AIDC norma 233",
+            "società semplice cedolare secca",
+            "diritto reale godimento",
+            "locazioni brevi comodatario",
+            "art 3 dlgs 23 2011",
+            "art 4 dl 50 2017",
+            "redditi diversi comodato",
+            "trasparenza fiscale società semplice",
+            "cedolare secca limiti"
+          ]
+        },
+        tags: ["Investitori", "Fiscalità", "Diritto", "Cedolare secca", "Società"],
+        faqs: [
+          { question: "Il comodatario può usare la cedolare secca?", answer: "Solo per le locazioni brevi (≤30 giorni) grazie all'art. 4, comma 3, del D.L. 50/2017. Per i contratti ordinari (4+4, 3+2, studenti) no: il comodato è un diritto personale, non un diritto reale, e l'art. 3 D.Lgs. 23/2011 lo esclude espressamente." },
+          { question: "Cos'è la Norma AIDC 233 del 2025?", answer: "È un'opinione dottrinale dell'Associazione Italiana Dottori Commercialisti che sostiene che il principio del D.L. 50/2017 sia sistemico e non eccezionale. Argomenta che il comodatario dovrebbe poter usare la cedolare secca su locazioni di qualunque durata. Non ha forza giuridica vincolante." },
+          { question: "La struttura con società semplice funziona per le locazioni ordinarie?", answer: "No. Lo schema SS → comodato al socio → locazione ordinaria → cedolare secca fallisce perché: la SS non è persona fisica, il socio non ha un diritto reale, il reddito è attribuito alla SS (comodante), e la deroga del D.L. 50/2017 vale solo per ≤30 giorni." },
+          { question: "Qual è la differenza tra diritto reale e diritto personale?", answer: "I diritti reali (usufrutto, uso, abitazione, superficie, enfiteusi) sono opponibili erga omnes e trasferiscono il possesso giuridico. Il comodato è un diritto personale che crea solo un rapporto obbligatorio e attribuisce la semplice detenzione, non il possesso." },
+          { question: "Come viene tassato il reddito da locazione del comodatario?", answer: "Per le locazioni brevi: come redditi diversi (art. 67 TUIR) in capo al comodatario, con possibilità di cedolare secca. Per le locazioni ordinarie: come redditi fondiari attribuiti al comodante (proprietario), secondo le Risoluzioni AE 381/E e 394/E del 2008." },
+          { question: "La struttura con società semplice funziona per le locazioni brevi?", answer: "Sì. SS → comodato al socio → locazione breve (≤30 giorni) → cedolare secca al 21% (primo immobile) o 26% (dal secondo). Il socio dichiara il reddito come redditi diversi nel Quadro RL." },
+          { question: "Quali rischi corro se seguo la posizione AIDC per le locazioni lunghe?", answer: "L'Agenzia delle Entrate non ha adottato questa interpretazione. Adottarla comporterebbe quasi certamente un accertamento fiscale e un contenzioso senza precedenti favorevoli. Il rischio è molto alto." },
+          { question: "C'è differenza tra sublocazione e comodato ai fini della cedolare secca?", answer: "No, il trattamento è identico. Entrambi producono redditi diversi, entrambi erano esclusi prima del 2017, entrambi vi hanno avuto accesso solo per le locazioni brevi tramite l'art. 4, comma 3, D.L. 50/2017." },
+          { question: "Qual è l'aliquota effettiva per le locazioni ordinarie tramite SS?", answer: "Senza cedolare secca, il reddito è tassato per trasparenza ai soci con IRPEF (23-43%) più addizionali regionali e comunali. L'aliquota effettiva può superare il 47%. Si aggiunge l'imposta di registro del 2% del canone annuo." },
+          { question: "Esistono alternative al comodato per accedere alla cedolare secca?", answer: "Sì: trasferire diritti reali come l'usufrutto ai singoli soci. Il titolare di usufrutto può optare per la cedolare secca. Tuttavia questa struttura ha costi e complessità proprie (atto notarile, imposte di trasferimento)." }
+        ]
+      },
+      en: {
+        title: "Comodato and cedolare secca: why it fails for long-term leases",
+        excerpt: "Legal analysis: why the comodatario cannot use cedolare secca on ordinary contracts (only ≤30 days). And what the AIDC Norma 233/2025 changes.",
+        seo: {
+          title: "Comodato and cedolare secca: the 2025 AIDC challenge and long-term lease limits",
+          description: "Why the comodatario cannot use cedolare secca for ordinary leases (4+4, 3+2). Analysis of Art. 3 D.Lgs. 23/2011, D.L. 50/2017 and the AIDC Norma 233/2025.",
+          keywords: [
+            "comodato cedolare secca",
+            "AIDC norma 233",
+            "società semplice cedolare secca",
+            "real property rights italy",
+            "short-term lease comodatario",
+            "art 3 dlgs 23 2011",
+            "art 4 dl 50 2017",
+            "redditi diversi comodato",
+            "fiscal transparency società semplice",
+            "cedolare secca limitations"
+          ]
+        },
+        tags: ["Investors", "Tax", "Legal", "Cedolare secca", "Corporate"],
+        faqs: [
+          { question: "Can a comodatario use cedolare secca?", answer: "Only for short-term leases (≤30 days) under Art. 4, paragraph 3, of Decree Law 50/2017. For ordinary contracts (4+4, 3+2, student leases) no: comodato is a personal right, not a real property right, and Art. 3 D.Lgs. 23/2011 expressly excludes it." },
+          { question: "What is the AIDC Norma 233 of 2025?", answer: "It is a doctrinal opinion by the Italian Association of Chartered Accountants arguing that the D.L. 50/2017 principle is systemic, not exceptional. It argues the comodatario should be able to use cedolare secca on leases of any duration. It has no binding legal force." },
+          { question: "Does the società semplice structure work for ordinary leases?", answer: "No. The scheme SS → comodato to partner → ordinary lease → cedolare secca fails because: the SS is not a natural person, the partner has no real right, income is attributed to the SS (comodante), and the D.L. 50/2017 exception applies only to ≤30 days." },
+          { question: "What is the difference between real right and personal right?", answer: "Real rights (usufruct, use, habitation, surface, emphyteusis) are opposable erga omnes and transfer legal possession. Comodato is a personal right creating only an obligatory relationship, granting mere holding (detenzione), not possession (possesso)." },
+          { question: "How is the comodatario's rental income taxed?", answer: "For short-term leases: as redditi diversi (Art. 67 TUIR) taxable in the comodatario's hands, with cedolare secca option. For ordinary leases: as property income attributed to the comodante (owner), per AE Resolutions 381/E and 394/E of 2008." },
+          { question: "Does the SS structure work for short-term leases?", answer: "Yes. SS → comodato to partner → short-term lease (≤30 days) → cedolare secca at 21% (first property) or 26% (second onwards). The partner declares income as redditi diversi in Quadro RL." },
+          { question: "What are the risks of following the AIDC position for long-term leases?", answer: "The Agenzia delle Entrate has not adopted this interpretation. Adopting it would almost certainly trigger a tax assessment and litigation with no favourable precedent. The risk is very high." },
+          { question: "Is there a difference between sublet and comodato for cedolare secca?", answer: "No, the treatment is identical. Both produce redditi diversi, both were excluded before 2017, both gained access only for short-term leases through Art. 4, paragraph 3, D.L. 50/2017." },
+          { question: "What is the effective tax rate for ordinary leases through an SS?", answer: "Without cedolare secca, income is taxed via fiscal transparency at each partner's IRPEF rate (23-43%) plus regional and municipal surcharges. The effective rate can exceed 47%. Registration tax of 2% of annual rent also applies." },
+          { question: "Are there alternatives to comodato for accessing cedolare secca?", answer: "Yes: transferring real rights such as usufruct to individual partners. The usufruct holder can opt for cedolare secca. However, this structure has its own costs and complexities (notarial deed, transfer taxes)." }
+        ]
+      }
+    }
+  },
+  {
     slug: "guida-investitori-stranieri-comprare-casa-torino",
     category: "investors",
     date: "2026-03-07",

@@ -202,6 +202,18 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'buy property italy', 'foreign investor', 'codice fiscale',
     'comprare casa straniero', 'notaio', 'rogito', 'transfer taxes italy',
     'cedolare secca stranieri', 'prima casa stranieri', 'procura acquisto'
+  ],
+  'contratto-studenti-affitto-breve-strategia': [
+    'contratto studenti', 'affitto breve estivo', 'doppia stagione',
+    'CIN affitti brevi', 'SCIA locazioni', 'imposta soggiorno torino',
+    'student contract summer rental', 'dual season strategy',
+    'cedolare secca 10% 21%', 'locazione transitoria studenti'
+  ],
+  'comodato-cedolare-secca-aidc-2025': [
+    'comodato cedolare secca', 'AIDC norma 233', 'società semplice',
+    'diritto reale godimento', 'comodatario locazione', 'trasparenza fiscale',
+    'locazioni brevi comodatario', 'redditi diversi comodato',
+    'comodato flat tax', 'società semplice rental'
   ]
 };
 
