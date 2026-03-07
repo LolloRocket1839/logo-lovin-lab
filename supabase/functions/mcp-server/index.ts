@@ -46,6 +46,9 @@ const COMPANY_INFO = {
 };
 
 const ARTICLES = [
+  { slug: "vendere-immobile-investitori-torino", category: "sellers", date: "2026-03-07", readTime: 14, title_it: "Vendere il tuo immobile a investitori a Torino: guida completa", title_en: "Selling your property to investors in Turin: complete guide", keywords: ["vendere a investitori", "rendimento lordo", "rental ready", "yield driven pricing", "vendere casa torino"] },
+  { slug: "contratto-studenti-affitto-breve-strategia", category: "investors", date: "2026-03-07", readTime: 15, title_it: "Contratto studenti + affitto breve estivo: cosa dice la legge italiana", title_en: "Student contract + summer short-term rental: what Italian law actually says", keywords: ["contratto studenti", "affitto breve estivo", "cedolare secca 10%", "CIN affitti brevi", "doppia stagione"] },
+  { slug: "comodato-cedolare-secca-aidc-2025", category: "investors", date: "2026-03-07", readTime: 12, title_it: "Comodato e cedolare secca: il caso AIDC 2025", title_en: "Commodatum and cedolare secca: the 2025 AIDC case", keywords: ["comodato cedolare secca", "AIDC norma 233", "società semplice", "diritto reale godimento", "locazioni brevi comodatario"] },
   { slug: "torino-citta-7-minuti-walkability", category: "societa", date: "2026-02-02", readTime: 12, title_it: "Torino è la 3ª città più camminabile al mondo: tutto a 7 minuti", title_en: "Turin: the 3rd most walkable city in the world", keywords: ["torino walkability", "15 minute city", "camminabilità"] },
   { slug: "cedolare-secca-2026-investitori", category: "investors", date: "2026-01-17", readTime: 15, title_it: "Cedolare secca 2026: dal 21% al 26%, cosa fare ora", title_en: "Cedolare secca 2026: from 21% to 26%, what to do now", keywords: ["cedolare secca", "tasse affitto", "flat tax rental"] },
   { slug: "sciopero-trasporti-italia-gennaio-2026", category: "societa", date: "2026-01-09", readTime: 25, title_it: "Sciopero trasporti 13-15 gennaio 2026: orari e alternative", title_en: "Italy transport strike Jan 13-15, 2026: schedules & tips", keywords: ["sciopero trasporti", "transport strike", "treni"] },
@@ -1010,6 +1013,98 @@ mcpServer.tool("calculate_budget", {
     return {
       content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }],
     };
+  },
+});
+
+mcpServer.tool("get_selling_to_investors_guide", {
+  description: "Get comprehensive guide on selling property to real estate investors in Turin. Covers: what investors care about (gross yield, rental ready), how to calculate and present yield, writing investor-targeted listings, yield-driven pricing strategy, selling tenanted properties, where to find investors, required documentation, and how to sell directly to Jungle Rent (0% commission, 60-90 days). Also explains how to request a free AI-powered valuation.",
+  inputSchema: {
+    type: "object" as const,
+    properties: {
+      topic: { type: "string", description: "Specific topic: yield_calculation, rental_ready, listing_tips, pricing_strategy, tenanted_sale, find_investors, documentation, sell_to_jungle_rent, free_valuation" },
+      language: { type: "string", enum: ["it", "en"], description: "Language (default: it)" },
+    },
+  },
+  handler: (args: { topic?: string; language?: string }) => {
+    const lang = args.language || "it";
+
+    const guide = {
+      title: lang === "en" ? "Selling your property to investors in Turin: complete guide" : "Vendere il tuo immobile a investitori a Torino: guida completa",
+      url: "https://junglerent.it/blog/vendere-immobile-investitori-torino",
+      sections: {
+        yield_calculation: {
+          title: lang === "en" ? "How to calculate and present yield" : "Come calcolare e presentare il rendimento",
+          content: lang === "en"
+            ? "Gross yield = (annual rent / purchase price) × 100. Turin investors seek 6-8% gross in university areas. Present a table: asking price, monthly/annual rent, gross yield, condo fees, IMU, net yield."
+            : "Rendimento lordo = (canone annuo / prezzo di acquisto) × 100. Gli investitori a Torino cercano almeno il 6-8% lordo nelle zone universitarie. Presenta una tabella: prezzo richiesto, canone mensile/annuo, rendimento lordo, spese condominiali, IMU, rendimento netto.",
+          example: { price: 85000, monthlyRent: 450, annualRent: 5400, grossYield: "6.35%", condoFees: 1200, imu: 600, netYield: "~4.2%" },
+        },
+        rental_ready: {
+          title: lang === "en" ? "The rental ready concept" : "Il concetto di rental ready",
+          content: lang === "en"
+            ? "A rental ready property can be rented from day one after closing: certified systems, urban/cadastral conformity, energy class E+, functional furnishings for students. Zero vacancy days = maximum yield."
+            : "Un immobile rental ready è pronto per essere affittato dal giorno dopo il rogito: impianti a norma, conformità urbanistica/catastale, APE classe E+, arredi funzionali per studenti. Zero giorni di vacanza = rendimento massimo.",
+        },
+        listing_tips: {
+          title: lang === "en" ? "Writing a listing that speaks to investors" : "Scrivere un annuncio che parla agli investitori",
+          content: lang === "en"
+            ? "Use title like 'Income-producing 3-room in Cenisia – 7.2% gross yield'. Include: gross yield, rent (with source), occupancy status, condo fees, IMU, energy class, proximity to universities. Avoid emotional descriptions."
+            : "Usa titoli come 'Trilocale a reddito zona Cenisia – rendimento lordo 7,2%'. Includi: rendimento lordo, canone (con fonte), stato locativo, spese condominiali, IMU, classe energetica, vicinanza università. Evita descrizioni emotive.",
+        },
+        pricing_strategy: {
+          title: lang === "en" ? "Yield-driven pricing strategy" : "Strategia del prezzo basata sul rendimento",
+          content: lang === "en"
+            ? "Price = annual rent / target yield. Example: €6,000 / 0.07 = €85,714. Turin university areas (Cenisia, San Salvario, Vanchiglia): gross yields 6-9%."
+            : "Prezzo = canone annuo / rendimento obiettivo. Esempio: €6.000 / 0,07 = €85.714. Zone universitarie Torino (Cenisia, San Salvario, Vanchiglia): rendimenti lordi 6-9%.",
+        },
+        tenanted_sale: {
+          title: lang === "en" ? "Selling a tenanted property" : "Vendere un immobile già affittato",
+          content: lang === "en"
+            ? "Advantages: immediate cash flow, reduced risk (real not theoretical yield), no startup costs. Pre-emption rights apply only to 4+4 contracts (art. 38 L. 392/1978), NOT to transitional/student contracts."
+            : "Vantaggi: cash flow immediato, rischio ridotto (rendimento reale non teorico), nessun costo di avviamento. Il diritto di prelazione si applica solo ai contratti 4+4 (art. 38 L. 392/1978), NON ai contratti transitori/studenteschi.",
+        },
+        find_investors: {
+          title: lang === "en" ? "Where to find investors" : "Dove trovare investitori",
+          content: lang === "en"
+            ? "1) Investor groups on Facebook/Telegram/forums, 2) Agencies specializing in income properties, 3) Crowdfunding platforms, 4) Accountants/wealth advisors, 5) Judicial auction attendees."
+            : "1) Gruppi investitori su Facebook/Telegram/forum, 2) Agenzie specializzate in immobili a reddito, 3) Piattaforme crowdfunding, 4) Commercialisti/consulenti patrimoniali, 5) Frequentatori aste giudiziarie.",
+        },
+        documentation: {
+          title: lang === "en" ? "Required documentation" : "Documentazione necessaria",
+          documents: lang === "en"
+            ? ["Updated cadastral survey", "Cadastral floor plan", "EPC (valid)", "System certifications", "Condo regulations + minutes", "Condo fee statements (2 years)", "Current lease (if any)", "F24 receipts (IMU/cedolare secca)", "Title deed", "Mortgage registry search"]
+            : ["Visura catastale aggiornata", "Planimetria catastale conforme", "APE in corso di validità", "Certificazioni impianti", "Regolamento condominiale + verbali", "Conteggio spese condominiali (2 anni)", "Contratto di locazione in corso", "Ricevute F24 (IMU/cedolare secca)", "Atto di provenienza", "Visura ipotecaria"],
+        },
+        sell_to_jungle_rent: {
+          title: lang === "en" ? "Sell directly to Jungle Rent" : "Vendi direttamente a Jungle Rent",
+          content: lang === "en"
+            ? "Jungle Rent buys properties in Turin for its student housing portfolio. 0% commission, 60-90 days closing, 1-2 inspections, high closing certainty, direct offer. Startup Innovativa registered at Turin Chamber of Commerce."
+            : "Jungle Rent acquista immobili a Torino per il proprio portafoglio di student housing. 0% commissioni, chiusura in 60-90 giorni, 1-2 sopralluoghi, alta certezza di chiusura, offerta diretta. Startup Innovativa iscritta alla CCIAA di Torino.",
+          comparison: {
+            traditional_agency: { commission: "2-4%", timeline: "6-12 months", viewings: "Many", certainty: "Low" },
+            private_sale: { commission: "0%", timeline: "3-9 months", viewings: "Many", certainty: "Low" },
+            jungle_rent: { commission: "0%", timeline: "60-90 days", viewings: "1-2", certainty: "High" },
+          },
+        },
+        free_valuation: {
+          title: lang === "en" ? "Request a free valuation" : "Richiedi una valutazione gratuita",
+          content: lang === "en"
+            ? "Three ways to get a free estimate: 1) Talk to our AI agent at junglerent.it (chat icon, bottom right), 2) Fill the form at junglerent.it/venditori, 3) Message us on WhatsApp. No cost, no commitment."
+            : "Tre modi per ottenere una stima gratuita: 1) Parla con il nostro agente AI su junglerent.it (icona chat in basso a destra), 2) Compila il modulo su junglerent.it/venditori, 3) Scrivici su WhatsApp. Senza costi né impegno.",
+          links: {
+            ai_agent: "https://junglerent.it",
+            sellers_form: "https://junglerent.it/venditori",
+          },
+        },
+      },
+    };
+
+    if (args.topic && guide.sections[args.topic as keyof typeof guide.sections]) {
+      const section = guide.sections[args.topic as keyof typeof guide.sections];
+      return { content: [{ type: "text" as const, text: JSON.stringify({ title: guide.title, url: guide.url, section }, null, 2) }] };
+    }
+
+    return { content: [{ type: "text" as const, text: JSON.stringify(guide, null, 2) }] };
   },
 });
 
