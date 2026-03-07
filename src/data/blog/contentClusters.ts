@@ -75,7 +75,8 @@ export const contentClusters: ContentCluster[] = [
     satellites: [
       'valutazione-immobiliare-torino-guida-completa',
       'props-gestione-immobiliare-semplificata',
-      'torino-citta-campus-atenei-immobiliare-2026'
+      'torino-citta-campus-atenei-immobiliare-2026',
+      'vendere-immobile-investitori-torino'
     ],
     keywords: ['vendere casa torino', 'valutazione immobile', 'mercato immobiliare torino']
   },
@@ -202,6 +203,13 @@ export const articleRelationships: ArticleRelationship[] = [
   // Comodato article connections
   { from: 'comodato-cedolare-secca-aidc-2025', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
   { from: 'comodato-cedolare-secca-aidc-2025', to: 'mutui-investitori-immobiliari-guida-completa', relevance: 'medium', bidirectional: true },
+  
+  // Vendere a investitori connections
+  { from: 'vendere-immobile-investitori-torino', to: 'vendere-casa-torino-guida-completa-2025', relevance: 'high', bidirectional: true },
+  { from: 'vendere-immobile-investitori-torino', to: 'valutazione-immobiliare-torino-guida-completa', relevance: 'high', bidirectional: true },
+  { from: 'vendere-immobile-investitori-torino', to: 'cedolare-secca-2026-investitori', relevance: 'medium', bidirectional: true },
+  { from: 'vendere-immobile-investitori-torino', to: 'guida-investitori-stranieri-comprare-casa-torino', relevance: 'medium', bidirectional: true },
+  { from: 'vendere-immobile-investitori-torino', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'medium', bidirectional: true },
 ];
 
 // Get cluster for a given article
