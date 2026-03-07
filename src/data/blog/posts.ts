@@ -2,6 +2,83 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "guida-investitori-stranieri-comprare-casa-torino",
+    category: "investors",
+    date: "2026-03-07",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 18,
+    content: "guida-investitori-stranieri-comprare-casa-torino",
+    translations: {
+      it: {
+        title: "Guida completa per investitori stranieri: comprare casa a Torino",
+        excerpt: "Dal codice fiscale al rogito: tutto quello che serve per acquistare, affittare e guadagnare nell'immobiliare di Torino come investitore straniero nel 2026.",
+        seo: {
+          title: "Comprare casa a Torino da straniero: guida completa 2026",
+          description: "Guida passo-passo per investitori stranieri che vogliono comprare casa a Torino: codice fiscale, tasse, notaio, cedolare secca, costi reali e rendimenti netti.",
+          keywords: [
+            "comprare casa torino straniero",
+            "investire immobiliare torino stranieri",
+            "codice fiscale stranieri italia",
+            "cedolare secca 10%",
+            "tasse acquisto casa italia",
+            "notaio italia costi",
+            "rendimento affitto torino",
+            "prima casa stranieri",
+            "procura acquisto immobile",
+            "property tax italy"
+          ]
+        },
+        tags: ["Investitori", "Guida", "Torino", "Fiscalità", "Acquisto immobile"],
+        faqs: [
+          { question: "Gli stranieri possono comprare casa in Italia?", answer: "Sì. I cittadini UE/SEE/Svizzera hanno gli stessi diritti degli italiani. I cittadini extra-UE possono comprare grazie al principio di reciprocità, se il loro paese consente agli italiani di acquistare. Chi ha un permesso di soggiorno valido può comprare liberamente." },
+          { question: "Come si ottiene il codice fiscale dall'estero?", answer: "Puoi richiederlo gratuitamente al consolato italiano nel tuo paese presentando il modulo AA4/8 con copia del passaporto. I tempi variano da 1 a 4 settimane. In alternativa, puoi ottenerlo in Italia all'Agenzia delle Entrate, spesso in giornata." },
+          { question: "Quanto costano le imposte di trasferimento a Torino?", answer: "Per una seconda casa da privato: 9% del valore catastale (tipicamente 30-50% del prezzo di mercato) più 100 € di imposte fisse. Per un appartamento da 75.000 €, le imposte di trasferimento sono circa 3.672 €." },
+          { question: "Cos'è la cedolare secca al 10%?", answer: "È un'imposta sostitutiva piatta del 10% sul reddito da locazione, disponibile per contratti a canone concordato a Torino. Sostituisce IRPEF, addizionali, imposta di registro e di bollo. È quasi sempre l'opzione più vantaggiosa per gli investitori." },
+          { question: "Posso accedere alle agevolazioni prima casa come straniero?", answer: "Sì, se stabilisci la residenza nel comune entro 18 mesi dall'acquisto, non possiedi altri immobili con agevolazione prima casa e l'immobile non è di lusso (A/1, A/8, A/9). Questo riduce l'imposta di registro dal 9% al 2%." },
+          { question: "Quanto costa il notaio per comprare casa in Italia?", answer: "Per un immobile da 50.000-100.000 €, le parcelle notarili sono circa 2.000-2.500 € più IVA al 22%, pari all'1-2,5% del valore dichiarato. Il notaio è obbligatorio per legge e gestisce tutti gli aspetti legali del trasferimento." },
+          { question: "Un non residente può ottenere un mutuo in Italia?", answer: "Sì, ma con condizioni diverse: LTV massimo del 60-70% (contro l'80% dei residenti) e tassi leggermente più alti. UniCredit offre tassi da circa 3,50% per non residenti. Dato i prezzi bassi di Torino, molti investitori preferiscono comprare in contanti." },
+          { question: "Come gestisco un immobile a Torino dall'estero?", answer: "Tramite property manager professionali. La gestione affitti studenti costa l'8-12% del reddito, quella affitti brevi il 15-25%. Per la sola custodia dell'immobile, i costi sono circa 100-300 €/mese." },
+          { question: "Perché investire a Torino invece di Milano o Roma?", answer: "Torino ha prezzi medi di 2.000 €/m² (60% meno di Milano), rendimenti lordi del 5-10% e domanda strutturale da oltre 100.000 studenti universitari. È una delle poche città dove gli affitti a lungo termine rendono più di quelli brevi." },
+          { question: "Posso comprare casa in Italia senza essere presente?", answer: "Sì, tramite procura speciale. Un rappresentante firma al rogito per te. La procura deve specificare immobile, prezzo e condizioni. Per i non italiani, serve traduzione certificata e Apostille. Costo totale: circa 850-1.550 €." }
+        ]
+      },
+      en: {
+        title: "Complete guide for foreign investors: buying property in Turin",
+        excerpt: "From codice fiscale to closing day: everything you need to buy, rent, and profit from real estate in Turin as a foreign investor in 2026.",
+        seo: {
+          title: "Buying property in Turin as a foreigner: complete 2026 guide",
+          description: "Step-by-step guide for foreign investors buying property in Turin: codice fiscale, taxes, notaio, cedolare secca, real costs and net yields explained.",
+          keywords: [
+            "buy property turin foreigner",
+            "foreign investor italy real estate",
+            "codice fiscale foreigners italy",
+            "cedolare secca 10%",
+            "transfer taxes italy property",
+            "notaio italy costs",
+            "rental yield turin",
+            "prima casa foreigners",
+            "power of attorney italy property",
+            "property tax italy"
+          ]
+        },
+        tags: ["Investors", "Guide", "Turin", "Taxation", "Property purchase"],
+        faqs: [
+          { question: "Can foreigners buy property in Italy?", answer: "Yes. EU/EEA/Swiss citizens have the same rights as Italians. Non-EU citizens can buy under the reciprocity principle if their country allows Italians to purchase property. Anyone with a valid residence permit can buy freely." },
+          { question: "How do I get a codice fiscale from abroad?", answer: "You can request one for free at the Italian consulate in your country by submitting Form AA4/8 with a passport copy. Processing takes 1 to 4 weeks. Alternatively, you can get it in Italy at any Agenzia delle Entrate office, often the same day." },
+          { question: "How much are transfer taxes in Turin?", answer: "For a second home from a private seller: 9% of cadastral value (typically 30-50% of market value) plus €100 in fixed taxes. For a €75,000 apartment, transfer taxes are roughly €3,672." },
+          { question: "What is the 10% cedolare secca?", answer: "It's a flat 10% substitute tax on rental income, available for canone concordato (agreed rent) contracts in Turin. It replaces IRPEF, surtaxes, registration tax, and stamp duty. It's almost always the most advantageous option for investors." },
+          { question: "Can foreigners access prima casa tax benefits?", answer: "Yes, if you establish residency in the municipality within 18 months, don't own another property with prima casa benefits, and the property isn't luxury category (A/1, A/8, A/9). This reduces the registration tax from 9% to 2%." },
+          { question: "How much does a notaio cost in Italy?", answer: "For a €50,000-€100,000 property, notaio fees are roughly €2,000-€2,500 plus 22% VAT, equal to 1-2.5% of the declared value. The notaio is mandatory by law and handles all legal aspects of the transfer." },
+          { question: "Can a non-resident get a mortgage in Italy?", answer: "Yes, but with different conditions: maximum LTV of 60-70% (versus 80% for residents) and slightly higher rates. UniCredit offers rates from roughly 3.50% for non-residents. Given Turin's low prices, many investors prefer to buy in cash." },
+          { question: "How do I manage a property in Turin from abroad?", answer: "Through professional property managers. Student rental management costs 8-12% of income, short-term rental management 15-25%. Basic property caretaking costs roughly €100-300/month." },
+          { question: "Why invest in Turin instead of Milan or Rome?", answer: "Turin has average prices of €2,000/m² (60% less than Milan), gross yields of 5-10%, and structural demand from over 100,000 university students. It's one of the few cities where long-term rentals consistently outperform short-term ones." },
+          { question: "Can I buy property in Italy without being present?", answer: "Yes, through a special power of attorney (procura speciale). A representative signs at the rogito for you. The procura must specify the property, price, and terms. For non-Italians, you need a certified translation and Apostille. Total cost: roughly €850-€1,550." }
+        ]
+      }
+    }
+  },
+  {
     slug: "eventi-torino-maggio-2026",
     category: "turisti",
     date: "2026-03-06",

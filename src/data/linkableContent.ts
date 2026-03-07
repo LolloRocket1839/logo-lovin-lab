@@ -197,6 +197,11 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'eventi maggio', 'salone del libro 2026', 'concerti torino maggio',
     'mostre torino maggio', 'twice torino', 'rockin 1000 torino',
     'cosa fare torino maggio', 'teatro torino maggio'
+  ],
+  'guida-investitori-stranieri-comprare-casa-torino': [
+    'buy property italy', 'foreign investor', 'codice fiscale',
+    'comprare casa straniero', 'notaio', 'rogito', 'transfer taxes italy',
+    'cedolare secca stranieri', 'prima casa stranieri', 'procura acquisto'
   ]
 };
 
