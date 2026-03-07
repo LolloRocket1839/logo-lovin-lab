@@ -1,65 +1,45 @@
 
 
-# Update SEO and AEO to latest 2026 standards
+# Add May 2026 events blog article
 
-## What needs updating
+## What changes
 
-The current implementation is solid but has several gaps vs. March 2026 best practices.
+### 1. Create Italian markdown — `src/data/blog/content/it/eventi-torino-maggio-2026.md`
+Convert the user-provided HTML content into markdown following the established natural language style (sentences under 25 words, active voice, no em dashes). Sections: grandi eventi (Jazz Festival, Salone del Libro, Onde), mostre (MonumenTO, GAM, MAO, OGR), concerti (TWICE, Rockin'1000, Mario Biondi, Sarah Toscano), teatro (Aladin, Lupin, Caveman, Cicchella, Teatro Regio), risorse utili, articoli correlati, fonti.
 
-## Changes
+### 2. Create English markdown — `src/data/blog/content/en/eventi-torino-maggio-2026.md`
+Full English translation, same structure.
 
-### 1. StructuredData.tsx — Add `@id` cross-references and update dates
+### 3. Register post in `src/data/blog/posts.ts`
+Insert at position 0 (most recent) with:
+- `slug: "eventi-torino-maggio-2026"`
+- `category: "turisti"`
+- `date: "2026-03-06"`
+- `readTime: 10`
+- `image: "/images/torino-primavera-marzo.jpg"`
+- `content: "eventi-torino-maggio-2026"`
+- 10 FAQs per language covering Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, teatro, transport
+- SEO keywords: "eventi torino maggio 2026", "salone del libro 2026", "concerti torino maggio", "mostre torino maggio", etc.
 
-- Add `@id` to Organization and WebSite schemas for entity linking (Google's recommended pattern for connecting schemas)
-- Update all `dateModified` from `2026-02-25` to `2026-03-07`
-- Add `WebPage` type to homepage with `speakable` property
-- Remove duplicate schemas: the homepage currently outputs 17 JSON-LD blocks — consolidate Organization + Startup into one with `@id` linking
+### 4. Update content clusters — `src/data/blog/contentClusters.ts`
+- Add `'eventi-torino-maggio-2026'` to Turin Experience satellites (after aprile)
+- Add temporal chain: `{ from: 'eventi-torino-aprile-2026', to: 'eventi-torino-maggio-2026', relevance: 'high', bidirectional: true }`
 
-### 2. ArticleStructuredData.tsx — Upgrade to 2026 Article best practices
+### 5. Update April article related articles
+Add May link at top of "Articoli correlati" in both IT and EN April markdown files.
 
-- Add `@id` to Article schema for entity resolution
-- Add `thumbnailUrl` property (used by AI Overviews)
-- Add `about` property with entity topics for better AEO extraction
-- Add `citation_url` meta tag (missing — key for AI attribution)
-- Add `isAccessibleForFree: true` for content accessibility signals
-
-### 3. Index.tsx — Add missing AEO meta tags
-
-- Add `ai.contentOrigin: "human-authored"` meta tag (emerging standard for AI content attribution)
-- Add `robots` meta with `max-snippet:-1, max-image-preview:large, max-video-preview:-1` for maximum AI Overview eligibility
-
-### 4. Sitemaps — Update all lastmod dates to 2026-03-07
-
-- `sitemap.xml`, `sitemap-blog.xml`, `sitemap-tools.xml`, `sitemap-images.xml`, `sitemap-index.xml`
-
-### 5. robots.txt — Update to v4.1
-
-- Update version/date header to March 7, 2026
-- Add new crawlers: `Windsurf-Bot` (Windsurf AI), `CopilotBot` (Microsoft Copilot), `Owler` (Owler research)
-- Update knowledge base version references to 4.1
-
-### 6. llms.txt and .well-known/llms.txt — Sync dates
-
-- Update "Last Updated" to March 7, 2026
-- Update version to 4.1
-
-### 7. About.tsx — Add ProfilePage schemas for founders
-
-- Add `ProfilePage` type references for founder entries (Google now supports this for author credibility)
+### 6. Update linkable content — `src/data/linkableContent.ts`
+Add keywords entry for `'eventi-torino-maggio-2026'`.
 
 ## Files changed
 
-| File | Change |
+| File | Action |
 |------|--------|
-| `src/components/StructuredData.tsx` | Add `@id` linking, consolidate schemas, update dates |
-| `src/components/blog/ArticleStructuredData.tsx` | Add `@id`, `thumbnailUrl`, `isAccessibleForFree`, `citation_url` meta |
-| `src/pages/Index.tsx` | Add `robots` meta for AI Overview eligibility, `ai.contentOrigin` |
-| `public/sitemap.xml` | Update all lastmod to 2026-03-07 |
-| `public/sitemap-blog.xml` | Update all lastmod to 2026-03-07 |
-| `public/sitemap-tools.xml` | Update all lastmod to 2026-03-07 |
-| `public/sitemap-images.xml` | Update all lastmod to 2026-03-07 |
-| `public/sitemap-index.xml` | Update all lastmod to 2026-03-07 |
-| `public/robots.txt` | v4.1 header, new AI crawlers |
-| `public/llms.txt` | Update date and version |
-| `public/.well-known/llms.txt` | Update date and version |
+| `src/data/blog/content/it/eventi-torino-maggio-2026.md` | Create |
+| `src/data/blog/content/en/eventi-torino-maggio-2026.md` | Create |
+| `src/data/blog/posts.ts` | Add post entry at top |
+| `src/data/blog/contentClusters.ts` | Add to cluster + relationship |
+| `src/data/linkableContent.ts` | Add enhanced keywords |
+| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Add May link |
+| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Add May link |
 

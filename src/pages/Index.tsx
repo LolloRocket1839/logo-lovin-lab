@@ -80,10 +80,15 @@ const Index = () => {
         {/* AI Crawlers - Citation & Attribution */}
         <meta name="citation_title" content={title} />
         <meta name="citation_author" content="Jungle Rent S.r.l." />
-          <meta name="citation_publication_date" content="2026-01-09" />
-          <meta name="citation_online_date" content="2026-01-09" />
+        <meta name="citation_publication_date" content="2026-01-09" />
+        <meta name="citation_online_date" content="2026-01-09" />
         <meta name="citation_publisher" content="Jungle Rent S.r.l." />
         <meta name="citation_language" content={isItalian ? "it" : "en"} />
+        <meta name="citation_url" content="https://junglerent.it/" />
+        
+        {/* AI content origin & Overview eligibility */}
+        <meta name="ai.contentOrigin" content="human-authored" />
+        <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         
         {/* AI Knowledge Base Links */}
         <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />

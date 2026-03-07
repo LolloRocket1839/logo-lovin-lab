@@ -100,5 +100,5 @@ For detailed information:
 - Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: February 25, 2026
-Version: 3.8 - Drastic SEO/AEO overhaul, March 2026 events, schema refactor
+Last Updated: March 7, 2026
+Version: 4.1 - SEO/AEO overhaul: @id entity linking, AI Overview eligibility, content attribution

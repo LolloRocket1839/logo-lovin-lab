@@ -33,15 +33,19 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
   const publishedDate = new Date(post.date).toISOString();
   // Use published date as modified date (stable, doesn't change on every render)
   const modifiedDate = publishedDate;
+
+  const imageUrl = post.image.startsWith('http') 
+    ? post.image 
+    : `${BASE_URL}${post.image}`;
   
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${url}#article`,
     "headline": translation.seo.title,
     "description": translation.seo.description,
-    "image": post.image.startsWith('http') 
-      ? post.image 
-      : `${BASE_URL}${post.image}`,
+    "image": imageUrl,
+    "thumbnailUrl": imageUrl,
     "author": {
       "@type": "Person",
       "name": post.author,
@@ -49,6 +53,7 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
     },
     "publisher": {
       "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
       "name": "Jungle Rent",
       "logo": {
         "@type": "ImageObject",
@@ -66,10 +71,15 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
       "@id": `${BASE_URL}/blog`,
       "name": "Jungle Rent Blog"
     },
+    "isAccessibleForFree": true,
     "articleSection": getCategoryLabel(post.category, language),
     "keywords": translation.seo.keywords.join(', '),
     "inLanguage": language === 'it' ? 'it-IT' : 'en-US',
     "wordCount": estimateWordCount(post.readTime),
+    "about": translation.seo.keywords.slice(0, 3).map(keyword => ({
+      "@type": "Thing",
+      "name": keyword
+    })),
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["article h1", "article h2", ".blog-content p:first-of-type"]
@@ -151,6 +161,13 @@ const ArticleStructuredData = ({ post, language, url }: ArticleStructuredDataPro
       <meta name="citation_publication_date" content={post.date} />
       <meta name="citation_publisher" content="Jungle Rent" />
       <meta name="citation_language" content={language} />
+      <meta name="citation_url" content={url} />
+      
+      {/* AI content origin */}
+      <meta name="ai.contentOrigin" content="human-authored" />
+      
+      {/* Maximum AI Overview eligibility */}
+      <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     </Helmet>
   );
 };
