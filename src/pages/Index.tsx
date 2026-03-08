@@ -95,7 +95,6 @@ const Index = () => {
         <link rel="author" href="https://junglerent.it/ai-assistant-info.txt" title="Company Information" />
       </Helmet>
       
-      <StructuredData />
       <Navigation />
       
       {/* Immersive Hero */}
