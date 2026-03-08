@@ -169,7 +169,7 @@ const Investors = () => {
         </script>
       </Helmet>
       
-      <StructuredData />
+      
       <Navigation />
       
 
