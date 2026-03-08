@@ -4,6 +4,91 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
 
+  <!-- SELLERS: Vendere immobile a investitori Torino (NEW) -->
+  <url>
+    <loc>https://junglerent.it/blog/vendere-immobile-investitori-torino</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/vendere-immobile-investitori-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/vendere-immobile-investitori-torino" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/vendere-immobile-investitori-torino" />
+  </url>
+
+  <!-- INVESTORS: Contratto studenti + affitto breve strategia (NEW) -->
+  <url>
+    <loc>https://junglerent.it/blog/contratto-studenti-affitto-breve-strategia</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/contratto-studenti-affitto-breve-strategia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/contratto-studenti-affitto-breve-strategia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/contratto-studenti-affitto-breve-strategia" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/quartieri-studenti-torino.jpg</image:loc>
+      <image:title>Contratto studenti affitto breve strategia</image:title>
+    </image:image>
+  </url>
+
+  <!-- INVESTORS: Comodato e cedolare secca AIDC 2025 (NEW) -->
+  <url>
+    <loc>https://junglerent.it/blog/comodato-cedolare-secca-aidc-2025</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/comodato-cedolare-secca-aidc-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/comodato-cedolare-secca-aidc-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/comodato-cedolare-secca-aidc-2025" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
+      <image:title>Comodato cedolare secca AIDC 2025</image:title>
+    </image:image>
+  </url>
+
+  <!-- INVESTORS: Guida investitori stranieri comprare casa Torino (NEW) -->
+  <url>
+    <loc>https://junglerent.it/blog/guida-investitori-stranieri-comprare-casa-torino</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/guida-investitori-stranieri-comprare-casa-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/guida-investitori-stranieri-comprare-casa-torino" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/guida-investitori-stranieri-comprare-casa-torino" />
+  </url>
+
+  <!-- TURISTI: Eventi Torino maggio 2026 (NEW, TIME-SENSITIVE) -->
+  <url>
+    <loc>https://junglerent.it/blog/eventi-torino-maggio-2026</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-maggio-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-maggio-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-maggio-2026" />
+  </url>
+
+  <!-- TURISTI: Eventi Torino aprile 2026 (NEW, TIME-SENSITIVE) -->
+  <url>
+    <loc>https://junglerent.it/blog/eventi-torino-aprile-2026</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-aprile-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-aprile-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-aprile-2026" />
+  </url>
+
+  <!-- INVESTORS: Cedolare secca 2026 investitori (NEW) -->
+  <url>
+    <loc>https://junglerent.it/blog/cedolare-secca-2026-investitori</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cedolare-secca-2026-investitori" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/cedolare-secca-2026-investitori" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/cedolare-secca-2026-investitori" />
+  </url>
+
   <!-- SELLERS: Torino città campus - atenei e immobiliare 2026 -->
   <url>
     <loc>https://junglerent.it/blog/torino-citta-campus-atenei-immobiliare-2026</loc>
