@@ -2,7 +2,7 @@ import { Suspense, lazy } from "react";
 import { Navigation } from "@/components/layout/Navigation";
 import { MobileHeader } from "@/components/layout/MobileHeader";
 import { TrustBadge } from "@/components/TrustBadge";
-import { StructuredData } from "@/components/StructuredData";
+
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { MobileFooter } from "@/components/layout/MobileFooter";
@@ -95,7 +95,6 @@ const Index = () => {
         <link rel="author" href="https://junglerent.it/ai-assistant-info.txt" title="Company Information" />
       </Helmet>
       
-      <StructuredData />
       <Navigation />
       
       {/* Immersive Hero */}
