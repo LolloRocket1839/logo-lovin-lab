@@ -354,4 +354,61 @@
     </image:image>
   </url>
 
+  <!-- NUOVI ARTICOLI -->
+  <url>
+    <loc>https://junglerent.it/blog/vendere-immobile-investitori-torino</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/torino-mercato-immobiliare.jpg</image:loc>
+      <image:title>Vendere immobile a investitori Torino - Guida completa</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://junglerent.it/blog/contratto-studenti-affitto-breve-strategia</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/quartieri-studenti-torino.jpg</image:loc>
+      <image:title>Contratto studenti affitto breve - Strategia investitori</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://junglerent.it/blog/comodato-cedolare-secca-aidc-2025</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
+      <image:title>Comodato e cedolare secca AIDC 2025 - Analisi fiscale</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://junglerent.it/blog/guida-investitori-stranieri-comprare-casa-torino</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
+      <image:title>Guida investitori stranieri comprare casa Torino</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://junglerent.it/blog/cedolare-secca-2026-investitori</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
+      <image:title>Cedolare secca 2026 - Guida investitori immobiliari</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://junglerent.it/blog/torino-citta-campus-atenei-immobiliare-2026</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
+      <image:title>Torino città campus - Atenei e mercato immobiliare 2026</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://junglerent.it/blog/torino-citta-7-minuti-walkability</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
+      <image:title>Torino città a 7 minuti - Walkability e quartieri</image:title>
+    </image:image>
+  </url>
+
 </urlset>
