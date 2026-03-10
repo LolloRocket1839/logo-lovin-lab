@@ -40,7 +40,7 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
     };
 
     // Mobile: inactivity timer (45 seconds)
-    let inactivityTimer: NodeJS.Timeout;
+    let inactivityTimer: ReturnType<typeof setTimeout>;
     const resetInactivityTimer = () => {
       clearTimeout(inactivityTimer);
       inactivityTimer = setTimeout(() => {

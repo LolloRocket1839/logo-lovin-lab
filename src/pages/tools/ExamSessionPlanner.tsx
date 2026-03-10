@@ -54,7 +54,7 @@ const ExamSessionPlanner = () => {
   const [cfuMax, setCfuMax] = useState(30);
   const [showClearDialog, setShowClearDialog] = useState(false);
   const [deletedExams, setDeletedExams] = useState<SessionExam[] | null>(null);
-  const undoTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const undoTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   
   // Modal state
   const [modalOpen, setModalOpen] = useState(false);

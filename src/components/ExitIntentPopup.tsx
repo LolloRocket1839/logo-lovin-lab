@@ -53,7 +53,7 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
     };
 
     // Mobile: Inactivity timeout (30 seconds)
-    let inactivityTimer: NodeJS.Timeout;
+    let inactivityTimer: ReturnType<typeof setTimeout>;
     const resetInactivityTimer = () => {
       clearTimeout(inactivityTimer);
       inactivityTimer = setTimeout(() => {
