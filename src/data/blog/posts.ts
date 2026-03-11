@@ -625,6 +625,7 @@ export const blogPosts: BlogPost[] = [
     image: "/images/mortgage-investment.jpg",
     readTime: 15,
     content: "cedolare-secca-2026-investitori",
+    gated: true,
     translations: {
       it: {
         title: "Cedolare secca 2026: dal 21% al 26%, cosa fare ora",

@@ -24,6 +24,7 @@ export interface BlogPost {
   readTime: number;
   content: string; // filename without extension in /data/blog/content/
   noteStyle?: boolean; // iPhone Notes template styling
+  gated?: boolean; // Email gate to access full content
   translations: {
     it: BlogPostTranslation;
     en: BlogPostTranslation;
