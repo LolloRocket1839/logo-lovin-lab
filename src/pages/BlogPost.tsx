@@ -10,6 +10,7 @@ import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
 import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
+import { EmailGate } from "@/components/blog/EmailGate";
 import { ClusterSidebar, ClusterSidebarTrigger } from "@/components/blog/ClusterSidebar";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { getClusterForArticle } from "@/data/blog/contentClusters";
