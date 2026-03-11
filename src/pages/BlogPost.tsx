@@ -10,6 +10,7 @@ import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
 import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
+import { EmailGate } from "@/components/blog/EmailGate";
 import { ClusterSidebar, ClusterSidebarTrigger } from "@/components/blog/ClusterSidebar";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { getClusterForArticle } from "@/data/blog/contentClusters";
@@ -236,11 +237,18 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
                 {/* Featured Image with Parallax */}
                 <ParallaxHeroImage src={post.image} alt={translatedData.title} />
 
-                {/* Animated Content with Auto-Linking */}
-                <AnimatedBlogContent content={content} slug={post.slug} lang={currentLang} />
-
-                {/* Floating Table of Contents (Desktop) */}
-                <FloatingTableOfContents content={content} />
+                {/* Animated Content with Auto-Linking — optionally gated */}
+                {post.gated ? (
+                  <EmailGate slug={post.slug} lang={currentLang}>
+                    <AnimatedBlogContent content={content} slug={post.slug} lang={currentLang} />
+                    <FloatingTableOfContents content={content} />
+                  </EmailGate>
+                ) : (
+                  <>
+                    <AnimatedBlogContent content={content} slug={post.slug} lang={currentLang} />
+                    <FloatingTableOfContents content={content} />
+                  </>
+                )}
 
                 {/* CTA */}
                 <BlogCTA type={post.category} />
