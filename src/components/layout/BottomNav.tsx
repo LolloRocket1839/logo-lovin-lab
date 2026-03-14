@@ -127,7 +127,7 @@ export const BottomNav = () => {
       <Drawer open={infoDrawerOpen} onOpenChange={setInfoDrawerOpen}>
         <DrawerContent className="max-h-[85vh]">
           <DrawerHeader className="pb-2">
-            <DrawerTitle className="text-center">infoinfoinfo(:</DrawerTitle>
+            <DrawerTitle className="text-center">{t("info.title", "Informazioni")}</DrawerTitle>
           </DrawerHeader>
           <div className="px-4 pb-8">
             <Suspense fallback={<div className="h-32 flex items-center justify-center text-muted-foreground">Loading...</div>}>
