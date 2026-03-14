@@ -242,6 +242,12 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'vendere appartamento affittato', 'income property sale',
     'vendita diretta immobile', 'cash flow immediato'
   ],
+  'contratti-locazione-morosita-italia-2026': [
+    'contratti locazione Italia', 'sfratto morosità', 'canone concordato',
+    'CIN affitti brevi', 'rental contracts Italy', 'eviction Italy 2026',
+    'contratto 4+4', 'contratto studenti universitari', 'cedolare secca 10%',
+    'deposito cauzionale', 'fideiussione bancaria', 'BDMI morosi'
+  ],
   'codice-fiscale-studenti-stranieri-torino-2026': [
     'codice fiscale studenti stranieri', 'Italian tax code students',
     'Agenzia delle Entrate Torino', 'Form AA4/8', 'codice fiscale Erasmus',

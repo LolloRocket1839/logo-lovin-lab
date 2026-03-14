@@ -234,6 +234,13 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'codice-fiscale-studenti-stranieri-torino-2026', to: 'conto-corrente-studenti-stranieri-italia-2026', relevance: 'high', bidirectional: true },
   { from: 'codice-fiscale-studenti-stranieri-torino-2026', to: 'quartieri-sicuri-studenti-internazionali-torino-2026', relevance: 'medium', bidirectional: true },
   
+  // Contratti locazione e morosità connections
+  { from: 'contratti-locazione-morosita-italia-2026', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'contratti-locazione-morosita-italia-2026', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'high', bidirectional: true },
+  { from: 'contratti-locazione-morosita-italia-2026', to: 'irpef-vs-cedolare-secca-2026-investitori', relevance: 'medium', bidirectional: true },
+  { from: 'contratti-locazione-morosita-italia-2026', to: 'imu-2026-immobili-affitto-torino-investitori', relevance: 'medium', bidirectional: true },
+  { from: 'contratti-locazione-morosita-italia-2026', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
+  
   // Vendere a investitori connections
   { from: 'vendere-immobile-investitori-torino', to: 'vendere-casa-torino-guida-completa-2025', relevance: 'high', bidirectional: true },
   { from: 'vendere-immobile-investitori-torino', to: 'valutazione-immobiliare-torino-guida-completa', relevance: 'high', bidirectional: true },
