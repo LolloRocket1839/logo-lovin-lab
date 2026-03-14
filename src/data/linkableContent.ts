@@ -253,6 +253,36 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'Agenzia delle Entrate Torino', 'Form AA4/8', 'codice fiscale Erasmus',
     'tax identification code Italy', 'codice fiscale come ottenere',
     'permesso soggiorno codice fiscale', 'codice fiscale stranieri'
+  ],
+  'san-salvario-sicurezza-dati-reali-2026': [
+    'san salvario sicurezza', 'san salvario pericoloso', 'criminalità san salvario',
+    'zona rossa san salvario', 'dati reati torino', 'rapporto rota',
+    'san salvario safety', 'crime data san salvario', 'red zone turin'
+  ],
+  'torino-notte-guida-sicurezza-studenti': [
+    'torino notte sicurezza', 'night buster torino', 'bus notturni torino',
+    'zone evitare notte torino', 'taxi torino notte', 'movida torino sicurezza',
+    'turin nightlife safety', 'night transport turin', '112 where are u'
+  ],
+  'canone-concordato-torino-2026-guida-completa': [
+    'canone concordato torino', 'calcolo canone concordato', 'bollinatura contratto',
+    'tabella canoni torino', 'accordo territoriale torino', 'sotto-fasce canone',
+    'regulated rent turin', 'canone concordato calculation', 'attestazione conformità'
+  ],
+  'rendimento-student-housing-torino-2026': [
+    'rendimento student housing', 'affitto a stanze rendimento', 'yield student housing',
+    'rendimento netto affitto torino', 'vacancy student housing', 'investimento stanze studenti',
+    'room by room rental yield', 'gross to net yield turin'
+  ],
+  'assicurazione-sanitaria-studenti-internazionali-italia-2026': [
+    'assicurazione sanitaria studenti', 'SSN studenti stranieri', 'health insurance students italy',
+    'tessera TEAM studenti', 'EHIC card italy', 'ASL torino iscrizione',
+    'SSN 700 euro', 'medico base studenti', 'ISEE parificato'
+  ],
+  'budget-mensile-studente-torino-2026': [
+    'budget studente torino', 'costo vita torino studenti', 'quanto costa vivere torino',
+    'Piemove gratis studenti', 'mensa EDISU prezzi', 'affitto studenti torino costo',
+    'student budget turin', 'cost of living turin students', 'monthly expenses turin'
   ]
 };
 
