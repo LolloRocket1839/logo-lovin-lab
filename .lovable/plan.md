@@ -1,51 +1,45 @@
 
 
-# Add "IRPEF vs Cedolare Secca 2026" blog article
+# Add May 2026 events blog article
 
-## Overview
-New investors-category article comparing IRPEF vs cedolare secca with real scenarios for Turin student housing investors. Closely related to the existing `cedolare-secca-2026-investitori` article but focused on practical comparison and decision-making.
+## What changes
 
-## Changes
+### 1. Create Italian markdown — `src/data/blog/content/it/eventi-torino-maggio-2026.md`
+Convert the user-provided HTML content into markdown following the established natural language style (sentences under 25 words, active voice, no em dashes). Sections: grandi eventi (Jazz Festival, Salone del Libro, Onde), mostre (MonumenTO, GAM, MAO, OGR), concerti (TWICE, Rockin'1000, Mario Biondi, Sarah Toscano), teatro (Aladin, Lupin, Caveman, Cicchella, Teatro Regio), risorse utili, articoli correlati, fonti.
 
-### 1. Create Italian markdown — `src/data/blog/content/it/irpef-vs-cedolare-secca-2026-investitori.md`
-Convert the provided HTML into markdown. Sections: TL;DR, rate tables (long-term unchanged, short-term changes, IRPEF brackets), three real scenarios, canone concordato winning combo, exceptions, rule of thumb, CTA, sources.
-
-### 2. Create English markdown — `src/data/blog/content/en/irpef-vs-cedolare-secca-2026-investitori.md`
-Full English translation from the provided HTML, same structure.
+### 2. Create English markdown — `src/data/blog/content/en/eventi-torino-maggio-2026.md`
+Full English translation, same structure.
 
 ### 3. Register post in `src/data/blog/posts.ts`
-Insert at position 0 with:
-- `slug: "irpef-vs-cedolare-secca-2026-investitori"`
-- `category: "investors"`
-- `date: "2026-03-14"`
-- `author: "Jungle Rent Team"`
-- `image: "/images/mortgage-investment.jpg"` (reuse existing)
+Insert at position 0 (most recent) with:
+- `slug: "eventi-torino-maggio-2026"`
+- `category: "turisti"`
+- `date: "2026-03-06"`
 - `readTime: 10`
-- `content: "irpef-vs-cedolare-secca-2026-investitori"`
-- 5 FAQs per language (from the provided HTML)
-- SEO keywords from the HTML meta tags
+- `image: "/images/torino-primavera-marzo.jpg"`
+- `content: "eventi-torino-maggio-2026"`
+- 10 FAQs per language covering Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, teatro, transport
+- SEO keywords: "eventi torino maggio 2026", "salone del libro 2026", "concerti torino maggio", "mostre torino maggio", etc.
 
 ### 4. Update content clusters — `src/data/blog/contentClusters.ts`
-- Add `'irpef-vs-cedolare-secca-2026-investitori'` to the Investors "Real Assets" cluster satellites
-- Add relationships:
-  - `irpef-vs-cedolare-secca-2026-investitori` ↔ `cedolare-secca-2026-investitori` (high)
-  - `irpef-vs-cedolare-secca-2026-investitori` ↔ `contratto-studenti-affitto-breve-strategia` (high)
-  - `irpef-vs-cedolare-secca-2026-investitori` ↔ `comodato-cedolare-secca-aidc-2025` (medium)
+- Add `'eventi-torino-maggio-2026'` to Turin Experience satellites (after aprile)
+- Add temporal chain: `{ from: 'eventi-torino-aprile-2026', to: 'eventi-torino-maggio-2026', relevance: 'high', bidirectional: true }`
 
-### 5. Update linkable content — `src/data/linkableContent.ts`
-Add keywords entry: "irpef vs cedolare secca", "confronto tassazione affitti", "flat tax rental Italy", "canone concordato 10% torino".
+### 5. Update April article related articles
+Add May link at top of "Articoli correlati" in both IT and EN April markdown files.
 
-### 6. Update sitemap-images.xml
-Add entry for the new article URL.
+### 6. Update linkable content — `src/data/linkableContent.ts`
+Add keywords entry for `'eventi-torino-maggio-2026'`.
 
 ## Files changed
 
 | File | Action |
 |------|--------|
-| `src/data/blog/content/it/irpef-vs-cedolare-secca-2026-investitori.md` | Create |
-| `src/data/blog/content/en/irpef-vs-cedolare-secca-2026-investitori.md` | Create |
+| `src/data/blog/content/it/eventi-torino-maggio-2026.md` | Create |
+| `src/data/blog/content/en/eventi-torino-maggio-2026.md` | Create |
 | `src/data/blog/posts.ts` | Add post entry at top |
-| `src/data/blog/contentClusters.ts` | Add to cluster + relationships |
-| `src/data/linkableContent.ts` | Add keywords |
-| `public/sitemap-images.xml` | Add image entry |
+| `src/data/blog/contentClusters.ts` | Add to cluster + relationship |
+| `src/data/linkableContent.ts` | Add enhanced keywords |
+| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Add May link |
+| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Add May link |
 

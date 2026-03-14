@@ -57,6 +57,7 @@ export const contentClusters: ContentCluster[] = [
     pillarTitleEn: 'Investing in real assets in Turin 2025',
     satellites: [
       'cedolare-secca-2026-investitori',
+      'irpef-vs-cedolare-secca-2026-investitori',
       'mutui-investitori-immobiliari-guida-completa',
       'student-housing-italia-savills-2025',
       'valutazione-immobiliare-torino-guida-completa',
@@ -65,7 +66,7 @@ export const contentClusters: ContentCluster[] = [
       'contratto-studenti-affitto-breve-strategia',
       'comodato-cedolare-secca-aidc-2025'
     ],
-    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire', 'affitto breve', 'comodato']
+    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire', 'affitto breve', 'comodato', 'IRPEF']
   },
   
   // SELLERS CLUSTER - Property Sales
@@ -207,6 +208,12 @@ export const articleRelationships: ArticleRelationship[] = [
   // Comodato article connections
   { from: 'comodato-cedolare-secca-aidc-2025', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
   { from: 'comodato-cedolare-secca-aidc-2025', to: 'mutui-investitori-immobiliari-guida-completa', relevance: 'medium', bidirectional: true },
+  
+  // IRPEF vs Cedolare Secca connections
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'high', bidirectional: true },
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'comodato-cedolare-secca-aidc-2025', relevance: 'medium', bidirectional: true },
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
   
   // Vendere a investitori connections
   { from: 'vendere-immobile-investitori-torino', to: 'vendere-casa-torino-guida-completa-2025', relevance: 'high', bidirectional: true },

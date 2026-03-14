@@ -2,6 +2,73 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "irpef-vs-cedolare-secca-2026-investitori",
+    category: "investors",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 10,
+    content: "irpef-vs-cedolare-secca-2026-investitori",
+    translations: {
+      it: {
+        title: "IRPEF vs Cedolare Secca 2026: Quando Conviene per Investitori Immobiliari",
+        excerpt: "Confronto completo IRPEF vs cedolare secca 2026 per investitori immobiliari a Torino. Aliquote aggiornate, scenari pratici, calcoli reali e il caso speciale del canone concordato al 10%.",
+        seo: {
+          title: "IRPEF vs Cedolare Secca 2026: Quando Conviene per Investitori Immobiliari",
+          description: "Confronto completo IRPEF vs cedolare secca 2026 per investitori immobiliari a Torino. Aliquote aggiornate, scenari pratici, calcoli reali e il caso speciale del canone concordato al 10%.",
+          keywords: [
+            "IRPEF vs cedolare secca 2026",
+            "cedolare secca investitori immobiliari",
+            "tassazione affitti 2026 Italia",
+            "canone concordato 10% 2026",
+            "cedolare secca 21% conviene",
+            "confronto tassazione affitti",
+            "flat tax affitti Italia",
+            "aliquote IRPEF 2026",
+            "investimento immobiliare torino tasse",
+            "cedolare secca canone concordato torino"
+          ]
+        },
+        tags: ["Investitori", "Fiscalità", "Cedolare Secca", "IRPEF", "Torino"],
+        faqs: [
+          { question: "La cedolare secca è aumentata al 26% nel 2026?", answer: "Solo per gli affitti brevi (≤30 giorni) dal secondo immobile in poi. Per i contratti a lungo termine (>30 giorni) — canone libero 4+4 e canone concordato — le aliquote sono rimaste invariate: 21% e 10% rispettivamente." },
+          { question: "Cosa conviene tra cedolare secca 21% e IRPEF per chi ha reddito da lavoro di €30.000?", answer: "La cedolare secca al 21% è quasi sempre vantaggiosa. Su un affitto annuo di €6.000, il risparmio rispetto all'IRPEF ordinaria (scaglione 33% + addizionali + registro) è tipicamente tra €400 e €700." },
+          { question: "Come si ottiene il canone concordato al 10% a Torino?", answer: "Il contratto deve rientrare nei parametri dell'Accordo Territoriale di Torino (microzona OMI di riferimento), ricevere la bollinatura da un'associazione firmataria (ANIAT, APE, ASPPI, ecc.) e optare per la cedolare secca in sede di registrazione." },
+          { question: "La cedolare secca si può applicare a qualsiasi immobile?", answer: "Solo per immobili a uso abitativo (categorie catastali A, escluso A/10) concessi in locazione a uso abitativo. Non applicabile a uffici, negozi, box o pertinenze affittate separatamente dall'abitazione." },
+          { question: "IMU e cedolare secca si sommano?", answer: "Sì. La cedolare secca sostituisce l'IRPEF, le addizionali, l'imposta di registro e l'imposta di bollo, ma non sostituisce l'IMU. L'IMU è dovuta separatamente (con le eventuali riduzioni per canone concordato)." }
+        ]
+      },
+      en: {
+        title: "IRPEF vs Cedolare Secca (Flat Tax) 2026: When it Pays Off for Property Investors",
+        excerpt: "Complete comparison of Italy's flat tax (cedolare secca) vs IRPEF for property investors in 2026. Updated rates, real scenarios, and the special 10% case for regulated contracts.",
+        seo: {
+          title: "IRPEF vs Cedolare Secca (Flat Tax) 2026: When it Pays Off for Property Investors",
+          description: "Complete comparison of Italy's flat tax (cedolare secca) vs IRPEF for property investors in 2026. Updated rates, real scenarios, and the special 10% case for regulated contracts.",
+          keywords: [
+            "cedolare secca 2026 Italy",
+            "Italian property tax investors",
+            "flat tax rental income Italy 2026",
+            "canone concordato 10% Turin",
+            "IRPEF rental income comparison",
+            "Italy rental tax comparison",
+            "flat tax vs income tax Italy",
+            "IRPEF brackets 2026",
+            "Turin property investment tax",
+            "cedolare secca canone concordato Turin"
+          ]
+        },
+        tags: ["Investors", "Taxation", "Cedolare Secca", "IRPEF", "Turin"],
+        faqs: [
+          { question: "Did cedolare secca increase to 26% in 2026?", answer: "Only for short-term rentals (≤30 days) from the second property onwards. Long-term contracts (>30 days) — free market 4+4 and canone concordato — are unchanged: 21% and 10% respectively." },
+          { question: "Which is better, cedolare secca 21% or IRPEF, for €30,000 annual income?", answer: "Cedolare secca 21% is almost always better. On €6,000 annual rent, the saving vs ordinary IRPEF (33% bracket + surtaxes + registry) is typically €400–700." },
+          { question: "How do I get the 10% rate with canone concordato in Turin?", answer: "Contract must fall within the Turin Territorial Agreement's bands, receive a bollinatura from a signatory association (ANIAT, APE, ASPPI, etc.), and opt for cedolare secca at contract registration." },
+          { question: "Can cedolare secca be applied to any property?", answer: "Only to residential properties (cadastral category A, excluding A/10) rented for residential use. Not applicable to offices, shops, garages, or outbuildings rented separately." },
+          { question: "Are IMU and cedolare secca cumulative?", answer: "Yes. Cedolare secca replaces IRPEF, surtaxes, registration tax, and stamp duty — but not IMU. IMU is due separately (with applicable reductions for canone concordato)." }
+        ]
+      }
+    }
+  },
+  {
     slug: "quartieri-sicuri-studenti-internazionali-torino-2026",
     category: "students",
     date: "2026-03-14",
