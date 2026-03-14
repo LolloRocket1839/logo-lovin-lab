@@ -64,6 +64,14 @@ export const BlogFilters = ({
             className="pl-10"
           />
         </div>
+        {isFiltering && resultCount !== undefined && (
+          <p className="text-sm text-muted-foreground text-center mt-2">
+            {resultCount === 0 
+              ? t('blog.search.noResultsShort', { defaultValue: '0 risultati' })
+              : t('blog.search.resultCount', { count: resultCount, defaultValue: `${resultCount} articoli trovati` })
+            }
+          </p>
+        )}
       </div>
       
       <div className="flex flex-wrap gap-3 justify-center">
