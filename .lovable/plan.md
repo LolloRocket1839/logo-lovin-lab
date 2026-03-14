@@ -1,43 +1,45 @@
 
 
-# Add "Conto Corrente per Studenti Stranieri in Italia 2026" blog article
+# Add May 2026 events blog article
 
-## Changes
+## What changes
 
-### 1. Create Italian markdown — `src/data/blog/content/it/conto-corrente-studenti-stranieri-italia-2026.md`
-Convert provided HTML to markdown. Sections: TL;DR, requirements, bank comparison (Revolut, Intesa XME, Widiba, N26, UniCredit, Fineco), comparison table, 3-phase strategy, opening without permesso di soggiorno, CTA, FAQ, sources.
+### 1. Create Italian markdown — `src/data/blog/content/it/eventi-torino-maggio-2026.md`
+Convert the user-provided HTML content into markdown following the established natural language style (sentences under 25 words, active voice, no em dashes). Sections: grandi eventi (Jazz Festival, Salone del Libro, Onde), mostre (MonumenTO, GAM, MAO, OGR), concerti (TWICE, Rockin'1000, Mario Biondi, Sarah Toscano), teatro (Aladin, Lupin, Caveman, Cicchella, Teatro Regio), risorse utili, articoli correlati, fonti.
 
-### 2. Create English markdown — `src/data/blog/content/en/conto-corrente-studenti-stranieri-italia-2026.md`
+### 2. Create English markdown — `src/data/blog/content/en/eventi-torino-maggio-2026.md`
 Full English translation, same structure.
 
 ### 3. Register post in `src/data/blog/posts.ts`
-Insert at position 0:
-- `slug: "conto-corrente-studenti-stranieri-italia-2026"`
-- `category: "students"`, `date: "2026-03-14"`, `readTime: 9`
-- `image` — reuse an existing student-related image (e.g. `/images/quartieri-studenti-torino.jpg` or similar)
-- 5 FAQs per language from provided HTML
-- SEO keywords from meta tags
+Insert at position 0 (most recent) with:
+- `slug: "eventi-torino-maggio-2026"`
+- `category: "turisti"`
+- `date: "2026-03-06"`
+- `readTime: 10`
+- `image: "/images/torino-primavera-marzo.jpg"`
+- `content: "eventi-torino-maggio-2026"`
+- 10 FAQs per language covering Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, teatro, transport
+- SEO keywords: "eventi torino maggio 2026", "salone del libro 2026", "concerti torino maggio", "mostre torino maggio", etc.
 
-### 4. Update `src/data/blog/contentClusters.ts`
-- Add to Students "University Life" cluster satellites (practical guide for international students)
-- Add relationships:
-  - ↔ `quartieri-sicuri-studenti-internazionali-torino-2026` (high — same target audience)
-  - ↔ `san-salvario-guida-studenti` (medium)
+### 4. Update content clusters — `src/data/blog/contentClusters.ts`
+- Add `'eventi-torino-maggio-2026'` to Turin Experience satellites (after aprile)
+- Add temporal chain: `{ from: 'eventi-torino-aprile-2026', to: 'eventi-torino-maggio-2026', relevance: 'high', bidirectional: true }`
 
-### 5. Update `src/data/linkableContent.ts`
-Add keywords: "conto corrente studenti stranieri", "bank account international students Italy", "Revolut IBAN italiano", "aprire conto banca Torino studenti".
+### 5. Update April article related articles
+Add May link at top of "Articoli correlati" in both IT and EN April markdown files.
 
-### 6. Update `public/sitemap-images.xml`
-Add entry for the new article URL.
+### 6. Update linkable content — `src/data/linkableContent.ts`
+Add keywords entry for `'eventi-torino-maggio-2026'`.
 
 ## Files changed
 
 | File | Action |
 |------|--------|
-| `src/data/blog/content/it/conto-corrente-studenti-stranieri-italia-2026.md` | Create |
-| `src/data/blog/content/en/conto-corrente-studenti-stranieri-italia-2026.md` | Create |
-| `src/data/blog/posts.ts` | Add post at top |
-| `src/data/blog/contentClusters.ts` | Add to cluster + relationships |
-| `src/data/linkableContent.ts` | Add keywords |
-| `public/sitemap-images.xml` | Add entry |
+| `src/data/blog/content/it/eventi-torino-maggio-2026.md` | Create |
+| `src/data/blog/content/en/eventi-torino-maggio-2026.md` | Create |
+| `src/data/blog/posts.ts` | Add post entry at top |
+| `src/data/blog/contentClusters.ts` | Add to cluster + relationship |
+| `src/data/linkableContent.ts` | Add enhanced keywords |
+| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Add May link |
+| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Add May link |
 

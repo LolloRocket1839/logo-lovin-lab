@@ -2,6 +2,67 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "conto-corrente-studenti-stranieri-italia-2026",
+    category: "students",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 9,
+    content: "conto-corrente-studenti-stranieri-italia-2026",
+    translations: {
+      it: {
+        title: "Conto Corrente per Studenti Stranieri in Italia 2026: Guida Completa",
+        excerpt: "Come aprire un conto corrente in Italia come studente straniero nel 2026: confronto banche, requisiti, migliori opzioni per Erasmus e studenti internazionali a Torino.",
+        seo: {
+          title: "Conto Corrente per Studenti Stranieri in Italia 2026: Guida Completa",
+          description: "Come aprire un conto corrente in Italia come studente straniero nel 2026: confronto banche, requisiti, migliori opzioni per Erasmus e studenti internazionali a Torino.",
+          keywords: [
+            "conto corrente studenti stranieri Italia 2026",
+            "aprire conto banca studenti internazionali Torino",
+            "conto corrente Erasmus Italia",
+            "Revolut IBAN italiano studenti",
+            "miglior banca studenti stranieri Italia",
+            "bank account international students Italy",
+            "codice fiscale conto corrente"
+          ]
+        },
+        tags: ["Studenti", "Banca", "Erasmus", "Guida Pratica", "Torino"],
+        faqs: [
+          { question: "Posso aprire un conto bancario in Italia senza residenza italiana?", answer: "Sì. Revolut non richiede la residenza italiana — basta un indirizzo italiano e il codice fiscale. Anche N26 non richiede residenza. Le banche tradizionali di solito richiedono il permesso di soggiorno per studenti non UE, ma accettano anche la ricevuta di richiesta." },
+          { question: "Revolut ha un IBAN italiano dal 2025?", answer: "Sì. Dal dicembre 2024/gennaio 2025, Revolut ha aperto la propria filiale italiana e ora emette IBAN con prefisso IT. Questo elimina i problemi di \"discriminazione IBAN\" con pagatori italiani." },
+          { question: "Qual è la migliore banca per uno studente Erasmus a Torino?", answer: "Per uso immediato: Revolut (IBAN italiano, gratuito, apertura in 10 minuti). Per uso a lungo termine: Intesa Sanpaolo XME (gratuito under 35, servizi completi, >40 filiali a Torino)." },
+          { question: "Ho bisogno del codice fiscale per aprire un conto?", answer: "Per la maggior parte delle banche, sì. Il codice fiscale è richiesto quasi universalmente per i conti bancari italiani. Ottienilo prima di tutto il resto." },
+          { question: "Come ricevo bonifici dall'estero con i costi più bassi?", answer: "Usa Wise (wise.com) — tasso di cambio interbancario reale, commissione ~1–2%. Molto più conveniente dei bonifici internazionali bancari tradizionali (€10–30 a operazione)." }
+        ]
+      },
+      en: {
+        title: "Bank Account for International Students in Italy 2026: Complete Guide",
+        excerpt: "How to open a bank account in Italy as an international student in 2026: bank comparison, requirements, best options for Erasmus and international students in Turin.",
+        seo: {
+          title: "Bank Account for International Students in Italy 2026: Complete Guide",
+          description: "How to open a bank account in Italy as an international student in 2026: bank comparison, requirements, best options for Erasmus and international students in Turin.",
+          keywords: [
+            "bank account international students Italy 2026",
+            "open bank account foreign students Turin",
+            "Erasmus bank account Italy",
+            "Revolut Italian IBAN students",
+            "best bank international students Italy",
+            "codice fiscale bank account",
+            "N26 vs Revolut Italy students"
+          ]
+        },
+        tags: ["Students", "Banking", "Erasmus", "Practical Guide", "Turin"],
+        faqs: [
+          { question: "Can I open a bank account in Italy without Italian residency?", answer: "Yes. Revolut doesn't require Italian residency — just an Italian address and codice fiscale. N26 also doesn't require residency. Traditional banks usually require a residence permit for non-EU students, but also accept the application receipt." },
+          { question: "Does Revolut have an Italian IBAN since 2025?", answer: "Yes. Since December 2024/January 2025, Revolut opened its Italian branch and now issues IBANs with IT prefix. This eliminates 'IBAN discrimination' problems with Italian payers." },
+          { question: "What's the best bank for an Erasmus student in Turin?", answer: "For immediate use: Revolut (Italian IBAN, free, 10-minute setup). For long-term use: Intesa Sanpaolo XME (free under 35, full services, >40 branches in Turin)." },
+          { question: "Do I need a codice fiscale to open an account?", answer: "For most banks, yes. The codice fiscale is almost universally required for Italian bank accounts. Get it before anything else." },
+          { question: "How do I receive international transfers at the lowest cost?", answer: "Use Wise (wise.com) — real interbank exchange rate, ~1–2% fee. Much cheaper than traditional bank international transfers (€10–30 per transaction)." }
+        ]
+      }
+    }
+  },
+  {
     slug: "imu-2026-immobili-affitto-torino-investitori",
     category: "investors",
     date: "2026-03-14",
