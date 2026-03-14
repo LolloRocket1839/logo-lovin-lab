@@ -2,6 +2,69 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "imu-2026-immobili-affitto-torino-investitori",
+    category: "investors",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 9,
+    content: "imu-2026-immobili-affitto-torino-investitori",
+    translations: {
+      it: {
+        title: "IMU 2026 su Immobili in Affitto a Torino: Guida per Investitori",
+        excerpt: "Guida completa all'IMU 2026 per immobili in affitto a Torino: aliquote ufficiali, riduzione 25% canone concordato, calcolo pratico e come ottimizzare il carico IMU per investitori student housing.",
+        seo: {
+          title: "IMU 2026 su Immobili in Affitto a Torino: Guida per Investitori",
+          description: "Guida completa all'IMU 2026 per immobili in affitto a Torino: aliquote ufficiali, riduzione 25% canone concordato, calcolo pratico e come ottimizzare il carico IMU per investitori student housing.",
+          keywords: [
+            "IMU 2026 affitti Torino",
+            "aliquota IMU immobili locati Torino 2026",
+            "IMU canone concordato riduzione 25%",
+            "IMU seconda casa Torino",
+            "calcolo IMU investitore immobiliare",
+            "IMU student housing Torino",
+            "scadenze IMU 2026",
+            "aliquota IMU 10,6 Torino"
+          ]
+        },
+        tags: ["Investitori", "IMU", "Fiscalità", "Canone Concordato", "Torino"],
+        faqs: [
+          { question: "L'IMU è cambiata nel 2026?", answer: "No. La Legge di Bilancio 2026 non ha modificato la struttura IMU. Il quadro normativo di riferimento (L. 160/2019) è invariato." },
+          { question: "Come si ottiene la riduzione IMU del 25% per canone concordato?", answer: "È automatica a livello nazionale per tutti i contratti validi ai sensi della L. 431/1998 (concordato agevolato, transitorio, studenti). Non richiede richiesta aggiuntiva — si calcola direttamente nella dichiarazione IMU." },
+          { question: "Come si ottiene l'aliquota agevolata 5,75‰ di Torino per canone concordato con residente?", answer: "Occorre presentare la Comunicazione di destinazione d'uso al Comune di Torino tramite TorinoFacile entro il 30 aprile dell'anno successivo al primo anno d'imposta." },
+          { question: "Si paga l'IMU sugli immobili affittati a studenti?", answer: "Sì. L'esenzione IMU vale solo per l'abitazione principale del proprietario. Gli immobili affittati — anche a studenti — sono soggetti a IMU, con le riduzioni applicabili per canone concordato." },
+          { question: "Quando si pagano acconto e saldo IMU 2026?", answer: "Acconto: 16 giugno 2026. Saldo: 16 dicembre 2026. Pagamento tramite F24 (codice tributo 3918)." }
+        ]
+      },
+      en: {
+        title: "IMU 2026 on Rental Properties in Turin: Investor Guide",
+        excerpt: "Complete guide to IMU 2026 for rental properties in Turin: official rates, 25% canone concordato reduction, practical calculation, and how to optimize IMU for student housing investors.",
+        seo: {
+          title: "IMU 2026 on Rental Properties in Turin: Investor Guide",
+          description: "Complete guide to IMU 2026 for rental properties in Turin: official rates, 25% canone concordato reduction, practical calculation, and how to optimize IMU for student housing investors.",
+          keywords: [
+            "IMU 2026 rental properties Turin",
+            "IMU property tax Italy investors",
+            "canone concordato IMU reduction 25%",
+            "IMU second home Turin",
+            "IMU calculation rental investor",
+            "IMU student housing Turin",
+            "IMU deadlines 2026 Italy",
+            "Turin property tax rates 2026"
+          ]
+        },
+        tags: ["Investors", "IMU", "Taxation", "Canone Concordato", "Turin"],
+        faqs: [
+          { question: "Did IMU change in 2026?", answer: "No. The 2026 Budget Law did not modify the IMU framework. The reference legislation (L. 160/2019) is unchanged." },
+          { question: "How do I get the 25% IMU reduction for canone concordato?", answer: "It's automatic at the national level for all valid contracts under L. 431/1998 (regulated, transitional, student contracts). No additional request needed — it's calculated directly in the IMU declaration." },
+          { question: "How do I get Turin's preferential 5.75‰ rate for canone concordato with resident tenant?", answer: "You must submit the intended use declaration to Turin municipality via TorinoFacile by 30 April of the year following the first tax year." },
+          { question: "Is IMU due on properties rented to students?", answer: "Yes. IMU exemption applies only to the owner's primary residence. Rented properties — including those rented to students — are subject to IMU, with applicable canone concordato reductions." },
+          { question: "When are IMU 2026 advance and balance payments due?", answer: "Advance: 16 June 2026. Balance: 16 December 2026. Payment via F24 form (tax code 3918)." }
+        ]
+      }
+    }
+  },
+  {
     slug: "irpef-vs-cedolare-secca-2026-investitori",
     category: "investors",
     date: "2026-03-14",
