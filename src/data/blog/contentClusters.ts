@@ -26,6 +26,7 @@ export const contentClusters: ContentCluster[] = [
     satellites: [
       'san-salvario-guida-studenti',
       'quartieri-sicuri-donne-torino',
+      'quartieri-sicuri-studenti-internazionali-torino-2026',
       'aule-studio-torino-guida-completa',
       'palestre-torino-studenti-guida-completa',
       'dove-mangiare-torino-studenti',
