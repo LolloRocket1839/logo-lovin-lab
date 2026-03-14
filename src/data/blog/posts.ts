@@ -2,6 +2,73 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "quartieri-sicuri-studenti-internazionali-torino-2026",
+    category: "students",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 10,
+    content: "quartieri-sicuri-studenti-internazionali-torino-2026",
+    translations: {
+      it: {
+        title: "Quartieri sicuri per studenti internazionali a Torino 2026",
+        excerpt: "Guida completa ai quartieri più sicuri di Torino per studenti internazionali: dati reali su criminalità, affitti, trasporti e vita studentesca per chi arriva dall'estero.",
+        seo: {
+          title: "Quartieri sicuri per studenti internazionali a Torino 2026",
+          description: "Guida completa ai quartieri più sicuri di Torino per studenti internazionali nel 2026: dati reali su criminalità, affitti, trasporti e vita studentesca per chi arriva dall'estero.",
+          keywords: [
+            "quartieri sicuri torino studenti internazionali",
+            "sicurezza torino stranieri 2026",
+            "dove vivere torino erasmus",
+            "affitti studenti internazionali torino",
+            "zone rosse torino studenti",
+            "crocetta torino studenti",
+            "cenisia torino affitto",
+            "san salvario sicurezza",
+            "quartieri torino erasmus 2026",
+            "torino safe neighborhoods students"
+          ]
+        },
+        tags: ["Studenti", "Sicurezza", "Quartieri", "Torino", "Internazionali"],
+        faqs: [
+          { question: "Qual è il quartiere più sicuro di Torino per uno studente internazionale?", answer: "Crocetta è unanimemente considerato il quartiere più sicuro e tranquillo di Torino. Non è designato zona rossa, ha una criminalità molto bassa e ottimi servizi. Il prezzo delle camere singole (€400–600/mese) è il più alto tra le zone universitarie." },
+          { question: "San Salvario è sicuro per una studentessa che vive sola?", answer: "San Salvario è sicuro durante il giorno e la sera fino alle 22-23. Di notte, è consigliabile evitare di camminare da sole nelle aree meno illuminate vicino a Porta Nuova e nel Parco del Valentino. Con le dovute precauzioni, molte studentesse internazionali vivono qui senza problemi." },
+          { question: "Come posso verificare la sicurezza di un quartiere di Torino prima di arrivare?", answer: "Consulta la mappa delle zone rosse della Prefettura di Torino, i dati Numbeo (numbeo.com/crime/in/Turin) per le percezioni aggiornate, e i gruppi Facebook/Telegram della comunità studentesca della tua università." },
+          { question: "Qual è il quartiere più economico sicuro per uno studente internazionale a Torino?", answer: "Santa Rita offre il miglior rapporto sicurezza-prezzo: camere singole da €300/mese, nessuna zona rossa, buona connessione bus. Cenisia è un'alternativa più vicina al Politecnico con prezzi simili." },
+          { question: "Torino è sicura per gli studenti stranieri di colore?", answer: "Il dato Numbeo sulla preoccupazione per attacchi basati su etnia riporta un punteggio di 31,27/100 ('basso'). Torino è una città universitaria internazionale e multiculturale. Episodi di discriminazione esistono come in ogni grande città europea, ma non sono statisticamente rilevanti come rischio quotidiano per gli studenti." }
+        ]
+      },
+      en: {
+        title: "Safe neighborhoods for international students in Turin 2026",
+        excerpt: "Complete guide to Turin's safest neighborhoods for international students: real data on crime, rent, transport, and student life for those arriving from abroad.",
+        seo: {
+          title: "Safe neighborhoods for international students in Turin 2026",
+          description: "Complete guide to Turin's safest neighborhoods for international students in 2026: real data on crime, rent, transport, and student life for those arriving from abroad.",
+          keywords: [
+            "safe neighborhoods turin international students",
+            "turin safety foreigners 2026",
+            "where to live turin erasmus",
+            "rent international students turin",
+            "red zones turin students",
+            "crocetta turin students",
+            "cenisia turin rent",
+            "san salvario safety",
+            "turin neighborhoods erasmus 2026",
+            "torino safe areas students"
+          ]
+        },
+        tags: ["Students", "Safety", "Neighborhoods", "Turin", "International"],
+        faqs: [
+          { question: "What is the safest neighborhood in Turin for an international student?", answer: "Crocetta is unanimously considered the safest and quietest neighborhood in Turin. It is not a red zone, has very low crime, and excellent services. Single room prices (€400–600/month) are the highest among university areas." },
+          { question: "Is San Salvario safe for a female student living alone?", answer: "San Salvario is safe during the day and evenings until 10-11 PM. At night, it's advisable to avoid walking alone in less-lit areas near Porta Nuova and Parco del Valentino. With proper precautions, many international female students live here without issues." },
+          { question: "How can I check a Turin neighborhood's safety before arriving?", answer: "Check the Turin Prefecture's red zone map, Numbeo data (numbeo.com/crime/in/Turin) for updated perceptions, and Facebook/Telegram groups of your university's student community." },
+          { question: "What is the cheapest safe neighborhood for an international student in Turin?", answer: "Santa Rita offers the best safety-to-price ratio: single rooms from €300/month, no red zone designation, good bus connections. Cenisia is a closer alternative to Politecnico with similar prices." },
+          { question: "Is Turin safe for students of color?", answer: "The Numbeo score for concern about ethnicity-based attacks is 31.27/100 ('low'). Turin is an international, multicultural university city. Discrimination incidents exist as in any major European city, but they are not statistically significant as a daily risk for students." }
+        ]
+      }
+    }
+  },
+  {
     slug: "vendere-immobile-investitori-torino",
     category: "sellers",
     date: "2026-03-07",
