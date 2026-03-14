@@ -3080,17 +3080,71 @@ export function getPostsByCategory(category: BlogCategory): BlogPost[] {
   return blogPosts.filter(post => post.category === category);
 }
 
+// Normalize text: lowercase, remove accents, collapse whitespace
+function normalizeForSearch(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^\w\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function searchPosts(posts: BlogPost[], query: string, lang: 'it' | 'en'): BlogPost[] {
   if (!query.trim()) return posts;
-  const lowerQuery = query.toLowerCase();
-  return posts.filter(post => {
-    const translation = post.translations[lang];
-    return (
-      translation.title.toLowerCase().includes(lowerQuery) ||
-      translation.excerpt.toLowerCase().includes(lowerQuery) ||
-      translation.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-    );
+
+  const normalizedQuery = normalizeForSearch(query);
+  const queryWords = normalizedQuery.split(' ').filter(w => w.length > 1);
+  if (queryWords.length === 0) return posts;
+
+  const scored = posts.map(post => {
+    const t = post.translations[lang];
+    const otherLang = lang === 'it' ? 'en' : 'it';
+    const tOther = post.translations[otherLang];
+
+    // Build searchable fields with weights
+    const fields: { text: string; weight: number }[] = [
+      { text: t.title, weight: 5 },
+      { text: tOther.title, weight: 3 },
+      { text: t.excerpt, weight: 3 },
+      { text: tOther.excerpt, weight: 1 },
+      { text: t.tags.join(' '), weight: 4 },
+      { text: tOther.tags.join(' '), weight: 2 },
+      { text: (t.seo?.keywords || []).join(' '), weight: 4 },
+      { text: (tOther.seo?.keywords || []).join(' '), weight: 2 },
+      { text: (t.faqs || []).map(f => f.question + ' ' + f.answer).join(' '), weight: 2 },
+      { text: (tOther.faqs || []).map(f => f.question + ' ' + f.answer).join(' '), weight: 1 },
+      { text: post.category, weight: 2 },
+    ];
+
+    let totalScore = 0;
+    let matchedWords = 0;
+
+    for (const word of queryWords) {
+      let wordScore = 0;
+      for (const field of fields) {
+        const normalized = normalizeForSearch(field.text);
+        if (normalized.includes(word)) {
+          wordScore += field.weight;
+        }
+      }
+      if (wordScore > 0) {
+        matchedWords++;
+        totalScore += wordScore;
+      }
+    }
+
+    // All query words must match at least one field
+    const allMatch = matchedWords === queryWords.length;
+
+    return { post, score: allMatch ? totalScore : 0 };
   });
+
+  return scored
+    .filter(s => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(s => s.post);
 }
 
 export function filterPostsByTags(posts: BlogPost[], tags: string[], lang: 'it' | 'en'): BlogPost[] {
