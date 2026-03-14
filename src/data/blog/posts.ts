@@ -2,6 +2,288 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "budget-mensile-studente-torino-2026",
+    category: "students",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 14,
+    content: "budget-mensile-studente-torino-2026",
+    translations: {
+      it: {
+        title: "Budget mensile studente Torino 2026: quanto spendi davvero",
+        excerpt: "Due scenari di budget reali per studenti a Torino: da €650 a €1.350 al mese. Affitto, mensa EDISU, Piemove gratuito, SIM e agevolazioni.",
+        seo: {
+          title: "Budget mensile studente Torino 2026: quanto spendi davvero",
+          description: "Budget reale studente Torino 2026: affitto €350-530, trasporto gratis con Piemove, mensa EDISU da €2,50. Due scenari concreti da €650 a €1.350/mese.",
+          keywords: ["budget studente torino 2026", "costo vita torino studenti", "Piemove gratis", "mensa EDISU prezzi", "affitto stanza torino", "borse EDISU 2026"]
+        },
+        tags: ["Studenti", "Budget", "Torino", "Università", "Piemove"],
+        faqs: [
+          { question: "Quanto costa vivere a Torino come studente nel 2026?", answer: "Il budget minimo sostenibile è €650-850/mese (posto letto in doppia, cucina a casa, Piemove gratuito). Un budget confortevole con stanza singola richiede €1.050-1.350/mese." },
+          { question: "Piemove è davvero gratuito per gli studenti?", answer: "Sì. Piemove è un abbonamento completamente gratuito per studenti under 26 iscritti a UniTo, PoliTo e UPO con ISEE ≤ €85.000. Copre bus, tram, metro GTT e treni SFM." },
+          { question: "Quanto costa una stanza singola a Torino per studenti?", answer: "La media è €483/mese (Immobiliare.it), con un range di €350-530. Le stanze all-inclusive (utenze incluse) vanno da €400 a €600." },
+          { question: "Le mense EDISU quanto costano?", answer: "Da ~€2,50-3,00 per borsisti fino a €7-8 a tariffa piena. Gli idonei non vincitori hanno 1 pasto gratuito al giorno." },
+          { question: "Torino è più economica di Milano per gli studenti?", answer: "Sì. L'affitto medio è 32% inferiore a Milano. Il costo della vita complessivo è €778/mese contro €836 (Codacons). E Torino ha il trasporto gratuito con Piemove." },
+          { question: "Quali agevolazioni economiche esistono per studenti a Torino?", answer: "Borse EDISU fino a €8.336/anno, No-Tax Area universitaria (PoliTo ≤€30.000, UniTo ≤€26.000), bonus affitto Under 31 fino a €991/anno e Piemove gratuito." }
+        ]
+      },
+      en: {
+        title: "Monthly student budget Turin 2026: what you'll really spend",
+        excerpt: "Two real budget scenarios for students in Turin: from €650 to €1,350 per month. Rent, EDISU canteen, free Piemove transport, SIM plans and financial aid.",
+        seo: {
+          title: "Monthly student budget Turin 2026: what you'll really spend",
+          description: "Real student budget Turin 2026: rent €350-530, free transport with Piemove, EDISU canteen from €2.50. Two concrete scenarios from €650 to €1,350/month.",
+          keywords: ["student budget turin 2026", "cost of living turin students", "Piemove free transport", "EDISU canteen prices", "room rent turin", "EDISU scholarships 2026"]
+        },
+        tags: ["Students", "Budget", "Turin", "University", "Piemove"],
+        faqs: [
+          { question: "How much does it cost to live in Turin as a student in 2026?", answer: "The minimum sustainable budget is €650-850/month (shared room, cooking at home, free Piemove). A comfortable budget with a single room requires €1,050-1,350/month." },
+          { question: "Is Piemove really free for students?", answer: "Yes. Piemove is a completely free pass for students under 26 enrolled at UniTo, PoliTo, and UPO with ISEE ≤ €85,000. It covers GTT buses, trams, metro, and SFM trains." },
+          { question: "How much does a single room cost in Turin for students?", answer: "The average is €483/month (Immobiliare.it), ranging from €350-530. All-inclusive rooms (utilities included) range from €400 to €600." },
+          { question: "How much do EDISU canteens cost?", answer: "From ~€2.50-3.00 for scholarship holders up to €7-8 at full rate. Eligible non-recipients get 1 free meal per day." },
+          { question: "Is Turin cheaper than Milan for students?", answer: "Yes. Average rent is 32% lower than Milan. Overall cost of living is €778/month vs. €836 (Codacons). And Turin has free transport with Piemove." },
+          { question: "What financial aid is available for students in Turin?", answer: "EDISU scholarships up to €8,336/year, university No-Tax Area (PoliTo ≤€30,000, UniTo ≤€26,000), Under-31 rent bonus up to €991/year, and free Piemove." }
+        ]
+      }
+    }
+  },
+  {
+    slug: "assicurazione-sanitaria-studenti-internazionali-italia-2026",
+    category: "students",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 12,
+    content: "assicurazione-sanitaria-studenti-internazionali-italia-2026",
+    translations: {
+      it: {
+        title: "Assicurazione sanitaria per studenti internazionali in Italia 2026",
+        excerpt: "SSN a €700/anno vs assicurazione privata: copertura totale, sportelli ASL a Torino, tessera TEAM per studenti UE, ospedali e servizi universitari.",
+        seo: {
+          title: "Assicurazione sanitaria studenti internazionali Italia 2026",
+          description: "Guida completa alla copertura sanitaria per studenti stranieri in Italia 2026: SSN €700/anno, tessera TEAM, sportelli ASL Torino, ospedali e servizi universitari.",
+          keywords: ["assicurazione sanitaria studenti stranieri Italia", "SSN studenti internazionali 2026", "TEAM tessera europea studenti", "ASL Torino iscrizione", "ospedali Torino studenti", "ISEE parificato"]
+        },
+        tags: ["Studenti", "Sanità", "Internazionali", "Torino", "SSN"],
+        faqs: [
+          { question: "Quanto costa iscriversi al SSN come studente straniero?", answer: "€700/anno dal 1° gennaio 2024 (Legge di Bilancio 2024). Il pagamento avviene con Modello F24, codice tributo 8846. Copre l'anno solare intero." },
+          { question: "Cosa copre il SSN per gli studenti stranieri?", answer: "Medico di base gratuito, visite specialistiche con ticket max €36,15, pronto soccorso gratuito, ricoveri, maternità e salute mentale. Gli stessi diritti dei cittadini italiani." },
+          { question: "La tessera TEAM funziona in Italia per gli studenti UE?", answer: "Sì. Copre le cure medicalmente necessarie alle stesse condizioni dei residenti SSN: pronto soccorso, cure urgenti, patologie croniche e maternità." },
+          { question: "Dove posso iscrivermi all'ASL a Torino?", answer: "Presso gli sportelli ASL della tua circoscrizione, aperti lun-ven 8:00-14:00. Per San Salvario/Lingotto: Corso Corsica 55. Per il Centro: Via Juvarra 19." },
+          { question: "Quanto costa una visita medica senza SSN a Torino?", answer: "Una visita specialistica privata costa €120-350, un'ecografia €47-140, una risonanza magnetica €95-620. Con il SSN paghi solo il ticket (€25-36)." },
+          { question: "UniTo e PoliTo offrono servizi sanitari gratuiti?", answer: "Sì. UniTo ha lo Spazio di Ascolto con 5 sedute psicologiche gratuite. PoliTo ha il programma Passi@PoliTo per studenti internazionali e SUPERA@POLITO per difficoltà di studio." }
+        ]
+      },
+      en: {
+        title: "Health insurance for international students in Italy 2026",
+        excerpt: "NHS at €700/year vs private insurance: full coverage, ASL offices in Turin, EHIC card for EU students, hospitals and university health services.",
+        seo: {
+          title: "Health insurance international students Italy 2026",
+          description: "Complete guide to health coverage for international students in Italy 2026: NHS €700/year, EHIC card, ASL offices Turin, hospitals and university services.",
+          keywords: ["health insurance international students Italy", "NHS foreign students 2026", "EHIC card students", "ASL Turin enrollment", "hospitals Turin students", "ISEE parificato"]
+        },
+        tags: ["Students", "Healthcare", "International", "Turin", "NHS"],
+        faqs: [
+          { question: "How much does NHS enrollment cost for international students?", answer: "€700/year since January 1, 2024 (Budget Law 2024). Payment via Form F24, tax code 8846. Covers the full calendar year." },
+          { question: "What does the Italian NHS cover for international students?", answer: "Free GP, specialist visits with max €36.15 copay, free emergency room, hospital admissions, maternity, and mental health. Same rights as Italian citizens." },
+          { question: "Does the EHIC card work in Italy for EU students?", answer: "Yes. It covers medically necessary treatment under the same conditions as NHS residents: ER, urgent care, chronic diseases, and maternity." },
+          { question: "Where can I register at the ASL in Turin?", answer: "At the ASL office in your district, open Mon-Fri 8:00-14:00. For San Salvario/Lingotto: Corso Corsica 55. For the Center: Via Juvarra 19." },
+          { question: "How much does a doctor visit cost without NHS in Turin?", answer: "A private specialist visit costs €120-350, an ultrasound €47-140, an MRI €95-620. With the NHS you only pay the copay (€25-36)." },
+          { question: "Do UniTo and PoliTo offer free health services?", answer: "Yes. UniTo has the Listening Space with 5 free psychology sessions. PoliTo has Passi@PoliTo for international students and SUPERA@POLITO for study difficulties." }
+        ]
+      }
+    }
+  },
+  {
+    slug: "rendimento-student-housing-torino-2026",
+    category: "investors",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 15,
+    content: "rendimento-student-housing-torino-2026",
+    translations: {
+      it: {
+        title: "Rendimento reale student housing Torino 2026: dal lordo al netto",
+        excerpt: "Rendimenti lordi 9-13% con affitto a stanze, netti 5,3-8,5%. Prezzi per zona, calcolo costi, vacancy quasi zero e confronto con Milano, Bologna e Roma.",
+        seo: {
+          title: "Rendimento student housing Torino 2026: dal lordo al netto",
+          description: "Rendimenti reali student housing Torino 2026: lordi 9-13%, netti 5,3-8,5%. Prezzi acquisto e affitto per zona, simulazione costi e proiezione decennale.",
+          keywords: ["rendimento student housing torino 2026", "affitto a stanze rendimento", "investimento immobiliare torino", "rendimento netto affitto", "vacancy student housing", "confronto rendimenti città universitarie"]
+        },
+        tags: ["Investitori", "Rendimento", "Student Housing", "Torino", "Immobiliare"],
+        faqs: [
+          { question: "Qual è il rendimento lordo dello student housing a Torino?", answer: "Con affitto a stanze di un trilocale: Aurora 12,7%, San Salvario 9,8%, Cenisia 9,6%, Vanchiglia 9,0%, Crocetta 8,3%. Molto superiore al 4,8-7,7% dell'affitto tradizionale." },
+          { question: "Qual è il rendimento netto reale?", answer: "Dopo cedolare 10%, IMU, vacancy, manutenzione e spese: Aurora ~8,5%, San Salvario ~6,6%, Cenisia ~6,4%, Vanchiglia ~5,9%, Crocetta ~5,3%." },
+          { question: "Quanto costa comprare un trilocale a Torino per student housing?", answer: "Da €105.000 in Aurora a €217.500 in Crocetta. San Salvario: €195.000. Cenisia: €161.250. Prezzi medi per 75 m²." },
+          { question: "Lo student housing ha problemi di vacancy?", answer: "No. La vacancy è quasi inesistente: 0,5-1 mese/anno. I ~40.000 studenti fuorisede cercano alloggio ma l'offerta copre solo il 20-30% del fabbisogno." },
+          { question: "Conviene il canone concordato o il canone libero?", answer: "Il concordato con cedolare 10% genera un netto quasi identico al libero con cedolare 21%, con minor rischio fiscale e IMU più bassa. A Torino il concordato è quasi sempre preferibile." },
+          { question: "Torino rende più di Milano per lo student housing?", answer: "Sì. Prezzi di ingresso 59% inferiori a Milano, affitti solo 30% più bassi. Rendimento lordo 9-13% a Torino contro 4,3-5,8% a Milano." }
+        ]
+      },
+      en: {
+        title: "Real student housing yields Turin 2026: gross to net",
+        excerpt: "Gross yields 9-13% with room-by-room rentals, net 5.3-8.5%. Prices by zone, cost breakdown, near-zero vacancy and comparison with Milan, Bologna and Rome.",
+        seo: {
+          title: "Student housing yields Turin 2026: gross to net",
+          description: "Real student housing yields Turin 2026: gross 9-13%, net 5.3-8.5%. Purchase and rental prices by zone, cost simulation and 10-year projection.",
+          keywords: ["student housing yields turin 2026", "room by room rental yield", "real estate investment turin", "net rental yield", "vacancy student housing", "university city yield comparison"]
+        },
+        tags: ["Investors", "Yields", "Student Housing", "Turin", "Real Estate"],
+        faqs: [
+          { question: "What is the gross yield for student housing in Turin?", answer: "With room-by-room rental of a 3-room apartment: Aurora 12.7%, San Salvario 9.8%, Cenisia 9.6%, Vanchiglia 9.0%, Crocetta 8.3%. Much higher than the 4.8-7.7% of traditional rentals." },
+          { question: "What is the real net yield?", answer: "After 10% flat tax, IMU, vacancy, maintenance and expenses: Aurora ~8.5%, San Salvario ~6.6%, Cenisia ~6.4%, Vanchiglia ~5.9%, Crocetta ~5.3%." },
+          { question: "How much does a 3-room apartment cost in Turin for student housing?", answer: "From €105,000 in Aurora to €217,500 in Crocetta. San Salvario: €195,000. Cenisia: €161,250. Average prices for 75 m²." },
+          { question: "Does student housing have vacancy problems?", answer: "No. Vacancy is near-zero: 0.5-1 month/year. ~40,000 non-resident students seek housing but supply covers only 20-30% of demand." },
+          { question: "Is regulated rent better than free market?", answer: "Regulated rent with 10% flat tax generates nearly identical net income to free market with 21%, with lower fiscal risk and lower IMU. In Turin, regulated is almost always preferable." },
+          { question: "Does Turin yield more than Milan for student housing?", answer: "Yes. Entry prices 59% lower than Milan, rents only 30% lower. Gross yield 9-13% in Turin vs. 4.3-5.8% in Milan." }
+        ]
+      }
+    }
+  },
+  {
+    slug: "canone-concordato-torino-2026-guida-completa",
+    category: "investors",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 16,
+    content: "canone-concordato-torino-2026-guida-completa",
+    translations: {
+      it: {
+        title: "Canone concordato Torino 2026: guida completa con tabelle e calcolo",
+        excerpt: "Le 4 aree, le 3 sotto-fasce, il calcolo step-by-step, la bollinatura, le organizzazioni e il risparmio di €2.653/anno rispetto al canone libero.",
+        seo: {
+          title: "Canone concordato Torino 2026: guida completa con tabelle",
+          description: "Guida completa al canone concordato Torino 2026: 4 aree, 3 sotto-fasce, calcolo step-by-step, bollinatura, organizzazioni firmatarie e risparmio fiscale.",
+          keywords: ["canone concordato torino 2026", "tabella canoni torino", "calcolo canone concordato", "bollinatura contratto", "cedolare secca 10%", "accordo territoriale torino"]
+        },
+        tags: ["Investitori", "Fiscalità", "Canone Concordato", "Torino", "Contratti"],
+        faqs: [
+          { question: "Quanto si risparmia con il canone concordato a Torino?", answer: "Su un canone annuo di €7.200: con canone libero e IRPEF 38% si pagano ~€3.804, con concordato e cedolare 10% si pagano ~€1.151. Risparmio annuo: €2.653." },
+          { question: "Quanto costa la bollinatura a Torino?", answer: "€50-150 a seconda dell'associazione. Servizi online come DokiCasa: €139-149. È obbligatoria per accedere a qualsiasi beneficio fiscale." },
+          { question: "Come si calcola il canone concordato?", answer: "Calcolo m² utili, applica coefficiente superficie, identifica area (1-4) e sotto-fascia (1-3), moltiplica per il range €/m² dell'Accordo Territoriale, applica maggiorazioni/riduzioni." },
+          { question: "Qual è l'IMU sul canone concordato a Torino?", answer: "Con residenza dell'inquilino: 4,31‰ effettivo (5,75‰ × 0,75). Senza residenza (transitorio): 7,95‰ (10,6‰ × 0,75). La base è comunque ridotta del 25%." },
+          { question: "Contratto transitorio o studenti: quale conviene?", answer: "Il contratto studenti ha IMU 4,31‰ (vs 7,95‰ del transitorio) e maggiorazione ammobiliato +20% (vs +15%). È sempre preferibile quando possibile." },
+          { question: "Quali sono le zone di pregio a Torino?", answer: "Le zone di pregio (fascia unica €5-8/m²/mese) includono 7 microzone del Centro e 2 della Collina. Il semicentro ha 1 zona di pregio. La periferia nessuna." }
+        ]
+      },
+      en: {
+        title: "Regulated rent Turin 2026: complete guide with tables and calculation",
+        excerpt: "The 4 zones, 3 sub-bands, step-by-step calculation, compliance certification, organizations and €2,653/year savings vs. free market rent.",
+        seo: {
+          title: "Regulated rent Turin 2026: complete guide with tables",
+          description: "Complete guide to regulated rent Turin 2026: 4 zones, 3 sub-bands, step-by-step calculation, certification, signatory organizations and tax savings.",
+          keywords: ["regulated rent turin 2026", "canone concordato tables", "rent calculation turin", "bollinatura certification", "flat tax 10%", "territorial agreement turin"]
+        },
+        tags: ["Investors", "Taxation", "Regulated Rent", "Turin", "Contracts"],
+        faqs: [
+          { question: "How much do you save with regulated rent in Turin?", answer: "On annual rent of €7,200: free market with 38% IRPEF costs ~€3,804, regulated with 10% flat tax costs ~€1,151. Annual savings: €2,653." },
+          { question: "How much does certification cost in Turin?", answer: "€50-150 depending on the organization. Online services like DokiCasa: €139-149. It's mandatory to access any tax benefit." },
+          { question: "How is regulated rent calculated?", answer: "Calculate usable m², apply surface coefficient, identify zone (1-4) and sub-band (1-3), multiply by the €/m² range from the Territorial Agreement, apply surcharges/reductions." },
+          { question: "What is the IMU on regulated rent in Turin?", answer: "With tenant residence: effective 4.31‰ (5.75‰ × 0.75). Without residence (temporary): 7.95‰ (10.6‰ × 0.75). The base is always reduced by 25%." },
+          { question: "Temporary or student contract: which is better?", answer: "Student contracts have IMU 4.31‰ (vs. 7.95‰ for temporary) and furnished surcharge +20% (vs. +15%). It's always preferable when possible." },
+          { question: "What are the premium zones in Turin?", answer: "Premium zones (single band €5-8/m²/month) include 7 Center microzones and 2 Hill microzones. Semi-center has 1 premium zone. Suburbs have none." }
+        ]
+      }
+    }
+  },
+  {
+    slug: "torino-notte-guida-sicurezza-studenti",
+    category: "students",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/torino-nightlife.jpg",
+    readTime: 13,
+    content: "torino-notte-guida-sicurezza-studenti",
+    translations: {
+      it: {
+        title: "Torino di notte: guida sicurezza per studenti 2026",
+        excerpt: "Le 5 zone della movida, i Night Buster notturni, taxi e app, zone da evitare, contatti di emergenza e l'app 112 Where ARE U.",
+        seo: {
+          title: "Torino di notte: guida sicurezza per studenti 2026",
+          description: "Guida completa alla vita notturna di Torino per studenti: 5 zone movida, Night Buster, taxi, zone da evitare, emergenze e app 112 Where ARE U.",
+          keywords: ["torino notte sicurezza studenti", "Night Buster torino", "zone movida torino", "taxi torino notte", "zone da evitare torino", "112 Where ARE U"]
+        },
+        tags: ["Studenti", "Sicurezza", "Vita Notturna", "Torino", "Trasporti"],
+        faqs: [
+          { question: "Come funzionano i Night Buster a Torino?", answer: "Bus notturni GTT ogni venerdì, sabato e prefestivi. Hub: Piazza Vittorio. Partenze ogni 60 minuti dalle ore 1 alle 5. Biglietto €2,00, lo stesso del diurno. 10 linee in inverno, 17 in estate." },
+          { question: "Quali zone evitare di notte a Torino?", answer: "Barriera di Milano, Porta Palazzo, i portici di Via Nizza, Aurora/Valdocco, Le Vallette/Falchera, San Salvario dopo le 3 e il Parco del Valentino dopo la chiusura." },
+          { question: "Uber funziona a Torino?", answer: "Solo Uber Black (NCC premium) 24/7. Lo standard Uber non è disponibile. Le alternative: FreeNow, WeTaxi, itTaxi. Radio Taxi: 011.5730." },
+          { question: "Fino a che ora è aperta la metro di Torino?", answer: "Fino alle 24:00 da martedì a giovedì, fino all'1:00 venerdì e sabato. Gli orari possono variare per i lavori CBTC. Un bus sostitutivo M1S copre il percorso quando chiusa." },
+          { question: "Cosa fare in caso di emergenza di notte a Torino?", answer: "Usa l'app 112 Where ARE U che invia la posizione GPS automaticamente. Ha la funzione 'chiamata silenziosa'. Helpline 1522 (24/7, gratuita, 12 lingue). Guardia Medica: 116117." },
+          { question: "Dove si concentra la movida a Torino?", answer: "San Salvario (epicentro, under-30), Quadrilatero Romano (wine bar, storico), Piazza Vittorio (hub centrale), Murazzi (estivo), Vanchiglia (alternativo, universitario)." }
+        ]
+      },
+      en: {
+        title: "Turin at night: safety guide for students 2026",
+        excerpt: "The 5 nightlife zones, Night Buster buses, taxis and apps, areas to avoid, emergency contacts and the 112 Where ARE U app.",
+        seo: {
+          title: "Turin at night: safety guide for students 2026",
+          description: "Complete guide to Turin nightlife for students: 5 nightlife zones, Night Buster buses, taxis, areas to avoid, emergencies and 112 Where ARE U app.",
+          keywords: ["turin night safety students", "Night Buster turin", "nightlife zones turin", "taxi turin night", "areas to avoid turin", "112 Where ARE U"]
+        },
+        tags: ["Students", "Safety", "Nightlife", "Turin", "Transport"],
+        faqs: [
+          { question: "How do Night Buster buses work in Turin?", answer: "GTT night buses every Friday, Saturday, and eve of holidays. Hub: Piazza Vittorio. Departures every 60 minutes from 1 AM to 5 AM. Ticket €2.00, same as daytime. 10 lines in winter, 17 in summer." },
+          { question: "Which areas should you avoid at night in Turin?", answer: "Barriera di Milano, Porta Palazzo, Via Nizza arcades, Aurora/Valdocco, Le Vallette/Falchera, San Salvario after 3 AM, and Parco del Valentino after closing." },
+          { question: "Does Uber work in Turin?", answer: "Only Uber Black (premium NCC) 24/7. Standard Uber is not available. Alternatives: FreeNow, WeTaxi, itTaxi. Radio Taxi: 011.5730." },
+          { question: "How late does the Turin metro run?", answer: "Until 12 AM Tuesday-Thursday, until 1 AM Friday-Saturday. Times may vary due to CBTC works. A replacement M1S bus covers the route when closed." },
+          { question: "What to do in a nighttime emergency in Turin?", answer: "Use the 112 Where ARE U app which sends your GPS location automatically. It has a 'silent call' function. Helpline 1522 (24/7, free, 12 languages). After-hours doctor: 116117." },
+          { question: "Where is nightlife concentrated in Turin?", answer: "San Salvario (epicenter, under-30), Quadrilatero Romano (wine bars, historic), Piazza Vittorio (central hub), Murazzi (summer), Vanchiglia (alternative, university)." }
+        ]
+      }
+    }
+  },
+  {
+    slug: "san-salvario-sicurezza-dati-reali-2026",
+    category: "students",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/san-salvario-night.jpeg",
+    readTime: 14,
+    content: "san-salvario-sicurezza-dati-reali-2026",
+    translations: {
+      it: {
+        title: "San Salvario Torino: sicurezza e dati reali 2026",
+        excerpt: "128.666 reati in provincia nel 2024, ma il Rapporto Rota classifica San Salvario come 'intermedio'. Zone rosse, telecamere AI, movida e affitti aggiornati.",
+        seo: {
+          title: "San Salvario Torino sicurezza: dati reali e zone rosse 2026",
+          description: "San Salvario sicurezza 2026: dati criminalità reali (Prefettura, Rapporto Rota), zona rossa, 23 nuove telecamere, movida e affitti €400-500/mese.",
+          keywords: ["san salvario sicurezza 2026", "criminalità san salvario torino", "zona rossa torino", "dati reati torino", "affitto san salvario", "movida san salvario"]
+        },
+        tags: ["Studenti", "Sicurezza", "San Salvario", "Torino", "Quartieri"],
+        faqs: [
+          { question: "San Salvario è davvero pericoloso?", answer: "Il Rapporto Rota classifica la pericolosità di San Salvario come 'intermedia', inferiore persino a Crocetta. Il divario tra reputazione e realtà nasce dalla visibilità dello spaccio di strada." },
+          { question: "Come funziona la zona rossa a San Salvario?", answer: "Istituita il 27 gennaio 2025 dal Prefetto. Perimetro: Corso Vittorio - Corso Marconi - Via Madama Cristina - Via Nizza. Consente l'allontanamento per 48 ore di soggetti con precedenti." },
+          { question: "Quanto costa affittare a San Salvario nel 2026?", answer: "Stanza singola: €400-500/mese più spese. Budget: €240-300. Premium con bagno privato: €520-600. Affitto medio al m²: €13,32 (vs €12,47 media Torino)." },
+          { question: "Quali sono le vie più critiche di San Salvario?", answer: "Via Berthollet/via Saluzzo (epicentro spaccio), via Sant'Anselmo, via Nizza, via Valperga Caluso. La zona sud verso Corso Bramante è molto più tranquilla." },
+          { question: "Il Parco del Valentino è sicuro?", answer: "Di giorno sì. Di notte lo spaccio si concentra al campetto, al 5° Padiglione e alla collinetta. Evita i sentieri isolati dopo la chiusura. Il Comune prevede sorveglianza con droni." },
+          { question: "Come si posiziona San Salvario rispetto agli altri quartieri?", answer: "Classifica sicurezza: Crocetta/Borgo Po (migliori) → Santa Rita/Centro → San Salvario → Vanchiglia/Aurora → Barriera di Milano/Porta Palazzo (peggiori)." }
+        ]
+      },
+      en: {
+        title: "San Salvario Turin: safety and real data 2026",
+        excerpt: "128,666 crimes in the province in 2024, but the Rota Report classifies San Salvario as 'intermediate'. Red zones, AI cameras, nightlife and updated rents.",
+        seo: {
+          title: "San Salvario Turin safety: real data and red zones 2026",
+          description: "San Salvario safety 2026: real crime data (Prefecture, Rota Report), red zone, 23 new cameras, nightlife and rents €400-500/month.",
+          keywords: ["san salvario safety 2026", "crime san salvario turin", "red zone turin", "crime data turin", "rent san salvario", "nightlife san salvario"]
+        },
+        tags: ["Students", "Safety", "San Salvario", "Turin", "Neighborhoods"],
+        faqs: [
+          { question: "Is San Salvario really dangerous?", answer: "The Rota Report classifies San Salvario's danger level as 'intermediate', lower even than Crocetta. The gap between reputation and reality stems from the visibility of street-level dealing." },
+          { question: "How does the red zone work in San Salvario?", answer: "Established January 27, 2025 by the Prefect. Perimeter: Corso Vittorio - Corso Marconi - Via Madama Cristina - Via Nizza. Allows 48-hour removal of individuals with prior records." },
+          { question: "How much does it cost to rent in San Salvario in 2026?", answer: "Single room: €400-500/month plus utilities. Budget: €240-300. Premium with private bathroom: €520-600. Average rent per m²: €13.32 (vs €12.47 Turin average)." },
+          { question: "What are the most critical streets in San Salvario?", answer: "Via Berthollet/Via Saluzzo (dealing epicenter), Via Sant'Anselmo, Via Nizza, Via Valperga Caluso. The southern area towards Corso Bramante is much quieter." },
+          { question: "Is Parco del Valentino safe?", answer: "During the day, yes. At night, dealing concentrates at the football pitch, 5th Pavilion, and hillock. Avoid isolated paths after closing. The municipality plans drone surveillance." },
+          { question: "How does San Salvario compare to other neighborhoods?", answer: "Safety ranking: Crocetta/Borgo Po (best) → Santa Rita/Centro → San Salvario → Vanchiglia/Aurora → Barriera di Milano/Porta Palazzo (worst)." }
+        ]
+      }
+    }
+  },
+  {
     slug: "contratti-locazione-morosita-italia-2026",
     category: "investors",
     date: "2026-03-14",
