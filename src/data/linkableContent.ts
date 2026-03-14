@@ -241,6 +241,12 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'yield driven pricing', 'sell to investors', 'cap rate',
     'vendere appartamento affittato', 'income property sale',
     'vendita diretta immobile', 'cash flow immediato'
+  ],
+  'codice-fiscale-studenti-stranieri-torino-2026': [
+    'codice fiscale studenti stranieri', 'Italian tax code students',
+    'Agenzia delle Entrate Torino', 'Form AA4/8', 'codice fiscale Erasmus',
+    'tax identification code Italy', 'codice fiscale come ottenere',
+    'permesso soggiorno codice fiscale', 'codice fiscale stranieri'
   ]
 };
 

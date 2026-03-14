@@ -2,6 +2,67 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "codice-fiscale-studenti-stranieri-torino-2026",
+    category: "students",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 9,
+    content: "codice-fiscale-studenti-stranieri-torino-2026",
+    translations: {
+      it: {
+        title: "Codice Fiscale per Studenti Stranieri a Torino: Guida Passo per Passo 2026",
+        excerpt: "Come ottenere il codice fiscale in Italia come studente straniero nel 2026: 4 metodi, documenti necessari, uffici Agenzia delle Entrate a Torino, tempi e FAQ complete.",
+        seo: {
+          title: "Codice Fiscale per Studenti Stranieri a Torino: Guida 2026",
+          description: "Come ottenere il codice fiscale in Italia come studente straniero nel 2026: 4 metodi, documenti necessari, uffici Agenzia delle Entrate a Torino, tempi e FAQ complete.",
+          keywords: [
+            "codice fiscale studenti stranieri Torino",
+            "come ottenere codice fiscale Italia straniero 2026",
+            "Agenzia delle Entrate Torino studenti internazionali",
+            "codice fiscale Erasmus Italia",
+            "modulo AA4/8 codice fiscale",
+            "permesso soggiorno codice fiscale"
+          ]
+        },
+        tags: ["Studenti", "Burocrazia", "Erasmus", "Guida Pratica", "Torino"],
+        faqs: [
+          { question: "Il codice fiscale si può ottenere subito all'arrivo a Torino?", answer: "Sì. Puoi prenotare l'appuntamento online prima ancora di arrivare. Il giorno dell'appuntamento il certificato viene rilasciato sul posto in 10–15 minuti." },
+          { question: "Il codice fiscale è valido indefinitamente?", answer: "Sì. Il codice fiscale è permanente e non scade mai. Rimane assegnato alla persona per tutta la vita, anche dopo aver lasciato l'Italia." },
+          { question: "Posso usare il codice fiscale di un sito online generatore?", answer: "No. I codici \"calcolati\" da siti web sono solo stime non verificate — non sono registrati presso l'Agenzia delle Entrate e non sono validi per nessun contratto ufficiale." },
+          { question: "Ho bisogno di un indirizzo italiano per richiedere il codice fiscale?", answer: "Non è obbligatorio un contratto d'affitto firmato, ma è consigliabile avere un domicilio di riferimento (residenza universitaria, domicilio di un amico, hotel). Puoi indicare la sede universitaria come domicilio provvisorio." },
+          { question: "Quanto tempo ci vuole per ottenere il codice fiscale?", answer: "Il certificato viene rilasciato immediatamente durante l'appuntamento. Il tempo di attesa per prenotare un appuntamento è tipicamente 3–10 giorni lavorativi a Torino." },
+          { question: "Il codice fiscale è lo stesso per tutti? Può essere uguale a quello di un'altra persona?", answer: "Il codice fiscale viene calcolato in base a nome, cognome, data e luogo di nascita. Possono verificarsi coincidenze (omocodia) — in quel caso l'Agenzia delle Entrate assegna un codice alternativo con alcune lettere sostituite da numeri." }
+        ]
+      },
+      en: {
+        title: "Codice Fiscale for Foreign Students in Turin: Step-by-Step Guide 2026",
+        excerpt: "How to get your Italian tax code (codice fiscale) as a foreign student in Turin in 2026: 4 methods, required documents, Agenzia delle Entrate offices, and complete FAQ.",
+        seo: {
+          title: "Codice Fiscale for Foreign Students in Turin: Complete Guide 2026",
+          description: "How to get your Italian tax code (codice fiscale) as a foreign student in Turin in 2026: 4 methods, required documents, Agenzia delle Entrate offices, and complete FAQ.",
+          keywords: [
+            "codice fiscale foreign students Turin",
+            "Italian tax code students 2026",
+            "get codice fiscale Italy Erasmus",
+            "Agenzia delle Entrate Turin international students",
+            "Form AA4/8 codice fiscale",
+            "residence permit codice fiscale"
+          ]
+        },
+        tags: ["Students", "Bureaucracy", "Erasmus", "Practical Guide", "Turin"],
+        faqs: [
+          { question: "Can I get the codice fiscale immediately upon arriving in Turin?", answer: "Yes. You can book the appointment online before arriving. On the day of the appointment, the certificate is issued on the spot in 10–15 minutes." },
+          { question: "Does the codice fiscale expire?", answer: "No. It is permanent and never expires. It remains assigned to the person for life, even after leaving Italy." },
+          { question: "Can I use a code from an online CF generator?", answer: "No. These \"calculated\" codes are not registered with the Agenzia delle Entrate and are not valid for any official contract, rental agreement, or bank account opening." },
+          { question: "Do I need an Italian address to apply?", answer: "A signed rental contract is not mandatory, but having a domicile reference is useful. You can indicate your university's address as a provisional domicile." },
+          { question: "How long does it take?", answer: "The certificate is issued immediately at the appointment. Wait time for an appointment is typically 3–10 working days in Turin." },
+          { question: "Is the codice fiscale the same as a social security number?", answer: "Not exactly. The codice fiscale is a tax identification code used across all public and private dealings. Italy also has a social security system (INPS) with separate identification, but for students the codice fiscale is the key identifier for all practical purposes." }
+        ]
+      }
+    }
+  },
+  {
     slug: "conto-corrente-studenti-stranieri-italia-2026",
     category: "students",
     date: "2026-03-14",

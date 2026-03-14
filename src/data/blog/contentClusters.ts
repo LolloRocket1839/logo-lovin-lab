@@ -32,7 +32,8 @@ export const contentClusters: ContentCluster[] = [
       'dove-mangiare-torino-studenti',
       'politecnico-torino-guida-completa',
       'universita-torino-guida-completa',
-      'conto-corrente-studenti-stranieri-italia-2026'
+      'conto-corrente-studenti-stranieri-italia-2026',
+      'codice-fiscale-studenti-stranieri-torino-2026'
     ],
     keywords: ['studenti torino', 'affitto studenti', 'quartieri torino', 'vita universitaria']
   },
@@ -227,6 +228,10 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'conto-corrente-studenti-stranieri-italia-2026', to: 'quartieri-sicuri-studenti-internazionali-torino-2026', relevance: 'high', bidirectional: true },
   { from: 'conto-corrente-studenti-stranieri-italia-2026', to: 'san-salvario-guida-studenti', relevance: 'medium', bidirectional: true },
   { from: 'conto-corrente-studenti-stranieri-italia-2026', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'medium', bidirectional: true },
+  
+  // Codice fiscale connections
+  { from: 'codice-fiscale-studenti-stranieri-torino-2026', to: 'conto-corrente-studenti-stranieri-italia-2026', relevance: 'high', bidirectional: true },
+  { from: 'codice-fiscale-studenti-stranieri-torino-2026', to: 'quartieri-sicuri-studenti-internazionali-torino-2026', relevance: 'medium', bidirectional: true },
   
   // Vendere a investitori connections
   { from: 'vendere-immobile-investitori-torino', to: 'vendere-casa-torino-guida-completa-2025', relevance: 'high', bidirectional: true },
