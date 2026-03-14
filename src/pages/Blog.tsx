@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useDeferredValue, useRef } from "react";
 import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFilters } from "@/components/blog/BlogFilters";
@@ -13,19 +13,39 @@ import { getPostsByCategory, searchPosts, filterPostsByTags, blogPosts } from "@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { createBlogCollectionSchema } from "@/lib/schema";
+import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearch = useDeferredValue(searchQuery);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const isItalian = i18n.language.startsWith('it');
+  const aiSearchRef = useRef<HTMLDivElement>(null);
   
   const posts = useMemo(() => {
     let categoryPosts = getPostsByCategory(activeCategory);
     categoryPosts = filterPostsByTags(categoryPosts, selectedTags, i18n.language as 'it' | 'en');
-    return searchPosts(categoryPosts, searchQuery, i18n.language as 'it' | 'en');
-  }, [activeCategory, searchQuery, selectedTags, i18n.language]);
+    return searchPosts(categoryPosts, deferredSearch, i18n.language as 'it' | 'en');
+  }, [activeCategory, deferredSearch, selectedTags, i18n.language]);
+
+  const isFiltering = deferredSearch.trim().length > 0 || selectedTags.length > 0 || activeCategory !== 'all';
+
+  const handleTryAISearch = () => {
+    if (aiSearchRef.current) {
+      aiSearchRef.current.scrollIntoView({ behavior: 'smooth' });
+      // Pre-fill AI search - find the input and set value
+      const input = aiSearchRef.current.querySelector('input');
+      if (input) {
+        const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')?.set;
+        nativeInputValueSetter?.call(input, searchQuery);
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.focus();
+      }
+    }
+  };
 
   const title = isItalian 
     ? "Blog Jungle Rent - Guide Torino per Studenti, Investitori e Turisti"
@@ -115,7 +135,7 @@ const Blog = () => {
         <BlogHero />
         
         <section className="py-6 md:py-8 px-4 md:px-8">
-          <div className="container mx-auto max-w-4xl">
+          <div ref={aiSearchRef} className="container mx-auto max-w-4xl">
             <AISearchBox />
           </div>
         </section>
@@ -136,12 +156,22 @@ const Blog = () => {
               onSearchChange={setSearchQuery}
               selectedTags={selectedTags}
               onTagsChange={setSelectedTags}
+              resultCount={posts.length}
+              isFiltering={isFiltering}
             />
-            {posts.length === 0 && searchQuery && (
-              <div className="text-center py-16">
+            {posts.length === 0 && (searchQuery || selectedTags.length > 0) && (
+              <div className="text-center py-16 space-y-4">
                 <p className="text-muted-foreground text-lg">
-                  {t('blog.search.noResults', { query: searchQuery })}
+                  {t('blog.search.noResults', { query: searchQuery || selectedTags.join(', ') })}
                 </p>
+                <Button 
+                  variant="outline" 
+                  onClick={handleTryAISearch}
+                  className="gap-2"
+                >
+                  <Search className="h-4 w-4" />
+                  {isItalian ? 'Prova la ricerca AI' : 'Try AI search'}
+                </Button>
               </div>
             )}
             <BlogGrid posts={posts} />
