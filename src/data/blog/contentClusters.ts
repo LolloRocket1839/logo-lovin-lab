@@ -223,6 +223,11 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'imu-2026-immobili-affitto-torino-investitori', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'medium', bidirectional: true },
   { from: 'imu-2026-immobili-affitto-torino-investitori', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
   
+  // Bank account guide connections
+  { from: 'conto-corrente-studenti-stranieri-italia-2026', to: 'quartieri-sicuri-studenti-internazionali-torino-2026', relevance: 'high', bidirectional: true },
+  { from: 'conto-corrente-studenti-stranieri-italia-2026', to: 'san-salvario-guida-studenti', relevance: 'medium', bidirectional: true },
+  { from: 'conto-corrente-studenti-stranieri-italia-2026', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'medium', bidirectional: true },
+  
   // Vendere a investitori connections
   { from: 'vendere-immobile-investitori-torino', to: 'vendere-casa-torino-guida-completa-2025', relevance: 'high', bidirectional: true },
   { from: 'vendere-immobile-investitori-torino', to: 'valutazione-immobiliare-torino-guida-completa', relevance: 'high', bidirectional: true },

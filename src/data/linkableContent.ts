@@ -230,6 +230,12 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'aliquota IMU immobili locati', 'calcolo IMU affitto', 'IMU seconda casa',
     'riduzione IMU 25%', 'scadenze IMU 2026', 'IMU student housing'
   ],
+  'conto-corrente-studenti-stranieri-italia-2026': [
+    'conto corrente studenti stranieri', 'bank account international students Italy',
+    'Revolut IBAN italiano', 'aprire conto banca Torino studenti',
+    'codice fiscale banca', 'Erasmus conto corrente', 'Wise bonifici internazionali',
+    'N26 Italia studenti', 'Intesa XME under 35'
+  ],
   'vendere-immobile-investitori-torino': [
     'vendere a investitori', 'rendimento lordo', 'rental ready',
     'yield driven pricing', 'sell to investors', 'cap rate',
