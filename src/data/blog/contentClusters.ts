@@ -32,7 +32,8 @@ export const contentClusters: ContentCluster[] = [
       'dove-mangiare-torino-studenti',
       'politecnico-torino-guida-completa',
       'universita-torino-guida-completa',
-      'conto-corrente-studenti-stranieri-italia-2026'
+      'conto-corrente-studenti-stranieri-italia-2026',
+      'codice-fiscale-studenti-stranieri-torino-2026'
     ],
     keywords: ['studenti torino', 'affitto studenti', 'quartieri torino', 'vita universitaria']
   },
