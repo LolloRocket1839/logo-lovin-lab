@@ -156,12 +156,22 @@ const Blog = () => {
               onSearchChange={setSearchQuery}
               selectedTags={selectedTags}
               onTagsChange={setSelectedTags}
+              resultCount={posts.length}
+              isFiltering={isFiltering}
             />
-            {posts.length === 0 && searchQuery && (
-              <div className="text-center py-16">
+            {posts.length === 0 && (searchQuery || selectedTags.length > 0) && (
+              <div className="text-center py-16 space-y-4">
                 <p className="text-muted-foreground text-lg">
-                  {t('blog.search.noResults', { query: searchQuery })}
+                  {t('blog.search.noResults', { query: searchQuery || selectedTags.join(', ') })}
                 </p>
+                <Button 
+                  variant="outline" 
+                  onClick={handleTryAISearch}
+                  className="gap-2"
+                >
+                  <Search className="h-4 w-4" />
+                  {isItalian ? 'Prova la ricerca AI' : 'Try AI search'}
+                </Button>
               </div>
             )}
             <BlogGrid posts={posts} />
