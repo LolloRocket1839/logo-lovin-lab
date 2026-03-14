@@ -253,6 +253,42 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'vendere-immobile-investitori-torino', to: 'cedolare-secca-2026-investitori', relevance: 'medium', bidirectional: true },
   { from: 'vendere-immobile-investitori-torino', to: 'guida-investitori-stranieri-comprare-casa-torino', relevance: 'medium', bidirectional: true },
   { from: 'vendere-immobile-investitori-torino', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'medium', bidirectional: true },
+  
+  // San Salvario sicurezza connections
+  { from: 'san-salvario-sicurezza-dati-reali-2026', to: 'san-salvario-guida-studenti', relevance: 'high', bidirectional: true },
+  { from: 'san-salvario-sicurezza-dati-reali-2026', to: 'quartieri-sicuri-studenti-internazionali-torino-2026', relevance: 'high', bidirectional: true },
+  { from: 'san-salvario-sicurezza-dati-reali-2026', to: 'quartieri-sicuri-donne-torino', relevance: 'high', bidirectional: true },
+  { from: 'san-salvario-sicurezza-dati-reali-2026', to: 'torino-notte-guida-sicurezza-studenti', relevance: 'high', bidirectional: true },
+  
+  // Torino notte connections
+  { from: 'torino-notte-guida-sicurezza-studenti', to: 'torino-nightlife-guide', relevance: 'high', bidirectional: true },
+  { from: 'torino-notte-guida-sicurezza-studenti', to: 'san-salvario-guida-studenti', relevance: 'high', bidirectional: true },
+  { from: 'torino-notte-guida-sicurezza-studenti', to: 'budget-mensile-studente-torino-2026', relevance: 'medium', bidirectional: true },
+  
+  // Canone concordato connections
+  { from: 'canone-concordato-torino-2026-guida-completa', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'canone-concordato-torino-2026-guida-completa', to: 'imu-2026-immobili-affitto-torino-investitori', relevance: 'high', bidirectional: true },
+  { from: 'canone-concordato-torino-2026-guida-completa', to: 'irpef-vs-cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'canone-concordato-torino-2026-guida-completa', to: 'rendimento-student-housing-torino-2026', relevance: 'high', bidirectional: true },
+  { from: 'canone-concordato-torino-2026-guida-completa', to: 'contratti-locazione-morosita-italia-2026', relevance: 'high', bidirectional: true },
+  { from: 'canone-concordato-torino-2026-guida-completa', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'high', bidirectional: true },
+  
+  // Rendimento student housing connections
+  { from: 'rendimento-student-housing-torino-2026', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
+  { from: 'rendimento-student-housing-torino-2026', to: 'student-housing-italia-savills-2025', relevance: 'high', bidirectional: true },
+  { from: 'rendimento-student-housing-torino-2026', to: 'torino-citta-campus-atenei-immobiliare-2026', relevance: 'medium', bidirectional: true },
+  
+  // Assicurazione sanitaria connections
+  { from: 'assicurazione-sanitaria-studenti-internazionali-italia-2026', to: 'codice-fiscale-studenti-stranieri-torino-2026', relevance: 'high', bidirectional: true },
+  { from: 'assicurazione-sanitaria-studenti-internazionali-italia-2026', to: 'conto-corrente-studenti-stranieri-italia-2026', relevance: 'high', bidirectional: true },
+  { from: 'assicurazione-sanitaria-studenti-internazionali-italia-2026', to: 'budget-mensile-studente-torino-2026', relevance: 'high', bidirectional: true },
+  { from: 'assicurazione-sanitaria-studenti-internazionali-italia-2026', to: 'quartieri-sicuri-studenti-internazionali-torino-2026', relevance: 'medium', bidirectional: true },
+  
+  // Budget mensile connections
+  { from: 'budget-mensile-studente-torino-2026', to: 'conto-corrente-studenti-stranieri-italia-2026', relevance: 'high', bidirectional: true },
+  { from: 'budget-mensile-studente-torino-2026', to: 'dove-mangiare-torino-studenti', relevance: 'high', bidirectional: true },
+  { from: 'budget-mensile-studente-torino-2026', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'high', bidirectional: true },
+  { from: 'budget-mensile-studente-torino-2026', to: 'palestre-torino-studenti-guida-completa', relevance: 'medium', bidirectional: true },
 ];
 
 // Get cluster for a given article
