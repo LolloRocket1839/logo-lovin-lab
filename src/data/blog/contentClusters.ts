@@ -67,9 +67,10 @@ export const contentClusters: ContentCluster[] = [
       'torino-citta-campus-atenei-immobiliare-2026',
       'guida-investitori-stranieri-comprare-casa-torino',
       'contratto-studenti-affitto-breve-strategia',
-      'comodato-cedolare-secca-aidc-2025'
+      'comodato-cedolare-secca-aidc-2025',
+      'contratti-locazione-morosita-italia-2026'
     ],
-    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire', 'affitto breve', 'comodato', 'IRPEF']
+    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire', 'affitto breve', 'comodato', 'IRPEF', 'morosità', 'sfratto']
   },
   
   // SELLERS CLUSTER - Property Sales
