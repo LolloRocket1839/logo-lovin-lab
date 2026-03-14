@@ -58,6 +58,7 @@ export const contentClusters: ContentCluster[] = [
     satellites: [
       'cedolare-secca-2026-investitori',
       'irpef-vs-cedolare-secca-2026-investitori',
+      'imu-2026-immobili-affitto-torino-investitori',
       'mutui-investitori-immobiliari-guida-completa',
       'student-housing-italia-savills-2025',
       'valutazione-immobiliare-torino-guida-completa',
