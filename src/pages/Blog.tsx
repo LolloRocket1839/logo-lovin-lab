@@ -20,14 +20,32 @@ const Blog = () => {
   const { t, i18n } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<BlogCategory>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredSearch = useDeferredValue(searchQuery);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const isItalian = i18n.language.startsWith('it');
+  const aiSearchRef = useRef<HTMLDivElement>(null);
   
   const posts = useMemo(() => {
     let categoryPosts = getPostsByCategory(activeCategory);
     categoryPosts = filterPostsByTags(categoryPosts, selectedTags, i18n.language as 'it' | 'en');
-    return searchPosts(categoryPosts, searchQuery, i18n.language as 'it' | 'en');
-  }, [activeCategory, searchQuery, selectedTags, i18n.language]);
+    return searchPosts(categoryPosts, deferredSearch, i18n.language as 'it' | 'en');
+  }, [activeCategory, deferredSearch, selectedTags, i18n.language]);
+
+  const isFiltering = deferredSearch.trim().length > 0 || selectedTags.length > 0 || activeCategory !== 'all';
+
+  const handleTryAISearch = () => {
+    if (aiSearchRef.current) {
+      aiSearchRef.current.scrollIntoView({ behavior: 'smooth' });
+      // Pre-fill AI search - find the input and set value
+      const input = aiSearchRef.current.querySelector('input');
+      if (input) {
+        const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')?.set;
+        nativeInputValueSetter?.call(input, searchQuery);
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.focus();
+      }
+    }
+  };
 
   const title = isItalian 
     ? "Blog Jungle Rent - Guide Torino per Studenti, Investitori e Turisti"
