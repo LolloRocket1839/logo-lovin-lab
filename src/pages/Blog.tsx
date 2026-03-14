@@ -135,7 +135,7 @@ const Blog = () => {
         <BlogHero />
         
         <section className="py-6 md:py-8 px-4 md:px-8">
-          <div className="container mx-auto max-w-4xl">
+          <div ref={aiSearchRef} className="container mx-auto max-w-4xl">
             <AISearchBox />
           </div>
         </section>
