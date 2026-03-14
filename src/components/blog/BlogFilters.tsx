@@ -19,6 +19,8 @@ interface BlogFiltersProps {
   onSearchChange: (query: string) => void;
   selectedTags: string[];
   onTagsChange: (tags: string[]) => void;
+  resultCount?: number;
+  isFiltering?: boolean;
 }
 
 export const BlogFilters = ({ 
