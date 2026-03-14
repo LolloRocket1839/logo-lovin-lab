@@ -29,7 +29,9 @@ export const BlogFilters = ({
   searchQuery, 
   onSearchChange,
   selectedTags,
-  onTagsChange 
+  onTagsChange,
+  resultCount,
+  isFiltering 
 }: BlogFiltersProps) => {
   const { t, i18n } = useTranslation();
   const [isTagsOpen, setIsTagsOpen] = useState(false);
