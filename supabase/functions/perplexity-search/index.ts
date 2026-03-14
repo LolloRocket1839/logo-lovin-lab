@@ -598,7 +598,7 @@ serve(async (req) => {
     // Use local content only if:
     // 1. High confidence match (>= 0.8) AND
     // 2. NOT a price query (price queries always go to Perplexity for fresh data)
-    if (topScore >= 0.8 && localResults.length > 0 && !isPriceQuery) {
+    if (topScore >= 0.5 && localResults.length > 0 && !isPriceQuery) {
       console.log('Using Jungle Rent content (high confidence, non-price query)');
       
       const answer = generateLocalAnswer(localResults, query, language);
