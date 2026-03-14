@@ -13,6 +13,8 @@ import { getPostsByCategory, searchPosts, filterPostsByTags, blogPosts } from "@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { createBlogCollectionSchema } from "@/lib/schema";
+import { Button } from "@/components/ui/button";
+import { Search } from "lucide-react";
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
