@@ -1,45 +1,68 @@
 
 
-# Add May 2026 events blog article
+# Add 6 new SEO articles from research dossier
 
-## What changes
+The PDF contains research data for 6 new articles. All 6 are new content not yet in the blog.
 
-### 1. Create Italian markdown — `src/data/blog/content/it/eventi-torino-maggio-2026.md`
-Convert the user-provided HTML content into markdown following the established natural language style (sentences under 25 words, active voice, no em dashes). Sections: grandi eventi (Jazz Festival, Salone del Libro, Onde), mostre (MonumenTO, GAM, MAO, OGR), concerti (TWICE, Rockin'1000, Mario Biondi, Sarah Toscano), teatro (Aladin, Lupin, Caveman, Cicchella, Teatro Regio), risorse utili, articoli correlati, fonti.
+## The 6 articles
 
-### 2. Create English markdown — `src/data/blog/content/en/eventi-torino-maggio-2026.md`
-Full English translation, same structure.
+| # | Slug | Category | Topic |
+|---|------|----------|-------|
+| 1 | `san-salvario-sicurezza-dati-reali-2026` | students | San Salvario safety: real crime data, red zones, nightlife, rents |
+| 2 | `torino-notte-guida-sicurezza-studenti` | students | Turin nightlife safety: movida zones, night transport, zones to avoid, emergency contacts |
+| 3 | `canone-concordato-torino-2026-guida-completa` | investors | Canone concordato: 4 areas, sub-bands, calculation steps, bollinatura, tax benefits |
+| 4 | `rendimento-student-housing-torino-2026` | investors | Real yields: buy/rent prices by zone, gross-to-net calculation, vacancy, city comparison |
+| 5 | `assicurazione-sanitaria-studenti-internazionali-italia-2026` | students | Health insurance: SSN €700/year, TEAM card, ASL offices, hospitals, university services |
+| 6 | `budget-mensile-studente-torino-2026` | students | Monthly budget: rent, food, transport (Piemove), utilities, SIM plans, two scenarios |
 
-### 3. Register post in `src/data/blog/posts.ts`
-Insert at position 0 (most recent) with:
-- `slug: "eventi-torino-maggio-2026"`
-- `category: "turisti"`
-- `date: "2026-03-06"`
-- `readTime: 10`
-- `image: "/images/torino-primavera-marzo.jpg"`
-- `content: "eventi-torino-maggio-2026"`
-- 10 FAQs per language covering Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, teatro, transport
-- SEO keywords: "eventi torino maggio 2026", "salone del libro 2026", "concerti torino maggio", "mostre torino maggio", etc.
+## Changes per file
 
-### 4. Update content clusters — `src/data/blog/contentClusters.ts`
-- Add `'eventi-torino-maggio-2026'` to Turin Experience satellites (after aprile)
-- Add temporal chain: `{ from: 'eventi-torino-aprile-2026', to: 'eventi-torino-maggio-2026', relevance: 'high', bidirectional: true }`
+### 1. Create 12 markdown files (IT + EN for each article)
+- `src/data/blog/content/it/<slug>.md` — Convert PDF research into natural-language markdown (sentences under 25 words, active voice, no em dashes). Include all data tables, section anchors, related articles links, and sources.
+- `src/data/blog/content/en/<slug>.md` — Full English translation, same structure.
 
-### 5. Update April article related articles
-Add May link at top of "Articoli correlati" in both IT and EN April markdown files.
+### 2. Register 6 posts in `src/data/blog/posts.ts`
+Insert at top of array. Each with:
+- Bilingual title, excerpt, SEO metadata, tags
+- 6-8 FAQs per language drawn from the PDF data
+- SEO keywords from the research
+- `readTime` based on content length (~12-18 min each)
+- Appropriate images from existing `/images/` assets
 
-### 6. Update linkable content — `src/data/linkableContent.ts`
-Add keywords entry for `'eventi-torino-maggio-2026'`.
+### 3. Update `src/data/blog/contentClusters.ts`
+- Add articles 1, 2, 5, 6 to the Students "University Life" cluster satellites
+- Add articles 3, 4 to the Investors "Property Investment" cluster satellites
+- Add bidirectional relationships between related articles (e.g., canone concordato ↔ IMU, san-salvario-sicurezza ↔ quartieri-sicuri, budget ↔ conto-corrente)
+
+### 4. Update `src/data/linkableContent.ts`
+Add keyword entries for all 6 new slugs with appropriate trigger keywords.
+
+### 5. Update AI search index (`supabase/functions/perplexity-search/index.ts`)
+Add all 6 new articles to `JUNGLE_RENT_INDEX` with bilingual keywords and FAQs.
+
+### 6. Cross-link existing related articles
+Add "Articoli correlati" links in existing articles that reference these new topics (e.g., san-salvario-guida-studenti, quartieri-sicuri, IMU, cedolare-secca).
 
 ## Files changed
 
 | File | Action |
 |------|--------|
-| `src/data/blog/content/it/eventi-torino-maggio-2026.md` | Create |
-| `src/data/blog/content/en/eventi-torino-maggio-2026.md` | Create |
-| `src/data/blog/posts.ts` | Add post entry at top |
-| `src/data/blog/contentClusters.ts` | Add to cluster + relationship |
-| `src/data/linkableContent.ts` | Add enhanced keywords |
-| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Add May link |
-| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Add May link |
+| `src/data/blog/content/it/san-salvario-sicurezza-dati-reali-2026.md` | Create |
+| `src/data/blog/content/en/san-salvario-sicurezza-dati-reali-2026.md` | Create |
+| `src/data/blog/content/it/torino-notte-guida-sicurezza-studenti.md` | Create |
+| `src/data/blog/content/en/torino-notte-guida-sicurezza-studenti.md` | Create |
+| `src/data/blog/content/it/canone-concordato-torino-2026-guida-completa.md` | Create |
+| `src/data/blog/content/en/canone-concordato-torino-2026-guida-completa.md` | Create |
+| `src/data/blog/content/it/rendimento-student-housing-torino-2026.md` | Create |
+| `src/data/blog/content/en/rendimento-student-housing-torino-2026.md` | Create |
+| `src/data/blog/content/it/assicurazione-sanitaria-studenti-internazionali-italia-2026.md` | Create |
+| `src/data/blog/content/en/assicurazione-sanitaria-studenti-internazionali-italia-2026.md` | Create |
+| `src/data/blog/content/it/budget-mensile-studente-torino-2026.md` | Create |
+| `src/data/blog/content/en/budget-mensile-studente-torino-2026.md` | Create |
+| `src/data/blog/posts.ts` | Add 6 post entries at top |
+| `src/data/blog/contentClusters.ts` | Add to clusters + relationships |
+| `src/data/linkableContent.ts` | Add 6 keyword entries |
+| `supabase/functions/perplexity-search/index.ts` | Add 6 articles to index |
+
+Due to file size limits, implementation will be split across multiple messages (2-3 articles per message).
 
