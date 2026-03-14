@@ -1,45 +1,52 @@
 
 
-# Add May 2026 events blog article
+# Fix visual bug + sync AI search index with all blog articles
 
-## What changes
+## Problems identified
 
-### 1. Create Italian markdown — `src/data/blog/content/it/eventi-torino-maggio-2026.md`
-Convert the user-provided HTML content into markdown following the established natural language style (sentences under 25 words, active voice, no em dashes). Sections: grandi eventi (Jazz Festival, Salone del Libro, Onde), mostre (MonumenTO, GAM, MAO, OGR), concerti (TWICE, Rockin'1000, Mario Biondi, Sarah Toscano), teatro (Aladin, Lupin, Caveman, Cicchella, Teatro Regio), risorse utili, articoli correlati, fonti.
+1. **Visual bug**: `BottomNav.tsx` line 130 shows `"infoinfoinfo(:"` as the drawer title instead of a proper label (visible in screenshot).
 
-### 2. Create English markdown — `src/data/blog/content/en/eventi-torino-maggio-2026.md`
-Full English translation, same structure.
+2. **AI search broken for newer articles**: The `JUNGLE_RENT_INDEX` in `supabase/functions/perplexity-search/index.ts` is hardcoded with ~20 old articles. It's missing ~15 newer articles (contratti-locazione, codice-fiscale, conto-corrente, IMU 2026, quartieri-sicuri, cedolare-secca, etc.). When a user queries "Secure neighbourhood", no local match is found, Perplexity is called, and if it fails the user sees the error.
 
-### 3. Register post in `src/data/blog/posts.ts`
-Insert at position 0 (most recent) with:
-- `slug: "eventi-torino-maggio-2026"`
-- `category: "turisti"`
-- `date: "2026-03-06"`
-- `readTime: 10`
-- `image: "/images/torino-primavera-marzo.jpg"`
-- `content: "eventi-torino-maggio-2026"`
-- 10 FAQs per language covering Salone del Libro, Jazz Festival, TWICE, Rockin'1000, MonumenTO, OGR, teatro, transport
-- SEO keywords: "eventi torino maggio 2026", "salone del libro 2026", "concerti torino maggio", "mostre torino maggio", etc.
+## Changes
 
-### 4. Update content clusters — `src/data/blog/contentClusters.ts`
-- Add `'eventi-torino-maggio-2026'` to Turin Experience satellites (after aprile)
-- Add temporal chain: `{ from: 'eventi-torino-aprile-2026', to: 'eventi-torino-maggio-2026', relevance: 'high', bidirectional: true }`
+### 1. Fix BottomNav drawer title (`src/components/layout/BottomNav.tsx`)
+- Replace `"infoinfoinfo(:"` with the proper i18n key (likely `t("info.title")` or similar label like "Informazioni").
 
-### 5. Update April article related articles
-Add May link at top of "Articoli correlati" in both IT and EN April markdown files.
+### 2. Add all missing articles to edge function index (`supabase/functions/perplexity-search/index.ts`)
+Add entries for these missing slugs to `JUNGLE_RENT_INDEX`:
+- `contratti-locazione-morosita-italia-2026`
+- `codice-fiscale-studenti-stranieri-torino-2026`
+- `conto-corrente-studenti-stranieri-italia-2026`
+- `imu-2026-immobili-affitto-torino-investitori`
+- `irpef-vs-cedolare-secca-2026-investitori`
+- `quartieri-sicuri-studenti-internazionali-torino-2026`
+- `vendere-immobile-investitori-torino`
+- `contratto-studenti-affitto-breve-strategia`
+- `comodato-cedolare-secca-aidc-2025`
+- `guida-investitori-stranieri-comprare-casa-torino`
+- `eventi-torino-maggio-2026`, `eventi-torino-aprile-2026`, `eventi-torino-marzo-2026`
+- `torino-citta-campus-atenei-immobiliare-2026`
+- `torino-citta-7-minuti-walkability`
+- `cedolare-secca-2026-investitori`
+- `sciopero-trasporti-italia-gennaio-2026`
+- `props-gestione-immobiliare-semplificata`
+- `palestre-torino-studenti-guida-completa`
+- `emergenze-affitti-torino-diritti-inquilini`
+- `valutazione-immobiliare-torino-guida-completa`
+- `panettoni-pandori-torino-guida-2025`
+- `viaggiare-sostenibile-torino-guida`
+- `carnevale-ivrea-battaglia-arance-2026`
 
-### 6. Update linkable content — `src/data/linkableContent.ts`
-Add keywords entry for `'eventi-torino-maggio-2026'`.
+Each entry includes: slug, type, category, bilingual keywords/title/excerpt, url, and FAQ entries for key articles.
+
+### 3. Lower local match threshold for better recall
+Currently the threshold to use local content is `topScore >= 0.8` (line 601). Lower it to `0.5` so that partial matches (like "secure neighbourhood" → quartieri-sicuri) return local content instead of falling through to Perplexity.
 
 ## Files changed
 
 | File | Action |
 |------|--------|
-| `src/data/blog/content/it/eventi-torino-maggio-2026.md` | Create |
-| `src/data/blog/content/en/eventi-torino-maggio-2026.md` | Create |
-| `src/data/blog/posts.ts` | Add post entry at top |
-| `src/data/blog/contentClusters.ts` | Add to cluster + relationship |
-| `src/data/linkableContent.ts` | Add enhanced keywords |
-| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Add May link |
-| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Add May link |
+| `src/components/layout/BottomNav.tsx` | Fix drawer title |
+| `supabase/functions/perplexity-search/index.ts` | Add ~20 missing articles + FAQs to index, lower threshold |
 
