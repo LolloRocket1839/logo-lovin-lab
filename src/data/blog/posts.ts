@@ -2,6 +2,67 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "contratti-locazione-morosita-italia-2026",
+    category: "investors",
+    date: "2026-03-14",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 15,
+    content: "contratti-locazione-morosita-italia-2026",
+    translations: {
+      it: {
+        title: "Contratti di locazione e morosità in Italia: la guida completa 2026",
+        excerpt: "I 6 tipi di contratto d'affitto in Italia, la normativa CIN per affitti brevi, le procedure di sfratto dopo il Decreto Sicurezza 2025 e gli strumenti di prevenzione della morosità.",
+        seo: {
+          title: "Contratti di locazione e morosità in Italia: guida completa 2026",
+          description: "I 6 contratti di locazione abitativa italiani, la cedolare secca, il CIN obbligatorio, le procedure di sfratto accelerate e gli strumenti preventivi contro la morosità.",
+          keywords: [
+            "contratti locazione Italia 2026",
+            "canone concordato cedolare secca 10%",
+            "sfratto morosità tempi 2026",
+            "CIN affitti brevi obbligatorio",
+            "contratto studenti universitari",
+            "Decreto Sicurezza sfratti 2025"
+          ]
+        },
+        tags: ["Investitori", "Fiscalità", "Contratti", "Morosità", "Torino"],
+        faqs: [
+          { question: "Qual è il contratto d'affitto più conveniente fiscalmente in Italia?", answer: "Il contratto a canone concordato (3+2) offre cedolare secca al 10%, IMU ridotta del 25% e base imponibile IRPEF ridotta del 30%. A Torino l'aliquota IMU effettiva scende al 4,31‰." },
+          { question: "Quanto tempo ci vuole per sfrattare un inquilino moroso nel 2026?", answer: "Con il Decreto Sicurezza 2025, la convalida deve avvenire entro 30 giorni e l'esecuzione entro 20 giorni. Nella pratica i tempi vanno da 2-4 mesi a oltre 1 anno nei casi complessi." },
+          { question: "Il CIN è obbligatorio per gli affitti brevi?", answer: "Sì, dal 1° gennaio 2025. Si ottiene sul portale bdsr.ministeroturismo.gov.it con SPID/CIE. Le sanzioni per mancanza vanno da €800 a €8.000." },
+          { question: "Quanti appartamenti posso affittare in affitto breve senza partita IVA?", answer: "Dal 2026 la soglia è scesa a 2 appartamenti. Dal terzo scatta la presunzione di attività d'impresa con obbligo di partita IVA." },
+          { question: "Esiste un registro degli inquilini morosi in Italia?", answer: "Non esiste un registro pubblico. L'unica banca dati privata operativa è la BDMI di idealista, che richiede l'autorizzazione firmata dell'inquilino per la consultazione." },
+          { question: "Il contratto per studenti universitari ha le stesse agevolazioni del 3+2?", answer: "Sì: cedolare secca al 10% e IMU ridotta del 25%. In più lo studente gode di una detrazione IRPEF del 19% fino a €2.633/anno se l'ateneo dista almeno 100 km dalla residenza." }
+        ]
+      },
+      en: {
+        title: "Rental contracts and tenant default in Italy: the complete guide 2026",
+        excerpt: "Italy's 6 lease types, CIN rules for short-term rentals, eviction procedures after the Security Decree 2025, and tenant default prevention tools.",
+        seo: {
+          title: "Rental contracts and tenant default in Italy: complete guide 2026",
+          description: "Italy's 6 residential lease types, flat tax options, mandatory CIN for short-term rentals, accelerated eviction procedures, and default prevention tools.",
+          keywords: [
+            "rental contracts Italy 2026",
+            "cedolare secca flat tax 10%",
+            "eviction tenant default Italy",
+            "CIN short-term rentals mandatory",
+            "student housing contract Italy",
+            "Security Decree evictions 2025"
+          ]
+        },
+        tags: ["Investors", "Taxation", "Contracts", "Default", "Turin"],
+        faqs: [
+          { question: "What is the most tax-efficient rental contract in Italy?", answer: "The regulated-rent contract (3+2) offers a 10% flat tax, 25% IMU reduction, and 30% IRPEF taxable base reduction. In Turin the effective IMU rate drops to 4.31‰." },
+          { question: "How long does it take to evict a defaulting tenant in 2026?", answer: "Under the Security Decree 2025, validation must occur within 30 days and execution within 20 days. In practice, timelines range from 2-4 months to over 1 year in complex cases." },
+          { question: "Is the CIN mandatory for short-term rentals?", answer: "Yes, since January 1, 2025. It is obtained through bdsr.ministeroturismo.gov.it with SPID/CIE. Fines for non-compliance range from €800 to €8,000." },
+          { question: "How many apartments can I short-term rent without a business license?", answer: "From 2026 the threshold dropped to 2 apartments. From the third, business activity is presumed with mandatory VAT registration." },
+          { question: "Is there a defaulting tenant registry in Italy?", answer: "There is no public registry. The only operational private database is BDMI by idealista, which requires the tenant's signed authorization for consultation." },
+          { question: "Does the student contract have the same tax benefits as the 3+2?", answer: "Yes: 10% flat tax and 25% IMU reduction. Additionally, the student gets a 19% IRPEF deduction on rent up to €2,633/year if the university is at least 100 km from their residence." }
+        ]
+      }
+    }
+  },
+  {
     slug: "codice-fiscale-studenti-stranieri-torino-2026",
     category: "students",
     date: "2026-03-14",
