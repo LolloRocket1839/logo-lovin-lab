@@ -209,6 +209,12 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'comodato-cedolare-secca-aidc-2025', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
   { from: 'comodato-cedolare-secca-aidc-2025', to: 'mutui-investitori-immobiliari-guida-completa', relevance: 'medium', bidirectional: true },
   
+  // IRPEF vs Cedolare Secca connections
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'high', bidirectional: true },
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'comodato-cedolare-secca-aidc-2025', relevance: 'medium', bidirectional: true },
+  { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
+  
   // Vendere a investitori connections
   { from: 'vendere-immobile-investitori-torino', to: 'vendere-casa-torino-guida-completa-2025', relevance: 'high', bidirectional: true },
   { from: 'vendere-immobile-investitori-torino', to: 'valutazione-immobiliare-torino-guida-completa', relevance: 'high', bidirectional: true },

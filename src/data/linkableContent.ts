@@ -220,6 +220,11 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'locazioni brevi comodatario', 'redditi diversi comodato',
     'comodato flat tax', 'società semplice rental'
   ],
+  'irpef-vs-cedolare-secca-2026-investitori': [
+    'irpef vs cedolare secca', 'confronto tassazione affitti', 'flat tax rental Italy',
+    'canone concordato 10% torino', 'aliquote IRPEF 2026', 'cedolare secca conviene',
+    'tassazione affitti 2026', 'IRPEF affitti', 'flat tax vs income tax Italy'
+  ],
   'vendere-immobile-investitori-torino': [
     'vendere a investitori', 'rendimento lordo', 'rental ready',
     'yield driven pricing', 'sell to investors', 'cap rate',
