@@ -58,6 +58,7 @@ export const contentClusters: ContentCluster[] = [
     satellites: [
       'cedolare-secca-2026-investitori',
       'irpef-vs-cedolare-secca-2026-investitori',
+      'imu-2026-immobili-affitto-torino-investitori',
       'mutui-investitori-immobiliari-guida-completa',
       'student-housing-italia-savills-2025',
       'valutazione-immobiliare-torino-guida-completa',
@@ -214,6 +215,12 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'high', bidirectional: true },
   { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'comodato-cedolare-secca-aidc-2025', relevance: 'medium', bidirectional: true },
   { from: 'irpef-vs-cedolare-secca-2026-investitori', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
+  
+  // IMU 2026 connections
+  { from: 'imu-2026-immobili-affitto-torino-investitori', to: 'irpef-vs-cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'imu-2026-immobili-affitto-torino-investitori', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'imu-2026-immobili-affitto-torino-investitori', to: 'contratto-studenti-affitto-breve-strategia', relevance: 'medium', bidirectional: true },
+  { from: 'imu-2026-immobili-affitto-torino-investitori', to: 'investire-real-assets-torino-2025', relevance: 'high', bidirectional: true },
   
   // Vendere a investitori connections
   { from: 'vendere-immobile-investitori-torino', to: 'vendere-casa-torino-guida-completa-2025', relevance: 'high', bidirectional: true },

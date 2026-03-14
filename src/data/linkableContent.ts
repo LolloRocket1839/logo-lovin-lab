@@ -225,6 +225,11 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'canone concordato 10% torino', 'aliquote IRPEF 2026', 'cedolare secca conviene',
     'tassazione affitti 2026', 'IRPEF affitti', 'flat tax vs income tax Italy'
   ],
+  'imu-2026-immobili-affitto-torino-investitori': [
+    'IMU 2026 torino', 'IMU canone concordato', 'IMU property tax Turin',
+    'aliquota IMU immobili locati', 'calcolo IMU affitto', 'IMU seconda casa',
+    'riduzione IMU 25%', 'scadenze IMU 2026', 'IMU student housing'
+  ],
   'vendere-immobile-investitori-torino': [
     'vendere a investitori', 'rendimento lordo', 'rental ready',
     'yield driven pricing', 'sell to investors', 'cap rate',
