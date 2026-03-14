@@ -198,6 +198,11 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'mostre torino maggio', 'twice torino', 'rockin 1000 torino',
     'cosa fare torino maggio', 'teatro torino maggio'
   ],
+  'quartieri-sicuri-studenti-internazionali-torino-2026': [
+    'quartieri sicuri internazionali', 'safe neighborhoods international students',
+    'erasmus torino sicurezza', 'zone rosse torino studenti',
+    'crocetta studenti', 'cenisia affitto sicuro'
+  ],
   'guida-investitori-stranieri-comprare-casa-torino': [
     'buy property italy', 'foreign investor', 'codice fiscale',
     'comprare casa straniero', 'notaio', 'rogito', 'transfer taxes italy',

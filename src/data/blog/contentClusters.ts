@@ -137,6 +137,9 @@ export const articleRelationships: ArticleRelationship[] = [
   // Students -> Safety
   { from: 'san-salvario-guida-studenti', to: 'quartieri-sicuri-donne-torino', relevance: 'high', bidirectional: true },
   { from: 'dove-vivere-torino-studenti-politecnico', to: 'quartieri-sicuri-donne-torino', relevance: 'high', bidirectional: true },
+  { from: 'quartieri-sicuri-studenti-internazionali-torino-2026', to: 'quartieri-sicuri-donne-torino', relevance: 'high', bidirectional: true },
+  { from: 'quartieri-sicuri-studenti-internazionali-torino-2026', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'high', bidirectional: true },
+  { from: 'quartieri-sicuri-studenti-internazionali-torino-2026', to: 'san-salvario-guida-studenti', relevance: 'high', bidirectional: true },
   
   // Students -> Food
   { from: 'san-salvario-guida-studenti', to: 'dove-mangiare-torino-studenti', relevance: 'high', bidirectional: true },
