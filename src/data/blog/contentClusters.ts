@@ -25,6 +25,8 @@ export const contentClusters: ContentCluster[] = [
     pillarTitleEn: 'Where to live in Turin: Politecnico student guide',
     satellites: [
       'san-salvario-guida-studenti',
+      'san-salvario-sicurezza-dati-reali-2026',
+      'torino-notte-guida-sicurezza-studenti',
       'quartieri-sicuri-donne-torino',
       'quartieri-sicuri-studenti-internazionali-torino-2026',
       'aule-studio-torino-guida-completa',
@@ -33,7 +35,9 @@ export const contentClusters: ContentCluster[] = [
       'politecnico-torino-guida-completa',
       'universita-torino-guida-completa',
       'conto-corrente-studenti-stranieri-italia-2026',
-      'codice-fiscale-studenti-stranieri-torino-2026'
+      'codice-fiscale-studenti-stranieri-torino-2026',
+      'assicurazione-sanitaria-studenti-internazionali-italia-2026',
+      'budget-mensile-studente-torino-2026'
     ],
     keywords: ['studenti torino', 'affitto studenti', 'quartieri torino', 'vita universitaria']
   },
