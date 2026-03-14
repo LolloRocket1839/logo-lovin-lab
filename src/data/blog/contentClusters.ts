@@ -57,6 +57,7 @@ export const contentClusters: ContentCluster[] = [
     pillarTitleEn: 'Investing in real assets in Turin 2025',
     satellites: [
       'cedolare-secca-2026-investitori',
+      'irpef-vs-cedolare-secca-2026-investitori',
       'mutui-investitori-immobiliari-guida-completa',
       'student-housing-italia-savills-2025',
       'valutazione-immobiliare-torino-guida-completa',
@@ -65,7 +66,7 @@ export const contentClusters: ContentCluster[] = [
       'contratto-studenti-affitto-breve-strategia',
       'comodato-cedolare-secca-aidc-2025'
     ],
-    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire', 'affitto breve', 'comodato']
+    keywords: ['investimenti immobiliari', 'rendimenti affitto', 'cedolare secca', 'torino investire', 'affitto breve', 'comodato', 'IRPEF']
   },
   
   // SELLERS CLUSTER - Property Sales
