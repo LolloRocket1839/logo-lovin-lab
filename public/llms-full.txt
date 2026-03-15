@@ -725,5 +725,5 @@ Natural language query endpoint — ask questions in plain language, get Schema.
 - **MIT Strike Calendar**: https://www.mit.gov.it/calendario-scioperi
 
 ---
-Last Updated: March 3, 2026
-Version: 4.0 - NLWeb natural language query endpoint (Microsoft NLWeb protocol)
+Last Updated: March 15, 2026
+Version: 4.2 - Study spaces major update: 66 locations, EDISU 2 AM hours, BI.TO rebrand, booking apps, night/Sunday study, neighborhood breakdown
