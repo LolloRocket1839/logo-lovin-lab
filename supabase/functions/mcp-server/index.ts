@@ -653,6 +653,15 @@ const STUDY_SPACES = [
   { id: 56, cat: "parchi", name: "Parco del Valentino", addr: "Lungo Po", cap: "Illimitati", hrs: "Sempre aperto", feat: "421.000 mq, Wi-Fi in alcune zone" },
   { id: 57, cat: "polo900", name: "Polo del '900 - Sala Lettura Istoreto", addr: "Corso Valdocco 4/A", cap: "Numerosi", hrs: "Lun-Gio 10-18, Ven 10-13", feat: "Storia Antifascismo, Wi-Fi", link: "https://www.polodel900.it" },
   { id: 58, cat: "polo900", name: "Polo del '900 - Sala Lettura Palazzo San Daniele", addr: "Via del Carmine 14", cap: "Numerosi", hrs: "Lun-Ven 9:30-13:30 / 14:30-18:30", feat: "300.000+ volumi, Wi-Fi, prenotazione", link: "https://www.polodel900.it" },
+  // New spaces added March 2026
+  { id: 59, cat: "bar", name: "Nora Book & Coffee", addr: "Via delle Orfane 24/D", cap: "Vari tavoli", hrs: "Lun-Ven 9:00-19:30, Sab 10:00-19:30", feat: "Libreria-caffè, atmosfera da biblioteca, Wi-Fi, centro storico" },
+  { id: 60, cat: "bar", name: "Bere in Tipografia / Studiare in Tipografia", addr: "Piazza Santa Giulia, Vanchiglia", cap: "Vari tavoli + piano studio", hrs: "Lun-Gio 8:00-0:00, Ven-Sab 8:00-2:00", feat: "Piano superiore dedicato studio, Wi-Fi, prezzi student-friendly" },
+  { id: 61, cat: "campus_diffuso", name: "Variante Bunker", addr: "Via Paganini 0/200", cap: "40 posti studio + sala gruppi", hrs: "Lun-Ven 9:00-23:00", feat: "Gratuito con tessera ARCI (disponibile in loco), Wi-Fi, prese, bar sconto 15% studenti" },
+  { id: 62, cat: "edisu", name: "Sala Studio EDISU Olimpia", addr: "Lungodora Siena 102/A", cap: "Numerosi", hrs: "Lun-Ven 7:30-18:45, Sab-Dom 8:00-18:45", feat: "Nuova, vicino Campus Luigi Einaudi, Wi-Fi gratuito", link: "https://www.edisu.piemonte.it" },
+  { id: 63, cat: "coworking", name: "OGR Social Table", addr: "Corso Castelfidardo 22", cap: "Tavolo 25m con USB", hrs: "10:00-20:00", feat: "Tavolo comunitario 25m con porte USB, Wi-Fi gratuito, bar OGR", link: "https://www.ogrtorino.it" },
+  { id: 64, cat: "coworking", name: "Nodo Borgodora", addr: "Via Borgo Dora 33", cap: "Numerosi", hrs: "Mar-Ven 15:00-19:00", feat: "€5 formula coworking (include caffè/tè), ogni 5 visite 1 gratis, Wi-Fi" },
+  { id: 65, cat: "bar", name: "Tomato Backpackers - Area Coworking", addr: "Via Silvio Pellico 11", cap: "Vari posti", hrs: "8:00-22:00", feat: "Wi-Fi ultra-veloce 300-500 Mbps, aperto anche ai non ospiti" , link: "https://www.tomatobackpackers.com" },
+  { id: 66, cat: "bar", name: "Natalia Ginzburg (Biblioteca Civica)", addr: "Via Lombroso 16", cap: "Numerosi", hrs: "Variabili", feat: "Polo culturale San Salvario, spazi verdi, Wi-Fi FreeTorinoWiFi", link: "https://bct.comune.torino.it" },
 ];
 
 const STUDY_SPACE_CATEGORIES: Record<string, { it: string; en: string }> = {
