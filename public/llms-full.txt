@@ -178,11 +178,11 @@ Turin property owners seeking:
   - "Calcola valore immobile Torino"
   - "Stima casa gratis Torino"
 
-### Study Spaces Directory ⭐ EXPANDED
+### Study Spaces Directory ⭐ MAJOR UPDATE MAR 2026
 - **URL IT**: https://junglerent.it/strumenti/aule-studio-torino
 - **URL EN**: https://junglerent.it/tools/study-spaces-turin
-- **Purpose**: Find where to study in Turin - 30+ locations
-- **Features**: Interactive map, filters by silence level, 24h access, WiFi, power outlets
+- **Purpose**: Find where to study in Turin - 60+ locations (the most comprehensive guide online)
+- **Features**: Interactive map, filters by silence/WiFi/24h, booking app guides (Affluences, Campus Piemonte, TorinoFacile), night study until 2 AM, Sunday options, neighborhood breakdown
 
 ### Cheap Eats Directory
 - **URL IT**: https://junglerent.it/strumenti/dove-mangiare-torino
