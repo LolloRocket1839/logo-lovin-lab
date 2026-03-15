@@ -1,539 +1,584 @@
-# Study spaces in Turin: complete guide to the 57 best places to study
+# Study spaces in Turin: complete guide to 60+ places to study (2026)
 
-**Are you a Politecnico or University of Turin student looking for the perfect study space?** We've mapped all 57 best places to study in Turin for you, from university libraries to the coziest cafés, from the University Diffused Campus (unique in Italy!) to the most innovative coworking spaces.
+Turin offers over 4,000 study seats across more than 60 spaces. No other online guide maps them all with verified hours, booking apps and practical neighborhood-level advice. This is that guide.
 
-## Quick index
+The data covers the 2025-2026 academic year and reflects the February 2026 municipal library reorganization, EDISU exam-session extensions, and the BI.TO civic library rebrand.
 
-1. [Bars and cafés for studying (6 locations)](#bars-and-cafes)
-2. [National library (the largest)](#national-library)
-3. [Public libraries (15 locations)](#public-libraries)
-4. [EDISU study halls (7 locations + Campus Piemonte app)](#edisu-study-halls)
-5. [Politecnico libraries (3 campuses)](#politecnico-libraries)
-6. [UniTo libraries (22 libraries)](#unito-libraries)
-7. [University Diffused Campus (11 spaces, unique in Turin!)](#diffused-campus)
-8. [Coworking and study spaces (7 locations)](#coworking)
-9. [Parks with Wi-Fi (2 outdoor study locations)](#parks)
-10. [Polo del 900 (2 specialized locations)](#polo-900)
-11. [Comparison table](#comparison-table)
-12. [How to choose the right space](#how-to-choose)
+## Quick index {#index}
 
----
-
-## <a id="bars-and-cafes"></a>☕ Bars and cafés for studying (6 locations)
-
-Perfect for those who love studying in a relaxed environment with good coffee. Ideal for short study sessions or informal group work.
-
-### 1. Barney's (Circolo dei Lettori)
-📍 Via Bogino 9, Turin  
-⏰ During Circolo opening hours  
-🔌 1h free Wi-Fi after purchase, unlimited with Circolo membership  
-🌐 [circololettori.it](https://www.circololettori.it)
-
-**Why choose it:** Refined cultural environment in the heart of Turin. Perfect for combining quality coffee and intellectual atmosphere.
-
-### 2. Casa del Quartiere San Salvario
-📍 Via Oddino Morgari 14, Turin  
-🏠 Informal environment, bar, Wi-Fi  
-💡 Common spaces for studying
-
-**Why choose it:** Lively student neighborhood, great for those living in San Salvario area. Informal and welcoming atmosphere.
-
-### 3. Combo Turin
-📍 Corso Regina Margherita 128, Turin  
-⏰ 7:00-23:00 (Fri-Sat until midnight)  
-🔌 Hostel + café, Wi-Fi, lunch  
-🌐 [thisiscombo.com](https://www.thisiscombo.com)
-
-**Why choose it:** Extended hours, large tables, international environment. Perfect for late-night study sessions.
-
-### 4. Costadoro Social Coffee Factory
-📍 Via Teofilo Rossi di Montelera 2, Turin  
-🔌 Fast Wi-Fi (1h free), electrical outlets, outdoor garden  
-☀️ Outdoor seating for open-air studying
-
-**Why choose it:** Super-fast Wi-Fi, outlets everywhere, outdoor garden. Ideal for laptop work.
-
-### 5. Orso Laboratorio Caffè
-📍 Via Claudio Luigi Berthollet 30, Turin  
-☕ Specialty coffee, Wi-Fi, outlets, outdoor seating  
-🎨 Well-kept and welcoming environment
-
-**Why choose it:** Highest quality coffee in university area. Perfect for short, focused study sessions.
-
-### 6. Bar Via Micca
-📍 Via Micca, Turin  
-🔌 Wi-Fi, relaxed environment  
-
-**Why choose it:** Central location, informal environment for studying with coffee.
+1. [EDISU study halls (the only ones open past 22:00)](#edisu-study-halls)
+2. [University libraries (UniTo and PoliTo)](#university-libraries)
+3. [National University Library](#national-library)
+4. [BI.TO civic libraries (18+ branches, free)](#civic-libraries)
+5. [University Diffused Campus (30+ free venues)](#diffused-campus)
+6. [Study-friendly cafés](#study-cafes)
+7. [Coworking with student pricing](#coworking)
+8. [Hidden gems other guides miss](#hidden-gems)
+9. [Where to study neighborhood by neighborhood](#neighborhoods)
+10. [Where to study on Sunday](#sunday)
+11. [Where to study at night (past 22:00)](#night-study)
+12. [Booking apps: how they actually work](#booking-apps)
+13. [WiFi: three networks, one guide](#wifi)
+14. [Peak times and seat-finding strategy](#peak-times)
+15. [Copy shops near campuses](#copy-shops)
+16. [Comparison table](#comparison-table)
+17. [FAQ](#faq)
 
 ---
 
-## <a id="national-library"></a>📖 National University Library
+## EDISU study halls (the only ones open past 22:00) {#edisu-study-halls}
 
-📍 Piazza Carlo Alberto 3, Turin  
-⏰ Mon-Fri 9:00-16:00  
-📚 Over 1.3 million volumes, rare manuscripts  
-🎫 Access from age 16  
-🌐 [bnuto.cultura.gov.it](https://bnuto.cultura.gov.it)
+EDISU halls are the most critical study infrastructure in Turin. They are the only spaces regularly open beyond 22:00. Access requires an Athena Card (university enrollment) and, for major halls, booking through the **Campus Piemonte ID Studyroom** app.
 
-**Why choose it:** The largest and most prestigious library in Turin. Over 1.3 million volumes, rare manuscripts, historic and solemn atmosphere. Perfect for thesis work, in-depth research and intensive study. Guaranteed silence.
+### The two champions: Verdi 26 and Michelangelo Buonarroti
 
----
+These two halls are the undisputed kings of late-night study in Turin.
 
-## <a id="public-libraries"></a>🏛️ Turin public libraries (15 locations)
+**Verdi 26 study hall**
+📍 Via Verdi 26, Turin
+👥 308 seats
+⏰ Mon-Fri 8:30-00:00 · Sat-Sun 8:30-22:00
+🔥 **During exam sessions: 8:30-2:00 AM daily**
+📱 Booking required via Campus Piemonte app
 
-Public libraries are free, open to everyone and distributed throughout the city. Perfect for those seeking silence, free Wi-Fi and extended opening hours.
+Central location, steps from UniTo. During exam sessions it stays open until 2 AM seven days a week.
 
-### Top 5 public libraries
+**Michelangelo Buonarroti study hall**
+📍 Via Michelangelo Buonarroti 17/bis, Turin
+👥 364-427 seats
+⏰ Mon-Fri 8:30-00:00 · Sat-Sun 8:30-22:00
+🔥 **During exam sessions: 8:30-2:00 AM daily**
+📱 Booking required via Campus Piemonte app
 
-#### 1. Central Public Library
-📍 Via della Cittadella 5, Turin  
-👥 60 seats in reading room  
-⏰ Mon 14:00-19:00, Tue-Fri 9:00-19:00, Sat 9:00-15:00  
-📚 Over 500,000 volumes  
-🌐 [bct.comune.torino.it](https://bct.comune.torino.it)
+The largest study hall in Turin. Same hours as Verdi, same booking app.
 
-**Why choose it:** THE main public library. Vast book collection, large reading room, central location. Ideal for downtown students.
-
-#### 2. Passerin d'Entrèves Public Library (Cascina Giajone)
-📍 Via Guido Reni 96/15, Turin  
-👥 140 reading seats  
-⏰ Mon 14:00-19:00, Tue-Fri-Sat 9:00-15:00, Wed-Thu 13:00-19:00  
-🔌 Wi-Fi, ample spaces
-
-**Why choose it:** The largest among public libraries. Spacious, bright, perfect for intensive study days.
-
-#### 3. Primo Levi Public Library
-📍 Via Leoncavallo 17, Turin  
-⏰ Mon 14:00-19:00, Tue-Fri 9:00-19:00, Sat 9:00-15:00  
-🔌 Wi-Fi, internet workstations
-
-**Why choose it:** Modern, well-equipped, semi-central area. Great for north area students.
-
-#### 4. Alberto Geisser Public Library
-📍 Corso Casale 5, Turin  
-⏰ Mon 9:00-12:30/14:00-19:00, Thu 9:00-12:30/14:00-19:00, Fri 9:00-14:00  
-☕ 'Il Mangialibro' refreshment point  
-🔌 Wi-Fi
-
-**Why choose it:** Only public library with internal refreshment point! Convenient for long study sessions.
-
-#### 5. Villa Amoretti Public Library
-📍 Corso Orbassano 200, Turin  
-🌳 In the park, bright, Wi-Fi  
-
-**Why choose it:** Immersed in park greenery, very bright, relaxing environment. Perfect for those who love studying with nature views.
-
-### Other public libraries
-
-- **Bianca Guidetti Serra Public Library** - Historic center, 32 seats
-- **Cascina Marchesa Public Library** - Corso Vercelli
-- **Cesare Pavese Public Library** - Via Candiolo (with parking)
-- **Dietrich Bonhoeffer Public Library** - Corso Corsica
-- **Don Lorenzo Milani Public Library (Falchera)** - Via dei Pioppi (48,000 volumes)
-- **Francesco Cognasso Public Library** - Corso Cincinnato (language courses)
-- **Italo Calvino Public Library** - Lungo Dora Agrigento
-- **Luigi Carluccio Public Library** - Via Monte Ortigara
-- **Mausoleo della Bela Rosin Public Library** - Mirafiori
-- **Andrea Della Corte Music Library** - Villa Tesoriera (specialized in music and dance, 36,000 scores)
-
-📱 **Recommended app:** Download the Turin Public Libraries app to book workstations and check real-time schedules.
-
----
-
-## <a id="edisu-study-halls"></a>🎓 EDISU study halls (7 locations)
-
-EDISU study halls are **dedicated to university students** with free Wi-Fi and extended hours. Many require booking through the **Campus Piemonte** app.
-
-### Top 3 EDISU halls
-
-#### 1. Michelangelo Buonarroti study hall ⭐
-📍 Via Michelangelo Buonarroti 17/Bis, Turin  
-👥 364-427 seats  
-⏰ Mon-Fri 8:30-24:00, Sat-Sun 8:30-22:00 (**during exam period until 2:00 AM**)  
-📱 Bookable via Campus Piemonte app  
-🌐 [edisu.piemonte.it](https://www.edisu.piemonte.it)
-
-**Why choose it:** The largest! Open until 2:00 AM during exam period. Ideal for pre-exam all-nighters.
-
-#### 2. Verdi study hall
-📍 Via Verdi 26, Turin  
-👥 292-308 seats  
-⏰ Mon-Fri 8:30-24:00, Sat-Sun 8:30-22:00 (**during exam period until 2:00 AM**)  
-📱 Bookable via Campus Piemonte app
-
-**Why choose it:** Very central, very close to UniTo. Open until 2:00 AM during exam period.
-
-#### 3. Pietro Giuria study hall
-📍 Via Pietro Giuria 17, Turin  
-👥 200 seats  
-⏰ Mon-Fri 8:30-19:00
-
-**Why choose it:** Convenient for Politecnico students in Cittadella area.
+> **Important fact:** no true 24/7 study space exists in Turin. The 6.5-hour gap between 2:00 AM and 8:30 AM is the closest the city comes to continuous service.
 
 ### Other EDISU halls
 
-- **Corso Castelfidardo study hall** - 180 seats, at Politecnico
-- **Corso Svizzera study hall** - 180 seats
-- **Ormea study hall** - 134 seats, bookable
-- **Principe Amedeo study hall** - 96 seats
+| Hall | Address | Seats | Standard hours | Notes |
+|------|---------|-------|----------------|-------|
+| Castelfidardo | Corso Castelfidardo 30/A | 180 | Mon-Fri 8:00-23:30 · Sat 8:00-20:00 | Latest-closing PoliTo space |
+| Pietro Giuria | Via Pietro Giuria | 200 | Mon-Fri 8:30-19:00 | Adds Sat-Sun 8:30-19:00 during exams |
+| Ormea | Via Ormea 11 bis/E | 134 | Mon-Fri 9:00-19:30 | Adds Sat-Sun 9:00-19:30 during exams |
+| Principe Amedeo | Via Principe Amedeo 48 | 96 | Mon-Sat 8:30-19:00 | — |
+| Svizzera | Corso Svizzera 185 | 180 | Mon-Fri 9:00-18:00 | Extended to 20:00 during exams |
+| Olimpia | Lungodora Siena 102/A | — | Mon-Fri 7:30-18:45 · Sat-Sun 8:00-18:45 | New, near CLE |
 
-### 🌟 Bonus: Turin Student Zone - Murazzi del Po
-📍 Via Murazzi del Po 26 (arches 30-38), Turin  
-👥 81 seats  
-⏰ Mon-Fri 9:00-21:00  
-☕ Bar, eatery, Wi-Fi, multipurpose space  
+All EDISU halls offer free WiFi, vending machines and photocopiers.
+
+### Turin Student Zone - Murazzi del Po
+📍 Murazzi del Po 22 (left side), Turin
+👥 81 seats
+⏰ Mon-Fri 9:00-21:00
+☕ Bar, canteen, WiFi
 🌐 [studyintorino.it](https://www.studyintorino.it)
 
-**Why choose it:** Unique space! Study with Po river view, internal bar, young and dynamic atmosphere. Perfect for coffee breaks between study sessions.
+Study with a Po river view. Internal bar, young atmosphere. Managed as part of the Diffused Campus.
 
-📱 **Mandatory app:** Download **Campus Piemonte** to book EDISU halls and check real-time availability.
+📱 **Required app:** download **Campus Piemonte ID Studyroom** (iOS, Android, Huawei AppGallery) to book Verdi, Michelangelo, Principe Amedeo and Giuria. QR scan at entry and exit.
 
 ---
 
-## <a id="politecnico-libraries"></a>🏗️ Politecnico di Torino libraries (3 campuses)
+## University libraries (UniTo and PoliTo) {#university-libraries}
 
-Dedicated to Politecnico students with silent and noisy study rooms, fast Wi-Fi and electrical outlets everywhere.
+### University of Turin (UniTo)
 
-### 1. Central Engineering Library (main campus)
-📍 Corso Duca degli Abruzzi 24, Turin  
-🔌 Silent and noisy study rooms, Wi-Fi, electrical outlets  
-⏰ Check Politecnico website  
+UniTo's library system spans 22 libraries across 6 disciplinary poles with 2.7 million+ items. Booking is via the **Affluences** app with an institutional UniTo email.
+
+#### "Norberto Bobbio" library - Campus Luigi Einaudi ⭐
+📍 Lungo Dora Siena 100/A, Turin
+👥 **850 seats** across 10,000 sqm (designed by Norman Foster)
+⏰ Mon-Fri 8:30-19:15 · Sat 8:30-13:15
+📱 Booking via Affluences (most sectors)
+💡 Cognetti and Solari sectors on the second floor allow free access without reservation
+
+The largest university library in Turin. The Campus Luigi Einaudi building is spectacular. If you need just one address to study, this is it.
+
+#### "Giovanni Tabacco" library - Palazzo Nuovo
+📍 Via Sant'Ottavio 20, Turin
+⏰ Mon-Fri until 19:30 · Sat until 13:00
+📚 Main humanities pole
+
+The entire Palazzo Nuovo complex houses the humanities libraries. Very central location.
+
+#### Economics and Management library
+📍 Corso Unione Sovietica 218 bis, Turin
+👥 276 seats across 6 study rooms + 4 IT rooms
+📱 Booking via Affluences
+
+Modern, well-equipped, dedicated to economics and management.
+
+#### Other UniTo libraries
+The system includes poles for medicine, pharmacy, sciences along Via Pietro Giuria, and the Historic Library "A. Graf" at Via Verdi 8.
+
+**Note:** no UniTo library exists at "Via Po 17." This address is often cited in error.
+
+📱 **Required app:** download **Affluences** (iOS, Android, web) to book. Requires UniTo institutional email. QR code must be scanned within one hour of booked time.
+
+### Politecnico di Torino (PoliTo)
+
+PoliTo operates two main libraries and does not use the Affluences app. Study area access is via PoliTo badge.
+
+#### Central Engineering Library (BCI)
+📍 Corso Duca degli Abruzzi 24, Turin
+⏰ Mon-Fri 8:30-20:00
+🔌 Silent and noisy study rooms, WiFi, outlets everywhere
 🌐 [biblio.polito.it](https://www.biblio.polito.it)
 
-**Why choose it:** THE PoliTo library. Study rooms divided by noise level, perfect for engineering students.
+PoliTo's largest library. Rooms divided by noise level. Saturday service was suspended from November 2025, check current status on the website.
 
-### 2. Lingotto campus study rooms
-📍 Via Nizza 230 (8Gallery), Turin  
-👥 Le Corbusier Hall (32), Tesla Hall (44), 1st floor study area (40)  
-⏰ Mon-Fri 8:00-19:30  
-🏢 Inside 8Gallery, modern, Wi-Fi
+#### Central Architecture Library "Roberto Gabetti"
+📍 Viale Pier Andrea Mattioli 39 (Castello del Valentino), Turin
+⏰ Mon-Fri 8:30-20:00 · Sat 8:30-14:00
+🏰 Inside an actual castle
 
-**Why choose it:** Super-modern spaces at Lingotto campus. Ideal for students at decentralized Politecnico campuses.
+Study in a castle on the Po river. For architecture students and beyond.
 
-### 3. Central Architecture Library 'Roberto Gabetti' (Castello del Valentino)
-📍 Viale Mattioli 39, Turin  
-📚 Architecture book collection, study rooms  
-🌐 [biblio.polito.it](https://www.biblio.polito.it)
+#### Castelfidardo study room (PoliTo)
+📍 Corso Castelfidardo 30/A (Cittadella Politecnica)
+👥 ~180 seats
+⏰ Mon-Fri 8:00-23:30 · Sat 8:00-20:00
 
-**Why choose it:** Study in a castle! Perfect for architecture students. Unique historic atmosphere.
-
----
-
-## <a id="unito-libraries"></a>📖 University of Turin libraries (22 libraries)
-
-The University of Turin has over **22 specialized libraries** distributed throughout the city. All with Wi-Fi and bookable via **Affluences** app.
-
-### Top 3 UniTo libraries
-
-#### 1. Norberto Bobbio Library
-📍 Via Sant'Ottavio, Turin  
-📱 Booking via Affluences app  
-⚖️ Main law library  
-🌐 [sba.unito.it](https://www.sba.unito.it)
-
-**Why choose it:** THE law library. Serious and focused atmosphere, perfect for legal studies.
-
-#### 2. Economics and Management Library
-📍 Corso Unione Sovietica, Turin  
-📱 Booking via Affluences app  
-💼 Specialized in economics
-
-**Why choose it:** Dedicated to economics and management. Spacious, modern, well-equipped.
-
-#### 3. UniTo Library System (22 libraries)
-📍 Various locations in the city  
-👥 Over 30 sites  
-🔐 Access with university credentials  
-📱 Booking via Affluences app
-
-**Why choose them:** Over 30 specialized sites (medicine, pharmacy, literature, sciences...). Find the one closest to your faculty!
-
-📱 **Mandatory app:** Download **Affluences** to book UniTo libraries and see real-time occupancy.
+PoliTo's latest-closing space. During exam sessions, additional rooms open in Pavilion T (Mon-Fri 8:00-19:00). No 24-hour study rooms exist at PoliTo.
 
 ---
 
-## <a id="diffused-campus"></a>🌆 University Diffused Campus (11 spaces - unique in Turin!)
+## National University Library {#national-library}
 
-The **University Diffused Campus** is a project **unique in Italy**: public spaces, bars, cafés and cultural venues transformed into informal study rooms. Perfect for those who want to study in a dynamic and social environment.
+📍 Piazza Carlo Alberto 3, Turin
+⏰ **Mon-Fri 8:15-19:55 · Sat 10:30-18:00** · Sun closed
+📚 Over 763,000 volumes, rare manuscripts
+🎫 Free access with registration, from age 16
+🌐 [bnuto.cultura.gov.it](https://bnuto.cultura.gov.it)
 
-### Top 5 Diffused Campus spaces
+The most prestigious library in Turin. Be aware: WiFi is slow and electrical outlets are scarce. Perfect for thesis work with print sources in a solemn atmosphere. Not ideal for laptop-heavy work.
 
-#### 1. Comala ⭐
-📍 Corso Ferrucci 65/A, Turin  
-👥 60 indoor + 350 heated outdoor  
-⏰ Mon-Fri 8:30-0:30, Sat-Sun 10:00-0:30  
-🔌 Public space, Wi-Fi, outlets, free water, bar  
-🌐 [studyintorino.it](https://www.studyintorino.it)
+---
 
-**Why choose it:** THE largest Diffused Campus space! 350 heated outdoor seats, open until late night, internal bar. Perfect for social study sessions.
+## BI.TO civic libraries (18+ branches, free) {#civic-libraries}
 
-#### 2. Off Topic - Turin Youth Centre
-📍 Via Pallavicino, Turin  
-👥 136 indoor  
-⏰ Variable, also during exam period  
-🎭 Cultural center, Wi-Fi, events
+The civic library system has been rebranded **BI.TO - Biblioteche Integrate del Torinese** since September 2025. All branches offer FreeTorinoWiFi (12 hours/day or 750 MB, register with phone number). Food and drinks are prohibited in reading rooms.
 
-**Why choose it:** Youth cultural center with events, concerts and study spaces. Ideal for combining study and social life.
+The February 2026 municipal reorganization expanded Saturday service to 13 branches.
 
-#### 3. Imbarchino (Valentino Park)
-📍 Viale Umberto Cagni 37, Parco del Valentino, Turin  
-👥 25 indoor + 64 outdoor  
-⏰ Mon-Sat 9:00-18:00  
-🌳 Bar, Wi-Fi, electrical outlets, free water, in nature  
-🌐 [imbarchino.space](https://www.imbarchino.space)
+### Top 3 for studying
 
-**Why choose it:** Study in Valentino Park! Nature view, internal bar, relaxed atmosphere. Perfect for sunny days.
+**Central Civic Library**
+📍 Via della Cittadella 5, Turin
+👥 ~1,000 daily visitors
+⏰ Mon 14:00-19:00 · Tue-Fri 9:00-19:00 · Sat 9:00-15:00
+📚 Over 500,000 volumes
+🌐 [bct.comune.torino.it](https://bct.comune.torino.it)
 
-#### 4. CAP10100
-📍 Via Barletta, Turin  
-👥 80 indoor  
-🔌 Free Wi-Fi, electrical outlets
+The flagship. 60 reading room seats bookable via TorinoFacile platform. A service reorganization began in March 2026.
 
-**Why choose it:** Large space in Porta Palazzo area. Great for those living in north area.
+**Villa Amoretti Civic Library**
+📍 Corso Orbassano 200, Turin
+👥 90 dedicated study seats
+🌳 Set in a park, very bright
 
-#### 5. Circolo Arci l'Arteficio
-📍 Via Fossano, Turin  
-👥 70 indoor  
-🔌 Free Wi-Fi  
-🌐 [arcitorino.it](https://www.arcitorino.it)
+Second-largest dedicated study space among civic libraries. Perfect for those who love studying surrounded by nature.
 
-**Why choose it:** Cultural club with study spaces. Perfect for those seeking an informal and community environment.
+**Passerin d'Entrèves Civic Library (Cascina Giajone)**
+📍 Via Guido Reni 96/15, Turin
+👥 140 reading seats
+⏰ Mon 14:00-19:00 · Tue-Fri-Sat 9:00-15:00 · Wed-Thu 13:00-19:00
+
+The largest civic library. Spacious and bright, ideal for intensive study days.
+
+### Other civic libraries
+
+- **Natalia Ginzburg** - Via Lombroso 16 (San Salvario), cultural hub with green spaces
+- **Alberto Geisser** - Corso Casale 5, the only one with a refreshment point "Il Mangialibro"
+- **Primo Levi** - Via Leoncavallo 17, modern, north area
+- **Dietrich Bonhoeffer** - Corso Corsica 55, full weekday hours
+- **Bianca Guidetti Serra** - Historic center, 32 seats
+- **Cascina Marchesa** - Corso Vercelli 141/7
+- **Cesare Pavese** - Via Candiolo 79, with parking
+- **Don Lorenzo Milani (Falchera)** - Via dei Pioppi 43, 48,000 volumes
+- **Francesco Cognasso** - Corso Cincinnato 115, language courses
+- **Italo Calvino** - Lungo Dora Agrigento 94
+- **Luigi Carluccio** - Via Monte Ortigara 95
+- **Mausoleo della Bela Rosin** - Strada Castello di Mirafiori 148/7 (**only civic library open on Sunday**)
+- **Andrea Della Corte Music Library** - Villa Tesoriera, Corso Francia 186, 36,000 scores
+
+> **Important note:** the "Biblioteca Renzo Piano" does not exist as a functioning library. The name refers to an unrealized project to relocate the Central Civic Library into the Torino Esposizioni complex. Renzo Piano offered pro bono design oversight around 2014, but the project remains incomplete as of March 2026.
+
+---
+
+## University Diffused Campus (30+ free venues) {#diffused-campus}
+
+The Diffused Campus deserves special attention. It is a network of 30+ venues providing 2,500+ study seats across cafés, cultural centers and community spaces throughout Turin. Run jointly by Comune di Torino, UniTo, PoliTo and EDISU, it is free and open to everyone, not just university students.
+
+### Main Diffused Campus spaces
+
+**Comala** ⭐
+📍 Corso Ferrucci 65/A, Turin
+👥 ~200 seats (indoor + covered heated outdoor)
+⏰ Mon-Fri 8:00-0:30 · Sat-Sun 10:00-0:30
+🔌 WiFi, outlets, free water, internal bar
+
+Public space in a former barracks in Cenisia, near PoliTo. The largest Diffused Campus venue. Open until late night.
+
+**Off Topic - Turin Youth Centre**
+📍 Via Pallavicino 35, Turin
+👥 46 indoor + 20 outdoor
+⏰ Variable, extended during exam periods
+🎭 Cultural center with events, concerts, WiFi
+
+Youth center mixing study and social life. Extended hours during exam sessions.
+
+**Imbarchino (Valentino Park)**
+📍 Viale Umberto Cagni 37, Parco del Valentino
+👥 25 indoor + 64 outdoor
+⏰ Mon-Sun 10:00-24:00
+☕ Bar, WiFi, outlets, free water
+
+Study in Valentino Park with a green view. Part of both the Diffused Campus and Study in Torino network.
+
+**CAP10100**
+📍 Via Barletta 1, Turin
+👥 80 indoor
+🔌 Free WiFi, outlets
+
+Large space in Porta Palazzo area.
+
+**Turin Student Zone - Via Po 22**
+📍 Via Po 22, Turin
+👥 81 seats
+⏰ Mon-Fri 9:00-21:00
+
+Central study point in the heart of the city.
 
 ### Other Diffused Campus spaces
 
 - **Bunker** - Via Paganini, 40 seats
-- **CPG Turin** - Via Verolengo, 20 seats, green view
-- **Casa del Quartiere - Barrito** - Via Rubino, 40 indoor + 40 outdoor
-- **Casa nel Parco (Mirafiori Sud)** - Via Panetti, student menu 5€
-- **El Barrio** - Via Baltea, 35 seats
-- **Spazio 211** - Via Cigna, socio-cultural hub
+- **CPG Turin** - Via Verolengo, 20 seats
+- **Casa del Quartiere Barrito** - Via Rubino 45, 40 indoor + 40 outdoor
+- **Casa nel Parco (Mirafiori Sud)** - Via Panetti 1, student menu €5
+- **El Barrio** - Via Baltea 3, 35 seats
+- **Spazio 211** - Via Cigna 211, socio-cultural hub
+- **Collettivo Freeco** - San Salvario area
 
-🌐 All spaces at [studyintorino.it](https://www.studyintorino.it)
+🌐 Full list at [torinogiovani.it](https://www.torinogiovani.it) and [studyintorino.it](https://www.studyintorino.it)
 
 ---
 
-## <a id="coworking"></a>💼 Coworking and study spaces (7 locations)
+## Study-friendly cafés {#study-cafes}
 
-For those seeking professional spaces, comfort and extra services (printers, meeting rooms, unlimited coffee).
+An honest observation: unlike Paris or London, Turin's café culture does not strongly encourage laptop study. Institutional spaces (libraries, EDISU halls, Diffused Campus) matter far more here than in typical European student cities. That said, some venues work well for shorter sessions.
 
-### Top 3 coworking spaces
+### Combo Turin ⭐
+📍 Corso Regina Margherita 128, Turin
+💰 **€6 half day** (water + 2 coffees included) · **€10 full day** · **€16 with lunch**
+⏰ 7:00-23:00 (Fri-Sat until midnight)
+🌐 [thisiscombo.com](https://www.thisiscombo.com)
 
-#### 1. OGR - Officine Grandi Riparazioni
-📍 Corso Castelfidardo 22, Turin  
-⏰ Variable according to events  
-🎨 Free Wi-Fi, bar, cultural center  
+Best value among coworking-cafés. Large tables, international atmosphere. Prices include beverages.
+
+### Orso Laboratorio Caffè
+📍 Via Berthollet 30, Turin
+☕ Specialty coffee, WiFi 300-500 Mbps, outlets, outdoor seating
+⏰ From 7:45
+
+The favorite specialty coffee spot for San Salvario students. Some of the fastest WiFi in town.
+
+### Circolo dei Lettori
+📍 Via Bogino 9, Turin (17th-century palazzo)
+⏰ 9:30-21:00 (Sun occasional)
+💳 Free access to the palazzo; Sala Artisti with 20 workstations requires Carta Io Leggo (€20, €15 students)
+☕ Internal Barney's bar
+
+Stunning atmosphere in a 17th-century palazzo. The ground floor is accessible without membership for reading and studying.
+
+### Nora Book & Coffee
+📍 Via delle Orfane 24/D, Turin
+📚 Bookshop-café with library-like atmosphere
+
+A bookshop-café in the historic center. Quiet environment, perfect for those seeking library-level concentration with café comfort.
+
+### Bere in Tipografia / Studiare in Tipografia
+📍 Piazza Santa Giulia area, Vanchiglia
+📚 Upstairs floor dedicated to study ("Studiare in Tipografia")
+💰 Student-friendly pricing
+
+The study institution of Vanchiglia. The upstairs floor is designed specifically for students.
+
+### Convitto Cafè
+📍 Via San Francesco da Paola 8, Turin
+⏰ Mon-Sat 8:30-19:30 · Sun 14:00-19:30
+☕ Artisan cakes, excellent coffee
+
+Very popular with students. Great pastries for study breaks.
+
+### Other study-friendly cafés
+
+- **Mara dei Boschi** - Via Berthollet 30 and Piazza Carlo Emanuele II 21, open Sundays
+- **Costadoro Social Coffee Factory** - Via Teofilo Rossi di Montelera 2, fast WiFi, garden
+- **EXKi** - Via Arcivescovado 2E, organic, open Sundays
+- **Casa del Quartiere San Salvario** - Via Oddino Morgari 14, free WiFi, indoor and outdoor tables
+
+---
+
+## Coworking with student pricing {#coworking}
+
+### OGR Social Table ⭐
+📍 Corso Castelfidardo 22, Turin (OGR - Officine Grandi Riparazioni)
+🔌 25-meter communal table with USB ports and outlets
+☕ Free WiFi, café service
 🌐 [ogrtorino.it](https://www.ogrtorino.it)
 
-**Why choose it:** International-level cultural center. Free Wi-Fi, events, exhibitions. Perfect for studying in a creative environment.
+The 25-meter table at OGR is one of the most unique study spaces in Italy. Built-in USB, free WiFi, international cultural center.
 
-#### 2. Open - Fondazione Time2
-📍 Via Avellino (area), Turin  
-👥 24 indoor + 20 outdoor workstations  
-⏰ Mon-Tue 9:00-18:00, Wed-Fri 9:00-20:30  
-🔌 Wi-Fi, outlets, air conditioning, free water, booking required  
-🌐 [open.fondazionetime2.it](https://www.open.fondazionetime2.it)
+### Nodo Borgodora
+📍 Via Borgo Dora 33, Turin
+💰 **€5 "coworking formula"** (Tue-Fri afternoons 15:00-19:00, includes coffee/tea)
+🎁 Every 5th visit is free
 
-**Why choose it:** Modern spaces, air conditioning, free water. Booking required.
+Affordable and original formula. Perfect for focused afternoon study sessions.
 
-#### 3. Circolo dei Lettori - Sala Artisti
-📍 Via Bogino 9, Turin  
-👥 20 workstations  
-⏰ Mon-Sat 9:30-17:30  
-💳 Carta Io Leggo required (20€, 15€ students)  
-☕ Internal Barney's bar  
-🌐 [circololettori.it](https://www.circololettori.it)
+### Open - Fondazione Time2
+📍 Via Lombroso area (San Salvario), Turin
+👥 24 indoor + 20 outdoor seats
+⏰ Mon-Tue 9:00-18:00 · Wed-Fri 9:00-20:30
+🔌 WiFi, outlets, climate control, free water
+💰 **Completely free** (booking required via website)
 
-**Why choose it:** Refined cultural atmosphere, quality bar, guaranteed silence. Great investment for serious students.
+24 free seats with all amenities. Booking required.
 
-### Other coworking spaces
+### Toolbox Coworking
+📍 Via Agostino da Montefeltro 2, Turin
+💰 Day pass ~€15
+🔌 Fiber optic WiFi, 150+ workstations
 
-- **AL DUDES Coworking** - Porta Susa area, flexible workstations
-- **Principi HUB** - Via Antonio Banfo, from 95€/month
-- **Vol.To Coworking** - Half day 6.50€, full day 10€
-- **Centro Pari Opportunità (CPO)** - Various locations
+The largest coworking in Turin. Former industrial factory converted.
 
----
+### Coworking with 24/7 access (for subscribers)
 
-## <a id="parks"></a>🌳 Parks with Wi-Fi (2 locations)
+If you truly need overnight access, these offer 24/7 to members:
+- **Copernico Garibaldi** - Corso Valdocco 2 (€150-250/month)
+- **Bliss Coworking** - Via Valentino Carrera 111B
+- **Toco Coworking** - Via Brandizzo 9 (more affordable)
+- **Talent Garden Fondazione Agnelli** - Via Giuseppe Giacosa 38
 
-For those who love studying outdoors. Perfect for sunny spring and summer days.
-
-### 1. Valentino Park
-📍 Lungo Po, Turin  
-🌳 421,000 sqm, Wi-Fi in some areas, Po river view  
-⏰ Always open
-
-**Why choose it:** THE Turin park. Po river view, immense spaces, Wi-Fi in some areas. Perfect for outdoor studying.
-
-### 2. Colletta Park
-📍 Mirafiori area, Turin  
-🌳 448,000 sqm, bike path, picnic area, Wi-Fi  
-⏰ Always open
-
-**Why choose it:** Huge park in Mirafiori area. Ideal for those living in southern Turin.
+These are professional-priced options (€150-250/month), not free. But they are the only true 24/7 spaces in Turin.
 
 ---
 
-## <a id="polo-900"></a>🏛️ Polo del 900 (2 specialized locations)
+## Hidden gems other guides miss {#hidden-gems}
 
-Libraries specialized in 20th century history, anti-fascism and resistance. Perfect for history, philosophy and political science students.
+**Polo del '900 - Free reading rooms**
+📍 Via del Carmine 14, Turin
+⏰ Mon-Fri 9:30-13:30 / 14:30-18:30
+📱 Booking at polodel900.it
+📚 Over 300,000 volumes on the 20th century in restored historic palaces
 
-### 1. Polo del '900 - Palazzo San Daniele reading room
-📍 Via del Carmine 14, Turin  
-📚 Over 300,000 volumes on the 20th century  
-⏰ Mon-Fri 9:30-13:30 / 14:30-18:30  
-📱 Booking required  
-🌐 [polodel900.it](https://www.polodel900.it)
+Free reading rooms in magnificent historic buildings. Few students know about them.
 
-**Why choose it:** Unique 20th century book collection in Italy. Perfect for contemporary history theses.
+**Variante Bunker** ⭐
+📍 Via Paganini 0/200, Turin
+👥 40 silent study seats + group room
+⏰ **Mon-Fri 9:00-23:00**
+🔌 WiFi, outlets, bar with 15% student discount
+💳 ARCI card required (available on-site)
 
-### 2. Polo del '900 - Istoreto reading room
-📍 Corso Valdocco 4/A (3rd floor), Turin  
-⏰ Mon-Thu 10:00-18:00, Fri 10:00-13:00  
-📚 Anti-fascism and Resistance history
+Free access, open until 23:00. One of the best evening spaces after EDISU halls. The ARCI card can be obtained on-site.
 
-**Why choose it:** Specialized in Anti-fascism and Resistance history. Ideal for specific research.
+**Tomato Backpackers Hotel - Coworking area**
+📍 Via Silvio Pellico 11, Turin
+🔌 WiFi 300-500 Mbps
+💰 Open to non-guests too
 
----
+A hostel that opens its coworking space to everyone. Among the fastest WiFi in the city.
 
-## <a id="comparison-table"></a>📊 Comparison table: find the perfect space
+**EDISU Olimpia (new)**
+📍 Lungodora Siena 102/A, Turin
+⏰ Mon-Fri 7:30-18:45 · Sat-Sun 8:00-18:45
 
-| **Type** | **Seats** | **Wi-Fi** | **Extended hours** | **Silence** | **Booking** | **Cost** |
-|----------|-----------|-----------|-------------------|--------------|--------------|-----------|
-| **EDISU halls** | ⭐⭐⭐⭐⭐ | ✅ Free | ✅ Until 2:00 AM | ⭐⭐⭐⭐ | 📱 Campus App | Free |
-| **Public libraries** | ⭐⭐⭐⭐ | ✅ Free | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ❌ No | Free |
-| **Politecnico libraries** | ⭐⭐⭐⭐ | ✅ Free | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ❌ No | Free |
-| **UniTo libraries** | ⭐⭐⭐⭐ | ✅ Free | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 📱 Affluences | Free |
-| **Diffused Campus** | ⭐⭐⭐ | ✅ Free | ⭐⭐⭐⭐ | ⭐⭐ | ❌ No | Free |
-| **Bars & cafés** | ⭐⭐ | ⭐⭐ 1h free | ⭐⭐⭐⭐ | ⭐⭐ | ❌ No | Purchase |
-| **Coworking** | ⭐⭐⭐ | ✅ Unlimited | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 📱 Often yes | 6-95€ |
-| **Parks** | ⭐⭐⭐⭐⭐ | ⭐ Some areas | ⭐⭐⭐⭐⭐ | ⭐⭐ | ❌ No | Free |
+New hall near Campus Luigi Einaudi. Convenient for Vanchiglia students.
 
 ---
 
-## <a id="how-to-choose"></a>🎯 How to choose the right study space
+## Where to study neighborhood by neighborhood {#neighborhoods}
 
-### If you need:
+### San Salvario
+The closest student neighborhood to PoliTo (15-20 minutes on foot from Corso Duca degli Abruzzi). Study spots: Biblioteca Natalia Ginzburg (Via Lombroso 16), EDISU Giuria, Orso Laboratorio Caffè, Tomato Backpackers, Casa del Quartiere (Via Morgari 14, free tables with WiFi). Transit to UniTo Centro: 20-25 minutes on foot or 15 by bus/tram 16.
 
-#### 🔇 Absolute silence for difficult exams
-✅ Public libraries (Central, Passerin d'Entrèves)  
-✅ Politecnico libraries (main campus)  
-✅ UniTo libraries (Bobbio)  
-✅ National Library
+### Vanchiglia
+Ideal for CLE students. Campus Luigi Einaudi with Biblioteca Bobbio (850 seats) is 5-10 minutes from Piazza Santa Giulia. Café: Bere in Tipografia with dedicated upstairs study space. Biblioteca Geisser (Corso Casale 5, Parco Michelotti) as a quiet alternative. Transit to PoliTo: 30-35 minutes on foot or 20 by bus.
 
-#### 🌙 Study until late night (exam period)
-✅ EDISU Buonarroti hall (until 2:00 AM)  
-✅ EDISU Verdi hall (until 2:00 AM)  
-✅ Comala (until 0:30)  
-✅ Combo Turin (until midnight)
+### Centro (Via Po corridor)
+The densest concentration of study options. EDISU Verdi 26 (308 seats, open until midnight or 2 AM), Murazzi Student Zone, Palazzo Nuovo with all humanities libraries, Biblioteca Nazionale (Piazza Carlo Alberto 3), Polo del '900. Cafés: Circolo dei Lettori (Via Bogino 9), Nora Book & Coffee (Via delle Orfane 24/D), OGR Social Table (Corso Castelfidardo 22).
 
-#### 👥 Group study
-✅ Diffused Campus (Comala, Off Topic, CAP10100)  
-✅ Bars & cafés (Combo, Costadoro)  
-✅ Turin Student Zone - Murazzi
+### Crocetta
+PoliTo's home turf. Beyond the libraries and Castelfidardo study room, Comala (Corso Ferrucci 65/A) works as a free space with WiFi and bar. Toolbox Coworking is 15 minutes south on foot. Biblioteca Bonhoeffer (Corso Corsica 55) as the nearest civic library.
 
-#### 💻 Laptop work with electrical outlets
-✅ Politecnico libraries (outlets everywhere)  
-✅ Costadoro Social Coffee Factory  
-✅ Coworking (Open, Principi HUB)  
-✅ EDISU halls
+### Aurora
+Close to CLE (10-15 minutes on foot from Porta Palazzo). Biblioteca Calvino (Lungo Dora Agrigento 94) and Biblioteca Primo Levi (Via Leoncavallo 17). EDIT Torino (Piazza Teresa Noce 15/A) combines bar and Impact Hub coworking.
 
-#### ☀️ Outdoor study
-✅ Valentino Park  
-✅ Colletta Park  
-✅ Imbarchino (Valentino Park)  
-✅ Costadoro (garden)
+### Cenisia / San Paolo
+Biblioteca Musicale Andrea Della Corte (Corso Francia 186, Parco della Tesoriera) as a quiet niche option. EDISU Svizzera (Corso Svizzera 185, 180 seats) at the neighborhood boundary. Distance to PoliTo: 15-25 minutes on foot, 10-15 by tram 10 or 13.
 
 ---
 
-## 📱 Essential apps for students in Turin
+## Where to study on Sunday {#sunday}
 
-| App | Purpose | Download |
-|-----|---------|----------|
-| **Campus Piemonte** | Book EDISU halls | iOS / Android |
-| **Affluences** | Book UniTo libraries | iOS / Android |
-| **Turin Public Libraries** | Check schedules and availability | iOS / Android |
-| **StudyInTorino** | Diffused Campus info | [studyintorino.it](https://www.studyintorino.it) |
+Sunday options are extremely scarce in Turin. Here are the only ones:
 
----
-
-## 💡 Pro tips from JungleRent
-
-1. **During exam period** (January-February, June-July): EDISU halls extend hours until 2:00 AM. Book in advance!
-2. **For thesis writing**: National Library for prestigious research, Polo del 900 for 20th century topics
-3. **For group projects**: Diffused Campus or cafés - more relaxed atmosphere
-4. **Summer**: Parks with Wi-Fi and Imbarchino are perfect for outdoor studying
-5. **Winter**: Coworking spaces offer heating, comfort and unlimited coffee
+| Space | Sunday hours | Notes |
+|-------|-------------|-------|
+| EDISU Verdi 26 | 8:30-22:00 (2:00 AM during exams) | App booking |
+| EDISU Michelangelo | 8:30-22:00 (2:00 AM during exams) | App booking |
+| EDISU Olimpia | 8:00-18:45 | — |
+| Mausoleo della Bela Rosin | 15:00-19:00 (14:00-17:00 Nov-Feb) | Only civic library open |
+| Mara dei Boschi | 9:30-19:30 | Café |
+| EXKi | 9:30-19:30 | Organic café |
+| Comala | 10:00-0:30 | Diffused Campus |
+| Imbarchino | 10:00-24:00 | Diffused Campus |
+| 24/7 Coworking | 24/7 for members | Subscribers only |
 
 ---
 
-## 🏠 Looking for accommodation in Turin?
+## Where to study at night (past 22:00) {#night-study}
 
-Finding the perfect study space is important, but having a comfortable room is essential. **JungleRent** helps you find the ideal accommodation near the best study spaces in Turin.
-
-**Why choose JungleRent:**
-- 🏠 Verified rooms near Politecnico and UniTo
-- 📍 Strategic locations close to libraries and study halls
-- 💰 Transparent prices with no surprises
-- 🤝 Support throughout the rental process
-
-[Discover available rooms →](/)
-
----
-
-## 🗺️ Interactive map (coming soon)
-
-We're working on an interactive map with all 57 study spaces, real-time availability and user reviews. Stay tuned!
+| Space | Closing | Cost | Period |
+|-------|---------|------|--------|
+| EDISU Verdi 26 | 00:00 (2:00 AM during exams) | Free | Year-round |
+| EDISU Michelangelo | 00:00 (2:00 AM during exams) | Free | Year-round |
+| EDISU Castelfidardo | 23:30 | Free | Mon-Fri |
+| Variante Bunker | 23:00 | Free (ARCI) | Mon-Fri |
+| Comala | 0:30 | Free | Year-round |
+| Copernico Garibaldi | 24/7 | Subscription | Members |
+| Bliss Coworking | 24/7 | Subscription | Members |
+| Toco Coworking | 24/7 | Subscription | Members |
 
 ---
 
-## ❓ FAQ - Frequently asked questions
+## Booking apps: how they actually work {#booking-apps}
 
-### 1. Which app should I download to book EDISU halls?
-Download **Campus Piemonte** (iOS and Android). Registration with university credentials required.
+Three booking systems coexist in Turin and no guide explains them all together. Here is how they work.
 
-### 2. Are public libraries free?
-Yes, all Turin public libraries are free and open to everyone, including non-residents.
+### Affluences (UniTo libraries)
+- **Where:** all 22 UniTo libraries
+- **Requirement:** UniTo institutional email
+- **How it works:** book a seat, then scan the QR code within one hour of the booked time
+- **Download:** iOS, Android, web
 
-### 3. Can I study in groups at university libraries?
-It depends. Many have silent areas (individual only) and noisy areas (groups allowed). Always check rules at entrance.
+### Campus Piemonte ID Studyroom (EDISU halls)
+- **Where:** Verdi 26, Michelangelo, Principe Amedeo, Giuria
+- **Requirement:** Athena Card (university enrollment)
+- **How it works:** book, scan QR at entry and exit
+- **Download:** iOS, Android, Huawei AppGallery
 
-### 4. Where can I study for free until late?
-EDISU halls (until 2:00 AM during exam period), Comala (until 0:30), Combo Turin (until midnight).
+### TorinoFacile (Central Civic Library)
+- **Where:** 60 reading room seats at the Central Civic Library
+- **Requirement:** TorinoFacile registration
+- **How it works:** book the workstation online
+- **Also on:** Affluences
 
-### 5. What is the University Diffused Campus?
-A project unique in Italy that transforms bars, cafés and public spaces into informal study rooms for students. Free Wi-Fi and outlets included.
-
-### 6. Where can I study outdoors?
-Valentino Park (Wi-Fi in some areas), Colletta Park, Imbarchino (in Valentino Park with bar).
-
-### 7. Do I need a university card to access libraries?
-For Politecnico and UniTo libraries, yes. For public libraries and Diffused Campus spaces, no.
+### PoliTo: no app
+Politecnico does not use any booking app. Study area access is via PoliTo badge.
 
 ---
 
-## 📚 Useful resources
+## WiFi: three networks, one guide {#wifi}
 
-- [Turin Public Libraries](https://bfrfrancesco.wixsite.com/bfrfrancesco) - Complete list with schedules
+### Eduroam
+Works across all UniTo, PoliTo and EDISU buildings. Configure via eduroam CAT tool with university SCU credentials. The most reliable network.
+
+### FreeTorinoWiFi
+Covers all civic libraries and many public spaces. Limit: 12 hours/day or 750 MB. Registration with phone number only (no Italian documents needed). Perfect for international students.
+
+### Individual venue WiFi
+Variable quality. The fastest: Orso Caffè and Tomato Backpackers (300-500 Mbps). Outdoor spaces at Comala are noticeably slower.
+
+---
+
+## Peak times and seat-finding strategy {#peak-times}
+
+University libraries and EDISU halls reach capacity between 10:00-13:00 and 14:30-17:00 on weekdays. Pressure is extreme during January-February and June-July exam sessions.
+
+**Guaranteed strategy:** arrive before 9:00 on weekdays. Saturday mornings at civic libraries (9:00-15:00) are consistently quieter than weekday equivalents. Evening sessions after 19:00 at Verdi 26 or Michelangelo face less competition but require advance booking.
+
+**Summer (July-August):** reduced hours but dramatically fewer students. The Central Civic Library typically closes August 8-31.
+
+---
+
+## Copy shops near campuses {#copy-shops}
+
+**Near PoliTo:**
+- **Copysprinter** (3 locations including Corso Duca degli Abruzzi 10/D) - Archive of ~3,000 lecture notes, copies from €0.032 with SPRINTERCARD
+- **Fulwer Design** (Via Marco Polo 41) - Open weekends, thesis binding in 2 hours
+
+**Near UniTo (Via Po):**
+- **Kromokopie** (Corso San Maurizio 53) - Thesis binding in 2 hours, competitive prices
+
+---
+
+## Comparison table {#comparison-table}
+
+| Type | Seats | WiFi | Evening hours | Silence | Booking | Cost |
+|------|-------|------|--------------|---------|---------|------|
+| **EDISU halls** | ⭐⭐⭐⭐⭐ | ✅ Free | ✅ Until 2:00 AM | ⭐⭐⭐⭐ | 📱 Campus Piemonte | Free |
+| **UniTo libraries** | ⭐⭐⭐⭐⭐ | ✅ Eduroam | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 📱 Affluences | Free |
+| **PoliTo libraries** | ⭐⭐⭐⭐ | ✅ Eduroam | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | 🪪 Badge | Free |
+| **Civic libraries** | ⭐⭐⭐⭐ | ✅ FreeTorinoWiFi | ⭐⭐ | ⭐⭐⭐⭐⭐ | ❌/TorinoFacile | Free |
+| **Diffused Campus** | ⭐⭐⭐ | ✅ Variable | ⭐⭐⭐⭐ | ⭐⭐ | ❌ No | Free |
+| **Cafés** | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ❌ No | Purchase |
+| **Coworking** | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 📱 Often yes | €5-250/month |
+
+---
+
+## FAQ {#faq}
+
+### Is there a 24-hour study space in Turin?
+No. No free 24/7 study space exists. The coworking spaces Copernico, Bliss and Toco offer 24/7 access to paying members (€150-250/month). The best free option is EDISU Verdi and Michelangelo, open until 2:00 AM during exam sessions.
+
+### Where can I study on Sunday?
+Options are very limited. EDISU Verdi and Michelangelo open 8:30-22:00. Mausoleo della Bela Rosin is the only civic library open Sunday (afternoon only). Comala and Imbarchino stay open. Some cafés like Mara dei Boschi and EXKi open on Sundays.
+
+### Which apps do I need to download?
+It depends on where you study. Affluences for UniTo libraries. Campus Piemonte for EDISU halls. TorinoFacile for the Central Civic Library. PoliTo does not use apps, it works with badges.
+
+### How does WiFi work in civic libraries?
+It is called FreeTorinoWiFi. Limit of 12 hours per day or 750 MB. No university credentials needed. Registration with SPID, TorinoFacile or phone number.
+
+### What changes during exam sessions?
+EDISU Verdi and Michelangelo stay open until 2:00 AM daily. Smaller halls extend hours (Giuria and Ormea add Sat-Sun, Svizzera extends to 20:00). Civic libraries maintain normal hours.
+
+### Are civic libraries open in August?
+Reduced hours. The Central Civic Library typically closes August 8-31. Always check the BI.TO website.
+
+### I am an international student. Where can I study without Italian credentials?
+Civic libraries with FreeTorinoWiFi accept registration with phone number. The Diffused Campus is open to everyone. Combo Turin requires no cards. EDISU halls require the Athena Card (university enrollment). UniTo libraries require institutional email for Affluences.
+
+### What time should I arrive to find a seat?
+Before 9:00 on weekdays. Saturday mornings at civic libraries are quieter. After 19:00 at Verdi or Michelangelo there are fewer people but booking is required.
+
+---
+
+## Useful resources
+
 - [EDISU Piemonte](https://www.edisu.piemonte.it) - Study halls and services
-- [Politecnico Library System](https://www.biblio.polito.it) - PoliTo libraries
-- [UniTo Library System](https://www.sba.unito.it) - UniTo libraries
-- [StudyInTorino](https://www.studyintorino.it) - Diffused Campus and services
+- [BI.TO - Civic libraries](https://bct.comune.torino.it) - 18+ free branches
+- [PoliTo libraries](https://www.biblio.polito.it) - Politecnico library system
+- [UniTo libraries](https://www.sba.unito.it) - 22 specialized libraries
+- [Study in Torino](https://www.studyintorino.it) - Diffused Campus
+- [Polo del '900](https://www.polodel900.it) - Free reading rooms
 
 ---
 
-## Related articles
+> **Related guides for students in Turin**
+> - [Politecnico di Torino: complete guide](/blog/politecnico-torino-guida-completa)
+> - [University of Turin: complete guide](/blog/universita-torino-guida-completa)
+> - [Sustainable mobility in Turin for students](/blog/mobilita-sostenibile-torino-studenti)
+> - [San Salvario safety: real data and zones](/blog/san-salvario-sicurezza-dati-reali-2026)
+> - [Monthly budget for students in Turin](/blog/budget-mensile-studente-torino-2026)
+> - [Health insurance for international students](/blog/assicurazione-sanitaria-studenti-internazionali-italia-2026)
 
-- [Sustainable mobility in Turin: student transport guide](/blog/mobilita-sostenibile-torino-studenti) - GTT passes, bike sharing and connections
-- [San Salvario: guide for students](/blog/san-salvario-guida-studenti) - Bars, restaurants and student life
-- [Where to live in Turin for Politecnico students](/blog/dove-vivere-torino-studenti-politecnico) - Best neighborhoods near campus
-- [Gyms in Turin for students](/blog/palestre-torino-studenti-guida-completa) - Low-cost options and CUS
-- [University of Turin: complete guide](/blog/universita-torino-guida-completa) - Faculties, services and campus life
-- [Politecnico di Torino: complete guide](/blog/politecnico-torino-guida-completa) - Programs, admissions and research
+📍 **Download the full CSV:** [Study spaces Turin](/resources/aule_studio_torino.csv)
 
 ---
 
-*Last updated: January 2026. Data verified with official sources and direct visits.*
-
-*Looking for a room near Turin's best study spaces? [Contact JungleRent](/) for personalized advice on university neighborhoods.*
+*Last updated: March 2026. Data verified with official sources, February 2026 municipal reorganization, and EDISU 2025-2026 schedules.*

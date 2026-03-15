@@ -2557,52 +2557,72 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "aule-studio-torino-guida-completa",
     category: "students",
-    date: "2025-11-17",
+    date: "2026-03-15",
     author: "Jungle Rent Team",
     image: "/images/aule-studio-torino.jpg",
-    readTime: 25,
+    readTime: 30,
     content: "aule-studio-torino-guida-completa",
     translations: {
       it: {
-        title: "Aule studio Torino: 18 posti gratis con orari e WiFi",
-        excerpt: "Biblioteche aperte fino a mezzanotte, sale studio 24/7 e spazi silenziosi. Mappa interattiva.",
+        title: "Aule studio Torino: 60+ spazi gratis con orari, WiFi e app (2026)",
+        excerpt: "Guida completa a tutti gli spazi studio di Torino: sale EDISU aperte fino alle 2, biblioteche BI.TO, Campus Diffuso, caffè study-friendly e gemme nascoste. Orari verificati marzo 2026.",
         seo: {
-          title: "Aule studio Torino: 18 posti gratis con orari e WiFi",
-          description: "Biblioteche aperte fino a mezzanotte, sale studio 24/7 e spazi silenziosi. Mappa interattiva e prenotazioni.",
+          title: "Aule studio Torino 2026: 60+ spazi gratis con orari e WiFi",
+          description: "Guida definitiva a 60+ spazi studio a Torino: sale EDISU fino alle 2:00, biblioteche BI.TO, app Affluences e Campus Piemonte, WiFi e studio notturno. Aggiornata marzo 2026.",
           keywords: [
             "aule studio torino",
-            "spazi studio torino",
-            "biblioteche torino",
-            "studenti torino",
-            "luoghi studio torino"
+            "dove studiare torino",
+            "biblioteche torino studenti",
+            "sale studio edisu torino",
+            "dove studiare torino notte",
+            "aule studio torino domenica",
+            "biblioteche torino agosto",
+            "app prenotazione aule studio torino",
+            "campus diffuso torino",
+            "spazi studio gratuiti torino"
           ]
         },
-        tags: ["Studenti", "Aule studio", "Torino", "Biblioteche", "Guide"],
+        tags: ["Studenti", "Aule studio", "Torino", "Biblioteche", "EDISU", "Guide"],
         faqs: [
-          { question: "Quali sono le aule studio più frequentate?", answer: "Biblioteche universitarie e spazi co-working dedicati agli studenti." },
-          { question: "Ci sono aule studio aperte 24 ore?", answer: "Alcune strutture private offrono accesso 24/7 con tessera." },
-          { question: "Come prenotare un posto in aula studio?", answer: "Attraverso i siti delle biblioteche o app dedicate." }
+          { question: "Esiste uno spazio studio aperto 24 ore a Torino?", answer: "No. Non esiste nessuno spazio gratuito 24/7. I coworking Copernico, Bliss e Toco offrono accesso 24/7 ai membri (€150-250/mese). Le sale EDISU Verdi e Michelangelo chiudono alle 2:00 in sessione." },
+          { question: "Dove posso studiare di domenica a Torino?", answer: "Le sale EDISU Verdi e Michelangelo aprono 8:30-22:00. Il Mausoleo della Bela Rosin è l'unica biblioteca civica aperta la domenica (pomeriggio). Comala e Imbarchino restano aperti." },
+          { question: "Quali app devo scaricare per prenotare le aule studio?", answer: "Affluences per le biblioteche UniTo, Campus Piemonte per le sale EDISU, TorinoFacile per la Civica Centrale. Il PoliTo non usa app, funziona con badge." },
+          { question: "Come funziona il WiFi nelle biblioteche civiche?", answer: "Si chiama FreeTorinoWiFi: 12 ore/giorno o 750 MB. Registrazione con numero di telefono, non servono credenziali universitarie." },
+          { question: "Cosa cambia durante la sessione d'esami?", answer: "Le sale EDISU Verdi e Michelangelo restano aperte fino alle 2:00 tutti i giorni. Le sale minori estendono gli orari. Le biblioteche civiche mantengono orari normali." },
+          { question: "Le biblioteche civiche sono aperte in agosto?", answer: "Orari ridotti. La Civica Centrale chiude tipicamente dall'8 al 31 agosto. Verifica sul sito BI.TO." },
+          { question: "Sono uno studente internazionale, dove posso studiare?", answer: "Le biblioteche civiche con FreeTorinoWiFi accettano registrazione con numero di telefono. Il Campus Diffuso è aperto a tutti. Per le sale EDISU serve la Athena Card." },
+          { question: "A che ora conviene arrivare per trovare posto?", answer: "Prima delle 9:00 nei giorni feriali. Il sabato mattina nelle civiche è più tranquillo. Dopo le 19:00 a Verdi o Michelangelo c'è meno gente." }
         ]
       },
       en: {
-        title: "Study spaces Turin: 18 free spots with hours & WiFi",
-        excerpt: "Libraries open until midnight, 24/7 study rooms and quiet spaces. Interactive map.",
+        title: "Study spaces Turin: 60+ free spots with hours, WiFi & apps (2026)",
+        excerpt: "Complete guide to all study spaces in Turin: EDISU halls open until 2 AM, BI.TO libraries, Diffused Campus, study-friendly cafés and hidden gems. Verified hours March 2026.",
         seo: {
-          title: "Study spaces Turin: 18 free spots with hours & WiFi",
-          description: "Libraries open until midnight, 24/7 study rooms and quiet spaces. Interactive map and booking info.",
+          title: "Study spaces Turin 2026: 60+ free spots with hours & WiFi",
+          description: "Definitive guide to 60+ study spaces in Turin: EDISU halls until 2:00 AM, BI.TO libraries, Affluences and Campus Piemonte apps, WiFi and night study. Updated March 2026.",
           keywords: [
             "study rooms turin",
             "study spaces turin",
-            "libraries turin",
-            "students turin",
-            "study places turin"
+            "where to study turin",
+            "libraries turin students",
+            "edisu study halls turin",
+            "study at night turin",
+            "study sunday turin",
+            "booking app study rooms turin",
+            "diffused campus turin",
+            "free study spaces turin"
           ]
         },
-        tags: ["Students", "Study rooms", "Turin", "Libraries", "Guides"],
+        tags: ["Students", "Study rooms", "Turin", "Libraries", "EDISU", "Guides"],
         faqs: [
-          { question: "What are the most frequented study rooms?", answer: "University libraries and co-working spaces dedicated to students." },
-          { question: "Are there study rooms open 24 hours?", answer: "Some private facilities offer 24/7 access with a card." },
-          { question: "How to book a study room seat?", answer: "Through library websites or dedicated apps." }
+          { question: "Is there a 24-hour study space in Turin?", answer: "No free 24/7 space exists. Copernico, Bliss and Toco coworking offer 24/7 to paying members (€150-250/month). EDISU Verdi and Michelangelo close at 2:00 AM during exam sessions." },
+          { question: "Where can I study on Sunday in Turin?", answer: "EDISU Verdi and Michelangelo open 8:30-22:00. Mausoleo della Bela Rosin is the only civic library open Sunday (afternoon). Comala and Imbarchino stay open." },
+          { question: "Which apps do I need to book study rooms?", answer: "Affluences for UniTo libraries, Campus Piemonte for EDISU halls, TorinoFacile for the Central Civic Library. PoliTo uses no app, just badges." },
+          { question: "How does WiFi work in civic libraries?", answer: "It is called FreeTorinoWiFi: 12 hours/day or 750 MB. Registration with phone number only, no university credentials needed." },
+          { question: "What changes during exam sessions?", answer: "EDISU Verdi and Michelangelo stay open until 2:00 AM daily. Smaller halls extend hours. Civic libraries maintain normal hours." },
+          { question: "Are civic libraries open in August?", answer: "Reduced hours. The Central Civic Library typically closes August 8-31. Always check the BI.TO website." },
+          { question: "I am an international student, where can I study?", answer: "Civic libraries with FreeTorinoWiFi accept registration with phone number. The Diffused Campus is open to everyone. EDISU halls require the Athena Card." },
+          { question: "What time should I arrive to find a seat?", answer: "Before 9:00 on weekdays. Saturday mornings at civic libraries are quieter. After 19:00 at Verdi or Michelangelo there are fewer people." }
         ]
       }
     }

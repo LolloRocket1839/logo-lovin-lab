@@ -985,6 +985,244 @@ export const detailedStudySpaces: DetailedStudySpace[] = [
       access24h: false
     },
     note: 'Nel cuore di Vanchiglia, quartiere trendy e artistico'
+  },
+  // New spaces from March 2026 research
+  {
+    id: 31,
+    category: 'caffetteria',
+    name: 'Combo Torino',
+    address: 'Corso Regina Margherita, 128, 10152 Torino',
+    district: 'Aurora',
+    website: 'https://www.thisiscombo.com/',
+    hours: {
+      monday: '07:00 - 23:00',
+      tuesday: '07:00 - 23:00',
+      wednesday: '07:00 - 23:00',
+      thursday: '07:00 - 23:00',
+      friday: '07:00 - 00:00',
+      saturday: '07:00 - 00:00',
+      sunday: '08:00 - 22:00'
+    },
+    features: {
+      silence: 'moderato',
+      wifi: 'si',
+      powerOutlets: 'numerose',
+      tables: 'Numerosi',
+      hasBar: true,
+      barDescription: 'Caffetteria + pranzo',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'totale',
+      access24h: false
+    },
+    note: '€6 mezza giornata (acqua+2 caffè), €10 giornata, €16 con pranzo'
+  },
+  {
+    id: 32,
+    category: 'spazi_polivalenti',
+    name: 'Variante Bunker',
+    address: 'Via Paganini 0/200, 10154 Torino',
+    district: 'Aurora',
+    website: 'https://www.arcitorino.it/',
+    hours: {
+      monday: '09:00 - 23:00',
+      tuesday: '09:00 - 23:00',
+      wednesday: '09:00 - 23:00',
+      thursday: '09:00 - 23:00',
+      friday: '09:00 - 23:00',
+      saturday: 'Chiuso',
+      sunday: 'Chiuso'
+    },
+    features: {
+      silence: 'assoluto',
+      wifi: 'si',
+      powerOutlets: 'numerose',
+      tables: '40 posti studio + sala gruppi',
+      hasBar: true,
+      barDescription: 'Bar con sconto 15% studenti',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    capacity: '40 posti',
+    note: 'Gratuito con tessera ARCI (disponibile in loco), aperto fino alle 23'
+  },
+  {
+    id: 33,
+    category: 'caffetteria',
+    name: 'Nora Book & Coffee',
+    address: 'Via delle Orfane, 24/D, 10122 Torino',
+    district: 'Centro',
+    hours: {
+      monday: '09:00 - 19:30',
+      tuesday: '09:00 - 19:30',
+      wednesday: '09:00 - 19:30',
+      thursday: '09:00 - 19:30',
+      friday: '09:00 - 19:30',
+      saturday: '10:00 - 19:30',
+      sunday: 'Chiuso'
+    },
+    features: {
+      silence: 'moderato',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: true,
+      barDescription: 'Caffè e libri',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Libreria-caffè con atmosfera da biblioteca, centro storico'
+  },
+  {
+    id: 34,
+    category: 'spazi_polivalenti',
+    name: 'OGR Social Table',
+    address: 'Corso Castelfidardo, 22, 10138 Torino',
+    district: 'Crocetta',
+    website: 'https://www.ogrtorino.it/',
+    hours: {
+      monday: '10:00 - 20:00',
+      tuesday: '10:00 - 20:00',
+      wednesday: '10:00 - 20:00',
+      thursday: '10:00 - 20:00',
+      friday: '10:00 - 20:00',
+      saturday: '10:00 - 20:00',
+      sunday: '10:00 - 20:00'
+    },
+    features: {
+      silence: 'moderato',
+      wifi: 'si',
+      powerOutlets: 'numerose',
+      tables: 'Tavolo comunitario 25m con USB',
+      hasBar: true,
+      barDescription: 'Servizio bar OGR',
+      hasBathrooms: true,
+      parking: 'vicino',
+      disabledAccess: 'totale',
+      access24h: false
+    },
+    note: 'Tavolo da 25 metri con porte USB integrate, centro culturale internazionale'
+  },
+  {
+    id: 35,
+    category: 'coworking',
+    name: 'Nodo Borgodora',
+    address: 'Via Borgo Dora, 33, 10152 Torino',
+    district: 'Aurora',
+    hours: {
+      monday: 'Chiuso',
+      tuesday: '15:00 - 19:00',
+      wednesday: '15:00 - 19:00',
+      thursday: '15:00 - 19:00',
+      friday: '15:00 - 19:00',
+      saturday: 'Chiuso',
+      sunday: 'Chiuso'
+    },
+    features: {
+      silence: 'moderato',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: true,
+      barDescription: 'Caffè/tè incluso',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: '€5 formula coworking (include caffè/tè), ogni 5 visite una gratis'
+  },
+  {
+    id: 36,
+    category: 'caffetteria',
+    name: 'Bere in Tipografia / Studiare in Tipografia',
+    address: 'Piazza Santa Giulia, 10124 Torino',
+    district: 'Vanchiglia',
+    hours: {
+      monday: '08:00 - 00:00',
+      tuesday: '08:00 - 00:00',
+      wednesday: '08:00 - 00:00',
+      thursday: '08:00 - 00:00',
+      friday: '08:00 - 02:00',
+      saturday: '08:00 - 02:00',
+      sunday: '09:00 - 00:00'
+    },
+    features: {
+      silence: 'moderato',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi (piano studio dedicato)',
+      hasBar: true,
+      barDescription: 'Caffè e drink',
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Piano superiore dedicato allo studio ("Studiare in Tipografia"), prezzi student-friendly'
+  },
+  {
+    id: 37,
+    category: 'edisu',
+    name: 'Sala Studio EDISU Olimpia',
+    address: 'Lungodora Siena, 102/A, 10153 Torino',
+    district: 'Vanchiglia',
+    email: 'edisu@piemonte.it',
+    website: 'https://www.edisu.piemonte.it/',
+    hours: {
+      monday: '7:30 - 18:45',
+      tuesday: '7:30 - 18:45',
+      wednesday: '7:30 - 18:45',
+      thursday: '7:30 - 18:45',
+      friday: '7:30 - 18:45',
+      saturday: '8:00 - 18:45',
+      sunday: '8:00 - 18:45'
+    },
+    features: {
+      silence: 'assoluto',
+      wifi: 'si',
+      powerOutlets: 'alcune',
+      tables: 'Numerosi',
+      hasBar: false,
+      hasBathrooms: true,
+      parking: 'parziale',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'Nuova sala EDISU vicino al Campus Luigi Einaudi'
+  },
+  {
+    id: 38,
+    category: 'caffetteria',
+    name: 'Tomato Backpackers - Area Coworking',
+    address: 'Via Silvio Pellico, 11, 10125 Torino',
+    district: 'San Salvario',
+    website: 'https://www.tomatobackpackers.com/',
+    hours: {
+      monday: '08:00 - 22:00',
+      tuesday: '08:00 - 22:00',
+      wednesday: '08:00 - 22:00',
+      thursday: '08:00 - 22:00',
+      friday: '08:00 - 22:00',
+      saturday: '08:00 - 22:00',
+      sunday: '08:00 - 22:00'
+    },
+    features: {
+      silence: 'informale',
+      wifi: 'ultra-veloce',
+      powerOutlets: 'numerose',
+      tables: 'Numerosi',
+      hasBar: false,
+      hasBathrooms: true,
+      parking: 'no',
+      disabledAccess: 'parziale',
+      access24h: false
+    },
+    note: 'WiFi 300-500 Mbps, aperto anche ai non ospiti dell\'ostello'
   }
 ];
 
