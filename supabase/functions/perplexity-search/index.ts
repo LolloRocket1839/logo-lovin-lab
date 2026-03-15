@@ -320,16 +320,16 @@ const JUNGLE_RENT_INDEX: SearchableItem[] = [
     excerptEn: "Complete guide to the University of Turin: faculties, campuses, student life and opportunities.",
     url: "/blog/universita-torino-guida-completa",
   },
-  // Aule studio
+  // Aule studio (major update March 2026)
   {
     slug: "aule-studio-torino-guida-completa",
     type: "article",
     category: "students",
-    keywords: ["aule", "studio", "torino", "biblioteca", "studiare", "studenti", "wifi"],
-    title: "Aule studio a Torino: guida completa",
-    titleEn: "Study rooms in Turin: complete guide",
-    excerpt: "Le migliori aule studio e biblioteche di Torino per studenti universitari, con orari e servizi.",
-    excerptEn: "The best study rooms and libraries in Turin for university students, with hours and services.",
+    keywords: ["aule", "studio", "torino", "biblioteca", "studiare", "studenti", "wifi", "edisu", "notte", "domenica", "prenotazione", "affluences", "campus piemonte", "bito", "coworking", "gratis"],
+    title: "Aule studio a Torino: 60+ spazi gratis con orari, WiFi e app (2026)",
+    titleEn: "Study spaces in Turin: 60+ free spots with hours, WiFi & apps (2026)",
+    excerpt: "Guida definitiva a 60+ spazi studio a Torino: sale EDISU fino alle 2:00, biblioteche BI.TO, app Affluences e Campus Piemonte, WiFi e studio notturno. Aggiornata marzo 2026.",
+    excerptEn: "Definitive guide to 60+ study spaces in Turin: EDISU halls until 2:00 AM, BI.TO libraries, Affluences and Campus Piemonte apps, WiFi and night study. Updated March 2026.",
     url: "/blog/aule-studio-torino-guida-completa",
   },
   // Dove mangiare

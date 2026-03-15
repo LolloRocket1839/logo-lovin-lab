@@ -78,8 +78,8 @@
     {
       "id": "get_study_spaces",
       "name": "Find Study Spaces",
-      "description": "Find study spaces in Turin from a directory of 58 locations. Includes libraries, EDISU halls, cafés, coworking spaces, and parks. Filter by category, WiFi availability, or free-text query.",
-      "tags": ["study", "library", "coworking", "students"]
+      "description": "Find study spaces in Turin from a directory of 66 locations. Includes EDISU halls (open until 2 AM during exams), BI.TO civic libraries, UniTo/PoliTo libraries, Campus Diffuso venues, cafés, and coworking. Filter by category, WiFi availability, or free-text query.",
+      "tags": ["study", "library", "coworking", "students", "EDISU", "BI.TO"]
     },
     {
       "id": "get_cheap_eats",

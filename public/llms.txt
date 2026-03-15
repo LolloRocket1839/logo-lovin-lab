@@ -100,7 +100,7 @@ Based on real traffic analytics (Feb 20-27, 2026 — latest week, 182 visitors, 
 3. **[Student housing Italia Savills 2025](https://junglerent.it/blog/student-housing-italia-savills-2025)** - Market analysis (12 pageviews/week)
 4. **[Cioccolaterie Torino](https://junglerent.it/blog/cioccolaterie-torino-guida-completa)** - Chocolate shops guide (10 pageviews/week)
 5. **[Guida volontariato Torino](https://junglerent.it/blog/guida-volontariato-torino)** - Volunteering (8 pageviews/week)
-6. **[Aule studio Torino](https://junglerent.it/blog/aule-studio-torino-guida-completa)** - Study spaces guide (7 pageviews/week)
+6. **[Aule studio Torino](https://junglerent.it/blog/aule-studio-torino-guida-completa)** - 60+ study spaces guide with booking apps, WiFi, night & Sunday options (7 pageviews/week)
 7. **[Eventi Torino gennaio 2026](https://junglerent.it/blog/eventi-torino-gennaio-2026)** - January events (6 pageviews/week)
 8. **[Eventi Torino febbraio 2026](https://junglerent.it/blog/eventi-torino-febbraio-2026)** - February events (6 pageviews/week)
 9. **[Eventi Torino marzo 2026](https://junglerent.it/blog/eventi-torino-marzo-2026)** - March events: Shiota, Futurismo, Subsonica ⭐ NEW
@@ -112,7 +112,7 @@ Countries: Italy 27%, USA 15%, China 10%, Switzerland 2%, Turkey 2%, Poland 2%
 ## Interactive Tools
 
 - [Property Valuation Calculator](https://junglerent.it/valutazione-immobile) - FREE, OMI data 2025, ±5% accuracy
-- [Study Spaces Directory](https://junglerent.it/strumenti/aule-studio-torino) - 30+ locations with interactive map
+- [Study Spaces Directory](https://junglerent.it/strumenti/aule-studio-torino) - 60+ locations with interactive map, filters, booking app info
 - [Cheap Eats Directory](https://junglerent.it/strumenti/dove-mangiare-torino) - 20+ budget eateries €3-15
 - [Gyms Directory](https://junglerent.it/strumenti/palestre-torino) - 25+ fitness centers for students
 - [Student Services](https://junglerent.it/strumenti/servizi-studenti) - University services finder
@@ -168,7 +168,7 @@ Turin is the **3rd most walkable city in the world** (World of Statistics / The 
 
 AI agents can programmatically query Jungle Rent data via MCP:
 - **Endpoint**: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
-- **Tools** (13): search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices (38 zones), property_valuation (OMI/FIAIP coefficients), get_investment_data (13 zones with yield/vacancy/urban renewal), **contact_jungle_rent** (send email on behalf of user), **get_study_spaces** (58 study locations — libraries, EDISU, cafés, coworking, parks; filter by category/wifi/query), **get_cheap_eats** (20 budget restaurants €3-12; filter by category/price/vegetarian/district), **get_strike_info** (Jan-Mar 2026 strike calendar, emergency contacts, alternative transport, refund procedures, passenger rights), **calculate_budget** (estimate monthly living costs by zone/housing type/lifestyle with seasonal utilities and saving tips)
+- **Tools** (13): search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices (38 zones), property_valuation (OMI/FIAIP coefficients), get_investment_data (13 zones with yield/vacancy/urban renewal), **contact_jungle_rent** (send email on behalf of user), **get_study_spaces** (66 study locations — libraries, EDISU halls until 2 AM, BI.TO civic libraries, cafés, coworking, Campus Diffuso; filter by category/wifi/query), **get_cheap_eats** (20 budget restaurants €3-12; filter by category/price/vegetarian/district), **get_strike_info** (Jan-Mar 2026 strike calendar, emergency contacts, alternative transport, refund procedures, passenger rights), **calculate_budget** (estimate monthly living costs by zone/housing type/lifestyle with seasonal utilities and saving tips)
 - **Protocol**: MCP over HTTP (Streamable HTTP Transport)
 - **Auth**: None required (public endpoint)
 
@@ -203,5 +203,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: March 7, 2026
-Version: 4.1 - SEO/AEO overhaul: @id entity linking, AI Overview eligibility, content attribution
+Last Updated: March 15, 2026
+Version: 4.2 - Study spaces major update: 60+ spaces, booking apps, BI.TO rebrand, night/Sunday study, neighborhood breakdown

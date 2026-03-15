@@ -601,7 +601,7 @@ const STUDY_SPACES = [
   { id: 4, cat: "bar", name: "Costadoro Social Coffee Factory", addr: "Via Teofilo Rossi di Montelera 2", cap: "Numerosi tavoli", hrs: "Variabili", feat: "Wi-Fi veloce (1h gratis), prese elettriche, giardino esterno" },
   { id: 5, cat: "bar", name: "Orso Laboratorio Caffè", addr: "Via Berthollet 30", cap: "Salottino", hrs: "Variabili", feat: "Caffetteria specialty, Wi-Fi, prese, dehors" },
   { id: 6, cat: "bar", name: "Bar e Caffè per Studiare", addr: "Via Micca", cap: "Tavoli", hrs: "Variabili", feat: "Wi-Fi, ambiente rilassato" },
-  { id: 7, cat: "biblioteca_nazionale", name: "Biblioteca Nazionale Universitaria", addr: "Piazza Carlo Alberto 3", cap: "Numerosi", hrs: "Lun-Ven 9:00-16:00", feat: "Oltre 1,3M volumi, manoscritti rari, accesso da 16 anni", link: "https://bnuto.cultura.gov.it" },
+  { id: 7, cat: "biblioteca_nazionale", name: "Biblioteca Nazionale Universitaria", addr: "Piazza Carlo Alberto 3", cap: "Numerosi", hrs: "Lun-Ven 8:15-19:55, Sab 10:30-18:00", feat: "763.000+ volumi, manoscritti rari, accesso gratuito da 16 anni, Wi-Fi lento, poche prese", link: "https://bnuto.cultura.gov.it" },
   { id: 8, cat: "biblioteche_civiche", name: "Biblioteca Civica Alberto Geisser", addr: "Corso Casale 5", cap: "Numerosi", hrs: "Lun-Ven variabili", feat: "Aula studio, punto ristoro, Wi-Fi", link: "https://bct.comune.torino.it" },
   { id: 9, cat: "biblioteche_civiche", name: "Biblioteca Civica Bianca Guidetti Serra", addr: "Piazzetta Università dei Mastri Minusieri", cap: "32 posti", hrs: "Variabili", feat: "Centro storico, Wi-Fi", link: "https://bct.comune.torino.it" },
   { id: 10, cat: "biblioteche_civiche", name: "Biblioteca Civica Cascina Marchesa", addr: "Corso Vercelli 141/7", cap: "Numerosi", hrs: "Variabili", feat: "Wi-Fi", link: "https://bct.comune.torino.it" },
@@ -628,7 +628,7 @@ const STUDY_SPACES = [
   { id: 31, cat: "politecnico", name: "Aule Studio Sede Lingotto", addr: "Via Nizza 230 (8Gallery)", cap: "32+44+40", hrs: "Lun-Ven 8:00-19:30", feat: "Moderne, Wi-Fi", link: "https://www.polito.it" },
   { id: 32, cat: "politecnico", name: "Biblioteca Centrale di Architettura 'Roberto Gabetti'", addr: "Viale Mattioli 39 (Castello del Valentino)", cap: "Numerosi", hrs: "Variabili", feat: "Patrimonio architettura, Wi-Fi", link: "https://www.biblio.polito.it" },
   { id: 33, cat: "politecnico", name: "Biblioteca Centrale di Ingegneria", addr: "Corso Duca degli Abruzzi 24", cap: "Vari posti", hrs: "Consultare sito", feat: "Aule silenziose e rumorose, Wi-Fi, prese", link: "https://www.biblio.polito.it" },
-  { id: 34, cat: "unito", name: "Biblioteca Norberto Bobbio", addr: "Via Sant'Ottavio", cap: "Numerosi", hrs: "Prenotazione app Affluences", feat: "Giurisprudenza, Wi-Fi", link: "https://www.sba.unito.it" },
+  { id: 34, cat: "unito", name: "Biblioteca Norberto Bobbio - Campus Luigi Einaudi", addr: "Lungo Dora Siena 100/A", cap: "850 posti su 10.000 mq", hrs: "Lun-Ven 8:30-19:15, Sab 8:30-13:15", feat: "Progetto Norman Foster, app Affluences, settori Cognetti e Solari ad accesso libero, Wi-Fi Eduroam", link: "https://www.sba.unito.it" },
   { id: 35, cat: "unito", name: "Biblioteca di Economia e Management", addr: "Corso Unione Sovietica", cap: "Numerosi", hrs: "Prenotazione app Affluences", feat: "Economia, Wi-Fi", link: "https://www.sba.unito.it" },
   { id: 36, cat: "unito", name: "Sistema Bibliotecario UniTo (22 biblioteche)", addr: "Varie sedi", cap: "30+ sedi", hrs: "Variabili, prenotazione Affluences", feat: "Wi-Fi, credenziali universitarie", link: "https://www.sba.unito.it" },
   { id: 37, cat: "campus_diffuso", name: "Bunker", addr: "Via Paganini", cap: "40", hrs: "Variabili", feat: "Wi-Fi, prese elettriche", link: "https://www.studyintorino.it" },
@@ -653,6 +653,15 @@ const STUDY_SPACES = [
   { id: 56, cat: "parchi", name: "Parco del Valentino", addr: "Lungo Po", cap: "Illimitati", hrs: "Sempre aperto", feat: "421.000 mq, Wi-Fi in alcune zone" },
   { id: 57, cat: "polo900", name: "Polo del '900 - Sala Lettura Istoreto", addr: "Corso Valdocco 4/A", cap: "Numerosi", hrs: "Lun-Gio 10-18, Ven 10-13", feat: "Storia Antifascismo, Wi-Fi", link: "https://www.polodel900.it" },
   { id: 58, cat: "polo900", name: "Polo del '900 - Sala Lettura Palazzo San Daniele", addr: "Via del Carmine 14", cap: "Numerosi", hrs: "Lun-Ven 9:30-13:30 / 14:30-18:30", feat: "300.000+ volumi, Wi-Fi, prenotazione", link: "https://www.polodel900.it" },
+  // New spaces added March 2026
+  { id: 59, cat: "bar", name: "Nora Book & Coffee", addr: "Via delle Orfane 24/D", cap: "Vari tavoli", hrs: "Lun-Ven 9:00-19:30, Sab 10:00-19:30", feat: "Libreria-caffè, atmosfera da biblioteca, Wi-Fi, centro storico" },
+  { id: 60, cat: "bar", name: "Bere in Tipografia / Studiare in Tipografia", addr: "Piazza Santa Giulia, Vanchiglia", cap: "Vari tavoli + piano studio", hrs: "Lun-Gio 8:00-0:00, Ven-Sab 8:00-2:00", feat: "Piano superiore dedicato studio, Wi-Fi, prezzi student-friendly" },
+  { id: 61, cat: "campus_diffuso", name: "Variante Bunker", addr: "Via Paganini 0/200", cap: "40 posti studio + sala gruppi", hrs: "Lun-Ven 9:00-23:00", feat: "Gratuito con tessera ARCI (disponibile in loco), Wi-Fi, prese, bar sconto 15% studenti" },
+  { id: 62, cat: "edisu", name: "Sala Studio EDISU Olimpia", addr: "Lungodora Siena 102/A", cap: "Numerosi", hrs: "Lun-Ven 7:30-18:45, Sab-Dom 8:00-18:45", feat: "Nuova, vicino Campus Luigi Einaudi, Wi-Fi gratuito", link: "https://www.edisu.piemonte.it" },
+  { id: 63, cat: "coworking", name: "OGR Social Table", addr: "Corso Castelfidardo 22", cap: "Tavolo 25m con USB", hrs: "10:00-20:00", feat: "Tavolo comunitario 25m con porte USB, Wi-Fi gratuito, bar OGR", link: "https://www.ogrtorino.it" },
+  { id: 64, cat: "coworking", name: "Nodo Borgodora", addr: "Via Borgo Dora 33", cap: "Numerosi", hrs: "Mar-Ven 15:00-19:00", feat: "€5 formula coworking (include caffè/tè), ogni 5 visite 1 gratis, Wi-Fi" },
+  { id: 65, cat: "bar", name: "Tomato Backpackers - Area Coworking", addr: "Via Silvio Pellico 11", cap: "Vari posti", hrs: "8:00-22:00", feat: "Wi-Fi ultra-veloce 300-500 Mbps, aperto anche ai non ospiti" , link: "https://www.tomatobackpackers.com" },
+  { id: 66, cat: "bar", name: "Natalia Ginzburg (Biblioteca Civica)", addr: "Via Lombroso 16", cap: "Numerosi", hrs: "Variabili", feat: "Polo culturale San Salvario, spazi verdi, Wi-Fi FreeTorinoWiFi", link: "https://bct.comune.torino.it" },
 ];
 
 const STUDY_SPACE_CATEGORIES: Record<string, { it: string; en: string }> = {
@@ -669,7 +678,7 @@ const STUDY_SPACE_CATEGORIES: Record<string, { it: string; en: string }> = {
 };
 
 mcpServer.tool("get_study_spaces", {
-  description: "Find study spaces in Turin: libraries, EDISU study halls, cafés, coworking, parks. 58 locations with address, capacity, hours, features. Filter by category, Wi-Fi, or free text search.",
+  description: "Find study spaces in Turin: libraries, EDISU study halls (open until 2 AM during exams), BI.TO civic libraries, cafés, coworking, Campus Diffuso, parks. 66 locations with address, capacity, hours, features. Filter by category, Wi-Fi, or free text search. Updated March 2026.",
   inputSchema: {
     type: "object" as const,
     properties: {
