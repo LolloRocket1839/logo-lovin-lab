@@ -112,7 +112,7 @@ Countries: Italy 27%, USA 15%, China 10%, Switzerland 2%, Turkey 2%, Poland 2%
 ## Interactive Tools
 
 - [Property Valuation Calculator](https://junglerent.it/valutazione-immobile) - FREE, OMI data 2025, ±5% accuracy
-- [Study Spaces Directory](https://junglerent.it/strumenti/aule-studio-torino) - 30+ locations with interactive map
+- [Study Spaces Directory](https://junglerent.it/strumenti/aule-studio-torino) - 60+ locations with interactive map, filters, booking app info
 - [Cheap Eats Directory](https://junglerent.it/strumenti/dove-mangiare-torino) - 20+ budget eateries €3-15
 - [Gyms Directory](https://junglerent.it/strumenti/palestre-torino) - 25+ fitness centers for students
 - [Student Services](https://junglerent.it/strumenti/servizi-studenti) - University services finder
