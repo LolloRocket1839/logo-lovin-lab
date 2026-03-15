@@ -1,6 +1,6 @@
 # ============================================
 # JUNGLE RENT S.R.L. - robots.txt
-# Last Updated: March 7, 2026 (v4.1)
+# Last Updated: March 15, 2026 (v4.2)
 # ============================================
 
 # Allow all crawlers

@@ -203,5 +203,5 @@ For detailed information:
 - Well-Known Location: https://junglerent.it/.well-known/llms.txt
 
 ---
-Last Updated: March 7, 2026
-Version: 4.1 - SEO/AEO overhaul: @id entity linking, AI Overview eligibility, content attribution
+Last Updated: March 15, 2026
+Version: 4.2 - Study spaces major update: 60+ spaces, booking apps, BI.TO rebrand, night/Sunday study, neighborhood breakdown

@@ -678,7 +678,7 @@ const STUDY_SPACE_CATEGORIES: Record<string, { it: string; en: string }> = {
 };
 
 mcpServer.tool("get_study_spaces", {
-  description: "Find study spaces in Turin: libraries, EDISU study halls, cafés, coworking, parks. 58 locations with address, capacity, hours, features. Filter by category, Wi-Fi, or free text search.",
+  description: "Find study spaces in Turin: libraries, EDISU study halls (open until 2 AM during exams), BI.TO civic libraries, cafés, coworking, Campus Diffuso, parks. 66 locations with address, capacity, hours, features. Filter by category, Wi-Fi, or free text search. Updated March 2026.",
   inputSchema: {
     type: "object" as const,
     properties: {
