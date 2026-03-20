@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Navigation, Footer } from "@/components/layout";
 import { InvestorWaitlistDialog } from "@/components/dialogs";
+import { ContractBanner } from "@/components/blog/ContractBanner";
 
 import { ScrollToTop } from "@/components/ScrollToTop";
 
