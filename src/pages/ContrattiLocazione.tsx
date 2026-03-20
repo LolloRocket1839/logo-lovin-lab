@@ -87,15 +87,10 @@ const PLANS = [
 ];
 
 const ContrattiLocazione = () => {
-  const { i18n } = useTranslation();
-  const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState("");
 
-  const mailtoFor = (planName: string) =>
-    `mailto:${CONTACTS.email}?subject=${encodeURIComponent(
-      lang === "it"
-        ? `Richiesta ${planName}`
-        : `Request ${planName}`
-    )}`;
+  const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
 
   const pageTitle =
     lang === "it"
