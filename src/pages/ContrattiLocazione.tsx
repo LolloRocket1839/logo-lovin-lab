@@ -10,6 +10,7 @@ import { Check, FileText, Shield, Clock, Mail } from "lucide-react";
 import { CONTACTS } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
 import { ContractRequestDialog } from "@/components/dialogs";
+import { ContractsFAQ, CONTRACT_FAQ_ITEMS } from "@/components/contracts/ContractsFAQ";
 
 const PLANS = [
   {
@@ -168,6 +169,20 @@ const ContrattiLocazione = () => {
             ],
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: CONTRACT_FAQ_ITEMS.map((faq) => ({
+              "@type": "Question",
+              name: faq.q[lang],
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.a[lang],
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       <Navigation />
@@ -279,6 +294,8 @@ const ContrattiLocazione = () => {
               </Card>
             ))}
           </div>
+
+          <ContractsFAQ lang={lang} />
 
           {/* Footer note */}
           <p className="text-center text-sm text-muted-foreground">
