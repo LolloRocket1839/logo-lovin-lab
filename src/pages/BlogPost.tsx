@@ -275,12 +275,15 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
           
           {/* Cluster Sidebar - Desktop */}
           {getClusterForArticle(slug) && (
-            <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12">
+            <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12 space-y-6">
               <ClusterSidebar 
                 currentSlug={slug} 
                 isOpen={true} 
                 onClose={() => {}} 
               />
+              {(post.category === 'investors' || post.category === 'sellers') && (
+                <ContractSidebarCard />
+              )}
             </div>
           )}
         </div>
