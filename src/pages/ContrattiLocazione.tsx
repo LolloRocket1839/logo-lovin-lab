@@ -87,6 +87,7 @@ const PLANS = [
 ];
 
 const ContrattiLocazione = () => {
+  const { i18n } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
 
