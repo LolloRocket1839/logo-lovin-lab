@@ -38,6 +38,7 @@ const PropertyValuation = lazy(() => import("./pages/PropertyValuation"));
 const StrikeEmergencyDirectory = lazy(() => import("./pages/StrikeEmergencyDirectory"));
 const SitemapDebug = lazy(() => import("./pages/SitemapDebug"));
 const ContentAudit = lazy(() => import("./pages/ContentAudit"));
+const ContrattiLocazione = lazy(() => import("./pages/ContrattiLocazione"));
 const NeighborhoodsIndex = lazy(() => import("./pages/NeighborhoodsIndex"));
 const NeighborhoodPage = lazy(() => import("./pages/NeighborhoodPage"));
 const InvestorZonesIndex = lazy(() => import("./pages/InvestorZonesIndex"));
