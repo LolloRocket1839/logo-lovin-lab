@@ -252,6 +252,11 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
                   </>
                 )}
 
+                {/* Contract Banner for investor/seller articles */}
+                {(post.category === 'investors' || post.category === 'sellers') && (
+                  <ContractBanner />
+                )}
+
                 {/* CTA */}
                 <BlogCTA type={post.category} />
 
