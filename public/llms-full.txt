@@ -78,6 +78,16 @@ Digital property management platform for landlords:
 - Tenant communication
 - Document storage
 - Maintenance scheduling
+
+### 6. Lease Agreement Drafting ⭐ NEW
+Professional lease agreement services for landlords:
+- Standard 4+4 or 3+2 contracts from €89
+- Transitional/student contracts from €109
+- Full landlord package (contract + handover report + inventory) from €149
+- Compliant with Italian rental law
+- Cedolare secca clauses included
+- 48-hour delivery with revision included
+- Page: https://junglerent.it/contratti-locazione
 - **Status**: Coming Q1 2026
 - **URL**: https://junglerent.it/blog/props-gestione-immobiliare-semplificata
 

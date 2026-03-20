@@ -6,6 +6,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCTA } from "@/components/blog/BlogCTA";
 import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { ShareButton } from "@/components/blog/ShareButton";
+import { ContractBanner } from "@/components/blog/ContractBanner";
+import { ContractSidebarCard } from "@/components/blog/ContractSidebarCard";
 import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
 import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
@@ -250,6 +252,11 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
                   </>
                 )}
 
+                {/* Contract Banner for investor/seller articles */}
+                {(post.category === 'investors' || post.category === 'sellers') && (
+                  <ContractBanner />
+                )}
+
                 {/* CTA */}
                 <BlogCTA type={post.category} />
 
@@ -268,12 +275,15 @@ Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
           
           {/* Cluster Sidebar - Desktop */}
           {getClusterForArticle(slug) && (
-            <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12">
+            <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12 space-y-6">
               <ClusterSidebar 
                 currentSlug={slug} 
                 isOpen={true} 
                 onClose={() => {}} 
               />
+              {(post.category === 'investors' || post.category === 'sellers') && (
+                <ContractSidebarCard />
+              )}
             </div>
           )}
         </div>
