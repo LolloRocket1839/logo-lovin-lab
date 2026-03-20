@@ -7,7 +7,8 @@ import {
   ArrowRight,
   Sparkles,
   BookOpen,
-  Calendar
+  Calendar,
+  ScrollText
 } from "lucide-react";
 import {
   Accordion,
