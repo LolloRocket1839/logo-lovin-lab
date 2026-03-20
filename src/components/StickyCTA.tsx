@@ -53,7 +53,7 @@ export const StickyCTA = () => {
     setSellerDialogOpen(true);
   };
 
-  if (!isVisible) return null;
+  if (!isVisible || isDismissed) return null;
 
   return (
     <>
