@@ -62,6 +62,26 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
           </Suspense>
         </section>
 
+        {/* Services - Contratti */}
+        <section>
+          <Link
+            to={currentLang === 'it' ? '/contratti-locazione' : '/rental-contracts'}
+            onClick={onClose}
+            className="flex items-center gap-3 p-4 rounded-lg bg-accent/30 hover:bg-accent/50 transition-colors"
+          >
+            <ScrollText className="w-5 h-5 text-primary flex-shrink-0" />
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-foreground">
+                {currentLang === 'it' ? 'Contratti di locazione' : 'Lease agreements'}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                {currentLang === 'it' ? 'Da €89 — pronti per la registrazione' : 'From €89 — ready for registration'}
+              </p>
+            </div>
+            <ArrowRight className="w-4 h-4 text-muted-foreground" />
+          </Link>
+        </section>
+
         {/* FAQ */}
         <section>
           <h3 className="font-semibold mb-3 flex items-center gap-2">

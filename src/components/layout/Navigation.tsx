@@ -95,6 +95,7 @@ export const Navigation = () => {
     { label: t("nav.investors"), id: undefined as string | undefined, path: "/investitori" as string | undefined },
     { label: t("nav.sell"), id: undefined, path: "/vendi" },
     { label: t("nav.students"), id: undefined, path: "/studenti" },
+    { label: t("nav.contracts"), id: undefined, path: "/contratti-locazione" },
     { label: t("founders.title"), id: undefined, path: undefined, isFounders: true },
   ];
 
