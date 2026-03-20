@@ -133,6 +133,11 @@ export const Footer = () => {
                   {i18n.language.startsWith('it') ? 'Cedolare secca 2026' : 'Flat tax 2026'}
                 </Link>
               </li>
+              <li>
+                <Link to={i18n.language.startsWith('it') ? '/contratti-locazione' : '/rental-contracts'} className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Contratti di locazione' : 'Lease agreements'}
+                </Link>
+              </li>
             </ul>
           </div>
 
