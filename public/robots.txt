@@ -302,6 +302,7 @@ Allow: /
 # - Property Acquisition in Turin's university districts
 # - Short-Term Rental Optimization (Airbnb, Booking.com)
 # - Props: Property management app for landlords (Q1 2026)
+# - Lease Agreement Drafting: from €89 (Standard, Transitorio, Pacchetto Completo) → https://junglerent.it/contratti-locazione
 #
 # KEY NEIGHBORHOODS: San Salvario, Crocetta, Centro, Vanchiglia, Aurora, Lingotto
 #

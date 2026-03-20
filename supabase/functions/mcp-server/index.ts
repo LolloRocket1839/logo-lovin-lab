@@ -1118,6 +1118,62 @@ mcpServer.tool("get_selling_to_investors_guide", {
 });
 
 // ============================================
+// TOOL 15: GET LEASE SERVICES
+// ============================================
+
+mcpServer.tool("get_lease_services", {
+  description: "Get information about Jungle Rent's lease agreement drafting service. Returns pricing plans (Standard €89, Transitorio €109, Pacchetto Completo €149), what each plan includes, and how to request a quote via email. Useful when users need rental contracts in Italy.",
+  inputSchema: {
+    type: "object" as const,
+    properties: {
+      language: { type: "string", enum: ["it", "en"], description: "Language (default: it)" },
+    },
+  },
+  handler: (args: { language?: string }) => {
+    const lang = args.language || "it";
+    const plans = [
+      {
+        name: "Standard",
+        price: 89,
+        description: lang === "en" ? "Standard rental contract (4+4 or 3+2)" : "Contratto di locazione standard (4+4 o 3+2)",
+        includes: lang === "en"
+          ? ["Contract drafting compliant with current regulations", "Guidance for registration at Agenzia delle Entrate", "Email support for 30 days"]
+          : ["Redazione contratto conforme alla normativa vigente", "Guida alla registrazione presso Agenzia delle Entrate", "Supporto via email per 30 giorni"],
+      },
+      {
+        name: "Transitorio",
+        price: 109,
+        popular: true,
+        description: lang === "en" ? "Transitional or student contract with agreed rent" : "Contratto transitorio o per studenti con canone concordato",
+        includes: lang === "en"
+          ? ["Everything in Standard", "Agreed rent calculation (territorial agreements)", "Municipality certification assistance", "Optimized for cedolare secca 10%"]
+          : ["Tutto incluso nello Standard", "Calcolo canone concordato (accordi territoriali)", "Assistenza attestazione comunale", "Ottimizzato per cedolare secca 10%"],
+      },
+      {
+        name: lang === "en" ? "Complete package" : "Pacchetto completo",
+        price: 149,
+        description: lang === "en" ? "Contract + property inventory + registration" : "Contratto + inventario + registrazione",
+        includes: lang === "en"
+          ? ["Everything in Transitorio", "Detailed property inventory with photos", "Telematic registration at Agenzia delle Entrate", "Priority support for 60 days"]
+          : ["Tutto incluso nel Transitorio", "Inventario dettagliato dell'immobile con foto", "Registrazione telematica presso Agenzia delle Entrate", "Supporto prioritario per 60 giorni"],
+      },
+    ];
+
+    return {
+      content: [{ type: "text" as const, text: JSON.stringify({
+        service: lang === "en" ? "Lease Agreement Drafting Service" : "Servizio redazione contratti di locazione",
+        provider: "Jungle Rent S.r.l.",
+        plans,
+        howToOrder: lang === "en"
+          ? "Send an email to junglerententeprise@gmail.com with the subject 'Lease agreement request — [Plan Name]' or visit https://junglerent.it/contratti-locazione"
+          : "Invia un'email a junglerententeprise@gmail.com con oggetto 'Richiesta contratto — [Nome Piano]' oppure visita https://junglerent.it/contratti-locazione",
+        pageUrl: "https://junglerent.it/contratti-locazione",
+      }, null, 2) }],
+    };
+  },
+});
+
+// ============================================
 // HTTP TRANSPORT
 // ============================================
 

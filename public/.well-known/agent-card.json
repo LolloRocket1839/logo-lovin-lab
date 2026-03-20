@@ -98,6 +98,12 @@
       "name": "Monthly Budget Calculator",
       "description": "Estimate monthly living costs in Turin for students. Inputs: neighborhood, housing type (shared/single/studio), transport, lifestyle choices. Returns itemized breakdown with seasonal adjustments and saving tips.",
       "tags": ["budget", "costs", "students", "calculator"]
+    },
+    {
+      "id": "get_lease_services",
+      "name": "Lease Agreement Service",
+      "description": "Get pricing and details for Jungle Rent's lease agreement drafting service. Three plans from €89: Standard (4+4, 3+2), Transitorio (student/transitional with agreed rent, cedolare secca 10%), Pacchetto Completo (contract + inventory + registration). Returns plans, inclusions, and how to order.",
+      "tags": ["lease", "contract", "rental", "locazione", "contratto", "affitto"]
     }
   ],
   "nlweb": {
