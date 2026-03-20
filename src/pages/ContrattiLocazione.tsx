@@ -169,6 +169,20 @@ const ContrattiLocazione = () => {
             ],
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: CONTRACT_FAQ_ITEMS.map((faq) => ({
+              "@type": "Question",
+              name: faq.q[lang],
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.a[lang],
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       <Navigation />
