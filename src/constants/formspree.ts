@@ -15,6 +15,7 @@ export const FORMSPREE_ENDPOINTS = {
   quickSeller: "https://formspree.io/f/xeojbzow",
   quickInvestor: "https://formspree.io/f/xeojbzow",
   student: "https://formspree.io/f/xeojbzow",
+  contracts: "https://formspree.io/f/xeojbzow",
 } as const;
 
 export type FormspreeEndpoint = keyof typeof FORMSPREE_ENDPOINTS;

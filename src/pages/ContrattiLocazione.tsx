@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
@@ -8,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Check, FileText, Shield, Clock, Mail } from "lucide-react";
 import { CONTACTS } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
+import { ContractRequestDialog } from "@/components/dialogs";
 
 const PLANS = [
   {
@@ -86,14 +88,10 @@ const PLANS = [
 
 const ContrattiLocazione = () => {
   const { i18n } = useTranslation();
-  const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState("");
 
-  const mailtoFor = (planName: string) =>
-    `mailto:${CONTACTS.email}?subject=${encodeURIComponent(
-      lang === "it"
-        ? `Richiesta ${planName}`
-        : `Request ${planName}`
-    )}`;
+  const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
 
   const pageTitle =
     lang === "it"
@@ -208,13 +206,14 @@ const ContrattiLocazione = () => {
                   </ul>
 
                   <Button
-                    asChild
                     variant={plan.popular ? "default" : "outline"}
                     className="w-full"
+                    onClick={() => {
+                      setSelectedPlan(plan.name[lang]);
+                      setDialogOpen(true);
+                    }}
                   >
-                    <a href={mailtoFor(plan.name[lang])}>
-                      {lang === "it" ? "Richiedi ora →" : "Request now →"}
-                    </a>
+                    {lang === "it" ? "Richiedi ora →" : "Request now →"}
                   </Button>
                 </CardContent>
               </Card>
@@ -239,6 +238,12 @@ const ContrattiLocazione = () => {
 
       <Footer />
       <MobileFooter />
+
+      <ContractRequestDialog
+        open={dialogOpen}
+        onOpenChange={setDialogOpen}
+        selectedPlan={selectedPlan}
+      />
     </>
   );
 };
