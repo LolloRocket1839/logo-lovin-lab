@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
@@ -8,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Check, FileText, Shield, Clock, Mail } from "lucide-react";
 import { CONTACTS } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
+import { ContractRequestDialog } from "@/components/dialogs";
 
 const PLANS = [
   {
