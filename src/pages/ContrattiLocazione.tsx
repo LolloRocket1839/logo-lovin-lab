@@ -10,6 +10,7 @@ import { Check, FileText, Shield, Clock, Mail } from "lucide-react";
 import { CONTACTS } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
 import { ContractRequestDialog } from "@/components/dialogs";
+import { ContractsFAQ, CONTRACT_FAQ_ITEMS } from "@/components/contracts/ContractsFAQ";
 
 const PLANS = [
   {
