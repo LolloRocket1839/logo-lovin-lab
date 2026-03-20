@@ -108,6 +108,66 @@ const ContrattiLocazione = () => {
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
         <link rel="canonical" href={`https://junglerent.it/${lang === "it" ? "contratti-locazione" : "rental-contracts"}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://junglerent.it/contratti-locazione#service",
+            name: lang === "it" ? "Contratti di locazione su misura" : "Custom lease agreements",
+            description: pageDesc,
+            url: `https://junglerent.it/${lang === "it" ? "contratti-locazione" : "rental-contracts"}`,
+            provider: {
+              "@type": "ProfessionalService",
+              "@id": "https://junglerent.it/#organization",
+              name: "Jungle Rent S.r.l.",
+            },
+            areaServed: {
+              "@type": "City",
+              name: "Torino",
+              "@id": "https://www.wikidata.org/wiki/Q495",
+            },
+            serviceType: "Lease Agreement Drafting",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: lang === "it" ? "Piani contratti di locazione" : "Lease agreement plans",
+              itemListElement: PLANS.map((plan, i) => ({
+                "@type": "Offer",
+                "@id": `https://junglerent.it/contratti-locazione#offer-${plan.id}`,
+                name: plan.name[lang],
+                description: plan.description[lang],
+                price: plan.price,
+                priceCurrency: "EUR",
+                priceSpecification: {
+                  "@type": "UnitPriceSpecification",
+                  price: plan.price,
+                  priceCurrency: "EUR",
+                  unitText: lang === "it" ? "fisso" : "fixed",
+                },
+                itemOffered: {
+                  "@type": "Service",
+                  name: plan.name[lang],
+                  description: plan.includes[lang].join(". "),
+                },
+                position: i + 1,
+              })),
+            },
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://junglerent.it/" },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: lang === "it" ? "Contratti di locazione" : "Rental contracts",
+                item: `https://junglerent.it/${lang === "it" ? "contratti-locazione" : "rental-contracts"}`,
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <Navigation />
