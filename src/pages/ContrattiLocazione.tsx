@@ -238,6 +238,12 @@ const ContrattiLocazione = () => {
 
       <Footer />
       <MobileFooter />
+
+      <ContractRequestDialog
+        open={dialogOpen}
+        onOpenChange={setDialogOpen}
+        selectedPlan={selectedPlan}
+      />
     </>
   );
 };
