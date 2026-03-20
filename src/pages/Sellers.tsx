@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { ContractBanner } from "@/components/blog/ContractBanner";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
@@ -611,6 +612,9 @@ const Sellers = () => {
             </Card>
           </div>
         </section>
+        <div className="container mx-auto px-4 md:px-8 py-8">
+          <ContractBanner />
+        </div>
       </main>
 
       <Footer />

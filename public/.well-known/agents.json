@@ -122,6 +122,29 @@
           "outputUsedBy": []
         }
       ]
+    },
+    {
+      "id": "request-lease-agreement",
+      "name": "Request a Lease Agreement",
+      "description": "Help a landlord or tenant get a professionally drafted lease agreement for a property in Turin.",
+      "triggers": [
+        "I need a rental contract",
+        "Ho bisogno di un contratto di locazione",
+        "Draft a lease agreement for my apartment"
+      ],
+      "steps": [
+        {
+          "tool": "get_lease_services",
+          "purpose": "Get available plans, pricing, and what each includes",
+          "outputUsedBy": ["step2"]
+        },
+        {
+          "tool": "contact_jungle_rent",
+          "purpose": "Send a quote request to Jungle Rent with the chosen plan",
+          "inputsFrom": ["step1"],
+          "requiresUserConsent": true
+        }
+      ]
     }
   ]
 }

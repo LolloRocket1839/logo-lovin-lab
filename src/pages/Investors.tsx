@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Navigation, Footer } from "@/components/layout";
 import { InvestorWaitlistDialog } from "@/components/dialogs";
+import { ContractBanner } from "@/components/blog/ContractBanner";
 
 import { ScrollToTop } from "@/components/ScrollToTop";
 
@@ -426,6 +427,10 @@ const Investors = () => {
           </Card>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 md:px-8 py-8">
+        <ContractBanner />
+      </div>
 
       <InvestorWaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
       <InvestorExitIntentPopup source="investors_page" />
