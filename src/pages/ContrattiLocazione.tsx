@@ -135,11 +135,11 @@ const ContrattiLocazione = () => {
                 "@id": `https://junglerent.it/contratti-locazione#offer-${plan.id}`,
                 name: plan.name[lang],
                 description: plan.description[lang],
-                price: plan.price,
+                price: String(plan.price),
                 priceCurrency: "EUR",
                 priceSpecification: {
                   "@type": "UnitPriceSpecification",
-                  price: plan.price,
+                  price: String(plan.price),
                   priceCurrency: "EUR",
                   unitText: lang === "it" ? "fisso" : "fixed",
                 },
