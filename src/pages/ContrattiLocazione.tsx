@@ -295,6 +295,8 @@ const ContrattiLocazione = () => {
             ))}
           </div>
 
+          <ContractsFAQ lang={lang} />
+
           {/* Footer note */}
           <p className="text-center text-sm text-muted-foreground">
             {lang === "it"
