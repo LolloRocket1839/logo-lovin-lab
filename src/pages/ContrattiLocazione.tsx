@@ -205,13 +205,14 @@ const ContrattiLocazione = () => {
                   </ul>
 
                   <Button
-                    asChild
                     variant={plan.popular ? "default" : "outline"}
                     className="w-full"
+                    onClick={() => {
+                      setSelectedPlan(plan.name[lang]);
+                      setDialogOpen(true);
+                    }}
                   >
-                    <a href={mailtoFor(plan.name[lang])}>
-                      {lang === "it" ? "Richiedi ora →" : "Request now →"}
-                    </a>
+                    {lang === "it" ? "Richiedi ora →" : "Request now →"}
                   </Button>
                 </CardContent>
               </Card>
