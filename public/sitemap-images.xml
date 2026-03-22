@@ -471,4 +471,13 @@
     </image:image>
   </url>
 
+  <!-- SERVICES -->
+  <url>
+    <loc>https://junglerent.it/contratti-locazione</loc>
+    <image:image>
+      <image:loc>https://junglerent.it/images/contratti-locazione-torino.jpg</image:loc>
+      <image:title>Contratti di locazione su misura Torino - servizio redazione contratti affitto professionali</image:title>
+    </image:image>
+  </url>
+
 </urlset>
