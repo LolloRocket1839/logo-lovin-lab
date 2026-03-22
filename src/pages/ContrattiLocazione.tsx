@@ -295,6 +295,72 @@ const ContrattiLocazione = () => {
             ))}
           </div>
 
+          {/* Come funziona */}
+          <section className="mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-3">
+              {lang === "it" ? "Come funziona" : "How it works"}
+            </h2>
+            <p className="text-muted-foreground text-center mb-10 max-w-xl mx-auto">
+              {lang === "it"
+                ? "Quattro semplici passi per ottenere il tuo contratto su misura."
+                : "Four simple steps to get your custom lease agreement."}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: ClipboardList,
+                  step: 1,
+                  title: { it: "Scegli il piano", en: "Choose your plan" },
+                  desc: {
+                    it: "Seleziona il pacchetto più adatto alle tue esigenze tra Standard, Transitorio o Pacchetto locatore.",
+                    en: "Select the package that best fits your needs: Standard, Temporary, or Landlord package.",
+                  },
+                },
+                {
+                  icon: Send,
+                  step: 2,
+                  title: { it: "Invia la richiesta", en: "Submit your request" },
+                  desc: {
+                    it: "Compila il modulo con i tuoi dati. Ti ricontatteremo per raccogliere le informazioni necessarie.",
+                    en: "Fill out the form with your details. We'll contact you to gather the necessary information.",
+                  },
+                },
+                {
+                  icon: FileCheck,
+                  step: 3,
+                  title: { it: "Ricevi il contratto", en: "Receive the contract" },
+                  desc: {
+                    it: "Entro 48-72 ore ricevi il contratto redatto su misura via email, pronto per la revisione.",
+                    en: "Within 48-72 hours you receive the tailor-made contract via email, ready for review.",
+                  },
+                },
+                {
+                  icon: CalendarCheck,
+                  step: 4,
+                  title: { it: "Revisione e firma", en: "Review and sign" },
+                  desc: {
+                    it: "Revisiona il contratto e richiedi modifiche gratuite. Poi procedi con la firma e la registrazione.",
+                    en: "Review the contract and request free revisions. Then proceed with signing and registration.",
+                  },
+                },
+              ].map(({ icon: Icon, step, title, desc }) => (
+                <div
+                  key={step}
+                  className="relative flex flex-col items-center text-center p-6 rounded-xl border border-border bg-card"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-4">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <span className="text-xs font-semibold text-primary tracking-wider uppercase mb-2">
+                    {lang === "it" ? `Passo ${step}` : `Step ${step}`}
+                  </span>
+                  <h3 className="text-base font-semibold text-foreground mb-2">{title[lang]}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{desc[lang]}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <ContractsFAQ lang={lang} />
 
           {/* Footer note */}
