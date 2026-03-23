@@ -247,11 +247,24 @@ const ContrattiLocazione = () => {
 
           {/* Hero */}
           <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <FileText className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium text-primary tracking-wide uppercase">
-                {lang === "it" ? "Servizi" : "Services"}
-              </span>
+            <div className="relative w-full max-w-3xl mx-auto mb-8 rounded-2xl overflow-hidden shadow-lg aspect-[16/7]">
+              <img
+                src="/images/contratti-locazione-torino.jpg"
+                alt={lang === "it" ? "Contratti di locazione su misura Torino" : "Custom lease agreements Turin"}
+                className="w-full h-full object-cover"
+                loading="eager"
+                width={960}
+                height={420}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
+                <div className="inline-flex items-center gap-2 mb-2">
+                  <FileText className="h-4 w-4 text-primary-foreground" />
+                  <span className="text-xs font-medium text-primary-foreground tracking-wide uppercase">
+                    {lang === "it" ? "Servizi" : "Services"}
+                  </span>
+                </div>
+              </div>
             </div>
             <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
               {lang === "it"
