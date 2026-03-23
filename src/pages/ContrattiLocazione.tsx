@@ -183,6 +183,52 @@ const ContrattiLocazione = () => {
             })),
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: lang === "it" ? "Come richiedere un contratto di locazione su misura" : "How to request a custom lease agreement",
+            description: lang === "it"
+              ? "Quattro semplici passi per ottenere il tuo contratto su misura."
+              : "Four simple steps to get your custom lease agreement.",
+            totalTime: "PT72H",
+            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "89" },
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: lang === "it" ? "Scegli il piano" : "Choose your plan",
+                text: lang === "it"
+                  ? "Seleziona il pacchetto più adatto alle tue esigenze tra Standard, Transitorio o Pacchetto locatore."
+                  : "Select the package that best fits your needs: Standard, Temporary, or Landlord package.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: lang === "it" ? "Invia la richiesta" : "Submit your request",
+                text: lang === "it"
+                  ? "Compila il modulo con i tuoi dati. Ti ricontatteremo per raccogliere le informazioni necessarie."
+                  : "Fill out the form with your details. We'll contact you to gather the necessary information.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: lang === "it" ? "Ricevi il contratto" : "Receive the contract",
+                text: lang === "it"
+                  ? "Entro 48-72 ore ricevi il contratto redatto su misura via email, pronto per la revisione."
+                  : "Within 48-72 hours you receive the tailor-made contract via email, ready for review.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 4,
+                name: lang === "it" ? "Revisione e firma" : "Review and sign",
+                text: lang === "it"
+                  ? "Revisiona il contratto e richiedi modifiche gratuite. Poi procedi con la firma e la registrazione."
+                  : "Review the contract and request free revisions. Then proceed with signing and registration.",
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <Navigation />
