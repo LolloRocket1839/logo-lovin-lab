@@ -2,6 +2,57 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "guida-affitto-italia-stranieri-2026",
+    category: "students",
+    date: "2026-03-24",
+    author: "Jungle Rent Team",
+    image: "/images/contratti-locazione-torino.jpg",
+    readTime: 18,
+    content: "guida-affitto-italia-stranieri-2026",
+    translations: {
+      it: {
+        title: "Affittare in Italia: guida completa per stranieri ed expat (2026)",
+        excerpt: "I 6 tipi di contratto, documenti necessari, diritti dell'inquilino, caparra, affitti medi per città e le 5 trappole da evitare. Tutto spiegato in modo chiaro.",
+        seo: {
+          title: "Affittare in Italia: guida completa per stranieri ed expat (2026)",
+          description: "Guida completa per stranieri che vogliono affittare in Italia nel 2026: 6 tipi di contratto, documenti, codice fiscale, caparra, diritti inquilino, cedolare secca e affitti medi per città.",
+          keywords: ["affitto italia stranieri", "contratto locazione italia guida", "affittare italia expat", "codice fiscale affitto", "diritti inquilino italia", "cedolare secca inquilino", "affitti medi italia 2026", "documenti affitto italia stranieri"]
+        },
+        tags: ["Studenti", "Contratti", "Affitto", "Italia", "Expat", "Guida"],
+        faqs: [
+          { question: "Gli stranieri possono affittare in Italia?", answer: "Sì. I cittadini UE affittano liberamente. I cittadini extra-UE hanno bisogno di un visto o permesso di soggiorno valido. Tutti gli inquilini necessitano del codice fiscale, ottenibile gratuitamente presso qualsiasi Agenzia delle Entrate o consolato italiano." },
+          { question: "Quali documenti servono per affittare in Italia?", answer: "Passaporto o carta d'identità, codice fiscale, prova di reddito (contratto di lavoro, buste paga o estratti conto), e per cittadini extra-UE: visto o permesso di soggiorno valido. Un IBAN italiano è fortemente consigliato." },
+          { question: "Quanti tipi di contratto d'affitto esistono in Italia?", answer: "Sei tipi principali: canone libero (4+4 anni), canone concordato (3+2), transitorio (1-18 mesi), studenti (6-36 mesi), commerciale (6+6), e locazione breve (fino a 30 giorni)." },
+          { question: "Quanta caparra può chiedere il proprietario?", answer: "Massimo 3 mensilità (Art. 11, L. 392/1978). Il proprietario deve pagare gli interessi legali annuali e restituirla a fine locazione, al netto di eventuali danni documentati." },
+          { question: "Cos'è il codice fiscale e come si ottiene?", answer: "Il codice fiscale è il numero di identificazione fiscale italiano. Si ottiene gratuitamente presso qualsiasi ufficio dell'Agenzia delle Entrate (con il passaporto) o presso i consolati italiani all'estero. È obbligatorio per qualsiasi contratto superiore a 30 giorni." },
+          { question: "Posso recedere anticipatamente dal contratto?", answer: "Sì, per gravi motivi (trasferimento lavorativo, salute) con 6 mesi di preavviso tramite raccomandata. Con clausola di recesso libero: in qualsiasi momento con il periodo di preavviso concordato." },
+          { question: "Cos'è la cedolare secca e come mi riguarda?", answer: "È un regime fiscale forfettario che il proprietario può scegliere. Per te: l'affitto è bloccato (nessun aumento ISTAT) e non ci sono imposte di registro. Chiedi sempre al proprietario se è disposto ad optare per la cedolare secca." },
+          { question: "Quanto costa affittare in Italia nel 2026?", answer: "Monolocale in centro: Milano €1.100-1.400, Roma €900-1.200, Firenze €800-1.100, Bologna €700-1.000, Torino €550-800, Napoli €500-750. Fuori centro: 30-40% in meno." }
+        ]
+      },
+      en: {
+        title: "Renting in Italy: complete guide for expats and foreigners (2026)",
+        excerpt: "The 6 contract types, documents needed, tenant rights, deposit rules, average rents by city, and the 5 traps to avoid. Everything explained in plain English.",
+        seo: {
+          title: "Renting in Italy: complete guide for expats and foreigners (2026)",
+          description: "Everything expats need to know about renting in Italy in 2026: the 6 contract types, documents needed, codice fiscale, deposit rules, tenant rights, cedolare secca, average rents by city, and common scams to avoid.",
+          keywords: ["renting in Italy", "rent apartment Italy", "Italian rental contract", "expat Italy housing", "tenant rights Italy", "codice fiscale rental", "how to rent in Italy foreigner", "average rent Italy 2026"]
+        },
+        tags: ["Students", "Contracts", "Rent", "Italy", "Expat", "Guide"],
+        faqs: [
+          { question: "Can foreigners rent property in Italy?", answer: "Yes. EU citizens can rent freely. Non-EU citizens need a valid visa or residence permit. All tenants need a codice fiscale (Italian tax code), obtainable for free from any Agenzia delle Entrate office or Italian consulate." },
+          { question: "What documents do I need to rent in Italy?", answer: "Passport or ID, codice fiscale, proof of income (employment contract, pay slips, or bank statements), and for non-EU citizens: a valid visa or permesso di soggiorno. An Italian bank account IBAN is strongly recommended." },
+          { question: "What types of rental contracts exist in Italy?", answer: "Six main types: canone libero (4+4 years), canone concordato (3+2), transitorio (1-18 months), studenti (6-36 months), commerciale (6+6), and locazione breve (up to 30 days)." },
+          { question: "How much deposit can a landlord ask for?", answer: "Maximum 3 months' rent (Art. 11, L. 392/1978). The landlord must pay legal interest annually and return it at lease-end, minus documented damages." },
+          { question: "What is the codice fiscale and how do I get one?", answer: "Italy's tax ID number. Free at any Agenzia delle Entrate office (bring passport) or at Italian consulates abroad. Required for any contract over 30 days." },
+          { question: "Can I terminate my contract early?", answer: "Yes, for serious reasons (job transfer, health) with 6 months' notice via registered letter. With a 'recesso libero' clause: anytime with the agreed notice period." },
+          { question: "What is cedolare secca and does it affect me?", answer: "A flat tax the landlord can choose. For you: rent is frozen (no inflation increases) and no registration fees. Always ask if the landlord will opt for it." },
+          { question: "How much does it cost to rent in Italy in 2026?", answer: "One-bedroom in city center: Milan €1,100-1,400, Rome €900-1,200, Florence €800-1,100, Bologna €700-1,000, Turin €550-800, Naples €500-750. Outside centers: 30-40% lower." }
+        ]
+      }
+    }
+  },
+  {
     slug: "budget-mensile-studente-torino-2026",
     category: "students",
     date: "2026-03-14",
