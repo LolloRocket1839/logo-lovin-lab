@@ -1,176 +1,257 @@
-# April 2026 in Turin: the essential guide to unmissable events
+# April 2026 in Turin: the complete guide to every major event
 
-April is one of the best months to experience Turin. Festival season, major exhibitions, arena concerts and the first day trips among tulips and cherry blossoms. The 2026 lineup is particularly dense. Music, pop culture, theatre, contemporary art and nature reach well beyond the city centre.
+If March was a warm-up, April 2026 is when Turin truly detonates. The month opens with Easter weekend (5–6 April), rolls straight into the EXPOSED Torino Photo Festival — 18 exhibitions turning the city into an open-air gallery — and peaks with the Biennale Tecnologia, the Torino Jazz Festival, the Lovers Film Festival, and arena-scale concerts from Tame Impala to Annalisa. Meanwhile, 130,000 tulips bloom at Pralormo, the cherry blossoms continue at Venaria, and Arturo Brachetti stages Cabaret at the Teatro Alfieri. Here is every event with dates, prices, venues, and contacts.
 
-Here's a structured overview of everything worth seeing, hearing and doing.
+## 🎵 Concerts and live music
 
-## Turin Jazz Festival 2026: the city plays from April 25
+Tickets on TicketOne, Vivaticket, and Ticketmaster unless otherwise noted.
 
-The musical heart of the month is the **Turin Jazz Festival 2026**, now in its 14th edition. Eight days of concerts **from April 25 to May 2** in theatres, clubs and urban spaces. Major international names alongside emerging talent. The programme spans classic jazz to crossovers with rock, electronics and avant-garde.
+| Date | Artist / Event | Venue | Tickets |
+|------|---------------|-------|---------|
+| 1, 3–4 Apr | Subsonica – Cieli su Torino | OGR Sala Fucine | SOLD OUT (€50) |
+| 5 Apr | Easter concerts (various) | Churches & venues citywide | See local listings |
+| 9–12 Apr | Cabaret – Arturo Brachetti | Teatro Alfieri, Pza Solferino 4 | TicketOne |
+| 12 Apr | Tame Impala – Deadbeat Tour | Inalpi Arena | Ticketmaster |
+| 17 Apr | Angelo Pintus – Nabana | Inalpi Arena | TicketOne |
+| 19 Apr | Gianni Morandi – C'era un ragazzo | Inalpi Arena | TicketOne |
+| 20 Apr | I Concerti del Regio | Teatro Regio, Pza Castello 215 | teatroregio.torino.it |
+| 21 Apr | Frah Quintale – Palazzetti'26 | Inalpi Arena | TicketOne |
+| 23 Apr | Tommaso Paradiso – Palasport 2026 | Inalpi Arena | TicketOne |
+| 24 Apr | Luca Arduini (TJF collab) | Blah Blah, Via Po 21 | Free entry |
+| 25 Apr | Blanco | Inalpi Arena | TicketOne |
+| 25 Apr–2 May | Torino Jazz Festival (various) | Citywide | torinojazzfestival.it |
+| 29 Apr | Elisa | Inalpi Arena | TicketOne |
+| 30 Apr | Annalisa – Fuoco Capitolo II | Inalpi Arena | TicketOne |
 
-The festival is promoted by the City of Turin and the Fondazione per la Cultura Torino. Early press previews revealed names like **Fabrizio Bosso**, **Funk Off**, **Bill Frisell** and **John Scofield**. Original productions spread across Teatro Colosseo, Teatro Alfieri and Auditorium Giovanni Agnelli.
+### Spotlight: Tame Impala – Deadbeat Tour
 
-If you're planning your late April agenda, cross-reference the TJF calendar with theatre schedules. That way you build hybrid weekends mixing music and performance.
+Kevin Parker's psychedelic powerhouse returns to Italy in support of the new album *Deadbeat* (Columbia Records). 12 April, 21:00, Inalpi Arena. 4 Grammy nominations, 13 ARIA Awards, 1 BRIT Award. Tickets from Ticketmaster.
 
-**References:**
-- Programme and tickets: [torinojazzfestival.it](https://www.torinojazzfestival.it)
-- Event page: [GuidaTorino](https://www.guidatorino.com/eventi-torino/torino-jazz-festival-2026/)
-- Dedicated page: [inpiemonteintorino.it](https://www.inpiemonteintorino.it)
+### Spotlight: Subsonica – Cieli su Torino 96–26 (final dates)
 
-## Pop fairs, comics and gaming
+The remaining 3 of 4 hometown dates celebrating 30 years fall in April: 1, 3, 4 April at OGR Sala Fucine. Concert + immersive retrospective in the OGR Duomo. All SOLD OUT. ogrtorino.it.
 
-April 2026 is a key month for Turin's pop culture scene. A double comic-and-gaming pole splits and enriches the offering.
+### Spotlight: Cabaret – Arturo Brachetti
 
-### Turin Comics & Games 2026 at the Certosa di Collegno
+The master of quick-change theatre brings his version of the Kander & Ebb musical to Turin, set in Weimar-era Berlin. 9–12 April, Teatro Alfieri, Piazza Solferino 4. Tickets via TicketOne.
 
-**Turin Comics** celebrates its **30th edition** with a historic venue change. From Lingotto it moves to the **Certosa Reale di Collegno**, becoming a fully outdoor event for the first time.
+### Blah Blah club scene
 
-- **Dates:** April 17-19, 2026
-- **Where:** Certosa Reale and Parco Dalla Chiesa, Collegno
+Blah Blah, Via Po 21 — the city's legendary indie/rock club — has a packed April:
 
-What you'll find: artist alley and creators area in the main cloister. Main stage in the Lavanderia a Vapore courtyard with concerts, international cosplay contests and awards. Commercial areas for comics, gadgets and memorabilia. K-pop area (K-pop League Italia), board games, RPGs and TCGs.
+| Date | Act | Entry |
+|------|-----|-------|
+| 3 Apr | Talk To Her (electro-wave) | €10 |
+| 4 Apr | Fratelli Lambretta (ska jazz) | €7 |
+| 7 Apr | Beer2Peer – Gaming Meetup | Free |
+| 9 Apr | Man As Plague (NL) + Gravery | €10 |
+| 10 Apr | Etta (pop) | €10 |
+| 11 Apr | Hugo Race Fatalists (AU) | €12 |
+| 17 Apr | Movie Star Junkies release party | €10 |
+| 18 Apr | Ulan Bator + A. Vagnoni | €12 |
+| 24 Apr | Luca Arduini (TJF – jazz) | Free |
+| 25 Apr | In Lugubre Tenebris + Nihili Locus | €10 |
+| 26 Apr | Delrei (future western) | €7 |
 
-Tickets available on **TicketOne** with early bird pricing until March 27.
+Full programme: longliverocknroll.it
 
-- Full details: [GuidaTorino](https://www.guidatorino.com/eventi-torino/torino-comics-2026/)
-- Dates overview: [Turinoise](https://www.turinoise.it/events/torino-comics/)
+## 🎊 Festivals and major events
 
-### Be Comics! Be Games! Torino at Lingotto Fiere
+### EXPOSED Torino Photo Festival (3rd edition)
 
-The following weekend brings **Be Comics! Be Games! Torino**. A new format by GL events dedicated to comics, manga, gaming and pop culture.
+**9 April – 2 June 2026** | Theme: "Mettersi a nudo" (Baring Oneself)
 
-- **Dates:** April 18-19, 2026
-- **Where:** Lingotto Fiere, via Nizza 280
+Turin's flagship photography festival returns with 18 indoor and outdoor exhibitions, screenings, artist talks, and urban projections across the city's major cultural institutions and public spaces. Artistic director: Walter Guadagnini. Organised by CAMERA – Centro Italiano per la Fotografia.
 
-Focus on creative and digital communities, cosplay, competitive gaming, family-friendly content and meetings with creators.
+**Key exhibitions:** Women in view by Toni Thorimbert (CAMERA Project Room) | Diana Markosian: *Replaced* – world premiere (Gallerie d'Italia, from 10 Apr) | FUORICAMPO – Cinema Unveiled (Gate of the Mole Antonelliana) | Paolo Ventura: Acrobats 2020–2025 (Piazza San Carlo) | "5,000 lire for a smile" historical portraits (Via Po arcades).
 
-- Official page: [Lingotto Fiere](https://lingottofiere.it/events/be-comics-be-games-torino/)
+Don't miss – **ESTERNO NOTTE**: Friday 10 April, 21:00–24:00 — a city-wide evening of photographic projections on buildings, courtyards, and balconies.
 
-For visitors from outside Turin, the concentration of pop events between April 17 and 19 makes for an excellent themed weekend. You can combine Turin Comics at Collegno with Be Comics at Lingotto.
+Tickets: Free with Abbonamento Musei for circuit museums. Individual venue tickets vary. exposed.to.it | camera.to.
 
-## The great exhibitions: spring's blockbuster season
+### Biennale Tecnologia (5th edition)
 
-On the museum front, April 2026 is packed. A good starting point is the [Events in Turin: April 2026](https://www.guidatorino.com/eventi-torino-aprile/) page on GuidaTorino.
+**15–19 April 2026** | Promoted by Politecnico di Torino.
 
-### Royal Museums and Chiablese Halls
+Five days exploring how technology is reshaping society — from AI and sustainability to energy, space, mobility, and education. Three thematic strands: Culturtech (technology in cultural production), plus strands on democratic challenges and local/global innovation.
 
-**"Orazio Gentileschi. A painter on a journey"** at the Chiablese Halls of the Royal Museums. Open until May 3, 2026. A Pisan painter from the 1600s who stood at the same level as Caravaggio. Loans from the Louvre, the Prado and the Vatican Pinacoteca.
+Venues (from 17–19 Apr): Circolo dei Lettori, Accademia delle Scienze, Teatro Carignano, Teatro Regio, Teatro Vittoria, Museo del Risorgimento, Oratorio San Filippo Neri, and Politecnico campus.
 
-**"Beato Angelico in the eyes of Bartholomäus Spranger"**. A dialogue between two visions of the Last Judgment, at the Royal Museums until May 3.
+Returning formats: Tecnologia Futura, Tecnologia in Piazza, Tecnologia Diffusa, and Politecnico Aperto. biennaletecnologia.it.
 
-### National Cinema Museum
+### Lovers Film Festival (41st edition)
 
-**"Artist Posters"** at the Mole Antonelliana. Extended until May 3. A journey from Futurism to twentieth-century graphic avant-garde.
+**16–21 April 2026** | Cinema Massimo, Via Giuseppe Verdi 18.
 
-### CAMERA - Italian Centre for Photography
+Italy's oldest LGBTQI+ film festival, directed by Vladimir Luxuria. Founded in 1986 by Giovanni Minerba and Ottavio Mai, the Lovers Film Festival showcases international features, documentaries, and shorts exploring gender, identity, and desire.
 
-**"Edward Weston. The matter of forms"**. A major retrospective on the twentieth-century photography master. Open from February 12 to June 2, 2026.
+Accreditation deadline: 9 April 2026. loversff.com.
 
-### Palazzo Madama
+### Torino Jazz Festival (14th edition)
 
-**"MonumenTO. Turin Capital. The shape of memory"**. A nocturnal photographic campaign rereading Turin's monumental heritage. From February 26 to September 7, 2026.
+**25 April – 2 May 2026** | Citywide.
 
-**"Vermeer. Woman in blue reading a letter"**. First appointment of the "Meeting with the masterpiece" cycle. From March 5 to June 29, 2026. This one alone is worth the trip.
+Turin's annual celebration of jazz transforms the city into an open-air concert hall over 10 days. World-class musicians perform in clubs, squares, bars, theatres, and unconventional spaces across the historic centre. Expect headline acts at OGR, Teatro Regio, and Piazza Castello alongside intimate jam sessions in venues like Blah Blah (Via Po 21) which hosts a free TJF collaboration with Luca Arduini on 24 April.
 
-### Egyptian Museum
+Info: torinojazzfestival.it.
 
-**"From Paris to Turin: Kha's Pyramidion and Merit's Book of the Dead"**. Two masterpieces from the Musée du Louvre enrich the permanent collection. From February 14 to August 10, 2026.
+### BE COMICS! BE GAMES! Torino (debut edition)
 
-### MAO - Museum of Oriental Art
+**18–19 April 2026** | Lingotto Fiere, Via Nizza 280.
 
-**"Chiharu Shiota. The Soul Trembles"**. The largest Italian retrospective on the Japanese artist. Over 70 works. You walk inside it. Running until June 28, 2026.
+A brand-new pop culture event by GL events Italia and Fandango Club Creators: comics, manga, gaming, cosplay competitions, meet & greets, and digital creativity workshops. Designed as the premier pop-culture convention for northwest Italy.
 
-For a cross-cutting view of exhibitions in the Turin area, check [Arte.it](https://www.arte.it/calendario-arte/torino/2026/04/).
+Tickets: torino.becomics.it.
 
-## Music: classical, chamber jazz and arena concerts
+### Torino Comics 2026 (30th edition – new venue!)
 
-Beyond the Jazz Festival, April offers a range of significant events.
+**17–19 April 2026** | Certosa Reale di Collegno, Via Martiri XXX Aprile 16, Collegno (first-ever outdoor edition).
 
-### "Onde 2026" at the Egyptian Museum
+For its 30th anniversary, Torino Comics leaves the Lingotto for the Certosa Reale, featuring Artist Alley, gaming zones, cosplay competitions, and special guests. turismotorino.org.
 
-The series transforms the Gallery of Kings at the Egyptian Museum into a small auditorium. Twelve free concerts, one per month, on Sunday mornings at 11. In collaboration with the Turin Philharmonic Orchestra, the "Giuseppe Verdi" Conservatory and the Merz Foundation.
+## 🎨 Exhibitions and museums
 
-In April the programme includes **"East, West & Beyond"**. Bridges between cultures and musical traditions, with accordion, lutes and Ūd. Free admission with mandatory booking on the [Egyptian Museum](https://www.museoegizio.it) website.
+Free first Sunday: 6 April 2026 (Easter Monday is 6 April — check museum schedules). State museums offer free entry on the 1st Sunday.
 
-- Series page: [GuidaTorino](https://www.guidatorino.com/eventi-torino/onde-2026-concerti-ingressi-gratuiti-museo-egizio-torino/)
+### Vermeer: Donna in blu che legge una lettera
 
-### Arena concerts
+5 Mar – 29 Jun 2026 | Palazzo Madama, Piazza Castello. The first-ever Vermeer in Turin, on loan from the Rijksmuseum. Included in permanent collections ticket.
 
-GuidaTorino lists a long lineup of concerts in arenas and theatres:
+### EXPOSED – 18 exhibitions citywide
 
-- **Tame Impala**, **Blanco**, **Elisa**, **Annalisa**, **Gianni Morandi** at Inalpi Arena
-- **Frah Quintale**, **Chiello**, **Venerus**, **Sergio Cammariere** across OGR, Hiroshima Mon Amour and city theatres
-- Tribute concerts to Morricone, Vecchioni, Allevi and Drusilla Foer
+9 Apr – 2 Jun 2026 | CAMERA, Gallerie d'Italia, Mole, Piazza San Carlo, Via Po, etc. See Festivals section. 18 indoor/outdoor photography exhibitions across Turin.
 
-For updated tickets and dates: [GuidaTorino April 2026](https://www.guidatorino.com/eventi-torino-aprile/) and ticketing platforms **TicketOne** and **Vivaticket**.
+### Diana Markosian: Replaced (world premiere)
 
-## Theatre, dance and performance
+10 Apr – 6 Sep 2026 | Gallerie d'Italia – Torino. Part of EXPOSED. Reconstructing the memory of first love through film and photography.
 
-April 2026 is rich on the theatre front too. A good aggregator is the [Turin April 2026](https://www.turinoise.it/torino-aprile/) page on Turinoise.
+### Orazio Gentileschi: Un pittore in viaggio
 
-### Shows not to miss
+Until 3 May 2026 | Sale Chiablese, Musei Reali. Major exhibition dedicated to one of the great masters of Baroque painting.
 
-- **"Dialogues of the Carmelites"** at Teatro Regio. Poulenc's opera in multiple performances in early and mid-April.
-- **"Cabaret" starring Arturo Brachetti** at Teatro Alfieri. One of the season's strongest musical titles. Around April 9-12.
-- **"A life on screen"** with Ezio Greggio at Teatro Gioiello. A one-man show spanning cinema, TV and personal anecdotes.
-- **"Circle Mirror Transformation"** by Annie Baker at Teatro Carignano. Contemporary drama between comedy and introspection. April 7-19.
-- **"Cap and Bells"** by Pirandello at Teatro Carignano with Silvio Orlando. Late April to early May.
-- **"Improv theatre match"** at Teatro Cardinal Massaia and improvised musical **B.L.U.E.** at Teatro Gioiello.
+### Edward Weston: La materia delle forme
 
-For programme details:
-- [Teatro Stabile di Torino](https://www.teatrostabiletorino.it)
-- [Teatro Regio Torino](https://www.teatroregio.torino.it)
+12 Feb – 2 Jun 2026 | CAMERA, Via delle Rosine 18. The first Italian retrospective of the American photography master. Co-produced with Fundación Mapfre.
 
-## Nature and day trips: tulips, cherry blossoms and historic gardens
+### Chiharu Shiota: The Soul Trembles
 
-If April is the month of festivals, it's also the month of blossoms. Between the Reggia di Venaria and Pralormo, you can build outdoor days less than an hour from the centre.
+Until 28 Jun 2026 | MAO, Via San Domenico 11. Immersive retrospective of Japan's thread-installation icon — memory, identity, and fragility.
 
-### Messer Tulipano 2026 at Castello di Pralormo
+### Electric Dreams
 
-A Piedmontese spring classic. The Castello di Pralormo, southeast of Turin, transforms into a carpet of colour.
+Until 10 May 2026 | OGR Torino, Binario 2. 40+ years of art at the crossroads of technology, organised by Tate Modern and OGR.
 
-- **Dates:** March 28 - April 26, 2026
-- **What you'll find:** over 100,000 tulips and daffodils in bloom. Themed displays, small exhibitions and side activities. Market with local products, plants and flowers.
+### Kha and Merit: 120 Years
 
-The perfect day trip. Combine it with a return to Turin for an evening concert.
+15 Feb – 10 Aug 2026 | Museo Egizio, Via Accademia delle Scienze 6. Celebrating 120 years since the discovery of the tomb of Kha and Merit.
 
-- Details: [GuidaTorino](https://www.guidatorino.com/eventi-torino/messer-tulipano-2026/)
-- Official site: [castellodipralormo.com](https://castellodipralormo.com)
-- Turismo Torino: [turismotorino.org](https://turismotorino.org/it/visita/eventi/messer-tulipano-2026)
+### Notti – Cinque secoli di stelle, sogni, pleniluni
 
-### "Under the cherry blossoms" at the Reggia di Venaria
+Extended until 12 April 2026 | GAM, Via Magenta 31. ~100 works on the night theme from the 17th century to today. Last chance!
 
-The Reggia di Venaria gardens host this event from **March 21 to April 6, 2026**. Around 100 cherry, pear and apple trees in bloom in the Potager Royal. Concerts, workshops, guided tours and wellness activities.
+### Orson Welles
 
-New for 2026: the evening event **"An evening under the cherry blossoms"**. Special openings until 23:00 with lighting designed to evoke the Japanese yozakura (night-time hanami). Magical.
+31 Mar – 5 Oct 2026 | Museo Nazionale del Cinema (Mole Antonelliana). Major exhibition on the legendary filmmaker inside Turin's iconic Mole.
 
-- Details: [GuidaTorino](https://www.guidatorino.com/eventi-torino/ombra-ciliegi-fiore-venaria-2026/)
-- Reggia website: [lavenaria.it](https://www.lavenaria.it)
-- Turismo Torino: [turismotorino.org](https://turismotorino.org/it/visita/eventi/all-ombra-dei-ciliegi-in-fiore)
+### Laure Prouvost: WE FELT A STAR DYING
 
-Combining a morning at the Reggia with an evening in central Turin for concerts, theatre or a jazz club is probably the strongest itinerary you can build in April.
+Until 10 May 2026 | OGR Torino. Multisensory installation exploring quantum computing with Google Quantum AI's Hartmut Neven.
+
+### MonumenTO, Torino Capitale
+
+From 26 Feb 2026 | Palazzo Madama. A century of public sculpture in Turin through Giorgio Boschetti's nocturnal photography.
+
+### Museum contacts
+
+| Museum | Address | Phone | Web |
+|--------|---------|-------|-----|
+| Museo Egizio | Via Accademia delle Scienze 6 | +39 011 5617776 | museoegizio.it |
+| GAM | Via Magenta 31 | +39 011 4429518 | gamtorino.it |
+| Palazzo Madama | Piazza Castello | +39 011 4433501 | palazzomadamatorino.it |
+| MAO | Via San Domenico 11 | +39 011 4436927 | maotorino.it |
+| OGR Torino | Corso Castelfidardo 22 | Box office on site | ogrtorino.it |
+| CAMERA | Via delle Rosine 18 | +39 011 0881150 | camera.to |
+| Musei Reali | Piazzetta Reale 1 | +39 011 19560449 | museireali.beniculturali.it |
+| Gallerie d'Italia | Via Lagrange 24 | +39 800 167619 | gallerieditalia.com |
+| Mole Antonelliana | Via Montebello 20 | +39 011 8138560 | museocinema.it |
+
+## 🎭 Theatre and performing arts
+
+The Teatro Stabile di Torino (70th anniversary season "Essere Umani") and the Teatro Regio anchor the month's performing arts.
+
+| Date | Show | Venue | Tickets / Info |
+|------|------|-------|---------------|
+| 7–19 Apr | Circle Mirror Transformation | Teatro Carignano, Pza Carignano 6 | teatrostabiletorino.it |
+| 8–19 Apr | Trilogia dei libri – Vangeli | Fonderie Limone, Moncalieri | teatrostabiletorino.it |
+| 8–12 Apr | Dialoghi delle Carmelitane | Teatro Regio, Pza Castello 215 | teatroregio.torino.it |
+| 9–12 Apr | Cabaret – Arturo Brachetti | Teatro Alfieri, Pza Solferino 4 | TicketOne |
+| 14–26 Apr | Resteremo sempre qui buone ad aspettarvi | Teatro Gobetti, Via Rossini 8 | teatrostabiletorino.it |
+| 15 Apr | Una noche con Sergio Bernal | Teatro Alfieri | TicketOne |
+| 16–19 Apr | Qualcosa è andato storto | Teatro Alfieri | TicketOne |
+| 17–19 Apr | Insieme – Laura Morante | Teatro Gioiello, Via Colombo 31 | teatrogioiello.it |
+| 28 Apr–3 May | Breve apologia del caos… | Teatro Gobetti | teatrostabiletorino.it |
+| 28 Apr–10 May | Il berretto a sonagli | Teatro Carignano | teatrostabiletorino.it |
+
+## 🌸 Nature and outdoor
+
+### Cherry blossoms at the Venaria Reale
+
+Until ~6 April 2026 (weather-dependent) | Giardini della Reggia di Venaria.
+
+The cherry blossom season that opened on 21 March continues into early April. Evening openings 19:00–23:00 daily (including Mondays). 100 cherry trees illuminated by 100 light points. **Tickets:** Day €6 | Evening €8 | Combined €10. Online reservation mandatory: lavenaria.it.
+
+### Messer Tulipano – 26th edition
+
+**28 March – 26 April 2026** | Castello di Pralormo, Via Umberto I 26, Pralormo (~30 km from Turin).
+
+Over **130,000 tulips** bloom across the 19th-century park designed by Xavier Kurten. Highlights include the near-black "Queen of the Night" tulip, the "Princess Elizabeth" variety, rivers of blue muscari around the lakes, and the new **"SOLOFIORI" exhibition** in the Orangerie — contemporary floral art by Piedmontese artists, curated by Marcella Pralormo. Family activities: enchanted forest of fairy tales, Lego workshops (Piemonte Bricks), and picnics under Japanese cherry trees.
+
+**Hours:** Mon–Fri 10:00–18:00 | Sat–Sun & holidays 10:00–19:00.
+
+**Tickets:** Weekdays €10 | Weekends €12 | Groups (15+) €9 | Children 4–12: €5 | Under 4: FREE | Disability: €5 (companion free). Castle interior & Trenino del Conte: separate tickets, on-site only.
+
+**Contact:** Tel. 011 884870 / 011 8140981 | info@castellodipralormo.com | castellodipralormo.com. By car: A21 Torino–Piacenza, exit Santena or Villanova, follow signs for Poirino–Pralormo.
+
+## 🐣 Easter in Turin
+
+**Easter Sunday: 5 April | Pasquetta (Easter Monday): 6 April.**
+
+Turin's Easter weekend offers a mix of traditions: chocolate egg hunts for children, special brunches, and festive openings across museums. Many cafes and artisan chocolatiers along Via Roma, Via Po, and Piazza San Carlo feature special Easter window displays and tastings — Turin is, after all, Italy's chocolate capital. Read our guide to [Turin's best chocolatiers](/blog/cioccolaterie-torino-guida-completa).
+
+The Museo Egizio, GAM, Palazzo Madama, and MAO typically remain open on Easter with regular hours (verify online). Messer Tulipano at Pralormo is a classic Easter day trip.
+
+## 🛒 Markets and food
+
+### Balon and Gran Balon
+
+Weekly Balon flea market: every Saturday in Borgo Dora. Monthly Gran Balon (antiques): 2nd Sunday = 12 April.
+
+### Vintage della Gran Madre
+
+Monthly vintage market near Piazza Gran Madre. Check local listings for April date.
+
+### 25 Aprile – Liberation Day
+
+Saturday 25 April is a national holiday. Expect special markets, live music in piazzas, and festive openings. Many restaurants run special menus. The Torino Jazz Festival begins on this day.
+
+### Where to eat in spring
+
+April brings the best seasonal produce. For a full guide to affordable spots, read [where to eat in Turin on a budget](/blog/dove-mangiare-torino-studenti).
+
+**Dishes to try:** Santena asparagus with fried eggs and Fontina fondue. Agnolotti del plin with butter and sage. Spring mixed fry with artichokes and asparagus. Artisan gelato — April is the right month to start. Read our guide to the [best gelato shops in Turin](/blog/migliori-gelaterie-torino-studenti).
+
+**Where to eat:** Quadrilatero Romano (steps from MAO and the Royal Museums). [San Salvario](/blog/san-salvario-guida-studenti) (international cuisine, young venues). Piazza Vittorio Veneto (aperitifs overlooking the Po). Vanchiglia (traditional osterias).
 
 ## Getting around Turin
 
-### GTT transport
+**GTT fares:** Single ticket €2.00 (100 min) | Daily €5.50 | 2-day €8.50 | Weekly €14.00 | Under 26 annual €258 (ISEE reductions available). Apps: Moovit, Google Maps, GTT App.
 
-Metro, tram, buses. The GTT network covers the entire metropolitan area. If you're arriving from outside the city, check our guide on [how to reach Turin sustainably](/blog/viaggiare-sostenibile-torino-guida).
-
-**Fares:**
-- Single ticket: €2.00 (100 minutes)
-- Daily: €5.50
-- 2-day: €8.50
-- Weekly: €14.00
-- Under 26 annual: €258 (ISEE reductions available)
-
-**Useful apps:** Moovit, Google Maps, GTT App
-
-### How to reach event venues
+For more on sustainable transport, read [how to reach Turin sustainably](/blog/viaggiare-sostenibile-torino-guida).
 
 | Venue | How to get there |
 |-------|-----------------|
 | Inalpi Arena | Metro line 1, Lingotto stop + 10 min walk |
-| Teatro Regio | Walk from the centre, 5 minutes from Piazza Castello |
+| Teatro Regio | Walk from the centre, 5 min from Piazza Castello |
 | MAO | Walk through the Quadrilatero Romano |
 | Teatro Alfieri | Piazza Solferino, pedestrian zone |
 | Certosa di Collegno | Bus line 36 or SFM3 train |
@@ -178,70 +259,48 @@ Metro, tram, buses. The GTT network covers the entire metropolitan area. If you'
 | Castello di Pralormo | Car, 40 min from Turin. Weekend shuttle available |
 | Reggia di Venaria | GTT Venaria Express bus from Porta Nuova |
 
-## Where to eat in spring
+## Essential contacts and links
 
-April brings the best seasonal produce. For a full guide to affordable spots, read [where to eat in Turin on a budget](/blog/dove-mangiare-torino-studenti).
-
-### Dishes to try
-
-- **Santena asparagus** with fried eggs and Fontina fondue. The taste of Piedmontese spring.
-- **Agnolotti del plin** with butter and sage. Fresh stuffed pasta every restaurant makes its own way.
-- **Spring mixed fry** with artichokes, asparagus and fresh vegetables.
-- **Artisan gelato.** April is the right month to start. Read our guide to the [best gelato shops in Turin](/blog/migliori-gelaterie-torino-studenti).
-
-### Where to eat
-
-- **Quadrilatero Romano:** historic trattorias steps from MAO and the Royal Museums.
-- **[San Salvario](/blog/san-salvario-guida-studenti):** international cuisine, young venues, sunset aperitifs.
-- **Piazza Vittorio Veneto:** aperitifs overlooking the Po. Turin's most beautiful spot at sunset.
-- **Vanchiglia:** traditional osterias and authentic wine bars.
+| Service | Website | Phone |
+|---------|---------|-------|
+| Turismo Torino | turismotorino.org | +39 011 535181 |
+| Comune di Torino Events | eventi.comune.torino.it | — |
+| Inalpi Arena | inalpiarena.it | +39 011 0062700 |
+| OGR Torino | ogrtorino.it | On-site box office |
+| Lingotto Fiere | lingottofiere.it | +39 011 6644111 |
+| GTT (public transport) | gtt.to.it | +39 011 57641 |
+| TicketOne | ticketone.it | 892101 |
+| Vivaticket | vivaticket.com | +39 040 6798900 |
+| Abbonamento Musei | abbonamentomusei.it | +39 011 3184568 |
+| Torino+Piemonte Card | turismotorino.org/card | +39 011 535181 |
+| Castello di Pralormo | castellodipralormo.com | 011 884870 |
+| EXPOSED Festival | exposed.to.it | camera.to |
+| Lovers Film Festival | loversff.com | — |
+| Biennale Tecnologia | biennaletecnologia.it | — |
 
 ## Itinerary ideas
 
-### Pop & nerd weekend (April 17-19)
+### Pop and nerd weekend (April 17–19)
 
 Friday evening at the theatre (Cabaret with Brachetti or comedy at Gioiello). Saturday and Sunday: Turin Comics at the Certosa di Collegno with evening ventures into the centre. Stop at Lingotto for Be Comics! Be Games!
 
-### Turin between jazz and museums (April 25-27)
+### Turin between jazz and museums (April 25–27)
 
 Museum day (Royal Museums + Egyptian Museum + CAMERA). Evening: Turin Jazz Festival concert with a potential after in the clubs. Next morning: brunch and Vermeer at Palazzo Madama.
+
+### Photography and culture (April 9–11)
+
+EXPOSED opening day + ESTERNO NOTTE projection evening (10 Apr). Next day: Cabaret with Brachetti at Teatro Alfieri. Sunday: cherry blossoms at Venaria before they finish.
 
 ### Spring between gardens and city
 
 Morning at the Reggia di Venaria for cherry blossoms. Next day at Messer Tulipano in Pralormo. Return to Turin for an evening concert or show.
 
-## Useful numbers
-
-| Service | Number |
-|---------|--------|
-| Emergencies | 112 |
-| Carabinieri | 112 |
-| Fire Department | 115 |
-| Ambulance | 118 |
-| Turismo Torino | +39 011 535181 |
-| GTT Info | +39 011 5764 |
-
-## How to plan your Turin April
-
-The calendar is packed. Here's how not to get lost:
-
-1. **Start from your interests.** Jazz? Late month with the TJF. Comics and pop culture? April 17-19 weekend. Art? Royal Museums, CAMERA, MAO and Palazzo Madama. Nature? Pralormo and Venaria.
-
-2. **Book now.** The Jazz Festival and Inalpi Arena concerts sell fast. Exhibitions are best visited on weekdays.
-
-3. **Think in zones.** The Quadrilatero Romano groups MAO, Royal Museums and the best restaurants. The historic centre concentrates Teatro Regio, Carignano and Alfieri within walking distance.
-
-4. **Use public transport.** The GTT daily pass costs €5.50 and gets you everywhere. For Collegno and Venaria you'll need dedicated buses.
-
-The perfect plan: exhibition in the morning, lunch in the neighbourhood, day trip in the afternoon, concert or show in the evening.
-
-To find out what happens after dinner, read our guide to [Turin nightlife](/blog/torino-nightlife-guide).
-
 ## Conclusion
 
-April 2026 is the month Turin explodes. The Jazz Festival, Turin Comics turning 30, Vermeer at Palazzo Madama, 100,000 tulips at Pralormo and cherry blossoms at the Reggia di Venaria. Add Tame Impala at Inalpi Arena and Pirandello with Silvio Orlando at Carignano. Few European cities offer this much in the same month.
+April 2026 is the month Turin explodes. EXPOSED brings 18 photography exhibitions across the city. The Biennale Tecnologia fills Politecnico and historic venues for five days. The Lovers Film Festival celebrates its 41st edition. The Jazz Festival, Turin Comics turning 30, Vermeer at Palazzo Madama, 130,000 tulips at Pralormo and cherry blossoms at the Reggia di Venaria. Add Tame Impala at Inalpi Arena and Pirandello with Silvio Orlando at Carignano. Few European cities offer this much in the same month.
 
-Check the calendars, book the tickets and come. To discover Turin throughout the year, read our guide to [Turin in every season](/blog/torino-ogni-stagione-turisti).
+Check the calendars, book the tickets and come. To discover Turin throughout the year, read our guide to [Turin in every season](/blog/torino-ogni-stagione-turisti). To find out what happens after dinner, read our guide to [Turin nightlife](/blog/torino-nightlife-guide).
 
 ---
 
@@ -258,38 +317,4 @@ Check the calendars, book the tickets and come. To discover Turin throughout the
 - [San Salvario neighbourhood guide](/blog/san-salvario-guida-studenti)
 - [Where to eat in Turin on a budget](/blog/dove-mangiare-torino-studenti)
 - [Best gelato shops in Turin](/blog/migliori-gelaterie-torino-studenti)
-
----
-
-## Sources
-
-1. Turin Jazz Festival 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino/torino-jazz-festival-2026/
-2. Turin Jazz Festival 2026 - in Piemonte in Torino https://www.inpiemonteintorino.it/it/eventi/dettaglio/torino-jazz-festival-2026
-3. First names revealed for TJF 2026 https://fpct.it/svelati-i-primi-quattro-nomi-del-torino-jazz-festival-2026/
-4. Turin Jazz Festival final report https://www.torinoclick.it/cultura/torino-jazz-festival-i-numeri-e-il-bilancio-finale/
-5. Turin Jazz Festival 2026 (EN) https://www.inpiemonteintorino.it/en/node/41365
-6. Lingotto replaces Turin Comics https://torinocronaca.it/news/torino/605540/il-lingotto-rimpiazza-torino-comics-nelle-stesse-date-be-comics-be-games.html
-7. Turin Comics 2026 relocates https://torinocronaca.it/news/tempo-libero/601762/torino-comics-2026-trasloca-ecco-dove-si-terra-la-tre-giorni-dedicata-a-fumetti-cosplay-e-giochi.html
-8. Turin Comics 2026 new venue - GuidaTorino https://www.guidatorino.com/eventi-torino/torino-comics-2026/
-9. Turin Comics - Turinoise https://www.turinoise.it/events/torino-comics/
-10. Be Comics! Be Games! Torino - Lingotto Fiere https://lingottofiere.it/events/be-comics-be-games-torino/
-11. Events in Turin: April 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino-aprile/
-12. Exhibitions in Turin April 2026 - Arte.it https://www.arte.it/calendario-arte/torino/2026/04/
-13. Events Calendar - City of Turin https://eventi.comune.torino.it/calendario/2026-04-26
-14. Turin April 2026 - Turinoise https://www.turinoise.it/torino-aprile/
-15. Onde 2026 free concerts Egyptian Museum - GuidaTorino https://www.guidatorino.com/eventi-torino/onde-2026-concerti-ingressi-gratuiti-museo-egizio-torino/
-16. Egyptian Museum Onde series - TorinoOggi https://www.torinoggi.it/2026/01/10/leggi-notizia/argomenti/cultura-e-spettacoli-7/articolo/museo-egizio-al-via-la-nuova-stagione-concertistica-di-onde.html
-17. Onde in Gallery of Kings - Fondazione Merz https://www.fondazionemerz.org/onde-in-galleria-dei-re_dodici-appuntamenti-in-musica-al-museo-egizio/
-18. Onde 2026 at Egyptian Museum - VICINI https://www.vicini.to.it/2026/01/onde-2026-al-museo-egizio/
-19. Messer Tulipano 2026 - GuidaTorino https://www.guidatorino.com/eventi-torino/messer-tulipano-2026/
-20. Messer Tulipano 2026 - Castello di Pralormo https://castellodipralormo.com/messer-tulipano-2026/
-21. Messer Tulipano 2026 - Turismo Torino https://turismotorino.org/it/visita/eventi/messer-tulipano-2026
-22. Under the cherry blossoms 2026 - Reggia di Venaria https://lavenaria.it/it/operatori-turistici/gli-eventi-annuali-reggia/allombra-dei-ciliegi-fiore-2026
-23. Under the cherry blossoms - GuidaTorino https://www.guidatorino.com/eventi-torino/ombra-ciliegi-fiore-venaria-2026/
-24. Under the cherry blossoms - Turismo Torino https://turismotorino.org/it/visita/eventi/all-ombra-dei-ciliegi-in-fiore
-25. Under the cherry blossoms - Reggia di Venaria https://lavenaria.it/it/eventi/2026/allombra-dei-ciliegi-fiore
-26. GuidaTorino events April 2026 https://www.guidatorino.com/eventi-torino/2026-04-12/?long_events=1&ajaxCalendar=1&mo=2&yr=2039
-27. Messer Tulipano Pralormo 2026 - InfoDiViaggio https://infodiviaggio.it/messer-tulipano-pralormo-tulipani-torino/
-28. Egyptian Museum Onde series - ArcheologiaVociDalPassato https://archeologiavocidalpassato.com/2026/01/18/torino-al-museo-egizio-torna-la-rassegna-musicale-onde-che-diventa-appuntamento-fisso-dodici-concerti-gratuiti-nella-galleria-dei-re-si-inizia-col-concerto-dalle-corti-al-tango/
-29. Under the cherry blossoms - GrandiGiardini https://www.grandigiardini.it/5246-evento-All-ombra-dei-ciliegi-in-fiore
-30. Messer Tulipano 2026 - ChesssFa https://chesssifa.altervista.org/robe/messer-tulipano-2026/
+- [Turin's best chocolatiers](/blog/cioccolaterie-torino-guida-completa)

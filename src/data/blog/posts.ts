@@ -1102,7 +1102,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "eventi-torino-aprile-2026",
     category: "turisti",
-    date: "2026-03-03",
+    date: "2026-03-25",
     author: "Jungle Rent Team",
     image: "/images/torino-primavera-marzo.jpg",
     readTime: 30,
@@ -1110,12 +1110,15 @@ export const blogPosts: BlogPost[] = [
     translations: {
       it: {
         title: "Eventi a Torino aprile 2026",
-        excerpt: "Guida completa agli eventi di aprile 2026: Torino Jazz Festival, Torino Comics 30ª edizione, Vermeer a Palazzo Madama, Messer Tulipano, ciliegi in fiore alla Reggia di Venaria.",
+        excerpt: "Guida completa agli eventi di aprile 2026: EXPOSED Photo Festival, Biennale Tecnologia, Lovers Film Festival, Torino Jazz Festival, Torino Comics 30ª edizione, Vermeer, 130.000 tulipani a Pralormo e ciliegi alla Reggia di Venaria.",
         seo: {
-          title: "Eventi Torino aprile 2026 | Jazz Festival, mostre, teatro",
-          description: "Scopri eventi, concerti e mostre a Torino ad aprile 2026: Torino Jazz Festival, Torino Comics, Vermeer, Messer Tulipano, ciliegi Venaria. Prezzi, orari e biglietti.",
+          title: "Eventi Torino aprile 2026 | EXPOSED, Biennale Tecnologia, Jazz Festival",
+          description: "Tutti gli eventi a Torino ad aprile 2026: EXPOSED Photo Festival, Biennale Tecnologia, Lovers Film Festival, Torino Jazz Festival, Torino Comics, concerti, mostre, teatro. Date, prezzi, biglietti.",
           keywords: [
             "eventi torino aprile 2026",
+            "exposed torino photo festival",
+            "biennale tecnologia 2026",
+            "lovers film festival 2026",
             "torino jazz festival 2026",
             "torino comics 2026",
             "messer tulipano 2026",
@@ -1123,32 +1126,36 @@ export const blogPosts: BlogPost[] = [
             "ciliegi venaria 2026",
             "concerti torino aprile",
             "vermeer palazzo madama torino",
+            "blah blah torino",
             "be comics torino",
             "teatro torino aprile 2026"
           ]
         },
-        tags: ["Turisti", "Eventi", "Torino", "Concerti", "Mostre", "Teatro", "Festival"],
+        tags: ["Turisti", "Eventi", "Torino", "Concerti", "Mostre", "Teatro", "Festival", "Fotografia"],
         faqs: [
-          { question: "Quando si tiene il Torino Jazz Festival 2026?", answer: "Il Torino Jazz Festival 2026, alla sua 14ª edizione, si tiene dal 25 aprile al 2 maggio. Otto giorni di concerti in teatri, club e spazi urbani con nomi come Fabrizio Bosso, Bill Frisell e John Scofield." },
+          { question: "Cos'è EXPOSED Torino Photo Festival?", answer: "EXPOSED è il festival fotografico di punta di Torino, alla sua 3ª edizione. Dal 9 aprile al 2 giugno 2026, con 18 mostre indoor e outdoor in tutta la città. Tema: 'Mettersi a nudo'. Organizzato da CAMERA – Centro Italiano per la Fotografia." },
+          { question: "Quando si tiene la Biennale Tecnologia 2026?", answer: "La Biennale Tecnologia, alla 5ª edizione, si tiene dal 15 al 19 aprile 2026. Promossa dal Politecnico di Torino, esplora come la tecnologia ridisegna la società con eventi in sedi storiche e al campus." },
+          { question: "Cos'è il Lovers Film Festival?", answer: "Il Lovers Film Festival è il più antico festival cinematografico LGBTQI+ d'Italia, alla 41ª edizione. Si tiene dal 16 al 21 aprile 2026 al Cinema Massimo. Diretto da Vladimir Luxuria." },
+          { question: "Quando si tiene il Torino Jazz Festival 2026?", answer: "Il Torino Jazz Festival 2026, alla sua 14ª edizione, si tiene dal 25 aprile al 2 maggio. Concerti in teatri, club e spazi urbani in tutto il centro storico." },
           { question: "Dove si tiene Torino Comics 2026?", answer: "Torino Comics 2026 cambia sede per la 30ª edizione: si sposta alla Certosa Reale di Collegno, diventando un evento completamente outdoor. Date: 17-19 aprile." },
-          { question: "Quando finisce Messer Tulipano 2026 a Pralormo?", answer: "Messer Tulipano 2026 al Castello di Pralormo è aperto dal 28 marzo al 26 aprile. Trovi oltre 100.000 tulipani e narcisi in fiore, allestimenti tematici e mercatino." },
-          { question: "Si possono vedere i ciliegi in fiore a Torino ad aprile?", answer: "Sì, alla Reggia di Venaria l'evento 'All'ombra dei ciliegi in fiore' si tiene dal 21 marzo al 6 aprile 2026. Circa 100 ciliegi, peri e meli in fiore nel Potager Royal, con aperture serali." },
-          { question: "Quali mostre sono aperte a Torino ad aprile 2026?", answer: "Le principali: Vermeer a Palazzo Madama, Orazio Gentileschi ai Musei Reali, Edward Weston a CAMERA, Chiharu Shiota al MAO, Pyramidion di Kha al Museo Egizio e MonumenTO a Palazzo Madama." },
-          { question: "Quali concerti ci sono a Torino ad aprile 2026?", answer: "All'Inalpi Arena: Tame Impala, Blanco, Elisa, Annalisa, Gianni Morandi. Tra OGR e club: Frah Quintale, Chiello, Venerus, Sergio Cammariere. Più il Torino Jazz Festival dal 25 aprile." },
-          { question: "Quali spettacoli teatrali ci sono a Torino ad aprile?", answer: "Al Teatro Regio: Dialoghi delle carmelitane. Al Teatro Alfieri: Cabaret con Arturo Brachetti. Al Carignano: Circle Mirror Transformation e Il berretto a sonagli con Silvio Orlando." },
-          { question: "Come raggiungere la Certosa di Collegno per Torino Comics?", answer: "Con il bus linea 36 o il treno SFM3. La Certosa Reale si trova nella prima cintura ovest di Torino, facilmente raggiungibile con i mezzi pubblici." },
-          { question: "Quanto costa il biglietto giornaliero GTT a Torino?", answer: "Il biglietto giornaliero GTT costa €5,50 e include metro, tram e autobus per tutta la giornata. Il biglietto singolo costa €2,00 per 100 minuti." },
-          { question: "Cos'è Be Comics! Be Games! Torino?", answer: "È un nuovo format al Lingotto Fiere dedicato a fumetto, manga, gaming e cultura pop. Si tiene il 18-19 aprile 2026, in parziale sovrapposizione con Torino Comics a Collegno." }
+          { question: "Quanto costano i biglietti per Messer Tulipano 2026?", answer: "Messer Tulipano al Castello di Pralormo (28 marzo – 26 aprile): feriali €10, weekend €12, gruppi 15+ €9, bambini 4-12 €5, sotto i 4 gratis. Oltre 130.000 tulipani e la nuova mostra SOLOFIORI." },
+          { question: "Quanto costano i biglietti per i ciliegi a Venaria?", answer: "Alla Reggia di Venaria (fino a ~6 aprile): giorno €6, sera €8, combinato €10. Aperture serali 19-23 con 100 ciliegi illuminati. Prenotazione obbligatoria su lavenaria.it." },
+          { question: "Quali concerti ci sono all'Inalpi Arena ad aprile 2026?", answer: "Tame Impala (12 apr), Angelo Pintus (17), Gianni Morandi (19), Frah Quintale (21), Tommaso Paradiso (23), Blanco (25), Elisa (29), Annalisa (30). Biglietti su TicketOne e Ticketmaster." },
+          { question: "Quali mostre sono aperte a Torino ad aprile 2026?", answer: "Vermeer a Palazzo Madama, EXPOSED (18 mostre), Orazio Gentileschi ai Musei Reali, Edward Weston a CAMERA, Chiharu Shiota al MAO, Electric Dreams all'OGR, Orson Welles alla Mole, Kha e Merit al Museo Egizio." },
+          { question: "Quali spettacoli teatrali ci sono a Torino ad aprile?", answer: "Cabaret con Arturo Brachetti al Teatro Alfieri (9-12 apr), Dialoghi delle Carmelitane al Regio, Circle Mirror Transformation e Il berretto a sonagli con Silvio Orlando al Carignano, Laura Morante al Gioiello." }
         ]
       },
       en: {
         title: "Events in Turin April 2026",
-        excerpt: "Complete guide to April 2026 events: Turin Jazz Festival, Turin Comics 30th edition, Vermeer at Palazzo Madama, Messer Tulipano, cherry blossoms at the Reggia di Venaria.",
+        excerpt: "Complete guide to April 2026 events: EXPOSED Photo Festival, Biennale Tecnologia, Lovers Film Festival, Turin Jazz Festival, Turin Comics 30th edition, Vermeer, 130,000 tulips at Pralormo and cherry blossoms at Venaria.",
         seo: {
-          title: "Events Turin April 2026 | Jazz Festival, exhibitions, theatre",
-          description: "Discover events, concerts and exhibitions in Turin in April 2026: Turin Jazz Festival, Turin Comics, Vermeer, Messer Tulipano, Venaria cherry blossoms. Prices, hours and tickets.",
+          title: "Events Turin April 2026 | EXPOSED, Biennale Tecnologia, Jazz Festival",
+          description: "Every event in Turin in April 2026: EXPOSED Photo Festival, Biennale Tecnologia, Lovers Film Festival, Turin Jazz Festival, Turin Comics, concerts, exhibitions, theatre. Dates, prices, tickets.",
           keywords: [
             "events turin april 2026",
+            "exposed torino photo festival",
+            "biennale tecnologia 2026",
+            "lovers film festival 2026",
             "turin jazz festival 2026",
             "torino comics 2026",
             "messer tulipano 2026",
@@ -1156,22 +1163,23 @@ export const blogPosts: BlogPost[] = [
             "venaria cherry blossoms 2026",
             "concerts turin april",
             "vermeer palazzo madama turin",
+            "blah blah torino",
             "be comics turin",
             "theatre turin april 2026"
           ]
         },
-        tags: ["Tourists", "Events", "Turin", "Concerts", "Exhibitions", "Theater", "Festival"],
+        tags: ["Tourists", "Events", "Turin", "Concerts", "Exhibitions", "Theater", "Festival", "Photography"],
         faqs: [
-          { question: "When is the Turin Jazz Festival 2026?", answer: "The Turin Jazz Festival 2026, in its 14th edition, runs from April 25 to May 2. Eight days of concerts in theatres, clubs and urban spaces with names like Fabrizio Bosso, Bill Frisell and John Scofield." },
+          { question: "What is EXPOSED Torino Photo Festival?", answer: "EXPOSED is Turin's flagship photography festival, in its 3rd edition. From 9 April to 2 June 2026, with 18 indoor and outdoor exhibitions across the city. Theme: 'Baring Oneself'. Organised by CAMERA – Centro Italiano per la Fotografia." },
+          { question: "When is Biennale Tecnologia 2026?", answer: "Biennale Tecnologia, in its 5th edition, runs from 15 to 19 April 2026. Promoted by Politecnico di Torino, it explores how technology reshapes society with events in historic venues and on campus." },
+          { question: "What is the Lovers Film Festival?", answer: "The Lovers Film Festival is Italy's oldest LGBTQI+ film festival, in its 41st edition. It runs from 16 to 21 April 2026 at Cinema Massimo. Directed by Vladimir Luxuria." },
+          { question: "When is the Turin Jazz Festival 2026?", answer: "The Turin Jazz Festival 2026, in its 14th edition, runs from April 25 to May 2. Concerts in theatres, clubs and urban spaces across the historic centre." },
           { question: "Where is Turin Comics 2026 held?", answer: "Turin Comics 2026 changes venue for its 30th edition: it moves to the Certosa Reale di Collegno, becoming a fully outdoor event for the first time. Dates: April 17-19." },
-          { question: "When does Messer Tulipano 2026 end at Pralormo?", answer: "Messer Tulipano 2026 at Castello di Pralormo runs from March 28 to April 26. You'll find over 100,000 tulips and daffodils in bloom, themed displays and a market." },
-          { question: "Can you see cherry blossoms in Turin in April?", answer: "Yes, at the Reggia di Venaria the 'Under the cherry blossoms' event runs from March 21 to April 6, 2026. Around 100 cherry, pear and apple trees bloom in the Potager Royal, with evening openings." },
-          { question: "What exhibitions are open in Turin in April 2026?", answer: "The main ones: Vermeer at Palazzo Madama, Orazio Gentileschi at the Royal Museums, Edward Weston at CAMERA, Chiharu Shiota at MAO, Kha's Pyramidion at the Egyptian Museum and MonumenTO at Palazzo Madama." },
-          { question: "What concerts are in Turin in April 2026?", answer: "At Inalpi Arena: Tame Impala, Blanco, Elisa, Annalisa, Gianni Morandi. At OGR and clubs: Frah Quintale, Chiello, Venerus, Sergio Cammariere. Plus the Turin Jazz Festival from April 25." },
-          { question: "What theatre shows are in Turin in April?", answer: "At Teatro Regio: Dialogues of the Carmelites. At Teatro Alfieri: Cabaret with Arturo Brachetti. At Carignano: Circle Mirror Transformation and Cap and Bells with Silvio Orlando." },
-          { question: "How to reach the Certosa di Collegno for Turin Comics?", answer: "By bus line 36 or SFM3 train. The Certosa Reale is in Turin's western inner belt, easily reachable by public transport." },
-          { question: "How much is the GTT daily ticket in Turin?", answer: "The GTT daily ticket costs €5.50 and includes metro, tram and buses for the whole day. A single ticket costs €2.00 for 100 minutes." },
-          { question: "What is Be Comics! Be Games! Torino?", answer: "It's a new format at Lingotto Fiere dedicated to comics, manga, gaming and pop culture. It runs April 18-19, 2026, partially overlapping with Turin Comics at Collegno." }
+          { question: "How much are tickets for Messer Tulipano 2026?", answer: "Messer Tulipano at Castello di Pralormo (28 March – 26 April): weekdays €10, weekends €12, groups 15+ €9, children 4-12 €5, under 4 free. Over 130,000 tulips and the new SOLOFIORI exhibition." },
+          { question: "How much are cherry blossom tickets at Venaria?", answer: "At the Reggia di Venaria (until ~6 April): day €6, evening €8, combined €10. Evening openings 19:00–23:00 with 100 illuminated cherry trees. Online reservation mandatory at lavenaria.it." },
+          { question: "What concerts are at Inalpi Arena in April 2026?", answer: "Tame Impala (12 Apr), Angelo Pintus (17), Gianni Morandi (19), Frah Quintale (21), Tommaso Paradiso (23), Blanco (25), Elisa (29), Annalisa (30). Tickets on TicketOne and Ticketmaster." },
+          { question: "What exhibitions are open in Turin in April 2026?", answer: "Vermeer at Palazzo Madama, EXPOSED (18 exhibitions), Orazio Gentileschi at the Royal Museums, Edward Weston at CAMERA, Chiharu Shiota at MAO, Electric Dreams at OGR, Orson Welles at the Mole, Kha and Merit at the Egyptian Museum." },
+          { question: "What theatre shows are in Turin in April?", answer: "Cabaret with Arturo Brachetti at Teatro Alfieri (9-12 Apr), Dialogues of the Carmelites at the Regio, Circle Mirror Transformation and Cap and Bells with Silvio Orlando at Carignano, Laura Morante at Gioiello." }
         ]
       }
     }
