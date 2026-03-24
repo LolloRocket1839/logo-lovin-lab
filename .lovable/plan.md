@@ -1,50 +1,53 @@
 
 
-# Add "Renting in Italy: Complete Guide for Expats" blog post
+# Replace April 2026 events article with DOCX content
 
-## Overview
-Add the comprehensive rental guide as a new bilingual blog post, adapting the HTML content into the existing blog system with markdown files, SEO metadata, FAQs, and contract banner integration.
+## What changed
+The uploaded DOCX contains a significantly expanded version of the April 2026 events guide. New sections not in the current article:
+- **EXPOSED Torino Photo Festival** (18 exhibitions, 9 Apr – 2 Jun)
+- **Biennale Tecnologia** (15–19 Apr, Politecnico di Torino)
+- **Lovers Film Festival** (16–21 Apr, 41st edition)
+- **Detailed concert table** with exact dates, venues, ticket sources
+- **Theatre table** with full April performing arts schedule
+- **Blah Blah club listings** (11 shows with prices)
+- **Easter in Turin** section (5–6 April)
+- **Markets & food** (Balon, Gran Balon, 25 Aprile)
+- **Museum contacts table** with phones and websites
+- **Essential contacts & links table**
+- Updated Messer Tulipano details (130,000 tulips, ticket prices, SOLOFIORI exhibition)
+- Updated cherry blossoms with ticket prices (€6/€8/€10)
 
-## 1. New blog post entry in `src/data/blog/posts.ts`
+## Plan
 
-- Slug: `guida-affitto-italia-stranieri-2026`
-- Category: `students` (primary audience: international students/expats)
-- Date: `2026-03-24`
-- ReadTime: 18
-- Image: reuse existing rental/contracts image
-- FAQs: 8 Q&A pairs from the HTML (bilingual)
-- SEO keywords targeting both "renting in Italy foreigner" (EN) and "affitto Italia stranieri guida" (IT)
+### 1. Replace EN markdown
+**File:** `src/data/blog/content/en/eventi-torino-aprile-2026.md`
 
-## 2. English markdown: `src/data/blog/content/en/guida-affitto-italia-stranieri-2026.md`
+Rewrite entirely from the DOCX content, converting to the site's markdown format with GFM tables, internal links to existing blog posts, and the same section structure as the DOCX (Concerts, Festivals, Exhibitions, Theatre, Nature, Easter, Markets, Contacts).
 
-Convert the full HTML article to markdown:
-- 10 sections: legal requirements, vocabulary, 6 contract types, documents, costs, rents by city, tenant rights, cedolare secca, termination, 5 traps
-- Tables (contract comparison, rent by city) in GFM format
-- Callout boxes using existing markdown conventions
-- Contract banner placeholder for auto-linking to `/contratti-locazione`
-- Internal links to related existing articles (cedolare-secca, canone-concordato, codice-fiscale, etc.)
+### 2. Replace IT markdown
+**File:** `src/data/blog/content/it/eventi-torino-aprile-2026.md`
 
-## 3. Italian markdown: `src/data/blog/content/it/guida-affitto-italia-stranieri-2026.md`
+Full Italian translation of the new expanded content, same structure.
 
-Full Italian translation of the guide, maintaining same structure and data. Adapted for Italian-speaking expats/international students.
+### 3. Update blog post metadata
+**File:** `src/data/blog/posts.ts`
 
-## 4. Internal linking
+- Update `date` to `2026-03-25` (compiled date from DOCX)
+- Add new SEO keywords: `exposed torino photo festival`, `biennale tecnologia`, `lovers film festival`, `blah blah torino`
+- Update FAQs to include new events (EXPOSED, Biennale Tecnologia, Lovers FF)
+- Keep existing FAQs that are still relevant, replace/expand others
 
-Add cross-references:
-- Link to `/contratti-locazione` service page (contract banner injection)
-- Link to existing related posts: `cedolare-secca-2026-investitori`, `canone-concordato-torino-2026-guida-completa`, `codice-fiscale-studenti-stranieri-torino-2026`, `contratti-locazione-morosita-italia-2026`
-- The auto-linking system will handle additional inline links automatically
+### 4. Update linkable content keywords
+**File:** `src/data/linkableContent.ts`
 
-## 5. Sitemap update
+Add new trigger keywords for auto-linking: `exposed photo festival`, `biennale tecnologia`, `lovers film festival`.
 
-Add the new article URL to `public/sitemap-blog.xml` with lastmod `2026-03-24`.
-
-## Files involved
+### Files involved
 
 | File | Action |
 |------|--------|
-| `src/data/blog/posts.ts` | Add new post entry |
-| `src/data/blog/content/en/guida-affitto-italia-stranieri-2026.md` | New — full EN guide |
-| `src/data/blog/content/it/guida-affitto-italia-stranieri-2026.md` | New — full IT guide |
-| `public/sitemap-blog.xml` | Add new URL entry |
+| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Replace with expanded DOCX content |
+| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Replace with Italian translation |
+| `src/data/blog/posts.ts` | Update date, keywords, FAQs |
+| `src/data/linkableContent.ts` | Add new auto-link keywords |
 
