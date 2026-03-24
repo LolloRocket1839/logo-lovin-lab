@@ -186,7 +186,9 @@ const enhancedBlogKeywords: Record<string, string[]> = {
   ],
   'eventi-torino-aprile-2026': [
     'eventi aprile', 'torino jazz festival', 'torino comics 2026',
-    'messer tulipano', 'ciliegi venaria', 'cosa fare torino aprile'
+    'messer tulipano', 'ciliegi venaria', 'cosa fare torino aprile',
+    'exposed torino photo festival', 'biennale tecnologia',
+    'lovers film festival', 'blah blah torino', 'pasqua torino'
   ],
   'torino-citta-campus-atenei-immobiliare-2026': [
     'masterplan politecnico', 'città delle scienze', 'metro 2 torino',
