@@ -646,4 +646,19 @@
     </image:image>
   </url>
 
+  <!-- STUDENTS: Renting in Italy guide for expats 2026 (NEW) -->
+  <url>
+    <loc>https://junglerent.it/blog/guida-affitto-italia-stranieri-2026</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/guida-affitto-italia-stranieri-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/guida-affitto-italia-stranieri-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/guida-affitto-italia-stranieri-2026" />
+    <image:image>
+      <image:loc>https://junglerent.it/images/contratti-locazione-torino.jpg</image:loc>
+      <image:title>Renting in Italy guide for expats and foreigners 2026</image:title>
+    </image:image>
+  </url>
+
 </urlset>
