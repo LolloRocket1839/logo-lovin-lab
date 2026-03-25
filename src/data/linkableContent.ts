@@ -285,6 +285,21 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'budget studente torino', 'costo vita torino studenti', 'quanto costa vivere torino',
     'Piemove gratis studenti', 'mensa EDISU prezzi', 'affitto studenti torino costo',
     'student budget turin', 'cost of living turin students', 'monthly expenses turin'
+  ],
+  'aule-studio-torino-notte-domenica-2026': [
+    'aule studio notte', 'studiare tardi torino', 'biblioteche aperte sera',
+    'EDISU Verdi 26', 'EDISU Michelangelo', 'studiare domenica torino',
+    'night study spaces turin', 'late night study torino', 'weekend study torino'
+  ],
+  'trovare-casa-torino-studente-fuorisede-2026': [
+    'trovare casa torino', 'cercare stanza torino', 'affitto studenti torino',
+    'housing torino studenti', 'find room turin', 'student housing search turin',
+    'fuorisede torino', 'alloggio universitario cercare'
+  ],
+  'guida-affitto-italia-stranieri-2026': [
+    'affitto Italia stranieri', 'renting Italy foreigner', 'contratto locazione inglese',
+    'rental contract Italy expat', 'codice fiscale rental', 'deposit rules Italy',
+    'tenant rights Italy', 'come affittare Italia straniero'
   ]
 };
 
