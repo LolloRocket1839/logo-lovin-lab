@@ -292,6 +292,29 @@ export const articleRelationships: ArticleRelationship[] = [
   { from: 'budget-mensile-studente-torino-2026', to: 'dove-mangiare-torino-studenti', relevance: 'high', bidirectional: true },
   { from: 'budget-mensile-studente-torino-2026', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'high', bidirectional: true },
   { from: 'budget-mensile-studente-torino-2026', to: 'palestre-torino-studenti-guida-completa', relevance: 'medium', bidirectional: true },
+  
+  // Aule studio notte/domenica connections
+  { from: 'aule-studio-torino-notte-domenica-2026', to: 'aule-studio-torino-guida-completa', relevance: 'high', bidirectional: true },
+  { from: 'aule-studio-torino-notte-domenica-2026', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'high', bidirectional: true },
+  { from: 'aule-studio-torino-notte-domenica-2026', to: 'san-salvario-guida-studenti', relevance: 'medium', bidirectional: true },
+  { from: 'aule-studio-torino-notte-domenica-2026', to: 'budget-mensile-studente-torino-2026', relevance: 'medium', bidirectional: true },
+  { from: 'aule-studio-torino-notte-domenica-2026', to: 'torino-digital-nomads-guide', relevance: 'medium', bidirectional: true },
+  
+  // Trovare casa studente connections
+  { from: 'trovare-casa-torino-studente-fuorisede-2026', to: 'dove-vivere-torino-studenti-politecnico', relevance: 'high', bidirectional: true },
+  { from: 'trovare-casa-torino-studente-fuorisede-2026', to: 'guida-affitto-italia-stranieri-2026', relevance: 'high', bidirectional: true },
+  { from: 'trovare-casa-torino-studente-fuorisede-2026', to: 'canone-concordato-torino-2026-guida-completa', relevance: 'high', bidirectional: true },
+  { from: 'trovare-casa-torino-studente-fuorisede-2026', to: 'san-salvario-guida-studenti', relevance: 'high', bidirectional: true },
+  { from: 'trovare-casa-torino-studente-fuorisede-2026', to: 'quartieri-sicuri-studenti-internazionali-torino-2026', relevance: 'high', bidirectional: true },
+  { from: 'trovare-casa-torino-studente-fuorisede-2026', to: 'codice-fiscale-studenti-stranieri-torino-2026', relevance: 'medium', bidirectional: true },
+  { from: 'trovare-casa-torino-studente-fuorisede-2026', to: 'budget-mensile-studente-torino-2026', relevance: 'medium', bidirectional: true },
+  
+  // Guida affitto Italia stranieri connections
+  { from: 'guida-affitto-italia-stranieri-2026', to: 'canone-concordato-torino-2026-guida-completa', relevance: 'high', bidirectional: true },
+  { from: 'guida-affitto-italia-stranieri-2026', to: 'cedolare-secca-2026-investitori', relevance: 'high', bidirectional: true },
+  { from: 'guida-affitto-italia-stranieri-2026', to: 'codice-fiscale-studenti-stranieri-torino-2026', relevance: 'high', bidirectional: true },
+  { from: 'guida-affitto-italia-stranieri-2026', to: 'contratti-locazione-morosita-italia-2026', relevance: 'high', bidirectional: true },
+  { from: 'guida-affitto-italia-stranieri-2026', to: 'emergenze-affitti-torino-diritti-inquilini', relevance: 'medium', bidirectional: true },
 ];
 
 // Get cluster for a given article
