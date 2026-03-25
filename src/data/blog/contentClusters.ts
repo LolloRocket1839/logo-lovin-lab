@@ -37,7 +37,10 @@ export const contentClusters: ContentCluster[] = [
       'conto-corrente-studenti-stranieri-italia-2026',
       'codice-fiscale-studenti-stranieri-torino-2026',
       'assicurazione-sanitaria-studenti-internazionali-italia-2026',
-      'budget-mensile-studente-torino-2026'
+      'budget-mensile-studente-torino-2026',
+      'aule-studio-torino-notte-domenica-2026',
+      'trovare-casa-torino-studente-fuorisede-2026',
+      'guida-affitto-italia-stranieri-2026'
     ],
     keywords: ['studenti torino', 'affitto studenti', 'quartieri torino', 'vita universitaria']
   },
