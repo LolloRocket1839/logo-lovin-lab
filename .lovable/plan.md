@@ -1,53 +1,46 @@
 
 
-# Replace April 2026 events article with DOCX content
+# Add 3 new blog posts with tailored Jungle Rent CTAs
 
-## What changed
-The uploaded DOCX contains a significantly expanded version of the April 2026 events guide. New sections not in the current article:
-- **EXPOSED Torino Photo Festival** (18 exhibitions, 9 Apr – 2 Jun)
-- **Biennale Tecnologia** (15–19 Apr, Politecnico di Torino)
-- **Lovers Film Festival** (16–21 Apr, 41st edition)
-- **Detailed concert table** with exact dates, venues, ticket sources
-- **Theatre table** with full April performing arts schedule
-- **Blah Blah club listings** (11 shows with prices)
-- **Easter in Turin** section (5–6 April)
-- **Markets & food** (Balon, Gran Balon, 25 Aprile)
-- **Museum contacts table** with phones and websites
-- **Essential contacts & links table**
-- Updated Messer Tulipano details (130,000 tulips, ticket prices, SOLOFIORI exhibition)
-- Updated cherry blossoms with ticket prices (€6/€8/€10)
+## Overview
 
-## Plan
+Add 3 new bilingual blog articles and update the existing health insurance article. Each article gets a tailored CTA section in the markdown content itself (linking to `/contratti-locazione` or waitlist) plus the existing `BlogCTA` component which already renders based on category.
 
-### 1. Replace EN markdown
-**File:** `src/data/blog/content/en/eventi-torino-aprile-2026.md`
+## Articles
 
-Rewrite entirely from the DOCX content, converting to the site's markdown format with GFM tables, internal links to existing blog posts, and the same section structure as the DOCX (Concerts, Festivals, Exhibitions, Theatre, Nature, Easter, Markets, Contacts).
+### 1. NEW — `aule-studio-torino-notte-domenica-2026`
+Night and Sunday study spaces guide. Category: `students`.
+- EN + IT markdown files from the user's content
+- Tailored CTA at bottom: "Cerchi casa vicino alla tua aula studio preferita? Jungle Rent aiuta studenti a trovare alloggi nelle zone universitarie di Torino."
+- Internal links to `aule-studio-torino-guida-completa`, `dove-vivere-torino-studenti-politecnico`
 
-### 2. Replace IT markdown
-**File:** `src/data/blog/content/it/eventi-torino-aprile-2026.md`
+### 2. REPLACE — `assicurazione-sanitaria-studenti-internazionali-italia-2026`
+Already exists as post entry. Replace EN + IT markdown content with the user's expanded version.
+- Update metadata (readTime: 15, date: 2026-03-25, expanded FAQs)
+- Tailored CTA: "Hai risolto la sanità — ora risolvi l'alloggio. Jungle Rent offre contratti regolari con cedolare secca per studenti internazionali a Torino."
+- Internal links to `codice-fiscale-studenti-stranieri-torino-2026`, `conto-corrente-studenti-stranieri-italia-2026`, `budget-mensile-studente-torino-2026`
 
-Full Italian translation of the new expanded content, same structure.
+### 3. NEW — `trovare-casa-torino-studente-fuorisede-2026`
+Housing search guide for students. Category: `students`.
+- EN + IT markdown files from the user's content
+- Tailored CTA: "Non hai trovato la stanza giusta? Jungle Rent sta costruendo un'offerta di alloggi per studenti a Torino con contratti regolari e prezzi trasparenti. Entra in lista d'attesa."
+- Additional CTA linking to `/contratti-locazione`: "Hai trovato casa ma ti serve un contratto? Il nostro servizio di redazione contratti parte da €89."
+- Internal links to `dove-vivere-torino-studenti-politecnico`, `guida-affitto-italia-stranieri-2026`, `canone-concordato-torino-2026-guida-completa`
 
-### 3. Update blog post metadata
-**File:** `src/data/blog/posts.ts`
+## CTA approach
 
-- Update `date` to `2026-03-25` (compiled date from DOCX)
-- Add new SEO keywords: `exposed torino photo festival`, `biennale tecnologia`, `lovers film festival`, `blah blah torino`
-- Update FAQs to include new events (EXPOSED, Biennale Tecnologia, Lovers FF)
-- Keep existing FAQs that are still relevant, replace/expand others
+Each markdown file will include a styled section at the bottom (before sources/FAQ) using a horizontal rule and bold header, with links to the waitlist page (`/studenti`) and to `/contratti-locazione`. The existing `BlogCTA` component (category-based) will also render as usual on the page.
 
-### 4. Update linkable content keywords
-**File:** `src/data/linkableContent.ts`
-
-Add new trigger keywords for auto-linking: `exposed photo festival`, `biennale tecnologia`, `lovers film festival`.
-
-### Files involved
+## Files involved
 
 | File | Action |
 |------|--------|
-| `src/data/blog/content/en/eventi-torino-aprile-2026.md` | Replace with expanded DOCX content |
-| `src/data/blog/content/it/eventi-torino-aprile-2026.md` | Replace with Italian translation |
-| `src/data/blog/posts.ts` | Update date, keywords, FAQs |
-| `src/data/linkableContent.ts` | Add new auto-link keywords |
+| `src/data/blog/posts.ts` | Add 2 new entries, update 1 existing |
+| `src/data/blog/content/en/aule-studio-torino-notte-domenica-2026.md` | New |
+| `src/data/blog/content/it/aule-studio-torino-notte-domenica-2026.md` | New |
+| `src/data/blog/content/en/assicurazione-sanitaria-studenti-internazionali-italia-2026.md` | Replace |
+| `src/data/blog/content/it/assicurazione-sanitaria-studenti-internazionali-italia-2026.md` | Replace |
+| `src/data/blog/content/en/trovare-casa-torino-studente-fuorisede-2026.md` | New |
+| `src/data/blog/content/it/trovare-casa-torino-studente-fuorisede-2026.md` | New |
+| `public/sitemap-blog.xml` | Add 2 new URLs |
 
