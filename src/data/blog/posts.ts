@@ -2,6 +2,96 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "trovare-casa-torino-studente-fuorisede-2026",
+    category: "students",
+    date: "2026-03-25",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 16,
+    content: "trovare-casa-torino-studente-fuorisede-2026",
+    translations: {
+      it: {
+        title: "Come trovare casa a Torino da studente fuorisede: guida pratica 2026",
+        excerpt: "Portali, zone, prezzi reali, documenti, contratti e come evitare le truffe. La guida completa per fuorisede italiani e internazionali.",
+        seo: {
+          title: "Come trovare casa a Torino da studente fuorisede 2026",
+          description: "Come trovare un alloggio a Torino da studente nel 2026: portali, zone, prezzi reali, documenti, contratti e come evitare le truffe. La guida pratica per fuorisede italiani e internazionali.",
+          keywords: ["trovare casa Torino studente", "affitto studenti Torino 2026", "come affittare stanza Torino", "alloggi studenti Torino", "portali affitto stanze Torino", "truffe affitto Torino studenti"]
+        },
+        tags: ["Studenti", "Affitto", "Torino", "Alloggi", "Guida"],
+        faqs: [
+          { question: "Quanto tempo prima devo iniziare a cercare casa a Torino?", answer: "Almeno 6–8 settimane prima dell'arrivo. Per settembre (il mese più competitivo), idealmente da luglio." },
+          { question: "Posso trovare casa a Torino dall'estero senza venire prima?", answer: "Sì, ma con cautela. HousingAnywhere, Spotahome e Uniplaces offrono garanzie per chi prenota online. Altrimenti, farsi rappresentare da qualcuno di fiducia per la visita è l'alternativa più sicura." },
+          { question: "Cosa succede se il proprietario non registra il contratto?", answer: "Il contratto non registrato è giuridicamente valido ma espone entrambe le parti a rischi fiscali. Come inquilino, puoi registrarlo tu stesso se il proprietario non lo fa." },
+          { question: "Posso rescindere il contratto studenti prima della scadenza?", answer: "Sì, con un preavviso di 20–30 giorni (dipende da quanto specificato nel contratto)." },
+          { question: "Ci sono agenzie specializzate in affitti per studenti a Torino?", answer: "Alcune agenzie tradizionali hanno un portafoglio studenti, ma la maggior parte degli affitti studenteschi avviene tra privati. Uniaffitti e le piattaforme internazionali (HousingAnywhere) sono le opzioni più strutturate." }
+        ]
+      },
+      en: {
+        title: "How to find housing in Turin as a student: practical guide 2026",
+        excerpt: "Portals, zones, real prices, documents, contracts and how to avoid scams. The complete guide for Italian and international out-of-town students.",
+        seo: {
+          title: "How to find housing in Turin as a student 2026",
+          description: "How to find housing in Turin as a student in 2026: portals, zones, real prices, documents, contracts and how to avoid scams. Practical guide for Italian and international students.",
+          keywords: ["find housing Turin student", "student rent Turin 2026", "how to rent room Turin", "student accommodation Turin", "rental portals Turin", "rental scams Turin students"]
+        },
+        tags: ["Students", "Rent", "Turin", "Housing", "Guide"],
+        faqs: [
+          { question: "How far in advance should I start looking for housing in Turin?", answer: "At least 6–8 weeks before arrival. For September (the most competitive month), ideally from July." },
+          { question: "Can I find housing in Turin from abroad without visiting first?", answer: "Yes, but with caution. HousingAnywhere, Spotahome and Uniplaces offer guarantees for online booking. Otherwise, have someone you trust visit on your behalf." },
+          { question: "What happens if the landlord doesn't register the contract?", answer: "An unregistered contract is legally valid but exposes both parties to tax risks. As a tenant, you can register it yourself if the landlord doesn't." },
+          { question: "Can I terminate a student contract early?", answer: "Yes, with 20–30 days' notice (depending on what's specified in the contract)." },
+          { question: "Are there agencies specializing in student rentals in Turin?", answer: "Some traditional agencies have student portfolios, but most student rentals happen between private parties. Uniaffitti and international platforms (HousingAnywhere) are the most structured options." }
+        ]
+      }
+    }
+  },
+  {
+    slug: "aule-studio-torino-notte-domenica-2026",
+    category: "students",
+    date: "2026-03-25",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 12,
+    content: "aule-studio-torino-notte-domenica-2026",
+    translations: {
+      it: {
+        title: "Aule studio a Torino aperte di notte e la domenica: guida completa 2026",
+        excerpt: "Dove studiare a Torino di sera, di notte e la domenica? Sale EDISU fino alle 2:00, Castelfidardo fino alle 23:30, Variante Bunker e caffè.",
+        seo: {
+          title: "Aule studio Torino notte e domenica: guida completa 2026",
+          description: "Dove studiare a Torino di sera, di notte e la domenica nel 2026? Guida completa con orari verificati di sale EDISU, biblioteche civiche, coworking e caffè — incluse le opzioni aperte fino alle 2:00.",
+          keywords: ["aule studio Torino notte", "dove studiare Torino domenica", "biblioteche Torino orari serali 2026", "EDISU sale studio orari", "studiare Torino tardi sera", "aule studio Torino aperte weekend"]
+        },
+        tags: ["Studenti", "Studio", "Torino", "EDISU", "Biblioteche"],
+        faqs: [
+          { question: "Esiste una sala studio aperta tutta la notte a Torino?", answer: "No. La chiusura più tarda è alle 2:00 di notte durante le sessioni esami (EDISU Verdi 26 e Michelangelo). Non esiste nessuno spazio 24 ore in città." },
+          { question: "Come si prenota un posto alle sale EDISU?", answer: "Con l'app Campus Piemonte ID Studyroom, disponibile su iOS, Android e Huawei AppGallery. Serve l'Athena Card universitaria. Si prenota il giorno stesso o con anticipo; all'ingresso si scansiona il QR code." },
+          { question: "Serve prenotare anche alla Biblioteca Bobbio?", answer: "Sì, per i settori principali tramite l'app Affluences. I settori Cognetti e Solari al secondo piano sono ad accesso libero senza prenotazione." },
+          { question: "Quale sala studio è più vicina al PoliTo?", answer: "La Sala Castelfidardo (Corso Castelfidardo 30/A) è praticamente sul campus, aperta fino alle 23:30 nei feriali." },
+          { question: "Dove si può studiare a Torino senza tessera universitaria?", answer: "Biblioteche civiche (con documento d'identità), Campus Diffuso, Variante Bunker (tessera ARCI), e caffè. Le sale EDISU richiedono l'Athena Card universitaria." }
+        ]
+      },
+      en: {
+        title: "Late-night and Sunday study spaces in Turin: complete guide 2026",
+        excerpt: "Where to study in Turin in the evening, at night and on Sundays? EDISU halls until 2:00 AM, Castelfidardo until 11:30 PM, Variante Bunker and cafés.",
+        seo: {
+          title: "Study spaces Turin night and Sunday: complete guide 2026",
+          description: "Where to study in Turin in the evening, at night and on Sundays in 2026? Complete guide with verified hours for EDISU halls, civic libraries, coworking and cafés — including options open until 2:00 AM.",
+          keywords: ["study spaces Turin night", "where to study Turin Sunday", "Turin libraries evening hours 2026", "EDISU study halls hours", "study Turin late evening", "study spaces Turin open weekend"]
+        },
+        tags: ["Students", "Study", "Turin", "EDISU", "Libraries"],
+        faqs: [
+          { question: "Is there a 24-hour study space in Turin?", answer: "No. The latest closing time is 2:00 AM during exam sessions (EDISU Verdi 26 and Michelangelo). There is no 24-hour space in the city." },
+          { question: "How do I book a seat at EDISU study halls?", answer: "Via the Campus Piemonte ID Studyroom app, available on iOS, Android and Huawei AppGallery. You need the Athena Card (university ID). Book same-day or in advance; scan the QR code at entry." },
+          { question: "Do I need to book at the Bobbio Library?", answer: "Yes, for the main sectors via the Affluences app. The Cognetti and Solari sectors on the second floor are open access without booking." },
+          { question: "Which study hall is closest to PoliTo?", answer: "Sala Castelfidardo (Corso Castelfidardo 30/A) is practically on campus, open until 11:30 PM on weekdays." },
+          { question: "Where can I study in Turin without a university card?", answer: "Civic libraries (with ID), Campus Diffuso, Variante Bunker (ARCI membership), and cafés. EDISU halls require the Athena Card." }
+        ]
+      }
+    }
+  },
+  {
     slug: "guida-affitto-italia-stranieri-2026",
     category: "students",
     date: "2026-03-24",
