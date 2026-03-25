@@ -192,10 +192,10 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "assicurazione-sanitaria-studenti-internazionali-italia-2026",
     category: "students",
-    date: "2026-03-14",
+    date: "2026-03-25",
     author: "Jungle Rent Team",
     image: "/images/quartieri-studenti-torino.jpg",
-    readTime: 12,
+    readTime: 15,
     content: "assicurazione-sanitaria-studenti-internazionali-italia-2026",
     translations: {
       it: {
