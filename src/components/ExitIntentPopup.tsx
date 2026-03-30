@@ -26,7 +26,6 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
   const { trackEvent } = useAnalytics();
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Generate event names based on prefix
