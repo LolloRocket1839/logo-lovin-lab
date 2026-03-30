@@ -172,10 +172,10 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
               </div>
 
               <h2 className="text-xl font-display font-bold text-foreground">
-                {title ?? t("exitIntent.title", "Stai andando via?")}
+                {title ?? t("exitIntent.title", "Before you go...")}
               </h2>
               <p className="text-muted-foreground text-sm mt-1">
-                {subtitle ?? t("exitIntent.subtitle", "Ricevi una valutazione gratuita del tuo immobile in 24 ore")}
+                {subtitle ?? t("exitIntent.subtitle", "Leave your email — we'll send you investment updates and opportunities")}
               </p>
             </div>
 
