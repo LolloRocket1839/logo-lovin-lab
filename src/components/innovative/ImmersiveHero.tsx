@@ -7,7 +7,7 @@ import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { HeroLogo } from "./HeroLogo";
 import { HowItWorksDrawer } from "./HowItWorksDrawer";
-import logo2i3t from "@/assets/2i3t-logo-green.png";
+import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 
 export const ImmersiveHero = () => {
   const { t, i18n } = useTranslation();
