@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/dialogs";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useABTest } from "@/hooks/useABTest";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { HeroLogo } from "./HeroLogo";
 import { HowItWorksDrawer } from "./HowItWorksDrawer";
