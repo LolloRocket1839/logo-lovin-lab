@@ -125,7 +125,7 @@ export const ImmersiveHero = () => {
           >
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              {t('hero.socialProof', { count: waitlistCount })}
+              {t('hero.socialProof', { count: ACTIVE_INVESTORS })}
             </p>
           </div>
 
