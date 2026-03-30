@@ -4,6 +4,7 @@ import { InvestorWaitlistDialog } from "@/components/dialogs";
 import { ContractBanner } from "@/components/blog/ContractBanner";
 
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
