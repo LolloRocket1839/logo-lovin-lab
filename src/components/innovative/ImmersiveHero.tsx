@@ -8,7 +8,7 @@ import { useABTest } from "@/hooks/useABTest";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { HeroLogo } from "./HeroLogo";
 import { HowItWorksDrawer } from "./HowItWorksDrawer";
-import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
+
 
 export const ImmersiveHero = () => {
   const { t, i18n } = useTranslation();
