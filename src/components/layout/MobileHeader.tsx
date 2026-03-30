@@ -59,12 +59,12 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
             {isSeller ? (
               <>
                 <FileText className="w-4 h-4 mr-1.5" aria-hidden="true" />
-                Valutazione
+                {t('nav.sell')}
               </>
             ) : (
               <>
                 <TrendingUp className="w-4 h-4 mr-1.5" aria-hidden="true" />
-                Investi
+                {t('nav.investors')}
               </>
             )}
           </Button>

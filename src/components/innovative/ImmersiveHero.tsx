@@ -108,31 +108,18 @@ export const ImmersiveHero = () => {
             </p>
           </div>
 
-          {/* 2i3T Badge - below CTA */}
-          <a 
-            href="https://2i3t.it" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={`inline-flex items-center gap-3 px-5 py-3 bg-background/60 backdrop-blur-sm border border-border/30 rounded-full hover:bg-background/80 transition-colors duration-[var(--duration-fast)] ${
+          {/* Social proof micro-strip */}
+          <div 
+            className={`mb-6 ${
               hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-3' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
-            onClick={() => trackClick('hero_2i3t_badge')}
           >
-            <img 
-              src={logo2i3t} 
-              alt="2i3T" 
-              className="h-7 w-auto" 
-              width={70} 
-              height={28}
-              loading="lazy"
-              decoding="async"
-            />
-            <div className="text-left">
-              <p className="text-sm font-medium text-foreground">Incubatore Imprese UniTO</p>
-              <p className="text-xs text-primary font-medium">Startup Innovativa</p>
-            </div>
-          </a>
+            <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              {t('hero.socialProof', { count: waitlistCount })}
+            </p>
+          </div>
 
           {/* How it works drawer - mobile only */}
           <HowItWorksDrawer />

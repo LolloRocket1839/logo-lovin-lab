@@ -14,7 +14,7 @@ export const HeroLogo = () => {
   
   if (prefersReducedMotion) {
     return (
-      <div className="flex justify-center items-center mb-6 w-full">
+      <div className="flex justify-center items-center mb-4 w-full">
         <img
           src={jungleRentLogo}
           alt="Jungle Rent"
