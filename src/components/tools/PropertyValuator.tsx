@@ -246,8 +246,8 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
     
     // Jungle Rent discount explanation
     const jungleRentDiscountReason = condition === 'good'
-      ? 'Costi adeguamento stimati: ' + formatCurrency(estimatedRenovationCost)
-      : 'Immobile pronto per affitto';
+      ? t('propertyValuator.adaptationCosts', 'Costi adeguamento stimati') + ': ' + formatCurrency(estimatedRenovationCost)
+      : t('propertyValuator.readyToRent', 'Immobile pronto per affitto');
     
     // Calculate reliability
     const filledFields = [zone, sqm, floor, condition, energy].filter(Boolean).length;
@@ -332,6 +332,28 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
   }, []);
 
   return (
+    <>
+      {/* Mobile sticky valuation bar */}
+      {calculation && (
+        <div className="lg:hidden sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50 py-3 px-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="text-xs text-muted-foreground">{t('propertyValuator.marketPrice', 'Prezzo di Mercato')}</span>
+              <div className="text-xl font-bold text-primary">{formatCurrency(calculation.marketPrice)}</div>
+            </div>
+            <div className="flex gap-3 text-center">
+              <div>
+                <div className="text-sm font-semibold">{formatCurrency(calculation.pricePerSqm)}</div>
+                <div className="text-xs text-muted-foreground">€/mq</div>
+              </div>
+              <div>
+                <div className="text-sm font-semibold">{calculation.reliability}%</div>
+                <div className="text-xs text-muted-foreground">{t('propertyValuator.reliability', 'Affidabilità')}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     <div className="grid lg:grid-cols-5 gap-6">
       {/* Left: Form inputs */}
       <div className="lg:col-span-3 space-y-6">
@@ -817,7 +839,7 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                               <Clock className="w-3 h-3" />
                               {t('propertyValuator.timeToSale', 'Tempo vendita')}
                             </span>
-                            <span>6-12 mesi</span>
+                            <span>6-12 {t('propertyValuator.months', 'mesi')}</span>
                           </div>
                           <div className="flex justify-between font-semibold pt-1 border-t border-border/50">
                             <span>{t('propertyValuator.netToSeller', 'Netto al venditore')}</span>
@@ -831,27 +853,27 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                         /* Custom Evaluation Card for "da ristrutturare" */
                         <div className="p-3 rounded-lg bg-amber-50 dark:bg-amber-950/30 border-2 border-amber-300 dark:border-amber-700 space-y-2 relative">
                           <Badge variant="secondary" className="absolute -top-2 -right-2 text-xs bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
-                            Valutazione ad hoc
+                            {t('propertyValuator.customEvaluation', 'Valutazione ad hoc')}
                           </Badge>
                           <div className="flex items-center gap-2">
                             <span className="text-sm font-medium text-amber-800 dark:text-amber-200">
-                              🏗️ Immobile da ristrutturare
+                              🏗️ {t('propertyValuator.toRenovateLabel', 'Immobile da ristrutturare')}
                             </span>
                           </div>
                           <p className="text-sm text-amber-700 dark:text-amber-300">
-                            Questo tipo di immobile richiede una valutazione dedicata del nostro team tecnico.
+                            {t('propertyValuator.toRenovateDescription', 'Questo tipo di immobile richiede una valutazione dedicata del nostro team tecnico.')}
                           </p>
                           <div className="text-sm bg-amber-100 dark:bg-amber-900/50 rounded p-2 space-y-1">
                             <div className="flex justify-between">
-                              <span className="text-amber-700 dark:text-amber-300">Costi ristrutturazione stimati (€800/mq):</span>
+                              <span className="text-amber-700 dark:text-amber-300">{t('propertyValuator.renovationCosts', 'Costi ristrutturazione stimati (€800/mq)')}:</span>
                               <span className="font-medium text-amber-800 dark:text-amber-200">{formatCurrency(calculation.estimatedRenovationCost)}</span>
                             </div>
                             <div className="flex justify-between text-amber-600 dark:text-amber-400">
                               <span className="flex items-center gap-1">
                                 <Clock className="w-3 h-3" />
-                                Tempo lavori stimato:
+                                {t('propertyValuator.renovationTime', 'Tempo lavori stimato')}:
                               </span>
-                              <span>{calculation.estimatedRenovationTime} giorni</span>
+                              <span>{calculation.estimatedRenovationTime} {t('propertyValuator.days', 'giorni')}</span>
                             </div>
                           </div>
                           <Button 
@@ -859,10 +881,10 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                             className="w-full bg-amber-600 hover:bg-amber-700 text-white"
                             onClick={handleOpenLeadForm}
                           >
-                            📋 Richiedi valutazione gratuita
+                            📋 {t('propertyValuator.requestFreeEvaluation', 'Richiedi valutazione gratuita')}
                           </Button>
                           <p className="text-xs text-amber-600 dark:text-amber-400 text-center">
-                            Sopralluogo e offerta vincolante entro 7 giorni lavorativi
+                            {t('propertyValuator.inspectionTimeline', 'Sopralluogo e offerta vincolante entro 7 giorni lavorativi')}
                           </p>
                         </div>
                       ) : (
@@ -898,9 +920,9 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                             <div className="flex justify-between text-muted-foreground">
                               <span className="flex items-center gap-1">
                                 <Clock className="w-3 h-3" />
-                                {t('propertyValuator.timeToSale', 'Tempo vendita')}
-                              </span>
-                              <span>60-90 giorni</span>
+                              {t('propertyValuator.timeToSale', 'Tempo vendita')}
+                            </span>
+                            <span>60-90 {t('propertyValuator.days', 'giorni')}</span>
                             </div>
                             <div className="flex justify-between font-semibold pt-1 border-t border-primary/30 text-primary">
                               <span>{t('propertyValuator.netToSeller', 'Netto al venditore')}</span>
@@ -1124,5 +1146,6 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
         estimatedValue={calculation?.marketPrice}
       />
     </div>
+    </>
   );
 };

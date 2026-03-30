@@ -200,6 +200,12 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
             <span>{MIN_SQM} mq</span>
             <span>{sliderMax} mq</span>
           </div>
+          {effectiveSqm < MIN_SQM && (
+            <p className="text-xs text-destructive flex items-center gap-1">
+              <Info className="w-3 h-3" />
+              {t("offerSimulator.minSqmWarning", `Minimo ${MIN_SQM} mq richiesti`)}
+            </p>
+          )}
         </div>
 
         {/* Condition */}

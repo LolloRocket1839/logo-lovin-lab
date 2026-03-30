@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -61,6 +61,14 @@ export const ExamForm = ({ onAddExam, language }: ExamFormProps) => {
   }
   gradeOptions.push({ value: "31", label: "30 e Lode" });
 
+  const cfuInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleGradeChange = (value: string) => {
+    setGrade(value);
+    // Auto-focus CFU field after grade selection
+    setTimeout(() => cfuInputRef.current?.focus(), 50);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -115,7 +123,7 @@ export const ExamForm = ({ onAddExam, language }: ExamFormProps) => {
             {/* Grade */}
             <div className="space-y-2">
               <Label htmlFor="exam-grade">{t.grade} *</Label>
-              <Select value={grade} onValueChange={setGrade}>
+              <Select value={grade} onValueChange={handleGradeChange}>
                 <SelectTrigger id="exam-grade">
                   <SelectValue placeholder={t.gradePlaceholder} />
                 </SelectTrigger>
@@ -133,6 +141,7 @@ export const ExamForm = ({ onAddExam, language }: ExamFormProps) => {
             <div className="space-y-2">
               <Label htmlFor="exam-cfu">{t.cfu} *</Label>
               <Input
+                ref={cfuInputRef}
                 id="exam-cfu"
                 type="number"
                 min={1}

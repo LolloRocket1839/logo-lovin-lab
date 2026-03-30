@@ -228,11 +228,14 @@ export const ExamModal = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto" aria-describedby="exam-modal-description">
         <DialogHeader>
           <DialogTitle>
             {editExam ? c.editTitle : c.addTitle}
           </DialogTitle>
+          <p id="exam-modal-description" className="sr-only">
+            {lang === 'it' ? 'Compila i dati dell\'esame in 3 passaggi' : 'Fill in exam details in 3 steps'}
+          </p>
         </DialogHeader>
 
         {/* Step Progress */}

@@ -58,10 +58,12 @@ export const AIBudgetAdvisor = ({
   const [isLoading, setIsLoading] = useState(false);
   const [advice, setAdvice] = useState<BudgetAdvice | null>(null);
   const [hasAnalyzed, setHasAnalyzed] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const analyzebudget = async () => {
     setIsLoading(true);
     setAdvice(null);
+    setError(null);
 
     try {
       const response = await fetch(
@@ -84,28 +86,40 @@ export const AIBudgetAdvisor = ({
       );
 
       if (!response.ok) {
-        const errorData = await response.json();
+        let errorData: { message?: string } = {};
+        try {
+          errorData = await response.json();
+        } catch {
+          // Non-JSON response (e.g. HTML 500 error page)
+        }
         if (response.status === 429) {
-          toast.error(language === "it" 
+          const msg = language === "it" 
             ? "Troppi tentativi. Riprova tra qualche minuto." 
-            : "Too many requests. Please try again later.");
+            : "Too many requests. Please try again later.";
+          setError(msg);
           return;
         }
         if (response.status === 402) {
-          toast.error(language === "it"
+          const msg = language === "it"
             ? "Servizio temporaneamente non disponibile."
-            : "Service temporarily unavailable.");
+            : "Service temporarily unavailable.";
+          setError(msg);
           return;
         }
         throw new Error(errorData.message || "Failed to analyze budget");
       }
 
-      const data: BudgetAdvice = await response.json();
+      let data: BudgetAdvice;
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error("Invalid response format");
+      }
       setAdvice(data);
       setHasAnalyzed(true);
-    } catch (error) {
-      console.error("Error analyzing budget:", error);
-      toast.error(language === "it" 
+    } catch (err) {
+      console.error("Error analyzing budget:", err);
+      setError(language === "it" 
         ? "Errore durante l'analisi. Riprova." 
         : "Error during analysis. Please try again.");
     } finally {
@@ -125,7 +139,7 @@ export const AIBudgetAdvisor = ({
       </CardHeader>
       <CardContent className="pt-4">
         <AnimatePresence mode="wait">
-          {!hasAnalyzed && !isLoading && (
+          {!hasAnalyzed && !isLoading && !error && (
             <motion.div
               key="cta"
               initial={{ opacity: 0, y: 10 }}
@@ -145,6 +159,29 @@ export const AIBudgetAdvisor = ({
               >
                 <Sparkles className="w-4 h-4" />
                 {language === "it" ? "Analizza il mio budget" : "Analyze my budget"}
+              </Button>
+            </motion.div>
+          )}
+
+          {error && !isLoading && (
+            <motion.div
+              key="error"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="text-center py-4 space-y-3"
+            >
+              <div className="p-3 rounded-lg bg-destructive/10 border border-destructive/20">
+                <AlertTriangle className="w-5 h-5 text-destructive mx-auto mb-2" />
+                <p className="text-sm text-destructive">{error}</p>
+              </div>
+              <Button 
+                onClick={analyzebudget}
+                variant="outline"
+                className="gap-2"
+              >
+                <RefreshCw className="w-4 h-4" />
+                {language === "it" ? "Riprova" : "Try again"}
               </Button>
             </motion.div>
           )}

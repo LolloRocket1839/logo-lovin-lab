@@ -444,7 +444,28 @@ const BudgetCalculator = () => {
               </div>
             </div>
             
-            {/* Collapsible Presets - Hidden on mobile */}
+            {/* Mobile Presets — horizontal scroll */}
+            <div className="mb-4 md:hidden">
+              <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
+                {Object.entries(studentPresets).map(([key, preset]) => {
+                  const Icon = preset.icon;
+                  return (
+                    <Button
+                      key={key}
+                      variant="outline"
+                      size="sm"
+                      className="gap-1.5 shrink-0 h-auto py-2 px-3"
+                      onClick={() => applyPreset(key as keyof typeof studentPresets)}
+                    >
+                      <Icon className="w-3.5 h-3.5 text-primary" />
+                      <span className="text-xs">{preset.label[currentLang]}</span>
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Desktop Presets — collapsible */}
             <Collapsible className="mb-4 hidden md:block">
               <CollapsibleTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2">
@@ -893,7 +914,7 @@ const BudgetCalculator = () => {
               {/* Right: Results */}
               <div className="space-y-4 md:space-y-6">
                 {/* Total - Full version hidden on mobile (sticky version shown above) */}
-                <Card className="hidden lg:block border-primary/20 bg-gradient-to-br from-primary/5 to-background">
+                <Card className="hidden lg:flex lg:flex-col border-primary/20 bg-gradient-to-br from-primary/5 to-background">
                   <CardContent className="pt-6">
                     <div className="text-center mb-4">
                       <p className="text-muted-foreground mb-1">
@@ -1060,9 +1081,9 @@ const BudgetCalculator = () => {
                   }}
                 />
 
-                {/* 12-Month Projection - Only in advanced, hidden on mobile */}
+                {/* 12-Month Projection - Only in advanced */}
                 {mode === "advanced" && (
-                  <Card className="hidden md:block">
+                  <Card>
                     <CardHeader className="pb-2">
                       <CardTitle className="flex items-center gap-2 text-base">
                         <TrendingUp className="w-4 h-4 text-primary" />
