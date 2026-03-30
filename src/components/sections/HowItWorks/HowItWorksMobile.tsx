@@ -13,7 +13,8 @@ const steps = [
 ];
 
 export const HowItWorksMobile = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
