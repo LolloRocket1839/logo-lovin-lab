@@ -56,7 +56,8 @@
     },
     "savingHighlight": "Risparmio annuale per gli studenti rispetto all'affitto medio di Torino",
     "ctaInvest": "Investi da €100",
-    "ctaRent": "Cerca alloggio"
+    "ctaRent": "Cerca alloggio",
+    "ctaTalkToUs": "Parla con Lorenzo"
   },
   "video": {
     "title": "Capire il nostro modello in 2 minuti",
@@ -218,7 +219,8 @@
     "sellerLink": {
       "prefix": "Sei un proprietario?",
       "cta": "Scopri come vendere casa"
-    }
+    },
+    "socialProof": "{{count}}+ investitori iscritti · Risposta media: 5 min"
   },
   "studentSearch": {
     "title": "Trova la tua stanza",
@@ -310,7 +312,8 @@
     "supportedBy": "Supportati da 2i3T",
     "incubator": "Incubatore d'Imprese dell'Università di Torino",
     "learnMore": "Scopri di più su 2i3T",
-    "guarantee": "Incubati presso l'ecosistema universitario torinese, garantendo professionalità e affidabilità in ogni transazione"
+    "guarantee": "Incubati presso l'ecosistema universitario torinese, garantendo professionalità e affidabilità in ogni transazione",
+    "inlineCta": "Vuoi saperne di più?"
   },
   "video": {
     "title": "Scopri Jungle Rent",

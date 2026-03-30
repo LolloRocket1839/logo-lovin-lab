@@ -57,48 +57,7 @@ export const StickyCTA = () => {
 
   return (
     <>
-      {/* Mobile version - positioned above BottomNav */}
-      <div 
-        role="region"
-        aria-live="polite"
-        aria-label={t('nav.investors')}
-        className={`fixed bottom-20 left-3 right-3 z-40 md:hidden
-                    glass-sticky
-                    shadow-lg rounded-xl safe-area-bottom
-                    ${hasAnimated && !prefersReducedMotion ? 'animate-fade-up' : ''}`}
-      >
-        <div className="px-3 py-2.5 flex items-center gap-2">
-          <Button
-            onClick={handleInvestClick}
-            size="sm"
-            variant="secondary"
-            className="flex-1 h-10 text-sm font-semibold shadow-md"
-          >
-            <TrendingUp className="mr-1.5 w-4 h-4" aria-hidden="true" />
-            {t('nav.investors')}
-          </Button>
-          <Button
-            onClick={handleSellerClick}
-            size="sm"
-            variant="outline"
-            className="flex-1 h-10 text-sm font-semibold bg-background/90"
-          >
-            <Building2 className="mr-1.5 w-4 h-4" aria-hidden="true" />
-            {t('nav.sell')}
-          </Button>
-          <Button
-            onClick={() => setIsDismissed(true)}
-            variant="ghost"
-            size="icon"
-            className="h-10 w-10 flex-shrink-0 text-primary-foreground hover:bg-primary-foreground/10"
-            aria-label={t('stickyCta.closeLabel')}
-          >
-            <X className="h-4 w-4" />
-          </Button>
-        </div>
-      </div>
-
-      {/* Desktop version */}
+      {/* Desktop version only - mobile removed to avoid BottomNav overlap */}
       <div 
         role="region"
         aria-live="polite"

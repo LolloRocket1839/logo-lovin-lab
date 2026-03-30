@@ -56,7 +56,8 @@
     },
     "savingHighlight": "Annual savings for students compared to Turin average rent",
     "ctaInvest": "Invest from €100",
-    "ctaRent": "Find housing"
+    "ctaRent": "Find housing",
+    "ctaTalkToUs": "Talk to Lorenzo"
   },
   "video": {
     "title": "Understand our model in 2 minutes",
@@ -213,7 +214,8 @@
     "sellerLink": {
       "prefix": "Are you a property owner?",
       "cta": "Discover how to sell"
-    }
+    },
+    "socialProof": "{{count}}+ investors joined · Avg response: 5 min"
   },
   "studentSearch": {
     "title": "Find Your Room",
@@ -305,7 +307,8 @@
     "supportedBy": "Supported by 2i3T",
     "incubator": "Business Incubator of the University of Turin",
     "learnMore": "Learn more about 2i3T",
-    "guarantee": "Incubated within the Turin university ecosystem, ensuring professionalism and reliability in every transaction"
+    "guarantee": "Incubated within the Turin university ecosystem, ensuring professionalism and reliability in every transaction",
+    "inlineCta": "Want to learn more?"
   },
   "benefits": {
     "title": "Why choose Jungle Rent",

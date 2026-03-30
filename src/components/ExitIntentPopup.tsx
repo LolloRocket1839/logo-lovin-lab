@@ -26,7 +26,6 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
   const { trackEvent } = useAnalytics();
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Generate event names based on prefix
@@ -110,7 +109,6 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: email.trim(),
-          phone: phone.trim() || "Non fornito",
           source,
           timestamp: new Date().toISOString(),
           _subject: `🚀 Exit Intent Lead - ${source}${utmString}`,
@@ -118,7 +116,7 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
       });
 
       if (response.ok) {
-        trackEvent(getEventName('submit'), { source, hasPhone: !!phone.trim() });
+        trackEvent(getEventName('submit'), { source });
         toast.success(t("exitIntent.success", "Riceverai la valutazione entro 24 ore!"));
         setIsOpen(false);
       } else {
@@ -174,10 +172,10 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
               </div>
 
               <h2 className="text-xl font-display font-bold text-foreground">
-                {title ?? t("exitIntent.title", "Stai andando via?")}
+                {title ?? t("exitIntent.title", "Before you go...")}
               </h2>
               <p className="text-muted-foreground text-sm mt-1">
-                {subtitle ?? t("exitIntent.subtitle", "Ricevi una valutazione gratuita del tuo immobile in 24 ore")}
+                {subtitle ?? t("exitIntent.subtitle", "Leave your email — we'll send you investment updates and opportunities")}
               </p>
             </div>
 
@@ -192,13 +190,6 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
                   required
                   className="h-12"
                 />
-                <Input
-                  type="tel"
-                  placeholder={t("exitIntent.phonePlaceholder", "Telefono (opzionale)")}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="h-12"
-                />
               </div>
 
               <Button
@@ -208,8 +199,8 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
                 variant="premium"
               >
                 {isSubmitting 
-                  ? t("exitIntent.submitting", "Invio...") 
-                  : t("exitIntent.cta", "Ricevi valutazione gratuita")}
+                  ? t("exitIntent.submitting", "Sending...") 
+                  : t("exitIntent.cta", "Get updates")}
               </Button>
 
               {/* Trust indicators */}

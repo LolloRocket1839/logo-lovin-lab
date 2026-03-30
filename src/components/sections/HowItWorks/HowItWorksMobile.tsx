@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Euro, Key, Users, TrendingUp } from "lucide-react";
+import { Euro, Key, Users, TrendingUp, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { openQuickContact, type SupportedLanguage } from "@/constants/contacts";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const steps = [
   { key: "invest", icon: Euro },
@@ -10,7 +13,8 @@ const steps = [
 ];
 
 export const HowItWorksMobile = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -95,6 +99,22 @@ export const HowItWorksMobile = () => {
           <p className="text-sm text-muted-foreground">
             {t("howItWorks.savingHighlight")}
           </p>
+        </div>
+
+        {/* CTA after savings stat */}
+        <div className="mt-4 text-center">
+          <Button
+            onClick={() => {
+              trackClick("how_it_works_whatsapp_cta");
+              const lang = (i18n.language?.slice(0, 2) || "en") as SupportedLanguage;
+              openQuickContact(lang);
+            }}
+            className="h-12 px-6 text-sm font-semibold"
+            variant="premium"
+          >
+            <MessageCircle className="w-4 h-4 mr-2" />
+            {t("howItWorks.ctaTalkToUs")}
+          </Button>
         </div>
       </div>
     </section>

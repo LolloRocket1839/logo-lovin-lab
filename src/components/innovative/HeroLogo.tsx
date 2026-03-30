@@ -14,13 +14,13 @@ export const HeroLogo = () => {
   
   if (prefersReducedMotion) {
     return (
-      <div className="flex justify-center items-center mb-6 w-full">
+      <div className="flex justify-center items-center mb-4 w-full">
         <img
           src={jungleRentLogo}
           alt="Jungle Rent"
           width={160}
           height={160}
-          className="w-20 h-20 md:w-40 md:h-40 mx-auto block"
+        className="w-14 h-14 md:w-40 md:h-40 mx-auto block"
           fetchPriority="high"
           decoding="async"
         />
@@ -30,7 +30,7 @@ export const HeroLogo = () => {
 
   return (
     <motion.div 
-      className="flex justify-center items-center mb-6 w-full"
+      className="flex justify-center items-center mb-4 w-full"
       style={{ 
         scale,
         opacity,
@@ -42,7 +42,7 @@ export const HeroLogo = () => {
         alt="Jungle Rent"
         width={160}
         height={160}
-        className="w-20 h-20 md:w-40 md:h-40 mx-auto block"
+        className="w-14 h-14 md:w-40 md:h-40 mx-auto block"
         fetchPriority="high"
         decoding="async"
         initial={{ scale: 0.95, opacity: 0 }}

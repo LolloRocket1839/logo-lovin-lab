@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { TrendingUp, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
@@ -10,6 +11,7 @@ interface MobileHeaderProps {
 }
 
 export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
@@ -57,12 +59,12 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
             {isSeller ? (
               <>
                 <FileText className="w-4 h-4 mr-1.5" aria-hidden="true" />
-                Valutazione
+                {t('nav.sell')}
               </>
             ) : (
               <>
                 <TrendingUp className="w-4 h-4 mr-1.5" aria-hidden="true" />
-                Investi
+                {t('nav.investors')}
               </>
             )}
           </Button>
