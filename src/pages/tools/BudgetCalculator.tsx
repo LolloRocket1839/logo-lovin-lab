@@ -914,7 +914,7 @@ const BudgetCalculator = () => {
               {/* Right: Results */}
               <div className="space-y-4 md:space-y-6">
                 {/* Total - Full version hidden on mobile (sticky version shown above) */}
-                <Card className="hidden lg:block border-primary/20 bg-gradient-to-br from-primary/5 to-background">
+                <Card className="hidden lg:flex lg:flex-col border-primary/20 bg-gradient-to-br from-primary/5 to-background">
                   <CardContent className="pt-6">
                     <div className="text-center mb-4">
                       <p className="text-muted-foreground mb-1">
