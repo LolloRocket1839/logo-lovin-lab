@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Euro, Key, Users, TrendingUp } from "lucide-react";
+import { Euro, Key, Users, TrendingUp, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { openQuickContact, type SupportedLanguage } from "@/constants/contacts";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const steps = [
   { key: "invest", icon: Euro },
