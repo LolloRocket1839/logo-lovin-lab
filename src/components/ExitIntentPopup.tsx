@@ -116,7 +116,7 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
       });
 
       if (response.ok) {
-        trackEvent(getEventName('submit'), { source, hasPhone: !!phone.trim() });
+        trackEvent(getEventName('submit'), { source });
         toast.success(t("exitIntent.success", "Riceverai la valutazione entro 24 ore!"));
         setIsOpen(false);
       } else {
