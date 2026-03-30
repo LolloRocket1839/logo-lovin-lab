@@ -134,7 +134,6 @@ const Index = () => {
         <BottomNav />
       </Suspense>
       <WhatsAppFAB />
-      </Suspense>
     </main>
   );
 };
