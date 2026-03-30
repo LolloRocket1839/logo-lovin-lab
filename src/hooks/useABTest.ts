@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
-type CTAType = 'students' | 'investors' | 'sellers' | 'turisti' | 'societa';
+type CTAType = 'students' | 'investors' | 'sellers' | 'turisti' | 'societa' | 'hero_headline' | 'whatsapp_fab';
 type Variation = 'A' | 'B';
 
 interface ABTestHook {
