@@ -30,7 +30,7 @@ export const HeroLogo = () => {
 
   return (
     <motion.div 
-      className="flex justify-center items-center mb-6 w-full"
+      className="flex justify-center items-center mb-4 w-full"
       style={{ 
         scale,
         opacity,
