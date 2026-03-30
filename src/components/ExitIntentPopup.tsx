@@ -190,13 +190,6 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
                   required
                   className="h-12"
                 />
-                <Input
-                  type="tel"
-                  placeholder={t("exitIntent.phonePlaceholder", "Telefono (opzionale)")}
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="h-12"
-                />
               </div>
 
               <Button
