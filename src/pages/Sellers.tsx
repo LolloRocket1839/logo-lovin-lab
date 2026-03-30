@@ -620,6 +620,7 @@ const Sellers = () => {
 
       <Footer />
       <MobileFooter />
+      <WhatsAppFAB />
 
       <QuickSellerLeadDialog 
         open={isDialogOpen} 

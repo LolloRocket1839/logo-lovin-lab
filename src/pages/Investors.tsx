@@ -443,6 +443,7 @@ const Investors = () => {
       <InvestorExitIntentPopup source="investors_page" />
       <Footer />
       <ScrollToTop />
+      <WhatsAppFAB />
     </main>
   );
 };
