@@ -15,6 +15,7 @@ export const ImmersiveHero = () => {
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const prefersReducedMotion = useReducedMotion();
+  const { count: waitlistCount } = useWaitlistCounter();
 
   // Trigger entrance animations after mount
   useEffect(() => {
