@@ -1,34 +1,22 @@
 
 
-# A/B Test: Hero Headline
+# General Polish Pass — All Tools
 
-## What We're Testing
-- **Variation A** (control): Current headline — "Invest in student housing in Turin"
-- **Variation B** (challenger): Direct value-prop — "Earn passive income from Turin student apartments" (IT: "Guadagna reddito passivo dagli appartamenti studenteschi a Torino")
+## Summary
+After reviewing all 8+ tools (Budget Calculator, Grade Calculator, Exam Session Planner, Property Valuator, Quick Offer Simulator, Study Spaces Directory, Cheap Eats Directory, Gyms Directory), the codebase is solid. Below are the concrete improvements organized by priority.
 
-Variation B leads with the *benefit* (earn passive income) rather than the *action* (invest). This tests whether outcome-framing drives more CTA clicks.
+---
 
-## Changes
+## 1. Accessibility & Console Errors
 
-### 1. Add `hero_headline` to CTAType
-**`src/hooks/useABTest.ts`** — Add `'hero_headline'` to the union type.
+**Problem**: Console shows `"Some page content is not contained by landmarks"` and missing `aria-describedby` on DialogContent.
+- Add `aria-describedby` to all `DialogContent` usages (Budget share dialog, Exam modal)
+- Wrap orphan content in `<main>` where missing
 
-### 2. Add `hero_headline` to edge function validation
-**`supabase/functions/track-ab-test/index.ts`** — Add `'hero_headline'` to the `allowedTypes` array (line 41).
+**Files**: `BudgetCalculator.tsx`, `ExamModal.tsx`
 
-### 3. Add variation B headline translations
-**All 7 locale files** (`en.json`, `it.json`, `de.json`, `fr.json`, `es.json`, `zh.json`, `sv.json`) — Add `hero.mainHeadlineB` and `hero.mainSubheadlineB` keys with benefit-first copy.
+---
 
-### 4. Wire A/B logic into ImmersiveHero
-**`src/components/innovative/ImmersiveHero.tsx`**:
-- Import and call `useABTest('hero_headline')`
-- `trackImpression()` on mount
-- Select headline/subheadline based on `variation === 'A'` or `'B'`
-- Wrap `handleInvestClick` to also call `trackClick()`
+## 2. Budget Calculator — Mobile UX Issues
 
-## Technical Detail
-- No new files or dependencies
-- 9 files modified total (hook, edge function, 7 locales, hero component)
-- Results viewable at existing `/ab-test-results` dashboard
-- Edge function redeployed automatically
-
+**Problem**: Student presets are `hidden md:block` — mobile users (the primary audience) can never access them. Also, the desktop-only
