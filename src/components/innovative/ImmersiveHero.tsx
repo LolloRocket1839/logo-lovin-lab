@@ -8,7 +8,7 @@ import { useABTest } from "@/hooks/useABTest";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { HeroLogo } from "./HeroLogo";
 import { HowItWorksDrawer } from "./HowItWorksDrawer";
-import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
+
 
 export const ImmersiveHero = () => {
   const { t, i18n } = useTranslation();
@@ -17,7 +17,7 @@ export const ImmersiveHero = () => {
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const { count: waitlistCount } = useWaitlistCounter();
+  const ACTIVE_INVESTORS = 5;
 
   // Trigger entrance animations after mount + track A/B impression
   useEffect(() => {
@@ -125,7 +125,7 @@ export const ImmersiveHero = () => {
           >
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
               <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              {t('hero.socialProof', { count: waitlistCount })}
+              {t('hero.socialProof', { count: ACTIVE_INVESTORS })}
             </p>
           </div>
 

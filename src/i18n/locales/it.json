@@ -222,7 +222,7 @@
       "prefix": "Sei un proprietario?",
       "cta": "Scopri come vendere casa"
     },
-    "socialProof": "{{count}}+ investitori iscritti · Risposta media: 5 min"
+    "socialProof": "{{count}} investitori già iscritti · Risposta media: 5 min"
   },
   "studentSearch": {
     "title": "Trova la tua stanza",
