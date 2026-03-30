@@ -1,24 +1,34 @@
 
 
-# A/B Test: WhatsApp FAB vs Contact Us Sticky Banner
+# A/B Test: Hero Headline
 
 ## What We're Testing
-- **Variation A**: Current WhatsApp FAB (green floating circle, mobile-only)
-- **Variation B**: Traditional "Contact Us" sticky banner (full-width bar at bottom with text + button, mobile-only)
+- **Variation A** (control): Current headline — "Invest in student housing in Turin"
+- **Variation B** (challenger): Direct value-prop — "Earn passive income from Turin student apartments" (IT: "Guadagna reddito passivo dagli appartamenti studenteschi a Torino")
 
-Both open the same WhatsApp chat on click. We measure which UI pattern gets more taps.
+Variation B leads with the *benefit* (earn passive income) rather than the *action* (invest). This tests whether outcome-framing drives more CTA clicks.
 
 ## Changes
 
-### 1. Add `whatsapp_fab` to allowed CTA types
+### 1. Add `hero_headline` to CTAType
+**`src/hooks/useABTest.ts`** — Add `'hero_headline'` to the union type.
 
-**`src/hooks/useABTest.ts`** — Add `'whatsapp_fab'` to the `CTAType` union.
+### 2. Add `hero_headline` to edge function validation
+**`supabase/functions/track-ab-test/index.ts`** — Add `'hero_headline'` to the `allowedTypes` array (line 41).
 
-**`supabase/functions/track-ab-test/index.ts`** — Add `'whatsapp_fab'` to the `allowedTypes` array.
+### 3. Add variation B headline translations
+**All 7 locale files** (`en.json`, `it.json`, `de.json`, `fr.json`, `es.json`, `zh.json`, `sv.json`) — Add `hero.mainHeadlineB` and `hero.mainSubheadlineB` keys with benefit-first copy.
 
-### 2. Rewrite `WhatsAppFAB.tsx` with A/B logic
+### 4. Wire A/B logic into ImmersiveHero
+**`src/components/innovative/ImmersiveHero.tsx`**:
+- Import and call `useABTest('hero_headline')`
+- `trackImpression()` on mount
+- Select headline/subheadline based on `variation === 'A'` or `'B'`
+- Wrap `handleInvestClick` to also call `trackClick()`
 
-Replace the current component with one that:
-- Calls `useABTest('whatsapp_fab')`
-- Tracks impression when the element becomes visible
-- On **variation A**: renders the current green floating
+## Technical Detail
+- No new files or dependencies
+- 9 files modified total (hook, edge function, 7 locales, hero component)
+- Results viewable at existing `/ab-test-results` dashboard
+- Edge function redeployed automatically
+
