@@ -57,7 +57,7 @@ export const WhatsAppFAB = () => {
       className="fixed bottom-16 left-0 right-0 z-40 md:hidden bg-[#25D366] text-white shadow-[0_-2px_10px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 py-3 px-4 animate-fade-up"
     >
       <Phone className="w-5 h-5" />
-      <span className="font-medium text-sm">{t('contactUs', 'Contact Us')}</span>
+      <span className="font-medium text-sm">{t('nav.contactUs')}</span>
     </button>
   );
 };
