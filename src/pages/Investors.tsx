@@ -212,6 +212,12 @@ const Investors = () => {
                 {t('investor.bookCall')}
               </Button>
             </div>
+
+            {/* Social proof micro-strip */}
+            <p className="mt-6 text-sm text-muted-foreground flex items-center justify-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+              {t('hero.socialProof', { count })}
+            </p>
           </div>
         </div>
       </section>
