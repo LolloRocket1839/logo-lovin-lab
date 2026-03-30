@@ -1146,5 +1146,6 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
         estimatedValue={calculation?.marketPrice}
       />
     </div>
+    </>
   );
 };
