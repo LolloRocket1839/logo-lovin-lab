@@ -76,6 +76,21 @@ export const TrustBadge = () => {
           }`}>
             {t('trustBadge.guarantee')}
           </p>
+
+          {/* Inline CTA */}
+          <a 
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('investor-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className={`inline-flex items-center gap-1.5 mt-4 text-sm text-primary hover:text-primary/80 font-medium transition-colors ${
+              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-2' : prefersReducedMotion ? '' : 'opacity-0'
+            }`}
+          >
+            <span>{t('trustBadge.inlineCta', 'Want to learn more?')}</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>

@@ -133,6 +133,8 @@ const Index = () => {
         <StickyCTA />
         <BottomNav />
       </Suspense>
+      <WhatsAppFAB />
+      </Suspense>
     </main>
   );
 };

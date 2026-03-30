@@ -100,6 +100,22 @@ export const HowItWorksMobile = () => {
             {t("howItWorks.savingHighlight")}
           </p>
         </div>
+
+        {/* CTA after savings stat */}
+        <div className="mt-4 text-center">
+          <Button
+            onClick={() => {
+              trackClick("how_it_works_whatsapp_cta");
+              const lang = (i18n.language?.slice(0, 2) || "en") as SupportedLanguage;
+              openQuickContact(lang);
+            }}
+            className="h-12 px-6 text-sm font-semibold"
+            variant="premium"
+          >
+            <MessageCircle className="w-4 h-4 mr-2" />
+            {t("howItWorks.ctaTalkToUs")}
+          </Button>
+        </div>
       </div>
     </section>
   );

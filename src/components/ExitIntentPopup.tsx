@@ -199,8 +199,8 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
                 variant="premium"
               >
                 {isSubmitting 
-                  ? t("exitIntent.submitting", "Invio...") 
-                  : t("exitIntent.cta", "Ricevi valutazione gratuita")}
+                  ? t("exitIntent.submitting", "Sending...") 
+                  : t("exitIntent.cta", "Get updates")}
               </Button>
 
               {/* Trust indicators */}
