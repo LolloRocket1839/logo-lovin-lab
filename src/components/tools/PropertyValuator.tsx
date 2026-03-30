@@ -332,6 +332,28 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
   }, []);
 
   return (
+    <>
+      {/* Mobile sticky valuation bar */}
+      {calculation && (
+        <div className="lg:hidden sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b border-border/50 py-3 px-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="text-xs text-muted-foreground">{t('propertyValuator.marketPrice', 'Prezzo di Mercato')}</span>
+              <div className="text-xl font-bold text-primary">{formatCurrency(calculation.marketPrice)}</div>
+            </div>
+            <div className="flex gap-3 text-center">
+              <div>
+                <div className="text-sm font-semibold">{formatCurrency(calculation.pricePerSqm)}</div>
+                <div className="text-xs text-muted-foreground">€/mq</div>
+              </div>
+              <div>
+                <div className="text-sm font-semibold">{calculation.reliability}%</div>
+                <div className="text-xs text-muted-foreground">{t('propertyValuator.reliability', 'Affidabilità')}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     <div className="grid lg:grid-cols-5 gap-6">
       {/* Left: Form inputs */}
       <div className="lg:col-span-3 space-y-6">
