@@ -84,7 +84,7 @@ export const ImmersiveHero = () => {
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
-            {t('hero.mainSubheadline')}
+            {subheadline}
           </p>
 
           {/* Single CTA */}
