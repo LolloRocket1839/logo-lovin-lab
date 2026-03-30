@@ -1081,9 +1081,9 @@ const BudgetCalculator = () => {
                   }}
                 />
 
-                {/* 12-Month Projection - Only in advanced, hidden on mobile */}
+                {/* 12-Month Projection - Only in advanced */}
                 {mode === "advanced" && (
-                  <Card className="hidden md:block">
+                  <Card>
                     <CardHeader className="pb-2">
                       <CardTitle className="flex items-center gap-2 text-base">
                         <TrendingUp className="w-4 h-4 text-primary" />

@@ -898,9 +898,9 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                             <div className="flex justify-between text-muted-foreground">
                               <span className="flex items-center gap-1">
                                 <Clock className="w-3 h-3" />
-                                {t('propertyValuator.timeToSale', 'Tempo vendita')}
-                              </span>
-                              <span>60-90 giorni</span>
+                              {t('propertyValuator.timeToSale', 'Tempo vendita')}
+                            </span>
+                            <span>60-90 {t('propertyValuator.days', 'giorni')}</span>
                             </div>
                             <div className="flex justify-between font-semibold pt-1 border-t border-primary/30 text-primary">
                               <span>{t('propertyValuator.netToSeller', 'Netto al venditore')}</span>

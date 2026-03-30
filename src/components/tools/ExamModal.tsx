@@ -233,6 +233,9 @@ export const ExamModal = ({
           <DialogTitle>
             {editExam ? c.editTitle : c.addTitle}
           </DialogTitle>
+          <p id="exam-modal-description" className="sr-only">
+            {lang === 'it' ? 'Compila i dati dell\'esame in 3 passaggi' : 'Fill in exam details in 3 steps'}
+          </p>
         </DialogHeader>
 
         {/* Step Progress */}

@@ -143,9 +143,28 @@ const ExamSessionPlanner = () => {
     setExams(prev => prev.map(e => e.id === id ? { ...e, ...updates } : e));
   };
   
+  // Use a ref to hold deleted exams for the undo closure
+  const deletedExamsRef = useRef<SessionExam[] | null>(null);
+
+  const handleUndo = useCallback(() => {
+    if (deletedExamsRef.current) {
+      setExams(deletedExamsRef.current);
+      setDeletedExams(null);
+      deletedExamsRef.current = null;
+      if (undoTimeoutRef.current) {
+        clearTimeout(undoTimeoutRef.current);
+      }
+      toast({
+        title: currentLang === 'it' ? "Dati ripristinati" : "Data restored",
+      });
+    }
+  }, [currentLang]);
+
   const clearAll = () => {
-    // Save for undo
-    setDeletedExams([...exams]);
+    // Save for undo via ref (avoids stale closure)
+    const backup = [...exams];
+    deletedExamsRef.current = backup;
+    setDeletedExams(backup);
     setExams([]);
     localStorage.removeItem(STORAGE_KEY);
     setShowClearDialog(false);
@@ -164,18 +183,7 @@ const ExamSessionPlanner = () => {
         <Button
           variant="outline"
           size="sm"
-          onClick={() => {
-            if (deletedExams) {
-              setExams(deletedExams);
-              setDeletedExams(null);
-              if (undoTimeoutRef.current) {
-                clearTimeout(undoTimeoutRef.current);
-              }
-              toast({
-                title: currentLang === 'it' ? "Dati ripristinati" : "Data restored",
-              });
-            }
-          }}
+          onClick={handleUndo}
           className="gap-1"
         >
           <Undo2 className="w-3 h-3" />
@@ -187,6 +195,7 @@ const ExamSessionPlanner = () => {
     // Clear undo data after 10 seconds
     undoTimeoutRef.current = setTimeout(() => {
       setDeletedExams(null);
+      deletedExamsRef.current = null;
     }, 10000);
   };
   

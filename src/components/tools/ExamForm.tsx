@@ -141,6 +141,7 @@ export const ExamForm = ({ onAddExam, language }: ExamFormProps) => {
             <div className="space-y-2">
               <Label htmlFor="exam-cfu">{t.cfu} *</Label>
               <Input
+                ref={cfuInputRef}
                 id="exam-cfu"
                 type="number"
                 min={1}

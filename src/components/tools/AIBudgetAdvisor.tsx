@@ -139,7 +139,7 @@ export const AIBudgetAdvisor = ({
       </CardHeader>
       <CardContent className="pt-4">
         <AnimatePresence mode="wait">
-          {!hasAnalyzed && !isLoading && (
+          {!hasAnalyzed && !isLoading && !error && (
             <motion.div
               key="cta"
               initial={{ opacity: 0, y: 10 }}
@@ -159,6 +159,29 @@ export const AIBudgetAdvisor = ({
               >
                 <Sparkles className="w-4 h-4" />
                 {language === "it" ? "Analizza il mio budget" : "Analyze my budget"}
+              </Button>
+            </motion.div>
+          )}
+
+          {error && !isLoading && (
+            <motion.div
+              key="error"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="text-center py-4 space-y-3"
+            >
+              <div className="p-3 rounded-lg bg-destructive/10 border border-destructive/20">
+                <AlertTriangle className="w-5 h-5 text-destructive mx-auto mb-2" />
+                <p className="text-sm text-destructive">{error}</p>
+              </div>
+              <Button 
+                onClick={analyzebudget}
+                variant="outline"
+                className="gap-2"
+              >
+                <RefreshCw className="w-4 h-4" />
+                {language === "it" ? "Riprova" : "Try again"}
               </Button>
             </motion.div>
           )}
