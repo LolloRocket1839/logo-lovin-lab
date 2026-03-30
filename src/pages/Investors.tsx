@@ -4,6 +4,7 @@ import { InvestorWaitlistDialog } from "@/components/dialogs";
 import { ContractBanner } from "@/components/blog/ContractBanner";
 
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -211,6 +212,12 @@ const Investors = () => {
                 {t('investor.bookCall')}
               </Button>
             </div>
+
+            {/* Social proof micro-strip */}
+            <p className="mt-6 text-sm text-muted-foreground flex items-center justify-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+              {t('hero.socialProof', { count })}
+            </p>
           </div>
         </div>
       </section>
@@ -436,6 +443,7 @@ const Investors = () => {
       <InvestorExitIntentPopup source="investors_page" />
       <Footer />
       <ScrollToTop />
+      <WhatsAppFAB />
     </main>
   );
 };

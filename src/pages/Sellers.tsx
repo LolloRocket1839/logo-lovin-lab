@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 import { ContractBanner } from "@/components/blog/ContractBanner";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { Helmet } from "react-helmet";
@@ -619,6 +620,7 @@ const Sellers = () => {
 
       <Footer />
       <MobileFooter />
+      <WhatsAppFAB />
 
       <QuickSellerLeadDialog 
         open={isDialogOpen} 
