@@ -63,6 +63,7 @@ export const AIBudgetAdvisor = ({
   const analyzebudget = async () => {
     setIsLoading(true);
     setAdvice(null);
+    setError(null);
 
     try {
       const response = await fetch(
@@ -85,28 +86,40 @@ export const AIBudgetAdvisor = ({
       );
 
       if (!response.ok) {
-        const errorData = await response.json();
+        let errorData: { message?: string } = {};
+        try {
+          errorData = await response.json();
+        } catch {
+          // Non-JSON response (e.g. HTML 500 error page)
+        }
         if (response.status === 429) {
-          toast.error(language === "it" 
+          const msg = language === "it" 
             ? "Troppi tentativi. Riprova tra qualche minuto." 
-            : "Too many requests. Please try again later.");
+            : "Too many requests. Please try again later.";
+          setError(msg);
           return;
         }
         if (response.status === 402) {
-          toast.error(language === "it"
+          const msg = language === "it"
             ? "Servizio temporaneamente non disponibile."
-            : "Service temporarily unavailable.");
+            : "Service temporarily unavailable.";
+          setError(msg);
           return;
         }
         throw new Error(errorData.message || "Failed to analyze budget");
       }
 
-      const data: BudgetAdvice = await response.json();
+      let data: BudgetAdvice;
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error("Invalid response format");
+      }
       setAdvice(data);
       setHasAnalyzed(true);
-    } catch (error) {
-      console.error("Error analyzing budget:", error);
-      toast.error(language === "it" 
+    } catch (err) {
+      console.error("Error analyzing budget:", err);
+      setError(language === "it" 
         ? "Errore durante l'analisi. Riprova." 
         : "Error during analysis. Please try again.");
     } finally {
