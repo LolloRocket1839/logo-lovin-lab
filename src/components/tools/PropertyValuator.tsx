@@ -817,7 +817,7 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                               <Clock className="w-3 h-3" />
                               {t('propertyValuator.timeToSale', 'Tempo vendita')}
                             </span>
-                            <span>6-12 mesi</span>
+                            <span>6-12 {t('propertyValuator.months', 'mesi')}</span>
                           </div>
                           <div className="flex justify-between font-semibold pt-1 border-t border-border/50">
                             <span>{t('propertyValuator.netToSeller', 'Netto al venditore')}</span>
