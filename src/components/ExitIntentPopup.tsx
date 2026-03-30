@@ -109,7 +109,6 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email: email.trim(),
-          phone: phone.trim() || "Non fornito",
           source,
           timestamp: new Date().toISOString(),
           _subject: `🚀 Exit Intent Lead - ${source}${utmString}`,
