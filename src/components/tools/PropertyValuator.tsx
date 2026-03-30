@@ -246,8 +246,8 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
     
     // Jungle Rent discount explanation
     const jungleRentDiscountReason = condition === 'good'
-      ? 'Costi adeguamento stimati: ' + formatCurrency(estimatedRenovationCost)
-      : 'Immobile pronto per affitto';
+      ? t('propertyValuator.adaptationCosts', 'Costi adeguamento stimati') + ': ' + formatCurrency(estimatedRenovationCost)
+      : t('propertyValuator.readyToRent', 'Immobile pronto per affitto');
     
     // Calculate reliability
     const filledFields = [zone, sqm, floor, condition, energy].filter(Boolean).length;
