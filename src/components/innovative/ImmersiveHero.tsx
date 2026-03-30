@@ -31,10 +31,12 @@ export const ImmersiveHero = () => {
 
   const handleInvestClick = () => {
     trackClick('immersive_hero_invest');
+    trackHeroClick();
     setInvestDialogOpen(true);
   };
 
-  const headline = t('hero.mainHeadline');
+  const headline = heroVariation === 'B' ? t('hero.mainHeadlineB') : t('hero.mainHeadline');
+  const subheadline = heroVariation === 'B' ? t('hero.mainSubheadlineB') : t('hero.mainSubheadline');
 
   return (
     <section 
