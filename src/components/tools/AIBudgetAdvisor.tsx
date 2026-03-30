@@ -58,6 +58,7 @@ export const AIBudgetAdvisor = ({
   const [isLoading, setIsLoading] = useState(false);
   const [advice, setAdvice] = useState<BudgetAdvice | null>(null);
   const [hasAnalyzed, setHasAnalyzed] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const analyzebudget = async () => {
     setIsLoading(true);
