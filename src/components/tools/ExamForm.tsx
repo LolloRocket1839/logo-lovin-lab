@@ -123,7 +123,7 @@ export const ExamForm = ({ onAddExam, language }: ExamFormProps) => {
             {/* Grade */}
             <div className="space-y-2">
               <Label htmlFor="exam-grade">{t.grade} *</Label>
-              <Select value={grade} onValueChange={setGrade}>
+              <Select value={grade} onValueChange={handleGradeChange}>
                 <SelectTrigger id="exam-grade">
                   <SelectValue placeholder={t.gradePlaceholder} />
                 </SelectTrigger>
