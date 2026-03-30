@@ -13,15 +13,20 @@ import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 export const ImmersiveHero = () => {
   const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
+  const { variation: heroVariation, trackImpression: trackHeroImpression, trackClick: trackHeroClick } = useABTest('hero_headline');
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const { count: waitlistCount } = useWaitlistCounter();
 
-  // Trigger entrance animations after mount
+  // Trigger entrance animations after mount + track A/B impression
   useEffect(() => {
     const timer = setTimeout(() => setHasLoaded(true), 100);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    trackHeroImpression();
   }, []);
 
   const handleInvestClick = () => {
