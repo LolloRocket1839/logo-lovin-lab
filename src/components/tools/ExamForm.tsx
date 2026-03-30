@@ -61,6 +61,14 @@ export const ExamForm = ({ onAddExam, language }: ExamFormProps) => {
   }
   gradeOptions.push({ value: "31", label: "30 e Lode" });
 
+  const cfuInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleGradeChange = (value: string) => {
+    setGrade(value);
+    // Auto-focus CFU field after grade selection
+    setTimeout(() => cfuInputRef.current?.focus(), 50);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
