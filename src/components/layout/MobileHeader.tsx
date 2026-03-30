@@ -11,6 +11,7 @@ interface MobileHeaderProps {
 }
 
 export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [investorDialogOpen, setInvestorDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
