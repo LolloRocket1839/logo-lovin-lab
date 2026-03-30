@@ -217,7 +217,7 @@
       "prefix": "Are you a property owner?",
       "cta": "Discover how to sell"
     },
-    "socialProof": "{{count}}+ investors joined · Avg response: 5 min"
+    "socialProof": "{{count}} investors already joined · Avg response: 5 min"
   },
   "studentSearch": {
     "title": "Find Your Room",
