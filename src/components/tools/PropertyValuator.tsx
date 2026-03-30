@@ -831,27 +831,27 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                         /* Custom Evaluation Card for "da ristrutturare" */
                         <div className="p-3 rounded-lg bg-amber-50 dark:bg-amber-950/30 border-2 border-amber-300 dark:border-amber-700 space-y-2 relative">
                           <Badge variant="secondary" className="absolute -top-2 -right-2 text-xs bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200">
-                            Valutazione ad hoc
+                            {t('propertyValuator.customEvaluation', 'Valutazione ad hoc')}
                           </Badge>
                           <div className="flex items-center gap-2">
                             <span className="text-sm font-medium text-amber-800 dark:text-amber-200">
-                              🏗️ Immobile da ristrutturare
+                              🏗️ {t('propertyValuator.toRenovateLabel', 'Immobile da ristrutturare')}
                             </span>
                           </div>
                           <p className="text-sm text-amber-700 dark:text-amber-300">
-                            Questo tipo di immobile richiede una valutazione dedicata del nostro team tecnico.
+                            {t('propertyValuator.toRenovateDescription', 'Questo tipo di immobile richiede una valutazione dedicata del nostro team tecnico.')}
                           </p>
                           <div className="text-sm bg-amber-100 dark:bg-amber-900/50 rounded p-2 space-y-1">
                             <div className="flex justify-between">
-                              <span className="text-amber-700 dark:text-amber-300">Costi ristrutturazione stimati (€800/mq):</span>
+                              <span className="text-amber-700 dark:text-amber-300">{t('propertyValuator.renovationCosts', 'Costi ristrutturazione stimati (€800/mq)')}:</span>
                               <span className="font-medium text-amber-800 dark:text-amber-200">{formatCurrency(calculation.estimatedRenovationCost)}</span>
                             </div>
                             <div className="flex justify-between text-amber-600 dark:text-amber-400">
                               <span className="flex items-center gap-1">
                                 <Clock className="w-3 h-3" />
-                                Tempo lavori stimato:
+                                {t('propertyValuator.renovationTime', 'Tempo lavori stimato')}:
                               </span>
-                              <span>{calculation.estimatedRenovationTime} giorni</span>
+                              <span>{calculation.estimatedRenovationTime} {t('propertyValuator.days', 'giorni')}</span>
                             </div>
                           </div>
                           <Button 
@@ -859,10 +859,10 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                             className="w-full bg-amber-600 hover:bg-amber-700 text-white"
                             onClick={handleOpenLeadForm}
                           >
-                            📋 Richiedi valutazione gratuita
+                            📋 {t('propertyValuator.requestFreeEvaluation', 'Richiedi valutazione gratuita')}
                           </Button>
                           <p className="text-xs text-amber-600 dark:text-amber-400 text-center">
-                            Sopralluogo e offerta vincolante entro 7 giorni lavorativi
+                            {t('propertyValuator.inspectionTimeline', 'Sopralluogo e offerta vincolante entro 7 giorni lavorativi')}
                           </p>
                         </div>
                       ) : (
