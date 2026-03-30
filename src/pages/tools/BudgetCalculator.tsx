@@ -444,7 +444,28 @@ const BudgetCalculator = () => {
               </div>
             </div>
             
-            {/* Collapsible Presets - Hidden on mobile */}
+            {/* Mobile Presets — horizontal scroll */}
+            <div className="mb-4 md:hidden">
+              <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
+                {Object.entries(studentPresets).map(([key, preset]) => {
+                  const Icon = preset.icon;
+                  return (
+                    <Button
+                      key={key}
+                      variant="outline"
+                      size="sm"
+                      className="gap-1.5 shrink-0 h-auto py-2 px-3"
+                      onClick={() => applyPreset(key as keyof typeof studentPresets)}
+                    >
+                      <Icon className="w-3.5 h-3.5 text-primary" />
+                      <span className="text-xs">{preset.label[currentLang]}</span>
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Desktop Presets — collapsible */}
             <Collapsible className="mb-4 hidden md:block">
               <CollapsibleTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2">
