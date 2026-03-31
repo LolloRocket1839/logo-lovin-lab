@@ -1,17 +1,66 @@
-// Jungle Rent Service Worker for Push Notifications
+// Jungle Rent Service Worker for Push Notifications + Asset Caching
 
-const CACHE_NAME = 'jungle-rent-v1';
+const CACHE_NAME = 'jungle-rent-v2';
+const STATIC_CACHE = 'jungle-rent-static-v1';
 
-// Install event
+// Static assets to cache on install
+const PRECACHE_URLS = [
+  '/jungle-rent-logo.svg',
+  '/favicon.ico',
+];
+
+// Install event - precache critical assets
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
-  self.skipWaiting();
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(() => self.skipWaiting())
+  );
 });
 
-// Activate event
+// Activate event - clean old caches
 self.addEventListener('activate', (event) => {
   console.log('Service Worker activated');
-  event.waitUntil(clients.claim());
+  event.waitUntil(
+    caches.keys().then(keys => 
+      Promise.all(
+        keys
+          .filter(key => key !== CACHE_NAME && key !== STATIC_CACHE)
+          .map(key => caches.delete(key))
+      )
+    ).then(() => clients.claim())
+  );
+});
+
+// Fetch event - stale-while-revalidate for assets
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+  
+  // Only cache same-origin GET requests
+  if (request.method !== 'GET' || url.origin !== self.location.origin) return;
+  
+  // Cache JS, CSS, images, fonts
+  const isAsset = /\.(js|css|png|jpg|jpeg|webp|svg|woff2?|ttf)(\?|$)/.test(url.pathname);
+  const isImage = url.pathname.startsWith('/images/');
+  
+  if (isAsset || isImage) {
+    event.respondWith(
+      caches.open(STATIC_CACHE).then(cache =>
+        cache.match(request).then(cached => {
+          const fetchPromise = fetch(request).then(response => {
+            if (response.ok) {
+              cache.put(request, response.clone());
+            }
+            return response;
+          }).catch(() => cached);
+          
+          return cached || fetchPromise;
+        })
+      )
+    );
+  }
 });
 
 // Push notification event
@@ -37,7 +86,6 @@ self.addEventListener('push', (event) => {
         url: payload.url || data.url
       };
     } catch (e) {
-      // If JSON parsing fails, use text
       data.body = event.data.text();
     }
   }
@@ -52,14 +100,8 @@ self.addEventListener('push', (event) => {
       dateOfArrival: Date.now()
     },
     actions: [
-      {
-        action: 'view',
-        title: 'Vedi dettagli'
-      },
-      {
-        action: 'close',
-        title: 'Chiudi'
-      }
+      { action: 'view', title: 'Vedi dettagli' },
+      { action: 'close', title: 'Chiudi' }
     ]
   };
   
@@ -70,24 +112,19 @@ self.addEventListener('push', (event) => {
 
 // Notification click event
 self.addEventListener('notificationclick', (event) => {
-  console.log('Notification clicked:', event);
-  
   event.notification.close();
-  
   const url = event.notification.data?.url || '/studenti/strumenti/calcolatore-budget';
   
   if (event.action === 'view' || !event.action) {
     event.waitUntil(
       clients.matchAll({ type: 'window', includeUncontrolled: true })
         .then((windowClients) => {
-          // Check if there's already a window open
           for (const client of windowClients) {
             if (client.url.includes(self.location.origin) && 'focus' in client) {
               client.navigate(url);
               return client.focus();
             }
           }
-          // If no window is open, open a new one
           if (clients.openWindow) {
             return clients.openWindow(url);
           }
@@ -96,12 +133,5 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Notification close event
-self.addEventListener('notificationclose', (event) => {
-  console.log('Notification closed:', event);
-});
-
-// Background sync for offline support (optional)
-self.addEventListener('sync', (event) => {
-  console.log('Background sync:', event.tag);
-});
+self.addEventListener('notificationclose', () => {});
+self.addEventListener('sync', () => {});
