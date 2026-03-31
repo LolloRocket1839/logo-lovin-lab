@@ -710,7 +710,7 @@ img[fetchpriority="high"] {
   
   /* Horizontal scroll section indicator dots */
   .scroll-indicator-dot {
-    @apply w-2.5 h-2.5 rounded-full transition-all duration-300;
+    @apply w-2.5 h-2.5 rounded-full transition-[transform,background-color,opacity] duration-300;
   }
   
   .scroll-indicator-dot.active {
