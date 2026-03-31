@@ -36,7 +36,7 @@ const NeighborhoodsIndex = lazy(() => import("@/pages/NeighborhoodsIndex"));
 const NeighborhoodPage = lazy(() => import("@/pages/NeighborhoodPage"));
 const InvestorZonesIndex = lazy(() => import("@/pages/InvestorZonesIndex"));
 const InvestorZonePage = lazy(() => import("@/pages/InvestorZonePage"));
-const AdminAutoBlog = lazy(() => import("@/pages/AdminAutoBlog"));
+
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 export const AnimatedRoutes = () => {
@@ -103,7 +103,7 @@ export const AnimatedRoutes = () => {
             <Route path="/rooms-rent-turin" element={<NeighborhoodsIndex />} />
             <Route path="/affitto-stanza-torino/:slug" element={<NeighborhoodPage />} />
             <Route path="/rooms-rent-turin/:slug" element={<NeighborhoodPage />} />
-            <Route path="/admin/content-engine" element={<AdminAutoBlog />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
