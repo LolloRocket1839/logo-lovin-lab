@@ -635,6 +635,6 @@ EXAMPLE QUERIES:
 - "How to invest in real estate in Turin?"
 
 ================================================================================
-Last Updated: March 3, 2026
-Version: 4.0 - NLWeb natural language query endpoint (Microsoft NLWeb protocol)
+Last Updated: March 31, 2026
+Version: 4.3 - Content sync: 60 articles, events updated to Apr-May 2026
 ================================================================================
