@@ -77,7 +77,7 @@ const BlogPost = () => {
     };
 
     loadContent();
-  }, [post?.content, currentLang]);
+  }, [post?.content, currentLang, autoPostData]);
 
   // Guard clauses after hooks
   if (!slug) return <Navigate to="/blog" replace />;
