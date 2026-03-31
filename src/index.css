@@ -179,7 +179,7 @@ img[fetchpriority="high"] {
 
   /* Blog Card Hover - Marvis Style */
   .blog-card-marvis {
-    @apply transition-all duration-300 ease-out;
+    @apply transition-[transform,box-shadow,border-color] duration-300 ease-out;
     @apply hover:scale-[1.02] hover:shadow-2xl;
     @apply cursor-pointer;
     @apply border border-border/50;
