@@ -445,7 +445,7 @@ interface PropertyValuatorFAQProps {
 }
 
 export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) => {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://junglerent.it';
+  const baseUrl = 'https://junglerent.it';
   
   const faqsIT: FAQItem[] = [
     {
