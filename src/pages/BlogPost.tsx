@@ -49,25 +49,16 @@ const BlogPost = () => {
   useEffect(() => {
     const loadContent = async () => {
       if (!post?.content) {
-        setContent(`
-## Introduzione
+        setContent("## Contenuto non disponibile");
+        return;
+      }
 
-Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
-
-### Punti Chiave
-
-- **Informazioni verificate**: Tutti i dati sono aggiornati al 2025
-- **Consigli pratici**: Suggerimenti applicabili immediatamente
-- **Risorse utili**: Link e strumenti per approfondire
-
-## Sezione Principale
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Conclusioni
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        `);
+      // Auto-generated posts: content comes from DB
+      if (post.content.startsWith("__auto__")) {
+        if (autoPostData) {
+          const dbContent = currentLang === 'it' ? autoPostData.content_it : autoPostData.content_en;
+          setContent(dbContent);
+        }
         return;
       }
       
@@ -80,11 +71,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
           const fallbackModule = await import(`@/data/blog/content/it/${post.content}.md?raw`);
           setContent(fallbackModule.default);
         } catch (fallbackError) {
-          setContent(`
-## Introduzione
-
-Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
-          `);
+          setContent("## Contenuto non disponibile");
         }
       }
     };
