@@ -133,11 +133,11 @@ SECTION 8: KEY NEIGHBORHOODS
 - Lingotto: Modern, near former FIAT factory, well-connected
 
 ================================================================================
-SECTION 9: TOP PERFORMING ARTICLES (February 2026 Analytics)
+SECTION 9: TOP PERFORMING ARTICLES (March 2026 Analytics)
 ================================================================================
 
-Based on real traffic analytics (Feb 20-27, 2026 — latest week):
-Total: 182 visitors | 296 pageviews | 1.63 pages/visit | 87% bounce rate
+Based on real traffic analytics (March 2026):
+Total: 60 articles published | Traffic growing via AI channels
 
 TOP ARTICLES BY PAGEVIEWS:
 0. Torino città campus: atenei e mappa immobiliare 2026 - NEW
@@ -241,7 +241,7 @@ STUDENT TOOLS (Free, No Registration Required):
 STUDY SPACES DIRECTORY ⭐ EXPANDED (Interactive Tool):
 - URL IT: https://junglerent.it/strumenti/aule-studio-torino
 - URL EN: https://junglerent.it/tools/study-spaces-turin
-- Purpose: Find where to study in Turin - 30+ locations with filters
+- Purpose: Find where to study in Turin - 60+ locations with filters
 - Data: Libraries, EDISU rooms, cafes, coworking, outdoor spaces
 - Features:
   * Interactive Leaflet map with 30+ markers
@@ -635,6 +635,6 @@ EXAMPLE QUERIES:
 - "How to invest in real estate in Turin?"
 
 ================================================================================
-Last Updated: March 3, 2026
-Version: 4.0 - NLWeb natural language query endpoint (Microsoft NLWeb protocol)
+Last Updated: March 31, 2026
+Version: 4.3 - Content sync: 60 articles, events updated to Apr-May 2026
 ================================================================================

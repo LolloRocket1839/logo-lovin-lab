@@ -58,14 +58,14 @@ export const ToolStructuredData = ({
   featureList,
   softwareVersion = "1.0",
   datePublished = "2025-12-01",
-  dateModified = "2025-12-19",
+  dateModified = "2026-03-31",
   inLanguage = ["it", "en"],
   author = {
     name: "Jungle Rent",
     url: "https://junglerent.it"
   }
 }: ToolStructuredDataProps) => {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://junglerent.it';
+  const baseUrl = 'https://junglerent.it';
   
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
@@ -138,7 +138,7 @@ export const HowToStructuredData = ({
   steps,
   image
 }: HowToStructuredDataProps) => {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://junglerent.it';
+  const baseUrl = 'https://junglerent.it';
   
   const howToSchema = {
     "@context": "https://schema.org",
@@ -377,7 +377,7 @@ export const PropertyValuatorSchema = () => (
     description="Calcola gratuitamente il valore di mercato del tuo immobile a Torino. Dati OMI Agenzia Entrate novembre 2025, coefficienti FIAIP, 35+ zone, stima accurata ±5%."
     url="/valutazione-immobile"
     applicationCategory="FinanceApplication"
-    dateModified="2025-12-27"
+    dateModified="2026-03-31"
     featureList={[
       "35+ zone di Torino con prezzi OMI",
       "Dati OMI Agenzia Entrate novembre 2025",
@@ -445,7 +445,7 @@ interface PropertyValuatorFAQProps {
 }
 
 export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) => {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://junglerent.it';
+  const baseUrl = 'https://junglerent.it';
   
   const faqsIT: FAQItem[] = [
     {
