@@ -10,6 +10,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AISearchBox } from "@/components/AISearchBox";
 import { BlogCategory } from "@/types/blog";
 import { getPostsByCategory, searchPosts, filterPostsByTags, blogPosts } from "@/data/blog/posts";
+import { useAutoBlogPosts } from "@/hooks/useAutoBlogPosts";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { createBlogCollectionSchema } from "@/lib/schema";
