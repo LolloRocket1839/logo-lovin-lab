@@ -157,7 +157,7 @@ img[fetchpriority="high"] {
 
   /* Marvis-Inspired Feel Good Clicks */
   .feel-good-click {
-    @apply transition-all duration-200 ease-out;
+    @apply transition-[transform,box-shadow] duration-200 ease-out;
     @apply active:scale-[0.97];
     @apply hover:shadow-lg hover:-translate-y-0.5;
   }
