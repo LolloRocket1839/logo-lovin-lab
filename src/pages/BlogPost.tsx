@@ -16,6 +16,7 @@ import { EmailGate } from "@/components/blog/EmailGate";
 import { ClusterSidebar, ClusterSidebarTrigger } from "@/components/blog/ClusterSidebar";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { getClusterForArticle } from "@/data/blog/contentClusters";
+import { useAutoBlogPost, autoBlogPostToBlogPost } from "@/hooks/useAutoBlogPosts";
 import { Calendar, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
@@ -34,7 +35,13 @@ const BlogPost = () => {
   const [langOverride, setLangOverride] = useState<BlogLanguage | null>(null);
   const currentLang = langOverride ?? globalLang;
   
-  const post = slug ? getPostBySlug(slug) : null;
+  // Try static posts first, then dynamic
+  const staticPost = slug ? getPostBySlug(slug) : null;
+  const { data: autoPostData } = useAutoBlogPost(staticPost ? "" : (slug || ""));
+  const autoPost = autoPostData ? autoBlogPostToBlogPost(autoPostData) : null;
+  const post = staticPost || autoPost;
+  const isAutoPost = !staticPost && !!autoPost;
+  
   const translatedData = post?.translations[currentLang];
   const currentTags = translatedData?.tags || [];
   const relatedPosts = post ? getRelatedPosts(post.slug, post.category, currentTags, currentLang) : [];
