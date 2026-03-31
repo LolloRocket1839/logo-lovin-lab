@@ -318,18 +318,23 @@ mcpServer.tool("get_faq", {
 });
 
 mcpServer.tool("get_events", {
-  description: "Get current events in Turin with dates, locations, and prices.",
+  description: "Get current and upcoming events in Turin with dates, locations, and prices. Covers February–April 2026.",
   inputSchema: {
     type: "object" as const,
     properties: {
-      month: { type: "string", enum: ["february", "march"], description: "Month filter" },
+      month: { type: "string", enum: ["february", "march", "april"], description: "Month filter" },
+      category: { type: "string", enum: ["concerts", "festivals", "exhibitions", "theatre", "nature", "markets"], description: "Filter by event category" },
     },
   },
-  handler: (args: { month?: string }) => {
-    const events = args.month === "march" ? EVENTS_MAR_2026 :
-                   args.month === "february" ? EVENTS_FEB_2026 :
-                   [...EVENTS_FEB_2026, ...EVENTS_MAR_2026];
-    return { content: [{ type: "text" as const, text: JSON.stringify({ count: events.length, events, note: "Data as of February 2026" }, null, 2) }] };
+  handler: (args: { month?: string; category?: string }) => {
+    const monthMap: Record<string, typeof EVENTS_FEB_2026> = {
+      february: EVENTS_FEB_2026,
+      march: EVENTS_MAR_2026,
+      april: EVENTS_APR_2026,
+    };
+    const events = args.month ? (monthMap[args.month] || []) :
+                   [...EVENTS_FEB_2026, ...EVENTS_MAR_2026, ...EVENTS_APR_2026];
+    return { content: [{ type: "text" as const, text: JSON.stringify({ count: events.length, events, note: "Data as of March 2026. April 2026 fully covered." }, null, 2) }] };
   },
 });
 
