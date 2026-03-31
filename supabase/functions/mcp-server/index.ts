@@ -175,6 +175,46 @@ const EVENTS_MAR_2026 = [
   { name: "Torino Jazz Festival Preview", dates: "Mar 2026", location: "Various venues", price: "Varies", description: "Preview events for the annual jazz festival" },
 ];
 
+const EVENTS_APR_2026 = [
+  // Concerts & live music
+  { name: "Subsonica – Cieli su Torino (final dates)", dates: "Apr 1, 3-4, 2026", location: "OGR Sala Fucine", price: "SOLD OUT (€50)", description: "Final 3 of 4 hometown dates celebrating 30 years. Concert + immersive retrospective in OGR Duomo." },
+  { name: "Cabaret – Arturo Brachetti", dates: "Apr 9-12, 2026", location: "Teatro Alfieri, Pza Solferino 4", price: "TicketOne", description: "The master of quick-change theatre brings Kander & Ebb's musical set in Weimar-era Berlin." },
+  { name: "Tame Impala – Deadbeat Tour", dates: "Apr 12, 2026", location: "Inalpi Arena", price: "Ticketmaster", description: "Kevin Parker's psychedelic powerhouse in support of new album Deadbeat. 21:00." },
+  { name: "Angelo Pintus – Nabana", dates: "Apr 17, 2026", location: "Inalpi Arena", price: "TicketOne", description: "Comedy show at Inalpi Arena." },
+  { name: "Gianni Morandi – C'era un ragazzo", dates: "Apr 19, 2026", location: "Inalpi Arena", price: "TicketOne", description: "Italian legend live at Inalpi Arena." },
+  { name: "Frah Quintale – Palazzetti'26", dates: "Apr 21, 2026", location: "Inalpi Arena", price: "TicketOne", description: "Italian indie-pop artist arena tour." },
+  { name: "Tommaso Paradiso – Palasport 2026", dates: "Apr 23, 2026", location: "Inalpi Arena", price: "TicketOne", description: "Former Thegiornalisti frontman solo arena show." },
+  { name: "Blanco", dates: "Apr 25, 2026", location: "Inalpi Arena", price: "TicketOne", description: "Sanremo 2022 winner live concert." },
+  { name: "Elisa", dates: "Apr 29, 2026", location: "Inalpi Arena", price: "TicketOne", description: "Italian singer-songwriter arena concert." },
+  { name: "Annalisa – Fuoco Capitolo II", dates: "Apr 30, 2026", location: "Inalpi Arena", price: "TicketOne", description: "Italian pop star arena tour." },
+  // Festivals
+  { name: "EXPOSED Torino Photo Festival (3rd edition)", dates: "Apr 9 – Jun 2, 2026", location: "CAMERA, Gallerie d'Italia, Mole, Piazza San Carlo + citywide", price: "Free with Abbonamento Musei; varies by venue", description: "18 indoor/outdoor photography exhibitions. Theme: 'Mettersi a nudo'. ESTERNO NOTTE projections Apr 10, 21:00-24:00." },
+  { name: "Biennale Tecnologia (5th edition)", dates: "Apr 15-19, 2026", location: "Politecnico di Torino + Circolo dei Lettori, Teatro Regio, Museo Risorgimento", price: "Varies", description: "5 days on AI, sustainability, energy, space, mobility. Promoted by Politecnico di Torino." },
+  { name: "Lovers Film Festival (41st edition)", dates: "Apr 16-21, 2026", location: "Cinema Massimo, Via Giuseppe Verdi 18", price: "Accreditation", description: "Italy's oldest LGBTQI+ film festival. Directed by Vladimir Luxuria." },
+  { name: "Torino Jazz Festival (14th edition)", dates: "Apr 25 – May 2, 2026", location: "Citywide – OGR, Teatro Regio, Piazza Castello, clubs", price: "Varies / some free", description: "10 days of world-class jazz in clubs, squares, theatres. Free TJF collab at Blah Blah Apr 24." },
+  { name: "BE COMICS! BE GAMES! Torino (debut)", dates: "Apr 18-19, 2026", location: "Lingotto Fiere, Via Nizza 280", price: "torino.becomics.it", description: "New pop culture event: comics, manga, gaming, cosplay. By GL events Italia." },
+  { name: "Torino Comics 2026 (30th edition)", dates: "Apr 17-19, 2026", location: "Certosa Reale di Collegno", price: "turismotorino.org", description: "30th anniversary, first outdoor edition at Certosa Reale. Artist Alley, gaming, cosplay." },
+  // Exhibitions (ongoing/opening in April)
+  { name: "Vermeer: Donna in blu che legge una lettera", dates: "Mar 5 – Jun 29, 2026", location: "Palazzo Madama, Piazza Castello", price: "Included in collections ticket", description: "First-ever Vermeer in Turin, on loan from Rijksmuseum." },
+  { name: "Diana Markosian: Replaced (world premiere)", dates: "Apr 10 – Sep 6, 2026", location: "Gallerie d'Italia – Torino", price: "Varies", description: "Part of EXPOSED. Reconstructing memory of first love through film and photography." },
+  { name: "Orazio Gentileschi: Un pittore in viaggio", dates: "Until May 3, 2026", location: "Sale Chiablese, Musei Reali", price: "Varies", description: "Major Baroque painting exhibition." },
+  { name: "Edward Weston: La materia delle forme", dates: "Feb 12 – Jun 2, 2026", location: "CAMERA, Via delle Rosine 18", price: "Varies", description: "First Italian retrospective of the American photography master." },
+  { name: "Chiharu Shiota: The Soul Trembles", dates: "Until Jun 28, 2026", location: "MAO, Via San Domenico 11", price: "Varies", description: "Immersive retrospective – memory, identity, fragility through thread installations." },
+  { name: "Electric Dreams", dates: "Until May 10, 2026", location: "OGR Torino, Binario 2", price: "Varies", description: "40+ years of art at the crossroads of technology, organised by Tate Modern and OGR." },
+  { name: "Orson Welles", dates: "Mar 31 – Oct 5, 2026", location: "Museo Nazionale del Cinema (Mole Antonelliana)", price: "Varies", description: "Major exhibition on the legendary filmmaker." },
+  // Nature & outdoor
+  { name: "Cherry Blossoms at Venaria Reale", dates: "Until ~Apr 6, 2026", location: "Giardini della Reggia di Venaria", price: "Day €6 / Evening €8 / Combined €10", description: "100 cherry trees illuminated. Evening openings 19:00-23:00 daily." },
+  { name: "Messer Tulipano (26th edition)", dates: "Mar 28 – Apr 26, 2026", location: "Castello di Pralormo (~30km from Turin)", price: "Weekdays €10 / Weekends €12", description: "130,000 tulips in 19th-century park. SOLOFIORI exhibition in Orangerie. Family activities." },
+  // Theatre
+  { name: "Circle Mirror Transformation", dates: "Apr 7-19, 2026", location: "Teatro Carignano", price: "teatrostabiletorino.it", description: "Teatro Stabile di Torino production." },
+  { name: "Dialoghi delle Carmelitane", dates: "Apr 8-12, 2026", location: "Teatro Regio", price: "teatroregio.torino.it", description: "Opera at Teatro Regio." },
+  { name: "Il berretto a sonagli", dates: "Apr 28 – May 10, 2026", location: "Teatro Carignano", price: "teatrostabiletorino.it", description: "Pirandello classic at Teatro Stabile." },
+  // Special days
+  { name: "Easter in Turin", dates: "Apr 5-6, 2026", location: "Citywide", price: "Varies", description: "Easter Sunday + Pasquetta. Chocolate tastings, museum openings, brunches. Turin is Italy's chocolate capital." },
+  { name: "Liberation Day (25 Aprile)", dates: "Apr 25, 2026", location: "Citywide", price: "Free", description: "National holiday. Special markets, live music in piazzas. Torino Jazz Festival opens." },
+  { name: "Gran Balon (monthly antiques)", dates: "Apr 12, 2026", location: "Borgo Dora", price: "Free entry", description: "Monthly antique market, 2nd Sunday of the month." },
+];
+
 // ============================================
 // MCP TOOLS
 // ============================================
