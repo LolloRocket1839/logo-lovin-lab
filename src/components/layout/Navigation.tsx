@@ -101,7 +101,7 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         isScrolled
           ? "glass-nav glass-nav-scrolled"
           : isHomePage 
@@ -211,7 +211,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border/20 bg-background/95 backdrop-blur-xl z-50 animate-materialize">
+          <div className="lg:hidden py-4 border-t border-border/20 bg-background/95 backdrop-blur-xl z-50 animate-fade-up">
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => {
                 const href = item.path || (item.id ? `/#${item.id}` : '/');
