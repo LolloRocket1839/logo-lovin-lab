@@ -65,7 +65,7 @@ export const ToolStructuredData = ({
     url: "https://junglerent.it"
   }
 }: ToolStructuredDataProps) => {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://junglerent.it';
+  const baseUrl = 'https://junglerent.it';
   
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
