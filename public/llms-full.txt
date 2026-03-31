@@ -659,10 +659,10 @@ Pre-defined multi-step flows for AI agents:
 
 ## SECTION 16: UPDATE LOG
 
-- **Last Updated**: March 2, 2026
-- **Version**: 3.9 - Agent discovery protocols (A2A Agent Card, agents.json, RSS feed)
+- **Last Updated**: March 31, 2026
+- **Version**: 4.3 - Content sync: 60 articles (was 38), 22 new articles, events updated to Apr-May 2026
 - **Maintainer**: Jungle Rent S.r.l.
-- **FAQ Count**: 210+ FAQs across 38+ articles
+- **FAQ Count**: 350+ FAQs across 60 articles
 - **Voice Search**: Optimized for Google Assistant, Alexa, Siri, Perplexity, Gemini
 
 ### Key Data Points for AI (Updated February 2026)
