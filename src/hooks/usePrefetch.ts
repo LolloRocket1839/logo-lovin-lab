@@ -7,9 +7,8 @@ const routeMap: Record<string, () => Promise<any>> = {
   "/blog": () => import("@/pages/Blog"),
   "/studenti": () => import("@/pages/Students"),
   "/investitori": () => import("@/pages/Investors"),
-  "/vendi-casa": () => import("@/pages/SellProperty"),
+  "/vendi-casa": () => import("@/pages/Sellers"),
   "/valutazione-immobile": () => import("@/pages/PropertyValuation"),
-  "/turisti": () => import("@/pages/Tourists"),
 };
 
 export function usePrefetch() {

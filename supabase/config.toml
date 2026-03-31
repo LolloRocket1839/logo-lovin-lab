@@ -32,3 +32,6 @@ verify_jwt = false
 
 [functions.nlweb]
 verify_jwt = false
+
+[functions.auto-publish-blog]
+verify_jwt = false
