@@ -28,6 +28,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 | Incubator | 2i3T (Università di Torino) |
 | Minimum Investment | €100 |
 | Students Served | 90,000+ across 7 universities |
+| Blog Articles | 60+ bilingual guides |
 
 ## Founders
 
@@ -43,53 +44,11 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - **Website**: https://junglerent.it
 - **Phone**: +39 331 905 3037
 
-## Key Statistics (February 2026)
-
-- Student Room Rent: €350-550/month (San Salvario, Cenisia, Vanchiglia)
-- Crocetta Premium: €500-700/month
-- GTT Under 26 Pass: €25/month or €258/year
-- Universities: Politecnico di Torino, UniTo, ESCP, SAA, IED, IAAD, IUSTO
-
-## Top Performing Articles (February 2026)
-
-1. [Eventi Torino gennaio 2026](https://junglerent.it/blog/eventi-torino-gennaio-2026) - 185 pageviews
-2. [Quartieri sicuri donne Torino](https://junglerent.it/blog/quartieri-sicuri-donne-torino) - 184 pageviews
-3. [Student housing Italia Savills 2025](https://junglerent.it/blog/student-housing-italia-savills-2025) - 104 pageviews
-4. [Digital nomads guide Turin](https://junglerent.it/blog/torino-digital-nomads-guide) - 60 pageviews
-5. [Torino nightlife guide](https://junglerent.it/blog/torino-nightlife-guide) - 58 pageviews
-6. [Aule studio Torino](https://junglerent.it/blog/aule-studio-torino-guida-completa) - 51 pageviews
-
-Traffic: Direct 55.5%, Google 35.7%, Gemini 4.4% ⬆️, ChatGPT 0.5%
-
-## Turin Walkability Ranking
-
-Turin is the **3rd most walkable city in the world** (World of Statistics / The Economist, Feb 2026):
-- Milan (6 min), Copenhagen (6 min), **Turin (7 min)**, Dublin (7 min), Lyon (7 min)
-- Turin ahead of Paris (8 min), Vienna (8 min), Berlin (9 min)
-- Blog: https://junglerent.it/blog/torino-citta-7-minuti-walkability
-
-## February 2026 Events
-
-- **CioccolaTò**: Feb 13-17, Piazza Vittorio Veneto - 60+ artisan chocolatiers, free entry
-- **Macbeth**: Feb 20 - Mar 7, Teatro Regio - Conducted by Riccardo Muti (€50-230)
-- **Battle of the Oranges**: Feb 15, Ivrea - UNESCO Heritage since 2023 (€15)
-- **Final Eight Basketball**: Feb 18-22, Inalpi Arena (from €15)
-- **Candlelight Ennio Morricone**: Feb 26, Palazzo della Luce (from €30)
-
-## March 2026 Events ⭐ NEW
-
-- **Shiota Chiharu**: Mar 1 - Jul 13, GAM - Major immersive art installation (€15)
-- **Futurismo 1909-2026**: From Feb 27, Museo del Cinema - Futurist movement centenary (€15)
-- **Subsonica 30th Anniversary**: Mar 13-14, Inalpi Arena - Landmark tour (from €40)
-- **Gentileschi at Palazzo Madama**: Ongoing - Baroque masterpieces exhibition
-- Blog: https://junglerent.it/blog/eventi-torino-marzo-2026
-
 ## MCP Server (Model Context Protocol)
 
 AI agents can programmatically query Jungle Rent data via MCP:
 - **Endpoint**: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
 - **Tools**: search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices (38 zones), property_valuation (OMI/FIAIP coefficients), get_investment_data (13 zones with yield/vacancy/urban renewal), **contact_jungle_rent** (send email on behalf of user)
-- **Contact Tool**: `contact_jungle_rent` accepts name, email, message (required) + category (investor/student/seller/tourist/general) and phone (optional). Sends email via Formspree. Returns confirmation + WhatsApp/email fallback.
 - **Protocol**: MCP over HTTP (Streamable HTTP Transport)
 - **Auth**: None required (public endpoint)
 
@@ -100,5 +59,5 @@ For detailed information:
 - Structured Data: https://junglerent.it/ai-assistant-info.txt
 
 ---
-Last Updated: March 7, 2026
-Version: 4.1 - SEO/AEO overhaul: @id entity linking, AI Overview eligibility, content attribution
+Last Updated: March 31, 2026
+Version: 4.3 - Synced article count to 60+, updated events to Apr-May 2026

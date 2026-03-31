@@ -377,7 +377,7 @@ export const PropertyValuatorSchema = () => (
     description="Calcola gratuitamente il valore di mercato del tuo immobile a Torino. Dati OMI Agenzia Entrate novembre 2025, coefficienti FIAIP, 35+ zone, stima accurata ±5%."
     url="/valutazione-immobile"
     applicationCategory="FinanceApplication"
-    dateModified="2025-12-27"
+    dateModified="2026-03-31"
     featureList={[
       "35+ zone di Torino con prezzi OMI",
       "Dati OMI Agenzia Entrate novembre 2025",
