@@ -140,6 +140,117 @@ export type Database = {
         }
         Relationships: []
       }
+      auto_blog_posts: {
+        Row: {
+          author: string
+          category: string
+          content_en: string
+          content_it: string
+          created_at: string | null
+          excerpt_en: string
+          excerpt_it: string
+          id: string
+          image: string
+          keywords: Json
+          published_at: string | null
+          read_time: number
+          seo_desc_en: string
+          seo_desc_it: string
+          seo_title_en: string
+          seo_title_it: string
+          slug: string
+          status: string
+          tags_en: Json
+          tags_it: Json
+          title_en: string
+          title_it: string
+        }
+        Insert: {
+          author?: string
+          category?: string
+          content_en: string
+          content_it: string
+          created_at?: string | null
+          excerpt_en: string
+          excerpt_it: string
+          id?: string
+          image?: string
+          keywords?: Json
+          published_at?: string | null
+          read_time?: number
+          seo_desc_en: string
+          seo_desc_it: string
+          seo_title_en: string
+          seo_title_it: string
+          slug: string
+          status?: string
+          tags_en?: Json
+          tags_it?: Json
+          title_en: string
+          title_it: string
+        }
+        Update: {
+          author?: string
+          category?: string
+          content_en?: string
+          content_it?: string
+          created_at?: string | null
+          excerpt_en?: string
+          excerpt_it?: string
+          id?: string
+          image?: string
+          keywords?: Json
+          published_at?: string | null
+          read_time?: number
+          seo_desc_en?: string
+          seo_desc_it?: string
+          seo_title_en?: string
+          seo_title_it?: string
+          slug?: string
+          status?: string
+          tags_en?: Json
+          tags_it?: Json
+          title_en?: string
+          title_it?: string
+        }
+        Relationships: []
+      }
+      auto_blog_topics: {
+        Row: {
+          category: string
+          created_at: string | null
+          id: string
+          priority: number
+          status: string
+          target_keywords: Json
+          topic_en: string
+          topic_it: string
+          used_at: string | null
+        }
+        Insert: {
+          category?: string
+          created_at?: string | null
+          id?: string
+          priority?: number
+          status?: string
+          target_keywords?: Json
+          topic_en: string
+          topic_it: string
+          used_at?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string | null
+          id?: string
+          priority?: number
+          status?: string
+          target_keywords?: Json
+          topic_en?: string
+          topic_it?: string
+          used_at?: string | null
+        }
+        Relationships: []
+      }
       investor_interest: {
         Row: {
           accredited_investor: string

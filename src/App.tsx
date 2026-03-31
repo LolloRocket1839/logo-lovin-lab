@@ -8,7 +8,14 @@ import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
 import { usePageViewTracking, useScrollDepth, useUTMTracking } from "./hooks";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes stale-while-revalidate
+      gcTime: 10 * 60 * 1000,
+    },
+  },
+});
 
 const AppContent = () => {
   usePageViewTracking();

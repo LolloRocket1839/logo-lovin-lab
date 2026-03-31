@@ -16,6 +16,7 @@ import { EmailGate } from "@/components/blog/EmailGate";
 import { ClusterSidebar, ClusterSidebarTrigger } from "@/components/blog/ClusterSidebar";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { getClusterForArticle } from "@/data/blog/contentClusters";
+import { useAutoBlogPost, autoBlogPostToBlogPost } from "@/hooks/useAutoBlogPosts";
 import { Calendar, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
@@ -34,7 +35,13 @@ const BlogPost = () => {
   const [langOverride, setLangOverride] = useState<BlogLanguage | null>(null);
   const currentLang = langOverride ?? globalLang;
   
-  const post = slug ? getPostBySlug(slug) : null;
+  // Try static posts first, then dynamic
+  const staticPost = slug ? getPostBySlug(slug) : null;
+  const { data: autoPostData } = useAutoBlogPost(staticPost ? "" : (slug || ""));
+  const autoPost = autoPostData ? autoBlogPostToBlogPost(autoPostData) : null;
+  const post = staticPost || autoPost;
+  const isAutoPost = !staticPost && !!autoPost;
+  
   const translatedData = post?.translations[currentLang];
   const currentTags = translatedData?.tags || [];
   const relatedPosts = post ? getRelatedPosts(post.slug, post.category, currentTags, currentLang) : [];
@@ -42,25 +49,16 @@ const BlogPost = () => {
   useEffect(() => {
     const loadContent = async () => {
       if (!post?.content) {
-        setContent(`
-## Introduzione
+        setContent("## Contenuto non disponibile");
+        return;
+      }
 
-Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
-
-### Punti Chiave
-
-- **Informazioni verificate**: Tutti i dati sono aggiornati al 2025
-- **Consigli pratici**: Suggerimenti applicabili immediatamente
-- **Risorse utili**: Link e strumenti per approfondire
-
-## Sezione Principale
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Conclusioni
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        `);
+      // Auto-generated posts: content comes from DB
+      if (post.content.startsWith("__auto__")) {
+        if (autoPostData) {
+          const dbContent = currentLang === 'it' ? autoPostData.content_it : autoPostData.content_en;
+          setContent(dbContent);
+        }
         return;
       }
       
@@ -73,17 +71,13 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
           const fallbackModule = await import(`@/data/blog/content/it/${post.content}.md?raw`);
           setContent(fallbackModule.default);
         } catch (fallbackError) {
-          setContent(`
-## Introduzione
-
-Questo è un articolo di esempio. Il contenuto reale verrà caricato a breve.
-          `);
+          setContent("## Contenuto non disponibile");
         }
       }
     };
 
     loadContent();
-  }, [post?.content, currentLang]);
+  }, [post?.content, currentLang, autoPostData]);
 
   // Guard clauses after hooks
   if (!slug) return <Navigate to="/blog" replace />;
