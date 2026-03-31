@@ -241,7 +241,7 @@ STUDENT TOOLS (Free, No Registration Required):
 STUDY SPACES DIRECTORY ⭐ EXPANDED (Interactive Tool):
 - URL IT: https://junglerent.it/strumenti/aule-studio-torino
 - URL EN: https://junglerent.it/tools/study-spaces-turin
-- Purpose: Find where to study in Turin - 30+ locations with filters
+- Purpose: Find where to study in Turin - 60+ locations with filters
 - Data: Libraries, EDISU rooms, cafes, coworking, outdoor spaces
 - Features:
   * Interactive Leaflet map with 30+ markers
