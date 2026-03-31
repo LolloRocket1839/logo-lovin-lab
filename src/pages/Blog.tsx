@@ -25,12 +25,15 @@ const Blog = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const isItalian = i18n.language.startsWith('it');
   const aiSearchRef = useRef<HTMLDivElement>(null);
+  const { data: autoPosts = [] } = useAutoBlogPosts();
   
   const posts = useMemo(() => {
-    let categoryPosts = getPostsByCategory(activeCategory);
+    // Merge static + dynamic posts
+    const allPosts = [...blogPosts, ...autoPosts];
+    let categoryPosts = activeCategory === 'all' ? allPosts : allPosts.filter(p => p.category === activeCategory);
     categoryPosts = filterPostsByTags(categoryPosts, selectedTags, i18n.language as 'it' | 'en');
     return searchPosts(categoryPosts, deferredSearch, i18n.language as 'it' | 'en');
-  }, [activeCategory, deferredSearch, selectedTags, i18n.language]);
+  }, [activeCategory, deferredSearch, selectedTags, i18n.language, autoPosts]);
 
   const isFiltering = deferredSearch.trim().length > 0 || selectedTags.length > 0 || activeCategory !== 'all';
 
