@@ -58,7 +58,7 @@ export const ToolStructuredData = ({
   featureList,
   softwareVersion = "1.0",
   datePublished = "2025-12-01",
-  dateModified = "2025-12-19",
+  dateModified = "2026-03-31",
   inLanguage = ["it", "en"],
   author = {
     name: "Jungle Rent",
