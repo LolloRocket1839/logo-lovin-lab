@@ -17,11 +17,16 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
 
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [logoOpacity, setLogoOpacity] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Reduced threshold from 200 to 100 for faster brand recognition
-      setIsVisible(window.scrollY > 100);
+      const sy = window.scrollY;
+      setIsVisible(sy > 100);
+      
+      // Fade header logo in as hero logo arrives (scrollY 200-250)
+      const logoFade = sy < 200 ? 0 : sy > 250 ? 1 : (sy - 200) / 50;
+      setLogoOpacity(logoFade);
       
       // Calculate scroll progress
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -49,7 +54,8 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
           <img
             src={jungleRentLogo}
             alt="Jungle Rent"
-            className="h-9 w-auto"
+            className="h-9 w-auto transition-opacity duration-150"
+            style={{ opacity: logoOpacity }}
           />
           <Button
             size="sm"
