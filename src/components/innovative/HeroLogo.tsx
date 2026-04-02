@@ -9,6 +9,7 @@ export const HeroLogo = () => {
   // Sequential: x moves first, y follows with overlap
   const rawX = useTransform(scrollY, [0, 200], ["0px", "calc(-50vw + 3rem)"]);
   const rawY = useTransform(scrollY, [100, 300], ["0px", "-40vh"]);
+  const rawRotate = useTransform(scrollY, [0, 250], [0, -12]);
   // Fade out mid-journey, well before header logo area
   const opacity = useTransform(scrollY, [120, 220], [1, 0]);
 
