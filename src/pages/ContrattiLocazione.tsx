@@ -6,11 +6,12 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Check, FileText, Shield, Clock, Mail, ClipboardList, Send, FileCheck, CalendarCheck } from "lucide-react";
+import { Check, FileText, Shield, Clock, Mail, ClipboardList, Send, FileCheck, CalendarCheck, Wand2 } from "lucide-react";
 import { CONTACTS } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
 import { ContractRequestDialog } from "@/components/dialogs";
 import { ContractsFAQ, CONTRACT_FAQ_ITEMS } from "@/components/contracts/ContractsFAQ";
+import { ContractWizard } from "@/components/contracts/ContractWizard";
 
 const PLANS = [
   {
