@@ -167,20 +167,10 @@ export function ContractWizard({ onClose }: ContractWizardProps) {
             : (lang === 'it' ? 'Indietro' : 'Back')}
         </Button>
 
-        {step < TOTAL_STEPS ? (
+        {step < TOTAL_STEPS && (
           <Button onClick={next} disabled={!canProceed()} className="gap-2">
             {lang === 'it' ? 'Avanti' : 'Next'}
             <ArrowRight className="h-4 w-4" />
-          </Button>
-        ) : (
-          <Button onClick={() => {
-            // For MVP: scroll to top and show confirmation
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            alert(lang === 'it'
-              ? 'Riepilogo contratto generato! Invieremo il contratto via email.'
-              : 'Contract summary generated! We will send the contract via email.');
-          }}>
-            {lang === 'it' ? 'Genera contratto' : 'Generate contract'}
           </Button>
         )}
       </div>
