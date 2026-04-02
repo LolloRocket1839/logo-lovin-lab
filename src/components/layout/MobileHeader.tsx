@@ -54,7 +54,8 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
           <img
             src={jungleRentLogo}
             alt="Jungle Rent"
-            className="h-9 w-auto"
+            className="h-9 w-auto transition-opacity duration-150"
+            style={{ opacity: logoOpacity }}
           />
           <Button
             size="sm"
