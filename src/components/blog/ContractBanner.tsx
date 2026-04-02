@@ -10,8 +10,8 @@ export const ContractBanner = () => {
       <FileText className="h-5 w-5 text-primary flex-shrink-0" />
       <p className="flex-1 text-sm text-foreground leading-relaxed">
         {lang === "it"
-          ? "Hai bisogno di un contratto di locazione? Da €89, redatto su misura e pronto per la registrazione."
-          : "Need a lease agreement? From €89, tailor-made and ready for registration."}
+          ? "Hai bisogno di un contratto di locazione? Gratuito, redatto su misura e pronto per la registrazione."
+          : "Need a lease agreement? Free, tailor-made and ready for registration."}
       </p>
       <Link
         to={lang === "it" ? "/contratti-locazione" : "/rental-contracts"}

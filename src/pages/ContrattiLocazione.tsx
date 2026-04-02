@@ -424,8 +424,8 @@ const ContrattiLocazione = () => {
           {/* Footer note */}
           <p className="text-center text-sm text-muted-foreground">
             {lang === "it"
-              ? "Pagamento dopo consegna del contratto. Hai domande? "
-              : "Payment after contract delivery. Questions? "}
+              ? "Servizio gratuito. Hai domande? "
+              : "Free service. Questions? "}
             <a
               href={`mailto:${CONTACTS.email}`}
               className="text-primary font-medium hover:underline"

@@ -23,8 +23,8 @@ export const ContractSidebarCard = () => {
 
       <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
         {lang === "it"
-          ? "Contratto di locazione redatto da professionisti, conforme alla normativa e pronto per la registrazione. A partire da €89."
-          : "Lease agreement drafted by professionals, legally compliant and ready for registration. From €89."}
+          ? "Contratto di locazione redatto da professionisti, conforme alla normativa e pronto per la registrazione. Gratuito."
+          : "Lease agreement drafted by professionals, legally compliant and ready for registration. Free."}
       </p>
 
       <ul className="space-y-1.5 mb-4">

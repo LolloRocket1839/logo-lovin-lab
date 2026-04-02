@@ -1196,7 +1196,7 @@ mcpServer.tool("get_lease_services", {
       },
       {
         name: lang === "en" ? "Complete package" : "Pacchetto completo",
-        price: 149,
+        price: 0,
         description: lang === "en" ? "Contract + property inventory + registration" : "Contratto + inventario + registrazione",
         includes: lang === "en"
           ? ["Everything in Transitorio", "Detailed property inventory with photos", "Telematic registration at Agenzia delle Entrate", "Priority support for 60 days"]

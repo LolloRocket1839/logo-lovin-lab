@@ -75,7 +75,7 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
                 {currentLang === 'it' ? 'Contratti di locazione' : 'Lease agreements'}
               </p>
               <p className="text-xs text-muted-foreground">
-                {currentLang === 'it' ? 'Da €89 — pronti per la registrazione' : 'From €89 — ready for registration'}
+                {currentLang === 'it' ? 'Gratuito — pronti per la registrazione' : 'Free — ready for registration'}
               </p>
             </div>
             <ArrowRight className="w-4 h-4 text-muted-foreground" />
