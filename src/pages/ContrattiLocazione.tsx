@@ -273,8 +273,8 @@ const ContrattiLocazione = () => {
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {lang === "it"
-                ? "Redatti su misura, conformi alla normativa italiana e pronti per la registrazione presso l'Agenzia delle Entrate. Prezzo fisso, nessuna sorpresa."
-                : "Tailor-made, compliant with Italian law and ready for registration. Fixed price, no surprises."}
+                ? "Redatti su misura, conformi alla normativa italiana e pronti per la registrazione presso l'Agenzia delle Entrate. Gratuito per tutti i nostri clienti."
+                : "Tailor-made, compliant with Italian law and ready for registration. Free for all our clients."}
             </p>
           </div>
 
