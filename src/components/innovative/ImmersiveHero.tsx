@@ -100,7 +100,7 @@ export const ImmersiveHero = () => {
           {/* Single CTA */}
           <div 
             className={`mb-8 md:mb-10 ${
-              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-2' : ''
+              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-3' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
