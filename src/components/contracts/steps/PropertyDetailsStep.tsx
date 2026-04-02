@@ -1,11 +1,14 @@
+import { useState, useCallback } from "react";
 import type { ContractWizardData } from "../ContractWizard";
 import { ALL_ZONES, ENERGY_CLASSES } from "@/data/contract-zones";
 import { calculateConventionalSurface } from "@/lib/contract-rules";
+import { detectZoneFromAddress, type ZoneDetectionResult } from "@/data/turin-stradario";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Card } from "@/components/ui/card";
+import { MapPin, Check, AlertCircle } from "lucide-react";
 
 interface Props {
   data: ContractWizardData;
