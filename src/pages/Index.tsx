@@ -16,7 +16,7 @@ const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
 const InvestorSection = lazy(() => import("@/components/sections/InvestorSection"));
 
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
-const BlogBanner = lazy(() => import("@/components/blog/BlogBanner").then(m => ({ default: m.BlogBanner })));
+
 const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ default: m.Footer })));
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
 const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
