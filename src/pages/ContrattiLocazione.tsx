@@ -16,7 +16,7 @@ const PLANS = [
   {
     id: "base",
     name: { it: "Contratto standard", en: "Standard lease" },
-    price: 89,
+    price: 0,
     description: {
       it: "Contratto di locazione 4+4 o 3+2, personalizzato e pronto per la registrazione.",
       en: "4+4 or 3+2 lease agreement, customized and ready for registration.",
