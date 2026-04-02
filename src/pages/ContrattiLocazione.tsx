@@ -38,7 +38,7 @@ const PLANS = [
   {
     id: "transitorio",
     name: { it: "Contratto transitorio", en: "Temporary lease" },
-    price: 109,
+    price: 0,
     description: {
       it: "Per esigenze temporanee documentate: contratto transitorio o per studenti universitari.",
       en: "For documented temporary needs: transitional or university student lease.",
