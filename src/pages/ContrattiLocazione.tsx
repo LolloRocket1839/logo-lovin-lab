@@ -16,7 +16,7 @@ const PLANS = [
   {
     id: "base",
     name: { it: "Contratto standard", en: "Standard lease" },
-    price: 89,
+    price: 0,
     description: {
       it: "Contratto di locazione 4+4 o 3+2, personalizzato e pronto per la registrazione.",
       en: "4+4 or 3+2 lease agreement, customized and ready for registration.",
@@ -38,7 +38,7 @@ const PLANS = [
   {
     id: "transitorio",
     name: { it: "Contratto transitorio", en: "Temporary lease" },
-    price: 109,
+    price: 0,
     description: {
       it: "Per esigenze temporanee documentate: contratto transitorio o per studenti universitari.",
       en: "For documented temporary needs: transitional or university student lease.",
@@ -62,7 +62,7 @@ const PLANS = [
   {
     id: "pacchetto",
     name: { it: "Pacchetto locatore", en: "Landlord package" },
-    price: 149,
+    price: 0,
     description: {
       it: "Contratto + verbale di consegna + inventario beni mobili. Tutto il necessario per partire.",
       en: "Contract + handover report + furniture inventory. Everything you need to start.",
@@ -100,8 +100,8 @@ const ContrattiLocazione = () => {
       : "Custom lease agreements | Jungle Rent";
   const pageDesc =
     lang === "it"
-      ? "Contratti di locazione redatti da professionisti, conformi alla normativa italiana. Da €89, pronti per la registrazione."
-      : "Lease agreements drafted by professionals, compliant with Italian law. From €89, ready for registration.";
+      ? "Contratti di locazione redatti da professionisti, conformi alla normativa italiana. Gratuito, pronti per la registrazione."
+      : "Lease agreements drafted by professionals, compliant with Italian law. Free, ready for registration.";
 
   return (
     <>
@@ -192,7 +192,7 @@ const ContrattiLocazione = () => {
               ? "Quattro semplici passi per ottenere il tuo contratto su misura."
               : "Four simple steps to get your custom lease agreement.",
             totalTime: "PT72H",
-            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "89" },
+            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
             step: [
               {
                 "@type": "HowToStep",
@@ -273,8 +273,8 @@ const ContrattiLocazione = () => {
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {lang === "it"
-                ? "Redatti su misura, conformi alla normativa italiana e pronti per la registrazione presso l'Agenzia delle Entrate. Prezzo fisso, nessuna sorpresa."
-                : "Tailor-made, compliant with Italian law and ready for registration. Fixed price, no surprises."}
+                ? "Redatti su misura, conformi alla normativa italiana e pronti per la registrazione presso l'Agenzia delle Entrate. Gratuito per tutti i nostri clienti."
+                : "Tailor-made, compliant with Italian law and ready for registration. Free for all our clients."}
             </p>
           </div>
 
@@ -324,9 +324,8 @@ const ContrattiLocazione = () => {
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-foreground">€{plan.price}</span>
-                    <span className="text-muted-foreground ml-1 text-sm">
-                      / {lang === "it" ? "fisso" : "fixed"}
+                    <span className="text-4xl font-bold text-foreground">
+                      {lang === "it" ? "Gratuito" : "Free"}
                     </span>
                   </div>
 
@@ -425,8 +424,8 @@ const ContrattiLocazione = () => {
           {/* Footer note */}
           <p className="text-center text-sm text-muted-foreground">
             {lang === "it"
-              ? "Pagamento dopo consegna del contratto. Hai domande? "
-              : "Payment after contract delivery. Questions? "}
+              ? "Servizio gratuito. Hai domande? "
+              : "Free service. Questions? "}
             <a
               href={`mailto:${CONTACTS.email}`}
               className="text-primary font-medium hover:underline"

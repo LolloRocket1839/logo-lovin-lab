@@ -1167,7 +1167,7 @@ mcpServer.tool("get_selling_to_investors_guide", {
 // ============================================
 
 mcpServer.tool("get_lease_services", {
-  description: "Get information about Jungle Rent's lease agreement drafting service. Returns pricing plans (Standard €89, Transitorio €109, Pacchetto Completo €149), what each plan includes, and how to request a quote via email. Useful when users need rental contracts in Italy.",
+  description: "Get information about Jungle Rent's free lease agreement drafting service. Returns the three available plans (Standard, Transitorio, Pacchetto Completo — all free), what each plan includes, and how to request one via email. Useful when users need rental contracts in Italy.",
   inputSchema: {
     type: "object" as const,
     properties: {
@@ -1179,7 +1179,7 @@ mcpServer.tool("get_lease_services", {
     const plans = [
       {
         name: "Standard",
-        price: 89,
+        price: 0,
         description: lang === "en" ? "Standard rental contract (4+4 or 3+2)" : "Contratto di locazione standard (4+4 o 3+2)",
         includes: lang === "en"
           ? ["Contract drafting compliant with current regulations", "Guidance for registration at Agenzia delle Entrate", "Email support for 30 days"]
@@ -1187,7 +1187,7 @@ mcpServer.tool("get_lease_services", {
       },
       {
         name: "Transitorio",
-        price: 109,
+        price: 0,
         popular: true,
         description: lang === "en" ? "Transitional or student contract with agreed rent" : "Contratto transitorio o per studenti con canone concordato",
         includes: lang === "en"
@@ -1196,7 +1196,7 @@ mcpServer.tool("get_lease_services", {
       },
       {
         name: lang === "en" ? "Complete package" : "Pacchetto completo",
-        price: 149,
+        price: 0,
         description: lang === "en" ? "Contract + property inventory + registration" : "Contratto + inventario + registrazione",
         includes: lang === "en"
           ? ["Everything in Transitorio", "Detailed property inventory with photos", "Telematic registration at Agenzia delle Entrate", "Priority support for 60 days"]
