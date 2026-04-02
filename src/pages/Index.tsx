@@ -14,7 +14,7 @@ import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
 const InvestorSection = lazy(() => import("@/components/sections/InvestorSection"));
-const HomepageFAQ = lazy(() => import("@/components/sections/HomepageFAQ"));
+
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
 const BlogBanner = lazy(() => import("@/components/blog/BlogBanner").then(m => ({ default: m.BlogBanner })));
 const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ default: m.Footer })));
