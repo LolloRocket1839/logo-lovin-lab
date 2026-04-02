@@ -324,9 +324,8 @@ const ContrattiLocazione = () => {
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col">
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-foreground">€{plan.price}</span>
-                    <span className="text-muted-foreground ml-1 text-sm">
-                      / {lang === "it" ? "fisso" : "fixed"}
+                    <span className="text-4xl font-bold text-foreground">
+                      {lang === "it" ? "Gratuito" : "Free"}
                     </span>
                   </div>
 
