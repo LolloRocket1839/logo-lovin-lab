@@ -1,28 +1,26 @@
 
 
-# Fix Hero Logo Scroll Animation — Sequential & Smoother
-
-## Problem
-
-From the screenshots, the logo moves left and up simultaneously, feeling mechanical. The user wants:
-1. **Sequential motion**: first move left, *then* up — not both at once
-2. **Smoother, frame-by-frame feel** tied to scroll position
-3. **Gradual fade to transparent** as it approaches the header logo position
+# Make Contracts Free
 
 ## Changes
 
-### `HeroLogo.tsx` — Stagger the x/y transforms with overlapping scroll ranges
+### 1. `src/pages/ContrattiLocazione.tsx`
+- Set all plan prices to `0` and update display from `€89/€109/€149` to **"Gratuito" / "Free"**
+- Remove "/ fisso" / "/ fixed" suffix next to price
+- Update hero subtitle: remove "Prezzo fisso, nessuna sorpresa" → replace with "Gratuito per tutti i nostri clienti" / "Free for all our clients"
+- Update footer note: remove "Pagamento dopo consegna" → "Servizio gratuito" / "Free service"
+- Update structured data (ld+json): set `price: "0"` in Offer schemas, update `estimatedCost` in HowTo to `"0"`
+- Update SEO meta description: remove "Da €89" → "Gratuito" / "Free"
 
-Instead of both `x` and `y` animating over the same `[0, 300]` range, offset them:
+### 2. `src/components/blog/ContractBanner.tsx`
+- Remove "Da €89" / "From €89" from the banner text
 
-- **`x` (horizontal)**: starts immediately, `[0, 200]` — moves left first
-- **`y` (vertical)**: delayed start, `[100, 300]` — moves up after horizontal motion begins
-- **`opacity`**: fade from `[120, 220]`, `1 → 0` — dissolves mid-journey, well before reaching the header
-- Add `useSpring` wrapper around `x` and `y` for physics-based smoothing (slight damping/stiffness) so the motion feels organic rather than linearly tied to scroll pixel
+### 3. `src/components/blog/ContractSidebarCard.tsx`
+- Update any price references to "Free" / "Gratuito"
 
-This creates a curved, elegant path: the logo drifts left first, then arcs upward while fading — like it's being gently swept away.
+### 4. `supabase/functions/mcp-server/index.ts`
+- Update `get_lease_services` tool: change plan prices from 89/109/149 to 0 and update description text
 
-### `MobileHeader.tsx` — No changes needed
-
-The header logo fade-in at `[240, 300]` already works correctly with the hero logo disappearing by scroll 220.
+### 5. Any other files referencing €89/€109/€149
+- Scan and update remaining price references across locale files and components
 
