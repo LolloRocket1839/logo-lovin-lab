@@ -17,6 +17,7 @@ export const HeroLogo = () => {
   const springConfig = { stiffness: 120, damping: 30, mass: 0.8 };
   const x = useSpring(rawX, springConfig);
   const y = useSpring(rawY, springConfig);
+  const rotate = useSpring(rawRotate, springConfig);
 
   if (prefersReducedMotion) {
     return (
