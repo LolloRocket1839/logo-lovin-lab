@@ -1,11 +1,14 @@
+import { useState, useCallback } from "react";
 import type { ContractWizardData } from "../ContractWizard";
 import { ALL_ZONES, ENERGY_CLASSES } from "@/data/contract-zones";
 import { calculateConventionalSurface } from "@/lib/contract-rules";
+import { detectZoneFromAddress, type ZoneDetectionResult } from "@/data/turin-stradario";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Card } from "@/components/ui/card";
+import { MapPin, Check, AlertCircle } from "lucide-react";
 
 interface Props {
   data: ContractWizardData;
@@ -14,6 +17,17 @@ interface Props {
 }
 
 export function PropertyDetailsStep({ data, update, lang }: Props) {
+  const [detection, setDetection] = useState<ZoneDetectionResult | null>(null);
+
+  const handleAddressChange = useCallback((value: string) => {
+    update({ address: value });
+    const result = detectZoneFromAddress(value);
+    setDetection(result);
+    if (result.matchType !== 'none' && result.zoneId) {
+      update({ address: value, zoneId: result.zoneId });
+    }
+  }, [update]);
+
   const conventional = calculateConventionalSurface({
     walkableSqm: data.walkableSqm,
     balconySqm: data.balconySqm,
@@ -63,11 +77,41 @@ export function PropertyDetailsStep({ data, update, lang }: Props) {
           <Input
             placeholder={lang === 'it' ? 'Via Roma 1, Torino' : '1 Via Roma, Turin'}
             value={data.address}
-            onChange={e => update({ address: e.target.value })}
+            onChange={e => handleAddressChange(e.target.value)}
           />
+          {/* Zone auto-detection feedback */}
+          {detection && detection.matchType !== 'none' && (
+            <div className="flex items-center gap-1.5 text-xs mt-1">
+              <Check className="h-3.5 w-3.5 text-green-600 shrink-0" />
+              <span className="text-green-700">
+                {lang === 'it'
+                  ? `Zona rilevata da ${detection.matchType === 'street' ? 'via' : 'quartiere'}: `
+                  : `Zone detected from ${detection.matchType}: `}
+                <span className="font-medium capitalize">{detection.matchedOn}</span>
+              </span>
+            </div>
+          )}
+          {data.address.length > 5 && (!detection || detection.matchType === 'none') && (
+            <div className="flex items-center gap-1.5 text-xs mt-1">
+              <AlertCircle className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
+              <span className="text-muted-foreground">
+                {lang === 'it'
+                  ? 'Zona non rilevata automaticamente — selezionala manualmente'
+                  : 'Zone not auto-detected — select it manually'}
+              </span>
+            </div>
+          )}
         </div>
         <div className="space-y-1.5">
-          <Label className="text-sm">{lang === 'it' ? 'Zona' : 'Zone'}</Label>
+          <Label className="text-sm flex items-center gap-1.5">
+            <MapPin className="h-3.5 w-3.5" />
+            {lang === 'it' ? 'Zona' : 'Zone'}
+            {detection?.matchType !== 'none' && (
+              <span className="text-xs font-normal text-green-600">
+                ({lang === 'it' ? 'auto' : 'auto'})
+              </span>
+            )}
+          </Label>
           <Select value={data.zoneId} onValueChange={v => update({ zoneId: v })}>
             <SelectTrigger>
               <SelectValue />
