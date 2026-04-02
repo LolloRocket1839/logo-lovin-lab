@@ -92,6 +92,7 @@ const ContrattiLocazione = () => {
   const { i18n } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
+  const [showWizard, setShowWizard] = useState(false);
 
   const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
 
