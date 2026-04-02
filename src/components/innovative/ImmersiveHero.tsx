@@ -129,7 +129,7 @@ export const ImmersiveHero = () => {
           {/* Social proof micro-strip */}
           <div 
             className={`mb-6 ${
-              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-3' : ''
+              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-4' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
