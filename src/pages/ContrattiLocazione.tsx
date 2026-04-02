@@ -303,6 +303,39 @@ const ContrattiLocazione = () => {
             ))}
           </div>
 
+          {/* Contract Builder Wizard CTA & Wizard */}
+          {!showWizard ? (
+            <div className="mb-12 md:mb-16">
+              <Card className="p-6 md:p-8 border-primary/30 bg-gradient-to-br from-primary/5 to-transparent">
+                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                  <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 flex-shrink-0">
+                    <Wand2 className="h-7 w-7 text-primary" />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h2 className="text-lg font-bold text-foreground mb-1">
+                      {lang === 'it' ? 'Calcola il canone concordato' : 'Calculate regulated rent'}
+                    </h2>
+                    <p className="text-sm text-muted-foreground">
+                      {lang === 'it'
+                        ? 'Usa il nostro calcolatore per determinare il canone secondo l\'Accordo Territoriale di Torino. Calcolo automatico di superficie convenzionale, sub-fascia e confronto fiscale.'
+                        : 'Use our calculator to determine rent according to Turin\'s Territorial Agreement. Automatic calculation of conventional surface, sub-band and tax comparison.'}
+                    </p>
+                  </div>
+                  <Button size="lg" onClick={() => setShowWizard(true)} className="gap-2 flex-shrink-0">
+                    <Wand2 className="h-4 w-4" />
+                    {lang === 'it' ? 'Avvia il calcolatore' : 'Start calculator'}
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          ) : (
+            <div className="mb-12 md:mb-16">
+              <Card className="p-6 md:p-8">
+                <ContractWizard onClose={() => setShowWizard(false)} />
+              </Card>
+            </div>
+          )}
+
           {/* Pricing cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {PLANS.map((plan) => (
