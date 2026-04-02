@@ -38,7 +38,7 @@ export const HeroLogo = () => {
   return (
     <motion.div 
       className="flex justify-center items-center mb-4 w-full"
-      style={{ x, y, opacity }}
+      style={{ x, y, opacity, rotate }}
     >
       <motion.img
         src={jungleRentLogo}
