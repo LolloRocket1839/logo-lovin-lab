@@ -6,14 +6,11 @@ export const HeroLogo = () => {
   const prefersReducedMotion = useReducedMotion();
   const { scrollY } = useScroll();
   
-  // Logo travels from center to top-left header position
-  const scale = useTransform(scrollY, [0, 250], [1, 0.35]);
-  // Move left: from center toward left edge (approx -50vw + 2rem padding + half logo)
-  const x = useTransform(scrollY, [0, 250], ["0px", "calc(-50vw + 3rem)"]);
-  // Move up toward the top of the viewport
-  const y = useTransform(scrollY, [0, 250], ["0px", "-40vh"]);
-  // Stay visible throughout, fade only at the very end for handoff
-  const opacity = useTransform(scrollY, [0, 220, 250], [1, 1, 0]);
+  // Gentle diagonal drift left/up — no scale to keep it crisp
+  const x = useTransform(scrollY, [0, 300], ["0px", "calc(-50vw + 3rem)"]);
+  const y = useTransform(scrollY, [0, 300], ["0px", "-40vh"]);
+  // Fade out early so it's gone before reaching the header logo
+  const opacity = useTransform(scrollY, [150, 250], [1, 0]);
   
   if (prefersReducedMotion) {
     return (
