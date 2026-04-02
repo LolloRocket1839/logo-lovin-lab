@@ -62,7 +62,7 @@ const PLANS = [
   {
     id: "pacchetto",
     name: { it: "Pacchetto locatore", en: "Landlord package" },
-    price: 149,
+    price: 0,
     description: {
       it: "Contratto + verbale di consegna + inventario beni mobili. Tutto il necessario per partire.",
       en: "Contract + handover report + furniture inventory. Everything you need to start.",
