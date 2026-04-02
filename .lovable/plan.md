@@ -1,38 +1,32 @@
 
 
-# Hero Logo Scroll Transition — Move to Header Position
+# Fix Hero Logo Scroll Animation — Smooth Movement, No Overlap
 
-## What changes
+## Problem
 
-Currently the hero logo fades out (opacity → 0) when scrolling. Instead, it should **stay visible** and elegantly translate from its centered hero position to the top-left mobile header position, shrinking as it goes — creating a seamless handoff.
+From the screenshots: the hero logo visibly overlaps with the header logo during scroll, creating a messy double-image. The movement also feels jerky because scale + translate + opacity all change simultaneously over the same range.
 
-## How it works
+## Solution
 
-The MobileHeader appears at `scrollY > 100`. The hero logo needs to animate from center → top-left over roughly `scrollY: 0–250`, matching the header logo's position by the end.
+Separate concerns: the hero logo should **only translate left/up and fade out** — it should become fully transparent *before* it reaches the header logo's position, so there's never overlap. The header logo then fades in seamlessly after.
 
-## Technical changes
+## Changes
 
-### 1. `HeroLogo.tsx` — Rework scroll transforms
+### 1. `HeroLogo.tsx` — Smoother, overlap-free animation
 
-- **Make logo bigger initially**: increase from `w-14 h-14` (mobile) to ~`w-20 h-20`
-- **Replace opacity fade with positional movement**:
-  - `x`: `0 → -X` (move left toward header logo position, roughly `-calc(50vw - 2rem)`)
-  - `y`: `0 → -Y` (move up toward top of viewport)
-  - `scale`: `1 → ~0.35` (shrink to header logo size ~h-9 vs h-20)
-  - `opacity`: keep at `1` throughout, only fade to `0` at the very end (scrollY 220–250) so it vanishes just as the MobileHeader appears
-- Use `useTransform` with scroll ranges `[0, 250]` for smooth interpolation
-- The logo never "disappears" — it physically travels to where the header logo sits
+- **Remove `scale` transform** — scaling while translating causes jerkiness. Just translate.
+- Adjust scroll ranges:
+  - `x`: move left over `[0, 300]` — slower, gentler drift
+  - `y`: move up over `[0, 300]` — same range for consistent diagonal movement  
+  - `opacity`: fade out over `[150, 250]` — starts fading early, fully gone by scroll 250 (before it would reach the header logo)
+- No scale change means the logo stays crisp during movement
 
-### 2. `MobileHeader.tsx` — Coordinate the handoff
+### 2. `MobileHeader.tsx` — Header logo appears after hero is gone
 
-- The header logo should fade **in** (opacity 0→1) right as the hero logo reaches its position (~scrollY 200–250), creating a seamless baton-pass
-- Add a brief opacity transition to the header logo element
+- Shift the header logo fade-in to `[240, 300]` — it only appears once the hero logo is already invisible
+- This eliminates any chance of overlap: hero is gone by 250, header starts at 240 with a gentle crossfade
 
-### 3. Desktop behavior
+### Result
 
-- On desktop (`md:` breakpoint), keep current behavior or apply similar movement toward the desktop nav logo position
-
-## Result
-
-On page load: logo centered, slightly larger. On scroll: logo elegantly glides up-left while shrinking, landing exactly where the sticky header logo appears — then the header takes over. Feels like one continuous logo, not a disappear/reappear.
+Slow scroll: logo gently drifts up-left while gradually becoming transparent. By the time it would reach the header position, it's invisible. The header logo then smoothly materializes. No overlap, no jerkiness.
 
