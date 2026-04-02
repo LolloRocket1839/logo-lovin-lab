@@ -17,6 +17,17 @@ interface Props {
 }
 
 export function PropertyDetailsStep({ data, update, lang }: Props) {
+  const [detection, setDetection] = useState<ZoneDetectionResult | null>(null);
+
+  const handleAddressChange = useCallback((value: string) => {
+    update({ address: value });
+    const result = detectZoneFromAddress(value);
+    setDetection(result);
+    if (result.matchType !== 'none' && result.zoneId) {
+      update({ address: value, zoneId: result.zoneId });
+    }
+  }, [update]);
+
   const conventional = calculateConventionalSurface({
     walkableSqm: data.walkableSqm,
     balconySqm: data.balconySqm,
