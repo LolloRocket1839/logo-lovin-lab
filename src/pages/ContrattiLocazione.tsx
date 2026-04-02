@@ -192,7 +192,7 @@ const ContrattiLocazione = () => {
               ? "Quattro semplici passi per ottenere il tuo contratto su misura."
               : "Four simple steps to get your custom lease agreement.",
             totalTime: "PT72H",
-            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "89" },
+            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
             step: [
               {
                 "@type": "HowToStep",
