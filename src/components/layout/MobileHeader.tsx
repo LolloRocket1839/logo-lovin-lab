@@ -24,8 +24,8 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
       const sy = window.scrollY;
       setIsVisible(sy > 100);
       
-      // Fade header logo in as hero logo arrives (scrollY 200-250)
-      const logoFade = sy < 200 ? 0 : sy > 250 ? 1 : (sy - 200) / 50;
+      // Fade header logo in after hero logo is gone (scrollY 240-300)
+      const logoFade = sy < 240 ? 0 : sy > 300 ? 1 : (sy - 240) / 60;
       setLogoOpacity(logoFade);
       
       // Calculate scroll progress
