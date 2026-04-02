@@ -116,11 +116,6 @@ const Index = () => {
         
         <SellerSection />
         
-        {/* FAQ Section - unified component handles desktop/mobile */}
-        <HomepageFAQ />
-        
-        {/* Blog banner - now visible on all devices */}
-        <BlogBanner />
         
         <div className="hidden md:block">
           <Footer />
