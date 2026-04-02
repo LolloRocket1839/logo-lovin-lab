@@ -100,8 +100,8 @@ const ContrattiLocazione = () => {
       : "Custom lease agreements | Jungle Rent";
   const pageDesc =
     lang === "it"
-      ? "Contratti di locazione redatti da professionisti, conformi alla normativa italiana. Da €89, pronti per la registrazione."
-      : "Lease agreements drafted by professionals, compliant with Italian law. From €89, ready for registration.";
+      ? "Contratti di locazione redatti da professionisti, conformi alla normativa italiana. Gratuito, pronti per la registrazione."
+      : "Lease agreements drafted by professionals, compliant with Italian law. Free, ready for registration.";
 
   return (
     <>
