@@ -77,10 +77,20 @@ export const ImmersiveHero = () => {
             ))}
           </h1>
 
+          {/* Mission statement */}
+          <p 
+            className={`text-sm sm:text-base text-muted-foreground/80 mb-4 md:mb-5 font-normal leading-relaxed max-w-xl mx-auto ${
+              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-1' : ''
+            }`}
+            style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
+          >
+            {t('hero.missionStatement')}
+          </p>
+
           {/* Subheadline */}
           <p 
             className={`text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 font-light leading-relaxed max-w-2xl mx-auto ${
-              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-1' : ''
+              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-2' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
@@ -90,7 +100,7 @@ export const ImmersiveHero = () => {
           {/* Single CTA */}
           <div 
             className={`mb-8 md:mb-10 ${
-              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-2' : ''
+              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-3' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
@@ -119,7 +129,7 @@ export const ImmersiveHero = () => {
           {/* Social proof micro-strip */}
           <div 
             className={`mb-6 ${
-              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-3' : ''
+              hasLoaded && !prefersReducedMotion ? 'animate-fade-up stagger-4' : ''
             }`}
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
