@@ -1187,7 +1187,7 @@ mcpServer.tool("get_lease_services", {
       },
       {
         name: "Transitorio",
-        price: 109,
+        price: 0,
         popular: true,
         description: lang === "en" ? "Transitional or student contract with agreed rent" : "Contratto transitorio o per studenti con canone concordato",
         includes: lang === "en"
