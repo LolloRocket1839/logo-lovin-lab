@@ -1167,7 +1167,7 @@ mcpServer.tool("get_selling_to_investors_guide", {
 // ============================================
 
 mcpServer.tool("get_lease_services", {
-  description: "Get information about Jungle Rent's lease agreement drafting service. Returns pricing plans (Standard €89, Transitorio €109, Pacchetto Completo €149), what each plan includes, and how to request a quote via email. Useful when users need rental contracts in Italy.",
+  description: "Get information about Jungle Rent's free lease agreement drafting service. Returns the three available plans (Standard, Transitorio, Pacchetto Completo — all free), what each plan includes, and how to request one via email. Useful when users need rental contracts in Italy.",
   inputSchema: {
     type: "object" as const,
     properties: {
