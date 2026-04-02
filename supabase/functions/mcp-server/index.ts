@@ -1179,7 +1179,7 @@ mcpServer.tool("get_lease_services", {
     const plans = [
       {
         name: "Standard",
-        price: 89,
+        price: 0,
         description: lang === "en" ? "Standard rental contract (4+4 or 3+2)" : "Contratto di locazione standard (4+4 o 3+2)",
         includes: lang === "en"
           ? ["Contract drafting compliant with current regulations", "Guidance for registration at Agenzia delle Entrate", "Email support for 30 days"]
