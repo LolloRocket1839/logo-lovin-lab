@@ -7,6 +7,7 @@ import { SkipToContent } from "./components/SkipToContent";
 import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
 import { usePageViewTracking, useScrollDepth, useUTMTracking } from "./hooks";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
