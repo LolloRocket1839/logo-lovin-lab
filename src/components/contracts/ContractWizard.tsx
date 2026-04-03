@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Save } from "lucide-react";
 import { ContractTypeStep } from "./steps/ContractTypeStep";
 import { PropertyDetailsStep } from "./steps/PropertyDetailsStep";
 import { FeatureChecklistStep } from "./steps/FeatureChecklistStep";
@@ -13,9 +13,7 @@ import { PreviewStep } from "./steps/PreviewStep";
 import type { ContractType, EnergyClass } from "@/data/contract-zones";
 
 export interface ContractWizardData {
-  // Step 1
   contractType: ContractType | null;
-  // Step 2
   address: string;
   zoneId: string;
   walkableSqm: number;
@@ -28,12 +26,9 @@ export interface ContractWizardData {
   renovationYear: string;
   isFurnished: boolean;
   furnitureValue: number;
-  // Step 3
   selectedFeatures: string[];
-  // Step 4
   chosenRent: number;
   useCedolareSecca: boolean;
-  // Step 5
   landlordName: string;
   landlordCF: string;
   landlordAddress: string;
@@ -42,10 +37,9 @@ export interface ContractWizardData {
   tenantUniversity: string;
   startDate: string;
   depositMonths: number;
-  // Step 6 — preview only
 }
 
-const initialData: ContractWizardData = {
+export const initialWizardData: ContractWizardData = {
   contractType: null,
   address: '',
   zoneId: 'zona1',
@@ -76,13 +70,19 @@ const TOTAL_STEPS = 6;
 
 interface ContractWizardProps {
   onClose: () => void;
+  initialData?: ContractWizardData;
+  initialStep?: number;
+  draftId?: string;
+  onSaveDraft?: (data: ContractWizardData, step: number, draftId?: string) => Promise<string | null>;
 }
 
-export function ContractWizard({ onClose }: ContractWizardProps) {
+export function ContractWizard({ onClose, initialData, initialStep, draftId: initialDraftId, onSaveDraft }: ContractWizardProps) {
   const { i18n } = useTranslation();
   const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
-  const [step, setStep] = useState(1);
-  const [data, setData] = useState<ContractWizardData>(initialData);
+  const [step, setStep] = useState(initialStep || 1);
+  const [data, setData] = useState<ContractWizardData>(initialData || initialWizardData);
+  const [currentDraftId, setCurrentDraftId] = useState<string | undefined>(initialDraftId);
+  const [saving, setSaving] = useState(false);
 
   const update = (partial: Partial<ContractWizardData>) => {
     setData(prev => ({ ...prev, ...partial }));
@@ -92,7 +92,7 @@ export function ContractWizard({ onClose }: ContractWizardProps) {
     switch (step) {
       case 1: return data.contractType !== null;
       case 2: return data.walkableSqm > 0 && data.zoneId !== '';
-      case 3: return true; // features are optional
+      case 3: return true;
       case 4: return data.chosenRent > 0;
       case 5: return data.landlordName.length > 0 && data.tenantName.length > 0;
       case 6: return true;
@@ -109,7 +109,7 @@ export function ContractWizard({ onClose }: ContractWizardProps) {
 
   const next = () => {
     if (step === 2 && !isConcordato) {
-      setStep(4); // skip features for free market
+      setStep(4);
     } else {
       setStep(s => Math.min(s + 1, TOTAL_STEPS));
     }
@@ -121,6 +121,14 @@ export function ContractWizard({ onClose }: ContractWizardProps) {
     } else {
       setStep(s => Math.max(s - 1, 1));
     }
+  };
+
+  const handleSave = async () => {
+    if (!onSaveDraft) return;
+    setSaving(true);
+    const id = await onSaveDraft(data, step, currentDraftId);
+    if (id) setCurrentDraftId(id);
+    setSaving(false);
   };
 
   const progress = (step / TOTAL_STEPS) * 100;
@@ -167,12 +175,23 @@ export function ContractWizard({ onClose }: ContractWizardProps) {
             : (lang === 'it' ? 'Indietro' : 'Back')}
         </Button>
 
-        {step < TOTAL_STEPS && (
-          <Button onClick={next} disabled={!canProceed()} className="gap-2">
-            {lang === 'it' ? 'Avanti' : 'Next'}
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        )}
+        <div className="flex gap-2">
+          {onSaveDraft && (
+            <Button variant="outline" onClick={handleSave} disabled={saving} className="gap-2">
+              <Save className="h-4 w-4" />
+              {saving
+                ? '...'
+                : (lang === 'it' ? 'Salva bozza' : 'Save draft')}
+            </Button>
+          )}
+
+          {step < TOTAL_STEPS && (
+            <Button onClick={next} disabled={!canProceed()} className="gap-2">
+              {lang === 'it' ? 'Avanti' : 'Next'}
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

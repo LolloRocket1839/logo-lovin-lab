@@ -251,6 +251,36 @@ export type Database = {
         }
         Relationships: []
       }
+      contract_drafts: {
+        Row: {
+          created_at: string
+          current_step: number
+          id: string
+          title: string
+          updated_at: string
+          user_id: string
+          wizard_data: Json
+        }
+        Insert: {
+          created_at?: string
+          current_step?: number
+          id?: string
+          title?: string
+          updated_at?: string
+          user_id: string
+          wizard_data?: Json
+        }
+        Update: {
+          created_at?: string
+          current_step?: number
+          id?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+          wizard_data?: Json
+        }
+        Relationships: []
+      }
       investor_interest: {
         Row: {
           accredited_investor: string
@@ -341,6 +371,27 @@ export type Database = {
           query?: string
           query_hash?: string
           response?: Json
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
         }
         Relationships: []
       }

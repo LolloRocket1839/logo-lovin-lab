@@ -7,6 +7,7 @@ import { SkipToContent } from "./components/SkipToContent";
 import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
 import { usePageViewTracking, useScrollDepth, useUTMTracking } from "./hooks";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,15 +28,17 @@ const AppContent = () => {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <SkipToContent />
-      <Toaster />
-      <Sonner />
-      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-        <ScrollToTopOnNavigation />
-        <AppContent />
-      </BrowserRouter>
-    </TooltipProvider>
+    <AuthProvider>
+      <TooltipProvider>
+        <SkipToContent />
+        <Toaster />
+        <Sonner />
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <ScrollToTopOnNavigation />
+          <AppContent />
+        </BrowserRouter>
+      </TooltipProvider>
+    </AuthProvider>
   </QueryClientProvider>
 );
 

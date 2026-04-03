@@ -11,7 +11,11 @@ import { CONTACTS } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
 import { ContractRequestDialog } from "@/components/dialogs";
 import { ContractsFAQ, CONTRACT_FAQ_ITEMS } from "@/components/contracts/ContractsFAQ";
-import { ContractWizard } from "@/components/contracts/ContractWizard";
+import { ContractWizard, initialWizardData } from "@/components/contracts/ContractWizard";
+import type { ContractWizardData } from "@/components/contracts/ContractWizard";
+import { DraftList } from "@/components/contracts/DraftList";
+import { useAuth } from "@/contexts/AuthContext";
+import { useContractDrafts } from "@/hooks/useContractDrafts";
 
 const PLANS = [
   {
@@ -93,6 +97,11 @@ const ContrattiLocazione = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
   const [showWizard, setShowWizard] = useState(false);
+  const [wizardInitialData, setWizardInitialData] = useState<ContractWizardData | undefined>();
+  const [wizardInitialStep, setWizardInitialStep] = useState<number | undefined>();
+  const [wizardDraftId, setWizardDraftId] = useState<string | undefined>();
+  const { user } = useAuth();
+  const { saveDraft } = useContractDrafts();
 
   const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
 
@@ -303,6 +312,18 @@ const ContrattiLocazione = () => {
             ))}
           </div>
 
+          {/* Draft List */}
+          <div className="mb-6">
+            <DraftList
+              onLoadDraft={(data, step, draftId) => {
+                setWizardInitialData(data);
+                setWizardInitialStep(step);
+                setWizardDraftId(draftId);
+                setShowWizard(true);
+              }}
+            />
+          </div>
+
           {/* Contract Builder Wizard CTA & Wizard */}
           {!showWizard ? (
             <div className="mb-12 md:mb-16">
@@ -321,7 +342,12 @@ const ContrattiLocazione = () => {
                         : 'Use our calculator to determine rent according to Turin\'s Territorial Agreement. Automatic calculation of conventional surface, sub-band and tax comparison.'}
                     </p>
                   </div>
-                  <Button size="lg" onClick={() => setShowWizard(true)} className="gap-2 flex-shrink-0">
+                  <Button size="lg" onClick={() => {
+                    setWizardInitialData(undefined);
+                    setWizardInitialStep(undefined);
+                    setWizardDraftId(undefined);
+                    setShowWizard(true);
+                  }} className="gap-2 flex-shrink-0">
                     <Wand2 className="h-4 w-4" />
                     {lang === 'it' ? 'Avvia il calcolatore' : 'Start calculator'}
                   </Button>
@@ -331,7 +357,13 @@ const ContrattiLocazione = () => {
           ) : (
             <div className="mb-12 md:mb-16">
               <Card className="p-6 md:p-8">
-                <ContractWizard onClose={() => setShowWizard(false)} />
+                <ContractWizard
+                  onClose={() => setShowWizard(false)}
+                  initialData={wizardInitialData}
+                  initialStep={wizardInitialStep}
+                  draftId={wizardDraftId}
+                  onSaveDraft={user ? saveDraft : undefined}
+                />
               </Card>
             </div>
           )}
