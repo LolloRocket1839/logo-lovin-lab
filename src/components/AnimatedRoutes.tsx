@@ -104,6 +104,8 @@ export const AnimatedRoutes = () => {
             <Route path="/rooms-rent-turin" element={<NeighborhoodsIndex />} />
             <Route path="/affitto-stanza-torino/:slug" element={<NeighborhoodPage />} />
             <Route path="/rooms-rent-turin/:slug" element={<NeighborhoodPage />} />
+            <Route path="/accedi" element={<Auth />} />
+            <Route path="/auth" element={<Auth />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
