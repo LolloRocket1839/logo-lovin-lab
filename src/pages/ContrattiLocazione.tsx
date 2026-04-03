@@ -11,7 +11,11 @@ import { CONTACTS } from "@/constants/contacts";
 import { cn } from "@/lib/utils";
 import { ContractRequestDialog } from "@/components/dialogs";
 import { ContractsFAQ, CONTRACT_FAQ_ITEMS } from "@/components/contracts/ContractsFAQ";
-import { ContractWizard } from "@/components/contracts/ContractWizard";
+import { ContractWizard, initialWizardData } from "@/components/contracts/ContractWizard";
+import type { ContractWizardData } from "@/components/contracts/ContractWizard";
+import { DraftList } from "@/components/contracts/DraftList";
+import { useAuth } from "@/contexts/AuthContext";
+import { useContractDrafts } from "@/hooks/useContractDrafts";
 
 const PLANS = [
   {
