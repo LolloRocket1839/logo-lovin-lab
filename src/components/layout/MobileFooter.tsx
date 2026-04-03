@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
+import regionePiemonteLogo from "@/assets/regione-piemonte-logo.jpg";
 
 export const MobileFooter = () => {
   const { t, i18n } = useTranslation();
@@ -114,6 +115,20 @@ export const MobileFooter = () => {
             <Utensils className="w-3.5 h-3.5" />
             <span>{isIt ? 'Dove mangiare' : 'Cheap eats'}</span>
           </Link>
+        </div>
+
+        {/* Regione Piemonte Funding */}
+        <div className="flex flex-col items-center gap-2 pt-2 border-t border-border/10 w-full">
+          <a href="https://www.regione.piemonte.it" target="_blank" rel="noopener noreferrer">
+            <img 
+              src={regionePiemonteLogo} 
+              alt="Regione Piemonte" 
+              className="h-12 w-auto opacity-80"
+            />
+          </a>
+          <p className="text-[10px] text-muted-foreground text-center leading-relaxed max-w-xs">
+            Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
+          </p>
         </div>
 
         {/* Logo + Copyright */}
