@@ -97,6 +97,11 @@ const ContrattiLocazione = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("");
   const [showWizard, setShowWizard] = useState(false);
+  const [wizardInitialData, setWizardInitialData] = useState<ContractWizardData | undefined>();
+  const [wizardInitialStep, setWizardInitialStep] = useState<number | undefined>();
+  const [wizardDraftId, setWizardDraftId] = useState<string | undefined>();
+  const { user } = useAuth();
+  const { saveDraft } = useContractDrafts();
 
   const lang = (i18n.language.startsWith("en") ? "en" : "it") as "it" | "en";
 
