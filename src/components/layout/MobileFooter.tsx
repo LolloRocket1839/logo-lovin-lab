@@ -116,6 +116,20 @@ export const MobileFooter = () => {
           </Link>
         </div>
 
+        {/* Regione Piemonte Funding */}
+        <div className="flex flex-col items-center gap-2 pt-2 border-t border-border/10 w-full">
+          <a href="https://www.regione.piemonte.it" target="_blank" rel="noopener noreferrer">
+            <img 
+              src={regionePiemonteLogo} 
+              alt="Regione Piemonte" 
+              className="h-12 w-auto opacity-80"
+            />
+          </a>
+          <p className="text-[10px] text-muted-foreground text-center leading-relaxed max-w-xs">
+            Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
+          </p>
+        </div>
+
         {/* Logo + Copyright */}
         <div className="flex items-center gap-2">
           <img 

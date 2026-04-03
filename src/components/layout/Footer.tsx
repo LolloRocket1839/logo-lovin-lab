@@ -295,6 +295,20 @@ export const Footer = () => {
             {t('footer.bottomText')}
           </p>
           
+          {/* Regione Piemonte Funding */}
+          <div className="mt-8 pt-8 border-t border-border/10 flex flex-col items-center gap-3">
+            <a href="https://www.regione.piemonte.it" target="_blank" rel="noopener noreferrer">
+              <img 
+                src={regionePiemonteLogo} 
+                alt="Regione Piemonte" 
+                className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </a>
+            <p className="text-muted-foreground text-xs font-light max-w-lg leading-relaxed">
+              Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
+            </p>
+          </div>
+
           {/* Legal Information */}
           <div className="mt-8 pt-8 border-t border-border/10">
             <p className="text-muted-foreground text-xs font-light">
