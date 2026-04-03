@@ -36,6 +36,7 @@ const NeighborhoodsIndex = lazy(() => import("@/pages/NeighborhoodsIndex"));
 const NeighborhoodPage = lazy(() => import("@/pages/NeighborhoodPage"));
 const InvestorZonesIndex = lazy(() => import("@/pages/InvestorZonesIndex"));
 const InvestorZonePage = lazy(() => import("@/pages/InvestorZonePage"));
+const Auth = lazy(() => import("@/pages/Auth"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
