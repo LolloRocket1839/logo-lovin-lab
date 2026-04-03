@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
+import regionePiemonteLogo from "@/assets/regione-piemonte-logo.jpg";
 
 export const MobileFooter = () => {
   const { t, i18n } = useTranslation();
