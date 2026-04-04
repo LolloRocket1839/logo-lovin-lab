@@ -19,17 +19,31 @@ const getSessionId = (): string => {
   return sessionId;
 };
 
+const AB_RESET_INTERVAL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+
 const getVariationForCTA = (ctaType: CTAType): Variation => {
   const storageKey = `ab_test_variation_${ctaType}`;
-  let variation = localStorage.getItem(storageKey) as Variation;
+  const timestampKey = `ab_test_assigned_at_${ctaType}`;
   
-  if (!variation) {
-    // 50/50 split between A and B
-    variation = Math.random() < 0.5 ? 'A' : 'B';
+  const existingVariation = localStorage.getItem(storageKey) as Variation;
+  const assignedAt = localStorage.getItem(timestampKey);
+  
+  const isExpired = assignedAt && (Date.now() - Number(assignedAt)) > AB_RESET_INTERVAL_MS;
+  
+  if (!existingVariation || isExpired) {
+    // Re-randomize: 50/50 split
+    const variation: Variation = Math.random() < 0.5 ? 'A' : 'B';
     localStorage.setItem(storageKey, variation);
+    localStorage.setItem(timestampKey, String(Date.now()));
+    return variation;
   }
   
-  return variation;
+  // Backfill timestamp for pre-existing assignments
+  if (!assignedAt) {
+    localStorage.setItem(timestampKey, String(Date.now()));
+  }
+  
+  return existingVariation;
 };
 
 export const useABTest = (ctaType: CTAType): ABTestHook => {
