@@ -1,8 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Navigation } from "@/components/layout/Navigation";
 import { MobileHeader } from "@/components/layout/MobileHeader";
-import { TrustBadge } from "@/components/TrustBadge";
-import { WhatsAppFAB } from "@/components/WhatsAppFAB";
+
+const TrustBadge = lazy(() => import("@/components/TrustBadge").then(m => ({ default: m.TrustBadge })));
+const WhatsAppFAB = lazy(() => import("@/components/WhatsAppFAB").then(m => ({ default: m.WhatsAppFAB })));
 
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
@@ -104,7 +105,9 @@ const Index = () => {
       </div>
       
       {/* TrustBadge - now visible on all devices */}
-      <TrustBadge />
+      <Suspense fallback={null}>
+        <TrustBadge />
+      </Suspense>
 
       <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
         
@@ -128,7 +131,9 @@ const Index = () => {
         <StickyCTA />
         <BottomNav />
       </Suspense>
-      <WhatsAppFAB />
+      <Suspense fallback={null}>
+        <WhatsAppFAB />
+      </Suspense>
     </main>
   );
 };

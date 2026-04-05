@@ -303,6 +303,7 @@ export const Footer = () => {
                 src={regionePiemonteLogo} 
                 alt="Regione Piemonte" 
                 className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                loading="lazy"
               />
             </a>
             <p className="text-muted-foreground text-xs font-light max-w-lg leading-relaxed">
