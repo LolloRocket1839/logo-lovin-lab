@@ -1,8 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Navigation } from "@/components/layout/Navigation";
 import { MobileHeader } from "@/components/layout/MobileHeader";
-import { TrustBadge } from "@/components/TrustBadge";
-import { WhatsAppFAB } from "@/components/WhatsAppFAB";
+
+const TrustBadge = lazy(() => import("@/components/TrustBadge").then(m => ({ default: m.TrustBadge })));
+const WhatsAppFAB = lazy(() => import("@/components/WhatsAppFAB").then(m => ({ default: m.WhatsAppFAB })));
 
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
