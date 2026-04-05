@@ -131,7 +131,9 @@ const Index = () => {
         <StickyCTA />
         <BottomNav />
       </Suspense>
-      <WhatsAppFAB />
+      <Suspense fallback={null}>
+        <WhatsAppFAB />
+      </Suspense>
     </main>
   );
 };

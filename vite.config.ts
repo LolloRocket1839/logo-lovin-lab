@@ -70,6 +70,7 @@ export default defineConfig(({ mode }) => ({
           'vendor-markdown': ['react-markdown', 'remark-gfm', 'rehype-raw'],
           'vendor-maps': ['leaflet', 'react-leaflet'],
           'vendor-pdf': ['jspdf'],
+          'vendor-icons': ['lucide-react'],
         },
       },
     },

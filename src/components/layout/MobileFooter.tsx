@@ -124,6 +124,7 @@ export const MobileFooter = () => {
               src={regionePiemonteLogo} 
               alt="Regione Piemonte" 
               className="h-12 w-auto opacity-80"
+              loading="lazy"
             />
           </a>
           <p className="text-[10px] text-muted-foreground text-center leading-relaxed max-w-xs">

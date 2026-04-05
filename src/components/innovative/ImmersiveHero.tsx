@@ -141,11 +141,15 @@ export const ImmersiveHero = () => {
           </div>
 
           {/* How it works drawer - mobile only */}
-          <HowItWorksDrawer />
+          <Suspense fallback={null}>
+            <HowItWorksDrawer />
+          </Suspense>
         </div>
       </div>
 
-      <QuickInvestorLeadDialog open={investDialogOpen} onOpenChange={setInvestDialogOpen} source="hero" />
+      <Suspense fallback={null}>
+        <QuickInvestorLeadDialog open={investDialogOpen} onOpenChange={setInvestDialogOpen} source="hero" />
+      </Suspense>
     </section>
   );
 };
