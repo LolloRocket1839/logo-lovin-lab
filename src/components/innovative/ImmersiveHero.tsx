@@ -1,13 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { QuickInvestorLeadDialog } from "@/components/dialogs";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useABTest } from "@/hooks/useABTest";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { HeroLogo } from "./HeroLogo";
-import { HowItWorksDrawer } from "./HowItWorksDrawer";
+
+const HowItWorksDrawer = lazy(() => import("./HowItWorksDrawer").then(m => ({ default: m.HowItWorksDrawer })));
+const QuickInvestorLeadDialog = lazy(() => import("@/components/dialogs").then(m => ({ default: m.QuickInvestorLeadDialog })));
 
 
 export const ImmersiveHero = () => {
