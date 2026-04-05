@@ -1041,9 +1041,10 @@
     "privacy": "Your data is safe. We'll never share it with third parties."
   },
   "quickInvestorLead": {
-    "title": "Start Investing",
-    "description": "Enter your email to receive information about investment opportunities in Jungle Rent",
-    "submit": "Submit Request",
+    "title": "First acquisition underway",
+    "description": "We're closing our first property in Turin. Leave your email to join as one of the first investors.",
+    "urgencyBadge": "Limited spots",
+    "submit": "I want in",
     "sending": "Sending...",
     "privacy": "By submitting, you agree to our privacy policy",
     "errorTitle": "Error",
