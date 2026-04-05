@@ -105,7 +105,9 @@ const Index = () => {
       </div>
       
       {/* TrustBadge - now visible on all devices */}
-      <TrustBadge />
+      <Suspense fallback={null}>
+        <TrustBadge />
+      </Suspense>
 
       <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
         
