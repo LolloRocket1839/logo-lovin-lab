@@ -163,7 +163,7 @@
     "badgeExplanation": "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite trimestrali.",
     "discoverOpportunity": "Scopri l'opportunità",
     "talkToLorenzo": "Parla con Lorenzo",
-    "startInvesting": "Inizia a investire",
+    "startInvesting": "Entra nella prima acquisizione",
     "discover": "Scopri",
     "howItWorks": "Come funziona?",
     "miniFaq": {
@@ -223,7 +223,7 @@
       "prefix": "Sei un proprietario?",
       "cta": "Scopri come vendere casa"
     },
-    "socialProof": "{{count}} investitori già iscritti · Risposta media: 5 min"
+    "socialProof": "🔴 Prima acquisizione in corso · {{count}} investitori già dentro"
   },
   "studentSearch": {
     "title": "Trova la tua stanza",
@@ -1027,9 +1027,10 @@
     "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi."
   },
   "quickInvestorLead": {
-    "title": "Inizia a investire",
-    "description": "Inserisci la tua email per ricevere informazioni sulle opportunità di investimento in Jungle Rent",
-    "submit": "Invia richiesta",
+    "title": "Prima acquisizione in corso",
+    "description": "Stiamo chiudendo il nostro primo immobile a Torino. Lascia la tua email per entrare tra i primi investitori.",
+    "urgencyBadge": "Posti limitati",
+    "submit": "Voglio partecipare",
     "sending": "Invio in corso...",
     "privacy": "Accettando, acconsenti alla nostra privacy policy",
     "errorTitle": "Errore",

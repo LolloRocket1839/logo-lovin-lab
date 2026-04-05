@@ -158,7 +158,7 @@
     "badgeExplanation": "You invest in a specific apartment acquired by Jungle Rent. Zero management, quarterly returns.",
     "discoverOpportunity": "Discover the opportunity",
     "talkToLorenzo": "Talk to Lorenzo",
-    "startInvesting": "Start investing",
+    "startInvesting": "Join our first deal",
     "discover": "Discover",
     "howItWorks": "How it works?",
     "miniFaq": {
@@ -218,7 +218,7 @@
       "prefix": "Are you a property owner?",
       "cta": "Discover how to sell"
     },
-    "socialProof": "{{count}} investors already joined · Avg response: 5 min"
+    "socialProof": "🔴 First acquisition underway · {{count}} investors already in"
   },
   "studentSearch": {
     "title": "Find Your Room",
@@ -1041,9 +1041,10 @@
     "privacy": "Your data is safe. We'll never share it with third parties."
   },
   "quickInvestorLead": {
-    "title": "Start Investing",
-    "description": "Enter your email to receive information about investment opportunities in Jungle Rent",
-    "submit": "Submit Request",
+    "title": "First acquisition underway",
+    "description": "We're closing our first property in Turin. Leave your email to join as one of the first investors.",
+    "urgencyBadge": "Limited spots",
+    "submit": "I want in",
     "sending": "Sending...",
     "privacy": "By submitting, you agree to our privacy policy",
     "errorTitle": "Error",
