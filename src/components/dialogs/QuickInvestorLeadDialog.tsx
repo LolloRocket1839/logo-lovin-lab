@@ -104,6 +104,12 @@ export const QuickInvestorLeadDialog = ({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md bg-gradient-to-br from-background via-background to-primary/5 border-primary/20">
         <DialogHeader className="text-center">
+          <div className="mx-auto mb-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-destructive/10 text-destructive text-xs font-semibold animate-pulse">
+              <span className="w-2 h-2 rounded-full bg-destructive" />
+              {t("quickInvestorLead.urgencyBadge")}
+            </span>
+          </div>
           <div className="mx-auto mb-4 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
             <TrendingUp className="w-6 h-6 text-primary" />
           </div>

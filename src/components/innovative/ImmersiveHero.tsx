@@ -135,7 +135,7 @@ export const ImmersiveHero = () => {
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="inline-block w-2 h-2 rounded-full bg-destructive animate-pulse" />
               {t('hero.socialProof', { count: ACTIVE_INVESTORS })}
             </p>
           </div>
