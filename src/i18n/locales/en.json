@@ -1824,5 +1824,43 @@
   },
   "announcement": {
     "firstDeal": "First acquisition underway — Limited spots"
+  },
+  "quiz": {
+    "title": "What type of investor are you?",
+    "subtitle": "3 questions, 30 seconds — discover your profile",
+    "q1": {
+      "question": "What is your main goal?",
+      "passive": "💰 Hassle-free passive income",
+      "active": "📈 Active capital growth",
+      "diversify": "🔄 Portfolio diversification"
+    },
+    "q2": {
+      "question": "How much would you like to invest?",
+      "low": "🏠 Up to €50,000",
+      "medium": "🏘️ €50,000 – €150,000",
+      "high": "🏰 Over €150,000"
+    },
+    "q3": {
+      "question": "When do you want to start?",
+      "exploring": "🔍 I'm exploring options",
+      "soon": "📅 Within 3 months",
+      "now": "⚡ I'm ready now"
+    },
+    "profiles": {
+      "explorer": {
+        "title": "The Strategic Explorer",
+        "description": "You prefer a careful, informed approach. We'll guide you step by step toward your first real estate investment in Turin."
+      },
+      "builder": {
+        "title": "The Wealth Builder",
+        "description": "You have a clear vision and want to build income over time. Turin's university market is perfect for your profile."
+      },
+      "accelerator": {
+        "title": "The Accelerator",
+        "description": "You're ready to act and have the capital. Our first acquisition is the ideal opportunity for your profile."
+      }
+    },
+    "resultCTA": "See how to participate",
+    "submitCTA": "I want in"
   }
 }
