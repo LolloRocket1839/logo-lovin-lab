@@ -1659,5 +1659,43 @@
   },
   "announcement": {
     "firstDeal": "Prima acquisizione in corso — Posti limitati"
+  },
+  "quiz": {
+    "title": "Che tipo di investitore sei?",
+    "subtitle": "3 domande, 30 secondi — scopri il tuo profilo",
+    "q1": {
+      "question": "Qual è il tuo obiettivo principale?",
+      "passive": "💰 Rendita passiva senza pensieri",
+      "active": "📈 Crescita attiva del capitale",
+      "diversify": "🔄 Diversificare il portafoglio"
+    },
+    "q2": {
+      "question": "Quanto vorresti investire?",
+      "low": "🏠 Fino a €50.000",
+      "medium": "🏘️ €50.000 – €150.000",
+      "high": "🏰 Oltre €150.000"
+    },
+    "q3": {
+      "question": "Quando vuoi iniziare?",
+      "exploring": "🔍 Sto esplorando le opzioni",
+      "soon": "📅 Nei prossimi 3 mesi",
+      "now": "⚡ Sono pronto adesso"
+    },
+    "profiles": {
+      "explorer": {
+        "title": "L'Esploratore Strategico",
+        "description": "Preferisci un approccio cauto e informato. Ti guideremo passo passo verso il tuo primo investimento immobiliare a Torino."
+      },
+      "builder": {
+        "title": "Il Costruttore di Patrimonio",
+        "description": "Hai le idee chiare e vuoi costruire rendita nel tempo. Il mercato universitario di Torino è perfetto per il tuo profilo."
+      },
+      "accelerator": {
+        "title": "L'Acceleratore",
+        "description": "Sei pronto ad agire e hai il capitale. La nostra prima acquisizione è l'opportunità ideale per il tuo profilo."
+      }
+    },
+    "resultCTA": "Scopri come partecipare",
+    "submitCTA": "Voglio partecipare"
   }
 }

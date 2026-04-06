@@ -15,6 +15,7 @@ import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
+const InvestorQuiz = lazy(() => import("@/components/InvestorQuiz"));
 const InvestorSection = lazy(() => import("@/components/sections/InvestorSection"));
 
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
@@ -116,7 +117,10 @@ const Index = () => {
         {/* How It Works Section - unified component handles desktop/mobile */}
         <HowItWorks />
         
-        {/* Investor Section - unified component handles desktop/mobile */}
+        {/* Investor Quiz - micro-commitment before lead form */}
+        <InvestorQuiz />
+        
+        {/* Investor Section */}
         <InvestorSection />
         
         <SellerSection />
