@@ -11,6 +11,7 @@ import { MobileFooter } from "@/components/layout/MobileFooter";
 
 // Innovative components - loaded immediately for impact
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
