@@ -117,7 +117,10 @@ const Index = () => {
         {/* How It Works Section - unified component handles desktop/mobile */}
         <HowItWorks />
         
-        {/* Investor Section - unified component handles desktop/mobile */}
+        {/* Investor Quiz - micro-commitment before lead form */}
+        <InvestorQuiz />
+        
+        {/* Investor Section */}
         <InvestorSection />
         
         <SellerSection />
