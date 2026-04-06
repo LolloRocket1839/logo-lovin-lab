@@ -11,6 +11,7 @@ import { MobileFooter } from "@/components/layout/MobileFooter";
 
 // Innovative components - loaded immediately for impact
 import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
+import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
@@ -37,6 +38,7 @@ const Index = () => {
 
   return (
     <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
+      <AnnouncementBanner />
       <MobileHeader />
       <Helmet>
         <title>{title}</title>

@@ -3,12 +3,7 @@
     "skipToContent": "Skip to main content",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "languageSelector": "Select language",
-    "startupInnovativaLink": "Certified Innovative Startup - Verify in official registry (opens in new window)",
-    "opensNewWindow": "(opens in new window)",
-    "openLogoModal": "Open Jungle Rent logo information",
-    "loading": "Loading...",
-    "currentPage": "Current page"
+    "languageSelector": "Select language"
   },
   "founders": {
     "title": "Founders",
@@ -98,7 +93,7 @@
     "call": "Call",
     "search": "Search"
   },
-"about": {
+  "about": {
     "metaTitle": "Jungle Rent - We Buy and Rent Properties to Students | Turin",
     "metaDescription": "Real estate startup with a dual mission: solving the student housing crisis and democratizing access to real estate. We acquire properties in Turin and rent them long-term.",
     "title": "About Jungle Rent",
@@ -160,7 +155,7 @@
     "talkToLorenzo": "Talk to Lorenzo",
     "startInvesting": "Join our first deal",
     "discover": "Discover",
-    "howItWorks": "How it works?",
+    "howItWorks": "How it works",
     "miniFaq": {
       "whatBuy": "What do I buy with €100?",
       "whatBuyAnswer": "You invest in Jungle Rent for a specific apartment that we acquire and manage. You know exactly where your capital goes.",
@@ -200,7 +195,6 @@
     "iAmStudent": "I'm a Student",
     "iAmInvestor": "I'm an Investor",
     "contactLorenzo": "Contact Lorenzo",
-    "howItWorks": "How it works",
     "trustSafe": "Secure contracts",
     "trustSupport": "Dedicated support",
     "trustNoFees": "Zero commissions",
@@ -243,9 +237,9 @@
     "roommatesLabel": "Number of roommates (optional)",
     "roommatesPlaceholder": "Select...",
     "roommatesOptions": {
-      "solo": "Just me (single room)",
       "2": "2 people total",
       "3": "3 people total",
+      "solo": "Just me (single room)",
       "4plus": "4+ people total",
       "flexible": "No preference"
     },
@@ -816,7 +810,7 @@
     "voiceQ15": "How do I contact Jungle Rent to invest?",
     "voiceA15": "You can contact Jungle Rent on WhatsApp at +39 331 905 3037 (response within 2 hours), email junglerententeprise@gmail.com, or by filling out the form on junglerent.it. Lorenzo Oni-Joseph, the founder, will personally respond to you."
   },
-"footer": {
+  "footer": {
     "forOwnersTitle": "For Property Owners",
     "valuateProperty": "Valuate your property",
     "sellProperty": "Sell your property",
@@ -1020,6 +1014,7 @@
     "motivationOther": "Other"
   },
   "stickyCta": {
+    "lorenzoButton": "Lorenzo",
     "closeLabel": "Close"
   },
   "quickLead": {
@@ -1052,9 +1047,6 @@
     "invalidEmail": "Please enter a valid email address",
     "errorDescription": "An error occurred. Please try again later."
   },
-  "breadcrumbs": {
-    "home": "Home"
-  },
   "scrollToTop": {
     "tooltip": "Back to top",
     "label": "Review the model",
@@ -1073,12 +1065,6 @@
     "close": "Close",
     "open": "Open",
     "menu": "Menu"
-  },
-  "accessibility": {
-    "skipToContent": "Skip to main content",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu",
-    "languageSelector": "Select language"
   },
   "waitlist": {
     "title": "Join the Waitlist",
@@ -1225,10 +1211,6 @@
   },
   "search": {
     "askAnything": "Ask anything"
-  },
-  "stickyCta": {
-    "lorenzoButton": "Lorenzo",
-    "closeLabel": "Close"
   },
   "blog": {
     "sectionLabel": "City Living",
@@ -1424,12 +1406,12 @@
       "5+": "5+ rooms"
     },
     "floors": {
-      "terra": "Ground Floor",
       "1": "1st Floor",
       "2": "2nd Floor",
       "3": "3rd Floor",
       "4": "4th Floor",
       "5": "5th Floor",
+      "terra": "Ground Floor",
       "6+": "6th Floor or higher"
     },
     "conditions": {
@@ -1839,5 +1821,8 @@
     "errorSubmit": "Submission error. Please try again.",
     "emailError": "Please enter a valid email",
     "close": "Close"
+  },
+  "announcement": {
+    "firstDeal": "First acquisition underway — Limited spots"
   }
 }
