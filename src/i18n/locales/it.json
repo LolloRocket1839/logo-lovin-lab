@@ -1,14 +1,6 @@
 {
   "accessibility": {
-    "skipToContent": "Salta al contenuto principale",
-    "openMenu": "Apri menu",
-    "closeMenu": "Chiudi menu",
-    "languageSelector": "Seleziona lingua",
-    "startupInnovativaLink": "Start-up Innovativa Certificata - Verifica nel registro ufficiale (si apre in una nuova finestra)",
-    "opensNewWindow": "(si apre in una nuova finestra)",
-    "openLogoModal": "Apri informazioni logo Jungle Rent",
-    "loading": "Caricamento in corso...",
-    "currentPage": "Pagina corrente"
+    "skipToContent": "Salta al contenuto principale"
   },
   "founders": {
     "title": "Fondatori",
@@ -60,14 +52,9 @@
     "ctaTalkToUs": "Parla con Lorenzo"
   },
   "video": {
-    "title": "Capire il nostro modello in 2 minuti",
-    "subtitle": "Un breve video che spiega come investire in immobili studenteschi a Torino con Jungle Rent.",
-    "badge": "2 minuti",
-    "point1": "Come funziona il modello",
-    "point2": "Rendimenti attesi",
-    "point3": "Zero gestione per te",
-    "cta": "Parla con Lorenzo",
-    "play": "Riproduci video"
+    "title": "Scopri Jungle Rent",
+    "subtitle": "Guarda come funziona la nostra piattaforma e come possiamo aiutarti a trovare la casa perfetta a Torino",
+    "cta": "Parla con Lorenzo"
   },
   "problem": {
     "badge": "Il problema",
@@ -98,7 +85,7 @@
     "call": "Chiama",
     "search": "Cerca"
   },
-"about": {
+  "about": {
     "metaTitle": "Jungle Rent - Compriamo e affittiamo immobili per studenti | Torino",
     "metaDescription": "Startup immobiliare con duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al real estate. Acquistiamo proprietà a Torino e le affittiamo a lungo termine.",
     "title": "Chi è Jungle Rent",
@@ -165,7 +152,7 @@
     "talkToLorenzo": "Parla con Lorenzo",
     "startInvesting": "Entra nella prima acquisizione",
     "discover": "Scopri",
-    "howItWorks": "Come funziona?",
+    "howItWorks": "Come funziona",
     "miniFaq": {
       "whatBuy": "Cosa compro con €100?",
       "whatBuyAnswer": "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi. Sai esattamente dove va il tuo capitale.",
@@ -205,7 +192,6 @@
     "iAmStudent": "Sono uno Studente",
     "iAmInvestor": "Sono un Investitore",
     "contactLorenzo": "Contatta Lorenzo",
-    "howItWorks": "Come funziona",
     "trustSafe": "Contratti sicuri",
     "trustSupport": "Supporto dedicato",
     "trustNoFees": "Zero commissioni",
@@ -248,9 +234,9 @@
     "roommatesLabel": "Numero coinquilini (opzionale)",
     "roommatesPlaceholder": "Seleziona...",
     "roommatesOptions": {
-      "solo": "Solo io (stanza singola)",
       "2": "2 persone totali",
       "3": "3 persone totali",
+      "solo": "Solo io (stanza singola)",
       "4plus": "4+ persone totali",
       "flexible": "Non ho preferenze"
     },
@@ -317,11 +303,6 @@
     "learnMore": "Scopri di più su 2i3T",
     "guarantee": "Incubati presso l'ecosistema universitario torinese, garantendo professionalità e affidabilità in ogni transazione",
     "inlineCta": "Vuoi saperne di più?"
-  },
-  "video": {
-    "title": "Scopri Jungle Rent",
-    "subtitle": "Guarda come funziona la nostra piattaforma e come possiamo aiutarti a trovare la casa perfetta a Torino",
-    "cta": "Parla con Lorenzo"
   },
   "benefits": {
     "title": "Perché scegliere Jungle Rent",
@@ -840,7 +821,7 @@
     "formSuccess": "Grazie! Il tuo messaggio è stato inviato.",
     "formError": "Errore! Riprova più tardi."
   },
-"footer": {
+  "footer": {
     "forOwnersTitle": "Per proprietari",
     "valuateProperty": "Valuta il tuo immobile",
     "sellProperty": "Vendi casa",
@@ -1172,9 +1153,6 @@
     "downloadDirectCta": "Scarica PDF",
     "readAnalysis": "Leggi l'analisi del report"
   },
-  "accessibility": {
-    "skipToContent": "Salta al contenuto principale"
-  },
   "areaSuggestion": {
     "addToForm": "Aggiungi info al form"
   },
@@ -1235,12 +1213,12 @@
       "5+": "5 o più locali"
     },
     "floors": {
-      "terra": "Piano Terra",
       "1": "1° Piano",
       "2": "2° Piano",
       "3": "3° Piano",
       "4": "4° Piano",
       "5": "5° Piano",
+      "terra": "Piano Terra",
       "6+": "6° Piano o superiore"
     },
     "conditions": {
@@ -1678,5 +1656,8 @@
     "errorSubmit": "Errore nell'invio. Riprova.",
     "emailError": "Inserisci un'email valida",
     "close": "Chiudi"
+  },
+  "announcement": {
+    "firstDeal": "Prima acquisizione in corso — Posti limitati"
   }
 }

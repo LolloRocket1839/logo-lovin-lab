@@ -38,6 +38,7 @@ const Index = () => {
 
   return (
     <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
+      <AnnouncementBanner />
       <MobileHeader />
       <Helmet>
         <title>{title}</title>
