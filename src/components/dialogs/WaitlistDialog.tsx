@@ -11,8 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
-import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 import {
   Form,
@@ -42,7 +42,7 @@ interface WaitlistDialogProps {
 export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const { incrementCount } = useWaitlistCounter();
+  const { submitLead } = useLeadCapture();
   const { trackFormSubmit } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -66,12 +66,10 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINTS.waitlist, {
+      // Formspree submission (keep existing)
+      const formspreeResponse = await fetch(FORMSPREE_ENDPOINTS.waitlist, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           name: data.name,
           email: data.email,
@@ -86,9 +84,28 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
         }),
       });
 
-      if (!response.ok) throw new Error("Submission failed");
+      if (!formspreeResponse.ok) throw new Error("Submission failed");
 
-      incrementCount();
+      // Also save to leads DB (non-blocking)
+      submitLead(
+        {
+          email: data.email,
+          name: data.name,
+          source: "waitlist",
+          leadType: "student",
+          metadata: {
+            university: data.university,
+            budget: data.budget,
+            move_date: data.move_date,
+            referral_source: data.referral_source,
+          },
+        },
+        {
+          endpoint: FORMSPREE_ENDPOINTS.waitlist,
+          subject: "New Jungle Rent Waitlist 🚀",
+        }
+      ).catch(() => {}); // Non-blocking DB write
+
       trackFormSubmit('student_waitlist', {
         university: data.university,
         budget: data.budget,
