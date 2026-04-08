@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { getUTMParams } from "@/hooks/useUTMTracking";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { Loader2, TrendingUp } from "lucide-react";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 
@@ -31,7 +31,7 @@ export const QuickInvestorLeadDialog = ({
   const navigate = useNavigate();
   const { toast } = useToast();
   const { trackClick } = useAnalytics();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { submitLead, isSubmitting } = useLeadCapture();
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -56,47 +56,27 @@ export const QuickInvestorLeadDialog = ({
       return;
     }
 
-    setIsSubmitting(true);
     trackClick("quick_investor_lead_submit", { source, email: email.trim() });
 
-    try {
-      const utmParams = getUTMParams();
-      const response = await fetch(FORMSPREE_ENDPOINTS.quickInvestor, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          _subject: `🔥 INVESTOR LEAD - Jungle Rent - ${email.trim()}${utmParams.utm_source ? ` [${utmParams.utm_source}]` : ""}`,
-          email: email.trim(),
-          source,
-          timestamp: new Date().toISOString(),
-          type: "quick_investor_lead",
-          utm_source: utmParams.utm_source || "",
-          utm_medium: utmParams.utm_medium || "",
-          utm_campaign: utmParams.utm_campaign || "",
-          utm_content: utmParams.utm_content || "",
-          utm_term: utmParams.utm_term || "",
-        }),
-      });
-
-      if (response.ok) {
-        setEmail("");
-        onOpenChange(false);
-        const thankYouPath = i18n.language === "it" ? "/grazie" : "/thank-you";
-        navigate(`${thankYouPath}?type=investor`);
-      } else {
-        throw new Error("Form submission failed");
+    const result = await submitLead(
+      { email: email.trim(), source, leadType: "investor" },
+      {
+        endpoint: FORMSPREE_ENDPOINTS.quickInvestor,
+        subject: `🔥 INVESTOR LEAD - Jungle Rent - ${email.trim()}`,
       }
-    } catch (error) {
-      console.error("Quick investor lead submission error:", error);
+    );
+
+    if (result.success) {
+      setEmail("");
+      onOpenChange(false);
+      const thankYouPath = i18n.language === "it" ? "/grazie" : "/thank-you";
+      navigate(`${thankYouPath}?type=investor`);
+    } else {
       toast({
         title: t("quickInvestorLead.errorTitle"),
         description: t("quickInvestorLead.errorDescription"),
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -105,8 +85,7 @@ export const QuickInvestorLeadDialog = ({
       <DialogContent className="sm:max-w-md bg-gradient-to-br from-background via-background to-primary/5 border-primary/20">
         <DialogHeader className="text-center">
           <div className="mx-auto mb-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-destructive/10 text-destructive text-xs font-semibold animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-destructive" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">
               {t("quickInvestorLead.urgencyBadge")}
             </span>
           </div>

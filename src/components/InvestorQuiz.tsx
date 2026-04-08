@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { getUTMParams } from "@/hooks/useUTMTracking";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { Loader2, ArrowRight, CheckCircle2 } from "lucide-react";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 import { cn } from "@/lib/utils";
@@ -35,6 +35,7 @@ export const InvestorQuiz = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { trackClick } = useAnalytics();
+  const { submitLead } = useLeadCapture();
 
   const [step, setStep] = useState<QuizStep>("q1");
   const [answers, setAnswers] = useState<QuizAnswer>({});
@@ -59,33 +60,28 @@ export const InvestorQuiz = () => {
     setIsSubmitting(true);
     trackClick("quiz_lead_submit", { profile: profile.key, ...answers });
 
-    try {
-      const utm = getUTMParams();
-      const res = await fetch(FORMSPREE_ENDPOINTS.quickInvestor, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          _subject: `🎯 QUIZ LEAD [${profile.key}] - ${email.trim()}`,
-          email: email.trim(),
-          investor_profile: profile.key,
-          quiz_answers: answers,
-          source: "investor_quiz",
-          timestamp: new Date().toISOString(),
-          utm_source: utm.utm_source || "",
-          utm_medium: utm.utm_medium || "",
-          utm_campaign: utm.utm_campaign || "",
-        }),
-      });
+    const result = await submitLead(
+      {
+        email: email.trim(),
+        source: "investor_quiz",
+        leadType: "investor",
+        metadata: { investor_profile: profile.key, quiz_answers: answers },
+      },
+      {
+        endpoint: FORMSPREE_ENDPOINTS.quickInvestor,
+        subject: `🎯 QUIZ LEAD [${profile.key}] - ${email.trim()}`,
+        extraFields: { investor_profile: profile.key, quiz_answers: answers },
+      }
+    );
 
-      if (res.ok) {
-        setEmail("");
-        const thankYouPath = i18n.language === "it" ? "/grazie" : "/thank-you";
-        navigate(`${thankYouPath}?type=investor`);
-      } else throw new Error("Failed");
-    } catch {
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setEmail("");
+      const thankYouPath = i18n.language === "it" ? "/grazie" : "/thank-you";
+      navigate(`${thankYouPath}?type=investor`);
+    } else {
       toast({ title: t("quickInvestorLead.errorTitle"), description: t("quickInvestorLead.errorDescription"), variant: "destructive" });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 

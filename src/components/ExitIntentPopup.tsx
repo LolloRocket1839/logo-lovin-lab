@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { getUTMParams, formatUTMForEmail } from "@/hooks/useUTMTracking";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 
 interface ExitIntentPopupProps {
@@ -24,6 +24,7 @@ const STORAGE_KEY = "exitIntentShown";
 export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title, subtitle }: ExitIntentPopupProps) => {
   const { t } = useTranslation();
   const { trackEvent } = useAnalytics();
+  const { submitLead } = useLeadCapture();
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -100,32 +101,22 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
 
     setIsSubmitting(true);
 
-    try {
-      const utmParams = getUTMParams();
-      const utmString = formatUTMForEmail(utmParams);
-
-      const response = await fetch(FORMSPREE_ENDPOINTS.exitIntent, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email.trim(),
-          source,
-          timestamp: new Date().toISOString(),
-          _subject: `🚀 Exit Intent Lead - ${source}${utmString}`,
-        }),
-      });
-
-      if (response.ok) {
-        trackEvent(getEventName('submit'), { source });
-        toast.success(t("exitIntent.success", "Riceverai la valutazione entro 24 ore!"));
-        setIsOpen(false);
-      } else {
-        throw new Error("Submission failed");
+    const result = await submitLead(
+      { email: email.trim(), source, leadType: "general" },
+      {
+        endpoint: FORMSPREE_ENDPOINTS.exitIntent,
+        subject: `🚀 Exit Intent Lead - ${source}`,
       }
-    } catch (error) {
+    );
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      trackEvent(getEventName('submit'), { source });
+      toast.success(t("exitIntent.success", "Riceverai la valutazione entro 24 ore!"));
+      setIsOpen(false);
+    } else {
       toast.error(t("exitIntent.error", "Errore. Riprova più tardi."));
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
