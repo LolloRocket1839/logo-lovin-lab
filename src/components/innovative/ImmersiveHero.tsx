@@ -18,7 +18,7 @@ export const ImmersiveHero = () => {
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const ACTIVE_INVESTORS = 5;
+  
 
   // Trigger entrance animations after mount + track A/B impression
   useEffect(() => {
@@ -135,8 +135,8 @@ export const ImmersiveHero = () => {
             style={{ opacity: prefersReducedMotion ? 1 : hasLoaded ? undefined : 0 }}
           >
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-destructive animate-pulse" />
-              {t('hero.socialProof', { count: ACTIVE_INVESTORS })}
+              <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
+              {t('hero.socialProof')}
             </p>
           </div>
 
