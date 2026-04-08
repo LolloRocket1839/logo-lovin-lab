@@ -39,7 +39,7 @@ export function useLeadCapture() {
         _utm_source: utm.utm_source || null,
         _utm_medium: utm.utm_medium || null,
         _utm_campaign: utm.utm_campaign || null,
-        _metadata: lead.metadata || {},
+        _metadata: (lead.metadata || {}) as unknown as Record<string, never>,
       }),
       // 2. Formspree
       fetch(formspree.endpoint, {
