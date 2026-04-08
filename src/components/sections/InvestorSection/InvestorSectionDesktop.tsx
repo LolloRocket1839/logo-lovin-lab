@@ -7,7 +7,7 @@ import { MESSAGES, openWhatsApp, CONTACTS } from "@/constants";
 import { openCalendly } from "@/lib/calendly";
 import { StyledText } from "@/components/StyledText";
 
-import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
+
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useHasBeenSeen } from "@/hooks/useScrollProgress";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
@@ -15,7 +15,7 @@ import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadD
 export const InvestorSectionDesktop = () => {
   const { t, i18n } = useTranslation();
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
-  const { count } = useWaitlistCounter();
+  
   const prefersReducedMotion = useReducedMotion();
   
   const sectionRef = useRef<HTMLElement>(null);
@@ -177,11 +177,11 @@ export const InvestorSectionDesktop = () => {
               <StyledText>{t('investor.compactDesc')}</StyledText>
             </p>
             
-            {/* Active Investors compact indicator */}
+            {/* Social proof */}
             <div className="flex justify-center mb-6">
               <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                {count}+ {t('investor.activeInvestors')}
+                {t('investor.socialProofLine')}
               </span>
             </div>
           </div>

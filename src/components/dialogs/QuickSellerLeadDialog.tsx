@@ -20,8 +20,8 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useAnalytics } from "@/hooks/useAnalytics";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { openCalendly } from "@/lib/calendly";
-import { getUTMParams } from "@/hooks/useUTMTracking";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 
 interface QuickSellerLeadDialogProps {
@@ -40,6 +40,7 @@ export const QuickSellerLeadDialog = ({
   const { t } = useTranslation();
   const { toast } = useToast();
   const { trackClick } = useAnalytics();
+  const { submitLead } = useLeadCapture();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [email, setEmail] = useState("");
@@ -67,38 +68,28 @@ export const QuickSellerLeadDialog = ({
     setIsSubmitting(true);
     trackClick('quick_seller_lead_submit', { source, email: email.trim() });
 
-    try {
-      const utmParams = getUTMParams();
-      const response = await fetch(FORMSPREE_ENDPOINTS.quickSeller, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          _subject: `🏠 SELLER LEAD - Jungle Rent - ${email.trim()}${utmParams.utm_source ? ` [${utmParams.utm_source}]` : ''}`,
-          email: email.trim(),
-          source,
-          timestamp: new Date().toISOString(),
-          type: "quick_seller_lead",
-          estimated_value: estimatedValue || "",
-          utm_source: utmParams.utm_source || "",
-          utm_medium: utmParams.utm_medium || "",
-          utm_campaign: utmParams.utm_campaign || "",
-          utm_content: utmParams.utm_content || "",
-          utm_term: utmParams.utm_term || "",
-        }),
-      });
-
-      if (response.ok) {
-        setStep(2);
-        setEmail("");
-        toast({ title: t('quickSellerLead.successTitle'), description: t('quickSellerLead.successDescription') });
-      } else {
-        throw new Error("Form submission failed");
+    const result = await submitLead(
+      {
+        email: email.trim(),
+        source,
+        leadType: "seller",
+        metadata: estimatedValue ? { estimated_value: estimatedValue } : undefined,
+      },
+      {
+        endpoint: FORMSPREE_ENDPOINTS.quickSeller,
+        subject: `🏠 SELLER LEAD - Jungle Rent - ${email.trim()}`,
+        extraFields: { estimated_value: estimatedValue || "" },
       }
-    } catch (error) {
-      console.error("Quick seller lead submission error:", error);
+    );
+
+    setIsSubmitting(false);
+
+    if (result.success) {
+      setStep(2);
+      setEmail("");
+      toast({ title: t('quickSellerLead.successTitle'), description: t('quickSellerLead.successDescription') });
+    } else {
       toast({ title: t('quickSellerLead.errorTitle'), description: t('quickSellerLead.errorDescription'), variant: "destructive" });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 

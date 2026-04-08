@@ -344,6 +344,48 @@ export type Database = {
         }
         Relationships: []
       }
+      leads: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          lead_type: string
+          metadata: Json | null
+          name: string | null
+          phone: string | null
+          source: string
+          utm_campaign: string | null
+          utm_medium: string | null
+          utm_source: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          lead_type?: string
+          metadata?: Json | null
+          name?: string | null
+          phone?: string | null
+          source?: string
+          utm_campaign?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          lead_type?: string
+          metadata?: Json | null
+          name?: string | null
+          phone?: string | null
+          source?: string
+          utm_campaign?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+        }
+        Relationships: []
+      }
       perplexity_cache: {
         Row: {
           created_at: string
@@ -535,7 +577,20 @@ export type Database = {
       }
     }
     Functions: {
-      [_ in never]: never
+      insert_lead: {
+        Args: {
+          _email: string
+          _lead_type?: string
+          _metadata?: Json
+          _name?: string
+          _phone?: string
+          _source?: string
+          _utm_campaign?: string
+          _utm_medium?: string
+          _utm_source?: string
+        }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
