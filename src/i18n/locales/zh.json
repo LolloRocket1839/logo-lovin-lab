@@ -1,1457 +1,1485 @@
 {
-  "accessibility": {
-    "skipToContent": "跳至主要内容",
-    "openMenu": "打开菜单",
-    "closeMenu": "关闭菜单",
-    "languageSelector": "选择语言",
-    "startupInnovativaLink": "认证创新型初创企业 - 在官方注册处验证（新窗口打开）",
-    "opensNewWindow": "（新窗口打开）",
-    "openLogoModal": "打开Jungle Rent标志信息",
-    "loading": "加载中...",
-    "currentPage": "当前页面"
-  },
-  "founders": {
-    "title": "创始人",
-    "contactUs": "直接联系我们",
-    "callNow": "立即拨打",
-    "message": "发送消息",
-    "noWhatsApp": "没有WhatsApp？",
-    "sendSMS": "发送短信",
-    "callDirect": "直接拨打"
-  },
-  "howItWorks": {
-    "badge": "我们的模式",
-    "title": "Jungle Rent的运作方式",
-    "subtitle": "让投资者、学生和游客都受益的模式",
-    "steps": {
-      "invest": {
-        "title": "投资",
-        "desc": "最低€100起，投资Jungle Rent的特定公寓"
-      },
-      "acquire": {
-        "title": "收购",
-        "desc": "都灵大学区附近的房产"
-      },
-      "rent": {
-        "title": "出租",
-        "desc": "灵活租赁给学生和游客"
-      },
-      "win": {
-        "title": "共赢",
-        "desc": "投资者：双月收益 • 学生：租金优惠25%"
-      }
-    },
-    "investors": {
-      "title": "投资者",
-      "point1": "双月收益发放",
-      "point2": "高于市场的回报",
-      "point3": "零管理负担",
-      "point4": "特定且透明的公寓"
-    },
-    "students": {
-      "title": "学生",
-      "point1": "比都灵平均租金低25%",
-      "point2": "学年灵活合同",
-      "point3": "零中介费"
-    },
-    "savingHighlight": "与都灵平均租金相比，学生年度节省金额",
-    "ctaInvest": "€100起投资",
-    "ctaRent": "寻找住房"
-  },
-  "video": {
-    "title": "2分钟了解我们的模式",
-    "subtitle": "一段简短的视频，介绍如何通过Jungle Rent投资都灵的学生公寓。",
-    "badge": "2分钟",
-    "point1": "模式运作方式",
-    "point2": "预期回报",
-    "point3": "零管理负担",
-    "cta": "与Lorenzo交谈",
-    "play": "播放视频"
-  },
-  "problem": {
-    "badge": "问题所在",
-    "title": "意大利学生住房危机",
-    "subtitle": "每年近60万学生寻找住房，但专用住房供应仅覆盖12.6%的需求。危机意味着机遇。",
-    "stat1Label": "外地学生",
-    "stat1Sub": "在意大利",
-    "stat2Label": "在私人市场寻找住房",
-    "stat2Sub": "",
-    "stat3Label": "需求覆盖率",
-    "stat3Sub": "由专用住房",
-    "stat4Label": "市场潜力",
-    "stat4Sub": "在意大利",
-    "source": "2025年数据 - 来源：Savills Research, Student Housing Italy Spotlight",
-    "cta": "阅读完整报告"
-  },
-  "nav": {
-    "home": "首页",
-    "about": "关于我们",
-    "students": "学生专区",
-    "investors": "投资者专区",
-    "sell": "出售房产",
-    "blog": "资源",
-    "faq": "常见问题",
-    "contacts": "联系我们",
-    "contactUs": "联系我们",
-    "call": "拨打电话",
-    "search": "搜索"
-  },
-  "about": {
-    "metaTitle": "Jungle Rent - 收购并出租学生公寓 | 都灵",
-    "metaDescription": "房地产初创公司，双重使命：解决学生住房危机，让房地产投资平民化。我们在都灵收购房产并长期出租。",
-    "title": "关于Jungle Rent",
-    "subtitle": "收购房产并出租，解决学生住房危机",
-    "cycle": {
-      "title": "我们的模式",
-      "subtitle": "为学生和投资者创造价值的良性循环",
-      "stepLabel": "第{{number}}阶段",
-      "step1Title": "收购",
-      "step1Desc": "我们在都灵大学区收购房产，持有至少10年。",
-      "step2Title": "出租给学生",
-      "step2Desc": "以灵活合同和实惠价格出租给大学生。",
-      "step3Title": "内部管理",
-      "step3Desc": "维护、合同、24/7客服全部内部处理，不外包。",
-      "step4Title": "投资者收益",
-      "step4Desc": "租金收入每季度透明分配给投资者。",
-      "reinvest": "收益用于收购新房产"
-    },
-    "foundedLabel": "成立日期",
-    "foundedDate": "2025年10月",
-    "legalForm": "创新型有限责任公司",
-    "foundersLabel": "创始合伙人",
-    "founderLabel": "创始人",
-    "lorenzoRole": "创始人 • LUISS法律与经济学院",
-    "capitalLabel": "注册资本",
-    "capitalDesc": "已全额缴纳",
-    "locationLabel": "注册地址",
-    "servicesTitle": "我们的业务",
-    "service1Title": "收购房产",
-    "service1Desc": "我们直接在都灵大学区购买房产。不是中介：直接收购并持有至少10年。",
-    "service2Title": "出租给学生",
-    "service2Desc": "以灵活合同出租给大学生，助力解决都灵学生住房危机。",
-    "service3Title": "全面内部管理",
-    "service3Desc": "维护、合同、24/7客服、清洁：所有方面都由我们直接管理。",
-    "service4Title": "便捷投资",
-    "service4Desc": "最低€100起即可投资Jungle Rent的特定公寓，让房地产投资平民化。",
-    "whyChooseTitle": "为什么选择JungleRent",
-    "whyPoint1": "直接业主：不是中介，是长期投资者",
-    "whyPoint2": "专注大学生市场",
-    "whyPoint3": "€100起即可进入房地产市场",
-    "whyPoint4": "24/7客服，保证响应",
-    "whyPoint5": "法规合规，与2i3T合作",
-    "contactTitle": "联系我们",
-    "contactLorenzo": "与Lorenzo交谈",
-    "sendEmail": "发送邮件"
-  },
-  "breadcrumbs": {
-    "home": "首页"
-  },
-  "scrollToTop": {
-    "tooltip": "查看模型",
-    "label": "查看模型",
-    "backToTop": "返回顶部"
-  },
-  "hero": {
-    "tagline": "房地产丛林中的安全租赁",
-    "mainHeadline": "投资都灵学生公寓",
-    "mainHeadlineB": "从都灵学生公寓赚取被动收入",
-    "mainSubheadline": "最低€100起投资Jungle Rent。我们收购管理，您获取收益。",
-    "mainSubheadlineB": "最低€100起，拥有托管学生公寓的份额——我们负责一切，您按季度收取回报。",
-    "missionStatement": "Jungle Rent在都灵购买房产并出租给大学生。您投资，我们负责一切管理。",
-    "badgeExplanation": "投资Jungle Rent收购的特定公寓。零管理负担，季度收益。",
-    "discoverOpportunity": "发现机会",
-    "talkToLorenzo": "与Lorenzo交谈",
-    "startInvesting": "开始投资",
-    "discover": "探索",
-    "howItWorks": "如何运作？",
-    "miniFaq": {
-      "whatBuy": "€100能买到什么？",
-      "whatBuyAnswer": "投资Jungle Rent的特定公寓，由我们收购和管理。您清楚知道资金的去向。",
-      "howEarn": "如何获得收益？",
-      "howEarnAnswer": "每季度按投资比例获得租金收入份额。透明报告和个人仪表盘。",
-      "whoManages": "谁管理房产？",
-      "whoManagesAnswer": "Jungle Rent全面管理：收购、合同、租户、维护和税务。您无需操心。"
-    },
-    "miniSteps": {
-      "step1": "€100起",
-      "step2": "我们管理"
-    },
-    "flowStep1": "投资",
-    "flowStep2": "份额",
-    "flowStep3": "租金",
-    "flowStep4": "收益",
-    "invest": "投资Jungle Rent",
-    "launchCountdown": "启动倒计时",
-    "days": "天",
-    "hours": "小时",
-    "minutes": "分钟",
-    "seconds": "秒",
-    "waitlistCounter": "加入其他{{count}}位等待者",
-    "earlyBirdPerk": "🎉 早鸟优惠：前100名学生获得€100积分",
-    "studentTitle": "您是学生吗？",
-    "studentSubtitle": "节省租金！",
-    "investorTitle": "您是房地产投资者吗？",
-    "investorSubtitle": "最低€100起投资Jungle Rent房地产！",
-    "subheadline": "智能租赁和投资机会",
-    "targetAudience": "面向学生和投资者",
-    "location": "靠近都灵理工大学、都灵大学及所有主要大学",
-    "questionnaire": "赢取€100 - 填写问卷！",
-    "quizCta": "参与问答赢取€100",
-    "quizSubtitle": "帮助我们了解您的需求，有机会赢取€100",
-    "availableRooms": "2026年9月起30间四人公寓房间可用",
-    "supportedBy": "支持方",
-    "iAmStudent": "我是学生",
-    "iAmInvestor": "我是投资者",
-    "contactLorenzo": "联系Lorenzo",
-    "trustSafe": "安全合同",
-    "trustSupport": "专属支持",
-    "trustNoFees": "零佣金",
-    "logoAlt": "Jungle Rent - 官方标志 - 都灵学生和投资者优化租赁",
-    "seoH1": "Jungle Rent - 都灵学生公寓投资 | 全面管理",
-    "smartRentals": "智能租赁",
-    "investmentOpportunities": "投资机会",
-    "students": "学生",
-    "investors": "投资者",
-    "politecnico": "都灵理工",
-    "unito": "都灵大学",
-    "benefits": "优势",
-    "logo2i3tAlt": "2i3T 都灵大学企业孵化器 - 官方合作伙伴",
-    "sellerLink": {
-      "prefix": "您是房产所有者吗？",
-      "cta": "了解如何出售"
-    }
-  },
-  "studentSearch": {
-    "title": "找到您的房间",
-    "description": "告诉我们您在寻找什么，我们将帮助您找到完美的解决方案",
-    "cardTitle": "找到您的理想房间",
-    "cardDescription": "填写表格，我们将帮助您找到完美的解决方案",
-    "cardCta": "开始搜索",
-    "nameLabel": "姓名",
-    "namePlaceholder": "张三",
-    "nameErrorMin": "姓名至少需要2个字符",
-    "nameErrorMax": "姓名不能超过100个字符",
-    "nameErrorFormat": "姓名只能包含字母、空格、撇号和连字符",
-    "emailLabel": "邮箱",
-    "emailPlaceholder": "zhangsan@example.com",
-    "emailErrorRequired": "邮箱是必填项",
-    "emailErrorInvalid": "请输入有效的邮箱地址（例如：name@example.com）",
-    "emailErrorMax": "邮箱不能超过255个字符",
-    "whatYouLookingForLabel": "您在寻找什么？",
-    "whatYouLookingForPlaceholder": "描述您理想的房间：区域、特点、对您重要的事项...",
-    "whatYouLookingForErrorMin": "请用至少20个字符描述您的需求，以便我们为您找到最佳解决方案",
-    "whatYouLookingForErrorMax": "描述不能超过500个字符",
-    "roommatesLabel": "室友人数（可选）",
-    "roommatesPlaceholder": "选择...",
-    "roommatesOptions": {
-      "solo": "仅我自己（单人间）",
-      "2": "共2人",
-      "3": "共3人",
-      "4plus": "4人及以上",
-      "flexible": "无偏好"
-    },
-    "areaLabel": "首选区域（可选）",
-    "areaPlaceholder": "选择...",
-    "areaOptions": {
-      "san-salvario": "San Salvario",
-      "crocetta": "Crocetta",
-      "centro": "市中心",
-      "polito": "都灵理工附近",
-      "unito": "都灵大学附近",
-      "san-paolo": "San Paolo/Santa Rita",
-      "aurora": "Aurora/Vanchiglia",
-      "flexible": "无偏好"
-    },
-    "studyLabel": "您将学习什么？（可选）",
-    "studyPlaceholder": "例如：都灵理工计算机工程",
-    "studyErrorMax": "学习领域不能超过150个字符",
-    "budgetLabel": "月度预算（可选）",
-    "budgetPlaceholder": "选择...",
-    "budgetRanges": {
-      "400-500": "400-500€（不含费用）",
-      "500-600": "500-600€（不含费用）",
-      "600-700": "600-700€（不含费用）",
-      "over-700": "超过700€（不含费用）"
-    },
-    "moveDateLabel": "您想何时入住？（可选）",
-    "moveDatePlaceholder": "选择...",
-    "moveDates": {
-      "september-2026": "2026年9月",
-      "asap": "尽快",
-      "custom": "自定义日期"
-    },
-    "customMoveDateLabel": "指定日期",
-    "customMoveDatePlaceholder": "例如：2026年3月，年底等",
-    "customMoveDateErrorMax": "自定义日期不能超过100个字符",
-    "consentLabel": "我同意根据隐私政策处理我的个人数据",
-    "consentError": "您必须接受隐私政策才能继续",
-    "resourcesTitle": "📚 学生实用资源",
-    "resourcesDesc": "在找房的同时，了解都灵的学习地点",
-    "studySpacesLink": "57个最佳自习室指南",
-    "submitButton": "提交请求",
-    "submitting": "提交中...",
-    "successTitle": "请求已发送！🎉",
-    "successDescription": "我们将尽快与您联系，提供最佳选择",
-    "errorTitle": "提交错误",
-    "errorDescription": "发生错误，请重试或通过WhatsApp联系我们",
-    "draftFoundMessage": "我们找到了自动保存的草稿",
-    "loadDraft": "加载草稿",
-    "draftLoadedTitle": "草稿已加载",
-    "draftLoadedDesc": "您之前的数据已恢复",
-    "draftClearedTitle": "草稿已删除",
-    "draftClearedDesc": "保存的草稿已被移除",
-    "draftAutoSaved": "草稿已自动保存"
-  },
-  "trustBadge": {
-    "title": "您的安全是我们的首要任务",
-    "verified": "认证合同",
-    "support": "24/7支持",
-    "transparent": "完全透明",
-    "sectionLabel": "机构合作伙伴",
-    "supportedBy": "由2i3T支持",
-    "incubator": "都灵大学企业孵化器",
-    "learnMore": "了解更多关于2i3T",
-    "guarantee": "在都灵大学生态系统中孵化，确保每笔交易的专业性和可靠性"
-  },
-  "benefits": {
-    "title": "为什么选择Jungle Rent",
-    "subtitle": "您住房体验的独家优势",
-    "sectionLabel": "我们的优势",
-    "whyJungleRent": "为什么选择Jungle Rent",
-    "sectionTitle": "学生和投资者的实际优势",
-    "sectionSubtitle": "专业管理、保证节省和机构合作伙伴",
-    "savings": "认证节省",
-    "savingsDesc": "节省约30%租金。透明合同的优惠租赁。",
-    "savingsHighlight": "节省",
-    "savingsHow1": "无中介佣金",
-    "savingsHow2": "有竞争力的租金",
-    "savingsTooltip": "每月节省€200-400",
-    "investment": "投资机会",
-    "investmentDesc": "投资者：持续的大学需求下的专业物业管理",
-    "investmentHighlight": "投资者",
-    "investmentHow1": "€100起即可进入",
-    "investmentHow2": "包含全面管理",
-    "investmentTooltip": "参与房地产市场",
-    "location": "战略位置",
-    "locationDesc": "精选房产组合，靠近所有主要大学：都灵理工、都灵大学、ESCP、SAA、IED、IAAD、IUSTO",
-    "locationHighlight": "顶级位置",
-    "locationHow1": "靠近所有大学",
-    "locationHow2": "高需求战略区域",
-    "locationTooltip": "靠近所有大学",
-    "quality": "认证合同",
-    "qualityDesc": "正规合同、专业管理、完全透明。由2i3T - 大学孵化器支持。",
-    "qualityHighlight": "100%安全",
-    "qualityHow1": "包含法律支持",
-    "qualityHow2": "与2i3T合作",
-    "qualityTooltip": "验证的法律合同",
-    "studentCta": "我是学生",
-    "investorCta": "我是投资者"
-  },
-  "student": {
-    "title": "学生专区",
-    "subtitle": "我们的使命：解决学生住房危机",
-    "marketProofLabel": "我们的市场",
-    "marketProofTitle": "都灵90,000+大学生",
-    "marketProofDesc": "7所大学，全年稳定需求。这就是我们投资这里的原因。",
-    "sectionLabel": "学生专区",
-    "sectionTitle": "解决学生住房危机",
-    "compactDesc": "大学区实惠租赁。透明合同、零佣金和专属支持，助力您的学业旅程。",
-    "contactCta": "WhatsApp联系我们",
-    "sectionSubtitle": "我们双重使命的一部分：让所有学生都能负担得起住房",
-    "benefit1Title": "降低成本",
-    "benefit1Desc": "实惠租金：更多资金用于学习和享受都灵",
-    "benefit1Tooltip": "优质实惠房间",
-    "benefit2Title": "灵活合同",
-    "benefit2Desc": "学年灵活合同，夏季考试期间免费住宿日：节省25%",
-    "benefit2Tooltip": "灵活预订选项",
-    "contactText": "直接联系我们的学生顾问：",
-    "contactLorenzo": "与Lorenzo交谈",
-    "sendEmail": "发送邮件",
-    "responseTime": "40分钟内回复",
-    "cta": "发现房间",
-    "feature1": "靠近大学",
-    "feature2": "精选室友",
-    "feature3": "全包",
-    "separator": "和"
-  },
-  "investor": {
-    "title": "投资者专区",
-    "subtitle": "让房地产投资平民化",
-    "sectionLabel": "投资者专区",
-    "sectionTitle": "€100起进入房地产市场",
-    "compactDesc": "投资都灵大学房产。全面管理，学生/游客混合模式。",
-    "sectionSubtitle": "双重使命：解决学生住房危机和房地产民主化",
-    "startupInnovativaBadge": "认证创新型初创企业",
-    "whyInvestTitle": "为什么与我们投资",
-    "benefit1Title": "优化投资",
-    "benefit1Desc": "通过我们的专业管理和战略定价获得房地产市场机会",
-    "benefit2Title": "全面管理",
-    "benefit2Desc": "我们处理一切：合同、维护、租户关系。您只需关注投资",
-    "benefit3Title": "战略组合",
-    "benefit3Desc": "精选房产靠近都灵7个主要大学中心（都灵理工、都灵大学、ESCP、SAA、IED、IAAD、IUSTO），需求持续稳定",
-    "flowStep1": "可及性",
-    "flowStep1Sub": "€100起",
-    "flowStep2": "管理",
-    "flowStep2Sub": "专业化",
-    "flowStep3": "组合",
-    "flowStep3Sub": "战略性",
-    "waitlistTitle": "加入投资者等待名单",
-    "waitlistSubtitle": "获得都灵房地产投资机会的独家更新",
-    "waitlistCta": "加入等待名单",
-    "priorityResponse": "保证优先回复",
-    "cta": "发现机会",
-    "feature1": "€100起",
-    "feature2": "全面管理",
-    "feature3": "零繁琐手续",
-    "activeInvestors": "活跃投资者",
-    "talkToAdvisor": "与Lorenzo交谈",
-    "talkToLorenzo": "与Lorenzo交谈",
-    "scheduleCall": "预约通话",
-    "bookCall": "表达兴趣",
-    "incubatorTooltip": "由2i3T孵化 - 都灵大学企业孵化器",
-    "minInvestmentBadge": "€100起投资",
-    "marketStats": {
-      "minInvestment": "最低投资",
-      "studentSavings": "学生节省",
-      "studentsOffsite": "意大利外地学生",
-      "marketPotential": "市场潜力",
-      "disclaimer": "2025年估计 - 来源：Savills Research"
-    },
-    "testimonials": {
-      "title": "投资者评价",
-      "quote1": "我投资了€500，收到透明的季度报告。终于可以进入房地产市场了。",
-      "author1": "Marco，32岁",
-      "quote2": "零管理，团队处理一切。我可以专注工作，投资自动运作。",
-      "author2": "Giulia，28岁"
-    }
-  },
-  "infographic": {
-    "badge": "我们的模式",
-    "title": "Jungle Rent模式",
-    "subtitle": "简化房地产投资",
-    "steps": {
-      "invest": {
-        "title": "投资",
-        "description": "€100起参与",
-        "detail": "无需购买整套房产即可进入房地产市场。零繁琐手续，零直接管理。",
-        "keyPoints": [
-          "仅€100起投资",
-          "无需管理房产",
-          "零繁琐手续和隐藏费用"
-        ]
-      },
-      "acquire": {
-        "title": "收购",
-        "description": "大学区房产",
-        "detail": "在都灵理工、都灵大学和都灵各大学附近的高需求区域精选并收购房产。",
-        "keyPoints": [
-          "完整尽职调查",
-          "高需求战略区域",
-          "服务7所大学"
-        ]
-      },
-      "manage": {
-        "title": "管理",
-        "description": "灵活租赁",
-        "detail": "灵活租赁给学生和游客。全年最大化入住率。",
-        "keyPoints": [
-          "学生和游客灵活租赁",
-          "包含维护"
-        ]
-      },
-      "earn": {
-        "title": "参与",
-        "description": "组合收益",
-        "detail": "参与管理房产的收益。透明报告和个人仪表盘监控您的投资。",
-        "keyPoints": [
-          "透明季度报告",
-          "个人仪表盘",
-          "分配收益"
-        ]
-      }
-    },
-    "metrics": {
-      "yield": {
-        "label": "最低投资",
-        "description": "€100起"
-      },
-      "savings": {
-        "label": "学生节省",
-        "description": "对比12个月合同"
-      },
-      "students": {
-        "label": "学生",
-        "description": "都灵大学生"
-      },
-      "universities": {
-        "label": "大学",
-        "description": "区域内大学"
-      }
-    },
-    "disclaimer": "*投资有风险，包括可能损失本金。收益取决于市场表现。",
-    "cta": "包含全面管理。",
-    "scrollHint": "等待继续"
-  },
-  "slideOverlays": {
-    "invest": {
-      "minInvestment": "€100起",
-      "caption": "您投资，我们处理其余。零繁琐手续。"
-    },
-    "acquire": {
-      "university": "大学区",
-      "caption": "在都灵理工、都灵大学和7所都灵大学附近收购。"
-    },
-    "manage": {
-      "students": "学生9月-6月",
-      "tourists": "游客7月-8月",
-      "caption": "365天入住。合同、维护、税务全包。"
-    },
-    "earn": {
-      "quarterly": "季度报告",
-      "dashboard": "个人仪表盘",
-      "caption": "完全透明参与收益。"
-    }
-  },
-  "investors": {
-    "metaTitle": "都灵便捷房地产投资 - 让房地产民主化 | Jungle Rent",
-    "metaDescription": "让房地产投资民主化，这一历史上安全的资产类别如今对许多人来说已无法企及。全面管理投资都灵大学房产。",
-    "heroTitle": "让房地产投资民主化",
-    "heroSubtitle": "一种历史上安全的资产类别，如今对许多人来说已无法企及。专业管理投资都灵大学房产。",
-    "metricReturn": "年度目标回报",
-    "metricOccupancy": "入住率",
-    "metricManagement": "包含管理",
-    "benefitsTitle": "为什么与我们投资",
-    "benefitsSubtitle": "都灵大学租赁市场的专业合作伙伴",
-    "processTitle": "如何运作",
-    "processSubtitle": "4个简单步骤开始投资",
-    "step1Title": "初次联系",
-    "step1Desc": "通过WhatsApp或电话讨论您的需求和投资目标",
-    "step2Title": "机会分析",
-    "step2Desc": "我们为您介绍可用房产，提供详细分析和预测",
-    "step3Title": "确认",
-    "step3Desc": "通过透明合同和包含的法律支持完成参与",
-    "step4Title": "参与收益",
-    "step4Desc": "通过季度报告参与组合收益。我们管理一切",
-    "ctaTitle": "准备好投资了吗？",
-    "ctaSubtitle": "与我们的顾问交谈，了解今天可用的机会",
-    "readSavillsAnalysis": "阅读完整市场分析"
-  },
-  "seller": {
-    "title": "在都灵出售您的房产",
-    "subtitle": "免费评估 • 零佣金 • 60-90天完成交易",
-    "sectionLabel": "出售房产",
-    "heroHighlight": "出售",
-    "heroRest": "您的房产",
-    "heroBracket": "（给我们）",
-    "heroSubheadline": "直接买家，零佣金，60-90天",
-    "newTitle": "我们购买您的房产。不是中介。",
-    "newSubtitle": "我们不为您寻找买家。Jungle Rent直接购买大学区房产。",
-    "directBuyerTitle": "直接购买您的房产",
-    "directBuyerSubtitle": "我们不是中介。为我们的组合直接购买。",
-    "benefit1": "零佣金",
-    "benefit2": "60-90天",
-    "benefit3": "保证买家",
-    "urgencyBadge": "我们在San Salvario、Vanchiglia、医院区、Santa Rita、Cit Turin、Campidoglio、Aurora、Campus Einaudi、Corso Casale寻找房产",
-    "missionStatement": "我们在都灵大学区购买房产，为90,000+学生提供住房。您的房产成为解决住房危机的一部分。",
-    "readGuide": "阅读完整指南：风险、税收和中介",
-    "comparison": {
-      "agency": "中介",
-      "jungleRent": "Jungle Rent",
-      "roleLabel": "角色",
-      "roleAgency": "中间人",
-      "roleJR": "买家",
-      "commissionsLabel": "佣金",
-      "commissionsJR": "€0",
-      "timeLabel": "时间",
-      "months": "月",
-      "days": "天",
-      "visitsLabel": "看房",
-      "visitsAgency": "数十次",
-      "visitsJR": "最多1-2次"
-    },
-    "compactTitle": "7天内评估和购买",
-    "compactDesc": "快速无佣金出售您的房产给Jungle Rent。我们在大学区购买。",
-    "compactBullet1": "72小时免费评估",
-    "compactBullet2": "10天内书面报价，零佣金",
-    "sectionTitle": "卖家专区",
-    "intro": "您在都灵拥有房产并想快速出售？Jungle Rent是您一直在寻找的直接买家。我们在都灵大学区（Crocetta、San Salvario、Centro、Vanchiglia、Vanchiglietta、Aurora、Lingotto）购买公寓，将其转化为学生和年轻专业人士的优化住房解决方案。",
-    "valuationFree": "3-5天免费评估",
-    "zeroFees": "零佣金",
-    "forSeller": "卖家",
-    "whyWeAcquire": "为什么我们在都灵收购房产",
-    "para1": "Jungle Rent诞生于优化都灵学生租赁市场的愿景，这是一个不断发展的大学城市，拥有超过90,000名学生，分布在都灵理工大学、都灵大学（UniTo）、ESCP商学院和IED。大学区优质住房需求巨大，但供应往往分散且不专业。",
-    "para2": "我们的使命是收购战略位置的大学区公寓，将其转化为现代优化住房：舒适的共享空间、装修精良的单人间、包含服务和专业管理。因此我们寻找三居室、四居室和更大公寓，位于",
-    "zones": "Crocetta、San Salvario、Centro、Vanchiglia、Vanchiglietta、Aurora、Lingotto、Santa Rita和San Paolo",
-    "para3": "理想情况下步行或乘坐公共交通10-20分钟可达主要都灵大学。",
-    "para4": "我们与专业公证员和律师合作，确保安全快速的交易。我们的评估基于每周更新的市场分析，考虑位置、面积、房产状况和租赁市场优化潜力。",
-    "advantagesTitle": "出售给Jungle Rent的优势：",
-    "para5": "零中介佣金（节省€6,000-10,000），快速流程无需数十次陌生人看房，实地勘察后48小时内提供书面报价，包含法律支持和安全付款。",
-    "timelineValuation": "评估",
-    "timelineValuationTime": "48小时",
-    "timelineInspection": "勘察",
-    "timelineInspectionTime": "10-14天",
-    "timelineOffer": "报价",
-    "timelineOfferTime": "5-7天",
-    "timelineClosing": "交易完成",
-    "timelineClosingTime": "60-90天",
-    "benefit1Title": "即时评估",
-    "benefit1Desc": "24-48小时内获得您房产的专业评估",
-    "benefit1Tooltip": "快速专业评估",
-    "benefit2Title": "快速销售",
-    "benefit2Desc": "简化快速的销售流程，无不必要的中间人",
-    "benefit2Tooltip": "60-90天内出售",
-    "benefit3Title": "安全交易",
-    "benefit3Desc": "整个过程透明合同和法律支持",
-    "benefit3Tooltip": "透明法律支持",
-    "benefit4Title": "最大价值",
-    "benefit4Desc": "为您在都灵的房产获得最佳市场价格",
-    "benefit4Tooltip": "最佳市场价格",
-    "zonesTitle": "都灵感兴趣区域",
-    "zonesText": "我们在以下都灵大学区寻找待售公寓：",
-    "zonesList": "Crocetta、San Salvario、Centro、Vanchiglia、Vanchiglietta、Aurora、Lingotto、Santa Rita、San Paolo",
-    "idealProperty": "理想房产：三居室、四居室或更大公寓，靠近都灵理工大学、都灵大学（UniTo）、ESCP商学院、SAA、IED。",
-    "formInvitation": "填写表格获取您房产的免费评估。无义务，3-5天内保证回复。",
-    "ctaButton": "申请免费评估",
-    "cta": "申请评估",
-    "scheduleCall": "预约通话",
-    "feature1": "免费评估",
-    "feature2": "30天出售",
-    "feature3": "零佣金"
-  },
-  "quickSellerLead": {
-    "title": "出售您的房产",
-    "newTitle": "24小时免费评估",
-    "description": "留下您的信息，我们将联系您进行免费评估。",
-    "notAgency": "我们不是中介。如果您的房产在我们的区域内，我们将直接报价。",
-    "advantage1": "直接买家",
-    "advantage2": "零佣金",
-    "advantage3": "7天报价",
-    "namePlaceholder": "您的姓名？",
-    "addressPlaceholder": "房产地址",
-    "optional": "可选",
-    "submit": "提交请求",
-    "sending": "发送中...",
-    "successTitle": "请求已发送！",
-    "successDescription": "我们将尽快联系您进行免费评估。",
-    "successMessage": "我们将尽快联系您讨论您的房产销售。",
-    "scheduleCall": "预约通话",
-    "close": "关闭",
-    "errorTitle": "错误",
-    "errorDescription": "发生错误，请稍后重试。",
-    "emailRequired": "请输入您的邮箱",
-    "invalidEmail": "请输入有效邮箱",
-    "privacy": "您的数据是安全的。我们绝不会与第三方共享。"
-  },
-  "tourist": {
-    "sectionLabel": "游客和数字游民",
-    "sectionTitle": "像当地人一样探索都灵",
-    "sectionDesc": "精选住宿、独家指南和地道建议，让您充分体验都灵。无论您是游客还是数字游民，我们都能帮助您发现这座城市。",
-    "ctaTitle": "都灵完整指南",
-    "ctaDesc": "了解在都灵哪里吃饭、工作、探索和生活",
-    "ctaButton": "阅读指南",
-    "benefit1Title": "精选住宿",
-    "benefit1Desc": "都灵最佳社区的验证公寓",
-    "benefit1Tooltip": "安全和地道地区的优质住宿",
-    "benefit2Title": "地道本地指南",
-    "benefit2Desc": "咖啡馆、联合办公、餐厅和本地文化的内部建议",
-    "benefit2Tooltip": "像居民一样发现都灵",
-    "benefit3Title": "个性化支持",
-    "benefit3Desc": "专属协助，让您的住宿难忘",
-    "benefit3Tooltip": "意大利语和英语WhatsApp支持",
-    "contactPrompt": "需要都灵建议？",
-    "contactButton": "WhatsApp联系我们"
-  },
-  "faq": {
-    "title": "常见问题",
-    "subtitle": "快速解答您的疑问",
-    "sectionLabel": "常见问题",
-    "investorCategory": "投资者",
-    "sellerCategory": "卖家",
-    "aboutCategory": "关于Jungle Rent",
-    "investorQ1": "最低投资额是多少？",
-    "investorA1": "Jungle Rent最低投资额为€100，让您即使资金有限也能进入都灵房地产市场。对于想要投资更多的人，机会取决于我们拥有和想要收购的房产。",
-    "investorQ2": "投资如何运作？",
-    "investorA2": "投资Jungle Rent的特定公寓，由我们精选和收购。您清楚知道资金投入了哪套房产。我们全面管理：租户、合同、维护。该公寓的收益即为您的回报。",
-    "investorQ3": "Jungle Rent全面管理房产吗？",
-    "investorA3": "是的，我们提供全方位管理服务，包括：租户寻找和筛选、合同管理和登记、日常和突发维护、租金收取、拖欠管理、法律协助和详细季度报告。投资者无需担心任何事情即可参与收益。",
-    "investorQ4": "多久能看到第一笔收益？",
-    "investorA4": "第一笔收益在投资后约2个月通知，完成设置阶段（购买/装修、寻找租户、合同登记）后。此后，您将收到详细的季度报告。",
-    "investorQ5": "向租户提供什么类型的合同？",
-    "investorA5": "我们使用学习动机的临时合同（第431/98号法第5条），与学年对齐，可每年续签。这种类型保证更高的周转率（因此租金调整到市场价格）以及业主和租户的法律保护。",
-    "investorQ6": "投资管理如何运作？",
-    "investorA6": "投资后，我们处理一切：租户筛选、合同、维护和租金收取。您将收到详细的季度报告，包含所有组合数据。",
-    "investorQ7": "我会收到什么报告，频率如何？",
-    "investorA7": "您将收到详细的季度报告，包括：房产状态、入住率、组合收益、发生的费用和下一季度预测。您还可以访问在线仪表盘实时监控您的投资。",
-    "investorQ8": "投资前可以参观房产吗？",
-    "investorA8": "可以，我们为感兴趣的投资者安排预约参观房产。您可以亲自查看房产，评估装修质量，并直接与我们的管理团队交谈。",
-    "investorQ9": "如何投资Jungle Rent？",
-    "investorA9": "您可以从€100起投资Jungle Rent的特定公寓。不是匿名基金：您清楚知道在为哪套房产融资。Jungle Rent收购、管理并分配收益。",
-    "investorQ10": "收益如何计算？",
-    "investorA10": "收益基于我们的混合模式计算：学年期间出租给大学生，夏季月份短期旅游出租。这种模式相比传统固定租金出租优化了入住率。收益扣除管理费用但不扣除个人税。注意：收益取决于市场表现，不保证。投资有风险，包括可能部分或全部损失资本。",
-    "investorQ11": "什么是学生/游客混合模式？",
-    "investorA11": "我们的混合模式结合：(1) 与学年对齐的临时合同出租给大学生，保证稳定性和可靠租户；(2) 学生放假时的夏季短期旅游出租，最大化季节性收入。学生相比传统合同节省大量费用，只需支付实际居住月份。此外，我们提供夏季免费住宿日，让学生可以无额外费用返回都灵参加考试。",
-    "studentCategory": "学生",
-    "studentQ1": "灵活合同如何运作？",
-    "studentA1": "学习动机临时合同覆盖学年（9月-6月），让您只需支付实际在都灵的月份。相比传统合同节省大量费用。合同可每年续签。",
-    "studentQ2": "如果需要回都灵参加夏季考试怎么办？",
-    "studentA2": "我们在夏季月份提供免费住宿日。这意味着您可以返回都灵参加夏季考试，无需额外支付租金。这包含在您的合同中。",
-    "studentQ3": "相比传统租赁能节省多少？",
-    "studentA3": "使用我们的模式，相比传统12个月合同可节省大量费用。您只需支付学年月份，避免不在都灵时支付夏季租金。",
-    "studentQ4": "都灵哪些区域有住房？",
-    "studentA4": "我们的住房位于最受欢迎的大学区：San Salvario、Crocetta、Vanchiglia、Centro、Aurora、Cenisia。都在都灵理工、都灵大学和其他都灵大学附近步行或骑车几分钟可达。",
-    "studentQ5": "租金包含什么？",
-    "studentA5": "租金包括：带家具房间、物业费、WiFi、每周公共区域清洁、日常维护。水电费（电、气、水）另算，室友分摊。正规登记合同，专属协助。",
-    "sellerQ1": "你们购买什么房产？",
-    "sellerA1": "我们在都灵及周边购买公寓，优先大学区：Vanchiglia、San Salvario、Cenisia、Crocetta、Lingotto、Aurora。我们对2到5室的房产感兴趣，包括需要装修的。无义务评估每个提案。",
-    "sellerQ2": "免费评估如何运作？",
-    "sellerA2": "您填写房产数据表格，我们24小时内回复。初次电话分析后，我们安排免费实地勘察评估房产。提供市场估价，如有兴趣，7天内提供购买提案。",
-    "sellerQ3": "出售需要多长时间？",
-    "sellerA3": "我们的流程比传统销售快得多。从评估到公证交易可能需要30-60天，取决于案件复杂程度和房产可用性。我们处理所有繁琐手续。",
-    "sellerQ4": "出售前需要装修吗？",
-    "sellerA4": "不需要，我们购买任何状况的房产，包括需要完全装修的。事实上，我们通常更喜欢需要工程的房产，因为我们可以根据学生需求进行调整。购买价格会考虑房产状况。",
-    "sellerQ5": "如何付款？",
-    "sellerA5": "在公证交易时通过银行转账或银行本票付款。如果您需要时间搬迁，我们可以灵活安排房产交付时间。卖家无佣金或隐藏费用。",
-    "sellerQ6": "你们和房产中介有什么区别？",
-    "sellerA6": "根本区别是我们是直接买家，不是中间人。中介为您寻找买家（并收取3-4%佣金）。我们直接为我们的组合购买您的房产，消除中间人、佣金和数十次看房。",
-    "sellerQ7": "为什么不收佣金？",
-    "sellerA7": "因为我们不是中间人。中介收取佣金是因为他们连接卖家和买家。我们直接购买将房产转化为学生住房，所以没有中间人需要支付。您节省€6,000-10,000。",
-    "aboutQ1": "你们是谁，运营多久了？",
-    "aboutA1": "Jungle Rent S.r.l.是2025年10月由Lorenzo Oni-Joseph和Andrea Niccolaini创立的创新型初创公司。我们用自有投资运营2年，2026年2月我们将启动初创公司向外部投资者开放投资机会。我们由2i3T孵化，都灵理工大学孵化器。",
-    "aboutQ2": "如何联系你们？",
-    "aboutA2": "您可以通过WhatsApp +39 331 905 3037（2小时内回复）、邮箱junglerententeprise@gmail.com或填写网站表格联系我们。地址：via Gioacchino Quarello 15/A, Torino。可预约会面。",
-    "aboutQ3": "你们是房产中介吗？",
-    "aboutA3": "不是。Jungle Rent是一家有双重使命的房地产初创公司：解决学生住房危机，让房地产投资民主化——这一历史上安全的资产类别与过去不同，如今对许多人来说已无法企及。我们收购、装修和管理房产，出租给大学生和游客。",
-    "voiceCategory": "常见语音问题",
-    "voiceQ1": "如何用少量资金投资都灵房地产？",
-    "voiceA1": "投资Jungle Rent的特定公寓，由我们在都灵大学区精选。您清楚知道资金去向，我们负责管理一切。",
-    "voiceQ2": "投资Jungle Rent安全吗？",
-    "voiceA2": "Jungle Rent是认证的创新型初创公司，在都灵商会注册，税号13333450016。我们由2i3T孵化，都灵大学孵化器。然而，与任何投资一样，存在风险，包括可能损失资本。",
-    "voiceQ3": "投资都灵学生公寓能赚多少？",
-    "voiceA3": "收益取决于市场表现，不保证。我们的学生/游客混合模式优化入住率：学年期间学生租赁，夏季月份旅游租赁。您将收到详细的季度报告。",
-    "voiceQ4": "如何查看我的房地产收益？",
-    "voiceA4": "您可以访问个人在线仪表盘实时监控您的投资。此外，您将通过邮件收到详细的季度报告，包含房产状态、入住率、收益和预测。",
-    "voiceQ5": "如何在都灵快速卖房？",
-    "voiceA5": "Jungle Rent直接购买您的房产，无中间人。填写表格，48小时内获得免费评估，7天内实地勘察，勘察后48小时内书面报价，60-90天完成交易。零佣金。",
-    "voiceQ6": "谁在都灵理工大学附近购买公寓？",
-    "voiceA6": "Jungle Rent在都灵大学区购买公寓：Crocetta、San Salvario、Centro、Vanchiglia、Aurora、Lingotto，非常靠近都灵理工和都灵大学。我们购买三居室、四居室和更大公寓，包括需要装修的。",
-    "voiceQ7": "我在San Salvario的公寓值多少钱？",
-    "voiceA7": "价值取决于面积、楼层、状况和San Salvario的确切位置。良好状况的中等三居室（80-90平方米）估价约€180,000-220,000。向Jungle Rent申请免费评估获取准确价格。",
-    "voiceQ8": "都灵大学生住在哪里？",
-    "voiceA8": "都灵大学生偏好靠近大学的社区：都灵理工附近的San Salvario和Crocetta，都灵大学附近的Centro和Vanchiglia，价格实惠的Aurora。这些区域提供服务、夜生活和交通。",
-    "voiceQ9": "都灵理工附近学生最佳区域是哪里？",
-    "voiceA9": "都灵理工大学附近学生最佳区域是Crocetta（优雅、安静，步行5-10分钟）、San Salvario（热闹、多元文化、经济实惠）和Cenisia/San Paolo（更安静，价格优惠）。",
-    "voiceQ10": "都灵学生租赁市场如何运作？",
-    "voiceA10": "都灵有超过90,000名大学生，住房需求旺盛。合同通常与学年对齐，单人间价格根据区域从€300-600不等。Jungle Rent提供灵活合同，节省大量费用。",
-    "voiceQ11": "都灵学生租房多少钱？",
-    "voiceA11": "都灵学生单人间平均月租：San Salvario €350-500，Crocetta €400-550，Aurora €300-400。价格包含物业费但不含水电费。",
-    "voiceQ12": "Jungle Rent投资可靠吗？",
-    "voiceA12": "Jungle Rent是在意大利注册的有限责任公司（税号13333450016，REA TO-1355899），认证为创新型初创公司。我们由2i3T孵化，都灵理工大学合作伙伴。我们提供透明合同和季度报告。",
-    "voiceQ13": "如果想退出Jungle Rent投资怎么办？",
-    "voiceA13": "退出投资的条件在合同中定义。我们建议您联系我们讨论可用选项。投资适合中长期（3-5年）以最大化收益。",
-    "voiceQ14": "Jungle Rent购买需要装修的房产吗？",
-    "voiceA14": "是的，Jungle Rent也在都灵大学区购买需要装修的公寓，但我们会根据所需工程的复杂程度和位置逐案评估。对于状况良好或需要部分维修的房产，我们直接购买。价格始终考虑房产状况。",
-    "voiceQ15": "如何联系Jungle Rent投资？",
-    "voiceA15": "您可以通过WhatsApp +39 331 905 3037（2小时内回复）、邮箱junglerententeprise@gmail.com或填写junglerent.it网站表格联系Jungle Rent。创始人Lorenzo Oni-Joseph将亲自回复。"
-  },
-  "contacts": {
-    "title": "联系我们",
-    "subtitle": "与我们的团队交谈",
-    "address": "地址",
-    "email": "邮箱",
-    "phone": "电话",
-    "social": "关注我们的社交媒体",
-    "formTitle": "发送消息",
-    "formName": "姓名",
-    "formEmail": "邮箱",
-    "formMessage": "消息",
-    "formSubmit": "发送",
-    "formSuccess": "谢谢！您的消息已发送。",
-    "formError": "错误！请稍后重试。"
-  },
-  "footer": {
-    "taglineAlt": "房地产丛林中的安全租赁",
-    "copyright": "© 2025 JUNGLE RENT S.R.L. 版权所有。",
-    "contactTitle": "联系方式",
-    "location": "意大利都灵",
-    "forStudentsTitle": "学生专区",
-    "howItWorksLink": "如何运作",
-    "universitiesLabel": "覆盖大学",
-    "partnershipTitle": "合作伙伴",
-    "incubatorDesc": "在都灵大学孵化",
-    "bottomTagline": "双重使命：学生住房危机和房地产投资平民化",
-    "bottomText": "由2i3T支持 - 都灵大学企业孵化器",
-    "legalAddress": "Via Gioacchino Quarello 15/A, 10135 都灵"
-  },
-  "waitlist": {
-    "title": "加入等待名单",
-    "description": "填写表格获取可用房间的优先访问权。",
-    "nameLabel": "全名",
-    "namePlaceholder": "张三",
-    "nameError": "请输入您的姓名",
-    "emailLabel": "邮箱",
-    "emailPlaceholder": "zhangsan@studenti.unito.it",
-    "emailError": "请输入有效邮箱",
-    "universityLabel": "大学（可选）",
-    "universityPlaceholder": "例如：都灵理工大学",
-    "budgetLabel": "月度预算（可选）",
-    "budgetPlaceholder": "大概预算",
-    "moveDateLabel": "入住日期（可选）",
-    "moveDatePlaceholder": "您想何时入住？",
-    "referralLabel": "如何找到我们？（可选）",
-    "referralPlaceholder": "帮助我们更了解您",
-    "consentLabel": "我同意数据处理（GDPR）并接收Jungle Rent更新",
-    "consentError": "您必须接受才能继续",
-    "submitButton": "注册",
-    "submitting": "发送中...",
-    "successTitle": "✨ 注册完成！",
-    "successDescription": "请检查您的邮箱确认。欢迎加入Jungle Rent！",
-    "errorTitle": "❌ 发送错误",
-    "errorDescription": "发生问题，请稍后重试或通过WhatsApp联系我们。",
-    "universities": {
-      "polito": "都灵理工大学",
-      "unito": "都灵大学",
-      "escp": "ESCP商学院",
-      "ied": "IED都灵",
-      "iaad": "IAAD",
-      "iusto": "IUSTO",
-      "other": "其他"
-    },
-    "budgetRanges": {
-      "300-400": "€300-400",
-      "400-500": "€400-500",
-      "500-600": "€500-600",
-      "over-600": ">€600"
-    },
-    "moveDates": {
-      "september-2025": "2025年9月",
-      "january-2026": "2026年1月",
-      "asap": "尽快",
-      "other": "其他"
-    },
-    "referralSources": {
-      "friend": "朋友",
-      "university": "大学",
-      "instagram": "Instagram",
-      "facebook": "Facebook",
-      "google": "Google",
-      "ai-assistant": "AI助手",
-      "other": "其他"
-    }
-  },
-  "investorWaitlist": {
-    "title": "加入投资者等待名单",
-    "description": "表达您对投资Jungle Rent的兴趣。我们将发送可用投资机会的独家信息。",
-    "nameLabel": "全名",
-    "namePlaceholder": "张三",
-    "nameError": "请输入您的姓名",
-    "emailLabel": "邮箱",
-    "emailPlaceholder": "zhangsan@email.com",
-    "emailError": "请输入有效邮箱",
-    "phoneLabel": "电话",
-    "phonePlaceholder": "+86 138 0000 0000",
-    "phoneError": "请输入您的电话号码",
-    "investmentBudgetLabel": "投资预算",
-    "investmentBudgetPlaceholder": "选择您的预算",
-    "budgetError": "选择可用预算",
-    "propertyTypeLabel": "房产类型",
-    "propertyTypePlaceholder": "您感兴趣什么？",
-    "propertyError": "选择一种类型",
-    "investmentHorizonLabel": "投资期限",
-    "investmentHorizonPlaceholder": "多长时间？",
-    "horizonError": "选择投资期限",
-    "investmentTimingLabel": "何时投资？",
-    "investmentTimingPlaceholder": "时间安排（可选）",
-    "hasRentalPropertiesLabel": "您有出租房产吗？",
-    "hasRentalPropertiesPlaceholder": "选择（可选）",
-    "preferredAreaLabel": "都灵首选区域（可选）",
-    "preferredAreaPlaceholder": "选择区域...",
-    "areaFlexible": "无偏好 - 灵活",
-    "referralLabel": "如何找到我们？（可选）",
-    "referralPlaceholder": "帮助我们更了解您",
-    "consentLabel": "我同意数据处理（GDPR）并接收投资机会更新",
-    "consentError": "您必须接受才能继续",
-    "submitButton": "表达兴趣",
-    "submitting": "发送中...",
-    "successTitle": "🎉 兴趣已登记！",
-    "successDescription": "谢谢！您将很快收到Jungle Rent投资机会的独家信息。",
-    "errorTitle": "错误",
-    "errorDescription": "出了点问题，请重试。",
-    "budgetRanges": {
-      "50k-100k": "€50k - €100k",
-      "100k-200k": "€100k - €200k",
-      "200k-300k": "€200k - €300k",
-      "over-300k": "超过€300k"
-    },
-    "propertyTypes": {
-      "monolocale": "一居室",
-      "bilocale": "两居室",
-      "trilocale": "三居室",
-      "appartamento-completo": "4+居室公寓",
-      "indeciso": "尚未决定"
-    },
-    "investmentHorizons": {
-      "short-term": "1-3年",
-      "medium-term": "3-5年",
-      "long-term": "5+年",
-      "flexible": "灵活"
-    },
-    "investmentTimings": {
-      "immediate": "立即（0-3个月）",
-      "short": "3-6个月",
-      "medium": "6-12个月",
-      "long": "12+个月"
-    },
-    "rentalProperties": {
-      "yes": "是的，有经验",
-      "no": "没有，第一次投资",
-      "considering": "正在考虑"
-    },
-    "areas": {
-      "san-salvario": "San Salvario",
-      "crocetta": "Crocetta",
-      "centro": "老城区",
-      "vanchiglia": "Vanchiglia",
-      "aurora": "Aurora/Barriera Milano",
-      "polito": "都灵理工附近",
-      "lingotto": "Lingotto",
-      "san-paolo": "San Paolo/Santa Rita"
-    },
-    "referralSources": {
-      "network": "专业网络",
-      "linkedin": "LinkedIn",
-      "referral": "推荐",
-      "google": "Google",
-      "ai-assistant": "AI助手",
-      "other": "其他"
-    }
-  },
-  "search": {
-    "askAnything": "问任何问题"
-  },
-  "stickyCta": {
-    "closeLabel": "关闭"
-  },
-  "quickLead": {
-    "title": "投资Jungle Rent",
-    "description": "留下您的邮箱，我们将联系您讨论投资机会。",
-    "namePlaceholder": "您的姓名？",
-    "optional": "可选",
-    "submit": "提交",
-    "sending": "发送中...",
-    "successTitle": "谢谢！",
-    "successDescription": "我们将尽快联系您讨论投资机会。",
-    "successMessage": "我们将尽快联系您讨论投资机会。",
-    "scheduleCall": "预约通话",
-    "close": "关闭",
-    "errorTitle": "错误",
-    "errorDescription": "发生错误，请稍后重试。",
-    "emailRequired": "请输入您的邮箱",
-    "invalidEmail": "请输入有效邮箱",
-    "privacy": "您的数据是安全的。我们绝不会与第三方共享。"
-  },
-  "quickInvestorLead": {
-    "title": "开始投资",
-    "description": "输入您的邮箱以获取Jungle Rent投资机会的信息",
-    "submit": "提交请求",
-    "sending": "发送中...",
-    "privacy": "提交即表示您同意我们的隐私政策",
-    "errorTitle": "错误",
-    "emailRequired": "请输入您的邮箱地址",
-    "invalidEmail": "请输入有效的邮箱地址",
-    "errorDescription": "发生错误，请稍后重试。"
-  },
-  "blog": {
-    "sectionLabel": "城市生活",
-    "sectionTitle": "城市生活",
-    "sectionSubtitle": "为您准备的城市内容...可能不那么显而易见！(:",
-    "bannerTitle": "城市、房地产和学生捷径信息",
-    "bannerSubtitle": "都灵指南、分析和建议",
-    "readGuide": "阅读指南",
-    "exploreAll": "让我们来看看",
-    "newBadge": "新",
-    "viewAll": "发现所有资源",
-    "readMore": "阅读文章",
-    "share": "分享",
-    "shareVia": "分享到",
-    "shareWhatsApp": "分享到WhatsApp",
-    "copyLink": "复制链接",
-    "linkCopied": "链接已复制！",
-    "shareNative": "更多选项...",
-    "relatedPosts": "相关文章",
-    "categories": {
-      "all": "全部",
-      "students": "学生",
-      "investors": "投资者",
-      "sellers": "卖家",
-      "turisti": "游客",
-      "societa": "公司"
-    },
-    "search": {
-      "placeholder": "搜索文章...",
-      "noResults": "未找到\"{{query}}\"相关文章"
-    },
-    "filters": {
-      "tags": "按标签筛选",
-      "clearAll": "清除筛选"
-    },
-    "hero": {
-      "title": "资源和指南",
-      "subtitle": "都灵房地产市场的深度分析、数据和实用建议"
-    },
-    "cta": {
-      "students": {
-        "A": {
-          "title": "今天开始您的搜索",
-          "description": "加入100+学生，在都灵理工和都灵大学附近找到实惠房间",
-          "button": "找房间"
-        },
-        "B": {
-          "title": "您的完美房间在等待",
-          "description": "优先获取校园附近验证房间。100+学生已注册",
-          "button": "立即注册 - 免费"
-        }
+   "accessibility": {
+      "skipToContent": "跳至主要内容",
+      "openMenu": "打开菜单",
+      "closeMenu": "关闭菜单",
+      "languageSelector": "选择语言",
+      "startupInnovativaLink": "认证创新型初创企业 - 在官方注册处验证（新窗口打开）",
+      "opensNewWindow": "（新窗口打开）",
+      "openLogoModal": "打开Jungle Rent标志信息",
+      "loading": "加载中...",
+      "currentPage": "当前页面"
+   },
+   "founders": {
+      "title": "创始人",
+      "contactUs": "直接联系我们",
+      "callNow": "立即拨打",
+      "message": "发送消息",
+      "noWhatsApp": "没有WhatsApp？",
+      "sendSMS": "发送短信",
+      "callDirect": "直接拨打"
+   },
+   "howItWorks": {
+      "badge": "我们的模式",
+      "title": "Jungle Rent的运作方式",
+      "subtitle": "让投资者、学生和游客都受益的模式",
+      "steps": {
+         "invest": {
+            "title": "投资",
+            "desc": "最低€100起，投资Jungle Rent的特定公寓"
+         },
+         "acquire": {
+            "title": "收购",
+            "desc": "都灵大学区附近的房产"
+         },
+         "rent": {
+            "title": "出租",
+            "desc": "灵活租赁给学生和游客"
+         },
+         "win": {
+            "title": "共赢",
+            "desc": "投资者：双月收益 • 学生：租金优惠25%"
+         }
       },
       "investors": {
-        "A": {
-          "title": "年回报7-9%",
-          "description": "投资都灵大学房地产市场，包含全面管理",
-          "button": "下载指南"
-        },
-        "B": {
-          "title": "将€100k转化为€7-9k年收益",
-          "description": "零房产管理。完整租户筛选。大学区保证收益",
-          "button": "预约免费咨询"
-        }
+         "title": "投资者",
+         "point1": "双月收益发放",
+         "point2": "高于市场的回报",
+         "point3": "零管理负担",
+         "point4": "特定且透明的公寓"
       },
-      "sellers": {
-        "A": {
-          "title": "60-90天出售，零佣金",
-          "description": "48小时内获得专业评估，节省€6,000-10,000佣金",
-          "button": "申请免费评估"
-        },
-        "B": {
-          "title": "节省€10k佣金，更快出售",
-          "description": "48小时专业评估。直接买家网络。平均75天对比行业180天",
-          "button": "获取现金报价"
-        }
+      "students": {
+         "title": "学生",
+         "point1": "比都灵平均租金低25%",
+         "point2": "学年灵活合同",
+         "point3": "零中介费"
       },
-      "turisti": {
-        "A": {
-          "title": "像当地人一样探索都灵",
-          "description": "加入我们的社区，获取独家建议、活动和都灵住宿优惠",
-          "button": "加入等待名单"
-        },
-        "B": {
-          "title": "体验真正的都灵",
-          "description": "优先获取独家指南、本地活动和都灵市中心精选住宿",
-          "button": "加入社区"
-        }
+      "savingHighlight": "与都灵平均租金相比，学生年度节省金额",
+      "ctaInvest": "€100起投资",
+      "ctaRent": "寻找住房"
+   },
+   "video": {
+      "title": "2分钟了解我们的模式",
+      "subtitle": "一段简短的视频，介绍如何通过Jungle Rent投资都灵的学生公寓。",
+      "badge": "2分钟",
+      "point1": "模式运作方式",
+      "point2": "预期回报",
+      "point3": "零管理负担",
+      "cta": "与Lorenzo交谈",
+      "play": "播放视频"
+   },
+   "problem": {
+      "badge": "问题所在",
+      "title": "意大利学生住房危机",
+      "subtitle": "每年近60万学生寻找住房，但专用住房供应仅覆盖12.6%的需求。危机意味着机遇。",
+      "stat1Label": "外地学生",
+      "stat1Sub": "在意大利",
+      "stat2Label": "在私人市场寻找住房",
+      "stat2Sub": "",
+      "stat3Label": "需求覆盖率",
+      "stat3Sub": "由专用住房",
+      "stat4Label": "市场潜力",
+      "stat4Sub": "在意大利",
+      "source": "2025年数据 - 来源：Savills Research, Student Housing Italy Spotlight",
+      "cta": "阅读完整报告"
+   },
+   "nav": {
+      "home": "首页",
+      "about": "关于我们",
+      "students": "学生专区",
+      "investors": "投资者专区",
+      "sell": "出售房产",
+      "blog": "资源",
+      "faq": "常见问题",
+      "contacts": "联系我们",
+      "contactUs": "联系我们",
+      "call": "拨打电话",
+      "search": "搜索"
+   },
+   "about": {
+      "metaTitle": "Jungle Rent - 收购并出租学生公寓 | 都灵",
+      "metaDescription": "房地产初创公司，双重使命：解决学生住房危机，让房地产投资平民化。我们在都灵收购房产并长期出租。",
+      "title": "关于Jungle Rent",
+      "subtitle": "收购房产并出租，解决学生住房危机",
+      "cycle": {
+         "title": "我们的模式",
+         "subtitle": "为学生和投资者创造价值的良性循环",
+         "stepLabel": "第{{number}}阶段",
+         "step1Title": "收购",
+         "step1Desc": "我们在都灵大学区收购房产，持有至少10年。",
+         "step2Title": "出租给学生",
+         "step2Desc": "以灵活合同和实惠价格出租给大学生。",
+         "step3Title": "内部管理",
+         "step3Desc": "维护、合同、24/7客服全部内部处理，不外包。",
+         "step4Title": "投资者收益",
+         "step4Desc": "租金收入每季度透明分配给投资者。",
+         "reinvest": "收益用于收购新房产"
       },
-      "downloadReport": "下载报告",
-      "readSavillsReport": "Savills 2025报告"
-    },
-    "meta": {
-      "title": "Jungle Rent博客 | 都灵租赁、投资和销售指南",
-      "description": "发现都灵房地产市场的指南、数据和深度分析，面向学生、投资者和卖家。"
-    }
-  },
-  "resourceLibrary": {
-    "sectionTitle": "投资者免费资源",
-    "sectionSubtitle": "最大化房地产投资的完整指南",
-    "guide1Title": "投资者完整指南",
-    "guide1Badge": "必备",
-    "guide1Desc": "开始投资都灵大学房产所需的一切",
-    "guide1Pages": "45页",
-    "guide1Bullet1": "Jungle Rent商业模式",
-    "guide1Bullet2": "详细ROI和财务预测",
-    "guide1Bullet3": "收益真实案例研究",
-    "guide1Bullet4": "与其他投资形式比较",
-    "guide2Title": "2025年都灵最佳房地产投资",
-    "guide2Badge": "高级 - 都灵市场",
-    "guide2Desc": "最赚钱区域、价格、收益和都灵市场策略的深度分析",
-    "guide2Pages": "完整指南",
-    "guide2Bullet1": "所有区域详细分析（Centro、Aurora、Lingotto、Mirafiori...）",
-    "guide2Bullet2": "各社区每平米价格和收益（2025年数据）",
-    "guide2Bullet3": "学生公寓：机会和运营策略",
-    "guide2Bullet4": "更新的贷款、利率和税收优惠",
-    "guide3Title": "都灵大学房地产市场",
-    "guide3Badge": "2025年报告",
-    "guide3Desc": "都灵学生公寓市场完整分析，包含需求、供应、价格和收益数据",
-    "guide3Pages": "18页",
-    "guide3Bullet1": "120,000名学生和50,000名外地学生：需求规模",
-    "guide3Bullet2": "供需缺口：缺少42,500个床位",
-    "guide3Bullet3": "7-9%收益对比米兰4-5%",
-    "guide3Bullet4": "各区域价格和全国比较",
-    "guide4Title": "意大利学生公寓聚焦",
-    "guide4Badge": "Savills 2025",
-    "guide4Desc": "Savills Research关于意大利学生公寓市场的官方报告，包含全国数据和趋势",
-    "guide4Pages": "12页",
-    "guide4Bullet1": "意大利589K外地学生",
-    "guide4Bullet2": "仅12.6%需求由专用住房覆盖",
-    "guide4Bullet3": "€40亿市场潜力",
-    "guide4Bullet4": "大学城市和收益分析",
-    "downloadCta": "下载免费指南",
-    "downloadDirectCta": "下载PDF",
-    "readAnalysis": "阅读报告分析"
-  },
-  "areaSuggestion": {
-    "addToForm": "添加信息到表格"
-  },
-  "sellerContact": {
-    "title": "出售您的房产",
-    "description": "填写表格获取您都灵房产的免费评估",
-    "nameLabel": "姓名 *",
-    "namePlaceholder": "张三",
-    "nameError": "姓名必填",
-    "emailLabel": "邮箱 *",
-    "emailPlaceholder": "zhangsan@email.com",
-    "emailErrorInvalid": "邮箱无效",
-    "phoneLabel": "电话 *",
-    "phonePlaceholder": "+86 138 0000 0000",
-    "phoneError": "电话必填",
-    "addressLabel": "房产地址 *",
-    "addressPlaceholder": "Roma路1号，都灵",
-    "addressError": "地址必填",
-    "zoneLabel": "区域（可选）",
-    "zonePlaceholder": "例如：Crocetta",
-    "squareMetersLabel": "面积（可选）",
-    "squareMetersPlaceholder": "例如：85平米",
-    "roomsLabel": "房间数（可选）",
-    "roomsPlaceholder": "例如：三居室",
-    "floorLabel": "楼层（可选）",
-    "floorPlaceholder": "例如：2楼",
-    "conditionLabel": "房产状况（可选）",
-    "conditionPlaceholder": "例如：良好",
-    "motivationLabel": "出售动机（可选）",
-    "motivationPlaceholder": "为什么出售？",
-    "urgentLabel": "⚡ 我急需出售（最高优先级）",
-    "messageLabel": "附加说明（可选）",
-    "messagePlaceholder": "其他有用信息（可选）...",
-    "privacyLabel": "我同意根据欧盟2016/679号法规（GDPR）处理我的个人数据，并授权Jungle Rent联系我进行房产评估。",
-    "privacyLink": "阅读隐私政策",
-    "privacyError": "您必须同意数据处理",
-    "submitButton": "提交请求",
-    "submitting": "提交中...",
-    "successTitle": "✨ 请求发送成功！",
-    "successDescription": "我们将在48小时内联系您进行免费房产评估",
-    "errorTitle": "❌ 发送错误",
-    "errorDescription": "发生错误，请重试或通过WhatsApp联系我们。",
-    "footerInfo": "✓ 48小时内保证回复 • ✓ 免费无义务评估 • ✓ 零佣金",
-    "zones": {
-      "crocetta": "Crocetta",
-      "san-salvario": "San Salvario",
-      "centro": "Centro",
-      "vanchiglia": "Vanchiglia",
-      "lingotto": "Lingotto",
-      "santa-rita": "Santa Rita",
-      "san-paolo": "San Paolo",
-      "altra": "其他区域"
-    },
-    "rooms": {
-      "2": "两居室 (2)",
-      "3": "三居室 (3)",
-      "4": "四居室 (4)",
-      "5+": "5间及以上"
-    },
-    "floors": {
-      "terra": "一楼",
-      "1": "1楼",
-      "2": "2楼",
-      "3": "3楼",
-      "4": "4楼",
-      "5": "5楼",
-      "6+": "6楼及以上"
-    },
-    "conditions": {
-      "ottimo": "优秀",
-      "buono": "良好",
-      "da-ristrutturare": "需要装修"
-    },
-    "motivations": {
-      "cambio-citta": "搬迁城市",
-      "liquidita": "需要资金",
-      "eredita": "遗产",
-      "investimento": "投资处置",
-      "altro": "其他"
-    }
-  },
-  "studentInfographic": {
-    "badge": "如何运作",
-    "title": "找到您的理想住房",
-    "subtitle": "我们的混合模式帮您省钱",
-    "steps": {
-      "search": {
-        "title": "搜索住房",
-        "description": "在都灵理工、都灵大学和所有都灵大学附近找房间"
+      "foundedLabel": "成立日期",
+      "foundedDate": "2025年10月",
+      "legalForm": "创新型有限责任公司",
+      "foundersLabel": "创始合伙人",
+      "founderLabel": "创始人",
+      "lorenzoRole": "创始人 • LUISS法律与经济学院",
+      "capitalLabel": "注册资本",
+      "capitalDesc": "已全额缴纳",
+      "locationLabel": "注册地址",
+      "servicesTitle": "我们的业务",
+      "service1Title": "收购房产",
+      "service1Desc": "我们直接在都灵大学区购买房产。不是中介：直接收购并持有至少10年。",
+      "service2Title": "出租给学生",
+      "service2Desc": "以灵活合同出租给大学生，助力解决都灵学生住房危机。",
+      "service3Title": "全面内部管理",
+      "service3Desc": "维护、合同、24/7客服、清洁：所有方面都由我们直接管理。",
+      "service4Title": "便捷投资",
+      "service4Desc": "最低€100起即可投资Jungle Rent的特定公寓，让房地产投资平民化。",
+      "whyChooseTitle": "为什么选择JungleRent",
+      "whyPoint1": "直接业主：不是中介，是长期投资者",
+      "whyPoint2": "专注大学生市场",
+      "whyPoint3": "€100起即可进入房地产市场",
+      "whyPoint4": "24/7客服，保证响应",
+      "whyPoint5": "法规合规，与2i3T合作",
+      "contactTitle": "联系我们",
+      "contactLorenzo": "与Lorenzo交谈",
+      "sendEmail": "发送邮件"
+   },
+   "breadcrumbs": {
+      "home": "首页"
+   },
+   "scrollToTop": {
+      "tooltip": "查看模型",
+      "label": "查看模型",
+      "backToTop": "返回顶部"
+   },
+   "hero": {
+      "tagline": "房地产丛林中的安全租赁",
+      "mainHeadline": "投资都灵学生公寓",
+      "mainHeadlineB": "从都灵学生公寓赚取被动收入",
+      "mainSubheadline": "最低€100起投资Jungle Rent。我们收购管理，您获取收益。",
+      "mainSubheadlineB": "最低€100起，拥有托管学生公寓的份额——我们负责一切，您按季度收取回报。",
+      "missionStatement": "Jungle Rent在都灵购买房产并出租给大学生。您投资，我们负责一切管理。",
+      "badgeExplanation": "投资Jungle Rent收购的特定公寓。零管理负担，季度收益。",
+      "discoverOpportunity": "发现机会",
+      "talkToLorenzo": "与Lorenzo交谈",
+      "startInvesting": "开始投资",
+      "discover": "探索",
+      "howItWorks": "如何运作？",
+      "miniFaq": {
+         "whatBuy": "€100能买到什么？",
+         "whatBuyAnswer": "投资Jungle Rent的特定公寓，由我们收购和管理。您清楚知道资金的去向。",
+         "howEarn": "如何获得收益？",
+         "howEarnAnswer": "每季度按投资比例获得租金收入份额。透明报告和个人仪表盘。",
+         "whoManages": "谁管理房产？",
+         "whoManagesAnswer": "Jungle Rent全面管理：收购、合同、租户、维护和税务。您无需操心。"
       },
-      "save": {
-        "title": "节省",
-        "description": "与学年对齐的灵活合同"
+      "miniSteps": {
+         "step1": "€100起",
+         "step2": "我们管理"
+      },
+      "flowStep1": "投资",
+      "flowStep2": "份额",
+      "flowStep3": "租金",
+      "flowStep4": "收益",
+      "invest": "投资Jungle Rent",
+      "launchCountdown": "启动倒计时",
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒",
+      "waitlistCounter": "加入其他{{count}}位等待者",
+      "earlyBirdPerk": "🎉 早鸟优惠：前100名学生获得€100积分",
+      "studentTitle": "您是学生吗？",
+      "studentSubtitle": "节省租金！",
+      "investorTitle": "您是房地产投资者吗？",
+      "investorSubtitle": "最低€100起投资Jungle Rent房地产！",
+      "subheadline": "智能租赁和投资机会",
+      "targetAudience": "面向学生和投资者",
+      "location": "靠近都灵理工大学、都灵大学及所有主要大学",
+      "questionnaire": "赢取€100 - 填写问卷！",
+      "quizCta": "参与问答赢取€100",
+      "quizSubtitle": "帮助我们了解您的需求，有机会赢取€100",
+      "availableRooms": "2026年9月起30间四人公寓房间可用",
+      "supportedBy": "支持方",
+      "iAmStudent": "我是学生",
+      "iAmInvestor": "我是投资者",
+      "contactLorenzo": "联系Lorenzo",
+      "trustSafe": "安全合同",
+      "trustSupport": "专属支持",
+      "trustNoFees": "零佣金",
+      "logoAlt": "Jungle Rent - 官方标志 - 都灵学生和投资者优化租赁",
+      "seoH1": "Jungle Rent - 都灵学生公寓投资 | 全面管理",
+      "smartRentals": "智能租赁",
+      "investmentOpportunities": "投资机会",
+      "students": "学生",
+      "investors": "投资者",
+      "politecnico": "都灵理工",
+      "unito": "都灵大学",
+      "benefits": "优势",
+      "logo2i3tAlt": "2i3T 都灵大学企业孵化器 - 官方合作伙伴",
+      "sellerLink": {
+         "prefix": "您是房产所有者吗？",
+         "cta": "了解如何出售"
       }
-    },
-    "benefits": {
-      "contract": "灵活合同",
-      "savings": "保证节省",
-      "examDays": "免费考试日"
-    },
-    "cta": "即将推出：2026年9月起可用住房"
-  },
-  "students": {
-    "seo": {
-      "title": "都灵学生租房 | Jungle Rent",
-      "description": "在都灵理工、都灵大学和所有都灵大学附近找到学生住房。灵活合同和实惠价格。"
-    },
-    "badge": "2026即将推出",
-    "hero": {
-      "title": "都灵学生租房",
-      "subtitle": "我们正在建设更好的方式在大学附近找房。注册成为第一批用户。"
-    },
-    "waitlist": {
-      "placeholder": "您的邮箱",
-      "button": "加入等待名单",
-      "note": "准备好后我们会联系您。不发垃圾邮件。",
-      "success": "注册完成！我们会尽快联系您。",
-      "error": "错误，请稍后重试。"
-    },
-    "stats": {
-      "students": "大学生",
-      "universities": "都灵大学",
-      "neighborhoods": "学生社区",
-      "avgRent": "平均房间租金"
-    },
-    "resources": {
-      "title": "学生资源",
-      "subtitle": "在都灵生活和学习的免费指南",
-      "neighborhoods": "社区指南",
-      "universities": "大学",
-      "studySpaces": "自习室",
-      "mobility": "交通出行",
-      "dailyLife": "日常生活",
-      "viewAll": "查看所有指南"
-    },
-    "investorCta": {
-      "title": "您是投资者吗？",
-      "subtitle": "了解如何参与都灵学生租赁市场。",
-      "button": "发现机会"
-    },
-    "tools": {
-      "badge": "免费工具",
-      "title": "学生实用工具",
-      "subtitle": "帮助您规划都灵生活的实用资源",
-      "budgetCalc": {
-        "title": "预算计算器",
-        "description": "了解各社区生活成本",
-        "cta": "立即试用"
+   },
+   "studentSearch": {
+      "title": "找到您的房间",
+      "description": "告诉我们您在寻找什么，我们将帮助您找到完美的解决方案",
+      "cardTitle": "找到您的理想房间",
+      "cardDescription": "填写表格，我们将帮助您找到完美的解决方案",
+      "cardCta": "开始搜索",
+      "nameLabel": "姓名",
+      "namePlaceholder": "张三",
+      "nameErrorMin": "姓名至少需要2个字符",
+      "nameErrorMax": "姓名不能超过100个字符",
+      "nameErrorFormat": "姓名只能包含字母、空格、撇号和连字符",
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "zhangsan@example.com",
+      "emailErrorRequired": "邮箱是必填项",
+      "emailErrorInvalid": "请输入有效的邮箱地址（例如：name@example.com）",
+      "emailErrorMax": "邮箱不能超过255个字符",
+      "whatYouLookingForLabel": "您在寻找什么？",
+      "whatYouLookingForPlaceholder": "描述您理想的房间：区域、特点、对您重要的事项...",
+      "whatYouLookingForErrorMin": "请用至少20个字符描述您的需求，以便我们为您找到最佳解决方案",
+      "whatYouLookingForErrorMax": "描述不能超过500个字符",
+      "roommatesLabel": "室友人数（可选）",
+      "roommatesPlaceholder": "选择...",
+      "roommatesOptions": {
+         "solo": "仅我自己（单人间）",
+         "2": "共2人",
+         "3": "共3人",
+         "4plus": "4人及以上",
+         "flexible": "无偏好"
       },
-      "gradeCalc": {
-        "title": "平均分计算器",
-        "description": "计算加权平均分和毕业成绩",
-        "cta": "立即试用"
+      "areaLabel": "首选区域（可选）",
+      "areaPlaceholder": "选择...",
+      "areaOptions": {
+         "san-salvario": "San Salvario",
+         "crocetta": "Crocetta",
+         "centro": "市中心",
+         "polito": "都灵理工附近",
+         "unito": "都灵大学附近",
+         "san-paolo": "San Paolo/Santa Rita",
+         "aurora": "Aurora/Vanchiglia",
+         "flexible": "无偏好"
       },
-      "utilityComp": {
-        "title": "水电费比较器",
-        "description": "比较电力和燃气费率",
-        "comingSoon": "即将推出"
+      "studyLabel": "您将学习什么？（可选）",
+      "studyPlaceholder": "例如：都灵理工计算机工程",
+      "studyErrorMax": "学习领域不能超过150个字符",
+      "budgetLabel": "月度预算（可选）",
+      "budgetPlaceholder": "选择...",
+      "budgetRanges": {
+         "400-500": "400-500€（不含费用）",
+         "500-600": "500-600€（不含费用）",
+         "600-700": "600-700€（不含费用）",
+         "over-700": "超过700€（不含费用）"
       },
-      "examSession": {
-        "title": "考试安排器",
-        "description": "优化规划您的考试期",
-        "cta": "立即试用"
+      "moveDateLabel": "您想何时入住？（可选）",
+      "moveDatePlaceholder": "选择...",
+      "moveDates": {
+         "september-2026": "2026年9月",
+         "asap": "尽快",
+         "custom": "自定义日期"
       },
-      "allTools": {
-        "title": "所有工具",
-        "description": "发现所有免费工具"
+      "customMoveDateLabel": "指定日期",
+      "customMoveDatePlaceholder": "例如：2026年3月，年底等",
+      "customMoveDateErrorMax": "自定义日期不能超过100个字符",
+      "consentLabel": "我同意根据隐私政策处理我的个人数据",
+      "consentError": "您必须接受隐私政策才能继续",
+      "resourcesTitle": "📚 学生实用资源",
+      "resourcesDesc": "在找房的同时，了解都灵的学习地点",
+      "studySpacesLink": "57个最佳自习室指南",
+      "submitButton": "提交请求",
+      "submitting": "提交中...",
+      "successTitle": "请求已发送！🎉",
+      "successDescription": "我们将尽快与您联系，提供最佳选择",
+      "errorTitle": "提交错误",
+      "errorDescription": "发生错误，请重试或通过WhatsApp联系我们",
+      "draftFoundMessage": "我们找到了自动保存的草稿",
+      "loadDraft": "加载草稿",
+      "draftLoadedTitle": "草稿已加载",
+      "draftLoadedDesc": "您之前的数据已恢复",
+      "draftClearedTitle": "草稿已删除",
+      "draftClearedDesc": "保存的草稿已被移除",
+      "draftAutoSaved": "草稿已自动保存"
+   },
+   "trustBadge": {
+      "title": "您的安全是我们的首要任务",
+      "verified": "认证合同",
+      "support": "24/7支持",
+      "transparent": "完全透明",
+      "sectionLabel": "机构合作伙伴",
+      "supportedBy": "由2i3T支持",
+      "incubator": "都灵大学企业孵化器",
+      "learnMore": "了解更多关于2i3T",
+      "guarantee": "在都灵大学生态系统中孵化，确保每笔交易的专业性和可靠性"
+   },
+   "benefits": {
+      "title": "为什么选择Jungle Rent",
+      "subtitle": "您住房体验的独家优势",
+      "sectionLabel": "我们的优势",
+      "whyJungleRent": "为什么选择Jungle Rent",
+      "sectionTitle": "学生和投资者的实际优势",
+      "sectionSubtitle": "专业管理、保证节省和机构合作伙伴",
+      "savings": "认证节省",
+      "savingsDesc": "节省约30%租金。透明合同的优惠租赁。",
+      "savingsHighlight": "节省",
+      "savingsHow1": "无中介佣金",
+      "savingsHow2": "有竞争力的租金",
+      "savingsTooltip": "每月节省€200-400",
+      "investment": "投资机会",
+      "investmentDesc": "投资者：持续的大学需求下的专业物业管理",
+      "investmentHighlight": "投资者",
+      "investmentHow1": "€100起即可进入",
+      "investmentHow2": "包含全面管理",
+      "investmentTooltip": "参与房地产市场",
+      "location": "战略位置",
+      "locationDesc": "精选房产组合，靠近所有主要大学：都灵理工、都灵大学、ESCP、SAA、IED、IAAD、IUSTO",
+      "locationHighlight": "顶级位置",
+      "locationHow1": "靠近所有大学",
+      "locationHow2": "高需求战略区域",
+      "locationTooltip": "靠近所有大学",
+      "quality": "认证合同",
+      "qualityDesc": "正规合同、专业管理、完全透明。由2i3T - 大学孵化器支持。",
+      "qualityHighlight": "100%安全",
+      "qualityHow1": "包含法律支持",
+      "qualityHow2": "与2i3T合作",
+      "qualityTooltip": "验证的法律合同",
+      "studentCta": "我是学生",
+      "investorCta": "我是投资者"
+   },
+   "student": {
+      "title": "学生专区",
+      "subtitle": "我们的使命：解决学生住房危机",
+      "marketProofLabel": "我们的市场",
+      "marketProofTitle": "都灵90,000+大学生",
+      "marketProofDesc": "7所大学，全年稳定需求。这就是我们投资这里的原因。",
+      "sectionLabel": "学生专区",
+      "sectionTitle": "解决学生住房危机",
+      "compactDesc": "大学区实惠租赁。透明合同、零佣金和专属支持，助力您的学业旅程。",
+      "contactCta": "WhatsApp联系我们",
+      "sectionSubtitle": "我们双重使命的一部分：让所有学生都能负担得起住房",
+      "benefit1Title": "降低成本",
+      "benefit1Desc": "实惠租金：更多资金用于学习和享受都灵",
+      "benefit1Tooltip": "优质实惠房间",
+      "benefit2Title": "灵活合同",
+      "benefit2Desc": "学年灵活合同，夏季考试期间免费住宿日：节省25%",
+      "benefit2Tooltip": "灵活预订选项",
+      "contactText": "直接联系我们的学生顾问：",
+      "contactLorenzo": "与Lorenzo交谈",
+      "sendEmail": "发送邮件",
+      "responseTime": "40分钟内回复",
+      "cta": "发现房间",
+      "feature1": "靠近大学",
+      "feature2": "精选室友",
+      "feature3": "全包",
+      "separator": "和"
+   },
+   "investor": {
+      "title": "投资者专区",
+      "subtitle": "让房地产投资平民化",
+      "sectionLabel": "投资者专区",
+      "sectionTitle": "€100起进入房地产市场",
+      "compactDesc": "投资都灵大学房产。全面管理，学生/游客混合模式。",
+      "sectionSubtitle": "双重使命：解决学生住房危机和房地产民主化",
+      "startupInnovativaBadge": "认证创新型初创企业",
+      "whyInvestTitle": "为什么与我们投资",
+      "benefit1Title": "优化投资",
+      "benefit1Desc": "通过我们的专业管理和战略定价获得房地产市场机会",
+      "benefit2Title": "全面管理",
+      "benefit2Desc": "我们处理一切：合同、维护、租户关系。您只需关注投资",
+      "benefit3Title": "战略组合",
+      "benefit3Desc": "精选房产靠近都灵7个主要大学中心（都灵理工、都灵大学、ESCP、SAA、IED、IAAD、IUSTO），需求持续稳定",
+      "flowStep1": "可及性",
+      "flowStep1Sub": "€100起",
+      "flowStep2": "管理",
+      "flowStep2Sub": "专业化",
+      "flowStep3": "组合",
+      "flowStep3Sub": "战略性",
+      "waitlistTitle": "加入投资者等待名单",
+      "waitlistSubtitle": "获得都灵房地产投资机会的独家更新",
+      "waitlistCta": "加入等待名单",
+      "priorityResponse": "保证优先回复",
+      "cta": "发现机会",
+      "feature1": "€100起",
+      "feature2": "全面管理",
+      "feature3": "零繁琐手续",
+      "activeInvestors": "活跃投资者",
+      "talkToAdvisor": "与Lorenzo交谈",
+      "talkToLorenzo": "与Lorenzo交谈",
+      "scheduleCall": "预约通话",
+      "bookCall": "表达兴趣",
+      "incubatorTooltip": "由2i3T孵化 - 都灵大学企业孵化器",
+      "minInvestmentBadge": "€100起投资",
+      "marketStats": {
+         "minInvestment": "最低投资",
+         "studentSavings": "学生节省",
+         "studentsOffsite": "意大利外地学生",
+         "marketPotential": "市场潜力",
+         "disclaimer": "2025年估计 - 来源：Savills Research"
       },
-      "backToTools": "返回工具"
-    },
-    "whyJungle": {
+      "testimonials": {
+         "title": "投资者评价",
+         "quote1": "我投资了€500，收到透明的季度报告。终于可以进入房地产市场了。",
+         "author1": "Marco，32岁",
+         "quote2": "零管理，团队处理一切。我可以专注工作，投资自动运作。",
+         "author2": "Giulia，28岁"
+      },
+      "socialProofLine": "首个项目筛选中 · 注册获取更新"
+   },
+   "infographic": {
       "badge": "我们的模式",
-      "title": "为学习者设计的租赁",
-      "subtitle": "终于有理解大学生活的模式了",
-      "contract": {
-        "title": "只在学习时付费",
-        "description": "您的租金跟随大学日历，不是房东的日历。在都灵学习？付费。在家陪家人？不付费。",
-        "highlight": "保证节省"
+      "title": "Jungle Rent模式",
+      "subtitle": "简化房地产投资",
+      "steps": {
+         "invest": {
+            "title": "投资",
+            "description": "€100起参与",
+            "detail": "无需购买整套房产即可进入房地产市场。零繁琐手续，零直接管理。",
+            "keyPoints": [
+               "仅€100起投资",
+               "无需管理房产",
+               "零繁琐手续和隐藏费用"
+            ]
+         },
+         "acquire": {
+            "title": "收购",
+            "description": "大学区房产",
+            "detail": "在都灵理工、都灵大学和都灵各大学附近的高需求区域精选并收购房产。",
+            "keyPoints": [
+               "完整尽职调查",
+               "高需求战略区域",
+               "服务7所大学"
+            ]
+         },
+         "manage": {
+            "title": "管理",
+            "description": "灵活租赁",
+            "detail": "灵活租赁给学生和游客。全年最大化入住率。",
+            "keyPoints": [
+               "学生和游客灵活租赁",
+               "包含维护"
+            ]
+         },
+         "earn": {
+            "title": "参与",
+            "description": "组合收益",
+            "detail": "参与管理房产的收益。透明报告和个人仪表盘监控您的投资。",
+            "keyPoints": [
+               "透明季度报告",
+               "个人仪表盘",
+               "分配收益"
+            ]
+         }
       },
-      "summer": {
-        "badge": "独家",
-        "title": "夏季灵活性",
-        "description": "需要回来考试？没问题。只付使用的天数，不是整月。",
-        "cta": "了解运作方式"
+      "metrics": {
+         "yield": {
+            "label": "最低投资",
+            "description": "€100起"
+         },
+         "savings": {
+            "label": "学生节省",
+            "description": "对比12个月合同"
+         },
+         "students": {
+            "label": "学生",
+            "description": "都灵大学生"
+         },
+         "universities": {
+            "label": "大学",
+            "description": "区域内大学"
+         }
       },
-      "commissions": {
-        "title": "零佣金",
-        "description": "直接从我们这里租房。没有中介，没有隐藏费用。",
-        "highlight": "节省€200-400"
+      "disclaimer": "*投资有风险，包括可能损失本金。收益取决于市场表现。",
+      "cta": "包含全面管理。",
+      "scrollHint": "等待继续"
+   },
+   "slideOverlays": {
+      "invest": {
+         "minInvestment": "€100起",
+         "caption": "您投资，我们处理其余。零繁琐手续。"
       },
+      "acquire": {
+         "university": "大学区",
+         "caption": "在都灵理工、都灵大学和7所都灵大学附近收购。"
+      },
+      "manage": {
+         "students": "学生9月-6月",
+         "tourists": "游客7月-8月",
+         "caption": "365天入住。合同、维护、税务全包。"
+      },
+      "earn": {
+         "quarterly": "季度报告",
+         "dashboard": "个人仪表盘",
+         "caption": "完全透明参与收益。"
+      }
+   },
+   "investors": {
+      "metaTitle": "都灵便捷房地产投资 - 让房地产民主化 | Jungle Rent",
+      "metaDescription": "让房地产投资民主化，这一历史上安全的资产类别如今对许多人来说已无法企及。全面管理投资都灵大学房产。",
+      "heroTitle": "让房地产投资民主化",
+      "heroSubtitle": "一种历史上安全的资产类别，如今对许多人来说已无法企及。专业管理投资都灵大学房产。",
+      "metricReturn": "年度目标回报",
+      "metricOccupancy": "入住率",
+      "metricManagement": "包含管理",
+      "benefitsTitle": "为什么与我们投资",
+      "benefitsSubtitle": "都灵大学租赁市场的专业合作伙伴",
+      "processTitle": "如何运作",
+      "processSubtitle": "4个简单步骤开始投资",
+      "step1Title": "初次联系",
+      "step1Desc": "通过WhatsApp或电话讨论您的需求和投资目标",
+      "step2Title": "机会分析",
+      "step2Desc": "我们为您介绍可用房产，提供详细分析和预测",
+      "step3Title": "确认",
+      "step3Desc": "通过透明合同和包含的法律支持完成参与",
+      "step4Title": "参与收益",
+      "step4Desc": "通过季度报告参与组合收益。我们管理一切",
+      "ctaTitle": "准备好投资了吗？",
+      "ctaSubtitle": "与我们的顾问交谈，了解今天可用的机会",
+      "readSavillsAnalysis": "阅读完整市场分析"
+   },
+   "seller": {
+      "title": "在都灵出售您的房产",
+      "subtitle": "免费评估 • 零佣金 • 60-90天完成交易",
+      "sectionLabel": "出售房产",
+      "heroHighlight": "出售",
+      "heroRest": "您的房产",
+      "heroBracket": "（给我们）",
+      "heroSubheadline": "直接买家，零佣金，60-90天",
+      "newTitle": "我们购买您的房产。不是中介。",
+      "newSubtitle": "我们不为您寻找买家。Jungle Rent直接购买大学区房产。",
+      "directBuyerTitle": "直接购买您的房产",
+      "directBuyerSubtitle": "我们不是中介。为我们的组合直接购买。",
+      "benefit1": "零佣金",
+      "benefit2": "60-90天",
+      "benefit3": "保证买家",
+      "urgencyBadge": "我们在San Salvario、Vanchiglia、医院区、Santa Rita、Cit Turin、Campidoglio、Aurora、Campus Einaudi、Corso Casale寻找房产",
+      "missionStatement": "我们在都灵大学区购买房产，为90,000+学生提供住房。您的房产成为解决住房危机的一部分。",
+      "readGuide": "阅读完整指南：风险、税收和中介",
       "comparison": {
-        "traditional": {
-          "title": "传统租赁",
-          "months12": "强制12个月合同",
-          "paySummer": "即使在家也要付夏季租金",
-          "noFlex": "考试期间没有灵活性",
-          "commissions": "中介佣金€200-400"
-        },
-        "jungle": {
-          "title": "Jungle Rent",
-          "months9": "学年合同",
-          "payUse": "夏季：只付使用的天数",
-          "flex": "夏季考试期灵活性",
-          "noCommissions": "零佣金，直接租赁"
-        }
+         "agency": "中介",
+         "jungleRent": "Jungle Rent",
+         "roleLabel": "角色",
+         "roleAgency": "中间人",
+         "roleJR": "买家",
+         "commissionsLabel": "佣金",
+         "commissionsJR": "€0",
+         "timeLabel": "时间",
+         "months": "月",
+         "days": "天",
+         "visitsLabel": "看房",
+         "visitsAgency": "数十次",
+         "visitsJR": "最多1-2次"
+      },
+      "compactTitle": "7天内评估和购买",
+      "compactDesc": "快速无佣金出售您的房产给Jungle Rent。我们在大学区购买。",
+      "compactBullet1": "72小时免费评估",
+      "compactBullet2": "10天内书面报价，零佣金",
+      "sectionTitle": "卖家专区",
+      "intro": "您在都灵拥有房产并想快速出售？Jungle Rent是您一直在寻找的直接买家。我们在都灵大学区（Crocetta、San Salvario、Centro、Vanchiglia、Vanchiglietta、Aurora、Lingotto）购买公寓，将其转化为学生和年轻专业人士的优化住房解决方案。",
+      "valuationFree": "3-5天免费评估",
+      "zeroFees": "零佣金",
+      "forSeller": "卖家",
+      "whyWeAcquire": "为什么我们在都灵收购房产",
+      "para1": "Jungle Rent诞生于优化都灵学生租赁市场的愿景，这是一个不断发展的大学城市，拥有超过90,000名学生，分布在都灵理工大学、都灵大学（UniTo）、ESCP商学院和IED。大学区优质住房需求巨大，但供应往往分散且不专业。",
+      "para2": "我们的使命是收购战略位置的大学区公寓，将其转化为现代优化住房：舒适的共享空间、装修精良的单人间、包含服务和专业管理。因此我们寻找三居室、四居室和更大公寓，位于",
+      "zones": "Crocetta、San Salvario、Centro、Vanchiglia、Vanchiglietta、Aurora、Lingotto、Santa Rita和San Paolo",
+      "para3": "理想情况下步行或乘坐公共交通10-20分钟可达主要都灵大学。",
+      "para4": "我们与专业公证员和律师合作，确保安全快速的交易。我们的评估基于每周更新的市场分析，考虑位置、面积、房产状况和租赁市场优化潜力。",
+      "advantagesTitle": "出售给Jungle Rent的优势：",
+      "para5": "零中介佣金（节省€6,000-10,000），快速流程无需数十次陌生人看房，实地勘察后48小时内提供书面报价，包含法律支持和安全付款。",
+      "timelineValuation": "评估",
+      "timelineValuationTime": "48小时",
+      "timelineInspection": "勘察",
+      "timelineInspectionTime": "10-14天",
+      "timelineOffer": "报价",
+      "timelineOfferTime": "5-7天",
+      "timelineClosing": "交易完成",
+      "timelineClosingTime": "60-90天",
+      "benefit1Title": "即时评估",
+      "benefit1Desc": "24-48小时内获得您房产的专业评估",
+      "benefit1Tooltip": "快速专业评估",
+      "benefit2Title": "快速销售",
+      "benefit2Desc": "简化快速的销售流程，无不必要的中间人",
+      "benefit2Tooltip": "60-90天内出售",
+      "benefit3Title": "安全交易",
+      "benefit3Desc": "整个过程透明合同和法律支持",
+      "benefit3Tooltip": "透明法律支持",
+      "benefit4Title": "最大价值",
+      "benefit4Desc": "为您在都灵的房产获得最佳市场价格",
+      "benefit4Tooltip": "最佳市场价格",
+      "zonesTitle": "都灵感兴趣区域",
+      "zonesText": "我们在以下都灵大学区寻找待售公寓：",
+      "zonesList": "Crocetta、San Salvario、Centro、Vanchiglia、Vanchiglietta、Aurora、Lingotto、Santa Rita、San Paolo",
+      "idealProperty": "理想房产：三居室、四居室或更大公寓，靠近都灵理工大学、都灵大学（UniTo）、ESCP商学院、SAA、IED。",
+      "formInvitation": "填写表格获取您房产的免费评估。无义务，3-5天内保证回复。",
+      "ctaButton": "申请免费评估",
+      "cta": "申请评估",
+      "scheduleCall": "预约通话",
+      "feature1": "免费评估",
+      "feature2": "30天出售",
+      "feature3": "零佣金"
+   },
+   "quickSellerLead": {
+      "title": "出售您的房产",
+      "newTitle": "24小时免费评估",
+      "description": "留下您的信息，我们将联系您进行免费评估。",
+      "notAgency": "我们不是中介。如果您的房产在我们的区域内，我们将直接报价。",
+      "advantage1": "直接买家",
+      "advantage2": "零佣金",
+      "advantage3": "7天报价",
+      "namePlaceholder": "您的姓名？",
+      "addressPlaceholder": "房产地址",
+      "optional": "可选",
+      "submit": "提交请求",
+      "sending": "发送中...",
+      "successTitle": "请求已发送！",
+      "successDescription": "我们将尽快联系您进行免费评估。",
+      "successMessage": "我们将尽快联系您讨论您的房产销售。",
+      "scheduleCall": "预约通话",
+      "close": "关闭",
+      "errorTitle": "错误",
+      "errorDescription": "发生错误，请稍后重试。",
+      "emailRequired": "请输入您的邮箱",
+      "invalidEmail": "请输入有效邮箱",
+      "privacy": "您的数据是安全的。我们绝不会与第三方共享。"
+   },
+   "tourist": {
+      "sectionLabel": "游客和数字游民",
+      "sectionTitle": "像当地人一样探索都灵",
+      "sectionDesc": "精选住宿、独家指南和地道建议，让您充分体验都灵。无论您是游客还是数字游民，我们都能帮助您发现这座城市。",
+      "ctaTitle": "都灵完整指南",
+      "ctaDesc": "了解在都灵哪里吃饭、工作、探索和生活",
+      "ctaButton": "阅读指南",
+      "benefit1Title": "精选住宿",
+      "benefit1Desc": "都灵最佳社区的验证公寓",
+      "benefit1Tooltip": "安全和地道地区的优质住宿",
+      "benefit2Title": "地道本地指南",
+      "benefit2Desc": "咖啡馆、联合办公、餐厅和本地文化的内部建议",
+      "benefit2Tooltip": "像居民一样发现都灵",
+      "benefit3Title": "个性化支持",
+      "benefit3Desc": "专属协助，让您的住宿难忘",
+      "benefit3Tooltip": "意大利语和英语WhatsApp支持",
+      "contactPrompt": "需要都灵建议？",
+      "contactButton": "WhatsApp联系我们"
+   },
+   "faq": {
+      "title": "常见问题",
+      "subtitle": "快速解答您的疑问",
+      "sectionLabel": "常见问题",
+      "investorCategory": "投资者",
+      "sellerCategory": "卖家",
+      "aboutCategory": "关于Jungle Rent",
+      "investorQ1": "最低投资额是多少？",
+      "investorA1": "Jungle Rent最低投资额为€100，让您即使资金有限也能进入都灵房地产市场。对于想要投资更多的人，机会取决于我们拥有和想要收购的房产。",
+      "investorQ2": "投资如何运作？",
+      "investorA2": "投资Jungle Rent的特定公寓，由我们精选和收购。您清楚知道资金投入了哪套房产。我们全面管理：租户、合同、维护。该公寓的收益即为您的回报。",
+      "investorQ3": "Jungle Rent全面管理房产吗？",
+      "investorA3": "是的，我们提供全方位管理服务，包括：租户寻找和筛选、合同管理和登记、日常和突发维护、租金收取、拖欠管理、法律协助和详细季度报告。投资者无需担心任何事情即可参与收益。",
+      "investorQ4": "多久能看到第一笔收益？",
+      "investorA4": "第一笔收益在投资后约2个月通知，完成设置阶段（购买/装修、寻找租户、合同登记）后。此后，您将收到详细的季度报告。",
+      "investorQ5": "向租户提供什么类型的合同？",
+      "investorA5": "我们使用学习动机的临时合同（第431/98号法第5条），与学年对齐，可每年续签。这种类型保证更高的周转率（因此租金调整到市场价格）以及业主和租户的法律保护。",
+      "investorQ6": "投资管理如何运作？",
+      "investorA6": "投资后，我们处理一切：租户筛选、合同、维护和租金收取。您将收到详细的季度报告，包含所有组合数据。",
+      "investorQ7": "我会收到什么报告，频率如何？",
+      "investorA7": "您将收到详细的季度报告，包括：房产状态、入住率、组合收益、发生的费用和下一季度预测。您还可以访问在线仪表盘实时监控您的投资。",
+      "investorQ8": "投资前可以参观房产吗？",
+      "investorA8": "可以，我们为感兴趣的投资者安排预约参观房产。您可以亲自查看房产，评估装修质量，并直接与我们的管理团队交谈。",
+      "investorQ9": "如何投资Jungle Rent？",
+      "investorA9": "您可以从€100起投资Jungle Rent的特定公寓。不是匿名基金：您清楚知道在为哪套房产融资。Jungle Rent收购、管理并分配收益。",
+      "investorQ10": "收益如何计算？",
+      "investorA10": "收益基于我们的混合模式计算：学年期间出租给大学生，夏季月份短期旅游出租。这种模式相比传统固定租金出租优化了入住率。收益扣除管理费用但不扣除个人税。注意：收益取决于市场表现，不保证。投资有风险，包括可能部分或全部损失资本。",
+      "investorQ11": "什么是学生/游客混合模式？",
+      "investorA11": "我们的混合模式结合：(1) 与学年对齐的临时合同出租给大学生，保证稳定性和可靠租户；(2) 学生放假时的夏季短期旅游出租，最大化季节性收入。学生相比传统合同节省大量费用，只需支付实际居住月份。此外，我们提供夏季免费住宿日，让学生可以无额外费用返回都灵参加考试。",
+      "studentCategory": "学生",
+      "studentQ1": "灵活合同如何运作？",
+      "studentA1": "学习动机临时合同覆盖学年（9月-6月），让您只需支付实际在都灵的月份。相比传统合同节省大量费用。合同可每年续签。",
+      "studentQ2": "如果需要回都灵参加夏季考试怎么办？",
+      "studentA2": "我们在夏季月份提供免费住宿日。这意味着您可以返回都灵参加夏季考试，无需额外支付租金。这包含在您的合同中。",
+      "studentQ3": "相比传统租赁能节省多少？",
+      "studentA3": "使用我们的模式，相比传统12个月合同可节省大量费用。您只需支付学年月份，避免不在都灵时支付夏季租金。",
+      "studentQ4": "都灵哪些区域有住房？",
+      "studentA4": "我们的住房位于最受欢迎的大学区：San Salvario、Crocetta、Vanchiglia、Centro、Aurora、Cenisia。都在都灵理工、都灵大学和其他都灵大学附近步行或骑车几分钟可达。",
+      "studentQ5": "租金包含什么？",
+      "studentA5": "租金包括：带家具房间、物业费、WiFi、每周公共区域清洁、日常维护。水电费（电、气、水）另算，室友分摊。正规登记合同，专属协助。",
+      "sellerQ1": "你们购买什么房产？",
+      "sellerA1": "我们在都灵及周边购买公寓，优先大学区：Vanchiglia、San Salvario、Cenisia、Crocetta、Lingotto、Aurora。我们对2到5室的房产感兴趣，包括需要装修的。无义务评估每个提案。",
+      "sellerQ2": "免费评估如何运作？",
+      "sellerA2": "您填写房产数据表格，我们24小时内回复。初次电话分析后，我们安排免费实地勘察评估房产。提供市场估价，如有兴趣，7天内提供购买提案。",
+      "sellerQ3": "出售需要多长时间？",
+      "sellerA3": "我们的流程比传统销售快得多。从评估到公证交易可能需要30-60天，取决于案件复杂程度和房产可用性。我们处理所有繁琐手续。",
+      "sellerQ4": "出售前需要装修吗？",
+      "sellerA4": "不需要，我们购买任何状况的房产，包括需要完全装修的。事实上，我们通常更喜欢需要工程的房产，因为我们可以根据学生需求进行调整。购买价格会考虑房产状况。",
+      "sellerQ5": "如何付款？",
+      "sellerA5": "在公证交易时通过银行转账或银行本票付款。如果您需要时间搬迁，我们可以灵活安排房产交付时间。卖家无佣金或隐藏费用。",
+      "sellerQ6": "你们和房产中介有什么区别？",
+      "sellerA6": "根本区别是我们是直接买家，不是中间人。中介为您寻找买家（并收取3-4%佣金）。我们直接为我们的组合购买您的房产，消除中间人、佣金和数十次看房。",
+      "sellerQ7": "为什么不收佣金？",
+      "sellerA7": "因为我们不是中间人。中介收取佣金是因为他们连接卖家和买家。我们直接购买将房产转化为学生住房，所以没有中间人需要支付。您节省€6,000-10,000。",
+      "aboutQ1": "你们是谁，运营多久了？",
+      "aboutA1": "Jungle Rent S.r.l.是2025年10月由Lorenzo Oni-Joseph和Andrea Niccolaini创立的创新型初创公司。我们用自有投资运营2年，2026年2月我们将启动初创公司向外部投资者开放投资机会。我们由2i3T孵化，都灵理工大学孵化器。",
+      "aboutQ2": "如何联系你们？",
+      "aboutA2": "您可以通过WhatsApp +39 331 905 3037（2小时内回复）、邮箱junglerententeprise@gmail.com或填写网站表格联系我们。地址：via Gioacchino Quarello 15/A, Torino。可预约会面。",
+      "aboutQ3": "你们是房产中介吗？",
+      "aboutA3": "不是。Jungle Rent是一家有双重使命的房地产初创公司：解决学生住房危机，让房地产投资民主化——这一历史上安全的资产类别与过去不同，如今对许多人来说已无法企及。我们收购、装修和管理房产，出租给大学生和游客。",
+      "voiceCategory": "常见语音问题",
+      "voiceQ1": "如何用少量资金投资都灵房地产？",
+      "voiceA1": "投资Jungle Rent的特定公寓，由我们在都灵大学区精选。您清楚知道资金去向，我们负责管理一切。",
+      "voiceQ2": "投资Jungle Rent安全吗？",
+      "voiceA2": "Jungle Rent是认证的创新型初创公司，在都灵商会注册，税号13333450016。我们由2i3T孵化，都灵大学孵化器。然而，与任何投资一样，存在风险，包括可能损失资本。",
+      "voiceQ3": "投资都灵学生公寓能赚多少？",
+      "voiceA3": "收益取决于市场表现，不保证。我们的学生/游客混合模式优化入住率：学年期间学生租赁，夏季月份旅游租赁。您将收到详细的季度报告。",
+      "voiceQ4": "如何查看我的房地产收益？",
+      "voiceA4": "您可以访问个人在线仪表盘实时监控您的投资。此外，您将通过邮件收到详细的季度报告，包含房产状态、入住率、收益和预测。",
+      "voiceQ5": "如何在都灵快速卖房？",
+      "voiceA5": "Jungle Rent直接购买您的房产，无中间人。填写表格，48小时内获得免费评估，7天内实地勘察，勘察后48小时内书面报价，60-90天完成交易。零佣金。",
+      "voiceQ6": "谁在都灵理工大学附近购买公寓？",
+      "voiceA6": "Jungle Rent在都灵大学区购买公寓：Crocetta、San Salvario、Centro、Vanchiglia、Aurora、Lingotto，非常靠近都灵理工和都灵大学。我们购买三居室、四居室和更大公寓，包括需要装修的。",
+      "voiceQ7": "我在San Salvario的公寓值多少钱？",
+      "voiceA7": "价值取决于面积、楼层、状况和San Salvario的确切位置。良好状况的中等三居室（80-90平方米）估价约€180,000-220,000。向Jungle Rent申请免费评估获取准确价格。",
+      "voiceQ8": "都灵大学生住在哪里？",
+      "voiceA8": "都灵大学生偏好靠近大学的社区：都灵理工附近的San Salvario和Crocetta，都灵大学附近的Centro和Vanchiglia，价格实惠的Aurora。这些区域提供服务、夜生活和交通。",
+      "voiceQ9": "都灵理工附近学生最佳区域是哪里？",
+      "voiceA9": "都灵理工大学附近学生最佳区域是Crocetta（优雅、安静，步行5-10分钟）、San Salvario（热闹、多元文化、经济实惠）和Cenisia/San Paolo（更安静，价格优惠）。",
+      "voiceQ10": "都灵学生租赁市场如何运作？",
+      "voiceA10": "都灵有超过90,000名大学生，住房需求旺盛。合同通常与学年对齐，单人间价格根据区域从€300-600不等。Jungle Rent提供灵活合同，节省大量费用。",
+      "voiceQ11": "都灵学生租房多少钱？",
+      "voiceA11": "都灵学生单人间平均月租：San Salvario €350-500，Crocetta €400-550，Aurora €300-400。价格包含物业费但不含水电费。",
+      "voiceQ12": "Jungle Rent投资可靠吗？",
+      "voiceA12": "Jungle Rent是在意大利注册的有限责任公司（税号13333450016，REA TO-1355899），认证为创新型初创公司。我们由2i3T孵化，都灵理工大学合作伙伴。我们提供透明合同和季度报告。",
+      "voiceQ13": "如果想退出Jungle Rent投资怎么办？",
+      "voiceA13": "退出投资的条件在合同中定义。我们建议您联系我们讨论可用选项。投资适合中长期（3-5年）以最大化收益。",
+      "voiceQ14": "Jungle Rent购买需要装修的房产吗？",
+      "voiceA14": "是的，Jungle Rent也在都灵大学区购买需要装修的公寓，但我们会根据所需工程的复杂程度和位置逐案评估。对于状况良好或需要部分维修的房产，我们直接购买。价格始终考虑房产状况。",
+      "voiceQ15": "如何联系Jungle Rent投资？",
+      "voiceA15": "您可以通过WhatsApp +39 331 905 3037（2小时内回复）、邮箱junglerententeprise@gmail.com或填写junglerent.it网站表格联系Jungle Rent。创始人Lorenzo Oni-Joseph将亲自回复。"
+   },
+   "contacts": {
+      "title": "联系我们",
+      "subtitle": "与我们的团队交谈",
+      "address": "地址",
+      "email": "邮箱",
+      "phone": "电话",
+      "social": "关注我们的社交媒体",
+      "formTitle": "发送消息",
+      "formName": "姓名",
+      "formEmail": "邮箱",
+      "formMessage": "消息",
+      "formSubmit": "发送",
+      "formSuccess": "谢谢！您的消息已发送。",
+      "formError": "错误！请稍后重试。"
+   },
+   "footer": {
+      "taglineAlt": "房地产丛林中的安全租赁",
+      "copyright": "© 2025 JUNGLE RENT S.R.L. 版权所有。",
+      "contactTitle": "联系方式",
+      "location": "意大利都灵",
+      "forStudentsTitle": "学生专区",
+      "howItWorksLink": "如何运作",
+      "universitiesLabel": "覆盖大学",
+      "partnershipTitle": "合作伙伴",
+      "incubatorDesc": "在都灵大学孵化",
+      "bottomTagline": "双重使命：学生住房危机和房地产投资平民化",
+      "bottomText": "由2i3T支持 - 都灵大学企业孵化器",
+      "legalAddress": "Via Gioacchino Quarello 15/A, 10135 都灵"
+   },
+   "waitlist": {
+      "title": "加入等待名单",
+      "description": "填写表格获取可用房间的优先访问权。",
+      "nameLabel": "全名",
+      "namePlaceholder": "张三",
+      "nameError": "请输入您的姓名",
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "zhangsan@studenti.unito.it",
+      "emailError": "请输入有效邮箱",
+      "universityLabel": "大学（可选）",
+      "universityPlaceholder": "例如：都灵理工大学",
+      "budgetLabel": "月度预算（可选）",
+      "budgetPlaceholder": "大概预算",
+      "moveDateLabel": "入住日期（可选）",
+      "moveDatePlaceholder": "您想何时入住？",
+      "referralLabel": "如何找到我们？（可选）",
+      "referralPlaceholder": "帮助我们更了解您",
+      "consentLabel": "我同意数据处理（GDPR）并接收Jungle Rent更新",
+      "consentError": "您必须接受才能继续",
+      "submitButton": "注册",
+      "submitting": "发送中...",
+      "successTitle": "✨ 注册完成！",
+      "successDescription": "请检查您的邮箱确认。欢迎加入Jungle Rent！",
+      "errorTitle": "❌ 发送错误",
+      "errorDescription": "发生问题，请稍后重试或通过WhatsApp联系我们。",
+      "universities": {
+         "polito": "都灵理工大学",
+         "unito": "都灵大学",
+         "escp": "ESCP商学院",
+         "ied": "IED都灵",
+         "iaad": "IAAD",
+         "iusto": "IUSTO",
+         "other": "其他"
+      },
+      "budgetRanges": {
+         "300-400": "€300-400",
+         "400-500": "€400-500",
+         "500-600": "€500-600",
+         "over-600": ">€600"
+      },
+      "moveDates": {
+         "september-2025": "2025年9月",
+         "january-2026": "2026年1月",
+         "asap": "尽快",
+         "other": "其他"
+      },
+      "referralSources": {
+         "friend": "朋友",
+         "university": "大学",
+         "instagram": "Instagram",
+         "facebook": "Facebook",
+         "google": "Google",
+         "ai-assistant": "AI助手",
+         "other": "其他"
+      }
+   },
+   "investorWaitlist": {
+      "title": "加入投资者等待名单",
+      "description": "表达您对投资Jungle Rent的兴趣。我们将发送可用投资机会的独家信息。",
+      "nameLabel": "全名",
+      "namePlaceholder": "张三",
+      "nameError": "请输入您的姓名",
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "zhangsan@email.com",
+      "emailError": "请输入有效邮箱",
+      "phoneLabel": "电话",
+      "phonePlaceholder": "+86 138 0000 0000",
+      "phoneError": "请输入您的电话号码",
+      "investmentBudgetLabel": "投资预算",
+      "investmentBudgetPlaceholder": "选择您的预算",
+      "budgetError": "选择可用预算",
+      "propertyTypeLabel": "房产类型",
+      "propertyTypePlaceholder": "您感兴趣什么？",
+      "propertyError": "选择一种类型",
+      "investmentHorizonLabel": "投资期限",
+      "investmentHorizonPlaceholder": "多长时间？",
+      "horizonError": "选择投资期限",
+      "investmentTimingLabel": "何时投资？",
+      "investmentTimingPlaceholder": "时间安排（可选）",
+      "hasRentalPropertiesLabel": "您有出租房产吗？",
+      "hasRentalPropertiesPlaceholder": "选择（可选）",
+      "preferredAreaLabel": "都灵首选区域（可选）",
+      "preferredAreaPlaceholder": "选择区域...",
+      "areaFlexible": "无偏好 - 灵活",
+      "referralLabel": "如何找到我们？（可选）",
+      "referralPlaceholder": "帮助我们更了解您",
+      "consentLabel": "我同意数据处理（GDPR）并接收投资机会更新",
+      "consentError": "您必须接受才能继续",
+      "submitButton": "表达兴趣",
+      "submitting": "发送中...",
+      "successTitle": "🎉 兴趣已登记！",
+      "successDescription": "谢谢！您将很快收到Jungle Rent投资机会的独家信息。",
+      "errorTitle": "错误",
+      "errorDescription": "出了点问题，请重试。",
+      "budgetRanges": {
+         "50k-100k": "€50k - €100k",
+         "100k-200k": "€100k - €200k",
+         "200k-300k": "€200k - €300k",
+         "over-300k": "超过€300k"
+      },
+      "propertyTypes": {
+         "monolocale": "一居室",
+         "bilocale": "两居室",
+         "trilocale": "三居室",
+         "appartamento-completo": "4+居室公寓",
+         "indeciso": "尚未决定"
+      },
+      "investmentHorizons": {
+         "short-term": "1-3年",
+         "medium-term": "3-5年",
+         "long-term": "5+年",
+         "flexible": "灵活"
+      },
+      "investmentTimings": {
+         "immediate": "立即（0-3个月）",
+         "short": "3-6个月",
+         "medium": "6-12个月",
+         "long": "12+个月"
+      },
+      "rentalProperties": {
+         "yes": "是的，有经验",
+         "no": "没有，第一次投资",
+         "considering": "正在考虑"
+      },
+      "areas": {
+         "san-salvario": "San Salvario",
+         "crocetta": "Crocetta",
+         "centro": "老城区",
+         "vanchiglia": "Vanchiglia",
+         "aurora": "Aurora/Barriera Milano",
+         "polito": "都灵理工附近",
+         "lingotto": "Lingotto",
+         "san-paolo": "San Paolo/Santa Rita"
+      },
+      "referralSources": {
+         "network": "专业网络",
+         "linkedin": "LinkedIn",
+         "referral": "推荐",
+         "google": "Google",
+         "ai-assistant": "AI助手",
+         "other": "其他"
+      }
+   },
+   "search": {
+      "askAnything": "问任何问题"
+   },
+   "stickyCta": {
+      "closeLabel": "关闭"
+   },
+   "quickLead": {
+      "title": "投资Jungle Rent",
+      "description": "留下您的邮箱，我们将联系您讨论投资机会。",
+      "namePlaceholder": "您的姓名？",
+      "optional": "可选",
+      "submit": "提交",
+      "sending": "发送中...",
+      "successTitle": "谢谢！",
+      "successDescription": "我们将尽快联系您讨论投资机会。",
+      "successMessage": "我们将尽快联系您讨论投资机会。",
+      "scheduleCall": "预约通话",
+      "close": "关闭",
+      "errorTitle": "错误",
+      "errorDescription": "发生错误，请稍后重试。",
+      "emailRequired": "请输入您的邮箱",
+      "invalidEmail": "请输入有效邮箱",
+      "privacy": "您的数据是安全的。我们绝不会与第三方共享。"
+   },
+   "quickInvestorLead": {
+      "title": "开始投资",
+      "description": "输入您的邮箱以获取Jungle Rent投资机会的信息",
+      "submit": "提交请求",
+      "sending": "发送中...",
+      "privacy": "提交即表示您同意我们的隐私政策",
+      "errorTitle": "错误",
+      "emailRequired": "请输入您的邮箱地址",
+      "invalidEmail": "请输入有效的邮箱地址",
+      "errorDescription": "发生错误，请稍后重试。"
+   },
+   "blog": {
+      "sectionLabel": "城市生活",
+      "sectionTitle": "城市生活",
+      "sectionSubtitle": "为您准备的城市内容...可能不那么显而易见！(:",
+      "bannerTitle": "城市、房地产和学生捷径信息",
+      "bannerSubtitle": "都灵指南、分析和建议",
+      "readGuide": "阅读指南",
+      "exploreAll": "让我们来看看",
+      "newBadge": "新",
+      "viewAll": "发现所有资源",
+      "readMore": "阅读文章",
+      "share": "分享",
+      "shareVia": "分享到",
+      "shareWhatsApp": "分享到WhatsApp",
+      "copyLink": "复制链接",
+      "linkCopied": "链接已复制！",
+      "shareNative": "更多选项...",
+      "relatedPosts": "相关文章",
+      "categories": {
+         "all": "全部",
+         "students": "学生",
+         "investors": "投资者",
+         "sellers": "卖家",
+         "turisti": "游客",
+         "societa": "公司"
+      },
+      "search": {
+         "placeholder": "搜索文章...",
+         "noResults": "未找到\"{{query}}\"相关文章"
+      },
+      "filters": {
+         "tags": "按标签筛选",
+         "clearAll": "清除筛选"
+      },
+      "hero": {
+         "title": "资源和指南",
+         "subtitle": "都灵房地产市场的深度分析、数据和实用建议"
       },
       "cta": {
-        "waitlist": "加入等待名单",
-        "whatsapp": "与Lorenzo交谈"
+         "students": {
+            "A": {
+               "title": "今天开始您的搜索",
+               "description": "加入100+学生，在都灵理工和都灵大学附近找到实惠房间",
+               "button": "找房间"
+            },
+            "B": {
+               "title": "您的完美房间在等待",
+               "description": "优先获取校园附近验证房间。100+学生已注册",
+               "button": "立即注册 - 免费"
+            }
+         },
+         "investors": {
+            "A": {
+               "title": "年回报7-9%",
+               "description": "投资都灵大学房地产市场，包含全面管理",
+               "button": "下载指南"
+            },
+            "B": {
+               "title": "将€100k转化为€7-9k年收益",
+               "description": "零房产管理。完整租户筛选。大学区保证收益",
+               "button": "预约免费咨询"
+            }
+         },
+         "sellers": {
+            "A": {
+               "title": "60-90天出售，零佣金",
+               "description": "48小时内获得专业评估，节省€6,000-10,000佣金",
+               "button": "申请免费评估"
+            },
+            "B": {
+               "title": "节省€10k佣金，更快出售",
+               "description": "48小时专业评估。直接买家网络。平均75天对比行业180天",
+               "button": "获取现金报价"
+            }
+         },
+         "turisti": {
+            "A": {
+               "title": "像当地人一样探索都灵",
+               "description": "加入我们的社区，获取独家建议、活动和都灵住宿优惠",
+               "button": "加入等待名单"
+            },
+            "B": {
+               "title": "体验真正的都灵",
+               "description": "优先获取独家指南、本地活动和都灵市中心精选住宿",
+               "button": "加入社区"
+            }
+         },
+         "downloadReport": "下载报告",
+         "readSavillsReport": "Savills 2025报告"
+      },
+      "meta": {
+         "title": "Jungle Rent博客 | 都灵租赁、投资和销售指南",
+         "description": "发现都灵房地产市场的指南、数据和深度分析，面向学生、投资者和卖家。"
       }
-    }
-  },
-  "examSessionPlanner": {
-    "seo": {
-      "title": "考试安排器 | Jungle Rent",
-      "description": "优化规划您的考试期。考虑学分、难度和先修课程创建完美计划。"
-    },
-    "badge": "免费工具",
-    "title": "考试安排器",
-    "subtitle": "战略性规划您的考试期，考虑学分、难度和先修课程",
-    "addExam": {
-      "title": "添加考试",
-      "name": "考试名称",
-      "namePlaceholder": "例如：高等数学I",
-      "cfu": "学分",
-      "difficulty": "感知难度",
-      "difficultyOptions": {
-        "1": "😊 简单",
-        "2": "😐 中等",
-        "3": "😰 困难",
-        "4": "💀 终极Boss"
+   },
+   "resourceLibrary": {
+      "sectionTitle": "投资者免费资源",
+      "sectionSubtitle": "最大化房地产投资的完整指南",
+      "guide1Title": "投资者完整指南",
+      "guide1Badge": "必备",
+      "guide1Desc": "开始投资都灵大学房产所需的一切",
+      "guide1Pages": "45页",
+      "guide1Bullet1": "Jungle Rent商业模式",
+      "guide1Bullet2": "详细ROI和财务预测",
+      "guide1Bullet3": "收益真实案例研究",
+      "guide1Bullet4": "与其他投资形式比较",
+      "guide2Title": "2025年都灵最佳房地产投资",
+      "guide2Badge": "高级 - 都灵市场",
+      "guide2Desc": "最赚钱区域、价格、收益和都灵市场策略的深度分析",
+      "guide2Pages": "完整指南",
+      "guide2Bullet1": "所有区域详细分析（Centro、Aurora、Lingotto、Mirafiori...）",
+      "guide2Bullet2": "各社区每平米价格和收益（2025年数据）",
+      "guide2Bullet3": "学生公寓：机会和运营策略",
+      "guide2Bullet4": "更新的贷款、利率和税收优惠",
+      "guide3Title": "都灵大学房地产市场",
+      "guide3Badge": "2025年报告",
+      "guide3Desc": "都灵学生公寓市场完整分析，包含需求、供应、价格和收益数据",
+      "guide3Pages": "18页",
+      "guide3Bullet1": "120,000名学生和50,000名外地学生：需求规模",
+      "guide3Bullet2": "供需缺口：缺少42,500个床位",
+      "guide3Bullet3": "7-9%收益对比米兰4-5%",
+      "guide3Bullet4": "各区域价格和全国比较",
+      "guide4Title": "意大利学生公寓聚焦",
+      "guide4Badge": "Savills 2025",
+      "guide4Desc": "Savills Research关于意大利学生公寓市场的官方报告，包含全国数据和趋势",
+      "guide4Pages": "12页",
+      "guide4Bullet1": "意大利589K外地学生",
+      "guide4Bullet2": "仅12.6%需求由专用住房覆盖",
+      "guide4Bullet3": "€40亿市场潜力",
+      "guide4Bullet4": "大学城市和收益分析",
+      "downloadCta": "下载免费指南",
+      "downloadDirectCta": "下载PDF",
+      "readAnalysis": "阅读报告分析"
+   },
+   "areaSuggestion": {
+      "addToForm": "添加信息到表格"
+   },
+   "sellerContact": {
+      "title": "出售您的房产",
+      "description": "填写表格获取您都灵房产的免费评估",
+      "nameLabel": "姓名 *",
+      "namePlaceholder": "张三",
+      "nameError": "姓名必填",
+      "emailLabel": "邮箱 *",
+      "emailPlaceholder": "zhangsan@email.com",
+      "emailErrorInvalid": "邮箱无效",
+      "phoneLabel": "电话 *",
+      "phonePlaceholder": "+86 138 0000 0000",
+      "phoneError": "电话必填",
+      "addressLabel": "房产地址 *",
+      "addressPlaceholder": "Roma路1号，都灵",
+      "addressError": "地址必填",
+      "zoneLabel": "区域（可选）",
+      "zonePlaceholder": "例如：Crocetta",
+      "squareMetersLabel": "面积（可选）",
+      "squareMetersPlaceholder": "例如：85平米",
+      "roomsLabel": "房间数（可选）",
+      "roomsPlaceholder": "例如：三居室",
+      "floorLabel": "楼层（可选）",
+      "floorPlaceholder": "例如：2楼",
+      "conditionLabel": "房产状况（可选）",
+      "conditionPlaceholder": "例如：良好",
+      "motivationLabel": "出售动机（可选）",
+      "motivationPlaceholder": "为什么出售？",
+      "urgentLabel": "⚡ 我急需出售（最高优先级）",
+      "messageLabel": "附加说明（可选）",
+      "messagePlaceholder": "其他有用信息（可选）...",
+      "privacyLabel": "我同意根据欧盟2016/679号法规（GDPR）处理我的个人数据，并授权Jungle Rent联系我进行房产评估。",
+      "privacyLink": "阅读隐私政策",
+      "privacyError": "您必须同意数据处理",
+      "submitButton": "提交请求",
+      "submitting": "提交中...",
+      "successTitle": "✨ 请求发送成功！",
+      "successDescription": "我们将在48小时内联系您进行免费房产评估",
+      "errorTitle": "❌ 发送错误",
+      "errorDescription": "发生错误，请重试或通过WhatsApp联系我们。",
+      "footerInfo": "✓ 48小时内保证回复 • ✓ 免费无义务评估 • ✓ 零佣金",
+      "zones": {
+         "crocetta": "Crocetta",
+         "san-salvario": "San Salvario",
+         "centro": "Centro",
+         "vanchiglia": "Vanchiglia",
+         "lingotto": "Lingotto",
+         "santa-rita": "Santa Rita",
+         "san-paolo": "San Paolo",
+         "altra": "其他区域"
       },
-      "prerequisite": "先修课程",
-      "prerequisitePlaceholder": "选择考试...",
-      "noPrerequisite": "无先修要求",
-      "date": "考试日期",
-      "datePlaceholder": "选择日期...",
-      "session": "考试期",
-      "sessionOptions": {
-        "invernale": "冬季（1-2月）",
-        "estiva": "夏季（6-7月）",
-        "autunnale": "秋季（9月）"
+      "rooms": {
+         "2": "两居室 (2)",
+         "3": "三居室 (3)",
+         "4": "四居室 (4)",
+         "5+": "5间及以上"
       },
-      "button": "添加考试"
-    },
-    "output": {
-      "title": "您的计划",
-      "empty": "添加考试查看您的优化计划",
-      "emptyHint": "使用上面的表格开始规划您的考试期"
-    },
-    "shareExport": {
-      "share": "分享计划",
-      "export": "导出PDF",
-      "copyLink": "复制链接",
-      "copied": "链接已复制！"
-    }
-  },
-  "aiSearch": {
-    "placeholder": "询问关于都灵的任何问题...",
-    "buttonSearch": "搜索",
-    "buttonSearching": "搜索中...",
-    "poweredBy": "由Perplexity AI提供支持",
-    "exampleQueries": "例如：\"都灵学生最佳社区？\"、\"都灵理工附近房间多少钱？\"",
-    "errorMessage": "发生错误，请稍后重试。",
-    "sources": "来源",
-    "relatedQuestions": "相关问题"
-  },
-  "homeFaq": {
-    "title": "常见问题",
-    "subtitle": "快速解答您的疑问",
-    "viewAll": "查看所有FAQ"
-  },
-  "thankYou": {
-    "title": "谢谢！",
-    "subtitle": "我们已收到您的请求",
-    "message": "我们的团队将尽快联系您。请检查您的邮箱获取更新。",
-    "backHome": "返回首页",
-    "contactUs": "联系我们"
-  },
-  "gradeCalculator": {
-    "seo": {
-      "title": "加权平均分和毕业成绩计算器 | Jungle Rent",
-      "description": "计算您的加权平均分并模拟毕业成绩。学生免费工具。"
-    },
-    "badge": "免费工具",
-    "title": "平均分计算器",
-    "subtitle": "计算您的加权平均分并模拟毕业成绩",
-    "addExam": {
-      "title": "添加考试",
-      "name": "考试名称",
-      "namePlaceholder": "例如：高等数学I",
-      "grade": "成绩",
-      "cfu": "学分",
-      "addButton": "添加考试",
-      "laudeCheckbox": "满分"
-    },
-    "exams": {
-      "title": "您的考试",
-      "empty": "尚未添加考试",
-      "emptyHint": "使用上面的表格添加您的考试"
-    },
-    "results": {
-      "title": "您的结果",
-      "weightedAvg": "加权平均",
-      "graduationBase": "110分制毕业基础",
-      "totalCfu": "总学分",
-      "totalExams": "总考试数"
-    },
-    "simulator": {
-      "title": "毕业成绩模拟器",
-      "thesisBonus": "论文加分",
-      "otherBonus": "其他加分",
-      "finalGrade": "最终成绩"
-    },
-    "share": {
-      "shareButton": "分享结果",
-      "exportPdf": "导出PDF",
-      "copied": "链接已复制！"
-    },
-    "budgetCalculator": {
+      "floors": {
+         "terra": "一楼",
+         "1": "1楼",
+         "2": "2楼",
+         "3": "3楼",
+         "4": "4楼",
+         "5": "5楼",
+         "6+": "6楼及以上"
+      },
+      "conditions": {
+         "ottimo": "优秀",
+         "buono": "良好",
+         "da-ristrutturare": "需要装修"
+      },
+      "motivations": {
+         "cambio-citta": "搬迁城市",
+         "liquidita": "需要资金",
+         "eredita": "遗产",
+         "investimento": "投资处置",
+         "altro": "其他"
+      }
+   },
+   "studentInfographic": {
+      "badge": "如何运作",
+      "title": "找到您的理想住房",
+      "subtitle": "我们的混合模式帮您省钱",
+      "steps": {
+         "search": {
+            "title": "搜索住房",
+            "description": "在都灵理工、都灵大学和所有都灵大学附近找房间"
+         },
+         "save": {
+            "title": "节省",
+            "description": "与学年对齐的灵活合同"
+         }
+      },
+      "benefits": {
+         "contract": "灵活合同",
+         "savings": "保证节省",
+         "examDays": "免费考试日"
+      },
+      "cta": "即将推出：2026年9月起可用住房"
+   },
+   "students": {
       "seo": {
-        "title": "都灵学生预算计算器 | Jungle Rent",
-        "description": "计算您在都灵各社区的生活成本。租金、水电费、交通和食物的详细估算。"
+         "title": "都灵学生租房 | Jungle Rent",
+         "description": "在都灵理工、都灵大学和所有都灵大学附近找到学生住房。灵活合同和实惠价格。"
+      },
+      "badge": "2026即将推出",
+      "hero": {
+         "title": "都灵学生租房",
+         "subtitle": "我们正在建设更好的方式在大学附近找房。注册成为第一批用户。"
+      },
+      "waitlist": {
+         "placeholder": "您的邮箱",
+         "button": "加入等待名单",
+         "note": "准备好后我们会联系您。不发垃圾邮件。",
+         "success": "注册完成！我们会尽快联系您。",
+         "error": "错误，请稍后重试。"
+      },
+      "stats": {
+         "students": "大学生",
+         "universities": "都灵大学",
+         "neighborhoods": "学生社区",
+         "avgRent": "平均房间租金"
+      },
+      "resources": {
+         "title": "学生资源",
+         "subtitle": "在都灵生活和学习的免费指南",
+         "neighborhoods": "社区指南",
+         "universities": "大学",
+         "studySpaces": "自习室",
+         "mobility": "交通出行",
+         "dailyLife": "日常生活",
+         "viewAll": "查看所有指南"
+      },
+      "investorCta": {
+         "title": "您是投资者吗？",
+         "subtitle": "了解如何参与都灵学生租赁市场。",
+         "button": "发现机会"
+      },
+      "tools": {
+         "badge": "免费工具",
+         "title": "学生实用工具",
+         "subtitle": "帮助您规划都灵生活的实用资源",
+         "budgetCalc": {
+            "title": "预算计算器",
+            "description": "了解各社区生活成本",
+            "cta": "立即试用"
+         },
+         "gradeCalc": {
+            "title": "平均分计算器",
+            "description": "计算加权平均分和毕业成绩",
+            "cta": "立即试用"
+         },
+         "utilityComp": {
+            "title": "水电费比较器",
+            "description": "比较电力和燃气费率",
+            "comingSoon": "即将推出"
+         },
+         "examSession": {
+            "title": "考试安排器",
+            "description": "优化规划您的考试期",
+            "cta": "立即试用"
+         },
+         "allTools": {
+            "title": "所有工具",
+            "description": "发现所有免费工具"
+         },
+         "backToTools": "返回工具"
+      },
+      "whyJungle": {
+         "badge": "我们的模式",
+         "title": "为学习者设计的租赁",
+         "subtitle": "终于有理解大学生活的模式了",
+         "contract": {
+            "title": "只在学习时付费",
+            "description": "您的租金跟随大学日历，不是房东的日历。在都灵学习？付费。在家陪家人？不付费。",
+            "highlight": "保证节省"
+         },
+         "summer": {
+            "badge": "独家",
+            "title": "夏季灵活性",
+            "description": "需要回来考试？没问题。只付使用的天数，不是整月。",
+            "cta": "了解运作方式"
+         },
+         "commissions": {
+            "title": "零佣金",
+            "description": "直接从我们这里租房。没有中介，没有隐藏费用。",
+            "highlight": "节省€200-400"
+         },
+         "comparison": {
+            "traditional": {
+               "title": "传统租赁",
+               "months12": "强制12个月合同",
+               "paySummer": "即使在家也要付夏季租金",
+               "noFlex": "考试期间没有灵活性",
+               "commissions": "中介佣金€200-400"
+            },
+            "jungle": {
+               "title": "Jungle Rent",
+               "months9": "学年合同",
+               "payUse": "夏季：只付使用的天数",
+               "flex": "夏季考试期灵活性",
+               "noCommissions": "零佣金，直接租赁"
+            }
+         },
+         "cta": {
+            "waitlist": "加入等待名单",
+            "whatsapp": "与Lorenzo交谈"
+         }
+      }
+   },
+   "examSessionPlanner": {
+      "seo": {
+         "title": "考试安排器 | Jungle Rent",
+         "description": "优化规划您的考试期。考虑学分、难度和先修课程创建完美计划。"
       },
       "badge": "免费工具",
-      "title": "预算计算器",
-      "subtitle": "了解都灵各社区的生活成本",
-      "neighborhood": {
-        "label": "选择社区",
-        "placeholder": "选择..."
+      "title": "考试安排器",
+      "subtitle": "战略性规划您的考试期，考虑学分、难度和先修课程",
+      "addExam": {
+         "title": "添加考试",
+         "name": "考试名称",
+         "namePlaceholder": "例如：高等数学I",
+         "cfu": "学分",
+         "difficulty": "感知难度",
+         "difficultyOptions": {
+            "1": "😊 简单",
+            "2": "😐 中等",
+            "3": "😰 困难",
+            "4": "💀 终极Boss"
+         },
+         "prerequisite": "先修课程",
+         "prerequisitePlaceholder": "选择考试...",
+         "noPrerequisite": "无先修要求",
+         "date": "考试日期",
+         "datePlaceholder": "选择日期...",
+         "session": "考试期",
+         "sessionOptions": {
+            "invernale": "冬季（1-2月）",
+            "estiva": "夏季（6-7月）",
+            "autunnale": "秋季（9月）"
+         },
+         "button": "添加考试"
       },
-      "roomType": {
-        "label": "房间类型",
-        "single": "单人间",
-        "double": "双人间"
+      "output": {
+         "title": "您的计划",
+         "empty": "添加考试查看您的优化计划",
+         "emptyHint": "使用上面的表格开始规划您的考试期"
+      },
+      "shareExport": {
+         "share": "分享计划",
+         "export": "导出PDF",
+         "copyLink": "复制链接",
+         "copied": "链接已复制！"
+      }
+   },
+   "aiSearch": {
+      "placeholder": "询问关于都灵的任何问题...",
+      "buttonSearch": "搜索",
+      "buttonSearching": "搜索中...",
+      "poweredBy": "由Perplexity AI提供支持",
+      "exampleQueries": "例如：\"都灵学生最佳社区？\"、\"都灵理工附近房间多少钱？\"",
+      "errorMessage": "发生错误，请稍后重试。",
+      "sources": "来源",
+      "relatedQuestions": "相关问题"
+   },
+   "homeFaq": {
+      "title": "常见问题",
+      "subtitle": "快速解答您的疑问",
+      "viewAll": "查看所有FAQ"
+   },
+   "thankYou": {
+      "title": "谢谢！",
+      "subtitle": "我们已收到您的请求",
+      "message": "我们的团队将尽快联系您。请检查您的邮箱获取更新。",
+      "backHome": "返回首页",
+      "contactUs": "联系我们"
+   },
+   "gradeCalculator": {
+      "seo": {
+         "title": "加权平均分和毕业成绩计算器 | Jungle Rent",
+         "description": "计算您的加权平均分并模拟毕业成绩。学生免费工具。"
+      },
+      "badge": "免费工具",
+      "title": "平均分计算器",
+      "subtitle": "计算您的加权平均分并模拟毕业成绩",
+      "addExam": {
+         "title": "添加考试",
+         "name": "考试名称",
+         "namePlaceholder": "例如：高等数学I",
+         "grade": "成绩",
+         "cfu": "学分",
+         "addButton": "添加考试",
+         "laudeCheckbox": "满分"
+      },
+      "exams": {
+         "title": "您的考试",
+         "empty": "尚未添加考试",
+         "emptyHint": "使用上面的表格添加您的考试"
       },
       "results": {
-        "title": "估算结果",
-        "rent": "租金",
-        "utilities": "水电费",
-        "transport": "交通",
-        "food": "食物",
-        "total": "月总计"
+         "title": "您的结果",
+         "weightedAvg": "加权平均",
+         "graduationBase": "110分制毕业基础",
+         "totalCfu": "总学分",
+         "totalExams": "总考试数"
       },
-      "aiAdvisor": {
-        "title": "AI预算顾问",
-        "placeholder": "询问我的预算建议...",
-        "exampleQueries": "例如：\"如何节省电费？\"、\"都灵最便宜的超市？\""
+      "simulator": {
+         "title": "毕业成绩模拟器",
+         "thesisBonus": "论文加分",
+         "otherBonus": "其他加分",
+         "finalGrade": "最终成绩"
+      },
+      "share": {
+         "shareButton": "分享结果",
+         "exportPdf": "导出PDF",
+         "copied": "链接已复制！"
+      },
+      "budgetCalculator": {
+         "seo": {
+            "title": "都灵学生预算计算器 | Jungle Rent",
+            "description": "计算您在都灵各社区的生活成本。租金、水电费、交通和食物的详细估算。"
+         },
+         "badge": "免费工具",
+         "title": "预算计算器",
+         "subtitle": "了解都灵各社区的生活成本",
+         "neighborhood": {
+            "label": "选择社区",
+            "placeholder": "选择..."
+         },
+         "roomType": {
+            "label": "房间类型",
+            "single": "单人间",
+            "double": "双人间"
+         },
+         "results": {
+            "title": "估算结果",
+            "rent": "租金",
+            "utilities": "水电费",
+            "transport": "交通",
+            "food": "食物",
+            "total": "月总计"
+         },
+         "aiAdvisor": {
+            "title": "AI预算顾问",
+            "placeholder": "询问我的预算建议...",
+            "exampleQueries": "例如：\"如何节省电费？\"、\"都灵最便宜的超市？\""
+         }
       }
-    }
-  },
-  "sellersPage": {
-    "breadcrumb": "出售房产",
-    "meta": { "title": "在都灵零佣金出售您的房产 | Jungle Rent", "description": "直接将您的房产出售给Jungle Rent。零佣金，60-90天。" },
-    "hero": { "badge": "直接买家", "subtitle": "我们不是中介。我们直接购买您的房产。" },
-    "calculator": { "title": "计算您的节省", "subtitle": "看看直接出售能节省多少", "propertyValue": "房产价值", "agency": "传统中介", "directBuyer": "直接买家", "yourSavings": "您的节省", "savingsNote": "与中介佣金相比的节省（4% + 增值税）", "cta": "申请免费估价" },
-    "timeline": { "title": "我们的4步流程", "subtitle": "从估价到成交60-90天", "step1Desc": "基于市场数据的分析", "step2Desc": "我们技术团队实地考察", "step3Desc": "无约束力的书面报价", "step4Desc": "公证签署和安全付款" },
-    "faq": { "subtitle": "关于出售给Jungle Rent您需要知道的一切" },
-    "finalCta": { "title": "准备出售您的房产？", "subtitle": "48小时内获得免费估价。无需承诺。" }
-  }
+   },
+   "sellersPage": {
+      "breadcrumb": "出售房产",
+      "meta": {
+         "title": "在都灵零佣金出售您的房产 | Jungle Rent",
+         "description": "直接将您的房产出售给Jungle Rent。零佣金，60-90天。"
+      },
+      "hero": {
+         "badge": "直接买家",
+         "subtitle": "我们不是中介。我们直接购买您的房产。"
+      },
+      "calculator": {
+         "title": "计算您的节省",
+         "subtitle": "看看直接出售能节省多少",
+         "propertyValue": "房产价值",
+         "agency": "传统中介",
+         "directBuyer": "直接买家",
+         "yourSavings": "您的节省",
+         "savingsNote": "与中介佣金相比的节省（4% + 增值税）",
+         "cta": "申请免费估价"
+      },
+      "timeline": {
+         "title": "我们的4步流程",
+         "subtitle": "从估价到成交60-90天",
+         "step1Desc": "基于市场数据的分析",
+         "step2Desc": "我们技术团队实地考察",
+         "step3Desc": "无约束力的书面报价",
+         "step4Desc": "公证签署和安全付款"
+      },
+      "faq": {
+         "subtitle": "关于出售给Jungle Rent您需要知道的一切"
+      },
+      "finalCta": {
+         "title": "准备出售您的房产？",
+         "subtitle": "48小时内获得免费估价。无需承诺。"
+      }
+   }
 }

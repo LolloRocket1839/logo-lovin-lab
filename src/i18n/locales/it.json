@@ -1,1701 +1,1702 @@
 {
-  "accessibility": {
-    "skipToContent": "Salta al contenuto principale"
-  },
-  "founders": {
-    "title": "Fondatori",
-    "contactUs": "Contattaci direttamente",
-    "callNow": "Chiama ora",
-    "message": "Scrivi",
-    "noWhatsApp": "Non hai WhatsApp?",
-    "sendSMS": "Invia un SMS",
-    "callDirect": "Chiama direttamente"
-  },
-  "howItWorks": {
-    "badge": "Il nostro modello",
-    "title": "Come funziona Jungle Rent",
-    "subtitle": "Un modello che fa vincere tutti: investitori, studenti e turisti",
-    "steps": {
-      "invest": {
-        "title": "Investi",
-        "desc": "A partire da €100, investi in Jungle Rent per un appartamento specifico"
-      },
-      "acquire": {
-        "title": "Acquistiamo",
-        "desc": "Immobili vicino alle università di Torino"
-      },
-      "rent": {
-        "title": "Affittiamo",
-        "desc": "Affitti flessibili a studenti e turisti"
-      },
-      "win": {
-        "title": "Tutti guadagnano",
-        "desc": "Investitori: payout bimestrali • Studenti: -25% affitto"
-      }
-    },
-    "investors": {
-      "title": "Per investitori",
-      "point1": "Payout bimestrali",
-      "point2": "Rendimenti sopra mercato",
-      "point3": "Zero gestione",
-      "point4": "Appartamento specifico e trasparente"
-    },
-    "students": {
-      "title": "Per studenti",
-      "point1": "-25% rispetto all'affitto medio di Torino",
-      "point2": "Contratti flessibili anno accademico",
-      "point3": "Zero commissioni d'agenzia"
-    },
-    "savingHighlight": "Risparmio annuale per gli studenti rispetto all'affitto medio di Torino",
-    "ctaInvest": "Investi da €100",
-    "ctaRent": "Cerca alloggio",
-    "ctaTalkToUs": "Parla con Lorenzo"
-  },
-  "video": {
-    "title": "Scopri Jungle Rent",
-    "subtitle": "Guarda come funziona la nostra piattaforma e come possiamo aiutarti a trovare la casa perfetta a Torino",
-    "cta": "Parla con Lorenzo"
-  },
-  "problem": {
-    "badge": "Il problema",
-    "title": "La crisi degli alloggi studenteschi in Italia",
-    "subtitle": "Quasi 600.000 studenti cercano casa ogni anno, ma l'offerta di alloggi dedicati copre solo il 12,6% della domanda. Una crisi che rappresenta un'opportunità.",
-    "stat1Label": "studenti fuori sede",
-    "stat1Sub": "in Italia",
-    "stat2Label": "cerca alloggio",
-    "stat2Sub": "nel privato",
-    "stat3Label": "domanda coperta",
-    "stat3Sub": "da housing dedicato",
-    "stat4Label": "mercato potenziale",
-    "stat4Sub": "in Italia",
-    "source": "Dati 2025 - Fonte: Savills Research, Student Housing Italy Spotlight",
-    "cta": "Leggi il report completo"
-  },
-  "nav": {
-    "home": "Home",
-    "about": "Chi siamo",
-    "students": "Per studenti",
-    "investors": "Per investitori",
-    "sell": "Vendi casa",
-    "contracts": "Contratti",
-    "blog": "Risorse",
-    "faq": "FAQ",
-    "contacts": "Contatti",
-    "contactUs": "Contattaci",
-    "call": "Chiama",
-    "search": "Cerca"
-  },
-  "about": {
-    "metaTitle": "Jungle Rent - Compriamo e affittiamo immobili per studenti | Torino",
-    "metaDescription": "Startup immobiliare con duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al real estate. Acquistiamo proprietà a Torino e le affittiamo a lungo termine.",
-    "title": "Chi è Jungle Rent",
-    "subtitle": "Compriamo immobili e li affittiamo per risolvere la crisi abitativa studentesca",
-    "cycle": {
-      "title": "Il nostro modello",
-      "subtitle": "Un ciclo virtuoso che crea valore per studenti e investitori",
-      "stepLabel": "Fase {{number}}",
-      "step1Title": "Acquisizione",
-      "step1Desc": "Compriamo immobili in zone universitarie a Torino. Li teniamo nel portfolio per almeno 10 anni.",
-      "step2Title": "Affitto a studenti",
-      "step2Desc": "Affittiamo le proprietà a studenti universitari con contratti flessibili e prezzi accessibili.",
-      "step3Title": "Gestione interna",
-      "step3Desc": "Gestiamo tutto internamente: manutenzione, contratti, assistenza 24/7, senza delegare a terzi.",
-      "step4Title": "Rendite agli investitori",
-      "step4Desc": "Gli affitti generano rendite distribuite trimestralmente agli investitori, in modo trasparente.",
-      "reinvest": "I proventi vengono reinvestiti per acquisire nuove proprietà"
-    },
-    "foundedLabel": "Data di costituzione",
-    "foundedDate": "Ottobre 2025",
-    "legalForm": "Start-up Innovativa S.r.l.",
-    "foundersLabel": "Soci fondatori",
-    "founderLabel": "Fondatore",
-    "lorenzoRole": "Fondatore • LUISS Diritto ed Economia",
-    "capitalLabel": "Capitale sociale",
-    "capitalDesc": "Interamente versato",
-    "locationLabel": "Sede legale",
-    "servicesTitle": "Cosa facciamo",
-    "service1Title": "Acquistiamo immobili",
-    "service1Desc": "Compriamo proprietà a Torino nelle zone universitarie. Non siamo intermediari: acquistiamo direttamente e le teniamo nel nostro portafoglio per almeno 10 anni.",
-    "service2Title": "Affittiamo a studenti",
-    "service2Desc": "Affittiamo le nostre proprietà a studenti universitari con contratti flessibili, contribuendo a risolvere la crisi abitativa studentesca a Torino.",
-    "service3Title": "Gestiamo tutto internamente",
-    "service3Desc": "Manutenzione, contratti, assistenza 24/7, pulizie: gestiamo ogni aspetto delle nostre proprietà direttamente, senza delegare a terzi.",
-    "service4Title": "Investimenti accessibili",
-    "service4Desc": "Offriamo la possibilità di investire in Jungle Rent per un appartamento specifico a partire da €100, democratizzando l'accesso al mercato immobiliare.",
-    "whyChooseTitle": "Perché scegliere JungleRent",
-    "whyPoint1": "Proprietari diretti: non intermediari, ma investitori a lungo termine",
-    "whyPoint2": "Focus esclusivo sugli studenti universitari",
-    "whyPoint3": "Accesso al mercato immobiliare da €100",
-    "whyPoint4": "Assistenza 24/7 con risposta garantita",
-    "whyPoint5": "Conformità normativa e partnership con 2i3T",
-    "contactTitle": "Contattaci",
-    "contactLorenzo": "Parla con Lorenzo",
-    "sendEmail": "Invia email"
-  },
-  "breadcrumbs": {
-    "home": "Home"
-  },
-  "scrollToTop": {
-    "tooltip": "Rivedi il modello",
-    "label": "Rivedi il modello",
-    "backToTop": "Torna su"
-  },
-  "hero": {
-    "tagline": "L'affitto sicuro nella giungla immobiliare",
-    "mainHeadline": "Investi in student housing a Torino",
-    "mainHeadlineB": "Guadagna reddito passivo dagli appartamenti studenteschi a Torino",
-    "mainSubheadline": "Investi da €100 in Jungle Rent. Noi acquistiamo e gestiamo, tu guadagni.",
-    "mainSubheadlineB": "Da €100, possiedi una quota di alloggi studenteschi gestiti — noi ci occupiamo di tutto, tu incassi rendite trimestrali.",
-    "missionStatement": "Jungle Rent acquista immobili a Torino e li affitta a studenti universitari. Tu investi, noi gestiamo tutto.",
-    "badgeExplanation": "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite trimestrali.",
-    "discoverOpportunity": "Scopri l'opportunità",
-    "talkToLorenzo": "Parla con Lorenzo",
-    "startInvesting": "Entra nella prima acquisizione",
-    "discover": "Scopri",
-    "howItWorks": "Come funziona",
-    "miniFaq": {
-      "whatBuy": "Cosa compro con €100?",
-      "whatBuyAnswer": "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi. Sai esattamente dove va il tuo capitale.",
-      "howEarn": "Come ricevo i rendimenti?",
-      "howEarnAnswer": "Ogni trimestre ricevi la tua quota degli affitti incassati, proporzionale al tuo investimento. Report trasparenti e dashboard personale.",
-      "whoManages": "Chi gestisce gli immobili?",
-      "whoManagesAnswer": "Jungle Rent gestisce tutto: acquisizione, contratti, inquilini, manutenzione e fiscalità. Tu non devi fare nulla."
-    },
-    "miniSteps": {
-      "step1": "Da €100",
-      "step2": "Gestiamo noi"
-    },
-    "flowStep1": "Investi",
-    "flowStep2": "Quote",
-    "flowStep3": "Affitti",
-    "flowStep4": "Rendite",
-    "invest": "Investi in Jungle Rent",
-    "launchCountdown": "Lancio tra",
-    "days": "giorni",
-    "hours": "ore",
-    "minutes": "minuti",
-    "seconds": "secondi",
-    "waitlistCounter": "Unisciti ad altri {{count}} in lista d'attesa",
-    "earlyBirdPerk": "🎉 Vantaggi early bird: I primi 100 studenti ottengono un credito di €100",
-    "studentTitle": "Sei uno studente?",
-    "studentSubtitle": "Risparmia sull'affitto!",
-    "investorTitle": "Sei un investitore immobiliare?",
-    "investorSubtitle": "Investi nel real estate di Jungle Rent a partire da 100€!",
-    "subheadline": "Affitti smart e opportunità di investimento",
-    "targetAudience": "Per studenti e investitori",
-    "location": "Vicino a Politecnico, UniTo e tutti i principali atenei torinesi",
-    "questionnaire": "Vinci 100€ - Compila il questionario!",
-    "quizCta": "Fai il Quiz e Vinci €100",
-    "quizSubtitle": "Aiutaci a capire le tue esigenze e potresti vincere €100",
-    "availableRooms": "30 stanze in quadrilocali disponibili da settembre 2026",
-    "supportedBy": "Supportati da",
-    "iAmStudent": "Sono uno Studente",
-    "iAmInvestor": "Sono un Investitore",
-    "contactLorenzo": "Contatta Lorenzo",
-    "trustSafe": "Contratti sicuri",
-    "trustSupport": "Supporto dedicato",
-    "trustNoFees": "Zero commissioni",
-    "logoAlt": "Jungle Rent - Logo ufficiale - Affitti ottimizzati per studenti e investitori a Torino",
-    "seoH1": "Jungle Rent - Investimenti in student housing a Torino | Gestione completa",
-    "smartRentals": "Affitti smart",
-    "investmentOpportunities": "Opportunità di investimento",
-    "students": "studenti",
-    "investors": "investitori",
-    "politecnico": "Politecnico",
-    "unito": "UniTo",
-    "benefits": "benefici",
-    "logo2i3tAlt": "2i3T Incubatore Imprese Università di Torino - Partner ufficiale",
-    "sellerLink": {
-      "prefix": "Sei un proprietario?",
-      "cta": "Scopri come vendere casa"
-    },
-    "socialProof": "🔴 Prima acquisizione in corso · {{count}} investitori già dentro"
-  },
-  "studentSearch": {
-    "title": "Trova la tua stanza",
-    "description": "Dicci cosa cerchi e ti aiuteremo a trovare la soluzione perfetta",
-    "cardTitle": "Trova la tua stanza ideale",
-    "cardDescription": "Compila il form e ti aiuteremo a trovare la soluzione perfetta per te",
-    "cardCta": "Inizia la ricerca",
-    "nameLabel": "Nome",
-    "namePlaceholder": "Mario Rossi",
-    "nameErrorMin": "Il nome deve contenere almeno 2 caratteri",
-    "nameErrorMax": "Il nome non può superare 100 caratteri",
-    "nameErrorFormat": "Il nome può contenere solo lettere, spazi, apostrofi e trattini",
-    "emailLabel": "Email",
-    "emailPlaceholder": "mario.rossi@example.com",
-    "emailErrorRequired": "L'email è obbligatoria",
-    "emailErrorInvalid": "Inserisci un indirizzo email valido (es: nome@esempio.com)",
-    "emailErrorMax": "L'email non può superare 255 caratteri",
-    "whatYouLookingForLabel": "Cosa cerchi?",
-    "whatYouLookingForPlaceholder": "Descrivi la tua stanza ideale: zona, caratteristiche, cosa è importante per te...",
-    "whatYouLookingForErrorMin": "Descrivi cosa cerchi con almeno 20 caratteri per aiutarci a trovarti la soluzione migliore",
-    "whatYouLookingForErrorMax": "La descrizione non può superare 500 caratteri",
-    "roommatesLabel": "Numero coinquilini (opzionale)",
-    "roommatesPlaceholder": "Seleziona...",
-    "roommatesOptions": {
-      "2": "2 persone totali",
-      "3": "3 persone totali",
-      "solo": "Solo io (stanza singola)",
-      "4plus": "4+ persone totali",
-      "flexible": "Non ho preferenze"
-    },
-    "areaLabel": "Zona preferita (opzionale)",
-    "areaPlaceholder": "Seleziona...",
-    "areaOptions": {
-      "san-salvario": "San Salvario",
-      "crocetta": "Crocetta",
-      "centro": "Centro",
-      "polito": "Vicino Politecnico",
-      "unito": "Vicino Università",
-      "san-paolo": "San Paolo/Santa Rita",
-      "aurora": "Aurora/Vanchiglia",
-      "flexible": "Non ho preferenze"
-    },
-    "studyLabel": "Cosa studierai? (opzionale)",
-    "studyPlaceholder": "Es: Ingegneria Informatica al Politecnico",
-    "studyErrorMax": "Il campo di studio non può superare 150 caratteri",
-    "budgetLabel": "Budget mensile (opzionale)",
-    "budgetPlaceholder": "Seleziona...",
-    "budgetRanges": {
-      "400-500": "400-500€ (escluse spese)",
-      "500-600": "500-600€ (escluse spese)",
-      "600-700": "600-700€ (escluse spese)",
-      "over-700": "Oltre 700€ (escluse spese)"
-    },
-    "moveDateLabel": "Quando vuoi trasferirti? (opzionale)",
-    "moveDatePlaceholder": "Seleziona...",
-    "moveDates": {
-      "september-2026": "Settembre 2026",
-      "asap": "Prima possibile",
-      "custom": "Data personalizzata"
-    },
-    "customMoveDateLabel": "Specifica la data",
-    "customMoveDatePlaceholder": "Es: Marzo 2026, Fine anno, etc.",
-    "customMoveDateErrorMax": "La data personalizzata non può superare 100 caratteri",
-    "consentLabel": "Acconsento al trattamento dei miei dati personali secondo la Privacy Policy",
-    "consentError": "Devi accettare la privacy policy per continuare",
-    "resourcesTitle": "📚 Risorse utili per studenti",
-    "resourcesDesc": "Mentre cerchi casa, scopri dove studiare a Torino",
-    "studySpacesLink": "Guida alle 57 migliori aule studio",
-    "submitButton": "Invia richiesta",
-    "submitting": "Invio in corso...",
-    "successTitle": "Richiesta inviata! 🎉",
-    "successDescription": "Ti contatteremo presto con le migliori opzioni per te",
-    "errorTitle": "Errore nell'invio",
-    "errorDescription": "Si è verificato un errore. Riprova o contattaci su WhatsApp",
-    "draftFoundMessage": "Abbiamo trovato una bozza salvata automaticamente",
-    "loadDraft": "Carica bozza",
-    "draftLoadedTitle": "Bozza caricata",
-    "draftLoadedDesc": "I tuoi dati precedenti sono stati ripristinati",
-    "draftClearedTitle": "Bozza eliminata",
-    "draftClearedDesc": "La bozza salvata è stata rimossa",
-    "draftAutoSaved": "Bozza salvata automaticamente"
-  },
-  "trustBadge": {
-    "title": "La tua sicurezza è la nostra priorità",
-    "verified": "Contratti certificati",
-    "support": "Supporto 24/7",
-    "transparent": "Trasparenza totale",
-    "sectionLabel": "Partnership istituzionale",
-    "supportedBy": "Supportati da 2i3T",
-    "incubator": "Incubatore d'Imprese dell'Università di Torino",
-    "learnMore": "Scopri di più su 2i3T",
-    "guarantee": "Incubati presso l'ecosistema universitario torinese, garantendo professionalità e affidabilità in ogni transazione",
-    "inlineCta": "Vuoi saperne di più?"
-  },
-  "benefits": {
-    "title": "Perché scegliere Jungle Rent",
-    "subtitle": "Vantaggi esclusivi per la tua esperienza abitativa",
-    "sectionLabel": "I nostri vantaggi",
-    "whyJungleRent": "Perché Jungle Rent",
-    "sectionTitle": "Vantaggi concreti per studenti e investitori",
-    "sectionSubtitle": "Gestione professionale, risparmio garantito e partnership istituzionali",
-    "savings": "Risparmi certificati",
-    "savingsDesc": "Risparmia circa il 30% sugli affitti. Affitti convenienti con contratti trasparenti.",
-    "savingsHighlight": "Risparmia",
-    "savingsHow1": "Nessuna commissione di agenzia",
-    "savingsHow2": "Affitti competitivi",
-    "savingsTooltip": "Risparmia €200-400 al mese",
-    "investment": "Opportunità di investimento",
-    "investmentDesc": "Per investitori: gestione professionale delle proprietà con domanda universitaria costante",
-    "investmentHighlight": "Investitori",
-    "investmentHow1": "Accesso da €100",
-    "investmentHow2": "Gestione completa inclusa",
-    "investmentTooltip": "Partecipa al mercato immobiliare",
-    "location": "Posizione strategica",
-    "locationDesc": "Portfolio immobiliare selezionato vicino a tutti i principali atenei: Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO",
-    "locationHighlight": "Top location",
-    "locationHow1": "Vicino a tutte le università",
-    "locationHow2": "Zone strategiche ad alta domanda",
-    "locationTooltip": "Vicino a tutte le università",
-    "quality": "Contratti certificati",
-    "qualityDesc": "Contratti regolari, gestione professionale e trasparenza totale. Supportati da 2i3T - Incubatore Universitario.",
-    "qualityHighlight": "100% Safe",
-    "qualityHow1": "Supporto legale incluso",
-    "qualityHow2": "Partnership con 2i3T",
-    "qualityTooltip": "Contratti legali verificati",
-    "studentCta": "Sono uno studente",
-    "investorCta": "Sono un investitore"
-  },
-  "student": {
-    "title": "Per studenti",
-    "subtitle": "La nostra missione: risolvere la crisi abitativa studentesca",
-    "marketProofLabel": "Il nostro mercato",
-    "marketProofTitle": "90.000+ studenti universitari a Torino",
-    "marketProofDesc": "7 università, domanda costante tutto l'anno. Ecco perché investiamo qui.",
-    "sectionLabel": "Per studenti",
-    "sectionTitle": "Risolviamo la crisi abitativa studentesca",
-    "compactDesc": "Affitti accessibili in zone universitarie. Contratti trasparenti, zero commissioni e supporto dedicato per il tuo percorso accademico.",
-    "contactCta": "Contattaci su WhatsApp",
-    "sectionSubtitle": "Parte della nostra duplice missione: rendere l'alloggio accessibile a tutti gli studenti",
-    "benefit1Title": "Costi ridotti",
-    "benefit1Desc": "Affitti convenienti: più soldi per studiare e vivere Torino",
-    "benefit1Tooltip": "Stanze di qualità convenienti",
-    "benefit2Title": "Contratti flessibili",
-    "benefit2Desc": "Contratti flessibili per l'anno accademico con giorni ospite gratuiti per esami estivi: risparmia il 25%",
-    "benefit2Tooltip": "Opzioni di prenotazione flessibili",
-    "contactText": "Contatta direttamente i nostri student advisor:",
-    "contactLorenzo": "Parla con Lorenzo",
-    "sendEmail": "Invia email",
-    "responseTime": "Risposta entro 40 minuti",
-    "cta": "Scopri le stanze",
-    "feature1": "Vicino alle università",
-    "feature2": "Coinquilini selezionati",
-    "feature3": "All-inclusive",
-    "separator": "e"
-  },
-  "investor": {
-    "title": "Per investitori",
-    "subtitle": "Democratizziamo l'accesso al mercato immobiliare",
-    "sectionLabel": "Per investitori",
-    "sectionTitle": "Accedi al mercato immobiliare da €100",
-    "compactDesc": "Investi in immobili universitari a Torino. Gestione completa, modello ibrido studenti/turisti.",
-    "sectionSubtitle": "Duplice missione: crisi abitativa studentesca e accesso democratico al mercato immobiliare",
-    "startupInnovativaBadge": "Start-up innovativa certificata",
-    "whyInvestTitle": "Perché investire con noi",
-    "benefit1Title": "Investimento ottimizzato",
-    "benefit1Desc": "Opportunità nel mercato immobiliare grazie alla nostra gestione professionale e pricing strategico",
-    "benefit2Title": "Gestione completa",
-    "benefit2Desc": "Ci occupiamo di tutto: contratti, manutenzione, relazioni con inquilini. Tu pensi solo all'investimento",
-    "benefit3Title": "Portfolio strategico",
-    "benefit3Desc": "Proprietà selezionate vicino ai 7 principali poli universitari di Torino (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO) con alta domanda costante",
-    "flowStep1": "Accessibilità",
-    "flowStep1Sub": "Da €100",
-    "flowStep2": "Gestione",
-    "flowStep2Sub": "Professionale",
-    "flowStep3": "Portfolio",
-    "flowStep3Sub": "Strategico",
-    "waitlistTitle": "Iscriviti alla waitlist investitori",
-    "waitlistSubtitle": "Ricevi aggiornamenti esclusivi sulle opportunità di investimento immobiliare a Torino",
-    "waitlistCta": "Entra in lista d'attesa",
-    "priorityResponse": "Risposta prioritaria garantita",
-    "cta": "Scopri l'opportunità",
-    "feature1": "Accesso da €100",
-    "feature2": "Gestione completa",
-    "feature3": "Zero burocrazia",
-    "activeInvestors": "investitori già attivi",
-    "talkToAdvisor": "Parla con Lorenzo",
-    "talkToLorenzo": "Parla con Lorenzo",
-    "scheduleCall": "Prenota una call",
-    "bookCall": "Mostra interesse",
-    "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino",
-    "minInvestmentBadge": "Investi da €100",
-    "marketStats": {
-      "minInvestment": "investimento minimo",
-      "studentSavings": "risparmio studenti",
-      "studentsOffsite": "studenti fuori sede in Italia",
-      "marketPotential": "mercato potenziale",
-      "disclaimer": "Stime 2025 - Fonte: Savills Research"
-    },
-    "testimonials": {
-      "title": "Cosa dicono gli investitori",
-      "quote1": "Ho investito €500 e ricevo report trimestrali trasparenti. Finalmente posso accedere al mercato immobiliare.",
-      "author1": "Marco, 32 anni",
-      "quote2": "Zero gestione, tutto è curato dal team. Posso concentrarmi sul mio lavoro mentre l'investimento lavora per me.",
-      "author2": "Giulia, 28 anni"
-    }
-  },
-  "infographic": {
-    "badge": "Il nostro modello",
-    "title": "Il modello Jungle Rent",
-    "subtitle": "Investimenti immobiliari semplificati",
-    "steps": {
-      "invest": {
-        "title": "Investi",
-        "description": "Partecipa da €100",
-        "detail": "Accedi al mercato immobiliare senza comprare un intero immobile. Zero burocrazia, zero gestione diretta.",
-        "keyPoints": [
-          "Investi da soli €100",
-          "Nessun immobile da gestire",
-          "Zero burocrazia e costi nascosti"
-        ]
-      },
-      "acquire": {
-        "title": "Acquistiamo",
-        "description": "Immobili in zone universitarie",
-        "detail": "Selezioniamo e acquistiamo immobili in zone ad alta domanda vicino a Politecnico, UniTo e le università torinesi.",
-        "keyPoints": [
-          "Due diligence completa",
-          "Zone strategiche ad alta domanda",
-          "7 università servite"
-        ]
-      },
-      "manage": {
-        "title": "Gestiamo",
-        "description": "Affitti flessibili",
-        "detail": "Affitti flessibili per studenti e turisti. Massimizzazione dell'occupazione tutto l'anno.",
-        "keyPoints": [
-          "Affitti flessibili studenti e turisti",
-          "Manutenzione inclusa"
-        ]
-      },
-      "earn": {
-        "title": "Partecipi",
-        "description": "Ai risultati del portafoglio",
-        "detail": "Partecipi ai risultati degli immobili gestiti. Report trasparenti e dashboard personale per monitorare il tuo investimento.",
-        "keyPoints": [
-          "Report trimestrali trasparenti",
-          "Dashboard personale",
-          "Rendimenti distribuiti"
-        ]
-      }
-    },
-    "metrics": {
-      "yield": {
-        "label": "Investimento minimo",
-        "description": "Da €100"
-      },
-      "savings": {
-        "label": "Risparmio studenti",
-        "description": "vs contratti 12 mesi"
-      },
-      "students": {
-        "label": "Studenti",
-        "description": "Universitari a Torino"
-      },
-      "universities": {
-        "label": "Università",
-        "description": "Atenei nel territorio"
-      }
-    },
-    "disclaimer": "*Gli investimenti comportano rischi, inclusa la possibile perdita del capitale. I risultati dipendono dall'andamento del mercato.",
-    "cta": "Gestione completa inclusa.",
-    "scrollHint": "Attendi per continuare"
-  },
-  "slideOverlays": {
-    "invest": {
-      "minInvestment": "Da €100",
-      "caption": "Tu investi, noi facciamo il resto. Zero burocrazia."
-    },
-    "acquire": {
-      "university": "Zone universitarie",
-      "caption": "Acquistiamo vicino a Politecnico, UniTo e i 7 atenei torinesi."
-    },
-    "manage": {
-      "students": "Studenti Set-Giu",
-      "tourists": "Turisti Lug-Ago",
-      "caption": "Occupazione 365 giorni. Contratti, manutenzione, fiscalità inclusi."
-    },
-    "earn": {
-      "quarterly": "Report trimestrali",
-      "dashboard": "Dashboard personale",
-      "caption": "Partecipi ai risultati con trasparenza totale."
-    }
-  },
-  "investors": {
-    "metaTitle": "Investimenti immobiliari accessibili Torino - Democratizziamo il real estate | Jungle Rent",
-    "metaDescription": "Democratizziamo l'accesso al mercato immobiliare, un'asset class storicamente sicura oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione completa.",
-    "heroTitle": "Democratizziamo l'accesso al real estate",
-    "heroSubtitle": "Un'asset class storicamente sicura, oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione professionale.",
-    "metricReturn": "Rendimento annuo target",
-    "metricOccupancy": "Tasso occupazione",
-    "metricManagement": "Gestione inclusa",
-    "benefitsTitle": "Perché investire con noi",
-    "benefitsSubtitle": "Partnership professionali nel mercato degli affitti universitari torinesi",
-    "processTitle": "Come funziona",
-    "processSubtitle": "4 semplici step per iniziare a investire",
-    "step1Title": "Contatto iniziale",
-    "step1Desc": "Parliamo delle tue esigenze e obiettivi di investimento via WhatsApp o call",
-    "step2Title": "Analisi opportunità",
-    "step2Desc": "Ti presentiamo le proprietà disponibili con analisi dettagliata e proiezioni",
-    "step3Title": "Conferma",
-    "step3Desc": "Finalizzi la partecipazione con contratti trasparenti e supporto legale incluso",
-    "step4Title": "Partecipazione ai risultati",
-    "step4Desc": "Partecipi ai risultati del portafoglio con report trimestrali. Noi gestiamo tutto",
-    "ctaTitle": "Pronto a investire?",
-    "ctaSubtitle": "Parla con un nostro advisor e scopri le opportunità disponibili oggi",
-    "readSavillsAnalysis": "Leggi l'analisi completa del mercato"
-  },
-  "seller": {
-    "title": "Vendi la tua casa a Torino",
-    "subtitle": "Valutazione gratuita • Zero commissioni • Rogito in 60-90 giorni",
-    "sectionLabel": "Vendi casa",
-    "heroHighlight": "Vendi",
-    "heroRest": "la tua proprietà",
-    "heroBracket": "(a noi)",
-    "heroSubheadline": "Acquirente diretto, zero commissioni, 60-90 giorni",
-    "newTitle": "Compriamo il tuo immobile. Non siamo un'agenzia.",
-    "newSubtitle": "Non cerchiamo acquirenti per te. Jungle Rent acquista direttamente immobili in zone universitarie.",
-    "directBuyerTitle": "Compriamo il tuo immobile direttamente",
-    "directBuyerSubtitle": "Non siamo un'agenzia. Acquistiamo noi per il nostro portafoglio.",
-    "benefit1": "Zero commissioni",
-    "benefit2": "60-90 giorni",
-    "benefit3": "Acquirente garantito",
-    "urgencyBadge": "Cerchiamo immobili in San Salvario, Vanchiglia, zona Ospedali, Santa Rita, Cit Turin, Campidoglio, Aurora, Campus Einaudi, Corso Casale",
-    "missionStatement": "Acquistiamo immobili nelle zone universitarie di Torino per offrire alloggi a 90.000+ studenti. Il tuo immobile diventa parte della soluzione alla crisi abitativa.",
-    "readGuide": "Leggi la guida completa: rischi, tasse e agenzie",
-    "comparison": {
-      "agency": "Agenzia",
-      "jungleRent": "Jungle Rent",
-      "roleLabel": "Ruolo",
-      "roleAgency": "Intermediario",
-      "roleJR": "Acquirente",
-      "commissionsLabel": "Commissioni",
-      "commissionsJR": "€0",
-      "timeLabel": "Tempo",
-      "months": "mesi",
-      "days": "giorni",
-      "visitsLabel": "Visite",
-      "visitsAgency": "Decine",
-      "visitsJR": "1-2 max"
-    },
-    "compactTitle": "Valutiamo e acquistiamo in 7 giorni",
-    "compactDesc": "Vendi il tuo immobile a Jungle Rent rapidamente e senza commissioni. Acquistiamo in zone universitarie.",
-    "compactBullet1": "Valutazione gratuita in 72 ore",
-    "compactBullet2": "Offerta scritta in 10 giorni, zero commissioni",
-    "sectionTitle": "Per venditori",
-    "intro": "Sei proprietario di un immobile a Torino e vuoi venderlo velocemente? Jungle Rent è l'acquirente diretto che stavi cercando. Acquistiamo appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto) per trasformarli in soluzioni abitative ottimizzate per studenti e giovani professionisti.",
-    "valuationFree": "Valutazione gratuita in 3-5 giorni",
-    "zeroFees": "zero commissioni",
-    "forSeller": "per il venditore",
-    "whyWeAcquire": "Perché acquistiamo immobili a Torino",
-    "para1": "Jungle Rent nasce dalla visione di ottimizzare il mercato degli affitti studenteschi a Torino, una città universitaria in continua crescita con oltre 90.000 studenti tra Politecnico di Torino, Università degli Studi (UniTo), ESCP Business School e IED. La domanda di alloggi di qualità nelle zone universitarie è altissima, ma l'offerta è spesso frammentata e poco professionale.",
-    "para2": "La nostra missione è acquisire appartamenti strategicamente posizionati nelle zone universitarie e trasformarli in housing moderno e ottimizzato: spazi condivisi confortevoli, camere singole ben arredate, servizi inclusi e gestione professionale. Per questo cerchiamo trilocali, quadrilocali e appartamenti più grandi in zone come",
-    "zones": "Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto, Santa Rita e San Paolo",
-    "para3": "idealmente a 10-20 minuti a piedi o in mezzi pubblici dai principali atenei torinesi.",
-    "para4": "Lavoriamo con notai e avvocati specializzati per garantire transazioni sicure e veloci. La nostra valutazione si basa su analisi di mercato aggiornate settimanalmente, considerando posizione, metratura, stato dell'immobile e potenziale di ottimizzazione per il mercato degli affitti.",
-    "advantagesTitle": "Vantaggi per chi vende a Jungle Rent:",
-    "para5": "nessuna commissione di agenzia (risparmi €6.000-10.000), processo rapido senza decine di visite di estranei in casa, offerta scritta chiara entro 48 ore dal sopralluogo, supporto legale incluso e pagamento sicuro.",
-    "timelineValuation": "Valutazione",
-    "timelineValuationTime": "48h",
-    "timelineInspection": "Sopralluogo",
-    "timelineInspectionTime": "10-14gg",
-    "timelineOffer": "Offerta",
-    "timelineOfferTime": "5-7gg",
-    "timelineClosing": "Rogito",
-    "timelineClosingTime": "60-90gg",
-    "benefit1Title": "Valutazione immediata",
-    "benefit1Desc": "Ricevi una valutazione professionale della tua proprietà in 24-48 ore",
-    "benefit1Tooltip": "Valutazione professionale rapida",
-    "benefit2Title": "Vendita rapida",
-    "benefit2Desc": "Processo di vendita semplificato e veloce, senza intermediari inutili",
-    "benefit2Tooltip": "Vendi in 60-90 giorni",
-    "benefit3Title": "Transazione sicura",
-    "benefit3Desc": "Contratti trasparenti e supporto legale durante tutto il processo",
-    "benefit3Tooltip": "Supporto legale trasparente",
-    "benefit4Title": "Massimo valore",
-    "benefit4Desc": "Ottieni il miglior prezzo di mercato per la tua proprietà a Torino",
-    "benefit4Tooltip": "Miglior prezzo di mercato",
-    "zonesTitle": "Zone di interesse a Torino",
-    "zonesText": "Cerchiamo appartamenti in vendita nelle seguenti zone universitarie di Torino:",
-    "zonesList": "Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto, Santa Rita, San Paolo",
-    "idealProperty": "Ideali: trilocali, quadrilocali o appartamenti più grandi vicini a Politecnico di Torino, Università di Torino (UniTo), ESCP Business School, SAA, IED.",
-    "formInvitation": "Compiliamo il form per ricevere una valutazione gratuita della tua proprietà. Nessun impegno, risposta garantita entro 3-5 giorni.",
-    "ctaButton": "Richiedi valutazione gratuita",
-    "cta": "Richiedi valutazione",
-    "scheduleCall": "Prenota una call",
-    "feature1": "Valutazione gratuita",
-    "feature2": "Vendita in 30 giorni",
-    "feature3": "Zero commissioni",
-    "valuationCta": "Vuoi prima sapere quanto vale il tuo immobile?",
-    "valuationLink": "Prova la nostra valutazione gratuita →"
-  },
-  "quickSellerLead": {
-    "title": "Vendi la tua casa",
-    "newTitle": "Valutazione gratuita in 24 ore",
-    "description": "Lascia i tuoi dati e ti contatteremo per una valutazione gratuita.",
-    "notAgency": "Non siamo un'agenzia. Se il tuo immobile è nelle nostre zone, ti facciamo un'offerta diretta.",
-    "advantage1": "Acquirente diretto",
-    "advantage2": "Zero commissioni",
-    "advantage3": "Offerta in 7 giorni",
-    "namePlaceholder": "Come ti chiami?",
-    "addressPlaceholder": "Indirizzo immobile",
-    "optional": "opzionale",
-    "submit": "Invia richiesta",
-    "sending": "Invio in corso...",
-    "successTitle": "Richiesta inviata!",
-    "successDescription": "Ti contatteremo presto per una valutazione gratuita.",
-    "successMessage": "Ti contatteremo presto per discutere la vendita del tuo immobile.",
-    "scheduleCall": "Prenota una call",
-    "close": "Chiudi",
-    "errorTitle": "Errore",
-    "errorDescription": "Si è verificato un errore. Riprova più tardi.",
-    "emailRequired": "Inserisci la tua email",
-    "invalidEmail": "Inserisci un'email valida",
-    "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi.",
-    "step2Title": "Aiutaci a preparare un'offerta migliore",
-    "step2Skip": "Salta e vai al Calendly",
-    "step2Submit": "Invia dettagli",
-    "addressLabel": "Indirizzo o zona dell'immobile",
-    "addressPlaceholderStep2": "Es. Via Roma 10, San Salvario",
-    "reasonLabel": "Perché vuoi vendere?",
-    "reasonInheritance": "Eredità",
-    "reasonRelocation": "Trasferimento",
-    "reasonNecessity": "Necessità economica",
-    "reasonOther": "Altro",
-    "estimatedValueContext": "Valore stimato: {{value}}"
-  },
-  "offerSimulator": {
-    "title": "Il tuo immobile ci interessa?",
-    "subtitle": "Scoprilo in 30 secondi",
-    "zoneLabel": "Zona dell'immobile",
-    "zoneTooltip": "Acquistiamo in zone universitarie e ospedaliere di Torino. Il prezzo medio al mq varia per zona e influenza la nostra valutazione.",
-    "zoneContext": "{{zone}}: media €{{price}}/mq (fonte OMI/Immobiliare.it 2025)",
-    "zonePlaceholder": "Seleziona zona...",
-    "sqmLabel": "Superficie (mq)",
-    "conditionLabel": "Stato dell'immobile",
-    "conditionToRenovate": "Da ristrutturare",
-    "conditionGood": "Abitabile",
-    "conditionRenovated": "Ristrutturato",
-    "emailGateTitle": "Inserisci la tua email per scoprire se il tuo immobile ci interessa",
-    "emailGatePlaceholder": "tuo@email.com",
-    "qualifiedTitle": "Ottima notizia!",
-    "qualifiedDescription": "Il tuo immobile rientra nei nostri criteri di acquisto. Ti contattiamo entro 48 ore con un'offerta concreta.",
-    "qualifiedCta": "Richiedi offerta",
-    "notQualifiedTitle": "Valutazione personalizzata",
-    "notQualifiedDescription": "Al momento il tuo immobile non rientra nei parametri standard, ma ogni caso è diverso. Contattaci per una valutazione personalizzata.",
-    "notQualifiedCta": "Contattaci comunque",
-    "whatsappCta": "Scrivici su WhatsApp",
-    "disclaimer": "Valutazione indicativa basata su dati di mercato. L'offerta vincolante verrà formulata dopo sopralluogo.",
-    "speed": "Chiusura in 60-90 giorni",
-    "noFees": "Zero commissioni"
-  },
-  "sellerScenarios": {
-    "title": "Ti riconosci in una di queste situazioni?",
-    "subtitle": "Jungle Rent acquista direttamente. Nessun intermediario.",
-    "heir": {
-      "title": "Hai ereditato un immobile",
-      "description": "Hai ereditato un appartamento a Torino ma vivi altrove? Gestire un immobile da lontano costa tempo, tasse e stress. Noi acquistiamo in 60-90 giorni, senza visite infinite."
-    },
-    "urgent": {
-      "title": "Devi vendere in fretta",
-      "description": "Trasferimento, separazione o necessità economica? Le agenzie impiegano 6-12 mesi. Noi facciamo un'offerta scritta in 48 ore."
-    },
-    "tired": {
-      "title": "Proprietario stanco",
-      "description": "Il tuo appartamento è sfitto da mesi? Noi acquistiamo anche immobili da ristrutturare nelle zone universitarie."
-    },
-    "whatsappCta": "Scrivici su WhatsApp",
-    "whatsappMessage": "Ciao, ho un immobile a Torino che vorrei vendere. Potete farmi un'offerta?"
-  },
-  "postValuation": {
-    "title": "Vuoi un'offerta concreta da Jungle Rent?",
-    "description": "Il tuo immobile vale circa {{value}}. Acquistiamo direttamente in 60-90 giorni, senza commissioni.",
-    "cta": "Richiedi offerta gratuita",
-    "whatsapp": "Oppure scrivici su WhatsApp"
-  },
-  "tourist": {
-    "sectionLabel": "Per turisti & digital nomad",
-    "sectionTitle": "Scopri Torino come un locale",
-    "sectionDesc": "Alloggi selezionati, guide esclusive e consigli autentici per vivere Torino al meglio. Che tu sia un turista o un digital nomad, ti aiutiamo a scoprire la città.",
-    "ctaTitle": "Guide complete su Torino",
-    "ctaDesc": "Scopri dove mangiare, lavorare, esplorare e vivere a Torino",
-    "ctaButton": "Leggi le guide",
-    "benefit1Title": "Alloggi selezionati",
-    "benefit1Desc": "Appartamenti verificati nei migliori quartieri di Torino",
-    "benefit1Tooltip": "Alloggi di qualità in zone sicure e autentiche",
-    "benefit2Title": "Guide locali autentiche",
-    "benefit2Desc": "Consigli insider su caffè, coworking, ristoranti e cultura locale",
-    "benefit2Tooltip": "Scopri Torino come un residente",
-    "benefit3Title": "Supporto personalizzato",
-    "benefit3Desc": "Assistenza dedicata per rendere il tuo soggiorno indimenticabile",
-    "benefit3Tooltip": "Supporto WhatsApp in italiano e inglese",
-    "contactPrompt": "Hai bisogno di consigli su Torino?",
-    "contactButton": "Contattaci su WhatsApp"
-  },
-  "faq": {
-    "title": "Domande frequenti",
-    "subtitle": "Risposte rapide alle tue domande",
-    "sectionLabel": "FAQ",
-    "investorCategory": "Per investitori",
-    "sellerCategory": "Per venditori",
-    "aboutCategory": "Chi è Jungle Rent",
-    "investorQ1": "Qual è l'investimento minimo richiesto?",
-    "investorA1": "L'investimento minimo in Jungle Rent parte da €100, permettendo di accedere al mercato immobiliare torinese anche con capitali limitati. Per chi vuole investire di più, le opportunità dipendono dagli immobili che abbiamo a disposizione e che vogliamo acquisire.",
-    "investorQ2": "Come funziona l'investimento?",
-    "investorA2": "Investi in Jungle Rent per un appartamento specifico che selezioniamo e acquistiamo noi. Sai esattamente in quale immobile entra il tuo capitale. Poi gestiamo tutto: inquilini, contratti, manutenzione. I risultati di quell'appartamento generano le tue rendite. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito.",
-    "investorQ3": "Jungle Rent gestisce completamente l'immobile?",
-    "investorA3": "Sì, offriamo un servizio di gestione full-service che include: ricerca e selezione inquilini, gestione contratti e registrazioni, manutenzione ordinaria e straordinaria, riscossione affitti, gestione morosità, assistenza legale e reportistica trimestrale dettagliata. L'investitore partecipa ai risultati senza doversi preoccupare di nulla.",
-    "investorQ4": "Quanto tempo ci vuole per vedere i primi risultati?",
-    "investorA4": "I primi risultati vengono comunicati dopo circa 2 mesi dall'investimento, una volta completata la fase di setup (acquisto/ristrutturazione, ricerca inquilini, registrazione contratti). Successivamente, ricevi report trimestrali dettagliati.",
-    "investorQ5": "Che tipo di contratti vengono proposti agli inquilini?",
-    "investorA5": "Utilizziamo contratti transitori con motivazione studio (art. 5 L. 431/98) allineati all'anno accademico, rinnovabili annualmente. Questa tipologia garantisce maggiore rotazione (quindi adeguamento degli affitti ai prezzi di mercato) e tutela legale sia per il proprietario che per l'inquilino.",
-    "investorQ6": "Come funziona la gestione dell'investimento?",
-    "investorA6": "Una volta effettuato l'investimento, ci occupiamo di tutto: selezione inquilini, contratti, manutenzione e riscossione affitti. Ricevi report trimestrali dettagliati con tutti i dati del portafoglio.",
-    "investorQ7": "Quali report ricevo e con che frequenza?",
-    "investorA7": "Ricevi un report trimestrale dettagliato che include: stato dell'immobile, tasso di occupazione, risultati del portafoglio, spese sostenute e previsioni per il trimestre successivo. Hai anche accesso a un dashboard online per monitorare il tuo investimento in tempo reale.",
-    "investorQ8": "Posso visitare le proprietà prima di investire?",
-    "investorA8": "Sì, organizziamo visite agli immobili su appuntamento per gli investitori interessati. Puoi vedere di persona le proprietà, valutare la qualità delle ristrutturazioni e parlare direttamente con il nostro team di gestione.",
-    "investorQ9": "Come posso investire con Jungle Rent?",
-    "investorA9": "Puoi investire in Jungle Rent a partire da €100 per un appartamento specifico. Non un fondo anonimo: sai quale immobile stai finanziando. Jungle Rent acquisisce, gestisce e distribuisce le rendite.",
-    "investorQ10": "Come vengono calcolati i risultati?",
-    "investorA10": "I risultati sono calcolati sulla base del nostro modello ibrido: affitti a studenti universitari durante l'anno accademico e affitti brevi turistici nei mesi estivi. Questo modello ottimizza l'occupazione rispetto agli affitti tradizionali a canone fisso. I risultati sono al netto delle spese di gestione ma al lordo delle imposte personali. ATTENZIONE: i risultati dipendono dall'andamento del mercato e non sono garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale.",
-    "investorQ11": "Cos'è il modello ibrido studenti/turisti?",
-    "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori allineati all'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano significativamente rispetto ai contratti tradizionali, pagando solo i mesi di effettiva permanenza. Inoltre, offriamo giorni ospite gratuiti durante l'estate per permettere agli studenti di tornare a Torino per gli esami senza costi aggiuntivi.",
-    "studentCategory": "Per studenti",
-    "studentQ1": "Come funziona il contratto flessibile?",
-    "studentA1": "Il contratto transitorio per motivi di studio copre l'anno accademico (settembre-giugno), permettendoti di pagare solo i mesi in cui sei effettivamente a Torino. Risparmi significativamente rispetto ai contratti tradizionali. Il contratto è rinnovabile annualmente.",
-    "studentQ2": "E se devo tornare a Torino per gli esami estivi?",
-    "studentA2": "Offriamo giorni ospite gratuiti durante i mesi estivi. Questo significa che puoi tornare a Torino per sostenere gli esami della sessione estiva senza pagare affitto aggiuntivo. È incluso nel tuo contratto.",
-    "studentQ3": "Quanto risparmio rispetto a un affitto tradizionale?",
-    "studentA3": "Con il nostro modello risparmi significativamente rispetto a un contratto tradizionale di 12 mesi. Paghi solo i mesi dell'anno accademico, evitando l'affitto estivo quando non sei a Torino.",
-    "studentQ4": "In quali zone di Torino avete alloggi?",
-    "studentA4": "I nostri alloggi sono nelle zone universitarie più richieste: San Salvario, Crocetta, Vanchiglia, Centro, Aurora, Cenisia. Tutte a pochi minuti a piedi o in bici dal Politecnico, UniTo e dalle altre università torinesi.",
-    "studentQ5": "Cosa è incluso nell'affitto?",
-    "studentA5": "L'affitto include: stanza arredata, spese condominiali, Wi-Fi, pulizia parti comuni settimanale, manutenzione ordinaria. Le utenze (luce, gas, acqua) sono a parte e divise tra coinquilini. Contratti regolari e registrati, assistenza dedicata.",
-    "sellerQ1": "Quali immobili acquistate?",
-    "sellerA1": "Acquistiamo appartamenti a Torino e prima cintura, preferibilmente nelle zone universitarie: Vanchiglia, San Salvario, Cenisia, Crocetta, Lingotto, Aurora. Siamo interessati a immobili da 2 a 5 locali, anche da ristrutturare. Valutiamo ogni proposta senza impegno.",
-    "sellerQ2": "Come funziona la valutazione gratuita?",
-    "sellerA2": "Compili il form con i dati dell'immobile e ti ricontattiamo entro 24 ore. Dopo una prima analisi telefonica, organizziamo una visita gratuita per valutare l'immobile. Ti forniamo una stima di mercato e, se interessati, una proposta d'acquisto entro 7 giorni.",
-    "sellerQ3": "Quanto tempo serve per vendere?",
-    "sellerA3": "Il nostro processo è molto più rapido rispetto alla vendita tradizionale. Dalla valutazione al rogito notarile possono passare 30-60 giorni, a seconda della complessità della pratica e della disponibilità dell'immobile. Gestiamo noi tutta la burocrazia.",
-    "sellerQ4": "Devo ristrutturare prima di vendere?",
-    "sellerA4": "No, non è necessario ristrutturare prima di vendere. Per immobili in buone condizioni o parzialmente da sistemare acquistiamo direttamente. Per immobili da ristrutturare completamente, valutiamo caso per caso in base alla complessità dei lavori e alla zona. Il prezzo di acquisto terrà sempre conto dello stato dell'immobile.",
-    "sellerQ5": "Come avviene il pagamento?",
-    "sellerA5": "Il pagamento avviene al rogito notarile tramite bonifico bancario o assegno circolare. Possiamo essere flessibili sulle tempistiche di consegna dell'immobile se hai bisogno di tempo per trasferirti. Non ci sono commissioni o costi nascosti per il venditore.",
-    "sellerQ6": "Qual è la differenza tra voi e un'agenzia immobiliare?",
-    "sellerA6": "La differenza fondamentale è che noi siamo l'acquirente diretto, non un intermediario. Un'agenzia cerca un compratore per te (e ti addebita una commissione del 3-4%). Noi invece compriamo direttamente il tuo immobile per il nostro portafoglio, eliminando intermediari, commissioni e decine di visite.",
-    "sellerQ7": "Perché non pagate commissioni?",
-    "sellerA7": "Perché non siamo intermediari. Le agenzie addebitano commissioni perché mettono in contatto venditori e acquirenti. Noi invece acquistiamo direttamente per trasformare gli immobili in alloggi per studenti, quindi non c'è nessun intermediario da pagare. Risparmi €6.000-10.000.",
-    "aboutQ1": "Chi siete e da quanto operate?",
-    "aboutA1": "Jungle Rent S.r.l. è una startup innovativa fondata nell'ottobre 2025 da Lorenzo Oni-Joseph e Andrea Niccolaini. Operiamo con nostri investimenti da 2 anni, e da febbraio 2026 lanceremo la startup per aprire le opportunità di investimento anche a investitori esterni. Siamo incubati da 2i3T, l'incubatore del Politecnico di Torino.",
-    "aboutQ2": "Come posso contattarvi?",
-    "aboutA2": "Puoi contattarci su WhatsApp al +39 331 905 3037 (risposta entro 2 ore), email junglerententeprise@gmail.com, oppure compilando i form sul sito. Sede: via Gioacchino Quarello 15/A, Torino. Disponibili per incontri su appuntamento.",
-    "aboutQ3": "Siete un'agenzia immobiliare?",
-    "aboutA3": "No. Jungle Rent è una startup immobiliare con una duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al mercato immobiliare — un'asset class storicamente sicura che, a differenza del passato, è diventata inaccessibile per molti. Acquistiamo, ristrutturiamo e gestiamo immobili per affittarli a studenti universitari e turisti.",
-    "voiceCategory": "Domande vocali comuni",
-    "voiceQ1": "Come posso investire in immobili a Torino con pochi soldi?",
-    "voiceA1": "Investi in Jungle Rent per un appartamento specifico che selezioniamo nelle zone universitarie di Torino. A partire da soli €100, sai dove va il tuo capitale, noi gestiamo il resto.",
-    "voiceQ2": "È sicuro investire in Jungle Rent?",
-    "voiceA2": "Jungle Rent è una startup innovativa certificata, registrata alla Camera di Commercio di Torino con P.IVA 13333450016. Siamo incubati da 2i3T, l'incubatore dell'Università di Torino. Tuttavia, come ogni investimento, comporta rischi inclusa la possibile perdita del capitale.",
-    "voiceQ3": "Quanto si guadagna investendo in appartamenti per studenti a Torino?",
-    "voiceA3": "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione: affitti studenteschi durante l'anno accademico e affitti turistici nei mesi estivi. Ricevi report trimestrali dettagliati.",
-    "voiceQ4": "Come faccio a vedere le mie rendite immobiliari?",
-    "voiceA4": "Hai accesso a una dashboard personale online dove puoi monitorare il tuo investimento in tempo reale. Inoltre, ricevi un report trimestrale dettagliato via email con stato dell'immobile, tasso di occupazione, risultati e previsioni.",
-    "voiceQ5": "Come faccio a vendere casa velocemente a Torino?",
-    "voiceA5": "Jungle Rent acquista direttamente la tua casa senza intermediari. Compili il form, ricevi valutazione gratuita in 48 ore, sopralluogo entro 7 giorni, offerta scritta entro 48 ore dal sopralluogo, e rogito in 60-90 giorni. Zero commissioni.",
-    "voiceQ6": "Chi compra appartamenti vicino al Politecnico di Torino?",
-    "voiceA6": "Jungle Rent acquista appartamenti nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Aurora, Lingotto, vicinissime a Politecnico e UniTo. Compriamo trilocali, quadrilocali e appartamenti più grandi, anche da ristrutturare.",
-    "voiceQ7": "Quanto vale il mio appartamento a San Salvario?",
-    "voiceA7": "Il valore dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta circa €180.000-220.000. Richiedi una valutazione gratuita a Jungle Rent per un prezzo preciso.",
-    "voiceQ8": "Dove vivono gli studenti universitari a Torino?",
-    "voiceA8": "Gli studenti universitari a Torino preferiscono i quartieri vicini alle università: San Salvario e Crocetta per il Politecnico, Centro e Vanchiglia per UniTo, Aurora per i prezzi accessibili. Queste zone offrono servizi, vita notturna e trasporti.",
-    "voiceQ9": "Qual è la migliore zona per studenti vicino al Politecnico?",
-    "voiceA9": "Le migliori zone per studenti vicino al Politecnico di Torino sono Crocetta (elegante, tranquilla, 5-10 minuti a piedi), San Salvario (vivace, multiculturale, economica) e Cenisia/San Paolo (più tranquilla, ottimi prezzi).",
-    "voiceQ10": "Come funziona il mercato degli affitti studenteschi a Torino?",
-    "voiceA10": "Torino ha oltre 90.000 studenti universitari e forte domanda di alloggi. I contratti sono tipicamente allineati all'anno accademico, i prezzi variano da €300-600 per stanza singola a seconda della zona. Jungle Rent offre contratti flessibili con risparmio significativo.",
-    "voiceQ11": "Quanto costa affittare una stanza a Torino per studenti?",
-    "voiceA11": "Una stanza singola per studenti a Torino costa mediamente €350-500 al mese in zone come San Salvario, €400-550 in Crocetta, €300-400 in Aurora. I prezzi includono spese condominiali ma non utenze.",
-    "voiceQ12": "Jungle Rent è affidabile per investire?",
-    "voiceA12": "Jungle Rent è una società a responsabilità limitata registrata in Italia (P.IVA 13333450016, REA TO-1355899), certificata come startup innovativa. Siamo incubati da 2i3T, partner del Politecnico di Torino. Offriamo contratti trasparenti e report trimestrali.",
-    "voiceQ13": "Cosa succede se voglio uscire dall'investimento Jungle Rent?",
-    "voiceA13": "Le condizioni di uscita dall'investimento sono definite nel contratto. Ti consigliamo di contattarci per discutere le opzioni disponibili. L'investimento è pensato per orizzonti di medio-lungo termine (3-5 anni) per massimizzare i risultati.",
-    "voiceQ14": "Jungle Rent compra case da ristrutturare?",
-    "voiceA14": "Sì, Jungle Rent acquista anche appartamenti da ristrutturare nelle zone universitarie di Torino, ma valutiamo caso per caso in base alla complessità dei lavori necessari e alla zona. Per immobili in buone condizioni o parzialmente da sistemare acquistiamo direttamente. Il prezzo tiene sempre conto dello stato dell'immobile.",
-    "voiceQ15": "Come contatto Jungle Rent per investire?",
-    "voiceA15": "Puoi contattare Jungle Rent su WhatsApp al +39 331 905 3037 (risposta entro 2 ore), email junglerententeprise@gmail.com, oppure compilando il form sul sito junglerent.it. Lorenzo Oni-Joseph, il fondatore, ti risponderà personalmente."
-  },
-  "contacts": {
-    "title": "Contatti",
-    "subtitle": "Parla con il nostro team",
-    "address": "Indirizzo",
-    "email": "Email",
-    "phone": "Telefono",
-    "social": "Seguici sui social",
-    "formTitle": "Invia un messaggio",
-    "formName": "Nome",
-    "formEmail": "Email",
-    "formMessage": "Messaggio",
-    "formSubmit": "Invia",
-    "formSuccess": "Grazie! Il tuo messaggio è stato inviato.",
-    "formError": "Errore! Riprova più tardi."
-  },
-  "footer": {
-    "forOwnersTitle": "Per proprietari",
-    "valuateProperty": "Valuta il tuo immobile",
-    "sellProperty": "Vendi casa",
-    "usefulResources": "Risorse utili",
-    "cheapEats": "Dove mangiare economico",
-    "taglineAlt": "L'affitto sicuro nella giungla immobiliare",
-    "copyright": "© 2025 JUNGLE RENT S.R.L. Tutti i diritti riservati.",
-    "contactTitle": "Contatti",
-    "location": "Torino, Italia",
-    "forStudentsTitle": "Per studenti",
-    "howItWorksLink": "Come funziona",
-    "universitiesLabel": "Università coperte",
-    "partnershipTitle": "Partnership",
-    "incubatorDesc": "Incubati presso l'Università di Torino",
-    "bottomTagline": "Duplice missione: crisi abitativa studentesca e accesso al real estate",
-    "bottomText": "Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino",
-    "legalAddress": "Via Gioacchino Quarello 15/A, 10135 Torino"
-  },
-  "waitlist": {
-    "title": "Iscriviti alla waitlist",
-    "description": "Compila il form per ricevere accesso prioritario alle stanze disponibili.",
-    "nameLabel": "Nome completo",
-    "namePlaceholder": "Mario Rossi",
-    "nameError": "Inserisci il tuo nome",
-    "emailLabel": "Email",
-    "emailPlaceholder": "mario.rossi@studenti.unito.it",
-    "emailError": "Inserisci un'email valida",
-    "universityLabel": "Università (opzionale)",
-    "universityPlaceholder": "Es: Politecnico di Torino",
-    "budgetLabel": "Budget mensile (opzionale)",
-    "budgetPlaceholder": "Indica budget approssimativo",
-    "moveDateLabel": "Data trasloco (opzionale)",
-    "moveDatePlaceholder": "Quando vorresti trasferirti?",
-    "referralLabel": "Come ci hai trovato? (opzionale)",
-    "referralPlaceholder": "Aiutaci a conoscerti meglio",
-    "consentLabel": "Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti da Jungle Rent",
-    "consentError": "Devi accettare per continuare",
-    "submitButton": "Iscriviti",
-    "submitting": "Invio in corso...",
-    "successTitle": "✨ Iscrizione completata!",
-    "successDescription": "Controlla la tua email per la conferma. Benvenuto in Jungle Rent!",
-    "errorTitle": "❌ Errore di invio",
-    "errorDescription": "Si è verificato un problema. Riprova tra qualche istante o contattaci su WhatsApp.",
-    "universities": {
-      "polito": "Politecnico di Torino",
-      "unito": "Università di Torino",
-      "escp": "ESCP Business School",
-      "ied": "IED Torino",
-      "iaad": "IAAD",
-      "iusto": "IUSTO",
-      "other": "Altro"
-    },
-    "budgetRanges": {
-      "300-400": "€300-400",
-      "400-500": "€400-500",
-      "500-600": "€500-600",
-      "over-600": ">€600"
-    },
-    "moveDates": {
-      "september-2025": "Settembre 2025",
-      "january-2026": "Gennaio 2026",
-      "asap": "ASAP",
-      "other": "Altro"
-    },
-    "referralSources": {
-      "friend": "Amico",
-      "university": "Università",
-      "instagram": "Instagram",
-      "facebook": "Facebook",
-      "google": "Google",
-      "ai-assistant": "AI assistant",
-      "other": "Altro"
-    }
-  },
-  "investorWaitlist": {
-    "title": "Unisciti alla waitlist investitori",
-    "description": "Mostra il tuo interesse per investire in Jungle Rent. Ti contatteremo con informazioni esclusive sulle opportunità disponibili.",
-    "nameLabel": "Nome completo",
-    "namePlaceholder": "Mario Rossi",
-    "nameError": "Inserisci il tuo nome",
-    "emailLabel": "Email",
-    "emailPlaceholder": "mario.rossi@email.com",
-    "emailError": "Inserisci un'email valida",
-    "phoneLabel": "Telefono",
-    "phonePlaceholder": "+39 333 1234567",
-    "phoneError": "Inserisci il tuo numero di telefono",
-    "investmentBudgetLabel": "Budget investimento",
-    "investmentBudgetPlaceholder": "Seleziona il tuo budget",
-    "budgetError": "Seleziona il budget disponibile",
-    "propertyTypeLabel": "Tipologia proprietà",
-    "propertyTypePlaceholder": "Cosa ti interessa?",
-    "propertyError": "Seleziona una tipologia",
-    "investmentHorizonLabel": "Orizzonte temporale",
-    "investmentHorizonPlaceholder": "Per quanto tempo?",
-    "horizonError": "Seleziona un orizzonte temporale",
-    "investmentTimingLabel": "Quando vuoi investire?",
-    "investmentTimingPlaceholder": "Tempistiche (opzionale)",
-    "hasRentalPropertiesLabel": "Hai già immobili in affitto?",
-    "hasRentalPropertiesPlaceholder": "Seleziona (opzionale)",
-    "preferredAreaLabel": "Zona preferita a Torino (opzionale)",
-    "preferredAreaPlaceholder": "Seleziona una zona...",
-    "areaFlexible": "Nessuna preferenza - Sono flessibile",
-    "referralLabel": "Come ci hai trovato? (opzionale)",
-    "referralPlaceholder": "Aiutaci a conoscerti meglio",
-    "consentLabel": "Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti sulle opportunità di investimento",
-    "consentError": "Devi accettare per continuare",
-    "submitButton": "Mostra interesse",
-    "submitting": "Invio in corso...",
-    "successTitle": "🎉 Interesse registrato!",
-    "successDescription": "Grazie! Riceverai presto informazioni esclusive sulle opportunità di investimento in Jungle Rent.",
-    "errorTitle": "Errore",
-    "errorDescription": "Qualcosa è andato storto. Riprova.",
-    "budgetRanges": {
-      "50k-100k": "€50k - €100k",
-      "100k-200k": "€100k - €200k",
-      "200k-300k": "€200k - €300k",
-      "over-300k": "Oltre €300k"
-    },
-    "propertyTypes": {
-      "monolocale": "Monolocale",
-      "bilocale": "Bilocale",
-      "trilocale": "Trilocale",
-      "appartamento-completo": "Appartamento 4+ stanze",
-      "indeciso": "Ancora indeciso"
-    },
-    "investmentHorizons": {
-      "short-term": "1-3 anni",
-      "medium-term": "3-5 anni",
-      "long-term": "5+ anni",
-      "flexible": "Flessibile"
-    },
-    "investmentTimings": {
-      "immediate": "Subito (0-3 mesi)",
-      "short": "3-6 mesi",
-      "medium": "6-12 mesi",
-      "long": "12+ mesi"
-    },
-    "rentalProperties": {
-      "yes": "Sì, ho esperienza",
-      "no": "No, è il primo investimento",
-      "considering": "Sto valutando"
-    },
-    "areas": {
-      "san-salvario": "San Salvario",
-      "crocetta": "Crocetta",
-      "centro": "Centro Storico",
-      "vanchiglia": "Vanchiglia",
-      "aurora": "Aurora/Barriera Milano",
-      "polito": "Vicino Politecnico",
-      "lingotto": "Lingotto",
-      "san-paolo": "San Paolo/Santa Rita"
-    },
-    "referralSources": {
-      "network": "Network professionale",
-      "linkedin": "LinkedIn",
-      "referral": "Segnalazione",
-      "google": "Google",
-      "ai-assistant": "AI assistant",
-      "other": "Altro"
-    }
-  },
-  "search": {
-    "askAnything": "Chiedi qualsiasi cosa"
-  },
-  "stickyCta": {
-    "closeLabel": "Chiudi"
-  },
-  "quickLead": {
-    "title": "Investi in Jungle Rent",
-    "description": "Lascia la tua email e ti contatteremo per discutere le opportunità di investimento.",
-    "namePlaceholder": "Come ti chiami?",
-    "optional": "opzionale",
-    "submit": "Invia",
-    "sending": "Invio in corso...",
-    "successTitle": "Grazie!",
-    "successDescription": "Ti contatteremo presto per discutere le opportunità di investimento.",
-    "successMessage": "Ti contatteremo presto per discutere le opportunità di investimento.",
-    "scheduleCall": "Prenota una call",
-    "close": "Chiudi",
-    "errorTitle": "Errore",
-    "errorDescription": "Si è verificato un errore. Riprova più tardi.",
-    "emailRequired": "Inserisci la tua email",
-    "invalidEmail": "Inserisci un'email valida",
-    "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi."
-  },
-  "quickInvestorLead": {
-    "title": "Prima acquisizione in corso",
-    "description": "Stiamo chiudendo il nostro primo immobile a Torino. Lascia la tua email per entrare tra i primi investitori.",
-    "urgencyBadge": "Posti limitati",
-    "submit": "Voglio partecipare",
-    "sending": "Invio in corso...",
-    "privacy": "Accettando, acconsenti alla nostra privacy policy",
-    "errorTitle": "Errore",
-    "emailRequired": "Inserisci un indirizzo email",
-    "invalidEmail": "Inserisci un indirizzo email valido",
-    "errorDescription": "Si è verificato un errore. Riprova più tardi."
-  },
-  "blog": {
-    "sectionLabel": "City Living",
-    "sectionTitle": "City Living",
-    "sectionSubtitle": "Contenuti sulla città per te... e magari non ovvi! (:",
-    "bannerTitle": "Info on the city, real estate and students shortcuts",
-    "bannerSubtitle": "Guide, analisi e consigli su Torino",
-    "readGuide": "Leggi la guida",
-    "exploreAll": "Let's check this out",
-    "newBadge": "Nuovo",
-    "viewAll": "Scopri tutte le risorse",
-    "readMore": "Leggi l'articolo",
-    "share": "Condividi",
-    "shareVia": "Condividi tramite",
-    "shareWhatsApp": "Condividi su WhatsApp",
-    "copyLink": "Copia link",
-    "linkCopied": "Link copiato!",
-    "shareNative": "Altre opzioni...",
-    "relatedPosts": "Articoli correlati",
-    "categories": {
-      "all": "Tutti",
-      "students": "Per studenti",
-      "investors": "Per investitori",
-      "sellers": "Per venditori",
-      "turisti": "Per turisti",
-      "societa": "Società"
-    },
-    "search": {
-      "placeholder": "Cerca articoli...",
-      "noResults": "Nessun articolo trovato per \"{{query}}\""
-    },
-    "filters": {
-      "tags": "Filtra per tag",
-      "clearAll": "Rimuovi filtri"
-    },
-    "hero": {
-      "title": "Risorse e guide",
-      "subtitle": "Approfondimenti, dati e consigli pratici sul mercato immobiliare torinese"
-    },
-    "cta": {
-      "students": {
-        "A": {
-          "title": "Inizia la tua ricerca oggi",
-          "description": "Unisciti a 100+ studenti che trovano stanze convenienti vicino a Politecnico e UniTo",
-          "button": "Trova una stanza"
-        },
-        "B": {
-          "title": "La tua stanza perfetta ti aspetta",
-          "description": "Accedi per primo alle stanze verificate vicino al campus. 100+ studenti già iscritti",
-          "button": "Iscriviti ora - È gratis"
-        }
+   "accessibility": {
+      "skipToContent": "Salta al contenuto principale"
+   },
+   "founders": {
+      "title": "Fondatori",
+      "contactUs": "Contattaci direttamente",
+      "callNow": "Chiama ora",
+      "message": "Scrivi",
+      "noWhatsApp": "Non hai WhatsApp?",
+      "sendSMS": "Invia un SMS",
+      "callDirect": "Chiama direttamente"
+   },
+   "howItWorks": {
+      "badge": "Il nostro modello",
+      "title": "Come funziona Jungle Rent",
+      "subtitle": "Un modello che fa vincere tutti: investitori, studenti e turisti",
+      "steps": {
+         "invest": {
+            "title": "Investi",
+            "desc": "A partire da €100, investi in Jungle Rent per un appartamento specifico"
+         },
+         "acquire": {
+            "title": "Acquistiamo",
+            "desc": "Immobili vicino alle università di Torino"
+         },
+         "rent": {
+            "title": "Affittiamo",
+            "desc": "Affitti flessibili a studenti e turisti"
+         },
+         "win": {
+            "title": "Tutti guadagnano",
+            "desc": "Investitori: payout bimestrali • Studenti: -25% affitto"
+         }
       },
       "investors": {
-        "A": {
-          "title": "Guadagna il 7-9% annuo",
-          "description": "Investi nel mercato immobiliare universitario torinese con gestione completa inclusa",
-          "button": "Scarica la guida"
-        },
-        "B": {
-          "title": "Trasforma €100k in €7-9k di rendita annua",
-          "description": "Zero gestione immobiliare. Selezione inquilini completa. Rendimenti potenziali nel distretto universitario",
-          "button": "Prenota consulenza gratuita"
-        }
+         "title": "Per investitori",
+         "point1": "Payout bimestrali",
+         "point2": "Rendimenti sopra mercato",
+         "point3": "Zero gestione",
+         "point4": "Appartamento specifico e trasparente"
       },
-      "sellers": {
-        "A": {
-          "title": "Vendi in 60-90 giorni, zero commissioni",
-          "description": "Ottieni una valutazione professionale in 48h e risparmia €6.000-10.000 di commissioni",
-          "button": "Richiedi valutazione gratuita"
-        },
-        "B": {
-          "title": "Risparmia €10k di commissioni, vendi più veloce",
-          "description": "Valutazione professionale in 48h. Rete diretta di acquirenti. Media 75 giorni vs 180 del settore",
-          "button": "Ottieni offerta in contanti"
-        }
+      "students": {
+         "title": "Per studenti",
+         "point1": "-25% rispetto all'affitto medio di Torino",
+         "point2": "Contratti flessibili anno accademico",
+         "point3": "Zero commissioni d'agenzia"
       },
-      "turisti": {
-        "A": {
-          "title": "Scopri Torino come un locale",
-          "description": "Unisciti alla nostra community per ricevere consigli esclusivi, eventi e offerte su alloggi a Torino",
-          "button": "Iscriviti alla waitlist"
-        },
-        "B": {
-          "title": "Vivi l'esperienza autentica di Torino",
-          "description": "Accesso anticipato a guide esclusive, eventi locali e alloggi selezionati nel cuore di Torino",
-          "button": "Unisciti alla community"
-        }
+      "savingHighlight": "Risparmio annuale per gli studenti rispetto all'affitto medio di Torino",
+      "ctaInvest": "Investi da €100",
+      "ctaRent": "Cerca alloggio",
+      "ctaTalkToUs": "Parla con Lorenzo"
+   },
+   "video": {
+      "title": "Scopri Jungle Rent",
+      "subtitle": "Guarda come funziona la nostra piattaforma e come possiamo aiutarti a trovare la casa perfetta a Torino",
+      "cta": "Parla con Lorenzo"
+   },
+   "problem": {
+      "badge": "Il problema",
+      "title": "La crisi degli alloggi studenteschi in Italia",
+      "subtitle": "Quasi 600.000 studenti cercano casa ogni anno, ma l'offerta di alloggi dedicati copre solo il 12,6% della domanda. Una crisi che rappresenta un'opportunità.",
+      "stat1Label": "studenti fuori sede",
+      "stat1Sub": "in Italia",
+      "stat2Label": "cerca alloggio",
+      "stat2Sub": "nel privato",
+      "stat3Label": "domanda coperta",
+      "stat3Sub": "da housing dedicato",
+      "stat4Label": "mercato potenziale",
+      "stat4Sub": "in Italia",
+      "source": "Dati 2025 - Fonte: Savills Research, Student Housing Italy Spotlight",
+      "cta": "Leggi il report completo"
+   },
+   "nav": {
+      "home": "Home",
+      "about": "Chi siamo",
+      "students": "Per studenti",
+      "investors": "Per investitori",
+      "sell": "Vendi casa",
+      "contracts": "Contratti",
+      "blog": "Risorse",
+      "faq": "FAQ",
+      "contacts": "Contatti",
+      "contactUs": "Contattaci",
+      "call": "Chiama",
+      "search": "Cerca"
+   },
+   "about": {
+      "metaTitle": "Jungle Rent - Compriamo e affittiamo immobili per studenti | Torino",
+      "metaDescription": "Startup immobiliare con duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al real estate. Acquistiamo proprietà a Torino e le affittiamo a lungo termine.",
+      "title": "Chi è Jungle Rent",
+      "subtitle": "Compriamo immobili e li affittiamo per risolvere la crisi abitativa studentesca",
+      "cycle": {
+         "title": "Il nostro modello",
+         "subtitle": "Un ciclo virtuoso che crea valore per studenti e investitori",
+         "stepLabel": "Fase {{number}}",
+         "step1Title": "Acquisizione",
+         "step1Desc": "Compriamo immobili in zone universitarie a Torino. Li teniamo nel portfolio per almeno 10 anni.",
+         "step2Title": "Affitto a studenti",
+         "step2Desc": "Affittiamo le proprietà a studenti universitari con contratti flessibili e prezzi accessibili.",
+         "step3Title": "Gestione interna",
+         "step3Desc": "Gestiamo tutto internamente: manutenzione, contratti, assistenza 24/7, senza delegare a terzi.",
+         "step4Title": "Rendite agli investitori",
+         "step4Desc": "Gli affitti generano rendite distribuite trimestralmente agli investitori, in modo trasparente.",
+         "reinvest": "I proventi vengono reinvestiti per acquisire nuove proprietà"
       },
-      "downloadReport": "Scarica report",
-      "readSavillsReport": "Report Savills 2025"
-    },
-    "meta": {
-      "title": "Blog Jungle Rent | Guide su Affitti, Investimenti e Vendite a Torino",
-      "description": "Scopri guide, dati e approfondimenti sul mercato immobiliare torinese per studenti, investitori e venditori."
-    }
-  },
-  "resourceLibrary": {
-    "sectionTitle": "Risorse gratuite per investitori",
-    "sectionSubtitle": "Guide complete per massimizzare i tuoi investimenti immobiliari",
-    "guide1Title": "Guida completa per investitori",
-    "guide1Badge": "Essenziale",
-    "guide1Desc": "Tutto quello che devi sapere per iniziare a investire in immobili universitari a Torino",
-    "guide1Pages": "45 pagine",
-    "guide1Bullet1": "Modello di business Jungle Rent",
-    "guide1Bullet2": "ROI e proiezioni finanziarie dettagliate",
-    "guide1Bullet3": "Case study reali con rendimenti",
-    "guide1Bullet4": "Confronto con altre forme di investimento",
-    "guide2Title": "Migliori investimenti immobiliari a Torino 2025",
-    "guide2Badge": "Avanzata - Mercato Torino",
-    "guide2Desc": "Analisi approfondita delle zone più redditizie, prezzi, rendimenti e strategie per il mercato torinese",
-    "guide2Pages": "Guida completa",
-    "guide2Bullet1": "Analisi dettagliata di tutte le zone (Centro, Aurora, Lingotto, Mirafiori...)",
-    "guide2Bullet2": "Prezzi al mq e rendimenti per quartiere (dati 2025)",
-    "guide2Bullet3": "Student housing: opportunità e strategie operative",
-    "guide2Bullet4": "Mutui, tassi e agevolazioni fiscali aggiornate",
-    "guide3Title": "Mercato immobiliare universitario Torino",
-    "guide3Badge": "Report 2025",
-    "guide3Desc": "Analisi completa del mercato student housing torinese con dati su domanda, offerta, prezzi e rendimenti",
-    "guide3Pages": "18 pagine",
-    "guide3Bullet1": "120.000 studenti e 50.000 fuorisede: dimensioni della domanda",
-    "guide3Bullet2": "Gap domanda-offerta: 42.500 posti letto mancanti",
-    "guide3Bullet3": "Rendimenti 7-9% vs 4-5% di Milano",
-    "guide3Bullet4": "Prezzi per zona e confronto nazionale",
-    "guide4Title": "Student Housing Italy Spotlight",
-    "guide4Badge": "Savills 2025",
-    "guide4Desc": "Report ufficiale Savills Research sul mercato student housing italiano con dati nazionali e trend",
-    "guide4Pages": "12 pagine",
-    "guide4Bullet1": "589K studenti fuori sede in Italia",
-    "guide4Bullet2": "Solo 12,6% della domanda coperta da alloggi dedicati",
-    "guide4Bullet3": "€4 miliardi di potenziale di mercato",
-    "guide4Bullet4": "Analisi città universitarie e rendimenti",
-    "downloadCta": "Scarica Guida Gratuita",
-    "downloadDirectCta": "Scarica PDF",
-    "readAnalysis": "Leggi l'analisi del report"
-  },
-  "areaSuggestion": {
-    "addToForm": "Aggiungi info al form"
-  },
-  "sellerContact": {
-    "title": "Vendi la tua casa",
-    "description": "Compila il form per ricevere una valutazione gratuita della tua proprietà a Torino",
-    "nameLabel": "Nome e cognome *",
-    "namePlaceholder": "Mario Rossi",
-    "nameError": "Nome richiesto",
-    "emailLabel": "Email *",
-    "emailPlaceholder": "mario.rossi@email.com",
-    "emailErrorInvalid": "Email non valida",
-    "phoneLabel": "Telefono *",
-    "phonePlaceholder": "+39 333 1234567",
-    "phoneError": "Telefono richiesto",
-    "addressLabel": "Indirizzo immobile *",
-    "addressPlaceholder": "Via Roma 1, Torino",
-    "addressError": "Indirizzo richiesto",
-    "zoneLabel": "Zona (opzionale)",
-    "zonePlaceholder": "Es: Crocetta",
-    "squareMetersLabel": "Metratura (opzionale)",
-    "squareMetersPlaceholder": "Es: 85 mq",
-    "roomsLabel": "Numero locali (opzionale)",
-    "roomsPlaceholder": "Es: Trilocale",
-    "floorLabel": "Piano (opzionale)",
-    "floorPlaceholder": "Es: 2° Piano",
-    "conditionLabel": "Stato immobile (opzionale)",
-    "conditionPlaceholder": "Es: Buono",
-    "motivationLabel": "Motivazione vendita (opzionale)",
-    "motivationPlaceholder": "Perché vendi?",
-    "urgentLabel": "⚡ Ho urgenza di vendere (priorità massima)",
-    "messageLabel": "Note aggiuntive (opzionale)",
-    "messagePlaceholder": "Altre informazioni utili (opzionale)...",
-    "privacyLabel": "Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) e autorizzo Jungle Rent a contattarmi per la valutazione dell'immobile.",
-    "privacyLink": "Leggi l'informativa privacy",
-    "privacyError": "Devi acconsentire al trattamento dei dati",
-    "submitButton": "Invia richiesta",
-    "submitting": "Invio in corso...",
-    "successTitle": "✨ Richiesta inviata con successo!",
-    "successDescription": "Ti contatteremo entro 48 ore per la valutazione gratuita del tuo immobile",
-    "errorTitle": "❌ Errore nell'invio",
-    "errorDescription": "Si è verificato un errore. Riprova o contattaci su WhatsApp.",
-    "footerInfo": "✓ Risposta garantita entro 48 ore • ✓ Valutazione gratuita e senza impegno • ✓ Zero commissioni",
-    "zones": {
-      "crocetta": "Crocetta",
-      "san-salvario": "San Salvario",
-      "centro": "Centro",
-      "vanchiglia": "Vanchiglia",
-      "lingotto": "Lingotto",
-      "santa-rita": "Santa Rita",
-      "san-paolo": "San Paolo",
-      "altra": "Altra zona"
-    },
-    "rooms": {
-      "2": "Bilocale (2)",
-      "3": "Trilocale (3)",
-      "4": "Quadrilocale (4)",
-      "5+": "5 o più locali"
-    },
-    "floors": {
-      "1": "1° Piano",
-      "2": "2° Piano",
-      "3": "3° Piano",
-      "4": "4° Piano",
-      "5": "5° Piano",
-      "terra": "Piano Terra",
-      "6+": "6° Piano o superiore"
-    },
-    "conditions": {
-      "ottimo": "Ottimo",
-      "buono": "Buono",
-      "da-ristrutturare": "Da ristrutturare"
-    },
-    "motivations": {
-      "cambio-citta": "Cambio città",
-      "liquidita": "Necessità liquidità",
-      "eredita": "Eredità",
-      "investimento": "Dismissione investimento",
-      "altro": "Altro"
-    }
-  },
-  "studentInfographic": {
-    "badge": "Come funziona",
-    "title": "Trova il tuo alloggio ideale",
-    "subtitle": "Il nostro modello ibrido ti fa risparmiare",
-    "steps": {
-      "search": {
-        "title": "Cerca alloggio",
-        "description": "Trova stanze vicino al Politecnico, UniTo e tutti gli atenei torinesi"
+      "foundedLabel": "Data di costituzione",
+      "foundedDate": "Ottobre 2025",
+      "legalForm": "Start-up Innovativa S.r.l.",
+      "foundersLabel": "Soci fondatori",
+      "founderLabel": "Fondatore",
+      "lorenzoRole": "Fondatore • LUISS Diritto ed Economia",
+      "capitalLabel": "Capitale sociale",
+      "capitalDesc": "Interamente versato",
+      "locationLabel": "Sede legale",
+      "servicesTitle": "Cosa facciamo",
+      "service1Title": "Acquistiamo immobili",
+      "service1Desc": "Compriamo proprietà a Torino nelle zone universitarie. Non siamo intermediari: acquistiamo direttamente e le teniamo nel nostro portafoglio per almeno 10 anni.",
+      "service2Title": "Affittiamo a studenti",
+      "service2Desc": "Affittiamo le nostre proprietà a studenti universitari con contratti flessibili, contribuendo a risolvere la crisi abitativa studentesca a Torino.",
+      "service3Title": "Gestiamo tutto internamente",
+      "service3Desc": "Manutenzione, contratti, assistenza 24/7, pulizie: gestiamo ogni aspetto delle nostre proprietà direttamente, senza delegare a terzi.",
+      "service4Title": "Investimenti accessibili",
+      "service4Desc": "Offriamo la possibilità di investire in Jungle Rent per un appartamento specifico a partire da €100, democratizzando l'accesso al mercato immobiliare.",
+      "whyChooseTitle": "Perché scegliere JungleRent",
+      "whyPoint1": "Proprietari diretti: non intermediari, ma investitori a lungo termine",
+      "whyPoint2": "Focus esclusivo sugli studenti universitari",
+      "whyPoint3": "Accesso al mercato immobiliare da €100",
+      "whyPoint4": "Assistenza 24/7 con risposta garantita",
+      "whyPoint5": "Conformità normativa e partnership con 2i3T",
+      "contactTitle": "Contattaci",
+      "contactLorenzo": "Parla con Lorenzo",
+      "sendEmail": "Invia email"
+   },
+   "breadcrumbs": {
+      "home": "Home"
+   },
+   "scrollToTop": {
+      "tooltip": "Rivedi il modello",
+      "label": "Rivedi il modello",
+      "backToTop": "Torna su"
+   },
+   "hero": {
+      "tagline": "L'affitto sicuro nella giungla immobiliare",
+      "mainHeadline": "Investi in student housing a Torino",
+      "mainHeadlineB": "Guadagna reddito passivo dagli appartamenti studenteschi a Torino",
+      "mainSubheadline": "Investi da €100 in Jungle Rent. Noi acquistiamo e gestiamo, tu guadagni.",
+      "mainSubheadlineB": "Da €100, possiedi una quota di alloggi studenteschi gestiti — noi ci occupiamo di tutto, tu incassi rendite trimestrali.",
+      "missionStatement": "Jungle Rent acquista immobili a Torino e li affitta a studenti universitari. Tu investi, noi gestiamo tutto.",
+      "badgeExplanation": "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite trimestrali.",
+      "discoverOpportunity": "Scopri l'opportunità",
+      "talkToLorenzo": "Parla con Lorenzo",
+      "startInvesting": "Entra nella prima acquisizione",
+      "discover": "Scopri",
+      "howItWorks": "Come funziona",
+      "miniFaq": {
+         "whatBuy": "Cosa compro con €100?",
+         "whatBuyAnswer": "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi. Sai esattamente dove va il tuo capitale.",
+         "howEarn": "Come ricevo i rendimenti?",
+         "howEarnAnswer": "Ogni trimestre ricevi la tua quota degli affitti incassati, proporzionale al tuo investimento. Report trasparenti e dashboard personale.",
+         "whoManages": "Chi gestisce gli immobili?",
+         "whoManagesAnswer": "Jungle Rent gestisce tutto: acquisizione, contratti, inquilini, manutenzione e fiscalità. Tu non devi fare nulla."
       },
-      "save": {
-        "title": "Risparmia",
-        "description": "Contratti flessibili allineati all'anno accademico"
-      }
-    },
-    "benefits": {
-      "contract": "Contratto flessibile",
-      "savings": "Risparmio garantito",
-      "examDays": "Giorni esame gratis"
-    },
-    "cta": "Presto disponibile: alloggi da settembre 2026"
-  },
-  "students": {
-    "seo": {
-      "title": "Affitti per studenti a Torino | Jungle Rent",
-      "description": "Trova il tuo alloggio studentesco vicino a Politecnico, UniTo e tutte le università di Torino. Contratti flessibili e prezzi accessibili."
-    },
-    "badge": "Coming Soon 2026",
-    "hero": {
-      "title": "Affitti per studenti a Torino",
-      "subtitle": "Stiamo costruendo un modo migliore per trovare casa vicino all'università. Iscriviti per essere tra i primi."
-    },
-    "waitlist": {
-      "placeholder": "La tua email",
-      "button": "Iscriviti alla waitlist",
-      "note": "Ti contatteremo quando saremo pronti. Niente spam.",
-      "success": "Iscrizione completata! Ti contatteremo presto.",
-      "error": "Errore. Riprova più tardi."
-    },
-    "stats": {
-      "students": "studenti universitari",
-      "universities": "università a Torino",
-      "neighborhoods": "quartieri studenteschi",
-      "avgRent": "affitto medio stanza"
-    },
-    "resources": {
-      "title": "Risorse per studenti",
-      "subtitle": "Guide gratuite per vivere e studiare a Torino",
-      "neighborhoods": "Guide quartieri",
-      "universities": "Università",
-      "studySpaces": "Aule studio",
-      "mobility": "Mobilità e trasporti",
-      "dailyLife": "Vita quotidiana",
-      "viewAll": "Vedi tutte le guide"
-    },
-    "investorCta": {
-      "title": "Sei un investitore?",
-      "subtitle": "Scopri come partecipare al mercato degli affitti studenteschi a Torino.",
-      "button": "Scopri l'opportunità"
-    },
-    "tools": {
-      "badge": "Strumenti gratuiti",
-      "title": "Strumenti utili per studenti",
-      "subtitle": "Risorse pratiche per aiutarti a pianificare la vita a Torino",
-      "budgetCalc": {
-        "title": "Calcolatore budget",
-        "description": "Scopri quanto costa vivere in ogni quartiere",
-        "cta": "Prova ora"
+      "miniSteps": {
+         "step1": "Da €100",
+         "step2": "Gestiamo noi"
       },
-      "gradeCalc": {
-        "title": "Calcolatore media",
-        "description": "Calcola media ponderata e voto di laurea",
-        "cta": "Prova ora"
+      "flowStep1": "Investi",
+      "flowStep2": "Quote",
+      "flowStep3": "Affitti",
+      "flowStep4": "Rendite",
+      "invest": "Investi in Jungle Rent",
+      "launchCountdown": "Lancio tra",
+      "days": "giorni",
+      "hours": "ore",
+      "minutes": "minuti",
+      "seconds": "secondi",
+      "waitlistCounter": "Unisciti ad altri {{count}} in lista d'attesa",
+      "earlyBirdPerk": "🎉 Vantaggi early bird: I primi 100 studenti ottengono un credito di €100",
+      "studentTitle": "Sei uno studente?",
+      "studentSubtitle": "Risparmia sull'affitto!",
+      "investorTitle": "Sei un investitore immobiliare?",
+      "investorSubtitle": "Investi nel real estate di Jungle Rent a partire da 100€!",
+      "subheadline": "Affitti smart e opportunità di investimento",
+      "targetAudience": "Per studenti e investitori",
+      "location": "Vicino a Politecnico, UniTo e tutti i principali atenei torinesi",
+      "questionnaire": "Vinci 100€ - Compila il questionario!",
+      "quizCta": "Fai il Quiz e Vinci €100",
+      "quizSubtitle": "Aiutaci a capire le tue esigenze e potresti vincere €100",
+      "availableRooms": "30 stanze in quadrilocali disponibili da settembre 2026",
+      "supportedBy": "Supportati da",
+      "iAmStudent": "Sono uno Studente",
+      "iAmInvestor": "Sono un Investitore",
+      "contactLorenzo": "Contatta Lorenzo",
+      "trustSafe": "Contratti sicuri",
+      "trustSupport": "Supporto dedicato",
+      "trustNoFees": "Zero commissioni",
+      "logoAlt": "Jungle Rent - Logo ufficiale - Affitti ottimizzati per studenti e investitori a Torino",
+      "seoH1": "Jungle Rent - Investimenti in student housing a Torino | Gestione completa",
+      "smartRentals": "Affitti smart",
+      "investmentOpportunities": "Opportunità di investimento",
+      "students": "studenti",
+      "investors": "investitori",
+      "politecnico": "Politecnico",
+      "unito": "UniTo",
+      "benefits": "benefici",
+      "logo2i3tAlt": "2i3T Incubatore Imprese Università di Torino - Partner ufficiale",
+      "sellerLink": {
+         "prefix": "Sei un proprietario?",
+         "cta": "Scopri come vendere casa"
       },
-      "utilityComp": {
-        "title": "Comparatore bollette",
-        "description": "Confronta le tariffe di luce e gas",
-        "comingSoon": "Prossimamente"
+      "socialProof": "Bilocale a Torino · €45-70K · Registra il tuo interesse"
+   },
+   "studentSearch": {
+      "title": "Trova la tua stanza",
+      "description": "Dicci cosa cerchi e ti aiuteremo a trovare la soluzione perfetta",
+      "cardTitle": "Trova la tua stanza ideale",
+      "cardDescription": "Compila il form e ti aiuteremo a trovare la soluzione perfetta per te",
+      "cardCta": "Inizia la ricerca",
+      "nameLabel": "Nome",
+      "namePlaceholder": "Mario Rossi",
+      "nameErrorMin": "Il nome deve contenere almeno 2 caratteri",
+      "nameErrorMax": "Il nome non può superare 100 caratteri",
+      "nameErrorFormat": "Il nome può contenere solo lettere, spazi, apostrofi e trattini",
+      "emailLabel": "Email",
+      "emailPlaceholder": "mario.rossi@example.com",
+      "emailErrorRequired": "L'email è obbligatoria",
+      "emailErrorInvalid": "Inserisci un indirizzo email valido (es: nome@esempio.com)",
+      "emailErrorMax": "L'email non può superare 255 caratteri",
+      "whatYouLookingForLabel": "Cosa cerchi?",
+      "whatYouLookingForPlaceholder": "Descrivi la tua stanza ideale: zona, caratteristiche, cosa è importante per te...",
+      "whatYouLookingForErrorMin": "Descrivi cosa cerchi con almeno 20 caratteri per aiutarci a trovarti la soluzione migliore",
+      "whatYouLookingForErrorMax": "La descrizione non può superare 500 caratteri",
+      "roommatesLabel": "Numero coinquilini (opzionale)",
+      "roommatesPlaceholder": "Seleziona...",
+      "roommatesOptions": {
+         "2": "2 persone totali",
+         "3": "3 persone totali",
+         "solo": "Solo io (stanza singola)",
+         "4plus": "4+ persone totali",
+         "flexible": "Non ho preferenze"
       },
-      "examSession": {
-        "title": "Organizzatore sessione",
-        "description": "Pianifica la sessione esami in modo ottimale",
-        "cta": "Prova ora"
+      "areaLabel": "Zona preferita (opzionale)",
+      "areaPlaceholder": "Seleziona...",
+      "areaOptions": {
+         "san-salvario": "San Salvario",
+         "crocetta": "Crocetta",
+         "centro": "Centro",
+         "polito": "Vicino Politecnico",
+         "unito": "Vicino Università",
+         "san-paolo": "San Paolo/Santa Rita",
+         "aurora": "Aurora/Vanchiglia",
+         "flexible": "Non ho preferenze"
       },
-      "allTools": {
-        "title": "Tutti gli strumenti",
-        "description": "Scopri tutti i tool gratuiti"
+      "studyLabel": "Cosa studierai? (opzionale)",
+      "studyPlaceholder": "Es: Ingegneria Informatica al Politecnico",
+      "studyErrorMax": "Il campo di studio non può superare 150 caratteri",
+      "budgetLabel": "Budget mensile (opzionale)",
+      "budgetPlaceholder": "Seleziona...",
+      "budgetRanges": {
+         "400-500": "400-500€ (escluse spese)",
+         "500-600": "500-600€ (escluse spese)",
+         "600-700": "600-700€ (escluse spese)",
+         "over-700": "Oltre 700€ (escluse spese)"
       },
-      "backToTools": "Torna agli strumenti"
-    },
-    "whyJungle": {
+      "moveDateLabel": "Quando vuoi trasferirti? (opzionale)",
+      "moveDatePlaceholder": "Seleziona...",
+      "moveDates": {
+         "september-2026": "Settembre 2026",
+         "asap": "Prima possibile",
+         "custom": "Data personalizzata"
+      },
+      "customMoveDateLabel": "Specifica la data",
+      "customMoveDatePlaceholder": "Es: Marzo 2026, Fine anno, etc.",
+      "customMoveDateErrorMax": "La data personalizzata non può superare 100 caratteri",
+      "consentLabel": "Acconsento al trattamento dei miei dati personali secondo la Privacy Policy",
+      "consentError": "Devi accettare la privacy policy per continuare",
+      "resourcesTitle": "📚 Risorse utili per studenti",
+      "resourcesDesc": "Mentre cerchi casa, scopri dove studiare a Torino",
+      "studySpacesLink": "Guida alle 57 migliori aule studio",
+      "submitButton": "Invia richiesta",
+      "submitting": "Invio in corso...",
+      "successTitle": "Richiesta inviata! 🎉",
+      "successDescription": "Ti contatteremo presto con le migliori opzioni per te",
+      "errorTitle": "Errore nell'invio",
+      "errorDescription": "Si è verificato un errore. Riprova o contattaci su WhatsApp",
+      "draftFoundMessage": "Abbiamo trovato una bozza salvata automaticamente",
+      "loadDraft": "Carica bozza",
+      "draftLoadedTitle": "Bozza caricata",
+      "draftLoadedDesc": "I tuoi dati precedenti sono stati ripristinati",
+      "draftClearedTitle": "Bozza eliminata",
+      "draftClearedDesc": "La bozza salvata è stata rimossa",
+      "draftAutoSaved": "Bozza salvata automaticamente"
+   },
+   "trustBadge": {
+      "title": "La tua sicurezza è la nostra priorità",
+      "verified": "Contratti certificati",
+      "support": "Supporto 24/7",
+      "transparent": "Trasparenza totale",
+      "sectionLabel": "Partnership istituzionale",
+      "supportedBy": "Supportati da 2i3T",
+      "incubator": "Incubatore d'Imprese dell'Università di Torino",
+      "learnMore": "Scopri di più su 2i3T",
+      "guarantee": "Incubati presso l'ecosistema universitario torinese, garantendo professionalità e affidabilità in ogni transazione",
+      "inlineCta": "Vuoi saperne di più?"
+   },
+   "benefits": {
+      "title": "Perché scegliere Jungle Rent",
+      "subtitle": "Vantaggi esclusivi per la tua esperienza abitativa",
+      "sectionLabel": "I nostri vantaggi",
+      "whyJungleRent": "Perché Jungle Rent",
+      "sectionTitle": "Vantaggi concreti per studenti e investitori",
+      "sectionSubtitle": "Gestione professionale, risparmio garantito e partnership istituzionali",
+      "savings": "Risparmi certificati",
+      "savingsDesc": "Risparmia circa il 30% sugli affitti. Affitti convenienti con contratti trasparenti.",
+      "savingsHighlight": "Risparmia",
+      "savingsHow1": "Nessuna commissione di agenzia",
+      "savingsHow2": "Affitti competitivi",
+      "savingsTooltip": "Risparmia €200-400 al mese",
+      "investment": "Opportunità di investimento",
+      "investmentDesc": "Per investitori: gestione professionale delle proprietà con domanda universitaria costante",
+      "investmentHighlight": "Investitori",
+      "investmentHow1": "Accesso da €100",
+      "investmentHow2": "Gestione completa inclusa",
+      "investmentTooltip": "Partecipa al mercato immobiliare",
+      "location": "Posizione strategica",
+      "locationDesc": "Portfolio immobiliare selezionato vicino a tutti i principali atenei: Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO",
+      "locationHighlight": "Top location",
+      "locationHow1": "Vicino a tutte le università",
+      "locationHow2": "Zone strategiche ad alta domanda",
+      "locationTooltip": "Vicino a tutte le università",
+      "quality": "Contratti certificati",
+      "qualityDesc": "Contratti regolari, gestione professionale e trasparenza totale. Supportati da 2i3T - Incubatore Universitario.",
+      "qualityHighlight": "100% Safe",
+      "qualityHow1": "Supporto legale incluso",
+      "qualityHow2": "Partnership con 2i3T",
+      "qualityTooltip": "Contratti legali verificati",
+      "studentCta": "Sono uno studente",
+      "investorCta": "Sono un investitore"
+   },
+   "student": {
+      "title": "Per studenti",
+      "subtitle": "La nostra missione: risolvere la crisi abitativa studentesca",
+      "marketProofLabel": "Il nostro mercato",
+      "marketProofTitle": "90.000+ studenti universitari a Torino",
+      "marketProofDesc": "7 università, domanda costante tutto l'anno. Ecco perché investiamo qui.",
+      "sectionLabel": "Per studenti",
+      "sectionTitle": "Risolviamo la crisi abitativa studentesca",
+      "compactDesc": "Affitti accessibili in zone universitarie. Contratti trasparenti, zero commissioni e supporto dedicato per il tuo percorso accademico.",
+      "contactCta": "Contattaci su WhatsApp",
+      "sectionSubtitle": "Parte della nostra duplice missione: rendere l'alloggio accessibile a tutti gli studenti",
+      "benefit1Title": "Costi ridotti",
+      "benefit1Desc": "Affitti convenienti: più soldi per studiare e vivere Torino",
+      "benefit1Tooltip": "Stanze di qualità convenienti",
+      "benefit2Title": "Contratti flessibili",
+      "benefit2Desc": "Contratti flessibili per l'anno accademico con giorni ospite gratuiti per esami estivi: risparmia il 25%",
+      "benefit2Tooltip": "Opzioni di prenotazione flessibili",
+      "contactText": "Contatta direttamente i nostri student advisor:",
+      "contactLorenzo": "Parla con Lorenzo",
+      "sendEmail": "Invia email",
+      "responseTime": "Risposta entro 40 minuti",
+      "cta": "Scopri le stanze",
+      "feature1": "Vicino alle università",
+      "feature2": "Coinquilini selezionati",
+      "feature3": "All-inclusive",
+      "separator": "e"
+   },
+   "investor": {
+      "title": "Per investitori",
+      "subtitle": "Democratizziamo l'accesso al mercato immobiliare",
+      "sectionLabel": "Per investitori",
+      "sectionTitle": "Accedi al mercato immobiliare da €100",
+      "compactDesc": "Investi in immobili universitari a Torino. Gestione completa, modello ibrido studenti/turisti.",
+      "sectionSubtitle": "Duplice missione: crisi abitativa studentesca e accesso democratico al mercato immobiliare",
+      "startupInnovativaBadge": "Start-up innovativa certificata",
+      "whyInvestTitle": "Perché investire con noi",
+      "benefit1Title": "Investimento ottimizzato",
+      "benefit1Desc": "Opportunità nel mercato immobiliare grazie alla nostra gestione professionale e pricing strategico",
+      "benefit2Title": "Gestione completa",
+      "benefit2Desc": "Ci occupiamo di tutto: contratti, manutenzione, relazioni con inquilini. Tu pensi solo all'investimento",
+      "benefit3Title": "Portfolio strategico",
+      "benefit3Desc": "Proprietà selezionate vicino ai 7 principali poli universitari di Torino (Politecnico, UniTo, ESCP, SAA, IED, IAAD, IUSTO) con alta domanda costante",
+      "flowStep1": "Accessibilità",
+      "flowStep1Sub": "Da €100",
+      "flowStep2": "Gestione",
+      "flowStep2Sub": "Professionale",
+      "flowStep3": "Portfolio",
+      "flowStep3Sub": "Strategico",
+      "waitlistTitle": "Iscriviti alla waitlist investitori",
+      "waitlistSubtitle": "Ricevi aggiornamenti esclusivi sulle opportunità di investimento immobiliare a Torino",
+      "waitlistCta": "Entra in lista d'attesa",
+      "priorityResponse": "Risposta prioritaria garantita",
+      "cta": "Scopri l'opportunità",
+      "feature1": "Accesso da €100",
+      "feature2": "Gestione completa",
+      "feature3": "Zero burocrazia",
+      "activeInvestors": "investitori già attivi",
+      "talkToAdvisor": "Parla con Lorenzo",
+      "talkToLorenzo": "Parla con Lorenzo",
+      "scheduleCall": "Prenota una call",
+      "bookCall": "Mostra interesse",
+      "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino",
+      "minInvestmentBadge": "Investi da €100",
+      "marketStats": {
+         "minInvestment": "investimento minimo",
+         "studentSavings": "risparmio studenti",
+         "studentsOffsite": "studenti fuori sede in Italia",
+         "marketPotential": "mercato potenziale",
+         "disclaimer": "Stime 2025 - Fonte: Savills Research"
+      },
+      "testimonials": {
+         "title": "Cosa dicono gli investitori",
+         "quote1": "Ho investito €500 e ricevo report trimestrali trasparenti. Finalmente posso accedere al mercato immobiliare.",
+         "author1": "Marco, 32 anni",
+         "quote2": "Zero gestione, tutto è curato dal team. Posso concentrarmi sul mio lavoro mentre l'investimento lavora per me.",
+         "author2": "Giulia, 28 anni"
+      },
+      "socialProofLine": "Primo progetto in fase di selezione · Registrati per aggiornamenti"
+   },
+   "infographic": {
       "badge": "Il nostro modello",
-      "title": "Affitto pensato per chi studia",
-      "subtitle": "Finalmente un modello che capisce la vita universitaria",
-      "contract": {
-        "title": "Paghi solo quando studi",
-        "description": "Il tuo affitto segue il calendario universitario, non quello del proprietario. Studi a Torino? Paghi. Sei a casa dalla tua famiglia? Non paghi.",
-        "highlight": "Risparmio garantito"
+      "title": "Il modello Jungle Rent",
+      "subtitle": "Investimenti immobiliari semplificati",
+      "steps": {
+         "invest": {
+            "title": "Investi",
+            "description": "Partecipa da €100",
+            "detail": "Accedi al mercato immobiliare senza comprare un intero immobile. Zero burocrazia, zero gestione diretta.",
+            "keyPoints": [
+               "Investi da soli €100",
+               "Nessun immobile da gestire",
+               "Zero burocrazia e costi nascosti"
+            ]
+         },
+         "acquire": {
+            "title": "Acquistiamo",
+            "description": "Immobili in zone universitarie",
+            "detail": "Selezioniamo e acquistiamo immobili in zone ad alta domanda vicino a Politecnico, UniTo e le università torinesi.",
+            "keyPoints": [
+               "Due diligence completa",
+               "Zone strategiche ad alta domanda",
+               "7 università servite"
+            ]
+         },
+         "manage": {
+            "title": "Gestiamo",
+            "description": "Affitti flessibili",
+            "detail": "Affitti flessibili per studenti e turisti. Massimizzazione dell'occupazione tutto l'anno.",
+            "keyPoints": [
+               "Affitti flessibili studenti e turisti",
+               "Manutenzione inclusa"
+            ]
+         },
+         "earn": {
+            "title": "Partecipi",
+            "description": "Ai risultati del portafoglio",
+            "detail": "Partecipi ai risultati degli immobili gestiti. Report trasparenti e dashboard personale per monitorare il tuo investimento.",
+            "keyPoints": [
+               "Report trimestrali trasparenti",
+               "Dashboard personale",
+               "Rendimenti distribuiti"
+            ]
+         }
       },
-      "summer": {
-        "badge": "Esclusivo",
-        "title": "Flessibilità estiva",
-        "description": "Devi tornare per gli esami? Nessun problema. Paghi solo i giorni che usi, non mesi interi.",
-        "cta": "Scopri come funziona"
+      "metrics": {
+         "yield": {
+            "label": "Investimento minimo",
+            "description": "Da €100"
+         },
+         "savings": {
+            "label": "Risparmio studenti",
+            "description": "vs contratti 12 mesi"
+         },
+         "students": {
+            "label": "Studenti",
+            "description": "Universitari a Torino"
+         },
+         "universities": {
+            "label": "Università",
+            "description": "Atenei nel territorio"
+         }
       },
-      "commissions": {
-        "title": "Zero commissioni",
-        "description": "Affitti direttamente da noi. Niente agenzie, niente costi nascosti.",
-        "highlight": "Risparmi €200-400"
+      "disclaimer": "*Gli investimenti comportano rischi, inclusa la possibile perdita del capitale. I risultati dipendono dall'andamento del mercato.",
+      "cta": "Gestione completa inclusa.",
+      "scrollHint": "Attendi per continuare"
+   },
+   "slideOverlays": {
+      "invest": {
+         "minInvestment": "Da €100",
+         "caption": "Tu investi, noi facciamo il resto. Zero burocrazia."
       },
-      "comparison": {
-        "traditional": {
-          "title": "Affitto tradizionale",
-          "months12": "Contratto 12 mesi obbligatorio",
-          "paySummer": "Paghi l'estate anche se sei a casa",
-          "noFlex": "Nessuna flessibilità per gli esami",
-          "commissions": "Commissioni agenzia €200-400"
-        },
-        "jungle": {
-          "title": "Jungle Rent",
-          "months9": "Contratto anno accademico",
-          "payUse": "Estate: paghi solo i giorni che usi",
-          "flex": "Flessibilità per sessioni estive",
-          "noCommissions": "Zero commissioni, affitti diretti"
-        }
+      "acquire": {
+         "university": "Zone universitarie",
+         "caption": "Acquistiamo vicino a Politecnico, UniTo e i 7 atenei torinesi."
       },
-      "cta": {
-        "waitlist": "Iscriviti alla waitlist",
-        "whatsapp": "Parla con Lorenzo"
+      "manage": {
+         "students": "Studenti Set-Giu",
+         "tourists": "Turisti Lug-Ago",
+         "caption": "Occupazione 365 giorni. Contratti, manutenzione, fiscalità inclusi."
+      },
+      "earn": {
+         "quarterly": "Report trimestrali",
+         "dashboard": "Dashboard personale",
+         "caption": "Partecipi ai risultati con trasparenza totale."
       }
-    }
-  },
-  "examSessionPlanner": {
-    "seo": {
-      "title": "Organizzatore sessione esami | Jungle Rent",
-      "description": "Pianifica la tua sessione d'esame in modo ottimale. Considera CFU, difficoltà e propedeuticità per creare il piano perfetto."
-    },
-    "badge": "Strumento gratuito",
-    "title": "Organizzatore sessione esami",
-    "subtitle": "Pianifica la tua sessione in modo strategico considerando CFU, difficoltà e propedeuticità",
-    "addExam": {
-      "title": "Aggiungi esame",
-      "name": "Nome esame",
-      "namePlaceholder": "Es: Analisi Matematica I",
-      "cfu": "CFU",
-      "difficulty": "Difficoltà percepita",
-      "difficultyOptions": {
-        "1": "😊 Facile",
-        "2": "😐 Media",
-        "3": "😰 Difficile",
-        "4": "💀 Boss finale"
+   },
+   "investors": {
+      "metaTitle": "Investimenti immobiliari accessibili Torino - Democratizziamo il real estate | Jungle Rent",
+      "metaDescription": "Democratizziamo l'accesso al mercato immobiliare, un'asset class storicamente sicura oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione completa.",
+      "heroTitle": "Democratizziamo l'accesso al real estate",
+      "heroSubtitle": "Un'asset class storicamente sicura, oggi inaccessibile a molti. Investi in immobili universitari a Torino con gestione professionale.",
+      "metricReturn": "Rendimento annuo target",
+      "metricOccupancy": "Tasso occupazione",
+      "metricManagement": "Gestione inclusa",
+      "benefitsTitle": "Perché investire con noi",
+      "benefitsSubtitle": "Partnership professionali nel mercato degli affitti universitari torinesi",
+      "processTitle": "Come funziona",
+      "processSubtitle": "4 semplici step per iniziare a investire",
+      "step1Title": "Contatto iniziale",
+      "step1Desc": "Parliamo delle tue esigenze e obiettivi di investimento via WhatsApp o call",
+      "step2Title": "Analisi opportunità",
+      "step2Desc": "Ti presentiamo le proprietà disponibili con analisi dettagliata e proiezioni",
+      "step3Title": "Conferma",
+      "step3Desc": "Finalizzi la partecipazione con contratti trasparenti e supporto legale incluso",
+      "step4Title": "Partecipazione ai risultati",
+      "step4Desc": "Partecipi ai risultati del portafoglio con report trimestrali. Noi gestiamo tutto",
+      "ctaTitle": "Pronto a investire?",
+      "ctaSubtitle": "Parla con un nostro advisor e scopri le opportunità disponibili oggi",
+      "readSavillsAnalysis": "Leggi l'analisi completa del mercato"
+   },
+   "seller": {
+      "title": "Vendi la tua casa a Torino",
+      "subtitle": "Valutazione gratuita • Zero commissioni • Rogito in 60-90 giorni",
+      "sectionLabel": "Vendi casa",
+      "heroHighlight": "Vendi",
+      "heroRest": "la tua proprietà",
+      "heroBracket": "(a noi)",
+      "heroSubheadline": "Acquirente diretto, zero commissioni, 60-90 giorni",
+      "newTitle": "Compriamo il tuo immobile. Non siamo un'agenzia.",
+      "newSubtitle": "Non cerchiamo acquirenti per te. Jungle Rent acquista direttamente immobili in zone universitarie.",
+      "directBuyerTitle": "Compriamo il tuo immobile direttamente",
+      "directBuyerSubtitle": "Non siamo un'agenzia. Acquistiamo noi per il nostro portafoglio.",
+      "benefit1": "Zero commissioni",
+      "benefit2": "60-90 giorni",
+      "benefit3": "Acquirente garantito",
+      "urgencyBadge": "Cerchiamo immobili in San Salvario, Vanchiglia, zona Ospedali, Santa Rita, Cit Turin, Campidoglio, Aurora, Campus Einaudi, Corso Casale",
+      "missionStatement": "Acquistiamo immobili nelle zone universitarie di Torino per offrire alloggi a 90.000+ studenti. Il tuo immobile diventa parte della soluzione alla crisi abitativa.",
+      "readGuide": "Leggi la guida completa: rischi, tasse e agenzie",
+      "comparison": {
+         "agency": "Agenzia",
+         "jungleRent": "Jungle Rent",
+         "roleLabel": "Ruolo",
+         "roleAgency": "Intermediario",
+         "roleJR": "Acquirente",
+         "commissionsLabel": "Commissioni",
+         "commissionsJR": "€0",
+         "timeLabel": "Tempo",
+         "months": "mesi",
+         "days": "giorni",
+         "visitsLabel": "Visite",
+         "visitsAgency": "Decine",
+         "visitsJR": "1-2 max"
       },
-      "prerequisite": "Propedeutico a",
-      "prerequisitePlaceholder": "Seleziona esame...",
-      "noPrerequisite": "Nessun prerequisito",
-      "date": "Data appello",
-      "datePlaceholder": "Seleziona data...",
-      "session": "Sessione",
-      "sessionOptions": {
-        "invernale": "Invernale (Gen-Feb)",
-        "estiva": "Estiva (Giu-Lug)",
-        "autunnale": "Autunnale (Set)"
+      "compactTitle": "Valutiamo e acquistiamo in 7 giorni",
+      "compactDesc": "Vendi il tuo immobile a Jungle Rent rapidamente e senza commissioni. Acquistiamo in zone universitarie.",
+      "compactBullet1": "Valutazione gratuita in 72 ore",
+      "compactBullet2": "Offerta scritta in 10 giorni, zero commissioni",
+      "sectionTitle": "Per venditori",
+      "intro": "Sei proprietario di un immobile a Torino e vuoi venderlo velocemente? Jungle Rent è l'acquirente diretto che stavi cercando. Acquistiamo appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto) per trasformarli in soluzioni abitative ottimizzate per studenti e giovani professionisti.",
+      "valuationFree": "Valutazione gratuita in 3-5 giorni",
+      "zeroFees": "zero commissioni",
+      "forSeller": "per il venditore",
+      "whyWeAcquire": "Perché acquistiamo immobili a Torino",
+      "para1": "Jungle Rent nasce dalla visione di ottimizzare il mercato degli affitti studenteschi a Torino, una città universitaria in continua crescita con oltre 90.000 studenti tra Politecnico di Torino, Università degli Studi (UniTo), ESCP Business School e IED. La domanda di alloggi di qualità nelle zone universitarie è altissima, ma l'offerta è spesso frammentata e poco professionale.",
+      "para2": "La nostra missione è acquisire appartamenti strategicamente posizionati nelle zone universitarie e trasformarli in housing moderno e ottimizzato: spazi condivisi confortevoli, camere singole ben arredate, servizi inclusi e gestione professionale. Per questo cerchiamo trilocali, quadrilocali e appartamenti più grandi in zone come",
+      "zones": "Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto, Santa Rita e San Paolo",
+      "para3": "idealmente a 10-20 minuti a piedi o in mezzi pubblici dai principali atenei torinesi.",
+      "para4": "Lavoriamo con notai e avvocati specializzati per garantire transazioni sicure e veloci. La nostra valutazione si basa su analisi di mercato aggiornate settimanalmente, considerando posizione, metratura, stato dell'immobile e potenziale di ottimizzazione per il mercato degli affitti.",
+      "advantagesTitle": "Vantaggi per chi vende a Jungle Rent:",
+      "para5": "nessuna commissione di agenzia (risparmi €6.000-10.000), processo rapido senza decine di visite di estranei in casa, offerta scritta chiara entro 48 ore dal sopralluogo, supporto legale incluso e pagamento sicuro.",
+      "timelineValuation": "Valutazione",
+      "timelineValuationTime": "48h",
+      "timelineInspection": "Sopralluogo",
+      "timelineInspectionTime": "10-14gg",
+      "timelineOffer": "Offerta",
+      "timelineOfferTime": "5-7gg",
+      "timelineClosing": "Rogito",
+      "timelineClosingTime": "60-90gg",
+      "benefit1Title": "Valutazione immediata",
+      "benefit1Desc": "Ricevi una valutazione professionale della tua proprietà in 24-48 ore",
+      "benefit1Tooltip": "Valutazione professionale rapida",
+      "benefit2Title": "Vendita rapida",
+      "benefit2Desc": "Processo di vendita semplificato e veloce, senza intermediari inutili",
+      "benefit2Tooltip": "Vendi in 60-90 giorni",
+      "benefit3Title": "Transazione sicura",
+      "benefit3Desc": "Contratti trasparenti e supporto legale durante tutto il processo",
+      "benefit3Tooltip": "Supporto legale trasparente",
+      "benefit4Title": "Massimo valore",
+      "benefit4Desc": "Ottieni il miglior prezzo di mercato per la tua proprietà a Torino",
+      "benefit4Tooltip": "Miglior prezzo di mercato",
+      "zonesTitle": "Zone di interesse a Torino",
+      "zonesText": "Cerchiamo appartamenti in vendita nelle seguenti zone universitarie di Torino:",
+      "zonesList": "Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto, Santa Rita, San Paolo",
+      "idealProperty": "Ideali: trilocali, quadrilocali o appartamenti più grandi vicini a Politecnico di Torino, Università di Torino (UniTo), ESCP Business School, SAA, IED.",
+      "formInvitation": "Compiliamo il form per ricevere una valutazione gratuita della tua proprietà. Nessun impegno, risposta garantita entro 3-5 giorni.",
+      "ctaButton": "Richiedi valutazione gratuita",
+      "cta": "Richiedi valutazione",
+      "scheduleCall": "Prenota una call",
+      "feature1": "Valutazione gratuita",
+      "feature2": "Vendita in 30 giorni",
+      "feature3": "Zero commissioni",
+      "valuationCta": "Vuoi prima sapere quanto vale il tuo immobile?",
+      "valuationLink": "Prova la nostra valutazione gratuita →"
+   },
+   "quickSellerLead": {
+      "title": "Vendi la tua casa",
+      "newTitle": "Valutazione gratuita in 24 ore",
+      "description": "Lascia i tuoi dati e ti contatteremo per una valutazione gratuita.",
+      "notAgency": "Non siamo un'agenzia. Se il tuo immobile è nelle nostre zone, ti facciamo un'offerta diretta.",
+      "advantage1": "Acquirente diretto",
+      "advantage2": "Zero commissioni",
+      "advantage3": "Offerta in 7 giorni",
+      "namePlaceholder": "Come ti chiami?",
+      "addressPlaceholder": "Indirizzo immobile",
+      "optional": "opzionale",
+      "submit": "Invia richiesta",
+      "sending": "Invio in corso...",
+      "successTitle": "Richiesta inviata!",
+      "successDescription": "Ti contatteremo presto per una valutazione gratuita.",
+      "successMessage": "Ti contatteremo presto per discutere la vendita del tuo immobile.",
+      "scheduleCall": "Prenota una call",
+      "close": "Chiudi",
+      "errorTitle": "Errore",
+      "errorDescription": "Si è verificato un errore. Riprova più tardi.",
+      "emailRequired": "Inserisci la tua email",
+      "invalidEmail": "Inserisci un'email valida",
+      "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi.",
+      "step2Title": "Aiutaci a preparare un'offerta migliore",
+      "step2Skip": "Salta e vai al Calendly",
+      "step2Submit": "Invia dettagli",
+      "addressLabel": "Indirizzo o zona dell'immobile",
+      "addressPlaceholderStep2": "Es. Via Roma 10, San Salvario",
+      "reasonLabel": "Perché vuoi vendere?",
+      "reasonInheritance": "Eredità",
+      "reasonRelocation": "Trasferimento",
+      "reasonNecessity": "Necessità economica",
+      "reasonOther": "Altro",
+      "estimatedValueContext": "Valore stimato: {{value}}"
+   },
+   "offerSimulator": {
+      "title": "Il tuo immobile ci interessa?",
+      "subtitle": "Scoprilo in 30 secondi",
+      "zoneLabel": "Zona dell'immobile",
+      "zoneTooltip": "Acquistiamo in zone universitarie e ospedaliere di Torino. Il prezzo medio al mq varia per zona e influenza la nostra valutazione.",
+      "zoneContext": "{{zone}}: media €{{price}}/mq (fonte OMI/Immobiliare.it 2025)",
+      "zonePlaceholder": "Seleziona zona...",
+      "sqmLabel": "Superficie (mq)",
+      "conditionLabel": "Stato dell'immobile",
+      "conditionToRenovate": "Da ristrutturare",
+      "conditionGood": "Abitabile",
+      "conditionRenovated": "Ristrutturato",
+      "emailGateTitle": "Inserisci la tua email per scoprire se il tuo immobile ci interessa",
+      "emailGatePlaceholder": "tuo@email.com",
+      "qualifiedTitle": "Ottima notizia!",
+      "qualifiedDescription": "Il tuo immobile rientra nei nostri criteri di acquisto. Ti contattiamo entro 48 ore con un'offerta concreta.",
+      "qualifiedCta": "Richiedi offerta",
+      "notQualifiedTitle": "Valutazione personalizzata",
+      "notQualifiedDescription": "Al momento il tuo immobile non rientra nei parametri standard, ma ogni caso è diverso. Contattaci per una valutazione personalizzata.",
+      "notQualifiedCta": "Contattaci comunque",
+      "whatsappCta": "Scrivici su WhatsApp",
+      "disclaimer": "Valutazione indicativa basata su dati di mercato. L'offerta vincolante verrà formulata dopo sopralluogo.",
+      "speed": "Chiusura in 60-90 giorni",
+      "noFees": "Zero commissioni"
+   },
+   "sellerScenarios": {
+      "title": "Ti riconosci in una di queste situazioni?",
+      "subtitle": "Jungle Rent acquista direttamente. Nessun intermediario.",
+      "heir": {
+         "title": "Hai ereditato un immobile",
+         "description": "Hai ereditato un appartamento a Torino ma vivi altrove? Gestire un immobile da lontano costa tempo, tasse e stress. Noi acquistiamo in 60-90 giorni, senza visite infinite."
       },
-      "addButton": "Aggiungi esame",
-      "editButton": "Modifica esame"
-    },
-    "config": {
-      "title": "Configurazione",
-      "maxCfu": "CFU massimi per sessione",
-      "sessions": "Sessioni disponibili"
-    },
-    "calendar": {
-      "title": "Calendario appelli",
-      "noExams": "Nessun esame con data",
-      "examDetails": "Dettagli esame",
-      "studyHours": "Ore studio stimate",
-      "warning": "Attenzione: più esami lo stesso giorno!"
-    },
-    "plan": {
-      "title": "Piano sessione",
-      "generate": "Genera piano ottimale",
-      "regenerate": "Rigenera piano",
-      "empty": "Aggiungi almeno un esame per generare il piano",
-      "totalCfu": "CFU totali",
-      "avgDifficulty": "Difficoltà media",
-      "estimatedHours": "Ore studio stimate",
-      "warning": "Sessione impegnativa!",
-      "proBadge": "Sessione da Pro!",
-      "noExamsInSession": "Nessun esame in questa sessione"
-    },
-    "share": {
-      "title": "Condividi piano",
-      "downloadPdf": "Scarica PDF",
+      "urgent": {
+         "title": "Devi vendere in fretta",
+         "description": "Trasferimento, separazione o necessità economica? Le agenzie impiegano 6-12 mesi. Noi facciamo un'offerta scritta in 48 ore."
+      },
+      "tired": {
+         "title": "Proprietario stanco",
+         "description": "Il tuo appartamento è sfitto da mesi? Noi acquistiamo anche immobili da ristrutturare nelle zone universitarie."
+      },
+      "whatsappCta": "Scrivici su WhatsApp",
+      "whatsappMessage": "Ciao, ho un immobile a Torino che vorrei vendere. Potete farmi un'offerta?"
+   },
+   "postValuation": {
+      "title": "Vuoi un'offerta concreta da Jungle Rent?",
+      "description": "Il tuo immobile vale circa {{value}}. Acquistiamo direttamente in 60-90 giorni, senza commissioni.",
+      "cta": "Richiedi offerta gratuita",
+      "whatsapp": "Oppure scrivici su WhatsApp"
+   },
+   "tourist": {
+      "sectionLabel": "Per turisti & digital nomad",
+      "sectionTitle": "Scopri Torino come un locale",
+      "sectionDesc": "Alloggi selezionati, guide esclusive e consigli autentici per vivere Torino al meglio. Che tu sia un turista o un digital nomad, ti aiutiamo a scoprire la città.",
+      "ctaTitle": "Guide complete su Torino",
+      "ctaDesc": "Scopri dove mangiare, lavorare, esplorare e vivere a Torino",
+      "ctaButton": "Leggi le guide",
+      "benefit1Title": "Alloggi selezionati",
+      "benefit1Desc": "Appartamenti verificati nei migliori quartieri di Torino",
+      "benefit1Tooltip": "Alloggi di qualità in zone sicure e autentiche",
+      "benefit2Title": "Guide locali autentiche",
+      "benefit2Desc": "Consigli insider su caffè, coworking, ristoranti e cultura locale",
+      "benefit2Tooltip": "Scopri Torino come un residente",
+      "benefit3Title": "Supporto personalizzato",
+      "benefit3Desc": "Assistenza dedicata per rendere il tuo soggiorno indimenticabile",
+      "benefit3Tooltip": "Supporto WhatsApp in italiano e inglese",
+      "contactPrompt": "Hai bisogno di consigli su Torino?",
+      "contactButton": "Contattaci su WhatsApp"
+   },
+   "faq": {
+      "title": "Domande frequenti",
+      "subtitle": "Risposte rapide alle tue domande",
+      "sectionLabel": "FAQ",
+      "investorCategory": "Per investitori",
+      "sellerCategory": "Per venditori",
+      "aboutCategory": "Chi è Jungle Rent",
+      "investorQ1": "Qual è l'investimento minimo richiesto?",
+      "investorA1": "L'investimento minimo in Jungle Rent parte da €100, permettendo di accedere al mercato immobiliare torinese anche con capitali limitati. Per chi vuole investire di più, le opportunità dipendono dagli immobili che abbiamo a disposizione e che vogliamo acquisire.",
+      "investorQ2": "Come funziona l'investimento?",
+      "investorA2": "Investi in Jungle Rent per un appartamento specifico che selezioniamo e acquistiamo noi. Sai esattamente in quale immobile entra il tuo capitale. Poi gestiamo tutto: inquilini, contratti, manutenzione. I risultati di quell'appartamento generano le tue rendite. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito.",
+      "investorQ3": "Jungle Rent gestisce completamente l'immobile?",
+      "investorA3": "Sì, offriamo un servizio di gestione full-service che include: ricerca e selezione inquilini, gestione contratti e registrazioni, manutenzione ordinaria e straordinaria, riscossione affitti, gestione morosità, assistenza legale e reportistica trimestrale dettagliata. L'investitore partecipa ai risultati senza doversi preoccupare di nulla.",
+      "investorQ4": "Quanto tempo ci vuole per vedere i primi risultati?",
+      "investorA4": "I primi risultati vengono comunicati dopo circa 2 mesi dall'investimento, una volta completata la fase di setup (acquisto/ristrutturazione, ricerca inquilini, registrazione contratti). Successivamente, ricevi report trimestrali dettagliati.",
+      "investorQ5": "Che tipo di contratti vengono proposti agli inquilini?",
+      "investorA5": "Utilizziamo contratti transitori con motivazione studio (art. 5 L. 431/98) allineati all'anno accademico, rinnovabili annualmente. Questa tipologia garantisce maggiore rotazione (quindi adeguamento degli affitti ai prezzi di mercato) e tutela legale sia per il proprietario che per l'inquilino.",
+      "investorQ6": "Come funziona la gestione dell'investimento?",
+      "investorA6": "Una volta effettuato l'investimento, ci occupiamo di tutto: selezione inquilini, contratti, manutenzione e riscossione affitti. Ricevi report trimestrali dettagliati con tutti i dati del portafoglio.",
+      "investorQ7": "Quali report ricevo e con che frequenza?",
+      "investorA7": "Ricevi un report trimestrale dettagliato che include: stato dell'immobile, tasso di occupazione, risultati del portafoglio, spese sostenute e previsioni per il trimestre successivo. Hai anche accesso a un dashboard online per monitorare il tuo investimento in tempo reale.",
+      "investorQ8": "Posso visitare le proprietà prima di investire?",
+      "investorA8": "Sì, organizziamo visite agli immobili su appuntamento per gli investitori interessati. Puoi vedere di persona le proprietà, valutare la qualità delle ristrutturazioni e parlare direttamente con il nostro team di gestione.",
+      "investorQ9": "Come posso investire con Jungle Rent?",
+      "investorA9": "Puoi investire in Jungle Rent a partire da €100 per un appartamento specifico. Non un fondo anonimo: sai quale immobile stai finanziando. Jungle Rent acquisisce, gestisce e distribuisce le rendite.",
+      "investorQ10": "Come vengono calcolati i risultati?",
+      "investorA10": "I risultati sono calcolati sulla base del nostro modello ibrido: affitti a studenti universitari durante l'anno accademico e affitti brevi turistici nei mesi estivi. Questo modello ottimizza l'occupazione rispetto agli affitti tradizionali a canone fisso. I risultati sono al netto delle spese di gestione ma al lordo delle imposte personali. ATTENZIONE: i risultati dipendono dall'andamento del mercato e non sono garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale.",
+      "investorQ11": "Cos'è il modello ibrido studenti/turisti?",
+      "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori allineati all'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano significativamente rispetto ai contratti tradizionali, pagando solo i mesi di effettiva permanenza. Inoltre, offriamo giorni ospite gratuiti durante l'estate per permettere agli studenti di tornare a Torino per gli esami senza costi aggiuntivi.",
+      "studentCategory": "Per studenti",
+      "studentQ1": "Come funziona il contratto flessibile?",
+      "studentA1": "Il contratto transitorio per motivi di studio copre l'anno accademico (settembre-giugno), permettendoti di pagare solo i mesi in cui sei effettivamente a Torino. Risparmi significativamente rispetto ai contratti tradizionali. Il contratto è rinnovabile annualmente.",
+      "studentQ2": "E se devo tornare a Torino per gli esami estivi?",
+      "studentA2": "Offriamo giorni ospite gratuiti durante i mesi estivi. Questo significa che puoi tornare a Torino per sostenere gli esami della sessione estiva senza pagare affitto aggiuntivo. È incluso nel tuo contratto.",
+      "studentQ3": "Quanto risparmio rispetto a un affitto tradizionale?",
+      "studentA3": "Con il nostro modello risparmi significativamente rispetto a un contratto tradizionale di 12 mesi. Paghi solo i mesi dell'anno accademico, evitando l'affitto estivo quando non sei a Torino.",
+      "studentQ4": "In quali zone di Torino avete alloggi?",
+      "studentA4": "I nostri alloggi sono nelle zone universitarie più richieste: San Salvario, Crocetta, Vanchiglia, Centro, Aurora, Cenisia. Tutte a pochi minuti a piedi o in bici dal Politecnico, UniTo e dalle altre università torinesi.",
+      "studentQ5": "Cosa è incluso nell'affitto?",
+      "studentA5": "L'affitto include: stanza arredata, spese condominiali, Wi-Fi, pulizia parti comuni settimanale, manutenzione ordinaria. Le utenze (luce, gas, acqua) sono a parte e divise tra coinquilini. Contratti regolari e registrati, assistenza dedicata.",
+      "sellerQ1": "Quali immobili acquistate?",
+      "sellerA1": "Acquistiamo appartamenti a Torino e prima cintura, preferibilmente nelle zone universitarie: Vanchiglia, San Salvario, Cenisia, Crocetta, Lingotto, Aurora. Siamo interessati a immobili da 2 a 5 locali, anche da ristrutturare. Valutiamo ogni proposta senza impegno.",
+      "sellerQ2": "Come funziona la valutazione gratuita?",
+      "sellerA2": "Compili il form con i dati dell'immobile e ti ricontattiamo entro 24 ore. Dopo una prima analisi telefonica, organizziamo una visita gratuita per valutare l'immobile. Ti forniamo una stima di mercato e, se interessati, una proposta d'acquisto entro 7 giorni.",
+      "sellerQ3": "Quanto tempo serve per vendere?",
+      "sellerA3": "Il nostro processo è molto più rapido rispetto alla vendita tradizionale. Dalla valutazione al rogito notarile possono passare 30-60 giorni, a seconda della complessità della pratica e della disponibilità dell'immobile. Gestiamo noi tutta la burocrazia.",
+      "sellerQ4": "Devo ristrutturare prima di vendere?",
+      "sellerA4": "No, non è necessario ristrutturare prima di vendere. Per immobili in buone condizioni o parzialmente da sistemare acquistiamo direttamente. Per immobili da ristrutturare completamente, valutiamo caso per caso in base alla complessità dei lavori e alla zona. Il prezzo di acquisto terrà sempre conto dello stato dell'immobile.",
+      "sellerQ5": "Come avviene il pagamento?",
+      "sellerA5": "Il pagamento avviene al rogito notarile tramite bonifico bancario o assegno circolare. Possiamo essere flessibili sulle tempistiche di consegna dell'immobile se hai bisogno di tempo per trasferirti. Non ci sono commissioni o costi nascosti per il venditore.",
+      "sellerQ6": "Qual è la differenza tra voi e un'agenzia immobiliare?",
+      "sellerA6": "La differenza fondamentale è che noi siamo l'acquirente diretto, non un intermediario. Un'agenzia cerca un compratore per te (e ti addebita una commissione del 3-4%). Noi invece compriamo direttamente il tuo immobile per il nostro portafoglio, eliminando intermediari, commissioni e decine di visite.",
+      "sellerQ7": "Perché non pagate commissioni?",
+      "sellerA7": "Perché non siamo intermediari. Le agenzie addebitano commissioni perché mettono in contatto venditori e acquirenti. Noi invece acquistiamo direttamente per trasformare gli immobili in alloggi per studenti, quindi non c'è nessun intermediario da pagare. Risparmi €6.000-10.000.",
+      "aboutQ1": "Chi siete e da quanto operate?",
+      "aboutA1": "Jungle Rent S.r.l. è una startup innovativa fondata nell'ottobre 2025 da Lorenzo Oni-Joseph e Andrea Niccolaini. Operiamo con nostri investimenti da 2 anni, e da febbraio 2026 lanceremo la startup per aprire le opportunità di investimento anche a investitori esterni. Siamo incubati da 2i3T, l'incubatore del Politecnico di Torino.",
+      "aboutQ2": "Come posso contattarvi?",
+      "aboutA2": "Puoi contattarci su WhatsApp al +39 331 905 3037 (risposta entro 2 ore), email junglerententeprise@gmail.com, oppure compilando i form sul sito. Sede: via Gioacchino Quarello 15/A, Torino. Disponibili per incontri su appuntamento.",
+      "aboutQ3": "Siete un'agenzia immobiliare?",
+      "aboutA3": "No. Jungle Rent è una startup immobiliare con una duplice missione: risolvere la crisi abitativa studentesca e democratizzare l'accesso al mercato immobiliare — un'asset class storicamente sicura che, a differenza del passato, è diventata inaccessibile per molti. Acquistiamo, ristrutturiamo e gestiamo immobili per affittarli a studenti universitari e turisti.",
+      "voiceCategory": "Domande vocali comuni",
+      "voiceQ1": "Come posso investire in immobili a Torino con pochi soldi?",
+      "voiceA1": "Investi in Jungle Rent per un appartamento specifico che selezioniamo nelle zone universitarie di Torino. A partire da soli €100, sai dove va il tuo capitale, noi gestiamo il resto.",
+      "voiceQ2": "È sicuro investire in Jungle Rent?",
+      "voiceA2": "Jungle Rent è una startup innovativa certificata, registrata alla Camera di Commercio di Torino con P.IVA 13333450016. Siamo incubati da 2i3T, l'incubatore dell'Università di Torino. Tuttavia, come ogni investimento, comporta rischi inclusa la possibile perdita del capitale.",
+      "voiceQ3": "Quanto si guadagna investendo in appartamenti per studenti a Torino?",
+      "voiceA3": "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione: affitti studenteschi durante l'anno accademico e affitti turistici nei mesi estivi. Ricevi report trimestrali dettagliati.",
+      "voiceQ4": "Come faccio a vedere le mie rendite immobiliari?",
+      "voiceA4": "Hai accesso a una dashboard personale online dove puoi monitorare il tuo investimento in tempo reale. Inoltre, ricevi un report trimestrale dettagliato via email con stato dell'immobile, tasso di occupazione, risultati e previsioni.",
+      "voiceQ5": "Come faccio a vendere casa velocemente a Torino?",
+      "voiceA5": "Jungle Rent acquista direttamente la tua casa senza intermediari. Compili il form, ricevi valutazione gratuita in 48 ore, sopralluogo entro 7 giorni, offerta scritta entro 48 ore dal sopralluogo, e rogito in 60-90 giorni. Zero commissioni.",
+      "voiceQ6": "Chi compra appartamenti vicino al Politecnico di Torino?",
+      "voiceA6": "Jungle Rent acquista appartamenti nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Aurora, Lingotto, vicinissime a Politecnico e UniTo. Compriamo trilocali, quadrilocali e appartamenti più grandi, anche da ristrutturare.",
+      "voiceQ7": "Quanto vale il mio appartamento a San Salvario?",
+      "voiceA7": "Il valore dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta circa €180.000-220.000. Richiedi una valutazione gratuita a Jungle Rent per un prezzo preciso.",
+      "voiceQ8": "Dove vivono gli studenti universitari a Torino?",
+      "voiceA8": "Gli studenti universitari a Torino preferiscono i quartieri vicini alle università: San Salvario e Crocetta per il Politecnico, Centro e Vanchiglia per UniTo, Aurora per i prezzi accessibili. Queste zone offrono servizi, vita notturna e trasporti.",
+      "voiceQ9": "Qual è la migliore zona per studenti vicino al Politecnico?",
+      "voiceA9": "Le migliori zone per studenti vicino al Politecnico di Torino sono Crocetta (elegante, tranquilla, 5-10 minuti a piedi), San Salvario (vivace, multiculturale, economica) e Cenisia/San Paolo (più tranquilla, ottimi prezzi).",
+      "voiceQ10": "Come funziona il mercato degli affitti studenteschi a Torino?",
+      "voiceA10": "Torino ha oltre 90.000 studenti universitari e forte domanda di alloggi. I contratti sono tipicamente allineati all'anno accademico, i prezzi variano da €300-600 per stanza singola a seconda della zona. Jungle Rent offre contratti flessibili con risparmio significativo.",
+      "voiceQ11": "Quanto costa affittare una stanza a Torino per studenti?",
+      "voiceA11": "Una stanza singola per studenti a Torino costa mediamente €350-500 al mese in zone come San Salvario, €400-550 in Crocetta, €300-400 in Aurora. I prezzi includono spese condominiali ma non utenze.",
+      "voiceQ12": "Jungle Rent è affidabile per investire?",
+      "voiceA12": "Jungle Rent è una società a responsabilità limitata registrata in Italia (P.IVA 13333450016, REA TO-1355899), certificata come startup innovativa. Siamo incubati da 2i3T, partner del Politecnico di Torino. Offriamo contratti trasparenti e report trimestrali.",
+      "voiceQ13": "Cosa succede se voglio uscire dall'investimento Jungle Rent?",
+      "voiceA13": "Le condizioni di uscita dall'investimento sono definite nel contratto. Ti consigliamo di contattarci per discutere le opzioni disponibili. L'investimento è pensato per orizzonti di medio-lungo termine (3-5 anni) per massimizzare i risultati.",
+      "voiceQ14": "Jungle Rent compra case da ristrutturare?",
+      "voiceA14": "Sì, Jungle Rent acquista anche appartamenti da ristrutturare nelle zone universitarie di Torino, ma valutiamo caso per caso in base alla complessità dei lavori necessari e alla zona. Per immobili in buone condizioni o parzialmente da sistemare acquistiamo direttamente. Il prezzo tiene sempre conto dello stato dell'immobile.",
+      "voiceQ15": "Come contatto Jungle Rent per investire?",
+      "voiceA15": "Puoi contattare Jungle Rent su WhatsApp al +39 331 905 3037 (risposta entro 2 ore), email junglerententeprise@gmail.com, oppure compilando il form sul sito junglerent.it. Lorenzo Oni-Joseph, il fondatore, ti risponderà personalmente."
+   },
+   "contacts": {
+      "title": "Contatti",
+      "subtitle": "Parla con il nostro team",
+      "address": "Indirizzo",
+      "email": "Email",
+      "phone": "Telefono",
+      "social": "Seguici sui social",
+      "formTitle": "Invia un messaggio",
+      "formName": "Nome",
+      "formEmail": "Email",
+      "formMessage": "Messaggio",
+      "formSubmit": "Invia",
+      "formSuccess": "Grazie! Il tuo messaggio è stato inviato.",
+      "formError": "Errore! Riprova più tardi."
+   },
+   "footer": {
+      "forOwnersTitle": "Per proprietari",
+      "valuateProperty": "Valuta il tuo immobile",
+      "sellProperty": "Vendi casa",
+      "usefulResources": "Risorse utili",
+      "cheapEats": "Dove mangiare economico",
+      "taglineAlt": "L'affitto sicuro nella giungla immobiliare",
+      "copyright": "© 2025 JUNGLE RENT S.R.L. Tutti i diritti riservati.",
+      "contactTitle": "Contatti",
+      "location": "Torino, Italia",
+      "forStudentsTitle": "Per studenti",
+      "howItWorksLink": "Come funziona",
+      "universitiesLabel": "Università coperte",
+      "partnershipTitle": "Partnership",
+      "incubatorDesc": "Incubati presso l'Università di Torino",
+      "bottomTagline": "Duplice missione: crisi abitativa studentesca e accesso al real estate",
+      "bottomText": "Supportati da 2i3T - Incubatore d'Imprese dell'Università di Torino",
+      "legalAddress": "Via Gioacchino Quarello 15/A, 10135 Torino"
+   },
+   "waitlist": {
+      "title": "Iscriviti alla waitlist",
+      "description": "Compila il form per ricevere accesso prioritario alle stanze disponibili.",
+      "nameLabel": "Nome completo",
+      "namePlaceholder": "Mario Rossi",
+      "nameError": "Inserisci il tuo nome",
+      "emailLabel": "Email",
+      "emailPlaceholder": "mario.rossi@studenti.unito.it",
+      "emailError": "Inserisci un'email valida",
+      "universityLabel": "Università (opzionale)",
+      "universityPlaceholder": "Es: Politecnico di Torino",
+      "budgetLabel": "Budget mensile (opzionale)",
+      "budgetPlaceholder": "Indica budget approssimativo",
+      "moveDateLabel": "Data trasloco (opzionale)",
+      "moveDatePlaceholder": "Quando vorresti trasferirti?",
+      "referralLabel": "Come ci hai trovato? (opzionale)",
+      "referralPlaceholder": "Aiutaci a conoscerti meglio",
+      "consentLabel": "Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti da Jungle Rent",
+      "consentError": "Devi accettare per continuare",
+      "submitButton": "Iscriviti",
+      "submitting": "Invio in corso...",
+      "successTitle": "✨ Iscrizione completata!",
+      "successDescription": "Controlla la tua email per la conferma. Benvenuto in Jungle Rent!",
+      "errorTitle": "❌ Errore di invio",
+      "errorDescription": "Si è verificato un problema. Riprova tra qualche istante o contattaci su WhatsApp.",
+      "universities": {
+         "polito": "Politecnico di Torino",
+         "unito": "Università di Torino",
+         "escp": "ESCP Business School",
+         "ied": "IED Torino",
+         "iaad": "IAAD",
+         "iusto": "IUSTO",
+         "other": "Altro"
+      },
+      "budgetRanges": {
+         "300-400": "€300-400",
+         "400-500": "€400-500",
+         "500-600": "€500-600",
+         "over-600": ">€600"
+      },
+      "moveDates": {
+         "september-2025": "Settembre 2025",
+         "january-2026": "Gennaio 2026",
+         "asap": "ASAP",
+         "other": "Altro"
+      },
+      "referralSources": {
+         "friend": "Amico",
+         "university": "Università",
+         "instagram": "Instagram",
+         "facebook": "Facebook",
+         "google": "Google",
+         "ai-assistant": "AI assistant",
+         "other": "Altro"
+      }
+   },
+   "investorWaitlist": {
+      "title": "Unisciti alla waitlist investitori",
+      "description": "Mostra il tuo interesse per investire in Jungle Rent. Ti contatteremo con informazioni esclusive sulle opportunità disponibili.",
+      "nameLabel": "Nome completo",
+      "namePlaceholder": "Mario Rossi",
+      "nameError": "Inserisci il tuo nome",
+      "emailLabel": "Email",
+      "emailPlaceholder": "mario.rossi@email.com",
+      "emailError": "Inserisci un'email valida",
+      "phoneLabel": "Telefono",
+      "phonePlaceholder": "+39 333 1234567",
+      "phoneError": "Inserisci il tuo numero di telefono",
+      "investmentBudgetLabel": "Budget investimento",
+      "investmentBudgetPlaceholder": "Seleziona il tuo budget",
+      "budgetError": "Seleziona il budget disponibile",
+      "propertyTypeLabel": "Tipologia proprietà",
+      "propertyTypePlaceholder": "Cosa ti interessa?",
+      "propertyError": "Seleziona una tipologia",
+      "investmentHorizonLabel": "Orizzonte temporale",
+      "investmentHorizonPlaceholder": "Per quanto tempo?",
+      "horizonError": "Seleziona un orizzonte temporale",
+      "investmentTimingLabel": "Quando vuoi investire?",
+      "investmentTimingPlaceholder": "Tempistiche (opzionale)",
+      "hasRentalPropertiesLabel": "Hai già immobili in affitto?",
+      "hasRentalPropertiesPlaceholder": "Seleziona (opzionale)",
+      "preferredAreaLabel": "Zona preferita a Torino (opzionale)",
+      "preferredAreaPlaceholder": "Seleziona una zona...",
+      "areaFlexible": "Nessuna preferenza - Sono flessibile",
+      "referralLabel": "Come ci hai trovato? (opzionale)",
+      "referralPlaceholder": "Aiutaci a conoscerti meglio",
+      "consentLabel": "Acconsento al trattamento dati (GDPR) e a ricevere aggiornamenti sulle opportunità di investimento",
+      "consentError": "Devi accettare per continuare",
+      "submitButton": "Mostra interesse",
+      "submitting": "Invio in corso...",
+      "successTitle": "🎉 Interesse registrato!",
+      "successDescription": "Grazie! Riceverai presto informazioni esclusive sulle opportunità di investimento in Jungle Rent.",
+      "errorTitle": "Errore",
+      "errorDescription": "Qualcosa è andato storto. Riprova.",
+      "budgetRanges": {
+         "50k-100k": "€50k - €100k",
+         "100k-200k": "€100k - €200k",
+         "200k-300k": "€200k - €300k",
+         "over-300k": "Oltre €300k"
+      },
+      "propertyTypes": {
+         "monolocale": "Monolocale",
+         "bilocale": "Bilocale",
+         "trilocale": "Trilocale",
+         "appartamento-completo": "Appartamento 4+ stanze",
+         "indeciso": "Ancora indeciso"
+      },
+      "investmentHorizons": {
+         "short-term": "1-3 anni",
+         "medium-term": "3-5 anni",
+         "long-term": "5+ anni",
+         "flexible": "Flessibile"
+      },
+      "investmentTimings": {
+         "immediate": "Subito (0-3 mesi)",
+         "short": "3-6 mesi",
+         "medium": "6-12 mesi",
+         "long": "12+ mesi"
+      },
+      "rentalProperties": {
+         "yes": "Sì, ho esperienza",
+         "no": "No, è il primo investimento",
+         "considering": "Sto valutando"
+      },
+      "areas": {
+         "san-salvario": "San Salvario",
+         "crocetta": "Crocetta",
+         "centro": "Centro Storico",
+         "vanchiglia": "Vanchiglia",
+         "aurora": "Aurora/Barriera Milano",
+         "polito": "Vicino Politecnico",
+         "lingotto": "Lingotto",
+         "san-paolo": "San Paolo/Santa Rita"
+      },
+      "referralSources": {
+         "network": "Network professionale",
+         "linkedin": "LinkedIn",
+         "referral": "Segnalazione",
+         "google": "Google",
+         "ai-assistant": "AI assistant",
+         "other": "Altro"
+      }
+   },
+   "search": {
+      "askAnything": "Chiedi qualsiasi cosa"
+   },
+   "stickyCta": {
+      "closeLabel": "Chiudi"
+   },
+   "quickLead": {
+      "title": "Investi in Jungle Rent",
+      "description": "Lascia la tua email e ti contatteremo per discutere le opportunità di investimento.",
+      "namePlaceholder": "Come ti chiami?",
+      "optional": "opzionale",
+      "submit": "Invia",
+      "sending": "Invio in corso...",
+      "successTitle": "Grazie!",
+      "successDescription": "Ti contatteremo presto per discutere le opportunità di investimento.",
+      "successMessage": "Ti contatteremo presto per discutere le opportunità di investimento.",
+      "scheduleCall": "Prenota una call",
+      "close": "Chiudi",
+      "errorTitle": "Errore",
+      "errorDescription": "Si è verificato un errore. Riprova più tardi.",
+      "emailRequired": "Inserisci la tua email",
+      "invalidEmail": "Inserisci un'email valida",
+      "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi."
+   },
+   "quickInvestorLead": {
+      "title": "Prima acquisizione in corso",
+      "description": "Stiamo chiudendo il nostro primo immobile a Torino. Lascia la tua email per entrare tra i primi investitori.",
+      "urgencyBadge": "Espressione di interesse · Nessun impegno",
+      "submit": "Voglio partecipare",
+      "sending": "Invio in corso...",
+      "privacy": "Accettando, acconsenti alla nostra privacy policy",
+      "errorTitle": "Errore",
+      "emailRequired": "Inserisci un indirizzo email",
+      "invalidEmail": "Inserisci un indirizzo email valido",
+      "errorDescription": "Si è verificato un errore. Riprova più tardi."
+   },
+   "blog": {
+      "sectionLabel": "City Living",
+      "sectionTitle": "City Living",
+      "sectionSubtitle": "Contenuti sulla città per te... e magari non ovvi! (:",
+      "bannerTitle": "Info on the city, real estate and students shortcuts",
+      "bannerSubtitle": "Guide, analisi e consigli su Torino",
+      "readGuide": "Leggi la guida",
+      "exploreAll": "Let's check this out",
+      "newBadge": "Nuovo",
+      "viewAll": "Scopri tutte le risorse",
+      "readMore": "Leggi l'articolo",
+      "share": "Condividi",
+      "shareVia": "Condividi tramite",
       "shareWhatsApp": "Condividi su WhatsApp",
       "copyLink": "Copia link",
       "linkCopied": "Link copiato!",
-      "pdfGenerated": "PDF generato con successo!"
-    },
-    "exams": {
-      "title": "I tuoi esami",
-      "empty": "Nessun esame aggiunto",
-      "delete": "Elimina",
-      "edit": "Modifica"
-    },
-    "gamification": {
-      "progress": "Progresso piano",
-      "balanced": "Piano bilanciato! 🎉",
-      "momentum": "Costruisci momentum con esami facili"
-    }
-  },
-  "aiSearch": {
-    "title": "Chiedi a Perplexity",
-    "subtitle": "Ricerca in tempo reale su alloggi e investimenti a Torino",
-    "placeholder": "Chiedi sui prezzi degli affitti, quartieri, rendimenti...",
-    "askButton": "Chiedi a Perplexity",
-    "searching": "Ricerca in corso...",
-    "sources": "Fonti",
-    "error": "Mi dispiace, non ho trovato una risposta. Prova a riformulare la domanda.",
-    "rateLimit": "Attendi un momento prima di fare un'altra domanda.",
-    "errorTitle": "Errore",
-    "minChars": "Inserisci almeno 3 caratteri",
-    "examples": "Prova a chiedere:",
-    "example1": "Affitto medio vicino al Politecnico?",
-    "example2": "San Salvario è sicuro per studenti?",
-    "example3": "Come funziona l'investimento Jungle Rent?",
-    "followUp": "Domande correlate",
-    "poweredBy": "Powered by"
-  },
-  "homeFaq": {
-    "title": "Domande frequenti",
-    "subtitle": "Le risposte alle domande più comuni degli investitori",
-    "viewAll": "Vedi tutte le FAQ"
-  },
-  "thankYou": {
-    "title": "Grazie per averci contattato! 🙂",
-    "investor": {
-      "subtitle": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 24 ore per discutere le opportunità di investimento.",
-      "step1": "Ti contatteremo entro 24 ore via email o telefono",
-      "step2": "Fisseremo una call conoscitiva per capire le tue esigenze",
-      "step3": "Ti invieremo la documentazione e le informazioni dettagliate",
-      "scheduleCta": "Prenota subito una call"
-    },
-    "student": {
-      "subtitle": "Sei in lista d'attesa! Ti avviseremo non appena avremo alloggi disponibili nella tua zona.",
-      "step1": "Riceverai aggiornamenti sulle disponibilità via email",
-      "step2": "Lanceremo le prime stanze a settembre 2026",
-      "step3": "Avrai priorità rispetto ai non iscritti",
-      "resourcesCta": "Scopri le risorse per studenti"
-    },
-    "nextSteps": {
-      "title": "Prossimi passi"
-    },
-    "followLinkedin": "Seguici su LinkedIn",
-    "followInstagram": "Seguici su Instagram",
-    "trustBadge": "Start-up incubata presso 2i3T - Università di Torino",
-    "backHome": "Torna alla home"
-  },
-  "startupBadge": {
-    "label": "Start-up innovativa",
-    "tooltip": "Iscritta al Registro Speciale delle Start-up Innovative"
-  },
-  "sellersPage": {
-    "breadcrumb": "Vendi casa",
-    "meta": {
-      "title": "Vendi Casa a Torino senza Commissioni | Jungle Rent - Acquirente Diretto",
-      "description": "Vendi il tuo immobile a Torino direttamente a Jungle Rent. Zero commissioni, 60-90 giorni, acquirente garantito. Valutazione gratuita."
-    },
-    "hero": {
-      "badge": "Acquirente diretto",
-      "subtitle": "Non siamo un'agenzia. Acquistiamo direttamente il tuo immobile per il nostro portafoglio di student housing. Zero intermediari, zero commissioni, processo rapido.",
-      "whatsappCta": "Scrivi su WhatsApp",
-      "orCall": "Preferisci parlare?"
-    },
-    "stats": {
-      "label": "Numeri che parlano",
-      "stat1": "immobili sfitti a Torino",
-      "stat1sub": "contesto di mercato",
-      "stat2": "dalla valutazione al rogito",
-      "stat2sub": "il nostro impegno",
-      "stat3": "commissioni per il venditore",
-      "stat3sub": "nessun costo nascosto"
-    },
-    "trust": {
-      "startup": "Startup Innovativa certificata",
-      "cciaa": "Iscritti CCIAA Torino",
-      "gdpr": "Dati protetti GDPR"
-    },
-    "exitIntent": {
-      "title": "Vendi senza agenzia, anche da casa",
-      "subtitle": "Ricevi un'offerta reale in 48 ore. Zero visite, zero commissioni."
-    },
-    "calculator": {
-      "title": "Calcola il tuo risparmio",
-      "subtitle": "Scopri quanto risparmi vendendo direttamente a noi invece che tramite agenzia",
-      "condition": {
-        "label": "Stato immobile",
-        "tooltip": "Seleziona lo stato attuale del tuo immobile per una stima più accurata",
-        "daRistrutturare": "Da ristrutturare",
-        "daRistrutturareShort": "Da rist.",
-        "buonoStato": "Buono stato",
-        "buonoStatoShort": "Buono",
-        "ristrutturato": "Ristrutturato",
-        "ristrutturatShort": "Nuovo"
+      "shareNative": "Altre opzioni...",
+      "relatedPosts": "Articoli correlati",
+      "categories": {
+         "all": "Tutti",
+         "students": "Per studenti",
+         "investors": "Per investitori",
+         "sellers": "Per venditori",
+         "turisti": "Per turisti",
+         "societa": "Società"
       },
-      "propertyType": "Tipologia",
-      "propertyValue": "Valore dell'immobile",
-      "agency": "Agenzia tradizionale",
-      "directBuyer": "Acquirente diretto",
-      "yourSavings": "Il tuo risparmio",
-      "savingsNote": "Risparmio rispetto alla commissione d'agenzia (4% + IVA)",
-      "dataSource": "Prezzi indicativi zone semicentrali Torino. Dati: OMI, Immobiliare.it, nov 2025",
-      "cta": "Richiedi valutazione gratuita",
-      "presets": {
-        "bilocale": "2 locali",
-        "trilocale": "3 locali",
-        "quadrilocale": "4 locali"
+      "search": {
+         "placeholder": "Cerca articoli...",
+         "noResults": "Nessun articolo trovato per \"{{query}}\""
       },
-      "minimumFee": "Compenso minimo agenzia",
-      "minimumFeeExplanation": "Minimo €5.000 (il 4% sarebbe inferiore)"
-    },
-    "timeline": {
-      "title": "Il nostro processo in 4 fasi",
-      "subtitle": "Dalla valutazione al rogito in 60-90 giorni",
-      "step1Desc": "Analisi del tuo immobile basata su dati di mercato aggiornati",
-      "step2Desc": "Visita dell'immobile con il nostro team tecnico",
-      "step3Desc": "Proposta d'acquisto scritta senza impegno",
-      "step4Desc": "Firma dal notaio e pagamento sicuro"
-    },
-    "faq": {
-      "subtitle": "Tutto quello che devi sapere sulla vendita a Jungle Rent"
-    },
-    "finalCta": {
-      "title": "Pronto a vendere il tuo immobile?",
-      "subtitle": "Ricevi una valutazione gratuita in 48 ore. Nessun impegno, zero commissioni."
-    },
-    "valuatorLink": "Calcola il valore del tuo immobile"
-  },
-  "propertyValuation": {
-    "meta": {
-      "title": "Valutazione immobiliare Torino | Calcola il valore della tua casa",
-      "description": "Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI 2025, coefficienti FIAIP, 35+ zone. Stima accurata ±5%."
-    },
-    "breadcrumb": "Valutazione immobile",
-    "badge": "Strumento gratuito",
-    "title": "Valutazione immobiliare",
-    "subtitle": "Calcola il valore del tuo immobile con dati OMI 2025 e coefficienti FIAIP. 35+ zone di Torino, stima accurata con margine ±5%.",
-    "feature1": "35+ zone Torino",
-    "feature2": "Dati OMI Nov 2025",
-    "feature3": "9 categorie coefficienti",
-    "sources": {
-      "title": "Fonti ufficiali",
-      "description": "I dati utilizzati provengono da fonti ufficiali e aggiornate a novembre 2025."
-    },
-    "structuredData": {
-      "name": "Calcolatore valutazione immobiliare Torino",
-      "description": "Strumento gratuito per calcolare il valore di mercato di un immobile a Torino basato su dati OMI e coefficienti FIAIP 2024-2025."
-    }
-  },
-  "propertyValuator": {
-    "location": "Localizzazione",
-    "zone": "Zona",
-    "selectZone": "Seleziona zona...",
-    "characteristics": "Caratteristiche",
-    "surface": "Superficie (mq)",
-    "hasElevator": "Con ascensore",
-    "floor": "Piano",
-    "condition": "Stato conservazione",
-    "energySection": "Energia e Impianti",
-    "energyClass": "Classe energetica (APE)",
-    "heating": "Riscaldamento",
-    "extrasSection": "Extra e Fattori Aggiuntivi",
-    "balcony": "Balcone / Terrazzo",
-    "garage": "Garage / Box auto",
-    "exposure": "Esposizione",
-    "premiums": "Fattori positivi",
-    "penalties": "Fattori negativi",
-    "reset": "Azzera campi",
-    "result": "Valutazione Stimata",
-    "basePrice": "Prezzo base",
-    "pricePerSqm": "€/mq zona",
-    "coefficients": "Coefficienti",
-    "reliability": "Affidabilità",
-    "clampedWarning": "Coefficienti limitati per sanity check (-25% / +50%)",
-    "showBreakdown": "Dettaglio coefficienti",
-    "noCoefficients": "Nessun coefficiente applicato",
-    "variation2024": "Variazione 2024",
-    "ctaProfessional": "Richiedi valutazione professionale",
-    "ctaSavings": "Quanto risparmi con Jungle Rent?",
-    "emptyState": "Seleziona zona e inserisci superficie per calcolare la stima",
-    "disclaimer": "Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati. Margine di errore: ±5-12%."
-  },
-  "exitIntent": {
-    "badge": "Offerta esclusiva",
-    "title": "Stai andando via?",
-    "subtitle": "Ricevi una valutazione gratuita del tuo immobile in 24 ore",
-    "emailPlaceholder": "La tua email *",
-    "phonePlaceholder": "Telefono (opzionale)",
-    "cta": "Ricevi valutazione gratuita",
-    "submitting": "Invio...",
-    "success": "Riceverai la valutazione entro 24 ore!",
-    "error": "Errore. Riprova più tardi.",
-    "emailRequired": "Inserisci un'email valida",
-    "emailInvalid": "Email non valida",
-    "close": "Chiudi",
-    "trust1": "Risposta in 24h",
-    "trust2": "Zero impegno"
-  },
-  "investorExitIntent": {
-    "badge": "Prima di andare...",
-    "title": "Soddisfa la tua curiosità, contatta Lorenzo!",
-    "subtitle": "Una chiamata senza impegno per scoprire le opportunità di investimento immobiliare a Torino",
-    "whatsappCTA": "Scrivi su WhatsApp",
-    "emailCTA": "Invia un'email",
-    "orSeparator": "oppure lascia la tua email",
-    "emailPlaceholder": "La tua email",
-    "submitCTA": "Ti ricontattiamo noi",
-    "submitting": "Invio...",
-    "trust1": "Zero impegno",
-    "trust2": "Risposta entro 24h",
-    "success": "Perfetto! Lorenzo ti contatterà presto.",
-    "errorSubmit": "Errore nell'invio. Riprova.",
-    "emailError": "Inserisci un'email valida",
-    "close": "Chiudi"
-  },
-  "announcement": {
-    "firstDeal": "Prima acquisizione in corso — Posti limitati →"
-  },
-  "quiz": {
-    "title": "Che tipo di investitore sei?",
-    "subtitle": "3 domande, 30 secondi — scopri il tuo profilo",
-    "q1": {
-      "question": "Qual è il tuo obiettivo principale?",
-      "passive": "💰 Rendita passiva senza pensieri",
-      "active": "📈 Crescita attiva del capitale",
-      "diversify": "🔄 Diversificare il portafoglio"
-    },
-    "q2": {
-      "question": "Quanto vorresti investire?",
-      "low": "🏠 Fino a €50.000",
-      "medium": "🏘️ €50.000 – €150.000",
-      "high": "🏰 Oltre €150.000"
-    },
-    "q3": {
-      "question": "Quando vuoi iniziare?",
-      "exploring": "🔍 Sto esplorando le opzioni",
-      "soon": "📅 Nei prossimi 3 mesi",
-      "now": "⚡ Sono pronto adesso"
-    },
-    "profiles": {
-      "explorer": {
-        "title": "L'Esploratore Strategico",
-        "description": "Preferisci un approccio cauto e informato. Ti guideremo passo passo verso il tuo primo investimento immobiliare a Torino."
+      "filters": {
+         "tags": "Filtra per tag",
+         "clearAll": "Rimuovi filtri"
       },
-      "builder": {
-        "title": "Il Costruttore di Patrimonio",
-        "description": "Hai le idee chiare e vuoi costruire rendita nel tempo. Il mercato universitario di Torino è perfetto per il tuo profilo."
+      "hero": {
+         "title": "Risorse e guide",
+         "subtitle": "Approfondimenti, dati e consigli pratici sul mercato immobiliare torinese"
       },
-      "accelerator": {
-        "title": "L'Acceleratore",
-        "description": "Sei pronto ad agire e hai il capitale. La nostra prima acquisizione è l'opportunità ideale per il tuo profilo."
+      "cta": {
+         "students": {
+            "A": {
+               "title": "Inizia la tua ricerca oggi",
+               "description": "Unisciti a 100+ studenti che trovano stanze convenienti vicino a Politecnico e UniTo",
+               "button": "Trova una stanza"
+            },
+            "B": {
+               "title": "La tua stanza perfetta ti aspetta",
+               "description": "Accedi per primo alle stanze verificate vicino al campus. 100+ studenti già iscritti",
+               "button": "Iscriviti ora - È gratis"
+            }
+         },
+         "investors": {
+            "A": {
+               "title": "Guadagna il 7-9% annuo",
+               "description": "Investi nel mercato immobiliare universitario torinese con gestione completa inclusa",
+               "button": "Scarica la guida"
+            },
+            "B": {
+               "title": "Trasforma €100k in €7-9k di rendita annua",
+               "description": "Zero gestione immobiliare. Selezione inquilini completa. Rendimenti potenziali nel distretto universitario",
+               "button": "Prenota consulenza gratuita"
+            }
+         },
+         "sellers": {
+            "A": {
+               "title": "Vendi in 60-90 giorni, zero commissioni",
+               "description": "Ottieni una valutazione professionale in 48h e risparmia €6.000-10.000 di commissioni",
+               "button": "Richiedi valutazione gratuita"
+            },
+            "B": {
+               "title": "Risparmia €10k di commissioni, vendi più veloce",
+               "description": "Valutazione professionale in 48h. Rete diretta di acquirenti. Media 75 giorni vs 180 del settore",
+               "button": "Ottieni offerta in contanti"
+            }
+         },
+         "turisti": {
+            "A": {
+               "title": "Scopri Torino come un locale",
+               "description": "Unisciti alla nostra community per ricevere consigli esclusivi, eventi e offerte su alloggi a Torino",
+               "button": "Iscriviti alla waitlist"
+            },
+            "B": {
+               "title": "Vivi l'esperienza autentica di Torino",
+               "description": "Accesso anticipato a guide esclusive, eventi locali e alloggi selezionati nel cuore di Torino",
+               "button": "Unisciti alla community"
+            }
+         },
+         "downloadReport": "Scarica report",
+         "readSavillsReport": "Report Savills 2025"
+      },
+      "meta": {
+         "title": "Blog Jungle Rent | Guide su Affitti, Investimenti e Vendite a Torino",
+         "description": "Scopri guide, dati e approfondimenti sul mercato immobiliare torinese per studenti, investitori e venditori."
       }
-    },
-    "resultCTA": "Scopri come partecipare",
-    "submitCTA": "Voglio partecipare"
-  }
+   },
+   "resourceLibrary": {
+      "sectionTitle": "Risorse gratuite per investitori",
+      "sectionSubtitle": "Guide complete per massimizzare i tuoi investimenti immobiliari",
+      "guide1Title": "Guida completa per investitori",
+      "guide1Badge": "Essenziale",
+      "guide1Desc": "Tutto quello che devi sapere per iniziare a investire in immobili universitari a Torino",
+      "guide1Pages": "45 pagine",
+      "guide1Bullet1": "Modello di business Jungle Rent",
+      "guide1Bullet2": "ROI e proiezioni finanziarie dettagliate",
+      "guide1Bullet3": "Case study reali con rendimenti",
+      "guide1Bullet4": "Confronto con altre forme di investimento",
+      "guide2Title": "Migliori investimenti immobiliari a Torino 2025",
+      "guide2Badge": "Avanzata - Mercato Torino",
+      "guide2Desc": "Analisi approfondita delle zone più redditizie, prezzi, rendimenti e strategie per il mercato torinese",
+      "guide2Pages": "Guida completa",
+      "guide2Bullet1": "Analisi dettagliata di tutte le zone (Centro, Aurora, Lingotto, Mirafiori...)",
+      "guide2Bullet2": "Prezzi al mq e rendimenti per quartiere (dati 2025)",
+      "guide2Bullet3": "Student housing: opportunità e strategie operative",
+      "guide2Bullet4": "Mutui, tassi e agevolazioni fiscali aggiornate",
+      "guide3Title": "Mercato immobiliare universitario Torino",
+      "guide3Badge": "Report 2025",
+      "guide3Desc": "Analisi completa del mercato student housing torinese con dati su domanda, offerta, prezzi e rendimenti",
+      "guide3Pages": "18 pagine",
+      "guide3Bullet1": "120.000 studenti e 50.000 fuorisede: dimensioni della domanda",
+      "guide3Bullet2": "Gap domanda-offerta: 42.500 posti letto mancanti",
+      "guide3Bullet3": "Rendimenti 7-9% vs 4-5% di Milano",
+      "guide3Bullet4": "Prezzi per zona e confronto nazionale",
+      "guide4Title": "Student Housing Italy Spotlight",
+      "guide4Badge": "Savills 2025",
+      "guide4Desc": "Report ufficiale Savills Research sul mercato student housing italiano con dati nazionali e trend",
+      "guide4Pages": "12 pagine",
+      "guide4Bullet1": "589K studenti fuori sede in Italia",
+      "guide4Bullet2": "Solo 12,6% della domanda coperta da alloggi dedicati",
+      "guide4Bullet3": "€4 miliardi di potenziale di mercato",
+      "guide4Bullet4": "Analisi città universitarie e rendimenti",
+      "downloadCta": "Scarica Guida Gratuita",
+      "downloadDirectCta": "Scarica PDF",
+      "readAnalysis": "Leggi l'analisi del report"
+   },
+   "areaSuggestion": {
+      "addToForm": "Aggiungi info al form"
+   },
+   "sellerContact": {
+      "title": "Vendi la tua casa",
+      "description": "Compila il form per ricevere una valutazione gratuita della tua proprietà a Torino",
+      "nameLabel": "Nome e cognome *",
+      "namePlaceholder": "Mario Rossi",
+      "nameError": "Nome richiesto",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "mario.rossi@email.com",
+      "emailErrorInvalid": "Email non valida",
+      "phoneLabel": "Telefono *",
+      "phonePlaceholder": "+39 333 1234567",
+      "phoneError": "Telefono richiesto",
+      "addressLabel": "Indirizzo immobile *",
+      "addressPlaceholder": "Via Roma 1, Torino",
+      "addressError": "Indirizzo richiesto",
+      "zoneLabel": "Zona (opzionale)",
+      "zonePlaceholder": "Es: Crocetta",
+      "squareMetersLabel": "Metratura (opzionale)",
+      "squareMetersPlaceholder": "Es: 85 mq",
+      "roomsLabel": "Numero locali (opzionale)",
+      "roomsPlaceholder": "Es: Trilocale",
+      "floorLabel": "Piano (opzionale)",
+      "floorPlaceholder": "Es: 2° Piano",
+      "conditionLabel": "Stato immobile (opzionale)",
+      "conditionPlaceholder": "Es: Buono",
+      "motivationLabel": "Motivazione vendita (opzionale)",
+      "motivationPlaceholder": "Perché vendi?",
+      "urgentLabel": "⚡ Ho urgenza di vendere (priorità massima)",
+      "messageLabel": "Note aggiuntive (opzionale)",
+      "messagePlaceholder": "Altre informazioni utili (opzionale)...",
+      "privacyLabel": "Acconsento al trattamento dei miei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) e autorizzo Jungle Rent a contattarmi per la valutazione dell'immobile.",
+      "privacyLink": "Leggi l'informativa privacy",
+      "privacyError": "Devi acconsentire al trattamento dei dati",
+      "submitButton": "Invia richiesta",
+      "submitting": "Invio in corso...",
+      "successTitle": "✨ Richiesta inviata con successo!",
+      "successDescription": "Ti contatteremo entro 48 ore per la valutazione gratuita del tuo immobile",
+      "errorTitle": "❌ Errore nell'invio",
+      "errorDescription": "Si è verificato un errore. Riprova o contattaci su WhatsApp.",
+      "footerInfo": "✓ Risposta garantita entro 48 ore • ✓ Valutazione gratuita e senza impegno • ✓ Zero commissioni",
+      "zones": {
+         "crocetta": "Crocetta",
+         "san-salvario": "San Salvario",
+         "centro": "Centro",
+         "vanchiglia": "Vanchiglia",
+         "lingotto": "Lingotto",
+         "santa-rita": "Santa Rita",
+         "san-paolo": "San Paolo",
+         "altra": "Altra zona"
+      },
+      "rooms": {
+         "2": "Bilocale (2)",
+         "3": "Trilocale (3)",
+         "4": "Quadrilocale (4)",
+         "5+": "5 o più locali"
+      },
+      "floors": {
+         "1": "1° Piano",
+         "2": "2° Piano",
+         "3": "3° Piano",
+         "4": "4° Piano",
+         "5": "5° Piano",
+         "terra": "Piano Terra",
+         "6+": "6° Piano o superiore"
+      },
+      "conditions": {
+         "ottimo": "Ottimo",
+         "buono": "Buono",
+         "da-ristrutturare": "Da ristrutturare"
+      },
+      "motivations": {
+         "cambio-citta": "Cambio città",
+         "liquidita": "Necessità liquidità",
+         "eredita": "Eredità",
+         "investimento": "Dismissione investimento",
+         "altro": "Altro"
+      }
+   },
+   "studentInfographic": {
+      "badge": "Come funziona",
+      "title": "Trova il tuo alloggio ideale",
+      "subtitle": "Il nostro modello ibrido ti fa risparmiare",
+      "steps": {
+         "search": {
+            "title": "Cerca alloggio",
+            "description": "Trova stanze vicino al Politecnico, UniTo e tutti gli atenei torinesi"
+         },
+         "save": {
+            "title": "Risparmia",
+            "description": "Contratti flessibili allineati all'anno accademico"
+         }
+      },
+      "benefits": {
+         "contract": "Contratto flessibile",
+         "savings": "Risparmio garantito",
+         "examDays": "Giorni esame gratis"
+      },
+      "cta": "Presto disponibile: alloggi da settembre 2026"
+   },
+   "students": {
+      "seo": {
+         "title": "Affitti per studenti a Torino | Jungle Rent",
+         "description": "Trova il tuo alloggio studentesco vicino a Politecnico, UniTo e tutte le università di Torino. Contratti flessibili e prezzi accessibili."
+      },
+      "badge": "Coming Soon 2026",
+      "hero": {
+         "title": "Affitti per studenti a Torino",
+         "subtitle": "Stiamo costruendo un modo migliore per trovare casa vicino all'università. Iscriviti per essere tra i primi."
+      },
+      "waitlist": {
+         "placeholder": "La tua email",
+         "button": "Iscriviti alla waitlist",
+         "note": "Ti contatteremo quando saremo pronti. Niente spam.",
+         "success": "Iscrizione completata! Ti contatteremo presto.",
+         "error": "Errore. Riprova più tardi."
+      },
+      "stats": {
+         "students": "studenti universitari",
+         "universities": "università a Torino",
+         "neighborhoods": "quartieri studenteschi",
+         "avgRent": "affitto medio stanza"
+      },
+      "resources": {
+         "title": "Risorse per studenti",
+         "subtitle": "Guide gratuite per vivere e studiare a Torino",
+         "neighborhoods": "Guide quartieri",
+         "universities": "Università",
+         "studySpaces": "Aule studio",
+         "mobility": "Mobilità e trasporti",
+         "dailyLife": "Vita quotidiana",
+         "viewAll": "Vedi tutte le guide"
+      },
+      "investorCta": {
+         "title": "Sei un investitore?",
+         "subtitle": "Scopri come partecipare al mercato degli affitti studenteschi a Torino.",
+         "button": "Scopri l'opportunità"
+      },
+      "tools": {
+         "badge": "Strumenti gratuiti",
+         "title": "Strumenti utili per studenti",
+         "subtitle": "Risorse pratiche per aiutarti a pianificare la vita a Torino",
+         "budgetCalc": {
+            "title": "Calcolatore budget",
+            "description": "Scopri quanto costa vivere in ogni quartiere",
+            "cta": "Prova ora"
+         },
+         "gradeCalc": {
+            "title": "Calcolatore media",
+            "description": "Calcola media ponderata e voto di laurea",
+            "cta": "Prova ora"
+         },
+         "utilityComp": {
+            "title": "Comparatore bollette",
+            "description": "Confronta le tariffe di luce e gas",
+            "comingSoon": "Prossimamente"
+         },
+         "examSession": {
+            "title": "Organizzatore sessione",
+            "description": "Pianifica la sessione esami in modo ottimale",
+            "cta": "Prova ora"
+         },
+         "allTools": {
+            "title": "Tutti gli strumenti",
+            "description": "Scopri tutti i tool gratuiti"
+         },
+         "backToTools": "Torna agli strumenti"
+      },
+      "whyJungle": {
+         "badge": "Il nostro modello",
+         "title": "Affitto pensato per chi studia",
+         "subtitle": "Finalmente un modello che capisce la vita universitaria",
+         "contract": {
+            "title": "Paghi solo quando studi",
+            "description": "Il tuo affitto segue il calendario universitario, non quello del proprietario. Studi a Torino? Paghi. Sei a casa dalla tua famiglia? Non paghi.",
+            "highlight": "Risparmio garantito"
+         },
+         "summer": {
+            "badge": "Esclusivo",
+            "title": "Flessibilità estiva",
+            "description": "Devi tornare per gli esami? Nessun problema. Paghi solo i giorni che usi, non mesi interi.",
+            "cta": "Scopri come funziona"
+         },
+         "commissions": {
+            "title": "Zero commissioni",
+            "description": "Affitti direttamente da noi. Niente agenzie, niente costi nascosti.",
+            "highlight": "Risparmi €200-400"
+         },
+         "comparison": {
+            "traditional": {
+               "title": "Affitto tradizionale",
+               "months12": "Contratto 12 mesi obbligatorio",
+               "paySummer": "Paghi l'estate anche se sei a casa",
+               "noFlex": "Nessuna flessibilità per gli esami",
+               "commissions": "Commissioni agenzia €200-400"
+            },
+            "jungle": {
+               "title": "Jungle Rent",
+               "months9": "Contratto anno accademico",
+               "payUse": "Estate: paghi solo i giorni che usi",
+               "flex": "Flessibilità per sessioni estive",
+               "noCommissions": "Zero commissioni, affitti diretti"
+            }
+         },
+         "cta": {
+            "waitlist": "Iscriviti alla waitlist",
+            "whatsapp": "Parla con Lorenzo"
+         }
+      }
+   },
+   "examSessionPlanner": {
+      "seo": {
+         "title": "Organizzatore sessione esami | Jungle Rent",
+         "description": "Pianifica la tua sessione d'esame in modo ottimale. Considera CFU, difficoltà e propedeuticità per creare il piano perfetto."
+      },
+      "badge": "Strumento gratuito",
+      "title": "Organizzatore sessione esami",
+      "subtitle": "Pianifica la tua sessione in modo strategico considerando CFU, difficoltà e propedeuticità",
+      "addExam": {
+         "title": "Aggiungi esame",
+         "name": "Nome esame",
+         "namePlaceholder": "Es: Analisi Matematica I",
+         "cfu": "CFU",
+         "difficulty": "Difficoltà percepita",
+         "difficultyOptions": {
+            "1": "😊 Facile",
+            "2": "😐 Media",
+            "3": "😰 Difficile",
+            "4": "💀 Boss finale"
+         },
+         "prerequisite": "Propedeutico a",
+         "prerequisitePlaceholder": "Seleziona esame...",
+         "noPrerequisite": "Nessun prerequisito",
+         "date": "Data appello",
+         "datePlaceholder": "Seleziona data...",
+         "session": "Sessione",
+         "sessionOptions": {
+            "invernale": "Invernale (Gen-Feb)",
+            "estiva": "Estiva (Giu-Lug)",
+            "autunnale": "Autunnale (Set)"
+         },
+         "addButton": "Aggiungi esame",
+         "editButton": "Modifica esame"
+      },
+      "config": {
+         "title": "Configurazione",
+         "maxCfu": "CFU massimi per sessione",
+         "sessions": "Sessioni disponibili"
+      },
+      "calendar": {
+         "title": "Calendario appelli",
+         "noExams": "Nessun esame con data",
+         "examDetails": "Dettagli esame",
+         "studyHours": "Ore studio stimate",
+         "warning": "Attenzione: più esami lo stesso giorno!"
+      },
+      "plan": {
+         "title": "Piano sessione",
+         "generate": "Genera piano ottimale",
+         "regenerate": "Rigenera piano",
+         "empty": "Aggiungi almeno un esame per generare il piano",
+         "totalCfu": "CFU totali",
+         "avgDifficulty": "Difficoltà media",
+         "estimatedHours": "Ore studio stimate",
+         "warning": "Sessione impegnativa!",
+         "proBadge": "Sessione da Pro!",
+         "noExamsInSession": "Nessun esame in questa sessione"
+      },
+      "share": {
+         "title": "Condividi piano",
+         "downloadPdf": "Scarica PDF",
+         "shareWhatsApp": "Condividi su WhatsApp",
+         "copyLink": "Copia link",
+         "linkCopied": "Link copiato!",
+         "pdfGenerated": "PDF generato con successo!"
+      },
+      "exams": {
+         "title": "I tuoi esami",
+         "empty": "Nessun esame aggiunto",
+         "delete": "Elimina",
+         "edit": "Modifica"
+      },
+      "gamification": {
+         "progress": "Progresso piano",
+         "balanced": "Piano bilanciato! 🎉",
+         "momentum": "Costruisci momentum con esami facili"
+      }
+   },
+   "aiSearch": {
+      "title": "Chiedi a Perplexity",
+      "subtitle": "Ricerca in tempo reale su alloggi e investimenti a Torino",
+      "placeholder": "Chiedi sui prezzi degli affitti, quartieri, rendimenti...",
+      "askButton": "Chiedi a Perplexity",
+      "searching": "Ricerca in corso...",
+      "sources": "Fonti",
+      "error": "Mi dispiace, non ho trovato una risposta. Prova a riformulare la domanda.",
+      "rateLimit": "Attendi un momento prima di fare un'altra domanda.",
+      "errorTitle": "Errore",
+      "minChars": "Inserisci almeno 3 caratteri",
+      "examples": "Prova a chiedere:",
+      "example1": "Affitto medio vicino al Politecnico?",
+      "example2": "San Salvario è sicuro per studenti?",
+      "example3": "Come funziona l'investimento Jungle Rent?",
+      "followUp": "Domande correlate",
+      "poweredBy": "Powered by"
+   },
+   "homeFaq": {
+      "title": "Domande frequenti",
+      "subtitle": "Le risposte alle domande più comuni degli investitori",
+      "viewAll": "Vedi tutte le FAQ"
+   },
+   "thankYou": {
+      "title": "Grazie per averci contattato! 🙂",
+      "investor": {
+         "subtitle": "Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 24 ore per discutere le opportunità di investimento.",
+         "step1": "Ti contatteremo entro 24 ore via email o telefono",
+         "step2": "Fisseremo una call conoscitiva per capire le tue esigenze",
+         "step3": "Ti invieremo la documentazione e le informazioni dettagliate",
+         "scheduleCta": "Prenota subito una call"
+      },
+      "student": {
+         "subtitle": "Sei in lista d'attesa! Ti avviseremo non appena avremo alloggi disponibili nella tua zona.",
+         "step1": "Riceverai aggiornamenti sulle disponibilità via email",
+         "step2": "Lanceremo le prime stanze a settembre 2026",
+         "step3": "Avrai priorità rispetto ai non iscritti",
+         "resourcesCta": "Scopri le risorse per studenti"
+      },
+      "nextSteps": {
+         "title": "Prossimi passi"
+      },
+      "followLinkedin": "Seguici su LinkedIn",
+      "followInstagram": "Seguici su Instagram",
+      "trustBadge": "Start-up incubata presso 2i3T - Università di Torino",
+      "backHome": "Torna alla home"
+   },
+   "startupBadge": {
+      "label": "Start-up innovativa",
+      "tooltip": "Iscritta al Registro Speciale delle Start-up Innovative"
+   },
+   "sellersPage": {
+      "breadcrumb": "Vendi casa",
+      "meta": {
+         "title": "Vendi Casa a Torino senza Commissioni | Jungle Rent - Acquirente Diretto",
+         "description": "Vendi il tuo immobile a Torino direttamente a Jungle Rent. Zero commissioni, 60-90 giorni, acquirente garantito. Valutazione gratuita."
+      },
+      "hero": {
+         "badge": "Acquirente diretto",
+         "subtitle": "Non siamo un'agenzia. Acquistiamo direttamente il tuo immobile per il nostro portafoglio di student housing. Zero intermediari, zero commissioni, processo rapido.",
+         "whatsappCta": "Scrivi su WhatsApp",
+         "orCall": "Preferisci parlare?"
+      },
+      "stats": {
+         "label": "Numeri che parlano",
+         "stat1": "immobili sfitti a Torino",
+         "stat1sub": "contesto di mercato",
+         "stat2": "dalla valutazione al rogito",
+         "stat2sub": "il nostro impegno",
+         "stat3": "commissioni per il venditore",
+         "stat3sub": "nessun costo nascosto"
+      },
+      "trust": {
+         "startup": "Startup Innovativa certificata",
+         "cciaa": "Iscritti CCIAA Torino",
+         "gdpr": "Dati protetti GDPR"
+      },
+      "exitIntent": {
+         "title": "Vendi senza agenzia, anche da casa",
+         "subtitle": "Ricevi un'offerta reale in 48 ore. Zero visite, zero commissioni."
+      },
+      "calculator": {
+         "title": "Calcola il tuo risparmio",
+         "subtitle": "Scopri quanto risparmi vendendo direttamente a noi invece che tramite agenzia",
+         "condition": {
+            "label": "Stato immobile",
+            "tooltip": "Seleziona lo stato attuale del tuo immobile per una stima più accurata",
+            "daRistrutturare": "Da ristrutturare",
+            "daRistrutturareShort": "Da rist.",
+            "buonoStato": "Buono stato",
+            "buonoStatoShort": "Buono",
+            "ristrutturato": "Ristrutturato",
+            "ristrutturatShort": "Nuovo"
+         },
+         "propertyType": "Tipologia",
+         "propertyValue": "Valore dell'immobile",
+         "agency": "Agenzia tradizionale",
+         "directBuyer": "Acquirente diretto",
+         "yourSavings": "Il tuo risparmio",
+         "savingsNote": "Risparmio rispetto alla commissione d'agenzia (4% + IVA)",
+         "dataSource": "Prezzi indicativi zone semicentrali Torino. Dati: OMI, Immobiliare.it, nov 2025",
+         "cta": "Richiedi valutazione gratuita",
+         "presets": {
+            "bilocale": "2 locali",
+            "trilocale": "3 locali",
+            "quadrilocale": "4 locali"
+         },
+         "minimumFee": "Compenso minimo agenzia",
+         "minimumFeeExplanation": "Minimo €5.000 (il 4% sarebbe inferiore)"
+      },
+      "timeline": {
+         "title": "Il nostro processo in 4 fasi",
+         "subtitle": "Dalla valutazione al rogito in 60-90 giorni",
+         "step1Desc": "Analisi del tuo immobile basata su dati di mercato aggiornati",
+         "step2Desc": "Visita dell'immobile con il nostro team tecnico",
+         "step3Desc": "Proposta d'acquisto scritta senza impegno",
+         "step4Desc": "Firma dal notaio e pagamento sicuro"
+      },
+      "faq": {
+         "subtitle": "Tutto quello che devi sapere sulla vendita a Jungle Rent"
+      },
+      "finalCta": {
+         "title": "Pronto a vendere il tuo immobile?",
+         "subtitle": "Ricevi una valutazione gratuita in 48 ore. Nessun impegno, zero commissioni."
+      },
+      "valuatorLink": "Calcola il valore del tuo immobile"
+   },
+   "propertyValuation": {
+      "meta": {
+         "title": "Valutazione immobiliare Torino | Calcola il valore della tua casa",
+         "description": "Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI 2025, coefficienti FIAIP, 35+ zone. Stima accurata ±5%."
+      },
+      "breadcrumb": "Valutazione immobile",
+      "badge": "Strumento gratuito",
+      "title": "Valutazione immobiliare",
+      "subtitle": "Calcola il valore del tuo immobile con dati OMI 2025 e coefficienti FIAIP. 35+ zone di Torino, stima accurata con margine ±5%.",
+      "feature1": "35+ zone Torino",
+      "feature2": "Dati OMI Nov 2025",
+      "feature3": "9 categorie coefficienti",
+      "sources": {
+         "title": "Fonti ufficiali",
+         "description": "I dati utilizzati provengono da fonti ufficiali e aggiornate a novembre 2025."
+      },
+      "structuredData": {
+         "name": "Calcolatore valutazione immobiliare Torino",
+         "description": "Strumento gratuito per calcolare il valore di mercato di un immobile a Torino basato su dati OMI e coefficienti FIAIP 2024-2025."
+      }
+   },
+   "propertyValuator": {
+      "location": "Localizzazione",
+      "zone": "Zona",
+      "selectZone": "Seleziona zona...",
+      "characteristics": "Caratteristiche",
+      "surface": "Superficie (mq)",
+      "hasElevator": "Con ascensore",
+      "floor": "Piano",
+      "condition": "Stato conservazione",
+      "energySection": "Energia e Impianti",
+      "energyClass": "Classe energetica (APE)",
+      "heating": "Riscaldamento",
+      "extrasSection": "Extra e Fattori Aggiuntivi",
+      "balcony": "Balcone / Terrazzo",
+      "garage": "Garage / Box auto",
+      "exposure": "Esposizione",
+      "premiums": "Fattori positivi",
+      "penalties": "Fattori negativi",
+      "reset": "Azzera campi",
+      "result": "Valutazione Stimata",
+      "basePrice": "Prezzo base",
+      "pricePerSqm": "€/mq zona",
+      "coefficients": "Coefficienti",
+      "reliability": "Affidabilità",
+      "clampedWarning": "Coefficienti limitati per sanity check (-25% / +50%)",
+      "showBreakdown": "Dettaglio coefficienti",
+      "noCoefficients": "Nessun coefficiente applicato",
+      "variation2024": "Variazione 2024",
+      "ctaProfessional": "Richiedi valutazione professionale",
+      "ctaSavings": "Quanto risparmi con Jungle Rent?",
+      "emptyState": "Seleziona zona e inserisci superficie per calcolare la stima",
+      "disclaimer": "Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati. Margine di errore: ±5-12%."
+   },
+   "exitIntent": {
+      "badge": "Offerta esclusiva",
+      "title": "Stai andando via?",
+      "subtitle": "Ricevi una valutazione gratuita del tuo immobile in 24 ore",
+      "emailPlaceholder": "La tua email *",
+      "phonePlaceholder": "Telefono (opzionale)",
+      "cta": "Ricevi valutazione gratuita",
+      "submitting": "Invio...",
+      "success": "Riceverai la valutazione entro 24 ore!",
+      "error": "Errore. Riprova più tardi.",
+      "emailRequired": "Inserisci un'email valida",
+      "emailInvalid": "Email non valida",
+      "close": "Chiudi",
+      "trust1": "Risposta in 24h",
+      "trust2": "Zero impegno"
+   },
+   "investorExitIntent": {
+      "badge": "Prima di andare...",
+      "title": "Soddisfa la tua curiosità, contatta Lorenzo!",
+      "subtitle": "Una chiamata senza impegno per scoprire le opportunità di investimento immobiliare a Torino",
+      "whatsappCTA": "Scrivi su WhatsApp",
+      "emailCTA": "Invia un'email",
+      "orSeparator": "oppure lascia la tua email",
+      "emailPlaceholder": "La tua email",
+      "submitCTA": "Ti ricontattiamo noi",
+      "submitting": "Invio...",
+      "trust1": "Zero impegno",
+      "trust2": "Risposta entro 24h",
+      "success": "Perfetto! Lorenzo ti contatterà presto.",
+      "errorSubmit": "Errore nell'invio. Riprova.",
+      "emailError": "Inserisci un'email valida",
+      "close": "Chiudi"
+   },
+   "announcement": {
+      "firstDeal": "Prima acquisizione in corso — Posti limitati →"
+   },
+   "quiz": {
+      "title": "Che tipo di investitore sei?",
+      "subtitle": "3 domande, 30 secondi — scopri il tuo profilo",
+      "q1": {
+         "question": "Qual è il tuo obiettivo principale?",
+         "passive": "💰 Rendita passiva senza pensieri",
+         "active": "📈 Crescita attiva del capitale",
+         "diversify": "🔄 Diversificare il portafoglio"
+      },
+      "q2": {
+         "question": "Quanto vorresti investire?",
+         "low": "🏠 Fino a €50.000",
+         "medium": "🏘️ €50.000 – €150.000",
+         "high": "🏰 Oltre €150.000"
+      },
+      "q3": {
+         "question": "Quando vuoi iniziare?",
+         "exploring": "🔍 Sto esplorando le opzioni",
+         "soon": "📅 Nei prossimi 3 mesi",
+         "now": "⚡ Sono pronto adesso"
+      },
+      "profiles": {
+         "explorer": {
+            "title": "L'Esploratore Strategico",
+            "description": "Preferisci un approccio cauto e informato. Ti guideremo passo passo verso il tuo primo investimento immobiliare a Torino."
+         },
+         "builder": {
+            "title": "Il Costruttore di Patrimonio",
+            "description": "Hai le idee chiare e vuoi costruire rendita nel tempo. Il mercato universitario di Torino è perfetto per il tuo profilo."
+         },
+         "accelerator": {
+            "title": "L'Acceleratore",
+            "description": "Sei pronto ad agire e hai il capitale. La nostra prima acquisizione è l'opportunità ideale per il tuo profilo."
+         }
+      },
+      "resultCTA": "Scopri come partecipare",
+      "submitCTA": "Voglio partecipare"
+   }
 }
