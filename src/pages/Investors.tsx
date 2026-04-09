@@ -11,6 +11,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 import { ResourceLibrary } from "@/components/investor/ResourceLibrary";
+import { YieldCalculator } from "@/components/investor/YieldCalculator";
 import { InvestorExitIntentPopup } from "@/components/investor/InvestorExitIntentPopup";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
