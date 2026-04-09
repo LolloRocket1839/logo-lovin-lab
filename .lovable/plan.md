@@ -1,30 +1,22 @@
 
-## Piano: Calcolatore di Rendimento Interattivo
 
-### Cosa fa
-Un calcolatore interattivo dove l'investitore inserisce l'importo di investimento e vede in tempo reale: rendimento lordo annuo, rendimento netto (dopo cedolare secca 21%), guadagno bimestrale, e confronto con alternative (conto deposito, BTP). Tutto bilingue IT/EN.
+## Piano: Sezione Banner EU con sfondo blu
 
-### Componente nuovo
-**`src/components/investor/YieldCalculator.tsx`**
-- Slider per importo investimento (€100 – €100.000, default €10.000)
-- Input numerico sincronizzato con lo slider
-- Rendimento lordo target: 8.34% (come da metriche esistenti)
-- Calcoli mostrati in cards animate:
-  - **Rendimento lordo annuo** (importo × 8.34%)
-  - **Rendimento netto annuo** (dopo cedolare secca 21%)
-  - **Payout bimestrale** (netto ÷ 6)
-  - **Confronto**: conto deposito (3%), BTP (3.5%)
-- Barra di confronto visuale (quanto guadagni in più vs alternative)
-- Disclaimer obbligatorio: "Stime basate su dati di mercato. I rendimenti passati non garantiscono risultati futuri."
-- CTA "Parla con Lorenzo" in fondo
-- Bilingue IT/EN tramite `useTranslation`
+Il banner EU ha già uno sfondo blu nell'immagine, ma attualmente è inserito sulla background chiara/crema del footer, creando un contrasto poco elegante. L'idea è avvolgere la sezione del banner EU in un contenitore con sfondo blu scuro che si fonda con il banner stesso.
 
-### Posizione nella pagina
-**`src/pages/Investors.tsx`** — Inserito tra la sezione Benefits e la sezione Zones (dopo riga 283), come nuova sezione con titolo "Calcola il tuo rendimento" / "Calculate your yield".
+### Modifiche
 
-### Stile
-Coerente con il design esistente: Card con bordo `border-primary/20`, bg gradient leggero, slider Radix già disponibile, badges emerald per i risultati positivi. Animazioni con framer-motion per i numeri che cambiano.
+**1. `src/components/layout/Footer.tsx`** (linee 299-311)
+- Avvolgere la sezione del banner EU in un div con sfondo blu scuro (`bg-[#003399]` o simile, matching il blu del banner Coesione Europa)
+- Testo disclaimer in bianco/chiaro
+- Padding e border-radius per un aspetto pulito
+- Rimuovere `opacity-90` dall'immagine, renderla piena
 
-### File da modificare
-1. **Creare** `src/components/investor/YieldCalculator.tsx` — componente calcolatore
-2. **Modificare** `src/pages/Investors.tsx` — importare e inserire `<YieldCalculator />` tra Benefits e Zones
+**2. `src/components/layout/MobileFooter.tsx`** (linee 120-132)
+- Stessa modifica: sfondo blu scuro per la sezione banner
+- Testo in bianco
+- Adattamento dimensioni per mobile
+
+### Risultato visivo
+La sezione del banner EU avrà uno sfondo blu scuro che si fonde naturalmente con il banner stesso, dandogli l'aspetto ufficiale/istituzionale che piaceva prima.
+
