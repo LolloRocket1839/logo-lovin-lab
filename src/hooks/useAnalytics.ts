@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
+import { hasAnalyticsConsent } from './useCookieConsent';
 
 interface AnalyticsEvent {
   event_type: string;
@@ -97,7 +98,25 @@ const getAnonymizedPageUrl = (): string => {
   }
 };
 
+/**
+ * Detects likely bot traffic by checking user agent patterns.
+ */
+const isLikelyBot = (): boolean => {
+  const ua = navigator.userAgent.toLowerCase();
+  const botPatterns = [
+    'bot', 'spider', 'crawl', 'slurp', 'mediapartners',
+    'headless', 'phantom', 'selenium', 'puppeteer', 'lighthouse',
+    'pingdom', 'pagespeed', 'gtmetrix', 'bytespider', 'yandex',
+    'baidu', 'sogou', 'semrush', 'ahrefs', 'mj12bot', 'dotbot',
+    'petalbot', 'dataforseo', 'gptbot', 'claudebot',
+  ];
+  return botPatterns.some(p => ua.includes(p)) || !navigator.languages?.length;
+};
+
 const trackEvent = async (event: AnalyticsEvent) => {
+  // Block if no GDPR consent or if bot
+  if (!hasAnalyticsConsent() || isLikelyBot()) return;
+
   try {
     const sessionId = await getAnonymizedSessionId();
     
