@@ -1,26 +1,22 @@
 
 
-## Plan: Update Payout Frequency from Quarterly to Every 2 Months
+## Plan: Add EU Co-Funding Banner to Footers
 
-All references to "quarterly" / "trimestrale" across the site will be changed to "every 2 months" / "bimestrale" to reflect the actual payout schedule.
+The uploaded image is the official EU/Regione Piemonte co-funding compliance banner. It should replace the current single Regione Piemonte logo in both the desktop and mobile footers with this proper multi-logo banner.
 
-### Files to Edit
+### What Changes
 
-**1. `src/i18n/locales/it.json`** — Change all instances of "trimestralmente", "trimestrali", "ogni trimestre" to "bimestralmente", "bimestrali", "ogni 2 mesi" (approx. 10+ occurrences in infographic, hero, FAQ, testimonials sections)
+**1. Copy the uploaded image into the project**
+- Copy `user-uploads://4.jpg` → `src/assets/eu-funding-banner.jpg`
 
-**2. `src/i18n/locales/en.json`** — Change "quarterly" to "every 2 months" / "bi-monthly" throughout
+**2. Update `src/components/layout/Footer.tsx` (desktop)**
+- Lines 299-312: Replace the current Regione Piemonte logo + text block with the new banner image
+- The banner already contains all required logos and text, so the separate text paragraph can be simplified or kept as an accessible fallback beneath
 
-**3. `src/i18n/locales/es.json`** — Change "trimestralmente", "trimestrales" to "bimestralmente", "bimestrales"
+**3. Update `src/components/layout/MobileFooter.tsx` (mobile)**
+- Lines 120-133: Same replacement — swap the Regione Piemonte logo for the full EU funding banner
+- Slightly smaller sizing for mobile (e.g. `w-full max-w-xs`)
 
-**4. `src/i18n/locales/fr.json`** — Some already say "bimestriels", fix remaining "trimestriels" references
-
-**5. `src/i18n/locales/de.json`** — Change "Quartalsberichte" / "vierteljährlich" to "zweimonatlich" / "alle 2 Monate"
-
-**6. `src/i18n/locales/sv.json`** — Change "Kvartalsrapporter" to "Varannan månad-rapporter"
-
-**7. `src/i18n/locales/zh.json`** — Change "季度" to "双月" (every 2 months)
-
-**8. `src/components/VideoSection.tsx`** — Change fallback string `'Rendite trimestrali'` to `'Rendite bimestrali'`
-
-### No structural changes — purely text replacements across locale files and one component fallback string.
+### Visual Result
+Both footers will show the official blue EU co-funding banner (Coesione Europa 21-27, EU flag, Regione Piemonte logos) instead of just the Regione Piemonte logo alone. The compliance text line is retained below for accessibility/SEO.
 
