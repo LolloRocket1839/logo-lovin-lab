@@ -219,7 +219,7 @@ const About = () => {
 
             <Card itemProp="makesOffer" itemScope itemType="https://schema.org/Offer">
               <CardContent className="pt-6">
-                <Users className="w-10 h-10 text-primary mb-4" />
+                <User className="w-10 h-10 text-primary mb-4" />
                 <h3 className="text-xl font-semibold mb-3" itemProp="name">{t("about.service2Title")}</h3>
                 <p className="text-muted-foreground" itemProp="description">{t("about.service2Desc")}</p>
               </CardContent>
