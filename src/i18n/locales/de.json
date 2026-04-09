@@ -113,7 +113,7 @@
          "step3Title": "Interne Verwaltung",
          "step3Desc": "Wir verwalten alles intern: Wartung, Verträge, 24/7-Support, ohne Auslagerung an Dritte.",
          "step4Title": "Renditen für Investoren",
-         "step4Desc": "Die Mieten generieren Renditen, die vierteljährlich transparent an die Investoren ausgeschüttet werden.",
+         "step4Desc": "Die Mieten generieren Renditen, die alle 2 Monate transparent an die Investoren ausgeschüttet werden.",
          "reinvest": "Die Erträge werden reinvestiert, um neue Immobilien zu erwerben"
       },
       "foundedLabel": "Gründungsdatum",
@@ -157,9 +157,9 @@
       "mainHeadline": "Investieren Sie in Studentenwohnungen in Turin",
       "mainHeadlineB": "Passives Einkommen aus Turiner Studentenwohnungen erzielen",
       "mainSubheadline": "Investieren Sie ab 100€ in Jungle Rent. Wir kaufen und verwalten, Sie verdienen.",
-      "mainSubheadlineB": "Ab 100€ besitzen Sie einen Anteil an verwalteten Studentenwohnungen — wir kümmern uns um alles, Sie erhalten vierteljährliche Renditen.",
+      "mainSubheadlineB": "Ab 100€ besitzen Sie einen Anteil an verwalteten Studentenwohnungen — wir kümmern uns um alles, Sie erhalten alle 2 Monatee Renditen.",
       "missionStatement": "Jungle Rent kauft Immobilien in Turin und vermietet sie an Universitätsstudierende. Sie investieren, wir kümmern uns um alles.",
-      "badgeExplanation": "Sie investieren in eine bestimmte Wohnung, die von Jungle Rent erworben wird. Null Verwaltung, vierteljährliche Erträge.",
+      "badgeExplanation": "Sie investieren in eine bestimmte Wohnung, die von Jungle Rent erworben wird. Null Verwaltung, alle 2 Monatee Erträge.",
       "discoverOpportunity": "Entdecken Sie die Gelegenheit",
       "talkToLorenzo": "Mit Lorenzo sprechen",
       "startInvesting": "Jetzt investieren",
@@ -169,7 +169,7 @@
          "whatBuy": "Was kaufe ich mit 100€?",
          "whatBuyAnswer": "Sie investieren in Jungle Rent für eine bestimmte Wohnung, die wir erwerben und verwalten. Sie wissen genau, wohin Ihr Kapital fließt.",
          "howEarn": "Wie erhalte ich die Renditen?",
-         "howEarnAnswer": "Jedes Quartal erhalten Sie Ihren Anteil an den eingezogenen Mieten, proportional zu Ihrer Investition.",
+         "howEarnAnswer": "Alle 2 Monate erhalten Sie Ihren Anteil an den eingezogenen Mieten, proportional zu Ihrer Investition.",
          "whoManages": "Wer verwaltet die Immobilien?",
          "whoManagesAnswer": "Jungle Rent verwaltet alles: Akquisition, Verträge, Mieter, Wartung und Steuern."
       },
@@ -477,7 +477,7 @@
       },
       "testimonials": {
          "title": "Was Investoren sagen",
-         "quote1": "Ich habe 500€ investiert und erhalte transparente Quartalsberichte. Endlich kann ich am Immobilienmarkt teilnehmen.",
+         "quote1": "Ich habe 500€ investiert und erhalte transparente Zweimonatsberichte. Endlich kann ich am Immobilienmarkt teilnehmen.",
          "author1": "Marco, 32 Jahre",
          "quote2": "Null Verwaltung, alles wird vom Team betreut. Ich kann mich auf meine Arbeit konzentrieren, während die Investition für mich arbeitet.",
          "author2": "Giulia, 28 Jahre"
@@ -523,7 +523,7 @@
             "description": "An den Portfolioergebnissen",
             "detail": "Partizipieren Sie an den Ergebnissen der verwalteten Immobilien. Transparente Berichte und persönliches Dashboard.",
             "keyPoints": [
-               "Transparente Quartalsberichte",
+               "Transparente Zweimonatsberichte",
                "Persönliches Dashboard",
                "Renditen ausgeschüttet"
             ]
@@ -566,7 +566,7 @@
          "caption": "365 Tage Auslastung. Verträge, Wartung, Steuern inklusive."
       },
       "earn": {
-         "quarterly": "Quartalsberichte",
+         "quarterly": "Zweimonatsberichte",
          "dashboard": "Persönliches Dashboard",
          "caption": "Partizipieren Sie an den Ergebnissen mit voller Transparenz."
       }
@@ -590,7 +590,7 @@
       "step3Title": "Bestätigung",
       "step3Desc": "Sie finalisieren Ihre Teilnahme mit transparenten Verträgen und inklusiver Rechtsunterstützung",
       "step4Title": "Partizipation an Ergebnissen",
-      "step4Desc": "Partizipieren Sie an den Portfolioergebnissen mit Quartalsberichten. Wir verwalten alles",
+      "step4Desc": "Partizipieren Sie an den Portfolioergebnissen mit Zweimonatsberichten. Wir verwalten alles",
       "ctaTitle": "Bereit zu investieren?",
       "ctaSubtitle": "Sprechen Sie mit einem unserer Berater und entdecken Sie die verfügbaren Möglichkeiten",
       "readSavillsAnalysis": "Vollständige Marktanalyse lesen"
@@ -699,9 +699,9 @@
       "investorQ2": "Wie funktioniert die Investition?",
       "investorA2": "Sie investieren in Jungle Rent für eine bestimmte Wohnung, die wir auswählen und erwerben. Sie wissen genau, in welche Immobilie Ihr Kapital fließt. Wir verwalten alles: Mieter, Verträge, Wartung. Die Ergebnisse dieser Wohnung generieren Ihre Erträge.",
       "investorQ3": "Verwaltet Jungle Rent die Immobilie vollständig?",
-      "investorA3": "Ja, wir bieten einen Full-Service-Verwaltungsdienst, der Folgendes umfasst: Suche und Auswahl von Mietern, Vertragsverwaltung, Wartung, Mieteinzug und vierteljährliche Berichte.",
+      "investorA3": "Ja, wir bieten einen Full-Service-Verwaltungsdienst, der Folgendes umfasst: Suche und Auswahl von Mietern, Vertragsverwaltung, Wartung, Mieteinzug und alle 2 Monatee Berichte.",
       "investorQ4": "Wie lange dauert es, bis erste Ergebnisse sichtbar sind?",
-      "investorA4": "Die ersten Ergebnisse werden nach etwa 2 Monaten nach der Investition mitgeteilt, sobald die Setup-Phase abgeschlossen ist. Danach erhalten Sie detaillierte Quartalsberichte.",
+      "investorA4": "Die ersten Ergebnisse werden nach etwa 2 Monaten nach der Investition mitgeteilt, sobald die Setup-Phase abgeschlossen ist. Danach erhalten Sie detaillierte Zweimonatsberichte.",
       "investorQ5": "Welche Art von Verträgen werden den Mietern angeboten?",
       "investorA5": "Wir verwenden befristete Verträge mit Studienmotivation, die an das akademische Jahr angepasst und jährlich verlängerbar sind.",
       "investorQ6": "Welche Rendite kann ich erwarten?",
@@ -713,7 +713,7 @@
       "investorQ9": "Kann ich jederzeit verkaufen?",
       "investorA9": "Die Modalitäten für den Ausstieg aus der Investition sind vertraglich festgelegt. Kontaktieren Sie uns für Details.",
       "investorQ10": "Welche Garantien bieten Sie?",
-      "investorA10": "Wir bieten volle Transparenz mit Quartalsberichten, reguläre Verträge und Inkubation bei 2i3T, dem Unternehmensinkubator der Universität Turin.",
+      "investorA10": "Wir bieten volle Transparenz mit Zweimonatsberichten, reguläre Verträge und Inkubation bei 2i3T, dem Unternehmensinkubator der Universität Turin.",
       "investorQ11": "Wie wird meine Investition geschützt?",
       "investorA11": "Investitionen werden durch reguläre Verträge, professionelle Verwaltung und die Partnerschaft mit dem Turiner Universitäts-Ökosystem geschützt.",
       "studentQ1": "Wie viel kann ich bei der Miete sparen?",

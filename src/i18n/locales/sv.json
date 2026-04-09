@@ -112,7 +112,7 @@
          "step3Title": "Intern förvaltning",
          "step3Desc": "Vi hanterar allt internt: underhåll, kontrakt, support 24/7, utan att delegera till tredje part.",
          "step4Title": "Avkastning till investerare",
-         "step4Desc": "Hyrorna genererar avkastning som distribueras kvartalsvis till investerare, på ett transparent sätt.",
+         "step4Desc": "Hyrorna genererar avkastning som distribueras varannan månad till investerare, på ett transparent sätt.",
          "reinvest": "Intäkterna återinvesteras för att förvärva nya fastigheter"
       },
       "foundedLabel": "Grundat",
@@ -156,9 +156,9 @@
       "mainHeadline": "Investera i studentbostäder i Turin",
       "mainHeadlineB": "Tjäna passiv inkomst från studentlägenheter i Turin",
       "mainSubheadline": "Investera från €100 i Jungle Rent. Vi köper och förvaltar, du tjänar.",
-      "mainSubheadlineB": "Från €100, äg en andel i förvaltade studentbostäder — vi sköter allt, du får kvartalsvis avkastning.",
+      "mainSubheadlineB": "Från €100, äg en andel i förvaltade studentbostäder — vi sköter allt, du får varannan månad avkastning.",
       "missionStatement": "Jungle Rent köper fastigheter i Turin och hyr ut dem till universitetsstudenter. Du investerar, vi sköter allt.",
-      "badgeExplanation": "Du investerar i en specifik lägenhet som förvärvas av Jungle Rent. Ingen förvaltning, kvartalsvis avkastning.",
+      "badgeExplanation": "Du investerar i en specifik lägenhet som förvärvas av Jungle Rent. Ingen förvaltning, varannan månad avkastning.",
       "discoverOpportunity": "Upptäck möjligheten",
       "talkToLorenzo": "Prata med Lorenzo",
       "startInvesting": "Börja investera",
@@ -419,7 +419,7 @@
       },
       "testimonials": {
          "title": "Vad investerare säger",
-         "quote1": "Jag investerade €500 och får transparenta kvartalsrapporter. Äntligen kan jag komma in på fastighetsmarknaden.",
+         "quote1": "Jag investerade €500 och får transparenta tvåmånadersrapporter. Äntligen kan jag komma in på fastighetsmarknaden.",
          "author1": "Marco, 32 år",
          "quote2": "Ingen förvaltning, allt sköts av teamet. Jag kan fokusera på mitt arbete medan investeringen arbetar för mig.",
          "author2": "Giulia, 28 år"
@@ -465,7 +465,7 @@
             "description": "I portföljresultaten",
             "detail": "Du deltar i resultaten från förvaltade fastigheter. Transparenta rapporter och personlig dashboard för att övervaka din investering.",
             "keyPoints": [
-               "Transparenta kvartalsrapporter",
+               "Transparenta tvåmånadersrapporter",
                "Personlig dashboard",
                "Distribuerad avkastning"
             ]
@@ -508,7 +508,7 @@
          "caption": "Beläggning 365 dagar. Kontrakt, underhåll, skatter ingår."
       },
       "earn": {
-         "quarterly": "Kvartalsrapporter",
+         "quarterly": "Tvåmånadersrapporter",
          "dashboard": "Personlig dashboard",
          "caption": "Du deltar i resultaten med total transparens."
       }
@@ -532,7 +532,7 @@
       "step3Title": "Bekräftelse",
       "step3Desc": "Du slutför deltagandet med transparenta kontrakt och juridisk support ingår",
       "step4Title": "Deltagande i resultaten",
-      "step4Desc": "Du deltar i portföljresultaten med kvartalsrapporter. Vi förvaltar allt",
+      "step4Desc": "Du deltar i portföljresultaten med tvåmånadersrapporter. Vi förvaltar allt",
       "ctaTitle": "Redo att investera?",
       "ctaSubtitle": "Prata med en av våra rådgivare och upptäck tillgängliga möjligheter idag",
       "readSavillsAnalysis": "Läs hela marknadsanalysen"
@@ -674,15 +674,15 @@
       "investorQ2": "Hur fungerar investeringen?",
       "investorA2": "Du investerar i Jungle Rent för en specifik lägenhet som vi väljer ut och förvärvar. Du vet exakt vilken fastighet ditt kapital går till. Vi hanterar allt: hyresgäster, kontrakt, underhåll. Resultaten från den lägenheten genererar din avkastning.",
       "investorQ3": "Förvaltar Jungle Rent fastigheterna helt?",
-      "investorA3": "Ja, vi erbjuder fullservice-förvaltning som inkluderar: sökning och urval av hyresgäster, kontraktshantering och registrering, ordinarie och extraordinärt underhåll, hyresindrivning, hantering av uteblivna betalningar, juridisk hjälp och detaljerad kvartalsrapportering. Investeraren deltar i resultaten utan att behöva oroa sig för något.",
+      "investorA3": "Ja, vi erbjuder fullservice-förvaltning som inkluderar: sökning och urval av hyresgäster, kontraktshantering och registrering, ordinarie och extraordinärt underhåll, hyresindrivning, hantering av uteblivna betalningar, juridisk hjälp och detaljerad tvåmånadersrapportering. Investeraren deltar i resultaten utan att behöva oroa sig för något.",
       "investorQ4": "Hur lång tid tar det att se de första resultaten?",
-      "investorA4": "De första resultaten meddelas efter cirka 2 månader från investeringen, när uppstartsfasen är klar (köp/renovering, hyresgästsökning, kontraktsregistrering). Därefter får du detaljerade kvartalsrapporter.",
+      "investorA4": "De första resultaten meddelas efter cirka 2 månader från investeringen, när uppstartsfasen är klar (köp/renovering, hyresgästsökning, kontraktsregistrering). Därefter får du detaljerade tvåmånadersrapporter.",
       "investorQ5": "Vilken typ av kontrakt erbjuds hyresgäster?",
       "investorA5": "Vi använder tillfälliga kontrakt med studiemotivering (art. 5 L. 431/98) anpassade till läsåret, förnybara årligen. Denna typ garanterar högre omsättning (därmed anpassning av hyror till marknadspriser) och juridiskt skydd för både ägare och hyresgäst.",
       "investorQ6": "Hur fungerar investeringsförvaltningen?",
-      "investorA6": "När investeringen är gjord tar vi hand om allt: hyresgästurval, kontrakt, underhåll och hyresindrivning. Du får detaljerade kvartalsrapporter med all portföljdata.",
+      "investorA6": "När investeringen är gjord tar vi hand om allt: hyresgästurval, kontrakt, underhåll och hyresindrivning. Du får detaljerade tvåmånadersrapporter med all portföljdata.",
       "investorQ7": "Vilka rapporter får jag och hur ofta?",
-      "investorA7": "Du får en detaljerad kvartalsrapport som inkluderar: fastighetsstatus, beläggningsgrad, portföljresultat, kostnader och prognoser för nästa kvartal. Du har också tillgång till en online-dashboard för att övervaka din investering i realtid.",
+      "investorA7": "Du får en detaljerad tvåmånadersrapport som inkluderar: fastighetsstatus, beläggningsgrad, portföljresultat, kostnader och prognoser för nästa period. Du har också tillgång till en online-dashboard för att övervaka din investering i realtid.",
       "investorQ8": "Kan jag besöka fastigheterna innan jag investerar?",
       "investorA8": "Ja, vi organiserar besök på fastigheterna på bokning för intresserade investerare. Du kan se fastigheterna personligen, bedöma renoveringskvaliteten och prata direkt med vårt förvaltningsteam.",
       "investorQ9": "Hur kan jag investera med Jungle Rent?",
@@ -728,9 +728,9 @@
       "voiceQ2": "Är det säkert att investera i Jungle Rent?",
       "voiceA2": "Jungle Rent är ett certifierat innovativt startup, registrerat vid Handelskammaren i Turin med organisationsnummer 13333450016. Vi är inkuberade av 2i3T, Turin universitets inkubator. Dock innebär det, som alla investeringar, risker inklusive möjlig kapitalförlust.",
       "voiceQ3": "Hur mycket kan man tjäna på att investera i studentlägenheter i Turin?",
-      "voiceA3": "Resultaten beror på marknadsutvecklingen och är inte garanterade. Vår hybridmodell studenter/turister optimerar beläggningen: studentuthyrning under läsåret och turistuthyrning under sommarmånaderna. Du får detaljerade kvartalsrapporter.",
+      "voiceA3": "Resultaten beror på marknadsutvecklingen och är inte garanterade. Vår hybridmodell studenter/turister optimerar beläggningen: studentuthyrning under läsåret och turistuthyrning under sommarmånaderna. Du får detaljerade tvåmånadersrapporter.",
       "voiceQ4": "Hur ser jag mina fastighetsavkastningar?",
-      "voiceA4": "Du har tillgång till en personlig online-dashboard där du kan övervaka din investering i realtid. Dessutom får du en detaljerad kvartalsrapport via e-post med fastighetsstatus, beläggningsgrad, resultat och prognoser.",
+      "voiceA4": "Du har tillgång till en personlig online-dashboard där du kan övervaka din investering i realtid. Dessutom får du en detaljerad tvåmånadersrapport via e-post med fastighetsstatus, beläggningsgrad, resultat och prognoser.",
       "voiceQ5": "Hur säljer jag hus snabbt i Turin?",
       "voiceA5": "Jungle Rent köper direkt ditt hus utan mellanhänder. Fyll i formuläret, få gratis värdering inom 48 timmar, besiktning inom 7 dagar, skriftligt bud inom 48 timmar efter besiktning, och avslut inom 60-90 dagar. Inga avgifter.",
       "voiceQ6": "Vem köper lägenheter nära Politecnico di Torino?",
@@ -746,7 +746,7 @@
       "voiceQ11": "Vad kostar det att hyra ett rum i Turin för studenter?",
       "voiceA11": "Ett enkelrum för studenter i Turin kostar i genomsnitt €350-500 per månad i områden som San Salvario, €400-550 i Crocetta, €300-400 i Aurora. Priserna inkluderar avgifter till bostadsrättsförening men inte el och gas.",
       "voiceQ12": "Är Jungle Rent pålitligt för investeringar?",
-      "voiceA12": "Jungle Rent är ett aktiebolag registrerat i Italien (org.nr 13333450016, REA TO-1355899), certifierat som innovativt startup. Vi är inkuberade av 2i3T, partner till Politecnico di Torino. Vi erbjuder transparenta kontrakt och kvartalsrapporter.",
+      "voiceA12": "Jungle Rent är ett aktiebolag registrerat i Italien (org.nr 13333450016, REA TO-1355899), certifierat som innovativt startup. Vi är inkuberade av 2i3T, partner till Politecnico di Torino. Vi erbjuder transparenta kontrakt och tvåmånadersrapporter.",
       "voiceQ13": "Vad händer om jag vill lämna Jungle Rent-investeringen?",
       "voiceA13": "Utträdesvillkoren definieras i kontraktet. Vi rekommenderar att du kontaktar oss för att diskutera tillgängliga alternativ. Investeringen är utformad för medellång till lång sikt (3-5 år) för att maximera resultaten.",
       "voiceQ14": "Köper Jungle Rent hus som behöver renoveras?",

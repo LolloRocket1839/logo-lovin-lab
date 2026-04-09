@@ -113,7 +113,7 @@
          "step3Title": "Gestion interne",
          "step3Desc": "Nous gérons tout en interne : maintenance, contrats, assistance 24/7, sans déléguer à des tiers.",
          "step4Title": "Rendements aux investisseurs",
-         "step4Desc": "Les loyers génèrent des rendements distribués trimestriellement aux investisseurs, de manière transparente.",
+         "step4Desc": "Les loyers génèrent des rendements distribués tous les 2 mois aux investisseurs, de manière transparente.",
          "reinvest": "Les revenus sont réinvestis pour acquérir de nouvelles propriétés"
       },
       "foundedLabel": "Date de création",
@@ -157,9 +157,9 @@
       "mainHeadline": "Investissez dans le logement étudiant à Turin",
       "mainHeadlineB": "Générez des revenus passifs avec les appartements étudiants à Turin",
       "mainSubheadline": "Investissez à partir de 100€ dans Jungle Rent. Nous achetons et gérons, vous gagnez.",
-      "mainSubheadlineB": "Dès 100€, possédez une part de logements étudiants gérés — nous gérons tout, vous percevez des rendements trimestriels.",
+      "mainSubheadlineB": "Dès 100€, possédez une part de logements étudiants gérés — nous gérons tout, vous percevez des rendements bimestriels.",
       "missionStatement": "Jungle Rent achète des biens immobiliers à Turin et les loue à des étudiants universitaires. Vous investissez, nous gérons tout.",
-      "badgeExplanation": "Vous investissez dans un appartement spécifique acquis par Jungle Rent. Zéro gestion, revenus trimestriels.",
+      "badgeExplanation": "Vous investissez dans un appartement spécifique acquis par Jungle Rent. Zéro gestion, revenus bimestriels.",
       "discoverOpportunity": "Découvrez l'opportunité",
       "talkToLorenzo": "Parler avec Lorenzo",
       "startInvesting": "Commencer à investir",
@@ -169,7 +169,7 @@
          "whatBuy": "Qu'est-ce que j'achète avec 100€ ?",
          "whatBuyAnswer": "Vous investissez dans Jungle Rent pour un appartement spécifique que nous acquérons et gérons. Vous savez exactement où va votre capital.",
          "howEarn": "Comment je reçois les rendements ?",
-         "howEarnAnswer": "Chaque trimestre, vous recevez votre part des loyers encaissés, proportionnelle à votre investissement. Rapports transparents et tableau de bord personnel.",
+         "howEarnAnswer": "Tous les 2 mois, vous recevez votre part des loyers encaissés, proportionnelle à votre investissement. Rapports transparents et tableau de bord personnel.",
          "whoManages": "Qui gère les biens ?",
          "whoManagesAnswer": "Jungle Rent gère tout : acquisition, contrats, locataires, maintenance et fiscalité. Vous n'avez rien à faire."
       },
@@ -420,7 +420,7 @@
       },
       "testimonials": {
          "title": "Ce que disent les investisseurs",
-         "quote1": "J'ai investi 500€ et je reçois des rapports trimestriels transparents. Enfin je peux accéder au marché immobilier.",
+         "quote1": "J'ai investi 500€ et je reçois des rapports bimestriels transparents. Enfin je peux accéder au marché immobilier.",
          "author1": "Marco, 32 ans",
          "quote2": "Zéro gestion, tout est géré par l'équipe. Je peux me concentrer sur mon travail pendant que l'investissement travaille pour moi.",
          "author2": "Giulia, 28 ans"
@@ -466,7 +466,7 @@
             "description": "Aux résultats du portefeuille",
             "detail": "Vous participez aux résultats des biens gérés. Rapports transparents et tableau de bord personnel pour suivre votre investissement.",
             "keyPoints": [
-               "Rapports trimestriels transparents",
+               "Rapports bimestriels transparents",
                "Tableau de bord personnel",
                "Rendements distribués"
             ]
@@ -509,7 +509,7 @@
          "caption": "Occupation 365 jours. Contrats, maintenance, fiscalité inclus."
       },
       "earn": {
-         "quarterly": "Rapports trimestriels",
+         "quarterly": "Rapports bimestriels",
          "dashboard": "Tableau de bord personnel",
          "caption": "Vous participez aux résultats avec transparence totale."
       }
@@ -533,7 +533,7 @@
       "step3Title": "Confirmation",
       "step3Desc": "Vous finalisez la participation avec contrats transparents et support juridique inclus",
       "step4Title": "Participation aux résultats",
-      "step4Desc": "Vous participez aux résultats du portefeuille avec rapports trimestriels. Nous gérons tout",
+      "step4Desc": "Vous participez aux résultats du portefeuille avec rapports bimestriels. Nous gérons tout",
       "ctaTitle": "Prêt à investir ?",
       "ctaSubtitle": "Parlez avec un de nos conseillers et découvrez les opportunités disponibles aujourd'hui",
       "readSavillsAnalysis": "Lire l'analyse complète du marché"
@@ -634,7 +634,7 @@
       "investorQ2": "Comment fonctionne l'investissement ?",
       "investorA2": "Vous investissez dans Jungle Rent pour un appartement spécifique que nous sélectionnons et acquérons. Vous savez exactement dans quel bien va votre capital. Nous gérons tout : locataires, contrats, maintenance. Les résultats de cet appartement génèrent vos revenus.",
       "investorQ3": "Jungle Rent gère-t-il complètement le bien ?",
-      "investorA3": "Oui, nous offrons un service de gestion complet incluant : recherche et sélection des locataires, gestion des contrats, maintenance, encaissement des loyers et rapports trimestriels.",
+      "investorA3": "Oui, nous offrons un service de gestion complet incluant : recherche et sélection des locataires, gestion des contrats, maintenance, encaissement des loyers et rapports bimestriels.",
       "investorQ4": "Combien de temps faut-il pour voir les premiers résultats ?",
       "investorA4": "Les premiers résultats sont communiqués environ 2 mois après l'investissement, une fois la phase de setup terminée (achat/rénovation, recherche de locataires, enregistrement des contrats).",
       "investorQ5": "Quel type de contrats proposez-vous aux locataires ?",

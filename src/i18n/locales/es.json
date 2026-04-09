@@ -113,7 +113,7 @@
          "step3Title": "Gestión interna",
          "step3Desc": "Gestionamos todo internamente: mantenimiento, contratos, soporte 24/7, sin delegar a terceros.",
          "step4Title": "Rendimientos a inversores",
-         "step4Desc": "Los alquileres generan rendimientos distribuidos trimestralmente a los inversores, de forma transparente.",
+         "step4Desc": "Los alquileres generan rendimientos distribuidos bimestralmente a los inversores, de forma transparente.",
          "reinvest": "Los ingresos se reinvierten para adquirir nuevas propiedades"
       },
       "foundedLabel": "Fecha de constitución",
@@ -157,9 +157,9 @@
       "mainHeadline": "Invierte en vivienda estudiantil en Turín",
       "mainHeadlineB": "Genera ingresos pasivos con apartamentos estudiantiles en Turín",
       "mainSubheadline": "Invierte desde €100 en Jungle Rent. Nosotros compramos y gestionamos, tú ganas.",
-      "mainSubheadlineB": "Desde €100, posee una participación en viviendas estudiantiles gestionadas — nosotros nos encargamos de todo, tú cobras rendimientos trimestrales.",
+      "mainSubheadlineB": "Desde €100, posee una participación en viviendas estudiantiles gestionadas — nosotros nos encargamos de todo, tú cobras rendimientos bimestrales.",
       "missionStatement": "Jungle Rent compra propiedades en Turín y las alquila a estudiantes universitarios. Tú inviertes, nosotros gestionamos todo.",
-      "badgeExplanation": "Inviertes en un apartamento específico adquirido por Jungle Rent. Cero gestión, rentas trimestrales.",
+      "badgeExplanation": "Inviertes en un apartamento específico adquirido por Jungle Rent. Cero gestión, rentas bimestrales.",
       "discoverOpportunity": "Descubre la oportunidad",
       "talkToLorenzo": "Habla con Lorenzo",
       "startInvesting": "Empieza a invertir",
@@ -477,7 +477,7 @@
       },
       "testimonials": {
          "title": "Qué dicen los inversores",
-         "quote1": "He invertido €500 y recibo informes trimestrales transparentes. Por fin puedo acceder al mercado inmobiliario.",
+         "quote1": "He invertido €500 y recibo informes bimestrales transparentes. Por fin puedo acceder al mercado inmobiliario.",
          "author1": "Marco, 32 años",
          "quote2": "Cero gestión, todo lo cuida el equipo. Puedo concentrarme en mi trabajo mientras la inversión trabaja para mí.",
          "author2": "Giulia, 28 años"
@@ -523,7 +523,7 @@
             "description": "En los resultados del portfolio",
             "detail": "Participas en los resultados de los inmuebles gestionados. Informes transparentes y dashboard personal.",
             "keyPoints": [
-               "Informes trimestrales transparentes",
+               "Informes bimestrales transparentes",
                "Dashboard personal",
                "Rendimientos distribuidos"
             ]
@@ -566,7 +566,7 @@
          "caption": "Ocupación 365 días. Contratos, mantenimiento, fiscalidad incluidos."
       },
       "earn": {
-         "quarterly": "Informes trimestrales",
+         "quarterly": "Informes bimestrales",
          "dashboard": "Dashboard personal",
          "caption": "Participas en los resultados con total transparencia."
       }
@@ -590,7 +590,7 @@
       "step3Title": "Confirmación",
       "step3Desc": "Finalizas tu participación con contratos transparentes y soporte legal incluido",
       "step4Title": "Participación en resultados",
-      "step4Desc": "Participas en los resultados del portfolio con informes trimestrales. Nosotros gestionamos todo",
+      "step4Desc": "Participas en los resultados del portfolio con informes bimestrales. Nosotros gestionamos todo",
       "ctaTitle": "¿Listo para invertir?",
       "ctaSubtitle": "Habla con uno de nuestros asesores y descubre las oportunidades disponibles",
       "readSavillsAnalysis": "Lee el análisis completo del mercado"
@@ -699,9 +699,9 @@
       "investorQ2": "¿Cómo funciona la inversión?",
       "investorA2": "Inviertes en Jungle Rent para un apartamento específico que seleccionamos y adquirimos nosotros. Sabes exactamente en qué inmueble entra tu capital. Gestionamos todo: inquilinos, contratos, mantenimiento. Los resultados de ese apartamento generan tus rentas.",
       "investorQ3": "¿Jungle Rent gestiona completamente el inmueble?",
-      "investorA3": "Sí, ofrecemos un servicio de gestión full-service que incluye: búsqueda y selección de inquilinos, gestión de contratos, mantenimiento, cobro de alquileres y reportes trimestrales.",
+      "investorA3": "Sí, ofrecemos un servicio de gestión full-service que incluye: búsqueda y selección de inquilinos, gestión de contratos, mantenimiento, cobro de alquileres y reportes bimestrales.",
       "investorQ4": "¿Cuánto tiempo se tarda en ver los primeros resultados?",
-      "investorA4": "Los primeros resultados se comunican después de aproximadamente 2 meses desde la inversión, una vez completada la fase de setup. Después, recibes informes trimestrales detallados.",
+      "investorA4": "Los primeros resultados se comunican después de aproximadamente 2 meses desde la inversión, una vez completada la fase de setup. Después, recibes informes bimestrales detallados.",
       "investorQ5": "¿Qué tipo de contratos se ofrecen a los inquilinos?",
       "investorA5": "Utilizamos contratos transitorios con motivación de estudio, alineados con el año académico y renovables anualmente.",
       "investorQ6": "¿Qué rendimiento puedo esperar?",
@@ -713,7 +713,7 @@
       "investorQ9": "¿Puedo vender en cualquier momento?",
       "investorA9": "Puedes invertir en Jungle Rent desde €100 para un apartamento específico. No un fondo anónimo: sabes qué inmueble estás financiando. Jungle Rent adquiere, gestiona y distribuye las rentas.",
       "investorQ10": "¿Qué garantías ofrecéis?",
-      "investorA10": "Ofrecemos total transparencia con informes trimestrales, contratos regulares e incubación en 2i3T, la incubadora de la Universidad de Turín.",
+      "investorA10": "Ofrecemos total transparencia con informes bimestrales, contratos regulares e incubación en 2i3T, la incubadora de la Universidad de Turín.",
       "investorQ11": "¿Cómo se protege mi inversión?",
       "investorA11": "Las inversiones están protegidas por contratos regulares, gestión profesional y la asociación con el ecosistema universitario de Turín.",
       "studentQ1": "¿Cuánto puedo ahorrar en el alquiler?",

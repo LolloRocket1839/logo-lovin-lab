@@ -109,7 +109,7 @@
          "step3Title": "In-House Management",
          "step3Desc": "We manage everything internally: maintenance, contracts, 24/7 support, without outsourcing.",
          "step4Title": "Returns to Investors",
-         "step4Desc": "Rental income generates returns distributed quarterly to investors, with full transparency.",
+         "step4Desc": "Rental income generates returns distributed every 2 months to investors, with full transparency.",
          "reinvest": "Proceeds are reinvested to acquire new properties"
       },
       "foundedLabel": "Date of Incorporation",
@@ -148,9 +148,9 @@
       "mainHeadline": "Invest in student housing in Turin",
       "mainHeadlineB": "Earn passive income from Turin student apartments",
       "mainSubheadline": "Invest from €100 in Jungle Rent. We acquire and manage, you earn.",
-      "mainSubheadlineB": "From €100, own a share of managed student housing — we handle everything, you collect quarterly returns.",
+      "mainSubheadlineB": "From €100, own a share of managed student housing — we handle everything, you collect bi-monthly returns.",
       "missionStatement": "Jungle Rent buys properties in Turin and rents them to university students. You invest, we manage everything.",
-      "badgeExplanation": "You invest in a specific apartment acquired by Jungle Rent. Zero management, quarterly returns.",
+      "badgeExplanation": "You invest in a specific apartment acquired by Jungle Rent. Zero management, bi-monthly returns.",
       "discoverOpportunity": "Discover the opportunity",
       "talkToLorenzo": "Talk to Lorenzo",
       "startInvesting": "Join our first deal",
@@ -160,7 +160,7 @@
          "whatBuy": "What do I buy with €100?",
          "whatBuyAnswer": "You invest in Jungle Rent for a specific apartment that we acquire and manage. You know exactly where your capital goes.",
          "howEarn": "How do I receive returns?",
-         "howEarnAnswer": "Each quarter you receive your share of collected rents, proportional to your investment. Transparent reports and personal dashboard.",
+         "howEarnAnswer": "Every 2 months you receive your share of collected rents, proportional to your investment. Transparent reports and personal dashboard.",
          "whoManages": "Who manages the properties?",
          "whoManagesAnswer": "Jungle Rent manages everything: acquisition, contracts, tenants, maintenance and taxes. You don't have to do anything."
       },
@@ -414,7 +414,7 @@
       },
       "testimonials": {
          "title": "What investors say",
-         "quote1": "I invested €500 and receive transparent quarterly reports. Finally I can access the real estate market.",
+         "quote1": "I invested €500 and receive transparent bi-monthly reports. Finally I can access the real estate market.",
          "author1": "Marco, 32 years old",
          "quote2": "Zero management, everything is handled by the team. I can focus on my work while my investment works for me.",
          "author2": "Giulia, 28 years old"
@@ -460,7 +460,7 @@
             "description": "In portfolio results",
             "detail": "You participate in managed property results. Transparent reports and personal dashboard to monitor your investment.",
             "keyPoints": [
-               "Transparent quarterly reports",
+               "Transparent bi-monthly reports",
                "Personal dashboard",
                "Dividends distributed"
             ]
@@ -503,7 +503,7 @@
          "caption": "365-day occupancy. Contracts, maintenance, taxes included."
       },
       "earn": {
-         "quarterly": "Quarterly reports",
+         "quarterly": "Bi-monthly reports",
          "dashboard": "Personal dashboard",
          "caption": "Participate in results with full transparency."
       }
@@ -527,7 +527,7 @@
       "step3Title": "Confirmation",
       "step3Desc": "Finalize your participation with transparent contracts and legal support included",
       "step4Title": "Portfolio participation",
-      "step4Desc": "You participate in portfolio results with quarterly reports. We manage everything",
+      "step4Desc": "You participate in portfolio results with bi-monthly reports. We manage everything",
       "ctaTitle": "Ready to Invest?",
       "ctaSubtitle": "Talk to our advisor and discover opportunities available today",
       "readSavillsAnalysis": "Read the full market analysis"
@@ -731,15 +731,15 @@
       "investorQ2": "How does the investment work?",
       "investorA2": "You invest in Jungle Rent for a specific apartment that we select and acquire. You know exactly which property your capital goes into. We handle everything: tenants, contracts, maintenance. That apartment's results generate your returns. WARNING: investments involve risks, including possible partial or total loss of invested capital.",
       "investorQ3": "Does Jungle Rent manage the property completely?",
-      "investorA3": "Yes, we offer a full-service management service that includes: tenant search and selection, contract management and registrations, ordinary and extraordinary maintenance, rent collection, arrears management, legal assistance, and detailed quarterly reporting. The investor participates in results without having to worry about anything.",
+      "investorA3": "Yes, we offer a full-service management service that includes: tenant search and selection, contract management and registrations, ordinary and extraordinary maintenance, rent collection, arrears management, legal assistance, and detailed bi-monthly reporting. The investor participates in results without having to worry about anything.",
       "investorQ4": "How long does it take to see the first results?",
-      "investorA4": "The first results are communicated after approximately 2 months from investment, once the setup phase is completed (purchase/renovation, tenant search, contract registration). Subsequently, you receive detailed quarterly reports.",
+      "investorA4": "The first results are communicated after approximately 2 months from investment, once the setup phase is completed (purchase/renovation, tenant search, contract registration). Subsequently, you receive detailed bi-monthly reports.",
       "investorQ5": "What type of contracts are offered to tenants?",
       "investorA5": "We use temporary contracts with study motivation (art. 5 L. 431/98) aligned with the academic year, renewable annually. This type guarantees greater rotation (therefore rent adjustment to market rates) and legal protection for both owner and tenant.",
       "investorQ6": "How does investment management work?",
-      "investorA6": "Once you've made your investment, we take care of everything: tenant selection, contracts, maintenance and rent collection. You receive detailed quarterly reports with all portfolio data.",
+      "investorA6": "Once you've made your investment, we take care of everything: tenant selection, contracts, maintenance and rent collection. You receive detailed bi-monthly reports with all portfolio data.",
       "investorQ7": "What reports do I receive and how often?",
-      "investorA7": "You receive a detailed quarterly report that includes: property status, occupancy rate, portfolio results, expenses incurred and forecasts for the next quarter. You also have access to an online dashboard to monitor your investment in real-time.",
+      "investorA7": "You receive a detailed bi-monthly report that includes: property status, occupancy rate, portfolio results, expenses incurred and forecasts for the next period. You also have access to an online dashboard to monitor your investment in real-time.",
       "investorQ8": "Can I visit the properties before investing?",
       "investorA8": "Yes, we organize property visits by appointment for interested investors. You can see the properties in person, evaluate the quality of the renovations and speak directly with our management team.",
       "investorQ9": "How can I invest with Jungle Rent?",
@@ -785,9 +785,9 @@
       "voiceQ2": "Is it safe to invest in Jungle Rent?",
       "voiceA2": "Jungle Rent is a certified innovative startup, registered with the Turin Chamber of Commerce with VAT number 13333450016. We are incubated by 2i3T, the University of Turin incubator. However, like any investment, it carries risks including possible loss of capital.",
       "voiceQ3": "How much can you earn investing in student apartments in Turin?",
-      "voiceA3": "Results depend on market performance and are not guaranteed. Our hybrid student/tourist model optimizes occupancy: student rentals during the academic year and tourist rentals in summer months. You receive detailed quarterly reports.",
+      "voiceA3": "Results depend on market performance and are not guaranteed. Our hybrid student/tourist model optimizes occupancy: student rentals during the academic year and tourist rentals in summer months. You receive detailed bi-monthly reports.",
       "voiceQ4": "How can I see my real estate returns?",
-      "voiceA4": "You have access to a personal online dashboard where you can monitor your investment in real-time. Additionally, you receive a detailed quarterly report via email with property status, occupancy rate, results and forecasts.",
+      "voiceA4": "You have access to a personal online dashboard where you can monitor your investment in real-time. Additionally, you receive a detailed bi-monthly report via email with property status, occupancy rate, results and forecasts.",
       "voiceQ5": "How can I sell my house quickly in Turin?",
       "voiceA5": "Jungle Rent buys your house directly without intermediaries. Fill out the form, receive a free valuation within 48 hours, inspection within 7 days, written offer within 48 hours of inspection, and closing in 60-90 days. Zero commissions.",
       "voiceQ6": "Who buys apartments near Politecnico di Torino?",
@@ -803,7 +803,7 @@
       "voiceQ11": "How much does it cost to rent a room in Turin for students?",
       "voiceA11": "A single room for students in Turin costs on average €350-500 per month in areas like San Salvario, €400-550 in Crocetta, €300-400 in Aurora. Prices include condo fees but not utilities.",
       "voiceQ12": "Is Jungle Rent reliable for investing?",
-      "voiceA12": "Jungle Rent is a limited liability company registered in Italy (VAT 13333450016, REA TO-1355899), certified as an innovative startup. We are incubated by 2i3T, partner of Politecnico di Torino. We offer transparent contracts and quarterly reports.",
+      "voiceA12": "Jungle Rent is a limited liability company registered in Italy (VAT 13333450016, REA TO-1355899), certified as an innovative startup. We are incubated by 2i3T, partner of Politecnico di Torino. We offer transparent contracts and bi-monthly reports.",
       "voiceQ13": "What happens if I want to exit my Jungle Rent investment?",
       "voiceA13": "Exit conditions are defined in the contract. We recommend contacting us to discuss available options. The investment is designed for medium to long-term horizons (3-5 years) to maximize results.",
       "voiceQ14": "Does Jungle Rent buy houses that need renovation?",
