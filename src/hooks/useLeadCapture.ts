@@ -86,17 +86,55 @@ export function useLeadCapture() {
       return { success: false, error: "Both submissions failed" };
     }
 
-    // Fire-and-forget: send confirmation email (don't block on it)
+    // Fire-and-forget emails (don't block on them)
+    const emailPayload = {
+      email: lead.email.trim(),
+      name: lead.name?.trim() || undefined,
+      phone: lead.phone?.trim() || undefined,
+      leadType: lead.leadType,
+      source: lead.source,
+      utmSource: utm.utm_source || undefined,
+      utmMedium: utm.utm_medium || undefined,
+      utmCampaign: utm.utm_campaign || undefined,
+      metadata: lead.metadata,
+    };
+
+    // 1. Confirmation email to the lead
+    const confirmTemplate =
+      lead.leadType === "seller" ? "seller-confirmation" : "lead-confirmation";
+
     supabase.functions
       .invoke("send-transactional-email", {
         body: {
-          templateName: "lead-confirmation",
+          templateName: confirmTemplate,
           recipientEmail: lead.email.trim(),
           idempotencyKey: `lead-confirm-${lead.email.trim()}-${Date.now()}`,
-          templateData: { leadType: lead.leadType },
+          templateData: {
+            leadType: lead.leadType,
+            ...(lead.metadata?.estimated_value
+              ? {
+                  estimatedValue: new Intl.NumberFormat("it-IT", {
+                    style: "currency",
+                    currency: "EUR",
+                    maximumFractionDigits: 0,
+                  }).format(lead.metadata.estimated_value as number),
+                }
+              : {}),
+          },
         },
       })
       .catch((err) => console.error("Confirmation email failed:", err));
+
+    // 2. Admin notification email
+    supabase.functions
+      .invoke("send-transactional-email", {
+        body: {
+          templateName: "lead-notification",
+          idempotencyKey: `lead-notify-${lead.email.trim()}-${Date.now()}`,
+          templateData: emailPayload,
+        },
+      })
+      .catch((err) => console.error("Admin notification email failed:", err));
 
     return { success: true };
   };
