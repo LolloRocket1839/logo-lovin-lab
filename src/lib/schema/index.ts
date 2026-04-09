@@ -228,13 +228,11 @@ export const createAboutPageSchema = (language: 'it' | 'en' = 'it') => ({
   "url": "https://junglerent.it/chi-siamo",
   "mainEntity": {
     ...createOrganizationSchema(),
-    "founder": [
-      {
-        "@type": "Person",
-        "name": "Jungle Rent Team",
-        "jobTitle": "Founders"
-      }
-    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Lorenzo Oni-Joseph",
+      "jobTitle": "Founder & CEO"
+    },
     "memberOf": {
       "@type": "Organization",
       "name": "2i3T - Incubatore di Imprese Innovative dell'Università di Torino"

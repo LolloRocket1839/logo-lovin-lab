@@ -11,7 +11,7 @@
       "currentPage": "Página actual"
    },
    "founders": {
-      "title": "Fundadores",
+      "title": "Fundador",
       "contactUs": "Contáctanos directamente",
       "callNow": "Llamar ahora",
       "message": "Escribir",
@@ -119,7 +119,7 @@
       "foundedLabel": "Fecha de constitución",
       "foundedDate": "Octubre 2025",
       "legalForm": "Start-up Innovadora S.r.l.",
-      "foundersLabel": "Socios fundadores",
+      "foundersLabel": "Fundador",
       "founderLabel": "Fundador",
       "lorenzoRole": "Fundador • LUISS Derecho y Economía",
       "capitalLabel": "Capital social",
