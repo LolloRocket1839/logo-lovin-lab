@@ -1,56 +1,39 @@
 
 
-## Plan: Regulatory-Safe Social Proof + Database Lead Capture (with Formspree kept)
+## Additional Automated Emails You Can Set Up
 
-Two parts: fix messaging, then add DB persistence alongside existing Formspree notifications.
-
----
-
-### Part 1: Replace Fake Social Proof
-
-**What changes:**
-
-| Location | New IT copy | New EN copy |
-|---|---|---|
-| Hero social proof | Bilocale a Torino · €45-70K · Registra il tuo interesse | 2-room apt in Turin · €45-70K · Register your interest |
-| Investor section (desktop + mobile) | Primo progetto in fase di selezione · Registrati per aggiornamenti | First project in selection · Register for updates |
-| Dialog urgency badge | Espressione di interesse · Nessun impegno | Expression of interest · No commitment |
-
-**Files:**
-- `ImmersiveHero.tsx` — remove `ACTIVE_INVESTORS = 5`, use plain translation key
-- `InvestorSectionDesktop.tsx` / `InvestorSectionMobile.tsx` — remove `useWaitlistCounter`, replace `{count}+ activeInvestors` with new `investor.socialProofLine` key
-- `QuickInvestorLeadDialog.tsx` — update urgency badge translation key
-- All 7 locale JSON files — update `hero.socialProof`, `investor.socialProofLine`, `quickInvestorLead.urgencyBadge`
+You already have a **lead confirmation** email that fires when someone registers interest. Here are the most impactful automated emails you can add, all using the same infrastructure already in place:
 
 ---
 
-### Part 2: Save All Leads to Database (Dual-Write)
+### 1. Owner/Admin Notification Email (highest value)
+**Trigger:** Every time a new lead signs up (investor, seller, or student)
+**What it does:** Sends YOU an email instantly with the lead details — name, email, type, source — so you never miss a lead even if you're not checking Formspree.
+**Template:** `lead-notification` with a fixed `to` field pointing to your email address.
 
-Every form submission will save to a `leads` table AND continue sending to Formspree, so you get both email notifications and a queryable database of all leads.
+### 2. Seller Lead Confirmation
+**Trigger:** When a property owner submits interest via the seller form
+**What it does:** Sends the seller a branded confirmation with next steps (e.g., "We'll evaluate your property and contact you within 48h").
+**Template:** `seller-confirmation` — different copy and tone from the investor one.
 
-**Database migration:**
-- Create `leads` table: `id` (uuid), `email`, `name` (nullable), `phone` (nullable), `source` (text — e.g. "hero_cta", "exit_intent", "seller_section"), `lead_type` (text — investor/seller/student/general), `utm_source`, `utm_medium`, `utm_campaign`, `metadata` (jsonb for extra fields like address/reason), `created_at`
-- RLS: block all public access, allow inserts only via security-definer RPC `insert_lead`
-- Create `insert_lead` RPC that validates email format server-side
+### 3. Quiz Completion Follow-Up
+**Trigger:** After someone completes the Investor Quiz
+**What it does:** Sends a personalized recap based on their quiz answers (budget range, property preferences) with a Calendly link to book a call.
+**Template:** `quiz-followup` with dynamic data from quiz responses.
 
-**New shared hook:** `src/hooks/useLeadCapture.ts`
-- Dual-write: inserts into DB via RPC + submits to Formspree
-- Independent error handling — if one fails, the other still completes
-- Returns `{ submitLead, isSubmitting }` with consistent interface
-
-**Forms to update (5 total):**
-- `QuickInvestorLeadDialog` → type: investor
-- `QuickSellerLeadDialog` → type: seller
-- `ExitIntentPopup` → type: general
-- `InvestorQuiz` → type: investor
-- `WaitlistDialog` → type: student
-
-Each keeps its existing Formspree endpoint + subject line formatting, but also writes to the `leads` table via the shared hook.
+### 4. Calendly Booking Confirmation (custom branded)
+**Trigger:** After someone books via Calendly (requires Calendly webhook integration)
+**What it does:** Sends a branded pre-meeting email with preparation tips, your company intro, and what to expect.
+**Note:** This requires setting up a Calendly webhook — slightly more complex.
 
 ---
 
-### What you get
-- **One place to see all leads** — query the `leads` table to see every signup, with source tracking and UTM data
-- **Email notifications unchanged** — Formspree still sends you emails for every submission
-- **Honest, compliant messaging** — no fake numbers, no regulatory risk
+### Recommended Starting Point
+
+I'd suggest **#1 (Owner notification)** and **#2 (Seller confirmation)** first — they're quick to implement and immediately useful. Both just need a new template + a small trigger update.
+
+### Technical Summary
+- Each new email = one new `.tsx` template file + registry update + one `supabase.functions.invoke()` call at the trigger point
+- All emails go through the existing `send-transactional-email` function — no new infrastructure needed
+- Templates get branded to match your site automatically
 
