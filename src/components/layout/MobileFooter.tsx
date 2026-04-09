@@ -119,7 +119,12 @@ export const MobileFooter = () => {
 
         {/* EU Co-Funding Compliance Banner */}
         <div className="w-full pt-2">
-          <div className="bg-[#003399] rounded-xl px-5 py-5 flex flex-col items-center gap-2">
+          <a
+            href="https://www.regione.piemonte.it/web/temi/fondi-europei/fondo-sociale-europeo/pr-fse-2021-2027"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#003399] rounded-xl px-5 py-5 flex flex-col items-center gap-2 hover:bg-[#002b80] transition-colors cursor-pointer"
+          >
             <img 
               src={euFundingBanner} 
               alt="Coesione Italia 21-27 Piemonte — L'Europa investe sul Piemonte, il Piemonte investe su di te — PR FSE+ 2021-2027" 
@@ -130,7 +135,7 @@ export const MobileFooter = () => {
             <p className="text-[9px] tracking-wide text-white/60 text-center leading-relaxed max-w-xs">
               Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
             </p>
-          </div>
+          </a>
         </div>
 
         {/* Logo + Copyright */}
