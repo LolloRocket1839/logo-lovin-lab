@@ -101,7 +101,7 @@
          "step3Title": "Gestione interna",
          "step3Desc": "Gestiamo tutto internamente: manutenzione, contratti, assistenza 24/7, senza delegare a terzi.",
          "step4Title": "Rendite agli investitori",
-         "step4Desc": "Gli affitti generano rendite distribuite trimestralmente agli investitori, in modo trasparente.",
+         "step4Desc": "Gli affitti generano rendite distribuite bimestralmente agli investitori, in modo trasparente.",
          "reinvest": "I proventi vengono reinvestiti per acquisire nuove proprietà"
       },
       "foundedLabel": "Data di costituzione",
@@ -145,9 +145,9 @@
       "mainHeadline": "Investi in student housing a Torino",
       "mainHeadlineB": "Guadagna reddito passivo dagli appartamenti studenteschi a Torino",
       "mainSubheadline": "Investi da €100 in Jungle Rent. Noi acquistiamo e gestiamo, tu guadagni.",
-      "mainSubheadlineB": "Da €100, possiedi una quota di alloggi studenteschi gestiti — noi ci occupiamo di tutto, tu incassi rendite trimestrali.",
+      "mainSubheadlineB": "Da €100, possiedi una quota di alloggi studenteschi gestiti — noi ci occupiamo di tutto, tu incassi rendite bimestrali.",
       "missionStatement": "Jungle Rent acquista immobili a Torino e li affitta a studenti universitari. Tu investi, noi gestiamo tutto.",
-      "badgeExplanation": "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite trimestrali.",
+      "badgeExplanation": "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite bimestrali.",
       "discoverOpportunity": "Scopri l'opportunità",
       "talkToLorenzo": "Parla con Lorenzo",
       "startInvesting": "Entra nella prima acquisizione",
@@ -157,7 +157,7 @@
          "whatBuy": "Cosa compro con €100?",
          "whatBuyAnswer": "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi. Sai esattamente dove va il tuo capitale.",
          "howEarn": "Come ricevo i rendimenti?",
-         "howEarnAnswer": "Ogni trimestre ricevi la tua quota degli affitti incassati, proporzionale al tuo investimento. Report trasparenti e dashboard personale.",
+         "howEarnAnswer": "Ogni 2 mesi ricevi la tua quota degli affitti incassati, proporzionale al tuo investimento. Report trasparenti e dashboard personale.",
          "whoManages": "Chi gestisce gli immobili?",
          "whoManagesAnswer": "Jungle Rent gestisce tutto: acquisizione, contratti, inquilini, manutenzione e fiscalità. Tu non devi fare nulla."
       },
@@ -410,7 +410,7 @@
       },
       "testimonials": {
          "title": "Cosa dicono gli investitori",
-         "quote1": "Ho investito €500 e ricevo report trimestrali trasparenti. Finalmente posso accedere al mercato immobiliare.",
+         "quote1": "Ho investito €500 e ricevo report bimestrali trasparenti. Finalmente posso accedere al mercato immobiliare.",
          "author1": "Marco, 32 anni",
          "quote2": "Zero gestione, tutto è curato dal team. Posso concentrarmi sul mio lavoro mentre l'investimento lavora per me.",
          "author2": "Giulia, 28 anni"
@@ -456,7 +456,7 @@
             "description": "Ai risultati del portafoglio",
             "detail": "Partecipi ai risultati degli immobili gestiti. Report trasparenti e dashboard personale per monitorare il tuo investimento.",
             "keyPoints": [
-               "Report trimestrali trasparenti",
+               "Report bimestrali trasparenti",
                "Dashboard personale",
                "Rendimenti distribuiti"
             ]
@@ -499,7 +499,7 @@
          "caption": "Occupazione 365 giorni. Contratti, manutenzione, fiscalità inclusi."
       },
       "earn": {
-         "quarterly": "Report trimestrali",
+         "quarterly": "Report bimestrali",
          "dashboard": "Dashboard personale",
          "caption": "Partecipi ai risultati con trasparenza totale."
       }
@@ -523,7 +523,7 @@
       "step3Title": "Conferma",
       "step3Desc": "Finalizzi la partecipazione con contratti trasparenti e supporto legale incluso",
       "step4Title": "Partecipazione ai risultati",
-      "step4Desc": "Partecipi ai risultati del portafoglio con report trimestrali. Noi gestiamo tutto",
+      "step4Desc": "Partecipi ai risultati del portafoglio con report bimestrali. Noi gestiamo tutto",
       "ctaTitle": "Pronto a investire?",
       "ctaSubtitle": "Parla con un nostro advisor e scopri le opportunità disponibili oggi",
       "readSavillsAnalysis": "Leggi l'analisi completa del mercato"
@@ -727,15 +727,15 @@
       "investorQ2": "Come funziona l'investimento?",
       "investorA2": "Investi in Jungle Rent per un appartamento specifico che selezioniamo e acquistiamo noi. Sai esattamente in quale immobile entra il tuo capitale. Poi gestiamo tutto: inquilini, contratti, manutenzione. I risultati di quell'appartamento generano le tue rendite. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito.",
       "investorQ3": "Jungle Rent gestisce completamente l'immobile?",
-      "investorA3": "Sì, offriamo un servizio di gestione full-service che include: ricerca e selezione inquilini, gestione contratti e registrazioni, manutenzione ordinaria e straordinaria, riscossione affitti, gestione morosità, assistenza legale e reportistica trimestrale dettagliata. L'investitore partecipa ai risultati senza doversi preoccupare di nulla.",
+      "investorA3": "Sì, offriamo un servizio di gestione full-service che include: ricerca e selezione inquilini, gestione contratti e registrazioni, manutenzione ordinaria e straordinaria, riscossione affitti, gestione morosità, assistenza legale e reportistica bimestrale dettagliata. L'investitore partecipa ai risultati senza doversi preoccupare di nulla.",
       "investorQ4": "Quanto tempo ci vuole per vedere i primi risultati?",
-      "investorA4": "I primi risultati vengono comunicati dopo circa 2 mesi dall'investimento, una volta completata la fase di setup (acquisto/ristrutturazione, ricerca inquilini, registrazione contratti). Successivamente, ricevi report trimestrali dettagliati.",
+      "investorA4": "I primi risultati vengono comunicati dopo circa 2 mesi dall'investimento, una volta completata la fase di setup (acquisto/ristrutturazione, ricerca inquilini, registrazione contratti). Successivamente, ricevi report bimestrali dettagliati.",
       "investorQ5": "Che tipo di contratti vengono proposti agli inquilini?",
       "investorA5": "Utilizziamo contratti transitori con motivazione studio (art. 5 L. 431/98) allineati all'anno accademico, rinnovabili annualmente. Questa tipologia garantisce maggiore rotazione (quindi adeguamento degli affitti ai prezzi di mercato) e tutela legale sia per il proprietario che per l'inquilino.",
       "investorQ6": "Come funziona la gestione dell'investimento?",
-      "investorA6": "Una volta effettuato l'investimento, ci occupiamo di tutto: selezione inquilini, contratti, manutenzione e riscossione affitti. Ricevi report trimestrali dettagliati con tutti i dati del portafoglio.",
+      "investorA6": "Una volta effettuato l'investimento, ci occupiamo di tutto: selezione inquilini, contratti, manutenzione e riscossione affitti. Ricevi report bimestrali dettagliati con tutti i dati del portafoglio.",
       "investorQ7": "Quali report ricevo e con che frequenza?",
-      "investorA7": "Ricevi un report trimestrale dettagliato che include: stato dell'immobile, tasso di occupazione, risultati del portafoglio, spese sostenute e previsioni per il trimestre successivo. Hai anche accesso a un dashboard online per monitorare il tuo investimento in tempo reale.",
+      "investorA7": "Ricevi un report bimestrale dettagliato che include: stato dell'immobile, tasso di occupazione, risultati del portafoglio, spese sostenute e previsioni per il bimestre successivo. Hai anche accesso a un dashboard online per monitorare il tuo investimento in tempo reale.",
       "investorQ8": "Posso visitare le proprietà prima di investire?",
       "investorA8": "Sì, organizziamo visite agli immobili su appuntamento per gli investitori interessati. Puoi vedere di persona le proprietà, valutare la qualità delle ristrutturazioni e parlare direttamente con il nostro team di gestione.",
       "investorQ9": "Come posso investire con Jungle Rent?",
@@ -781,9 +781,9 @@
       "voiceQ2": "È sicuro investire in Jungle Rent?",
       "voiceA2": "Jungle Rent è una startup innovativa certificata, registrata alla Camera di Commercio di Torino con P.IVA 13333450016. Siamo incubati da 2i3T, l'incubatore dell'Università di Torino. Tuttavia, come ogni investimento, comporta rischi inclusa la possibile perdita del capitale.",
       "voiceQ3": "Quanto si guadagna investendo in appartamenti per studenti a Torino?",
-      "voiceA3": "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione: affitti studenteschi durante l'anno accademico e affitti turistici nei mesi estivi. Ricevi report trimestrali dettagliati.",
+      "voiceA3": "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione: affitti studenteschi durante l'anno accademico e affitti turistici nei mesi estivi. Ricevi report bimestrali dettagliati.",
       "voiceQ4": "Come faccio a vedere le mie rendite immobiliari?",
-      "voiceA4": "Hai accesso a una dashboard personale online dove puoi monitorare il tuo investimento in tempo reale. Inoltre, ricevi un report trimestrale dettagliato via email con stato dell'immobile, tasso di occupazione, risultati e previsioni.",
+      "voiceA4": "Hai accesso a una dashboard personale online dove puoi monitorare il tuo investimento in tempo reale. Inoltre, ricevi un report bimestrale dettagliato via email con stato dell'immobile, tasso di occupazione, risultati e previsioni.",
       "voiceQ5": "Come faccio a vendere casa velocemente a Torino?",
       "voiceA5": "Jungle Rent acquista direttamente la tua casa senza intermediari. Compili il form, ricevi valutazione gratuita in 48 ore, sopralluogo entro 7 giorni, offerta scritta entro 48 ore dal sopralluogo, e rogito in 60-90 giorni. Zero commissioni.",
       "voiceQ6": "Chi compra appartamenti vicino al Politecnico di Torino?",
@@ -799,7 +799,7 @@
       "voiceQ11": "Quanto costa affittare una stanza a Torino per studenti?",
       "voiceA11": "Una stanza singola per studenti a Torino costa mediamente €350-500 al mese in zone come San Salvario, €400-550 in Crocetta, €300-400 in Aurora. I prezzi includono spese condominiali ma non utenze.",
       "voiceQ12": "Jungle Rent è affidabile per investire?",
-      "voiceA12": "Jungle Rent è una società a responsabilità limitata registrata in Italia (P.IVA 13333450016, REA TO-1355899), certificata come startup innovativa. Siamo incubati da 2i3T, partner del Politecnico di Torino. Offriamo contratti trasparenti e report trimestrali.",
+      "voiceA12": "Jungle Rent è una società a responsabilità limitata registrata in Italia (P.IVA 13333450016, REA TO-1355899), certificata come startup innovativa. Siamo incubati da 2i3T, partner del Politecnico di Torino. Offriamo contratti trasparenti e report bimestrali.",
       "voiceQ13": "Cosa succede se voglio uscire dall'investimento Jungle Rent?",
       "voiceA13": "Le condizioni di uscita dall'investimento sono definite nel contratto. Ti consigliamo di contattarci per discutere le opzioni disponibili. L'investimento è pensato per orizzonti di medio-lungo termine (3-5 anni) per massimizzare i risultati.",
       "voiceQ14": "Jungle Rent compra case da ristrutturare?",

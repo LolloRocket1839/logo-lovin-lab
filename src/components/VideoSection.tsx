@@ -32,7 +32,7 @@ const MobileSteps = () => {
       icon: TrendingUp,
       number: "4",
       title: t('infographic.steps.earn.title', 'Guadagni'),
-      description: t('video.mobileStep4', 'Rendite trimestrali'),
+      description: t('video.mobileStep4', 'Rendite bimestrali'),
     },
   ];
 
