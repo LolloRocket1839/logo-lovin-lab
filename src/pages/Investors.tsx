@@ -283,6 +283,9 @@ const Investors = () => {
         </div>
       </section>
 
+      {/* Yield Calculator */}
+      <YieldCalculator />
+
       {/* Zones Section - Link to market analysis with preview cards */}
       <section className="py-16 md:py-24 bg-muted/30 border-t border-border/20">
         <div className="container px-8">
