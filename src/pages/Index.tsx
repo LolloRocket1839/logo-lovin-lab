@@ -24,6 +24,8 @@ const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ defa
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
 const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
 const BottomNav = lazy(() => import("@/components/layout/BottomNav").then(m => ({ default: m.BottomNav })));
+const ExitIntentPopup = lazy(() => import("@/components/ExitIntentPopup").then(m => ({ default: m.ExitIntentPopup })));
+const ScrollQualifier = lazy(() => import("@/components/ScrollQualifier").then(m => ({ default: m.ScrollQualifier })));
 
 const Index = () => {
   const { t, i18n } = useTranslation();
@@ -139,6 +141,8 @@ const Index = () => {
       </Suspense>
       <Suspense fallback={null}>
         <WhatsAppFAB />
+        <ExitIntentPopup source="homepage" />
+        <ScrollQualifier />
       </Suspense>
     </main>
   );
