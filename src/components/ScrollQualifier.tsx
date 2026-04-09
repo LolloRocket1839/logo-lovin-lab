@@ -21,6 +21,11 @@ export const ScrollQualifier = () => {
     if (dismissed) return;
 
     const onScroll = () => {
+      // Don't show if exit intent popup is already shown
+      try {
+        if (sessionStorage.getItem("exitIntentShown") === "true") return;
+      } catch {}
+
       const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
       if (pct >= 40 && !visible) {
         setVisible(true);
@@ -31,6 +36,25 @@ export const ScrollQualifier = () => {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [dismissed, visible, trackEvent]);
+
+  // Listen for exit intent opening and hide this component
+  useEffect(() => {
+    const checkExitIntent = () => {
+      try {
+        if (sessionStorage.getItem("exitIntentShown") === "true") {
+          setVisible(false);
+        }
+      } catch {}
+    };
+
+    // Check on storage events (cross-tab) and periodically for same-tab
+    window.addEventListener("storage", checkExitIntent);
+    const interval = setInterval(checkExitIntent, 1000);
+    return () => {
+      window.removeEventListener("storage", checkExitIntent);
+      clearInterval(interval);
+    };
+  }, []);
 
   const dismiss = () => {
     setVisible(false);

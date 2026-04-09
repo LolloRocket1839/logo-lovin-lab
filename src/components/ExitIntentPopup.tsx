@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Clock, Shield, Gift } from "lucide-react";
+import { X, Clock, Shield, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
@@ -152,13 +152,8 @@ export const ExitIntentPopup = ({ source = "exit-intent", trackingPrefix, title,
               </button>
 
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <Gift className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-wider text-primary font-medium">
-                    {t("exitIntent.badge", "Offerta esclusiva")}
-                  </p>
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-primary" />
                 </div>
               </div>
 

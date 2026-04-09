@@ -37,26 +37,26 @@ export const WhatsAppFAB = () => {
     openQuickContact(lang);
   };
 
-  // Variation A: Classic green floating circle
+  // Variation A: Subtle dark floating circle
   if (variation === 'A') {
     return (
       <button
         onClick={handleClick}
         aria-label="WhatsApp"
-        className="fixed bottom-24 right-4 z-40 md:hidden w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform animate-fade-up"
+        className="fixed bottom-24 right-4 z-40 md:hidden w-14 h-14 rounded-full bg-foreground text-background shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-transform animate-fade-up"
       >
-        <MessageCircle className="w-7 h-7" fill="white" />
+        <MessageCircle className="w-7 h-7" />
       </button>
     );
   }
 
-  // Variation B: Full-width sticky banner
+  // Variation B: Subtle dark pill button
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-16 left-0 right-0 z-40 md:hidden bg-[#25D366] text-white shadow-[0_-2px_10px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 py-3 px-4 animate-fade-up"
+      className="fixed bottom-20 right-4 z-40 md:hidden bg-foreground text-background rounded-full shadow-lg flex items-center gap-2 py-3 px-5 hover:scale-105 active:scale-95 transition-transform animate-fade-up"
     >
-      <Phone className="w-5 h-5" />
+      <Phone className="w-4 h-4" />
       <span className="font-medium text-sm">{t('nav.contactUs')}</span>
     </button>
   );
