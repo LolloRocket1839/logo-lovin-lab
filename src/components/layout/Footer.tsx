@@ -297,17 +297,19 @@ export const Footer = () => {
           </p>
           
           {/* EU Co-Funding Compliance Banner */}
-          <div className="mt-8 pt-8 border-t border-border/10 flex flex-col items-center gap-3">
-            <img 
-              src={euFundingBanner} 
-              alt="Coesione Europa 21-27 — Finanziato dall'Unione Europea, Repubblica Italiana, Regione Piemonte — PR FSE+ 2021-2027" 
-              className="w-full max-w-[280px] opacity-90 hover:opacity-100 transition-opacity"
-              style={{ imageRendering: 'auto' }}
-              loading="lazy"
-            />
-            <p className="text-muted-foreground text-[10px] font-light max-w-lg leading-relaxed">
-              Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
-            </p>
+          <div className="mt-8 pt-8 border-t border-border/10">
+            <div className="bg-[#003399] rounded-lg px-6 py-5 flex flex-col items-center gap-3">
+              <img 
+                src={euFundingBanner} 
+                alt="Coesione Europa 21-27 — Finanziato dall'Unione Europea, Repubblica Italiana, Regione Piemonte — PR FSE+ 2021-2027" 
+                className="w-full max-w-[280px]"
+                style={{ imageRendering: 'auto' }}
+                loading="lazy"
+              />
+              <p className="text-white/80 text-[10px] font-light max-w-lg leading-relaxed text-center">
+                Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
+              </p>
+            </div>
           </div>
 
           {/* Legal Information */}
