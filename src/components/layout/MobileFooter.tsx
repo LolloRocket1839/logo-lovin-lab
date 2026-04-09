@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import regionePiemonteLogo from "@/assets/regione-piemonte-logo.jpg";
+import euFundingBanner from "@/assets/eu-funding-banner.jpg";
 
 export const MobileFooter = () => {
   const { t, i18n } = useTranslation();
@@ -117,16 +117,14 @@ export const MobileFooter = () => {
           </Link>
         </div>
 
-        {/* Regione Piemonte Funding */}
+        {/* EU Co-Funding Compliance Banner */}
         <div className="flex flex-col items-center gap-2 pt-2 border-t border-border/10 w-full">
-          <a href="https://www.regione.piemonte.it" target="_blank" rel="noopener noreferrer">
-            <img 
-              src={regionePiemonteLogo} 
-              alt="Regione Piemonte" 
-              className="h-12 w-auto opacity-80"
-              loading="lazy"
-            />
-          </a>
+          <img 
+            src={euFundingBanner} 
+            alt="Coesione Europa 21-27 — Finanziato dall'Unione Europea, Repubblica Italiana, Regione Piemonte — PR FSE+ 2021-2027" 
+            className="w-full max-w-xs opacity-90"
+            loading="lazy"
+          />
           <p className="text-[10px] text-muted-foreground text-center leading-relaxed max-w-xs">
             Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
           </p>
