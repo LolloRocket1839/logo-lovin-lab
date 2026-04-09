@@ -1,22 +1,25 @@
 
 
-## Plan: Add EU Co-Funding Banner to Footers
+## Fix: Banner EU Sgranato nel Footer
 
-The uploaded image is the official EU/Regione Piemonte co-funding compliance banner. It should replace the current single Regione Piemonte logo in both the desktop and mobile footers with this proper multi-logo banner.
+### Problema
+L'immagine `eu-funding-banner.jpg` è solo 562×103px e 15KB. Su display Retina (2x/3x) viene renderizzata a dimensioni maggiori della risoluzione nativa, causando l'effetto sgranato. Inoltre il formato JPEG aggiunge artefatti di compressione ai loghi/testo.
 
-### What Changes
+### Soluzione
 
-**1. Copy the uploaded image into the project**
-- Copy `user-uploads://4.jpg` → `src/assets/eu-funding-banner.jpg`
+**1. Convertire JPG → PNG** per eliminare artefatti JPEG su testo/loghi
+- Convertire `src/assets/eu-funding-banner.jpg` → `src/assets/eu-funding-banner.png`
+- PNG preserva meglio testo e bordi netti
 
-**2. Update `src/components/layout/Footer.tsx` (desktop)**
-- Lines 299-312: Replace the current Regione Piemonte logo + text block with the new banner image
-- The banner already contains all required logos and text, so the separate text paragraph can be simplified or kept as an accessible fallback beneath
+**2. Ridurre la dimensione di visualizzazione** per adattarla alla risoluzione nativa
+- Desktop (`Footer.tsx`): cambiare `max-w-md` → `max-w-[280px]` (circa metà della risoluzione nativa = nitido su 2x Retina)
+- Mobile (`MobileFooter.tsx`): cambiare `max-w-xs` → `max-w-[220px]`
 
-**3. Update `src/components/layout/MobileFooter.tsx` (mobile)**
-- Lines 120-133: Same replacement — swap the Regione Piemonte logo for the full EU funding banner
-- Slightly smaller sizing for mobile (e.g. `w-full max-w-xs`)
+**3. Aggiungere rendering optimization**
+- Aggiungere `style={{ imageRendering: 'auto' }}` per miglior rendering browser
 
-### Visual Result
-Both footers will show the official blue EU co-funding banner (Coesione Europa 21-27, EU flag, Regione Piemonte logos) instead of just the Regione Piemonte logo alone. The compliance text line is retained below for accessibility/SEO.
+### File da modificare
+- `src/assets/eu-funding-banner.png` (nuovo, convertito da JPG)
+- `src/components/layout/Footer.tsx` — import + sizing
+- `src/components/layout/MobileFooter.tsx` — import + sizing
 
