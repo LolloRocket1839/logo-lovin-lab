@@ -301,7 +301,7 @@ export const Footer = () => {
             <div className="bg-[#003399] rounded-lg px-6 py-5 flex flex-col items-center gap-3">
               <img 
                 src={euFundingBanner} 
-                alt="Coesione Europa 21-27 — Finanziato dall'Unione Europea, Repubblica Italiana, Regione Piemonte — PR FSE+ 2021-2027" 
+                alt="Coesione Italia 21-27 Piemonte — L'Europa investe sul Piemonte, il Piemonte investe su di te — PR FSE+ 2021-2027" 
                 className="w-full max-w-[280px]"
                 style={{ imageRendering: 'auto' }}
                 loading="lazy"

@@ -122,7 +122,7 @@ export const MobileFooter = () => {
           <div className="bg-[#003399] rounded-lg px-4 py-4 flex flex-col items-center gap-2">
             <img 
               src={euFundingBanner} 
-              alt="Coesione Europa 21-27 — Finanziato dall'Unione Europea, Repubblica Italiana, Regione Piemonte — PR FSE+ 2021-2027" 
+              alt="Coesione Italia 21-27 Piemonte — L'Europa investe sul Piemonte, il Piemonte investe su di te — PR FSE+ 2021-2027" 
               className="w-full max-w-[220px]"
               style={{ imageRendering: 'auto' }}
               loading="lazy"
