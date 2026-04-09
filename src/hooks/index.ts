@@ -11,3 +11,4 @@ export { useToolLanguage } from './useToolLanguage';
 export { useUTMTracking, getUTMParams } from './useUTMTracking';
 export { useValuationCount } from './useValuationCount';
 export { useWaitlistCounter } from './useWaitlistCounter';
+export { useCookieConsent, hasAnalyticsConsent } from './useCookieConsent';

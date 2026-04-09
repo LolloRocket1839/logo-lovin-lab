@@ -9,6 +9,7 @@ import { usePageViewTracking, useScrollDepth, useUTMTracking } from "./hooks";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
+import { CookieBanner } from "./components/CookieBanner";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,6 +38,7 @@ const App = () => (
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <ScrollToTopOnNavigation />
           <AppContent />
+          <CookieBanner />
         </BrowserRouter>
       </TooltipProvider>
     </AuthProvider>
