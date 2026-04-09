@@ -1,24 +1,23 @@
 
 
-## Piano: Sostituire il banner EU con la nuova versione
+## Piano: Banner EU più elegante
 
-L'immagine caricata è un banner più pulito e leggibile: sfondo blu con loghi "Coesione 21-27 Piemonte", bandiera EU, stemma italiano e Regione Piemonte, con slogan "L'Europa investe sul Piemonte, il Piemonte investe su di te".
+Dalla screenshot si vede che il testo disclaimer è fuori dal contenitore blu, creando un effetto poco curato. L'obiettivo è rendere la sezione più integrata e raffinata.
 
 ### Modifiche
 
-**1. Sostituire l'asset**
-- Copiare `user-uploads://4_1.jpg` → `src/assets/eu-funding-banner.png` (sovrascrive il file esistente)
+**Entrambi i footer** (`Footer.tsx` e `MobileFooter.tsx`):
 
-**2. Aggiornare il testo disclaimer** in entrambi i footer
-- Il testo attuale menziona "Coesione Europa" — aggiornare per coerenza con il nuovo banner che dice "Coesione Italia 21-27 Piemonte"
-- Mantenere il testo obbligatorio sul FSE+ 2021-2027
+1. **Includere il disclaimer dentro il contenitore blu** — il testo "Realizzato con il finanziamento..." resta dentro il `bg-[#003399]` con colore `text-white/60` più sottile
+2. **Rimuovere `border-t`** dal wrapper esterno — il banner blu fa già da separatore visivo
+3. **Allargare il banner** — `max-w-[320px]` desktop, `max-w-[260px]` mobile per più respiro
+4. **Aggiungere padding maggiore** e `rounded-xl` per un aspetto più morbido e moderno
+5. **Ridurre il testo disclaimer** a `text-[9px]` con `tracking-wide` per un look più istituzionale e discreto
 
-**3. Nessuna modifica strutturale**
-- Lo sfondo `bg-[#003399]` già presente si fonde perfettamente con il blu del nuovo banner
-- Le dimensioni (`max-w-[280px]` desktop, `max-w-[220px]` mobile) restano appropriate
+### Risultato
+Una sezione EU compatta, tutta su sfondo blu, con aspetto pulito e istituzionale — come un badge di certificazione, non un blocco separato.
 
 ### File da modificare
-1. `src/assets/eu-funding-banner.png` — sostituzione asset
-2. `src/components/layout/Footer.tsx` — aggiornare alt text dell'immagine
-3. `src/components/layout/MobileFooter.tsx` — aggiornare alt text dell'immagine
+1. `src/components/layout/Footer.tsx` (linee 299-313)
+2. `src/components/layout/MobileFooter.tsx` (linee 120-134)
 
