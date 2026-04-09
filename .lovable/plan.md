@@ -1,23 +1,39 @@
 
 
-## Piano: Banner EU più elegante
+## Piano: Risolvere i problemi evidenziati negli screenshot
 
-Dalla screenshot si vede che il testo disclaimer è fuori dal contenitore blu, creando un effetto poco curato. L'obiettivo è rendere la sezione più integrata e raffinata.
+Dagli screenshot e dal feedback ("super tight", "not a fan of the emojis", "the whatsapp green is pretty intense"), ci sono 4 problemi da risolvere:
+
+### Problemi identificati
+
+1. **BottomNav ha 5 voci -- troppo stretto**: "Founders" e "Info" sono separati, ma dovrebbero essere unificati (come da architettura prevista: 4 voci)
+2. **WhatsApp banner verde troppo aggressivo**: La variante B (barra verde full-width) si sovrappone al BottomNav ed e visivamente pesante
+3. **ExitIntentPopup + ScrollQualifier si sovrappongono**: IMG_1632 mostra entrambi visibili contemporaneamente
+4. **Emoji/icona Gift nel popup**: L'icona regalo e il badge "OFFERTA ESCLUSIVA" sono troppo promozionali
 
 ### Modifiche
 
-**Entrambi i footer** (`Footer.tsx` e `MobileFooter.tsx`):
+**1. BottomNav.tsx -- Ridurre a 4 voci**
+- Rimuovere il tab "Founders" (5o elemento)
+- Spostare i contatti fondatore dentro il drawer Info (gia esistente come InfoDrawerContent)
+- Risultato: Investi | Vendi | Studenti | Info
 
-1. **Includere il disclaimer dentro il contenitore blu** — il testo "Realizzato con il finanziamento..." resta dentro il `bg-[#003399]` con colore `text-white/60` più sottile
-2. **Rimuovere `border-t`** dal wrapper esterno — il banner blu fa già da separatore visivo
-3. **Allargare il banner** — `max-w-[320px]` desktop, `max-w-[260px]` mobile per più respiro
-4. **Aggiungere padding maggiore** e `rounded-xl` per un aspetto più morbido e moderno
-5. **Ridurre il testo disclaimer** a `text-[9px]` con `tracking-wide` per un look più istituzionale e discreto
+**2. WhatsAppFAB.tsx -- Tono meno aggressivo**
+- Variante B: sostituire la barra verde full-width con un bottone pill piu discreto (sfondo `bg-foreground` scuro invece di `#25D366`, testo bianco, posizionato sopra il BottomNav)
+- Variante A: cambiare il cerchio verde in un design piu neutro (sfondo scuro con icona WhatsApp)
 
-### Risultato
-Una sezione EU compatta, tutta su sfondo blu, con aspetto pulito e istituzionale — come un badge di certificazione, non un blocco separato.
+**3. ScrollQualifier.tsx -- Evitare sovrapposizione con ExitIntent**
+- Aggiungere check: se ExitIntentPopup e gia visibile (verificare `sessionStorage` key `exitIntentShown`), non mostrare il ScrollQualifier
+- Quando ExitIntent si apre, nascondere automaticamente il ScrollQualifier
+
+**4. ExitIntentPopup.tsx -- Rimuovere tono promozionale**
+- Sostituire icona `Gift` con qualcosa di piu sobrio (es. `Mail` o rimuovere del tutto)
+- Rimuovere badge "OFFERTA ESCLUSIVA" -- usare un testo piu diretto
+- Mantenere la funzionalita invariata
 
 ### File da modificare
-1. `src/components/layout/Footer.tsx` (linee 299-313)
-2. `src/components/layout/MobileFooter.tsx` (linee 120-134)
+1. `src/components/layout/BottomNav.tsx` -- ridurre a 4 voci, merge founders in info
+2. `src/components/WhatsAppFAB.tsx` -- design meno aggressivo
+3. `src/components/ScrollQualifier.tsx` -- check anti-sovrapposizione
+4. `src/components/ExitIntentPopup.tsx` -- rimuovere emoji e tono promozionale
 
