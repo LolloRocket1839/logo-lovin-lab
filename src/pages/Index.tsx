@@ -71,7 +71,7 @@ const Index = () => {
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://junglerent.it/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://junglerent.it/jungle-rent-logo.svg" />
+        <meta property="og:image" content="https://junglerent.it/og-image-homepage.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Jungle Rent" />
@@ -82,7 +82,7 @@ const Index = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://junglerent.it/jungle-rent-logo.svg" />
+        <meta name="twitter:image" content="https://junglerent.it/og-image-homepage.jpg" />
 
         {/* AI Crawlers - Citation & Attribution */}
         <meta name="citation_title" content={title} />

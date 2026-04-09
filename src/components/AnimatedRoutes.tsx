@@ -38,6 +38,7 @@ const InvestorZonesIndex = lazy(() => import("@/pages/InvestorZonesIndex"));
 const InvestorZonePage = lazy(() => import("@/pages/InvestorZonePage"));
 const Auth = lazy(() => import("@/pages/Auth"));
 const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
+const LeadsAdmin = lazy(() => import("@/pages/admin/Leads"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
@@ -108,6 +109,7 @@ export const AnimatedRoutes = () => {
             <Route path="/accedi" element={<Auth />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
+            <Route path="/admin/leads" element={<LeadsAdmin />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
