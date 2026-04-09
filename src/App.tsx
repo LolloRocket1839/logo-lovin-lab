@@ -24,7 +24,7 @@ const AppContent = () => {
   useScrollDepth();
   useUTMTracking();
   
-  return <AnimatedRoutes />;
+  return <ErrorBoundary><AnimatedRoutes /></ErrorBoundary>;
 };
 
 const App = () => (
