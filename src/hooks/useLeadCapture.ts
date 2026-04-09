@@ -86,6 +86,18 @@ export function useLeadCapture() {
       return { success: false, error: "Both submissions failed" };
     }
 
+    // Fire-and-forget: send confirmation email (don't block on it)
+    supabase.functions
+      .invoke("send-transactional-email", {
+        body: {
+          templateName: "lead-confirmation",
+          recipientEmail: lead.email.trim(),
+          idempotencyKey: `lead-confirm-${lead.email.trim()}-${Date.now()}`,
+          templateData: { leadType: lead.leadType },
+        },
+      })
+      .catch((err) => console.error("Confirmation email failed:", err));
+
     return { success: true };
   };
 

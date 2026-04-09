@@ -37,6 +37,7 @@ const NeighborhoodPage = lazy(() => import("@/pages/NeighborhoodPage"));
 const InvestorZonesIndex = lazy(() => import("@/pages/InvestorZonesIndex"));
 const InvestorZonePage = lazy(() => import("@/pages/InvestorZonePage"));
 const Auth = lazy(() => import("@/pages/Auth"));
+const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
@@ -106,6 +107,7 @@ export const AnimatedRoutes = () => {
             <Route path="/rooms-rent-turin/:slug" element={<NeighborhoodPage />} />
             <Route path="/accedi" element={<Auth />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/unsubscribe" element={<Unsubscribe />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
