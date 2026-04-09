@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
-import euFundingBanner from "@/assets/eu-funding-banner.jpg";
+import euFundingBanner from "@/assets/eu-funding-banner.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/constants";
 import { LogoModal } from "@/components/LogoModal";
@@ -301,7 +301,8 @@ export const Footer = () => {
             <img 
               src={euFundingBanner} 
               alt="Coesione Europa 21-27 — Finanziato dall'Unione Europea, Repubblica Italiana, Regione Piemonte — PR FSE+ 2021-2027" 
-              className="w-full max-w-md opacity-90 hover:opacity-100 transition-opacity"
+              className="w-full max-w-[280px] opacity-90 hover:opacity-100 transition-opacity"
+              style={{ imageRendering: 'auto' }}
               loading="lazy"
             />
             <p className="text-muted-foreground text-[10px] font-light max-w-lg leading-relaxed">

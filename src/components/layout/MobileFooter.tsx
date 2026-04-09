@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
-import euFundingBanner from "@/assets/eu-funding-banner.jpg";
+import euFundingBanner from "@/assets/eu-funding-banner.png";
 
 export const MobileFooter = () => {
   const { t, i18n } = useTranslation();
@@ -122,7 +122,8 @@ export const MobileFooter = () => {
           <img 
             src={euFundingBanner} 
             alt="Coesione Europa 21-27 — Finanziato dall'Unione Europea, Repubblica Italiana, Regione Piemonte — PR FSE+ 2021-2027" 
-            className="w-full max-w-xs opacity-90"
+            className="w-full max-w-[220px] opacity-90"
+            style={{ imageRendering: 'auto' }}
             loading="lazy"
           />
           <p className="text-[10px] text-muted-foreground text-center leading-relaxed max-w-xs">
