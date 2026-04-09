@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Navigation, Footer } from "@/components/layout";
 import { useTranslation } from "react-i18next";
-import { Building2, Users, TrendingUp, Award, MapPin, Mail, Phone } from "lucide-react";
+import { Building2, User, TrendingUp, Award, MapPin, Mail, Phone } from "lucide-react";
 import BusinessCycleInfographic from "@/components/BusinessCycleInfographic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -46,20 +46,12 @@ const About = () => {
         "postalCode": "10137",
         "addressCountry": "IT"
       },
-      "founder": [
-        {
-          "@type": "Person",
-          "@id": "https://junglerent.it/#founder-lorenzo",
-          "name": "Lorenzo Oni-Joseph",
-          "jobTitle": currentLang === 'it' ? "Co-Fondatore & CEO" : "Co-Founder & CEO"
-        },
-        {
-          "@type": "Person",
-          "@id": "https://junglerent.it/#founder-andrea",
-          "name": "Andrea Niccolaini",
-          "jobTitle": currentLang === 'it' ? "Co-Fondatore" : "Co-Founder"
-        }
-      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://junglerent.it/#founder-lorenzo",
+        "name": "Lorenzo Oni-Joseph",
+        "jobTitle": currentLang === 'it' ? "Fondatore & CEO" : "Founder & CEO"
+      },
       "memberOf": {
         "@type": "Organization",
         "name": "2i3T - Incubatore Imprese Innovative Università di Torino"
@@ -89,7 +81,7 @@ const About = () => {
         <meta name="company" content="JUNGLE RENT S.R.L." />
         <meta name="company.legalName" content="JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA" />
         <meta name="company.founded" content="2025-10-24" />
-        <meta name="company.founders" content="Lorenzo Oni-Joseph, Andrea Niccolaini" />
+        <meta name="company.founders" content="Lorenzo Oni-Joseph" />
         <meta name="company.location" content="Via Gioacchino Quarello 15/A, 10137 Torino, Italy" />
         <meta name="company.vatId" content="IT13333450016" />
         <meta name="company.rea" content="TO-1355899" />
@@ -164,15 +156,12 @@ const About = () => {
           <Card className="border-primary/20 hover:border-primary/40 transition-colors">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3 mb-3">
-                <Users className="w-8 h-8 text-primary" />
-                <h3 className="font-semibold text-lg">{t("about.foundersLabel")}</h3>
+                <User className="w-8 h-8 text-primary" />
+                <h3 className="font-semibold text-lg">{t("about.founderLabel")}</h3>
               </div>
-              <div itemProp="founders" itemScope itemType="https://schema.org/Person">
+              <div itemProp="founder" itemScope itemType="https://schema.org/Person">
                 <p className="font-medium" itemProp="name">Lorenzo Oni-Joseph</p>
                 <p className="text-xs text-muted-foreground">{t('about.lorenzoRole')}</p>
-              </div>
-              <div itemProp="founders" itemScope itemType="https://schema.org/Person">
-                <p className="font-medium" itemProp="name">Andrea Niccolaini</p>
               </div>
             </CardContent>
           </Card>

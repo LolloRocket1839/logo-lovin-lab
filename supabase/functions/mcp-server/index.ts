@@ -29,8 +29,7 @@ const COMPANY_INFO = {
   email: "junglerententeprise@gmail.com",
   pec: "junglerent@legalmail.it",
   founders: [
-    { name: "Lorenzo Oni-Joseph", role: "Founder", phone: "+39 331 905 3037" },
-    { name: "Andrea Niccolaini", role: "Co-Founder", phone: "+39 351 577 8924" },
+    { name: "Lorenzo Oni-Joseph", role: "Founder & CEO", phone: "+39 331 905 3037" },
   ],
   services: [
     "Student Housing Management (90,000+ students, 7 universities)",
