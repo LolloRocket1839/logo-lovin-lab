@@ -297,16 +297,16 @@ export const Footer = () => {
           </p>
           
           {/* EU Co-Funding Compliance Banner */}
-          <div className="mt-8 pt-8 border-t border-border/10">
-            <div className="bg-[#003399] rounded-lg px-6 py-5 flex flex-col items-center gap-3">
+          <div className="mt-8">
+            <div className="bg-[#003399] rounded-xl px-8 py-6 flex flex-col items-center gap-3">
               <img 
                 src={euFundingBanner} 
                 alt="Coesione Italia 21-27 Piemonte — L'Europa investe sul Piemonte, il Piemonte investe su di te — PR FSE+ 2021-2027" 
-                className="w-full max-w-[280px]"
+                className="w-full max-w-[320px]"
                 style={{ imageRendering: 'auto' }}
                 loading="lazy"
               />
-              <p className="text-white/80 text-[10px] font-light max-w-lg leading-relaxed text-center">
+              <p className="text-white/60 text-[9px] tracking-wide font-light max-w-lg leading-relaxed text-center">
                 Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
               </p>
             </div>

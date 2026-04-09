@@ -118,16 +118,16 @@ export const MobileFooter = () => {
         </div>
 
         {/* EU Co-Funding Compliance Banner */}
-        <div className="w-full pt-2 border-t border-border/10">
-          <div className="bg-[#003399] rounded-lg px-4 py-4 flex flex-col items-center gap-2">
+        <div className="w-full pt-2">
+          <div className="bg-[#003399] rounded-xl px-5 py-5 flex flex-col items-center gap-2">
             <img 
               src={euFundingBanner} 
               alt="Coesione Italia 21-27 Piemonte — L'Europa investe sul Piemonte, il Piemonte investe su di te — PR FSE+ 2021-2027" 
-              className="w-full max-w-[220px]"
+              className="w-full max-w-[260px]"
               style={{ imageRendering: 'auto' }}
               loading="lazy"
             />
-            <p className="text-[10px] text-white/80 text-center leading-relaxed max-w-xs">
+            <p className="text-[9px] tracking-wide text-white/60 text-center leading-relaxed max-w-xs">
               Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
             </p>
           </div>
