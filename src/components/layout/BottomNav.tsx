@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 import { QuickSellerLeadDialog } from "@/components/dialogs/QuickSellerLeadDialog";
-import { type SupportedLanguage } from "@/constants/contacts";
+
 import {
   Drawer,
   DrawerContent,
