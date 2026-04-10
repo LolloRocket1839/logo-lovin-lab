@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Copy, ExternalLink, Download, TrendingUp, Mail, AlertTriangle } from "lucide-react";
+import { Copy, ExternalLink, Download, TrendingUp, AlertTriangle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -191,10 +191,6 @@ export default function AITesting() {
               </p>
             </div>
             <div className="flex gap-2">
-              <Button onClick={sendTestReport} variant="outline">
-                <Mail className="w-4 h-4 mr-2" />
-                Invia Report Settimanale
-              </Button>
               <Button onClick={exportResults} variant="outline">
                 <Download className="w-4 h-4 mr-2" />
                 Export Results
