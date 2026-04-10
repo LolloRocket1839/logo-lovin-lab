@@ -31,9 +31,6 @@ export interface AITestDbRow {
   claude_cited: boolean | null;
   claude_context: string | null;
   claude_position: number | null;
-  perplexity_cited: boolean | null;
-  perplexity_context: string | null;
-  perplexity_position: number | null;
   notes: string | null;
   tester_name: string | null;
   created_at: string | null;
