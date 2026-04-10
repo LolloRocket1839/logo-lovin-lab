@@ -1,55 +1,49 @@
 
 
-## Piano: Rimuovere Perplexity e pulire il codebase
+## Piano: Correggere i 3 problemi dell'audit + sincronizzare le traduzioni
 
-### Cosa viene rimosso
+### Parte 1: Fix audit edge functions
 
-**Componenti frontend:**
-- `src/components/AISearchBox.tsx` — eliminare il file
-- `src/assets/perplexity-logo.svg` — eliminare il file
+**1. `supabase/config.toml`** — rimuovere la voce orfana `[functions.submit-investor-interest]` (righe 6-7) e aggiungere:
+```toml
+[functions.admin-leads]
+verify_jwt = false
 
-**Edge functions (eliminare + undeploy):**
-- `supabase/functions/perplexity-search/` — ricerca AI
-- `supabase/functions/cleanup-perplexity-cache/` — pulizia cache
-- `supabase/functions/rent-prices-update/` — aggiornamento prezzi via Perplexity
+[functions.check-url-status]
+verify_jwt = false
+```
 
-**Config (rimuovere blocchi):**
-- `supabase/config.toml` — rimuovere le 3 sezioni `[functions.perplexity-search]`, `[functions.cleanup-perplexity-cache]`, `[functions.rent-prices-update]`
+**2. `src/pages/AITesting.tsx`** — rimuovere la funzione `sendTestReport` (righe 165-188) e il bottone "Invia Report Settimanale" (righe 219-222) che chiama la edge function inesistente `weekly-ai-report`.
 
-**Database (migration):**
-- Eliminare tabella `perplexity_cache`
+**3. `src/types/aiTesting.ts`** — rimuovere i 3 campi `perplexity_*` residui dall'interfaccia `AITestDbRow` (righe 34-36). Creare anche una migration per droppare le colonne `perplexity_cited`, `perplexity_context`, `perplexity_position` dalla tabella `ai_test_results`.
 
-**Traduzioni — rimuovere blocco `aiSearch` da tutti e 7 i locale:**
-- `it.json`, `en.json`, `de.json`, `fr.json`, `sv.json`, `zh.json`, `es.json`
+### Parte 2: Sincronizzazione traduzioni
 
-### Cosa viene aggiornato (pulizia riferimenti)
+L'analisi mostra disallineamenti significativi tra i file di traduzione:
 
-**`src/pages/Blog.tsx`:**
-- Rimuovere import `AISearchBox`, `aiSearchRef`, `handleTryAISearch`
-- Rimuovere la sezione che renderizza `<AISearchBox />`
-- Rimuovere il pulsante "Prova la ricerca AI" nel fallback zero-results
+| Lingua | Chiavi mancanti vs IT | Chiavi extra vs IT |
+|--------|----------------------|-------------------|
+| EN | 37 mancanti | 196 extra |
+| DE | 270 mancanti | 67 extra |
+| ES | 270 mancanti | 67 extra |
+| FR | 268 mancanti | 39 extra |
+| SV | 235 mancanti | 70 extra |
+| ZH | 235 mancanti | 70 extra |
 
-**`src/components/FAQSection.tsx`:**
-- Rimuovere import e rendering di `<AISearchBox />`
+**Strategia:**
+1. **IT è il riferimento** — tutte le chiavi presenti in IT devono esistere in tutte le lingue
+2. **EN ha chiavi extra legittime** (dialoghi, CTA, accessibility) che mancano da IT → aggiungerle a IT e poi a tutte le altre lingue
+3. Usare uno script Python per:
+   - Unire tutte le chiavi (unione IT ∪ EN come master set)
+   - Per ogni lingua mancante, generare la traduzione copiando la chiave EN come fallback (i18next usa già il fallback, ma avere le chiavi esplicite evita warning e permette traduzioni future)
+   - Rimuovere chiavi extra che non esistono nel master set
+4. Tradurre effettivamente le chiavi mancanti nelle rispettive lingue (DE, FR, ES, SV, ZH)
 
-**`src/components/InfoDrawerContent.tsx`:**
-- Rimuovere il lazy import e la sezione `<Suspense>` con `<AISearchBox />`
+### Dettagli tecnici
 
-**`src/data/aiTestingQueries.ts`:**
-- Rimuovere il campo `perplexity` dall'interfaccia `TestResult`
+- Migration SQL: `ALTER TABLE ai_test_results DROP COLUMN perplexity_cited, DROP COLUMN perplexity_context, DROP COLUMN perplexity_position;`
+- Lo script di sync traduzioni processerà tutti e 7 i file locale + i file nella sottocartella `investor/`
+- Le chiavi extra in EN (waitlistDialog, sellerContactDialog, investorWaitlistDialog, ecc.) verranno aggiunte a IT con testo italiano e poi propagate
 
-**`src/types/aiTesting.ts`:**
-- Rimuovere `perplexity` da `TestResult` e i campi `perplexity_*` da `DBTestResult`
-
-**`src/pages/AITesting.tsx`:**
-- Rimuovere tutte le reference a Perplexity nel form/export
-
-**`src/data/investorZoneData.ts`:**
-- Aggiornare il commento source (rimuovere "Perplexity research")
-
-### Cosa NON viene toccato
-- Il connector Perplexity e il secret `PERPLEXITY_API_KEY` restano (non causano problemi, possono essere disconnessi manualmente dal pannello Connectors)
-- `src/integrations/supabase/types.ts` — si aggiorna automaticamente dopo la migration
-
-### File da modificare/eliminare: ~18 file
+### File coinvolti: ~12 file
 
