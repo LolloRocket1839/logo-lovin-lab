@@ -1214,24 +1214,6 @@
       "title": "Organizador de sesión de exámenes",
       "subtitle": "Planifica tu sesión de forma estratégica considerando CFU, dificultad y propedeuticidad"
    },
-   "aiSearch": {
-      "title": "Pregunta a Perplexity",
-      "subtitle": "Búsqueda en tiempo real sobre alojamientos e inversiones en Turín",
-      "placeholder": "Pregunta sobre precios de alquileres, barrios, rendimientos...",
-      "askButton": "Preguntar a Perplexity",
-      "searching": "Buscando...",
-      "sources": "Fuentes",
-      "error": "Lo siento, no encontré una respuesta. Intenta reformular la pregunta.",
-      "rateLimit": "Espera un momento antes de hacer otra pregunta.",
-      "errorTitle": "Error",
-      "minChars": "Introduce al menos 3 caracteres",
-      "examples": "Prueba a preguntar:",
-      "example1": "¿Alquiler medio cerca del Politecnico?",
-      "example2": "¿Es seguro San Salvario para estudiantes?",
-      "example3": "¿Cómo funciona la inversión en Jungle Rent?",
-      "followUp": "Preguntas relacionadas",
-      "poweredBy": "Powered by"
-   },
    "homeFaq": {
       "title": "Preguntas frecuentes",
       "subtitle": "Las respuestas a las preguntas más comunes de los inversores",

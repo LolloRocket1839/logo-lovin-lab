@@ -6,7 +6,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { TrendingUp, Home, Building2, Mic, GraduationCap } from "lucide-react";
-import { AISearchBox } from "@/components/AISearchBox";
 
 export const FAQSection = () => {
   const { t } = useTranslation();
@@ -78,9 +77,6 @@ export const FAQSection = () => {
         </div>
 
         <div className="max-w-3xl lg:max-w-4xl mx-auto space-y-6 sm:space-y-8">
-          {/* AI Search Box */}
-          <AISearchBox />
-
           {/* Investitori */}
           <div>
             <div className="flex items-center gap-2 mb-3 sm:mb-4">

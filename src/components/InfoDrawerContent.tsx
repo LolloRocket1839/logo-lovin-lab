@@ -1,11 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Suspense, lazy, useMemo } from "react";
+import { useMemo } from "react";
 import { 
-  Search, 
   FileText, 
   ArrowRight,
-  Sparkles,
   BookOpen,
   Calendar,
   ScrollText
@@ -20,14 +18,10 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { blogPosts } from "@/data/blog/posts";
 
-// Lazy load AISearchBox since it's heavy
-const AISearchBox = lazy(() => import("@/components/AISearchBox").then(m => ({ default: m.AISearchBox })));
-
 export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language.startsWith('en') ? 'en' : 'it';
 
-  // Get latest 3 blog posts
   const latestPosts = useMemo(() => {
     return blogPosts
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -45,22 +39,6 @@ export const InfoDrawerContent = ({ onClose }: { onClose: () => void }) => {
   return (
     <ScrollArea className="h-[70vh] pr-4">
       <div className="space-y-6 pb-8">
-        
-        {/* AI Search Section */}
-        <section className="bg-primary/5 border border-primary/20 rounded-lg p-4">
-          <h3 className="font-semibold mb-3 flex items-center gap-2">
-            <Search className="w-4 h-4 text-primary" />
-            <Sparkles className="w-3 h-3 text-primary" />
-            {t("search.askAnything")}
-          </h3>
-          <Suspense fallback={
-            <div className="h-24 flex items-center justify-center text-muted-foreground text-sm">
-              {t("common.loading")}...
-            </div>
-          }>
-            <AISearchBox />
-          </Suspense>
-        </section>
 
         {/* Services - Contratti */}
         <section>

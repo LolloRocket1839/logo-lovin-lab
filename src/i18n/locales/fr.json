@@ -1196,24 +1196,6 @@
          "momentum": "Construisez l'élan avec des examens faciles"
       }
    },
-   "aiSearch": {
-      "title": "Demandez à Perplexity",
-      "subtitle": "Recherche en temps réel sur logements et investissements à Turin",
-      "placeholder": "Demandez sur les prix des loyers, quartiers, rendements...",
-      "askButton": "Demander à Perplexity",
-      "searching": "Recherche en cours...",
-      "sources": "Sources",
-      "error": "Désolé, je n'ai pas trouvé de réponse. Essayez de reformuler la question.",
-      "rateLimit": "Attendez un moment avant de poser une autre question.",
-      "errorTitle": "Erreur",
-      "minChars": "Entrez au moins 3 caractères",
-      "examples": "Essayez de demander :",
-      "example1": "Loyer moyen près du Politecnico ?",
-      "example2": "San Salvario est-il sûr pour les étudiants ?",
-      "example3": "Comment fonctionne l'investissement Jungle Rent ?",
-      "followUp": "Questions connexes",
-      "poweredBy": "Propulsé par"
-   },
    "homeFaq": {
       "title": "Questions fréquentes",
       "subtitle": "Les réponses aux questions les plus courantes des investisseurs",

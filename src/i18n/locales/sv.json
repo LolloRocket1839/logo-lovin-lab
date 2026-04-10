@@ -1352,16 +1352,6 @@
          "copied": "Länk kopierad!"
       }
    },
-   "aiSearch": {
-      "placeholder": "Fråga vad som helst om Turin...",
-      "buttonSearch": "Sök",
-      "buttonSearching": "Söker...",
-      "poweredBy": "Drivs av Perplexity AI",
-      "exampleQueries": "T.ex. \"Bästa stadsdelar för studenter i Turin?\", \"Vad kostar ett rum nära Politecnico?\"",
-      "errorMessage": "Ett fel uppstod. Försök igen senare.",
-      "sources": "Källor",
-      "relatedQuestions": "Relaterade frågor"
-   },
    "homeFaq": {
       "title": "Vanliga frågor",
       "subtitle": "Snabba svar på dina frågor",

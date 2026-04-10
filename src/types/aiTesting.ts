@@ -17,7 +17,6 @@ export interface TestResult {
   date: string;
   chatgpt: AIEngineResult;
   claude: AIEngineResult;
-  perplexity: AIEngineResult;
   notes: string;
 }
 
