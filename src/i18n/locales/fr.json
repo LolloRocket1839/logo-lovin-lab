@@ -95,6 +95,14 @@
    "blog": {
       "bannerSubtitle": "Guides, analysis and tips about Turin",
       "bannerTitle": "Info on the city, real estate and students shortcuts",
+      "categories": {
+         "all": "All",
+         "investors": "For Investors",
+         "sellers": "For Sellers",
+         "societa": "Society",
+         "students": "For Students",
+         "turisti": "For Tourists"
+      },
       "copyLink": "Copy link",
       "cta": {
          "downloadReport": "Download Report",
