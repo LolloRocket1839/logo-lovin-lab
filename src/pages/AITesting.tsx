@@ -162,31 +162,6 @@ export default function AITesting() {
     a.click();
   };
 
-  const sendTestReport = async () => {
-    toast({
-      title: "Invio report...",
-      description: "Generazione e invio del report settimanale in corso...",
-    });
-
-    try {
-      const { data, error } = await supabase.functions.invoke('weekly-ai-report');
-      
-      if (error) throw error;
-      
-      toast({
-        title: "Report inviato!",
-        description: "Controlla la tua email per il report settimanale di test.",
-      });
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      toast({
-        title: "Errore invio report",
-        description: errorMessage,
-        variant: "destructive",
-      });
-    }
-  };
-
   const calculateStats = () => {
     if (testResults.length === 0) return { chatgpt: 0, claude: 0, total: 0 };
     
