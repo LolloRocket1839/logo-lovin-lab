@@ -97,7 +97,6 @@ describe('Types Barrel Export', () => {
         date: '2024-01-01',
         chatgpt: { cited: true, context: '' },
         claude: { cited: false, context: '' },
-        perplexity: { cited: true, context: '' },
         notes: 'Test notes',
       };
       expect(testResult.queryId).toBe('q1');
