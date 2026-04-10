@@ -424,8 +424,8 @@ const RentPriceHistoryComponent = ({ selectedArea, onAreaChange }: RentPriceHist
           <span className="flex items-center gap-1">
             <Info className="w-3 h-3" />
             {currentLang === 'it' 
-              ? 'Fonte: Perplexity AI + Immobiliare.it, Idealista'
-              : 'Source: Perplexity AI + Immobiliare.it, Idealista'
+              ? 'Fonte: Immobiliare.it, Idealista'
+              : 'Source: Immobiliare.it, Idealista'
             }
           </span>
           <span>
