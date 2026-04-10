@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS public.perplexity_cache;
