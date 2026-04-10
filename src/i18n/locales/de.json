@@ -1214,24 +1214,6 @@
       "title": "Prüfungssession-Organizer",
       "subtitle": "Planen Sie Ihre Session strategisch unter Berücksichtigung von ECTS, Schwierigkeit und Voraussetzungen"
    },
-   "aiSearch": {
-      "title": "Perplexity fragen",
-      "subtitle": "Echtzeit-Suche zu Unterkünften und Investitionen in Turin",
-      "placeholder": "Fragen Sie zu Mietpreisen, Vierteln, Renditen...",
-      "askButton": "Perplexity fragen",
-      "searching": "Suche läuft...",
-      "sources": "Quellen",
-      "error": "Entschuldigung, ich habe keine Antwort gefunden. Versuchen Sie, die Frage umzuformulieren.",
-      "rateLimit": "Warten Sie einen Moment, bevor Sie eine weitere Frage stellen.",
-      "errorTitle": "Fehler",
-      "minChars": "Mindestens 3 Zeichen eingeben",
-      "examples": "Probieren Sie zu fragen:",
-      "example1": "Durchschnittliche Miete in der Nähe des Politecnico?",
-      "example2": "Ist San Salvario sicher für Studenten?",
-      "example3": "Wie funktioniert die Jungle Rent Investition?",
-      "followUp": "Verwandte Fragen",
-      "poweredBy": "Powered by"
-   },
    "homeFaq": {
       "title": "Häufig gestellte Fragen",
       "subtitle": "Die Antworten auf die häufigsten Fragen von Investoren",

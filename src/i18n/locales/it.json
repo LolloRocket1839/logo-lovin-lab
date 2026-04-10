@@ -1444,24 +1444,6 @@
          "momentum": "Costruisci momentum con esami facili"
       }
    },
-   "aiSearch": {
-      "title": "Chiedi a Perplexity",
-      "subtitle": "Ricerca in tempo reale su alloggi e investimenti a Torino",
-      "placeholder": "Chiedi sui prezzi degli affitti, quartieri, rendimenti...",
-      "askButton": "Chiedi a Perplexity",
-      "searching": "Ricerca in corso...",
-      "sources": "Fonti",
-      "error": "Mi dispiace, non ho trovato una risposta. Prova a riformulare la domanda.",
-      "rateLimit": "Attendi un momento prima di fare un'altra domanda.",
-      "errorTitle": "Errore",
-      "minChars": "Inserisci almeno 3 caratteri",
-      "examples": "Prova a chiedere:",
-      "example1": "Affitto medio vicino al Politecnico?",
-      "example2": "San Salvario è sicuro per studenti?",
-      "example3": "Come funziona l'investimento Jungle Rent?",
-      "followUp": "Domande correlate",
-      "poweredBy": "Powered by"
-   },
    "homeFaq": {
       "title": "Domande frequenti",
       "subtitle": "Le risposte alle domande più comuni degli investitori",

@@ -1352,16 +1352,6 @@
          "copied": "链接已复制！"
       }
    },
-   "aiSearch": {
-      "placeholder": "询问关于都灵的任何问题...",
-      "buttonSearch": "搜索",
-      "buttonSearching": "搜索中...",
-      "poweredBy": "由Perplexity AI提供支持",
-      "exampleQueries": "例如：\"都灵学生最佳社区？\"、\"都灵理工附近房间多少钱？\"",
-      "errorMessage": "发生错误，请稍后重试。",
-      "sources": "来源",
-      "relatedQuestions": "相关问题"
-   },
    "homeFaq": {
       "title": "常见问题",
       "subtitle": "快速解答您的疑问",
