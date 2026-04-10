@@ -58,9 +58,6 @@ export type Database = {
           created_at: string | null
           id: string
           notes: string | null
-          perplexity_cited: boolean | null
-          perplexity_context: string | null
-          perplexity_position: number | null
           query_id: string
           test_date: string
           tester_name: string | null
@@ -76,9 +73,6 @@ export type Database = {
           created_at?: string | null
           id?: string
           notes?: string | null
-          perplexity_cited?: boolean | null
-          perplexity_context?: string | null
-          perplexity_position?: number | null
           query_id: string
           test_date: string
           tester_name?: string | null
@@ -94,9 +88,6 @@ export type Database = {
           created_at?: string | null
           id?: string
           notes?: string | null
-          perplexity_cited?: boolean | null
-          perplexity_context?: string | null
-          perplexity_position?: number | null
           query_id?: string
           test_date?: string
           tester_name?: string | null

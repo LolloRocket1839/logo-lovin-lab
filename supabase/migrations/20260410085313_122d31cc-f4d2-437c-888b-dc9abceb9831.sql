@@ -1,0 +1,1 @@
+ALTER TABLE public.ai_test_results DROP COLUMN perplexity_cited, DROP COLUMN perplexity_context, DROP COLUMN perplexity_position;
