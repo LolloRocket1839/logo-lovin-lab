@@ -42,3 +42,9 @@ verify_jwt = false
 
 [functions.handle-email-suppression]
 verify_jwt = false
+
+[functions.admin-leads]
+verify_jwt = false
+
+[functions.check-url-status]
+verify_jwt = false
