@@ -16,7 +16,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 export default function AITesting() {
-  // Security check: only allow access in local development
   const isLocalDevelopment = import.meta.env.DEV || 
     window.location.hostname === 'localhost' || 
     window.location.hostname === '127.0.0.1';
@@ -46,7 +45,6 @@ export default function AITesting() {
     date: new Date().toISOString().split('T')[0],
     chatgpt: { cited: false, context: "" },
     claude: { cited: false, context: "" },
-    perplexity: { cited: false, context: "" },
     notes: ""
   });
   const { toast } = useToast();
@@ -90,11 +88,6 @@ export default function AITesting() {
       context: db.claude_context || "",
       position: db.claude_position ?? undefined
     },
-    perplexity: {
-      cited: db.perplexity_cited ?? false,
-      context: db.perplexity_context || "",
-      position: db.perplexity_position ?? undefined
-    },
     notes: db.notes || ""
   });
 
@@ -110,9 +103,6 @@ export default function AITesting() {
         claude_cited: currentTest.claude?.cited || false,
         claude_context: currentTest.claude?.context || null,
         claude_position: currentTest.claude?.position || null,
-        perplexity_cited: currentTest.perplexity?.cited || false,
-        perplexity_context: currentTest.perplexity?.context || null,
-        perplexity_position: currentTest.perplexity?.position || null,
         notes: currentTest.notes || null
       });
 
@@ -130,16 +120,13 @@ export default function AITesting() {
       description: "Test results have been saved to database"
     });
     
-    // Reload results from database
     await loadResults();
     
-    // Reset form
     setCurrentTest({
       queryId: selectedQuery.id,
       date: new Date().toISOString().split('T')[0],
       chatgpt: { cited: false, context: "" },
       claude: { cited: false, context: "" },
-      perplexity: { cited: false, context: "" },
       notes: ""
     });
   };
@@ -154,7 +141,7 @@ export default function AITesting() {
 
   const exportResults = () => {
     const csv = [
-      ["Date", "Query", "ChatGPT Cited", "Claude Cited", "Perplexity Cited", "Notes"],
+      ["Date", "Query", "ChatGPT Cited", "Claude Cited", "Notes"],
       ...testResults.map(r => {
         const query = aiTestingQueries.find(q => q.id === r.queryId);
         return [
@@ -162,7 +149,6 @@ export default function AITesting() {
           query?.query || "",
           r.chatgpt.cited ? "Yes" : "No",
           r.claude.cited ? "Yes" : "No",
-          r.perplexity.cited ? "Yes" : "No",
           r.notes
         ];
       })
@@ -202,17 +188,15 @@ export default function AITesting() {
   };
 
   const calculateStats = () => {
-    if (testResults.length === 0) return { chatgpt: 0, claude: 0, perplexity: 0, total: 0 };
+    if (testResults.length === 0) return { chatgpt: 0, claude: 0, total: 0 };
     
     const chatgptCitations = testResults.filter(r => r.chatgpt.cited).length;
     const claudeCitations = testResults.filter(r => r.claude.cited).length;
-    const perplexityCitations = testResults.filter(r => r.perplexity.cited).length;
     
     return {
       chatgpt: Math.round((chatgptCitations / testResults.length) * 100),
       claude: Math.round((claudeCitations / testResults.length) * 100),
-      perplexity: Math.round((perplexityCitations / testResults.length) * 100),
-      total: Math.round(((chatgptCitations + claudeCitations + perplexityCitations) / (testResults.length * 3)) * 100)
+      total: Math.round(((chatgptCitations + claudeCitations) / (testResults.length * 2)) * 100)
     };
   };
 
@@ -228,7 +212,7 @@ export default function AITesting() {
             <div>
               <h1 className="text-4xl font-bold mb-2">AI Citation Testing Protocol</h1>
               <p className="text-muted-foreground">
-                Weekly testing of 20 target queries across ChatGPT, Claude, and Perplexity
+                Weekly testing of target queries across ChatGPT and Claude
               </p>
             </div>
             <div className="flex gap-2">
@@ -244,7 +228,7 @@ export default function AITesting() {
           </div>
 
           {/* Stats Overview */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <Card>
               <CardHeader className="pb-3">
                 <CardTitle className="text-sm font-medium">Overall Citation Rate</CardTitle>
@@ -271,15 +255,6 @@ export default function AITesting() {
               </CardHeader>
               <CardContent>
                 <div className="text-3xl font-bold">{stats.claude}%</div>
-                <p className="text-xs text-muted-foreground mt-1">citation rate</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader className="pb-3">
-                <CardTitle className="text-sm font-medium">Perplexity</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold">{stats.perplexity}%</div>
                 <p className="text-xs text-muted-foreground mt-1">citation rate</p>
               </CardContent>
             </Card>
@@ -377,12 +352,6 @@ export default function AITesting() {
                             Claude
                           </a>
                         </Button>
-                        <Button variant="outline" size="sm" asChild>
-                          <a href="https://perplexity.ai" target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Perplexity
-                          </a>
-                        </Button>
                       </div>
                     </div>
 
@@ -457,36 +426,6 @@ export default function AITesting() {
                       />
                     </div>
 
-                    {/* Perplexity Results */}
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <Label className="text-base font-semibold">Perplexity</Label>
-                        <div className="flex items-center space-x-2">
-                          <Checkbox
-                            checked={currentTest.perplexity?.cited}
-                            onCheckedChange={(checked) => 
-                              setCurrentTest({
-                                ...currentTest,
-                                perplexity: { ...currentTest.perplexity!, cited: checked as boolean }
-                              })
-                            }
-                          />
-                          <Label>Jungle Rent cited</Label>
-                        </div>
-                      </div>
-                      <Textarea
-                        placeholder="Paste citation context here (if cited)..."
-                        value={currentTest.perplexity?.context}
-                        onChange={(e) => 
-                          setCurrentTest({
-                            ...currentTest,
-                            perplexity: { ...currentTest.perplexity!, context: e.target.value }
-                          })
-                        }
-                        rows={3}
-                      />
-                    </div>
-
                     {/* Additional Notes */}
                     <div className="space-y-2">
                       <Label>Additional Notes</Label>
@@ -535,15 +474,12 @@ export default function AITesting() {
                                   {query?.category}
                                 </Badge>
                               </div>
-                              <div className="grid grid-cols-3 gap-4 mb-3">
+                              <div className="grid grid-cols-2 gap-4 mb-3">
                                 <div className={`text-sm ${result.chatgpt.cited ? 'text-green-600 font-semibold' : 'text-muted-foreground'}`}>
                                   ChatGPT: {result.chatgpt.cited ? '✓ Cited' : '✗ Not cited'}
                                 </div>
                                 <div className={`text-sm ${result.claude.cited ? 'text-green-600 font-semibold' : 'text-muted-foreground'}`}>
                                   Claude: {result.claude.cited ? '✓ Cited' : '✗ Not cited'}
-                                </div>
-                                <div className={`text-sm ${result.perplexity.cited ? 'text-green-600 font-semibold' : 'text-muted-foreground'}`}>
-                                  Perplexity: {result.perplexity.cited ? '✓ Cited' : '✗ Not cited'}
                                 </div>
                               </div>
                               {result.notes && (
@@ -565,7 +501,7 @@ export default function AITesting() {
             <TabsContent value="queries">
               <Card>
                 <CardHeader>
-                  <CardTitle>All Target Queries (20)</CardTitle>
+                  <CardTitle>All Target Queries ({aiTestingQueries.length})</CardTitle>
                   <CardDescription>Complete list of queries to test weekly</CardDescription>
                 </CardHeader>
                 <CardContent>
