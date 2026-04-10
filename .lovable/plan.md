@@ -1,37 +1,55 @@
 
 
-## Piano: Da "Founders" (plurale) a "Founder" (singolare)
+## Piano: Rimuovere Perplexity e pulire il codebase
 
-Ora che c'è un solo fondatore (Lorenzo Oni-Joseph), bisogna aggiornare tutti i riferimenti plurali e rimuovere Andrea Niccolaini dall'intero codebase.
+### Cosa viene rimosso
 
-### Modifiche
+**Componenti frontend:**
+- `src/components/AISearchBox.tsx` — eliminare il file
+- `src/assets/perplexity-logo.svg` — eliminare il file
 
-**1. Traduzioni — tutti i file locale** (`it.json`, `en.json`, `de.json`, `fr.json`, `sv.json`, `zh.json`, `es.json`)
-- `founders.title`: singolare ("Fondatore" / "Founder" / etc.)
-- `about.foundersLabel`: singolare ("Fondatore" / "Founder" / etc.)
-- `about.lorenzoRole`: rimuovere "Co-" → "Fondatore & CEO" / "Founder & CEO"
-- FAQ `aboutA1`: rimuovere "e Andrea Niccolaini", riformulare come "fondata da Lorenzo Oni-Joseph"
+**Edge functions (eliminare + undeploy):**
+- `supabase/functions/perplexity-search/` — ricerca AI
+- `supabase/functions/cleanup-perplexity-cache/` — pulizia cache
+- `supabase/functions/rent-prices-update/` — aggiornamento prezzi via Perplexity
 
-**2. About.tsx**
-- Schema JSON-LD: rimuovere Andrea dal array `founder`, cambiare Lorenzo da "Co-Founder & CEO" a "Founder & CEO"
-- Meta tag `company.founders`: solo "Lorenzo Oni-Joseph"
-- Card fondatori: rimuovere il div di Andrea, cambiare icona da `Users` a `User`, usare `founderLabel` invece di `foundersLabel`
+**Config (rimuovere blocchi):**
+- `supabase/config.toml` — rimuovere le 3 sezioni `[functions.perplexity-search]`, `[functions.cleanup-perplexity-cache]`, `[functions.rent-prices-update]`
 
-**3. Schema (`src/lib/schema/index.ts`)**
-- Cambiare `founder` array in oggetto singolo con nome "Lorenzo Oni-Joseph" e jobTitle "Founder & CEO"
+**Database (migration):**
+- Eliminare tabella `perplexity_cache`
 
-**4. Edge function MCP (`supabase/functions/mcp-server/index.ts`)**
-- Rimuovere Andrea dalla lista founders, tenere solo Lorenzo come "Founder & CEO"
+**Traduzioni — rimuovere blocco `aiSearch` da tutti e 7 i locale:**
+- `it.json`, `en.json`, `de.json`, `fr.json`, `sv.json`, `zh.json`, `es.json`
 
-### File da modificare (10 file)
-1. `src/i18n/locales/it.json`
-2. `src/i18n/locales/en.json`
-3. `src/i18n/locales/de.json`
-4. `src/i18n/locales/fr.json`
-5. `src/i18n/locales/sv.json`
-6. `src/i18n/locales/zh.json`
-7. `src/i18n/locales/es.json`
-8. `src/pages/About.tsx`
-9. `src/lib/schema/index.ts`
-10. `supabase/functions/mcp-server/index.ts`
+### Cosa viene aggiornato (pulizia riferimenti)
+
+**`src/pages/Blog.tsx`:**
+- Rimuovere import `AISearchBox`, `aiSearchRef`, `handleTryAISearch`
+- Rimuovere la sezione che renderizza `<AISearchBox />`
+- Rimuovere il pulsante "Prova la ricerca AI" nel fallback zero-results
+
+**`src/components/FAQSection.tsx`:**
+- Rimuovere import e rendering di `<AISearchBox />`
+
+**`src/components/InfoDrawerContent.tsx`:**
+- Rimuovere il lazy import e la sezione `<Suspense>` con `<AISearchBox />`
+
+**`src/data/aiTestingQueries.ts`:**
+- Rimuovere il campo `perplexity` dall'interfaccia `TestResult`
+
+**`src/types/aiTesting.ts`:**
+- Rimuovere `perplexity` da `TestResult` e i campi `perplexity_*` da `DBTestResult`
+
+**`src/pages/AITesting.tsx`:**
+- Rimuovere tutte le reference a Perplexity nel form/export
+
+**`src/data/investorZoneData.ts`:**
+- Aggiornare il commento source (rimuovere "Perplexity research")
+
+### Cosa NON viene toccato
+- Il connector Perplexity e il secret `PERPLEXITY_API_KEY` restano (non causano problemi, possono essere disconnessi manualmente dal pannello Connectors)
+- `src/integrations/supabase/types.ts` — si aggiorna automaticamente dopo la migration
+
+### File da modificare/eliminare: ~18 file
 
