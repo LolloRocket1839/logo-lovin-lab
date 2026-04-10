@@ -210,11 +210,6 @@ export interface TestResult {
     context: string;
     position?: number;
   };
-  perplexity: {
-    cited: boolean;
-    context: string;
-    position?: number;
-  };
   notes: string;
 }
 
