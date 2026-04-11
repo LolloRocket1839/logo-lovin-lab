@@ -1,49 +1,20 @@
 
 
-## Piano: Correggere i 3 problemi dell'audit + sincronizzare le traduzioni
+## Piano: Rimuovere il riferimento a "febbraio 2026" e investitori esterni dalla FAQ
 
-### Parte 1: Fix audit edge functions
+Rimuovere dalla chiave `faq.aboutA1` in tutte e 7 le lingue la frase sul lancio per investitori esterni, mantenendo il resto del testo.
 
-**1. `supabase/config.toml`** — rimuovere la voce orfana `[functions.submit-investor-interest]` (righe 6-7) e aggiungere:
-```toml
-[functions.admin-leads]
-verify_jwt = false
+### Modifiche ai 7 file locale
 
-[functions.check-url-status]
-verify_jwt = false
-```
+| Lingua | Testo attuale (aboutA1) | Nuovo testo |
+|--------|------------------------|-------------|
+| **IT** | "...da Lorenzo Oni-Joseph. Operiamo con nostri investimenti da 2 anni, e da febbraio 2026 lanceremo la startup per aprire le opportunità di investimento anche a investitori esterni. Siamo incubati da 2i3T..." | "...da Lorenzo Oni-Joseph. Siamo incubati da 2i3T, l'incubatore del Politecnico di Torino." |
+| **EN** | "...by Lorenzo Oni-Joseph. We have been operating with our own investments for 2 years, and starting from February 2026 we will launch the startup to open investment opportunities to external investors as well. We are incubated by 2i3T..." | "...by Lorenzo Oni-Joseph. We are incubated by 2i3T, the Politecnico di Torino incubator." |
+| **DE** | Già senza la frase — nessuna modifica necessaria |
+| **ES** | Già senza la frase — nessuna modifica necessaria |
+| **FR** | Già senza la frase — nessuna modifica necessaria |
+| **SV** | "...av Lorenzo Oni-Joseph. Vi har drivit med egna investeringar i 2 år, och i februari 2026 lanserar vi startupen för att öppna investeringsmöjligheter även för externa investerare. Vi är inkuberade av 2i3T..." | "...av Lorenzo Oni-Joseph. Vi är inkuberade av 2i3T, Politecnico di Torinos inkubator." |
+| **ZH** | "...Lorenzo Oni-Joseph创立的创新型初创公司。我们用自有投资运营2年，2026年2月我们将启动初创公司向外部投资者开放投资机会。我们由2i3T孵化..." | "...Lorenzo Oni-Joseph创立的创新型初创公司。我们由2i3T孵化，都灵理工大学孵化器。" |
 
-**2. `src/pages/AITesting.tsx`** — rimuovere la funzione `sendTestReport` (righe 165-188) e il bottone "Invia Report Settimanale" (righe 219-222) che chiama la edge function inesistente `weekly-ai-report`.
-
-**3. `src/types/aiTesting.ts`** — rimuovere i 3 campi `perplexity_*` residui dall'interfaccia `AITestDbRow` (righe 34-36). Creare anche una migration per droppare le colonne `perplexity_cited`, `perplexity_context`, `perplexity_position` dalla tabella `ai_test_results`.
-
-### Parte 2: Sincronizzazione traduzioni
-
-L'analisi mostra disallineamenti significativi tra i file di traduzione:
-
-| Lingua | Chiavi mancanti vs IT | Chiavi extra vs IT |
-|--------|----------------------|-------------------|
-| EN | 37 mancanti | 196 extra |
-| DE | 270 mancanti | 67 extra |
-| ES | 270 mancanti | 67 extra |
-| FR | 268 mancanti | 39 extra |
-| SV | 235 mancanti | 70 extra |
-| ZH | 235 mancanti | 70 extra |
-
-**Strategia:**
-1. **IT è il riferimento** — tutte le chiavi presenti in IT devono esistere in tutte le lingue
-2. **EN ha chiavi extra legittime** (dialoghi, CTA, accessibility) che mancano da IT → aggiungerle a IT e poi a tutte le altre lingue
-3. Usare uno script Python per:
-   - Unire tutte le chiavi (unione IT ∪ EN come master set)
-   - Per ogni lingua mancante, generare la traduzione copiando la chiave EN come fallback (i18next usa già il fallback, ma avere le chiavi esplicite evita warning e permette traduzioni future)
-   - Rimuovere chiavi extra che non esistono nel master set
-4. Tradurre effettivamente le chiavi mancanti nelle rispettive lingue (DE, FR, ES, SV, ZH)
-
-### Dettagli tecnici
-
-- Migration SQL: `ALTER TABLE ai_test_results DROP COLUMN perplexity_cited, DROP COLUMN perplexity_context, DROP COLUMN perplexity_position;`
-- Lo script di sync traduzioni processerà tutti e 7 i file locale + i file nella sottocartella `investor/`
-- Le chiavi extra in EN (waitlistDialog, sellerContactDialog, investorWaitlistDialog, ecc.) verranno aggiunte a IT con testo italiano e poi propagate
-
-### File coinvolti: ~12 file
+**File coinvolti:** `src/i18n/locales/it.json`, `en.json`, `sv.json`, `zh.json` (DE, ES, FR già OK)
 
