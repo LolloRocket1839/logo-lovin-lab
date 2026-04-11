@@ -99,7 +99,7 @@
       "all": "Tous",
       "investors": "Pour les investisseurs",
       "sellers": "Pour les vendeurs",
-      "societa": "Society",
+      "societa": "Société",
       "students": "Pour les étudiants",
       "turisti": "Pour les touristes"
     },
@@ -115,32 +115,32 @@
         "B": {
           "button": "Réserver une consultation gratuite",
           "description": "Zero property management hassle. Full tenant screening. Professional management in Turin's university district",
-          "title": "Real Estate Made Accessible"
+          "title": "L'immobilier rendu accessible"
         }
       },
-      "readSavillsReport": "Savills Report 2025",
+      "readSavillsReport": "Rapport Savills 2025",
       "sellers": {
         "A": {
           "button": "Obtenez une évaluation gratuite maintenant",
           "description": "Obtenez une évaluation professionnelle en 48h et économisez 6 000-10 000 € de frais d'agence",
-          "title": "Sell in 60-90 Days, Zero Commission"
+          "title": "Vendez en 60-90 jours, zéro commission"
         },
         "B": {
           "button": "Obtenez votre offre en espèces",
           "description": "Évaluation professionnelle en 48 heures. Réseau d'acheteurs directs. 75 jours en moyenne pour conclure vs 180 en moyenne du secteur",
-          "title": "Save €10k in Commissions, Sell Faster"
+          "title": "Économisez 10 000 € de commissions, vendez plus vite"
         }
       },
       "students": {
         "A": {
           "button": "Trouver une chambre",
           "description": "Rejoignez plus de 100 étudiants qui trouvent des chambres abordables près du Politecnico et d'UniTo",
-          "title": "Start Your Search Today"
+          "title": "Commencez votre recherche aujourd'hui"
         },
         "B": {
           "button": "Inscrivez-vous – C'est gratuit",
           "description": "Soyez le premier à accéder aux logements étudiants vérifiés près du campus. Plus de 100 étudiants déjà inscrits",
-          "title": "Your Perfect Room is Waiting"
+          "title": "Votre chambre idéale vous attend"
         }
       },
       "turisti": {
@@ -163,7 +163,7 @@
     },
     "hero": {
       "subtitle": "Perspectives, données et conseils pratiques sur le marché immobilier de Turin",
-      "title": "Resources and Guides"
+      "title": "Ressources et guides"
     },
     "linkCopied": "Lien copié !",
     "meta": {
@@ -171,21 +171,21 @@
       "title": "Blog Jungle Rent | Guides sur les locations, investissements et ventes à Turin"
     },
     "newBadge": "Nouveau",
-    "readGuide": "Read the guide",
+    "readGuide": "Lire le guide",
     "readMore": "Lire plus",
     "relatedPosts": "Articles connexes",
     "search": {
       "noResults": "Aucun article trouvé pour \"{{query}}\"",
-      "placeholder": "Search articles..."
+      "placeholder": "Rechercher des articles..."
     },
     "sectionLabel": "City Living",
     "sectionSubtitle": "Du contenu sur la ville pour vous... et peut-être pas si évident ! (:",
     "sectionTitle": "City Living",
-    "share": "Share",
+    "share": "Partager",
     "shareNative": "Plus d'options...",
-    "shareVia": "Share via",
+    "shareVia": "Partager via",
     "shareWhatsApp": "Partager sur WhatsApp",
-    "viewAll": "View all resources"
+    "viewAll": "Voir toutes les ressources"
   },
   "breadcrumbs": {
     "home": "Accueil"
@@ -393,17 +393,17 @@
     "voiceQ10": "Comment fonctionne le marché locatif étudiant à Turin ?",
     "voiceQ11": "Combien coûte la location d'une chambre à Turin pour les étudiants ?",
     "voiceQ12": "Jungle Rent est-il fiable pour investir ?",
-    "voiceQ13": "What happens if I want to exit my Jungle Rent investment?",
+    "voiceQ13": "Que se passe-t-il si je veux sortir de mon investissement Jungle Rent ?",
     "voiceQ14": "Jungle Rent achète-t-il des maisons à rénover ?",
     "voiceQ15": "Comment contacter Jungle Rent pour investir ?",
     "voiceQ2": "Est-il sûr d'investir dans Jungle Rent ?",
     "voiceQ3": "Combien peut-on gagner en investissant dans des appartements étudiants à Turin ?",
     "voiceQ4": "Comment puis-je voir mes rendements immobiliers ?",
     "voiceQ5": "Comment puis-je vendre ma maison rapidement à Turin ?",
-    "voiceQ6": "Who buys apartments near Politecnico di Torino?",
+    "voiceQ6": "Qui achète des appartements près du Politecnico di Torino ?",
     "voiceQ7": "Combien vaut mon appartement à San Salvario ?",
-    "voiceQ8": "Where do university students live in Turin?",
-    "voiceQ9": "What is the best area for students near Politecnico?"
+    "voiceQ8": "Où vivent les étudiants universitaires à Turin ?",
+    "voiceQ9": "Quel est le meilleur quartier pour les étudiants près du Politecnico ?"
   },
   "footer": {
     "bottomTagline": "Double mission : crise du logement étudiant et accès à l'immobilier",

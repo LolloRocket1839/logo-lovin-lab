@@ -1218,7 +1218,7 @@
     "addressError": "Adresse erforderlich",
     "addressLabel": "Immobilienadresse *",
     "addressPlaceholder": "Musterstraße 1, Turin",
-    "conditionLabel": "Property Condition (optional)",
+    "conditionLabel": "Zustand der Immobilie (optional)",
     "conditionPlaceholder": "Z.B.: Gut",
     "conditions": {
       "buono": "Gut",
@@ -1230,7 +1230,7 @@
     "emailLabel": "E-Mail *",
     "emailPlaceholder": "max.mustermann@email.de",
     "errorDescription": "Ein Fehler ist aufgetreten. Bitte versuche es erneut oder kontaktiere uns auf WhatsApp.",
-    "errorTitle": "❌ Submission error",
+    "errorTitle": "❌ Übermittlungsfehler",
     "floorLabel": "Stockwerk (optional)",
     "floorPlaceholder": "Z.B.: 2. OG",
     "floors": {
@@ -1242,10 +1242,10 @@
       "6+": "6. OG oder höher",
       "terra": "Erdgeschoss"
     },
-    "footerInfo": "✓ Guaranteed response within 48 hours • ✓ Free valuation with no commitment • ✓ Zero commissions",
+    "footerInfo": "✓ Garantierte Antwort innerhalb von 48 Stunden • ✓ Kostenlose Bewertung ohne Verpflichtung • ✓ Null Provisionen",
     "messageLabel": "Zusätzliche Anmerkungen (optional)",
     "messagePlaceholder": "Weitere nützliche Informationen (optional)...",
-    "motivationLabel": "Reason for Selling (optional)",
+    "motivationLabel": "Verkaufsgrund (optional)",
     "motivationPlaceholder": "Warum verkaufst du?",
     "motivations": {
       "altro": "Sonstiges",
@@ -1260,9 +1260,9 @@
     "phoneError": "Telefon erforderlich",
     "phoneLabel": "Telefon *",
     "phonePlaceholder": "+49 151 12345678",
-    "privacyError": "You must consent to data processing",
+    "privacyError": "Du musst der Datenverarbeitung zustimmen",
     "privacyLabel": "Ich stimme der Verarbeitung meiner persönlichen Daten gemäß EU-Verordnung 2016/679 (DSGVO) zu und ermächtige Jungle Rent, mich für die Immobilienbewertung zu kontaktieren.",
-    "privacyLink": "Read privacy policy",
+    "privacyLink": "Datenschutzrichtlinie lesen",
     "rooms": {
       "2": "2-Zimmer-Wohnung",
       "3": "3-Zimmer-Wohnung",
@@ -1271,14 +1271,14 @@
     },
     "roomsLabel": "Anzahl der Zimmer (optional)",
     "roomsPlaceholder": "Z.B.: 3 Zimmer",
-    "squareMetersLabel": "Square Meters (optional)",
+    "squareMetersLabel": "Quadratmeter (optional)",
     "squareMetersPlaceholder": "Z.B.: 85 qm",
     "submitButton": "Anfrage senden",
     "submitting": "Wird gesendet...",
-    "successDescription": "We will contact you within 48 hours for your free property valuation",
-    "successTitle": "✨ Request sent successfully!",
+    "successDescription": "Wir kontaktieren dich innerhalb von 48 Stunden für deine kostenlose Immobilienbewertung",
+    "successTitle": "✨ Anfrage erfolgreich gesendet!",
     "title": "Verkaufen Sie Ihr Haus",
-    "urgentLabel": "⚡ I need to sell urgently (highest priority)",
+    "urgentLabel": "⚡ Ich muss dringend verkaufen (höchste Priorität)",
     "zoneLabel": "Gebiet (optional)",
     "zonePlaceholder": "Z.B.: Crocetta",
     "zones": {
@@ -1683,8 +1683,8 @@
         "jungle": {
           "flex": "Flexibilität für Sommersitzungen",
           "months9": "Akademischer Jahresvertrag",
-          "noCommissions": "Zero commissions, direct rentals",
-          "payUse": "Summer: pay only days you use",
+          "noCommissions": "Null Provisionen, Direktvermietung",
+          "payUse": "Sommer: zahle nur die Tage, die du nutzt",
           "title": "Jungle Rent"
         },
         "traditional": {
@@ -1692,7 +1692,7 @@
           "months12": "Pflichtiger 12-Monats-Vertrag",
           "noFlex": "Keine Flexibilität für Prüfungen",
           "paySummer": "Sommer bezahlen, auch wenn du zuhause bist",
-          "title": "Traditional rental"
+          "title": "Traditionelle Vermietung"
         }
       },
       "contract": {

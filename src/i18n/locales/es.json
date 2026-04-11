@@ -1218,7 +1218,7 @@
     "addressError": "Dirección requerida",
     "addressLabel": "Dirección del inmueble *",
     "addressPlaceholder": "Calle Roma 1, Turín",
-    "conditionLabel": "Property Condition (optional)",
+    "conditionLabel": "Estado del inmueble (opcional)",
     "conditionPlaceholder": "Ej.: Bueno",
     "conditions": {
       "buono": "Bueno",
@@ -1230,7 +1230,7 @@
     "emailLabel": "Email *",
     "emailPlaceholder": "juan.garcia@email.com",
     "errorDescription": "Ha ocurrido un error. Por favor inténtalo de nuevo o contáctanos por WhatsApp.",
-    "errorTitle": "❌ Submission error",
+    "errorTitle": "❌ Error de envío",
     "floorLabel": "Planta (opcional)",
     "floorPlaceholder": "Ej.: 2ª Planta",
     "floors": {
@@ -1242,10 +1242,10 @@
       "6+": "6ª Planta o superior",
       "terra": "Planta Baja"
     },
-    "footerInfo": "✓ Guaranteed response within 48 hours • ✓ Free valuation with no commitment • ✓ Zero commissions",
+    "footerInfo": "✓ Respuesta garantizada en 48 horas • ✓ Valoración gratuita sin compromiso • ✓ Cero comisiones",
     "messageLabel": "Notas adicionales (opcional)",
     "messagePlaceholder": "Cualquier otra información útil (opcional)...",
-    "motivationLabel": "Reason for Selling (optional)",
+    "motivationLabel": "Motivo de venta (opcional)",
     "motivationPlaceholder": "¿Por qué vendes?",
     "motivations": {
       "altro": "Otro",
@@ -1260,9 +1260,9 @@
     "phoneError": "Teléfono requerido",
     "phoneLabel": "Teléfono *",
     "phonePlaceholder": "+34 612 345 678",
-    "privacyError": "You must consent to data processing",
+    "privacyError": "Debes consentir el tratamiento de datos",
     "privacyLabel": "Consiento el tratamiento de mis datos personales de acuerdo con el Reglamento UE 2016/679 (RGPD) y autorizo a Jungle Rent a contactarme para la valoración del inmueble.",
-    "privacyLink": "Read privacy policy",
+    "privacyLink": "Leer política de privacidad",
     "rooms": {
       "2": "Apartamento de 2 habitaciones",
       "3": "Apartamento de 3 habitaciones",
@@ -1271,14 +1271,14 @@
     },
     "roomsLabel": "Número de habitaciones (opcional)",
     "roomsPlaceholder": "Ej.: 3 habitaciones",
-    "squareMetersLabel": "Square Meters (optional)",
+    "squareMetersLabel": "Metros cuadrados (opcional)",
     "squareMetersPlaceholder": "Ej.: 85 m²",
     "submitButton": "Enviar solicitud",
     "submitting": "Enviando...",
-    "successDescription": "We will contact you within 48 hours for your free property valuation",
-    "successTitle": "✨ Request sent successfully!",
+    "successDescription": "Te contactaremos en 48 horas para tu valoración gratuita",
+    "successTitle": "✨ ¡Solicitud enviada con éxito!",
     "title": "Vende tu casa",
-    "urgentLabel": "⚡ I need to sell urgently (highest priority)",
+    "urgentLabel": "⚡ Necesito vender urgentemente (máxima prioridad)",
     "zoneLabel": "Zona (opcional)",
     "zonePlaceholder": "Ej.: Crocetta",
     "zones": {
@@ -1683,8 +1683,8 @@
         "jungle": {
           "flex": "Flexibilidad para sesiones de verano",
           "months9": "Contrato de año académico",
-          "noCommissions": "Zero commissions, direct rentals",
-          "payUse": "Summer: pay only days you use",
+          "noCommissions": "Cero comisiones, alquileres directos",
+          "payUse": "Verano: paga solo los días que uses",
           "title": "Jungle Rent"
         },
         "traditional": {
@@ -1692,7 +1692,7 @@
           "months12": "Contrato obligatorio de 12 meses",
           "noFlex": "Sin flexibilidad para exámenes",
           "paySummer": "Pagar en verano aunque estés en casa",
-          "title": "Traditional rental"
+          "title": "Alquiler tradicional"
         }
       },
       "contract": {
