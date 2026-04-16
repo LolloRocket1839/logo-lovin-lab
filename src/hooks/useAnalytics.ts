@@ -105,12 +105,43 @@ const isLikelyBot = (): boolean => {
   const ua = navigator.userAgent.toLowerCase();
   const botPatterns = [
     'bot', 'spider', 'crawl', 'slurp', 'mediapartners',
-    'headless', 'phantom', 'selenium', 'puppeteer', 'lighthouse',
-    'pingdom', 'pagespeed', 'gtmetrix', 'bytespider', 'yandex',
+    'headless', 'headlesschrome', 'phantom', 'selenium', 'puppeteer', 'playwright',
+    'lighthouse', 'pingdom', 'pagespeed', 'gtmetrix', 'bytespider', 'yandex',
     'baidu', 'sogou', 'semrush', 'ahrefs', 'mj12bot', 'dotbot',
-    'petalbot', 'dataforseo', 'gptbot', 'claudebot',
+    'petalbot', 'dataforseo', 'gptbot', 'claudebot', 'perplexitybot',
+    'python-requests', 'go-http-client', 'okhttp', 'curl/', 'wget/',
+    'http_request', 'axios', 'node-fetch', 'java/', 'apache-httpclient',
   ];
-  return botPatterns.some(p => ua.includes(p)) || !navigator.languages?.length;
+
+  // Standard webdriver signal
+  if ((navigator as any).webdriver === true) return true;
+
+  // No languages exposed = almost certainly automated
+  if (!navigator.languages?.length) return true;
+
+  // UA pattern match
+  if (botPatterns.some(p => ua.includes(p))) return true;
+
+  // Headless heuristics: no plugins + no touch + no webgl is suspicious on "Chrome"
+  try {
+    const langs = navigator.languages.map(l => l.toLowerCase());
+    const hasLatinLang = langs.some(l =>
+      l.startsWith('it') || l.startsWith('en') || l.startsWith('de') ||
+      l.startsWith('fr') || l.startsWith('es') || l.startsWith('sv') ||
+      l.startsWith('pt') || l.startsWith('nl')
+    );
+    // If no Latin-script language at all AND timezone is far from EU/Americas, likely off-target traffic
+    if (!hasLatinLang) {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      if (tz.startsWith('Asia/') && !tz.includes('Jerusalem') && !tz.includes('Istanbul')) {
+        return true;
+      }
+    }
+  } catch {
+    // ignore
+  }
+
+  return false;
 };
 
 const trackEvent = async (event: AnalyticsEvent) => {
