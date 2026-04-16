@@ -27,6 +27,26 @@ const isRateLimited = (clientIP: string): boolean => {
   return false;
 };
 
+// Server-side bot UA blacklist
+const BOT_UA_PATTERNS = [
+  'bot', 'spider', 'crawl', 'slurp', 'headless', 'phantom', 'selenium',
+  'puppeteer', 'playwright', 'lighthouse', 'pingdom', 'pagespeed', 'gtmetrix',
+  'bytespider', 'yandex', 'baidu', 'sogou', 'semrush', 'ahrefs', 'mj12bot',
+  'dotbot', 'petalbot', 'dataforseo', 'gptbot', 'claudebot', 'perplexitybot',
+  'python-requests', 'go-http-client', 'okhttp', 'curl/', 'wget/',
+  'axios', 'node-fetch', 'java/', 'apache-httpclient',
+];
+
+const isBotRequest = (req: Request, bodyUA?: string): boolean => {
+  const headerUA = (req.headers.get('user-agent') || '').toLowerCase();
+  const ua = (bodyUA || headerUA).toLowerCase();
+  if (!ua) return true;
+  if (BOT_UA_PATTERNS.some(p => ua.includes(p))) return true;
+  const acceptLang = req.headers.get('accept-language');
+  if (!acceptLang || acceptLang.trim().length === 0) return true;
+  return false;
+};
+
 interface ABTestEventRequest {
   cta_type: string;
   variation: string;
