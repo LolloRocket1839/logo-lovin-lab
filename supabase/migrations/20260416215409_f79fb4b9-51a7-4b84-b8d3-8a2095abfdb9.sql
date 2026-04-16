@@ -1,0 +1,9 @@
+ALTER TABLE public.ab_test_events DROP CONSTRAINT IF EXISTS ab_test_events_cta_type_check;
+
+ALTER TABLE public.ab_test_events ADD CONSTRAINT ab_test_events_cta_type_check
+CHECK (cta_type IN (
+  'students', 'investors', 'sellers', 'turisti', 'societa',
+  'hero_headline', 'whatsapp_fab',
+  'hero_cta_v2', 'quiz_position',
+  'blog_inline_cta'
+));
