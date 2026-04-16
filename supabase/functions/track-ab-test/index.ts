@@ -101,6 +101,14 @@ Deno.serve(async (req: Request): Promise<Response> => {
 
     const body: ABTestEventRequest = await req.json();
 
+    // Server-side bot filter
+    if (isBotRequest(req, body.user_agent)) {
+      return new Response(
+        JSON.stringify({ success: true, filtered: true }),
+        { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     // Validate required fields
     if (!isValidCtaType(body.cta_type)) {
       return new Response(
