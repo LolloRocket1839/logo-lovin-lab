@@ -15,6 +15,7 @@ export const ImmersiveHero = () => {
   const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
   const { variation: heroVariation, trackImpression: trackHeroImpression, trackClick: trackHeroClick } = useABTest('hero_headline');
+  const { variation: ctaVariation, trackImpression: trackCtaImpression, trackClick: trackCtaClick } = useABTest('hero_cta_v2');
   const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const prefersReducedMotion = useReducedMotion();
@@ -34,14 +35,23 @@ export const ImmersiveHero = () => {
     }
   }, [heroVariation, trackHeroImpression]);
 
+  useEffect(() => {
+    if (ctaVariation) {
+      trackCtaImpression();
+    }
+  }, [ctaVariation, trackCtaImpression]);
+
   const handleInvestClick = () => {
     trackClick('immersive_hero_invest');
     trackHeroClick();
+    trackCtaClick();
     setInvestDialogOpen(true);
   };
 
   const headline = heroVariation === 'B' ? t('hero.mainHeadlineB') : t('hero.mainHeadline');
   const subheadline = heroVariation === 'B' ? t('hero.mainSubheadlineB') : t('hero.mainSubheadline');
+  const ctaLabel = ctaVariation === 'B' ? t('hero.startInvestingB') : t('hero.startInvesting');
+  const ctaSocialProof = ctaVariation === 'B' ? t('hero.ctaSocialProofB') : null;
 
   return (
     <section 
@@ -115,8 +125,14 @@ export const ImmersiveHero = () => {
               onClick={handleInvestClick}
               className="text-base md:text-lg px-8 py-6 md:px-10 md:py-7"
             >
-              {t('hero.startInvesting')} →
+              {ctaLabel} →
             </Button>
+
+            {ctaSocialProof && (
+              <p className="mt-3 text-xs text-muted-foreground/90 font-medium">
+                {ctaSocialProof}
+              </p>
+            )}
             
             {/* Secondary seller link */}
             <p className="mt-4 text-sm text-muted-foreground">
