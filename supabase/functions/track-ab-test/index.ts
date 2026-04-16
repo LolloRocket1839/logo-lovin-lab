@@ -58,7 +58,7 @@ interface ABTestEventRequest {
 
 // Validation functions
 const isValidCtaType = (ctaType: string): boolean => {
-  const allowedTypes = ['students', 'investors', 'sellers', 'turisti', 'societa', 'hero_headline', 'whatsapp_fab'];
+  const allowedTypes = ['students', 'investors', 'sellers', 'turisti', 'societa', 'hero_headline', 'whatsapp_fab', 'hero_cta_v2', 'quiz_position'];
   return allowedTypes.includes(ctaType);
 };
 
