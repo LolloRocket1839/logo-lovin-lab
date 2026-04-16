@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
 type CTAType = 'students' | 'investors' | 'sellers' | 'turisti' | 'societa' | 'hero_headline' | 'whatsapp_fab';
