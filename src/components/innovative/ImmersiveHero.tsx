@@ -20,15 +20,19 @@ export const ImmersiveHero = () => {
   const prefersReducedMotion = useReducedMotion();
   
 
-  // Trigger entrance animations after mount + track A/B impression
+  // Trigger entrance animations after mount
   useEffect(() => {
     const timer = setTimeout(() => setHasLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
+  // Track A/B impression ONLY after variation is loaded from localStorage
+  // (avoids race where impression fires with default 'A' before re-render)
   useEffect(() => {
-    trackHeroImpression();
-  }, []);
+    if (heroVariation) {
+      trackHeroImpression();
+    }
+  }, [heroVariation, trackHeroImpression]);
 
   const handleInvestClick = () => {
     trackClick('immersive_hero_invest');

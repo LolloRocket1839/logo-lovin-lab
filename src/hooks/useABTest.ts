@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
 type CTAType = 'students' | 'investors' | 'sellers' | 'turisti' | 'societa' | 'hero_headline' | 'whatsapp_fab';
@@ -47,13 +47,12 @@ const getVariationForCTA = (ctaType: CTAType): Variation => {
 };
 
 export const useABTest = (ctaType: CTAType): ABTestHook => {
-  const [variation, setVariation] = useState<Variation>('A');
+  // Initialize synchronously from localStorage to avoid race with impression tracking
+  const [variation] = useState<Variation>(() => {
+    if (typeof window === 'undefined') return 'A';
+    return getVariationForCTA(ctaType);
+  });
   const [impressionTracked, setImpressionTracked] = useState(false);
-
-  useEffect(() => {
-    const selectedVariation = getVariationForCTA(ctaType);
-    setVariation(selectedVariation);
-  }, [ctaType]);
 
   const trackEvent = async (eventType: 'impression' | 'click') => {
     try {
