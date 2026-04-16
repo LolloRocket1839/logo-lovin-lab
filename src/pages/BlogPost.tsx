@@ -9,6 +9,8 @@ import { ShareButton } from "@/components/blog/ShareButton";
 import { ContractBanner } from "@/components/blog/ContractBanner";
 import { ContractSidebarCard } from "@/components/blog/ContractSidebarCard";
 import { AnimatedBlogContent } from "@/components/blog/AnimatedBlogContent";
+import { InlineContextualCTA } from "@/components/blog/InlineContextualCTA";
+import { hasInlineCTA } from "@/data/blog/inlineCTAs";
 import { ParallaxHeroImage } from "@/components/blog/ParallaxHeroImage";
 import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
@@ -244,6 +246,11 @@ const BlogPost = () => {
                     <AnimatedBlogContent content={content} slug={post.slug} lang={currentLang} />
                     <FloatingTableOfContents content={content} />
                   </>
+                )}
+
+                {/* Inline contextual CTA for top 5 most-viewed articles */}
+                {hasInlineCTA(post.slug) && (
+                  <InlineContextualCTA slug={post.slug} lang={currentLang} />
                 )}
 
                 {/* Contract Banner for investor/seller articles */}
