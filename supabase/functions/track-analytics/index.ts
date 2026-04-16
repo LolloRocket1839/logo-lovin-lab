@@ -130,6 +130,15 @@ Deno.serve(async (req: Request): Promise<Response> => {
       );
     }
 
+    // Server-side bot filter (UA blacklist + missing Accept-Language)
+    if (isBotRequest(req)) {
+      // Return 200 silently so bots don't retry, but skip insert
+      return new Response(
+        JSON.stringify({ success: true, filtered: true }),
+        { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     const body: AnalyticsEventRequest = await req.json();
 
     // Validate required fields
@@ -137,6 +146,14 @@ Deno.serve(async (req: Request): Promise<Response> => {
       return new Response(
         JSON.stringify({ error: "Invalid session_id" }),
         { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    // Per-session burst guard (catches scripted clients that pass UA checks)
+    if (isSessionFlooding(body.session_id)) {
+      return new Response(
+        JSON.stringify({ success: true, filtered: true }),
+        { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
