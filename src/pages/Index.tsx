@@ -17,6 +17,7 @@ import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
 const InvestorQuiz = lazy(() => import("@/components/InvestorQuiz"));
 const InvestorSection = lazy(() => import("@/components/sections/InvestorSection"));
+const QuizPositionAB = lazy(() => import("@/components/QuizPositionAB").then(m => ({ default: m.QuizPositionAB })));
 
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
 
@@ -114,13 +115,22 @@ const Index = () => {
         <TrustBadge />
       </Suspense>
 
+      {/* Quiz position A/B test — Variant B: quiz right after hero */}
+      <Suspense fallback={null}>
+        <QuizPositionAB showOn="B">
+          <InvestorQuiz />
+        </QuizPositionAB>
+      </Suspense>
+
       <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
         
         {/* How It Works Section - unified component handles desktop/mobile */}
         <HowItWorks />
         
-        {/* Investor Quiz - micro-commitment before lead form */}
-        <InvestorQuiz />
+        {/* Quiz position A/B test — Variant A (current): after HowItWorks */}
+        <QuizPositionAB showOn="A">
+          <InvestorQuiz />
+        </QuizPositionAB>
         
         {/* Investor Section */}
         <InvestorSection />
