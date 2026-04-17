@@ -1,97 +1,63 @@
 
 
-## Analisi situazione
+## Piano: rimuovere riferimenti specifici a "SFP" dal copy pubblico
 
-Il prompt è un brief completo per ricostruire `/investitori`. Stack richiesto = Next.js, ma il progetto è **Vite + React + React Router** (non Next.js, non App Router, non next-intl). Devo adattare lo stack mantenendo la sostanza compliance, copy e struttura.
+### Razionale
+Menzionare uno strumento finanziario specifico (SFP, art. 2346 c.c.) sulla pagina pubblica avvicina il messaggio a "offerta al pubblico di prodotto finanziario specifico". Meglio restare a un livello descrittivo generico: "strumento di partecipazione economica", "modalità di partecipazione", "strumento finanziario dedicato". Il dettaglio tecnico (SFP, regolamento, art. 2346) resta nel **memorandum informativo** consegnato dopo la call di qualifica.
 
-Servono check preliminari prima del piano: capire stato attuale di `/investitori`, sistema i18n esistente (i18next, non next-intl), pagina layout pattern, edge function emails, route inglesi.
+### Sostituzioni di copy
 
-## Decisioni di adattamento (non chiedo, sono tecniche obbligate)
+**Linguaggio da bandire sulla pagina pubblica:**
+- "SFP" / "Strumenti Finanziari Partecipativi" / "Participating Financial Instruments"
+- "art. 2346 c.c." / "art. 26 DL 179/2012"
+- "regolamento SFP"
+- "serie di SFP"
 
-- **Routing**: React Router. Creo `/investitori` (IT primario) e `/investors` (EN) come due pagine wrapper della stessa logica, oppure singola con switch locale gestito dal i18n esistente. Il progetto usa pattern bilingue via i18next con file `it.json`/`en.json` per modulo (vedi `src/i18n/locales/investor/`). Riuso quel modulo `investor` già esistente, estendendolo.
-- **Stack form**: react-hook-form + zod (già presente nel progetto).
-- **Email**: uso edge function `send-transactional-email` esistente (già nel sistema email queue + Resend). Niente Resend diretto, niente nuova edge function. Aggiungo 2 template React Email: `investor-info-request-confirmation` (al lead) + `investor-info-request-notification` (a `ADMIN_NOTIFICATION_EMAIL` già configurato come secret). Il Gmail destinatario lo cambia poi via secret se serve.
-- **Lead persistence**: uso RPC `insert_lead` esistente con `_lead_type='investor'` + metadata strutturato (ticket, horizon, residence, declarations).
-- **Tracking**: rispetto `useCookieConsent` + filtro bot, già pattern del progetto.
-- **Design**: rispetto memory `mem://design/minimalist-visual-standards` (quiet luxury, no animazioni complesse). La palette del prompt (`#FAFAF7`, `#2C4A3E`, `#D4A574`) è sostanzialmente compatibile col jungle green/cream esistente — uso i token già definiti in `index.css` invece di hardcodare hex, per coerenza con il resto del sito.
+**Linguaggio sostitutivo:**
+- "strumento di partecipazione economica dedicato"
+- "modalità di partecipazione riservata"
+- "strumento finanziario riservato a investitori qualificati"
+- "documentazione contrattuale" (al posto di "regolamento SFP")
+- "serie dedicata all'operazione" (al posto di "serie di SFP")
 
-## Struttura piano
+### File da aggiornare
 
-### File da creare
-```
-src/pages/Investitori.tsx                    (rebuild completo IT)
-src/pages/Investors.tsx                      (wrapper EN, stessa logica)
-src/components/investitori/
-  HeroSection.tsx
-  TrustStripe.tsx
-  FounderLetterSection.tsx
-  ThesisSection.tsx
-  StartupInnovativaSection.tsx
-  HowItWorksSection.tsx
-  TaxSection.tsx
-  RisksSection.tsx
-  FAQSection.tsx
-  RequestInfoForm.tsx
-  LegalDisclaimerFooter.tsx
-src/lib/validation/investorLead.ts           (zod schema)
-supabase/functions/_shared/transactional-email-templates/
-  investor-info-request-confirmation.tsx
-  investor-info-request-notification.tsx
-```
+**1. `src/i18n/locales/investor/it.json` + `en.json`** — namespace `landing.*`
+- **Hero**: "Investi in Jungle Rent. Con esposizione alla singola operazione immobiliare." Subhead: "Jungle Rent è una startup innovativa torinese. Acquistiamo, ristrutturiamo e gestiamo appartamenti per studenti universitari. Apriamo a un numero limitato di investitori privati la partecipazione economica al portfolio tramite uno strumento dedicato. I dettagli tecnici dello strumento sono descritti nel memorandum informativo."
+- **Founder letter** §2: "Apro la partecipazione a un piccolo gruppo di investitori privati. Lo facciamo con uno strumento dedicato che allinea gli incentivi: la struttura premia chi entra presto sul singolo deal. I dettagli giuridici sono nel memorandum."
+- **Thesis "Cosa stai sottoscrivendo"**: rimuovo. Sostituisco con riquadro più sobrio: "Contratto con Jungle Rent S.r.l., esposizione economica alla singola operazione del portfolio. Forma giuridica e meccanica della distribuzione: nel memorandum."
+- **How it works** step 5: "Firma dell'atto di sottoscrizione presso il notaio incaricato, contestualmente al versamento."
+- **How it works** step 3: rimuovo "regolamento SFP" → "documentazione contrattuale completa"
+- **FAQ**: rimuovo la domanda "Che cos'è uno Strumento Finanziario Partecipativo?". Sostituisco con: **"Quale strumento finanziario viene utilizzato?"** → "Uno strumento di partecipazione economica dedicato, riservato a investitori qualificati tramite collocamento privato. La forma giuridica precisa, i diritti patrimoniali, il meccanismo di distribuzione e il regolamento sono descritti integralmente nel memorandum informativo, consegnato dopo la call di qualifica."
+- **FAQ "Investo nella società o in un singolo immobile?"**: riformulo senza menzione SFP — "Il contratto è con Jungle Rent S.r.l. L'esposizione economica è alla singola operazione: ogni serie dello strumento è collegata a uno specifico deal, e il tuo ritorno dipende dalla performance di quel deal."
+- **FAQ "Come vengono distribuiti i profitti?"**: rimuovo "regolamento SFP" → "La documentazione contrattuale prevede uno split economico definito caso per caso, descritto nel memorandum."
+- **FAQ "Posso vedere il business plan?"**: rimuovo "regolamento SFP" dall'elenco materiali → "memorandum informativo, documentazione contrattuale, business plan, modello finanziario, verbali societari"
+- **FAQ "Cosa succede se non chiudete entro settembre 2026?"**: "Questa clausola è prevista nella documentazione contrattuale" (no "regolamento SFP")
+- **Tax section**: ricado descrittivo — "Gli investimenti in startup innovative possono beneficiare della deduzione IRPEF al 65% (art. 29-bis DL 179/2012, regime de minimis Reg. UE 2831/2023). L'effettiva applicabilità dipende dallo strumento utilizzato e dal profilo dell'investitore." (rimuovo "investimenti in SFP di startup innovativa")
+- **Risks** "Concentrazione su singola operazione": "La serie dello strumento che sottoscrivi è esposta al risultato di un solo immobile…"
+- **Risks** "Illiquidità": rimuovo "Gli SFP sono trasferibili" → "Lo strumento è trasferibile in forma privata, ma trovare un compratore è una tua responsabilità."
+- **Form checkbox 2**: "Comprendo che l'investimento in strumenti finanziari di startup innovativa comporta rischi inclusi la possibile perdita totale del capitale." (no "SFP")
+- **Legal disclaimer footer** §2: "Lo strumento finanziario descritto non è disponibile per sottoscrizione online. L'eventuale sottoscrizione avviene esclusivamente tramite collocamento privato…" (no "Strumenti Finanziari Partecipativi")
 
-### File da modificare
-```
-src/App.tsx                                   (aggiungo route /investors)
-src/i18n/locales/investor/it.json + en.json   (aggiungo namespace landing.*)
-                                              (estendo gli altri 6 locale con fallback EN)
-supabase/functions/_shared/transactional-email-templates/registry.ts
-                                              (registro 2 nuovi template)
-src/lib/seo/structuredData.ts (o equivalente) (JSON-LD InvestmentOrDeposit / Service)
-mem://compliance/investment-messaging-eoi     (aggiorno: pagina /investitori ora è collocamento privato, non più EOI generico)
-```
+**2. Versione EN** — stesse sostituzioni con: "dedicated financial instrument", "contractual documentation", "series dedicated to the operation". Rimuovo l'istruzione "Italian civil code art. 2346" dalla traduzione.
 
-### Cosa rimuovo dalla pagina attuale
-Tutto ciò che configura sollecitazione pubblica:
-- "€100 minimum" / qualsiasi cifra retail in homepage e meta
-- Countdown / progress bar / "raccolti €X"
-- "Investi ora" CTA → unica CTA "Richiedi il memorandum informativo"
-- Testimonianze / "X investitori hanno già…" / urgency banners su questa pagina
-- Promesse rendimento puntuali (`mem://strategy/investment-acquisition-urgency` va sospeso per /investitori)
+**3. `public/.well-known/llms.txt` + `public/llms-full.txt` + `public/ai-assistant-info.txt`**
+- Sezione investor: rimuovo "SFP", "Participating Financial Instruments", "art. 2346". Sostituisco con: "Investment in Jungle Rent S.r.l. via a dedicated financial instrument reserved to qualified investors through private placement. Each series is linked to a specific property operation. Instrument details available in the information memorandum."
 
-### Compliance — implementazione concreta
-1. **Honeypot field** nel form (`<input name="website" tabIndex={-1}>` nascosto)
-2. **Doppio checkbox obbligatorio**: privacy + dichiarazione di iniziativa propria
-3. **Disclaimer footer sticky** sul fondo della pagina (non popup)
-4. **Audit trail**: salvo `submitted_at` + `user_agent` (no IP — non lo abbiamo lato client; lo logga Supabase nei `request.headers` via edge function)
-5. **No A/B test su questa pagina** (escludo `/investitori` dagli AB test esistenti)
+**4. Componenti homepage** (`InvestorSection` mobile + desktop): se contengono "SFP" → "strumento dedicato di partecipazione".
 
-### Email flow
-1. Submit → `insert_lead` RPC (lead_type=`investor`, metadata strutturato)
-2. Invoke `send-transactional-email` con `investor-info-request-confirmation` → al lead
-3. Invoke `send-transactional-email` con `investor-info-request-notification` → admin (`ADMIN_NOTIFICATION_EMAIL`)
-4. Idempotency key: `investor-info-${email}-${timestamp}`
+**5. Memory**
+Aggiorno `mem://compliance/investment-messaging-eoi`:
+- Aggiungo regola: **"Sulle pagine pubbliche (incluse `/investitori`, llms files, schema, homepage) non menzionare mai SFP / Strumenti Finanziari Partecipativi / art. 2346 / art. 26 DL 179/2012 / 'regolamento SFP'. Usare 'strumento dedicato di partecipazione economica' / 'documentazione contrattuale' / 'serie dedicata all'operazione'. Il dettaglio tecnico vive solo nel memorandum informativo consegnato dopo la call di qualifica."**
 
-### SEO / structured data
-- `<title>`: "Co-investi nello student housing di Torino | Jungle Rent"
-- Meta description sobria, niente keyword stuffing investment
-- JSON-LD `Organization` (riuso quello esistente) — **non** aggiungo `Offer` o `InvestmentOrDeposit` per evitare segnali di offerta pubblica agli LLM
-- Aggiorno `public/llms-full.txt` per togliere riferimenti a "€100 minimum" su questa pagina (questo è il follow-up del piano compliance precedente, lo includo qui solo per la sezione investor)
-- Hreflang IT/EN tra `/investitori` e `/investors`
+Aggiorno Core rule in `mem://index.md`:
+"Investment Model: investment in Jungle Rent S.r.l. via dedicated financial instrument, each series linked to a specific property operation. **Never name the instrument (SFP/art. 2346) on public surfaces** — only in the post-qualification memorandum. Payouts every 2 months (bimestrale)."
 
-### Localizzazione
-- IT primario, EN parallelo (non traduzione letterale come da brief)
-- Per gli altri 5 locale (DE/ES/FR/PT/ZH/SV): fallback a EN per ora — la pagina è destinata principalmente a investitori IT/CH/EU
-- Aggiorno solo `it.json` e `en.json` del modulo `investor`; gli altri locale ricevono solo le chiavi minime di switch lingua
+### Cosa NON cambio
+- Memorandum informativo (PDF inviato post-qualifica): lì SFP resta, è il documento tecnico
+- Disclaimer legale generale (TUF art. 94/100 può restare, è normativa generale, non strumento specifico)
+- Form, edge functions, schema DB
 
-### Cosa NON faccio in questo task
-- Cambio Next.js → resta Vite/React Router (impossibile cambiare framework)
-- Configuro Resend diretto → uso infrastruttura email esistente
-- Pubblico la pagina come "production ready" → la deployo in stato "draft for legal review by Stefano" come richiesto dall'utente
-- Tocco `/investors` esistente in altri linguaggi se non necessario
-
-### Stima
-~12 file nuovi, ~5 modificati. 2 nuovi template email + 1 deploy edge functions. Nessuna migration DB (uso `insert_lead` esistente).
-
-### Domanda rapida prima di procedere
-Una sola, perché incide sul deploy:
+### File coinvolti
+~7 file: 2 JSON i18n investor, 3 file public, 1-2 componenti homepage, 2 file memory. Nessuna migration.
 
