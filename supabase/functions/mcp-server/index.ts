@@ -279,7 +279,7 @@ mcpServer.tool("get_neighborhoods", {
 });
 
 mcpServer.tool("get_company_info", {
-  description: "Get structured information about Jungle Rent: legal data, founders, services, contact details.",
+  description: "Get structured information about Jungle Rent: legal data, sole founder/shareholder (Lorenzo Oni-Joseph), board members (Andrea Niccolaini, non-shareholder Consigliere), services, contact details.",
   inputSchema: { type: "object" as const, properties: {} },
   handler: () => {
     return { content: [{ type: "text" as const, text: JSON.stringify(COMPANY_INFO, null, 2) }] };
