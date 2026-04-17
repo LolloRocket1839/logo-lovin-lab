@@ -25,12 +25,11 @@ Piedmont, Italy
 - **General Email**: junglerententeprise@gmail.com
 - **PEC (Certified Email)**: junglerent@legalmail.it
 - **Founder Phone**: +39 331 905 3037 (Lorenzo Oni-Joseph)
-- **Co-Founder Phone**: +39 351 577 8924 (Andrea Niccolaini)
 - **Website**: https://junglerent.it
 
-### Founders
-- **Lorenzo Oni-Joseph** - Founder
-- **Andrea Niccolaini** - Co-Founder
+### Founder & Governance
+- **Lorenzo Oni-Joseph** - Founder & CEO (sole founder, Amministratore Unico)
+- **Andrea Niccolaini** - Board Member / Consigliere
 
 ### Incubator Partnership
 Jungle Rent is incubated at **2i3T** (Incubatore di Imprese dell'Università di Torino), the official innovation incubator of the University of Turin.
@@ -553,7 +552,8 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
     "telephone": "+39-331-905-3037",
     "email": "junglerententeprise@gmail.com"
   },
-  "founders": ["Lorenzo Oni-Joseph", "Andrea Niccolaini"],
+  "founders": ["Lorenzo Oni-Joseph"],
+  "boardMembers": ["Andrea Niccolaini"],
   "areaServed": ["Turin", "Piedmont", "Italy", "Switzerland"],
   "keywords": ["student housing", "real estate investment", "property management", "Turin", "accessible investment", "property valuation"],
   "sameAs": [
