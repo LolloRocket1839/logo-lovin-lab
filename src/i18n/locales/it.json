@@ -682,13 +682,13 @@
     "whyInvestTitle": "Perché investire con noi",
     "landing": {
       "meta": {
-        "title": "Co-investi nello student housing di Torino | Jungle Rent",
-        "description": "Jungle Rent apre a un numero limitato di investitori privati la partecipazione al portfolio di student housing torinese tramite Strumenti Finanziari Partecipativi. Richiedi il memorandum informativo."
+        "title": "Investi in Jungle Rent · student housing Torino",
+        "description": "Jungle Rent apre a un numero limitato di investitori privati la partecipazione economica al portfolio di student housing torinese tramite uno strumento dedicato. Richiedi il memorandum informativo."
       },
       "hero": {
         "eyebrow": "Opportunità riservata · Collocamento privato",
-        "h1": "Co-investi nello student housing di Torino, con chi ci mette la faccia.",
-        "subhead": "Jungle Rent è una startup innovativa torinese che acquista, ristruttura e gestisce appartamenti per studenti universitari. Apriamo a un numero limitato di investitori privati la partecipazione al nostro portfolio tramite Strumenti Finanziari Partecipativi.",
+        "h1": "Investi in Jungle Rent. Con esposizione alla singola operazione immobiliare.",
+        "subhead": "Jungle Rent è una startup innovativa torinese. Acquistiamo, ristrutturiamo e gestiamo appartamenti per studenti universitari. Apriamo a un numero limitato di investitori privati la partecipazione economica al portfolio tramite uno strumento dedicato. I dettagli tecnici dello strumento sono descritti nel memorandum informativo.",
         "cta": "Richiedi il memorandum informativo",
         "ctaNote": "La sottoscrizione non avviene online. Il primo passo è una richiesta di informazioni: ricevi il memorandum, valutalo con calma, decidi poi."
       },
@@ -718,7 +718,7 @@
         "paragraphs": [
           "Ciao,",
           "sono Lorenzo, founder di Jungle Rent. Ho costruito questa società con un'idea semplice: a Torino ci sono 90.000 studenti universitari e un mercato immobiliare ancora accessibile. Comprando bene, ristrutturando bene, e gestendo bene, si possono costruire flussi di cassa solidi in un asset class storicamente difensiva.",
-          "Apro la partecipazione a un piccolo gruppo di investitori privati per un motivo pratico: accelerare la costruzione del portfolio senza diluire eccessivamente il capitale sociale. Lo faccio con uno strumento (gli SFP) che allinea gli incentivi — io prendo il 10% dei profitti, voi il 90%, dopo il servicing.",
+          "Apro la partecipazione a un piccolo gruppo di investitori privati per un motivo pratico: accelerare la costruzione del portfolio senza diluire eccessivamente il capitale sociale. Lo facciamo con uno strumento dedicato che allinea gli incentivi: la struttura premia chi entra presto sulla singola operazione, e io prendo il 10% dei profitti dopo il servicing. I dettagli giuridici sono nel memorandum.",
           "Questa pagina ti dà il perimetro. I numeri veri, la struttura, i modelli, i contratti — tutto questo sta nel memorandum. Te lo mando solo dopo una breve call di conoscenza, perché voglio essere sicuro che l'opportunità e le tue aspettative siano compatibili.",
           "Se ti interessa, compila il form in fondo alla pagina. Ti rispondo personalmente entro 48 ore."
         ],
@@ -751,7 +751,7 @@
           },
           "tax": {
             "title": "Agevolazione fiscale per chi investe",
-            "body": "Gli investitori privati che sottoscrivono SFP in una startup innovativa possono beneficiare di una deduzione IRPEF fino al 65% dell'importo investito (regime de minimis, Reg. UE 2831/2023). L'agevolazione è soggetta a limiti individuali e condizioni da verificare con il proprio consulente fiscale. Dettagli nel memorandum."
+            "body": "Gli investimenti in startup innovative possono beneficiare di una deduzione IRPEF fino al 65% dell'importo investito (regime de minimis, Reg. UE 2831/2023). L'effettiva applicabilità dipende dallo strumento utilizzato e dal profilo dell'investitore. Dettagli nel memorandum."
           },
           "transparency": {
             "title": "Trasparenza obbligatoria",
@@ -772,7 +772,7 @@
           },
           {
             "title": "Ricevi i materiali",
-            "body": "Memorandum informativo, regolamento SFP, business plan, modello finanziario in Excel, verbali degli organi societari."
+            "body": "Memorandum informativo, documentazione contrattuale completa, business plan, modello finanziario in Excel, verbali degli organi societari."
           },
           {
             "title": "Tempo per valutare",
@@ -780,14 +780,14 @@
           },
           {
             "title": "Firma",
-            "body": "Se decidi di procedere, l'atto di sottoscrizione si firma di persona presso il notaio incaricato, contestualmente al versamento."
+            "body": "Se decidi di procedere, l'atto di sottoscrizione si firma di persona presso il notaio incaricato, contestualmente al versamento. Ricevi una serie dello strumento dedicata all'operazione che hai scelto."
           }
         ],
         "callout": "Nessuno step è automatizzato. Ogni investitore che entra in Jungle Rent lo fa dopo aver parlato con Lorenzo direttamente."
       },
       "tax": {
         "title": "Trattamento fiscale dell'investimento",
-        "content": "Gli investimenti in SFP di startup innovativa possono beneficiare della deduzione IRPEF al 65% ai sensi dell'art. 29-bis DL 179/2012, nel regime de minimis introdotto dal Reg. UE 2831/2023. La normativa è in vigore fino al 04/12/2028, salvo proroghe.",
+        "content": "Gli investimenti in startup innovative possono beneficiare della deduzione IRPEF al 65% ai sensi dell'art. 29-bis DL 179/2012, nel regime de minimis introdotto dal Reg. UE 2831/2023. L'effettiva applicabilità dipende dallo strumento utilizzato e dal profilo dell'investitore. La normativa è in vigore fino al 04/12/2028, salvo proroghe.",
         "caveatTitle": "Importante",
         "caveat": "L'effettiva applicabilità e misura della deduzione dipende da limiti individuali dell'investitore, dalla disponibilità residua del plafond de minimis della società, e dal rispetto di una serie di condizioni previste dalla normativa. Nessuna informazione in questa pagina costituisce consulenza fiscale. Prima di qualsiasi decisione, consulta il tuo commercialista di fiducia o richiedi al nostro team di metterti in contatto con lo studio fiscale che assiste Jungle Rent."
       },
@@ -796,11 +796,11 @@
         "items": [
           {
             "title": "Illiquidità",
-            "body": "Il lock-up fiscale è di 3 anni. Non esiste mercato secondario organizzato. Gli SFP sono trasferibili in forma privata, ma trovare un compratore è una tua responsabilità."
+            "body": "Il lock-up fiscale è di 3 anni. Non esiste mercato secondario organizzato. Lo strumento è trasferibile in forma privata, ma trovare un compratore è una tua responsabilità."
           },
           {
-            "title": "Rischio esecuzione",
-            "body": "Jungle Rent al momento della pubblicazione di questa pagina non possiede ancora immobili. Tutto il business plan si basa sulla capacità di chiudere la prima acquisizione in tempo per l'anno accademico 2026/2027, e sulla capacità di ripeterla in modo efficiente."
+            "title": "Concentrazione su singola operazione",
+            "body": "La serie dello strumento che sottoscrivi è esposta al risultato di un solo immobile (acquisto, ristrutturazione, occupancy, eventuale dismissione). Non c'è diversificazione automatica sul portfolio aggregato. Inoltre, alla pubblicazione di questa pagina Jungle Rent non possiede ancora immobili: il business plan si basa sulla capacità di chiudere la prima acquisizione in tempo per l'anno accademico 2026/2027 e di ripeterla in modo efficiente."
           },
           {
             "title": "Rischio di mercato immobiliare",
@@ -808,7 +808,7 @@
           },
           {
             "title": "Rischio di dilution",
-            "body": "Round futuri di capitale potrebbero diluire la tua quota relativa, anche se gli SFP hanno diritti patrimoniali proporzionali protetti."
+            "body": "Round futuri di capitale potrebbero diluire la tua quota relativa, anche se lo strumento prevede diritti patrimoniali proporzionali protetti."
           },
           {
             "title": "Nessuna garanzia sui rendimenti",
@@ -820,8 +820,12 @@
         "title": "Domande frequenti",
         "items": [
           {
-            "q": "Che cos'è uno Strumento Finanziario Partecipativo (SFP)?",
-            "a": "È uno strumento previsto dall'art. 2346 del Codice Civile che dà diritti patrimoniali (quota dei profitti, liquidazione) senza diritti amministrativi (voto in assemblea). È assimilabile a un'azione privilegiata senza voto."
+            "q": "Investo nella società o in un singolo immobile?",
+            "a": "Il contratto è con Jungle Rent S.r.l. L'esposizione economica è alla singola operazione: ogni serie dello strumento è collegata a uno specifico deal, e il tuo ritorno dipende dalla performance di quel deal. Forma giuridica e meccanica della distribuzione: nel memorandum."
+          },
+          {
+            "q": "Quale strumento finanziario viene utilizzato?",
+            "a": "Uno strumento di partecipazione economica dedicato, riservato a investitori qualificati tramite collocamento privato. La forma giuridica precisa, i diritti patrimoniali, il meccanismo di distribuzione e il regolamento sono descritti integralmente nel memorandum informativo, consegnato dopo la call di qualifica."
           },
           {
             "q": "Qual è il ticket tipico?",
@@ -833,7 +837,7 @@
           },
           {
             "q": "Come vengono distribuiti i profitti?",
-            "a": "Il regolamento SFP prevede uno split 90% investitori / 10% Jungle Rent dopo il servicing fee, secondo una waterfall dettagliata nel memorandum. La distribuzione è bimestrale."
+            "a": "La documentazione contrattuale prevede uno split economico definito caso per caso, tipicamente 90% investitori / 10% Jungle Rent dopo il servicing fee, secondo una waterfall dettagliata nel memorandum. La distribuzione è bimestrale."
           },
           {
             "q": "Jungle Rent è davvero una startup innovativa o è un'auto-dichiarazione?",
@@ -849,7 +853,7 @@
           },
           {
             "q": "Cosa succede se Jungle Rent non riesce a chiudere la prima acquisizione entro settembre 2026?",
-            "a": "Il capitale raccolto viene conservato sul conto societario in attesa della prossima finestra di mercato, oppure restituito agli investitori se questi lo richiedono, al netto dei costi documentati. Questa clausola è scritta nel regolamento SFP."
+            "a": "Il capitale raccolto viene conservato sul conto societario in attesa della prossima finestra di mercato, oppure restituito agli investitori se questi lo richiedono, al netto dei costi documentati. Questa clausola è prevista nella documentazione contrattuale."
           }
         ]
       },
@@ -868,7 +872,7 @@
           "source": "Come ci hai conosciuto? (opzionale)",
           "notes": "Note o domande specifiche (opzionale)",
           "privacyConsent": "Ho letto e accetto l'informativa privacy (GDPR).",
-          "ownInitiative": "Dichiaro di aver richiesto queste informazioni di mia iniziativa e non a seguito di promozione pubblica o sollecitazione individuale. Comprendo che l'investimento in SFP comporta rischi inclusi la possibile perdita totale del capitale."
+          "ownInitiative": "Dichiaro di aver richiesto queste informazioni di mia iniziativa e non a seguito di promozione pubblica o sollecitazione individuale. Comprendo che l'investimento in strumenti finanziari di startup innovativa comporta rischi inclusi la possibile perdita totale del capitale."
         },
         "options": {
           "residence": {
@@ -904,7 +908,7 @@
       },
       "disclaimer": {
         "p1": "Le informazioni contenute in questa pagina hanno finalità esclusivamente informative e non costituiscono offerta al pubblico di prodotti finanziari ai sensi dell'art. 94 del D.Lgs. 58/1998 (TUF), né sollecitazione all'investimento, né consulenza finanziaria, fiscale o legale.",
-        "p2": "Gli Strumenti Finanziari Partecipativi descritti non sono disponibili per sottoscrizione online. L'eventuale sottoscrizione avviene esclusivamente tramite collocamento privato, riservato a un numero ristretto di investitori individualmente qualificati, previa consegna del memorandum informativo completo e del regolamento SFP, nel rispetto delle esenzioni previste dall'art. 100 TUF.",
+        "p2": "Lo strumento finanziario descritto non è disponibile per sottoscrizione online. L'eventuale sottoscrizione avviene esclusivamente tramite collocamento privato, riservato a un numero ristretto di investitori individualmente qualificati, previa consegna del memorandum informativo completo e della documentazione contrattuale, nel rispetto delle esenzioni previste dall'art. 100 TUF.",
         "p3": "I rendimenti illustrati nei materiali informativi sono proiezioni basate su ipotesi di modello. La performance effettiva dipende dall'andamento del portfolio e non è in alcun modo garantita. L'investimento comporta rischi, inclusi rischio di illiquidità, rischio di mercato immobiliare, rischio di esecuzione operativa, rischio di dilution, e possibilità di perdita totale del capitale investito.",
         "p4": "Il trattamento fiscale descritto è soggetto a condizioni individuali, limiti normativi e possibili modifiche legislative. Prima di qualsiasi decisione di investimento, l'investitore è tenuto a consultare un proprio consulente fiscale e finanziario indipendente.",
         "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
