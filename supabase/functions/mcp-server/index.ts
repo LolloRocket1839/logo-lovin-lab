@@ -29,7 +29,10 @@ const COMPANY_INFO = {
   email: "junglerententeprise@gmail.com",
   pec: "junglerent@legalmail.it",
   founders: [
-    { name: "Lorenzo Oni-Joseph", role: "Founder & CEO", phone: "+39 331 905 3037" },
+    { name: "Lorenzo Oni-Joseph", role: "Founder & CEO (sole founder, sole shareholder, Amministratore Unico)", phone: "+39 331 905 3037" },
+  ],
+  boardMembers: [
+    { name: "Andrea Niccolaini", role: "Board Member / Consigliere (non-shareholder, non-operational)" },
   ],
   services: [
     "Student Housing Management (90,000+ students, 7 universities)",
@@ -276,7 +279,7 @@ mcpServer.tool("get_neighborhoods", {
 });
 
 mcpServer.tool("get_company_info", {
-  description: "Get structured information about Jungle Rent: legal data, founders, services, contact details.",
+  description: "Get structured information about Jungle Rent: legal data, sole founder/shareholder (Lorenzo Oni-Joseph), board members (Andrea Niccolaini, non-shareholder Consigliere), services, contact details.",
   inputSchema: { type: "object" as const, properties: {} },
   handler: () => {
     return { content: [{ type: "text" as const, text: JSON.stringify(COMPANY_INFO, null, 2) }] };
