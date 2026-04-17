@@ -46,8 +46,8 @@ SECTION 2: CONTACT INFORMATION
 SECTION 3: FOUNDER & GOVERNANCE
 ================================================================================
 
-1. Lorenzo Oni-Joseph - Founder & CEO (sole founder, Amministratore Unico)
-2. Andrea Niccolaini - Board Member / Consigliere (non-operational)
+1. Lorenzo Oni-Joseph - Founder & CEO (sole founder, sole shareholder, Amministratore Unico)
+2. Andrea Niccolaini - Board Member / Consigliere (non-shareholder, non-operational)
 
 ================================================================================
 SECTION 4: INCUBATOR PARTNERSHIP

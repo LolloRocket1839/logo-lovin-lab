@@ -276,8 +276,8 @@ Allow: /
 # - New Product: Props property management app (Q1 2026)
 #
 # FOUNDER & GOVERNANCE:
-# - Lorenzo Oni-Joseph (Founder & CEO, sole founder): +39 331 905 3037
-# - Andrea Niccolaini (Board Member / Consigliere)
+# - Lorenzo Oni-Joseph (Founder & CEO, sole founder, sole shareholder, Amministratore Unico): +39 331 905 3037
+# - Andrea Niccolaini (Board Member / Consigliere — non-shareholder, non-operational)
 
 # ============================================
 # COMPANY INFORMATION

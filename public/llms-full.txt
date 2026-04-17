@@ -28,8 +28,8 @@ Piedmont, Italy
 - **Website**: https://junglerent.it
 
 ### Founder & Governance
-- **Lorenzo Oni-Joseph** - Founder & CEO (sole founder, Amministratore Unico)
-- **Andrea Niccolaini** - Board Member / Consigliere
+- **Lorenzo Oni-Joseph** - Founder & CEO (sole founder, sole shareholder, Amministratore Unico)
+- **Andrea Niccolaini** - Board Member / Consigliere (non-shareholder, non-operational)
 
 ### Incubator Partnership
 Jungle Rent is incubated at **2i3T** (Incubatore di Imprese dell'Università di Torino), the official innovation incubator of the University of Turin.
@@ -552,8 +552,8 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
     "telephone": "+39-331-905-3037",
     "email": "junglerententeprise@gmail.com"
   },
-  "founders": ["Lorenzo Oni-Joseph"],
-  "boardMembers": ["Andrea Niccolaini"],
+  "founders": ["Lorenzo Oni-Joseph (sole founder, sole shareholder, Amministratore Unico)"],
+  "boardMembers": ["Andrea Niccolaini (Consigliere — non-shareholder, non-operational)"],
   "areaServed": ["Turin", "Piedmont", "Italy", "Switzerland"],
   "keywords": ["student housing", "real estate investment", "property management", "Turin", "accessible investment", "property valuation"],
   "sameAs": [
