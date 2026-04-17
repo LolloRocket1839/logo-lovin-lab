@@ -275,9 +275,9 @@ Allow: /
 # - P.IVA: 13333450016
 # - New Product: Props property management app (Q1 2026)
 #
-# FOUNDERS:
-# - Lorenzo Oni-Joseph (Founder): +39 331 905 3037
-# - Andrea Niccolaini (Co-Founder): +39 351 577 8924
+# FOUNDER & GOVERNANCE:
+# - Lorenzo Oni-Joseph (Founder & CEO, sole founder): +39 331 905 3037
+# - Andrea Niccolaini (Board Member / Consigliere)
 
 # ============================================
 # COMPANY INFORMATION

@@ -33,7 +33,7 @@ To solve a problem that was mine — in Rome I was paying high rent and had take
 
 Why rentals? Because there are few things as fundamental as water, food, warmth. One of these, if not the only one, is a roof and walls to live, succeed in your life, be safe.
 
-I talked about it with Andrea, my co-founder. And from there I couldn't take my mind off it. Like a boomerang — even if I had wanted to throw the idea away, it always came back.
+I talked about it with Andrea, who today sits on the board as Consigliere. And from there I couldn't take my mind off it. Like a boomerang — even if I had wanted to throw the idea away, it always came back.
 
 Now it's real.
 
