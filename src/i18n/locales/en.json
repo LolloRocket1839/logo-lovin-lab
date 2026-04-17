@@ -682,13 +682,13 @@
     "whyInvestTitle": "Why invest with us",
     "landing": {
       "meta": {
-        "title": "Co-invest in Turin student housing | Jungle Rent",
-        "description": "Jungle Rent opens portfolio participation to a limited number of private investors via Italian Participating Financial Instruments (SFP). Request the information memorandum."
+        "title": "Invest in Jungle Rent · Turin student housing",
+        "description": "Jungle Rent opens portfolio participation to a limited number of private investors via a dedicated financial instrument. Request the information memorandum."
       },
       "hero": {
         "eyebrow": "Reserved opportunity · Private placement",
-        "h1": "Co-invest in Turin student housing, with someone who shows their face.",
-        "subhead": "Jungle Rent is a Turin-based innovative startup that buys, renovates and manages apartments for university students. We open portfolio participation to a limited number of private investors through Participating Financial Instruments (SFP, Italian Civil Code art. 2346).",
+        "h1": "Invest in Jungle Rent. With exposure to the single property operation.",
+        "subhead": "Jungle Rent is a Turin-based innovative startup. We buy, renovate and manage apartments for university students. We open economic participation in the portfolio to a limited number of private investors through a dedicated financial instrument. Technical details of the instrument are described in the information memorandum.",
         "cta": "Request the information memorandum",
         "ctaNote": "Subscription does not happen online. The first step is an information request: receive the memorandum, evaluate it calmly, decide afterwards."
       },
@@ -718,7 +718,7 @@
         "paragraphs": [
           "Hi,",
           "I'm Lorenzo, founder of Jungle Rent. I built this company with a simple idea: Turin has 90,000 university students and a real estate market that is still accessible. Buying well, renovating well, and managing well, you can build solid cash flows in a historically defensive asset class.",
-          "I open participation to a small group of private investors for a practical reason: accelerate portfolio construction without diluting share capital excessively. I do this with an instrument (SFP) that aligns incentives — I take 10% of profits, you take 90%, after servicing.",
+          "I open participation to a small group of private investors for a practical reason: accelerate portfolio construction without diluting share capital excessively. We do this with a dedicated instrument that aligns incentives: the structure rewards those who join early on the single operation, and I take 10% of profits after servicing. Legal details are in the memorandum.",
           "This page gives you the perimeter. The real numbers, the structure, the models, the contracts — all that is in the memorandum. I send it only after a brief introductory call, because I want to make sure the opportunity and your expectations are compatible.",
           "If you are interested, fill out the form at the bottom of the page. I'll respond personally within 48 hours."
         ],
@@ -751,7 +751,7 @@
           },
           "tax": {
             "title": "Tax incentive for investors",
-            "body": "Private investors who subscribe to SFP in an innovative startup may benefit from an IRPEF deduction up to 65% of the invested amount (de minimis regime, EU Reg. 2831/2023). The incentive is subject to individual limits and conditions, to be verified with your tax advisor. Details in the memorandum. Non-Italian tax residents may not benefit from the 65% IRPEF deduction. Tax treatment applicable to foreign investors depends on individual residence and should be assessed with a local tax advisor."
+            "body": "Investments in innovative startups may benefit from an IRPEF deduction up to 65% of the invested amount (de minimis regime, EU Reg. 2831/2023). Actual applicability depends on the instrument used and on the investor's profile. Details in the memorandum. Non-Italian tax residents may not benefit from the 65% IRPEF deduction. Tax treatment applicable to foreign investors depends on individual residence and should be assessed with a local tax advisor."
           },
           "transparency": {
             "title": "Mandatory transparency",
@@ -772,7 +772,7 @@
           },
           {
             "title": "Receive the materials",
-            "body": "Information memorandum, SFP regulation, business plan, Excel financial model, corporate body minutes."
+            "body": "Information memorandum, full contractual documentation, business plan, Excel financial model, corporate body minutes."
           },
           {
             "title": "Time to evaluate",
@@ -780,14 +780,14 @@
           },
           {
             "title": "Signature",
-            "body": "If you decide to proceed, the subscription deed is signed in person before the appointed notary, simultaneously with the payment."
+            "body": "If you decide to proceed, the subscription deed is signed in person before the appointed notary, simultaneously with the payment. You receive a series of the instrument dedicated to the operation you have chosen."
           }
         ],
         "callout": "No step is automated. Every investor who joins Jungle Rent does so after speaking with Lorenzo directly."
       },
       "tax": {
         "title": "Tax treatment of the investment",
-        "content": "Investments in SFP of innovative startups may benefit from the 65% IRPEF deduction pursuant to art. 29-bis DL 179/2012, in the de minimis regime introduced by EU Reg. 2831/2023. The legislation is in force until 04/12/2028, subject to extensions.",
+        "content": "Investments in innovative startups may benefit from the 65% IRPEF deduction pursuant to art. 29-bis DL 179/2012, in the de minimis regime introduced by EU Reg. 2831/2023. Actual applicability depends on the instrument used and on the investor's profile. The legislation is in force until 04/12/2028, subject to extensions.",
         "caveatTitle": "Important",
         "caveat": "The actual applicability and measure of the deduction depends on individual investor limits, on the residual de minimis allowance of the company, and on compliance with a series of conditions provided by the regulations. No information on this page constitutes tax advice. Before any decision, consult your trusted accountant or ask our team to put you in touch with the tax firm assisting Jungle Rent. Non-Italian tax residents may not benefit from the 65% IRPEF deduction."
       },
@@ -796,11 +796,11 @@
         "items": [
           {
             "title": "Illiquidity",
-            "body": "The tax lock-up is 3 years. There is no organized secondary market. SFPs are privately transferable, but finding a buyer is your responsibility."
+            "body": "The tax lock-up is 3 years. There is no organized secondary market. The instrument is privately transferable, but finding a buyer is your responsibility."
           },
           {
-            "title": "Execution risk",
-            "body": "At the time of publication of this page, Jungle Rent does not yet own properties. The entire business plan relies on the ability to close the first acquisition in time for academic year 2026/2027, and on the ability to repeat it efficiently."
+            "title": "Single-operation concentration",
+            "body": "The series of the instrument you subscribe to is exposed to the result of a single property (purchase, renovation, occupancy, eventual disposal). There is no automatic diversification across the aggregate portfolio. Furthermore, at the time of publication of this page, Jungle Rent does not yet own properties: the business plan relies on the ability to close the first acquisition in time for academic year 2026/2027 and to repeat it efficiently."
           },
           {
             "title": "Real estate market risk",
@@ -808,7 +808,7 @@
           },
           {
             "title": "Dilution risk",
-            "body": "Future capital rounds could dilute your relative share, although SFPs have proportionally protected economic rights."
+            "body": "Future capital rounds could dilute your relative share, although the instrument provides proportionally protected economic rights."
           },
           {
             "title": "No guaranteed returns",
@@ -820,8 +820,12 @@
         "title": "Frequently asked questions",
         "items": [
           {
-            "q": "What is a Participating Financial Instrument (SFP)?",
-            "a": "It is an instrument provided for by art. 2346 of the Italian Civil Code that grants economic rights (share of profits, liquidation) without administrative rights (voting in shareholder meetings). It is comparable to a non-voting preferred share."
+            "q": "Am I investing in the company or in a single property?",
+            "a": "The contract is with Jungle Rent S.r.l. The economic exposure is to the single operation: each series of the instrument is linked to one specific deal, and your return depends on the performance of that deal. Legal form and distribution mechanics: in the memorandum."
+          },
+          {
+            "q": "Which financial instrument is used?",
+            "a": "A dedicated economic-participation instrument, reserved to qualified investors via private placement. The exact legal form, economic rights, distribution mechanism and regulation are described in full in the information memorandum, delivered after the qualification call."
           },
           {
             "q": "What is the typical ticket?",
@@ -833,7 +837,7 @@
           },
           {
             "q": "How are profits distributed?",
-            "a": "The SFP regulation provides for a 90% investors / 10% Jungle Rent split after the servicing fee, according to a waterfall detailed in the memorandum. Distribution is bi-monthly."
+            "a": "The contractual documentation provides for an economic split defined case by case, typically 90% investors / 10% Jungle Rent after the servicing fee, according to a waterfall detailed in the memorandum. Distribution is bi-monthly."
           },
           {
             "q": "Is Jungle Rent really an innovative startup or is it self-declared?",
@@ -849,7 +853,7 @@
           },
           {
             "q": "What happens if Jungle Rent fails to close the first acquisition by September 2026?",
-            "a": "Capital raised is held in the corporate account awaiting the next market window, or returned to investors upon their request, net of documented costs. This clause is written in the SFP regulation."
+            "a": "Capital raised is held in the corporate account awaiting the next market window, or returned to investors upon their request, net of documented costs. This clause is provided for in the contractual documentation."
           }
         ]
       },
@@ -868,7 +872,7 @@
           "source": "How did you hear about us? (optional)",
           "notes": "Notes or specific questions (optional)",
           "privacyConsent": "I have read and accept the privacy notice (GDPR).",
-          "ownInitiative": "I declare I requested this information on my own initiative and not following public promotion or individual solicitation. I understand SFP investment involves risks including the possible total loss of capital."
+          "ownInitiative": "I declare I requested this information on my own initiative and not following public promotion or individual solicitation. I understand investment in financial instruments of an innovative startup involves risks including the possible total loss of capital."
         },
         "options": {
           "residence": {
@@ -904,7 +908,7 @@
       },
       "disclaimer": {
         "p1": "The information on this page is for informational purposes only and does not constitute a public offering of financial products under art. 94 of Italian Legislative Decree 58/1998 (TUF — Italian Consolidated Financial Act), nor an investment solicitation, nor financial, tax or legal advice.",
-        "p2": "The Participating Financial Instruments described are not available for online subscription. Any subscription occurs exclusively via private placement, reserved to a restricted number of individually qualified investors, after delivery of the complete information memorandum and SFP regulation, in compliance with the exemptions provided by art. 100 TUF.",
+        "p2": "The financial instrument described is not available for online subscription. Any subscription occurs exclusively via private placement, reserved to a restricted number of individually qualified investors, after delivery of the complete information memorandum and contractual documentation, in compliance with the exemptions provided by art. 100 TUF.",
         "p3": "Returns illustrated in informational materials are projections based on model assumptions. Actual performance depends on portfolio performance and is in no way guaranteed. Investment carries risks, including illiquidity risk, real estate market risk, operational execution risk, dilution risk, and the possibility of total loss of invested capital.",
         "p4": "The tax treatment described is subject to individual conditions, regulatory limits and possible legislative changes. Before any investment decision, the investor must consult their own independent tax and financial advisor.",
         "company": "Jungle Rent S.r.l. · VAT 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin · junglerententeprise@gmail.com"
