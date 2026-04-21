@@ -85,6 +85,7 @@ const isValidEventType = (eventType: string): boolean => {
   const allowedTypes = [
     'page_view', 'click', 'form_submit', 'scroll', 'scroll_depth', 
     'page_exit_scroll', 'page_navigation_scroll', 'engagement',
+    'scroll_qualifier_shown', 'scroll_qualifier_clicked', 'scroll_qualifier_dismissed',
     // Generic exit intent
     'exit_intent_shown', 'exit_intent_submit', 'exit_intent_closed',
     // Investor exit intent
