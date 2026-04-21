@@ -11,7 +11,7 @@ export const AnnouncementBanner = () => {
 
   if (dismissed) return null;
 
-  const destination = i18n.language === "en" ? "/investors" : "/investitori";
+  const destination = i18n.language?.startsWith("it") ? "/investitori" : "/investors";
 
   return (
     <div className="bg-destructive text-destructive-foreground text-center text-sm relative z-[60]">
