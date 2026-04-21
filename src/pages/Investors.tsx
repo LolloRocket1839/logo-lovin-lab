@@ -12,8 +12,6 @@ import { FounderLetterSection } from "@/components/investitori/FounderLetterSect
 import { ThesisSection } from "@/components/investitori/ThesisSection";
 import { StartupInnovativaSection } from "@/components/investitori/StartupInnovativaSection";
 import { HowItWorksSection } from "@/components/investitori/HowItWorksSection";
-import { TaxSection } from "@/components/investitori/TaxSection";
-import { RisksSection } from "@/components/investitori/RisksSection";
 import { FAQSection } from "@/components/investitori/FAQSection";
 import { RequestInfoForm } from "@/components/investitori/RequestInfoForm";
 import { LegalDisclaimerFooter } from "@/components/investitori/LegalDisclaimerFooter";
@@ -60,8 +58,6 @@ const Investors = () => {
         <HowItWorksSection />
         <FAQSection />
         <RequestInfoForm ref={formRef} />
-        <TaxSection />
-        <RisksSection />
         <LegalDisclaimerFooter />
       </main>
 
