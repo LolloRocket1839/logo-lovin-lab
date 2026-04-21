@@ -690,7 +690,45 @@
         "h1": "Invest in Jungle Rent. With exposure to the single property operation.",
         "subhead": "Jungle Rent is a Turin-based innovative startup. We buy, renovate and manage apartments for university students. We open economic participation in the portfolio to a limited number of private investors through a dedicated financial instrument. Technical details of the instrument are described in the information memorandum.",
         "cta": "Request the information memorandum",
-        "ctaNote": "Subscription does not happen online. The first step is an information request: receive the memorandum, evaluate it calmly, decide afterwards."
+        "ctaPrimary": "Talk to Lorenzo",
+        "ctaSecondary": "Get the memorandum",
+        "ctaNote": "Subscription does not happen online. The first step is an information request: receive the memorandum, evaluate it calmly, decide afterwards.",
+        "metrics": {
+          "yieldLabel": "Target gross yield",
+          "yieldValue": "8–12%",
+          "payoutLabel": "Payout frequency",
+          "payoutValue": "Every 2 months",
+          "ticketLabel": "Minimum ticket",
+          "ticketValue": "€5k"
+        }
+      },
+      "quickBar": {
+        "label": "Want to talk directly?",
+        "whatsapp": "WhatsApp Lorenzo",
+        "email": "Write to us"
+      },
+      "socialProof": {
+        "countPrefix_one": "{{count}} person",
+        "countPrefix_other": "{{count}} people",
+        "countPrefix": "{{count}} people",
+        "countSuffix": "have requested info in the last 4 weeks",
+        "startupLabel": "Innovative Startup",
+        "startupSuffix": "registered with CCIAA Turin · REA TO-1355899"
+      },
+      "emailFirst": {
+        "title": "Just want to stay informed?",
+        "subtitle": "Leave your name and email: we'll only write when we open a new operation. No newsletter, no spam.",
+        "fields": {
+          "name": "Name",
+          "email": "Email"
+        },
+        "submit": "Keep me updated",
+        "submitting": "Sending…",
+        "preferFull": "I'd rather fill out the full form to receive the memorandum",
+        "alsoQualify": "Also want the memorandum? Fill out the qualification form",
+        "privacy": "We process your data only to contact you about this opportunity (GDPR). You can unsubscribe at any time.",
+        "success": "Thank you. We'll personally notify you at the next opening.",
+        "error": "Something went wrong. Try again in a few minutes or message us on WhatsApp."
       },
       "trust": {
         "title": "Publicly verifiable",

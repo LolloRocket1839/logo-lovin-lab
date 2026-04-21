@@ -4,6 +4,9 @@ import { Helmet } from "react-helmet";
 import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HeroSection } from "@/components/investitori/HeroSection";
+import { QuickContactBar } from "@/components/investitori/QuickContactBar";
+import { SocialProofMini } from "@/components/investitori/SocialProofMini";
+import { EmailFirstForm } from "@/components/investitori/EmailFirstForm";
 import { TrustStripe } from "@/components/investitori/TrustStripe";
 import { FounderLetterSection } from "@/components/investitori/FounderLetterSection";
 import { ThesisSection } from "@/components/investitori/ThesisSection";
@@ -44,18 +47,21 @@ const Investors = () => {
       </Helmet>
 
       <Navigation />
+      <QuickContactBar onEmailClick={scrollToForm} />
 
       <main>
         <HeroSection onCtaClick={scrollToForm} />
+        <SocialProofMini />
         <TrustStripe />
+        <EmailFirstForm onRequestFullForm={scrollToForm} />
         <FounderLetterSection />
         <ThesisSection />
         <StartupInnovativaSection />
         <HowItWorksSection />
-        <TaxSection />
-        <RisksSection />
         <FAQSection />
         <RequestInfoForm ref={formRef} />
+        <TaxSection />
+        <RisksSection />
         <LegalDisclaimerFooter />
       </main>
 
