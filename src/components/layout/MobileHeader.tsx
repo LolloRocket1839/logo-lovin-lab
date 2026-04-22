@@ -44,7 +44,7 @@ export const MobileHeader = ({ variant = 'investor' }: MobileHeaderProps) => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-b border-border/50">
+      <header className="fixed top-0 left-0 right-0 z-50 md:hidden bg-background border-b border-border/50">
         {/* Scroll progress indicator */}
         <div 
           className="absolute top-0 left-0 h-0.5 bg-primary transition-all duration-150 ease-out"
