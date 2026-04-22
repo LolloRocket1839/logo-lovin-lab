@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import { Users, ShieldCheck } from "lucide-react";
 
-export const SocialProofMini = () => {
+const SocialProofMiniComponent = () => {
   const { t } = useTranslation();
   const [count, setCount] = useState<number | null>(null);
 
@@ -58,3 +58,5 @@ export const SocialProofMini = () => {
     </section>
   );
 };
+
+export const SocialProofMini = memo(SocialProofMiniComponent);
