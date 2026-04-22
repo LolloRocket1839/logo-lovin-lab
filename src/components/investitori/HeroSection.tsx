@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
@@ -7,7 +8,7 @@ interface Props {
   onCtaClick: () => void;
 }
 
-export const HeroSection = ({ onCtaClick }: Props) => {
+const HeroSectionComponent = ({ onCtaClick }: Props) => {
   const { t, i18n } = useTranslation();
   const { trackEvent } = useAnalytics();
   const lang = i18n.language.startsWith("en") ? "en" : "it";
@@ -18,11 +19,14 @@ export const HeroSection = ({ onCtaClick }: Props) => {
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
-  const metrics = [
-    { label: t("investor.landing.hero.metrics.yieldLabel"), value: t("investor.landing.hero.metrics.yieldValue") },
-    { label: t("investor.landing.hero.metrics.payoutLabel"), value: t("investor.landing.hero.metrics.payoutValue") },
-    { label: t("investor.landing.hero.metrics.ticketLabel"), value: t("investor.landing.hero.metrics.ticketValue") },
-  ];
+  const metrics = useMemo(
+    () => [
+      { label: t("investor.landing.hero.metrics.yieldLabel"), value: t("investor.landing.hero.metrics.yieldValue") },
+      { label: t("investor.landing.hero.metrics.payoutLabel"), value: t("investor.landing.hero.metrics.payoutValue") },
+      { label: t("investor.landing.hero.metrics.ticketLabel"), value: t("investor.landing.hero.metrics.ticketValue") },
+    ],
+    [t]
+  );
 
   return (
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 bg-cream">
@@ -74,3 +78,5 @@ export const HeroSection = ({ onCtaClick }: Props) => {
     </section>
   );
 };
+
+export const HeroSection = memo(HeroSectionComponent);

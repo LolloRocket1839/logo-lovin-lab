@@ -1,4 +1,4 @@
-import { useRef, lazy, Suspense } from "react";
+import { useRef, useCallback, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Navigation, Footer } from "@/components/layout";
@@ -44,9 +44,9 @@ const Investors = () => {
     ? "https://junglerent.it/investors"
     : "https://junglerent.it/investitori";
 
-  const scrollToForm = () => {
+  const scrollToForm = useCallback(() => {
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, Mail } from "lucide-react";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
@@ -7,7 +8,7 @@ interface Props {
   onEmailClick: () => void;
 }
 
-export const QuickContactBar = ({ onEmailClick }: Props) => {
+const QuickContactBarComponent = ({ onEmailClick }: Props) => {
   const { t, i18n } = useTranslation();
   const { trackEvent } = useAnalytics();
   const isEn = i18n.language.startsWith("en");
@@ -50,3 +51,5 @@ export const QuickContactBar = ({ onEmailClick }: Props) => {
     </div>
   );
 };
+
+export const QuickContactBar = memo(QuickContactBarComponent);

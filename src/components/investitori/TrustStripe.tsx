@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { Building2, Award, GraduationCap, FileCheck } from "lucide-react";
 
@@ -8,7 +9,7 @@ const items = [
   { key: "vat", Icon: FileCheck },
 ] as const;
 
-export const TrustStripe = () => {
+const TrustStripeComponent = () => {
   const { t } = useTranslation();
   return (
     <section className="border-y border-border/40 bg-background py-8">
@@ -33,3 +34,5 @@ export const TrustStripe = () => {
     </section>
   );
 };
+
+export const TrustStripe = memo(TrustStripeComponent);

@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Accordion,
@@ -11,11 +12,12 @@ interface FAQ {
   a: string;
 }
 
-export const FAQSection = () => {
+const FAQSectionComponent = () => {
   const { t } = useTranslation();
-  const items = t("investor.landing.faq.items", {
-    returnObjects: true,
-  }) as FAQ[];
+  const items = useMemo(
+    () => t("investor.landing.faq.items", { returnObjects: true }) as FAQ[],
+    [t]
+  );
 
   return (
     <section className="py-20 md:py-28 bg-background">
@@ -39,3 +41,5 @@ export const FAQSection = () => {
     </section>
   );
 };
+
+export const FAQSection = memo(FAQSectionComponent);
