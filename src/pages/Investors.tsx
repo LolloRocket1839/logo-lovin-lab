@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Navigation, Footer } from "@/components/layout";
@@ -6,15 +6,35 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { HeroSection } from "@/components/investitori/HeroSection";
 import { QuickContactBar } from "@/components/investitori/QuickContactBar";
 import { SocialProofMini } from "@/components/investitori/SocialProofMini";
-import { EmailFirstForm } from "@/components/investitori/EmailFirstForm";
 import { TrustStripe } from "@/components/investitori/TrustStripe";
-import { FounderLetterSection } from "@/components/investitori/FounderLetterSection";
-import { ThesisSection } from "@/components/investitori/ThesisSection";
-import { StartupInnovativaSection } from "@/components/investitori/StartupInnovativaSection";
-import { HowItWorksSection } from "@/components/investitori/HowItWorksSection";
-import { FAQSection } from "@/components/investitori/FAQSection";
-import { RequestInfoForm } from "@/components/investitori/RequestInfoForm";
-import { LegalDisclaimerFooter } from "@/components/investitori/LegalDisclaimerFooter";
+
+// Lazy-load below-the-fold sections to reduce initial bundle of /investitori
+const EmailFirstForm = lazy(() =>
+  import("@/components/investitori/EmailFirstForm").then((m) => ({ default: m.EmailFirstForm }))
+);
+const FounderLetterSection = lazy(() =>
+  import("@/components/investitori/FounderLetterSection").then((m) => ({ default: m.FounderLetterSection }))
+);
+const ThesisSection = lazy(() =>
+  import("@/components/investitori/ThesisSection").then((m) => ({ default: m.ThesisSection }))
+);
+const StartupInnovativaSection = lazy(() =>
+  import("@/components/investitori/StartupInnovativaSection").then((m) => ({ default: m.StartupInnovativaSection }))
+);
+const HowItWorksSection = lazy(() =>
+  import("@/components/investitori/HowItWorksSection").then((m) => ({ default: m.HowItWorksSection }))
+);
+const FAQSection = lazy(() =>
+  import("@/components/investitori/FAQSection").then((m) => ({ default: m.FAQSection }))
+);
+const RequestInfoForm = lazy(() =>
+  import("@/components/investitori/RequestInfoForm").then((m) => ({ default: m.RequestInfoForm }))
+);
+const LegalDisclaimerFooter = lazy(() =>
+  import("@/components/investitori/LegalDisclaimerFooter").then((m) => ({ default: m.LegalDisclaimerFooter }))
+);
+
+const SectionFallback = () => <div className="min-h-[200px]" aria-hidden="true" />;
 
 const Investors = () => {
   const { t, i18n } = useTranslation();
@@ -51,14 +71,16 @@ const Investors = () => {
         <HeroSection onCtaClick={scrollToForm} />
         <SocialProofMini />
         <TrustStripe />
-        <EmailFirstForm onRequestFullForm={scrollToForm} />
-        <FounderLetterSection />
-        <ThesisSection />
-        <StartupInnovativaSection />
-        <HowItWorksSection />
-        <FAQSection />
-        <RequestInfoForm ref={formRef} />
-        <LegalDisclaimerFooter />
+        <Suspense fallback={<SectionFallback />}>
+          <EmailFirstForm onRequestFullForm={scrollToForm} />
+          <FounderLetterSection />
+          <ThesisSection />
+          <StartupInnovativaSection />
+          <HowItWorksSection />
+          <FAQSection />
+          <RequestInfoForm ref={formRef} />
+          <LegalDisclaimerFooter />
+        </Suspense>
       </main>
 
       <Footer />
