@@ -44,9 +44,9 @@ const Investors = () => {
     ? "https://junglerent.it/investors"
     : "https://junglerent.it/investitori";
 
-  const scrollToForm = () => {
+  const scrollToForm = useCallback(() => {
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

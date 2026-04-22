@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
@@ -7,7 +8,7 @@ interface Props {
   onCtaClick: () => void;
 }
 
-export const HeroSection = ({ onCtaClick }: Props) => {
+const HeroSectionComponent = ({ onCtaClick }: Props) => {
   const { t, i18n } = useTranslation();
   const { trackEvent } = useAnalytics();
   const lang = i18n.language.startsWith("en") ? "en" : "it";
