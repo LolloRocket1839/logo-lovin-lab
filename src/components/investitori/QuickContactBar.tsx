@@ -25,7 +25,7 @@ export const QuickContactBar = ({ onEmailClick }: Props) => {
   };
 
   return (
-    <div className="sticky top-16 z-30 bg-cream/95 backdrop-blur-md border-b border-primary/10">
+    <div className="sticky top-16 z-30 bg-cream border-b border-primary/10">
       <div className="container max-w-4xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row gap-2 sm:gap-3 sm:items-center sm:justify-between">
         <p className="text-xs sm:text-sm text-foreground/80 font-medium">
           {t("investor.landing.quickBar.label")}
