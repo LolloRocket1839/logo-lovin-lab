@@ -51,3 +51,5 @@ const QuickContactBarComponent = ({ onEmailClick }: Props) => {
     </div>
   );
 };
+
+export const QuickContactBar = memo(QuickContactBarComponent);
