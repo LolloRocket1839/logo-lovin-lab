@@ -2,74 +2,74 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+// Eager-load only Italian (default + fallback). Other locales are loaded on
+// demand the first time they're requested. This shaves ~6 large JSON blobs
+// (≈ several hundred KB gzipped) off the initial bundle.
 import translationIT from './locales/it.json';
-import translationEN from './locales/en.json';
-import translationES from './locales/es.json';
-import translationFR from './locales/fr.json';
-import translationDE from './locales/de.json';
-import translationZH from './locales/zh.json';
-import translationSV from './locales/sv.json';
-
-const resources = {
-  it: {
-    translation: translationIT
-  },
-  en: {
-    translation: translationEN
-  },
-  es: {
-    translation: translationES
-  },
-  fr: {
-    translation: translationFR
-  },
-  de: {
-    translation: translationDE
-  },
-  zh: {
-    translation: translationZH
-  },
-  sv: {
-    translation: translationSV
-  }
-};
 
 const supportedLanguages = ['it', 'en', 'es', 'fr', 'de', 'zh', 'sv'];
+
+const lazyLoaders: Record<string, () => Promise<{ default: any }>> = {
+  en: () => import('./locales/en.json'),
+  es: () => import('./locales/es.json'),
+  fr: () => import('./locales/fr.json'),
+  de: () => import('./locales/de.json'),
+  zh: () => import('./locales/zh.json'),
+  sv: () => import('./locales/sv.json'),
+};
+
+const loadedLanguages = new Set<string>(['it']);
+
+const ensureLanguageLoaded = async (lng: string): Promise<void> => {
+  const base = lng?.split('-')[0]?.toLowerCase() || 'it';
+  if (loadedLanguages.has(base)) return;
+  const loader = lazyLoaders[base];
+  if (!loader) return;
+  try {
+    const mod = await loader();
+    i18n.addResourceBundle(base, 'translation', mod.default, true, true);
+    loadedLanguages.add(base);
+  } catch (err) {
+    console.warn(`Failed to load locale "${base}":`, err);
+  }
+};
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources,
+    resources: {
+      it: { translation: translationIT },
+    },
     fallbackLng: 'it',
     supportedLngs: supportedLanguages,
     debug: false,
-    interpolation: {
-      escapeValue: false
-    },
+    partialBundledLanguages: true,
+    interpolation: { escapeValue: false },
     detection: {
-      // Priority: stored preference > browser/phone settings > default
       order: ['localStorage', 'navigator', 'htmlTag'],
-      // Look for language in these navigator properties
       lookupLocalStorage: 'i18nextLng',
-      // Cache user's choice
       caches: ['localStorage'],
-      // Convert browser locale (e.g., 'en-US') to supported language ('en')
       convertDetectedLanguage: (lng) => {
-        // Extract base language code (e.g., 'en-US' -> 'en', 'it-IT' -> 'it')
         const baseLang = lng.split('-')[0].toLowerCase();
-        // Only return if it's a supported language, otherwise fallback
         return supportedLanguages.includes(baseLang) ? baseLang : 'it';
-      }
+      },
+    },
+  })
+  .then(() => {
+    // Load detected language if it's not Italian
+    const current = i18n.language?.split('-')[0]?.toLowerCase();
+    if (current && current !== 'it') {
+      ensureLanguageLoaded(current);
     }
   });
 
-// Update HTML lang attribute when language changes
+// Load on demand whenever the user switches language
 i18n.on('languageChanged', (lng) => {
   document.documentElement.lang = lng;
+  ensureLanguageLoaded(lng);
 });
 
-// Set initial HTML lang attribute
 if (typeof document !== 'undefined') {
   document.documentElement.lang = i18n.language?.split('-')[0] || 'it';
 }
