@@ -1,50 +1,63 @@
 
 
-## Possibili cause del calo di performance
+# Piano: Migliorare Performance Sito (globale, non solo /investitori)
 
-Non ho ancora dati di profiling, ma analizzando le modifiche recenti alla pagina `/investitori` e i pattern noti del progetto, ecco le cause **più probabili** del rallentamento percepito:
+Le ottimizzazioni precedenti hanno già toccato la pagina Investors. Ora intervengo sui colli di bottiglia **trasversali** che rallentano tutto il sito (homepage, navigazione, scroll, prima visita).
 
-### 1. `backdrop-blur` su contenuti animati (causa più comune)
-La pagina Investors usa probabilmente `backdrop-blur` su card/sezioni sopra elementi animati (gradient, motion divs). Ogni frame il browser deve ri-campionare e sfocare tutti i pixel sottostanti → frame drop.
+## Problemi identificati
 
-### 2. Animazioni framer-motion non ottimizzate
-- `PageTransition` applica fade+translate ad ogni cambio rotta (compreso il click sul banner rosso → `/investitori`).
-- Possibili `motion.div` con `whileInView` o transizioni continue nelle sezioni della pagina Investors (Hero, Metrics, FAQ).
+1. **Analytics troppo aggressivi** — Ogni `page_view` e ogni milestone di scroll fa una `supabase.functions.invoke('track-analytics')` + `crypto.subtle.digest()` SHA-256. Su SPA con molte navigazioni → decine di chiamate edge bloccanti per UI.
+2. **Listener `scroll` multipli e ridondanti** — `Navigation`, `StickyCTA`, `useScrollDepth`, `HeroLogo` (framer `useScroll`) ascoltano tutti lo stesso evento scroll separatamente.
+3. **i18n carica 7 lingue in eager** (`it/en/es/fr/de/zh/sv` importati sincroni in `src/i18n/index.ts`) → il main bundle include translations che il 99% degli utenti non userà mai.
+4. **`backdrop-blur-xl` rimasti** in mobile menu Navigation, LanguageSwitcher dropdown e altri overlay sticky → blur GPU costoso.
+5. **HeroLogo con framer-motion `useSpring` su scroll** → calcoli fisici ad ogni frame anche fuori viewport.
+6. **Preload broken** in `index.html`: `<link rel="preload" href="/src/assets/jungle-rent-logo-new.svg">` punta al path di sviluppo, ignorato in produzione (Vite rinomina con hash) → warning + richiesta sprecata.
+7. **Axe-core** in dev viene caricato dinamicamente: ok, già gated da `import.meta.env.DEV`.
+8. **i18n debug** già `false`: ok.
 
-### 3. Bundle pagina Investors pesante
-La rotta `/investitori` è lazy-loaded ma la pagina importa molti componenti (Hero, QuickContactBar, EmailFirstForm, FAQ, RequestInfoForm, LegalDisclaimerFooter, ecc.). Primo render dopo il click dal banner = parsing/eval di un chunk grosso.
+## Interventi
 
-### 4. Pulse animation del banner sempre attiva
-Il pallino `animate-pulse` nel banner gira 24/7 in cima a ogni pagina. Trascurabile da solo, ma somma con altri layer animati.
+### A. Sciogliere il carico analytics (impatto alto)
+- **Batching**: accodare gli eventi in memoria e flush ogni 5s o su `pagehide` con `navigator.sendBeacon` invece di una invocazione edge per evento.
+- **Hash sessione**: calcolare il SHA-256 **una sola volta** e cachare in memoria invece di rigenerarlo ad ogni evento.
+- **Skip iniziale**: non sparare `scroll_depth: 0` al mount (è ridondante con `page_view`).
+- **`useScrollDepth`**: rimuovere il listener scroll dedicato e leggere lo scroll da uno **scroll manager singleton** condiviso (vedi B).
 
-### 5. Re-render globali da `AuthProvider` / `usePageViewTracking`
-Hook globali in `App.tsx` (page view, scroll depth, UTM) si rieseguono ad ogni navigazione SPA.
+### B. Scroll manager unificato
+- Creare `src/hooks/useGlobalScroll.ts`: un singolo `addEventListener('scroll')` con `requestAnimationFrame`, esposto come hook con subscriber pattern.
+- Migrare `Navigation`, `StickyCTA`, `useScrollDepth` a usarlo. Risparmio: da 4 listener + 4 rAF a 1.
 
-## Cosa propongo di fare
+### C. i18n lazy-loaded per lingua
+- Sostituire gli import sincroni dei 7 JSON con `i18next-http-backend` o dynamic `import()` per lingua attiva.
+- Solo `it` (default) caricato eagerly; `en/es/fr/de/zh/sv` lazy on `languageChanged`.
+- Stima: -300/500 KB gzipped dal main chunk.
 
-**Diagnosi prima, fix dopo.** In default mode eseguo questi step:
+### D. Rimozione blur residui
+- `Navigation.tsx` mobile menu: `bg-background/95 backdrop-blur-xl` → `bg-background`.
+- `LanguageSwitcher.tsx` trigger e dropdown: rimuovere `backdrop-blur-*`, alzare opacità del bg.
+- Mantenere blur solo su overlay momentanei (Dialog, ExitIntent, CookieBanner).
 
-1. **Leggere `src/pages/Investors.tsx`** e tutti i sotto-componenti (Hero, Metrics, ecc.) per identificare:
-   - usi di `backdrop-blur`
-   - `motion.*` con animazioni continue o `whileInView` non gated da `useReducedMotion`
-   - import sincroni pesanti che potrebbero essere lazy
+### E. HeroLogo: gating più aggressivo
+- Smontare/disattivare le `useTransform` quando lo scroll supera 300px (logo già fade-out): smettere di calcolare spring su tutto il resto della pagina.
+- Alternativa: sostituire framer-motion con CSS `transform` controllato da una variabile `--scroll-y` aggiornata via rAF dal scroll manager (B).
 
-2. **Eseguire profiling browser** (`browser--performance_profile` + `start_profiling` / `stop_profiling`) sulla pagina `/investitori` per misurare:
-   - Long tasks > 50ms
-   - Layout/paint counts
-   - Top funzioni per self-time
+### F. Fix preload index.html
+- Rimuovere `<link rel="preload" href="/src/assets/jungle-rent-logo-new.svg" as="image">` (path dev non valido in produzione).
+- Sostituire con preload sull'asset PNG già pubblico se serve LCP, oppure accettare che il logo venga caricato dal bundle.
 
-3. **Controllare network** per chunk size e richieste duplicate dopo navigazione.
+### G. Micro-fix
+- `AnnouncementBanner`: `animate-pulse` → opzionale, costo trascurabile, lo lascio.
+- `QueryClient` già configurato bene (staleTime 5min).
+- Verificare che `vendor-pdf`, `vendor-maps`, `vendor-charts` non siano importati nella homepage (controllo con sourcemap visualizer in dry-run).
 
-4. **Applicare fix mirati** in base a cosa trovo, scegliendo tra:
-   - Sostituire `backdrop-blur` con `text-shadow` o background solido (pattern già noto nel progetto)
-   - Rimuovere/semplificare animazioni ridondanti
-   - Memoizzare componenti pesanti (`React.memo`)
-   - Lazy-load sezioni below-the-fold della pagina Investors
-   - Disabilitare `animate-pulse` del banner se identificato come costoso
+## Cosa NON tocco
+- Logica business, form, RLS, edge functions backend.
+- Animazioni framer-motion già gated da `useReducedMotion`.
+- Routing e SEO (Helmet, JSON-LD, sitemap).
 
-## Cosa NON faccio
-- Non tocco logica di business, form, DB, RLS
-- Non rimuovo funzionalità (solo ottimizzazioni rendering)
-- Non upgrado l'istanza Lovable Cloud (è un problema frontend, non backend)
+## Risultato atteso
+- **TTI/LCP homepage**: -20/30% su mobile (meno JS, meno blur, meno listener).
+- **Scroll FPS**: stabile a 60fps anche su Android low-end (un solo listener vs quattro).
+- **Bundle iniziale**: -300KB+ gzip (i18n lazy).
+- **Network**: -60% chiamate `track-analytics` (batching).
 
