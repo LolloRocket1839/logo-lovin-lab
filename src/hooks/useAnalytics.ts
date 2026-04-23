@@ -12,10 +12,14 @@ interface AnalyticsEvent {
   metadata?: Record<string, any>;
 }
 
-/**
- * Generates a privacy-preserving hashed session ID using Web Crypto API.
- * The hash ensures session IDs cannot be correlated with PII.
- */
+// ---- Cached identity (computed once per session) ----------------------------
+
+let cachedSessionId: string | null = null;
+let sessionIdPromise: Promise<string> | null = null;
+let cachedUserAgent: string | null = null;
+let cachedReferrer: string | null = null;
+let botResult: boolean | null = null;
+
 const hashSessionId = async (input: string): Promise<string> => {
   const encoder = new TextEncoder();
   const data = encoder.encode(input);
@@ -24,84 +28,69 @@ const hashSessionId = async (input: string): Promise<string> => {
   return hashArray.map(b => b.toString(16).padStart(2, '0')).join('').substring(0, 16);
 };
 
-/**
- * Gets or creates an anonymized session ID.
- * Session IDs are hashed before storage to prevent correlation with PII.
- */
-const getAnonymizedSessionId = async (): Promise<string> => {
-  let sessionId = sessionStorage.getItem('analytics_session_hash');
-  if (!sessionId) {
-    const rawId = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    sessionId = await hashSessionId(rawId);
-    sessionStorage.setItem('analytics_session_hash', sessionId);
-  }
-  return sessionId;
+const getAnonymizedSessionId = (): Promise<string> => {
+  if (cachedSessionId) return Promise.resolve(cachedSessionId);
+  if (sessionIdPromise) return sessionIdPromise;
+
+  sessionIdPromise = (async () => {
+    let sessionId = sessionStorage.getItem('analytics_session_hash');
+    if (!sessionId) {
+      const rawId = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionId = await hashSessionId(rawId);
+      sessionStorage.setItem('analytics_session_hash', sessionId);
+    }
+    cachedSessionId = sessionId;
+    return sessionId;
+  })();
+
+  return sessionIdPromise;
 };
 
-/**
- * Anonymizes user agent string to prevent browser fingerprinting.
- * Only extracts essential browser/OS info without revealing specific version details.
- */
 const getAnonymizedUserAgent = (): string => {
+  if (cachedUserAgent) return cachedUserAgent;
   const ua = navigator.userAgent;
-  
-  // Extract only browser family and OS family, no version details
   let browser = 'Unknown';
   let os = 'Unknown';
-  
-  // Detect browser family
   if (ua.includes('Firefox')) browser = 'Firefox';
   else if (ua.includes('Edg')) browser = 'Edge';
   else if (ua.includes('Chrome')) browser = 'Chrome';
   else if (ua.includes('Safari')) browser = 'Safari';
-  
-  // Detect OS family
   if (ua.includes('Windows')) os = 'Windows';
   else if (ua.includes('Mac')) os = 'macOS';
   else if (ua.includes('Linux')) os = 'Linux';
   else if (ua.includes('Android')) os = 'Android';
   else if (ua.includes('iPhone') || ua.includes('iPad')) os = 'iOS';
-  
-  // Detect device type
   const isMobile = /Mobile|Android|iPhone|iPad/.test(ua);
-  
-  return `${browser}/${os}/${isMobile ? 'Mobile' : 'Desktop'}`;
+  cachedUserAgent = `${browser}/${os}/${isMobile ? 'Mobile' : 'Desktop'}`;
+  return cachedUserAgent;
 };
 
-/**
- * Anonymizes referrer URL to remove potential PII (query params, paths with IDs).
- * Only stores the domain for aggregate analytics.
- */
 const getAnonymizedReferrer = (): string => {
+  if (cachedReferrer !== null) return cachedReferrer;
   const referrer = document.referrer;
-  if (!referrer) return '';
-  
-  try {
-    const url = new URL(referrer);
-    // Only return hostname, strip path and query params that might contain PII
-    return url.hostname;
-  } catch {
-    return '';
+  if (!referrer) {
+    cachedReferrer = '';
+    return cachedReferrer;
   }
+  try {
+    cachedReferrer = new URL(referrer).hostname;
+  } catch {
+    cachedReferrer = '';
+  }
+  return cachedReferrer;
 };
 
-/**
- * Anonymizes page URL by stripping query parameters that might contain PII.
- */
 const getAnonymizedPageUrl = (): string => {
   try {
     const url = new URL(window.location.href);
-    // Keep only origin + pathname, remove query params and hash
     return `${url.origin}${url.pathname}`;
   } catch {
     return window.location.pathname;
   }
 };
 
-/**
- * Detects likely bot traffic by checking user agent patterns.
- */
 const isLikelyBot = (): boolean => {
+  if (botResult !== null) return botResult;
   const ua = navigator.userAgent.toLowerCase();
   const botPatterns = [
     'bot', 'spider', 'crawl', 'slurp', 'mediapartners',
@@ -112,17 +101,9 @@ const isLikelyBot = (): boolean => {
     'python-requests', 'go-http-client', 'okhttp', 'curl/', 'wget/',
     'http_request', 'axios', 'node-fetch', 'java/', 'apache-httpclient',
   ];
-
-  // Standard webdriver signal
-  if ((navigator as any).webdriver === true) return true;
-
-  // No languages exposed = almost certainly automated
-  if (!navigator.languages?.length) return true;
-
-  // UA pattern match
-  if (botPatterns.some(p => ua.includes(p))) return true;
-
-  // Headless heuristics: no plugins + no touch + no webgl is suspicious on "Chrome"
+  if ((navigator as any).webdriver === true) { botResult = true; return true; }
+  if (!navigator.languages?.length) { botResult = true; return true; }
+  if (botPatterns.some(p => ua.includes(p))) { botResult = true; return true; }
   try {
     const langs = navigator.languages.map(l => l.toLowerCase());
     const hasLatinLang = langs.some(l =>
@@ -130,50 +111,130 @@ const isLikelyBot = (): boolean => {
       l.startsWith('fr') || l.startsWith('es') || l.startsWith('sv') ||
       l.startsWith('pt') || l.startsWith('nl')
     );
-    // If no Latin-script language at all AND timezone is far from EU/Americas, likely off-target traffic
     if (!hasLatinLang) {
       const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
       if (tz.startsWith('Asia/') && !tz.includes('Jerusalem') && !tz.includes('Istanbul')) {
+        botResult = true;
         return true;
       }
     }
-  } catch {
-    // ignore
-  }
-
+  } catch { /* ignore */ }
+  botResult = false;
   return false;
 };
 
-const trackEvent = async (event: AnalyticsEvent) => {
-  // Block if no GDPR consent or if bot
-  if (!hasAnalyticsConsent() || isLikelyBot()) return;
+// ---- Event batching ---------------------------------------------------------
 
-  try {
-    const sessionId = await getAnonymizedSessionId();
-    
-    // Use edge function with rate limiting instead of direct insert
-    await supabase.functions.invoke('track-analytics', {
-      body: {
-        session_id: sessionId,
-        event_type: event.event_type,
-        page_url: getAnonymizedPageUrl(),
-        page_title: event.page_title || document.title,
-        referrer: getAnonymizedReferrer(),
-        user_agent: getAnonymizedUserAgent(),
-        metadata: event.metadata,
-      }
+interface QueuedEvent {
+  session_id: string;
+  event_type: string;
+  page_url: string;
+  page_title: string;
+  referrer: string;
+  user_agent: string;
+  metadata?: Record<string, any>;
+  ts: number;
+}
+
+const queue: QueuedEvent[] = [];
+let flushTimer: ReturnType<typeof setTimeout> | null = null;
+const FLUSH_INTERVAL_MS = 5000;
+const MAX_QUEUE_SIZE = 20;
+
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
+const sendBatch = (events: QueuedEvent[], useBeacon = false) => {
+  if (!events.length) return;
+  // Backend currently accepts a single event per call; send sequentially but
+  // detached from UI. Prefer sendBeacon on unload so the browser doesn't block.
+  const url = `${SUPABASE_URL}/functions/v1/track-analytics`;
+  const headers = {
+    'Content-Type': 'application/json',
+    'apikey': SUPABASE_ANON_KEY,
+    'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+  };
+  for (const ev of events) {
+    const body = JSON.stringify({
+      session_id: ev.session_id,
+      event_type: ev.event_type,
+      page_url: ev.page_url,
+      page_title: ev.page_title,
+      referrer: ev.referrer,
+      user_agent: ev.user_agent,
+      metadata: ev.metadata,
     });
-  } catch (error) {
-    // Silently fail - don't break user experience for analytics
-    console.debug('Analytics tracking error:', error);
+    if (useBeacon && 'sendBeacon' in navigator) {
+      try {
+        const blob = new Blob([body], { type: 'application/json' });
+        navigator.sendBeacon(url, blob);
+        continue;
+      } catch { /* fall through to fetch */ }
+    }
+    // Fire-and-forget fetch with keepalive so navigation doesn't kill it
+    fetch(url, { method: 'POST', headers, body, keepalive: true }).catch(() => {});
   }
 };
+
+const flush = (useBeacon = false) => {
+  if (flushTimer) {
+    clearTimeout(flushTimer);
+    flushTimer = null;
+  }
+  if (!queue.length) return;
+  const batch = queue.splice(0, queue.length);
+  sendBatch(batch, useBeacon);
+};
+
+const scheduleFlush = () => {
+  if (flushTimer) return;
+  flushTimer = setTimeout(() => {
+    flushTimer = null;
+    flush(false);
+  }, FLUSH_INTERVAL_MS);
+};
+
+// Flush on tab hide / unload
+if (typeof window !== 'undefined') {
+  const onHide = () => flush(true);
+  window.addEventListener('pagehide', onHide);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') onHide();
+  });
+}
+
+const enqueue = async (event: AnalyticsEvent) => {
+  if (!hasAnalyticsConsent() || isLikelyBot()) return;
+  try {
+    const sessionId = await getAnonymizedSessionId();
+    queue.push({
+      session_id: sessionId,
+      event_type: event.event_type,
+      page_url: getAnonymizedPageUrl(),
+      page_title: event.page_title || document.title,
+      referrer: getAnonymizedReferrer(),
+      user_agent: getAnonymizedUserAgent(),
+      metadata: event.metadata,
+      ts: Date.now(),
+    });
+    if (queue.length >= MAX_QUEUE_SIZE) {
+      flush(false);
+    } else {
+      scheduleFlush();
+    }
+  } catch (error) {
+    console.debug('Analytics queue error:', error);
+  }
+};
+
+// Backward-compatible alias (used in a couple of callers indirectly)
+const trackEvent = enqueue;
 
 export const usePageViewTracking = () => {
   const location = useLocation();
 
   useEffect(() => {
-    trackEvent({
+    enqueue({
       event_type: 'page_view',
       page_url: window.location.href,
       page_title: document.title,
@@ -184,21 +245,21 @@ export const usePageViewTracking = () => {
 export const useAnalytics = () => {
   return {
     trackEvent: (eventType: string, metadata?: Record<string, any>) => {
-      trackEvent({
+      enqueue({
         event_type: eventType,
         page_url: window.location.href,
         metadata,
       });
     },
     trackClick: (elementName: string, metadata?: Record<string, any>) => {
-      trackEvent({
+      enqueue({
         event_type: 'click',
         page_url: window.location.href,
         metadata: { element: elementName, ...metadata },
       });
     },
     trackFormSubmit: (formName: string, metadata?: Record<string, any>) => {
-      trackEvent({
+      enqueue({
         event_type: 'form_submit',
         page_url: window.location.href,
         metadata: { form: formName, ...metadata },
@@ -206,3 +267,7 @@ export const useAnalytics = () => {
     },
   };
 };
+
+// Keep supabase import referenced (avoid tree-shaking surprises if other code
+// re-exports). It's intentionally not used here now that we POST directly.
+void supabase;

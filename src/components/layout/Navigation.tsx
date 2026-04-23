@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Menu, X, ChevronLeft, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useGlobalScroll } from "@/hooks/useGlobalScroll";
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 import { CONTACTS, openQuickContact, type SupportedLanguage } from "@/constants";
 import { Button } from "@/components/ui/button";
@@ -24,20 +25,14 @@ export const Navigation = () => {
   const isBlogPost = location.pathname.startsWith('/blog/');
   const showBackButton = !isHomePage;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 50);
-      
-      const windowHeight = window.innerHeight;
-      const progress = Math.min(Math.max(scrollY / (windowHeight * 0.5), 0), 1);
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+  const handleScroll = useCallback((scrollY: number) => {
+    setIsScrolled(scrollY > 50);
+    const windowHeight = window.innerHeight;
+    const progress = Math.min(Math.max(scrollY / (windowHeight * 0.5), 0), 1);
+    setScrollProgress(progress);
   }, []);
+
+  useGlobalScroll(handleScroll);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -211,7 +206,7 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border/20 bg-background/95 backdrop-blur-xl z-50 animate-fade-up">
+          <div className="lg:hidden py-4 border-t border-border/20 bg-background z-50 animate-fade-up">
             <div className="flex flex-col gap-2">
               {menuItems.map((item, index) => {
                 const href = item.path || (item.id ? `/#${item.id}` : '/');

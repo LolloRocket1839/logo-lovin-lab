@@ -33,7 +33,7 @@ export const LanguageSwitcher = () => {
         <Button
           variant="outline"
           size="sm"
-          className="gap-2 bg-background/95 backdrop-blur-sm hover:bg-accent/80 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          className="gap-2 bg-background hover:bg-accent/80 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           aria-label={t("accessibility.languageSelector")}
         >
           <Globe className="h-4 w-4" aria-hidden="true" />
@@ -42,7 +42,7 @@ export const LanguageSwitcher = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent 
         align="end" 
-        className="w-40 bg-background/95 backdrop-blur-xl border-border shadow-lg z-[100]"
+        className="w-40 bg-background border-border shadow-lg z-[100]"
       >
         {languages.map((language) => (
           <DropdownMenuItem
