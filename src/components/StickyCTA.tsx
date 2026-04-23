@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { X, TrendingUp, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useGlobalScroll } from "@/hooks/useGlobalScroll";
 import { QuickInvestorLeadDialog, QuickSellerLeadDialog } from "@/components/dialogs";
 
 export const StickyCTA = () => {
@@ -16,32 +17,17 @@ export const StickyCTA = () => {
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
-  useEffect(() => {
-    let ticking = false;
+  const handleScroll = useCallback((scrollY: number) => {
+    const threshold = window.innerHeight * 1.0;
+    if (scrollY > threshold && !isDismissed) {
+      setIsVisible(true);
+      setHasAnimated((prev) => prev || true);
+    } else if (scrollY <= threshold) {
+      setIsVisible(false);
+    }
+  }, [isDismissed]);
 
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const threshold = window.innerHeight * 1.0;
-          if (window.scrollY > threshold && !isDismissed) {
-            setIsVisible(true);
-            if (!hasAnimated) {
-              setHasAnimated(true);
-            }
-          } else if (window.scrollY <= threshold) {
-            setIsVisible(false);
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isDismissed, hasAnimated]);
+  useGlobalScroll(handleScroll);
 
   const handleInvestClick = () => {
     trackClick('sticky_cta_invest');
