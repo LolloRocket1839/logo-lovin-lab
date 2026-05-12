@@ -71,24 +71,27 @@ All colors MUST be HSL.
     --popover: 42 60% 92%;
     --popover-foreground: 0 0% 9%;
 
-    --primary: 150 45% 18%;
+    /* Logo-derived primary: jungle green #4D8E59 (slightly darkened for AA on cream) */
+    --primary: 131 30% 36%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 131 30% 48%; /* exact logo green for accents */
 
-    --secondary: 40 55% 88%;
+    /* Sage tones derived from logo secondary #A2AC97 */
+    --secondary: 90 12% 86%;
     --secondary-foreground: 0 0% 9%;
 
-    --muted: 40 55% 88%;
+    --muted: 90 12% 86%;
     --muted-foreground: 0 0% 25%; /* Improved from 30% for WCAG AA 4.5:1 contrast */
 
-    --accent: 40 55% 88%;
+    --accent: 90 12% 86%;
     --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 40 50% 83%;
-    --input: 40 50% 83%;
-    --ring: 150 45% 18%;
+    --border: 90 14% 78%;
+    --input: 90 14% 78%;
+    --ring: 131 30% 36%;
 
     --radius: 0.5rem;
     
@@ -100,15 +103,15 @@ All colors MUST be HSL.
     --shadow-minimal: 0 1px 3px hsla(0, 0%, 0%, 0.08);
     --shadow-card: 0 2px 8px hsla(0, 0%, 0%, 0.08);
     --shadow-card-hover: 0 4px 16px hsla(0, 0%, 0%, 0.12);
-    --shadow-button: 0 2px 8px hsla(150, 45%, 18%, 0.2);
-    --shadow-button-hover: 0 4px 12px hsla(150, 45%, 18%, 0.3);
+    --shadow-button: 0 2px 8px hsla(131, 30%, 36%, 0.22);
+    --shadow-button-hover: 0 4px 12px hsla(131, 30%, 36%, 0.32);
     
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Blog-specific shadows */
     --shadow-soft: 0 2px 15px -3px hsla(37, 20%, 15%, 0.07), 0 10px 20px -2px hsla(37, 20%, 15%, 0.04);
-    --shadow-focus: 0 0 0 2px hsl(28 24% 100%), 0 0 0 4px hsl(150 45% 18%);
+    --shadow-focus: 0 0 0 2px hsl(28 24% 100%), 0 0 0 4px hsl(131 30% 36%);
   }
   
 /* ============================================
@@ -373,36 +376,38 @@ img[fetchpriority="high"] {
   }
 
   .dark {
-    --background: 150 40% 8%;
+    --background: 131 35% 8%;
     --foreground: 45 20% 97%;
 
-    --card: 150 35% 12%;
+    --card: 131 30% 12%;
     --card-foreground: 45 20% 97%;
 
-    --popover: 150 35% 12%;
+    --popover: 131 30% 12%;
     --popover-foreground: 45 20% 97%;
 
-    --primary: 145 35% 65%;
-    --primary-foreground: 150 40% 8%;
+    /* Logo green lifted for dark mode contrast */
+    --primary: 131 30% 62%;
+    --primary-foreground: 131 35% 8%;
+    --primary-glow: 131 30% 70%;
 
-    --secondary: 145 25% 25%;
+    --secondary: 131 18% 24%;
     --secondary-foreground: 45 20% 97%;
 
-    --muted: 145 20% 20%;
-    --muted-foreground: 145 12% 72%; /* Improved for WCAG AA contrast on dark backgrounds */
+    --muted: 131 14% 20%;
+    --muted-foreground: 90 10% 72%;
 
-    --accent: 145 25% 30%;
+    --accent: 131 18% 28%;
     --accent-foreground: 45 20% 97%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 45 20% 97%;
 
-    --border: 145 20% 20%;
-    --input: 145 20% 20%;
-    --ring: 145 35% 65%;
+    --border: 131 14% 20%;
+    --input: 131 14% 20%;
+    --ring: 131 30% 62%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(150 40% 8%) 0%, hsl(145 35% 18%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(150 40% 8%) 0%, hsl(145 30% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(131 35% 8%) 0%, hsl(131 28% 18%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(131 35% 8%) 0%, hsl(131 25% 12%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
