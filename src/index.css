@@ -1107,7 +1107,7 @@ img[fetchpriority="high"] {
     border-top: 1px solid hsl(var(--primary) / 0.18);
   }
   .metric-mono {
-    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: 'IBM Plex Mono', 'IBM Plex Mono Fallback', ui-monospace, SFMono-Regular, Menlo, monospace;
     font-variant-numeric: tabular-nums;
     letter-spacing: -0.04em;
   }
@@ -1119,7 +1119,7 @@ img[fetchpriority="high"] {
     font-weight: 500;
   }
   .eyebrow-mono {
-    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-family: 'IBM Plex Mono', 'IBM Plex Mono Fallback', ui-monospace, monospace;
     font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
