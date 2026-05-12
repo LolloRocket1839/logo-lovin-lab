@@ -19,9 +19,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['IBM Plex Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        sans: ['Inter', 'Inter Fallback', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'Inter Fallback', 'system-ui', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'IBM Plex Mono Fallback', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       letterSpacing: {
         'tighter': '-0.05em',
