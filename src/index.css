@@ -376,36 +376,38 @@ img[fetchpriority="high"] {
   }
 
   .dark {
-    --background: 150 40% 8%;
+    --background: 131 35% 8%;
     --foreground: 45 20% 97%;
 
-    --card: 150 35% 12%;
+    --card: 131 30% 12%;
     --card-foreground: 45 20% 97%;
 
-    --popover: 150 35% 12%;
+    --popover: 131 30% 12%;
     --popover-foreground: 45 20% 97%;
 
-    --primary: 145 35% 65%;
-    --primary-foreground: 150 40% 8%;
+    /* Logo green lifted for dark mode contrast */
+    --primary: 131 30% 62%;
+    --primary-foreground: 131 35% 8%;
+    --primary-glow: 131 30% 70%;
 
-    --secondary: 145 25% 25%;
+    --secondary: 131 18% 24%;
     --secondary-foreground: 45 20% 97%;
 
-    --muted: 145 20% 20%;
-    --muted-foreground: 145 12% 72%; /* Improved for WCAG AA contrast on dark backgrounds */
+    --muted: 131 14% 20%;
+    --muted-foreground: 90 10% 72%;
 
-    --accent: 145 25% 30%;
+    --accent: 131 18% 28%;
     --accent-foreground: 45 20% 97%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 45 20% 97%;
 
-    --border: 145 20% 20%;
-    --input: 145 20% 20%;
-    --ring: 145 35% 65%;
+    --border: 131 14% 20%;
+    --input: 131 14% 20%;
+    --ring: 131 30% 62%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(150 40% 8%) 0%, hsl(145 35% 18%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(150 40% 8%) 0%, hsl(145 30% 12%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(131 35% 8%) 0%, hsl(131 28% 18%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(131 35% 8%) 0%, hsl(131 25% 12%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
