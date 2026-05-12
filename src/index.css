@@ -1067,3 +1067,38 @@ img[fetchpriority="high"] {
     transition: background-color 100ms ease;
   }
 }
+
+/* ============================================
+   SWISS PRECISION UTILITIES
+   Minimal grid frames, mono metrics, eyebrow labels
+   ============================================ */
+@layer utilities {
+  .swiss-frame {
+    border: 1px solid hsl(var(--primary) / 0.18);
+  }
+  .swiss-divide-x > * + * {
+    border-left: 1px solid hsl(var(--primary) / 0.18);
+  }
+  .swiss-divide-y > * + * {
+    border-top: 1px solid hsl(var(--primary) / 0.18);
+  }
+  .metric-mono {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+  }
+  .eyebrow {
+    font-size: 0.7rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 500;
+  }
+  .eyebrow-mono {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 500;
+  }
+}
