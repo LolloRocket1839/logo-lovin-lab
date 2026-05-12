@@ -10,6 +10,30 @@
 
 /* All fonts use Inter from Google Fonts for consistency */
 
+/* ============================================
+   METRICS-MATCHED FALLBACK FONTS (reduce CLS)
+   ============================================
+   Until Inter / IBM Plex Mono finish loading, the browser renders
+   these synthesized fallbacks built from local system fonts but with
+   overrides that match the web-font metrics, so the swap causes
+   minimal layout shift on the LCP hero text. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22.43%;
+  line-gap-override: 0%;
+  size-adjust: 107.4%;
+}
+@font-face {
+  font-family: 'IBM Plex Mono Fallback';
+  src: local('Menlo'), local('Consolas'), local('Courier New');
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+  size-adjust: 105%;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
