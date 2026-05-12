@@ -12,19 +12,24 @@ const items = [
 const TrustStripeComponent = () => {
   const { t } = useTranslation();
   return (
-    <section className="border-y border-border/40 bg-background py-8">
-      <div className="container max-w-5xl mx-auto px-4 sm:px-6">
-        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground/70 text-center mb-6 font-medium">
+    <section className="border-y border-primary/15 bg-background py-0">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6">
+        <p className="eyebrow-mono text-foreground/50 text-center pt-6 pb-4">
           {t("investor.landing.trust.title")}
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {items.map(({ key, Icon }) => (
-            <div key={key} className="flex flex-col items-center text-center gap-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 border-t border-primary/15">
+          {items.map(({ key, Icon }, i) => (
+            <div
+              key={key}
+              className={`flex flex-col items-center text-center gap-2 py-6 px-4 ${
+                i < items.length - 1 ? "md:border-r" : ""
+              } ${i % 2 === 0 ? "border-r" : ""} ${i < 2 ? "border-b md:border-b-0" : ""} border-primary/15`}
+            >
               <Icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
-              <p className="text-xs font-medium text-foreground">
+              <p className="eyebrow-mono text-foreground">
                 {t(`investor.landing.trust.items.${key}.label`)}
               </p>
-              <p className="text-xs text-muted-foreground">
+              <p className="metric-mono text-sm text-foreground/70">
                 {t(`investor.landing.trust.items.${key}.value`)}
               </p>
             </div>

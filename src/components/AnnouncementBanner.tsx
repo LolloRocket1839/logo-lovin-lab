@@ -14,15 +14,16 @@ export const AnnouncementBanner = () => {
   const destination = i18n.language?.startsWith("it") ? "/investitori" : "/investors";
 
   return (
-    <div className="bg-destructive text-destructive-foreground text-center text-sm relative z-[60]">
+    <div className="bg-background border-b border-primary/20 text-foreground text-center relative z-[60]">
       <Link
         to={destination}
         onClick={() => trackClick("announcement_banner", { destination })}
-        className="block py-2 pl-4 pr-10 hover:brightness-110 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-destructive-foreground/60"
+        className="block py-2 pl-4 pr-10 hover:bg-primary/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
       >
-        <span className="inline-flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-destructive-foreground animate-pulse" />
-          {t('announcement.firstDeal')}
+        <span className="inline-flex items-center gap-2.5 eyebrow-mono text-foreground/80">
+          <span className="w-1.5 h-1.5 rounded-full bg-destructive animate-pulse" aria-hidden="true" />
+          <span>{t('announcement.firstDeal')}</span>
+          <span className="text-foreground/40" aria-hidden="true">→</span>
         </span>
       </Link>
       <button
@@ -34,7 +35,7 @@ export const AnnouncementBanner = () => {
         }}
         onMouseDown={(e) => e.stopPropagation()}
         onTouchStart={(e) => e.stopPropagation()}
-        className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded opacity-70 hover:opacity-100 hover:bg-destructive-foreground/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-destructive-foreground/60 transition-colors"
+        className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded opacity-50 hover:opacity-100 hover:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 transition-colors"
         aria-label={t('accessibility.closeMenu')}
       >
         <X className="w-3.5 h-3.5" />

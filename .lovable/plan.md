@@ -1,63 +1,79 @@
 
+# Piano: refresh sito in stile "Minimal Swiss Precision"
 
-# Piano: Migliorare Performance Sito (globale, non solo /investitori)
+Applico la direzione selezionata (griglia 12-col, bordi 1px forest green, tipografia bold tighter con accenti italic, mono per dati) come **layer estetico globale**, senza toccare logica, form, RLS, edge functions.
 
-Le ottimizzazioni precedenti hanno già toccato la pagina Investors. Ora intervengo sui colli di bottiglia **trasversali** che rallentano tutto il sito (homepage, navigazione, scroll, prima visita).
+## Principi visivi
 
-## Problemi identificati
+- **Cornice strutturale**: contenitori principali con `border border-primary/20`, divisori interni `border-r / border-t` invece di card flottanti con shadow.
+- **Tipografia**:
+  - Display headings: `font-bold tracking-tighter leading-[0.9]`, scala fino a `text-7xl/8xl` desktop.
+  - Parole-chiave (es. "student housing") in `italic font-normal` per contrasto.
+  - Dati numerici/metriche in `font-mono` (IBM Plex Mono via Google Fonts), tabular-nums.
+  - Eyebrow/label: `text-xs uppercase tracking-widest`.
+- **Palette**: invariata (cream `--background`, forest `--primary`). Accento urgenza in rosso desaturato `#D14343` invece dell'attuale rosso saturo.
+- **Motion**: solo fade-up 300ms già esistente. Niente parallax, niente blur.
 
-1. **Analytics troppo aggressivi** — Ogni `page_view` e ogni milestone di scroll fa una `supabase.functions.invoke('track-analytics')` + `crypto.subtle.digest()` SHA-256. Su SPA con molte navigazioni → decine di chiamate edge bloccanti per UI.
-2. **Listener `scroll` multipli e ridondanti** — `Navigation`, `StickyCTA`, `useScrollDepth`, `HeroLogo` (framer `useScroll`) ascoltano tutti lo stesso evento scroll separatamente.
-3. **i18n carica 7 lingue in eager** (`it/en/es/fr/de/zh/sv` importati sincroni in `src/i18n/index.ts`) → il main bundle include translations che il 99% degli utenti non userà mai.
-4. **`backdrop-blur-xl` rimasti** in mobile menu Navigation, LanguageSwitcher dropdown e altri overlay sticky → blur GPU costoso.
-5. **HeroLogo con framer-motion `useSpring` su scroll** → calcoli fisici ad ogni frame anche fuori viewport.
-6. **Preload broken** in `index.html`: `<link rel="preload" href="/src/assets/jungle-rent-logo-new.svg">` punta al path di sviluppo, ignorato in produzione (Vite rinomina con hash) → warning + richiesta sprecata.
-7. **Axe-core** in dev viene caricato dinamicamente: ok, già gated da `import.meta.env.DEV`.
-8. **i18n debug** già `false`: ok.
+## Interventi mirati
 
-## Interventi
+### 1. Token e tipografia globali
+- `tailwind.config.ts`: aggiungere `fontFamily.mono` → `['IBM Plex Mono', ...]`; preservare Inter come sans.
+- `index.html`: preload IBM Plex Mono insieme a Inter (subset light).
+- `src/index.css`: nuove utility:
+  - `.swiss-frame` → border + divide forest green a opacità 20%.
+  - `.metric-mono` → font-mono, tabular-nums, tracking-tighter.
+  - `.eyebrow` → uppercase, tracking-widest, text-xs.
 
-### A. Sciogliere il carico analytics (impatto alto)
-- **Batching**: accodare gli eventi in memoria e flush ogni 5s o su `pagehide` con `navigator.sendBeacon` invece di una invocazione edge per evento.
-- **Hash sessione**: calcolare il SHA-256 **una sola volta** e cachare in memoria invece di rigenerarlo ad ogni evento.
-- **Skip iniziale**: non sparare `scroll_depth: 0` al mount (è ridondante con `page_view`).
-- **`useScrollDepth`**: rimuovere il listener scroll dedicato e leggere lo scroll da uno **scroll manager singleton** condiviso (vedi B).
+### 2. Hero homepage (`ImmersiveHero.tsx`)
+- Riprogettare in layout 12-col con cornice bordata:
+  - Col 8: H1 multi-riga `Investi in / student housing (italic) / a Torino`, subhead breve.
+  - Col 4: due metriche mono (Target yield, Asset gestiti) impilate + CTA "Parla con Lorenzo" a piena larghezza in fondo, dark verde.
+- Sotto-hero: barra 4 colonne con Occupancy / Turnover / Market / Strategy (tutto in stile Swiss).
+- Mobile: stack verticale, stessa logica, paddings 8.
 
-### B. Scroll manager unificato
-- Creare `src/hooks/useGlobalScroll.ts`: un singolo `addEventListener('scroll')` con `requestAnimationFrame`, esposto come hook con subscriber pattern.
-- Migrare `Navigation`, `StickyCTA`, `useScrollDepth` a usarlo. Risparmio: da 4 listener + 4 rAF a 1.
+### 3. AnnouncementBanner
+- Riformulare come thin strip top: cream bg, bordo bottom forest, punto rosso `animate-pulse`, label "Solo X slot disponibili" uppercase tracking-widest. Più discreto rispetto all'attuale fascia rossa piena.
 
-### C. i18n lazy-loaded per lingua
-- Sostituire gli import sincroni dei 7 JSON con `i18next-http-backend` o dynamic `import()` per lingua attiva.
-- Solo `it` (default) caricato eagerly; `en/es/fr/de/zh/sv` lazy on `languageChanged`.
-- Stima: -300/500 KB gzipped dal main chunk.
+### 4. Sezioni below-the-fold (HowItWorks, InvestorSection, SellerSection, FAQ)
+- Wrappare ogni sezione in un container con `border-y border-primary/15` e titolo eyebrow allineato a sinistra.
+- Cards/passaggi: rimuovere shadow, usare bordi 1px e divisori interni.
+- Numeri grandi (rendimenti, ticket, %) → `metric-mono`.
 
-### D. Rimozione blur residui
-- `Navigation.tsx` mobile menu: `bg-background/95 backdrop-blur-xl` → `bg-background`.
-- `LanguageSwitcher.tsx` trigger e dropdown: rimuovere `backdrop-blur-*`, alzare opacità del bg.
-- Mantenere blur solo su overlay momentanei (Dialog, ExitIntent, CookieBanner).
+### 5. Pagina /investitori
+- Adattare HeroSection: stessa griglia 8/4, metriche in mono, italic su parola chiave.
+- TrustStripe / SocialProofMini: layout a 4-up con bordi verticali, niente background card.
+- FAQ accordion: bordi top/bottom 1px, niente rounded card; chevron + numero progressivo mono.
 
-### E. HeroLogo: gating più aggressivo
-- Smontare/disattivare le `useTransform` quando lo scroll supera 300px (logo già fade-out): smettere di calcolare spring su tutto il resto della pagina.
-- Alternativa: sostituire framer-motion con CSS `transform` controllato da una variabile `--scroll-y` aggiornata via rAF dal scroll manager (B).
+### 6. Navigation & layout chrome
+- Navigation desktop: rimuovere shadow, mantenere border-b 1px primary/15; brand wordmark in tracking-tighter.
+- BottomNav mobile: bordo top 1px, icone più piccole, label mono.
+- Footer: già minimale → uniformare bordi e tipografia eyebrow.
 
-### F. Fix preload index.html
-- Rimuovere `<link rel="preload" href="/src/assets/jungle-rent-logo-new.svg" as="image">` (path dev non valido in produzione).
-- Sostituire con preload sull'asset PNG già pubblico se serve LCP, oppure accettare che il logo venga caricato dal bundle.
+### 7. Cosa NON tocco
+- Logica business, form, validazione, RLS, edge functions.
+- Routing, SEO (Helmet, JSON-LD), hreflang.
+- i18n strings (cambio solo layout, non testi).
+- Performance optimizations già fatte (memoization, lazy load, scroll manager, analytics batching).
 
-### G. Micro-fix
-- `AnnouncementBanner`: `animate-pulse` → opzionale, costo trascurabile, lo lascio.
-- `QueryClient` già configurato bene (staleTime 5min).
-- Verificare che `vendor-pdf`, `vendor-maps`, `vendor-charts` non siano importati nella homepage (controllo con sourcemap visualizer in dry-run).
+## File principali coinvolti
 
-## Cosa NON tocco
-- Logica business, form, RLS, edge functions backend.
-- Animazioni framer-motion già gated da `useReducedMotion`.
-- Routing e SEO (Helmet, JSON-LD, sitemap).
+```
+tailwind.config.ts                          # fontFamily.mono
+src/index.css                               # utility .swiss-frame, .metric-mono, .eyebrow
+index.html                                  # preload IBM Plex Mono
+src/components/innovative/ImmersiveHero.tsx # hero homepage
+src/components/AnnouncementBanner.tsx       # banner urgenza
+src/components/layout/Navigation.tsx        # chrome top
+src/components/layout/BottomNav.tsx         # chrome mobile
+src/components/sections/HowItWorks/*        # griglia step
+src/components/sections/InvestorSection/*   # cards metriche
+src/components/SellerSection.tsx
+src/components/investitori/HeroSection.tsx
+src/components/investitori/TrustStripe.tsx
+src/components/investitori/SocialProofMini.tsx
+src/components/investitori/FAQSection.tsx
+```
 
 ## Risultato atteso
-- **TTI/LCP homepage**: -20/30% su mobile (meno JS, meno blur, meno listener).
-- **Scroll FPS**: stabile a 60fps anche su Android low-end (un solo listener vs quattro).
-- **Bundle iniziale**: -300KB+ gzip (i18n lazy).
-- **Network**: -60% chiamate `track-analytics` (batching).
 
+Sito visivamente più rigoroso e premium: griglie a vista, tipografia espressiva con accenti italic, dati in mono. Stessa palette, stessa copy, stessa funzionalità. Implementazione progressiva (homepage + hero investors prima, poi sezioni interne) così possiamo valutare in corso d'opera.

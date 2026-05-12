@@ -1,6 +1,5 @@
 import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
@@ -28,52 +27,84 @@ const HeroSectionComponent = ({ onCtaClick }: Props) => {
     [t]
   );
 
-  return (
-    <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 bg-cream">
-      <div className="container max-w-4xl mx-auto px-4 sm:px-6">
-        <p className="text-xs uppercase tracking-[0.2em] text-primary/70 font-medium mb-6">
-          {t("investor.landing.hero.eyebrow")}
-        </p>
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl leading-[1.1] text-foreground mb-6 tracking-tight">
-          {t("investor.landing.hero.h1")}
-        </h1>
-        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8">
-          {t("investor.landing.hero.subhead")}
-        </p>
+  // Split H1 to italicize a key phrase
+  const h1Text = t("investor.landing.hero.h1");
+  const renderHeading = () => {
+    const accent = lang === "en" ? "student housing" : "student housing";
+    const idx = h1Text.toLowerCase().indexOf(accent.toLowerCase());
+    if (idx === -1) return h1Text;
+    const before = h1Text.slice(0, idx);
+    const match = h1Text.slice(idx, idx + accent.length);
+    const after = h1Text.slice(idx + accent.length);
+    return (
+      <>
+        {before}
+        <span className="italic font-normal text-primary">{match}</span>
+        {after}
+      </>
+    );
+  };
 
-        <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mb-10 border-y border-primary/15 py-6">
-          {metrics.map((m) => (
-            <div key={m.label}>
-              <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-primary tracking-tight leading-none">
-                {m.value}
+  return (
+    <section className="relative pt-20 md:pt-28 pb-12 md:pb-16 bg-background">
+      <div className="container max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="swiss-frame bg-background">
+          {/* Eyebrow row */}
+          <div className="flex items-center justify-between px-5 md:px-8 py-3 border-b border-primary/15">
+            <span className="eyebrow-mono text-foreground/70">
+              {t("investor.landing.hero.eyebrow")}
+            </span>
+            <span className="hidden sm:inline-flex items-center gap-2 eyebrow-mono text-foreground/50">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
+              Q3 attivo
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12">
+            {/* Headline + subhead */}
+            <div className="md:col-span-8 px-5 md:px-12 py-10 md:py-14 md:border-r border-primary/15">
+              <h1 className="font-display font-bold tracking-tighter text-foreground leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+                {renderHeading()}
+              </h1>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl">
+                {t("investor.landing.hero.subhead")}
               </p>
-              <p className="text-[11px] sm:text-xs uppercase tracking-wider text-muted-foreground mt-2 leading-tight">
-                {m.label}
+              <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-xl">
+                {t("investor.landing.hero.ctaNote")}
               </p>
             </div>
-          ))}
-        </div>
 
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-          <Button
-            size="lg"
-            onClick={handleWhatsApp}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 h-12 text-base font-medium"
-          >
-            {t("investor.landing.hero.ctaPrimary")}
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={onCtaClick}
-            className="border-primary/30 hover:bg-primary/5 rounded-full px-8 h-12 text-base font-medium"
-          >
-            {t("investor.landing.hero.ctaSecondary")}
-          </Button>
+            {/* Metrics column */}
+            <div className="md:col-span-4 flex flex-col">
+              <div className="flex-1 px-5 md:px-8 py-8 md:py-10 flex flex-col justify-end gap-7 border-t md:border-t-0 border-primary/15">
+                {metrics.map((m) => (
+                  <div key={m.label} className="space-y-1">
+                    <p className="eyebrow-mono text-foreground/50">{m.label}</p>
+                    <p className="metric-mono text-3xl md:text-4xl text-primary font-medium">
+                      {m.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={handleWhatsApp}
+                className="block w-full bg-primary text-primary-foreground px-6 py-6 text-center font-bold uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors border-t border-primary/15 group"
+              >
+                {t("investor.landing.hero.ctaPrimary")}
+                <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
+              </button>
+              <button
+                type="button"
+                onClick={onCtaClick}
+                className="block w-full bg-background text-foreground px-6 py-4 text-center font-medium text-sm hover:bg-primary/5 transition-colors border-t border-primary/15"
+              >
+                {t("investor.landing.hero.ctaSecondary")}
+              </button>
+            </div>
+          </div>
         </div>
-        <p className="text-sm text-muted-foreground leading-relaxed mt-4 max-w-2xl">
-          {t("investor.landing.hero.ctaNote")}
-        </p>
       </div>
     </section>
   );
