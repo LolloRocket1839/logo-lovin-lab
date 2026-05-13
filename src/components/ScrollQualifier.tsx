@@ -63,7 +63,7 @@ export const ScrollQualifier = () => {
   };
 
   const handleClick = (type: string) => {
-    trackEvent("scroll_qualifier_click", { choice: type });
+    trackEvent("scroll_qualifier_clicked", { choice: type });
     dismiss();
   };
 
