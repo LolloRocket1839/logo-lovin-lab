@@ -4,19 +4,32 @@
   "url": "https://junglerent.it",
   "provider": {
     "organization": "Jungle Rent S.r.l.",
-    "url": "https://junglerent.it"
+    "url": "https://junglerent.it",
+    "contact": "junglerententeprise@gmail.com"
   },
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "documentationUrl": "https://junglerent.it/llms-full.txt",
   "capabilities": {
     "streaming": false,
     "pushNotifications": false
   },
-  "defaultInputModes": ["application/json"],
+  "defaultInputModes": ["application/json", "text/plain"],
   "defaultOutputModes": ["application/json"],
   "authentication": {
     "schemes": ["none"]
   },
   "skills": [
+    {
+      "id": "nlweb_query",
+      "name": "Natural Language Query (NLWeb)",
+      "description": "Ask Jungle Rent's knowledge base in natural language via the Microsoft NLWeb protocol. Returns grounded answers about Turin housing, neighborhoods, investment, valuations, and company info.",
+      "tags": ["nlweb", "natural-language", "rag", "turin"],
+      "endpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask",
+      "examples": [
+        "Quanto costa una stanza in San Salvario?",
+        "How can I invest in Jungle Rent from €100?"
+      ]
+    },
     {
       "id": "search_articles",
       "name": "Search Blog Articles",
