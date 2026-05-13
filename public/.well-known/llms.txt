@@ -22,6 +22,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 - [Sell Your Property](https://junglerent.it/vendi)
 - [Property Valuation Calculator](https://junglerent.it/valutazione-immobile)
 - [Strike Emergency Directory](https://junglerent.it/scioperi-italia)
+- [About / Chi siamo](https://junglerent.it/chi-siamo)
 - [Student Resources](https://junglerent.it/studenti)
 - [Blog](https://junglerent.it/blog)
 
