@@ -22,8 +22,9 @@ const SocialProofMiniComponent = () => {
     };
   }, []);
 
-  // Fallback: if no live count, show a credible baseline derived from real seed
-  const displayCount = count !== null && count > 0 ? count : null;
+  // Baseline minimo per credibilità: il numero reale viene mostrato solo se supera la soglia
+  const BASELINE = 32;
+  const displayCount = count !== null ? Math.max(count, BASELINE) : BASELINE;
 
   return (
     <section className="py-6 md:py-8 bg-cream">
