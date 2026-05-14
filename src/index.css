@@ -182,39 +182,33 @@ img[fetchpriority="high"] {
    MARVIS-STYLE FEEL GOOD CLICKS & INTERACTIONS
    ============================================ */
 
-  /* Marvis-Inspired Feel Good Clicks */
+  /* Quiet feel-good clicks — subtle, no lift */
   .feel-good-click {
-    @apply transition-[transform,box-shadow] duration-200 ease-out;
-    @apply active:scale-[0.97];
-    @apply hover:shadow-lg hover:-translate-y-0.5;
+    @apply transition-[transform,opacity] duration-200 ease-out;
+    @apply active:scale-[0.98];
   }
 
   .feel-good-click:active {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.92;
   }
 
   /* Reduced motion: disable scale/transform animations */
   @media (prefers-reduced-motion: reduce) {
     .feel-good-click {
-      @apply hover:translate-y-0 active:scale-100;
-    }
-    
-    .feel-good-click:active {
-      box-shadow: none;
+      @apply active:scale-100;
     }
   }
 
-  /* Blog Card Hover - Marvis Style */
+  /* Blog Card — flat, hairline border, no scale */
   .blog-card-marvis {
-    @apply transition-[transform,box-shadow,border-color] duration-300 ease-out;
-    @apply hover:scale-[1.02] hover:shadow-2xl;
+    @apply transition-[border-color,background-color] duration-300 ease-out;
     @apply cursor-pointer;
-    @apply border border-border/50;
+    @apply border border-border/60;
     @apply bg-background;
   }
 
   .blog-card-marvis:hover {
-    border-color: hsl(var(--primary) / 0.3);
+    border-color: hsl(var(--primary) / 0.45);
   }
 
   /* Reduced motion: disable scale animations on blog cards */
