@@ -218,11 +218,10 @@ img[fetchpriority="high"] {
     }
   }
 
-  /* Category Badge - Refined & High Contrast */
+  /* Category Badge — quieter, hairline */
   .category-badge {
-    @apply px-3 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wide;
-    @apply backdrop-blur-md shadow-sm;
-    @apply transition-all duration-200;
+    @apply px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-[0.12em];
+    @apply transition-colors duration-200;
   }
 
   .category-badge.investors {
