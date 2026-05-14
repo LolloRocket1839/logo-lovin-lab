@@ -428,12 +428,20 @@ img[fetchpriority="high"] {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: 'cv11', 'ss01';
     font-weight: 400;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.011em;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-extrabold;
-    letter-spacing: -0.03em;
+  h1, h2 {
+    @apply font-display;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-sans;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
   
   /* Elegant link underline animation */
