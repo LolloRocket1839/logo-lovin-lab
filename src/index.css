@@ -275,7 +275,7 @@ img[fetchpriority="high"] {
 
   /* Footnote references in text */
   sup a {
-    color: hsl(150 45% 18%);
+    color: hsl(var(--primary));
     font-weight: 600;
     text-decoration: none;
     padding: 0 2px;
@@ -283,7 +283,7 @@ img[fetchpriority="high"] {
   }
 
   sup a:hover {
-    color: hsl(150 50% 25%);
+    color: hsl(var(--primary-glow));
     text-decoration: underline;
   }
 
@@ -320,20 +320,20 @@ img[fetchpriority="high"] {
   }
 
   .footnotes li::marker {
-    color: hsl(150 45% 18%);
+    color: hsl(var(--primary));
     font-weight: 600;
   }
 
   /* Footnote links */
   .footnotes a {
-    color: hsl(150 45% 18%);
+    color: hsl(var(--primary));
     text-decoration: underline;
     word-break: break-word;
     transition: color 0.2s ease;
   }
 
   .footnotes a:hover {
-    color: hsl(150 50% 25%);
+    color: hsl(var(--primary-glow));
   }
 
   /* Back to reference link */
