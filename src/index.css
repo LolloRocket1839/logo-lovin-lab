@@ -71,20 +71,22 @@ All colors MUST be HSL.
     --popover: 42 60% 92%;
     --popover-foreground: 0 0% 9%;
 
-    /* Logo-derived primary: jungle green #4D8E59 (slightly darkened for AA on cream) */
+    /* Logo-aligned palette — exact values from jungle-rent-logo.svg */
+    /* Primary: #4D8E59 jungle green (logo mark) — kept slightly darker for AA on cream */
     --primary: 131 30% 36%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 131 30% 48%; /* exact logo green for accents */
+    --primary-glow: 131 30% 43%; /* exact #4D8E59 for accents/hover */
 
-    /* Sage tones derived from logo secondary #A2AC97 */
-    --secondary: 90 12% 86%;
-    --secondary-foreground: 0 0% 9%;
+    /* Secondary sage: #A2AC97 (logo wordmark accent) — surface tint kept light for backgrounds */
+    --secondary: 90 9% 88%;
+    --secondary-foreground: 131 30% 18%;
+    --secondary-strong: 90 9% 63%; /* exact #A2AC97 for borders/accents */
 
-    --muted: 90 12% 86%;
-    --muted-foreground: 0 0% 25%; /* Improved from 30% for WCAG AA 4.5:1 contrast */
+    --muted: 90 9% 90%;
+    --muted-foreground: 0 0% 25%; /* WCAG AA 4.5:1 contrast */
 
-    --accent: 90 12% 86%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 90 9% 86%;
+    --accent-foreground: 131 30% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
