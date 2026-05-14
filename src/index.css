@@ -89,28 +89,28 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 90 14% 78%;
-    --input: 90 14% 78%;
+    --border: 40 22% 80%;
+    --input: 40 22% 80%;
     --ring: 131 30% 36%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
     
     
     /* Clean gradients */
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
     
-    /* Minimal shadows - Apple style */
-    --shadow-minimal: 0 1px 3px hsla(0, 0%, 0%, 0.08);
-    --shadow-card: 0 2px 8px hsla(0, 0%, 0%, 0.08);
-    --shadow-card-hover: 0 4px 16px hsla(0, 0%, 0%, 0.12);
-    --shadow-button: 0 2px 8px hsla(131, 30%, 36%, 0.22);
-    --shadow-button-hover: 0 4px 12px hsla(131, 30%, 36%, 0.32);
+    /* Editorial hairline shadows — quiet luxury */
+    --shadow-minimal: 0 1px 0 hsla(0, 0%, 0%, 0.04);
+    --shadow-card: 0 1px 0 hsla(0, 0%, 0%, 0.04);
+    --shadow-card-hover: 0 1px 2px hsla(0, 0%, 0%, 0.06);
+    --shadow-button: none;
+    --shadow-button-hover: 0 1px 2px hsla(131, 30%, 36%, 0.18);
     
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
     /* Blog-specific shadows */
-    --shadow-soft: 0 2px 15px -3px hsla(37, 20%, 15%, 0.07), 0 10px 20px -2px hsla(37, 20%, 15%, 0.04);
+    --shadow-soft: 0 1px 0 hsla(37, 20%, 15%, 0.05);
     --shadow-focus: 0 0 0 2px hsl(28 24% 100%), 0 0 0 4px hsl(131 30% 36%);
   }
   
@@ -182,39 +182,33 @@ img[fetchpriority="high"] {
    MARVIS-STYLE FEEL GOOD CLICKS & INTERACTIONS
    ============================================ */
 
-  /* Marvis-Inspired Feel Good Clicks */
+  /* Quiet feel-good clicks — subtle, no lift */
   .feel-good-click {
-    @apply transition-[transform,box-shadow] duration-200 ease-out;
-    @apply active:scale-[0.97];
-    @apply hover:shadow-lg hover:-translate-y-0.5;
+    @apply transition-[transform,opacity] duration-200 ease-out;
+    @apply active:scale-[0.98];
   }
 
   .feel-good-click:active {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.92;
   }
 
   /* Reduced motion: disable scale/transform animations */
   @media (prefers-reduced-motion: reduce) {
     .feel-good-click {
-      @apply hover:translate-y-0 active:scale-100;
-    }
-    
-    .feel-good-click:active {
-      box-shadow: none;
+      @apply active:scale-100;
     }
   }
 
-  /* Blog Card Hover - Marvis Style */
+  /* Blog Card — flat, hairline border, no scale */
   .blog-card-marvis {
-    @apply transition-[transform,box-shadow,border-color] duration-300 ease-out;
-    @apply hover:scale-[1.02] hover:shadow-2xl;
+    @apply transition-[border-color,background-color] duration-300 ease-out;
     @apply cursor-pointer;
-    @apply border border-border/50;
+    @apply border border-border/60;
     @apply bg-background;
   }
 
   .blog-card-marvis:hover {
-    border-color: hsl(var(--primary) / 0.3);
+    border-color: hsl(var(--primary) / 0.45);
   }
 
   /* Reduced motion: disable scale animations on blog cards */
@@ -224,11 +218,10 @@ img[fetchpriority="high"] {
     }
   }
 
-  /* Category Badge - Refined & High Contrast */
+  /* Category Badge — quieter, hairline */
   .category-badge {
-    @apply px-3 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wide;
-    @apply backdrop-blur-md shadow-sm;
-    @apply transition-all duration-200;
+    @apply px-2.5 py-1 rounded-full text-[10px] font-medium uppercase tracking-[0.12em];
+    @apply transition-colors duration-200;
   }
 
   .category-badge.investors {
@@ -428,12 +421,20 @@ img[fetchpriority="high"] {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: 'cv11', 'ss01';
     font-weight: 400;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.011em;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-extrabold;
-    letter-spacing: -0.03em;
+  h1, h2 {
+    @apply font-display;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-sans;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
   
   /* Elegant link underline animation */

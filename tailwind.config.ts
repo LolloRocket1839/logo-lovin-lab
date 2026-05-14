@@ -20,7 +20,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'Inter Fallback', 'system-ui', 'sans-serif'],
-        display: ['Inter', 'Inter Fallback', 'system-ui', 'sans-serif'],
+        display: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'Cambria', 'serif'],
+        serif: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'Cambria', 'serif'],
         mono: ['IBM Plex Mono', 'IBM Plex Mono Fallback', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       letterSpacing: {
