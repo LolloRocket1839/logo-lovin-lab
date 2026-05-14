@@ -227,7 +227,7 @@ img[fetchpriority="high"] {
   }
 
   .category-badge.investors {
-    background: hsl(150 45% 18% / 0.92);
+    background: hsl(var(--primary) / 0.92);
     @apply text-white border border-white/20;
   }
 
