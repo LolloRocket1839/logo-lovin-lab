@@ -32,12 +32,12 @@ const FAQ = () => {
       },
       {
         "@type": "Question",
-        "name": isItalian ? "Quali sono i rendimenti attesi?" : "What are the expected returns?",
+        "name": isItalian ? "Come funzionano i rendimenti?" : "How do returns work?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": isItalian
-            ? "Il rendimento target è del 7-9% annuo, derivante da affitti studenteschi a Torino con occupancy rate del 95%."
-            : "The target return is 7-9% annually, from student rentals in Turin with a 95% occupancy rate."
+            ? "Il rendimento potenziale dipende dalla singola operazione immobiliare. Non comunichiamo cifre o percentuali pubblicamente: le proiezioni di ritorno, basate sui dati reali della specifica operazione, vengono condivise nel memorandum informativo dopo un primo colloquio con Lorenzo."
+            : "The potential return depends on the individual real estate operation. We do not communicate figures or percentages publicly: return projections, based on the actual data of the specific operation, are shared in the information memorandum after an initial conversation with Lorenzo."
         }
       },
       {

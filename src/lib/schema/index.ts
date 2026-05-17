@@ -48,8 +48,8 @@ export const createInvestmentSchema = (language: 'it' | 'en' = 'it') => ({
     ? "Investimento Immobiliare Frazionato Torino" 
     : "Fractional Real Estate Investment Turin",
   "description": language === 'it'
-    ? "Investi in immobili studenteschi a Torino a partire da €100. Rendimento target 7-9% annuo con gestione completa."
-    : "Invest in student housing in Turin starting from €100. Target yield 7-9% annually with full management.",
+    ? "Investi in immobili studenteschi a Torino a partire da €100. Esposizione economica alla singola operazione con gestione completa. Rendimento potenziale variabile, legato alla singola operazione."
+    : "Invest in student housing in Turin starting from €100. Economic exposure to each individual operation with full management. Potential return varies by individual operation.",
   "url": "https://junglerent.it/investitori",
   "provider": ORGANIZATION_BASE,
   "amount": {
