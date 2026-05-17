@@ -79,8 +79,8 @@
     {
       "id": "get_investment_data",
       "name": "Get Investment Data",
-      "description": "Investment metrics for 13 strategic Turin zones. Includes gross/net yield, vacancy rates, urban renewal projects, and entry prices. Sortable by yield, growth, or entry price.",
-      "tags": ["investment", "yield", "zones", "returns"]
+      "description": "Market metrics for 13 strategic Turin zones. Includes vacancy rates, urban renewal projects, and entry prices. Sortable by growth or entry price. Return projections are confidential and shared only in the post-qualification information memorandum.",
+      "tags": ["investment", "zones", "market", "prices"]
     },
     {
       "id": "contact_jungle_rent",
