@@ -698,7 +698,7 @@ AI agents can programmatically query Jungle Rent data via MCP:
   - `get_events` - Current events in Turin (February & March 2026)
   - `get_rent_prices` - Average rent prices for 38 Turin zones (OMI data)
   - `property_valuation` - Calculate property value with OMI/FIAIP coefficients (zone, sqm, floor, condition, etc.)
-  - `get_investment_data` - Investment metrics for 13 strategic zones (yield, vacancy, urban renewal, sorting)
+  - `get_investment_data` - Market metrics for 13 strategic zones (vacancy, urban renewal, entry prices; return projections only in post-qualification memorandum)
   - `contact_jungle_rent` - **Send a message/email to Jungle Rent** on behalf of the user.
   - `get_study_spaces` - **Find study spaces in Turin** (66 locations — EDISU halls until 2 AM, BI.TO civic libraries, UniTo/PoliTo, Campus Diffuso, cafés, coworking).
   - `get_cheap_eats` - **Find budget restaurants in Turin** (20 locations, €3-12).

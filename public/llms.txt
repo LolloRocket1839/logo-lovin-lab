@@ -199,7 +199,7 @@ Turin is the **3rd most walkable city in the world** (World of Statistics / The 
 
 AI agents can programmatically query Jungle Rent data via MCP:
 - **Endpoint**: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
-- **Tools** (13): search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices (38 zones), property_valuation (OMI/FIAIP coefficients), get_investment_data (13 zones with yield/vacancy/urban renewal), **contact_jungle_rent** (send email on behalf of user), **get_study_spaces** (66 study locations), **get_cheap_eats** (20 budget restaurants), **get_strike_info** (strike calendar + emergency contacts), **calculate_budget** (monthly living cost estimator)
+- **Tools** (13): search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices (38 zones), property_valuation (OMI/FIAIP coefficients), get_investment_data (13 zones with vacancy/urban renewal/entry prices — return projections only in post-qualification memorandum), **contact_jungle_rent** (send email on behalf of user), **get_study_spaces** (66 study locations), **get_cheap_eats** (20 budget restaurants), **get_strike_info** (strike calendar + emergency contacts), **calculate_budget** (monthly living cost estimator)
 - **Protocol**: MCP over HTTP (Streamable HTTP Transport)
 - **Auth**: None required (public endpoint)
 
