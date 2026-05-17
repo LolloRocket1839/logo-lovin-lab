@@ -35,8 +35,15 @@ export interface InvestorZone {
         { 
           name: 'Metro 2', 
           investment: '€2+ mld (linea completa)',
-          impact: { it: 'Forte rivalutazione prevista', en: 'Strong revaluation expectedMiglior rapporto rendimento/rischio. Vicinanza Politecnico garantisce domanda costante. Prezzi ancora accessibili rispetto a Crocetta con rendimenti superiori.',
-      en: },
+          impact: { it: 'Forte rivalutazione prevista', en: 'Strong revaluation expected' }
+        }
+      ]
+    },
+    rankings: { netYieldRank: 1, growthPotentialRank: 4, entryPriceRank: 6 },
+    investorNote: {
+      it: 'Miglior rapporto rendimento/rischio. Vicinanza Politecnico garantisce domanda costante. Prezzi ancora accessibili rispetto a Crocetta.',
+      en: 'Best risk-adjusted profile. Proximity to Politecnico ensures constant demand. Prices still accessible compared to Crocetta.'
+    },
     image: '/images/viale-alberato-torino.jpeg',
     coordinates: { lat: 45.0634, lng: 7.6489 },
     seo: {
@@ -77,8 +84,15 @@ export interface InvestorZone {
         { 
           name: 'Riqualificazione Porta Palazzo', 
           investment: 'Multi-milioni',
-          impact: { it: 'Miglioramento generale area', en: 'General area improvementAlto potenziale di rivalutazione grazie a Masterplan Carlo Ratti. Rischio medio-alto compensato da prezzi entry-level e rendimenti elevati. Perfetto per investitori value-add.',
-      en: },
+          impact: { it: 'Miglioramento generale area', en: 'General area improvement' }
+        }
+      ]
+    },
+    rankings: { netYieldRank: 2, growthPotentialRank: 2, entryPriceRank: 2 },
+    investorNote: {
+      it: 'Alto potenziale di rivalutazione grazie a Masterplan Carlo Ratti. Rischio medio-alto compensato da prezzi entry-level. Perfetto per investitori value-add.',
+      en: 'High appreciation potential thanks to Carlo Ratti Masterplan. Medium-high risk offset by entry-level prices. Perfect for value-add investors.'
+    },
     image: '/images/mercato-piazza-crispi.jpg',
     coordinates: { lat: 45.0823, lng: 7.6823 },
     seo: {
@@ -89,7 +103,8 @@ export interface InvestorZone {
       },
       en: {
         title: 'Invest in Aurora Turin | Maximum potential +25%',
-        description: keywords: ['aurora turin investment', 'aurora urban renewal', 'buy property aurora']
+        description: 'Aurora Turin: prices €1,520/sqm. Carlo Ratti Masterplan promises +15-25% in 5-7 years.',
+        keywords: ['aurora turin investment', 'aurora urban renewal', 'buy property aurora']
       }
     }
   },
@@ -313,8 +328,9 @@ export interface InvestorZone {
     },
     rankings: { entryPriceRank: 3 },
     investorNote: {
-      it: 'Entry price basso con rendimenti decenti. Quartiere residenziale stabile. Buon rapporto qualità/prezzo per primi investimenti.',
-      en: },
+      it: 'Entry price basso con domanda stabile. Quartiere residenziale solido. Buon rapporto qualità/prezzo per primi investimenti.',
+      en: 'Low entry price with stable demand. Solid residential neighborhood. Good value for first investments.'
+    },
     image: '/images/quartieri-studenti-torino.jpg',
     coordinates: { lat: 45.0923, lng: 7.6634 },
     seo: {
@@ -434,8 +450,9 @@ export interface InvestorZone {
     },
     rankings: {},
     investorNote: {
-      it: 'Quartiere residenziale stabile con buoni servizi. Rendimenti moderati ma rischio basso. Ideale per investitori conservativi.',
-      en: },
+      it: 'Quartiere residenziale stabile con buoni servizi. Rischio basso. Ideale per investitori conservativi.',
+      en: 'Stable residential neighborhood with good services. Low risk. Ideal for conservative investors.'
+    },
     image: '/images/mercato-nitti-torino.jpg',
     coordinates: { lat: 45.0389, lng: 7.6534 },
     seo: {
