@@ -29,7 +29,6 @@ import {
   getTrendIcon,
   getDemandLabel,
   formatPrice,
-  formatYield,
   InvestorZone
 } from "@/data/investorZoneData";
 import { ZoneMetricCard } from "@/components/investor/ZoneMetricCard";
@@ -63,11 +62,9 @@ const InvestorZonePage = () => {
     it: {
       backToZones: 'Tutte le zone',
       pricePerSqm: 'Prezzo medio',
-      grossYield: 'Rendimento lordo',
-      netYield: 'Rendimento netto',
       vacancy: 'Tasso sfitto',
       trend: 'Trend 2024',
-      rentalsTitle: 'Rendimenti locativi',
+      rentalsTitle: 'Range affitti di mercato',
       roomRent: 'Affitto stanza',
       apartmentRent: 'Affitto bilocale',
       perMonth: '/mese',
@@ -80,19 +77,17 @@ const InvestorZonePage = () => {
       impactLabel: 'Impatto atteso',
       noteTitle: 'Nota per investitori',
       ctaTitle: 'Interessato a investire qui?',
-      ctaSubtitle: 'Parla con Lorenzo per scoprire le opportunità nel quartiere ' + zone.name,
+      ctaSubtitle: 'Parla con Lorenzo per una proiezione personalizzata sul quartiere ' + zone.name,
       ctaButton: 'Parla con Lorenzo',
-      disclaimer: '*Valori stimati basati su analisi di mercato (Feb 2025). Fonte: OMI, Immobiliare.it, FIAIP, Nomisma.',
+      disclaimer: '*Valori stimati basati su analisi di mercato (Feb 2025). Fonte: OMI, Immobiliare.it, FIAIP, Nomisma. Le proiezioni di ritorno sulla singola operazione sono riservate al memorandum informativo.',
       seeAllZones: 'Vedi tutti i quartieri'
     },
     en: {
       backToZones: 'All zones',
       pricePerSqm: 'Average price',
-      grossYield: 'Gross yield',
-      netYield: 'Net yield',
       vacancy: 'Vacancy rate',
       trend: '2024 trend',
-      rentalsTitle: 'Rental yields',
+      rentalsTitle: 'Market rent range',
       roomRent: 'Room rent',
       apartmentRent: 'Apartment rent',
       perMonth: '/month',
@@ -105,9 +100,9 @@ const InvestorZonePage = () => {
       impactLabel: 'Expected impact',
       noteTitle: 'Investor note',
       ctaTitle: 'Interested in investing here?',
-      ctaSubtitle: 'Talk to Lorenzo to discover opportunities in ' + zone.name,
+      ctaSubtitle: 'Talk to Lorenzo for a personalized projection on ' + zone.name,
       ctaButton: 'Talk to Lorenzo',
-      disclaimer: '*Estimated values based on market analysis (Feb 2025). Source: OMI, Immobiliare.it, FIAIP, Nomisma.',
+      disclaimer: '*Estimated values based on market analysis (Feb 2025). Source: OMI, Immobiliare.it, FIAIP, Nomisma. Return projections per operation are reserved for the information memorandum.',
       seeAllZones: 'View all neighborhoods'
     }
   };
@@ -115,19 +110,13 @@ const InvestorZonePage = () => {
   const t = texts[lang];
   const zonesIndexPath = lang === 'en' ? '/investors/zones' : '/investitori/zone';
 
-  // Schema.org for investment
+  // Schema.org for investment — return values intentionally omitted (public surface)
   const investmentSchema = {
     "@context": "https://schema.org",
     "@type": "InvestmentOrDeposit",
     "name": zone.seo[lang].title,
     "description": zone.seo[lang].description,
     "url": `https://junglerent.it${lang === 'en' ? '/investors/zones' : '/investitori/zone'}/${zone.slug}`,
-    "interestRate": {
-      "@type": "QuantitativeValue",
-      "minValue": zone.netYield.min,
-      "maxValue": zone.netYield.max,
-      "unitCode": "P1"
-    },
     "amount": {
       "@type": "MonetaryAmount",
       "minValue": zone.pricePerSqm.min * 50, // Approximate min investment
@@ -237,18 +226,11 @@ const InvestorZonePage = () => {
       {/* Metrics Cards - overlapping hero */}
       <section className="relative z-20 -mt-20 md:-mt-24 pb-12">
         <div className="container px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             <ZoneMetricCard 
               icon={Building2}
               value={`€${formatPrice(zone.pricePerSqm.avg)}`}
               label={`${t.pricePerSqm}/m²`}
-              size="md"
-            />
-            <ZoneMetricCard 
-              icon={Percent}
-              value={formatYield(zone.grossYield.min, zone.grossYield.max)}
-              label={t.grossYield}
-              variant="highlight"
               size="md"
             />
             <ZoneMetricCard 
@@ -292,18 +274,6 @@ const InvestorZonePage = () => {
                   <p className="text-2xl font-bold text-foreground">
                     €{zone.rentApartment.min} - €{zone.rentApartment.max}
                     <span className="text-sm font-normal text-muted-foreground">{t.perMonth}</span>
-                  </p>
-                </div>
-                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
-                  <p className="text-sm text-muted-foreground mb-2">{t.grossYield}</p>
-                  <p className="text-2xl font-bold text-primary">
-                    {formatYield(zone.grossYield.min, zone.grossYield.max)}
-                  </p>
-                </div>
-                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
-                  <p className="text-sm text-muted-foreground mb-2">{t.netYield}*</p>
-                  <p className="text-2xl font-bold text-primary">
-                    {formatYield(zone.netYield.min, zone.netYield.max)}
                   </p>
                 </div>
               </div>
