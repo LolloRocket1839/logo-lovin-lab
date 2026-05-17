@@ -327,9 +327,8 @@ const InvestorZonesIndex = () => {
               <span className="text-sm font-medium text-muted-foreground">{t2.sortLabel}:</span>
               <div className="flex gap-2">
                 {[
-                  { value: 'yield', label: t2.sortYield },
-                  { value: 'price_asc', label: t2.sortPriceAsc },
-                  { value: 'growth', label: t2.sortGrowth }
+                  { value: 'growth', label: t2.sortGrowth },
+                  { value: 'price_asc', label: t2.sortPriceAsc }
                 ].map(sort => (
                   <Button
                     key={sort.value}
