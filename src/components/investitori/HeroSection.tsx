@@ -20,7 +20,6 @@ const HeroSectionComponent = ({ onCtaClick }: Props) => {
 
   const metrics = useMemo(
     () => [
-      { label: t("investor.landing.hero.metrics.yieldLabel"), value: t("investor.landing.hero.metrics.yieldValue") },
       { label: t("investor.landing.hero.metrics.payoutLabel"), value: t("investor.landing.hero.metrics.payoutValue") },
       { label: t("investor.landing.hero.metrics.ticketLabel"), value: t("investor.landing.hero.metrics.ticketValue") },
     ],

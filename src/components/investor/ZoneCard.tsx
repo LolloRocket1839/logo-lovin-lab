@@ -90,8 +90,8 @@ export const ZoneCard = ({ zone, lang, className }: ZoneCardProps) => {
             <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
           </div>
 
-          {/* Key metrics grid */}
-          <div className="grid grid-cols-3 gap-3 mb-4">
+          {/* Key metrics grid — no yield figures (public surface) */}
+          <div className="grid grid-cols-2 gap-3 mb-4">
             <div className="text-center p-2 rounded-lg bg-muted/50">
               <div className="flex items-center justify-center gap-1 mb-1">
                 <Building2 className="w-3 h-3 text-muted-foreground" />
@@ -101,19 +101,7 @@ export const ZoneCard = ({ zone, lang, className }: ZoneCardProps) => {
               </div>
               <div className="text-[10px] text-muted-foreground">/m²</div>
             </div>
-            
-            <div className="text-center p-2 rounded-lg bg-muted/50">
-              <div className="flex items-center justify-center gap-1 mb-1">
-                <Percent className="w-3 h-3 text-muted-foreground" />
-              </div>
-              <div className="text-sm font-bold text-primary">
-                {formatYield(zone.grossYield.min, zone.grossYield.max)}
-              </div>
-              <div className="text-[10px] text-muted-foreground">
-                {lang === 'it' ? 'Lordo' : 'Gross'}
-              </div>
-            </div>
-            
+
             <div className="text-center p-2 rounded-lg bg-muted/50">
               <div className="flex items-center justify-center gap-1 mb-1">
                 <TrendingUp className="w-3 h-3 text-muted-foreground" />

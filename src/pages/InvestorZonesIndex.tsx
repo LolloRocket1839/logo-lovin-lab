@@ -255,7 +255,7 @@ const InvestorZonesIndex = () => {
             <div className="p-4 border-b border-border/20 flex items-center justify-between">
               <h2 className="font-semibold flex items-center gap-2 text-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                {lang === 'it' ? 'Mappa rendimenti' : 'Yield map'}
+                {lang === 'it' ? 'Mappa di mercato' : 'Market map'}
               </h2>
               {comparisonZoneIds.length > 0 && (
                 <div className="flex items-center gap-2">

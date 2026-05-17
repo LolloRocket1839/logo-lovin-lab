@@ -110,12 +110,12 @@
         "A": {
           "button": "Scarica la guida",
           "description": "Investi nel mercato immobiliare universitario torinese con gestione completa inclusa",
-          "title": "Guadagna il 7-9% annuo"
+          "title": "Investi nel mercato studentesco di Torino"
         },
         "B": {
           "button": "Prenota consulenza gratuita",
-          "description": "Zero gestione immobiliare. Selezione inquilini completa. Rendimenti potenziali nel distretto universitario",
-          "title": "Trasforma €100k in €7-9k di rendita annua"
+          "description": "Zero gestione immobiliare. Selezione inquilini completa. Esposizione al distretto universitario torinese",
+          "title": "Trasforma il tuo capitale in rendita ricorrente"
         }
       },
       "readSavillsReport": "Report Savills 2025",
@@ -694,8 +694,8 @@
         "ctaSecondary": "Ricevi il memorandum",
         "ctaNote": "La sottoscrizione non avviene online. Il primo passo è una richiesta di informazioni: ricevi il memorandum, valutalo con calma, decidi poi.",
         "metrics": {
-          "yieldLabel": "Rendimento target lordo",
-          "yieldValue": "8–12%",
+          "yieldLabel": "Modello di payout",
+          "yieldValue": "Bimestrale",
           "payoutLabel": "Frequenza payout",
           "payoutValue": "Bimestrale",
           "ticketLabel": "Ticket minimo",
@@ -1379,7 +1379,7 @@
     "guide3Badge": "Report 2025",
     "guide3Bullet1": "120.000 studenti e 50.000 fuorisede: dimensioni della domanda",
     "guide3Bullet2": "Gap domanda-offerta: 42.500 posti letto mancanti",
-    "guide3Bullet3": "Rendimenti 7-9% vs 4-5% di Milano",
+    "guide3Bullet3": "Mercato studentesco strutturalmente più dinamico di Milano",
     "guide3Bullet4": "Prezzi per zona e confronto nazionale",
     "guide3Desc": "Analisi completa del mercato student housing torinese con dati su domanda, offerta, prezzi e rendimenti",
     "guide3Pages": "18 pagine",
