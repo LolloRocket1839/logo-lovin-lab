@@ -110,12 +110,12 @@
         "A": {
           "button": "Ladda ner guiden",
           "description": "Investera i Turins universitetsfastighetsmarknad med komplett förvaltning ingår",
-          "title": "Tjäna 7-9% årligen"
+          "title": "Investera i Turins studentmarknad"
         },
         "B": {
           "button": "Boka gratis konsultation",
           "description": "Ingen fastighetsförvaltning. Komplett hyresgästurval. Garanterad avkastning i universitetsdistriktet",
-          "title": "Omvandla €100k till €7-9k årlig avkastning"
+          "title": "Omvandla ditt kapital till återkommande intäkter"
         }
       },
       "readSavillsReport": "Savills-rapport 2025",
@@ -1107,7 +1107,7 @@
     "guide3Badge": "Rapport 2025",
     "guide3Bullet1": "120 000 studenter och 50 000 från andra städer: efterfrågans storlek",
     "guide3Bullet2": "Utbuds-efterfrågan-gap: 42 500 saknade sängplatser",
-    "guide3Bullet3": "7-9% avkastning mot Milanos 4-5%",
+    "guide3Bullet3": "Strukturellt mer dynamisk studentmarknad än Milano",
     "guide3Bullet4": "Priser per område och nationell jämförelse",
     "guide3Desc": "Komplett analys av Turins studentbostadsmarknad med data om efterfrågan, utbud, priser och avkastning",
     "guide3Pages": "18 sidor",

@@ -110,12 +110,12 @@
         "A": {
           "button": "Guide herunterladen",
           "description": "Investieren Sie in den Turiner Universitätsimmobilienmarkt mit kompletter Verwaltung inklusive",
-          "title": "7-9% jährliche Rendite verdienen"
+          "title": "In den Studentenmarkt Turin investieren"
         },
         "B": {
           "button": "Kostenlose Beratung buchen",
           "description": "Null Immobilienverwaltung. Komplette Mieterauswahl. Potenzielle Renditen im Universitätsviertel",
-          "title": "100.000€ in 7-9.000€ jährliche Rendite verwandeln"
+          "title": "Kapital in wiederkehrende Erträge umwandeln"
         }
       },
       "readSavillsReport": "Savills Bericht 2025",
@@ -1107,7 +1107,7 @@
     "guide3Badge": "Bericht 2025",
     "guide3Bullet1": "120.000 Studenten und 50.000 Auswärtige: Nachfragedimensionen",
     "guide3Bullet2": "Nachfrage-Angebots-Lücke: 42.500 fehlende Betten",
-    "guide3Bullet3": "Renditen 7-9% vs 4-5% in Mailand",
+    "guide3Bullet3": "Strukturell dynamischerer Studentenmarkt als Mailand",
     "guide3Bullet4": "Preise nach Gebiet und nationaler Vergleich",
     "guide3Desc": "Vollständige Analyse des Turiner Student-Housing-Marktes mit Daten zu Nachfrage, Angebot, Preisen und Renditen",
     "guide3Pages": "18 Seiten",

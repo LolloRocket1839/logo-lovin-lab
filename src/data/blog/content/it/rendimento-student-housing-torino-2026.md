@@ -1,6 +1,6 @@
 # Rendimento reale student housing Torino 2026 {#intro}
 
-Lo student housing a Torino rende più di qualsiasi altra tipologia residenziale. I numeri parlano chiaro: rendimenti lordi del 9-13% con affitto a stanze, contro il 4,8-7,7% dell'affitto tradizionale.
+Lo student housing a Torino rende più di qualsiasi altra tipologia residenziale. L'affitto a stanze a studenti universitari supera strutturalmente l'affitto tradizionale di un intero appartamento, grazie a una domanda concentrata e a una vacancy quasi nulla durante l'anno accademico.
 
 Questa guida analizza i rendimenti reali zona per zona, il calcolo dal lordo al netto, la vacancy quasi inesistente e il confronto con le altre città universitarie italiane.
 

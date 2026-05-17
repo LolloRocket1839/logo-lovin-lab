@@ -39,14 +39,14 @@ import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
 import InvestorZonesMap from "@/components/investor/InvestorZonesMap";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
-type SortOption = 'yield' | 'price_asc' | 'price_desc' | 'growth';
+type SortOption = 'growth' | 'price_asc' | 'price_desc';
 type FilterOption = 'all' | 'Centro' | 'Semicentro' | 'Periferia' | 'renewal';
 
 const InvestorZonesIndex = () => {
   const { t, i18n } = useTranslation();
   const lang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
   
-  const [sortBy, setSortBy] = useState<SortOption>('yield');
+  const [sortBy, setSortBy] = useState<SortOption>('growth');
   const [filterBy, setFilterBy] = useState<FilterOption>('all');
   const [comparisonZoneIds, setComparisonZoneIds] = useLocalStorage<string[]>('investor-comparison-zones', []);
   const [isCompareDrawerOpen, setIsCompareDrawerOpen] = useState(false);
@@ -66,7 +66,6 @@ const InvestorZonesIndex = () => {
   };
 
   // Get top zones for highlights
-  const topYieldZones = getZonesByRanking('netYieldRank', 3);
   const topGrowthZones = getZonesByRanking('growthPotentialRank', 3);
   const renewalZones = getZonesWithUrbanRenewal();
 
@@ -83,9 +82,6 @@ const InvestorZonesIndex = () => {
 
     // Apply sort
     switch (sortBy) {
-      case 'yield':
-        zones.sort((a, b) => b.grossYield.max - a.grossYield.max);
-        break;
       case 'price_asc':
         zones.sort((a, b) => a.pricePerSqm.avg - b.pricePerSqm.avg);
         break;
@@ -108,16 +104,14 @@ const InvestorZonesIndex = () => {
   const texts = {
     it: {
       title: 'Zone Investimento Torino | Analisi Mercato 2025',
-      description: 'Guida completa alle zone di Torino per investitori immobiliari. Rendimenti, prezzi €/mq, trend e progetti di riqualificazione per ogni quartiere.',
+      description: 'Guida completa alle zone di Torino per investitori immobiliari. Prezzi €/mq, trend e progetti di riqualificazione per ogni quartiere.',
       heroTitle: 'Zone di investimento',
       heroSubtitle: 'Analisi di mercato 2025 per ogni quartiere di Torino',
-      topYield: 'Miglior rendimento',
       topGrowth: 'Massima crescita',
       withRenewal: 'Con riqualificazione',
       allZones: 'Tutti i quartieri',
       filterLabel: 'Filtra',
       sortLabel: 'Ordina',
-      sortYield: 'Rendimento',
       sortPriceAsc: 'Prezzo ↑',
       sortPriceDesc: 'Prezzo ↓',
       sortGrowth: 'Crescita',
@@ -129,22 +123,20 @@ const InvestorZonesIndex = () => {
       zonesCount: 'quartieri',
       compareZones: 'Confronta zone',
       ctaTitle: 'Vuoi investire?',
-      ctaSubtitle: 'Parla direttamente con Lorenzo per una consulenza personalizzata',
+      ctaSubtitle: 'Parla direttamente con Lorenzo per una proiezione personalizzata sulla prossima operazione',
       ctaButton: 'Parla con Lorenzo',
-      disclaimer: '*Dati aggiornati a febbraio 2025. Fonte: OMI, Immobiliare.it, FIAIP, Nomisma. Rendimenti stimati.'
+      disclaimer: '*Dati aggiornati a febbraio 2025. Fonte: OMI, Immobiliare.it, FIAIP, Nomisma. Le proiezioni di ritorno sulla singola operazione sono riservate al memorandum informativo.'
     },
     en: {
       title: 'Turin Investment Zones | 2025 Market Analysis',
-      description: 'Complete guide to Turin neighborhoods for real estate investors. Yields, €/sqm prices, trends and urban renewal projects for each area.',
+      description: 'Complete guide to Turin neighborhoods for real estate investors. €/sqm prices, trends and urban renewal projects for each area.',
       heroTitle: 'Investment zones',
       heroSubtitle: '2025 market analysis for every Turin neighborhood',
-      topYield: 'Best yield',
       topGrowth: 'Maximum growth',
       withRenewal: 'With urban renewal',
       allZones: 'All neighborhoods',
       filterLabel: 'Filter',
       sortLabel: 'Sort',
-      sortYield: 'Yield',
       sortPriceAsc: 'Price ↑',
       sortPriceDesc: 'Price ↓',
       sortGrowth: 'Growth',
@@ -156,9 +148,9 @@ const InvestorZonesIndex = () => {
       zonesCount: 'neighborhoods',
       compareZones: 'Compare zones',
       ctaTitle: 'Want to invest?',
-      ctaSubtitle: 'Talk directly with Lorenzo for personalized advice',
+      ctaSubtitle: 'Talk directly with Lorenzo for a personalized projection on the next operation',
       ctaButton: 'Talk to Lorenzo',
-      disclaimer: '*Data updated February 2025. Sources: OMI, Immobiliare.it, FIAIP, Nomisma. Estimated yields.'
+      disclaimer: '*Data updated February 2025. Sources: OMI, Immobiliare.it, FIAIP, Nomisma. Return projections per operation are reserved for the information memorandum.'
     }
   };
 
@@ -220,23 +212,7 @@ const InvestorZonesIndex = () => {
       {/* Quick Stats */}
       <section className="pb-12 md:pb-16">
         <div className="container px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {/* Top Yield */}
-            <Card className="p-4 border-border/20">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Percent className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">{t2.topYield}</p>
-                  <p className="font-semibold text-foreground">{topYieldZones[0]?.name}</p>
-                </div>
-              </div>
-              <p className="text-2xl font-bold text-primary">
-                {topYieldZones[0]?.grossYield.min}-{topYieldZones[0]?.grossYield.max}%
-              </p>
-            </Card>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
             {/* Top Growth */}
             <Card className="p-4 border-border/20">
               <div className="flex items-center gap-3 mb-3">
@@ -279,7 +255,7 @@ const InvestorZonesIndex = () => {
             <div className="p-4 border-b border-border/20 flex items-center justify-between">
               <h2 className="font-semibold flex items-center gap-2 text-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                {lang === 'it' ? 'Mappa rendimenti' : 'Yield map'}
+                {lang === 'it' ? 'Mappa di mercato' : 'Market map'}
               </h2>
               {comparisonZoneIds.length > 0 && (
                 <div className="flex items-center gap-2">
@@ -351,9 +327,8 @@ const InvestorZonesIndex = () => {
               <span className="text-sm font-medium text-muted-foreground">{t2.sortLabel}:</span>
               <div className="flex gap-2">
                 {[
-                  { value: 'yield', label: t2.sortYield },
-                  { value: 'price_asc', label: t2.sortPriceAsc },
-                  { value: 'growth', label: t2.sortGrowth }
+                  { value: 'growth', label: t2.sortGrowth },
+                  { value: 'price_asc', label: t2.sortPriceAsc }
                 ].map(sort => (
                   <Button
                     key={sort.value}

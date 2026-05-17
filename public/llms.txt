@@ -130,7 +130,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 4. **[Aule studio Torino](https://junglerent.it/blog/aule-studio-torino-guida-completa)** - 60+ study spaces guide
 5. **[Come trovare casa a Torino](https://junglerent.it/blog/trovare-casa-torino-studente-fuorisede-2026)** - Housing guide for students ⭐ NEW
 6. **[Budget mensile studente Torino](https://junglerent.it/blog/budget-mensile-studente-torino-2026)** - Real budget scenarios ⭐ NEW
-7. **[Rendimento student housing Torino](https://junglerent.it/blog/rendimento-student-housing-torino-2026)** - Yield analysis ⭐ NEW
+7. **[Rendimento student housing Torino](https://junglerent.it/blog/rendimento-student-housing-torino-2026)** - Market analysis per zone ⭐ NEW
 8. **[Eventi Torino aprile 2026](https://junglerent.it/blog/eventi-torino-aprile-2026)** - April events ⭐ NEW
 
 Traffic sources: Direct 55.5%, Google 35.7%, Gemini 4.4% ⬆️, ChatGPT 0.5%
@@ -199,7 +199,7 @@ Turin is the **3rd most walkable city in the world** (World of Statistics / The 
 
 AI agents can programmatically query Jungle Rent data via MCP:
 - **Endpoint**: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
-- **Tools** (13): search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices (38 zones), property_valuation (OMI/FIAIP coefficients), get_investment_data (13 zones with yield/vacancy/urban renewal), **contact_jungle_rent** (send email on behalf of user), **get_study_spaces** (66 study locations), **get_cheap_eats** (20 budget restaurants), **get_strike_info** (strike calendar + emergency contacts), **calculate_budget** (monthly living cost estimator)
+- **Tools** (13): search_articles, get_neighborhoods, get_company_info, get_faq, get_events, get_rent_prices (38 zones), property_valuation (OMI/FIAIP coefficients), get_investment_data (13 zones with vacancy/urban renewal/entry prices — return projections only in post-qualification memorandum), **contact_jungle_rent** (send email on behalf of user), **get_study_spaces** (66 study locations), **get_cheap_eats** (20 budget restaurants), **get_strike_info** (strike calendar + emergency contacts), **calculate_budget** (monthly living cost estimator)
 - **Protocol**: MCP over HTTP (Streamable HTTP Transport)
 - **Auth**: None required (public endpoint)
 

@@ -1,85 +1,70 @@
-# Editorial Quiet Luxury — Site-wide Refinement
+## Obiettivo
 
-Goal: bring the entire site to a more elegant, minimal, editorial feel without changing functionality, copy, or routes. Pure presentation work in `src/index.css`, `tailwind.config.ts`, and a small set of high-traffic UI components.
+Eliminare qualsiasi **percentuale di rendimento** (es. "7‑9%", "8,34%", "Rendimento lordo 6‑7%") da tutte le superfici pubbliche del sito. Restano consentite le percentuali NON di rendimento (commissioni agenzia 3‑4%, risparmio studenti 25%, margine valutativo ±5‑12%, crescita prezzi +15‑25%, vacancy/occupancy), perché non sono promesse di ritorno sull'investimento.
 
-## Direction
+Sostituzione standard:
+- IT: "Rendimento potenziale variabile, legato alla singola operazione"
+- EN: "Potential return varies by individual operation"
+- Niente cifre, niente range, niente confronti numerici BTP/conti deposito.
 
-Inspired by Aesop, Apartamento, RIMOWA, Muji editorial: serif display headlines, generous whitespace, hairline 1px borders instead of cards-on-cards, muted accents, motion that whispers (300ms fade-up only).
+## Superfici da bonificare
 
-## Changes
+### 1. Homepage e sezione investitori
+- `src/components/sections/InvestorSection/InvestorSectionDesktop.tsx` — rimuovere ogni metrica "%" presentata come rendimento (mantenere 87% / 12,6% solo se etichettati come dato di domanda/offerta, non come rendimento).
+- `src/components/sections/InvestorSection/InvestorSectionMobile.tsx` — idem.
+- `src/components/innovative/ImmersiveHero.tsx` — verificare e rimuovere eventuali claim di rendimento.
+- `src/components/investitori/HeroSection.tsx` — sostituire `yieldValue` con stringa qualitativa.
+- `src/components/investitori/ThesisSection.tsx`, `TaxSection.tsx`, `SocialProofMini.tsx`, `TrustStripe.tsx` — passare in rassegna e rimuovere riferimenti numerici al rendimento.
 
-### 1. Typography (foundation of "editorial")
-- Add a refined serif display font alongside Inter:
-  - Display: **Instrument Serif** (or Cormorant Garamond) — for h1/h2 and hero
-  - Body: keep **Inter** but shift default weight 400 → 380 visual via `font-weight: 400` + `letter-spacing: -0.011em`
-  - Mono: keep IBM Plex Mono (used sparingly for numbers/labels)
-- Update `tailwind.config.ts`:
-  - `font-display` → Instrument Serif stack
-  - `font-sans` → Inter (unchanged)
-  - New `font-serif` token = display
-- Headings:
-  - h1: serif, weight 400, tracking `-0.02em`, leading `1.05`
-  - h2: serif, weight 400, tracking `-0.015em`
-  - h3+: sans, weight 500, tracking `-0.01em`
-  - Replace any `font-extrabold`/`font-black` on headings with `font-normal` serif
-- Eyebrow labels: uppercase, mono, tracking `0.18em`, size `xs`, muted
+### 2. Calcolatore di rendimento
+- `src/components/investor/YieldCalculator.tsx` — opzioni:
+  - **(a)** rimuovere il componente dalla pagina e nasconderlo,
+  - **(b)** trasformarlo in "Simulatore esplorativo" che mostra solo input (capitale, durata) senza output numerico di yield/ritorno, con CTA "Parla con Lorenzo per una proiezione personalizzata".
+  - Default proposto: **(b)** — mantiene engagement senza promettere ritorni.
+- Rimuovere `GROSS_YIELD = 0.0834`, le barre comparative con BTP/conti deposito, le stringhe "8,34%", "21%", "BTP 3,5%", "Conto deposito 3%".
 
-### 2. Color & surfaces (calmer)
-- Keep cream + jungle green palette (per memory).
-- Soften:
-  - `--card` becomes near-identical to `--background` (`44 60% 91%`) — no visible card surface; rely on hairline borders
-  - `--border` lighten to `40 25% 80%` for true hairlines
-  - `--muted-foreground` keep AA (0 0% 25%)
-- Remove gradients on hero/sections where they add noise; keep one subtle vertical wash only for footer.
-- Primary accent stays jungle green; use it more sparingly (links, primary CTA only).
+### 3. Pagine zone investitori
+- `src/data/investorZoneData.ts` — i campi `grossYield` e `netYield` restano nel data layer (servono internamente), ma:
+  - le `seo.title`/`seo.description` con "Rendimento 6‑7%" vengono riscritte senza cifre (es. "Investire a Cenisia Torino | Zona ad alto potenziale studentesco").
+- `src/pages/InvestorZonePage.tsx` — nascondere visivamente le card "Rendimento lordo" / "Rendimento netto" (rimuovere `formatYield(...)` dalle metric card e dai blocchi descrittivi). Rimuovere `minValue`/`maxValue` dal JSON‑LD generato.
+- `src/pages/InvestorZonesIndex.tsx` — rimuovere il blocco hero che mostra `{topYieldZones[0].grossYield.min}-{...max}%` e il ranking "top yield".
 
-### 3. Shadows & radii (less plastic)
-- Reduce shadows globally:
-  - `--shadow-card` → `0 1px 0 hsl(0 0% 0% / 0.04)` (hairline base)
-  - `--shadow-card-hover` → `0 1px 2px hsl(0 0% 0% / 0.06)`
-  - `--shadow-button` → none; rely on color contrast
-- Border radius:
-  - `--radius` 0.5rem → `0.375rem` (slightly tighter, more editorial)
-  - Buttons keep `rounded-md`; cards `rounded-sm`; inputs `rounded-sm`
+### 4. FAQ e schema
+- `src/pages/FAQ.tsx` — riscrivere la Q&A "rendimento target 7‑9%" → risposta qualitativa che rimanda al colloquio con Lorenzo.
+- `src/lib/schema/index.ts` — rimuovere "Rendimento target 7‑9% annuo" / "Target yield 7‑9% annually" dalle description.
 
-### 4. Motion (quieter)
-- Keep only one motion primitive: 300ms `fade-in-up` on section reveal.
-- Remove: `subtle-float`, `dino-blink`, hover lift translates on cards, scale on click for non-CTA elements.
-- Keep `feel-good-click` only on primary CTAs.
+### 5. Contenuti AI / SEO
+- `public/llms.txt`, `public/llms-full.txt`, `public/.well-known/agent-card.json`:
+  - rimuovere "Gross 9‑13%, net 5.3‑8.5% yields by zone",
+  - aggiornare descrizione del tool `get_investment_data` togliendo i tag "yield" / "returns" come metrica numerica,
+  - lasciare riferimenti ai dati OMI (prezzi, vacancy) ma non rendimenti.
+- `src/pages/Index.tsx` (meta keywords) — rimuovere "rendita immobiliare torino, rendimenti immobiliari".
 
-### 5. Component refinements (presentation only)
-- **`Card` (`src/components/ui/card.tsx`)**: switch from `border bg-card shadow-sm` to `border-b border-border/60 bg-transparent shadow-none` variant for editorial cards; keep current as `variant="solid"` if needed. Default becomes flat.
-- **`Button` (shadcn)**: default variant loses heavy shadow; outline variant uses 1px hairline border.
-- **`Navigation` / `MobileHeader`**: thinner top bar, serif wordmark optional, hairline bottom border instead of shadow.
-- **`ImmersiveHero`**: serif h1, single CTA emphasis (Parla con Lorenzo), reduce secondary visual elements, more vertical breathing room (py increased on desktop).
-- **`HowItWorks`, `InvestorSection`, `SellerSection`, `FAQSection`, `BlogHero`**: drop background tints, use `py-24 md:py-32`, hairline dividers between sections instead of color blocks.
-- **`Footer` / `MobileFooter`**: lighter type, serif heading, more whitespace.
-- **Badges (category, trust)**: outline only, no fill.
+### 6. Locali i18n (7 lingue)
+File: `src/i18n/locales/{it,en,de,fr,es,pt,zh,sv}.json` e `src/i18n/locales/investor/*.json`.
+Chiavi da bonificare (lista non esaustiva, derivata dalla ricognizione):
+- `*.guide3Bullet3` → "Rendimenti 7‑9% vs 4‑5% di Milano" → "Mercato studentesco strutturalmente più dinamico di Milano"
+- chiavi `title` con "Guadagna il 7‑9% annuo" / "Earn 7‑9% annually" / equivalenti DE/FR/ES/ZH/SV → "Costruisci rendita nel tempo" / "Build long‑term income"
+- "Trasforma €100k in €7‑9k di rendita annua" → "Trasforma il tuo capitale in rendita ricorrente"
+- chiavi `investor.landing.hero.metrics.yieldValue` → stringa qualitativa
+Sincronizzazione IT primaria → EN fallback → resto secondo lo standard di traduzione.
 
-### 6. Spacing rhythm
-- Establish vertical rhythm: section padding `py-20 md:py-28 lg:py-32`.
-- Container max-width on long-form: `max-w-3xl` for editorial blocks, `max-w-6xl` for grids.
+### 7. Blog
+- Articolo `rendimento-student-housing-torino-2026` (citato in llms.txt): se contiene cifre nel titolo SEO/meta o nel corpo, vanno riscritte in chiave qualitativa. Da verificare a parte se il file `.md` ha numeri nel titolo.
+- Inline CTA / link interni che ripetono "7‑9%" vanno aggiornati.
 
-## Out of scope
-- No copy changes, no routing changes, no JSON-LD/SEO files, no business logic.
-- No new pages, no re-architecture of components — only style + small markup tweaks.
-- Investor compliance copy untouched.
+## Fuori scope
 
-## Files to touch
-- `src/index.css` (tokens, typography base, motion cleanup)
-- `tailwind.config.ts` (font stacks, animation removal)
-- `index.html` (add Instrument Serif preconnect + font link)
-- `src/components/ui/card.tsx`, `src/components/ui/button.tsx` (variant defaults)
-- `src/components/layout/Navigation.tsx`, `MobileHeader.tsx`, `Footer.tsx`, `MobileFooter.tsx`
-- `src/components/innovative/ImmersiveHero.tsx`
-- `src/components/sections/HowItWorks/*`, `InvestorSection/*`, `HomepageFAQ/*`
-- `src/components/SellerSection.tsx`, `FAQSection.tsx`, `TrustBadge.tsx`, `AnnouncementBanner.tsx`
-- `src/components/blog/BlogHero.tsx`
+- Commissioni di agenzia (3‑4%), risparmio studenti (25%), margine valutativo (±5‑12%), crescita prezzi attesa di zona (+15‑25%), vacancy/occupancy: NON sono percentuali di rendimento dell'investimento e restano.
+- Nessuna modifica al modello di business, al data layer interno `investorZoneData.ts` (i numeri restano disponibili per uso interno post‑qualifica), alla logica di lead capture o ai contratti.
+- Nessuna nuova pagina, nessun cambio routing.
 
-## Verification
-- Visual QA at mobile (375), tablet (768), desktop (1280) on `/`, `/investitori`, `/blog`, a blog post, `/contratti-locazione`.
-- Confirm Lighthouse LCP not regressed (serif font preloaded + `font-display: swap` + metrics-matched fallback).
-- Check WCAG AA contrast on muted text and hairline borders against cream.
+## Compliance allineata
 
-## Memory update (after build)
-- Update `mem://design/minimalist-visual-standards` with the new editorial direction (serif display + hairlines + flat cards) so future work stays consistent.
+Coerente con la memoria `EOI Compliance` e `Investment Model`: niente promesse di ritorno su superfici pubbliche; le proiezioni numeriche si presentano solo nel memorandum post‑qualifica via colloquio con Lorenzo.
+
+## Verifica finale
+
+1. `rg -n 'yield|rendiment|return.*%|\d+\s*-\s*\d+\s*%' src public` non deve più trovare cifre presentate come rendimento dell'investimento.
+2. Screenshot mobile/desktop di: homepage, `/investitori`, `/investitori/zone`, una pagina zona, FAQ, calcolatore.
+3. Aggiornare la memoria `EOI Compliance` con la regola: "Nessuna percentuale di rendimento su superfici pubbliche, mai".
