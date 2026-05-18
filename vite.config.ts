@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => ({
     }),
     mode === "development" && componentTagger(),
     validateSentenceCase(),
-    validateInvestorZonesPlugin(),
+    validateInvestorZonesPlugin(mode),
     mode === "production" && visualizer({
       filename: "dist/stats.html",
       open: false,
