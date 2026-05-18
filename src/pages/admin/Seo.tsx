@@ -5,14 +5,16 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Navigation } from "@/components/layout/Navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Loader2, Send } from "lucide-react";
+import { Loader2, Send, ShieldCheck } from "lucide-react";
 
 const ADMIN_EMAILS = ["lorenzo.onijoseph@gmail.com"];
 
 const SeoAdmin = () => {
   const { user, loading: authLoading } = useAuth();
   const [submitting, setSubmitting] = useState(false);
+  const [verifying, setVerifying] = useState(false);
   const [result, setResult] = useState<unknown>(null);
+  const [verifyResult, setVerifyResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email ?? "");
@@ -33,38 +35,83 @@ const SeoAdmin = () => {
     }
   };
 
+  const verifyGsc = async () => {
+    setVerifying(true);
+    setError(null);
+    setVerifyResult(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("verify-gsc", { body: {} });
+      if (error) throw error;
+      setVerifyResult(data);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Unknown error");
+    } finally {
+      setVerifying(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="max-w-3xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-serif mb-6">SEO admin</h1>
+      <main className="max-w-3xl mx-auto px-4 py-12 space-y-6">
+        <h1 className="text-3xl font-serif mb-2">SEO admin</h1>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Verify Google Search Console</CardTitle>
+            <CardDescription>
+              Fetches <code>https://junglerent.it/</code>, checks for the{" "}
+              <code>google-site-verification</code> meta tag, then calls Google's verify endpoint.
+              Run this after each production deploy.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Button onClick={verifyGsc} disabled={verifying} variant="default">
+              {verifying ? (
+                <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Verifying…</>
+              ) : (
+                <><ShieldCheck className="mr-2 h-4 w-4" /> Verify now</>
+              )}
+            </Button>
+
+            {verifyResult && (
+              <div className="space-y-2">
+                <div className={`text-sm font-medium px-3 py-2 rounded-md ${
+                  verifyResult.overall === "verified"
+                    ? "bg-green-500/10 text-green-700 dark:text-green-400"
+                    : "bg-destructive/10 text-destructive"
+                }`}>
+                  {verifyResult.overall === "verified" && "✅ Verified by Google"}
+                  {verifyResult.overall === "meta_missing" &&
+                    `❌ Meta tag NOT detected on live site (HTTP ${verifyResult.metaTag?.httpStatus}). Republish required.`}
+                  {verifyResult.overall === "verify_failed" &&
+                    "⚠️ Meta tag detected on site, but Google verify call failed (see details)."}
+                </div>
+                <pre className="text-xs bg-muted p-3 rounded-md overflow-auto max-h-96">
+                  {JSON.stringify(verifyResult, null, 2)}
+                </pre>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
         <Card>
           <CardHeader>
             <CardTitle>Submit sitemap to Google Search Console</CardTitle>
             <CardDescription>
               Re-submits <code>https://junglerent.it/sitemap.xml</code> for the property{" "}
-              <code>https://junglerent.it/</code>. Run this after each production deploy that
-              changes routes or published content.
+              <code>https://junglerent.it/</code>.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Button onClick={submitSitemap} disabled={submitting}>
+            <Button onClick={submitSitemap} disabled={submitting} variant="outline">
               {submitting ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…
-                </>
+                <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting…</>
               ) : (
-                <>
-                  <Send className="mr-2 h-4 w-4" /> Submit sitemap
-                </>
+                <><Send className="mr-2 h-4 w-4" /> Submit sitemap</>
               )}
             </Button>
 
-            {error && (
-              <pre className="text-sm bg-destructive/10 text-destructive p-3 rounded-md overflow-auto">
-                {error}
-              </pre>
-            )}
             {result !== null && (
               <pre className="text-xs bg-muted p-3 rounded-md overflow-auto max-h-96">
                 {JSON.stringify(result, null, 2)}
@@ -72,6 +119,12 @@ const SeoAdmin = () => {
             )}
           </CardContent>
         </Card>
+
+        {error && (
+          <pre className="text-sm bg-destructive/10 text-destructive p-3 rounded-md overflow-auto">
+            {error}
+          </pre>
+        )}
       </main>
     </div>
   );
