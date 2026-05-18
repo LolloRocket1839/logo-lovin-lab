@@ -112,7 +112,7 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast.error(t("investorExitIntent.emailError"));
       return;
@@ -120,31 +120,38 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
 
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch(FORMSPREE_ENDPOINTS.quickInvestor, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          source: `investor_exit_intent_${source}`,
-          language: currentLang,
-          timestamp: new Date().toISOString(),
-        }),
-      });
+    const result = await submitLead(
+      {
+        email: email.trim(),
+        source: `investor_exit_intent_${source}`,
+        leadType: "investor",
+        metadata: { language: currentLang },
+      },
+      {
+        endpoint: FORMSPREE_ENDPOINTS.quickInvestor,
+        subject: `🔥 INVESTOR LEAD (exit-intent) - ${email.trim()}`,
+        extraFields: { language: currentLang },
+      },
+    );
 
-      if (response.ok) {
-        trackEvent("investor_exit_intent_form_submit", { source, email_provided: true });
-        toast.success(t("investorExitIntent.success"));
-        handleClose();
-      } else {
-        toast.error(t("investorExitIntent.errorSubmit"));
-      }
-    } catch (error) {
+    setIsSubmitting(false);
+
+    if (result.success) {
+      trackEvent("investor_exit_intent_form_submit", { source, email_provided: true });
+      setSubmitted(true);
+    } else {
       toast.error(t("investorExitIntent.errorSubmit"));
-    } finally {
-      setIsSubmitting(false);
     }
   };
+
+  const handoffWhatsappHref = (() => {
+    const phone = CONTACTS.investor.phone.replace(/[^\d]/g, "");
+    const msg =
+      currentLang === "it"
+        ? `Ciao Lorenzo, ho appena lasciato la mia email (${email.trim()}) per investire con Jungle Rent. Vorrei capire i prossimi passi.`
+        : `Hi Lorenzo, I just left my email (${email.trim()}) to invest with Jungle Rent. I'd like to understand the next steps.`;
+    return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  })();
 
   return (
     <AnimatePresence>
