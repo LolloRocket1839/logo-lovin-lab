@@ -4,6 +4,8 @@ import {
   investorZoneSchema,
   investorZonesSchema,
   validateInvestorZones,
+  collectInvestorZoneIssues,
+  clearInvestorZoneValidationCache,
 } from './investorZoneData';
 
 describe('investorZonesSchema', () => {
@@ -179,5 +181,35 @@ describe('validateInvestorZones — fixtures', () => {
     }
     // Sanity: report header lists the expected total issue count.
     expect(caught!.message).toMatch(/schema validation failed — \d+ issue/);
+  });
+});
+
+describe('collectInvestorZoneIssues — caching', () => {
+  it('returns the exact same array reference on repeated calls for the same dataset', () => {
+    clearInvestorZoneValidationCache();
+    const dataset = [investorZones[0]];
+    const first = collectInvestorZoneIssues(dataset);
+    const second = collectInvestorZoneIssues(dataset);
+    expect(second).toBe(first);
+  });
+
+  it('produces distinct results for distinct dataset references', () => {
+    clearInvestorZoneValidationCache();
+    const a = [investorZones[0]];
+    const b = [{ ...investorZones[0], investorNote: undefined } as unknown];
+    const ra = collectInvestorZoneIssues(a);
+    const rb = collectInvestorZoneIssues(b);
+    expect(ra).not.toBe(rb);
+    expect(ra.length).toBe(0);
+    expect(rb.length).toBeGreaterThan(0);
+  });
+
+  it('clearInvestorZoneValidationCache() forces a fresh computation', () => {
+    const dataset = [investorZones[0]];
+    const first = collectInvestorZoneIssues(dataset);
+    clearInvestorZoneValidationCache();
+    const second = collectInvestorZoneIssues(dataset);
+    expect(second).not.toBe(first);
+    expect(second).toEqual(first);
   });
 });
