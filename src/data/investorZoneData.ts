@@ -765,14 +765,40 @@ export const investorZonesSchema = z.array(investorZoneSchema);
 
 export interface InvestorZoneValidationIssue {
   zoneId: string | null;
+  zoneName: string | null;
+  slug: string | null;
   index: number | null;
   path: string;
+  /** Zod error code, e.g. 'invalid_type', 'invalid_enum_value'. */
+  code: string;
+  /** Stringified value at the failing path (truncated), when retrievable. */
+  received: string | null;
   message: string;
+}
+
+function safeGetAtPath(root: unknown, path: ReadonlyArray<PropertyKey>): unknown {
+  let cur: unknown = root;
+  for (const k of path) {
+    if (cur === null || cur === undefined) return undefined;
+    cur = (cur as Record<PropertyKey, unknown>)[k];
+  }
+  return cur;
+}
+
+function previewValue(v: unknown): string | null {
+  if (v === undefined) return 'undefined';
+  if (v === null) return 'null';
+  try {
+    const s = typeof v === 'string' ? `"${v}"` : JSON.stringify(v);
+    return s.length > 80 ? `${s.slice(0, 77)}…` : s;
+  } catch {
+    return String(v);
+  }
 }
 
 /**
  * Returns a list of validation issues against `investorZonesSchema`,
- * each annotated with the offending zone id and field path.
+ * each annotated with zone id, slug, field path, Zod code, and received value.
  */
 export function collectInvestorZoneIssues(
   zones: unknown = investorZones,
@@ -781,32 +807,65 @@ export function collectInvestorZoneIssues(
   if (result.success) return [];
   return result.error.issues.map((i) => {
     const idx = typeof i.path[0] === 'number' ? i.path[0] : null;
-    const zoneId =
+    const zone =
       idx !== null && Array.isArray(zones)
-        ? ((zones[idx] as InvestorZone | undefined)?.id ?? null)
-        : null;
+        ? (zones[idx] as InvestorZone | undefined)
+        : undefined;
+    const received = previewValue(safeGetAtPath(zones, i.path));
     return {
-      zoneId,
+      zoneId: zone?.id ?? null,
+      zoneName: zone?.name ?? null,
+      slug: zone?.slug ?? null,
       index: idx,
       path: i.path.slice(1).join('.') || '<root>',
+      code: i.code ?? 'unknown',
+      received,
       message: i.message,
     };
   });
 }
 
 /**
- * Validates investorZones at module load in development. Throws a clear,
- * zone-scoped error so structural breakage (e.g. `trend202526demand` merge,
- * missing impact blocks) surfaces immediately instead of as a cryptic
- * downstream render bug.
+ * Formats issues into a human-readable, grouped report (by zone slug).
+ * Used both by the throwing validator and the build/CI script.
+ */
+export function formatInvestorZoneReport(issues: InvestorZoneValidationIssue[]): string {
+  if (issues.length === 0) return '[investorZoneData] ✓ all zones valid';
+  const groups = new Map<string, InvestorZoneValidationIssue[]>();
+  for (const i of issues) {
+    const key = i.slug ?? i.zoneId ?? `index #${i.index ?? '?'}`;
+    const arr = groups.get(key) ?? [];
+    arr.push(i);
+    groups.set(key, arr);
+  }
+  const lines: string[] = [
+    `[investorZoneData] schema validation failed — ${issues.length} issue${issues.length === 1 ? '' : 's'} across ${groups.size} zone${groups.size === 1 ? '' : 's'}:`,
+    '',
+  ];
+  for (const [key, group] of groups) {
+    const header = group[0];
+    const label = header.zoneName ? `${header.zoneName} (${key})` : key;
+    lines.push(`▸ ${label}`);
+    for (const i of group) {
+      lines.push(`    · ${i.path}  [${i.code}]`);
+      lines.push(`        ${i.message}`);
+      if (i.received !== null) lines.push(`        received: ${i.received}`);
+    }
+    lines.push('');
+  }
+  return lines.join('\n').trimEnd();
+}
+
+/**
+ * Validates investorZones at module load (dev) and during build/CI.
+ * Throws a clear, grouped, zone-scoped report so structural breakage
+ * (e.g. `trend202526demand` merge, missing impact blocks) surfaces
+ * immediately instead of as a cryptic downstream render bug.
  */
 export function validateInvestorZones(zones: unknown = investorZones): void {
   const issues = collectInvestorZoneIssues(zones);
   if (issues.length === 0) return;
-  const formatted = issues
-    .map((i) => `  • ${i.zoneId ? `zone "${i.zoneId}"` : `index ${i.index ?? '?'}`} → ${i.path}: ${i.message}`)
-    .join('\n');
-  throw new Error(`[investorZoneData] schema validation failed:\n${formatted}`);
+  throw new Error(formatInvestorZoneReport(issues));
 }
 
 // Run automatically in dev (Vite). No-op in production bundles.
