@@ -22,10 +22,20 @@ const validateSentenceCase = () => ({
 const validateInvestorZonesPlugin = (mode: string) => ({
   name: 'validate-investor-zones',
   buildStart() {
-    // In dev: warn-only (never block HMR / dev server).
-    // In production build & CI: hard fail.
+    // 1) Zod schema check.
+    //    Dev: warn-only (never block HMR / dev server).
+    //    Production build & CI: hard fail.
     const flag = mode === 'production' ? '' : ' --warn';
     execSync(`npx tsx scripts/validate-investor-zones.ts${flag}`, { stdio: 'inherit' });
+
+    // 2) Unit-test suite for the data module.
+    //    Only blocks in production / CI — keeps dev startup fast.
+    if (mode === 'production') {
+      execSync(
+        'npx vitest run src/data/investorZoneData.test.ts --reporter=dot',
+        { stdio: 'inherit' },
+      );
+    }
   }
 });
 
