@@ -169,7 +169,8 @@ Demonstrates passthrough + coercion:
 | Module side effect (`import.meta.env.DEV`) | Vite dev start, HMR reload | Console group + sonner toast |
 | `scripts/validate-investor-zones.ts` (default) | `vite build` (production) via `validateInvestorZonesPlugin` | Exit ≠ 0, build aborts |
 | `scripts/validate-investor-zones.ts --warn` | `vite dev` / `vite build --mode development` | Logs report as warning, exit 0 |
-| Vitest `investorZoneData.test.ts` | CI test run | Test failure with grouped report |
+| `vitest run src/data/investorZoneData.test.ts` | `vite build` (production) via the same plugin | Exit ≠ 0, build aborts |
+| Vitest `investorZoneData.test.ts` (full CI run) | CI test run | Test failure with grouped report |
 
 Results are memoized per dataset reference (WeakMap) for the lifetime of
 the process — repeated calls within one build are free.
