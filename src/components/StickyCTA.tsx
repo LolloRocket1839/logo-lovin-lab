@@ -85,12 +85,6 @@ export const StickyCTA = () => {
         </div>
       </div>
 
-      <QuickInvestorLeadDialog 
-        open={investDialogOpen} 
-        onOpenChange={setInvestDialogOpen}
-        source="sticky_cta"
-      />
-
       <QuickSellerLeadDialog 
         open={sellerDialogOpen} 
         onOpenChange={setSellerDialogOpen}
