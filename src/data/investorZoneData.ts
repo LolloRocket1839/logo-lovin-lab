@@ -102,7 +102,7 @@ export const investorZones: InvestorZone[] = [
         {
           name: 'Masterplan Carlo Ratti',
           investment: '€25,8 mln',
-          impact: { it: '+15-25% in 5-7 anni', en: '+15-25% in 5-7 years' }
+          impact: { it: 'Forte rivalutazione attesa a medio termine', en: 'Strong revaluation expected mid-term' }
         },
         {
           name: 'Riqualificazione Porta Palazzo',
@@ -120,13 +120,13 @@ export const investorZones: InvestorZone[] = [
     coordinates: { lat: 45.0823, lng: 7.6823 },
     seo: {
       it: {
-        title: 'Investire ad Aurora Torino | Massimo potenziale +25%',
-        description: 'Aurora Torino: prezzi €1.520/mq. Masterplan Carlo Ratti promette +15-25% in 5-7 anni.',
+        title: 'Investire ad Aurora Torino | Massimo potenziale di rivalutazione',
+        description: 'Aurora Torino: prezzi entry-level €1.520/mq. Masterplan Carlo Ratti e riqualificazione Porta Palazzo guidano una rivalutazione strutturale.',
         keywords: ['investimento aurora torino', 'aurora riqualificazione', 'comprare casa aurora']
       },
       en: {
-        title: 'Invest in Aurora Turin | Maximum potential +25%',
-        description: 'Aurora Turin: prices €1,520/sqm. Carlo Ratti Masterplan promises +15-25% in 5-7 years.',
+        title: 'Invest in Aurora Turin | Maximum revaluation potential',
+        description: 'Aurora Turin: entry-level prices €1,520/sqm. Carlo Ratti Masterplan and Porta Palazzo urban renewal drive structural revaluation.',
         keywords: ['aurora turin investment', 'aurora urban renewal', 'buy property aurora']
       }
     }
@@ -152,7 +152,7 @@ export const investorZones: InvestorZone[] = [
         {
           name: 'Scalo Nizza',
           investment: '€105 mln',
-          impact: { it: '+10-15% consolidamento', en: '+10-15% consolidation' }
+          impact: { it: 'Consolidamento e rivalutazione progressiva', en: 'Consolidation and progressive revaluation' }
         }
       ]
     },
@@ -252,12 +252,12 @@ export const investorZones: InvestorZone[] = [
     seo: {
       it: {
         title: 'Investire al Lingotto Torino | Parco della Salute',
-        description: 'Lingotto Torino: forte crescita +7.8% annuo. Parco della Salute e trasformazione ex FIAT trainano i prezzi.',
+        description: 'Lingotto Torino: trasformazione urbana profonda guidata da Parco della Salute ed ex FIAT. Quartiere in forte crescita strutturale.',
         keywords: ['investimento lingotto torino', 'lingotto parco salute', 'comprare casa lingotto']
       },
       en: {
         title: 'Invest in Lingotto Turin | Parco della Salute',
-        description: 'Lingotto Turin: strong +7.8% yearly growth. Parco della Salute and former FIAT transformation driving prices.',
+        description: 'Lingotto Turin: deep urban transformation led by Parco della Salute and former FIAT site. Neighborhood in strong structural growth.',
         keywords: ['lingotto investment', 'lingotto parco salute', 'buy property lingotto']
       }
     }
@@ -293,26 +293,26 @@ export const investorZones: InvestorZone[] = [
         {
           name: 'Masterplan Carlo Ratti',
           investment: '€25,8 mln',
-          impact: { it: '+15-25% in 5-7 anni', en: '+15-25% in 5-7 years' }
+          impact: { it: 'Forte rivalutazione attesa a medio termine', en: 'Strong revaluation expected mid-term' }
         }
       ]
     },
     rankings: { growthPotentialRank: 1, entryPriceRank: 1 },
     investorNote: {
-      it: 'MASSIMO POTENZIALE. Prezzi più bassi di Torino (€1.150/mq) con Metro 2 in arrivo. Rischio alto ma upside enorme (+15-25%). Solo per investitori con orizzonte 5+ anni.',
-      en: 'MAXIMUM POTENTIAL. Lowest prices in Turin (€1,150/sqm) with Metro 2 coming. High risk but huge upside (+15-25%). Only for investors with 5+ year horizon.'
+      it: 'MASSIMO POTENZIALE. Prezzi più bassi di Torino (€1.150/mq) con Metro 2 in arrivo. Rischio alto compensato da upside strutturale. Solo per investitori con orizzonte 5+ anni.',
+      en: 'MAXIMUM POTENTIAL. Lowest prices in Turin (€1,150/sqm) with Metro 2 coming. High risk offset by structural upside. Only for investors with 5+ year horizon.'
     },
     image: '/images/mercati-rionali-torino.jpg',
     coordinates: { lat: 45.0956, lng: 7.6912 },
     seo: {
       it: {
-        title: 'Investire a Barriera di Milano | Metro 2 +25%',
-        description: 'Barriera di Milano: prezzi più bassi di Torino €1.150/mq. Metro 2 e Masterplan Carlo Ratti promettono +15-25% in 5-7 anni.',
+        title: 'Investire a Barriera di Milano | Metro 2 e riqualificazione',
+        description: 'Barriera di Milano: prezzi più bassi di Torino €1.150/mq. Metro 2 e Masterplan Carlo Ratti trainano la rivalutazione strutturale.',
         keywords: ['investimento barriera milano torino', 'barriera milano metro 2', 'comprare casa barriera']
       },
       en: {
-        title: 'Invest in Barriera di Milano | Metro 2 +25%',
-        description: 'Barriera di Milano: lowest prices in Turin €1,150/sqm. Metro 2 and Carlo Ratti Masterplan promise +15-25% in 5-7 years.',
+        title: 'Invest in Barriera di Milano | Metro 2 and urban renewal',
+        description: 'Barriera di Milano: lowest prices in Turin €1,150/sqm. Metro 2 and Carlo Ratti Masterplan drive structural revaluation.',
         keywords: ['barriera milano investment', 'barriera milano metro 2', 'buy property barriera']
       }
     }
@@ -335,20 +335,20 @@ export const investorZones: InvestorZone[] = [
     urbanRenewal: { active: false, projects: [] },
     rankings: { growthPotentialRank: 5 },
     investorNote: {
-      it: 'Quartiere premium sede del Politecnico. Prezzi alti ma domanda garantita. Crescita forte (+10% nel 2024). Ideale per investitori che cercano asset prime.',
-      en: 'Premium neighborhood home to Politecnico. High prices but guaranteed demand. Strong growth (+10% in 2024). Ideal for investors seeking prime assets.'
+      it: 'Quartiere premium sede del Politecnico. Prezzi alti ma domanda garantita. Trend di crescita consolidato. Ideale per investitori che cercano asset prime.',
+      en: 'Premium neighborhood home to Politecnico. High prices but guaranteed demand. Consolidated growth trend. Ideal for investors seeking prime assets.'
     },
     image: '/images/politecnico-torino.avif',
     coordinates: { lat: 45.0567, lng: 7.6612 },
     seo: {
       it: {
         title: 'Investire alla Crocetta Torino | Politecnico premium',
-        description: 'Crocetta Torino: quartiere premium Politecnico. Prezzi €3.000/mq, crescita +10% annuo. Domanda garantita, asset sicuro.',
+        description: 'Crocetta Torino: quartiere premium Politecnico. Prezzi €3.000/mq, trend di crescita consolidato. Domanda garantita, asset sicuro.',
         keywords: ['investimento crocetta torino', 'crocetta politecnico', 'comprare casa crocetta']
       },
       en: {
         title: 'Invest in Crocetta Turin | Politecnico premium',
-        description: 'Crocetta Turin: premium Politecnico neighborhood. Prices €3,000/sqm, +10% yearly growth. Guaranteed demand, safe asset.',
+        description: 'Crocetta Turin: premium Politecnico neighborhood. Prices €3,000/sqm, consolidated growth trend. Guaranteed demand, safe asset.',
         keywords: ['crocetta investment', 'crocetta politecnico', 'buy property crocetta']
       }
     }
