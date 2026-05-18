@@ -1,23 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
 import { Navigation } from "@/components/layout/Navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Loader2, Send, ShieldCheck } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Loader2, Send, ShieldCheck, BellRing, RefreshCw } from "lucide-react";
 
 const ADMIN_EMAILS = ["lorenzo.onijoseph@gmail.com"];
+
+interface GscSnapshot {
+  id: string;
+  captured_at: string;
+  totals: { errors: number; warnings: number; submitted: number };
+  alerts: Array<{ severity: "info" | "warn" | "critical"; type: string; message: string }>;
+  alert_sent: boolean;
+}
 
 const SeoAdmin = () => {
   const { user, loading: authLoading } = useAuth();
   const [submitting, setSubmitting] = useState(false);
   const [verifying, setVerifying] = useState(false);
+  const [monitoring, setMonitoring] = useState(false);
+  const [loadingSnapshots, setLoadingSnapshots] = useState(false);
   const [result, setResult] = useState<unknown>(null);
   const [verifyResult, setVerifyResult] = useState<any>(null);
+  const [monitorResult, setMonitorResult] = useState<any>(null);
+  const [snapshots, setSnapshots] = useState<GscSnapshot[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email ?? "");
+
+  const loadSnapshots = async () => {
+    setLoadingSnapshots(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("gsc-index-monitor", { method: "GET" });
+      if (error) throw error;
+      setSnapshots((data as any)?.snapshots ?? []);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Unknown error");
+    } finally {
+      setLoadingSnapshots(false);
+    }
+  };
+
+  useEffect(() => { if (isAdmin) loadSnapshots(); }, [isAdmin]);
+
   if (!authLoading && !isAdmin) return <Navigate to="/" replace />;
 
   const submitSitemap = async () => {
@@ -49,6 +78,23 @@ const SeoAdmin = () => {
       setVerifying(false);
     }
   };
+
+  const runMonitor = async () => {
+    setMonitoring(true);
+    setError(null);
+    setMonitorResult(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("gsc-index-monitor", { body: {} });
+      if (error) throw error;
+      setMonitorResult(data);
+      await loadSnapshots();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Unknown error");
+    } finally {
+      setMonitoring(false);
+    }
+  };
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -116,6 +162,85 @@ const SeoAdmin = () => {
               <pre className="text-xs bg-muted p-3 rounded-md overflow-auto max-h-96">
                 {JSON.stringify(result, null, 2)}
               </pre>
+            )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <BellRing className="h-5 w-5" /> GSC indexing monitor &amp; alerts
+            </CardTitle>
+            <CardDescription>
+              Cattura uno snapshot dello stato sitemap di Search Console, lo confronta con il precedente
+              e invia email a <code>ADMIN_NOTIFICATION_EMAIL</code> se compaiono errori, aumentano i warning
+              o calano gli URL inviati di oltre il 5%. Pianifica via pg_cron (vedi note) per esecuzione automatica giornaliera.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex gap-2 flex-wrap">
+              <Button onClick={runMonitor} disabled={monitoring} variant="default">
+                {monitoring ? (
+                  <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Eseguo snapshot…</>
+                ) : (
+                  <><BellRing className="mr-2 h-4 w-4" /> Esegui ora</>
+                )}
+              </Button>
+              <Button onClick={loadSnapshots} disabled={loadingSnapshots} variant="outline">
+                {loadingSnapshots ? (
+                  <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Carico…</>
+                ) : (
+                  <><RefreshCw className="mr-2 h-4 w-4" /> Ricarica storico</>
+                )}
+              </Button>
+            </div>
+
+            {monitorResult && (
+              <div className="text-sm px-3 py-2 rounded-md bg-muted">
+                Snapshot salvato — errori: <b>{monitorResult.totals?.errors}</b>,
+                warning: <b>{monitorResult.totals?.warnings}</b>,
+                URL inviati: <b>{monitorResult.totals?.submitted}</b>
+                {monitorResult.alertSent && <span className="ml-2 text-yellow-700 dark:text-yellow-400">📧 email alert inviata</span>}
+              </div>
+            )}
+
+            {snapshots.length > 0 && (
+              <div className="space-y-2">
+                <h3 className="text-sm font-semibold">Ultimi {snapshots.length} snapshot</h3>
+                <div className="border rounded-md divide-y">
+                  {snapshots.map((s) => (
+                    <div key={s.id} className="p-3 text-sm flex flex-col gap-1">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <span className="font-mono text-xs">
+                          {new Date(s.captured_at).toLocaleString("it-IT")}
+                        </span>
+                        <div className="flex gap-1 flex-wrap">
+                          <Badge variant={s.totals.errors > 0 ? "destructive" : "secondary"}>
+                            {s.totals.errors} err
+                          </Badge>
+                          <Badge variant={s.totals.warnings > 0 ? "outline" : "secondary"}>
+                            {s.totals.warnings} warn
+                          </Badge>
+                          <Badge variant="secondary">{s.totals.submitted} URL</Badge>
+                          {s.alert_sent && <Badge variant="outline">📧 alert</Badge>}
+                        </div>
+                      </div>
+                      {s.alerts?.filter((a) => a.severity !== "info").length > 0 && (
+                        <ul className="text-xs text-muted-foreground list-disc list-inside">
+                          {s.alerts.filter((a) => a.severity !== "info").map((a, i) => (
+                            <li key={i}>
+                              <span className={a.severity === "critical" ? "text-destructive" : "text-yellow-700 dark:text-yellow-400"}>
+                                [{a.severity}]
+                              </span>{" "}
+                              {a.message}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
             )}
           </CardContent>
         </Card>

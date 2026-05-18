@@ -359,6 +359,39 @@ export type Database = {
         }
         Relationships: []
       }
+      gsc_index_snapshots: {
+        Row: {
+          alert_sent: boolean
+          alerts: Json
+          captured_at: string
+          id: string
+          raw_response: Json | null
+          site_url: string
+          sitemaps: Json
+          totals: Json
+        }
+        Insert: {
+          alert_sent?: boolean
+          alerts?: Json
+          captured_at?: string
+          id?: string
+          raw_response?: Json | null
+          site_url?: string
+          sitemaps?: Json
+          totals?: Json
+        }
+        Update: {
+          alert_sent?: boolean
+          alerts?: Json
+          captured_at?: string
+          id?: string
+          raw_response?: Json | null
+          site_url?: string
+          sitemaps?: Json
+          totals?: Json
+        }
+        Relationships: []
+      }
       investor_interest: {
         Row: {
           accredited_investor: string
