@@ -152,7 +152,7 @@ export const investorZones: InvestorZone[] = [
         {
           name: 'Scalo Nizza',
           investment: '€105 mln',
-          impact: { it: '+10-15% consolidamento', en: '+10-15% consolidation' }
+          impact: { it: 'Consolidamento e rivalutazione progressiva', en: 'Consolidation and progressive revaluation' }
         }
       ]
     },
