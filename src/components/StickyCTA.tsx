@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { X, TrendingUp, Building2 } from "lucide-react";
+import { X, MessageCircle, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useGlobalScroll } from "@/hooks/useGlobalScroll";
+import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { QuickInvestorLeadDialog, QuickSellerLeadDialog } from "@/components/dialogs";
 
 export const StickyCTA = () => {
