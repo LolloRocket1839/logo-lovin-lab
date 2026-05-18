@@ -866,6 +866,51 @@ export function collectInvestorZoneIssues(
 }
 
 /**
+ * Compact, column-aligned summary of all invalid zones/fields.
+ * One line per issue: `zone-slug  field.path  [code]  message`.
+ * Designed for CI logs where a quick scan of every broken field matters
+ * more than the verbose grouped report.
+ */
+export function formatInvestorZoneSummary(issues: InvestorZoneValidationIssue[]): string {
+  if (issues.length === 0) return '[investorZoneData] ✓ no invalid fields';
+
+  const rows = issues.map((i) => ({
+    zone: i.slug ?? i.zoneId ?? (i.index !== null ? `#${i.index}` : '<root>'),
+    path: i.path,
+    code: i.code,
+    message: i.message,
+    received: i.received,
+  }));
+
+  const widths = {
+    zone: Math.max(4, ...rows.map((r) => r.zone.length)),
+    path: Math.max(5, ...rows.map((r) => r.path.length)),
+    code: Math.max(4, ...rows.map((r) => r.code.length)),
+  };
+
+  const byZone = new Map<string, number>();
+  for (const r of rows) byZone.set(r.zone, (byZone.get(r.zone) ?? 0) + 1);
+
+  const lines: string[] = [
+    `[investorZoneData] invalid fields report — ${issues.length} issue${issues.length === 1 ? '' : 's'} across ${byZone.size} zone${byZone.size === 1 ? '' : 's'}:`,
+    '',
+    `  ${'ZONE'.padEnd(widths.zone)}  ${'FIELD'.padEnd(widths.path)}  ${'CODE'.padEnd(widths.code)}  MESSAGE`,
+    `  ${'-'.repeat(widths.zone)}  ${'-'.repeat(widths.path)}  ${'-'.repeat(widths.code)}  -------`,
+  ];
+  for (const r of rows) {
+    lines.push(
+      `  ${r.zone.padEnd(widths.zone)}  ${r.path.padEnd(widths.path)}  ${r.code.padEnd(widths.code)}  ${r.message}${r.received !== null ? `  (received: ${r.received})` : ''}`,
+    );
+  }
+  lines.push('');
+  lines.push('  Per-zone totals:');
+  for (const [zone, count] of [...byZone.entries()].sort((a, b) => b[1] - a[1])) {
+    lines.push(`    · ${zone.padEnd(widths.zone)}  ${count} invalid field${count === 1 ? '' : 's'}`);
+  }
+  return lines.join('\n');
+}
+
+/**
  * Formats issues into a human-readable, grouped report (by zone slug).
  * Used both by the throwing validator and the build/CI script.
  */
