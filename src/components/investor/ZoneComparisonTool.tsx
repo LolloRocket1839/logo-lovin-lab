@@ -159,16 +159,6 @@ export const ZoneComparisonTool = ({
       getValue: (z: InvestorZone) => `€${formatPrice(z.pricePerSqm.avg)}${t.perSqm}`,
     },
     {
-      key: "grossYield",
-      label: t.grossYield,
-      getValue: (z: InvestorZone) => formatYield(z.grossYield.min, z.grossYield.max),
-    },
-    {
-      key: "netYield",
-      label: t.netYield,
-      getValue: (z: InvestorZone) => formatYield(z.netYield.min, z.netYield.max),
-    },
-    {
       key: "vacancy",
       label: t.vacancy,
       getValue: (z: InvestorZone) => `${z.vacancyRate.min}-${z.vacancyRate.max}%`,
@@ -177,16 +167,6 @@ export const ZoneComparisonTool = ({
       key: "trend",
       label: t.trend,
       getValue: (z: InvestorZone) => `+${z.variation2024}%`,
-    },
-    {
-      key: "roomRent",
-      label: t.roomRent,
-      getValue: (z: InvestorZone) => `€${z.rentRoom.min}-${z.rentRoom.max}${t.perMonth}`,
-    },
-    {
-      key: "aptRent",
-      label: t.aptRent,
-      getValue: (z: InvestorZone) => `€${z.rentApartment.min}-${z.rentApartment.max}${t.perMonth}`,
     },
     {
       key: "demand",
