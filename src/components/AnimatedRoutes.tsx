@@ -39,6 +39,7 @@ const InvestorZonePage = lazy(() => import("@/pages/InvestorZonePage"));
 const Auth = lazy(() => import("@/pages/Auth"));
 const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
 const LeadsAdmin = lazy(() => import("@/pages/admin/Leads"));
+const SeoAdmin = lazy(() => import("@/pages/admin/Seo"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
@@ -110,6 +111,7 @@ export const AnimatedRoutes = () => {
             <Route path="/auth" element={<Auth />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="/admin/leads" element={<LeadsAdmin />} />
+            <Route path="/admin/seo" element={<SeoAdmin />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
