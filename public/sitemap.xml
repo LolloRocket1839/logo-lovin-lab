@@ -2,28 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- AI Knowledge Base Files -->
-  <url>
-    <loc>https://junglerent.it/llms.txt</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://junglerent.it/llms-full.txt</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://junglerent.it/ai-assistant-info.txt</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
+
+  <!-- Note: /llms.txt, /llms-full.txt, /ai-assistant-info.txt are static AI knowledge files
+       exposed via robots.txt and llms.txt discovery, not HTML routes — kept out of sitemap. -->
 
   <!-- Homepage -->
   <url>
@@ -1292,13 +1273,57 @@
 
   <!-- Terms and Conditions -->
   <url>
-    <loc>https://junglerent.it/termini-condizioni</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://junglerent.it/termini-e-condizioni</loc>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-condizioni" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/terms-conditions" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/termini-condizioni" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/termini-e-condizioni" />
+  </url>
+
+  <!-- Terms and Conditions (EN) -->
+  <url>
+    <loc>https://junglerent.it/terms</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/termini-e-condizioni" />
+  </url>
+
+  <!-- About (EN) -->
+  <url>
+    <loc>https://junglerent.it/about</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/chi-siamo" />
+  </url>
+
+  <!-- Investors (EN) -->
+  <url>
+    <loc>https://junglerent.it/investors</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
+  </url>
+
+  <!-- Invest (canonical redirects to /investitori) -->
+  <url>
+    <loc>https://junglerent.it/invest</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
   </url>
 
   <!-- FAQ -->
