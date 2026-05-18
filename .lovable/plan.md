@@ -1,68 +1,33 @@
-# Far convertire davvero gli investitori
+## Obiettivo
+Attivare le notifiche WhatsApp istantanee a Lorenzo quando arriva un nuovo lead investitore, usando CallMeBot (gratis, nessun account).
 
-**Diagnosi**: l'infrastruttura email funziona già (DB + `lead-notification` a `ADMIN_NOTIFICATION_EMAIL` + conferma al lead via dominio `notify.junglerent.it`). Non serve Gmail. I problemi reali sono due:
+## Stato attuale
+- Edge function `supabase/functions/notify-investor-whatsapp/index.ts` — già creata e deployata
+- `src/hooks/useLeadCapture.ts` — già la invoca in parallelo a `send-transactional-email` quando `leadType === "investor"`
+- `QuickInvestorLeadDialog` e `InvestorExitIntentPopup` — già aggiornati col post-submit "Talk to Lorenzo"
+- Mancano solo 2 secrets per chiudere il cerchio
 
-1. **Tu vieni avvisato solo via email** → reazione lenta → il lead si raffredda.
-2. **Dopo il submit il lead viene "parcheggiato"** in una thank-you page → nessuna conversazione immediata.
+## Passi
 
-Il piano risolve entrambi senza toccare i contenuti delle pagine.
+### 1. Setup CallMeBot (lato Lorenzo, 2 minuti)
+- Salvare in rubrica `+34 644 51 95 23`
+- Inviare via WhatsApp: `I allow callmebot to send me messages`
+- Attendere risposta con `APIKEY` numerica
 
----
+### 2. Salvare i secrets in Lovable Cloud
+- `WHATSAPP_NOTIFY_NUMBER` → numero E.164 di Lorenzo (es. `+393331234567`)
+- `CALLMEBOT_API_KEY` → la APIKEY ricevuta da CallMeBot
 
-## 1. Notifica WhatsApp istantanea a Lorenzo (oltre all'email)
+### 3. Verifica end-to-end
+- Test della edge function con `supabase--curl_edge_functions` passando un payload fittizio
+- Controllo log via `supabase--edge_function_logs` per confermare HTTP 200 da CallMeBot
+- Submit di prova dal form `QuickInvestorLeadDialog` in preview per validare il flusso completo (DB insert + email admin + WhatsApp)
 
-Quando arriva un lead investitore, oltre all'email parte un messaggio WhatsApp al numero di Lorenzo con: tipo lead, email, ticket, country, fonte, link mailto e link WhatsApp pre-compilato per ricontattare il lead in un tap.
+## Dettagli tecnici
+- La function legge `WHATSAPP_NOTIFY_NUMBER` e `CALLMEBOT_API_KEY` da `Deno.env`
+- Chiama `https://api.callmebot.com/whatsapp.php?phone=<num>&text=<urlencoded>&apikey=<key>`
+- Il messaggio include: email lead, nome, ticket size, source, UTM
+- Se i secrets mancano la function logga warning e ritorna 200 (non blocca il flusso lead)
 
-**Come**: nuova edge function `notify-investor-whatsapp` chiamata in parallelo a `send-transactional-email` dentro `useLeadCapture.ts` quando `leadType === "investor"`.
-
-**Provider WhatsApp** — due opzioni, scegli tu:
-- **CallMeBot** (gratis, 2 min di setup): mandi un messaggio "I allow callmebot to send me messages" al loro numero, ricevi una API key. Zero costi, zero account. Limite ~rate-limited ma ampiamente sufficiente per i volumi attuali. **Consigliato per partire.**
-- **Twilio WhatsApp Business API**: serio, scalabile, ma richiede account Twilio + numero approvato + ~$0.005/msg. Sostituibile in futuro senza toccare il resto del codice.
-
-Le credenziali (numero + API key) vanno nei secrets backend; mai nel frontend.
-
-## 2. Allineare l'exit-intent investitore alla pipeline unificata
-
-`InvestorExitIntentPopup.tsx` oggi chiama **solo Formspree** → bypassa DB e email transazionali → quei lead non triggherano notifica admin né conferma al lead. Lo faccio passare per `useLeadCapture()` come gli altri form. Zero impatto visivo.
-
-## 3. Handoff immediato lead → Lorenzo dopo il submit
-
-Oggi: submit → toast → chiusura dialog → thank-you page. Il lead esce dal funnel.
-
-Nuovo flusso (dentro `QuickInvestorLeadDialog` e `InvestorExitIntentPopup`, senza cambiare i contenuti delle pagine):
-dopo submit OK il dialog **non si chiude subito**, mostra uno step "fatto, ora parla con Lorenzo" con:
-- bottone primario WhatsApp pre-compilato (`wa.me/<numero>?text=Ciao Lorenzo, ho appena lasciato la mia email per investire...`)
-- bottone secondario "Prenota call 15 min" (link Cal.com / Calendly da incollare — dimmelo o lo lascio placeholder)
-- micro-testo: "Lorenzo risponde di persona, entro poche ore"
-
-Risultato: ogni form compilato ha la possibilità di diventare una conversazione attiva nello stesso secondo.
-
-## 4. Mini-rafforzamenti di conversione (no contenuti nuovi)
-
-Solo elementi che riducono attrito:
-- Nel `QuickInvestorLeadDialog`: aggiungere sopra al campo email un singolo line di micro-social-proof dinamico ("Lorenzo ha già parlato con N investitori questo mese" — N letto dalla edge function `get-investor-interest-count` che esiste già).
-- Sotto al pulsante submit: una riga "Risposta entro 24h · WhatsApp diretto · Nessun impegno".
-- Sul bottone CTA: cambiare il testo da "Invia" a "Parla con Lorenzo" per coerenza con la Core rule del progetto.
-
-Nessun popup nuovo, nessuna sezione nuova.
-
----
-
-## Dettagli tecnici (per riferimento)
-
-**File toccati**:
-- `supabase/functions/notify-investor-whatsapp/index.ts` *(nuovo)* — input validation con Zod (email, source, leadType="investor", optional name/ticket/country), CORS, chiama CallMeBot/Twilio, logga su `email_send_log` con `template_name="whatsapp-admin-alert"` per tracking unificato.
-- `src/hooks/useLeadCapture.ts` — se `leadType === "investor"`, fire-and-forget invoke a `notify-investor-whatsapp`.
-- `src/components/investor/InvestorExitIntentPopup.tsx` — rimpiazza chiamata diretta Formspree con `useLeadCapture()`.
-- `src/components/dialogs/QuickInvestorLeadDialog.tsx` + `InvestorExitIntentPopup.tsx` — nuovo step post-submit "WhatsApp + book a call" prima della chiusura, micro-social-proof in cima.
-- Secrets nuovi: `WHATSAPP_NOTIFY_NUMBER` (numero Lorenzo formato E.164) e `CALLMEBOT_API_KEY` (oppure `TWILIO_*` se scegli Twilio).
-
-**Niente migrations**, niente cambi RLS, niente cambi al copy SEO delle pagine.
-
----
-
-## Cosa mi serve da te per partire
-
-1. **Provider WhatsApp**: CallMeBot (gratis, parto subito) o Twilio (devi creare account)?
-2. **Numero WhatsApp di Lorenzo** in formato `+39...` (lo metto nei secrets, non in codice).
-3. **Link per "Book a call 15 min"** (Cal.com / Calendly / altro). Se non ce l'hai ancora, lascio fuori il bottone e usiamo solo WhatsApp.
+## Fallback / evoluzione futura
+- Se in futuro vuoi anche scrivere automaticamente ai lead (non solo a Lorenzo), si passa a Twilio WhatsApp Business via connettore Lovable — nessuna riscrittura, basta sostituire la chiamata HTTP dentro la stessa edge function
