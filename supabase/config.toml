@@ -48,3 +48,6 @@ verify_jwt = false
 
 [functions.check-url-status]
 verify_jwt = false
+
+[functions.notify-investor-whatsapp]
+verify_jwt = false

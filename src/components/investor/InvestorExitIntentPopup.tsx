@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, MessageCircle, Mail, Clock, Shield } from "lucide-react";
+import { X, MessageCircle, Mail, Clock, Shield, CheckCircle2 } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,7 @@ import { useAnalytics } from "@/hooks/useAnalytics";
 import { toast } from "sonner";
 import { openWhatsApp, openEmail, CONTACTS, MESSAGES } from "@/constants";
 import { FORMSPREE_ENDPOINTS } from "@/constants/formspree";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 
 interface InvestorExitIntentPopupProps {
   source?: string;
@@ -17,9 +18,11 @@ interface InvestorExitIntentPopupProps {
 export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorExitIntentPopupProps) => {
   const { t, i18n } = useTranslation();
   const { trackEvent } = useAnalytics();
+  const { submitLead } = useLeadCapture();
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
 
   const showPopup = useCallback(() => {
@@ -109,7 +112,7 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast.error(t("investorExitIntent.emailError"));
       return;
@@ -117,31 +120,38 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
 
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch(FORMSPREE_ENDPOINTS.quickInvestor, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          source: `investor_exit_intent_${source}`,
-          language: currentLang,
-          timestamp: new Date().toISOString(),
-        }),
-      });
+    const result = await submitLead(
+      {
+        email: email.trim(),
+        source: `investor_exit_intent_${source}`,
+        leadType: "investor",
+        metadata: { language: currentLang },
+      },
+      {
+        endpoint: FORMSPREE_ENDPOINTS.quickInvestor,
+        subject: `🔥 INVESTOR LEAD (exit-intent) - ${email.trim()}`,
+        extraFields: { language: currentLang },
+      },
+    );
 
-      if (response.ok) {
-        trackEvent("investor_exit_intent_form_submit", { source, email_provided: true });
-        toast.success(t("investorExitIntent.success"));
-        handleClose();
-      } else {
-        toast.error(t("investorExitIntent.errorSubmit"));
-      }
-    } catch (error) {
+    setIsSubmitting(false);
+
+    if (result.success) {
+      trackEvent("investor_exit_intent_form_submit", { source, email_provided: true });
+      setSubmitted(true);
+    } else {
       toast.error(t("investorExitIntent.errorSubmit"));
-    } finally {
-      setIsSubmitting(false);
     }
   };
+
+  const handoffWhatsappHref = (() => {
+    const phone = CONTACTS.investor.phone.replace(/[^\d]/g, "");
+    const msg =
+      currentLang === "it"
+        ? `Ciao Lorenzo, ho appena lasciato la mia email (${email.trim()}) per investire con Jungle Rent. Vorrei capire i prossimi passi.`
+        : `Hi Lorenzo, I just left my email (${email.trim()}) to invest with Jungle Rent. I'd like to understand the next steps.`;
+    return `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+  })();
 
   return (
     <AnimatePresence>
@@ -177,94 +187,133 @@ export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorE
 
             {/* Content */}
             <div className="p-6 md:p-8">
-              {/* Badge */}
-              <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                <img 
-                  src={jungleRentLogo} 
-                  alt="" 
-                  className="w-8 h-8 object-contain" 
-                  aria-hidden="true"
-                />
-                {t("investorExitIntent.badge")}
-              </span>
-              </div>
-
-              {/* Title */}
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2 pr-8">
-                {t("investorExitIntent.title")}
-              </h2>
-
-              {/* Subtitle */}
-              <p className="text-muted-foreground mb-6">
-                {t("investorExitIntent.subtitle")}
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="space-y-3 mb-6">
-                <Button
-                  onClick={handleWhatsApp}
-                  size="lg"
-                  variant="premium"
-                  className="w-full py-6 text-base group shadow-lg"
-                >
-                  <MessageCircle className="mr-2 w-5 h-5" />
-                  {t("investorExitIntent.whatsappCTA")}
-                </Button>
-
-                <Button
-                  onClick={handleEmail}
-                  size="lg"
-                  variant="outline"
-                  className="w-full py-6 text-base"
-                >
-                  <Mail className="mr-2 w-5 h-5" />
-                  {t("investorExitIntent.emailCTA")}
-                </Button>
-              </div>
-
-              {/* Divider */}
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex-1 h-px bg-border/50" />
-                <span className="text-xs text-muted-foreground uppercase tracking-wide">
-                  {t("investorExitIntent.orSeparator")}
-                </span>
-                <div className="flex-1 h-px bg-border/50" />
-              </div>
-
-              {/* Email form */}
-              <form onSubmit={handleFormSubmit} className="space-y-3">
-                <Input
-                  type="email"
-                  name="email"
-                  autoComplete="email"
-                  placeholder={t("investorExitIntent.emailPlaceholder")}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="h-12"
-                  disabled={isSubmitting}
-                />
-                <Button
-                  type="submit"
-                  variant="secondary"
-                  className="w-full h-12"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? t("investorExitIntent.submitting") : t("investorExitIntent.submitCTA")}
-                </Button>
-              </form>
-
-              {/* Trust indicators */}
-              <div className="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-border/30">
-                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                  <Shield className="w-3.5 h-3.5" />
-                  <span>{t("investorExitIntent.trust1")}</span>
+              {submitted ? (
+                <div className="text-center py-2">
+                  <div className="mx-auto mb-4 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-7 h-7 text-primary" />
+                  </div>
+                  <h2 className="text-2xl font-display font-bold text-foreground mb-2">
+                    {currentLang === "it" ? "Email ricevuta ✓" : "Email received ✓"}
+                  </h2>
+                  <p className="text-muted-foreground mb-6">
+                    {currentLang === "it"
+                      ? "Lorenzo ti risponderà a breve. Vuoi anticipare? Scrivigli ora su WhatsApp — risponde di persona."
+                      : "Lorenzo will get back to you shortly. Want to skip the queue? Message him on WhatsApp now — he replies personally."}
+                  </p>
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="premium"
+                    className="w-full py-6 text-base shadow-lg"
+                    onClick={() =>
+                      trackEvent("investor_exit_intent_whatsapp_handoff", { source })
+                    }
+                  >
+                    <a href={handoffWhatsappHref} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="mr-2 w-5 h-5" />
+                      {currentLang === "it" ? "Parla con Lorenzo ora" : "Talk to Lorenzo now"}
+                    </a>
+                  </Button>
+                  <button
+                    type="button"
+                    onClick={handleClose}
+                    className="mt-3 text-xs text-muted-foreground hover:text-foreground underline-offset-2 hover:underline"
+                  >
+                    {currentLang === "it" ? "Lo farò più tardi" : "I'll do it later"}
+                  </button>
                 </div>
-                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                  <Clock className="w-3.5 h-3.5" />
-                  <span>{t("investorExitIntent.trust2")}</span>
-                </div>
-              </div>
+              ) : (
+                <>
+                  {/* Badge */}
+                  <div className="flex items-center gap-2 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                    <img
+                      src={jungleRentLogo}
+                      alt=""
+                      className="w-8 h-8 object-contain"
+                      aria-hidden="true"
+                    />
+                    {t("investorExitIntent.badge")}
+                  </span>
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2 pr-8">
+                    {t("investorExitIntent.title")}
+                  </h2>
+
+                  {/* Subtitle */}
+                  <p className="text-muted-foreground mb-6">
+                    {t("investorExitIntent.subtitle")}
+                  </p>
+
+                  {/* CTA Buttons */}
+                  <div className="space-y-3 mb-6">
+                    <Button
+                      onClick={handleWhatsApp}
+                      size="lg"
+                      variant="premium"
+                      className="w-full py-6 text-base group shadow-lg"
+                    >
+                      <MessageCircle className="mr-2 w-5 h-5" />
+                      {t("investorExitIntent.whatsappCTA")}
+                    </Button>
+
+                    <Button
+                      onClick={handleEmail}
+                      size="lg"
+                      variant="outline"
+                      className="w-full py-6 text-base"
+                    >
+                      <Mail className="mr-2 w-5 h-5" />
+                      {t("investorExitIntent.emailCTA")}
+                    </Button>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="flex-1 h-px bg-border/50" />
+                    <span className="text-xs text-muted-foreground uppercase tracking-wide">
+                      {t("investorExitIntent.orSeparator")}
+                    </span>
+                    <div className="flex-1 h-px bg-border/50" />
+                  </div>
+
+                  {/* Email form */}
+                  <form onSubmit={handleFormSubmit} className="space-y-3">
+                    <Input
+                      type="email"
+                      name="email"
+                      autoComplete="email"
+                      placeholder={t("investorExitIntent.emailPlaceholder")}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="h-12"
+                      disabled={isSubmitting}
+                    />
+                    <Button
+                      type="submit"
+                      variant="secondary"
+                      className="w-full h-12"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? t("investorExitIntent.submitting") : t("investorExitIntent.submitCTA")}
+                    </Button>
+                  </form>
+
+                  {/* Trust indicators */}
+                  <div className="flex items-center justify-center gap-4 mt-6 pt-4 border-t border-border/30">
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <Shield className="w-3.5 h-3.5" />
+                      <span>{t("investorExitIntent.trust1")}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <Clock className="w-3.5 h-3.5" />
+                      <span>{t("investorExitIntent.trust2")}</span>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
         </>

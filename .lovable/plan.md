@@ -1,56 +1,68 @@
-## Obiettivo
+# Far convertire davvero gli investitori
 
-Allineare le CTA tra `/` (homepage) e `/investitori`: stessa gerarchia (primario WhatsApp → secondario form), stesso microcopy ("Parla con Lorenzo" / "Talk to Lorenzo"), stesso allineamento e stati hover/focus visivamente coerenti.
+**Diagnosi**: l'infrastruttura email funziona già (DB + `lead-notification` a `ADMIN_NOTIFICATION_EMAIL` + conferma al lead via dominio `notify.junglerent.it`). Non serve Gmail. I problemi reali sono due:
 
-## Stato attuale (cosa diverge)
+1. **Tu vieni avvisato solo via email** → reazione lenta → il lead si raffredda.
+2. **Dopo il submit il lead viene "parcheggiato"** in una thank-you page → nessuna conversazione immediata.
 
-| Superficie | CTA primaria | CTA secondaria | Stile | Focus ring |
-|---|---|---|---|---|
-| Homepage `ImmersiveHero` | `t('hero.startInvesting')` (A/B test `hero_cta_v2`) → dialog | Link "Sei un proprietario" | `<button>` custom | nessuno esplicito |
-| Homepage `InvestorSection` (desktop) | "Parla con Lorenzo" (WhatsApp) | "Investi ora" (dialog) + "Prenota call" (Calendly) | shadcn `<Button>` | default |
-| Homepage `StickyCTA` | "Investi" (dialog) | "Vendi casa" + dismiss | shadcn `<Button>` | default |
-| `/investitori` `HeroSection` | "Parla con Lorenzo" (WhatsApp) | "Richiedi info" (scroll form) | `<button>` custom uppercase tracking-widest | nessuno esplicito |
-| `/investitori` `QuickContactBar` | "WhatsApp" pill | "Email" pill | `<button>` custom rounded-full | nessuno esplicito |
+Il piano risolve entrambi senza toccare i contenuti delle pagine.
 
-Divergenze chiave: gerarchia diversa (homepage spinge dialog "Investi"; /investitori spinge WhatsApp), microcopy inconsistente, alcuni `<button>` non hanno `focus-visible:ring`, allineamento testo CTA varia (uppercase vs. sentence case).
+---
 
-## Decisioni di design
+## 1. Notifica WhatsApp istantanea a Lorenzo (oltre all'email)
 
-1. **Gerarchia unica** su entrambe le pagine:
-   - **Primaria** = WhatsApp a Lorenzo ("Parla con Lorenzo" / "Talk to Lorenzo")
-   - **Secondaria** = form/dialog di richiesta info ("Richiedi info" / "Request info")
-   - Eventuale terziaria (Calendly / "Vendi casa") rimane ma con peso visivo minore (ghost/link).
-2. **Microcopy** = chiavi i18n condivise (`cta.talkToLorenzo`, `cta.requestInfo`) usate da hero homepage, InvestorSection, HeroSection /investitori, QuickContactBar, StickyCTA. Sentence case (eccezione tedesco), senza uppercase tracking-widest.
-3. **Hierarchy visiva** = shadcn `<Button>` variants:
-   - Primaria: `variant="default" size="lg"` (sfondo `primary`, testo `primary-foreground`)
-   - Secondaria: `variant="outline" size="lg"` (border `primary/30`, hover `bg-primary/5`)
-   - Terziaria: `variant="ghost"` o link `text-primary underline-offset-4 hover:underline`
-4. **Stati hover/focus uniformi** = lo `<Button>` shadcn già porta `focus-visible:ring-2 ring-ring ring-offset-2`. I `<button>` custom in HeroSection investitori, QuickContactBar e ImmersiveHero vanno sostituiti con `<Button>` (o, dove serve preservare il layout swiss-frame, aggiungere esplicitamente `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors`).
-5. **Allineamento** = su tutte le superfici, in stack verticale su mobile (`w-full`), in riga orizzontale `flex flex-row gap-3` da `sm:` in su; CTA primaria sempre prima a sinistra (o sopra su mobile).
-6. **A/B test `hero_cta_v2`** attualmente cambia la label. Lo conservo solo come label-variant *interno alla CTA primaria* ("Parla con Lorenzo" vs "Parla con Lorenzo · risposta in 24h"), per non perdere il dato in corso, ma la gerarchia visiva resta uguale tra A e B. Chiedo conferma se invece l'A/B può essere ritirato.
+Quando arriva un lead investitore, oltre all'email parte un messaggio WhatsApp al numero di Lorenzo con: tipo lead, email, ticket, country, fonte, link mailto e link WhatsApp pre-compilato per ricontattare il lead in un tap.
 
-## File da modificare
+**Come**: nuova edge function `notify-investor-whatsapp` chiamata in parallelo a `send-transactional-email` dentro `useLeadCapture.ts` quando `leadType === "investor"`.
 
-- `src/i18n/locales/investor/{it,en,...}.json` (+ eventuali file globali) — aggiungere chiavi condivise `cta.talkToLorenzo`, `cta.requestInfo`, `cta.talkToLorenzoSubcopy`. Sync IT → EN → 6 locali residue.
-- `src/components/innovative/ImmersiveHero.tsx` — sostituire `<button>` custom con `<Button>` shadcn, primario WhatsApp, secondario dialog form; conservare hook A/B.
-- `src/components/investitori/HeroSection.tsx` — rimuovere uppercase tracking-widest sulle due CTA, passare a `<Button>` shadcn `default` + `outline`, stack mobile/desktop coerente.
-- `src/components/investitori/QuickContactBar.tsx` — pill → `<Button>` shadcn `size="sm"` variants `default` + `outline` rounded-full (preservato), microcopy unificato.
-- `src/components/sections/InvestorSection/InvestorSectionDesktop.tsx` + `InvestorSectionMobile.tsx` — riordinare CTA: primaria "Parla con Lorenzo", secondaria "Richiedi info" (dialog esistente), Calendly come ghost.
-- `src/components/StickyCTA.tsx` — primaria "Parla con Lorenzo" (WhatsApp), secondaria "Vendi casa" outline, dismiss invariato.
+**Provider WhatsApp** — due opzioni, scegli tu:
+- **CallMeBot** (gratis, 2 min di setup): mandi un messaggio "I allow callmebot to send me messages" al loro numero, ricevi una API key. Zero costi, zero account. Limite ~rate-limited ma ampiamente sufficiente per i volumi attuali. **Consigliato per partire.**
+- **Twilio WhatsApp Business API**: serio, scalabile, ma richiede account Twilio + numero approvato + ~$0.005/msg. Sostituibile in futuro senza toccare il resto del codice.
 
-## Out of scope
+Le credenziali (numero + API key) vanno nei secrets backend; mai nel frontend.
 
-- Nessun cambio a Footer/Navigation, contenuti delle sezioni intermedie, dialog interni.
-- Nessun cambio di routing, RLS, analytics events: i `trackEvent` esistenti restano (rinominati solo se la sorgente cambia semantica).
-- Nessun nuovo asset visivo.
+## 2. Allineare l'exit-intent investitore alla pipeline unificata
 
-## Dettagli tecnici
+`InvestorExitIntentPopup.tsx` oggi chiama **solo Formspree** → bypassa DB e email transazionali → quei lead non triggherano notifica admin né conferma al lead. Lo faccio passare per `useLeadCapture()` come gli altri form. Zero impatto visivo.
 
-- Tokens: solo `bg-primary`, `text-primary-foreground`, `border-primary/30`, `bg-primary/5`, `ring-ring`. Niente colori arbitrari.
-- Focus ring: `focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background`.
-- Microcopy IT (sentence case): "Parla con Lorenzo", "Richiedi info". EN: "Talk to Lorenzo", "Request info". DE mantiene capitalization sostantivi: "Mit Lorenzo sprechen", "Infos anfordern".
-- `hero_cta_v2` A/B: la variante B aggiunge solo subcopy `"Risposta entro 24h"` sotto la CTA primaria, label uguale.
+## 3. Handoff immediato lead → Lorenzo dopo il submit
 
-## Domanda aperta
+Oggi: submit → toast → chiusura dialog → thank-you page. Il lead esce dal funnel.
 
-L'A/B test `hero_cta_v2` è ancora in raccolta dati o posso ritirarlo e usare una sola label? Procedo conservandolo come label-variant minore se non specifichi diversamente.
+Nuovo flusso (dentro `QuickInvestorLeadDialog` e `InvestorExitIntentPopup`, senza cambiare i contenuti delle pagine):
+dopo submit OK il dialog **non si chiude subito**, mostra uno step "fatto, ora parla con Lorenzo" con:
+- bottone primario WhatsApp pre-compilato (`wa.me/<numero>?text=Ciao Lorenzo, ho appena lasciato la mia email per investire...`)
+- bottone secondario "Prenota call 15 min" (link Cal.com / Calendly da incollare — dimmelo o lo lascio placeholder)
+- micro-testo: "Lorenzo risponde di persona, entro poche ore"
+
+Risultato: ogni form compilato ha la possibilità di diventare una conversazione attiva nello stesso secondo.
+
+## 4. Mini-rafforzamenti di conversione (no contenuti nuovi)
+
+Solo elementi che riducono attrito:
+- Nel `QuickInvestorLeadDialog`: aggiungere sopra al campo email un singolo line di micro-social-proof dinamico ("Lorenzo ha già parlato con N investitori questo mese" — N letto dalla edge function `get-investor-interest-count` che esiste già).
+- Sotto al pulsante submit: una riga "Risposta entro 24h · WhatsApp diretto · Nessun impegno".
+- Sul bottone CTA: cambiare il testo da "Invia" a "Parla con Lorenzo" per coerenza con la Core rule del progetto.
+
+Nessun popup nuovo, nessuna sezione nuova.
+
+---
+
+## Dettagli tecnici (per riferimento)
+
+**File toccati**:
+- `supabase/functions/notify-investor-whatsapp/index.ts` *(nuovo)* — input validation con Zod (email, source, leadType="investor", optional name/ticket/country), CORS, chiama CallMeBot/Twilio, logga su `email_send_log` con `template_name="whatsapp-admin-alert"` per tracking unificato.
+- `src/hooks/useLeadCapture.ts` — se `leadType === "investor"`, fire-and-forget invoke a `notify-investor-whatsapp`.
+- `src/components/investor/InvestorExitIntentPopup.tsx` — rimpiazza chiamata diretta Formspree con `useLeadCapture()`.
+- `src/components/dialogs/QuickInvestorLeadDialog.tsx` + `InvestorExitIntentPopup.tsx` — nuovo step post-submit "WhatsApp + book a call" prima della chiusura, micro-social-proof in cima.
+- Secrets nuovi: `WHATSAPP_NOTIFY_NUMBER` (numero Lorenzo formato E.164) e `CALLMEBOT_API_KEY` (oppure `TWILIO_*` se scegli Twilio).
+
+**Niente migrations**, niente cambi RLS, niente cambi al copy SEO delle pagine.
+
+---
+
+## Cosa mi serve da te per partire
+
+1. **Provider WhatsApp**: CallMeBot (gratis, parto subito) o Twilio (devi creare account)?
+2. **Numero WhatsApp di Lorenzo** in formato `+39...` (lo metto nei secrets, non in codice).
+3. **Link per "Book a call 15 min"** (Cal.com / Calendly / altro). Se non ce l'hai ancora, lascio fuori il bottone e usiamo solo WhatsApp.
