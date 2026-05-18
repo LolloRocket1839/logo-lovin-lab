@@ -81,7 +81,7 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
          transition: transform 0.2s ease;
          ${isSelected ? 'transform: scale(1.15); z-index: 1000 !important;' : ''}
        ">
-         ${yieldValue}%
+         ${zone.zone.charAt(0)}
          ${hasRenewal ? '<span style="position:absolute;top:-6px;right:-6px;font-size:10px;background:white;border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.2);">🏗️</span>' : ''}
         ${selectionBadge}
        </div>
