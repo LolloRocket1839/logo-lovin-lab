@@ -26,24 +26,21 @@ interface MapFilters {
    zones?: InvestorZone[];
    lang: 'it' | 'en';
    onZoneClick?: (zone: InvestorZone) => void;
-  selectedZoneIds?: string[];
-   showYieldMode?: 'gross' | 'net';
+   selectedZoneIds?: string[];
  }
  
- // Yield color scale
- const getYieldColor = (yieldMax: number): string => {
-   if (yieldMax >= 6.5) return '#16a34a'; // green-600 - excellent
-   if (yieldMax >= 5.5) return '#22c55e'; // green-500 - high
-   if (yieldMax >= 5) return '#eab308';   // yellow-500 - medium
-   return '#f97316';                       // orange-500 - low
+ type DemandKey = 'very_high' | 'high' | 'medium' | 'low';
+
+ // Demand color scale (replaces previous yield-based scale)
+ const DEMAND_COLOR: Record<DemandKey, string> = {
+   very_high: '#16a34a',
+   high: '#22c55e',
+   medium: '#eab308',
+   low: '#f97316',
  };
- 
- const getYieldLabel = (yieldMax: number, lang: 'it' | 'en'): string => {
-   if (yieldMax >= 6.5) return lang === 'it' ? 'Eccellente' : 'Excellent';
-   if (yieldMax >= 5.5) return lang === 'it' ? 'Alto' : 'High';
-   if (yieldMax >= 5) return lang === 'it' ? 'Medio' : 'Medium';
-   return lang === 'it' ? 'Basso' : 'Low';
- };
+
+ const getDemandColor = (demand: string): string =>
+   DEMAND_COLOR[(demand as DemandKey)] || '#f97316';
  
  const getDemandLabel = (demand: string, lang: 'it' | 'en'): string => {
    const labels: Record<string, { it: string; en: string }> = {
