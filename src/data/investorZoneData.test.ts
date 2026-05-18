@@ -6,6 +6,8 @@ import {
   validateInvestorZones,
   collectInvestorZoneIssues,
   clearInvestorZoneValidationCache,
+  formatInvestorZoneReport,
+  formatInvestorZoneSummary,
 } from './investorZoneData';
 
 describe('investorZonesSchema', () => {
@@ -315,5 +317,72 @@ describe('collectInvestorZoneIssues — caching', () => {
     const second = collectInvestorZoneIssues(dataset);
     expect(second).not.toBe(first);
     expect(second).toEqual(first);
+  });
+});
+
+/**
+ * Snapshot tests guarding the human-readable validator output.
+ * Any change to issue paths, codes, messages, or report formatting
+ * will surface here as a regression instead of silently shipping.
+ *
+ * Fixture is built from real zones (cloned) so snapshots stay stable
+ * across edits to unrelated zones — we only break specific fields.
+ */
+describe('investorZoneData — error report snapshots', () => {
+  const makeBrokenFixture = () => {
+    const base = JSON.parse(JSON.stringify(investorZones.slice(0, 2))) as Array<
+      Record<string, unknown>
+    >;
+    // Zone 0: drop a required string field.
+    delete (base[0] as { investorNote?: string }).investorNote;
+    // Zone 1: wrong type on nested coordinates.lat.
+    (base[1] as { coordinates: { lat: unknown } }).coordinates.lat = 'not-a-number';
+    return base;
+  };
+
+  it('collectInvestorZoneIssues() returns a stable issue shape', () => {
+    clearInvestorZoneValidationCache();
+    const issues = collectInvestorZoneIssues(makeBrokenFixture());
+    // Strip volatile fields (zoneId / zoneName / slug come from real data
+    // and we want the snapshot to track *shape* + path + code + message).
+    const normalized = issues
+      .map((i) => ({
+        index: i.index,
+        path: i.path,
+        code: i.code,
+        message: i.message,
+        received: i.received,
+      }))
+      .sort((a, b) =>
+        `${a.index}:${a.path}`.localeCompare(`${b.index}:${b.path}`),
+      );
+    expect(normalized).toMatchSnapshot();
+  });
+
+  it('formatInvestorZoneSummary() output is stable', () => {
+    clearInvestorZoneValidationCache();
+    const issues = collectInvestorZoneIssues(makeBrokenFixture());
+    // Mask zone-identifying tokens so the snapshot is resilient to
+    // edits in the first two zones' slug/name (covered by other tests).
+    const masked = formatInvestorZoneSummary(issues)
+      .replace(new RegExp(investorZones[0].slug, 'g'), '<zone-0-slug>')
+      .replace(new RegExp(investorZones[1].slug, 'g'), '<zone-1-slug>');
+    expect(masked).toMatchSnapshot();
+  });
+
+  it('formatInvestorZoneReport() output is stable', () => {
+    clearInvestorZoneValidationCache();
+    const issues = collectInvestorZoneIssues(makeBrokenFixture());
+    const masked = formatInvestorZoneReport(issues)
+      .replace(new RegExp(investorZones[0].slug, 'g'), '<zone-0-slug>')
+      .replace(new RegExp(investorZones[1].slug, 'g'), '<zone-1-slug>')
+      .replace(new RegExp(investorZones[0].name, 'g'), '<zone-0-name>')
+      .replace(new RegExp(investorZones[1].name, 'g'), '<zone-1-name>');
+    expect(masked).toMatchSnapshot();
+  });
+
+  it('empty-issues output is stable', () => {
+    expect(formatInvestorZoneSummary([])).toMatchSnapshot();
+    expect(formatInvestorZoneReport([])).toMatchSnapshot();
   });
 });

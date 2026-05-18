@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`investorZoneData — error report snapshots > collectInvestorZoneIssues() returns a stable issue shape 1`] = `
+[
+  {
+    "code": "invalid_type",
+    "index": 0,
+    "message": "Required",
+    "path": "investorNote",
+    "received": "undefined",
+  },
+  {
+    "code": "invalid_type",
+    "index": 1,
+    "message": "Expected number, received string",
+    "path": "coordinates.lat",
+    "received": ""not-a-number"",
+  },
+]
+`;
+
+exports[`investorZoneData — error report snapshots > empty-issues output is stable 1`] = `"[investorZoneData] ✓ no invalid fields"`;
+
+exports[`investorZoneData — error report snapshots > empty-issues output is stable 2`] = `"[investorZoneData] ✓ all zones valid"`;
+
+exports[`investorZoneData — error report snapshots > formatInvestorZoneReport() output is stable 1`] = `
+"[investorZoneData] schema validation failed — 2 issues across 2 zones:
+
+▸ <zone-0-name> (<zone-0-slug>)
+    · investorNote  [invalid_type]
+        Required
+        received: undefined
+
+▸ <zone-1-name> (<zone-1-slug>)
+    · coordinates.lat  [invalid_type]
+        Expected number, received string
+        received: "not-a-number""
+`;
+
+exports[`investorZoneData — error report snapshots > formatInvestorZoneSummary() output is stable 1`] = `
+"[investorZoneData] invalid fields report — 2 issues across 2 zones:
+
+  ZONE     FIELD            CODE          MESSAGE
+  -------  ---------------  ------------  -------
+  <zone-0-slug>  investorNote     invalid_type  Required  (received: undefined)
+  <zone-1-slug>   coordinates.lat  invalid_type  Expected number, received string  (received: "not-a-number")
+
+  Per-zone totals:
+    · <zone-0-slug>  1 invalid field
+    · <zone-1-slug>   1 invalid field"
+`;
