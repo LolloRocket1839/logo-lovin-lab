@@ -252,12 +252,12 @@ export const investorZones: InvestorZone[] = [
     seo: {
       it: {
         title: 'Investire al Lingotto Torino | Parco della Salute',
-        description: 'Lingotto Torino: forte crescita +7.8% annuo. Parco della Salute e trasformazione ex FIAT trainano i prezzi.',
+        description: 'Lingotto Torino: trasformazione urbana profonda guidata da Parco della Salute ed ex FIAT. Quartiere in forte crescita strutturale.',
         keywords: ['investimento lingotto torino', 'lingotto parco salute', 'comprare casa lingotto']
       },
       en: {
         title: 'Invest in Lingotto Turin | Parco della Salute',
-        description: 'Lingotto Turin: strong +7.8% yearly growth. Parco della Salute and former FIAT transformation driving prices.',
+        description: 'Lingotto Turin: deep urban transformation led by Parco della Salute and former FIAT site. Neighborhood in strong structural growth.',
         keywords: ['lingotto investment', 'lingotto parco salute', 'buy property lingotto']
       }
     }
