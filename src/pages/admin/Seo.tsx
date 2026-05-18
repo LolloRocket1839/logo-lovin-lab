@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
 import { Navigation } from "@/components/layout/Navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Loader2, Send, ShieldCheck } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Loader2, Send, ShieldCheck, BellRing, RefreshCw } from "lucide-react";
 
 const ADMIN_EMAILS = ["lorenzo.onijoseph@gmail.com"];
+
+interface GscSnapshot {
+  id: string;
+  captured_at: string;
+  totals: { errors: number; warnings: number; submitted: number };
+  alerts: Array<{ severity: "info" | "warn" | "critical"; type: string; message: string }>;
+  alert_sent: boolean;
+}
 
 const SeoAdmin = () => {
   const { user, loading: authLoading } = useAuth();
