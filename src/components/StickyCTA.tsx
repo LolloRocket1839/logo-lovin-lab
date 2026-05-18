@@ -14,7 +14,6 @@ export const StickyCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
