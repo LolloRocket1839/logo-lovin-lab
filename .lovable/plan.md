@@ -1,70 +1,56 @@
 ## Obiettivo
 
-Eliminare qualsiasi **percentuale di rendimento** (es. "7‑9%", "8,34%", "Rendimento lordo 6‑7%") da tutte le superfici pubbliche del sito. Restano consentite le percentuali NON di rendimento (commissioni agenzia 3‑4%, risparmio studenti 25%, margine valutativo ±5‑12%, crescita prezzi +15‑25%, vacancy/occupancy), perché non sono promesse di ritorno sull'investimento.
+Allineare le CTA tra `/` (homepage) e `/investitori`: stessa gerarchia (primario WhatsApp → secondario form), stesso microcopy ("Parla con Lorenzo" / "Talk to Lorenzo"), stesso allineamento e stati hover/focus visivamente coerenti.
 
-Sostituzione standard:
-- IT: "Rendimento potenziale variabile, legato alla singola operazione"
-- EN: "Potential return varies by individual operation"
-- Niente cifre, niente range, niente confronti numerici BTP/conti deposito.
+## Stato attuale (cosa diverge)
 
-## Superfici da bonificare
+| Superficie | CTA primaria | CTA secondaria | Stile | Focus ring |
+|---|---|---|---|---|
+| Homepage `ImmersiveHero` | `t('hero.startInvesting')` (A/B test `hero_cta_v2`) → dialog | Link "Sei un proprietario" | `<button>` custom | nessuno esplicito |
+| Homepage `InvestorSection` (desktop) | "Parla con Lorenzo" (WhatsApp) | "Investi ora" (dialog) + "Prenota call" (Calendly) | shadcn `<Button>` | default |
+| Homepage `StickyCTA` | "Investi" (dialog) | "Vendi casa" + dismiss | shadcn `<Button>` | default |
+| `/investitori` `HeroSection` | "Parla con Lorenzo" (WhatsApp) | "Richiedi info" (scroll form) | `<button>` custom uppercase tracking-widest | nessuno esplicito |
+| `/investitori` `QuickContactBar` | "WhatsApp" pill | "Email" pill | `<button>` custom rounded-full | nessuno esplicito |
 
-### 1. Homepage e sezione investitori
-- `src/components/sections/InvestorSection/InvestorSectionDesktop.tsx` — rimuovere ogni metrica "%" presentata come rendimento (mantenere 87% / 12,6% solo se etichettati come dato di domanda/offerta, non come rendimento).
-- `src/components/sections/InvestorSection/InvestorSectionMobile.tsx` — idem.
-- `src/components/innovative/ImmersiveHero.tsx` — verificare e rimuovere eventuali claim di rendimento.
-- `src/components/investitori/HeroSection.tsx` — sostituire `yieldValue` con stringa qualitativa.
-- `src/components/investitori/ThesisSection.tsx`, `TaxSection.tsx`, `SocialProofMini.tsx`, `TrustStripe.tsx` — passare in rassegna e rimuovere riferimenti numerici al rendimento.
+Divergenze chiave: gerarchia diversa (homepage spinge dialog "Investi"; /investitori spinge WhatsApp), microcopy inconsistente, alcuni `<button>` non hanno `focus-visible:ring`, allineamento testo CTA varia (uppercase vs. sentence case).
 
-### 2. Calcolatore di rendimento
-- `src/components/investor/YieldCalculator.tsx` — opzioni:
-  - **(a)** rimuovere il componente dalla pagina e nasconderlo,
-  - **(b)** trasformarlo in "Simulatore esplorativo" che mostra solo input (capitale, durata) senza output numerico di yield/ritorno, con CTA "Parla con Lorenzo per una proiezione personalizzata".
-  - Default proposto: **(b)** — mantiene engagement senza promettere ritorni.
-- Rimuovere `GROSS_YIELD = 0.0834`, le barre comparative con BTP/conti deposito, le stringhe "8,34%", "21%", "BTP 3,5%", "Conto deposito 3%".
+## Decisioni di design
 
-### 3. Pagine zone investitori
-- `src/data/investorZoneData.ts` — i campi `grossYield` e `netYield` restano nel data layer (servono internamente), ma:
-  - le `seo.title`/`seo.description` con "Rendimento 6‑7%" vengono riscritte senza cifre (es. "Investire a Cenisia Torino | Zona ad alto potenziale studentesco").
-- `src/pages/InvestorZonePage.tsx` — nascondere visivamente le card "Rendimento lordo" / "Rendimento netto" (rimuovere `formatYield(...)` dalle metric card e dai blocchi descrittivi). Rimuovere `minValue`/`maxValue` dal JSON‑LD generato.
-- `src/pages/InvestorZonesIndex.tsx` — rimuovere il blocco hero che mostra `{topYieldZones[0].grossYield.min}-{...max}%` e il ranking "top yield".
+1. **Gerarchia unica** su entrambe le pagine:
+   - **Primaria** = WhatsApp a Lorenzo ("Parla con Lorenzo" / "Talk to Lorenzo")
+   - **Secondaria** = form/dialog di richiesta info ("Richiedi info" / "Request info")
+   - Eventuale terziaria (Calendly / "Vendi casa") rimane ma con peso visivo minore (ghost/link).
+2. **Microcopy** = chiavi i18n condivise (`cta.talkToLorenzo`, `cta.requestInfo`) usate da hero homepage, InvestorSection, HeroSection /investitori, QuickContactBar, StickyCTA. Sentence case (eccezione tedesco), senza uppercase tracking-widest.
+3. **Hierarchy visiva** = shadcn `<Button>` variants:
+   - Primaria: `variant="default" size="lg"` (sfondo `primary`, testo `primary-foreground`)
+   - Secondaria: `variant="outline" size="lg"` (border `primary/30`, hover `bg-primary/5`)
+   - Terziaria: `variant="ghost"` o link `text-primary underline-offset-4 hover:underline`
+4. **Stati hover/focus uniformi** = lo `<Button>` shadcn già porta `focus-visible:ring-2 ring-ring ring-offset-2`. I `<button>` custom in HeroSection investitori, QuickContactBar e ImmersiveHero vanno sostituiti con `<Button>` (o, dove serve preservare il layout swiss-frame, aggiungere esplicitamente `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-colors`).
+5. **Allineamento** = su tutte le superfici, in stack verticale su mobile (`w-full`), in riga orizzontale `flex flex-row gap-3` da `sm:` in su; CTA primaria sempre prima a sinistra (o sopra su mobile).
+6. **A/B test `hero_cta_v2`** attualmente cambia la label. Lo conservo solo come label-variant *interno alla CTA primaria* ("Parla con Lorenzo" vs "Parla con Lorenzo · risposta in 24h"), per non perdere il dato in corso, ma la gerarchia visiva resta uguale tra A e B. Chiedo conferma se invece l'A/B può essere ritirato.
 
-### 4. FAQ e schema
-- `src/pages/FAQ.tsx` — riscrivere la Q&A "rendimento target 7‑9%" → risposta qualitativa che rimanda al colloquio con Lorenzo.
-- `src/lib/schema/index.ts` — rimuovere "Rendimento target 7‑9% annuo" / "Target yield 7‑9% annually" dalle description.
+## File da modificare
 
-### 5. Contenuti AI / SEO
-- `public/llms.txt`, `public/llms-full.txt`, `public/.well-known/agent-card.json`:
-  - rimuovere "Gross 9‑13%, net 5.3‑8.5% yields by zone",
-  - aggiornare descrizione del tool `get_investment_data` togliendo i tag "yield" / "returns" come metrica numerica,
-  - lasciare riferimenti ai dati OMI (prezzi, vacancy) ma non rendimenti.
-- `src/pages/Index.tsx` (meta keywords) — rimuovere "rendita immobiliare torino, rendimenti immobiliari".
+- `src/i18n/locales/investor/{it,en,...}.json` (+ eventuali file globali) — aggiungere chiavi condivise `cta.talkToLorenzo`, `cta.requestInfo`, `cta.talkToLorenzoSubcopy`. Sync IT → EN → 6 locali residue.
+- `src/components/innovative/ImmersiveHero.tsx` — sostituire `<button>` custom con `<Button>` shadcn, primario WhatsApp, secondario dialog form; conservare hook A/B.
+- `src/components/investitori/HeroSection.tsx` — rimuovere uppercase tracking-widest sulle due CTA, passare a `<Button>` shadcn `default` + `outline`, stack mobile/desktop coerente.
+- `src/components/investitori/QuickContactBar.tsx` — pill → `<Button>` shadcn `size="sm"` variants `default` + `outline` rounded-full (preservato), microcopy unificato.
+- `src/components/sections/InvestorSection/InvestorSectionDesktop.tsx` + `InvestorSectionMobile.tsx` — riordinare CTA: primaria "Parla con Lorenzo", secondaria "Richiedi info" (dialog esistente), Calendly come ghost.
+- `src/components/StickyCTA.tsx` — primaria "Parla con Lorenzo" (WhatsApp), secondaria "Vendi casa" outline, dismiss invariato.
 
-### 6. Locali i18n (7 lingue)
-File: `src/i18n/locales/{it,en,de,fr,es,pt,zh,sv}.json` e `src/i18n/locales/investor/*.json`.
-Chiavi da bonificare (lista non esaustiva, derivata dalla ricognizione):
-- `*.guide3Bullet3` → "Rendimenti 7‑9% vs 4‑5% di Milano" → "Mercato studentesco strutturalmente più dinamico di Milano"
-- chiavi `title` con "Guadagna il 7‑9% annuo" / "Earn 7‑9% annually" / equivalenti DE/FR/ES/ZH/SV → "Costruisci rendita nel tempo" / "Build long‑term income"
-- "Trasforma €100k in €7‑9k di rendita annua" → "Trasforma il tuo capitale in rendita ricorrente"
-- chiavi `investor.landing.hero.metrics.yieldValue` → stringa qualitativa
-Sincronizzazione IT primaria → EN fallback → resto secondo lo standard di traduzione.
+## Out of scope
 
-### 7. Blog
-- Articolo `rendimento-student-housing-torino-2026` (citato in llms.txt): se contiene cifre nel titolo SEO/meta o nel corpo, vanno riscritte in chiave qualitativa. Da verificare a parte se il file `.md` ha numeri nel titolo.
-- Inline CTA / link interni che ripetono "7‑9%" vanno aggiornati.
+- Nessun cambio a Footer/Navigation, contenuti delle sezioni intermedie, dialog interni.
+- Nessun cambio di routing, RLS, analytics events: i `trackEvent` esistenti restano (rinominati solo se la sorgente cambia semantica).
+- Nessun nuovo asset visivo.
 
-## Fuori scope
+## Dettagli tecnici
 
-- Commissioni di agenzia (3‑4%), risparmio studenti (25%), margine valutativo (±5‑12%), crescita prezzi attesa di zona (+15‑25%), vacancy/occupancy: NON sono percentuali di rendimento dell'investimento e restano.
-- Nessuna modifica al modello di business, al data layer interno `investorZoneData.ts` (i numeri restano disponibili per uso interno post‑qualifica), alla logica di lead capture o ai contratti.
-- Nessuna nuova pagina, nessun cambio routing.
+- Tokens: solo `bg-primary`, `text-primary-foreground`, `border-primary/30`, `bg-primary/5`, `ring-ring`. Niente colori arbitrari.
+- Focus ring: `focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background`.
+- Microcopy IT (sentence case): "Parla con Lorenzo", "Richiedi info". EN: "Talk to Lorenzo", "Request info". DE mantiene capitalization sostantivi: "Mit Lorenzo sprechen", "Infos anfordern".
+- `hero_cta_v2` A/B: la variante B aggiunge solo subcopy `"Risposta entro 24h"` sotto la CTA primaria, label uguale.
 
-## Compliance allineata
+## Domanda aperta
 
-Coerente con la memoria `EOI Compliance` e `Investment Model`: niente promesse di ritorno su superfici pubbliche; le proiezioni numeriche si presentano solo nel memorandum post‑qualifica via colloquio con Lorenzo.
-
-## Verifica finale
-
-1. `rg -n 'yield|rendiment|return.*%|\d+\s*-\s*\d+\s*%' src public` non deve più trovare cifre presentate come rendimento dell'investimento.
-2. Screenshot mobile/desktop di: homepage, `/investitori`, `/investitori/zone`, una pagina zona, FAQ, calcolatore.
-3. Aggiornare la memoria `EOI Compliance` con la regola: "Nessuna percentuale di rendimento su superfici pubbliche, mai".
+L'A/B test `hero_cta_v2` è ancora in raccolta dati o posso ritirarlo e usare una sola label? Procedo conservandolo come label-variant minore se non specifichi diversamente.

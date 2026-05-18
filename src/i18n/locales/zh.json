@@ -214,10 +214,12 @@
     "title": "联系我们"
   },
   "cta": {
-    "backToTop": "Back to top",
-    "contact": "Contact us",
-    "getStarted": "Get started",
-    "learnMore": "Learn more"
+    "backToTop": "返回顶部",
+    "contact": "联系我们",
+    "getStarted": "开始",
+    "learnMore": "了解更多",
+    "talkToLorenzo": "与 Lorenzo 交流",
+    "requestInfo": "请求信息"
   },
   "examSessionPlanner": {
     "addExam": {

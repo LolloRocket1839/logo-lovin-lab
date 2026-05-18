@@ -34,17 +34,17 @@ const QuickContactBarComponent = ({ onEmailClick }: Props) => {
         <div className="flex gap-2">
           <button
             onClick={handleWhatsApp}
-            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-4 py-2 text-sm font-medium transition-colors"
+            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <MessageCircle className="w-4 h-4" strokeWidth={1.75} />
-            {t("investor.landing.quickBar.whatsapp")}
+            <MessageCircle className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
+            {t("cta.talkToLorenzo")}
           </button>
           <button
             onClick={handleEmail}
-            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 border border-primary/30 hover:bg-primary/5 text-foreground rounded-full px-4 py-2 text-sm font-medium transition-colors"
+            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 border border-primary/30 hover:bg-primary/5 text-foreground rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            <Mail className="w-4 h-4" strokeWidth={1.75} />
-            {t("investor.landing.quickBar.email")}
+            <Mail className="w-4 h-4" strokeWidth={1.75} aria-hidden="true" />
+            {t("cta.requestInfo")}
           </button>
         </div>
       </div>

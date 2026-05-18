@@ -1,19 +1,19 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { X, TrendingUp, Building2 } from "lucide-react";
+import { X, MessageCircle, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useGlobalScroll } from "@/hooks/useGlobalScroll";
-import { QuickInvestorLeadDialog, QuickSellerLeadDialog } from "@/components/dialogs";
+import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
+import { QuickSellerLeadDialog } from "@/components/dialogs";
 
 export const StickyCTA = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
 
@@ -30,8 +30,10 @@ export const StickyCTA = () => {
   useGlobalScroll(handleScroll);
 
   const handleInvestClick = () => {
-    trackClick('sticky_cta_invest');
-    setInvestDialogOpen(true);
+    trackClick('sticky_cta_talk_to_lorenzo');
+    const lang = i18n.language.startsWith('en') ? 'en' : 'it';
+    const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
   const handleSellerClick = () => {
@@ -57,17 +59,16 @@ export const StickyCTA = () => {
           <Button
             onClick={handleInvestClick}
             size="lg"
-            variant="secondary"
-            className="flex-1 h-12 text-sm font-semibold shadow-xl touch-target"
+            className="flex-1 h-12 text-sm font-semibold shadow-xl touch-target focus-visible:ring-offset-background"
           >
-            <TrendingUp className="mr-2 w-5 h-5" aria-hidden="true" />
-            {t('nav.investors')}
+            <MessageCircle className="mr-2 w-5 h-5" aria-hidden="true" />
+            {t('cta.talkToLorenzo')}
           </Button>
           <Button
             onClick={handleSellerClick}
             size="lg"
             variant="outline"
-            className="flex-1 h-12 text-sm font-semibold bg-background/90 touch-target"
+            className="flex-1 h-12 text-sm font-semibold bg-background/90 touch-target focus-visible:ring-offset-background"
           >
             <Building2 className="mr-2 w-5 h-5" aria-hidden="true" />
             {t('nav.sell')}
@@ -83,12 +84,6 @@ export const StickyCTA = () => {
           </Button>
         </div>
       </div>
-
-      <QuickInvestorLeadDialog 
-        open={investDialogOpen} 
-        onOpenChange={setInvestDialogOpen}
-        source="sticky_cta"
-      />
 
       <QuickSellerLeadDialog 
         open={sellerDialogOpen} 

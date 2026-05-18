@@ -196,30 +196,30 @@ export const InvestorSectionDesktop = () => {
             <Button 
               onClick={handleLorenzoWhatsApp}
               size="lg"
-              className="w-full sm:w-auto text-sm md:text-base"
+              className="w-full sm:w-auto text-sm md:text-base focus-visible:ring-offset-background"
             >
-              <MessageCircle className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-              {t('investor.talkToLorenzo')}
+              <MessageCircle className="mr-2 w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
+              {t('cta.talkToLorenzo')}
             </Button>
             
             <Button 
               onClick={() => setInvestDialogOpen(true)}
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto text-sm md:text-base group"
+              className="w-full sm:w-auto text-sm md:text-base group focus-visible:ring-offset-background"
             >
-              {t('investor.cta')}
-              <ArrowRight className="ml-2 w-4 h-4" />
+              {t('cta.requestInfo')}
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </Button>
             
-            {/* Calendly only on desktop */}
+            {/* Calendly only on desktop - tertiary */}
             <Button 
               onClick={() => openCalendly()}
               size="lg"
-              variant="secondary"
-              className="hidden md:inline-flex w-auto text-base"
+              variant="ghost"
+              className="hidden md:inline-flex w-auto text-sm text-muted-foreground hover:text-primary"
             >
-              <Calendar className="mr-2 w-5 h-5" />
+              <Calendar className="mr-2 w-4 h-4" aria-hidden="true" />
               {t('investor.scheduleCall')}
             </Button>
           </div>

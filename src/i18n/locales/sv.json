@@ -214,10 +214,12 @@
     "title": "Kontakt"
   },
   "cta": {
-    "backToTop": "Back to top",
-    "contact": "Contact us",
-    "getStarted": "Get started",
-    "learnMore": "Learn more"
+    "backToTop": "Till toppen",
+    "contact": "Kontakta oss",
+    "getStarted": "Kom igång",
+    "learnMore": "Läs mer",
+    "talkToLorenzo": "Prata med Lorenzo",
+    "requestInfo": "Begär info"
   },
   "examSessionPlanner": {
     "addExam": {

@@ -214,10 +214,12 @@
     "title": "Contacts"
   },
   "cta": {
-    "backToTop": "Back to top",
-    "contact": "Contact us",
-    "getStarted": "Get started",
-    "learnMore": "Learn more"
+    "backToTop": "Retour en haut",
+    "contact": "Contactez-nous",
+    "getStarted": "Commencer",
+    "learnMore": "En savoir plus",
+    "talkToLorenzo": "Parlez à Lorenzo",
+    "requestInfo": "Demander des infos"
   },
   "examSessionPlanner": {
     "addExam": {
