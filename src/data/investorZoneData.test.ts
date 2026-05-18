@@ -120,3 +120,66 @@ describe('investorZonesSchema', () => {
     );
   });
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Fixture-driven regression suite — prevents structural drift over time.
+// Each invalid fixture isolates one critical failure mode and asserts that
+// the validator both fails AND points at the correct field path.
+// ─────────────────────────────────────────────────────────────────────────────
+
+import {
+  validFixtures,
+  invalidFixtures,
+} from './__fixtures__/investorZoneFixtures';
+
+describe('validateInvestorZones — fixtures', () => {
+  describe('valid fixtures pass', () => {
+    it.each(validFixtures.map((z) => [z.id, z]))(
+      'accepts "%s" as a single-element dataset',
+      (_id, zone) => {
+        expect(() => validateInvestorZones([zone])).not.toThrow();
+      },
+    );
+
+    it('accepts the combined valid dataset', () => {
+      expect(() => validateInvestorZones(validFixtures)).not.toThrow();
+    });
+  });
+
+  describe('invalid fixtures fail with the expected path', () => {
+    it.each(invalidFixtures.map((f) => [f.name, f]))(
+      'rejects: %s',
+      (_name, fixture) => {
+        const f = fixture as { data: unknown; expectedPath: string };
+        let caught: Error | null = null;
+        try {
+          validateInvestorZones([f.data]);
+        } catch (e) {
+          caught = e as Error;
+        }
+        expect(caught).not.toBeNull();
+        expect(caught!.message).toMatch(/\[investorZoneData\] schema validation failed/);
+        expect(caught!.message).toContain(f.expectedPath);
+      },
+    );
+  });
+
+  it('reports all invalid fixtures in a single pass without false-positives on valid ones', () => {
+    const mixed = [...validFixtures, ...invalidFixtures.map((f) => f.data)];
+    let caught: Error | null = null;
+    try {
+      validateInvestorZones(mixed);
+    } catch (e) {
+      caught = e as Error;
+    }
+    expect(caught).not.toBeNull();
+    // Every invalid fixture's expected path must surface in the grouped report.
+    for (const f of invalidFixtures) {
+      expect(caught!.message).toContain(f.expectedPath);
+    }
+    // None of the valid fixtures should be named as a failing zone.
+    for (const z of validFixtures) {
+      expect(caught!.message).not.toMatch(new RegExp(`▸ .*\\(${z.slug}\\)`));
+    }
+  });
+});
