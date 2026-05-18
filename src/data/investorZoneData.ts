@@ -2,6 +2,8 @@
 // Investor Zone Data - Market data for Turin neighborhoods (Feb 2025)
 // Source: OMI, Immobiliare.it, FIAIP, Nomisma data
 // ============================================================================
+import { z } from 'zod';
+
 
 export type TrendType = 'stable' | 'moderate' | 'growth' | 'strong_growth' | 'max_growth';
 export type DemandLevel = 'low' | 'medium' | 'high' | 'very_high';
@@ -645,3 +647,91 @@ export const formatPrice = (price: number): string => {
 export const formatYield = (yieldMin: number, yieldMax: number): string => {
   return `${yieldMin.toFixed(1)}-${yieldMax.toFixed(1)}%`;
 };
+
+// ============================================================================
+// RUNTIME VALIDATION (dev-only) — catches structural drift before build,
+// e.g. merged fields like `trend202526demand` or missing impact/investorNote.
+// ============================================================================
+
+const i18nString = z.object({ it: z.string().min(1), en: z.string().min(1) });
+
+const urbanProjectSchema = z.object({
+  name: z.string().min(1),
+  investment: z.string().min(1),
+  impact: i18nString,
+});
+
+const investorZoneSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  slug: z.string().regex(/^[a-z0-9-]+$/, 'slug must be kebab-case'),
+  zone: z.enum(['Centro', 'Semicentro', 'Periferia']),
+  pricePerSqm: z.object({
+    min: z.number().positive(),
+    avg: z.number().positive(),
+    max: z.number().positive(),
+  }),
+  variation2024: z.number(),
+  trend202526: z.enum(['stable', 'moderate', 'growth', 'strong_growth', 'max_growth']),
+  demand: z.enum(['low', 'medium', 'high', 'very_high']),
+  vacancyRate: z.object({ min: z.number().min(0), max: z.number().min(0) }),
+  rentingTime: i18nString,
+  targetTenant: z.object({
+    it: z.array(z.string().min(1)).min(1),
+    en: z.array(z.string().min(1)).min(1),
+  }),
+  urbanRenewal: z.object({
+    active: z.boolean(),
+    projects: z.array(urbanProjectSchema),
+  }),
+  rankings: z.object({
+    netYieldRank: z.number().int().positive().optional(),
+    growthPotentialRank: z.number().int().positive().optional(),
+    entryPriceRank: z.number().int().positive().optional(),
+  }),
+  investorNote: i18nString,
+  image: z.string().min(1),
+  coordinates: z.object({ lat: z.number(), lng: z.number() }),
+  seo: z.object({
+    it: z.object({
+      title: z.string().min(1),
+      description: z.string().min(1),
+      keywords: z.array(z.string().min(1)).min(1),
+    }),
+    en: z.object({
+      title: z.string().min(1),
+      description: z.string().min(1),
+      keywords: z.array(z.string().min(1)).min(1),
+    }),
+  }),
+});
+
+export const investorZonesSchema = z.array(investorZoneSchema);
+
+/**
+ * Validates investorZones at module load in development. Throws a clear,
+ * zone-scoped error so structural breakage (e.g. `trend202526demand` merge,
+ * missing impact blocks) surfaces immediately instead of as a cryptic
+ * downstream render bug.
+ */
+export function validateInvestorZones(zones: unknown = investorZones): void {
+  const result = investorZonesSchema.safeParse(zones);
+  if (!result.success) {
+    const issues = result.error.issues
+      .map((i) => {
+        const idx = typeof i.path[0] === 'number' ? i.path[0] : null;
+        const zoneId =
+          idx !== null && Array.isArray(zones) && (zones[idx] as InvestorZone | undefined)?.id;
+        const where = zoneId ? `zone "${zoneId}"` : `index ${idx ?? '?'}`;
+        return `  • ${where} → ${i.path.slice(1).join('.') || '<root>'}: ${i.message}`;
+      })
+      .join('\n');
+    throw new Error(`[investorZoneData] schema validation failed:\n${issues}`);
+  }
+}
+
+// Run automatically in dev (Vite). No-op in production bundles.
+if (import.meta.env?.DEV) {
+  validateInvestorZones();
+}
+
