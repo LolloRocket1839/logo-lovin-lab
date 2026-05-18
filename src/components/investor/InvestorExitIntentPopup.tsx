@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, MessageCircle, Mail, Clock, Shield } from "lucide-react";
+import { X, MessageCircle, Mail, Clock, Shield, CheckCircle2 } from "lucide-react";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,7 @@ import { useAnalytics } from "@/hooks/useAnalytics";
 import { toast } from "sonner";
 import { openWhatsApp, openEmail, CONTACTS, MESSAGES } from "@/constants";
 import { FORMSPREE_ENDPOINTS } from "@/constants/formspree";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 
 interface InvestorExitIntentPopupProps {
   source?: string;
