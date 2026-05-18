@@ -308,7 +308,7 @@ const filterTexts = {
       const bounds = L.latLngBounds(filteredZones.map(z => [z.coordinates.lat, z.coordinates.lng]));
        mapRef.current.fitBounds(bounds, { padding: [50, 50] });
      }
-  }, [filteredZones, lang, selectedZoneIds, yieldMode, onZoneClick, navigate, zonesPath, t]);
+  }, [filteredZones, lang, selectedZoneIds, onZoneClick, navigate, zonesPath, t]);
  
    return (
      <div className="relative w-full h-[450px] md:h-[500px] rounded-lg overflow-hidden">
