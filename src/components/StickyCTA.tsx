@@ -31,8 +31,10 @@ export const StickyCTA = () => {
   useGlobalScroll(handleScroll);
 
   const handleInvestClick = () => {
-    trackClick('sticky_cta_invest');
-    setInvestDialogOpen(true);
+    trackClick('sticky_cta_talk_to_lorenzo');
+    const lang = i18n.language.startsWith('en') ? 'en' : 'it';
+    const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
   const handleSellerClick = () => {
