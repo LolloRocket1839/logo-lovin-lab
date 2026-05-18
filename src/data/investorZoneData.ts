@@ -120,13 +120,13 @@ export const investorZones: InvestorZone[] = [
     coordinates: { lat: 45.0823, lng: 7.6823 },
     seo: {
       it: {
-        title: 'Investire ad Aurora Torino | Massimo potenziale +25%',
-        description: 'Aurora Torino: prezzi €1.520/mq. Masterplan Carlo Ratti promette +15-25% in 5-7 anni.',
+        title: 'Investire ad Aurora Torino | Massimo potenziale di rivalutazione',
+        description: 'Aurora Torino: prezzi entry-level €1.520/mq. Masterplan Carlo Ratti e riqualificazione Porta Palazzo guidano una rivalutazione strutturale.',
         keywords: ['investimento aurora torino', 'aurora riqualificazione', 'comprare casa aurora']
       },
       en: {
-        title: 'Invest in Aurora Turin | Maximum potential +25%',
-        description: 'Aurora Turin: prices €1,520/sqm. Carlo Ratti Masterplan promises +15-25% in 5-7 years.',
+        title: 'Invest in Aurora Turin | Maximum revaluation potential',
+        description: 'Aurora Turin: entry-level prices €1,520/sqm. Carlo Ratti Masterplan and Porta Palazzo urban renewal drive structural revaluation.',
         keywords: ['aurora turin investment', 'aurora urban renewal', 'buy property aurora']
       }
     }
