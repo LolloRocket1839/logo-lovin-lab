@@ -813,7 +813,6 @@ let _primitiveCacheValue: InvestorZoneValidationIssue[] = [];
 /** Test/debug helper: clears the in-memory validation cache. */
 export function clearInvestorZoneValidationCache(): void {
   // WeakMap has no .clear() — replace the slot instead.
-  // @ts-expect-error -- intentional reassignment for cache reset
   _issuesCache = new WeakMap();
   _primitiveCacheKey = Symbol('unset');
   _primitiveCacheValue = [];
