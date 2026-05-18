@@ -1,14 +1,21 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { TrendingUp, ArrowRight, AlertTriangle } from "lucide-react";
+import { TrendingUp, ArrowRight, AlertTriangle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 
 import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 
 export const InvestorSectionMobile = () => {
   const { t, i18n } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
+
+  const handleWhatsApp = () => {
+    const lang = i18n.language.startsWith('en') ? 'en' : 'it';
+    const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
   
 
   return (
