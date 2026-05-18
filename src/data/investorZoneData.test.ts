@@ -201,6 +201,33 @@ describe('investorZones — coordinates', () => {
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Uniqueness — id and slug must be globally unique across investorZones.
+// Duplicates would clobber routing (slug → page) and lookups by id.
+// ─────────────────────────────────────────────────────────────────────────────
+
+describe('investorZones — uniqueness', () => {
+  const findDuplicates = (key: 'id' | 'slug') => {
+    const counts = new Map<string, string[]>();
+    for (const z of investorZones) {
+      const arr = counts.get(z[key]) ?? [];
+      arr.push(z.id);
+      counts.set(z[key], arr);
+    }
+    return [...counts.entries()]
+      .filter(([, ids]) => ids.length > 1)
+      .map(([value, ids]) => ({ value, ids }));
+  };
+
+  it('every zone id is unique', () => {
+    expect(findDuplicates('id')).toEqual([]);
+  });
+
+  it('every zone slug is unique', () => {
+    expect(findDuplicates('slug')).toEqual([]);
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Fixture-driven regression suite — prevents structural drift over time.
 // Each invalid fixture isolates one critical failure mode and asserts that
 // the validator both fails AND points at the correct field path.
