@@ -239,7 +239,13 @@ async function sendAlertEmail(alerts: Alert[], curr: Snapshot) {
 async function authorize(req: Request): Promise<{ ok: boolean; mode: "cron" | "admin" | null; error?: string }> {
   const auth = req.headers.get("Authorization") ?? "";
   const cronSecret = Deno.env.get("WEEKLY_REPORT_SECRET");
+  const cronHeader = req.headers.get("x-cron-secret") ?? "";
 
+  // pg_cron path: header x-cron-secret matches WEEKLY_REPORT_SECRET
+  if (cronSecret && cronHeader && cronHeader === cronSecret) {
+    return { ok: true, mode: "cron" };
+  }
+  // External cron path: Authorization: Bearer <WEEKLY_REPORT_SECRET>
   if (cronSecret && auth === `Bearer ${cronSecret}`) {
     return { ok: true, mode: "cron" };
   }
