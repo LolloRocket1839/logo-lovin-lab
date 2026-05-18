@@ -65,14 +65,23 @@ export const InvestorSectionMobile = () => {
             </span>
           </div>
 
-          <Button
-            onClick={() => setDialogOpen(true)}
-            className="w-full h-12 text-base shadow-lg"
-            variant="premium"
-          >
-            {t("investor.cta")}
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+          <div className="flex flex-col gap-2">
+            <Button
+              onClick={handleWhatsApp}
+              className="w-full h-12 text-base shadow-lg focus-visible:ring-offset-background"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" aria-hidden="true" />
+              {t('cta.talkToLorenzo')}
+            </Button>
+            <Button
+              onClick={() => setDialogOpen(true)}
+              variant="outline"
+              className="w-full h-12 text-base focus-visible:ring-offset-background"
+            >
+              {t('cta.requestInfo')}
+              <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
+            </Button>
+          </div>
 
           {/* Link to zones - SEO internal linking */}
           <div className="text-center mt-4">
