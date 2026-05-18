@@ -299,20 +299,20 @@ export const investorZones: InvestorZone[] = [
     },
     rankings: { growthPotentialRank: 1, entryPriceRank: 1 },
     investorNote: {
-      it: 'MASSIMO POTENZIALE. Prezzi più bassi di Torino (€1.150/mq) con Metro 2 in arrivo. Rischio alto ma upside enorme (+15-25%). Solo per investitori con orizzonte 5+ anni.',
-      en: 'MAXIMUM POTENTIAL. Lowest prices in Turin (€1,150/sqm) with Metro 2 coming. High risk but huge upside (+15-25%). Only for investors with 5+ year horizon.'
+      it: 'MASSIMO POTENZIALE. Prezzi più bassi di Torino (€1.150/mq) con Metro 2 in arrivo. Rischio alto compensato da upside strutturale. Solo per investitori con orizzonte 5+ anni.',
+      en: 'MAXIMUM POTENTIAL. Lowest prices in Turin (€1,150/sqm) with Metro 2 coming. High risk offset by structural upside. Only for investors with 5+ year horizon.'
     },
     image: '/images/mercati-rionali-torino.jpg',
     coordinates: { lat: 45.0956, lng: 7.6912 },
     seo: {
       it: {
-        title: 'Investire a Barriera di Milano | Metro 2 +25%',
-        description: 'Barriera di Milano: prezzi più bassi di Torino €1.150/mq. Metro 2 e Masterplan Carlo Ratti promettono +15-25% in 5-7 anni.',
+        title: 'Investire a Barriera di Milano | Metro 2 e riqualificazione',
+        description: 'Barriera di Milano: prezzi più bassi di Torino €1.150/mq. Metro 2 e Masterplan Carlo Ratti trainano la rivalutazione strutturale.',
         keywords: ['investimento barriera milano torino', 'barriera milano metro 2', 'comprare casa barriera']
       },
       en: {
-        title: 'Invest in Barriera di Milano | Metro 2 +25%',
-        description: 'Barriera di Milano: lowest prices in Turin €1,150/sqm. Metro 2 and Carlo Ratti Masterplan promise +15-25% in 5-7 years.',
+        title: 'Invest in Barriera di Milano | Metro 2 and urban renewal',
+        description: 'Barriera di Milano: lowest prices in Turin €1,150/sqm. Metro 2 and Carlo Ratti Masterplan drive structural revaluation.',
         keywords: ['barriera milano investment', 'barriera milano metro 2', 'buy property barriera']
       }
     }
