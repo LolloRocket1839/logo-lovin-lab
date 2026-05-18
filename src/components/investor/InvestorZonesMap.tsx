@@ -26,24 +26,21 @@ interface MapFilters {
    zones?: InvestorZone[];
    lang: 'it' | 'en';
    onZoneClick?: (zone: InvestorZone) => void;
-  selectedZoneIds?: string[];
-   showYieldMode?: 'gross' | 'net';
+   selectedZoneIds?: string[];
  }
  
- // Yield color scale
- const getYieldColor = (yieldMax: number): string => {
-   if (yieldMax >= 6.5) return '#16a34a'; // green-600 - excellent
-   if (yieldMax >= 5.5) return '#22c55e'; // green-500 - high
-   if (yieldMax >= 5) return '#eab308';   // yellow-500 - medium
-   return '#f97316';                       // orange-500 - low
+ type DemandKey = 'very_high' | 'high' | 'medium' | 'low';
+
+ // Demand color scale (replaces previous yield-based scale)
+ const DEMAND_COLOR: Record<DemandKey, string> = {
+   very_high: '#16a34a',
+   high: '#22c55e',
+   medium: '#eab308',
+   low: '#f97316',
  };
- 
- const getYieldLabel = (yieldMax: number, lang: 'it' | 'en'): string => {
-   if (yieldMax >= 6.5) return lang === 'it' ? 'Eccellente' : 'Excellent';
-   if (yieldMax >= 5.5) return lang === 'it' ? 'Alto' : 'High';
-   if (yieldMax >= 5) return lang === 'it' ? 'Medio' : 'Medium';
-   return lang === 'it' ? 'Basso' : 'Low';
- };
+
+ const getDemandColor = (demand: string): string =>
+   DEMAND_COLOR[(demand as DemandKey)] || '#f97316';
  
  const getDemandLabel = (demand: string, lang: 'it' | 'en'): string => {
    const labels: Record<string, { it: string; en: string }> = {
@@ -55,9 +52,8 @@ interface MapFilters {
    return labels[demand]?.[lang] || demand;
  };
  
-const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex: number, yieldMode: 'gross' | 'net'): L.DivIcon => {
-   const yieldValue = yieldMode === 'gross' ? zone.grossYield.max : zone.netYield.max;
-   const color = getYieldColor(yieldValue);
+const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex: number): L.DivIcon => {
+   const color = getDemandColor(zone.demand);
    const size = isSelected ? 44 : 36;
    const hasRenewal = zone.urbanRenewal.active;
   const selectionBadge = isSelected && selectionIndex >= 0 
@@ -85,7 +81,7 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
          transition: transform 0.2s ease;
          ${isSelected ? 'transform: scale(1.15); z-index: 1000 !important;' : ''}
        ">
-         ${yieldValue}%
+         ${zone.zone.charAt(0)}
          ${hasRenewal ? '<span style="position:absolute;top:-6px;right:-6px;font-size:10px;background:white;border-radius:50%;width:16px;height:16px;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.2);">🏗️</span>' : ''}
         ${selectionBadge}
        </div>
@@ -98,15 +94,13 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
  
  const texts = {
    it: {
-     mapTitle: 'Mappa rendimenti',
-     legend: 'Rendimento',
-     excellent: 'Eccellente (≥6.5%)',
-     high: 'Alto (5.5-6.5%)',
-     medium: 'Medio (5-5.5%)',
-     low: 'Basso (<5%)',
+     mapTitle: 'Mappa quartieri',
+     legend: 'Domanda affitti',
+     excellent: 'Molto alta',
+     high: 'Alta',
+     medium: 'Media',
+     low: 'Bassa',
      viewDetails: 'Vedi dettagli',
-     grossYield: 'Lordo',
-     netYield: 'Netto',
      renewal: 'Riqualificazione',
      zones: 'quartieri',
      priceAvg: 'Prezzo medio',
@@ -115,15 +109,13 @@ const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex:
      trend: 'Trend 2024'
    },
    en: {
-     mapTitle: 'Yield map',
-     legend: 'Yield',
-     excellent: 'Excellent (≥6.5%)',
-     high: 'High (5.5-6.5%)',
-     medium: 'Medium (5-5.5%)',
-     low: 'Low (<5%)',
+     mapTitle: 'Neighborhood map',
+     legend: 'Rental demand',
+     excellent: 'Very high',
+     high: 'High',
+     medium: 'Medium',
+     low: 'Low',
      viewDetails: 'View details',
-     grossYield: 'Gross',
-     netYield: 'Net',
      renewal: 'Urban renewal',
      zones: 'neighborhoods',
      priceAvg: 'Avg price',
@@ -159,12 +151,10 @@ const filterTexts = {
    lang, 
    onZoneClick,
   selectedZoneIds = [],
-   showYieldMode = 'gross'
  }) => {
    const mapContainerRef = useRef<HTMLDivElement>(null);
    const mapRef = useRef<L.Map | null>(null);
    const markersRef = useRef<L.Marker[]>([]);
-   const [yieldMode, setYieldMode] = useState<'gross' | 'net'>(showYieldMode);
   const [filters, setFilters] = useState<MapFilters>({
     types: ['Centro', 'Semicentro', 'Periferia'],
     renewalOnly: false
@@ -232,11 +222,9 @@ const filterTexts = {
  
       const isSelected = selectedZoneIds.includes(zone.id);
       const selectionIndex = selectedZoneIds.indexOf(zone.id);
-       const yieldValue = yieldMode === 'gross' ? zone.grossYield : zone.netYield;
-       
        const marker = L.marker(
          [zone.coordinates.lat, zone.coordinates.lng], 
-        { icon: createZoneIcon(zone, isSelected, selectionIndex, yieldMode) }
+        { icon: createZoneIcon(zone, isSelected, selectionIndex) }
        ).addTo(mapRef.current);
  
        // Popup content
@@ -264,12 +252,12 @@ const filterTexts = {
                <div style="font-size: 13px; font-weight: 600; color: ${zone.variation2024 > 0 ? '#16a34a' : '#666'};">+${zone.variation2024}%</div>
              </div>
              <div style="background: hsl(var(--muted) / 0.5); padding: 6px 8px; border-radius: 6px;">
-               <div style="font-size: 10px; color: #666; margin-bottom: 2px;">📊 ${yieldMode === 'gross' ? t.grossYield : t.netYield}</div>
-               <div style="font-size: 13px; font-weight: 600; color: ${getYieldColor(yieldValue.max)};">${yieldValue.min}-${yieldValue.max}%</div>
+               <div style="font-size: 10px; color: #666; margin-bottom: 2px;">📊 ${t.vacancy}</div>
+               <div style="font-size: 13px; font-weight: 600;">${zone.vacancyRate.min}-${zone.vacancyRate.max}%</div>
              </div>
              <div style="background: hsl(var(--muted) / 0.5); padding: 6px 8px; border-radius: 6px;">
                <div style="font-size: 10px; color: #666; margin-bottom: 2px;">📍 ${t.demand}</div>
-               <div style="font-size: 13px; font-weight: 600;">${getDemandLabel(zone.demand, lang)}</div>
+               <div style="font-size: 13px; font-weight: 600; color: ${getDemandColor(zone.demand)};">${getDemandLabel(zone.demand, lang)}</div>
              </div>
            </div>
            
@@ -316,7 +304,7 @@ const filterTexts = {
       const bounds = L.latLngBounds(filteredZones.map(z => [z.coordinates.lat, z.coordinates.lng]));
        mapRef.current.fitBounds(bounds, { padding: [50, 50] });
      }
-  }, [filteredZones, lang, selectedZoneIds, yieldMode, onZoneClick, navigate, zonesPath, t]);
+  }, [filteredZones, lang, selectedZoneIds, onZoneClick, navigate, zonesPath, t]);
  
    return (
      <div className="relative w-full h-[450px] md:h-[500px] rounded-lg overflow-hidden">
@@ -385,31 +373,12 @@ const filterTexts = {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        {/* Yield mode toggle */}
-        <div className="flex gap-1 bg-background/95 backdrop-blur-sm rounded-lg p-1 shadow-lg">
-         <Button
-           variant={yieldMode === 'gross' ? 'default' : 'ghost'}
-           size="sm"
-           onClick={() => setYieldMode('gross')}
-           className="h-7 text-xs"
-         >
-           {t.grossYield}
-         </Button>
-         <Button
-           variant={yieldMode === 'net' ? 'default' : 'ghost'}
-           size="sm"
-           onClick={() => setYieldMode('net')}
-           className="h-7 text-xs"
-         >
-           {t.netYield}
-         </Button>
-        </div>
        </div>
        
        {/* Legend */}
        <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-[1000] max-w-[180px]">
          <h4 className="text-xs font-semibold mb-2 text-foreground">
-           {t.legend} ({yieldMode === 'gross' ? t.grossYield.toLowerCase() : t.netYield.toLowerCase()})
+           {t.legend}
          </h4>
          <div className="space-y-1.5">
            <div className="flex items-center gap-2 text-xs">

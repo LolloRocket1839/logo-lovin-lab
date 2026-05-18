@@ -16,24 +16,46 @@ export interface InvestorZone {
   id: string;
   name: string;
   slug: string;
-  zone: 'Centro' | 'Semicentro' | 'Periferiacenisia',
+  zone: 'Centro' | 'Semicentro' | 'Periferia';
+  pricePerSqm: { min: number; avg: number; max: number };
+  variation2024: number;
+  trend202526: TrendType;
+  demand: DemandLevel;
+  vacancyRate: { min: number; max: number };
+  rentingTime: { it: string; en: string };
+  targetTenant: { it: string[]; en: string[] };
+  urbanRenewal: { active: boolean; projects: UrbanProject[] };
+  rankings: { netYieldRank?: number; growthPotentialRank?: number; entryPriceRank?: number };
+  investorNote: { it: string; en: string };
+  image: string;
+  coordinates: { lat: number; lng: number };
+  seo: {
+    it: { title: string; description: string; keywords: string[] };
+    en: { title: string; description: string; keywords: string[] };
+  };
+}
+
+export const investorZones: InvestorZone[] = [
+  {
+    id: 'cenisia',
     name: 'Cenisia',
     slug: 'cenisia',
     zone: 'Semicentro',
     pricePerSqm: { min: 1940, avg: 2200, max: 2285 },
     variation2024: 4,
-    trend202526: 'growthhigh',
+    trend202526: 'growth',
+    demand: 'high',
     vacancyRate: { min: 3, max: 5 },
     rentingTime: { it: '2-4 settimane', en: '2-4 weeks' },
-    targetTenant: { 
-      it: ['Studenti Politecnico', 'Giovani professionisti'], 
-      en: ['Politecnico students', 'Young professionals'] 
+    targetTenant: {
+      it: ['Studenti Politecnico', 'Giovani professionisti'],
+      en: ['Politecnico students', 'Young professionals']
     },
     urbanRenewal: {
       active: true,
       projects: [
-        { 
-          name: 'Metro 2', 
+        {
+          name: 'Metro 2',
           investment: '€2+ mld (linea completa)',
           impact: { it: 'Forte rivalutazione prevista', en: 'Strong revaluation expected' }
         }
@@ -49,12 +71,12 @@ export interface InvestorZone {
     seo: {
       it: {
         title: 'Investire a Cenisia Torino',
-        description: 'Guida investimento immobiliare Cenisia Torino. prezzi €2.200/mq. Vicinanza Politecnico, domanda studentesca alta.',
+        description: 'Guida investimento immobiliare Cenisia Torino. Prezzi €2.200/mq. Vicinanza Politecnico, domanda studentesca alta.',
         keywords: ['investimento cenisia torino', 'comprare casa cenisia', 'affitto studenti cenisia']
       },
       en: {
         title: 'Invest in Cenisia Turin',
-        description: 'Cenisia Turin real estate investment guide. prices €2,200/sqm. Near Politecnico, high student demand.',
+        description: 'Cenisia Turin real estate investment guide. Prices €2,200/sqm. Near Politecnico, high student demand.',
         keywords: ['cenisia turin investment', 'buy property cenisia', 'student rental cenisia']
       }
     }
@@ -66,23 +88,24 @@ export interface InvestorZone {
     zone: 'Periferia',
     pricePerSqm: { min: 1000, avg: 1520, max: 1800 },
     variation2024: 7,
-    trend202526: 'strong_growthhigh',
+    trend202526: 'strong_growth',
+    demand: 'high',
     vacancyRate: { min: 5, max: 8 },
     rentingTime: { it: '2-4 settimane', en: '2-4 weeks' },
-    targetTenant: { 
-      it: ['Studenti Campus Einaudi', 'Investitori value-add'], 
-      en: ['Campus Einaudi students', 'Value-add investors'] 
+    targetTenant: {
+      it: ['Studenti Campus Einaudi', 'Investitori value-add'],
+      en: ['Campus Einaudi students', 'Value-add investors']
     },
     urbanRenewal: {
       active: true,
       projects: [
-        { 
-          name: 'Masterplan Carlo Ratti', 
+        {
+          name: 'Masterplan Carlo Ratti',
           investment: '€25,8 mln',
           impact: { it: '+15-25% in 5-7 anni', en: '+15-25% in 5-7 years' }
         },
-        { 
-          name: 'Riqualificazione Porta Palazzo', 
+        {
+          name: 'Riqualificazione Porta Palazzo',
           investment: 'Multi-milioni',
           impact: { it: 'Miglioramento generale area', en: 'General area improvement' }
         }
@@ -115,31 +138,41 @@ export interface InvestorZone {
     zone: 'Centro',
     pricePerSqm: { min: 2050, avg: 2650, max: 2710 },
     variation2024: 5.5,
-    trend202526: 'stablevery_high',
+    trend202526: 'stable',
+    demand: 'very_high',
     vacancyRate: { min: 2, max: 4 },
     rentingTime: { it: '2-3 settimane', en: '2-3 weeks' },
-    targetTenant: { 
-      it: ['Studenti Medicina', 'Giovani professionisti', 'Expat'], 
-      en: ['Medical students', 'Young professionals', 'Expats'] 
+    targetTenant: {
+      it: ['Studenti Medicina', 'Giovani professionisti', 'Expat'],
+      en: ['Medical students', 'Young professionals', 'Expats']
     },
     urbanRenewal: {
       active: true,
       projects: [
-        { 
-          name: 'Scalo Nizza', 
+        {
+          name: 'Scalo Nizza',
           investment: '€105 mln',
-          impact: { it: '+10-15% consolidamento', en: '+10-15% consolidationIl quartiere studentesco più consolidato di Torino. Domanda altissima, sfitto quasi nullo. Rendimenti stabili, ideale per investitori conservativi che cercano cash flow sicuro.',
-      en: 'Turin\},
+          impact: { it: '+10-15% consolidamento', en: '+10-15% consolidation' }
+        }
+      ]
+    },
+    rankings: {},
+    investorNote: {
+      it: 'Il quartiere studentesco più consolidato di Torino. Domanda altissima, sfitto quasi nullo. Rendimenti stabili, ideale per investitori conservativi che cercano cash flow sicuro.',
+      en: 'Turin\'s most established student neighborhood. Very high demand, near-zero vacancy. Stable returns, ideal for conservative investors seeking secure cash flow.'
+    },
     image: '/images/san-salvario-night.jpeg',
     coordinates: { lat: 45.0523, lng: 7.6784 },
     seo: {
       it: {
         title: 'Investire a San Salvario Torino',
-        description: 'San Salvario Torino: il quartiere studentesco più richiesto. sfitto 2-4%. Investimento sicuro con cash flow stabile.',
+        description: 'San Salvario Torino: il quartiere studentesco più richiesto. Sfitto 2-4%. Investimento sicuro con cash flow stabile.',
         keywords: ['investimento san salvario', 'comprare casa san salvario', 'affitto studenti san salvario']
       },
       en: {
-        title: description: keywords: ['san salvario investment', 'buy property san salvario', 'student rental san salvario']
+        title: 'Invest in San Salvario Turin',
+        description: 'San Salvario Turin: the most sought-after student neighborhood. Vacancy 2-4%. Safe investment with stable cash flow.',
+        keywords: ['san salvario investment', 'buy property san salvario', 'student rental san salvario']
       }
     }
   },
@@ -150,12 +183,18 @@ export interface InvestorZone {
     zone: 'Centro',
     pricePerSqm: { min: 2070, avg: 2600, max: 2680 },
     variation2024: 2.5,
-    trend202526: 'moderatehigh',
+    trend202526: 'moderate',
+    demand: 'high',
     vacancyRate: { min: 3, max: 5 },
     rentingTime: { it: '2-4 settimane', en: '2-4 weeks' },
-    targetTenant: { 
-      it: ['Studenti umanistiche', 'Artisti e creativi'], 
-      en: ['Humanities students', 'Artists and creativesQuartiere artistico con identità forte. Target nicchia ma fedele. Crescita moderata, ottimo per diversificare portafoglio studentesco.',
+    targetTenant: {
+      it: ['Studenti umanistiche', 'Artisti e creativi'],
+      en: ['Humanities students', 'Artists and creatives']
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: {},
+    investorNote: {
+      it: 'Quartiere artistico con identità forte. Target nicchia ma fedele. Crescita moderata, ottimo per diversificare portafoglio studentesco.',
       en: 'Artistic neighborhood with strong identity. Niche but loyal target. Moderate growth, great for diversifying student portfolio.'
     },
     image: '/images/tramonto-po-torino.jpeg',
@@ -168,7 +207,8 @@ export interface InvestorZone {
       },
       en: {
         title: 'Invest in Vanchiglia Turin | Artistic neighborhood',
-        description: keywords: ['vanchiglia investment', 'buy property vanchiglia', 'student rental vanchiglia']
+        description: 'Vanchiglia Turin: artistic neighborhood near Palazzo Nuovo. Target humanities students and creatives.',
+        keywords: ['vanchiglia investment', 'buy property vanchiglia', 'student rental vanchiglia']
       }
     }
   },
@@ -179,25 +219,32 @@ export interface InvestorZone {
     zone: 'Periferia',
     pricePerSqm: { min: 1200, avg: 1650, max: 3000 },
     variation2024: 7.8,
-    trend202526: 'strong_growthhigh',
+    trend202526: 'strong_growth',
+    demand: 'high',
     vacancyRate: { min: 4, max: 6 },
     rentingTime: { it: '3-4 settimane', en: '3-4 weeks' },
-    targetTenant: { 
-      it: ['Professionisti', 'Studenti metro-dipendenti'], 
-      en: ['Professionals', 'Metro-dependent students'] 
+    targetTenant: {
+      it: ['Professionisti', 'Studenti metro-dipendenti'],
+      en: ['Professionals', 'Metro-dependent students']
     },
     urbanRenewal: {
       active: true,
       projects: [
-        { 
-          name: 'Parco della Salute', 
+        {
+          name: 'Parco della Salute',
           investment: 'Multi-miliardi',
           impact: { it: 'Consolidamento trend positivo', en: 'Consolidation of positive trend' }
         },
-        { 
-          name: 'Nuova Città della Salute', 
+        {
+          name: 'Nuova Città della Salute',
           investment: '€450 mln',
-          impact: { it: 'Hub sanitario regionale', en: 'Regional healthcare hubEx polo industriale FIAT in forte trasformazione. Parco della Salute creerà migliaia di posti di lavoro. Ottimo per investimento a medio-lungo termine.',
+          impact: { it: 'Hub sanitario regionale', en: 'Regional healthcare hub' }
+        }
+      ]
+    },
+    rankings: {},
+    investorNote: {
+      it: 'Ex polo industriale FIAT in forte trasformazione. Parco della Salute creerà migliaia di posti di lavoro. Ottimo per investimento a medio-lungo termine.',
       en: 'Former FIAT industrial hub undergoing major transformation. Parco della Salute will create thousands of jobs. Great for medium-long term investment.'
     },
     image: '/images/strada-alpi-torino.jpeg',
@@ -210,14 +257,11 @@ export interface InvestorZone {
       },
       en: {
         title: 'Invest in Lingotto Turin | Parco della Salute',
-        description: keywords: ['lingotto investment', 'lingotto parco salute', 'buy property lingotto']
+        description: 'Lingotto Turin: strong +7.8% yearly growth. Parco della Salute and former FIAT transformation driving prices.',
+        keywords: ['lingotto investment', 'lingotto parco salute', 'buy property lingotto']
       }
     }
   },
-  
-  // ============================================================================
-  // TOP 5 POTENZIALE CRESCITA
-  // ============================================================================
   {
     id: 'barriera_di_milano',
     name: 'Barriera di Milano',
@@ -225,30 +269,37 @@ export interface InvestorZone {
     zone: 'Periferia',
     pricePerSqm: { min: 860, avg: 1150, max: 1600 },
     variation2024: 3,
-    trend202526: 'max_growthmedium',
+    trend202526: 'max_growth',
+    demand: 'medium',
     vacancyRate: { min: 8, max: 12 },
     rentingTime: { it: '4-6 settimane', en: '4-6 weeks' },
-    targetTenant: { 
-      it: ['Studenti budget-conscious', 'Lavoratori'], 
-      en: ['Budget-conscious students', 'Workers'] 
+    targetTenant: {
+      it: ['Studenti budget-conscious', 'Lavoratori'],
+      en: ['Budget-conscious students', 'Workers']
     },
     urbanRenewal: {
       active: true,
       projects: [
-        { 
-          name: 'Metro 2 - Fermata Rebaudengo', 
+        {
+          name: 'Metro 2 - Fermata Rebaudengo',
           investment: '€2+ mld (linea completa)',
           impact: { it: 'Massima rivalutazione attesa', en: 'Maximum revaluation expected' }
         },
-        { 
-          name: 'Ex Manifattura Tabacchi', 
+        {
+          name: 'Ex Manifattura Tabacchi',
           investment: '€200+ mln',
           impact: { it: 'Nuovo polo culturale', en: 'New cultural hub' }
         },
-        { 
-          name: 'Masterplan Carlo Ratti', 
+        {
+          name: 'Masterplan Carlo Ratti',
           investment: '€25,8 mln',
-          impact: { it: '+15-25% in 5-7 anni', en: '+15-25% in 5-7 yearsMASSIMO POTENZIALE. Prezzi più bassi di Torino (€1.150/mq) con Metro 2 in arrivo. Rischio alto ma upside enorme (+15-25%). Solo per investitori con orizzonte 5+ anni.',
+          impact: { it: '+15-25% in 5-7 anni', en: '+15-25% in 5-7 years' }
+        }
+      ]
+    },
+    rankings: { growthPotentialRank: 1, entryPriceRank: 1 },
+    investorNote: {
+      it: 'MASSIMO POTENZIALE. Prezzi più bassi di Torino (€1.150/mq) con Metro 2 in arrivo. Rischio alto ma upside enorme (+15-25%). Solo per investitori con orizzonte 5+ anni.',
       en: 'MAXIMUM POTENTIAL. Lowest prices in Turin (€1,150/sqm) with Metro 2 coming. High risk but huge upside (+15-25%). Only for investors with 5+ year horizon.'
     },
     image: '/images/mercati-rionali-torino.jpg',
@@ -272,18 +323,16 @@ export interface InvestorZone {
     slug: 'crocetta',
     zone: 'Semicentro',
     pricePerSqm: { min: 2750, avg: 3000, max: 3500 },
-    variation2024: 10, // Average of 6.3-14%
-    trend202526: 'strong_growthhigh',
+    variation2024: 10,
+    trend202526: 'strong_growth',
+    demand: 'high',
     vacancyRate: { min: 4, max: 6 },
     rentingTime: { it: '3-4 settimane', en: '3-4 weeks' },
-    targetTenant: { 
-      it: ['Studenti Politecnico', 'Famiglie', 'Professionisti'], 
-      en: ['Politecnico students', 'Families', 'Professionals'] 
+    targetTenant: {
+      it: ['Studenti Politecnico', 'Famiglie', 'Professionisti'],
+      en: ['Politecnico students', 'Families', 'Professionals']
     },
-    urbanRenewal: {
-      active: false,
-      projects: []
-    },
+    urbanRenewal: { active: false, projects: [] },
     rankings: { growthPotentialRank: 5 },
     investorNote: {
       it: 'Quartiere premium sede del Politecnico. Prezzi alti ma domanda garantita. Crescita forte (+10% nel 2024). Ideale per investitori che cercano asset prime.',
@@ -304,28 +353,22 @@ export interface InvestorZone {
       }
     }
   },
-  
-  // ============================================================================
-  // TOP 5 ENTRY PRICE (prezzi più bassi)
-  // ============================================================================
   {
     id: 'borgo_vittoria',
     name: 'Borgo Vittoria',
     slug: 'borgo-vittoria',
     zone: 'Periferia',
     pricePerSqm: { min: 1200, avg: 1370, max: 1755 },
-    variation2024: 8, // Average of 2-14%
-    trend202526: 'growthmedium',
+    variation2024: 8,
+    trend202526: 'growth',
+    demand: 'medium',
     vacancyRate: { min: 6, max: 10 },
     rentingTime: { it: '3-5 settimane', en: '3-5 weeks' },
-    targetTenant: { 
-      it: ['Studenti', 'Giovani lavoratori'], 
-      en: ['Students', 'Young workers'] 
+    targetTenant: {
+      it: ['Studenti', 'Giovani lavoratori'],
+      en: ['Students', 'Young workers']
     },
-    urbanRenewal: {
-      active: false,
-      projects: []
-    },
+    urbanRenewal: { active: false, projects: [] },
     rankings: { entryPriceRank: 3 },
     investorNote: {
       it: 'Entry price basso con domanda stabile. Quartiere residenziale solido. Buon rapporto qualità/prezzo per primi investimenti.',
@@ -341,7 +384,8 @@ export interface InvestorZone {
       },
       en: {
         title: 'Invest in Borgo Vittoria Turin | Low entry price',
-        description: keywords: ['borgo vittoria investment', 'borgo vittoria turin', 'buy property borgo vittoria']
+        description: 'Borgo Vittoria Turin: prices €1,370/sqm. Residential neighborhood ideal for first investments.',
+        keywords: ['borgo vittoria investment', 'borgo vittoria turin', 'buy property borgo vittoria']
       }
     }
   },
@@ -352,17 +396,15 @@ export interface InvestorZone {
     zone: 'Periferia',
     pricePerSqm: { min: 1500, avg: 1700, max: 2000 },
     variation2024: 4.3,
-    trend202526: 'moderatemedium',
+    trend202526: 'moderate',
+    demand: 'medium',
     vacancyRate: { min: 5, max: 8 },
     rentingTime: { it: '3-5 settimane', en: '3-5 weeks' },
-    targetTenant: { 
-      it: ['Studenti', 'Famiglie', 'Lavoratori'], 
-      en: ['Students', 'Families', 'Workers'] 
+    targetTenant: {
+      it: ['Studenti', 'Famiglie', 'Lavoratori'],
+      en: ['Students', 'Families', 'Workers']
     },
-    urbanRenewal: {
-      active: false,
-      projects: []
-    },
+    urbanRenewal: { active: false, projects: [] },
     rankings: { entryPriceRank: 4 },
     investorNote: {
       it: 'Quartiere popolare con buoni collegamenti. Prezzi accessibili e domanda stabile. Ottimo per investimenti a basso rischio.',
@@ -378,7 +420,8 @@ export interface InvestorZone {
       },
       en: {
         title: 'Invest in San Donato Turin | Accessible prices',
-        description: keywords: ['san donato investment', 'san donato turin', 'buy property san donato']
+        description: 'San Donato Turin: prices €1,700/sqm. Well-connected neighborhood with stable demand.',
+        keywords: ['san donato investment', 'san donato turin', 'buy property san donato']
       }
     }
   },
@@ -389,18 +432,19 @@ export interface InvestorZone {
     zone: 'Periferia',
     pricePerSqm: { min: 1575, avg: 1960, max: 2605 },
     variation2024: 5.5,
-    trend202526: 'growthmedium',
+    trend202526: 'growth',
+    demand: 'medium',
     vacancyRate: { min: 5, max: 7 },
     rentingTime: { it: '3-4 settimane', en: '3-4 weeks' },
-    targetTenant: { 
-      it: ['Famiglie', 'Lavoratori', 'Studenti'], 
-      en: ['Families', 'Workers', 'Students'] 
+    targetTenant: {
+      it: ['Famiglie', 'Lavoratori', 'Studenti'],
+      en: ['Families', 'Workers', 'Students']
     },
     urbanRenewal: {
       active: true,
       projects: [
-        { 
-          name: 'Metro 2 - Fermata Parella', 
+        {
+          name: 'Metro 2 - Fermata Parella',
           investment: '€2+ mld (linea completa)',
           impact: { it: 'Rivalutazione con arrivo metro', en: 'Revaluation with metro arrival' }
         }
@@ -426,10 +470,6 @@ export interface InvestorZone {
       }
     }
   },
-  
-  // ============================================================================
-  // ALTRI QUARTIERI RILEVANTI
-  // ============================================================================
   {
     id: 'santa_rita',
     name: 'Santa Rita',
@@ -437,17 +477,15 @@ export interface InvestorZone {
     zone: 'Semicentro',
     pricePerSqm: { min: 1200, avg: 1910, max: 2000 },
     variation2024: 4.5,
-    trend202526: 'stablemedium',
+    trend202526: 'stable',
+    demand: 'medium',
     vacancyRate: { min: 4, max: 6 },
     rentingTime: { it: '3-4 settimane', en: '3-4 weeks' },
-    targetTenant: { 
-      it: ['Famiglie', 'Lavoratori', 'Studenti'], 
-      en: ['Families', 'Workers', 'Students'] 
+    targetTenant: {
+      it: ['Famiglie', 'Lavoratori', 'Studenti'],
+      en: ['Families', 'Workers', 'Students']
     },
-    urbanRenewal: {
-      active: false,
-      projects: []
-    },
+    urbanRenewal: { active: false, projects: [] },
     rankings: {},
     investorNote: {
       it: 'Quartiere residenziale stabile con buoni servizi. Rischio basso. Ideale per investitori conservativi.',
@@ -463,7 +501,8 @@ export interface InvestorZone {
       },
       en: {
         title: 'Invest in Santa Rita Turin | Stable neighborhood',
-        description: keywords: ['santa rita investment', 'santa rita turin', 'buy property santa rita']
+        description: 'Santa Rita Turin: prices €1,910/sqm. Safe residential neighborhood for conservative investments.',
+        keywords: ['santa rita investment', 'santa rita turin', 'buy property santa rita']
       }
     }
   },
@@ -474,17 +513,15 @@ export interface InvestorZone {
     zone: 'Semicentro',
     pricePerSqm: { min: 2400, avg: 2680, max: 4000 },
     variation2024: 3,
-    trend202526: 'moderatehigh',
+    trend202526: 'moderate',
+    demand: 'high',
     vacancyRate: { min: 3, max: 5 },
     rentingTime: { it: '2-4 settimane', en: '2-4 weeks' },
-    targetTenant: { 
-      it: ['Professionisti', 'Studenti', 'Famiglie'], 
-      en: ['Professionals', 'Students', 'Families'] 
+    targetTenant: {
+      it: ['Professionisti', 'Studenti', 'Famiglie'],
+      en: ['Professionals', 'Students', 'Families']
     },
-    urbanRenewal: {
-      active: false,
-      projects: []
-    },
+    urbanRenewal: { active: false, projects: [] },
     rankings: {},
     investorNote: {
       it: 'Quartiere liberty elegante. Prezzi premium ma alta qualità degli inquilini. Asset di prestigio per portafogli diversificati.',
@@ -495,12 +532,13 @@ export interface InvestorZone {
     seo: {
       it: {
         title: 'Investire a Cit Turin Torino | Quartiere liberty premium',
-        description: 'Cit Turin Torino: prezzi €2.680/mq, quartiere liberty elegante. con inquilini di qualità.',
+        description: 'Cit Turin Torino: prezzi €2.680/mq, quartiere liberty elegante con inquilini di qualità.',
         keywords: ['investimento cit turin', 'cit turin torino', 'comprare casa cit turin']
       },
       en: {
         title: 'Invest in Cit Turin | Premium Art Nouveau',
-        description: keywords: ['cit turin investment', 'cit turin torino', 'buy property cit turin']
+        description: 'Cit Turin: prices €2,680/sqm, elegant Art Nouveau neighborhood with quality tenants.',
+        keywords: ['cit turin investment', 'cit turin torino', 'buy property cit turin']
       }
     }
   },
@@ -510,18 +548,16 @@ export interface InvestorZone {
     slug: 'campidoglio',
     zone: 'Semicentro',
     pricePerSqm: { min: 1850, avg: 2325, max: 2600 },
-    variation2024: 4.75, // Average of 3.5-6%
-    trend202526: 'stablemedium',
+    variation2024: 4.75,
+    trend202526: 'stable',
+    demand: 'medium',
     vacancyRate: { min: 4, max: 7 },
     rentingTime: { it: '3-4 settimane', en: '3-4 weeks' },
-    targetTenant: { 
-      it: ['Studenti creativi', 'Giovani professionisti'], 
-      en: ['Creative students', 'Young professionals'] 
+    targetTenant: {
+      it: ['Studenti creativi', 'Giovani professionisti'],
+      en: ['Creative students', 'Young professionals']
     },
-    urbanRenewal: {
-      active: false,
-      projects: []
-    },
+    urbanRenewal: { active: false, projects: [] },
     rankings: {},
     investorNote: {
       it: 'Quartiere in gentrificazione con mercato Balon. Atmosfera autentica, prezzi ancora accessibili. Potenziale di crescita medio-alto.',
@@ -553,7 +589,7 @@ export const getZoneBySlug = (slug: string): InvestorZone | undefined => {
 };
 
 export const getZonesByRanking = (
-  rankingType: | 'growthPotentialRank' | 'entryPriceRank',
+  rankingType: 'netYieldRank' | 'growthPotentialRank' | 'entryPriceRank',
   limit: number = 5
 ): InvestorZone[] => {
   return investorZones
