@@ -52,9 +52,8 @@ interface MapFilters {
    return labels[demand]?.[lang] || demand;
  };
  
-const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex: number, yieldMode: 'gross' | 'net'): L.DivIcon => {
-   const yieldValue = yieldMode === 'gross' ? zone.grossYield.max : zone.netYield.max;
-   const color = getYieldColor(yieldValue);
+const createZoneIcon = (zone: InvestorZone, isSelected: boolean, selectionIndex: number): L.DivIcon => {
+   const color = getDemandColor(zone.demand);
    const size = isSelected ? 44 : 36;
    const hasRenewal = zone.urbanRenewal.active;
   const selectionBadge = isSelected && selectionIndex >= 0 
