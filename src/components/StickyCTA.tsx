@@ -6,7 +6,7 @@ import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useGlobalScroll } from "@/hooks/useGlobalScroll";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
-import { QuickInvestorLeadDialog, QuickSellerLeadDialog } from "@/components/dialogs";
+import { QuickSellerLeadDialog } from "@/components/dialogs";
 
 export const StickyCTA = () => {
   const { t, i18n } = useTranslation();
