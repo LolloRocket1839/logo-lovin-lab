@@ -19,10 +19,13 @@ const validateSentenceCase = () => ({
 });
 
 // Investor zones schema validation — BLOCKING (fails build & CI on bad data)
-const validateInvestorZonesPlugin = () => ({
+const validateInvestorZonesPlugin = (mode: string) => ({
   name: 'validate-investor-zones',
   buildStart() {
-    execSync('npx tsx scripts/validate-investor-zones.ts', { stdio: 'inherit' });
+    // In dev: warn-only (never block HMR / dev server).
+    // In production build & CI: hard fail.
+    const flag = mode === 'production' ? '' : ' --warn';
+    execSync(`npx tsx scripts/validate-investor-zones.ts${flag}`, { stdio: 'inherit' });
   }
 });
 
@@ -47,7 +50,7 @@ export default defineConfig(({ mode }) => ({
     }),
     mode === "development" && componentTagger(),
     validateSentenceCase(),
-    validateInvestorZonesPlugin(),
+    validateInvestorZonesPlugin(mode),
     mode === "production" && visualizer({
       filename: "dist/stats.html",
       open: false,
