@@ -2,7 +2,7 @@
  * Fixtures for investorZoneData schema validation tests.
  * Kept separate so cases stay readable and easy to extend.
  */
-import type { InvestorZone } from './investorZoneData';
+import type { InvestorZone } from '../investorZoneData';
 
 /** Minimal valid zone — only critical fields populated. */
 export const minimalValidZone: InvestorZone = {
