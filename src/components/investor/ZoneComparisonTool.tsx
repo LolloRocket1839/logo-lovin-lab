@@ -15,7 +15,6 @@ import {
   investorZones,
   InvestorZone,
   formatPrice,
-  formatYield,
   getDemandLabel,
 } from "@/data/investorZoneData";
 import { ComparisonRow } from "./ComparisonRow";
