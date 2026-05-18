@@ -53,7 +53,7 @@ const HeroSectionComponent = ({ onCtaClick }: Props) => {
             <span className="eyebrow-mono text-foreground/70">
               {t("investor.landing.hero.eyebrow")}
             </span>
-            <span className="hidden sm:inline-flex items-center gap-2 eyebrow-mono text-foreground/50">
+            <span className="hidden sm:inline-flex items-center gap-2 eyebrow-mono text-muted-foreground">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
               Q3 attivo
             </span>
@@ -78,7 +78,7 @@ const HeroSectionComponent = ({ onCtaClick }: Props) => {
               <div className="flex-1 px-5 md:px-8 py-8 md:py-10 flex flex-col justify-end gap-7 border-t md:border-t-0 border-primary/15">
                 {metrics.map((m) => (
                   <div key={m.label} className="space-y-1">
-                    <p className="eyebrow-mono text-foreground/50">{m.label}</p>
+                    <p className="eyebrow-mono text-muted-foreground">{m.label}</p>
                     <p className="metric-mono text-3xl md:text-4xl text-primary font-medium">
                       {m.value}
                     </p>
