@@ -22,11 +22,7 @@ const validateSentenceCase = () => ({
 const validateInvestorZonesPlugin = () => ({
   name: 'validate-investor-zones',
   buildStart() {
-    try {
-      execSync('npx tsx scripts/validate-investor-zones.ts', { stdio: 'inherit' });
-    } catch (e) {
-      this.error('[validate-investor-zones] schema validation failed — aborting build.');
-    }
+    execSync('npx tsx scripts/validate-investor-zones.ts', { stdio: 'inherit' });
   }
 });
 
