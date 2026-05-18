@@ -9,7 +9,7 @@ import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { QuickInvestorLeadDialog, QuickSellerLeadDialog } from "@/components/dialogs";
 
 export const StickyCTA = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
