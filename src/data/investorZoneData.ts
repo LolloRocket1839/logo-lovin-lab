@@ -335,20 +335,20 @@ export const investorZones: InvestorZone[] = [
     urbanRenewal: { active: false, projects: [] },
     rankings: { growthPotentialRank: 5 },
     investorNote: {
-      it: 'Quartiere premium sede del Politecnico. Prezzi alti ma domanda garantita. Crescita forte (+10% nel 2024). Ideale per investitori che cercano asset prime.',
-      en: 'Premium neighborhood home to Politecnico. High prices but guaranteed demand. Strong growth (+10% in 2024). Ideal for investors seeking prime assets.'
+      it: 'Quartiere premium sede del Politecnico. Prezzi alti ma domanda garantita. Trend di crescita consolidato. Ideale per investitori che cercano asset prime.',
+      en: 'Premium neighborhood home to Politecnico. High prices but guaranteed demand. Consolidated growth trend. Ideal for investors seeking prime assets.'
     },
     image: '/images/politecnico-torino.avif',
     coordinates: { lat: 45.0567, lng: 7.6612 },
     seo: {
       it: {
         title: 'Investire alla Crocetta Torino | Politecnico premium',
-        description: 'Crocetta Torino: quartiere premium Politecnico. Prezzi €3.000/mq, crescita +10% annuo. Domanda garantita, asset sicuro.',
+        description: 'Crocetta Torino: quartiere premium Politecnico. Prezzi €3.000/mq, trend di crescita consolidato. Domanda garantita, asset sicuro.',
         keywords: ['investimento crocetta torino', 'crocetta politecnico', 'comprare casa crocetta']
       },
       en: {
         title: 'Invest in Crocetta Turin | Politecnico premium',
-        description: 'Crocetta Turin: premium Politecnico neighborhood. Prices €3,000/sqm, +10% yearly growth. Guaranteed demand, safe asset.',
+        description: 'Crocetta Turin: premium Politecnico neighborhood. Prices €3,000/sqm, consolidated growth trend. Guaranteed demand, safe asset.',
         keywords: ['crocetta investment', 'crocetta politecnico', 'buy property crocetta']
       }
     }
