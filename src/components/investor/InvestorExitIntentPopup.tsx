@@ -18,9 +18,11 @@ interface InvestorExitIntentPopupProps {
 export const InvestorExitIntentPopup = ({ source = "investors_page" }: InvestorExitIntentPopupProps) => {
   const { t, i18n } = useTranslation();
   const { trackEvent } = useAnalytics();
+  const { submitLead } = useLeadCapture();
   const [isVisible, setIsVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const currentLang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
 
   const showPopup = useCallback(() => {
