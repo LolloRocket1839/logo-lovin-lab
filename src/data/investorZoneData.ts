@@ -2,6 +2,8 @@
 // Investor Zone Data - Market data for Turin neighborhoods (Feb 2025)
 // Source: OMI, Immobiliare.it, FIAIP, Nomisma data
 // ============================================================================
+import { z } from 'zod';
+
 
 export type TrendType = 'stable' | 'moderate' | 'growth' | 'strong_growth' | 'max_growth';
 export type DemandLevel = 'low' | 'medium' | 'high' | 'very_high';
