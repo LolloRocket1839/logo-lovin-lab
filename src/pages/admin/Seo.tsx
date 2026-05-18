@@ -22,11 +22,31 @@ const SeoAdmin = () => {
   const { user, loading: authLoading } = useAuth();
   const [submitting, setSubmitting] = useState(false);
   const [verifying, setVerifying] = useState(false);
+  const [monitoring, setMonitoring] = useState(false);
+  const [loadingSnapshots, setLoadingSnapshots] = useState(false);
   const [result, setResult] = useState<unknown>(null);
   const [verifyResult, setVerifyResult] = useState<any>(null);
+  const [monitorResult, setMonitorResult] = useState<any>(null);
+  const [snapshots, setSnapshots] = useState<GscSnapshot[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const isAdmin = user && ADMIN_EMAILS.includes(user.email ?? "");
+
+  const loadSnapshots = async () => {
+    setLoadingSnapshots(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("gsc-index-monitor", { method: "GET" });
+      if (error) throw error;
+      setSnapshots((data as any)?.snapshots ?? []);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Unknown error");
+    } finally {
+      setLoadingSnapshots(false);
+    }
+  };
+
+  useEffect(() => { if (isAdmin) loadSnapshots(); }, [isAdmin]);
+
   if (!authLoading && !isAdmin) return <Navigate to="/" replace />;
 
   const submitSitemap = async () => {
@@ -58,6 +78,23 @@ const SeoAdmin = () => {
       setVerifying(false);
     }
   };
+
+  const runMonitor = async () => {
+    setMonitoring(true);
+    setError(null);
+    setMonitorResult(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("gsc-index-monitor", { body: {} });
+      if (error) throw error;
+      setMonitorResult(data);
+      await loadSnapshots();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Unknown error");
+    } finally {
+      setMonitoring(false);
+    }
+  };
+
 
   return (
     <div className="min-h-screen bg-background">
