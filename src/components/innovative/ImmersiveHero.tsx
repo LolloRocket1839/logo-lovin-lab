@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useABTest } from "@/hooks/useABTest";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { HeroLogo } from "./HeroLogo";
 
 const HowItWorksDrawer = lazy(() => import("./HowItWorksDrawer").then(m => ({ default: m.HowItWorksDrawer })));
