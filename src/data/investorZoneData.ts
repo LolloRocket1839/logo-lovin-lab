@@ -708,6 +708,37 @@ export const investorZoneSchema = z.object({
 
 export const investorZonesSchema = z.array(investorZoneSchema);
 
+export interface InvestorZoneValidationIssue {
+  zoneId: string | null;
+  index: number | null;
+  path: string;
+  message: string;
+}
+
+/**
+ * Returns a list of validation issues against `investorZonesSchema`,
+ * each annotated with the offending zone id and field path.
+ */
+export function collectInvestorZoneIssues(
+  zones: unknown = investorZones,
+): InvestorZoneValidationIssue[] {
+  const result = investorZonesSchema.safeParse(zones);
+  if (result.success) return [];
+  return result.error.issues.map((i) => {
+    const idx = typeof i.path[0] === 'number' ? i.path[0] : null;
+    const zoneId =
+      idx !== null && Array.isArray(zones)
+        ? ((zones[idx] as InvestorZone | undefined)?.id ?? null)
+        : null;
+    return {
+      zoneId,
+      index: idx,
+      path: i.path.slice(1).join('.') || '<root>',
+      message: i.message,
+    };
+  });
+}
+
 /**
  * Validates investorZones at module load in development. Throws a clear,
  * zone-scoped error so structural breakage (e.g. `trend202526demand` merge,
@@ -715,23 +746,50 @@ export const investorZonesSchema = z.array(investorZoneSchema);
  * downstream render bug.
  */
 export function validateInvestorZones(zones: unknown = investorZones): void {
-  const result = investorZonesSchema.safeParse(zones);
-  if (!result.success) {
-    const issues = result.error.issues
-      .map((i) => {
-        const idx = typeof i.path[0] === 'number' ? i.path[0] : null;
-        const zoneId =
-          idx !== null && Array.isArray(zones) && (zones[idx] as InvestorZone | undefined)?.id;
-        const where = zoneId ? `zone "${zoneId}"` : `index ${idx ?? '?'}`;
-        return `  • ${where} → ${i.path.slice(1).join('.') || '<root>'}: ${i.message}`;
-      })
-      .join('\n');
-    throw new Error(`[investorZoneData] schema validation failed:\n${issues}`);
-  }
+  const issues = collectInvestorZoneIssues(zones);
+  if (issues.length === 0) return;
+  const formatted = issues
+    .map((i) => `  • ${i.zoneId ? `zone "${i.zoneId}"` : `index ${i.index ?? '?'}`} → ${i.path}: ${i.message}`)
+    .join('\n');
+  throw new Error(`[investorZoneData] schema validation failed:\n${formatted}`);
 }
 
 // Run automatically in dev (Vite). No-op in production bundles.
 if (import.meta.env?.DEV) {
-  validateInvestorZones();
+  const issues = collectInvestorZoneIssues();
+  if (issues.length > 0) {
+    // Grouped, readable console output with zone id + field path.
+    /* eslint-disable no-console */
+    console.group(
+      `%c[investorZoneData] ${issues.length} schema issue${issues.length === 1 ? '' : 's'}`,
+      'color:#fff;background:#b91c1c;padding:2px 6px;border-radius:3px;font-weight:bold;',
+    );
+    console.table(issues);
+    issues.forEach((i) => {
+      const where = i.zoneId ? `zone "${i.zoneId}"` : `index ${i.index ?? '?'}`;
+      console.error(`• ${where} → ${i.path}: ${i.message}`);
+    });
+    console.groupEnd();
+    /* eslint-enable no-console */
+
+    // Dev-friendly toast (sonner is mounted globally). Lazy-load to avoid
+    // pulling sonner into any non-UI consumer of this data module.
+    void import('sonner')
+      .then(({ toast }) => {
+        const preview = issues
+          .slice(0, 3)
+          .map((i) => `${i.zoneId ?? `#${i.index ?? '?'}`} → ${i.path}`)
+          .join('\n');
+        const more = issues.length > 3 ? `\n…and ${issues.length - 3} more (see console)` : '';
+        toast.error(`Investor zones: ${issues.length} schema issue${issues.length === 1 ? '' : 's'}`, {
+          description: preview + more,
+          duration: 12000,
+        });
+      })
+      .catch(() => {
+        /* sonner unavailable (non-UI context) — console output already logged */
+      });
+  }
 }
+
 
