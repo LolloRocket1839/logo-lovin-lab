@@ -255,30 +255,6 @@ const InvestorZonePage = () => {
         <div className="container px-6">
           <div className="max-w-4xl mx-auto space-y-12">
             
-            {/* Rental Yields */}
-            <Card className="p-6 md:p-8 rounded-xl border-border/20">
-              <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                <Home className="w-5 h-5 text-primary" />
-                {t.rentalsTitle}
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-4 rounded-lg bg-muted/50">
-                  <p className="text-sm text-muted-foreground mb-2">{t.roomRent}</p>
-                  <p className="text-2xl font-bold text-foreground">
-                    €{zone.rentRoom.min} - €{zone.rentRoom.max}
-                    <span className="text-sm font-normal text-muted-foreground">{t.perMonth}</span>
-                  </p>
-                </div>
-                <div className="p-4 rounded-lg bg-muted/50">
-                  <p className="text-sm text-muted-foreground mb-2">{t.apartmentRent}</p>
-                  <p className="text-2xl font-bold text-foreground">
-                    €{zone.rentApartment.min} - €{zone.rentApartment.max}
-                    <span className="text-sm font-normal text-muted-foreground">{t.perMonth}</span>
-                  </p>
-                </div>
-              </div>
-            </Card>
-
             {/* Demand & Risk */}
             <Card className="p-6 md:p-8 rounded-xl border-border/20">
               <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
