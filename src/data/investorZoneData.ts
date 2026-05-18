@@ -102,7 +102,7 @@ export const investorZones: InvestorZone[] = [
         {
           name: 'Masterplan Carlo Ratti',
           investment: '€25,8 mln',
-          impact: { it: '+15-25% in 5-7 anni', en: '+15-25% in 5-7 years' }
+          impact: { it: 'Forte rivalutazione attesa a medio termine', en: 'Strong revaluation expected mid-term' }
         },
         {
           name: 'Riqualificazione Porta Palazzo',
