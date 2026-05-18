@@ -330,7 +330,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti/strumenti/media" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students/tools/grades" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students/tools/gpa" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti/strumenti/media" />
   </url>
 
