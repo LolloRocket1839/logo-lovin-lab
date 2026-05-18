@@ -797,32 +797,73 @@ function previewValue(v: unknown): string | null {
 }
 
 /**
+ * In-memory cache for validation results — keyed by the dataset reference.
+ * Avoids re-parsing the (large) `investorZones` array on repeated calls
+ * during the same process (e.g. Vite build + dev-mode side effect + CLI script
+ * + tests all hitting the validator within one Node session).
+ *
+ * - WeakMap for non-primitive datasets (no leaks).
+ * - A dedicated slot for non-object inputs (primitives), invalidated on each
+ *   distinct primitive value.
+ */
+const _issuesCache = new WeakMap<object, InvestorZoneValidationIssue[]>();
+let _primitiveCacheKey: unknown = Symbol('unset');
+let _primitiveCacheValue: InvestorZoneValidationIssue[] = [];
+
+/** Test/debug helper: clears the in-memory validation cache. */
+export function clearInvestorZoneValidationCache(): void {
+  // WeakMap has no .clear() — replace the slot instead.
+  // @ts-expect-error -- intentional reassignment for cache reset
+  _issuesCache = new WeakMap();
+  _primitiveCacheKey = Symbol('unset');
+  _primitiveCacheValue = [];
+}
+
+/**
  * Returns a list of validation issues against `investorZonesSchema`,
  * each annotated with zone id, slug, field path, Zod code, and received value.
+ * Results are cached per dataset reference for the lifetime of the process.
  */
 export function collectInvestorZoneIssues(
   zones: unknown = investorZones,
 ): InvestorZoneValidationIssue[] {
+  const isObject = zones !== null && (typeof zones === 'object' || typeof zones === 'function');
+  if (isObject) {
+    const cached = _issuesCache.get(zones as object);
+    if (cached) return cached;
+  } else if (zones === _primitiveCacheKey) {
+    return _primitiveCacheValue;
+  }
+
   const result = investorZonesSchema.safeParse(zones);
-  if (result.success) return [];
-  return result.error.issues.map((i) => {
-    const idx = typeof i.path[0] === 'number' ? i.path[0] : null;
-    const zone =
-      idx !== null && Array.isArray(zones)
-        ? (zones[idx] as InvestorZone | undefined)
-        : undefined;
-    const received = previewValue(safeGetAtPath(zones, i.path));
-    return {
-      zoneId: zone?.id ?? null,
-      zoneName: zone?.name ?? null,
-      slug: zone?.slug ?? null,
-      index: idx,
-      path: i.path.slice(1).join('.') || '<root>',
-      code: i.code ?? 'unknown',
-      received,
-      message: i.message,
-    };
-  });
+  const issues: InvestorZoneValidationIssue[] = result.success
+    ? []
+    : result.error.issues.map((i) => {
+        const idx = typeof i.path[0] === 'number' ? i.path[0] : null;
+        const zone =
+          idx !== null && Array.isArray(zones)
+            ? (zones[idx] as InvestorZone | undefined)
+            : undefined;
+        const received = previewValue(safeGetAtPath(zones, i.path));
+        return {
+          zoneId: zone?.id ?? null,
+          zoneName: zone?.name ?? null,
+          slug: zone?.slug ?? null,
+          index: idx,
+          path: i.path.slice(1).join('.') || '<root>',
+          code: i.code ?? 'unknown',
+          received,
+          message: i.message,
+        };
+      });
+
+  if (isObject) {
+    _issuesCache.set(zones as object, issues);
+  } else {
+    _primitiveCacheKey = zones;
+    _primitiveCacheValue = issues;
+  }
+  return issues;
 }
 
 /**
