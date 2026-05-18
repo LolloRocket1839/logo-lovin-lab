@@ -111,6 +111,7 @@ export const AnimatedRoutes = () => {
             <Route path="/auth" element={<Auth />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="/admin/leads" element={<LeadsAdmin />} />
+            <Route path="/admin/seo" element={<SeoAdmin />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
