@@ -872,17 +872,22 @@ export function validateInvestorZones(zones: unknown = investorZones): void {
 if (import.meta.env?.DEV) {
   const issues = collectInvestorZoneIssues();
   if (issues.length > 0) {
-    // Grouped, readable console output with zone id + field path.
+    // Grouped, readable console output with slug + path + code + received value.
     /* eslint-disable no-console */
     console.group(
       `%c[investorZoneData] ${issues.length} schema issue${issues.length === 1 ? '' : 's'}`,
       'color:#fff;background:#b91c1c;padding:2px 6px;border-radius:3px;font-weight:bold;',
     );
-    console.table(issues);
-    issues.forEach((i) => {
-      const where = i.zoneId ? `zone "${i.zoneId}"` : `index ${i.index ?? '?'}`;
-      console.error(`• ${where} → ${i.path}: ${i.message}`);
-    });
+    console.table(
+      issues.map((i) => ({
+        slug: i.slug ?? `#${i.index ?? '?'}`,
+        path: i.path,
+        code: i.code,
+        received: i.received,
+        message: i.message,
+      })),
+    );
+    console.error(formatInvestorZoneReport(issues));
     console.groupEnd();
     /* eslint-enable no-console */
 
@@ -892,7 +897,7 @@ if (import.meta.env?.DEV) {
       .then(({ toast }) => {
         const preview = issues
           .slice(0, 3)
-          .map((i) => `${i.zoneId ?? `#${i.index ?? '?'}`} → ${i.path}`)
+          .map((i) => `${i.slug ?? i.zoneId ?? `#${i.index ?? '?'}`} → ${i.path}`)
           .join('\n');
         const more = issues.length > 3 ? `\n…and ${issues.length - 3} more (see console)` : '';
         toast.error(`Investor zones: ${issues.length} schema issue${issues.length === 1 ? '' : 's'}`, {
