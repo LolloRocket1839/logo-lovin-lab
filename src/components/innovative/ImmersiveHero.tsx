@@ -49,9 +49,17 @@ export const ImmersiveHero = () => {
     setInvestDialogOpen(true);
   };
 
+  const handleTalkToLorenzo = () => {
+    trackClick('immersive_hero_whatsapp');
+    trackHeroClick();
+    trackCtaClick();
+    const lang = i18n.language.startsWith('en') ? 'en' : 'it';
+    const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
+    openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
+
   const headline = heroVariation === 'B' ? t('hero.mainHeadlineB') : t('hero.mainHeadline');
   const subheadline = heroVariation === 'B' ? t('hero.mainSubheadlineB') : t('hero.mainSubheadline');
-  const ctaLabel = ctaVariation === 'B' ? t('hero.startInvestingB') : t('hero.startInvesting');
   const ctaSocialProof = ctaVariation === 'B' ? t('hero.ctaSocialProofB') : null;
 
   // Split headline into key word (italic emphasis) + rest
