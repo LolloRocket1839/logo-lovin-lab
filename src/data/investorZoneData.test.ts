@@ -124,6 +124,83 @@ describe('investorZonesSchema', () => {
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Geographic sanity — every zone must sit inside the Turin metropolitan
+// bounding box and use finite, well-typed numeric coordinates.
+// Bounds are intentionally generous (covers Turin + first ring).
+// ─────────────────────────────────────────────────────────────────────────────
+
+const TURIN_BOUNDS = {
+  latMin: 44.95,
+  latMax: 45.20,
+  lngMin: 7.50,
+  lngMax: 7.85,
+} as const;
+
+describe('investorZones — coordinates', () => {
+  it.each(investorZones.map((z) => [z.id, z]))(
+    'zone "%s" has finite numeric lat/lng',
+    (_id, zone) => {
+      expect(zone.coordinates).toBeDefined();
+      const { lat, lng } = zone.coordinates;
+      expect(typeof lat).toBe('number');
+      expect(typeof lng).toBe('number');
+      expect(Number.isFinite(lat)).toBe(true);
+      expect(Number.isFinite(lng)).toBe(true);
+      // Reject sentinel/default values.
+      expect(lat).not.toBe(0);
+      expect(lng).not.toBe(0);
+    },
+  );
+
+  it.each(investorZones.map((z) => [z.id, z]))(
+    'zone "%s" lat is within global range [-90, 90]',
+    (_id, zone) => {
+      expect(zone.coordinates.lat).toBeGreaterThanOrEqual(-90);
+      expect(zone.coordinates.lat).toBeLessThanOrEqual(90);
+    },
+  );
+
+  it.each(investorZones.map((z) => [z.id, z]))(
+    'zone "%s" lng is within global range [-180, 180]',
+    (_id, zone) => {
+      expect(zone.coordinates.lng).toBeGreaterThanOrEqual(-180);
+      expect(zone.coordinates.lng).toBeLessThanOrEqual(180);
+    },
+  );
+
+  it.each(investorZones.map((z) => [z.id, z]))(
+    'zone "%s" sits inside the Turin bounding box',
+    (_id, zone) => {
+      const { lat, lng } = zone.coordinates;
+      expect(lat).toBeGreaterThanOrEqual(TURIN_BOUNDS.latMin);
+      expect(lat).toBeLessThanOrEqual(TURIN_BOUNDS.latMax);
+      expect(lng).toBeGreaterThanOrEqual(TURIN_BOUNDS.lngMin);
+      expect(lng).toBeLessThanOrEqual(TURIN_BOUNDS.lngMax);
+    },
+  );
+
+  it('coordinates have at least 3 decimals of precision (≈100m)', () => {
+    const lowPrecision = investorZones.filter((z) => {
+      const decimals = (n: number) => (String(n).split('.')[1] ?? '').length;
+      return decimals(z.coordinates.lat) < 3 || decimals(z.coordinates.lng) < 3;
+    });
+    expect(lowPrecision.map((z) => z.id)).toEqual([]);
+  });
+
+  it('no two zones share identical coordinates (likely copy-paste bug)', () => {
+    const seen = new Map<string, string>();
+    const duplicates: Array<[string, string]> = [];
+    for (const z of investorZones) {
+      const key = `${z.coordinates.lat},${z.coordinates.lng}`;
+      const prev = seen.get(key);
+      if (prev) duplicates.push([prev, z.id]);
+      else seen.set(key, z.id);
+    }
+    expect(duplicates).toEqual([]);
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Fixture-driven regression suite — prevents structural drift over time.
 // Each invalid fixture isolates one critical failure mode and asserts that
 // the validator both fails AND points at the correct field path.
