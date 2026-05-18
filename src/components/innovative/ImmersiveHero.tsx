@@ -174,11 +174,18 @@ export const ImmersiveHero = () => {
 
               <button
                 type="button"
-                onClick={handleInvestClick}
-                className="block w-full bg-primary text-primary-foreground px-6 py-6 md:py-7 text-center font-bold uppercase tracking-widest text-sm hover:bg-primary/90 transition-colors border-t border-primary/15 group"
+                onClick={handleTalkToLorenzo}
+                className="block w-full bg-primary text-primary-foreground px-6 py-5 md:py-6 text-center font-semibold text-base hover:bg-primary/90 transition-colors border-t border-primary/15 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               >
-                {ctaLabel}
-                <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
+                {t('cta.talkToLorenzo')}
+                <span className="inline-block ml-2 transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+              </button>
+              <button
+                type="button"
+                onClick={handleInvestClick}
+                className="block w-full bg-background text-foreground px-6 py-4 text-center font-medium text-sm hover:bg-primary/5 transition-colors border-t border-primary/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                {t('cta.requestInfo')}
               </button>
               {ctaSocialProof && (
                 <p className="px-6 py-3 text-xs text-muted-foreground text-center border-t border-primary/15">
