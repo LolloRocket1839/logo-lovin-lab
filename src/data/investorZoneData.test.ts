@@ -29,16 +29,51 @@ describe('investorZonesSchema', () => {
     },
   );
 
-  it('rejects a zone missing required top-level fields', () => {
+  it('rejects a zone missing a critical field (investorNote)', () => {
     const broken = { ...investorZones[0] } as Record<string, unknown>;
     delete broken.investorNote;
+    // `rankings` is intentionally tolerated as optional (legacy support).
     delete broken.rankings;
     const result = investorZoneSchema.safeParse(broken);
     expect(result.success).toBe(false);
     if (!result.success) {
       const paths = result.error.issues.map((i) => i.path.join('.'));
-      expect(paths).toEqual(expect.arrayContaining(['investorNote', 'rankings']));
+      expect(paths).toContain('investorNote');
+      expect(paths).not.toContain('rankings');
     }
+  });
+
+  it('tolerates legacy/optional fields (image, coordinates, vacancyRate, rentingTime, targetTenant, urbanRenewal, rankings) being absent', () => {
+    const base = investorZones[0];
+    const minimal = {
+      id: base.id,
+      name: base.name,
+      slug: base.slug,
+      zone: base.zone,
+      pricePerSqm: base.pricePerSqm,
+      trend202526: base.trend202526,
+      demand: base.demand,
+      investorNote: base.investorNote,
+      seo: base.seo,
+    };
+    expect(investorZoneSchema.safeParse(minimal).success).toBe(true);
+  });
+
+  it('tolerates unknown legacy fields without flagging them (passthrough)', () => {
+    const withLegacy = {
+      ...investorZones[0],
+      grossYield: 7.2,
+      netYield: 5.4,
+      roomRent: { min: 350, max: 500 },
+    };
+    expect(investorZoneSchema.safeParse(withLegacy).success).toBe(true);
+  });
+
+  it('coerces a numeric-string variation2024 ("+4%") to a number', () => {
+    const coerced = { ...investorZones[0], variation2024: '+4%' };
+    const result = investorZoneSchema.safeParse(coerced);
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.variation2024).toBe(4);
   });
 
   it('rejects a zone missing the seo block', () => {
