@@ -18,6 +18,18 @@ const validateSentenceCase = () => ({
   }
 });
 
+// Investor zones schema validation — BLOCKING (fails build & CI on bad data)
+const validateInvestorZonesPlugin = () => ({
+  name: 'validate-investor-zones',
+  buildStart() {
+    try {
+      execSync('npx tsx scripts/validate-investor-zones.ts', { stdio: 'inherit' });
+    } catch (e) {
+      this.error('[validate-investor-zones] schema validation failed — aborting build.');
+    }
+  }
+});
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
