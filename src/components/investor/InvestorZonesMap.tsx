@@ -226,11 +226,9 @@ const filterTexts = {
  
       const isSelected = selectedZoneIds.includes(zone.id);
       const selectionIndex = selectedZoneIds.indexOf(zone.id);
-       const yieldValue = yieldMode === 'gross' ? zone.grossYield : zone.netYield;
-       
        const marker = L.marker(
          [zone.coordinates.lat, zone.coordinates.lng], 
-        { icon: createZoneIcon(zone, isSelected, selectionIndex, yieldMode) }
+        { icon: createZoneIcon(zone, isSelected, selectionIndex) }
        ).addTo(mapRef.current);
  
        // Popup content
@@ -258,12 +256,12 @@ const filterTexts = {
                <div style="font-size: 13px; font-weight: 600; color: ${zone.variation2024 > 0 ? '#16a34a' : '#666'};">+${zone.variation2024}%</div>
              </div>
              <div style="background: hsl(var(--muted) / 0.5); padding: 6px 8px; border-radius: 6px;">
-               <div style="font-size: 10px; color: #666; margin-bottom: 2px;">📊 ${yieldMode === 'gross' ? t.grossYield : t.netYield}</div>
-               <div style="font-size: 13px; font-weight: 600; color: ${getYieldColor(yieldValue.max)};">${yieldValue.min}-${yieldValue.max}%</div>
+               <div style="font-size: 10px; color: #666; margin-bottom: 2px;">📊 ${t.vacancy}</div>
+               <div style="font-size: 13px; font-weight: 600;">${zone.vacancyRate.min}-${zone.vacancyRate.max}%</div>
              </div>
              <div style="background: hsl(var(--muted) / 0.5); padding: 6px 8px; border-radius: 6px;">
                <div style="font-size: 10px; color: #666; margin-bottom: 2px;">📍 ${t.demand}</div>
-               <div style="font-size: 13px; font-weight: 600;">${getDemandLabel(zone.demand, lang)}</div>
+               <div style="font-size: 13px; font-weight: 600; color: ${getDemandColor(zone.demand)};">${getDemandLabel(zone.demand, lang)}</div>
              </div>
            </div>
            
