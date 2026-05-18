@@ -131,8 +131,6 @@ export const ZoneComparisonTool = ({
     if (selectedZones.length < 2) return {};
 
     const lowestPrice = Math.min(...selectedZones.map((z) => z.pricePerSqm.avg));
-    const highestGrossYield = Math.max(...selectedZones.map((z) => z.grossYield.max));
-    const highestNetYield = Math.max(...selectedZones.map((z) => z.netYield.max));
     const lowestVacancy = Math.min(...selectedZones.map((z) => z.vacancyRate.min));
     const highestTrend = Math.max(...selectedZones.map((z) => z.variation2024));
     const demandOrder: Record<string, number> = {
@@ -147,8 +145,6 @@ export const ZoneComparisonTool = ({
 
     return {
       price: selectedZones.find((z) => z.pricePerSqm.avg === lowestPrice)?.id,
-      grossYield: selectedZones.find((z) => z.grossYield.max === highestGrossYield)?.id,
-      netYield: selectedZones.find((z) => z.netYield.max === highestNetYield)?.id,
       vacancy: selectedZones.find((z) => z.vacancyRate.min === lowestVacancy)?.id,
       trend: selectedZones.find((z) => z.variation2024 === highestTrend)?.id,
       demand: selectedZones.find((z) => demandOrder[z.demand] === highestDemand)?.id,
