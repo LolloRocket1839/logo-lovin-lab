@@ -653,60 +653,115 @@ export const formatYield = (yieldMin: number, yieldMax: number): string => {
 // e.g. merged fields like `trend202526demand` or missing impact/investorNote.
 // ============================================================================
 
-const i18nString = z.object({ it: z.string().min(1), en: z.string().min(1) });
+/**
+ * i18n string block. `en` is tolerated as optional/empty for legacy entries
+ * (IT-only datasets pre-translation) — IT remains required.
+ */
+const i18nString = z
+  .object({
+    it: z.string().min(1, 'IT copy is required'),
+    en: z.string().optional().default(''),
+  })
+  .passthrough();
 
-const urbanProjectSchema = z.object({
-  name: z.string().min(1),
-  investment: z.string().min(1),
-  impact: i18nString,
-});
+/** Critical: every urban project MUST carry an impact i18n block. */
+const urbanProjectSchema = z
+  .object({
+    name: z.string().min(1),
+    investment: z.string().min(1).optional().default(''),
+    impact: i18nString,
+  })
+  .passthrough();
 
-export const investorZoneSchema = z.object({
-  id: z.string().min(1),
-  name: z.string().min(1),
-  slug: z.string().regex(/^[a-z0-9-]+$/, 'slug must be kebab-case'),
-  zone: z.enum(['Centro', 'Semicentro', 'Periferia']),
-  pricePerSqm: z.object({
-    min: z.number().positive(),
-    avg: z.number().positive(),
-    max: z.number().positive(),
-  }),
-  variation2024: z.number(),
-  trend202526: z.enum(['stable', 'moderate', 'growth', 'strong_growth', 'max_growth']),
-  demand: z.enum(['low', 'medium', 'high', 'very_high']),
-  vacancyRate: z.object({ min: z.number().min(0), max: z.number().min(0) }),
-  rentingTime: i18nString,
-  targetTenant: z.object({
-    it: z.array(z.string().min(1)).min(1),
-    en: z.array(z.string().min(1)).min(1),
-  }),
-  urbanRenewal: z.object({
-    active: z.boolean(),
-    projects: z.array(urbanProjectSchema),
-  }),
-  rankings: z.object({
-    netYieldRank: z.number().int().positive().optional(),
-    growthPotentialRank: z.number().int().positive().optional(),
-    entryPriceRank: z.number().int().positive().optional(),
-  }),
-  investorNote: i18nString,
-  image: z.string().min(1),
-  coordinates: z.object({ lat: z.number(), lng: z.number() }),
-  seo: z.object({
-    it: z.object({
-      title: z.string().min(1),
-      description: z.string().min(1),
-      keywords: z.array(z.string().min(1)).min(1),
+/** Accepts number, numeric string ("+4%", "4"), or null/undefined for legacy. */
+const variationSchema = z.preprocess((v) => {
+  if (v === null || v === undefined || v === '') return 0;
+  if (typeof v === 'number') return v;
+  if (typeof v === 'string') {
+    const cleaned = v.replace(/[%+\s]/g, '').replace(',', '.');
+    const n = Number(cleaned);
+    return Number.isFinite(n) ? n : v;
+  }
+  return v;
+}, z.number());
+
+/** Accepts {min,max} OR a single number (legacy) OR omitted. */
+const vacancyRateSchema = z
+  .union([
+    z.object({ min: z.number().min(0), max: z.number().min(0) }),
+    z.number().min(0).transform((n) => ({ min: n, max: n })),
+  ])
+  .optional();
+
+const seoLocaleSchema = z
+  .object({
+    title: z.string().min(1, 'SEO title required'),
+    description: z.string().min(1, 'SEO description required'),
+    keywords: z.array(z.string().min(1)).optional().default([]),
+  })
+  .passthrough();
+
+/**
+ * `passthrough()` on the root tolerates legacy/extra fields (e.g. removed
+ * grossYield, netYield, roomRent) without flagging them as errors.
+ * Only structural/critical fields are strictly enforced.
+ */
+export const investorZoneSchema = z
+  .object({
+    // ---- Critical identity & taxonomy (strict) ----
+    id: z.string().min(1),
+    name: z.string().min(1),
+    slug: z.string().regex(/^[a-z0-9-]+$/, 'slug must be kebab-case'),
+    zone: z.enum(['Centro', 'Semicentro', 'Periferia']),
+
+    // ---- Critical pricing (strict) ----
+    pricePerSqm: z.object({
+      min: z.number().positive(),
+      avg: z.number().positive(),
+      max: z.number().positive(),
     }),
-    en: z.object({
-      title: z.string().min(1),
-      description: z.string().min(1),
-      keywords: z.array(z.string().min(1)).min(1),
-    }),
-  }),
-});
+
+    // ---- Critical enums (catch trend202526demand-style merges) ----
+    trend202526: z.enum(['stable', 'moderate', 'growth', 'strong_growth', 'max_growth']),
+    demand: z.enum(['low', 'medium', 'high', 'very_high']),
+
+    // ---- Critical narrative (strict on IT, tolerant on EN) ----
+    investorNote: i18nString,
+    seo: z.object({ it: seoLocaleSchema, en: seoLocaleSchema.partial().optional() }).passthrough(),
+
+    // ---- Tolerant / legacy-friendly ----
+    variation2024: variationSchema.optional(),
+    vacancyRate: vacancyRateSchema,
+    rentingTime: i18nString.optional(),
+    targetTenant: z
+      .object({
+        it: z.array(z.string().min(1)).min(1),
+        en: z.array(z.string()).optional().default([]),
+      })
+      .passthrough()
+      .optional(),
+    urbanRenewal: z
+      .object({
+        active: z.boolean(),
+        projects: z.array(urbanProjectSchema), // impact still required inside
+      })
+      .passthrough()
+      .optional(),
+    rankings: z
+      .object({
+        netYieldRank: z.number().int().positive().optional(),
+        growthPotentialRank: z.number().int().positive().optional(),
+        entryPriceRank: z.number().int().positive().optional(),
+      })
+      .passthrough()
+      .optional(),
+    image: z.string().optional().default(''),
+    coordinates: z.object({ lat: z.number(), lng: z.number() }).optional(),
+  })
+  .passthrough();
 
 export const investorZonesSchema = z.array(investorZoneSchema);
+
 
 export interface InvestorZoneValidationIssue {
   zoneId: string | null;
