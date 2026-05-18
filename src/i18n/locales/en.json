@@ -217,7 +217,9 @@
     "backToTop": "Back to top",
     "contact": "Contact us",
     "getStarted": "Get started",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "talkToLorenzo": "Talk to Lorenzo",
+    "requestInfo": "Request info"
   },
   "examSessionPlanner": {
     "addExam": {
