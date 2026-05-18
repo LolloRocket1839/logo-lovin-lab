@@ -377,31 +377,12 @@ const filterTexts = {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        {/* Yield mode toggle */}
-        <div className="flex gap-1 bg-background/95 backdrop-blur-sm rounded-lg p-1 shadow-lg">
-         <Button
-           variant={yieldMode === 'gross' ? 'default' : 'ghost'}
-           size="sm"
-           onClick={() => setYieldMode('gross')}
-           className="h-7 text-xs"
-         >
-           {t.grossYield}
-         </Button>
-         <Button
-           variant={yieldMode === 'net' ? 'default' : 'ghost'}
-           size="sm"
-           onClick={() => setYieldMode('net')}
-           className="h-7 text-xs"
-         >
-           {t.netYield}
-         </Button>
-        </div>
        </div>
        
        {/* Legend */}
        <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-[1000] max-w-[180px]">
          <h4 className="text-xs font-semibold mb-2 text-foreground">
-           {t.legend} ({yieldMode === 'gross' ? t.grossYield.toLowerCase() : t.netYield.toLowerCase()})
+           {t.legend}
          </h4>
          <div className="space-y-1.5">
            <div className="flex items-center gap-2 text-xs">
