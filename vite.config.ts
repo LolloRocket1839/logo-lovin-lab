@@ -28,12 +28,14 @@ const validateInvestorZonesPlugin = (mode: string) => ({
     const flag = mode === 'production' ? '' : ' --warn';
     execSync(`npx tsx scripts/validate-investor-zones.ts${flag}`, { stdio: 'inherit' });
 
-    // 2) Unit-test suite for the data module.
+    // 2) Unit-test suite for the data module (includes snapshot tests).
     //    Only blocks in production / CI — keeps dev startup fast.
+    //    CI=true ensures vitest fails (instead of auto-writing) on missing
+    //    or stale snapshots, so PRs catch error-message regressions.
     if (mode === 'production') {
       execSync(
         'npx vitest run src/data/investorZoneData.test.ts --reporter=dot',
-        { stdio: 'inherit' },
+        { stdio: 'inherit', env: { ...process.env, CI: 'true' } },
       );
     }
   }
