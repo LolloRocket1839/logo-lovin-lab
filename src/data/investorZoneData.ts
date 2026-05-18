@@ -661,7 +661,7 @@ const urbanProjectSchema = z.object({
   impact: i18nString,
 });
 
-const investorZoneSchema = z.object({
+export const investorZoneSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
   slug: z.string().regex(/^[a-z0-9-]+$/, 'slug must be kebab-case'),
