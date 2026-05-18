@@ -6,6 +6,8 @@ import {
   validateInvestorZones,
   collectInvestorZoneIssues,
   clearInvestorZoneValidationCache,
+  formatInvestorZoneReport,
+  formatInvestorZoneSummary,
 } from './investorZoneData';
 
 describe('investorZonesSchema', () => {
