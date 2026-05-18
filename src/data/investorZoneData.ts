@@ -806,7 +806,7 @@ function previewValue(v: unknown): string | null {
  * - A dedicated slot for non-object inputs (primitives), invalidated on each
  *   distinct primitive value.
  */
-const _issuesCache = new WeakMap<object, InvestorZoneValidationIssue[]>();
+let _issuesCache = new WeakMap<object, InvestorZoneValidationIssue[]>();
 let _primitiveCacheKey: unknown = Symbol('unset');
 let _primitiveCacheValue: InvestorZoneValidationIssue[] = [];
 
