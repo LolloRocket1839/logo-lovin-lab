@@ -60,17 +60,16 @@ export const StickyCTA = () => {
           <Button
             onClick={handleInvestClick}
             size="lg"
-            variant="secondary"
-            className="flex-1 h-12 text-sm font-semibold shadow-xl touch-target"
+            className="flex-1 h-12 text-sm font-semibold shadow-xl touch-target focus-visible:ring-offset-background"
           >
-            <TrendingUp className="mr-2 w-5 h-5" aria-hidden="true" />
-            {t('nav.investors')}
+            <MessageCircle className="mr-2 w-5 h-5" aria-hidden="true" />
+            {t('cta.talkToLorenzo')}
           </Button>
           <Button
             onClick={handleSellerClick}
             size="lg"
             variant="outline"
-            className="flex-1 h-12 text-sm font-semibold bg-background/90 touch-target"
+            className="flex-1 h-12 text-sm font-semibold bg-background/90 touch-target focus-visible:ring-offset-background"
           >
             <Building2 className="mr-2 w-5 h-5" aria-hidden="true" />
             {t('nav.sell')}
