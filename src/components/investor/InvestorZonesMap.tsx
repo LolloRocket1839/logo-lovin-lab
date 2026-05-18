@@ -155,12 +155,10 @@ const filterTexts = {
    lang, 
    onZoneClick,
   selectedZoneIds = [],
-   showYieldMode = 'gross'
  }) => {
    const mapContainerRef = useRef<HTMLDivElement>(null);
    const mapRef = useRef<L.Map | null>(null);
    const markersRef = useRef<L.Marker[]>([]);
-   const [yieldMode, setYieldMode] = useState<'gross' | 'net'>(showYieldMode);
   const [filters, setFilters] = useState<MapFilters>({
     types: ['Centro', 'Semicentro', 'Periferia'],
     renewalOnly: false
