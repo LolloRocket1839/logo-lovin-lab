@@ -78,7 +78,7 @@ export const ImmersiveHero = () => {
           {/* Top eyebrow row */}
           <div className="flex items-center justify-between px-5 md:px-8 py-3 border-b border-primary/15">
             <span className="eyebrow-mono text-foreground/70">Real Estate · Torino</span>
-            <span className="hidden sm:inline-flex items-center gap-2 eyebrow-mono text-foreground/50">
+            <span className="hidden sm:inline-flex items-center gap-2 eyebrow-mono text-muted-foreground">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
               Acquisizione attiva
             </span>
@@ -153,19 +153,19 @@ export const ImmersiveHero = () => {
             <div className="md:col-span-4 flex flex-col">
               <div className="flex-1 px-5 md:px-8 py-8 md:py-12 flex flex-col justify-end gap-8 border-t md:border-t-0 border-primary/15">
                 <div className="space-y-1">
-                  <p className="eyebrow-mono text-foreground/50">Ticket minimo</p>
+                  <p className="eyebrow-mono text-muted-foreground">Ticket minimo</p>
                   <p className="metric-mono text-3xl md:text-4xl text-primary font-medium">
                     €100
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <p className="eyebrow-mono text-foreground/50">Payout</p>
+                  <p className="eyebrow-mono text-muted-foreground">Payout</p>
                   <p className="metric-mono text-3xl md:text-4xl text-primary font-medium">
                     /2m
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <p className="eyebrow-mono text-foreground/50">Mercato</p>
+                  <p className="eyebrow-mono text-muted-foreground">Mercato</p>
                   <p className="metric-mono text-3xl md:text-4xl text-primary font-medium">
                     Torino
                   </p>
@@ -198,19 +198,19 @@ export const ImmersiveHero = () => {
           {/* Footer metric bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 border-t border-primary/15 bg-primary/[0.03]">
             <div className="p-4 md:p-5 border-r border-primary/15 text-center">
-              <span className="block eyebrow-mono text-foreground/50 mb-1.5">Studenti</span>
+              <span className="block eyebrow-mono text-muted-foreground mb-1.5">Studenti</span>
               <span className="metric-mono text-foreground font-medium">90.000+</span>
             </div>
             <div className="p-4 md:p-5 md:border-r border-primary/15 text-center">
-              <span className="block eyebrow-mono text-foreground/50 mb-1.5">Università</span>
+              <span className="block eyebrow-mono text-muted-foreground mb-1.5">Università</span>
               <span className="metric-mono text-foreground font-medium">7</span>
             </div>
             <div className="p-4 md:p-5 border-r border-t md:border-t-0 border-primary/15 text-center">
-              <span className="block eyebrow-mono text-foreground/50 mb-1.5">Modello</span>
+              <span className="block eyebrow-mono text-muted-foreground mb-1.5">Modello</span>
               <span className="metric-mono text-foreground font-medium">9m + estate</span>
             </div>
             <div className="p-4 md:p-5 border-t md:border-t-0 border-primary/15 text-center">
-              <span className="block eyebrow-mono text-foreground/50 mb-1.5">Stato</span>
+              <span className="block eyebrow-mono text-muted-foreground mb-1.5">Stato</span>
               <span className="metric-mono text-foreground font-medium">Q3 attivo</span>
             </div>
           </div>

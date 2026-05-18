@@ -14,7 +14,7 @@ const TrustStripeComponent = () => {
   return (
     <section className="border-y border-primary/15 bg-background py-0">
       <div className="container max-w-6xl mx-auto px-4 sm:px-6">
-        <p className="eyebrow-mono text-foreground/50 text-center pt-6 pb-4">
+        <p className="eyebrow-mono text-muted-foreground text-center pt-6 pb-4">
           {t("investor.landing.trust.title")}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 border-t border-primary/15">
