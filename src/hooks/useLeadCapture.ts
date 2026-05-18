@@ -136,6 +136,15 @@ export function useLeadCapture() {
       })
       .catch((err) => console.error("Admin notification email failed:", err));
 
+    // 3. Instant WhatsApp ping to Lorenzo for investor leads
+    if (lead.leadType === "investor") {
+      supabase.functions
+        .invoke("notify-investor-whatsapp", { body: emailPayload })
+        .catch((err) =>
+          console.error("Investor WhatsApp notify failed:", err),
+        );
+    }
+
     return { success: true };
   };
 
