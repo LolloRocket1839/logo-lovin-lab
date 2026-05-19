@@ -359,8 +359,10 @@ serve(async (req) => {
     const hasActionable = alerts.some((a) => a.severity === "critical" || a.severity === "warn");
 
     let alertSent = false;
+    let whatsappSent = false;
     if (hasActionable) {
       alertSent = await sendAlertEmail(alerts, snapshot);
+      whatsappSent = await sendWhatsAppAlert(alerts, snapshot);
     }
 
     const { data: inserted, error: insErr } = await admin
