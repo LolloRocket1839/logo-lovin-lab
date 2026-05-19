@@ -201,6 +201,7 @@ const SeoAdmin = () => {
                 warning: <b>{monitorResult.totals?.warnings}</b>,
                 URL inviati: <b>{monitorResult.totals?.submitted}</b>
                 {monitorResult.alertSent && <span className="ml-2 text-yellow-700 dark:text-yellow-400">📧 email alert inviata</span>}
+                {monitorResult.whatsappSent && <span className="ml-2 text-green-700 dark:text-green-400">📱 WhatsApp inviato</span>}
               </div>
             )}
 
