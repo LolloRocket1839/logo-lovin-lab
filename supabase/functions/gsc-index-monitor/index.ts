@@ -387,6 +387,7 @@ serve(async (req) => {
       totals: snapshot.totals,
       alerts,
       alertSent,
+      whatsappSent,
       sitemapsCount: snapshot.sitemaps.length,
     });
   } catch (e) {
