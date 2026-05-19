@@ -948,7 +948,19 @@
         "submitting": "Invio in corso…",
         "success": "Grazie. Lorenzo ti risponde entro 48 ore all'email che hai indicato. Nel frattempo puoi esplorare gli articoli sul mercato torinese.",
         "error": "Invio non riuscito. Riprova o scrivi a junglerententeprise@gmail.com.",
-        "selectPlaceholder": "Seleziona…"
+        "selectPlaceholder": "Seleziona…",
+        "steps": {
+          "progress": "Passo {{current}} di {{total}}",
+          "step1Title": "Iniziamo a conoscerci",
+          "step1Subtitle": "Solo 30 secondi. I tuoi contatti restano privati.",
+          "step2Title": "Aiutaci a personalizzare la proposta",
+          "step2Subtitle": "Così Lorenzo prepara materiali rilevanti per te.",
+          "step3Title": "Ultimo passaggio",
+          "step3Subtitle": "Conferme legali e consensi richiesti dalla normativa.",
+          "next": "Continua",
+          "back": "Indietro",
+          "autoSaved": "Bozza salvata automaticamente"
+        }
       },
       "disclaimer": {
         "p1": "Le informazioni contenute in questa pagina hanno finalità esclusivamente informative e non costituiscono offerta al pubblico di prodotti finanziari ai sensi dell'art. 94 del D.Lgs. 58/1998 (TUF), né sollecitazione all'investimento, né consulenza finanziaria, fiscale o legale.",
