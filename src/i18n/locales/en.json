@@ -948,7 +948,19 @@
         "submitting": "Sending…",
         "success": "Thank you. Lorenzo will reply within 48 hours at the email you provided. In the meantime, feel free to explore our articles on the Turin market.",
         "error": "Submission failed. Please retry or write to junglerententeprise@gmail.com.",
-        "selectPlaceholder": "Select…"
+        "selectPlaceholder": "Select…",
+        "steps": {
+          "progress": "Step {{current}} of {{total}}",
+          "step1Title": "Let's start",
+          "step1Subtitle": "30 seconds. Your details stay private.",
+          "step2Title": "Help us tailor the proposal",
+          "step2Subtitle": "So Lorenzo can prepare materials relevant to you.",
+          "step3Title": "Last step",
+          "step3Subtitle": "Legal confirmations required by regulation.",
+          "next": "Continue",
+          "back": "Back",
+          "autoSaved": "Draft saved automatically"
+        }
       },
       "disclaimer": {
         "p1": "The information on this page is for informational purposes only and does not constitute a public offering of financial products under art. 94 of Italian Legislative Decree 58/1998 (TUF — Italian Consolidated Financial Act), nor an investment solicitation, nor financial, tax or legal advice.",
