@@ -234,3 +234,5 @@ Nel contesto specifico di Torino, la dinamicità del mercato nel 2025 crea sia o
 [8] [Quanto si paga a un'agenzia immobiliare?](https://www.nextcasa.it/quanto-si-paga-a-unagenzia-immobiliare-tutto-quello-che-devi-sapere-sulle-commissioni/)
 
 [9] [I rischi per il venditore di immobili nelle compravendite](https://www.expertisere.it/n-134-i-rischi-per-il-venditore-di-immobili-nelle-compravendite-/)
+
+[9b] [A Torino troppe case sfitte, almeno 50 mila. Il Comune: «Dobbiamo intervenire» — Corriere Torino, 2024](https://torino.corriere.it/notizie/cronaca/24_settembre_18/a-torino-troppe-case-sfitte-almeno-50-mila-il-comune-dobbiamo-intervenire-13fc2fab-7e53-4d9b-bfb3-3d0f9a400xlk.shtml)
