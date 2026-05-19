@@ -11,8 +11,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import {
   Mail, Phone, MessageCircle, PhoneCall, Calendar as CalendarIcon, StickyNote,
-  Users, ArrowDownToLine, ArrowUpFromLine, RotateCcw, ExternalLink, Loader2,
+  Users, RotateCcw, Loader2,
 } from "lucide-react";
+import { format, formatDistanceToNow } from "date-fns";
+import { it } from "date-fns/locale";
 import { format, formatDistanceToNow } from "date-fns";
 import { it } from "date-fns/locale";
 import {
