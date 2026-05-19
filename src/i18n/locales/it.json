@@ -718,18 +718,22 @@
         "startupSuffix": "iscritta CCIAA Torino · REA TO-1355899"
       },
       "emailFirst": {
-        "title": "Vuoi solo restare informato?",
-        "subtitle": "Lasciaci nome ed email: ti scriviamo solo quando apriamo una nuova operazione. Niente newsletter, niente spam.",
+        "title": "Vuoi essere informato sulla prossima operazione?",
+        "subtitle": "Solo email. Ti scriviamo quando apriamo. Niente newsletter, niente spam.",
         "fields": {
-          "name": "Nome",
-          "email": "Email"
+          "name": "Nome (facoltativo)",
+          "email": "La tua email"
         },
         "submit": "Tienimi aggiornato",
         "submitting": "Invio…",
         "preferFull": "Preferisco compilare il form completo per ricevere il memorandum",
         "alsoQualify": "Vuoi anche il memorandum? Compila il form di qualifica",
         "privacy": "Trattiamo i tuoi dati solo per ricontattarti su questa opportunità (GDPR). Puoi cancellarti in ogni momento.",
+        "trustLine": "Niente spam · Risposta entro 24h · Lorenzo risponde di persona",
         "success": "Grazie. Ti avviseremo personalmente alla prossima apertura.",
+        "successNamePrompt": "Come ti chiami? Ci aiuta a ricontattarti meglio.",
+        "saveName": "Salva",
+        "skipName": "Salta",
         "error": "Qualcosa è andato storto. Riprova tra qualche minuto o scrivici via WhatsApp."
       },
       "trust": {
