@@ -71,6 +71,16 @@ const HeroSectionComponent = ({ onCtaClick }: Props) => {
               <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-xl">
                 {t("investor.landing.hero.ctaNote")}
               </p>
+              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs eyebrow-mono text-muted-foreground/90">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
+                  Lorenzo · Founder · {lang === "en" ? "replies within 24h" : "risponde entro 24h"}
+                </span>
+                <span className="hidden sm:inline-flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary/60" aria-hidden="true" />
+                  S.r.l. · {lang === "en" ? "Innovative Startup Registry" : "Registro Startup Innovative"}
+                </span>
+              </div>
             </div>
 
             {/* Metrics column */}
