@@ -236,6 +236,61 @@ async function sendAlertEmail(alerts: Alert[], curr: Snapshot) {
   return true;
 }
 
+async function sendWhatsAppAlert(alerts: Alert[], curr: Snapshot): Promise<boolean> {
+  const criticals = alerts.filter((a) => a.severity === "critical");
+  if (criticals.length === 0) return false;
+
+  const phone = (Deno.env.get("WHATSAPP_NOTIFY_NUMBER") || "").replace(/[^\d]/g, "");
+  const apiKey = Deno.env.get("CALLMEBOT_API_KEY") || "";
+  if (!phone || !apiKey) {
+    console.warn("WHATSAPP_NOTIFY_NUMBER or CALLMEBOT_API_KEY missing — skip WhatsApp");
+    return false;
+  }
+
+  const top = criticals.slice(0, 3).map((a) => `• ${a.message}`).join("\n");
+  let message = [
+    `🚨 GSC Alert — junglerent.it`,
+    `${criticals.length} errori critici rilevati`,
+    "",
+    top,
+    "",
+    `Totali: ${curr.totals.errors} err / ${curr.totals.warnings} warn / ${curr.totals.submitted} URL`,
+    `🔗 https://search.google.com/search-console`,
+  ].join("\n");
+  if (message.length > 1000) message = message.slice(0, 997) + "...";
+
+  const url = `https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(phone)}` +
+    `&text=${encodeURIComponent(message)}&apikey=${encodeURIComponent(apiKey)}`;
+
+  let ok = false;
+  let errorMessage: string | null = null;
+  try {
+    const resp = await fetch(url, { method: "GET" });
+    const text = await resp.text();
+    ok = resp.ok && !/error|invalid|not received/i.test(text);
+    if (!ok) errorMessage = `HTTP ${resp.status}: ${text.slice(0, 300)}`;
+  } catch (err) {
+    errorMessage = err instanceof Error ? err.message : String(err);
+  }
+
+  try {
+    const admin = createClient(
+      Deno.env.get("SUPABASE_URL")!,
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+    );
+    await admin.from("email_send_log").insert({
+      template_name: "whatsapp-gsc-alert",
+      recipient_email: Deno.env.get("ADMIN_NOTIFICATION_EMAIL") ?? "admin@junglerent.it",
+      status: ok ? "sent" : "failed",
+      error_message: errorMessage,
+      metadata: { criticals: criticals.length, totals: curr.totals },
+    });
+  } catch (e) {
+    console.error("Failed to log WhatsApp send:", e);
+  }
+  return ok;
+}
+
 async function authorize(req: Request): Promise<{ ok: boolean; mode: "cron" | "admin" | null; error?: string }> {
   const auth = req.headers.get("Authorization") ?? "";
   const cronSecret = Deno.env.get("WEEKLY_REPORT_SECRET");

@@ -1,33 +1,36 @@
+# Canale WhatsApp per alert critici GSC
+
 ## Obiettivo
-Attivare le notifiche WhatsApp istantanee a Lorenzo quando arriva un nuovo lead investitore, usando CallMeBot (gratis, nessun account).
+Quando `gsc-index-monitor` rileva alert di severità **critical** (errori sitemap, nuovi errori su sitemap esistenti), spedire — oltre all'email — un messaggio WhatsApp di alert al numero admin. I `warn` (warning aumentati, calo URL >5%) restano solo email per evitare rumore.
 
-## Stato attuale
-- Edge function `supabase/functions/notify-investor-whatsapp/index.ts` — già creata e deployata
-- `src/hooks/useLeadCapture.ts` — già la invoca in parallelo a `send-transactional-email` quando `leadType === "investor"`
-- `QuickInvestorLeadDialog` e `InvestorExitIntentPopup` — già aggiornati col post-submit "Talk to Lorenzo"
-- Mancano solo 2 secrets per chiudere il cerchio
+## Componenti
 
-## Passi
+| Componente | Modifica |
+|---|---|
+| `supabase/functions/gsc-index-monitor/index.ts` | Aggiungere funzione `sendWhatsAppAlert(alerts, curr)` che invia messaggio CallMeBot se ci sono alert `critical`. Chiamata dopo `sendAlertEmail`, fire-and-forget, errori loggati ma non bloccanti. Risultato esposto nel JSON di risposta come `whatsappSent`. |
+| Secrets riutilizzati | `WHATSAPP_NOTIFY_NUMBER` + `CALLMEBOT_API_KEY` (gli stessi già usati da `notify-investor-whatsapp` — nessun nuovo secret). Se mancanti: skip silenzioso con `console.warn`, nessun errore. |
+| `src/pages/admin/Seo.tsx` | Mostrare badge "📱 WhatsApp inviato" nel banner di risultato snapshot quando `whatsappSent === true`. |
 
-### 1. Setup CallMeBot (lato Lorenzo, 2 minuti)
-- Salvare in rubrica `+34 644 51 95 23`
-- Inviare via WhatsApp: `I allow callmebot to send me messages`
-- Attendere risposta con `APIKEY` numerica
+## Formato messaggio WhatsApp
+```
+🚨 GSC Alert — junglerent.it
+{N} errori critici rilevati
 
-### 2. Salvare i secrets in Lovable Cloud
-- `WHATSAPP_NOTIFY_NUMBER` → numero E.164 di Lorenzo (es. `+393331234567`)
-- `CALLMEBOT_API_KEY` → la APIKEY ricevuta da CallMeBot
+• {alert.message}
+• {alert.message}
 
-### 3. Verifica end-to-end
-- Test della edge function con `supabase--curl_edge_functions` passando un payload fittizio
-- Controllo log via `supabase--edge_function_logs` per confermare HTTP 200 da CallMeBot
-- Submit di prova dal form `QuickInvestorLeadDialog` in preview per validare il flusso completo (DB insert + email admin + WhatsApp)
+Totali: {errors} err / {warnings} warn / {submitted} URL
+🔗 https://search.google.com/search-console
+```
+Max 3 alert nel messaggio (gli altri sono nell'email completa). Tronca a 1000 char.
 
 ## Dettagli tecnici
-- La function legge `WHATSAPP_NOTIFY_NUMBER` e `CALLMEBOT_API_KEY` da `Deno.env`
-- Chiama `https://api.callmebot.com/whatsapp.php?phone=<num>&text=<urlencoded>&apikey=<key>`
-- Il messaggio include: email lead, nome, ticket size, source, UTM
-- Se i secrets mancano la function logga warning e ritorna 200 (non blocca il flusso lead)
+- Nessuna nuova tabella, nessuna migration.
+- CallMeBot URL: `https://api.callmebot.com/whatsapp.php?phone=...&text=...&apikey=...` (GET).
+- Logging: insert in `email_send_log` con `template_name = 'whatsapp-gsc-alert'` per tracciare send.
+- Solo `severity === 'critical'` triggera WhatsApp. `warn` → solo email.
 
-## Fallback / evoluzione futura
-- Se in futuro vuoi anche scrivere automaticamente ai lead (non solo a Lorenzo), si passa a Twilio WhatsApp Business via connettore Lovable — nessuna riscrittura, basta sostituire la chiamata HTTP dentro la stessa edge function
+## Caveat CallMeBot
+La APIKEY CallMeBot al momento **non è ancora arrivata** (Bot 2 in attesa). Il codice è pronto: appena salvi `CALLMEBOT_API_KEY` nei secrets, gli alert WhatsApp partono al prossimo snapshot. Senza secret = skip silenzioso, email continuano a funzionare.
+
+Se CallMeBot continua a non rispondere, possiamo sostituire questa funzione con Telegram in 5 minuti (stesso punto di chiamata, cambia solo la `sendWhatsAppAlert`).
