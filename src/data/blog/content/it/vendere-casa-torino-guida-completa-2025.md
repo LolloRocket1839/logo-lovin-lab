@@ -176,7 +176,7 @@ Il prezzo medio di compravendita a Torino si attesta attorno a **2.071€/mq**, 
 
 ### Il problema strutturale delle case sfitte
 
-Torino affronta una problematica emergente: l'accumulo di case vuote e sfitte. Secondo i dati ufficiali del Comune, oltre **22.000 alloggi** risultano inutilizzati, sebbene fonti alternative stimino il numero reale a oltre **70.000 unità**.
+Torino affronta una problematica emergente: l'accumulo di case vuote e sfitte. Secondo il Comune di Torino (Assessore al Welfare Jacopo Rosatelli, 2024), in città risultano **almeno 50.000 alloggi sfitti**, mentre stime di stampa indipendenti arrivano fino a **70.000–80.000 unità**.[9b]
 
 Per affrontare questa emergenza abitativa strutturale, il Comune di Torino sta valutando il progetto **"Vuoti a Rendere"**, con sanzioni significative per i proprietari di immobili sfitti, che potrebbero arrivare a **400€ mensili** per ciascun immobile sfitto.[9]
 
