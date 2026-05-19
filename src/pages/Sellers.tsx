@@ -294,7 +294,7 @@ const Sellers = () => {
             </p>
             <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto text-center">
               {[
-                { value: '22.000+', label: t('sellersPage.stats.stat1', 'immobili sfitti a Torino'), sub: t('sellersPage.stats.stat1sub', 'contesto di mercato') },
+                { value: '50.000+', label: t('sellersPage.stats.stat1', 'immobili sfitti a Torino'), sub: t('sellersPage.stats.stat1sub', 'fonte: Comune di Torino, 2024') },
                 { value: '60–90 gg', label: t('sellersPage.stats.stat2', 'dalla valutazione al rogito'), sub: t('sellersPage.stats.stat2sub', 'il nostro impegno') },
                 { value: '0%', label: t('sellersPage.stats.stat3', 'commissioni per il venditore'), sub: t('sellersPage.stats.stat3sub', 'nessun costo nascosto') },
               ].map((stat, i) => (
