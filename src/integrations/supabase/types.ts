@@ -455,42 +455,104 @@ export type Database = {
         }
         Relationships: []
       }
+      lead_interactions: {
+        Row: {
+          content: string | null
+          created_at: string
+          created_by: string | null
+          direction: string
+          id: string
+          kind: string
+          lead_id: string
+          lead_table: string
+          metadata: Json | null
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string
+          created_by?: string | null
+          direction?: string
+          id?: string
+          kind: string
+          lead_id: string
+          lead_table?: string
+          metadata?: Json | null
+        }
+        Update: {
+          content?: string | null
+          created_at?: string
+          created_by?: string | null
+          direction?: string
+          id?: string
+          kind?: string
+          lead_id?: string
+          lead_table?: string
+          metadata?: Json | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lead_interactions_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       leads: {
         Row: {
+          assigned_to: string | null
           created_at: string
           email: string
           id: string
+          internal_notes: string | null
+          last_contact_at: string | null
           lead_type: string
           metadata: Json | null
           name: string | null
+          next_followup_at: string | null
           phone: string | null
+          priority: string
           source: string
+          status: string
           utm_campaign: string | null
           utm_medium: string | null
           utm_source: string | null
         }
         Insert: {
+          assigned_to?: string | null
           created_at?: string
           email: string
           id?: string
+          internal_notes?: string | null
+          last_contact_at?: string | null
           lead_type?: string
           metadata?: Json | null
           name?: string | null
+          next_followup_at?: string | null
           phone?: string | null
+          priority?: string
           source?: string
+          status?: string
           utm_campaign?: string | null
           utm_medium?: string | null
           utm_source?: string | null
         }
         Update: {
+          assigned_to?: string | null
           created_at?: string
           email?: string
           id?: string
+          internal_notes?: string | null
+          last_contact_at?: string | null
           lead_type?: string
           metadata?: Json | null
           name?: string | null
+          next_followup_at?: string | null
           phone?: string | null
+          priority?: string
           source?: string
+          status?: string
           utm_campaign?: string | null
           utm_medium?: string | null
           utm_source?: string | null

@@ -1,24 +1,74 @@
-## Fix stat "22.000+ immobili sfitti" → "50.000+"
+## Mini CRM in `/admin/leads`
 
-Il numero "22.000+" sulla pagina **Vendi** non è verificabile: fonti pubbliche (Comune di Torino / Assessore Rosatelli via Corriere 2024) parlano di **almeno 50.000 alloggi sfitti**, La Stampa stima ~80.000. Sostituisco con il dato conservativo Comune + Corriere.
+Trasforma la pagina admin esistente in un mini-CRM operativo per gestire i lead (investitori, venditori, studenti, generali) senza uscire dall'app. Niente Gmail in MVP: parto da quello che hai già (`leads` + `seller_leads` + `investor_interest` + `admin-leads` edge function) e aggiungo stato, timeline interazioni, follow-up.
 
-### Modifiche
+### Stati lead (kanban)
+`nuovo` → `contattato` → `qualificato` → `proposta` → `vinto` / `perso` / `nurturing`
 
-1. **`src/pages/Sellers.tsx`** — stat card "Numeri che parlano":
-   - `value: '22.000+'` → `value: '50.000+'`
-   - `sub: 'contesto di mercato'` → `sub: 'fonte: Comune di Torino, 2024'`
+### 1. Schema (1 migrazione)
 
-2. **i18n (`src/i18n/locales/it.json` + en/de/es/fr/pt/sv/zh)** — chiavi `sellersPage.stats`:
-   - `stat1`: invariato ("immobili sfitti a Torino" / "vacant properties in Turin")
-   - `stat1sub`: nuovo valore "fonte: Comune di Torino, 2024" / "source: Turin City Council, 2024"
-   - Sync IT primary → 7 locali (EN tradotto, altri 5 in EN fallback).
+**Modifiche a `public.leads`**:
+- `status text NOT NULL DEFAULT 'nuovo'` con CHECK su valori sopra
+- `assigned_to text` (email admin, default `lorenzo.onijoseph@gmail.com`)
+- `last_contact_at timestamptz`
+- `next_followup_at timestamptz`
+- `priority text DEFAULT 'medium'` (`low|medium|high`)
 
-3. **Blog `src/data/blog/content/it/vendere-casa-torino-guida-completa-2025.md`** — paragrafo "case sfitte":
-   - Aggiornare a "oltre **50.000 alloggi sfitti** secondo il Comune di Torino (Assessore al Welfare Rosatelli, 2024), con stime alternative che arrivano a 70.000–80.000 unità."
-   - Aggiungere fonte Corriere come `[^N]` nelle note.
+**Nuova tabella `public.lead_interactions`** (timeline):
+- `id uuid PK`, `lead_id uuid` (FK a `leads.id` ON DELETE CASCADE)
+- `lead_table text` default `'leads'` (per supportare anche `seller_leads` / `investor_interest` in futuro)
+- `kind text` (`note | call | whatsapp | email | meeting | status_change | followup`)
+- `direction text` (`inbound | outbound | system`)
+- `content text`, `metadata jsonb`
+- `created_by text` (email admin), `created_at timestamptz`
 
-### Out of scope
+**RLS**: stesso pattern di `leads` — blocco pubblico, service role gestisce tutto. Accesso solo via edge function `admin-leads` con check admin email.
 
-- Le menzioni "50.000 appartamenti sfitti (15% del totale)" nel blog `rendimento-student-housing-torino-2026.md` e i riferimenti generici nel blog mutui restano invariati: sono coerenti con la nuova fonte.
-- Nessun cambio a UI/layout della griglia stats (resta 3 colonne).
-- Nessun cambio al `seller_leads` schema o ad altre statistiche ("60-90 gg", "0% commissioni").
+**Indici**: `leads(status, next_followup_at)`, `lead_interactions(lead_id, created_at DESC)`.
+
+### 2. Edge function `admin-leads` (estesa)
+
+Nuove `action`:
+- `list` (già esistente) — aggiunge campi `status`, `assigned_to`, `last_contact_at`, `next_followup_at`, `priority`, e `interactions_count` (subquery)
+- `get_detail` `{ lead_id }` → lead completo + timeline `lead_interactions` ordinata DESC
+- `update_lead` `{ lead_id, patch }` → aggiorna `status / priority / assigned_to / next_followup_at / notes`. Quando cambia `status`, crea automaticamente una riga `lead_interactions` di tipo `status_change`.
+- `add_interaction` `{ lead_id, kind, direction, content, metadata }` → inserisce riga timeline; se `kind` ∈ {call, whatsapp, email, meeting}, aggiorna anche `last_contact_at = now()`.
+- `bulk_update_status` `{ lead_ids[], status }` per azioni multiple dal kanban
+
+Tutte le action mantengono il check `ADMIN_EMAILS`.
+
+### 3. Frontend `/admin/leads`
+
+Refactor `src/pages/admin/Leads.tsx` in 3 sotto-componenti dentro `src/components/admin/leads/`:
+
+- **`LeadsToolbar.tsx`** — search, filtri (tipo, stato, priorità, assegnatario, "solo follow-up scaduti"), toggle vista **Tabella ↔ Kanban**, export CSV.
+- **`LeadsTable.tsx`** — colonne: Stato (badge colorato), Tipo, Email, Telefono, Source, Ultimo contatto, Prossimo follow-up, Età lead. Riga cliccabile → apre drawer.
+- **`LeadsKanban.tsx`** — 6 colonne (una per stato), card draggable (react-dnd lite o solo via menu "sposta in…" per restare leggero). Drop = `update_lead`.
+- **`LeadDetailDrawer.tsx`** (shadcn `Sheet`) — apertura laterale con:
+  - Header: nome/email/tipo + badge stato + select per cambiare stato + select priorità
+  - Quick actions: pulsanti WhatsApp (apre `wa.me/<phone>` precompilato), Email (`mailto:`), "Marca come contattato"
+  - Form **"Aggiungi interazione"**: select tipo (nota/call/whatsapp/email/meeting), textarea, pulsante salva → `add_interaction`
+  - **Timeline** verticale delle `lead_interactions` con icona per tipo, autore, timestamp relativo
+  - Date picker per `next_followup_at` + bottone "Pianifica follow-up"
+  - Pannello laterale con tutti i campi (metadata, UTM, source)
+
+### 4. Dashboard mini in cima alla pagina
+
+4 stat card: **Nuovi** (status=nuovo), **Da ricontattare oggi** (next_followup_at ≤ now), **In trattativa** (status ∈ qualificato/proposta), **Vinti questo mese**. Tutti calcolati client-side da `list`.
+
+### 5. Notifiche follow-up (out of scope MVP, menzionato per dopo)
+
+Cron settimanale che invia a `lorenzo.onijoseph@gmail.com` via Lovable Emails (transactional, già pronto) la lista follow-up scaduti. Lo aggiungo in una fase 2 se vuoi.
+
+### Out of scope esplicito
+
+- **Gmail connector** — non incluso. Se vuoi vedere i thread email reali del lead dentro il drawer (e poter rispondere senza uscire dall'app), lo aggiungiamo in fase 2 con `standard_connectors--connect google_mail` e una `action: "list_thread"` nell'edge function che cerca per `from:/to:<lead.email>`.
+- `seller_leads` e `investor_interest` restano separate per ora — il CRM gestisce solo `leads`. Posso unificare la vista in fase 2 (creare una RPC `unified_leads` che fa UNION ALL).
+- Niente assignment multi-utente: per ora c'è solo Lorenzo come admin.
+
+### Tecnico
+
+- Migrazione Supabase con CHECK constraint sugli enum-like (`status`, `priority`, `kind`, `direction`).
+- Edge function unica `admin-leads` (no nuovi function), tutto in `index.ts`.
+- Drawer + Kanban usano shadcn (`Sheet`, `Card`, `Select`, `Badge`, `Calendar`/`Popover`).
+- DnD: parto con menu "Sposta in…" (più affidabile mobile). Drag-and-drop vero in fase 2 se ti serve.
