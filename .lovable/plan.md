@@ -1,90 +1,56 @@
-## Obiettivo
+## Nuovo articolo blog: "Real life Monopoly"
 
-Rimuovere ogni riferimento a **yield/rendimenti percentuali specifici riferiti agli immobili Jungle Rent** sulle superfici pubbliche, conformemente alla regola core "Mai cifre o percentuali pubblicamente: solo nel memorandum post-qualifica". I rendimenti sono indicativi e non garantiti.
+Aggiunge un articolo a tesi macro sul passaggio generazionale immobiliare italiano (2.720 mld €) come contesto per il modello Jungle Rent. Nessuna cifra di rendimento Jungle Rent — solo dati di mercato con fonti terze, quindi pienamente conforme alla policy "No Public Yield Figures".
 
-## Violazioni trovate (superfici pubbliche)
+### Categoria e posizionamento
 
-### Critiche — riferite a Jungle Rent come promessa di rendimento
+- **Category:** `investors` (tesi macro + bridge al modello JR; rilevante anche per seller ma il taglio è investor-thesis)
+- **Slug IT:** `real-life-monopoly-passaggio-generazionale-immobiliare-2026`
+- **Data:** `2026-05-21`
+- **Autore:** Jungle Rent Team
+- **Read time:** ~7 min
+- **Tags IT:** Investitori, Mercato, Passaggio generazionale, Torino, Immobiliare
+- **Image:** riuso `/images/mortgage-investment.jpg` (già usato per articoli investor)
 
-1. **CTA homepage `investors.startInvestingB`** in tutte e 7 le lingue:
-   - `it.json:505` "Vedi rendimenti reali (8–12% annuo)"
-   - mirror in `en.json`, `es.json`, `fr.json`, `de.json`, `sv.json`, `zh.json`
-2. **Business plan / about (`about.businessPlan.opportunity.body`)** — `it.json:781` e `en.json:781`:
-   - "Yield lordi sull'affitto studentesco **superiori al 10%** nelle zone più efficienti"
-   - (verificare anche es/fr/de/sv/zh se la chiave esiste — ricordo che il sottoalbero `investor.landing.*` è oggi assente in quelle lingue, ma `about.businessPlan` potrebbe esserci)
-3. **`about.businessPlan.opportunity.body` (dual-season)** — `it.json:785` / `en.json:785`:
-   - "aumenta il **yield netto** rispetto al solo studentesco" — non c'è numero, ma il termine "yield" può essere addolcito ("rendimento atteso", "ricavo").
-4. **Prompt content generation** `public/resources/content-generation-prompt.md:10`:
-   - "rendimenti netti **8–12% annui**" → questo prompt alimenta l'AI che scrive i blog: il numero si propaga.
-5. **`src/constants/contacts.ts:73`** — template WhatsApp menziona "ROI previsto e rendimenti" come argomento di chiamata: ok parlarne in privato, ma il testo del template appare anche come stringa pubblica? Verifico.
+### File da creare
 
-### Non critiche (NON da toccare, contesto diverso)
+1. `src/data/blog/content/it/real-life-monopoly-passaggio-generazionale-immobiliare-2026.md`
+   - Corpo dell'articolo come fornito dall'utente, leggermente ristrutturato in heading H2/H3 con anchor (es. `{#dato}`, `{#problema}`, `{#tesi-jr}`) per coerenza con gli altri post.
+   - Sezione fonti in fondo già presente.
+   - Rimossa la frase finale "Aggiungi articolo" (testo di istruzione, non contenuto).
 
-- `±5-12%` nei disclaimer del **valutatore immobiliare** → margine di errore valutazione, non yield.
-- `propertyCoefficients.ts` (+12%, -10%) → coefficienti di adeguamento prezzo immobile, non yield.
-- "12,6% della domanda coperta" → student housing demand, non rendimento.
-- `TerminiCondizioni.tsx:156` → contiene già il disclaimer "stime e non garantiti", lo lasciamo.
-- Blog editoriale `rendimento-student-housing-torino-2026.md` → analisi di mercato Torino generale, citata con fonti (Wikicasa, Idealista, OMI). **Borderline**: non promette rendimenti Jungle Rent, parla del mercato. Propongo di lasciarlo (è contenuto educativo SEO con fonti), ma posso aggiungere un box di disclaimer "questi sono dati di mercato, non rendimenti Jungle Rent" se preferisci.
+2. `src/data/blog/content/en/real-life-monopoly-passaggio-generazionale-immobiliare-2026.md`
+   - Traduzione fedele in inglese, stesso slug, stesso schema heading.
 
-## Fix proposti
+3. Voce in `src/data/blog/posts.ts` con `translations.it` e `translations.en`, includendo SEO meta, excerpt, tags e 5 FAQ:
+   - "Quanto vale il patrimonio immobiliare in transizione generazionale in Italia?"
+   - "Quale percentuale del patrimonio immobiliare italiano è vuota o sottoutilizzata?"
+   - "Cosa succede agli immobili ereditati in Italia?"
+   - "Perché Torino è strategica in questo scenario?"
+   - "Come Jungle Rent si inserisce in questo trend?"
 
-### Fix 1 — CTA `investors.startInvestingB` (7 lingue)
+### SEO (IT)
 
-Riformulazione neutra, allineata alla policy:
-| Lingua | Da | A |
-|---|---|---|
-| IT | "Vedi rendimenti reali (8–12% annuo)" | "Vedi come funziona l'investimento" |
-| EN | "See real returns (8–12% annual)" | "See how the investment works" |
-| ES | "Ver rendimientos reales (8–12% anual)" | "Ver cómo funciona la inversión" |
-| FR | "Voir les rendements réels (8–12% par an)" | "Voir comment fonctionne l'investissement" |
-| DE | "Reale Renditen ansehen (8–12% jährlich)" | "So funktioniert die Investition" |
-| SV | "Se verkliga avkastningar (8–12% årligen)" | "Se hur investeringen fungerar" |
-| ZH | "查看真实收益（年化8–12%）" | "了解投资如何运作" |
+- **Title:** "Real life Monopoly: 2.720 miliardi di immobili in transizione | Jungle Rent" (<60 char target)
+- **Description:** "Metà delle case italiane è in mano agli over 70: 2.720 miliardi di patrimonio sta per cambiare mano. Perché conta, e come si rimette a reddito un appartamento sottoutilizzato a Torino." (<160)
+- **Keywords:** passaggio generazionale immobiliare, eredità immobiliare Italia 2026, case vuote Italia, patrimonio immobiliare anziani, ridistribuzione immobiliare, student housing Torino
 
-### Fix 2 — `about.businessPlan.opportunity.body` (IT + EN, e altre lingue se la chiave esiste)
+### SEO (EN)
 
-| Da | A |
-|---|---|
-| "Yield lordi sull'affitto studentesco superiori al 10% nelle zone più efficienti, stabilizzati dalla domanda inelastica." | "L'affitto studentesco nelle zone target genera ricavi stabilizzati dalla domanda inelastica. Le proiezioni economiche puntuali sono nel memorandum informativo." |
-| (EN) "Gross student-rental yields above 10% in the most efficient areas…" | "Student-rental income in target areas is stabilized by inelastic demand. Exact economic projections are shared in the information memorandum." |
+- **Title:** "Real life Monopoly: €2.72T of Italian property in transition"
+- **Description:** "Half of Italian homes are owned by people in their 70s: €2.72 trillion of property is about to change hands. Why it matters, and how an underused Turin flat returns to use."
 
-### Fix 3 — `about.businessPlan` dual-season body
+### Compliance check
 
-| Da | A |
-|---|---|
-| "…aumenta il yield netto rispetto al solo studentesco." | "…ottimizza l'occupancy e il ricavo complessivo rispetto al solo studentesco." |
-| (EN) "…increases net yield versus a student-only strategy." | "…optimizes occupancy and overall income versus a student-only strategy." |
+- Nessuna cifra/% di rendimento Jungle Rent menzionata ✓
+- Dati di mercato con fonti citate (Il Sole 24 Ore, UBS, IRES Piemonte) ✓
+- Linguaggio "gestione attiva di un asset reale", "non speculazione sulla rivendita" ✓
+- Lorenzo come unico founder/socio non viene contraddetto (l'articolo non nomina founder) ✓
+- Sentence case, H1 unico (titolo) ✓
 
-### Fix 4 — `public/resources/content-generation-prompt.md`
+### Out of scope
 
-| Da | A |
-|---|---|
-| "…li gestiamo per investitori privati con rendimenti netti 8–12% annui." | "…li gestiamo per investitori privati. Le proiezioni di rendimento sono comunicate caso per caso nel memorandum informativo." |
-
-Riga 43 ("scroll 8–12%") parla di scroll depth metrics interne → la lascio (non è una promessa di rendimento).
-
-### Fix 5 — `src/constants/contacts.ts:73`
-
-Verifico se il template è user-facing. Se sì, sostituisco "ROI previsto e rendimenti" con "Come funziona il modello di investimento". Se è solo un commento interno al codice → lo lascio.
-
-## Memoria
-
-Aggiungo una memoria progetto **`mem://compliance/no-public-yield-figures`** con la regola:
-> Mai yield/rendimenti percentuali specifici riferiti a immobili Jungle Rent su superfici pubbliche (sito, CTA, copy, prompt AI). Sono ammessi: yield di mercato Torino in contenuti editoriali blog **se citate fonti terze** (OMI, Idealista, Wikicasa) e contestualizzati come dati di mercato. Le proiezioni Jungle Rent vivono solo nel memorandum informativo post-qualifica.
-
-E aggiorno l'indice memoria.
-
-## File toccati
-
-- `src/i18n/locales/{it,en,es,fr,de,sv,zh}.json` (CTA + business plan dove esiste)
-- `public/resources/content-generation-prompt.md`
-- `src/constants/contacts.ts` (condizionale, da verificare in build)
-- `mem://compliance/no-public-yield-figures` (nuova)
-- `mem://index.md` (aggiornato)
-
-## Fuori scope
-
-- Articoli blog su rendimenti di mercato Torino (con fonti): non toccati. Posso fare un secondo giro se vuoi un disclaimer in cima.
-- Disclaimer e termini condizioni: già conformi.
-
-Confermi e procedo? Vuoi che includa anche un sweep sul blog editoriale?
+- Niente traduzione in es/fr/de/sv/zh (i contenuti blog vivono solo in IT/EN come gli altri post)
+- Niente nuova immagine generata (riuso asset esistente)
+- Niente modifica a `contentClusters.ts` o `searchIndex.ts` salvo che non risultino necessari (verifico durante l'implementazione e li aggiorno se servono per non rompere search/cluster)
+- Niente inline-CTA personalizzato in `inlineCTAs.ts` per ora (può seguire in un secondo round)
