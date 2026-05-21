@@ -1,44 +1,78 @@
-## Skill proposta: `anti-ai-prose-it-en`
+## Obiettivo
+Rendere la lettura degli articoli più piacevole con un trattamento "Apple Newsroom": tipografia editoriale ampia, navigazione interna fluida e micro-esperienza immersiva. Applicato a tutti i post via `BlogPost.tsx` + `AnimatedBlogContent.tsx`.
 
-Una sola skill, focalizzata sul problema emerso oggi: la prosa dei nuovi articoli blog "suona AI". Si attiva ogni volta che scrivo o riscrivo contenuti lunghi (blog, landing copy, email lunghe) in italiano o inglese.
+## Cosa cambia (a livello utente)
 
-### Cosa fa la skill
+**1. Leggibilità del testo**
+- Colonna più stretta e centrata (~680px max) con padding generoso.
+- Font display più grande per titolo e drop-cap sulla prima lettera del primo paragrafo.
+- Body con `font-size` fluido (clamp 17→19px), `line-height` 1.75, `letter-spacing` editoriale.
+- Spaziatura ariosa fra paragrafi, H2 con respiro extra sopra (mt-16) e hairline sottile.
+- Blockquote stile Apple: senza barra laterale, corsivo grande, centrato.
+- Immagini full-bleed opzionali con didascalia minimale.
+- Code/tabelle con sfondo soft e bordo morbido.
 
-Carica una checklist + uno script di lint che blocca i tic tipici dei modelli linguistici:
+**2. Navigazione interna**
+- Reading progress bar in alto (1px, color primary, scroll-driven).
+- TOC galleggiante a sinistra desktop (sostituisce il `FloatingTableOfContents` attuale): scroll-spy che evidenzia la sezione attiva, click → smooth scroll.
+- Mobile: TOC dentro un Sheet con trigger a bordo schermo.
+- Stima "X min rimanenti" che si aggiorna con lo scroll.
 
-1. **Zero em-dash (—)** nel corpo. Consentito solo en-dash (–) per intervalli numerici/temporali (`9–13`, `giugno–agosto`).
-2. **Zero costruzioni "Non X, ma Y"** e doppie negazioni stilistiche (`non è X. È Y`, `non solo… ma anche`, `it's not X, it's Y`).
-3. **Frasi brevi** (target: <25 parole medie), voce attiva, no "in altre parole" / "in other words", no "It's worth noting", no "Vale la pena notare".
-4. **Sentence case** rispettato (già regola progetto, ribadita).
+**3. Esperienza immersiva (sobria, no parallax pesanti)**
+- Hero ridisegnato: titolo grande sopra l'immagine (no badge category sotto), meta-info in riga sottile, immagine sotto con angoli morbidi e leggero fade dai bordi.
+- Fade-up dei paragrafi al primo viewport entry (300ms, intersection observer, una volta sola — rispetta `prefers-reduced-motion`).
+- "Reading mode": pulsante che nasconde sidebar/CTA in linea e allarga ancora la colonna (toggle in header sticky minimale).
+- Header sticky minimale che appare allo scroll-down: titolo abbreviato + progress + share.
 
-### Struttura file
+## Scope tecnico
 
+**File nuovi**
+- `src/components/blog/ReadingProgressBar.tsx` — barra 1px scroll-driven.
+- `src/components/blog/StickyArticleHeader.tsx` — header condensato con titolo + progress + share + reading-mode toggle.
+- `src/components/blog/ArticleTOC.tsx` — TOC desktop sticky con scroll-spy (rimpiazza `FloatingTableOfContents` su desktop; mobile sheet riusa la stessa logica).
+- `src/components/blog/ReadingModeProvider.tsx` — context per toggle reading mode.
+
+**File modificati**
+- `src/pages/BlogPost.tsx` — nuova struttura header, integra i componenti sopra, rimuove `ParallaxHeroImage` a favore di hero più "quiet".
+- `src/components/blog/AnimatedBlogContent.tsx` — wrap paragrafi con fade-up observer, drop-cap sulla prima `<p>`, classi `prose` editoriali.
+- `src/index.css` — utility `.prose-editorial` con tipografia Apple-like, drop-cap, blockquote, image full-bleed.
+
+**File invariati**
+- `IPhoneNotesTemplate` (note-style posts) resta com'è.
+- `EmailGate`, `BlogCTA`, `RelatedPosts`, `ClusterSidebar` invariati.
+
+## Vincoli e principi
+- Solid soft backgrounds, 300ms fade-up, niente parallax/layout-shift (memory: design philosophy).
+- Sentence case su tutti i nuovi testi UI (es. "Modalità lettura", "Indice").
+- `prefers-reduced-motion` rispettato ovunque.
+- Nessun cambio a SEO, structured data, lingua, gating, analytics.
+- Nessun nuovo pacchetto: solo Tailwind + Intersection Observer + scroll listener.
+
+## Cosa NON cambia
+- Logica caricamento contenuto, auto-linking, contextual suggestions.
+- Struttura `BlogCard` / `BlogGrid` / pagina `/blog`.
+- Backend, schema, traduzioni esistenti (aggiungo solo 4-5 chiavi UI per IT/EN: "reading mode", "table of contents", "min remaining").
+
+## Quick visual reference
+
+```text
+┌─────────────────────────────────────────┐
+│ ▓▓▓▓▓▓▓▓░░░░░░░░░░░░░ progress 1px     │
+├─────────────────────────────────────────┤
+│ [sticky header on scroll: title · ●●●●] │
+│                                         │
+│   Category · 5 min · 20 nov 2026        │
+│                                         │
+│   Titolo grande in display font         │
+│   che respira su tre righe              │
+│                                         │
+│   [— immagine hero soft —]              │
+│                                         │
+│ ┌──────┐  ┌──────────────────────────┐  │
+│ │ TOC  │  │ D rop-cap sul primo      │  │
+│ │ ●    │  │ paragrafo. Body 18px     │  │
+│ │ ○    │  │ line-height 1.75 ampio.  │  │
+│ │ ○    │  │                          │  │
+│ └──────┘  └──────────────────────────┘  │
+└─────────────────────────────────────────┘
 ```
-.agents/skills/anti-ai-prose-it-en/
-├── SKILL.md                          # trigger + checklist
-├── references/
-│   ├── ai-tells-it.md                # lista pattern italiani da evitare + sostituzioni
-│   └── ai-tells-en.md                # stesso per inglese
-└── scripts/
-    └── lint-prose.sh                 # grep-based: conta —, "non X, ma Y", "in altre parole", etc.
-```
-
-### Quando si attiva
-
-Frontmatter description mirata: "Use when writing or rewriting blog posts, landing copy, or any long-form prose in Italian or English for Jungle Rent. Removes AI tells (em-dashes, 'non X ma Y' constructions, double negatives, hedge phrases) and enforces short active sentences."
-
-### Cosa NON serve come skill
-
-- Lista colori / palette → già in `mem://design/color-palette`
-- Founder disclosure → già in `mem://compliance/sole-founder-disclosure`
-- Yield figures policy → già in `mem://compliance/no-public-yield-figures`
-
-Queste sono regole sempre-on (Core memory), non skill on-demand.
-
-### Domanda
-
-Confermi questa singola skill, oppure vuoi anche:
-- **B)** skill separata `og-image-generator` (procedura per generare/sostituire OG image 1200×630 con logo + ImageMagick)?
-- **C)** skill `blog-post-publisher` (checklist completa: crea .md IT+EN, aggiorna `posts.ts`, FAQ, categorie, sitemap)?
-
-Default: procedo solo con **A** (`anti-ai-prose-it-en`) se non dici altro.
