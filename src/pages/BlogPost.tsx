@@ -31,7 +31,7 @@ import { useBlogLanguage, type BlogLanguage } from "@/hooks/useBlogLanguage";
 import { BlogLanguageToggle } from "@/components/blog/BlogLanguageToggle";
 import { getCategoryColor, getAbsoluteImageUrl, formatDate } from "@/lib/blog";
 
-const BlogPost = () => {
+const BlogPostInner = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
   const [content, setContent] = useState<string>("");
