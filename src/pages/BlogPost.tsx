@@ -276,7 +276,7 @@ const BlogPostBody = ({
                   </div>
                 </header>
 
-                {/* Featured Image with Parallax */}
+                {/* Featured Image */}
                 <ParallaxHeroImage src={post.image} alt={translatedData.title} />
 
                 {/* Animated Content with Auto-Linking — optionally gated */}
@@ -292,47 +292,50 @@ const BlogPostBody = ({
                   </>
                 )}
 
-                {/* Inline contextual CTA for top 5 most-viewed articles */}
-                {hasInlineCTA(post.slug) && (
-                  <InlineContextualCTA slug={post.slug} lang={currentLang} />
-                )}
+                <div className="reading-hide">
+                  {/* Inline contextual CTA for top 5 most-viewed articles */}
+                  {hasInlineCTA(post.slug) && (
+                    <InlineContextualCTA slug={post.slug} lang={currentLang} />
+                  )}
 
-                {/* Contract Banner for investor/seller articles */}
-                {(post.category === 'investors' || post.category === 'sellers') && (
-                  <ContractBanner />
-                )}
+                  {/* Contract Banner for investor/seller articles */}
+                  {(post.category === 'investors' || post.category === 'sellers') && (
+                    <ContractBanner />
+                  )}
 
-                {/* CTA */}
-                <BlogCTA type={post.category} />
+                  {/* CTA */}
+                  <BlogCTA type={post.category} />
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 pt-8 border-t border-border/20">
-                  {translatedData.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">
-                      #{tag}
-                    </Badge>
-                  ))}
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 pt-8 border-t border-border/20">
+                    {translatedData.tags.map((tag: string) => (
+                      <Badge key={tag} variant="secondary">
+                        #{tag}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
               </>
             )}
           </div>
         </article>
           
-          {/* Cluster Sidebar - Desktop */}
-          {getClusterForArticle(slug) && (
-            <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12 space-y-6">
-              <ClusterSidebar 
-                currentSlug={slug} 
-                isOpen={true} 
-                onClose={() => {}} 
-              />
-              {(post.category === 'investors' || post.category === 'sellers') && (
-                <ContractSidebarCard />
-              )}
-            </div>
-          )}
-        </div>
+        {/* Cluster Sidebar - Desktop */}
+        {getClusterForArticle(slug) && (
+          <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12 space-y-6 reading-hide">
+            <ClusterSidebar 
+              currentSlug={slug} 
+              isOpen={true} 
+              onClose={() => {}} 
+            />
+            {(post.category === 'investors' || post.category === 'sellers') && (
+              <ContractSidebarCard />
+            )}
+          </div>
+        )}
+      </div>
 
+      <div className="reading-hide">
         {/* Related Posts */}
         <RelatedPosts posts={relatedPosts} currentTags={currentTags} />
         
@@ -347,11 +350,14 @@ const BlogPostBody = ({
           onClose={() => setSidebarOpen(false)} 
         />
       </div>
-      
-      <Footer />
-      <ScrollToTop />
-    </main>
+    </div>
   );
 };
+
+const BlogPost = () => (
+  <ReadingModeProvider>
+    <BlogPostInner />
+  </ReadingModeProvider>
+);
 
 export default BlogPost;
