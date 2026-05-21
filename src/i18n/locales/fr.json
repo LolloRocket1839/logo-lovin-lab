@@ -681,7 +681,295 @@
     "waitlistCta": "Entrer en liste d'attente",
     "waitlistSubtitle": "Recevez des mises à jour exclusives sur les opportunités d'investissement immobilier à Turin",
     "waitlistTitle": "Inscrivez-vous à la waitlist investisseurs",
-    "whyInvestTitle": "Pourquoi investir avec nous"
+    "whyInvestTitle": "Pourquoi investir avec nous",
+    "landing": {
+      "meta": {
+        "title": "Investissez dans Jungle Rent · logement étudiant Torino",
+        "description": "Jungle Rent ouvre la participation économique à son portefeuille de logements étudiants à Torino à un nombre limité d'investisseurs privés, via un instrument dédié. Demandez le mémorandum d'information."
+      },
+      "hero": {
+        "eyebrow": "Opportunité réservée · Placement privé",
+        "h1": "Investissez dans Jungle Rent. Avec une exposition à l'opération immobilière individuelle.",
+        "subhead": "Jungle Rent est une startup innovante de Torino. Nous achetons, rénovons et gérons des appartements pour étudiants universitaires. Nous ouvrons la participation économique au portefeuille à un nombre limité d'investisseurs privés via un instrument dédié. Les détails techniques de l'instrument sont décrits dans le mémorandum d'information.",
+        "cta": "Demandez le mémorandum d'information",
+        "ctaPrimary": "Parlez avec Lorenzo",
+        "ctaSecondary": "Recevez le mémorandum",
+        "ctaNote": "La souscription ne se fait pas en ligne. Le premier pas est une demande d'informations : recevez le mémorandum, évaluez-le tranquillement, puis décidez.",
+        "metrics": {
+          "yieldLabel": "Modèle de versement",
+          "yieldValue": "Bimestriel",
+          "payoutLabel": "Fréquence des versements",
+          "payoutValue": "Bimestriel",
+          "ticketLabel": "Ticket minimum",
+          "ticketValue": "€5k"
+        }
+      },
+      "quickBar": {
+        "label": "Vous voulez en parler directement ?",
+        "whatsapp": "WhatsApp Lorenzo",
+        "email": "Écrivez-nous"
+      },
+      "socialProof": {
+        "countPrefix_one": "{{count}} personne",
+        "countPrefix_other": "{{count}} personnes",
+        "countPrefix": "{{count}} personnes",
+        "countSuffix": "ont demandé des informations ces 4 dernières semaines",
+        "startupLabel": "Startup innovante",
+        "startupSuffix": "Inscrite à la CCIAA Torino · REA TO-1355899"
+      },
+      "emailFirst": {
+        "title": "Voulez-vous être informé de la prochaine opération ?",
+        "subtitle": "Uniquement par e-mail. Nous vous écrirons lors de l'ouverture. Pas de newsletter, pas de spam.",
+        "fields": {
+          "name": "Nom (facultatif)",
+          "email": "Votre e-mail"
+        },
+        "submit": "Tenez-moi au courant",
+        "submitting": "Envoi en cours...",
+        "preferFull": "Je préfère remplir le formulaire complet pour recevoir le mémorandum",
+        "alsoQualify": "Vous voulez aussi le mémorandum ? Remplissez le formulaire de qualification",
+        "privacy": "Nous traitons vos données uniquement pour vous recontacter au sujet de cette opportunité (RGPD). Vous pouvez vous désinscrire à tout moment.",
+        "trustLine": "Pas de spam · Réponse sous 24h · Lorenzo répond en personne",
+        "success": "Merci. Nous vous informerons personnellement lors de la prochaine ouverture.",
+        "successNamePrompt": "Quel est votre nom ? Cela nous aide à mieux vous recontacter.",
+        "saveName": "Enregistrer",
+        "skipName": "Passer",
+        "error": "Quelque chose s'est mal passé. Réessayez dans quelques minutes ou écrivez-nous via WhatsApp."
+      },
+      "trust": {
+        "title": "Vérifiable publiquement",
+        "items": {
+          "rea": {
+            "label": "Chambre de commerce de Torino",
+            "value": "REA TO-1355899"
+          },
+          "mise": {
+            "label": "Startup innovante",
+            "value": "Inscrite le 04/12/2025"
+          },
+          "incubator": {
+            "label": "2i3T",
+            "value": "Incubateur de l'Université de Torino"
+          },
+          "vat": {
+            "label": "P.IVA",
+            "value": "13333450016"
+          }
+        }
+      },
+      "founder": {
+        "title": "Une lettre du fondateur",
+        "paragraphs": [
+          "Bonjour,",
+          "Je suis Lorenzo, fondateur de Jungle Rent. J'ai bâti cette société sur une idée simple : à Torino, il y a 90 000 étudiants universitaires et un marché immobilier encore accessible. En achetant bien, en rénovant bien et en gérant bien, il est possible de construire des flux de trésorerie solides dans une classe d'actifs historiquement défensive.",
+          "J'ouvre la participation à un petit groupe d'investisseurs privés pour une raison pratique : accélérer la construction du portefeuille sans diluer excessivement le capital social. Nous le faisons avec un instrument dédié qui aligne les incitations : la structure récompense ceux qui entrent tôt dans l'opération individuelle, et je prends 10% des bénéfices après les frais de 'servicing'. Les détails juridiques se trouvent dans le mémorandum.",
+          "Cette page vous donne le périmètre. Les vrais chiffres, la structure, les modèles, les contrats — tout cela se trouve dans le mémorandum. Je ne vous l'enverrai qu'après un bref appel de prise de contact, car je veux m'assurer que l'opportunité et vos attentes sont compatibles.",
+          "Si cela vous intéresse, remplissez le formulaire en bas de page. Je vous répondrai personnellement dans les 48 heures."
+        ],
+        "signature": "Lorenzo Oni-Joseph",
+        "role": "Fondateur & PDG, Jungle Rent S.r.l."
+      },
+      "thesis": {
+        "title": "Pourquoi Torino, pourquoi maintenant, pourquoi nous",
+        "items": {
+          "market": {
+            "title": "Marché sous-desservi",
+            "body": "90 000 étudiants universitaires, 7 institutions (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Une demande de logements chroniquement supérieure à l'offre régulière. Loyers de 350 € à 700 € pour une chambre individuelle selon le quartier."
+          },
+          "asset": {
+            "title": "Classe d'actifs défensive à un prix accessible",
+            "body": "Les appartements de deux pièces dans les zones cibles (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) s'achètent aujourd'hui entre 45 000 € et 130 000 €. La location étudiante génère des revenus stabilisés par une demande inélastique. Les projections économiques précises se trouvent dans le mémorandum d'information."
+          },
+          "model": {
+            "title": "Modèle hybride",
+            "body": "10 mois pour les étudiants (septembre-juin) + saison touristique estivale (juillet-août) sur Airbnb et Booking. Ce mélange optimise le taux d'occupation et le revenu global par rapport à la location étudiante seule."
+          }
+        }
+      },
+      "innovativa": {
+        "title": "Ce qui change parce que nous sommes une startup innovante",
+        "items": {
+          "fg": {
+            "title": "Financement bancaire privilégié",
+            "body": "Nous accédons au Fonds de Garantie pour les PME avec une couverture gratuite de 80% pour les startups innovantes. Cela nous permet d'obtenir des prêts chirographaires sans hypothéquer le bien immobilier, le laissant libre pour de futures recapitalisations ou cessions."
+          },
+          "tax": {
+            "title": "Avantage fiscal pour les investisseurs",
+            "body": "Les investissements dans des startups innovantes peuvent bénéficier d'une déduction IRPEF jusqu'à 65% du montant investi (régime de minimis, Reg. UE 2831/2023). Son applicabilité effective dépend de l'instrument utilisé et du profil de l'investisseur. Détails dans le mémorandum."
+          },
+          "transparency": {
+            "title": "Transparence obligatoire",
+            "body": "En tant que startup innovante, nous sommes tenus de publier tous les six mois des données d'entreprise à jour sur la section spéciale du 'Registro Imprese', et nous maintenons un 'visura camerale' consultable publiquement. Chaque investisseur peut vérifier de manière autonome le statut de la société."
+          }
+        }
+      },
+      "process": {
+        "title": "Du premier contact à la souscription",
+        "steps": [
+          {
+            "title": "Demandez le mémorandum",
+            "body": "Vous remplissez le formulaire en bas de page."
+          },
+          {
+            "title": "Appel de prise de contact (30 minutes)",
+            "body": "Je vous rappelle personnellement dans les 48 heures pour comprendre votre horizon, votre expérience, vos questions."
+          },
+          {
+            "title": "Recevez les documents",
+            "body": "Mémorandum d'information, documentation contractuelle complète, business plan, modèle financier sur Excel, procès-verbaux des organes sociaux."
+          },
+          {
+            "title": "Du temps pour évaluer",
+            "body": "Aucune pression. Vous pouvez consulter votre expert-comptable, un avocat, un conseiller de confiance."
+          },
+          {
+            "title": "Signature",
+            "body": "Si vous décidez de procéder, l'acte de souscription est signé en personne chez le notaire désigné, en même temps que le versement. Vous recevez une série de l'instrument dédiée à l'opération que vous avez choisie."
+          }
+        ],
+        "callout": "Aucune étape n'est automatisée. Chaque investisseur qui rejoint Jungle Rent le fait après avoir parlé directement avec Lorenzo."
+      },
+      "tax": {
+        "title": "Traitement fiscal de l'investissement",
+        "content": "Les investissements dans des startups innovantes peuvent bénéficier de la déduction IRPEF de 65% conformément à l'art. 29-bis DL 179/2012, dans le cadre du régime de minimis introduit par le Reg. UE 2831/2023. Son applicabilité effective dépend de l'instrument utilisé et du profil de l'investisseur. La réglementation est en vigueur jusqu'au 04/12/2028, sauf prolongation.",
+        "caveatTitle": "Important",
+        "caveat": "L'applicabilité et le montant effectifs de la déduction dépendent des limites individuelles de l'investisseur, de la disponibilité résiduelle du plafond de minimis de la société, et du respect d'une série de conditions prévues par la législation. Aucune information sur cette page ne constitue un conseil fiscal. Avant toute décision, consultez votre expert-comptable de confiance ou demandez à notre équipe de vous mettre en contact avec le cabinet fiscal qui assiste Jungle Rent."
+      },
+      "risks": {
+        "title": "Ce qui peut mal tourner",
+        "items": [
+          {
+            "title": "Illiquidité",
+            "body": "La période de blocage ('lock-up') fiscale est de 3 ans. Il n'existe pas de marché secondaire organisé. L'instrument est transférable à titre privé, mais trouver un acheteur est de votre responsabilité."
+          },
+          {
+            "title": "Concentration sur une seule opération",
+            "body": "La série de l'instrument que vous souscrivez est exposée au résultat d'un seul bien immobilier (achat, rénovation, taux d'occupation, cession éventuelle). Il n'y a pas de diversification automatique sur le portefeuille agrégé. De plus, à la date de publication de cette page, Jungle Rent ne possède pas encore de biens immobiliers : le business plan est basé sur la capacité à finaliser la première acquisition à temps pour l'année universitaire 2026/2027 et à la répéter efficacement."
+          },
+          {
+            "title": "Risque du marché immobilier",
+            "body": "Des variations significatives du marché de Torino (prix, demande étudiante, réglementation des locations de courte durée) peuvent impacter le rendement du portefeuille."
+          },
+          {
+            "title": "Risque de dilution",
+            "body": "De futures levées de fonds pourraient diluer votre part relative, bien que l'instrument prévoie des droits patrimoniaux proportionnels protégés."
+          },
+          {
+            "title": "Aucune garantie sur les rendements",
+            "body": "Les rendements attendus présentés dans le business plan sont des projections. La performance réelle dépendra de l'exécution opérationnelle et des conditions de marché. Une perte partielle ou totale du capital investi est raisonnablement possible."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "items": [
+          {
+            "q": "J'investis dans la société ou dans un seul bien immobilier ?",
+            "a": "Le contrat est avec Jungle Rent S.r.l. L'exposition économique est à l'opération individuelle : chaque série de l'instrument est liée à un 'deal' spécifique, et votre retour dépend de la performance de ce 'deal'. Forme juridique et mécanique de distribution : dans le mémorandum."
+          },
+          {
+            "q": "Quel instrument financier est utilisé ?",
+            "a": "Un instrument de participation économique dédié, réservé à des investisseurs qualifiés via un placement privé. La forme juridique précise, les droits patrimoniaux, le mécanisme de distribution et le règlement sont entièrement décrits dans le mémorandum d'information, remis après l'appel de qualification."
+          },
+          {
+            "q": "Quel est le ticket typique ?",
+            "a": "La fourchette indicative est de 5 000 € à 20 000 € par investisseur. Des tickets inférieurs ou supérieurs sont évalués au cas par cas en fonction de la levée de fonds ('round') et du profil de l'investisseur."
+          },
+          {
+            "q": "Puis-je récupérer le capital avant 3 ans ?",
+            "a": "Le blocage ('lock-up') de 3 ans est une contrainte de la législation fiscale (pour conserver la déduction IRPEF). Techniquement, vous pouvez transférer l'instrument à un autre investisseur, mais vous perdriez l'avantage fiscal et devriez trouver un acheteur par vous-même."
+          },
+          {
+            "q": "Comment les bénéfices sont-ils distribués ?",
+            "a": "La documentation contractuelle prévoit une répartition économique ('split') définie au cas par cas, typiquement 90% investisseurs / 10% Jungle Rent après les frais de 'servicing', selon une cascade ('waterfall') détaillée dans le mémorandum. La distribution est bimestrielle."
+          },
+          {
+            "q": "Jungle Rent est-elle vraiment une startup innovante ou s'agit-il d'une auto-déclaration ?",
+            "a": "L'inscription à la section spéciale du 'Registro Imprese' a eu lieu le 04/12/2025 et est vérifiable de manière indépendante sur le portail startup.registroimprese.it avec le P.IVA 13333450016."
+          },
+          {
+            "q": "Puis-je voir le business plan et le modèle financier ?",
+            "a": "Oui, après l'appel de qualification. Ce sont des documents complets (business plan rédigé en 2025, modèle Excel multi-feuilles avec analyse de sensibilité, projections sur 5 ans)."
+          },
+          {
+            "q": "Qui s'occupe de la comptabilité et de l'audit des comptes ?",
+            "a": "Assistance fiscale par le cabinet Starola Cantino Bono de Torino. Le bilan annuel est public sur la 'visura camerale'."
+          },
+          {
+            "q": "Que se passe-t-il si Jungle Rent ne parvient pas à finaliser la première acquisition avant septembre 2026 ?",
+            "a": "Le capital levé est conservé sur le compte de la société en attendant la prochaine fenêtre de marché, ou restitué aux investisseurs s'ils le demandent, déduction faite des coûts documentés. Cette clause est prévue dans la documentation contractuelle."
+          }
+        ]
+      },
+      "form": {
+        "title": "Recevez le mémorandum d'information",
+        "subtitle": "Je réponds personnellement dans les 48 heures. Pas de newsletter, pas de suivi automatique.",
+        "fields": {
+          "fullName": "Nom et prénom",
+          "email": "E-mail",
+          "phone": "Téléphone (facultatif)",
+          "phoneHint": "Utilisé uniquement si vous demandez explicitement à être rappelé",
+          "taxResidence": "Résidence fiscale",
+          "ticketRange": "Fourchette de ticket indicative",
+          "horizon": "Horizon de temps pour décider",
+          "prevExperience": "Avez-vous déjà investi dans des startups innovantes ou dans l'immobilier non coté ?",
+          "source": "Comment nous avez-vous connus ? (facultatif)",
+          "notes": "Notes ou questions spécifiques (facultatif)",
+          "privacyConsent": "J'ai lu et j'accepte la politique de confidentialité (RGPD).",
+          "ownInitiative": "Je déclare avoir demandé ces informations de ma propre initiative et non à la suite d'une promotion publique ou d'une sollicitation individuelle. Je comprends que l'investissement dans des instruments financiers de startup innovante comporte des risques, y compris la perte totale possible du capital."
+        },
+        "options": {
+          "residence": {
+            "IT": "Italie",
+            "CH": "Suisse",
+            "EU": "Autre UE",
+            "OTHER": "Hors UE"
+          },
+          "ticket": {
+            "5-10": "5 000 €–10 000 €",
+            "10-20": "10 000 €–20 000 €",
+            "20-50": "20 000 €–50 000 €",
+            "50+": "Plus de 50 000 €",
+            "TBD": "Je préfère le définir après avoir vu les documents"
+          },
+          "horizon": {
+            "WEEKS": "Dans les prochaines semaines",
+            "1-3M": "1–3 mois",
+            "3-6M": "3–6 mois",
+            "6M+": "Plus de 6 mois"
+          },
+          "experience": {
+            "YES": "Oui",
+            "NO": "Non",
+            "PARTIAL": "Partiellement"
+          }
+        },
+        "submit": "Envoyer la demande",
+        "submitting": "Envoi en cours…",
+        "success": "Merci. Lorenzo vous répondra dans les 48 heures à l'e-mail que vous avez indiqué. En attendant, vous pouvez explorer les articles sur le marché de Torino.",
+        "error": "L'envoi a échoué. Réessayez ou écrivez à junglerententeprise@gmail.com.",
+        "selectPlaceholder": "Sélectionnez…",
+        "steps": {
+          "progress": "Étape {{current}} sur {{total}}",
+          "step1Title": "Commençons à nous connaître",
+          "step1Subtitle": "Seulement 30 secondes. Vos coordonnées restent privées.",
+          "step2Title": "Aidez-nous à personnaliser la proposition",
+          "step2Subtitle": "Ainsi, Lorenzo préparera des documents pertinents pour vous.",
+          "step3Title": "Dernière étape",
+          "step3Subtitle": "Confirmations légales et consentements requis par la réglementation.",
+          "next": "Continuer",
+          "back": "Retour",
+          "autoSaved": "Brouillon enregistré automatiquement"
+        }
+      },
+      "disclaimer": {
+        "p1": "Les informations contenues sur cette page sont à des fins purement informatives et ne constituent ni une offre au public de produits financiers au sens de l'art. 94 du D.Lgs. 58/1998 (TUF), ni une sollicitation à l'investissement, ni un conseil financier, fiscal ou juridique.",
+        "p2": "L'instrument financier décrit n'est pas disponible à la souscription en ligne. L'éventuelle souscription se fait exclusivement par placement privé, réservé à un nombre restreint d'investisseurs qualifiés individuellement, après remise du mémorandum d'information complet et de la documentation contractuelle, dans le respect des exemptions prévues par l'art. 100 TUF.",
+        "p3": "Les rendements présentés dans les documents d'information sont des projections basées sur des hypothèses de modèle. La performance réelle dépend de l'évolution du portefeuille et n'est en aucun cas garantie. L'investissement comporte des risques, y compris le risque d'illiquidité, le risque du marché immobilier, le risque d'exécution opérationnelle, le risque de dilution et la possibilité d'une perte totale du capital investi.",
+        "p4": "Le traitement fiscal décrit est soumis à des conditions individuelles, des limites réglementaires et de possibles modifications législatives. Avant toute décision d'investissement, l'investisseur est tenu de consulter son propre conseiller fiscal et financier indépendant.",
+        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
+      }
+    }
   },
   "investorExitIntent": {
     "badge": "Avant de partir...",
