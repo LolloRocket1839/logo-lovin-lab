@@ -1,22 +1,37 @@
 ## Obiettivo
 
-Sostituire l'immagine OG attuale (card verde con scritta "Jungle Rent") con un'immagine che mostra il **logo reale** di Jungle Rent (lo stesso usato sul sito), in modo che WhatsApp/iMessage/LinkedIn mostrino il logo quando si condivide un link.
+Riscrivere l'articolo "Real life Monopoly" (IT + EN) togliendo i due tic che lo fanno suonare AI:
 
-## Cosa cambia
+1. **Trattini lunghi (—)** — 9 in ciascun file. Sostituiti con virgole, due punti, parentesi o frasi separate.
+2. **Costruzioni "Non X, ma Y" e doppie negazioni** — pattern tipico dei modelli linguistici. Riformulati in positivo dove possibile.
 
-1. **Generare nuova `public/og-image-homepage.jpg` (1200×630)** partendo dal logo reale del sito (`src/assets/jungle-rent-logo.png`):
-   - Sfondo: cream/avorio chiaro (stesso del sito) per far risaltare il logo verde
-   - Logo Jungle Rent centrato, dimensione generosa (~50% larghezza)
-   - Nessun testo aggiuntivo — solo il logo, pulito, "quiet luxury"
-   - Format JPG 1200×630 (richiesto da WhatsApp/Facebook/iMessage)
+## File toccati
 
-2. **Nessuna modifica al codice** — `index.html` già punta a `/og-image-homepage.jpg`, basta sovrascrivere il file.
+- `src/data/blog/content/it/real-life-monopoly-passaggio-generazionale-immobiliare-2026.md`
+- `src/data/blog/content/en/real-life-monopoly-passaggio-generazionale-immobiliare-2026.md`
 
-## Note importanti
+## Esempi di riscrittura (IT)
 
-- WhatsApp/iMessage **cachano le anteprime** per giorni. Per testare subito serve aggiungere `?v=3` all'URL condiviso, oppure usare il [WhatsApp Link Preview Debugger](https://developers.facebook.com/tools/debug/) per forzare il refresh dopo il deploy.
-- Le anteprime per-articolo del blog restano un problema separato (Opzione B - prerendering) — non incluso qui.
+| Prima | Dopo |
+|---|---|
+| "è già cominciata — e cosa significa" | "è già cominciata, e cosa significa" |
+| "Non case qualsiasi: in larga parte abitazioni grandi" | "Sono in larga parte abitazioni grandi" |
+| "Non è un dato isolato" | "Il dato trova conferma altrove" |
+| "fermi — non abitati, non affettati, non manutenuti" | "fermi: vuoti, sfitti, lasciati senza manutenzione" |
+| "non sempre trovano chi sappia rimetterle in funzione" | "raramente trovano chi sa rimetterle in funzione" |
+| "Qui si inserisce il nostro modello, e non per caso" | "Qui si inserisce il nostro modello, con una ragione precisa" |
+| "Non è speculazione sulla rivendita. È gestione attiva" | "È gestione attiva di un asset reale, non un'operazione di rivendita" |
+| "lo slogan — *Real life Monopoly* — non è solo un'immagine" | "lo slogan *Real life Monopoly* descrive esattamente questo" |
+| "Non per cavalcare un'onda speculativa, ma per fare un lavoro" | "L'obiettivo non è cavalcare un'onda speculativa: è fare un lavoro" → meglio: "L'obiettivo è fare un lavoro che il mercato lascia scoperto" |
+| "non significano 2.720 miliardi di opportunità" | "valgono molto meno in termini di opportunità reali" |
 
-## Domanda
+Stesso trattamento su EN (em-dashes → virgole/due punti; "It's not X, it's Y" → frasi affermative dirette).
 
-Vuoi **solo il logo** su sfondo cream pulito, oppure preferisci logo + piccolo tagline "Student housing · Torino" sotto?
+## Cosa NON cambia
+
+- Dati, fonti, citazioni (Sole 24 Ore, UBS, Piketty, 40.000 studenti, €480/mese).
+- Struttura sezioni e ancore (`{#intro}`, `{#dato}`, ecc.).
+- Tagline "Real life Monopoly" e firma finale Jungle Rent S.r.l.
+- Conformità: zero cifre/percentuali di rendimento Jungle Rent, già a posto.
+
+Procedo a riscrivere entrambi i file in build mode.
