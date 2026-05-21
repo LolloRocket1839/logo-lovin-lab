@@ -57,9 +57,9 @@ Best regards`
   investor: {
     whatsapp: {
       it: (name: string) => 
-        `Ciao ${name}! Sono interessato/a alle opportunità di investimento immobiliare con Jungle Rent.\n\nVorrei informazioni su:\n- Rendimenti previsti e ROI\n- Proprietà disponibili in zone universitarie\n- Gestione professionale del servizio\n- Opportunità di investimento e tempistiche\n\nGrazie!`,
+        `Ciao ${name}! Sono interessato/a alle opportunità di investimento immobiliare con Jungle Rent.\n\nVorrei informazioni su:\n- Come funziona il modello di investimento\n- Proprietà disponibili in zone universitarie\n- Gestione professionale del servizio\n- Opportunità di investimento e tempistiche\n\nGrazie!`,
       en: (name: string) => 
-        `Hi ${name}! I'm interested in real estate investment opportunities with Jungle Rent.\n\nI would like information about:\n- Expected returns and ROI\n- Available properties in university areas\n- Professional service management\n- Investment opportunities and timelines\n\nThank you!`
+        `Hi ${name}! I'm interested in real estate investment opportunities with Jungle Rent.\n\nI would like information about:\n- How the investment model works\n- Available properties in university areas\n- Professional service management\n- Investment opportunities and timelines\n\nThank you!`
     },
     
     email: {
@@ -88,7 +88,7 @@ Cordiali saluti`
 I am interested in receiving more information about real estate investment opportunities with JungleRent.
 
 I would like to know more about:
-- Expected ROI and returns
+- How the investment model works
 - Types of available properties
 - Complete service management
 - Next steps
