@@ -5,7 +5,8 @@ import { createMarkdownComponents, preprocessMarkdownWithAutoLinks } from "@/lib
 import { getContextualSuggestions } from "@/lib/autoLinking";
 import { autoLinkConfig } from "@/data/linkableContent";
 import { ContextualSuggestionsList } from "./ContextualSuggestion";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import type { Components } from "react-markdown";
 
 interface AnimatedBlogContentProps {
@@ -21,6 +22,8 @@ export const AnimatedBlogContent = ({
   lang = 'it' 
 }: AnimatedBlogContentProps) => {
   const staticComponents = createMarkdownComponents();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
   
   // Preprocess content with auto-links
   const processedContent = useMemo(() => {
@@ -33,8 +36,34 @@ export const AnimatedBlogContent = ({
     return getContextualSuggestions(content, slug, lang, 2);
   }, [content, slug, lang]);
 
+  // Fade-up paragraphs/headings as they enter viewport (once)
+  useEffect(() => {
+    if (prefersReducedMotion || !containerRef.current) return;
+    const root = containerRef.current;
+    const blocks = root.querySelectorAll<HTMLElement>(
+      "p, h2, h3, h4, blockquote, ul, ol, figure, pre, table"
+    );
+    blocks.forEach((el) => el.classList.add("editorial-reveal"));
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            (entry.target as HTMLElement).classList.add("editorial-revealed");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.05 }
+    );
+    blocks.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, [processedContent, prefersReducedMotion]);
+
   return (
-    <div className="prose prose-sm sm:prose-base md:prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-none blog-content-wrapper mb-12 prose-headings:scroll-mt-20 prose-a:text-primary prose-strong:font-bold prose-table:overflow-x-auto prose-pre:overflow-x-auto overflow-x-hidden">
+    <div
+      ref={containerRef}
+      className="prose prose-sm sm:prose-base md:prose-lg lg:prose-xl prose-slate dark:prose-invert max-w-none blog-content-wrapper blog-editorial mb-12 prose-headings:scroll-mt-24 prose-a:text-primary prose-strong:font-bold prose-table:overflow-x-auto prose-pre:overflow-x-auto overflow-x-hidden"
+    >
       <ReactMarkdown 
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}

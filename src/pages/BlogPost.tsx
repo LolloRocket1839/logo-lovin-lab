@@ -16,6 +16,9 @@ import { IPhoneNotesTemplate } from "@/components/blog/IPhoneNotesTemplate";
 import { FloatingTableOfContents } from "@/components/blog/FloatingTableOfContents";
 import { EmailGate } from "@/components/blog/EmailGate";
 import { ClusterSidebar, ClusterSidebarTrigger } from "@/components/blog/ClusterSidebar";
+import { ReadingProgressBar } from "@/components/blog/ReadingProgressBar";
+import { StickyArticleHeader } from "@/components/blog/StickyArticleHeader";
+import { ReadingModeProvider, useReadingMode } from "@/components/blog/ReadingModeProvider";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { getClusterForArticle } from "@/data/blog/contentClusters";
 import { useAutoBlogPost, autoBlogPostToBlogPost } from "@/hooks/useAutoBlogPosts";
@@ -28,7 +31,7 @@ import { useBlogLanguage, type BlogLanguage } from "@/hooks/useBlogLanguage";
 import { BlogLanguageToggle } from "@/components/blog/BlogLanguageToggle";
 import { getCategoryColor, getAbsoluteImageUrl, formatDate } from "@/lib/blog";
 
-const BlogPost = () => {
+const BlogPostInner = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation();
   const [content, setContent] = useState<string>("");
@@ -153,9 +156,49 @@ const BlogPost = () => {
       />
       
       <Navigation />
+      <ReadingProgressBar />
+      <StickyArticleHeader
+        title={translatedData.title}
+        onShare={handleShare}
+        lang={currentLang}
+      />
       
+      <BlogPostBody
+        post={post}
+        translatedData={translatedData}
+        currentLang={currentLang}
+        content={content}
+        slug={slug}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        setLangOverride={setLangOverride}
+        relatedPosts={relatedPosts}
+        currentTags={currentTags}
+      />
       
-      <div className="pt-20">
+      <Footer />
+      <ScrollToTop />
+    </main>
+  );
+};
+
+const BlogPostBody = ({
+  post,
+  translatedData,
+  currentLang,
+  content,
+  slug,
+  sidebarOpen,
+  setSidebarOpen,
+  setLangOverride,
+  relatedPosts,
+  currentTags,
+}: any) => {
+  const { t } = useTranslation();
+  const { readingMode } = useReadingMode();
+  return (
+    <div className={`pt-20 ${readingMode ? "reading-mode-on" : ""}`}>
+      <div className={readingMode ? "reading-hide" : ""}>
         <Breadcrumbs
           items={[
             { label: t('nav.blog'), href: '/blog' },
@@ -163,12 +206,13 @@ const BlogPost = () => {
             { label: translatedData.title }
           ]}
         />
-        
-        {/* Main layout with optional sidebar */}
-        <div className="max-w-7xl mx-auto lg:flex lg:gap-8 lg:px-8">
-          {/* Main article content */}
-          <article className="py-12 md:py-16 px-4 md:px-0 flex-1 lg:max-w-4xl">
-            <div className="container mx-auto lg:mx-0">
+      </div>
+      
+      {/* Main layout with optional sidebar */}
+      <div className="max-w-7xl mx-auto lg:flex lg:gap-8 lg:px-8 reading-column">
+        {/* Main article content */}
+        <article className="py-12 md:py-16 px-4 md:px-0 flex-1 lg:max-w-3xl">
+          <div className="container mx-auto lg:mx-0 max-w-2xl">
             {/* iPhone Notes Template for special posts */}
             {post.noteStyle ? (
               <>
@@ -232,7 +276,7 @@ const BlogPost = () => {
                   </div>
                 </header>
 
-                {/* Featured Image with Parallax */}
+                {/* Featured Image */}
                 <ParallaxHeroImage src={post.image} alt={translatedData.title} />
 
                 {/* Animated Content with Auto-Linking — optionally gated */}
@@ -248,47 +292,50 @@ const BlogPost = () => {
                   </>
                 )}
 
-                {/* Inline contextual CTA for top 5 most-viewed articles */}
-                {hasInlineCTA(post.slug) && (
-                  <InlineContextualCTA slug={post.slug} lang={currentLang} />
-                )}
+                <div className="reading-hide">
+                  {/* Inline contextual CTA for top 5 most-viewed articles */}
+                  {hasInlineCTA(post.slug) && (
+                    <InlineContextualCTA slug={post.slug} lang={currentLang} />
+                  )}
 
-                {/* Contract Banner for investor/seller articles */}
-                {(post.category === 'investors' || post.category === 'sellers') && (
-                  <ContractBanner />
-                )}
+                  {/* Contract Banner for investor/seller articles */}
+                  {(post.category === 'investors' || post.category === 'sellers') && (
+                    <ContractBanner />
+                  )}
 
-                {/* CTA */}
-                <BlogCTA type={post.category} />
+                  {/* CTA */}
+                  <BlogCTA type={post.category} />
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 pt-8 border-t border-border/20">
-                  {translatedData.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">
-                      #{tag}
-                    </Badge>
-                  ))}
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 pt-8 border-t border-border/20">
+                    {translatedData.tags.map((tag: string) => (
+                      <Badge key={tag} variant="secondary">
+                        #{tag}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
               </>
             )}
           </div>
         </article>
           
-          {/* Cluster Sidebar - Desktop */}
-          {getClusterForArticle(slug) && (
-            <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12 space-y-6">
-              <ClusterSidebar 
-                currentSlug={slug} 
-                isOpen={true} 
-                onClose={() => {}} 
-              />
-              {(post.category === 'investors' || post.category === 'sellers') && (
-                <ContractSidebarCard />
-              )}
-            </div>
-          )}
-        </div>
+        {/* Cluster Sidebar - Desktop */}
+        {getClusterForArticle(slug) && (
+          <div className="hidden lg:block lg:w-80 lg:flex-shrink-0 py-12 space-y-6 reading-hide">
+            <ClusterSidebar 
+              currentSlug={slug} 
+              isOpen={true} 
+              onClose={() => {}} 
+            />
+            {(post.category === 'investors' || post.category === 'sellers') && (
+              <ContractSidebarCard />
+            )}
+          </div>
+        )}
+      </div>
 
+      <div className="reading-hide">
         {/* Related Posts */}
         <RelatedPosts posts={relatedPosts} currentTags={currentTags} />
         
@@ -303,11 +350,14 @@ const BlogPost = () => {
           onClose={() => setSidebarOpen(false)} 
         />
       </div>
-      
-      <Footer />
-      <ScrollToTop />
-    </main>
+    </div>
   );
 };
+
+const BlogPost = () => (
+  <ReadingModeProvider>
+    <BlogPostInner />
+  </ReadingModeProvider>
+);
 
 export default BlogPost;
