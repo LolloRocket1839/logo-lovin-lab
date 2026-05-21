@@ -1,74 +1,70 @@
-## Mini CRM in `/admin/leads`
+## Obiettivo
 
-Trasforma la pagina admin esistente in un mini-CRM operativo per gestire i lead (investitori, venditori, studenti, generali) senza uscire dall'app. Niente Gmail in MVP: parto da quello che hai già (`leads` + `seller_leads` + `investor_interest` + `admin-leads` edge function) e aggiungo stato, timeline interazioni, follow-up.
+1. Eseguire un audit completo delle traduzioni in tutte le lingue del progetto.
+2. Creare una **skill** (`i18n-translation-check`) che permetta a qualsiasi futura sessione di rieseguire lo stesso controllo in un comando.
 
-### Stati lead (kanban)
-`nuovo` → `contattato` → `qualificato` → `proposta` → `vinto` / `perso` / `nurturing`
+## Stato attuale rilevato
 
-### 1. Schema (1 migrazione)
+- Locali principali: `src/i18n/locales/{it,en,es,fr,de,sv,zh}.json` (7 lingue, IT reference).
+- Locali investor: `src/i18n/locales/investor/{it,en,es,fr,de,sv,zh,pt}.json` (8 lingue, include **pt** che manca nel set principale).
+- Script esistente `scripts/validate-translations.js`:
+  - **rotto** (`require` in scope ESM perché `package.json` ha `"type":"module"`),
+  - **non controlla** la cartella `investor/`,
+  - **non controlla** stringhe vuote o uguali a IT (= non tradotte),
+  - **non gestisce** il bundle `pt` di investor.
 
-**Modifiche a `public.leads`**:
-- `status text NOT NULL DEFAULT 'nuovo'` con CHECK su valori sopra
-- `assigned_to text` (email admin, default `lorenzo.onijoseph@gmail.com`)
-- `last_contact_at timestamptz`
-- `next_followup_at timestamptz`
-- `priority text DEFAULT 'medium'` (`low|medium|high`)
+## Cosa farò
 
-**Nuova tabella `public.lead_interactions`** (timeline):
-- `id uuid PK`, `lead_id uuid` (FK a `leads.id` ON DELETE CASCADE)
-- `lead_table text` default `'leads'` (per supportare anche `seller_leads` / `investor_interest` in futuro)
-- `kind text` (`note | call | whatsapp | email | meeting | status_change | followup`)
-- `direction text` (`inbound | outbound | system`)
-- `content text`, `metadata jsonb`
-- `created_by text` (email admin), `created_at timestamptz`
+### Step 1 — Fix + estensione del check (script unico)
 
-**RLS**: stesso pattern di `leads` — blocco pubblico, service role gestisce tutto. Accesso solo via edge function `admin-leads` con check admin email.
+Sostituire `scripts/validate-translations.js` con `scripts/validate-translations.mjs` (ESM nativo, compatibile col `package.json`) che per **ogni bundle** (`main` e `investor`):
 
-**Indici**: `leads(status, next_followup_at)`, `lead_interactions(lead_id, created_at DESC)`.
+- estrae le chiavi flatten con dot-notation;
+- confronta ogni lingua vs IT e segnala **chiavi mancanti** e **chiavi extra**;
+- segnala **valori vuoti**;
+- segnala **valori identici alla stringa IT** (probabile traduzione mancata) — esclusioni: brand `Jungle Rent`, `Lorenzo`, `WhatsApp`, numeri, URL;
+- ritorna **exit code 1** se trova mismatch (utile in CI / GitHub Actions).
 
-### 2. Edge function `admin-leads` (estesa)
+Aggiornare `package.json` script:
+```json
+"validate:translations": "node scripts/validate-translations.mjs"
+```
 
-Nuove `action`:
-- `list` (già esistente) — aggiunge campi `status`, `assigned_to`, `last_contact_at`, `next_followup_at`, `priority`, e `interactions_count` (subquery)
-- `get_detail` `{ lead_id }` → lead completo + timeline `lead_interactions` ordinata DESC
-- `update_lead` `{ lead_id, patch }` → aggiorna `status / priority / assigned_to / next_followup_at / notes`. Quando cambia `status`, crea automaticamente una riga `lead_interactions` di tipo `status_change`.
-- `add_interaction` `{ lead_id, kind, direction, content, metadata }` → inserisce riga timeline; se `kind` ∈ {call, whatsapp, email, meeting}, aggiorna anche `last_contact_at = now()`.
-- `bulk_update_status` `{ lead_ids[], status }` per azioni multiple dal kanban
+Il vecchio `.js` viene rimosso (workflow `.github/workflows/test.yml` resta valido se chiama lo script npm).
 
-Tutte le action mantengono il check `ADMIN_EMAILS`.
+### Step 2 — Eseguire l'audit e riportare i risultati
 
-### 3. Frontend `/admin/leads`
+Lancio `node scripts/validate-translations.mjs` e riporto in chat un riassunto: per ogni lingua e bundle, numero di chiavi mancanti / extra / vuote / sospette, con esempi.
 
-Refactor `src/pages/admin/Leads.tsx` in 3 sotto-componenti dentro `src/components/admin/leads/`:
+### Step 3 — Creare la skill `i18n-translation-check`
 
-- **`LeadsToolbar.tsx`** — search, filtri (tipo, stato, priorità, assegnatario, "solo follow-up scaduti"), toggle vista **Tabella ↔ Kanban**, export CSV.
-- **`LeadsTable.tsx`** — colonne: Stato (badge colorato), Tipo, Email, Telefono, Source, Ultimo contatto, Prossimo follow-up, Età lead. Riga cliccabile → apre drawer.
-- **`LeadsKanban.tsx`** — 6 colonne (una per stato), card draggable (react-dnd lite o solo via menu "sposta in…" per restare leggero). Drop = `update_lead`.
-- **`LeadDetailDrawer.tsx`** (shadcn `Sheet`) — apertura laterale con:
-  - Header: nome/email/tipo + badge stato + select per cambiare stato + select priorità
-  - Quick actions: pulsanti WhatsApp (apre `wa.me/<phone>` precompilato), Email (`mailto:`), "Marca come contattato"
-  - Form **"Aggiungi interazione"**: select tipo (nota/call/whatsapp/email/meeting), textarea, pulsante salva → `add_interaction`
-  - **Timeline** verticale delle `lead_interactions` con icona per tipo, autore, timestamp relativo
-  - Date picker per `next_followup_at` + bottone "Pianifica follow-up"
-  - Pannello laterale con tutti i campi (metadata, UTM, source)
+Struttura:
+```text
+.agents/skills/i18n-translation-check/
+├── SKILL.md
+└── scripts/
+    └── check.mjs   (copia dello script, autonomo)
+```
 
-### 4. Dashboard mini in cima alla pagina
+`SKILL.md` (frontmatter + body conciso):
+- **name**: `i18n-translation-check`
+- **description**: "Audit traduzioni i18n del progetto Jungle Rent: confronta IT (reference) contro EN/ES/FR/DE/SV/ZH (e PT per investor), in entrambi i bundle `locales/` e `locales/investor/`. Trigger quando l'utente chiede di 'controllare traduzioni', 'sync locales', 'verificare lingue', aggiunge una nuova lingua, o modifica `it.json`."
+- Procedura: 1) lanciare `node scripts/validate-translations.mjs`, 2) interpretare exit code, 3) per fix, partire sempre da IT come reference e mantenere le 8 lingue investor / 7 lingue main allineate, 4) `pt` esiste solo nel bundle investor (non aggiungerlo al main).
+- Sezione "Falsi positivi noti": brand names, numeri, URL.
 
-4 stat card: **Nuovi** (status=nuovo), **Da ricontattare oggi** (next_followup_at ≤ now), **In trattativa** (status ∈ qualificato/proposta), **Vinti questo mese**. Tutti calcolati client-side da `list`.
+Poi `skills--apply_draft .agents/skills/i18n-translation-check` per attivarla.
 
-### 5. Notifiche follow-up (out of scope MVP, menzionato per dopo)
+## File toccati
 
-Cron settimanale che invia a `lorenzo.onijoseph@gmail.com` via Lovable Emails (transactional, già pronto) la lista follow-up scaduti. Lo aggiungo in una fase 2 se vuoi.
+- `scripts/validate-translations.mjs` (nuovo)
+- `scripts/validate-translations.js` (eliminato)
+- `package.json` (script npm aggiornato)
+- `.agents/skills/i18n-translation-check/SKILL.md` (nuovo)
+- `.agents/skills/i18n-translation-check/scripts/check.mjs` (nuovo)
 
-### Out of scope esplicito
+## Fuori scope
 
-- **Gmail connector** — non incluso. Se vuoi vedere i thread email reali del lead dentro il drawer (e poter rispondere senza uscire dall'app), lo aggiungiamo in fase 2 con `standard_connectors--connect google_mail` e una `action: "list_thread"` nell'edge function che cerca per `from:/to:<lead.email>`.
-- `seller_leads` e `investor_interest` restano separate per ora — il CRM gestisce solo `leads`. Posso unificare la vista in fase 2 (creare una RPC `unified_leads` che fa UNION ALL).
-- Niente assignment multi-utente: per ora c'è solo Lorenzo come admin.
+- Non traduco automaticamente le chiavi mancanti in questa iterazione: prima ti mostro il report, poi decidiamo se compilarle (manualmente o via AI) in un secondo giro.
+- Non tocco le memorie di progetto (la regola "IT primary, EN fallback, 7 locales" resta valida, aggiorneremo solo se confermi che `pt` deve estendersi anche al main).
 
-### Tecnico
-
-- Migrazione Supabase con CHECK constraint sugli enum-like (`status`, `priority`, `kind`, `direction`).
-- Edge function unica `admin-leads` (no nuovi function), tutto in `index.ts`.
-- Drawer + Kanban usano shadcn (`Sheet`, `Card`, `Select`, `Badge`, `Calendar`/`Popover`).
-- DnD: parto con menu "Sposta in…" (più affidabile mobile). Drag-and-drop vero in fase 2 se ti serve.
+Confermi e procedo?
