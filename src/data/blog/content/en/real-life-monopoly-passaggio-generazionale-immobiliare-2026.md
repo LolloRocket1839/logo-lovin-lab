@@ -10,7 +10,7 @@ On 20 May 2026 *Il Sole 24 Ore* published a snapshot worth reading carefully: to
 
 The figure is confirmed elsewhere. The *UBS Global Wealth Report 2025* estimates that over the next twenty years more than €2.3 trillion will pass from one generation to the next in Italy, and that **more than 60% of that value will be in real estate**. The projections all converge on one point: **by 2045 roughly one home out of two will change owner** through inheritance or donation.
 
-In other words, the board is about to tip. And as in any game, what matters is what you do with the squares that open up.
+The board is about to tip. And as in any game, what matters is what you do with the squares that open up.
 
 ---
 
