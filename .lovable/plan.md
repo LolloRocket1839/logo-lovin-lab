@@ -1,37 +1,44 @@
-## Obiettivo
+## Skill proposta: `anti-ai-prose-it-en`
 
-Riscrivere l'articolo "Real life Monopoly" (IT + EN) togliendo i due tic che lo fanno suonare AI:
+Una sola skill, focalizzata sul problema emerso oggi: la prosa dei nuovi articoli blog "suona AI". Si attiva ogni volta che scrivo o riscrivo contenuti lunghi (blog, landing copy, email lunghe) in italiano o inglese.
 
-1. **Trattini lunghi (—)** — 9 in ciascun file. Sostituiti con virgole, due punti, parentesi o frasi separate.
-2. **Costruzioni "Non X, ma Y" e doppie negazioni** — pattern tipico dei modelli linguistici. Riformulati in positivo dove possibile.
+### Cosa fa la skill
 
-## File toccati
+Carica una checklist + uno script di lint che blocca i tic tipici dei modelli linguistici:
 
-- `src/data/blog/content/it/real-life-monopoly-passaggio-generazionale-immobiliare-2026.md`
-- `src/data/blog/content/en/real-life-monopoly-passaggio-generazionale-immobiliare-2026.md`
+1. **Zero em-dash (—)** nel corpo. Consentito solo en-dash (–) per intervalli numerici/temporali (`9–13`, `giugno–agosto`).
+2. **Zero costruzioni "Non X, ma Y"** e doppie negazioni stilistiche (`non è X. È Y`, `non solo… ma anche`, `it's not X, it's Y`).
+3. **Frasi brevi** (target: <25 parole medie), voce attiva, no "in altre parole" / "in other words", no "It's worth noting", no "Vale la pena notare".
+4. **Sentence case** rispettato (già regola progetto, ribadita).
 
-## Esempi di riscrittura (IT)
+### Struttura file
 
-| Prima | Dopo |
-|---|---|
-| "è già cominciata — e cosa significa" | "è già cominciata, e cosa significa" |
-| "Non case qualsiasi: in larga parte abitazioni grandi" | "Sono in larga parte abitazioni grandi" |
-| "Non è un dato isolato" | "Il dato trova conferma altrove" |
-| "fermi — non abitati, non affettati, non manutenuti" | "fermi: vuoti, sfitti, lasciati senza manutenzione" |
-| "non sempre trovano chi sappia rimetterle in funzione" | "raramente trovano chi sa rimetterle in funzione" |
-| "Qui si inserisce il nostro modello, e non per caso" | "Qui si inserisce il nostro modello, con una ragione precisa" |
-| "Non è speculazione sulla rivendita. È gestione attiva" | "È gestione attiva di un asset reale, non un'operazione di rivendita" |
-| "lo slogan — *Real life Monopoly* — non è solo un'immagine" | "lo slogan *Real life Monopoly* descrive esattamente questo" |
-| "Non per cavalcare un'onda speculativa, ma per fare un lavoro" | "L'obiettivo non è cavalcare un'onda speculativa: è fare un lavoro" → meglio: "L'obiettivo è fare un lavoro che il mercato lascia scoperto" |
-| "non significano 2.720 miliardi di opportunità" | "valgono molto meno in termini di opportunità reali" |
+```
+.agents/skills/anti-ai-prose-it-en/
+├── SKILL.md                          # trigger + checklist
+├── references/
+│   ├── ai-tells-it.md                # lista pattern italiani da evitare + sostituzioni
+│   └── ai-tells-en.md                # stesso per inglese
+└── scripts/
+    └── lint-prose.sh                 # grep-based: conta —, "non X, ma Y", "in altre parole", etc.
+```
 
-Stesso trattamento su EN (em-dashes → virgole/due punti; "It's not X, it's Y" → frasi affermative dirette).
+### Quando si attiva
 
-## Cosa NON cambia
+Frontmatter description mirata: "Use when writing or rewriting blog posts, landing copy, or any long-form prose in Italian or English for Jungle Rent. Removes AI tells (em-dashes, 'non X ma Y' constructions, double negatives, hedge phrases) and enforces short active sentences."
 
-- Dati, fonti, citazioni (Sole 24 Ore, UBS, Piketty, 40.000 studenti, €480/mese).
-- Struttura sezioni e ancore (`{#intro}`, `{#dato}`, ecc.).
-- Tagline "Real life Monopoly" e firma finale Jungle Rent S.r.l.
-- Conformità: zero cifre/percentuali di rendimento Jungle Rent, già a posto.
+### Cosa NON serve come skill
 
-Procedo a riscrivere entrambi i file in build mode.
+- Lista colori / palette → già in `mem://design/color-palette`
+- Founder disclosure → già in `mem://compliance/sole-founder-disclosure`
+- Yield figures policy → già in `mem://compliance/no-public-yield-figures`
+
+Queste sono regole sempre-on (Core memory), non skill on-demand.
+
+### Domanda
+
+Confermi questa singola skill, oppure vuoi anche:
+- **B)** skill separata `og-image-generator` (procedura per generare/sostituire OG image 1200×630 con logo + ImageMagick)?
+- **C)** skill `blog-post-publisher` (checklist completa: crea .md IT+EN, aggiorna `posts.ts`, FAQ, categorie, sitemap)?
+
+Default: procedo solo con **A** (`anti-ai-prose-it-en`) se non dici altro.

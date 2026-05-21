@@ -10,7 +10,7 @@ Il 20 maggio 2026 *Il Sole 24 Ore* ha pubblicato una fotografia che vale la pena
 
 Il dato trova conferma altrove. Lo *UBS Global Wealth Report 2025* stima che nei prossimi vent'anni in Italia si trasferiranno oltre 2.300 miliardi di euro da una generazione all'altra, e che **più del 60% di questo valore sarà immobiliare**. Le proiezioni convergono su un punto: **entro il 2045 circa una casa su due cambierà proprietario** attraverso successioni o donazioni.
 
-In altre parole, il tabellone si sta per ribaltare. E come in ogni partita, conta cosa si fa delle caselle che si liberano.
+Il tabellone si sta per ribaltare. E come in ogni partita, conta cosa si fa delle caselle che si liberano.
 
 ---
 
