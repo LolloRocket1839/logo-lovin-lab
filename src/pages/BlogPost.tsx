@@ -156,9 +156,49 @@ const BlogPostInner = () => {
       />
       
       <Navigation />
+      <ReadingProgressBar />
+      <StickyArticleHeader
+        title={translatedData.title}
+        onShare={handleShare}
+        lang={currentLang}
+      />
       
+      <BlogPostBody
+        post={post}
+        translatedData={translatedData}
+        currentLang={currentLang}
+        content={content}
+        slug={slug}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
+        setLangOverride={setLangOverride}
+        relatedPosts={relatedPosts}
+        currentTags={currentTags}
+      />
       
-      <div className="pt-20">
+      <Footer />
+      <ScrollToTop />
+    </main>
+  );
+};
+
+const BlogPostBody = ({
+  post,
+  translatedData,
+  currentLang,
+  content,
+  slug,
+  sidebarOpen,
+  setSidebarOpen,
+  setLangOverride,
+  relatedPosts,
+  currentTags,
+}: any) => {
+  const { t } = useTranslation();
+  const { readingMode } = useReadingMode();
+  return (
+    <div className={`pt-20 ${readingMode ? "reading-mode-on" : ""}`}>
+      <div className={readingMode ? "reading-hide" : ""}>
         <Breadcrumbs
           items={[
             { label: t('nav.blog'), href: '/blog' },
@@ -166,12 +206,13 @@ const BlogPostInner = () => {
             { label: translatedData.title }
           ]}
         />
-        
-        {/* Main layout with optional sidebar */}
-        <div className="max-w-7xl mx-auto lg:flex lg:gap-8 lg:px-8">
-          {/* Main article content */}
-          <article className="py-12 md:py-16 px-4 md:px-0 flex-1 lg:max-w-4xl">
-            <div className="container mx-auto lg:mx-0">
+      </div>
+      
+      {/* Main layout with optional sidebar */}
+      <div className="max-w-7xl mx-auto lg:flex lg:gap-8 lg:px-8 reading-column">
+        {/* Main article content */}
+        <article className="py-12 md:py-16 px-4 md:px-0 flex-1 lg:max-w-3xl">
+          <div className="container mx-auto lg:mx-0 max-w-2xl">
             {/* iPhone Notes Template for special posts */}
             {post.noteStyle ? (
               <>
