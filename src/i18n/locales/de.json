@@ -681,7 +681,295 @@
     "waitlistCta": "Auf die Warteliste",
     "waitlistSubtitle": "Erhalten Sie exklusive Updates zu Immobilieninvestitionsmöglichkeiten",
     "waitlistTitle": "Treten Sie der Investoren-Warteliste bei",
-    "whyInvestTitle": "Warum bei uns investieren"
+    "whyInvestTitle": "Warum bei uns investieren",
+    "landing": {
+      "meta": {
+        "title": "Investieren Sie in Jungle Rent · Studentenwohnungen in Torino",
+        "description": "Jungle Rent ermöglicht einer begrenzten Anzahl von privaten Investoren die wirtschaftliche Beteiligung am Portfolio von Studentenwohnungen in Torino über ein spezielles Instrument. Fordern Sie das Informationsmemorandum an."
+      },
+      "hero": {
+        "eyebrow": "Reservierte Gelegenheit · Privatplatzierung",
+        "h1": "Investieren Sie in Jungle Rent. Mit Exposition gegenüber dem einzelnen Immobiliengeschäft.",
+        "subhead": "Jungle Rent ist ein innovatives Startup aus Torino. Wir kaufen, renovieren und verwalten Wohnungen für Universitätsstudenten. Wir ermöglichen einer begrenzten Anzahl von privaten Investoren die wirtschaftliche Beteiligung am Portfolio über ein spezielles Instrument. Die technischen Details des Instruments sind im Informationsmemorandum beschrieben.",
+        "cta": "Informationsmemorandum anfordern",
+        "ctaPrimary": "Mit Lorenzo sprechen",
+        "ctaSecondary": "Memorandum erhalten",
+        "ctaNote": "Die Zeichnung erfolgt nicht online. Der erste Schritt ist eine Informationsanfrage: Sie erhalten das Memorandum, bewerten es in Ruhe und entscheiden dann.",
+        "metrics": {
+          "yieldLabel": "Auszahlungsmodell",
+          "yieldValue": "Zweimonatlich",
+          "payoutLabel": "Auszahlungshäufigkeit",
+          "payoutValue": "Zweimonatlich",
+          "ticketLabel": "Mindestticket",
+          "ticketValue": "€5k"
+        }
+      },
+      "quickBar": {
+        "label": "Möchten Sie direkt darüber sprechen?",
+        "whatsapp": "WhatsApp Lorenzo",
+        "email": "Schreiben Sie uns"
+      },
+      "socialProof": {
+        "countPrefix_one": "{{count}} Person",
+        "countPrefix_other": "{{count}} Personen",
+        "countPrefix": "{{count}} Personen",
+        "countSuffix": "haben in den letzten 4 Wochen Informationen angefordert",
+        "startupLabel": "Innovatives Startup",
+        "startupSuffix": "eingetragen bei der Handelskammer Torino · REA TO-1355899"
+      },
+      "emailFirst": {
+        "title": "Möchten Sie über das nächste Geschäft informiert werden?",
+        "subtitle": "Nur E-Mail. Wir schreiben Ihnen, wenn wir öffnen. Kein Newsletter, kein Spam.",
+        "fields": {
+          "name": "Name (optional)",
+          "email": "Ihre E-Mail"
+        },
+        "submit": "Halten Sie mich auf dem Laufenden",
+        "submitting": "Wird gesendet…",
+        "preferFull": "Ich fülle lieber das vollständige Formular aus, um das Memorandum zu erhalten",
+        "alsoQualify": "Möchten Sie auch das Memorandum? Füllen Sie das Qualifizierungsformular aus",
+        "privacy": "Wir verarbeiten Ihre Daten nur, um Sie bezüglich dieser Gelegenheit zu kontaktieren (DSGVO). Sie können sich jederzeit abmelden.",
+        "trustLine": "Kein Spam · Antwort innerhalb von 24 Stunden · Lorenzo antwortet persönlich",
+        "success": "Danke. Wir werden Sie bei der nächsten Eröffnung persönlich benachrichtigen.",
+        "successNamePrompt": "Wie heißen Sie? Das hilft uns, Sie besser zu kontaktieren.",
+        "saveName": "Speichern",
+        "skipName": "Überspringen",
+        "error": "Etwas ist schiefgelaufen. Versuchen Sie es in ein paar Minuten erneut oder schreiben Sie uns per WhatsApp."
+      },
+      "trust": {
+        "title": "Öffentlich überprüfbar",
+        "items": {
+          "rea": {
+            "label": "Handelskammer Torino",
+            "value": "REA TO-1355899"
+          },
+          "mise": {
+            "label": "Innovatives Startup",
+            "value": "Eingetragen am 04/12/2025"
+          },
+          "incubator": {
+            "label": "2i3T",
+            "value": "Inkubator der Universität von Torino"
+          },
+          "vat": {
+            "label": "P.IVA",
+            "value": "13333450016"
+          }
+        }
+      },
+      "founder": {
+        "title": "Ein Brief vom Gründer",
+        "paragraphs": [
+          "Hallo,",
+          "Ich bin Lorenzo, der Gründer von Jungle Rent. Ich habe dieses Unternehmen auf einer einfachen Idee aufgebaut: In Torino gibt es 90.000 Universitätsstudenten und einen noch zugänglichen Immobilienmarkt. Durch gutes Kaufen, gutes Renovieren und gutes Verwalten können solide Cashflows in einer historisch defensiven Anlageklasse aufgebaut werden.",
+          "Ich öffne die Beteiligung für eine kleine Gruppe privater Investoren aus einem praktischen Grund: um den Aufbau des Portfolios zu beschleunigen, ohne das Grundkapital übermäßig zu verwässern. Wir tun dies mit einem speziellen Instrument, das die Anreize aufeinander abstimmt: Die Struktur belohnt diejenigen, die früh in das einzelne Geschäft einsteigen, und ich erhalte 10% der Gewinne nach dem Servicing. Die rechtlichen Details stehen im Memorandum.",
+          "Diese Seite gibt Ihnen den Rahmen vor. Die echten Zahlen, die Struktur, die Modelle, die Verträge – all das steht im Memorandum. Ich sende es Ihnen erst nach einem kurzen Kennenlerngespräch zu, denn ich möchte sicherstellen, dass die Gelegenheit und Ihre Erwartungen kompatibel sind.",
+          "Wenn Sie interessiert sind, füllen Sie das Formular am Ende der Seite aus. Ich antworte Ihnen persönlich innerhalb von 48 Stunden."
+        ],
+        "signature": "Lorenzo Oni-Joseph",
+        "role": "Gründer & CEO, Jungle Rent S.r.l."
+      },
+      "thesis": {
+        "title": "Warum Torino, warum jetzt, warum wir",
+        "items": {
+          "market": {
+            "title": "Unterversorgter Markt",
+            "body": "90.000 Universitätsstudenten, 7 Institutionen (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Chronischer Nachfrageüberhang an Wohnraum im Vergleich zum regulären Angebot. Mieten von 350 € bis 700 € für ein Einzelzimmer je nach Gegend."
+          },
+          "asset": {
+            "title": "Defensive Anlageklasse zu einem erschwinglichen Preis",
+            "body": "Zweizimmerwohnungen in den Zielgebieten (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) können heute zwischen 45.000 € und 130.000 € erworben werden. Die Studentenvermietung generiert Einnahmen, die durch eine unelastische Nachfrage stabilisiert werden. Die genauen wirtschaftlichen Prognosen finden Sie im Informationsmemorandum."
+          },
+          "model": {
+            "title": "Hybridmodell",
+            "body": "10 Monate Studenten (September–Juni) + touristische Sommersaison (Juli–August) auf Airbnb und Booking. Diese Mischung optimiert die Auslastung und den Gesamtumsatz im Vergleich zur reinen Studentenvermietung."
+          }
+        }
+      },
+      "innovativa": {
+        "title": "Was sich ändert, weil wir ein innovatives Startup sind",
+        "items": {
+          "fg": {
+            "title": "Privilegierte Bankfinanzierung",
+            "body": "Wir haben Zugang zum KMU-Garantiefonds mit 80% kostenloser Deckung für innovative Startups. Dies ermöglicht es uns, Blankodarlehen zu erhalten, ohne die Immobilie zu verpfänden, sodass sie für zukünftige Rekapitalisierungen oder Veräußerungen frei bleibt."
+          },
+          "tax": {
+            "title": "Steuererleichterung für Investoren",
+            "body": "Investitionen in innovative Startups können von einem IRPEF-Abzug von bis zu 65% des investierten Betrags profitieren (de-minimis-Regelung, Reg. UE 2831/2023). Die tatsächliche Anwendbarkeit hängt vom verwendeten Instrument und dem Profil des Investors ab. Details im Memorandum."
+          },
+          "transparency": {
+            "title": "Verpflichtende Transparenz",
+            "body": "Als innovatives Startup sind wir verpflichtet, alle sechs Monate aktualisierte Unternehmensdaten im speziellen Bereich des Handelsregisters zu veröffentlichen, und wir halten einen öffentlich einsehbaren Handelsregisterauszug bereit. Jeder Investor kann den Status des Unternehmens selbstständig überprüfen."
+          }
+        }
+      },
+      "process": {
+        "title": "Vom ersten Kontakt bis zur Zeichnung",
+        "steps": [
+          {
+            "title": "Fordern Sie das Memorandum an",
+            "body": "Füllen Sie das Formular am Ende der Seite aus."
+          },
+          {
+            "title": "Kennenlerngespräch (30 Minuten)",
+            "body": "Ich rufe Sie persönlich innerhalb von 48 Stunden an, um Ihren Horizont, Ihre Erfahrung und Ihre Fragen zu verstehen."
+          },
+          {
+            "title": "Erhalten Sie die Unterlagen",
+            "body": "Informationsmemorandum, vollständige Vertragsunterlagen, Businessplan, Finanzmodell in Excel, Protokolle der Gesellschaftsorgane."
+          },
+          {
+            "title": "Zeit zur Bewertung",
+            "body": "Kein Druck. Sie können Ihren Steuerberater, einen Anwalt oder einen Vertrauensberater hinzuziehen."
+          },
+          {
+            "title": "Unterschrift",
+            "body": "Wenn Sie sich entscheiden fortzufahren, wird die Zeichnungsurkunde persönlich beim beauftragten Notar unterzeichnet, gleichzeitig mit der Einzahlung. Sie erhalten eine Serie des Instruments, die dem von Ihnen gewählten Geschäft gewidmet ist."
+          }
+        ],
+        "callout": "Kein Schritt ist automatisiert. Jeder Investor, der bei Jungle Rent einsteigt, tut dies, nachdem er direkt mit Lorenzo gesprochen hat."
+      },
+      "tax": {
+        "title": "Steuerliche Behandlung der Investition",
+        "content": "Investitionen in innovative Startups können vom IRPEF-Abzug von 65% gemäß art. 29-bis DL 179/2012 im Rahmen der de-minimis-Regelung, eingeführt durch die Reg. UE 2831/2023, profitieren. Die tatsächliche Anwendbarkeit hängt vom verwendeten Instrument und dem Profil des Investors ab. Die Regelung ist bis zum 04.12.2028 in Kraft, vorbehaltlich Verlängerungen.",
+        "caveatTitle": "Wichtig",
+        "caveat": "Die tatsächliche Anwendbarkeit und Höhe des Abzugs hängen von den individuellen Grenzen des Investors, der verbleibenden Verfügbarkeit des de-minimis-Plafonds des Unternehmens und der Einhaltung einer Reihe von gesetzlich vorgesehenen Bedingungen ab. Keine der Informationen auf dieser Seite stellt eine Steuerberatung dar. Bevor Sie eine Entscheidung treffen, konsultieren Sie Ihren vertrauenswürdigen Steuerberater oder bitten Sie unser Team, Sie mit der Steuerkanzlei in Kontakt zu bringen, die Jungle Rent berät."
+      },
+      "risks": {
+        "title": "Was schiefgehen kann",
+        "items": [
+          {
+            "title": "Illiquidität",
+            "body": "Die steuerliche Sperrfrist (Lock-up) beträgt 3 Jahre. Es gibt keinen organisierten Sekundärmarkt. Das Instrument ist privat übertragbar, aber die Suche nach einem Käufer liegt in Ihrer Verantwortung."
+          },
+          {
+            "title": "Konzentration auf ein einzelnes Geschäft",
+            "body": "Die von Ihnen gezeichnete Serie des Instruments ist dem Ergebnis einer einzigen Immobilie ausgesetzt (Kauf, Renovierung, Auslastung, eventuelle Veräußerung). Es gibt keine automatische Diversifizierung über das Gesamtportfolio. Darüber hinaus besitzt Jungle Rent zum Zeitpunkt der Veröffentlichung dieser Seite noch keine Immobilien: Der Businessplan basiert auf der Fähigkeit, die erste Akquisition rechtzeitig für das akademische Jahr 2026/2027 abzuschließen und dies effizient zu wiederholen."
+          },
+          {
+            "title": "Immobilienmarktrisiko",
+            "body": "Wesentliche Veränderungen des Marktes in Torino (Preise, studentische Nachfrage, Vorschriften für Kurzzeitvermietungen) können die Rendite des Portfolios beeinträchtigen."
+          },
+          {
+            "title": "Verwässerungsrisiko",
+            "body": "Zukünftige Kapitalrunden könnten Ihren relativen Anteil verwässern, obwohl das Instrument geschützte proportionale Vermögensrechte vorsieht."
+          },
+          {
+            "title": "Keine Garantie auf Renditen",
+            "body": "Die im Businessplan dargestellten erwarteten Renditen sind Prognosen. Die tatsächliche Performance hängt von der operativen Umsetzung und den Marktbedingungen ab. Ein teilweiser oder vollständiger Verlust des investierten Kapitals ist vernünftigerweise möglich."
+          }
+        ]
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "items": [
+          {
+            "q": "Investiere ich in das Unternehmen oder in eine einzelne Immobilie?",
+            "a": "Der Vertrag wird mit Jungle Rent S.r.l. geschlossen. Die wirtschaftliche Exposition bezieht sich auf das einzelne Geschäft: Jede Serie des Instruments ist mit einem spezifischen Deal verbunden, und Ihre Rendite hängt von der Performance dieses Deals ab. Rechtsform und Ausschüttungsmechanismus: im Memorandum."
+          },
+          {
+            "q": "Welches Finanzinstrument wird verwendet?",
+            "a": "Ein spezielles wirtschaftliches Beteiligungsinstrument, das qualifizierten Anlegern im Rahmen einer Privatplatzierung vorbehalten ist. Die genaue Rechtsform, die Vermögensrechte, der Ausschüttungsmechanismus und die Satzung sind vollständig im Informationsmemorandum beschrieben, das nach dem Qualifizierungsgespräch ausgehändigt wird."
+          },
+          {
+            "q": "Was ist das typische Ticket?",
+            "a": "Der Richtwert liegt zwischen 5.000 € und 20.000 € pro Investor. Niedrigere oder höhere Tickets werden je nach Runde und Anlegerprofil von Fall zu Fall bewertet."
+          },
+          {
+            "q": "Kann ich das Kapital vor Ablauf der 3 Jahre zurückerhalten?",
+            "a": "Die 3-jährige Sperrfrist ist eine steuerliche Vorgabe (um den IRPEF-Abzug zu behalten). Technisch gesehen können Sie das Instrument an einen anderen Investor übertragen, aber Sie würden den Steuervorteil verlieren und müssten selbst einen Käufer finden."
+          },
+          {
+            "q": "Wie werden die Gewinne ausgeschüttet?",
+            "a": "Die Vertragsunterlagen sehen eine von Fall zu Fall definierte wirtschaftliche Aufteilung vor, typischerweise 90% Investoren / 10% Jungle Rent nach Abzug der Servicing-Gebühr, gemäß einer im Memorandum detaillierten Waterfall-Struktur. Die Ausschüttung erfolgt zweimonatlich."
+          },
+          {
+            "q": "Ist Jungle Rent wirklich ein innovatives Startup oder ist das eine Eigendeklaration?",
+            "a": "Die Eintragung in den speziellen Bereich des Handelsregisters erfolgte am 04.12.2025 und ist unabhängig auf dem Portal startup.registroimprese.it mit P.IVA 13333450016 überprüfbar."
+          },
+          {
+            "q": "Kann ich den Businessplan und das Finanzmodell einsehen?",
+            "a": "Ja, nach dem Qualifizierungsgespräch. Es handelt sich um vollständige Dokumente (schriftlicher Businessplan 2025, mehrseitiges Excel-Modell mit Sensitivitätsanalyse, 5-Jahres-Prognosen)."
+          },
+          {
+            "q": "Wer führt die Buchhaltung und prüft die Bilanzen?",
+            "a": "Steuerliche Betreuung durch die Kanzlei Starola Cantino Bono in Torino. Der Jahresabschluss ist über den Handelsregisterauszug öffentlich einsehbar."
+          },
+          {
+            "q": "Was passiert, wenn Jungle Rent die erste Akquisition nicht bis September 2026 abschließen kann?",
+            "a": "Das eingeworbene Kapital wird auf dem Unternehmenskonto bis zum nächsten Marktfenster aufbewahrt oder auf Wunsch der Investoren zurückgezahlt, abzüglich der dokumentierten Kosten. Diese Klausel ist in den Vertragsunterlagen vorgesehen."
+          }
+        ]
+      },
+      "form": {
+        "title": "Erhalten Sie das Informationsmemorandum",
+        "subtitle": "Ich antworte persönlich innerhalb von 48 Stunden. Kein Newsletter, keine automatischen Follow-ups.",
+        "fields": {
+          "fullName": "Vor- und Nachname",
+          "email": "E-Mail",
+          "phone": "Telefon (optional)",
+          "phoneHint": "Wird nur verwendet, wenn Sie ausdrücklich einen Rückruf anfordern",
+          "taxResidence": "Steuerlicher Wohnsitz",
+          "ticketRange": "Ungefährer Ticketbereich",
+          "horizon": "Zeithorizont für die Entscheidung",
+          "prevExperience": "Haben Sie bereits in innovative Startups oder nicht börsennotierte Immobilien investiert?",
+          "source": "Wie haben Sie von uns erfahren? (optional)",
+          "notes": "Anmerkungen oder spezifische Fragen (optional)",
+          "privacyConsent": "Ich habe die Datenschutzerklärung gelesen und akzeptiere sie (DSGVO).",
+          "ownInitiative": "Ich erkläre, dass ich diese Informationen aus eigener Initiative und nicht aufgrund öffentlicher Werbung oder individueller Aufforderung angefordert habe. Ich verstehe, dass die Investition in Finanzinstrumente eines innovativen Startups Risiken birgt, einschließlich des möglichen Totalverlusts des Kapitals."
+        },
+        "options": {
+          "residence": {
+            "IT": "Italien",
+            "CH": "Schweiz",
+            "EU": "Anderes EU-Land",
+            "OTHER": "Außerhalb der EU"
+          },
+          "ticket": {
+            "5-10": "€5.000–€10.000",
+            "10-20": "€10.000–€20.000",
+            "20-50": "€20.000–€50.000",
+            "50+": "Über 50.000 €",
+            "TBD": "Ich möchte dies nach Sichtung der Unterlagen festlegen"
+          },
+          "horizon": {
+            "WEEKS": "In den nächsten Wochen",
+            "1-3M": "1–3 Monate",
+            "3-6M": "3–6 Monate",
+            "6M+": "Mehr als 6 Monate"
+          },
+          "experience": {
+            "YES": "Ja",
+            "NO": "Nein",
+            "PARTIAL": "Teilweise"
+          }
+        },
+        "submit": "Anfrage senden",
+        "submitting": "Wird gesendet…",
+        "success": "Danke. Lorenzo wird Ihnen innerhalb von 48 Stunden an die angegebene E-Mail-Adresse antworten. In der Zwischenzeit können Sie die Artikel über den Markt in Torino erkunden.",
+        "error": "Senden fehlgeschlagen. Versuchen Sie es erneut oder schreiben Sie an junglerententeprise@gmail.com.",
+        "selectPlaceholder": "Wählen Sie aus…",
+        "steps": {
+          "progress": "Schritt {{current}} von {{total}}",
+          "step1Title": "Lernen wir uns kennen",
+          "step1Subtitle": "Nur 30 Sekunden. Ihre Kontaktdaten bleiben privat.",
+          "step2Title": "Helfen Sie uns, das Angebot zu personalisieren",
+          "step2Subtitle": "So kann Lorenzo relevante Unterlagen für Sie vorbereiten.",
+          "step3Title": "Letzter Schritt",
+          "step3Subtitle": "Gesetzlich vorgeschriebene rechtliche Bestätigungen und Zustimmungen.",
+          "next": "Weiter",
+          "back": "Zurück",
+          "autoSaved": "Entwurf automatisch gespeichert"
+        }
+      },
+      "disclaimer": {
+        "p1": "Die auf dieser Seite enthaltenen Informationen dienen ausschließlich Informationszwecken und stellen kein öffentliches Angebot von Finanzprodukten im Sinne von art. 94 des D.Lgs. 58/1998 (TUF), keine Anlageaufforderung und keine Finanz-, Steuer- oder Rechtsberatung dar.",
+        "p2": "Das beschriebene Finanzinstrument ist nicht zur Online-Zeichnung verfügbar. Eine eventuelle Zeichnung erfolgt ausschließlich im Rahmen einer Privatplatzierung, die einer begrenzten Anzahl individuell qualifizierter Anleger vorbehalten ist, nach Übergabe des vollständigen Informationsmemorandums und der Vertragsunterlagen, unter Einhaltung der in art. 100 TUF vorgesehenen Ausnahmen.",
+        "p3": "Die in den Informationsmaterialien dargestellten Renditen sind Prognosen, die auf Modellannahmen basieren. Die tatsächliche Performance hängt von der Entwicklung des Portfolios ab und wird in keiner Weise garantiert. Die Anlage birgt Risiken, einschließlich Illiquiditätsrisiko, Immobilienmarktrisiko, operatives Ausführungsrisiko, Verwässerungsrisiko und der Möglichkeit eines Totalverlusts des investierten Kapitals.",
+        "p4": "Die beschriebene steuerliche Behandlung unterliegt individuellen Bedingungen, regulatorischen Grenzen und möglichen Gesetzesänderungen. Vor jeder Anlageentscheidung ist der Anleger verpflichtet, einen eigenen unabhängigen Steuer- und Finanzberater zu konsultieren.",
+        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
+      }
+    }
   },
   "investorExitIntent": {
     "badge": "Bevor Sie gehen...",
