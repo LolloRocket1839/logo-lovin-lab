@@ -6,9 +6,9 @@
 
 ## The number that redraws the map {#data}
 
-On 20 May 2026 *Il Sole 24 Ore* published a snapshot worth reading carefully: today roughly **half of Italian homes are owned by people around seventy**, and over the coming years a property portfolio estimated at **€2.72 trillion** will enter a phase of generational transfer. These are largely **large apartments located in major cities**.
+On 20 May 2026 *Il Sole 24 Ore* published a snapshot worth reading carefully: today roughly **half of Italian homes are owned by people around seventy,** and over the coming years a property portfolio estimated at **€2.72 trillion** will enter a phase of generational transfer. These are largely **large apartments located in major cities.**
 
-The figure is confirmed elsewhere. The *UBS Global Wealth Report 2025* estimates that over the next twenty years more than €2.3 trillion will pass from one generation to the next in Italy, and that **more than 60% of that value will be in real estate**. The projections all converge on one point: **by 2045 roughly one home out of two will change owner** through inheritance or donation.
+The figure is confirmed elsewhere. The *UBS Global Wealth Report 2025* estimates that over the next twenty years more than €2.3 trillion will pass from one generation to the next in Italy, and that **more than 60% of that value will be in real estate.** The projections all converge on one point: **by 2045 roughly one home out of two will change owner** through inheritance or donation.
 
 The board is about to tip. And as in any game, what matters is what you do with the squares that open up.
 
@@ -16,9 +16,9 @@ The board is about to tip. And as in any game, what matters is what you do with 
 
 ## The problem: frozen wealth {#problem}
 
-There's a second number, less cited but decisive: an estimated **27% of Italian real estate stock is empty or underused**. Often large apartments in valuable urban locations, but idle: empty, unrented, left without maintenance.
+There's a second number, less cited but decisive: an estimated **27% of Italian real estate stock is empty or underused.** Often large apartments in valuable urban locations, but idle: empty, unrented, left without maintenance.
 
-The reason is structural. Because people live longer, inheritance now arrives late: those who receive a home are often already adults or seniors themselves, with their own home and a life set up elsewhere. The result is predictable. According to market data, after an inheritance **roughly 35% of properties are sold, 30% simply held, 20% rented out and 15% split among family members**.
+The reason is structural. Because people live longer, inheritance now arrives late: those who receive a home are often already adults or seniors themselves, with their own home and a life set up elsewhere. The result is predictable. According to market data, after an inheritance **roughly 35% of properties are sold, 30% simply held, 20% rented out and 15% split among family members.**
 
 That 35% sold, and a good share of the 30% "held" without a plan, is the knot: homes leaving the hands of those who leave them idle, yet rarely reaching someone who knows how to put them back to work. It's capital, literally, locked in place. The economist Thomas Piketty observed that the more a country's wealth is transferred by inheritance, the more growth slows down: the value exists, but it stays still.
 
@@ -34,7 +34,7 @@ On one side, frozen wealth. On the other, unmet demand. **The market has a utili
 
 ## The Jungle Rent thesis {#jr-thesis}
 
-This is where our model fits in, for a precise reason. Jungle Rent does something simple to explain and hard to do well: **we buy underused apartments in Turin's university neighbourhoods, renovate them and put them back to work**.
+This is where our model fits in, for a precise reason. Jungle Rent does something simple to explain and hard to do well: **we buy underused apartments in Turin's university neighbourhoods, renovate them and put them back to work.**
 
 The mechanics mirror the optimisation logic that the market, at the macro level, still struggles to express:
 
@@ -43,7 +43,7 @@ The mechanics mirror the optimisation logic that the market, at the macro level,
 
 The same square metre, two seasons, two complementary demands. A home that used to be idle goes back to generating value: for those who live in it, for the city, for those who invest.
 
-This is **active management of a real asset**, rather than a resale play: you buy something that exists, you improve it, you make it work. That's why the tagline *Real life Monopoly* describes exactly this work. The difference is all in that *real life*: real apartments, real rents, real students and city centres that repopulate instead of emptying out.
+This is **active management of a real asset,** rather than a resale play: you buy something that exists, you improve it, you make it work. That's why the tagline *Real life Monopoly* describes exactly this work. The difference is all in that *real life*: real apartments, real rents, real students and city centres that repopulate instead of emptying out.
 
 ---
 

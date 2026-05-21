@@ -6,9 +6,9 @@
 
 ## Il dato che cambia la mappa {#dato}
 
-Il 20 maggio 2026 *Il Sole 24 Ore* ha pubblicato una fotografia che vale la pena guardare con attenzione: oggi circa **metà delle abitazioni italiane è in mano a persone intorno ai settant'anni**, e nei prossimi anni un patrimonio immobiliare stimato in **2.720 miliardi di euro** entrerà in una fase di passaggio generazionale. Si tratta in gran parte di **abitazioni grandi, situate nelle principali città**.
+Il 20 maggio 2026 *Il Sole 24 Ore* ha pubblicato una fotografia che vale la pena guardare con attenzione: oggi circa **metà delle abitazioni italiane è in mano a persone intorno ai settant'anni,** e nei prossimi anni un patrimonio immobiliare stimato in **2.720 miliardi di euro** entrerà in una fase di passaggio generazionale. Si tratta in gran parte di **abitazioni grandi, situate nelle principali città.**
 
-Il dato trova conferma altrove. Lo *UBS Global Wealth Report 2025* stima che nei prossimi vent'anni in Italia si trasferiranno oltre 2.300 miliardi di euro da una generazione all'altra, e che **più del 60% di questo valore sarà immobiliare**. Le proiezioni convergono su un punto: **entro il 2045 circa una casa su due cambierà proprietario** attraverso successioni o donazioni.
+Il dato trova conferma altrove. Lo *UBS Global Wealth Report 2025* stima che nei prossimi vent'anni in Italia si trasferiranno oltre 2.300 miliardi di euro da una generazione all'altra, e che **più del 60% di questo valore sarà immobiliare.** Le proiezioni convergono su un punto: **entro il 2045 circa una casa su due cambierà proprietario** attraverso successioni o donazioni.
 
 Il tabellone si sta per ribaltare. E come in ogni partita, conta cosa si fa delle caselle che si liberano.
 
@@ -16,9 +16,9 @@ Il tabellone si sta per ribaltare. E come in ogni partita, conta cosa si fa dell
 
 ## Il problema: ricchezza congelata {#problema}
 
-C'è un secondo numero, meno citato ma decisivo: si stima che **circa il 27% del patrimonio immobiliare italiano sia vuoto o sottoutilizzato**. Appartamenti spesso ampi, in posizioni urbane di valore, ma fermi: vuoti, sfitti, lasciati senza manutenzione.
+C'è un secondo numero, meno citato ma decisivo: si stima che **circa il 27% del patrimonio immobiliare italiano sia vuoto o sottoutilizzato.** Appartamenti spesso ampi, in posizioni urbane di valore, ma fermi: vuoti, sfitti, lasciati senza manutenzione.
 
-Il motivo è strutturale. Per via dell'allungamento della vita, oggi si eredita tardi: chi riceve una casa è spesso a sua volta già adulto-anziano, con la propria abitazione e una vita ormai impostata altrove. Il risultato è prevedibile. Secondo le rilevazioni di mercato, dopo una successione **circa il 35% degli immobili viene venduto, il 30% semplicemente mantenuto, il 20% affittato e il 15% diviso tra i familiari**.
+Il motivo è strutturale. Per via dell'allungamento della vita, oggi si eredita tardi: chi riceve una casa è spesso a sua volta già adulto-anziano, con la propria abitazione e una vita ormai impostata altrove. Il risultato è prevedibile. Secondo le rilevazioni di mercato, dopo una successione **circa il 35% degli immobili viene venduto, il 30% semplicemente mantenuto, il 20% affittato e il 15% diviso tra i familiari.**
 
 Quel 35% che viene venduto, e una buona parte del 30% "mantenuto" senza un progetto, sono il nodo: case che escono dal patrimonio di chi le lascia inutilizzate, ma che raramente trovano chi sa rimetterle in funzione. È capitale immobilizzato, letteralmente. L'economista Thomas Piketty ha osservato che, quanto più la ricchezza di un Paese passa per via ereditaria, tanto più la crescita rallenta: il valore esiste, ma resta fermo.
 
@@ -34,7 +34,7 @@ Da una parte ricchezza ferma. Dall'altra domanda insoddisfatta. **Il mercato ha 
 
 ## La tesi di Jungle Rent {#tesi-jr}
 
-Qui si inserisce il nostro modello, con una ragione precisa. Jungle Rent fa una cosa semplice da spiegare e difficile da fare bene: **acquista appartamenti sottoutilizzati nelle zone universitarie di Torino, li ristruttura e li rimette a reddito**.
+Qui si inserisce il nostro modello, con una ragione precisa. Jungle Rent fa una cosa semplice da spiegare e difficile da fare bene: **acquista appartamenti sottoutilizzati nelle zone universitarie di Torino, li ristruttura e li rimette a reddito.**
 
 Il funzionamento ricalca quella logica di ottimizzazione che il mercato, a livello macro, fatica ancora a esprimere:
 
@@ -43,7 +43,7 @@ Il funzionamento ricalca quella logica di ottimizzazione che il mercato, a livel
 
 Lo stesso metro quadro, due stagioni, due domande complementari. Una casa che prima era ferma torna a generare valore: per chi ci abita, per la città, per chi investe.
 
-È **gestione attiva di un asset reale**, non un'operazione di rivendita: si compra una cosa che esiste, la si migliora, la si fa funzionare. Per questo lo slogan *Real life Monopoly* descrive esattamente questo lavoro. La differenza è tutta in quel *real life*: niente caselle di cartone, ma appartamenti veri, affitti veri, studenti veri e centri urbani che si ripopolano invece di svuotarsi.
+È **gestione attiva di un asset reale,** non un'operazione di rivendita: si compra una cosa che esiste, la si migliora, la si fa funzionare. Per questo lo slogan *Real life Monopoly* descrive esattamente questo lavoro. La differenza è tutta in quel *real life*: niente caselle di cartone, ma appartamenti veri, affitti veri, studenti veri e centri urbani che si ripopolano invece di svuotarsi.
 
 ---
 
