@@ -40,14 +40,14 @@ export const INLINE_CTAS: Record<string, InlineCTAConfig> = {
     variant: 'investor',
     it: {
       eyebrow: 'Investitore?',
-      title: 'Trasformiamo i dati Savills in rendimenti reali',
-      description: 'Acquistiamo bilocali a Torino e li gestiamo nel modello dual-season studenti + turisti. Rendimenti netti 8–12% annui.',
+      title: 'Trasformiamo i dati Savills in operazioni reali',
+      description: 'Acquistiamo bilocali a Torino e li gestiamo nel modello dual-season studenti + turisti. Le proiezioni economiche puntuali sono nel memorandum informativo.',
       button: 'Parla con Lorenzo',
     },
     en: {
       eyebrow: 'Investor?',
-      title: 'Turning Savills data into real returns',
-      description: 'We buy 2-room apartments in Turin and manage them with our dual-season student + tourist model. Net returns 8–12% per year.',
+      title: 'Turning Savills data into real operations',
+      description: 'We buy 2-room apartments in Turin and manage them with our dual-season student + tourist model. Detailed economic projections are shared in the information memorandum.',
       button: 'Talk to Lorenzo',
     },
   },

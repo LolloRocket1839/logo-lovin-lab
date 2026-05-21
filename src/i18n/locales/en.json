@@ -502,7 +502,7 @@
     "smartRentals": "Smart rentals",
     "socialProof": "2-room apt in Turin · €45-70K · Register your interest",
     "startInvesting": "Join our first deal",
-    "startInvestingB": "See real returns (8–12% annual)",
+    "startInvestingB": "See how the investment works",
     "ctaSocialProofB": "127 investors already on the waitlist",
     "studentSubtitle": "Save on rent!",
     "studentTitle": "Are you a student?",
@@ -778,11 +778,11 @@
           },
           "asset": {
             "title": "Defensive asset class at accessible prices",
-            "body": "Two-room apartments in target areas (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) trade today between €45,000 and €130,000. Gross student-rental yields above 10% in the most efficient areas, stabilized by inelastic demand."
+            "body": "Two-room apartments in target areas (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) trade today between €45,000 and €130,000. Student-rental income is stabilized by inelastic demand. Exact economic projections are shared in the information memorandum."
           },
           "model": {
             "title": "Hybrid model",
-            "body": "10 student months (September–June) + summer tourist season (July–August) on Airbnb and Booking. The mix optimizes occupancy and increases net yield versus a student-only strategy."
+            "body": "10 student months (September–June) + summer tourist season (July–August) on Airbnb and Booking. The mix optimizes occupancy and overall income versus a student-only strategy."
           }
         }
       },
