@@ -70,7 +70,7 @@ Best regards`
 sono interessato/a a ricevere maggiori informazioni sulle opportunità di investimento immobiliare con JungleRent.
 
 Vorrei saperne di più su:
-- ROI previsto e rendimenti
+- Come funziona il modello di investimento
 - Tipologie di proprietà disponibili
 - Gestione completa del servizio
 - Prossimi step

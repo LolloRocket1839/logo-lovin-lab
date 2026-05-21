@@ -502,7 +502,7 @@
     "smartRentals": "Affitti smart",
     "socialProof": "Bilocale a Torino · €45-70K · Registra il tuo interesse",
     "startInvesting": "Entra nella prima acquisizione",
-    "startInvestingB": "Vedi rendimenti reali (8–12% annuo)",
+    "startInvestingB": "Vedi come funziona l'investimento",
     "ctaSocialProofB": "127 investitori già in lista d'attesa",
     "studentSubtitle": "Risparmia sull'affitto!",
     "studentTitle": "Sei uno studente?",
@@ -778,11 +778,11 @@
           },
           "asset": {
             "title": "Asset class difensiva a prezzo accessibile",
-            "body": "I bilocali nelle zone target (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) si acquistano oggi tra €45.000 e €130.000. Yield lordi sull'affitto studentesco superiori al 10% nelle zone più efficienti, stabilizzati dalla domanda inelastica."
+            "body": "I bilocali nelle zone target (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) si acquistano oggi tra €45.000 e €130.000. L'affitto studentesco genera ricavi stabilizzati dalla domanda inelastica. Le proiezioni economiche puntuali sono nel memorandum informativo."
           },
           "model": {
             "title": "Modello ibrido",
-            "body": "10 mesi studenti (settembre–giugno) + stagione turistica estiva (luglio–agosto) su Airbnb e Booking. Il mix ottimizza l'occupancy e aumenta il yield netto rispetto al solo studentesco."
+            "body": "10 mesi studenti (settembre–giugno) + stagione turistica estiva (luglio–agosto) su Airbnb e Booking. Il mix ottimizza l'occupancy e il ricavo complessivo rispetto al solo studentesco."
           }
         }
       },
