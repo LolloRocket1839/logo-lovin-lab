@@ -3517,8 +3517,54 @@ export const blogPosts: BlogPost[] = [
         ]
       }
     }
+  },
+  {
+    slug: "real-life-monopoly-passaggio-generazionale-immobiliare-2026",
+    category: "investors",
+    date: "2026-05-21",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 7,
+    content: "real-life-monopoly-passaggio-generazionale-immobiliare-2026",
+    translations: {
+      it: {
+        title: "Real life Monopoly: 2.720 miliardi di immobili in transizione",
+        excerpt: "Metà delle case italiane è in mano agli over 70: 2.720 miliardi di patrimonio sta per cambiare mano. Perché conta, e come si rimette a reddito un appartamento sottoutilizzato a Torino.",
+        seo: {
+          title: "Real life Monopoly: 2.720 mld di immobili in transizione",
+          description: "Metà delle case italiane è in mano agli over 70: 2.720 miliardi di patrimonio in passaggio generazionale. Perché conta e come si rimette a reddito un appartamento a Torino.",
+          keywords: ["passaggio generazionale immobiliare", "eredità immobiliare Italia 2026", "case vuote Italia", "patrimonio immobiliare anziani", "ridistribuzione immobiliare", "student housing Torino"]
+        },
+        tags: ["Investitori", "Mercato", "Passaggio generazionale", "Torino", "Immobiliare"],
+        faqs: [
+          { question: "Quanto vale il patrimonio immobiliare in transizione generazionale in Italia?", answer: "Secondo Il Sole 24 Ore (20 maggio 2026) circa 2.720 miliardi di euro, in larga parte abitazioni grandi nelle principali città. UBS stima oltre 2.300 miliardi di trasferimenti complessivi nei prossimi vent'anni, di cui più del 60% immobiliare." },
+          { question: "Quale percentuale del patrimonio immobiliare italiano è vuota o sottoutilizzata?", answer: "Si stima circa il 27%: appartamenti spesso ampi e in posizioni urbane di valore, ma non abitati, non affittati e non manutenuti." },
+          { question: "Cosa succede agli immobili ereditati in Italia?", answer: "Secondo le rilevazioni di mercato, dopo una successione circa il 35% viene venduto, il 30% mantenuto senza un progetto, il 20% affittato e il 15% diviso tra i familiari." },
+          { question: "Perché Torino è strategica in questo scenario?", answer: "Torino combina prezzi d'ingresso ancora accessibili con una domanda strutturale: oltre 40.000 studenti fuorisede e prezzi medi della stanza singola sopra i 480 euro al mese. È un mercato in cui un appartamento sottoutilizzato può tornare a generare valore reale." },
+          { question: "Come Jungle Rent si inserisce in questo trend?", answer: "Jungle Rent acquista appartamenti sottoutilizzati nelle zone universitarie di Torino, li ristruttura e li gestisce con un modello a doppia stagione: studenti da settembre a maggio, breve termine turistico da giugno ad agosto. Non speculazione sulla rivendita, ma gestione attiva di asset reali, una proprietà alla volta." }
+        ]
+      },
+      en: {
+        title: "Real life Monopoly: €2.72T of Italian property in transition",
+        excerpt: "Half of Italian homes are owned by people in their 70s: €2.72 trillion of property is about to change hands. Why it matters, and how an underused Turin flat is put back to work.",
+        seo: {
+          title: "Real life Monopoly: €2.72T of Italian property in transition",
+          description: "Half of Italian homes are owned by people in their 70s: €2.72T of property is in generational transition. Why it matters and how an underused Turin flat is put back to work.",
+          keywords: ["italian real estate generational transfer", "inheritance property italy 2026", "empty homes italy", "underused real estate", "wealth redistribution italy", "student housing turin"]
+        },
+        tags: ["Investors", "Market", "Generational transfer", "Turin", "Real Estate"],
+        faqs: [
+          { question: "How much Italian real estate is in generational transition?", answer: "Per Il Sole 24 Ore (20 May 2026), roughly €2.72 trillion, mostly large urban apartments. UBS estimates over €2.3 trillion in total wealth transfers over the next twenty years, more than 60% of it real estate." },
+          { question: "What share of Italian real estate is empty or underused?", answer: "An estimated 27%: often large apartments in valuable urban locations, but not lived in, not rented and not maintained." },
+          { question: "What happens to inherited properties in Italy?", answer: "Market data shows that after an inheritance roughly 35% of properties are sold, 30% held without a plan, 20% rented out and 15% split among family members." },
+          { question: "Why is Turin strategic in this scenario?", answer: "Turin combines still-accessible entry prices with structural demand: over 40,000 out-of-town students and average single-room prices above €480 a month. It's a market where an underused apartment can go back to generating real value." },
+          { question: "How does Jungle Rent fit into this trend?", answer: "Jungle Rent acquires underused apartments in Turin's university neighbourhoods, renovates them and runs a dual-season model: students from September to May, short-term tourist rentals from June to August. Not resale speculation, but active management of real assets, one property at a time." }
+        ]
+      }
+    }
   }
 ];
+
 
 // Helper functions
 
