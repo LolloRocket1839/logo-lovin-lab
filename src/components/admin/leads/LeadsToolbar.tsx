@@ -61,6 +61,24 @@ export function LeadsToolbar(p: Props) {
       </div>
 
       <div className="flex flex-wrap gap-2 items-center">
+        <Button
+          size="sm"
+          variant={p.sourceFilter === "nizza-millefonti" ? "default" : "outline"}
+          onClick={() =>
+            p.setSourceFilter(p.sourceFilter === "nizza-millefonti" ? "" : "nizza-millefonti")
+          }
+          className="h-8 text-xs"
+        >
+          <Hospital className="h-3.5 w-3.5 mr-1" /> Pipeline Nizza
+        </Button>
+
+        <Input
+          placeholder="Filtra per fonte…"
+          value={p.sourceFilter}
+          onChange={(e) => p.setSourceFilter(e.target.value)}
+          className="h-8 w-[160px] text-xs"
+        />
+
         <Select value={p.typeFilter} onValueChange={p.setTypeFilter}>
           <SelectTrigger className="h-8 w-[140px] text-xs"><SelectValue placeholder="Tipo" /></SelectTrigger>
           <SelectContent>
