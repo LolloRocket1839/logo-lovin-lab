@@ -1,120 +1,68 @@
-# Lead gen venditori — Lingotto / Nizza Millefonti
+# Step 2 — Outbound distribution kit (Lingotto / Nizza Millefonti sellers)
 
-## Obiettivo
+Obiettivo: produrre tutti i materiali outbound che alimentano la landing `/vendi-casa/lingotto-nizza-millefonti` creata nello Step 1, così da iniziare a generare lead anche senza traffico SEO.
 
-Pipeline costante di proprietari che vogliono vendere bilocali/trilocali €50-130k nella zona Lingotto / Nizza Millefonti / Ospedali — il tuo primo target di acquisizione.
+## Deliverable
 
-## Perché questa zona, adesso
+### 1. Flyer A5 stampabili (PDF)
+Generati via script Python (reportlab) e salvati in `/mnt/documents/`:
 
-- Stock vecchio anni '60-'70, molti eredi non-residenti (Lingotto post-FIAT)
-- Prezzi medi €1.400-1.900/mq → bilocali 50mq spesso nel tuo range €70-95k
-- Domanda affitto altissima (Molinette, Politecnico Mirafiori, OGR) → puoi monetizzare subito
-- Concorrenza acquirenti diretti scarsa: agenzie tradizionali prendono provvigione, tu compri
+- **Flyer A — "Hai ereditato una casa a Lingotto?"**
+  Target: eredi non residenti, appartamenti vuoti vie Nizza/Spotorno/Genova
+  CTA: WhatsApp + QR verso `/vendi-casa/lingotto-nizza-millefonti?utm_source=flyer&utm_campaign=eredita`
+- **Flyer B — "Ti trasferisci? Vendi in 60-90 giorni"**
+  Target: proprietari in trasferimento lavoro, separazioni, downsizing
+  CTA: WhatsApp + QR verso `?utm_campaign=trasferimento`
+- **Flyer C — "Casa sfitta? Te la compriamo noi"**
+  Target: proprietari di appartamenti sfitti da >6 mesi
+  CTA: stessa landing, `?utm_campaign=sfitto`
 
-## Architettura (riuso 100%)
+Layout: A5 verticale, palette jungle (cream + green), sentence case, claim breve, 3 bullet di valore (0% commissioni, 60-90 giorni, rogito notarile), numero WhatsApp, QR code, footer Jungle Rent S.r.l. con P.IVA.
 
-Hai già: `seller_leads` table, `QuickSellerLeadDialog`, `Sellers.tsx`, valuator, drip email seller. Manca solo: **landing zona-specifica + contenuti + canali outbound mirati**.
+### 2. Lettera personalizzata cartacea (PDF + template editabile)
+- Formato A4, fronte unico
+- 4 varianti di apertura (eredità / trasferimento / sfitto / pensione)
+- Tono umano, firma "Lorenzo Oni-Joseph, Amministratore Unico"
+- CTA: WhatsApp + landing + telefono
+- Salvata in `/mnt/documents/lettera-proprietari-lingotto.pdf` + `.docx` per editing manuale dei nomi
 
-Niente nuovo CRM, niente nuove tabelle.
+### 3. Copy ads (Markdown reference doc)
+File `/mnt/documents/ads-copy-lingotto-nizza-millefonti.md` con:
 
-## Piano in 3 step approvabili
+- **Meta Ads (Facebook + Instagram)** — 3 varianti headline + 3 primary text + targeting (raggio 1.5 km Lingotto, età 45+, interessi: eredità, trasloco, pensione, immobili)
+- **Google Ads Search** — 8 keyword bid (vendere casa lingotto, agenzia immobiliare lingotto torino, comprare casa contanti torino, ecc.) + 3 ad headline + 2 description + sitelink
+- **Google Ads Performance Max asset group** — headline/description/immagini
+- Budget suggerito: 15€/giorno Google + 10€/giorno Meta per 14 giorni di test
+- UTM tagging convention coerente con la landing
 
-### Step 1 — Asset di conversione zona venditori (1 turno)
+### 4. Script outreach offline (Markdown)
+File `/mnt/documents/outreach-script-lingotto.md`:
 
-**1.1 Landing `/vendi-casa/lingotto-nizza-millefonti`** (IT+EN)
-- H1: "Vendi il tuo appartamento a Lingotto / Nizza Millefonti in 60-90 giorni"
-- Hero: "0% commissioni, acquisto diretto, offerta entro 7 giorni"
-- Sezioni: prezzi medi al mq aggiornati per micro-zona (via Nizza, Spotorno, Passo Buole, Borgo Filadelfia), tempi di vendita standard vs Jungle Rent, "che immobili compriamo" (bilocali/trilocali 40-80mq, anche da ristrutturare), processo in 3 step, testimonial/social proof quando disponibile
-- Form: `QuickSellerLeadDialog` embedded con `source: "vendi-lingotto-nizza-millefonti"`, metadata `{zona_specifica, mq, stato, motivo_vendita: eredità|trasferimento|liquidità|altro}`
-- CTA primaria: "Parla con Lorenzo" WhatsApp pre-compilato
-- JSON-LD `RealEstateAgent` + `Service` con `areaServed: Lingotto`
-- Riusa pattern `NeighborhoodPage.tsx` ma in variante seller
+- Script telefonico per amministratori di condominio (5 condomini target su via Nizza/Spotorno)
+- Script per notai della zona (offerta partner: segnaliamo clienti acquirenti, loro segnalano venditori)
+- Email cold a 10 piccole agenzie immobiliari della zona per co-mediazione
 
-**1.2 Articolo pilota (IT+EN)**
-- "Vendere casa a Lingotto nel 2026: prezzi reali, tempi e a chi conviene vendere direttamente"
-- Dati concreti: prezzi mq per via, tempo medio agenzie (180+ gg), tasse di vendita, plusvalenza dopo 5 anni
-- CTA inline al modulo valutazione
+### 5. Tracking CSV
+`/mnt/documents/distribution-tracker.csv` con colonne: data, materiale, zona, quantità distribuita, lead generati, note. Da compilare manualmente da Lorenzo.
 
-**1.3 SEO**: sitemap + rss + llms.txt + breadcrumb
+## Note operative
 
-### Step 2 — Canali outbound zona-mirati (1 turno + lavoro umano)
+- Nessuna modifica al codice dell'app in questo step — solo asset esterni in `/mnt/documents/`.
+- Tutti i QR code puntano a URL con UTM parametrizzati, già tracciati da `useLeadCapture` via `source`.
+- Compliance: nessuna cifra di rendimento, nessuna data lancio specifica, sentence case, "Parla con Lorenzo" come CTA secondaria.
+- Footer flyer/lettera: ragione sociale completa + P.IVA + indirizzo sede legale.
 
-Asset pronti da usare (codice + copy):
+## Cosa NON è incluso (rimane Step 3)
+- CRM automation (filtro pipeline seller Lingotto, drip email, WhatsApp priority ping)
+- Weekly report automation
 
-**2.1 Volantini A5 PDF** (genero il file in `/mnt/documents`)
-- Variante A "Eredità": per portoni con cognomi/cassette multiple → tipico immobile ereditato
-- Variante B "Trasferimento lavoro": area Lingotto post-FIAT/CNH
-- QR → landing con UTM `utm_source=volantino-lingotto&utm_medium=offline`
-- Da distribuire: vie Nizza 200-400, Spotorno, Passo Buole, Borgo Filadelfia, attorno a Eataly Lingotto
+## Dettagli tecnici
 
-**2.2 Lettera cartacea personalizzata** (template Word/PDF)
-- "Gentile proprietario di via X, sto cercando di acquistare un appartamento nel suo palazzo"
-- Trigger: annunci vecchi su Idealista/Immobiliare scaduti senza vendita (cerca tu manualmente, ti do lo script di scraping leggero in Step 3 se vuoi)
+- Reportlab per i PDF (A5 flyer + A4 lettera), font: Inter da Google Fonts scaricato in `/tmp/fonts/`
+- QR code via libreria `qrcode` Python
+- Logo Jungle Rent: riuso asset esistente in `public/`
+- QA: pdftoppm + view di ogni pagina, controllo testo (no overflow, contrasto, P.IVA presente)
 
-**2.3 Annuncio Facebook/Instagram local-targeted**
-- Raggio 1.5 km da Lingotto, età 45+, interessi: "eredità", "trasloco", "pensione"
-- Copy: "Hai un appartamento a Lingotto che non usi? Te lo compro io." + foto Lorenzo + CTA WhatsApp
-- Pixel già tracciato se configurato
+## Conferma richiesta
 
-**2.4 Google Ads micro-campagna** (script keyword pronto)
-- Keyword: "vendere casa lingotto", "vendere appartamento nizza millefonti", "agenzia immobiliare lingotto torino", "valutazione immobile lingotto"
-- Budget consigliato: €15/giorno, landing = la nuova pagina zona
-- Quality score alto = pagina perfettamente match con keyword
-
-**2.5 Notai e amministratori di condominio della zona**
-- Lista pronta: 8-10 studi notarili + amministratori condominio con sede CAP 10126/10127
-- Email outreach template: "Se ha clienti che devono liquidare immobili in zona, acquisto diretto, chiusura 60 gg"
-
-### Step 3 — Automazione e nurture (1 turno)
-
-**3.1 CRM filtro "Pipeline Lingotto Sellers"** in `/admin/leads`
-- Filtro su `source LIKE 'vendi-lingotto%'` + `lead_type=seller`
-- Già esiste l'infrastruttura toolbar (vedi pipeline Nizza studenti)
-
-**3.2 Drip seller-zona** (estendo `student-nurture-cron` → `lead-nurture-cron` generalizzato)
-- T+0: `seller-confirmation` (esiste già)
-- T+2: email "3 cose da sapere prima di vendere a Lingotto" + link articolo
-- T+5: WhatsApp template manuale-assistito (un click apre WhatsApp pre-compilato)
-- T+10: email "vuoi una valutazione più precisa? mando un sopralluogo"
-- Skip se `last_contact_at < 2gg` o `status in (vinto, perso)`
-
-**3.3 WhatsApp priority ping a te per seller Lingotto** (estendo regola in `useLeadCapture.ts`)
-- Già fatto per student Nizza → aggiungo `seller + source LIKE 'vendi-lingotto%'`
-
-**3.4 Alert settimanale**: report lead Lingotto + conversion rate, riusa pattern `WEEKLY_REPORT_SECRET`
-
-## Cosa NON faccio
-
-- Niente provvigioni o cifre di acquisto pubbliche (ti tieni leva in trattativa)
-- Niente promesse di prezzo specifico sulla landing (solo range generici tipo "€60-130k tipico per bilocale zona")
-- Niente nuovo strumento esterno (HubSpot, Idealista Pro, ecc.) — non ti serve a questo volume
-
-## Dettagli tecnici (per quando approvi)
-
-**File nuovi**
-- `src/pages/vendi/LingottoNizzaMillefonti.tsx` (route IT+EN)
-- `src/data/blog/content/{it,en}/vendere-casa-lingotto-2026.md`
-- `supabase/functions/seller-nurture-cron/index.ts` (o generalizzo `student-nurture-cron`)
-- `supabase/functions/_shared/transactional-email-templates/seller-nurture-day2.tsx` + `day10.tsx`
-- `/mnt/documents/volantino-lingotto-A5-eredita.pdf` + `-trasferimento.pdf`
-- `/mnt/documents/lettera-proprietario-template.pdf`
-- `/mnt/documents/google-ads-keywords-lingotto.csv`
-- `/mnt/documents/notai-amministratori-lingotto.csv`
-
-**File modificati**
-- `src/components/AnimatedRoutes.tsx` (2 rotte)
-- `src/data/blog/posts.ts` (registra articolo)
-- `src/hooks/useLeadCapture.ts` (regola WhatsApp priority per seller Lingotto)
-- `src/components/admin/leads/LeadsToolbar.tsx` (chip "Pipeline Lingotto")
-- `public/sitemap.xml`, `public/rss.xml`, `public/.well-known/llms.txt`
-
-**Compliance**: sentence case, "Parla con Lorenzo" CTA, WhatsApp primario, nessuna cifra di rendimento, conferma "0% commissioni" coerente con memory `seller-acquisition-positioning`.
-
-## Domanda per te
-
-Confermi l'ordine 1 → 2 → 3? In particolare:
-- **Step 1** ti dà subito landing + articolo per partire con Google Ads e SEO
-- **Step 2** è il pacchetto offline+ads, lavoro umano dopo
-- **Step 3** è automazione, ha senso solo dopo che arrivano i primi lead
-
-Vuoi che parta da Step 1, o preferisci che faccia Step 1 + 3 insieme (landing + automazione) e poi 2?
+Procedo con tutti e 5 i deliverable insieme, oppure preferisci che generi prima solo i 3 flyer A5 per validare layout/tono e poi il resto?
