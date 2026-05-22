@@ -58,12 +58,14 @@ const LeadsAdmin = () => {
       const matchType = typeFilter === "all" || l.lead_type === typeFilter;
       const matchStatus = statusFilter === "all" || l.status === statusFilter;
       const matchPriority = priorityFilter === "all" || l.priority === priorityFilter;
+      const matchSource =
+        !sourceFilter || (l.source ?? "").toLowerCase().includes(sourceFilter.toLowerCase());
       const matchDue =
         !onlyDueFollowups ||
         (l.next_followup_at && new Date(l.next_followup_at).getTime() <= now);
-      return matchSearch && matchType && matchStatus && matchPriority && matchDue;
+      return matchSearch && matchType && matchStatus && matchPriority && matchSource && matchDue;
     });
-  }, [leads, search, typeFilter, statusFilter, priorityFilter, onlyDueFollowups]);
+  }, [leads, search, typeFilter, statusFilter, priorityFilter, sourceFilter, onlyDueFollowups]);
 
   const stats = useMemo(() => {
     const now = Date.now();
