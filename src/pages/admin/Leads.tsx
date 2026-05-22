@@ -23,6 +23,7 @@ const LeadsAdmin = () => {
   const [typeFilter, setTypeFilter] = useState<string>("all");
   const [statusFilter, setStatusFilter] = useState<LeadStatus | "all">("all");
   const [priorityFilter, setPriorityFilter] = useState<LeadPriority | "all">("all");
+  const [sourceFilter, setSourceFilter] = useState<string>("");
   const [onlyDueFollowups, setOnlyDueFollowups] = useState(false);
   const [view, setView] = useState<"table" | "kanban">("table");
   const [selected, setSelected] = useState<Lead | null>(null);
