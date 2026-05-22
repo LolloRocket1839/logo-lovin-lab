@@ -136,12 +136,17 @@ export function useLeadCapture() {
       })
       .catch((err) => console.error("Admin notification email failed:", err));
 
-    // 3. Instant WhatsApp ping to Lorenzo for investor leads
-    if (lead.leadType === "investor") {
+    // 3. Instant WhatsApp ping to Lorenzo for priority leads
+    //    - all investor leads
+    //    - student leads from the Nizza Millefonti / hospitals pipeline
+    const isPriorityStudent =
+      lead.leadType === "student" &&
+      /^nizza-millefonti/.test(lead.source);
+    if (lead.leadType === "investor" || isPriorityStudent) {
       supabase.functions
         .invoke("notify-investor-whatsapp", { body: emailPayload })
         .catch((err) =>
-          console.error("Investor WhatsApp notify failed:", err),
+          console.error("Priority WhatsApp notify failed:", err),
         );
     }
 
