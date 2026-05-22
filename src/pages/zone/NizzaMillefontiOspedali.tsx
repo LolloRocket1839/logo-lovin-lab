@@ -190,7 +190,7 @@ const NizzaMillefontiOspedali = () => {
       );
 
       if (result.success) {
-        trackFormSubmit("nizza-millefonti-waitlist", true);
+        trackFormSubmit("nizza-millefonti-waitlist", { zone: "nizza-millefonti-ospedali" });
         setSubmitted(true);
         toast({
           title: isItalian ? "Grazie!" : "Thanks!",
