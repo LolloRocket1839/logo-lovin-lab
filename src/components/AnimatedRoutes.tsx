@@ -37,6 +37,7 @@ const NeighborhoodPage = lazy(() => import("@/pages/NeighborhoodPage"));
 const InvestorZonesIndex = lazy(() => import("@/pages/InvestorZonesIndex"));
 const InvestorZonePage = lazy(() => import("@/pages/InvestorZonePage"));
 const NizzaMillefontiOspedali = lazy(() => import("@/pages/zone/NizzaMillefontiOspedali"));
+const LingottoNizzaMillefontiSeller = lazy(() => import("@/pages/vendi/LingottoNizzaMillefonti"));
 const Auth = lazy(() => import("@/pages/Auth"));
 const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
 const LeadsAdmin = lazy(() => import("@/pages/admin/Leads"));
@@ -110,6 +111,8 @@ export const AnimatedRoutes = () => {
             <Route path="/rooms-rent-turin/:slug" element={<NeighborhoodPage />} />
             <Route path="/zone/nizza-millefonti-ospedali" element={<NizzaMillefontiOspedali />} />
             <Route path="/zones/nizza-millefonti-hospitals" element={<NizzaMillefontiOspedali />} />
+            <Route path="/vendi-casa/lingotto-nizza-millefonti" element={<LingottoNizzaMillefontiSeller />} />
+            <Route path="/sell-home/lingotto-nizza-millefonti" element={<LingottoNizzaMillefontiSeller />} />
             <Route path="/accedi" element={<Auth />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
