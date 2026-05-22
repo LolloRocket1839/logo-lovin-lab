@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Download, RefreshCw, LayoutGrid, List, AlarmClock } from "lucide-react";
+import { Search, Download, RefreshCw, LayoutGrid, List, AlarmClock, Hospital } from "lucide-react";
 import { STATUS_LABEL, STATUS_ORDER, LeadStatus, LeadPriority, PRIORITY_LABEL } from "./types";
 
 interface Props {
@@ -13,6 +13,8 @@ interface Props {
   setStatusFilter: (v: LeadStatus | "all") => void;
   priorityFilter: LeadPriority | "all";
   setPriorityFilter: (v: LeadPriority | "all") => void;
+  sourceFilter: string;
+  setSourceFilter: (v: string) => void;
   onlyDueFollowups: boolean;
   setOnlyDueFollowups: (v: boolean) => void;
   view: "table" | "kanban";
