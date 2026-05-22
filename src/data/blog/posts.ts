@@ -2,6 +2,49 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vendere-casa-lingotto-nizza-millefonti-2026",
+    category: "sellers",
+    date: "2026-05-22",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 10,
+    content: "vendere-casa-lingotto-nizza-millefonti-2026",
+    translations: {
+      it: {
+        title: "Vendere casa a Lingotto e Nizza Millefonti nel 2026: prezzi, tempi, acquisto diretto",
+        excerpt: "Prezzi reali al mq via per via, tempi di vendita con agenzie tradizionali, e quando l'acquisto diretto Jungle Rent (0% commissioni, 60–90 giorni) conviene davvero.",
+        seo: {
+          title: "Vendere casa Lingotto Nizza Millefonti 2026: prezzi e tempi",
+          description: "Vendere appartamento a Lingotto, Nizza Millefonti o Borgo Filadelfia: prezzi reali al mq, tempi agenzia vs acquisto diretto, 0% commissioni. Guida 2026.",
+          keywords: ["vendere casa Lingotto", "vendere appartamento Nizza Millefonti", "prezzi case Lingotto 2026", "acquisto diretto immobile Torino", "valutazione casa Lingotto", "vendere casa Borgo Filadelfia"],
+        },
+        tags: ["Venditori", "Lingotto", "Nizza Millefonti", "Prezzi", "Acquisto diretto"],
+        faqs: [
+          { question: "Quanto vale un bilocale a Nizza Millefonti nel 2026?", answer: "Un bilocale di 50 m² abitabile vale tipicamente €70.000–95.000. I prezzi medi al m² nella zona vanno da €1.400 a €1.900, con premio fino a €2.100/m² per immobili vicini all'ingresso Molinette." },
+          { question: "Quanto tempo serve per vendere casa a Lingotto con un'agenzia?", answer: "I dati 2025 sulla zona indicano 6–9 mesi medi dall'incarico al rogito, 12–18 visite prima di un'offerta accettata, e una probabilità intorno al 60% che la prima offerta arrivi effettivamente al rogito." },
+          { question: "Quanto costa la commissione di un'agenzia immobiliare per il venditore?", answer: "Tipicamente 3% + IVA sul prezzo finale. Su un bilocale da €85.000 sono €2.550 più IVA. Jungle Rent compra direttamente: 0% commissione venditore." },
+          { question: "Pago tasse sulla plusvalenza se vendo un immobile a Lingotto?", answer: "No, se hai posseduto l'immobile per più di 5 anni o se è stato la tua prima casa. Lo stabilisce l'art. 67 c. 1 lett. b) del TUIR." },
+        ],
+      },
+      en: {
+        title: "Selling a flat in Lingotto and Nizza Millefonti in 2026: prices, timelines, direct purchase",
+        excerpt: "Real prices per m² street by street, traditional agency timelines, and when Jungle Rent's direct purchase (0% commission, 60–90 days) really makes sense.",
+        seo: {
+          title: "Selling a flat in Lingotto Nizza Millefonti 2026: prices, timing",
+          description: "Selling a flat in Lingotto, Nizza Millefonti or Borgo Filadelfia: real prices per m², agency vs direct purchase timelines, 0% commission. 2026 guide.",
+          keywords: ["sell flat Lingotto", "sell apartment Nizza Millefonti", "Lingotto property prices 2026", "direct property purchase Turin", "Lingotto home valuation", "sell home Borgo Filadelfia"],
+        },
+        tags: ["Sellers", "Lingotto", "Nizza Millefonti", "Prices", "Direct purchase"],
+        faqs: [
+          { question: "How much is a one-bedroom in Nizza Millefonti worth in 2026?", answer: "A 50 m² liveable one-bedroom is typically worth €70,000–95,000. Average prices per m² in the area run from €1,400 to €1,900, with a premium up to €2,100/m² for flats near the Molinette entrance." },
+          { question: "How long does it take to sell a home in Lingotto via an agency?", answer: "2025 data for the area shows 6–9 months on average from mandate to deed, 12–18 viewings before an accepted offer, and about 60% probability that the first offer actually reaches the deed." },
+          { question: "How much does a real estate agency charge the seller?", answer: "Typically 3% + VAT on the final price. On an €85,000 one-bedroom that's €2,550 plus VAT. Jungle Rent buys directly: 0% seller commission." },
+          { question: "Do I pay capital gain tax if I sell a flat in Lingotto?", answer: "No, if you've owned the property for more than 5 years or it has been your primary residence. Italian TUIR art. 67 §1 lett. b) covers this." },
+        ],
+      },
+    },
+  },
+  {
     slug: "affittare-vicino-molinette-specializzandi-2026",
     category: "students",
     date: "2026-05-22",

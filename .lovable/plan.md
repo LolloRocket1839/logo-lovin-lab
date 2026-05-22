@@ -1,138 +1,120 @@
+# Lead gen venditori — Lingotto / Nizza Millefonti
 
-# Pipeline studenti Nizza Millefonti / Ospedali — luglio/agosto
+## Obiettivo
 
-## TL;DR architetturale (la tua vera domanda)
+Pipeline costante di proprietari che vogliono vendere bilocali/trilocali €50-130k nella zona Lingotto / Nizza Millefonti / Ospedali — il tuo primo target di acquisizione.
 
-**Non serve un'altra app Lovable. Non serve un agente esterno.** Hai già:
+## Perché questa zona, adesso
 
-- `leads` + `lead_interactions` + RPC `insert_lead` (RLS pulita, dual-write Formspree)
-- Admin Leads (`/admin/leads` con Kanban, drawer, status, interazioni) → **è già il tuo CRM**
-- `useLeadCapture` con email di conferma, notifica admin, WhatsApp ping
-- Infrastruttura email transazionale + WhatsApp FAB
-- 60+ articoli blog, SEO maturo, schema strutturato
+- Stock vecchio anni '60-'70, molti eredi non-residenti (Lingotto post-FIAT)
+- Prezzi medi €1.400-1.900/mq → bilocali 50mq spesso nel tuo range €70-95k
+- Domanda affitto altissima (Molinette, Politecnico Mirafiori, OGR) → puoi monetizzare subito
+- Concorrenza acquirenti diretti scarsa: agenzie tradizionali prendono provvigione, tu compri
 
-Quello che manca è **una landing verticale + contenuti zona + sequenze automatiche + canali di distribuzione**. Tutto dentro questo progetto.
+## Architettura (riuso 100%)
 
-Una "skill" (in senso Lovable) ha senso solo come **playbook ripetibile** per replicare la stessa pipeline su altre zone (Vanchiglia/Polito, San Salvario/Unito, ecc.) nei prossimi mesi. La creiamo alla fine, non adesso.
+Hai già: `seller_leads` table, `QuickSellerLeadDialog`, `Sellers.tsx`, valuator, drip email seller. Manca solo: **landing zona-specifica + contenuti + canali outbound mirati**.
 
----
+Niente nuovo CRM, niente nuove tabelle.
 
-## Perché Nizza Millefonti / Ospedali è la zona giusta a luglio/agosto
+## Piano in 3 step approvabili
 
-Ricerca rapida sul target reale della zona (Molinette, San Giovanni Bosco, Mauriziano, CTO, Sant'Anna, Regina Margherita, Dental School):
+### Step 1 — Asset di conversione zona venditori (1 turno)
 
-- **Specializzandi medici (SSM)**: graduatoria nazionale esce **fine luglio**, contratti partono **1 novembre** → cercano casa **agosto–settembre**, decidono in fretta, budget medio-alto (€1.300–1.700 netti/mese di stipendio), contratti 4–5 anni = inquilino oro.
-- **Studenti Infermieristica / Professioni Sanitarie** (sede Molinette + San Luigi): test a settembre, immatricolati cercano da agosto.
-- **Studenti Medicina e Chirurgia** (Polo Universitario Molinette per anni clinici 4°–6°): trasferimento dal centro a Nizza.
-- **Erasmus medici incoming**: arrivi settembre, prenotano luglio.
-- **Dottorandi + ricercatori CCM / IRCCS Candiolo navetta**.
+**1.1 Landing `/vendi-casa/lingotto-nizza-millefonti`** (IT+EN)
+- H1: "Vendi il tuo appartamento a Lingotto / Nizza Millefonti in 60-90 giorni"
+- Hero: "0% commissioni, acquisto diretto, offerta entro 7 giorni"
+- Sezioni: prezzi medi al mq aggiornati per micro-zona (via Nizza, Spotorno, Passo Buole, Borgo Filadelfia), tempi di vendita standard vs Jungle Rent, "che immobili compriamo" (bilocali/trilocali 40-80mq, anche da ristrutturare), processo in 3 step, testimonial/social proof quando disponibile
+- Form: `QuickSellerLeadDialog` embedded con `source: "vendi-lingotto-nizza-millefonti"`, metadata `{zona_specifica, mq, stato, motivo_vendita: eredità|trasferimento|liquidità|altro}`
+- CTA primaria: "Parla con Lorenzo" WhatsApp pre-compilato
+- JSON-LD `RealEstateAgent` + `Service` con `areaServed: Lingotto`
+- Riusa pattern `NeighborhoodPage.tsx` ma in variante seller
 
-Tutti questi target hanno **tre cose in comune che il mercato standard non gli dà**: contratto regolare (per residenza/borsa), camera arredata vicino al reparto, gestione veloce in italiano + inglese. È esattamente la value prop di Jungle Rent.
+**1.2 Articolo pilota (IT+EN)**
+- "Vendere casa a Lingotto nel 2026: prezzi reali, tempi e a chi conviene vendere direttamente"
+- Dati concreti: prezzi mq per via, tempo medio agenzie (180+ gg), tasse di vendita, plusvalenza dopo 5 anni
+- CTA inline al modulo valutazione
 
----
+**1.3 SEO**: sitemap + rss + llms.txt + breadcrumb
 
-## Piano (4 blocchi, in ordine di leva)
+### Step 2 — Canali outbound zona-mirati (1 turno + lavoro umano)
 
-### Blocco 1 — Asset di conversione dedicato (il "magnete")
+Asset pronti da usare (codice + copy):
 
-1. **Landing `/zone/nizza-millefonti-ospedali`** (riusa pattern `NeighborhoodPage.tsx`, non `InvestorZonePage`)
-   - H1: "Casa per studenti e specializzandi vicino alle Molinette"
-   - Sezioni: distanze a piedi/bici/tram da Molinette, S. Giovanni Bosco, Mauriziano, Dental School, Polo Universitario; prezzi medi camera/bilocale; trasporti notturni (turni); contratti accettati per residenza/borsa.
-   - **Form waitlist email-first** (lead_type=`student`, source=`nizza-millefonti-waitlist`, metadata: `{target_audience: "specializzando|infermieristica|medicina|erasmus|altro", move_in_month: "lug|ago|set|ott|nov", budget_range}`)
-   - CTA primaria: "Parla con Lorenzo" (WhatsApp deep link pre-compilato con zona + mese).
-   - JSON-LD `RealEstateListing` + `Place` con coordinate Molinette per AEO.
+**2.1 Volantini A5 PDF** (genero il file in `/mnt/documents`)
+- Variante A "Eredità": per portoni con cognomi/cassette multiple → tipico immobile ereditato
+- Variante B "Trasferimento lavoro": area Lingotto post-FIAT/CNH
+- QR → landing con UTM `utm_source=volantino-lingotto&utm_medium=offline`
+- Da distribuire: vie Nizza 200-400, Spotorno, Passo Buole, Borgo Filadelfia, attorno a Eataly Lingotto
 
-2. **Hub contenuti zona** (3 articoli, IT+EN, pubblicati in 10 giorni):
-   - "Affittare casa vicino alle Molinette: guida per specializzandi 2026"
-   - "Quanto costa una camera a Nizza Millefonti e dove cercarla"
-   - "Infermieristica a Torino: vivere vicino alla sede clinica"
-   Ognuno con CTA in-article alla waitlist (pattern `inlineCTAs.ts` già presente).
+**2.2 Lettera cartacea personalizzata** (template Word/PDF)
+- "Gentile proprietario di via X, sto cercando di acquistare un appartamento nel suo palazzo"
+- Trigger: annunci vecchi su Idealista/Immobiliare scaduti senza vendita (cerca tu manualmente, ti do lo script di scraping leggero in Step 3 se vuoi)
 
-3. **Sitemap + RSS + llms.txt aggiornati**.
+**2.3 Annuncio Facebook/Instagram local-targeted**
+- Raggio 1.5 km da Lingotto, età 45+, interessi: "eredità", "trasloco", "pensione"
+- Copy: "Hai un appartamento a Lingotto che non usi? Te lo compro io." + foto Lorenzo + CTA WhatsApp
+- Pixel già tracciato se configurato
 
-### Blocco 2 — CRM e automazioni (riuso 95% di ciò che esiste)
+**2.4 Google Ads micro-campagna** (script keyword pronto)
+- Keyword: "vendere casa lingotto", "vendere appartamento nizza millefonti", "agenzia immobiliare lingotto torino", "valutazione immobile lingotto"
+- Budget consigliato: €15/giorno, landing = la nuova pagina zona
+- Quality score alto = pagina perfettamente match con keyword
 
-1. **Filtro/segmento "Nizza Millefonti" in `/admin/leads`**: chip di filtro su `source` e su `metadata.target_audience` (modifica solo `LeadsToolbar.tsx` + `LeadsTable.tsx`, niente DB).
+**2.5 Notai e amministratori di condominio della zona**
+- Lista pronta: 8-10 studi notarili + amministratori condominio con sede CAP 10126/10127
+- Email outreach template: "Se ha clienti che devono liquidare immobili in zona, acquisto diretto, chiusura 60 gg"
 
-2. **Sequenza automatica drip** (nuovo edge function `student-nurture-cron`, schedulato giornaliero):
-   - T+0: conferma immediata (già esiste come `lead-confirmation`) — versione **specializzando-aware** se `metadata.target_audience` lo indica.
-   - T+2 giorni: email "5 cose da sapere su Nizza Millefonti" + link articolo.
-   - T+5 giorni: WhatsApp template (manuale-assistito) precompilato dal pannello admin → un click apre WhatsApp con messaggio personalizzato per zona + mese di trasloco.
-   - T+10 giorni: email "ancora cerchi casa per [mese]?" con bottone "prenota call".
-   - Skip se `last_contact_at` < 2 giorni o `status` in (`vinto`, `perso`).
-   - Tutto loggato come `lead_interactions` kind=`email`/`whatsapp` direction=`system`.
+### Step 3 — Automazione e nurture (1 turno)
 
-3. **Notifica WhatsApp istantanea a Lorenzo per lead student da questa zona** (estendi `notify-investor-whatsapp` → generalizza in `notify-priority-lead` con regola: `lead_type=student AND source LIKE 'nizza-millefonti%'`).
+**3.1 CRM filtro "Pipeline Lingotto Sellers"** in `/admin/leads`
+- Filtro su `source LIKE 'vendi-lingotto%'` + `lead_type=seller`
+- Già esiste l'infrastruttura toolbar (vedi pipeline Nizza studenti)
 
-4. **Vista Kanban predefinita per pipeline studenti**: stati già esistenti (`nuovo → contattato → qualificato → proposta → vinto/perso`). Aggiungo solo un quick-filter "Pipeline Nizza".
+**3.2 Drip seller-zona** (estendo `student-nurture-cron` → `lead-nurture-cron` generalizzato)
+- T+0: `seller-confirmation` (esiste già)
+- T+2: email "3 cose da sapere prima di vendere a Lingotto" + link articolo
+- T+5: WhatsApp template manuale-assistito (un click apre WhatsApp pre-compilato)
+- T+10: email "vuoi una valutazione più precisa? mando un sopralluogo"
+- Skip se `last_contact_at < 2gg` o `status in (vinto, perso)`
 
-### Blocco 3 — Distribuzione (dove trovi i lead a luglio/agosto)
+**3.3 WhatsApp priority ping a te per seller Lingotto** (estendo regola in `useLeadCapture.ts`)
+- Già fatto per student Nizza → aggiungo `seller + source LIKE 'vendi-lingotto%'`
 
-Questo è **lavoro umano + asset che ti preparo io**, non codice. Te li lascio pronti da copiare:
+**3.4 Alert settimanale**: report lead Lingotto + conversion rate, riusa pattern `WEEKLY_REPORT_SECRET`
 
-- Post template per gruppi Facebook: "Specializzandi Torino", "Affitti Torino Studenti", "Erasmus Torino", "Infermieristica Torino UniTo".
-- Volantino A5 PDF per bacheche Molinette / aula studio Dental School / mensa San Luigi (QR → landing).
-- Email outreach per segreterie scuole di specializzazione (Anestesia, Chirurgia, Medicina Interna sono le più numerose).
-- Post LinkedIn + Reel Instagram (script).
-- DM script per gruppi WhatsApp matricole.
+## Cosa NON faccio
 
-Tutti i link portano alla landing con UTM (`utm_source=fb-specializzandi`, ecc.) → già tracciati da `useUTMTracking`.
-
-### Blocco 4 — Misurazione
-
-- Dashboard semplice in `/admin/leads` con counter: lead totali Nizza, per audience, conversion rate per stato, tempo medio risposta.
-- Alert email settimanale a Lorenzo (riusa pattern `WEEKLY_REPORT_SECRET`).
-
----
-
-## Cosa NON faccio (e perché)
-
-- **Niente seconda app Lovable.** Frammenterebbe il CRM, romperebbe SEO/dominio, raddoppierebbe i costi Cloud, e non aggiunge nulla che questo progetto non possa fare meglio.
-- **Niente nuove tabelle DB** in questa fase: `leads.metadata` jsonb basta per audience/mese/budget. Migrazione solo se servirà dashboard analitica complessa.
-- **Niente integrazione CRM esterno (HubSpot/Pipedrive)**: il tuo Admin Leads attuale è già più adatto al volume previsto (decine/centinaia di lead, non migliaia).
-- **Niente cifre di rendimento** sulla landing (rispetta la core rule "no public yield figures") — questa pagina è per studenti, non investitori.
-
----
-
-## Skill — quando ha senso, e quale
-
-Dopo che il primo ciclo Nizza Millefonti gira ed è validato (~3–4 settimane), creiamo **una skill `student-zone-pipeline`** che documenta il playbook ripetibile: "data una zona di Torino + un cluster di domanda (ospedale/università/sede), genera landing + 3 articoli + sequenza drip + kit distribuzione". Così replichi su Vanchiglia/Polito, Crocetta/UniTo Medicina, San Salvario/Lingue in poche ore.
-
-Creare la skill **adesso, prima di aver validato il playbook**, sarebbe prematuro — documenterebbe ipotesi, non un processo che funziona.
-
----
+- Niente provvigioni o cifre di acquisto pubbliche (ti tieni leva in trattativa)
+- Niente promesse di prezzo specifico sulla landing (solo range generici tipo "€60-130k tipico per bilocale zona")
+- Niente nuovo strumento esterno (HubSpot, Idealista Pro, ecc.) — non ti serve a questo volume
 
 ## Dettagli tecnici (per quando approvi)
 
 **File nuovi**
-- `src/pages/zone/NizzaMillefontiOspedali.tsx` (route `/zone/nizza-millefonti-ospedali`)
-- `src/components/zone/StudentWaitlistForm.tsx`
-- `src/data/blog/content/{it,en}/affittare-vicino-molinette-specializzandi-2026.md`
-- `src/data/blog/content/{it,en}/camera-nizza-millefonti-prezzi-2026.md`
-- `src/data/blog/content/{it,en}/infermieristica-torino-vivere-vicino-sede.md`
-- `supabase/functions/student-nurture-cron/index.ts` (schedulato giornaliero)
-- `supabase/functions/_shared/transactional-email-templates/student-nurture-day2.tsx`
-- `supabase/functions/_shared/transactional-email-templates/student-nurture-day10.tsx`
+- `src/pages/vendi/LingottoNizzaMillefonti.tsx` (route IT+EN)
+- `src/data/blog/content/{it,en}/vendere-casa-lingotto-2026.md`
+- `supabase/functions/seller-nurture-cron/index.ts` (o generalizzo `student-nurture-cron`)
+- `supabase/functions/_shared/transactional-email-templates/seller-nurture-day2.tsx` + `day10.tsx`
+- `/mnt/documents/volantino-lingotto-A5-eredita.pdf` + `-trasferimento.pdf`
+- `/mnt/documents/lettera-proprietario-template.pdf`
+- `/mnt/documents/google-ads-keywords-lingotto.csv`
+- `/mnt/documents/notai-amministratori-lingotto.csv`
 
 **File modificati**
-- `src/App.tsx` (rotta)
-- `src/components/admin/leads/LeadsToolbar.tsx` + `LeadsTable.tsx` (filtro segmento)
-- `supabase/functions/notify-investor-whatsapp/index.ts` → rinominato/generalizzato
+- `src/components/AnimatedRoutes.tsx` (2 rotte)
+- `src/data/blog/posts.ts` (registra articolo)
+- `src/hooks/useLeadCapture.ts` (regola WhatsApp priority per seller Lingotto)
+- `src/components/admin/leads/LeadsToolbar.tsx` (chip "Pipeline Lingotto")
 - `public/sitemap.xml`, `public/rss.xml`, `public/.well-known/llms.txt`
-- `src/i18n/locales/*.json` (chiavi nuove)
 
-**Edge function config**: `student-nurture-cron` con `verify_jwt = false` e cron schedule daily 09:00 Europe/Rome.
+**Compliance**: sentence case, "Parla con Lorenzo" CTA, WhatsApp primario, nessuna cifra di rendimento, conferma "0% commissioni" coerente con memory `seller-acquisition-positioning`.
 
-**Compliance**: tutte le copy in sentence case (IT), nessuna cifra di rendimento, "Parla con Lorenzo" come CTA primaria, WhatsApp come canale principale.
+## Domanda per te
 
----
+Confermi l'ordine 1 → 2 → 3? In particolare:
+- **Step 1** ti dà subito landing + articolo per partire con Google Ads e SEO
+- **Step 2** è il pacchetto offline+ads, lavoro umano dopo
+- **Step 3** è automazione, ha senso solo dopo che arrivano i primi lead
 
-## Domanda per te prima di partire
-
-Confermi l'ordine? Io partirei in questa sequenza in 3 step approvabili separatamente:
-
-1. **Landing + form + 1 articolo pilota** (1 turno) → puoi già iniziare distribuzione manuale
-2. **Filtri admin + sequenza drip + WhatsApp priority ping** (1 turno) → automazione
-3. **2 articoli rimanenti + kit distribuzione PDF/script** (1 turno) → scala
-
-Se vuoi invertire o tagliare, dimmelo prima che parta lo step 1.
+Vuoi che parta da Step 1, o preferisci che faccia Step 1 + 3 insieme (landing + automazione) e poi 2?
