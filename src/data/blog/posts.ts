@@ -2,6 +2,49 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "affittare-vicino-molinette-specializzandi-2026",
+    category: "students",
+    date: "2026-05-22",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 9,
+    content: "affittare-vicino-molinette-specializzandi-2026",
+    translations: {
+      it: {
+        title: "Affittare casa vicino alle Molinette: guida per specializzandi 2026",
+        excerpt: "Tempistiche SSM, contratti giusti, prezzi reali a Nizza Millefonti e cosa rifiutare prima di firmare. Per specializzandi, medicina, infermieristica.",
+        seo: {
+          title: "Affittare casa Molinette: guida specializzandi 2026 Torino",
+          description: "Casa vicino alle Molinette per specializzandi e studenti: tempistiche SSM, contratti, prezzi reali a Nizza Millefonti, errori da evitare. Guida 2026.",
+          keywords: ["affitto specializzandi Torino", "casa vicino Molinette", "affitto Nizza Millefonti", "stanza specializzandi medicina Torino", "contratto specializzando casa", "alloggio Molinette Torino"]
+        },
+        tags: ["Studenti", "Specializzandi", "Molinette", "Nizza Millefonti", "Affitto"],
+        faqs: [
+          { question: "Quando esce la graduatoria SSM e quando devo cercare casa?", answer: "La graduatoria nazionale SSM esce di solito a fine luglio. Da quel momento hai circa sei settimane prima dell'inizio contratto del 1° novembre. Inizia la mappatura a luglio, fissa visite ad agosto, firma a settembre." },
+          { question: "Quale contratto è giusto per uno specializzando di 4–5 anni?", answer: "Le opzioni serie sono due: 4+4 a canone concordato (legge 431/98 art. 2 c. 3) oppure contratto per studenti universitari (art. 5 c. 2). Il contratto a uso transitorio non è adatto: copre massimo 18 mesi." },
+          { question: "Quanto costa una camera singola vicino alle Molinette nel 2026?", answer: "450–650 euro al mese tutto incluso per una camera singola in appartamento condiviso arredato a canone concordato, a seconda di distanza e condizioni. Sotto i 400 euro a maggio 2026 sono quasi tutti annunci-civetta." },
+          { question: "Posso cambiare casa durante la specializzazione?", answer: "Sì. Sia il contratto 4+4 sia quello studenti universitari prevedono recesso con preavviso (di solito 6 mesi sul 4+4, 3 mesi sul contratto studenti). Verifica sempre la clausola specifica nel tuo contratto." }
+        ]
+      },
+      en: {
+        title: "Renting near Molinette: 2026 guide for medical residents",
+        excerpt: "SSM timing, the right contract, real Nizza Millefonti prices and what to refuse before signing. For residents, medical and nursing students.",
+        seo: {
+          title: "Renting near Molinette: 2026 guide for residents Turin",
+          description: "Housing near Molinette for residents and students: SSM timing, contracts, real Nizza Millefonti prices, mistakes to avoid. 2026 guide.",
+          keywords: ["medical residents housing Turin", "house near Molinette", "Nizza Millefonti rent", "resident student housing Turin", "specializzando contract", "Molinette accommodation"]
+        },
+        tags: ["Students", "Medical residents", "Molinette", "Nizza Millefonti", "Rent"],
+        faqs: [
+          { question: "When is the SSM ranking published and when should I look for housing?", answer: "The national SSM ranking is usually out in late July. From that day you have about six weeks before the November 1 contract start. Start mapping in July, viewings in August, sign in September." },
+          { question: "Which contract is right for a 4–5 year residency?", answer: "Two serious options: 4+4 canone concordato (law 431/98 art. 2 §3) or university student contract (art. 5 §2). A transitory-use contract is not suitable: it covers at most 18 months." },
+          { question: "How much does a single room near Molinette cost in 2026?", answer: "450–650 euro a month all-in for a single furnished room in a shared flat under canone concordato, depending on distance and condition. Below 400 euro in May 2026 most listings are scams." },
+          { question: "Can I change apartment during residency?", answer: "Yes. Both 4+4 and student contracts allow withdrawal with notice (usually 6 months on 4+4, 3 months on the student contract). Always check the specific clause in your contract." }
+        ]
+      }
+    }
+  },
+  {
     slug: "trovare-casa-torino-studente-fuorisede-2026",
     category: "students",
     date: "2026-03-25",
