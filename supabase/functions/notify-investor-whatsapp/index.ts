@@ -17,35 +17,39 @@ const BodySchema = z.object({
   name: z.string().trim().max(120).optional().nullable(),
   phone: z.string().trim().max(40).optional().nullable(),
   source: z.string().trim().max(120).default("unknown"),
-  leadType: z.literal("investor"),
+  leadType: z.enum(["investor", "seller", "student", "general"]),
   metadata: z.record(z.unknown()).optional().nullable(),
   utmSource: z.string().trim().max(120).optional().nullable(),
   utmMedium: z.string().trim().max(120).optional().nullable(),
   utmCampaign: z.string().trim().max(120).optional().nullable(),
 });
 
+const HEADER: Record<string, string> = {
+  investor: "🌴 Nuovo lead INVESTITORE Jungle Rent",
+  seller: "🏠 Nuovo lead VENDITORE Jungle Rent",
+  student: "🎓 Nuovo lead STUDENTE Jungle Rent",
+  general: "📨 Nuovo lead Jungle Rent",
+};
+
 function buildMessage(p: z.infer<typeof BodySchema>): string {
-  const lines = [
-    "🌴 Nuovo lead INVESTITORE Jungle Rent",
-    "",
-    `📧 ${p.email}`,
-  ];
+  const lines = [HEADER[p.leadType] ?? HEADER.general, "", `📧 ${p.email}`];
   if (p.name) lines.push(`👤 ${p.name}`);
   if (p.phone) lines.push(`📱 ${p.phone}`);
   lines.push(`📍 Fonte: ${p.source}`);
-  const ticket = (p.metadata as any)?.ticket || (p.metadata as any)?.ticket_size;
+  const m = (p.metadata ?? {}) as Record<string, unknown>;
+  const ticket = m.ticket || m.ticket_size;
   if (ticket) lines.push(`💶 Ticket: ${ticket}`);
-  const country = (p.metadata as any)?.country;
-  if (country) lines.push(`🌍 Country: ${country}`);
+  if (m.country) lines.push(`🌍 Country: ${m.country}`);
+  if (m.target_audience) lines.push(`🩺 Profilo: ${m.target_audience}`);
+  if (m.move_in_month) lines.push(`📅 Move-in: ${m.move_in_month}`);
+  if (m.budget_range) lines.push(`💰 Budget: ${m.budget_range}`);
   if (p.utmSource || p.utmCampaign) {
     lines.push(
       `🎯 UTM: ${p.utmSource || "-"} / ${p.utmMedium || "-"} / ${p.utmCampaign || "-"}`,
     );
   }
   lines.push("");
-  lines.push(
-    `↪️ Rispondi: mailto:${p.email}`,
-  );
+  lines.push(`↪️ Rispondi: mailto:${p.email}`);
   return lines.join("\n");
 }
 

@@ -23,6 +23,7 @@ const LeadsAdmin = () => {
   const [typeFilter, setTypeFilter] = useState<string>("all");
   const [statusFilter, setStatusFilter] = useState<LeadStatus | "all">("all");
   const [priorityFilter, setPriorityFilter] = useState<LeadPriority | "all">("all");
+  const [sourceFilter, setSourceFilter] = useState<string>("");
   const [onlyDueFollowups, setOnlyDueFollowups] = useState(false);
   const [view, setView] = useState<"table" | "kanban">("table");
   const [selected, setSelected] = useState<Lead | null>(null);
@@ -57,12 +58,14 @@ const LeadsAdmin = () => {
       const matchType = typeFilter === "all" || l.lead_type === typeFilter;
       const matchStatus = statusFilter === "all" || l.status === statusFilter;
       const matchPriority = priorityFilter === "all" || l.priority === priorityFilter;
+      const matchSource =
+        !sourceFilter || (l.source ?? "").toLowerCase().includes(sourceFilter.toLowerCase());
       const matchDue =
         !onlyDueFollowups ||
         (l.next_followup_at && new Date(l.next_followup_at).getTime() <= now);
-      return matchSearch && matchType && matchStatus && matchPriority && matchDue;
+      return matchSearch && matchType && matchStatus && matchPriority && matchSource && matchDue;
     });
-  }, [leads, search, typeFilter, statusFilter, priorityFilter, onlyDueFollowups]);
+  }, [leads, search, typeFilter, statusFilter, priorityFilter, sourceFilter, onlyDueFollowups]);
 
   const stats = useMemo(() => {
     const now = Date.now();
@@ -137,6 +140,8 @@ const LeadsAdmin = () => {
           setStatusFilter={setStatusFilter}
           priorityFilter={priorityFilter}
           setPriorityFilter={setPriorityFilter}
+          sourceFilter={sourceFilter}
+          setSourceFilter={setSourceFilter}
           onlyDueFollowups={onlyDueFollowups}
           setOnlyDueFollowups={setOnlyDueFollowups}
           view={view}

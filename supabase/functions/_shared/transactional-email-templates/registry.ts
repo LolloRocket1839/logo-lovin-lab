@@ -14,6 +14,8 @@ import { template as leadNotification } from './lead-notification.tsx'
 import { template as sellerConfirmation } from './seller-confirmation.tsx'
 import { template as investorInfoRequestConfirmation } from './investor-info-request-confirmation.tsx'
 import { template as investorInfoRequestNotification } from './investor-info-request-notification.tsx'
+import { template as studentNurtureDay2 } from './student-nurture-day2.tsx'
+import { template as studentNurtureDay10 } from './student-nurture-day10.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'lead-confirmation': leadConfirmation,
@@ -21,4 +23,6 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'seller-confirmation': sellerConfirmation,
   'investor-info-request-confirmation': investorInfoRequestConfirmation,
   'investor-info-request-notification': investorInfoRequestNotification,
+  'student-nurture-day2': studentNurtureDay2,
+  'student-nurture-day10': studentNurtureDay10,
 }
