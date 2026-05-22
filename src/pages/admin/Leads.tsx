@@ -140,6 +140,8 @@ const LeadsAdmin = () => {
           setStatusFilter={setStatusFilter}
           priorityFilter={priorityFilter}
           setPriorityFilter={setPriorityFilter}
+          sourceFilter={sourceFilter}
+          setSourceFilter={setSourceFilter}
           onlyDueFollowups={onlyDueFollowups}
           setOnlyDueFollowups={setOnlyDueFollowups}
           view={view}
