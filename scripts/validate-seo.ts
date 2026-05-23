@@ -97,17 +97,18 @@ while ((m = jsonLdRe.exec(indexHtml))) {
   }
 }
 
-// 5. Sitemap coverage of static routes
+// 5. Sitemap coverage of static routes (union of main + tools sitemaps)
 if (exists("public/sitemap.xml")) {
-  const sitemap = read("public/sitemap.xml");
+  const sitemap =
+    read("public/sitemap.xml") +
+    (exists("public/sitemap-tools.xml") ? read("public/sitemap-tools.xml") : "");
   const generator = read("scripts/generate-sitemap.ts");
-  // Pull `it:` paths from STATIC_ROUTES literal
   const pathRe = /\{\s*it:\s*"([^"]+)"/g;
   let pm: RegExpExecArray | null;
   while ((pm = pathRe.exec(generator))) {
     const path = pm[1];
     if (!sitemap.includes(`<loc>https://junglerent.it${path}</loc>`)) {
-      warnings.push(`[sitemap] generator declares ${path} but it's missing from public/sitemap.xml (regenerate?)`);
+      warnings.push(`[sitemap] generator declares ${path} but it's missing from sitemaps (regenerate?)`);
     }
   }
 }
