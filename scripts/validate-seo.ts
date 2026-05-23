@@ -46,22 +46,29 @@ for (const src of sources) {
   }
 }
 
-// 2. Andrea must never be described as founder/partner/shareholder in public surfaces
-const SCAN_FILES = [
-  "index.html",
-  "public/llms.txt",
-  "public/llms-full.txt",
-  "public/ai-assistant-info.txt",
-  "public/.well-known/agent-card.json",
-  "public/.well-known/llms.txt",
-];
-const ANDREA_BAD = /Andrea\s+Niccolaini[^.\n]{0,200}\b(co-?founder|founder|partner|socio|quotista|shareholder|owner)\b/i;
+// 2. Andrea must never be described as AFFIRMATIVE founder/partner/shareholder.
+// Skip lines where the assertion is negated ("not", "non-", "never", "NOT", "non ", "mai")
+const ANDREA_BAD = /Andrea\s+Niccolaini[^.\n]{0,200}\b(co-?founder|founder|partner|socio|quotista|shareholder|owner)\b/gi;
+const NEGATION = /\b(not|non-?|never|mai|no(?:n)?\s)\b/i;
 for (const f of SCAN_FILES) {
   if (!exists(f)) continue;
   const content = read(f);
-  const m = content.match(ANDREA_BAD);
+  let mm: RegExpExecArray | null;
+  while ((mm = ANDREA_BAD.exec(content))) {
+    if (!NEGATION.test(mm[0])) {
+      failures.push(`[compliance] ${f}: Andrea described as founder/partner/shareholder → "${mm[0].slice(0, 120)}..."`);
+    }
+  }
+}
+
+// 3. No "trimestrale" / "quarterly" wording near payout/report copy
+const PAYOUT_BAD = /(report|payout|distribuzion|cedola)[^\n]{0,80}(trimestral|quarterly)|(trimestral|quarterly)[^\n]{0,80}(report|payout|distribuzion|cedola)/i;
+for (const f of SCAN_FILES) {
+  if (!exists(f)) continue;
+  const content = read(f);
+  const m = content.match(PAYOUT_BAD);
   if (m) {
-    failures.push(`[compliance] ${f}: Andrea described as founder/partner/shareholder → "${m[0].slice(0, 120)}..."`);
+    failures.push(`[compliance] ${f}: quarterly/trimestrale wording near payout copy (memory: bimestrale) → "${m[0].slice(0, 120)}..."`);
   }
 }
 
