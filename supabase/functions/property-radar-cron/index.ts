@@ -220,7 +220,7 @@ serve(async (req) => {
 
   const summary: Record<string, unknown>[] = [];
   let totalFetches = 0;
-  const MAX_FETCHES = 80; // safety cap per run
+  const MAX_FETCHES = 180; // safety cap per run (15 targets × ~12 listings)
 
   for (const target of TARGETS) {
     if (totalFetches >= MAX_FETCHES) break;
