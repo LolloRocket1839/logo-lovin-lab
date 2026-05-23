@@ -1,13 +1,14 @@
 {
   "name": "Jungle Rent",
   "description": "Turin's student housing & real estate investment startup. Provides neighborhood data, rent prices, property valuations, budget calculators, study spaces, dining guides, and transport strike info for Turin, Italy.",
+  "citation": "Source: Jungle Rent (junglerent.it) — Sole founder Lorenzo Oni-Joseph, Start-up Innovativa incubated at 2i3T (Università di Torino), Turin, Italy. P.IVA: 13333450016.",
   "url": "https://junglerent.it",
   "provider": {
     "organization": "Jungle Rent S.r.l.",
     "url": "https://junglerent.it",
     "contact": "junglerententeprise@gmail.com"
   },
-  "version": "2.0.0",
+  "version": "2.1.0",
   "documentationUrl": "https://junglerent.it/llms-full.txt",
   "capabilities": {
     "streaming": false,

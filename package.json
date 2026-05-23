@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "bunx tsx scripts/generate-sitemap.ts",
     "dev": "vite",
+    "prebuild": "bunx tsx scripts/generate-sitemap.ts",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
@@ -14,7 +16,9 @@
     "test:investor-zones": "vitest run src/data/investorZoneData.test.ts --reporter=verbose",
     "test:snapshots:update": "vitest run src/data/investorZoneData.test.ts -u",
     "test:ci": "CI=true vitest run --reporter=dot",
-    "validate:translations": "node scripts/validate-translations.mjs"
+    "validate:translations": "node scripts/validate-translations.mjs",
+    "validate:seo": "bunx tsx scripts/validate-seo.ts",
+    "generate:sitemap": "bunx tsx scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "@axe-core/react": "^4.11.0",
