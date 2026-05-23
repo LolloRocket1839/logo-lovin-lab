@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Download, RefreshCw, LayoutGrid, List, AlarmClock, Hospital } from "lucide-react";
+import { Search, Download, RefreshCw, LayoutGrid, List, AlarmClock, Hospital, Home } from "lucide-react";
 import { STATUS_LABEL, STATUS_ORDER, LeadStatus, LeadPriority, PRIORITY_LABEL } from "./types";
 
 interface Props {
@@ -70,6 +70,21 @@ export function LeadsToolbar(p: Props) {
           className="h-8 text-xs"
         >
           <Hospital className="h-3.5 w-3.5 mr-1" /> Pipeline Nizza
+        </Button>
+
+        <Button
+          size="sm"
+          variant={p.sourceFilter === "vendi-lingotto-nizza-millefonti" ? "default" : "outline"}
+          onClick={() =>
+            p.setSourceFilter(
+              p.sourceFilter === "vendi-lingotto-nizza-millefonti"
+                ? ""
+                : "vendi-lingotto-nizza-millefonti",
+            )
+          }
+          className="h-8 text-xs"
+        >
+          <Home className="h-3.5 w-3.5 mr-1" /> Pipeline Lingotto
         </Button>
 
         <Input
