@@ -17,20 +17,31 @@ interface ScanTarget {
   url: string;
 }
 
-// Priority zones (Lingotto, Nizza Millefonti, Mirafiori Nord)
+// Tutta Torino — 9 quartieri prioritari, cap €80k
 const TARGETS: ScanTarget[] = [
-  // Immobiliare.it — sale, Torino, priority neighborhoods
-  { portal: "immobiliare", zone: "Lingotto", url: "https://www.immobiliare.it/vendita-case/torino/lingotto/?prezzoMassimo=150000" },
-  { portal: "immobiliare", zone: "Nizza Millefonti", url: "https://www.immobiliare.it/vendita-case/torino/nizza-millefonti/?prezzoMassimo=150000" },
-  { portal: "immobiliare", zone: "Mirafiori Nord", url: "https://www.immobiliare.it/vendita-case/torino/mirafiori-nord/?prezzoMassimo=150000" },
-  // Idealista
-  { portal: "idealista", zone: "Lingotto", url: "https://www.idealista.it/vendita-case/torino-torino/con-prezzo_150000,lingotto-italia-61/" },
-  { portal: "idealista", zone: "Nizza Millefonti", url: "https://www.idealista.it/vendita-case/torino-torino/con-prezzo_150000,nizza-italia-61/" },
-  // Subito (mostly private sellers)
-  { portal: "subito", zone: "Torino - Sud", url: "https://www.subito.it/annunci-piemonte/vendita/appartamenti/torino/torino/?qso=true&pe=150000&ca=12" },
+  // Immobiliare.it — sale, Torino, max €80k
+  { portal: "immobiliare", zone: "Lingotto", url: "https://www.immobiliare.it/vendita-case/torino/lingotto/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Nizza Millefonti", url: "https://www.immobiliare.it/vendita-case/torino/nizza-millefonti/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Mirafiori Nord", url: "https://www.immobiliare.it/vendita-case/torino/mirafiori-nord/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Mirafiori Sud", url: "https://www.immobiliare.it/vendita-case/torino/mirafiori-sud/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Aurora", url: "https://www.immobiliare.it/vendita-case/torino/aurora/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Barriera di Milano", url: "https://www.immobiliare.it/vendita-case/torino/barriera-di-milano/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Madonna di Campagna", url: "https://www.immobiliare.it/vendita-case/torino/madonna-di-campagna/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Parella", url: "https://www.immobiliare.it/vendita-case/torino/parella/?prezzoMassimo=80000" },
+  { portal: "immobiliare", zone: "Santa Rita", url: "https://www.immobiliare.it/vendita-case/torino/santa-rita/?prezzoMassimo=80000" },
+  // Idealista — principali
+  { portal: "idealista", zone: "Lingotto", url: "https://www.idealista.it/vendita-case/torino-torino/con-prezzo_80000,lingotto-italia-61/" },
+  { portal: "idealista", zone: "Nizza Millefonti", url: "https://www.idealista.it/vendita-case/torino-torino/con-prezzo_80000,nizza-italia-61/" },
+  { portal: "idealista", zone: "Aurora", url: "https://www.idealista.it/vendita-case/torino-torino/con-prezzo_80000,aurora-italia-61/" },
+  { portal: "idealista", zone: "Barriera di Milano", url: "https://www.idealista.it/vendita-case/torino-torino/con-prezzo_80000,barriera-di-milano-italia-61/" },
+  // Subito (mostly private sellers) — tutta Torino
+  { portal: "subito", zone: "Torino", url: "https://www.subito.it/annunci-piemonte/vendita/appartamenti/torino/torino/?qso=true&pe=80000&ca=12" },
 ];
 
-const PRIORITY_ZONES = ["Lingotto", "Nizza Millefonti", "Mirafiori Nord"];
+const PRIORITY_ZONES = [
+  "Lingotto", "Nizza Millefonti", "Mirafiori Nord", "Mirafiori Sud",
+  "Aurora", "Barriera di Milano", "Madonna di Campagna", "Parella", "Santa Rita",
+];
 
 function calcLeadScore(listing: {
   is_private_seller: boolean;
