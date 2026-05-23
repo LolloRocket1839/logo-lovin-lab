@@ -174,6 +174,73 @@ const staticLinkableContent: LinkableContent[] = [
       'stima casa lingotto'
     ],
     priority: 11
+  },
+  // Landing SEO — vendere senza agenzia
+  {
+    url: '/vendere-casa-senza-agenzia-torino',
+    titleIt: 'Vendere casa senza agenzia a Torino',
+    titleEn: 'Sell home without agency in Turin',
+    type: 'page',
+    triggerKeywords: [
+      'vendere casa senza agenzia',
+      'vendere senza agenzia',
+      'senza agenzia torino',
+      'zero commissioni agenzia',
+      'vendere casa privatamente torino',
+      'sell home without agency',
+      'no agency fees turin'
+    ],
+    priority: 11
+  },
+  // Landing SEO — vendere velocemente
+  {
+    url: '/vendere-casa-velocemente-torino',
+    titleIt: 'Vendere casa velocemente a Torino',
+    titleEn: 'Sell home fast in Turin',
+    type: 'page',
+    triggerKeywords: [
+      'vendere casa velocemente',
+      'vendere casa rapidamente',
+      'vendere casa in fretta',
+      'vendita rapida torino',
+      'sell home fast',
+      'quick home sale turin'
+    ],
+    priority: 11
+  },
+  // Landing SEO — comprare casa già affittata
+  {
+    url: '/comprare-casa-affittata-torino',
+    titleIt: 'Comprare casa già affittata a Torino',
+    titleEn: 'Buy a tenanted property in Turin',
+    type: 'page',
+    triggerKeywords: [
+      'comprare casa affittata',
+      'casa già affittata',
+      'immobile a reddito',
+      'income property torino',
+      'comprare immobile con inquilino',
+      'appartamento affittato in vendita',
+      'tenanted property turin',
+      'buy to let turin'
+    ],
+    priority: 11
+  },
+  // Landing SEO — investire nell'immobiliare a Torino
+  {
+    url: '/investire-immobiliare-torino',
+    titleIt: 'Investire nell\'immobiliare a Torino',
+    titleEn: 'Real estate investment in Turin',
+    type: 'page',
+    triggerKeywords: [
+      'investire nell\'immobiliare torino',
+      'investire immobiliare torino',
+      'investimenti immobiliari torino',
+      'real estate investment turin',
+      'investire a torino',
+      'operazioni immobiliari torino'
+    ],
+    priority: 11
   }
 ];
 

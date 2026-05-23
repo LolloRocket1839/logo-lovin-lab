@@ -38,6 +38,10 @@ const InvestorZonesIndex = lazy(() => import("@/pages/InvestorZonesIndex"));
 const InvestorZonePage = lazy(() => import("@/pages/InvestorZonePage"));
 const NizzaMillefontiOspedali = lazy(() => import("@/pages/zone/NizzaMillefontiOspedali"));
 const LingottoNizzaMillefontiSeller = lazy(() => import("@/pages/vendi/LingottoNizzaMillefonti"));
+const VendereSenzaAgenzia = lazy(() => import("@/pages/landings/VendereSenzaAgenzia"));
+const VendereVelocemente = lazy(() => import("@/pages/landings/VendereVelocemente"));
+const ComprareCasaAffittata = lazy(() => import("@/pages/landings/ComprareCasaAffittata"));
+const InvestireImmobiliareTorino = lazy(() => import("@/pages/landings/InvestireImmobiliareTorino"));
 const Auth = lazy(() => import("@/pages/Auth"));
 const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
 const LeadsAdmin = lazy(() => import("@/pages/admin/Leads"));
@@ -114,6 +118,10 @@ export const AnimatedRoutes = () => {
             <Route path="/zones/nizza-millefonti-hospitals" element={<NizzaMillefontiOspedali />} />
             <Route path="/vendi-casa/lingotto-nizza-millefonti" element={<LingottoNizzaMillefontiSeller />} />
             <Route path="/sell-home/lingotto-nizza-millefonti" element={<LingottoNizzaMillefontiSeller />} />
+            <Route path="/vendere-casa-senza-agenzia-torino" element={<VendereSenzaAgenzia />} />
+            <Route path="/vendere-casa-velocemente-torino" element={<VendereVelocemente />} />
+            <Route path="/comprare-casa-affittata-torino" element={<ComprareCasaAffittata />} />
+            <Route path="/investire-immobiliare-torino" element={<InvestireImmobiliareTorino />} />
             <Route path="/accedi" element={<Auth />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
