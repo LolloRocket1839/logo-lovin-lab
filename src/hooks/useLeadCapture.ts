@@ -139,10 +139,14 @@ export function useLeadCapture() {
     // 3. Instant WhatsApp ping to Lorenzo for priority leads
     //    - all investor leads
     //    - student leads from the Nizza Millefonti / hospitals pipeline
+    //    - seller leads from the Lingotto / Nizza Millefonti pipeline
     const isPriorityStudent =
       lead.leadType === "student" &&
       /^nizza-millefonti/.test(lead.source);
-    if (lead.leadType === "investor" || isPriorityStudent) {
+    const isPrioritySeller =
+      lead.leadType === "seller" &&
+      /^vendi-lingotto-nizza-millefonti/.test(lead.source);
+    if (lead.leadType === "investor" || isPriorityStudent || isPrioritySeller) {
       supabase.functions
         .invoke("notify-investor-whatsapp", { body: emailPayload })
         .catch((err) =>
