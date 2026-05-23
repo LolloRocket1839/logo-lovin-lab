@@ -47,7 +47,14 @@ for (const src of sources) {
 }
 
 // 2. Andrea must never be described as AFFIRMATIVE founder/partner/shareholder.
-// Skip lines where the assertion is negated ("not", "non-", "never", "NOT", "non ", "mai")
+const SCAN_FILES = [
+  "index.html",
+  "public/llms.txt",
+  "public/llms-full.txt",
+  "public/ai-assistant-info.txt",
+  "public/.well-known/agent-card.json",
+  "public/.well-known/llms.txt",
+];
 const ANDREA_BAD = /Andrea\s+Niccolaini[^.\n]{0,200}\b(co-?founder|founder|partner|socio|quotista|shareholder|owner)\b/gi;
 const NEGATION = /\b(not|non-?|never|mai|no(?:n)?\s)\b/i;
 for (const f of SCAN_FILES) {
