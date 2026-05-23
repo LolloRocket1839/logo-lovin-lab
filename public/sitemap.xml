@@ -1,1340 +1,500 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- Note: /llms.txt, /llms-full.txt, /ai-assistant-info.txt are static AI knowledge files
-       exposed via robots.txt and llms.txt discovery, not HTML routes — kept out of sitemap. -->
-
-  <!-- Homepage -->
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://junglerent.it/</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/" />
-    <image:image>
-      <image:loc>https://junglerent.it/jungle-rent-logo.svg</image:loc>
-      <image:title>Jungle Rent Logo</image:title>
-      <image:caption>Investimenti immobiliari e affitti studenti a Torino</image:caption>
-    </image:image>
   </url>
-
-  <!-- About Page -->
   <url>
     <loc>https://junglerent.it/chi-siamo</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/about" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/chi-siamo" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/chi-siamo" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/chi-siamo" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/chi-siamo" />
   </url>
-
-  <!-- Investors Page -->
+  <url>
+    <loc>https://junglerent.it/about</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/chi-siamo" />
+  </url>
   <url>
     <loc>https://junglerent.it/investitori</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/investitori" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/investitori" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/investitori" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
   </url>
-
-  <!-- Lease Agreements Page -->
   <url>
-    <loc>https://junglerent.it/contratti-locazione</loc>
-    <lastmod>2026-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/contratti-locazione" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/rental-contracts" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/contratti-locazione" />
+    <loc>https://junglerent.it/investors</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
   </url>
-
-  <!-- ========== INVESTOR ZONE PAGES (Market Analysis) ========== -->
-  
-  <!-- Investor Zones Index -->
   <url>
     <loc>https://junglerent.it/investitori/zone</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone" />
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone" />
   </url>
-
-  <!-- Investor Zone: Cenisia -->
   <url>
-    <loc>https://junglerent.it/investitori/zone/cenisia</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cenisia" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cenisia" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cenisia" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
-      <image:title>Investire a Cenisia Torino</image:title>
-      <image:caption>Rendimento 6-7%, sfitto 3%. Vicino al Politecnico, alta domanda studentesca.</image:caption>
-    </image:image>
+    <loc>https://junglerent.it/investors/zones</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone" />
   </url>
-
-  <!-- Investor Zone: Aurora -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/aurora</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/aurora" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/aurora" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/aurora" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercato-piazza-crispi.jpg</image:loc>
-      <image:title>Investire ad Aurora Torino</image:title>
-      <image:caption>Rendimento 7-8%, massima crescita. Zona in forte riqualificazione urbana.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: San Salvario -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/san-salvario</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-salvario" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-salvario" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
-      <image:title>Investire a San Salvario Torino</image:title>
-      <image:caption>Rendimento 5.8-6.5%, sfitto 2-4%. Il quartiere studentesco piu richiesto di Torino.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Vanchiglia -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/vanchiglia</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/vanchiglia" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/vanchiglia" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/vanchiglia" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/quadrilatero-notte-torino.jpg</image:loc>
-      <image:title>Investire a Vanchiglia Torino</image:title>
-      <image:caption>Rendimento 5.5-6.2%, sfitto basso. Quartiere artistico vicino al centro e al Po.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Lingotto -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/lingotto</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/lingotto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/lingotto" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/lingotto" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-transport.jpg</image:loc>
-      <image:title>Investire al Lingotto Torino</image:title>
-      <image:caption>Rendimento 5-6%, crescita +3.8%. Metro 2 in arrivo, Eataly e campus universitario.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Barriera di Milano -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/barriera-di-milano</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/barriera-di-milano" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
-      <image:title>Investire a Barriera di Milano Torino</image:title>
-      <image:caption>Rendimento 7-9%, prezzi bassi. Massimo potenziale di rivalutazione con Metro 2.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Crocetta -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/crocetta</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/crocetta" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/crocetta" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/crocetta" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
-      <image:title>Investire alla Crocetta Torino</image:title>
-      <image:caption>Rendimento 4.5-5.5%, sfitto 1-2%. Quartiere premium vicino al Politecnico.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Borgo Vittoria -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/borgo-vittoria</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/borgo-vittoria" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/parco-valentino-inverno.jpg</image:loc>
-      <image:title>Investire a Borgo Vittoria Torino</image:title>
-      <image:caption>Rendimento 6-7%, prezzi accessibili. Quartiere familiare con servizi.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: San Donato -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/san-donato</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-donato" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-donato" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-donato" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
-      <image:title>Investire a San Donato Torino</image:title>
-      <image:caption>Rendimento 6-7%, metro. Buon rapporto qualita-prezzo per investitori.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Parella -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/parella</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/parella" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/parella" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/parella" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/viale-alberato-torino.jpeg</image:loc>
-      <image:title>Investire a Parella Torino</image:title>
-      <image:caption>Rendimento 5.5-6.5%, residenziale. Quartiere tranquillo, famiglie e giovani coppie.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Santa Rita -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/santa-rita</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/santa-rita" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/santa-rita" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/santa-rita" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercato-nitti-torino.jpg</image:loc>
-      <image:title>Investire a Santa Rita Torino</image:title>
-      <image:caption>Rendimento 5-6%, metro. Quartiere servito, mercato stabile e affidabile.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Cit Turin -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/cit-turin</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cit-turin" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cit-turin" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cit-turin" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
-      <image:title>Investire a Cit Turin Torino</image:title>
-      <image:caption>Rendimento 5.5-6.5%, architettura liberty. Quartiere elegante vicino al centro.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Investor Zone: Campidoglio -->
-  <url>
-    <loc>https://junglerent.it/investitori/zone/campidoglio</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/campidoglio" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/campidoglio" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/campidoglio" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
-      <image:title>Investire al Campidoglio Torino</image:title>
-      <image:caption>Rendimento 6-7%, atmosfera autentica. Mercato Balon, prezzi in crescita.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- ========== END INVESTOR ZONE PAGES ========== -->
-
-  <!-- Sell Property Page - FEATURED SERVICE -->
   <url>
     <loc>https://junglerent.it/vendi</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendi" />
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/sell" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendi" />
   </url>
-
-  <!-- Students Page -->
   <url>
-    <loc>https://junglerent.it/studenti</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://junglerent.it/sell</loc>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/studenti" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/studenti" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/studenti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti" />
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/sell" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendi" />
   </url>
-
-  <!-- Student Tools - Budget Calculator -->
   <url>
-    <loc>https://junglerent.it/studenti/strumenti/budget</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://junglerent.it/proprietari</loc>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti/strumenti/budget" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students/tools/budget" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti/strumenti/budget" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/proprietari" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/proprietari" />
   </url>
-
-  <!-- Student Tools - Grade Calculator -->
-  <url>
-    <loc>https://junglerent.it/studenti/strumenti/media</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti/strumenti/media" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students/tools/gpa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti/strumenti/media" />
-  </url>
-
-  <!-- Student Tools - Exam Session Planner -->
-  <url>
-    <loc>https://junglerent.it/studenti/strumenti/sessione</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti/strumenti/sessione" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students/tools/session" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti/strumenti/sessione" />
-  </url>
-
-  <!-- Gyms Directory -->
-  <url>
-    <loc>https://junglerent.it/strumenti/palestre-torino-studenti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/gyms-turin-students" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/palestre-torino-studenti" />
-  </url>
-
-  <!-- Property Valuation Tool -->
   <url>
     <loc>https://junglerent.it/valutazione-immobile</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/valutazione-immobile" />
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/property-valuation" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/valutazione-immobile" />
   </url>
-
-  <!-- Study Spaces Directory -->
   <url>
-    <loc>https://junglerent.it/strumenti/aule-studio-torino</loc>
-    <lastmod>2026-03-15</lastmod>
+    <loc>https://junglerent.it/property-valuation</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/valutazione-immobile" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/property-valuation" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/valutazione-immobile" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/contratti-locazione</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/contratti-locazione" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/rental-contracts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/contratti-locazione" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/rental-contracts</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/contratti-locazione" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/rental-contracts" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/contratti-locazione" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/studenti</loc>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/aule-studio-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/study-spaces-turin" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/aule-studio-torino" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti" />
   </url>
-
-  <!-- Cheap Eats Directory -->
   <url>
-    <loc>https://junglerent.it/strumenti/dove-mangiare-torino</loc>
-    <lastmod>2026-03-21</lastmod>
+    <loc>https://junglerent.it/students</loc>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/dove-mangiare-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/cheap-eats-turin" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/dove-mangiare-torino" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/students" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/studenti" />
   </url>
-
-  <!-- Student Services Directory -->
-  <url>
-    <loc>https://junglerent.it/strumenti/sportelli-studenti-torino</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/tools/student-services-turin" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/strumenti/sportelli-studenti-torino" />
-  </url>
-
-  <!-- ========== NEIGHBORHOOD PAGES (Programmatic SEO) ========== -->
-  
-  <!-- Neighborhoods Index -->
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/rooms-rent-turin" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino" />
   </url>
-
-  <!-- Neighborhood: San Salvario -->
   <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/san-salvario</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://junglerent.it/rooms-rent-turin</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/san-salvario" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
-      <image:title>Affitto stanza San Salvario Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze a San Salvario: prezzi, vita notturna, trasporti</image:caption>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/rooms-rent-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino" />
   </url>
-
-  <!-- Neighborhood: Vanchiglia -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/vanchiglia</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/vanchiglia" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/quadrilatero-notte-torino.jpg</image:loc>
-      <image:title>Affitto stanza Vanchiglia Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze a Vanchiglia: quartiere artistico vicino al Po</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Neighborhood: Crocetta -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/crocetta</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/crocetta" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
-      <image:title>Affitto stanza Crocetta Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze alla Crocetta: vicino al Politecnico di Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Neighborhood: Santa Rita -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/santa-rita</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/santa-rita" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercato-nitti-torino.jpg</image:loc>
-      <image:title>Affitto stanza Santa Rita Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze a Santa Rita: prezzi economici e metro</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Neighborhood: Cenisia -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/cenisia</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/cenisia" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/portici-torino.jpg</image:loc>
-      <image:title>Affitto stanza Cenisia Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze a Cenisia: vicino al Politecnico a prezzi accessibili</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Neighborhood: Cit Turin -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/cit-turin</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/cit-turin" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
-  </url>
-
-  <!-- Neighborhood: Campidoglio -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/campidoglio</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/campidoglio" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
-      <image:title>Affitto stanza Campidoglio Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze al Campidoglio: mercato Balon e atmosfera autentica</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Neighborhood: Aurora -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/aurora</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/aurora" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/aurora" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/aurora" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercato-piazza-crispi.jpg</image:loc>
-      <image:title>Affitto stanza Aurora Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze ad Aurora: i prezzi più bassi vicino a Porta Palazzo</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Neighborhood: Lingotto -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/lingotto</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/lingotto" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-transport.jpg</image:loc>
-      <image:title>Affitto stanza Lingotto Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze al Lingotto: ex FIAT, Eataly e metro</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Neighborhood: San Paolo -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/san-paolo</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/room-rental-turin/san-paolo" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/parco-valentino-inverno.jpg</image:loc>
-      <image:title>Affitto stanza San Paolo Torino</image:title>
-      <image:caption>Guida completa all'affitto di stanze a San Paolo: quartiere tranquillo con metro</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Page -->
   <url>
     <loc>https://junglerent.it/blog</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog" />
   </url>
-
-  <!-- Blog Post: Jungle Control December 2025 -->
-  <url>
-    <loc>https://junglerent.it/blog/jungle-control-dicembre-2025</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/jungle-control-dicembre-2025" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/jungle-control-december-2025" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/jungle-control-dicembre-2025" />
-  </url>
-
-  <!-- Blog Post: Props Gestione Immobiliare Semplificata - FEATURED -->
-  <url>
-    <loc>https://junglerent.it/blog/props-gestione-immobiliare-semplificata</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/props-gestione-immobiliare-semplificata" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/props-gestione-immobiliare-semplificata" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/props-gestione-immobiliare-semplificata" />
-  </url>
-
-  <!-- Blog Post: Palestre Torino studenti guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/palestre-torino-studenti-guida-completa</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/palestre-torino-studenti-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/palestre-torino-studenti-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/palestre-torino-studenti-guida-completa" />
-  </url>
-
-  <!-- Blog Post: Tajarin piemontesi guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/tajarin-piemontesi-guida-completa</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/tajarin-piemontesi-guida-completa" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/tajarin-tartufo-torino.jpg</image:loc>
-      <image:title>I tajarin piemontesi guida completa</image:title>
-      <image:caption>Guida completa ai tajarin piemontesi: storia, ricetta 30 tuorli, comodino, tartufo bianco d'Alba</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Cioccolaterie Torino guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/cioccolaterie-torino-guida-completa</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/cioccolaterie-torino-guida-completa" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/cioccolato-gianduiotti-torino.jpg</image:loc>
-      <image:title>Le cioccolaterie a Torino guida completa</image:title>
-      <image:caption>Guida completa alle cioccolaterie di Torino: storia dal 1560, Caffarel, Venchi, Guido Gobino, Gianduiotto, Cremino, CioccolaTò</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Panettoni e Pandori Torino guida 2025 -->
-  <url>
-    <loc>https://junglerent.it/blog/panettoni-pandori-torino-guida-2025</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/panettoni-pandori-torino-guida-2025" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/panettoni-pandori-torino-guida-2025" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/panettoni-pandori-torino-guida-2025" />
-  </url>
-
-  <!-- Blog Post: Vendere casa Torino guida completa 2025 -->
-  <url>
-    <loc>https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/vendere-casa-torino-guida-completa-2025" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/vendere-casa-torino.jpg</image:loc>
-      <image:title>Vendere casa a Torino guida 2025</image:title>
-      <image:caption>Guida completa alla vendita immobiliare a Torino: rischi, tasse, agenzie, prezzi per quartiere</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Valutazione immobiliare Torino guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/valutazione-immobiliare-torino-guida-completa" />
-  </url>
-
-  <!-- Blog Post: Eventi Torino gennaio 2026 -->
-  <url>
-    <loc>https://junglerent.it/blog/eventi-torino-gennaio-2026</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-gennaio-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-gennaio-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-gennaio-2026" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-gennaio-luci.jpg</image:loc>
-      <image:title>Eventi Torino gennaio 2026</image:title>
-      <image:caption>Guida completa agli eventi a Torino a gennaio 2026</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Eventi Torino febbraio 2026 -->
-  <url>
-    <loc>https://junglerent.it/blog/eventi-torino-febbraio-2026</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-febbraio-2026" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/cioccolato-festival-torino.jpg</image:loc>
-      <image:title>Eventi Torino febbraio 2026</image:title>
-      <image:caption>Guida completa agli eventi a Torino a febbraio 2026: CioccolaTò, Macbeth, Lee Miller, Jeff Wall, Carnevale di Ivrea</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Eventi Torino marzo 2026 -->
-  <url>
-    <loc>https://junglerent.it/blog/eventi-torino-marzo-2026</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/eventi-torino-marzo-2026" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-primavera-marzo.jpg</image:loc>
-      <image:title>Eventi Torino marzo 2026</image:title>
-      <image:caption>Guida completa agli eventi a Torino a marzo 2026: Chiharu Shiota, Gentileschi, Mika, Renato Zero, Subsonica</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Cicloturismo avanzato Torino -->
-  <url>
-    <loc>https://junglerent.it/blog/cicloturismo-avanzato-torino</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/cicloturismo-avanzato-torino" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/cicloturismo-avanzato-torino.jpg</image:loc>
-      <image:title>Cicloturismo avanzato a Torino</image:title>
-      <image:caption>Guida completa al cicloturismo a Torino: 290 km piste ciclabili, e-bike tours, bike packing e comunità cicloattivista</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Viaggiare sostenibile Torino guida -->
-  <url>
-    <loc>https://junglerent.it/blog/viaggiare-sostenibile-torino-guida</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/viaggiare-sostenibile-torino-guida" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/viaggiare-sostenibile-torino.jpg</image:loc>
-      <image:title>Come raggiungere Torino in modo sostenibile</image:title>
-      <image:caption>Guida completa ai viaggi sostenibili verso Torino: treni, bus, aeroporto green, bike-sharing e micro-mobilità</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Carnevale Ivrea Battaglia Arance 2026 -->
-  <url>
-    <loc>https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/carnevale-ivrea-battaglia-arance-2026" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/battaglia-arance-ivrea.jpg</image:loc>
-      <image:title>Carnevale di Ivrea 2026 Battaglia delle Arance</image:title>
-      <image:caption>Guida completa al Carnevale di Ivrea: storia della Mugnaia, battaglia delle arance, come arrivare da Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Università di Torino guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/universita-torino-guida-completa</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/universita-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/universita-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/universita-torino-guida-completa" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/unito-campus-torino.jpg</image:loc>
-      <image:title>Università di Torino guida completa</image:title>
-      <image:caption>Guida completa all'Università di Torino: 600 anni di storia, 3 Nobel, ricerca di eccellenza</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Politecnico di Torino guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/politecnico-torino-guida-completa</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/politecnico-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/politecnico-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/politecnico-torino-guida-completa" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
-      <image:title>Politecnico di Torino guida completa</image:title>
-      <image:caption>Guida completa al Politecnico di Torino: ammissione, tasse, residenze, Erasmus</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Raccolta differenziata Torino guida -->
-  <url>
-    <loc>https://junglerent.it/blog/raccolta-differenziata-torino-guida</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/raccolta-differenziata-torino-guida" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/raccolta-differenziata-torino-guida" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/raccolta-differenziata-torino-guida" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/raccolta-differenziata-torino.jpg</image:loc>
-      <image:title>Raccolta differenziata Torino guida</image:title>
-      <image:caption>Come fare la raccolta differenziata a Torino: guida pratica completa</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Mercati storici Torino chiusure -->
-  <url>
-    <loc>https://junglerent.it/blog/mercati-storici-torino-chiusure</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mercati-storici-torino-chiusure" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/mercati-storici-torino-chiusure" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/mercati-storici-torino-chiusure" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mercati-rionali-torino.jpg</image:loc>
-      <image:title>Mercati storici Torino chiusure</image:title>
-      <image:caption>Analisi della crisi dei mercati rionali torinesi e impatto sociale</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Guida volontariato Torino -->
-  <url>
-    <loc>https://junglerent.it/blog/guida-volontariato-torino</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/guida-volontariato-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/guida-volontariato-torino" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/guida-volontariato-torino" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
-      <image:title>Guida volontariato Torino</image:title>
-      <image:caption>Guida completa alle organizzazioni di volontariato a Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Aule studio Torino guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/aule-studio-torino-guida-completa</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/aule-studio-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/aule-studio-torino-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/aule-studio-torino-guida-completa" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/aule-studio-torino.jpg</image:loc>
-      <image:title>Aule studio Torino guida completa 2026</image:title>
-      <image:caption>Guida definitiva a 60+ spazi per studiare a Torino con orari verificati marzo 2026</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Torino nightlife guide -->
-  <url>
-    <loc>https://junglerent.it/blog/torino-nightlife-guide</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-nightlife-guide" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-nightlife-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-nightlife-guide" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-nightlife.jpg</image:loc>
-      <image:title>Torino nightlife guide</image:title>
-      <image:caption>Guida completa alle discoteche e vita notturna di Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Student Housing Italia Savills 2025 -->
-  <url>
-    <loc>https://junglerent.it/blog/student-housing-italia-savills-2025</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/student-housing-italia-savills-2025" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
-      <image:title>Student Housing Italia Savills 2025</image:title>
-      <image:caption>Analisi del report Savills 2025 sul mercato student housing italiano: 589K studenti, €4 miliardi di opportunità</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Investire real assets Torino 2025 -->
-  <url>
-    <loc>https://junglerent.it/blog/investire-real-assets-torino-2025</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/investire-real-assets-torino-2025" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/investire-real-assets-torino-2025" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/investire-real-assets-torino-2025" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
-      <image:title>Investire real assets Torino 2025</image:title>
-      <image:caption>Perché investire in real assets a Torino nel 2025</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Torino digital nomads guide -->
-  <url>
-    <loc>https://junglerent.it/blog/torino-digital-nomads-guide</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-digital-nomads-guide" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-digital-nomads-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-digital-nomads-guide" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/digital-nomad-torino.jpg</image:loc>
-      <image:title>Torino digital nomads guide</image:title>
-      <image:caption>Torino per digital nomad: guida definitiva ai luoghi di lavoro</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Quartieri sicuri donne Torino -->
-  <url>
-    <loc>https://junglerent.it/blog/quartieri-sicuri-donne-torino</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/quartieri-sicuri-donne-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/quartieri-sicuri-donne-torino" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/quartieri-sicuri-donne-torino" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
-      <image:title>Quartieri sicuri donne Torino</image:title>
-      <image:caption>Guida completa ai quartieri più sicuri per donne a Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Torino ogni stagione turisti -->
-  <url>
-    <loc>https://junglerent.it/blog/torino-ogni-stagione-turisti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-ogni-stagione-turisti" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-ogni-stagione-collage.jpg</image:loc>
-      <image:title>Torino ogni stagione turisti</image:title>
-      <image:caption>Quando visitare Torino: guida stagionale completa per turisti</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Torino novembre turisti -->
-  <url>
-    <loc>https://junglerent.it/blog/torino-novembre-turisti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-novembre-turisti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-novembre-turisti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-novembre-turisti" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-autunno-novembre.jpg</image:loc>
-      <image:title>Torino novembre turisti</image:title>
-      <image:caption>Torino a novembre: ATP Finals, Film Festival, Artissima, tartufi</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Torino dicembre turisti -->
-  <url>
-    <loc>https://junglerent.it/blog/torino-dicembre-turisti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/torino-dicembre-turisti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/torino-dicembre-turisti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/torino-dicembre-turisti" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-natale-luci-artista.jpg</image:loc>
-      <image:title>Torino dicembre turisti</image:title>
-      <image:caption>Torino a dicembre: Luci d'Artista, mercatini di Natale, Teatro Regio</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Mobilità sostenibile Torino studenti -->
-  <url>
-    <loc>https://junglerent.it/blog/mobilita-sostenibile-torino-studenti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mobilita-sostenibile-torino-studenti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/mobilita-sostenibile-torino-studenti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/mobilita-sostenibile-torino-studenti" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/torino-transport.jpg</image:loc>
-      <image:title>Mobilità sostenibile Torino studenti</image:title>
-      <image:caption>Guida completa ai trasporti per studenti a Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Mutui investitori immobiliari guida completa -->
-  <url>
-    <loc>https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/mutui-investitori-immobiliari-guida-completa" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/mortgage-investment.jpg</image:loc>
-      <image:title>Guida completa mutui investitori immobiliari</image:title>
-      <image:caption>Guida definitiva ai mutui per investimenti immobiliari in Italia</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Migliori gelaterie Torino studenti -->
-  <url>
-    <loc>https://junglerent.it/blog/migliori-gelaterie-torino-studenti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/migliori-gelaterie-torino-studenti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/migliori-gelaterie-torino-studenti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/migliori-gelaterie-torino-studenti" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/gelato-italiano.jpg</image:loc>
-      <image:title>Migliori gelaterie Torino per studenti</image:title>
-      <image:caption>Guida completa alle migliori gelaterie artigianali di Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Dove vivere Torino studenti Politecnico -->
-  <url>
-    <loc>https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/dove-vivere-torino-studenti-politecnico" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/quartieri-studenti-torino.jpg</image:loc>
-      <image:title>Dove vivere a Torino studenti Politecnico</image:title>
-      <image:caption>Guida completa ai migliori quartieri per studenti del Politecnico di Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Dove mangiare a Torino da studente -->
-  <url>
-    <loc>https://junglerent.it/blog/dove-mangiare-torino-studenti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/dove-mangiare-torino-studenti" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/caffe-vini-quadrilatero.jpg</image:loc>
-      <image:title>Dove mangiare a Torino per studenti</image:title>
-      <image:caption>Guida completa ai migliori ristoranti economici per studenti a Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: San Salvario guida studenti -->
-  <url>
-    <loc>https://junglerent.it/blog/san-salvario-guida-studenti</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/san-salvario-guida-studenti" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
-      <image:title>San Salvario guida studenti</image:title>
-      <image:caption>Guida completa a San Salvario: il quartiere perfetto per studenti a Torino</image:caption>
-    </image:image>
-  </url>
-
-  <!-- Blog Post: Emergenze affitti Torino diritti inquilini -->
-  <url>
-    <loc>https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog/emergenze-affitti-torino-diritti-inquilini" />
-  </url>
-
-  <!-- Neighborhood Pages - Room Rentals Turin -->
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/san-salvario</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/san-salvario" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/san-salvario-night.jpeg</image:loc>
-      <image:title>Affitto stanza San Salvario Torino</image:title>
-      <image:caption>Guida completa affitto stanze San Salvario: prezzi, trasporti, vita notturna</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/vanchiglia</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/vanchiglia" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/crocetta</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/crocetta" />
-    <image:image>
-      <image:loc>https://junglerent.it/images/politecnico-torino.avif</image:loc>
-      <image:title>Affitto stanza Crocetta Torino vicino Politecnico</image:title>
-      <image:caption>Guida completa affitto stanze Crocetta: vicino Politecnico, prezzi, sicurezza</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/santa-rita</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/santa-rita" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/cenisia</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/cenisia" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/cit-turin</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/cit-turin" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/campidoglio</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/campidoglio" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/aurora</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/aurora" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/aurora" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/aurora" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/lingotto</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/lingotto" />
-  </url>
-
-  <url>
-    <loc>https://junglerent.it/affitto-stanza-torino/san-paolo</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitto-stanza-torino/san-paolo" />
-  </url>
-
-  <!-- Privacy Policy -->
-  <url>
-    <loc>https://junglerent.it/privacy</loc>
-    <lastmod>2026-03-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/privacy" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/privacy" />
-  </url>
-
-  <!-- Terms and Conditions -->
-  <url>
-    <loc>https://junglerent.it/termini-e-condizioni</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/termini-e-condizioni" />
-  </url>
-
-  <!-- Terms and Conditions (EN) -->
-  <url>
-    <loc>https://junglerent.it/terms</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/terms" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/termini-e-condizioni" />
-  </url>
-
-  <!-- About (EN) -->
-  <url>
-    <loc>https://junglerent.it/about</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/chi-siamo" />
-  </url>
-
-  <!-- Investors (EN) -->
-  <url>
-    <loc>https://junglerent.it/investors</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
-  </url>
-
-  <!-- Invest (canonical redirects to /investitori) -->
-  <url>
-    <loc>https://junglerent.it/invest</loc>
-    <lastmod>2026-03-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori" />
-  </url>
-
-  <!-- FAQ -->
   <url>
     <loc>https://junglerent.it/faq</loc>
-    <lastmod>2026-03-21</lastmod>
+    <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/faq" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/faq" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/faq" />
   </url>
-
+  <url>
+    <loc>https://junglerent.it/scioperi-italia</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/scioperi-italia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/italy-strikes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/scioperi-italia" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/italy-strikes</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/scioperi-italia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/italy-strikes" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/scioperi-italia" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/invest</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/invest" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/invest" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/sell-home/lingotto-nizza-millefonti</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/sell-home/lingotto-nizza-millefonti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/sell-home/lingotto-nizza-millefonti" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/vendi-casa/lingotto-nizza-millefonti</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendi-casa/lingotto-nizza-millefonti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendi-casa/lingotto-nizza-millefonti" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/zone/nizza-millefonti-ospedali</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/zone/nizza-millefonti-ospedali" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/zones/nizza-millefonti-hospitals" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/zone/nizza-millefonti-ospedali" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/zones/nizza-millefonti-hospitals</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/zone/nizza-millefonti-ospedali" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/zones/nizza-millefonti-hospitals" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/zone/nizza-millefonti-ospedali" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/termini-e-condizioni</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/termini-e-condizioni" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/terms</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/termini-e-condizioni" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/privacy</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/privacy" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/cenisia</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cenisia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cenisia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cenisia" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/cenisia</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cenisia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cenisia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cenisia" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/aurora</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/aurora" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/aurora" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/aurora" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/aurora</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/aurora" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/aurora" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/aurora" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/san-salvario</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-salvario" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/san-salvario</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-salvario" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-salvario" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/vanchiglia</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/vanchiglia" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/vanchiglia</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/vanchiglia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/vanchiglia" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/lingotto</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/lingotto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/lingotto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/lingotto" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/lingotto</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/lingotto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/lingotto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/lingotto" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/barriera-di-milano</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/barriera-di-milano" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/barriera-di-milano</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/barriera-di-milano" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/crocetta</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/crocetta" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/crocetta" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/crocetta" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/crocetta</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/crocetta" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/crocetta" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/crocetta" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/borgo-vittoria</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/borgo-vittoria" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/borgo-vittoria</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/borgo-vittoria" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/san-donato</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-donato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-donato" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-donato" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/san-donato</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-donato" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/san-donato" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/san-donato" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/parella</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/parella" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/parella" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/parella" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/parella</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/parella" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/parella" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/parella" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/santa-rita</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/santa-rita" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/santa-rita</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/santa-rita" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/santa-rita" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/cit-turin</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cit-turin" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/cit-turin</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/cit-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/cit-turin" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investitori/zone/campidoglio</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/campidoglio" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/investors/zones/campidoglio</loc>
+    <lastmod>2026-05-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/investors/zones/campidoglio" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investitori/zone/campidoglio" />
+  </url>
 </urlset>
