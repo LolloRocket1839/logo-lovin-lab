@@ -131,6 +131,49 @@ const staticLinkableContent: LinkableContent[] = [
     type: 'page',
     triggerKeywords: ['jungle rent', 'chi siamo', 'about us'],
     priority: 5
+  },
+  // Zone investitori — Nizza Millefonti / Ospedali (high priority for area-specific anchors)
+  {
+    url: '/zone/nizza-millefonti-ospedali',
+    titleIt: 'Investire a Nizza Millefonti e zona Ospedali',
+    titleEn: 'Invest in Nizza Millefonti and Hospitals area',
+    type: 'page',
+    triggerKeywords: [
+      'nizza millefonti',
+      'zona ospedali torino',
+      'molinette',
+      'ospedale molinette',
+      'cto torino',
+      'sant\'anna torino',
+      'regina margherita torino',
+      'investire nizza millefonti',
+      'investire zona ospedali',
+      'nizza millefonti hospitals',
+      'molinette area',
+      'turin hospitals area'
+    ],
+    priority: 11
+  },
+  // Vendi casa — Lingotto / Nizza Millefonti (area-specific seller landing)
+  {
+    url: '/vendi-casa/lingotto-nizza-millefonti',
+    titleIt: 'Vendi casa a Lingotto e Nizza Millefonti',
+    titleEn: 'Sell your home in Lingotto and Nizza Millefonti',
+    type: 'page',
+    triggerKeywords: [
+      'vendere casa lingotto',
+      'vendere casa nizza millefonti',
+      'vendere appartamento lingotto',
+      'vendere appartamento nizza millefonti',
+      'vendita immobile lingotto',
+      'vendere a lingotto',
+      'sell home lingotto',
+      'sell apartment nizza millefonti',
+      'lingotto seller',
+      'quanto vale casa lingotto',
+      'stima casa lingotto'
+    ],
+    priority: 11
   }
 ];
 
