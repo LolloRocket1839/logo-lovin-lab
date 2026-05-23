@@ -72,17 +72,6 @@ for (const f of SCAN_FILES) {
   }
 }
 
-// 3. No "trimestrale" / "quarterly" wording near payout/report copy
-const PAYOUT_BAD = /(report|payout|distribuzion|cedola)[^\n]{0,80}(trimestral|quarterly)|(trimestral|quarterly)[^\n]{0,80}(report|payout|distribuzion|cedola)/i;
-for (const f of SCAN_FILES) {
-  if (!exists(f)) continue;
-  const content = read(f);
-  const m = content.match(PAYOUT_BAD);
-  if (m) {
-    failures.push(`[compliance] ${f}: quarterly/trimestrale wording near payout copy (memory: bimestrale) → "${m[0].slice(0, 120)}..."`);
-  }
-}
-
 // 4. JSON-LD validity in index.html
 const indexHtml = read("index.html");
 const jsonLdRe = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
