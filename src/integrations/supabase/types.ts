@@ -559,6 +559,39 @@ export type Database = {
         }
         Relationships: []
       }
+      outreach_templates: {
+        Row: {
+          body: string
+          channel: string
+          created_at: string
+          id: string
+          is_active: boolean
+          language: string
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          body: string
+          channel?: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          language?: string
+          name: string
+          updated_at?: string
+        }
+        Update: {
+          body?: string
+          channel?: string
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          language?: string
+          name?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
@@ -577,6 +610,87 @@ export type Database = {
           email?: string | null
           full_name?: string | null
           id?: string
+        }
+        Relationships: []
+      }
+      property_listings: {
+        Row: {
+          condition: string | null
+          contact_notes: string | null
+          contacted_at: string | null
+          converted_lead_id: string | null
+          created_at: string
+          description_excerpt: string | null
+          external_id: string
+          first_seen_at: string
+          floor: string | null
+          id: string
+          is_private_seller: boolean
+          last_seen_at: string
+          lead_score: number
+          portal: string
+          price_eur: number | null
+          price_history: Json
+          rooms: number | null
+          sqm: number | null
+          status: string
+          thumbnail_url: string | null
+          title: string | null
+          updated_at: string
+          url: string
+          zone: string | null
+        }
+        Insert: {
+          condition?: string | null
+          contact_notes?: string | null
+          contacted_at?: string | null
+          converted_lead_id?: string | null
+          created_at?: string
+          description_excerpt?: string | null
+          external_id: string
+          first_seen_at?: string
+          floor?: string | null
+          id?: string
+          is_private_seller?: boolean
+          last_seen_at?: string
+          lead_score?: number
+          portal: string
+          price_eur?: number | null
+          price_history?: Json
+          rooms?: number | null
+          sqm?: number | null
+          status?: string
+          thumbnail_url?: string | null
+          title?: string | null
+          updated_at?: string
+          url: string
+          zone?: string | null
+        }
+        Update: {
+          condition?: string | null
+          contact_notes?: string | null
+          contacted_at?: string | null
+          converted_lead_id?: string | null
+          created_at?: string
+          description_excerpt?: string | null
+          external_id?: string
+          first_seen_at?: string
+          floor?: string | null
+          id?: string
+          is_private_seller?: boolean
+          last_seen_at?: string
+          lead_score?: number
+          portal?: string
+          price_eur?: number | null
+          price_history?: Json
+          rooms?: number | null
+          sqm?: number | null
+          status?: string
+          thumbnail_url?: string | null
+          title?: string | null
+          updated_at?: string
+          url?: string
+          zone?: string | null
         }
         Relationships: []
       }
@@ -604,6 +718,45 @@ export type Database = {
           endpoint?: string
           id?: string
           p256dh_key?: string
+        }
+        Relationships: []
+      }
+      radar_fetch_log: {
+        Row: {
+          created_at: string
+          duration_ms: number | null
+          errors: Json
+          id: string
+          listings_found: number
+          listings_new: number
+          listings_updated: number
+          portal: string
+          url: string | null
+          zone: string | null
+        }
+        Insert: {
+          created_at?: string
+          duration_ms?: number | null
+          errors?: Json
+          id?: string
+          listings_found?: number
+          listings_new?: number
+          listings_updated?: number
+          portal: string
+          url?: string | null
+          zone?: string | null
+        }
+        Update: {
+          created_at?: string
+          duration_ms?: number | null
+          errors?: Json
+          id?: string
+          listings_found?: number
+          listings_new?: number
+          listings_updated?: number
+          portal?: string
+          url?: string | null
+          zone?: string | null
         }
         Relationships: []
       }
