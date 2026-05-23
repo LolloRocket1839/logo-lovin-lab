@@ -53,7 +53,7 @@ function calcLeadScore(listing: {
 }): number {
   let score = 0;
   if (listing.is_private_seller) score += 30;
-  if (listing.price_eur && listing.price_eur >= 50000 && listing.price_eur <= 130000) score += 20;
+  if (listing.price_eur && listing.price_eur >= 30000 && listing.price_eur <= 80000) score += 20;
   if (listing.condition && /ristrutturare|da ristrutturare|abitabile/i.test(listing.condition)) score += 15;
   if (listing.zone && PRIORITY_ZONES.includes(listing.zone)) score += 10;
   const ageDays = (Date.now() - new Date(listing.first_seen_at).getTime()) / 86400000;
