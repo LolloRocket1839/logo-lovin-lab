@@ -241,6 +241,32 @@ const staticLinkableContent: LinkableContent[] = [
       'operazioni immobiliari torino'
     ],
     priority: 11
+  },
+  // Landing tenant — affitti Lingotto / Nizza Millefonti / Ospedali
+  {
+    url: '/affitti-lingotto-ospedali-torino',
+    titleIt: 'Cerca casa in zona Lingotto e Ospedali',
+    titleEn: 'Find housing near Lingotto & Hospitals',
+    type: 'page',
+    triggerKeywords: [
+      'affitti lingotto',
+      'affitto lingotto torino',
+      'casa lingotto torino',
+      'stanza nizza millefonti',
+      'affitto nizza millefonti',
+      'casa vicino molinette',
+      'affitto vicino molinette',
+      'affitto vicino ospedale',
+      'casa vicino ospedale torino',
+      'stanza vicino molinette',
+      'cerco casa lingotto',
+      'cerco stanza lingotto',
+      'affitto cto torino',
+      'rent near molinette',
+      'rooms near hospitals turin',
+      'rent lingotto turin'
+    ],
+    priority: 11
   }
 ];
 
