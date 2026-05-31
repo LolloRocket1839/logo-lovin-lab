@@ -42,6 +42,7 @@ const VendereSenzaAgenzia = lazy(() => import("@/pages/landings/VendereSenzaAgen
 const VendereVelocemente = lazy(() => import("@/pages/landings/VendereVelocemente"));
 const ComprareCasaAffittata = lazy(() => import("@/pages/landings/ComprareCasaAffittata"));
 const InvestireImmobiliareTorino = lazy(() => import("@/pages/landings/InvestireImmobiliareTorino"));
+const AffittiLingottoOspedali = lazy(() => import("@/pages/landings/AffittiLingottoOspedali"));
 const Auth = lazy(() => import("@/pages/Auth"));
 const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
 const LeadsAdmin = lazy(() => import("@/pages/admin/Leads"));
