@@ -16,7 +16,8 @@ export default function Auth() {
   const lang = i18n.language.startsWith("en") ? "en" : "it";
   const navigate = useNavigate();
   const { user } = useAuth();
-  const [isLogin, setIsLogin] = useState(true);
+  const ALLOWED_EMAIL = "lorenzo.onijoseph@gmail.com";
+  const [isLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
