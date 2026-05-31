@@ -125,12 +125,6 @@ export default function Auth() {
                 {loading ? "..." : labels.submit}
               </Button>
             </form>
-            <button
-              onClick={() => setIsLogin(!isLogin)}
-              className="mt-4 w-full text-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {labels.toggle}
-            </button>
           </CardContent>
         </Card>
       </main>
