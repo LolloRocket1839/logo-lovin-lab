@@ -32,27 +32,17 @@ export default function Auth() {
     setLoading(true);
 
     try {
-      if (isLogin) {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
-        toast.success(lang === "it" ? "Accesso effettuato!" : "Signed in!");
-        navigate("/contratti-locazione");
-      } else {
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            data: { full_name: fullName },
-            emailRedirectTo: window.location.origin,
-          },
-        });
-        if (error) throw error;
-        toast.success(
+      if (email.trim().toLowerCase() !== ALLOWED_EMAIL) {
+        throw new Error(
           lang === "it"
-            ? "Registrazione completata! Controlla la tua email per verificare l'account."
-            : "Sign up complete! Check your email to verify your account."
+            ? "Accesso riservato. Questo account non è autorizzato."
+            : "Access restricted. This account is not authorized."
         );
       }
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      toast.success(lang === "it" ? "Accesso effettuato!" : "Signed in!");
+      navigate("/contratti-locazione");
     } catch (error: any) {
       toast.error(error.message);
     } finally {
