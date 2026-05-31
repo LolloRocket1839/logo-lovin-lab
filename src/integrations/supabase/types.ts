@@ -359,6 +359,129 @@ export type Database = {
         }
         Relationships: []
       }
+      gmail_processed_messages: {
+        Row: {
+          auto_replied: boolean
+          classification: string
+          confidence: number | null
+          from_email: string | null
+          from_name: string | null
+          id: string
+          lead_id: string | null
+          message_id: string
+          metadata: Json
+          processed_at: string
+          snippet: string | null
+          subject: string | null
+          thread_id: string | null
+        }
+        Insert: {
+          auto_replied?: boolean
+          classification?: string
+          confidence?: number | null
+          from_email?: string | null
+          from_name?: string | null
+          id?: string
+          lead_id?: string | null
+          message_id: string
+          metadata?: Json
+          processed_at?: string
+          snippet?: string | null
+          subject?: string | null
+          thread_id?: string | null
+        }
+        Update: {
+          auto_replied?: boolean
+          classification?: string
+          confidence?: number | null
+          from_email?: string | null
+          from_name?: string | null
+          id?: string
+          lead_id?: string | null
+          message_id?: string
+          metadata?: Json
+          processed_at?: string
+          snippet?: string | null
+          subject?: string | null
+          thread_id?: string | null
+        }
+        Relationships: []
+      }
+      gmail_sent_messages: {
+        Row: {
+          body_excerpt: string | null
+          id: string
+          in_reply_to: string | null
+          linked_lead_id: string | null
+          linked_listing_id: string | null
+          message_id: string | null
+          metadata: Json
+          sent_at: string
+          sent_by: string | null
+          sent_by_email: string | null
+          subject: string
+          template_key: string | null
+          thread_id: string | null
+          to_email: string
+        }
+        Insert: {
+          body_excerpt?: string | null
+          id?: string
+          in_reply_to?: string | null
+          linked_lead_id?: string | null
+          linked_listing_id?: string | null
+          message_id?: string | null
+          metadata?: Json
+          sent_at?: string
+          sent_by?: string | null
+          sent_by_email?: string | null
+          subject: string
+          template_key?: string | null
+          thread_id?: string | null
+          to_email: string
+        }
+        Update: {
+          body_excerpt?: string | null
+          id?: string
+          in_reply_to?: string | null
+          linked_lead_id?: string | null
+          linked_listing_id?: string | null
+          message_id?: string | null
+          metadata?: Json
+          sent_at?: string
+          sent_by?: string | null
+          sent_by_email?: string | null
+          subject?: string
+          template_key?: string | null
+          thread_id?: string | null
+          to_email?: string
+        }
+        Relationships: []
+      }
+      gmail_settings: {
+        Row: {
+          auto_reply_categories: Json
+          auto_reply_enabled: boolean
+          id: number
+          signature: string
+          updated_at: string
+        }
+        Insert: {
+          auto_reply_categories?: Json
+          auto_reply_enabled?: boolean
+          id?: number
+          signature?: string
+          updated_at?: string
+        }
+        Update: {
+          auto_reply_categories?: Json
+          auto_reply_enabled?: boolean
+          id?: number
+          signature?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       gsc_index_snapshots: {
         Row: {
           alert_sent: boolean

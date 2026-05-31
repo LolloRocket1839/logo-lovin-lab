@@ -48,6 +48,7 @@ const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
 const LeadsAdmin = lazy(() => import("@/pages/admin/Leads"));
 const SeoAdmin = lazy(() => import("@/pages/admin/Seo"));
 const SellerRadarAdmin = lazy(() => import("@/pages/admin/SellerRadar"));
+const InboxAdmin = lazy(() => import("@/pages/admin/Inbox"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
@@ -131,6 +132,7 @@ export const AnimatedRoutes = () => {
             <Route path="/admin/leads" element={<LeadsAdmin />} />
             <Route path="/admin/seo" element={<SeoAdmin />} />
             <Route path="/admin/seller-radar" element={<SellerRadarAdmin />} />
+            <Route path="/admin/inbox" element={<InboxAdmin />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>

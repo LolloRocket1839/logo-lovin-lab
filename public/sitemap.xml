@@ -270,6 +270,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investire-immobiliare-torino" />
   </url>
   <url>
+    <loc>https://junglerent.it/affitti-lingotto-ospedali-torino</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitti-lingotto-ospedali-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/rent-lingotto-hospitals-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitti-lingotto-ospedali-torino" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/rent-lingotto-hospitals-turin</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitti-lingotto-ospedali-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/rent-lingotto-hospitals-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/affitti-lingotto-ospedali-torino" />
+  </url>
+  <url>
     <loc>https://junglerent.it/termini-e-condizioni</loc>
     <lastmod>2026-05-31</lastmod>
     <changefreq>yearly</changefreq>
