@@ -203,6 +203,30 @@ const AffittiLingottoOspedali = () => {
         { "@type": "ListItem", position: 2, name: "Affitti Lingotto / Ospedali", item: CANONICAL },
       ],
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      name: "Jungle Rent — Affitti Lingotto / Nizza Millefonti / Ospedali",
+      url: CANONICAL,
+      description,
+      areaServed: [
+        { "@type": "Place", name: "Lingotto, Torino" },
+        { "@type": "Place", name: "Nizza Millefonti, Torino" },
+        { "@type": "Place", name: "Italia 61, Torino" },
+        { "@type": "Place", name: "Molinette (Città della Salute), Torino" },
+        { "@type": "Place", name: "CTO Torino" },
+        { "@type": "Place", name: "Ospedale Sant'Anna, Torino" },
+        { "@type": "Place", name: "Ospedale Regina Margherita, Torino" },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Torino",
+        addressRegion: "TO",
+        addressCountry: "IT",
+      },
+      telephone: "+393319053037",
+      priceRange: "€€",
+    },
   ];
 
   const onSubmit = async (data: FormData) => {

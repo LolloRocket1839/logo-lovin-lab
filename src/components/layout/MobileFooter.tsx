@@ -43,6 +43,12 @@ export const MobileFooter = () => {
               Vanchiglia
             </Link>
             <Link 
+              to={isIt ? '/affitti-lingotto-ospedali-torino' : '/rent-lingotto-hospitals-turin'}
+              className="px-2.5 py-1 rounded-full bg-background border border-border/30 text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors"
+            >
+              Lingotto / Ospedali
+            </Link>
+            <Link 
               to="/affitto-stanza-torino"
               className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium hover:bg-primary/20 transition-colors"
             >

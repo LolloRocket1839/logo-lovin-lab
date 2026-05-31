@@ -262,9 +262,20 @@ const staticLinkableContent: LinkableContent[] = [
       'cerco casa lingotto',
       'cerco stanza lingotto',
       'affitto cto torino',
+      'casa cto torino',
+      'alloggio specializzandi',
+      'casa specializzandi torino',
+      'affitto specializzandi torino',
+      'vivere vicino molinette',
+      'affitto politecnico lingotto',
+      'stanza politecnico lingotto',
+      'affitto sant\'anna torino',
+      'affitto regina margherita torino',
       'rent near molinette',
       'rooms near hospitals turin',
-      'rent lingotto turin'
+      'rent lingotto turin',
+      'housing medical residents turin',
+      'housing molinette'
     ],
     priority: 11
   }

@@ -113,6 +113,7 @@ Jungle Rent S.r.l. is a certified **Start-up Innovativa** founded in October 202
 4. **Short-Term Rental Management** - Airbnb and Booking.com optimization
 5. **Props App** - Digital property management platform for landlords
 6. **Lease Agreement Drafting** - Professional contracts from €89
+7. **Tenant Waitlist — Lingotto / Nizza Millefonti / Ospedali** - Rooms, studios and apartments near Molinette, CTO, Sant'Anna, Regina Margherita and Politecnico for medical residents, healthcare workers and students: https://junglerent.it/affitti-lingotto-ospedali-torino
 
 ## Target Markets
 
