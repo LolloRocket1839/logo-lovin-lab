@@ -55,6 +55,7 @@ const STATIC_ROUTES: RouteEntry[] = [
   { it: "/vendere-casa-velocemente-torino", changefreq: "monthly", priority: "0.8" },
   { it: "/comprare-casa-affittata-torino", changefreq: "monthly", priority: "0.8" },
   { it: "/investire-immobiliare-torino", changefreq: "monthly", priority: "0.85" },
+  { it: "/affitti-lingotto-ospedali-torino", en: "/rent-lingotto-hospitals-turin", changefreq: "weekly", priority: "0.85" },
   { it: "/termini-e-condizioni", en: "/terms", changefreq: "yearly", priority: "0.2" },
   { it: "/privacy", changefreq: "yearly", priority: "0.2" },
 ];
