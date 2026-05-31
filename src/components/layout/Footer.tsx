@@ -169,6 +169,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to={i18n.language.startsWith('it') ? '/affitti-lingotto-ospedali-torino' : '/rent-lingotto-hospitals-turin'} className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
+                  {i18n.language.startsWith('it') ? 'Lingotto / Ospedali' : 'Lingotto / Hospitals'}
+                </Link>
+              </li>
+              <li>
                 <Link to="/affitto-stanza-torino" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-500 link-elegant">
                   {i18n.language.startsWith('it') ? 'Tutti i quartieri →' : 'All neighborhoods →'}
                 </Link>

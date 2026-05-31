@@ -296,6 +296,32 @@ const NizzaMillefontiOspedali = () => {
             </div>
           </section>
 
+          {/* CTA banner → landing affitti */}
+          <section className="mb-4">
+            <Link
+              to={isItalian ? "/affitti-lingotto-ospedali-torino" : "/rent-lingotto-hospitals-turin"}
+              className="block rounded-2xl border border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors p-5 md:p-6"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-sm font-medium text-primary mb-1">
+                    {isItalian ? "Cerchi casa in zona?" : "Looking for a place here?"}
+                  </p>
+                  <p className="text-base md:text-lg font-semibold text-foreground">
+                    {isItalian
+                      ? "Lista d'attesa affitti Lingotto / Nizza Millefonti / Ospedali →"
+                      : "Rental waitlist Lingotto / Nizza Millefonti / Hospitals →"}
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {isItalian
+                      ? "Stanze, monolocali e bilocali. Zero agenzia, contratto regolare."
+                      : "Rooms, studios and one-bedrooms. No agency, regular contract."}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </section>
+
           {/* WHY THIS ZONE */}
           <section className="py-8 grid md:grid-cols-3 gap-4">
             {[

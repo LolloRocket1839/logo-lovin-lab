@@ -1,49 +1,50 @@
 ## Obiettivo
+Rendere la nuova landing `/affitti-lingotto-ospedali-torino` realmente raggiungibile da chi cerca casa in zona Lingotto/Ospedali, sia dal sito sia dai motori di ricerca.
 
-Catturare lead di **chi cerca casa in affitto** nella zona Lingotto / Nizza Millefonti / Ospedali (Molinette, CTO, Sant'Anna, Regina Margherita), oggi non coperti: la pagina esistente `/zone/nizza-millefonti-ospedali` è informativa ma è tarata su specializzandi/sanitari, e `/vendi/lingotto-nizza-millefonti` è per chi vende. Manca una landing inquilino-generalista con form di waitlist e CTA WhatsApp.
+## Cosa cambia
 
-## Cosa costruire
+### 1. Entry points interni (visibilità immediata)
+- **Card prominente su `/zone/nizza-millefonti-ospedali`**: banner "Cerchi casa qui? Lista d'attesa affitti" sopra la fold, link diretto alla landing.
+- **Sezione su `/studenti`**: card dedicata "Affitti vicino Molinette / CTO / Politecnico Sede Lingotto" nel blocco zone, accanto a San Salvario/Cittadella.
+- **Footer**: nuova voce sotto "Affitti / Studenti" → "Affitti Lingotto e Ospedali".
+- **Homepage** (`Index.tsx`): inserire un riferimento nella sezione studenti/affitti esistente, senza nuovi blocchi (rispetta "limit details, make every detail perfect").
+- **Cross-link da `/affitto-stanza-torino`** (NeighborhoodsIndex): card zona Nizza/Lingotto che punta alla landing invece che solo al NeighborhoodPage.
 
-### 1. Nuova landing `/affitti-lingotto-ospedali-torino`
+### 2. Discoverability per chi cerca su Google
+- **Submit manuale a Google Search Console**: usare la edge function `submit-sitemap` già esistente per forzare il re-crawl della sitemap aggiornata.
+- **Verifica metadata**: controllare che la landing abbia title <60 char con keyword primaria ("Affitti Lingotto Torino vicino Molinette"), meta description <160 char con CTA, canonical corretto, OG image 1200x630.
+- **Breadcrumb JSON-LD esteso**: aggiungere `RealEstateAgent` / `Service` schema con `areaServed` = Lingotto/Nizza Millefonti per rinforzare il segnale locale.
+- **Aggiunta a `llms.txt` e `llms-full.txt`**: così Perplexity/ChatGPT/Claude la citano quando uno chiede "dove trovare casa vicino Molinette Torino".
 
-Pagina SEO ottimizzata (target: "affitti Lingotto Torino", "case in affitto vicino Molinette", "stanze Nizza Millefonti") costruita su `SeoLandingTemplate` esteso o componente dedicato. Sezioni:
+### 3. Rinforzo auto-linking dai blog
+- Verificare che gli articoli rilevanti (es. guide San Salvario, vita studentesca, Politecnico) abbiano i trigger esatti nel testo. Se mancano, aggiungere 1-2 menzioni naturali per attivare l'auto-link.
+- Aggiungere trigger aggiuntivi in `linkableContent.ts`: "vivere vicino molinette", "alloggio specializzandi", "casa cto torino", "affitto politecnico lingotto".
 
-- Hero: H1 "Cerca casa in zona Lingotto, Nizza Millefonti e Ospedali" + sub con tempi a Molinette/CTO/Politecnico
-- 3 pillars: vicinanza ospedali · contratti regolari (transitorio/4+4/studenti) · zero agenzia
-- Cards quartieri micro (Nizza, Millefonti, Lingotto, Italia 61) con affitto medio
-- Tabella tempi verso ospedali + Politecnico (riuso array `HOSPITALS`)
-- Form waitlist inquilino (email + telefono opz + budget + tipo: studente / specializzando / lavoratore / famiglia + data ingresso desiderata + note)
-- CTA WhatsApp a Lorenzo con messaggio precompilato
-- FAQ (deposito, contratti, animali, durata) → JSON-LD FAQPage
-- JSON-LD WebPage + BreadcrumbList
+### 4. Canali diretti (traffico immediato, non SEO)
+- **WhatsApp link condivisibile**: generare URL `/affitti-lingotto-ospedali-torino?utm=wa-direct` da inoltrare nei gruppi Telegram/WhatsApp di studenti Polito/UniTo e specializzandi Molinette.
+- **Annuncio nel CookieBanner / AnnouncementBanner** (opzionale, 7 giorni): "Nuovo: lista d'attesa affitti Lingotto/Ospedali" con CTA alla landing. Disattivabile.
 
-### 2. Lead capture
+## Cosa NON cambia
+- Nessuna modifica al backend, RLS, tabelle leads, edge functions.
+- Nessuna modifica alla logica di `useLeadCapture` (la landing usa già `leadType: student` + source `nizza-millefonti-tenant-*` che triggera il WhatsApp prioritario).
+- Nessun nuovo design system o palette.
 
-Riuso `useLeadCapture` con:
-- `leadType: "student"` (riusa template email esistenti) oppure `"general"` se non studente
-- `source: "affitti-lingotto-ospedali-<audience>"` (prefisso `nizza-millefonti-` per attivare il **ping WhatsApp prioritario già esistente** in `useLeadCapture.ts` → priority student rule)
-- `metadata`: budget, audience, move_in_date, note
+## File toccati (stimato)
+- `src/pages/zone/NizzaMillefontiOspedali.tsx` (banner)
+- `src/pages/Students.tsx` (card zona)
+- `src/components/layout/Footer.tsx` (voce menu)
+- `src/components/layout/MobileFooter.tsx`
+- `src/pages/Index.tsx` (1 link contestuale)
+- `src/pages/NeighborhoodsIndex.tsx` (card aggiornata)
+- `src/pages/landings/AffittiLingottoOspedali.tsx` (verifica meta + schema)
+- `src/data/linkableContent.ts` (trigger extra)
+- `public/llms.txt`, `public/llms-full.txt`
+- Eventuale chiamata `submit-sitemap` per Google
 
-Nessuna nuova tabella, nessuna migration: i lead finiscono in `leads` via `insert_lead` RPC + Formspree, e Lorenzo riceve WhatsApp istantaneo via `notify-investor-whatsapp` (già scattante per source `nizza-millefonti-*`).
+## Tempistica realistica per "essere trovati"
+- **Entry points interni**: immediato dopo deploy.
+- **Indicizzazione Google base**: 3-14 giorni dopo submit sitemap.
+- **Posizionamento competitivo** ("affitti Lingotto Torino"): 1-3 mesi, dipende da backlink e traffico organico.
+- **Citazioni AI (ChatGPT, Perplexity)**: 1-4 settimane dopo aggiornamento `llms.txt` + indicizzazione.
 
-### 3. Integrazione
-
-- Route lazy in `AnimatedRoutes.tsx`: `/affitti-lingotto-ospedali-torino`
-- Sitemap: aggiunta in `scripts/generate-sitemap.ts` con priority 0.8
-- `linkableContent.ts`: voce ad alta priorità con trigger "affitti lingotto", "casa molinette", "stanza nizza millefonti", "affitto vicino ospedale" → auto-link dai blog
-- Link interni: aggiungere reference dalla pagina `/zone/nizza-millefonti-ospedali` (sezione "stai cercando casa qui?") e dai blog post "affittare-vicino-molinette-specializzandi-2026"
-- Thank you page: parametro `?lead=tenant-lingotto` per messaggio dedicato (riuso `ThankYou.tsx` esistente)
-
-## Out of scope
-
-- Nessuna nuova tabella Supabase
-- Nessuna modifica admin / Leads UI (i lead arrivano già filtrabili per source)
-- Nessun matching automatico con `property_listings` (può essere fase 2)
-
-## File toccati
-
-- **Nuovo** `src/pages/landings/AffittiLingottoOspedali.tsx`
-- **Edit** `src/components/AnimatedRoutes.tsx` (route)
-- **Edit** `scripts/generate-sitemap.ts`
-- **Edit** `src/data/linkableContent.ts`
-- **Edit** `src/pages/zone/NizzaMillefontiOspedali.tsx` (banner/link interno "cerchi casa? lascia preferenze")
+Per traffico immediato, la leva vera nel breve è canali diretti (WhatsApp/Telegram) + entry points interni. La SEO arriva dopo.
