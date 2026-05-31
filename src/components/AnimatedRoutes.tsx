@@ -123,6 +123,8 @@ export const AnimatedRoutes = () => {
             <Route path="/vendere-casa-velocemente-torino" element={<VendereVelocemente />} />
             <Route path="/comprare-casa-affittata-torino" element={<ComprareCasaAffittata />} />
             <Route path="/investire-immobiliare-torino" element={<InvestireImmobiliareTorino />} />
+            <Route path="/affitti-lingotto-ospedali-torino" element={<AffittiLingottoOspedali />} />
+            <Route path="/rent-lingotto-hospitals-turin" element={<AffittiLingottoOspedali />} />
             <Route path="/accedi" element={<Auth />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
