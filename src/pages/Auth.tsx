@@ -16,7 +16,8 @@ export default function Auth() {
   const lang = i18n.language.startsWith("en") ? "en" : "it";
   const navigate = useNavigate();
   const { user } = useAuth();
-  const [isLogin, setIsLogin] = useState(true);
+  const ALLOWED_EMAIL = "lorenzo.onijoseph@gmail.com";
+  const [isLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
@@ -31,27 +32,17 @@ export default function Auth() {
     setLoading(true);
 
     try {
-      if (isLogin) {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
-        toast.success(lang === "it" ? "Accesso effettuato!" : "Signed in!");
-        navigate("/contratti-locazione");
-      } else {
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            data: { full_name: fullName },
-            emailRedirectTo: window.location.origin,
-          },
-        });
-        if (error) throw error;
-        toast.success(
+      if (email.trim().toLowerCase() !== ALLOWED_EMAIL) {
+        throw new Error(
           lang === "it"
-            ? "Registrazione completata! Controlla la tua email per verificare l'account."
-            : "Sign up complete! Check your email to verify your account."
+            ? "Accesso riservato. Questo account non è autorizzato."
+            : "Access restricted. This account is not authorized."
         );
       }
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      toast.success(lang === "it" ? "Accesso effettuato!" : "Signed in!");
+      navigate("/contratti-locazione");
     } catch (error: any) {
       toast.error(error.message);
     } finally {
@@ -134,12 +125,6 @@ export default function Auth() {
                 {loading ? "..." : labels.submit}
               </Button>
             </form>
-            <button
-              onClick={() => setIsLogin(!isLogin)}
-              className="mt-4 w-full text-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {labels.toggle}
-            </button>
           </CardContent>
         </Card>
       </main>
