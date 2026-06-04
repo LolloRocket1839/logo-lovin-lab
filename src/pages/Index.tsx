@@ -15,6 +15,7 @@ import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { BrandWordmark } from "@/components/immersive/BrandWordmark";
 import { ScrollProgressRail } from "@/components/immersive/ScrollProgressRail";
 import { ImmersiveAct } from "@/components/immersive/ImmersiveAct";
+import { PinnedSceneStage } from "@/components/immersive/PinnedSceneStage";
 
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
