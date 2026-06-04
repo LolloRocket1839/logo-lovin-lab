@@ -15,6 +15,7 @@ import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { BrandWordmark } from "@/components/immersive/BrandWordmark";
 import { ScrollProgressRail } from "@/components/immersive/ScrollProgressRail";
 import { ImmersiveAct } from "@/components/immersive/ImmersiveAct";
+import { PinnedSceneStage } from "@/components/immersive/PinnedSceneStage";
 
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
@@ -113,55 +114,82 @@ const Index = () => {
       <ScrollProgressRail />
 
       <div className="relative z-10">
-        {/* ACT I — Hero */}
-        <div id="hero">
-          <ImmersiveHero />
-        </div>
+        <PinnedSceneStage
+          total="05"
+          scenes={[
+            {
+              id: "hero",
+              node: (
+                <div id="hero">
+                  <ImmersiveHero />
+                  <Suspense fallback={null}>
+                    <TrustBadge />
+                  </Suspense>
+                  <Suspense fallback={null}>
+                    <QuizPositionAB showOn="B">
+                      <InvestorQuiz />
+                    </QuizPositionAB>
+                  </Suspense>
+                </div>
+              ),
+            },
+            {
+              id: "how",
+              index: "02",
+              label: isItalian ? "Come funziona" : "How it works",
+              node: (
+                <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
+                  <HowItWorks />
+                  <QuizPositionAB showOn="A">
+                    <InvestorQuiz />
+                  </QuizPositionAB>
+                </Suspense>
+              ),
+            },
+            {
+              id: "investor",
+              index: "03",
+              label: isItalian ? "Investitori" : "Investors",
+              node: (
+                <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
+                  <InvestorSection />
+                </Suspense>
+              ),
+            },
+            {
+              id: "seller",
+              index: "04",
+              label: isItalian ? "Vendi casa" : "Sell",
+              node: (
+                <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
+                  <SellerSection />
+                </Suspense>
+              ),
+            },
+            {
+              id: "footer",
+              index: "05",
+              label: isItalian ? "Contatti" : "Contact",
+              node: (
+                <Suspense fallback={null}>
+                  <div className="hidden md:block">
+                    <Footer />
+                  </div>
+                  <div className="md:hidden">
+                    <MobileFooter />
+                  </div>
+                </Suspense>
+              ),
+            },
+          ]}
+        />
 
-        {/* TrustBadge */}
         <Suspense fallback={null}>
-          <TrustBadge />
-        </Suspense>
-
-        {/* Quiz position A/B test — Variant B */}
-        <Suspense fallback={null}>
-          <QuizPositionAB showOn="B">
-            <InvestorQuiz />
-          </QuizPositionAB>
-        </Suspense>
-
-        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-          {/* ACT II — How it works */}
-          <ImmersiveAct index="02" label={isItalian ? "Come funziona" : "How it works"} total="05">
-            <HowItWorks />
-          </ImmersiveAct>
-
-          {/* Quiz position A/B test — Variant A */}
-          <QuizPositionAB showOn="A">
-            <InvestorQuiz />
-          </QuizPositionAB>
-
-          {/* ACT III — Investor */}
-          <ImmersiveAct index="03" label={isItalian ? "Investitori" : "Investors"} total="05">
-            <InvestorSection />
-          </ImmersiveAct>
-
-          {/* ACT IV — Seller */}
-          <ImmersiveAct index="04" label={isItalian ? "Vendi casa" : "Sell"} total="05">
-            <SellerSection />
-          </ImmersiveAct>
-
-          {/* ACT V — Footer */}
-          <div className="hidden md:block">
-            <Footer />
-          </div>
-          <div className="md:hidden">
-            <MobileFooter />
-          </div>
           <ScrollToTop />
           <StickyCTA />
           <BottomNav />
         </Suspense>
+
         <Suspense fallback={null}>
           <WhatsAppFAB />
           <ExitIntentPopup source="homepage" />
