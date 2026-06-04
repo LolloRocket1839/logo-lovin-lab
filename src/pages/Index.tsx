@@ -107,56 +107,67 @@ const Index = () => {
       </Helmet>
       
       <Navigation />
-      
-      {/* Immersive Hero */}
-      <div id="hero">
-        <ImmersiveHero />
+
+      {/* Immersive background canvas */}
+      <BrandWordmark word={isItalian ? "TORINO" : "TORINO"} />
+      <ScrollProgressRail />
+
+      <div className="relative z-10">
+        {/* ACT I — Hero */}
+        <div id="hero">
+          <ImmersiveHero />
+        </div>
+
+        {/* TrustBadge */}
+        <Suspense fallback={null}>
+          <TrustBadge />
+        </Suspense>
+
+        {/* Quiz position A/B test — Variant B */}
+        <Suspense fallback={null}>
+          <QuizPositionAB showOn="B">
+            <InvestorQuiz />
+          </QuizPositionAB>
+        </Suspense>
+
+        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
+          {/* ACT II — How it works */}
+          <ImmersiveAct index="02" label={isItalian ? "Come funziona" : "How it works"} total="05">
+            <HowItWorks />
+          </ImmersiveAct>
+
+          {/* Quiz position A/B test — Variant A */}
+          <QuizPositionAB showOn="A">
+            <InvestorQuiz />
+          </QuizPositionAB>
+
+          {/* ACT III — Investor */}
+          <ImmersiveAct index="03" label={isItalian ? "Investitori" : "Investors"} total="05">
+            <InvestorSection />
+          </ImmersiveAct>
+
+          {/* ACT IV — Seller */}
+          <ImmersiveAct index="04" label={isItalian ? "Vendi casa" : "Sell"} total="05">
+            <SellerSection />
+          </ImmersiveAct>
+
+          {/* ACT V — Footer */}
+          <div className="hidden md:block">
+            <Footer />
+          </div>
+          <div className="md:hidden">
+            <MobileFooter />
+          </div>
+          <ScrollToTop />
+          <StickyCTA />
+          <BottomNav />
+        </Suspense>
+        <Suspense fallback={null}>
+          <WhatsAppFAB />
+          <ExitIntentPopup source="homepage" />
+          <ScrollQualifier />
+        </Suspense>
       </div>
-      
-      {/* TrustBadge - now visible on all devices */}
-      <Suspense fallback={null}>
-        <TrustBadge />
-      </Suspense>
-
-      {/* Quiz position A/B test — Variant B: quiz right after hero */}
-      <Suspense fallback={null}>
-        <QuizPositionAB showOn="B">
-          <InvestorQuiz />
-        </QuizPositionAB>
-      </Suspense>
-
-      <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-        
-        {/* How It Works Section - unified component handles desktop/mobile */}
-        <HowItWorks />
-        
-        {/* Quiz position A/B test — Variant A (current): after HowItWorks */}
-        <QuizPositionAB showOn="A">
-          <InvestorQuiz />
-        </QuizPositionAB>
-        
-        {/* Investor Section */}
-        <InvestorSection />
-        
-        <SellerSection />
-        
-        
-        <div className="hidden md:block">
-          <Footer />
-        </div>
-        
-        <div className="md:hidden">
-          <MobileFooter />
-        </div>
-        <ScrollToTop />
-        <StickyCTA />
-        <BottomNav />
-      </Suspense>
-      <Suspense fallback={null}>
-        <WhatsAppFAB />
-        <ExitIntentPopup source="homepage" />
-        <ScrollQualifier />
-      </Suspense>
     </main>
   );
 };
