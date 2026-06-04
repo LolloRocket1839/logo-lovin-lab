@@ -118,22 +118,13 @@ const Index = () => {
         <LiquidHomepageStory />
 
         {/* Full sections below — for SEO, conversion paths and deep-link anchors */}
-        <div id="hero" className="sr-only" aria-hidden="true">
-          <ImmersiveHero />
-        </div>
-
         <Suspense fallback={null}>
           <TrustBadge />
         </Suspense>
 
         <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
           <HowItWorks />
-          <QuizPositionAB showOn="A">
-            <InvestorQuiz />
-          </QuizPositionAB>
-          <QuizPositionAB showOn="B">
-            <InvestorQuiz />
-          </QuizPositionAB>
+          <InvestorQuiz />
         </Suspense>
 
         <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
@@ -152,6 +143,7 @@ const Index = () => {
             <MobileFooter />
           </div>
         </Suspense>
+
 
 
         <Suspense fallback={null}>
