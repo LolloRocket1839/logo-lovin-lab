@@ -49,7 +49,7 @@ export const LiquidHomepageStory = () => {
   ];
 
   // Ambient background drift — a single big word slides across.
-  const wordX = useTransform(p, [0, 1], reduced ? [0, 0] : ["8%", "-22%"]);
+  const wordX = useTransform(p, [0, 1], reduced ? ["0%", "0%"] : ["8%", "-22%"]);
   const wordOpacity = useTransform(p, [0, 0.1, 0.9, 1], [0, 0.06, 0.06, 0]);
 
   return (

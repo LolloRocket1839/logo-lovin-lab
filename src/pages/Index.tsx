@@ -15,7 +15,7 @@ import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { BrandWordmark } from "@/components/immersive/BrandWordmark";
 import { ScrollProgressRail } from "@/components/immersive/ScrollProgressRail";
 import { ImmersiveAct } from "@/components/immersive/ImmersiveAct";
-import { PinnedSceneStage } from "@/components/immersive/PinnedSceneStage";
+import { LiquidHomepageStory } from "@/components/immersive/LiquidHomepageStory";
 
 // Lazy load below-the-fold components
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
@@ -114,75 +114,45 @@ const Index = () => {
       <ScrollProgressRail />
 
       <div className="relative z-10">
-        <PinnedSceneStage
-          total="05"
-          scenes={[
-            {
-              id: "hero",
-              node: (
-                <div id="hero">
-                  <ImmersiveHero />
-                  <Suspense fallback={null}>
-                    <TrustBadge />
-                  </Suspense>
-                  <Suspense fallback={null}>
-                    <QuizPositionAB showOn="B">
-                      <InvestorQuiz />
-                    </QuizPositionAB>
-                  </Suspense>
-                </div>
-              ),
-            },
-            {
-              id: "how",
-              index: "02",
-              label: isItalian ? "Come funziona" : "How it works",
-              node: (
-                <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-                  <HowItWorks />
-                  <QuizPositionAB showOn="A">
-                    <InvestorQuiz />
-                  </QuizPositionAB>
-                </Suspense>
-              ),
-            },
-            {
-              id: "investor",
-              index: "03",
-              label: isItalian ? "Investitori" : "Investors",
-              node: (
-                <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-                  <InvestorSection />
-                </Suspense>
-              ),
-            },
-            {
-              id: "seller",
-              index: "04",
-              label: isItalian ? "Vendi casa" : "Sell",
-              node: (
-                <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-                  <SellerSection />
-                </Suspense>
-              ),
-            },
-            {
-              id: "footer",
-              index: "05",
-              label: isItalian ? "Contatti" : "Contact",
-              node: (
-                <Suspense fallback={null}>
-                  <div className="hidden md:block">
-                    <Footer />
-                  </div>
-                  <div className="md:hidden">
-                    <MobileFooter />
-                  </div>
-                </Suspense>
-              ),
-            },
-          ]}
-        />
+        {/* Liquid pinned story — the homepage narrative in a single frame */}
+        <LiquidHomepageStory />
+
+        {/* Full sections below — for SEO, conversion paths and deep-link anchors */}
+        <div id="hero" className="sr-only" aria-hidden="true">
+          <ImmersiveHero />
+        </div>
+
+        <Suspense fallback={null}>
+          <TrustBadge />
+        </Suspense>
+
+        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
+          <HowItWorks />
+          <QuizPositionAB showOn="A">
+            <InvestorQuiz />
+          </QuizPositionAB>
+          <QuizPositionAB showOn="B">
+            <InvestorQuiz />
+          </QuizPositionAB>
+        </Suspense>
+
+        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
+          <InvestorSection />
+        </Suspense>
+
+        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
+          <SellerSection />
+        </Suspense>
+
+        <Suspense fallback={null}>
+          <div className="hidden md:block">
+            <Footer />
+          </div>
+          <div className="md:hidden">
+            <MobileFooter />
+          </div>
+        </Suspense>
+
 
         <Suspense fallback={null}>
           <ScrollToTop />
