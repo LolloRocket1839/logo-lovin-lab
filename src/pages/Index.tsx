@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { MobileFooter } from "@/components/layout/MobileFooter";
 
 // Innovative components - loaded immediately for impact
-import { ImmersiveHero } from "@/components/innovative/ImmersiveHero";
+
 import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { BrandWordmark } from "@/components/immersive/BrandWordmark";
 import { ScrollProgressRail } from "@/components/immersive/ScrollProgressRail";
@@ -21,7 +21,7 @@ import { LiquidHomepageStory } from "@/components/immersive/LiquidHomepageStory"
 const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
 const InvestorQuiz = lazy(() => import("@/components/InvestorQuiz"));
 const InvestorSection = lazy(() => import("@/components/sections/InvestorSection"));
-const QuizPositionAB = lazy(() => import("@/components/QuizPositionAB").then(m => ({ default: m.QuizPositionAB })));
+
 
 const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
 
