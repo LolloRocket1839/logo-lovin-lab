@@ -1,58 +1,32 @@
-## Goal
+## Plan
 
-Trasformare la homepage in un'esperienza **pinned single-viewport**: la pagina non si allunga visivamente, lo scroll diventa il "telecomando" che fa entrare e uscire le scene (atti) nello stesso quadro. Niente scroll lungo, niente sezioni che scorrono via — gli elementi **vanno e vengono** sopra lo stesso canvas. Logo invariato.
+Correggo lo stage immersivo perché ora sembra “non succedere nulla”: ogni scena è `overflow-y-auto`, quindi su mobile il gesto viene catturato dal layer interno invece di far avanzare lo scroll del contenitore pinned.
 
-## Comportamento
+### Cosa cambio
 
-- Una "scena" alla volta occupa il viewport, ancorata (pinned).
-- Lo scroll fisico avviene su uno spacer alto (es. 500vh), ma il contenuto **resta fermo** mentre dentro al frame le scene si dissolvono / traslano leggermente / si scambiano (cross-fade + soft Y/X 20–40px, blur 4→0).
-- 5 atti: Hero · Come funziona · Investitori · Vendi · Footer.
-- Il rail di progresso a destra mostra in che atto sei (già esistente, lo riusiamo).
-- Su mobile: stesso pattern ma con altezze ridotte e transizioni più brevi; rispetta `prefers-reduced-motion` (fallback a fade istantaneo).
+1. **Rendo lo scroll realmente globale**
+   - Tolgo `overflow-y-auto` dai singoli layer scena.
+   - I layer restano fissi dentro il canvas pinned e non intercettano lo scroll come mini-pagine interne.
 
-## Cosa NON cambia
+2. **Rendo il ritmo più immediato**
+   - Riduzione altezza virtuale: da 100vh per scena a circa 55-60vh per scena.
+   - Così basta poco scroll per vedere la scena successiva.
 
-- Logo, copy, palette, tipografia, A/B test, analytics, routing, dati.
-- I componenti interni (`ImmersiveHero`, `HowItWorks`, `InvestorSection`, `SellerSection`, `Footer`) restano invariati internamente.
+3. **Transizioni più fluide e leggere**
+   - Rimuovo il blur animato, che su mobile può causare scatti.
+   - Uso solo `opacity`, `y` e `scale`, compositati via GPU.
+   - Finestra di transizione più corta, così non resta tutto “fermo” troppo a lungo.
 
-## Architettura tecnica
+4. **Proteggo layout e logo**
+   - Non tocco il logo.
+   - Non cambio contenuti, CTA, sezioni o business copy.
+   - Intervengo solo su `PinnedSceneStage.tsx` e, se necessario, sul valore `vhPerScene` in `Index.tsx`.
 
-Nuovo componente `PinnedSceneStage`:
+### Risultato atteso
 
-```text
-<section style={height: 500vh}>           ← spacer che genera lo scroll
-  <div className="sticky top-0 h-screen"> ← canvas pinned
-    {scenes.map((Scene, i) => (
-      <motion.div                          ← cross-fade + micro-translate
-        style={{ opacity, y, filter:blur }}
-      >
-        <Scene />
-      </motion.div>
-    ))}
-  </div>
-</section>
-```
+Scrollando, la pagina resta nello stesso viewport, ma le sezioni cambiano davvero e più velocemente, senza effetto scattoso o “non succede nulla”.
 
-- `useScroll({ target: spacerRef })` da framer-motion.
-- Per ogni scena calcolo finestre di progress (es. scena 2 visibile 0.2–0.4) → `useTransform` su opacity (0→1→1→0), y (24→0→0→-24), blur (6→0→0→6).
-- Transizione di 200–300ms equivalente in spazio scroll, easing `cubic-bezier(0.16,1,0.3,1)` (coerente con `ImmersiveAct` attuale).
-- Le scene interne mantengono il proprio layout ma vengono renderizzate dentro un contenitore `h-screen overflow-y-auto` così se una scena è più alta del viewport puoi scrollare **internamente** senza rompere il pin (gesture nested gestita).
+### File coinvolti
 
-### File toccati
-
-- **Nuovo**: `src/components/immersive/PinnedSceneStage.tsx` (orchestratore scene + scroll progress).
-- **Nuovo**: `src/components/immersive/Scene.tsx` (wrapper motion per singola scena).
-- **Modificato**: `src/pages/Index.tsx` — sostituisce la sequenza `ImmersiveAct` con `<PinnedSceneStage scenes={[...]} />`. `BrandWordmark` + `ScrollProgressRail` restano.
-- **Rimossi dal flow** (non cancellati): wrapping `ImmersiveAct` numerato per Acts 2–4 (la numerazione "02/05" passa dentro al rail/eyebrow della scena attiva).
-
-### Mobile / accessibilità
-
-- `useReducedMotion` → disattiva blur/translate, lascia solo opacity istantanea.
-- Touch: lo scroll del browser resta nativo (no hijack), solo l'effetto visivo è agganciato a `scrollYProgress`.
-- Scene con contenuto > viewport: scroll interno con `overscroll-contain` per evitare conflitti.
-
-## Out of scope
-
-- Nessuna nuova libreria (resta `framer-motion`).
-- Nessuna modifica a copy, logo, palette, schema, edge functions.
-- Altre pagine non toccate.
+- `src/components/immersive/PinnedSceneStage.tsx`
+- opzionale: `src/pages/Index.tsx` solo per passare un ritmo scroll più rapido
