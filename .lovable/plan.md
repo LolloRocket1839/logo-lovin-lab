@@ -1,45 +1,58 @@
-# Immersive homepage redesign
+## Goal
 
-Transform `/` (Index.tsx) into a single-page, scroll-driven immersive experience. Keep all current content, logo, brand palette (jungle green + cream) and Inter typography. Change only how it is composed, paced and animated.
+Trasformare la homepage in un'esperienza **pinned single-viewport**: la pagina non si allunga visivamente, lo scroll diventa il "telecomando" che fa entrare e uscire le scene (atti) nello stesso quadro. Niente scroll lungo, niente sezioni che scorrono via — gli elementi **vanno e vengono** sopra lo stesso canvas. Logo invariato.
 
-## Principles
+## Comportamento
 
-- One continuous canvas. No abrupt section breaks — content reveals on a fixed scroll spine.
-- Horizontal motion as a counterpoint to vertical scroll (sideways pans, marquee data strips, parallax depth layers).
-- Quiet luxury: 300–600ms fade-ups, soft easing, generous negative space. No "AI generic" gradients, no purple, no boilerplate cards-in-rows.
-- Respect `prefers-reduced-motion` (existing `useReducedMotion` hook) — degrade to static fade-ins.
+- Una "scena" alla volta occupa il viewport, ancorata (pinned).
+- Lo scroll fisico avviene su uno spacer alto (es. 500vh), ma il contenuto **resta fermo** mentre dentro al frame le scene si dissolvono / traslano leggermente / si scambiano (cross-fade + soft Y/X 20–40px, blur 4→0).
+- 5 atti: Hero · Come funziona · Investitori · Vendi · Footer.
+- Il rail di progresso a destra mostra in che atto sei (già esistente, lo riusiamo).
+- Su mobile: stesso pattern ma con altezze ridotte e transizioni più brevi; rispetta `prefers-reduced-motion` (fallback a fade istantaneo).
 
-## Scroll architecture (5 acts, same page)
+## Cosa NON cambia
+
+- Logo, copy, palette, tipografia, A/B test, analytics, routing, dati.
+- I componenti interni (`ImmersiveHero`, `HowItWorks`, `InvestorSection`, `SellerSection`, `Footer`) restano invariati internamente.
+
+## Architettura tecnica
+
+Nuovo componente `PinnedSceneStage`:
 
 ```text
-ACT I   Hero — pinned full-viewport logo + headline, parallax cream/forest layers
-ACT II  How it works — horizontal scroll-jack (3 panels translate sideways while page is pinned)
-ACT III Investor proof — sticky left column (numbers/quiz CTA) + right column scroll
-ACT IV  Seller offer — split-screen reveal, image clip-path expands on scroll
-ACT V   Footer transition — gradient dissolve into footer, WhatsApp FAB persistent
+<section style={height: 500vh}>           ← spacer che genera lo scroll
+  <div className="sticky top-0 h-screen"> ← canvas pinned
+    {scenes.map((Scene, i) => (
+      <motion.div                          ← cross-fade + micro-translate
+        style={{ opacity, y, filter:blur }}
+      >
+        <Scene />
+      </motion.div>
+    ))}
+  </div>
+</section>
 ```
 
-A single thin progress rail on the right edge shows the act position (replaces today's section jumps).
+- `useScroll({ target: spacerRef })` da framer-motion.
+- Per ogni scena calcolo finestre di progress (es. scena 2 visibile 0.2–0.4) → `useTransform` su opacity (0→1→1→0), y (24→0→0→-24), blur (6→0→0→6).
+- Transizione di 200–300ms equivalente in spazio scroll, easing `cubic-bezier(0.16,1,0.3,1)` (coerente con `ImmersiveAct` attuale).
+- Le scene interne mantengono il proprio layout ma vengono renderizzate dentro un contenitore `h-screen overflow-y-auto` così se una scena è più alta del viewport puoi scrollare **internamente** senza rompere il pin (gesture nested gestita).
 
-## Technical approach
+### File toccati
 
-- Add `framer-motion`'s `useScroll` + `useTransform` driven from a single root container in `Index.tsx`.
-- Wrap each existing section component (`ImmersiveHero`, `HowItWorks`, `InvestorSection`, `SellerSection`) in a new `<ImmersiveAct>` wrapper that handles pin / horizontal-translate / opacity timeline. Sections keep their internal markup and copy unchanged.
-- Add a new `useScrollSpine` hook to centralize scroll progress and broadcast to acts.
-- New components:
-  - `src/components/immersive/ScrollSpine.tsx` — root pinned canvas + progress rail
-  - `src/components/immersive/ImmersiveAct.tsx` — per-section pin/translate wrapper
-  - `src/components/immersive/HorizontalReel.tsx` — Act II sideways panels
-  - `src/components/immersive/StickyDuo.tsx` — Act III split layout
-- Touch only `src/pages/Index.tsx` and the wrappers above. Do **not** modify section internals, business logic, analytics hooks, or the Navigation/Footer.
-- Mobile (≤ md): pin/horizontal effects collapse to vertical fades; horizontal reel becomes a swipeable snap-scroll strip (no scroll-jack on touch).
+- **Nuovo**: `src/components/immersive/PinnedSceneStage.tsx` (orchestratore scene + scroll progress).
+- **Nuovo**: `src/components/immersive/Scene.tsx` (wrapper motion per singola scena).
+- **Modificato**: `src/pages/Index.tsx` — sostituisce la sequenza `ImmersiveAct` con `<PinnedSceneStage scenes={[...]} />`. `BrandWordmark` + `ScrollProgressRail` restano.
+- **Rimossi dal flow** (non cancellati): wrapping `ImmersiveAct` numerato per Acts 2–4 (la numerazione "02/05" passa dentro al rail/eyebrow della scena attiva).
+
+### Mobile / accessibilità
+
+- `useReducedMotion` → disattiva blur/translate, lascia solo opacity istantanea.
+- Touch: lo scroll del browser resta nativo (no hijack), solo l'effetto visivo è agganciato a `scrollYProgress`.
+- Scene con contenuto > viewport: scroll interno con `overscroll-contain` per evitare conflitti.
 
 ## Out of scope
 
-- No copy changes, no logo changes, no new data, no new routes.
-- No new dependencies (framer-motion already in project).
-- Other pages (Blog, Investors, etc.) untouched in this pass.
-
-## Before I build
-
-I'll first generate 3 rendered design directions (composition + motion register variants — same brand palette and Inter locked) using the design directions tool so you can pick the exact feel. Then implement the chosen one.
+- Nessuna nuova libreria (resta `framer-motion`).
+- Nessuna modifica a copy, logo, palette, schema, edge functions.
+- Altre pagine non toccate.
