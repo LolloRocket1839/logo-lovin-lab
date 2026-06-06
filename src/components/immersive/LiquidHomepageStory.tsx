@@ -41,11 +41,11 @@ export const LiquidHomepageStory = () => {
   // Scene boundaries on the unified progress timeline.
   // 5 scenes across ~300vh of virtual scroll.
   const scenes = [
-    { id: "hero", in: 0.0, out: 0.22 },
-    { id: "how", in: 0.18, out: 0.42 },
-    { id: "invest", in: 0.38, out: 0.62 },
-    { id: "sell", in: 0.58, out: 0.82 },
-    { id: "talk", in: 0.78, out: 1.0 },
+    { id: "hero", in: 0.0, out: 0.22, isFirst: true, isLast: false },
+    { id: "how", in: 0.18, out: 0.42, isFirst: false, isLast: false },
+    { id: "invest", in: 0.38, out: 0.62, isFirst: false, isLast: false },
+    { id: "sell", in: 0.58, out: 0.82, isFirst: false, isLast: false },
+    { id: "talk", in: 0.78, out: 1.0, isFirst: false, isLast: true },
   ];
 
   // Ambient background drift — a single big word slides across.
@@ -82,7 +82,7 @@ export const LiquidHomepageStory = () => {
         />
 
         {/* SCENE 1 — Hero */}
-        <Scene p={p} range={[scenes[0].in, scenes[0].out]} reduced={reduced}>
+        <Scene p={p} range={[scenes[0].in, scenes[0].out]} reduced={reduced} isFirst>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
             <SceneIndex index="01" total="05" label={isItalian ? "Inizio" : "Start"} />
             <div className="mt-6 md:mt-10">
@@ -184,7 +184,7 @@ export const LiquidHomepageStory = () => {
         </Scene>
 
         {/* SCENE 5 — Talk */}
-        <Scene p={p} range={[scenes[4].in, scenes[4].out]} reduced={reduced}>
+        <Scene p={p} range={[scenes[4].in, scenes[4].out]} reduced={reduced} isLast>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
             <SceneIndex index="05" total="05" label={isItalian ? "Contatti" : "Contact"} />
             <h2 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
@@ -236,30 +236,36 @@ interface SceneProps {
   range: [number, number];
   reduced: boolean;
   children: ReactNode;
+  isFirst?: boolean;
+  isLast?: boolean;
 }
 
-const Scene = ({ p, range, reduced, children }: SceneProps) => {
+const Scene = ({ p, range, reduced, children, isFirst, isLast }: SceneProps) => {
   const [a, b] = range;
   const mid = (a + b) / 2;
   const fade = (b - a) * 0.18;
 
+  // First scene must be fully visible at progress 0 (page load).
+  // Last scene must stay fully visible after its end.
   const opacity = useTransform(
     p,
     [a - 0.001, a + fade, b - fade, b + 0.001],
-    [0, 1, 1, 0]
+    [isFirst ? 1 : 0, 1, 1, isLast ? 1 : 0]
   );
 
   // Elements enter from below, drift up and out — liquid.
   const y = useTransform(
     p,
     [a, mid, b],
-    reduced ? ["0%", "0%", "0%"] : ["8%", "0%", "-8%"]
+    reduced
+      ? ["0%", "0%", "0%"]
+      : [isFirst ? "0%" : "8%", "0%", isLast ? "0%" : "-8%"]
   );
 
   const scale = useTransform(
     p,
     [a, mid, b],
-    reduced ? [1, 1, 1] : [1.02, 1, 0.985]
+    reduced ? [1, 1, 1] : [isFirst ? 1 : 1.02, 1, isLast ? 1 : 0.985]
   );
 
   // Disable pointer-events when not visible enough.
