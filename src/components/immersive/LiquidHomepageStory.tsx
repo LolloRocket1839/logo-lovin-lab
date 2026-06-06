@@ -84,9 +84,11 @@ export const LiquidHomepageStory = () => {
         {/* SCENE 1 — Hero */}
         <Scene p={p} range={[scenes[0].in, scenes[0].out]} reduced={reduced} isFirst>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
-            <SceneIndex index="01" total="05" label={isItalian ? "Inizio" : "Start"} />
-            <div className="mt-6 md:mt-10">
+            <div>
               <HeroLogo />
+            </div>
+            <div className="mt-6 md:mt-10">
+              <SceneIndex index="01" total="05" label={isItalian ? "Inizio" : "Start"} />
             </div>
             <h1 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
               {isItalian ? (
