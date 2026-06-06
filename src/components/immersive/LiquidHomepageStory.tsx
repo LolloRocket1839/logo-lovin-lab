@@ -41,11 +41,11 @@ export const LiquidHomepageStory = () => {
   // Scene boundaries on the unified progress timeline.
   // 5 scenes across ~300vh of virtual scroll.
   const scenes = [
-    { id: "hero", in: 0.0, out: 0.22 },
-    { id: "how", in: 0.18, out: 0.42 },
-    { id: "invest", in: 0.38, out: 0.62 },
-    { id: "sell", in: 0.58, out: 0.82 },
-    { id: "talk", in: 0.78, out: 1.0 },
+    { id: "hero", in: 0.0, out: 0.22, isFirst: true, isLast: false },
+    { id: "how", in: 0.18, out: 0.42, isFirst: false, isLast: false },
+    { id: "invest", in: 0.38, out: 0.62, isFirst: false, isLast: false },
+    { id: "sell", in: 0.58, out: 0.82, isFirst: false, isLast: false },
+    { id: "talk", in: 0.78, out: 1.0, isFirst: false, isLast: true },
   ];
 
   // Ambient background drift — a single big word slides across.
