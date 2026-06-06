@@ -236,30 +236,36 @@ interface SceneProps {
   range: [number, number];
   reduced: boolean;
   children: ReactNode;
+  isFirst?: boolean;
+  isLast?: boolean;
 }
 
-const Scene = ({ p, range, reduced, children }: SceneProps) => {
+const Scene = ({ p, range, reduced, children, isFirst, isLast }: SceneProps) => {
   const [a, b] = range;
   const mid = (a + b) / 2;
   const fade = (b - a) * 0.18;
 
+  // First scene must be fully visible at progress 0 (page load).
+  // Last scene must stay fully visible after its end.
   const opacity = useTransform(
     p,
     [a - 0.001, a + fade, b - fade, b + 0.001],
-    [0, 1, 1, 0]
+    [isFirst ? 1 : 0, 1, 1, isLast ? 1 : 0]
   );
 
   // Elements enter from below, drift up and out — liquid.
   const y = useTransform(
     p,
     [a, mid, b],
-    reduced ? ["0%", "0%", "0%"] : ["8%", "0%", "-8%"]
+    reduced
+      ? ["0%", "0%", "0%"]
+      : [isFirst ? "0%" : "8%", "0%", isLast ? "0%" : "-8%"]
   );
 
   const scale = useTransform(
     p,
     [a, mid, b],
-    reduced ? [1, 1, 1] : [1.02, 1, 0.985]
+    reduced ? [1, 1, 1] : [isFirst ? 1 : 1.02, 1, isLast ? 1 : 0.985]
   );
 
   // Disable pointer-events when not visible enough.
