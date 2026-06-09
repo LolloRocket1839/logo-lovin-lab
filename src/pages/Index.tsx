@@ -119,16 +119,11 @@ const Index = () => {
         </Suspense>
 
         <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-          <HowItWorks />
-          <InvestorQuiz />
+          <AudienceDoors />
         </Suspense>
 
-        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-          <InvestorSection />
-        </Suspense>
-
-        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-          <SellerSection />
+        <Suspense fallback={<div className="min-h-[300px] bg-background" aria-hidden="true" />}>
+          <ClosingManifesto />
         </Suspense>
 
         <Suspense fallback={null}>
