@@ -18,12 +18,8 @@ import { ImmersiveAct } from "@/components/immersive/ImmersiveAct";
 import { LiquidHomepageStory } from "@/components/immersive/LiquidHomepageStory";
 
 // Lazy load below-the-fold components
-const HowItWorks = lazy(() => import("@/components/sections/HowItWorks"));
-const InvestorQuiz = lazy(() => import("@/components/InvestorQuiz"));
-const InvestorSection = lazy(() => import("@/components/sections/InvestorSection"));
-
-
-const SellerSection = lazy(() => import("@/components/SellerSection").then(m => ({ default: m.SellerSection })));
+const AudienceDoors = lazy(() => import("@/components/home/AudienceDoors").then(m => ({ default: m.AudienceDoors })));
+const ClosingManifesto = lazy(() => import("@/components/home/ClosingManifesto").then(m => ({ default: m.ClosingManifesto })));
 
 const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ default: m.Footer })));
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
