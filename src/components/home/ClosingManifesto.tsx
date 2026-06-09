@@ -43,13 +43,13 @@ export const ClosingManifesto = () => {
           <h2 className="mt-10 font-display font-bold tracking-tighter text-foreground leading-[0.92] text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
             {isItalian ? (
               <>
-                Torino non è una<br />
-                <span className="italic font-normal text-primary">scommessa</span>.
+                Un mercato che leggo ogni giorno,<br />
+                <span className="italic font-normal text-primary">palazzo per palazzo</span>.
               </>
             ) : (
               <>
-                Turin is not a<br />
-                <span className="italic font-normal text-primary">bet</span>.
+                A market I read every day,<br />
+                <span className="italic font-normal text-primary">building by building</span>.
               </>
             )}
           </h2>
@@ -58,8 +58,8 @@ export const ClosingManifesto = () => {
         <SceneReveal delay={180}>
           <p className="mt-10 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
             {isItalian
-              ? "È un mercato che leggo ogni giorno, palazzo per palazzo. Se vuoi entrarci con me, scrivimi su WhatsApp. Niente moduli."
-              : "It's a market I read every day, building by building. If you want in with me, message me on WhatsApp. No forms."}
+              ? "Se vuoi entrarci con me, scrivimi su WhatsApp. Niente moduli."
+              : "If you want in with me, message me on WhatsApp. No forms."}
           </p>
         </SceneReveal>
 
