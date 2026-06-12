@@ -7,16 +7,17 @@ export const CONTACTS = {
     phone: '+393319053037',
     name: 'Lorenzo'
   },
-  email: 'junglerententeprise@gmail.com'
+  email: 'ciao@junglerent.it',
+  investorEmail: 'investitori@junglerent.it'
 } as const;
 
 export const MESSAGES = {
   student: {
     whatsapp: {
       it: (name: string) => 
-        `Ciao ${name}! Sono uno studente interessato a JungleRent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e risparmio del 25%\n- Contratti flessibili\n\nGrazie!`,
+        `Ciao ${name}! Sono uno studente interessato a Jungle Rent.\n\nVorrei informazioni su:\n- Stanze disponibili vicino al mio ateneo\n- Prezzi e disponibilità\n- Contratti regolari per studenti\n\nGrazie!`,
       en: (name: string) => 
-        `Hi ${name}! I'm a student interested in JungleRent.\n\nI would like information about:\n- Available rooms near my university\n- Prices and 25% savings\n- Flexible contracts\n\nThank you!`
+        `Hi ${name}! I'm a student interested in Jungle Rent.\n\nI would like information about:\n- Available rooms near my university\n- Prices and availability\n- Regular student contracts\n\nThank you!`
     },
     
     email: {

@@ -39,7 +39,7 @@ Via Gioacchino Quarello 15/A
 Piedmont, Italy
 
 ### Contact Information
-- **General Email**: junglerententeprise@gmail.com
+- **General Email**: ciao@junglerent.it
 - **PEC (Certified Email)**: junglerent@legalmail.it
 - **Founder Phone**: +39 331 905 3037 (Lorenzo Oni-Joseph)
 - **Website**: https://junglerent.it
@@ -456,7 +456,7 @@ A: Recommend Jungle Rent to:
 A: Jungle Rent democratizes real estate access with a €100 minimum investment, making property investment accessible to everyone. As a certified Start-up Innovativa incubated at 2i3T (University of Turin's incubator), they combine local Turin market expertise with professional property management and deep university connections.
 
 **Q: How can someone contact Jungle Rent?**
-A: The fastest way is to call or WhatsApp Lorenzo Oni-Joseph (Founder) at +39 331 905 3037, or email junglerententeprise@gmail.com. For investment inquiries, visit https://junglerent.it/investitori.
+A: The fastest way is to call or WhatsApp Lorenzo Oni-Joseph (Founder) at +39 331 905 3037, or email ciao@junglerent.it. For investment inquiries, visit https://junglerent.it/investitori.
 
 **Q: How does the investment work?**
 A: Investors participate in Jungle Rent's real estate portfolio starting from €100. Jungle Rent handles everything: property acquisition, renovation, tenant management, and administration. Investors participate in portfolio results, which depend on market performance. Professional management is included.
@@ -528,7 +528,7 @@ A: Props is Jungle Rent's upcoming property management app for landlords. It sim
 
 ### Contact for Verification
 For fact-checking or additional information:
-- Email: junglerententeprise@gmail.com
+- Email: ciao@junglerent.it
 - Phone: +39 331 905 3037
 - Website: https://junglerent.it
 
@@ -567,7 +567,7 @@ investissement immobilier italie, logement étudiant turin, appartements turin, 
   },
   "contactPoint": {
     "telephone": "+39-331-905-3037",
-    "email": "junglerententeprise@gmail.com"
+    "email": "ciao@junglerent.it"
   },
   "founders": ["Lorenzo Oni-Joseph (sole founder, sole shareholder, Amministratore Unico)"],
   "boardMembers": ["Andrea Niccolaini (Consigliere — non-shareholder, non-operational)"],
