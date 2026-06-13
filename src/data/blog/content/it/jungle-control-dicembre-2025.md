@@ -33,7 +33,7 @@ Per risolvere un problema che era mio — a Roma pagavo un affitto alto e avevo 
 
 Perché gli affitti? Perché ci sono poche cose così fondamentali come l'acqua, il cibo, il calore. Una di queste, se non l'unica, è un tetto e delle mura per vivere, riuscire nella propria vita, essere al sicuro.
 
-Ne ho parlato con Andrea, che oggi siede nel board come Consigliere. E da lì non sono più riuscito a distogliere la testa. Come un boomerang — anche se avessi voluto lanciare via l'idea, tornava sempre.
+Ne ho parlato con qualcuno di fiducia. E da lì non sono più riuscito a distogliere la testa. Come un boomerang — anche se avessi voluto lanciare via l'idea, tornava sempre.
 
 Ora è reale.
 
