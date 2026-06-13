@@ -32,13 +32,13 @@ const Index = () => {
   const { t, i18n } = useTranslation();
   const isItalian = i18n.language.startsWith('it');
 
-  const title = isItalian 
-    ? "Jungle Rent - Affitti Smart e Investimenti Immobiliari a Torino"
-    : "Jungle Rent - Smart Rentals and Real Estate Investment in Turin";
-  
+  const title = isItalian
+    ? "Jungle Rent — Affitti per studenti e investimenti immobiliari a Torino"
+    : "Jungle Rent — Student rentals and real estate investment in Turin";
+
   const description = isItalian
-    ? "Investimenti immobiliari nel mercato universitario di Torino. Rendimenti sopra mercato, gestione professionale completa. 90.000+ studenti, 7 università."
-    : "Real estate investments in Turin's university market. Above-market returns, full professional management. 90,000+ students, 7 universities.";
+    ? "Jungle Rent — affitti per studenti, investimenti immobiliari accessibili e gestione professionale a Torino. Start-up Innovativa incubata in 2i3T."
+    : "Jungle Rent — student rentals, accessible real estate investment and professional management in Turin. Certified Innovative Startup incubated at 2i3T.";
 
   return (
     <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>

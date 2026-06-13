@@ -39,7 +39,7 @@ const STATIC_ROUTES: RouteEntry[] = [
   { it: "/investitori", en: "/investors", changefreq: "weekly", priority: "0.9" },
   { it: "/investitori/zone", en: "/investors/zones", changefreq: "weekly", priority: "0.85" },
   { it: "/vendi", en: "/sell", changefreq: "weekly", priority: "0.9" },
-  { it: "/proprietari", changefreq: "monthly", priority: "0.7" },
+  // /proprietari → redirects to /vendi (excluded from sitemap)
   { it: "/valutazione-immobile", en: "/property-valuation", changefreq: "monthly", priority: "0.85" },
   { it: "/contratti-locazione", en: "/rental-contracts", changefreq: "monthly", priority: "0.8" },
   { it: "/studenti", en: "/students", changefreq: "weekly", priority: "0.8" },
@@ -47,7 +47,7 @@ const STATIC_ROUTES: RouteEntry[] = [
   { it: "/blog", changefreq: "daily", priority: "0.8" },
   { it: "/faq", changefreq: "monthly", priority: "0.6" },
   { it: "/scioperi-italia", en: "/italy-strikes", changefreq: "daily", priority: "0.5" },
-  { it: "/invest", changefreq: "monthly", priority: "0.6" },
+  // /invest → redirects to /investitori (excluded from sitemap)
   { it: "/sell-home/lingotto-nizza-millefonti", changefreq: "monthly", priority: "0.7" },
   { it: "/vendi-casa/lingotto-nizza-millefonti", changefreq: "monthly", priority: "0.7" },
   { it: "/zone/nizza-millefonti-ospedali", en: "/zones/nizza-millefonti-hospitals", changefreq: "monthly", priority: "0.7" },
