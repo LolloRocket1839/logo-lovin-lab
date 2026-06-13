@@ -68,8 +68,8 @@ const TOOLS_ROUTES: RouteEntry[] = [
   { it: "/strumenti/aule-studio-torino", en: "/tools/study-spaces-turin", changefreq: "monthly", priority: "0.7" },
   { it: "/strumenti/dove-mangiare-torino", en: "/tools/cheap-eats-turin", changefreq: "monthly", priority: "0.7" },
   { it: "/strumenti/palestre-torino-studenti", en: "/tools/gyms-turin-students", changefreq: "monthly", priority: "0.65" },
-  { it: "/strumenti/servizi-studenti-torino", en: "/tools/student-services-turin", changefreq: "monthly", priority: "0.65" },
-  { it: "/strumenti/sportelli-studenti-torino", changefreq: "monthly", priority: "0.6" },
+  // /strumenti/servizi-studenti-torino → redirects to /strumenti/sportelli-studenti-torino (excluded)
+  { it: "/strumenti/sportelli-studenti-torino", en: "/tools/student-services-turin", changefreq: "monthly", priority: "0.65" },
 ];
 
 // Routes intentionally excluded from sitemap (admin, auth, debug, conversion-only):
