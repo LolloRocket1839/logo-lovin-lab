@@ -295,7 +295,6 @@ Allow: /
 #
 # FOUNDER & GOVERNANCE:
 # - Lorenzo Oni-Joseph (Founder & CEO, sole founder, sole shareholder, Amministratore Unico): +39 331 905 3037
-# - Andrea Niccolaini (Board Member / Consigliere — non-shareholder, non-operational)
 
 # ============================================
 # COMPANY INFORMATION
