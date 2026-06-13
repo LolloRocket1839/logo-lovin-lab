@@ -82,14 +82,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendi" />
   </url>
   <url>
-    <loc>https://junglerent.it/proprietari</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/proprietari" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/proprietari" />
-  </url>
-  <url>
     <loc>https://junglerent.it/valutazione-immobile</loc>
     <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -194,14 +186,6 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/scioperi-italia" />
     <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/italy-strikes" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/scioperi-italia" />
-  </url>
-  <url>
-    <loc>https://junglerent.it/invest</loc>
-    <lastmod>2026-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/invest" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/invest" />
   </url>
   <url>
     <loc>https://junglerent.it/sell-home/lingotto-nizza-millefonti</loc>
