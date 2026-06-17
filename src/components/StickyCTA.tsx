@@ -67,7 +67,7 @@ export const StickyCTA = () => {
           <Button
             onClick={handleSellerClick}
             size="lg"
-            className="flex-1 h-12 text-sm font-semibold border border-gray-300 bg-white/90 text-gray-700 touch-target focus-visible:ring-offset-background hover:bg-yellow-100 hover:text-gray-900 hover:border-yellow-200 active:bg-yellow-200 active:text-gray-900 active:border-yellow-300"
+            className="flex-1 h-12 text-sm font-semibold border border-pastel-yellow-border bg-pastel-yellow text-pastel-yellow-foreground touch-target focus-visible:ring-offset-background hover:bg-pastel-yellow-hover hover:text-pastel-yellow-foreground hover:border-pastel-yellow-border active:bg-pastel-yellow-hover active:text-pastel-yellow-foreground active:border-pastel-yellow-border"
           >
             <Building2 className="mr-2 w-5 h-5" aria-hidden="true" />
             {t('nav.sell')}
