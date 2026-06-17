@@ -24,20 +24,21 @@ export const ClosingManifesto = () => {
 
   return (
     <section
-      aria-label={isItalian ? "Manifesto di chiusura" : "Closing manifesto"}
+      aria-label={isItalian ? "Capitolo 08 — Manifesto" : "Chapter 08 — Manifesto"}
       className="relative bg-background py-28 md:py-40 border-t border-border/30"
     >
-      <div className="container mx-auto px-6 md:px-10 max-w-5xl">
+      <div className="container mx-auto px-6 md:px-10 max-w-6xl">
         <SceneReveal>
           <div className="flex items-center gap-4 text-foreground/45">
-            <span className="metric-mono text-xs text-primary">07</span>
+            <span className="metric-mono text-xs text-primary">08</span>
             <span className="h-px w-12 bg-primary/25" aria-hidden="true" />
             <span className="eyebrow-mono text-foreground/60 text-xs">
-              {isItalian ? "Chiusura" : "Closing"}
+              {isItalian ? "Manifesto" : "Manifesto"}
             </span>
-            <span className="metric-mono text-xs text-foreground/40">/ 03</span>
+            <span className="metric-mono text-xs text-foreground/40">/ 08</span>
           </div>
         </SceneReveal>
+
 
         <SceneReveal delay={100}>
           <h2 className="mt-10 font-display font-bold tracking-tighter text-foreground leading-[0.92] text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
