@@ -95,6 +95,13 @@ All colors MUST be HSL.
     --input: 40 22% 48%; /* form-control border, AA 3:1 vs background */
     --ring: 131 30% 36%;
 
+    /* Pastel yellow — harmonizes with cream background + logo green foreground.
+       Used for the "Vendi casa" CTA hover/active and any soft warning/highlight surface. */
+    --pastel-yellow: 48 90% 88%;
+    --pastel-yellow-hover: 48 85% 80%;
+    --pastel-yellow-border: 45 55% 72%;
+    --pastel-yellow-foreground: 131 30% 18%; /* logo dark green for AA contrast */
+
     --radius: 0.375rem;
     
     
