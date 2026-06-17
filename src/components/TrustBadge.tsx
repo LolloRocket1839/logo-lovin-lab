@@ -1,98 +1,85 @@
-import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { ExternalLink, ArrowRight } from "lucide-react";
-import logo2i3t from "@/assets/2i3t-logo-green.png";
-import { useHasBeenSeen } from "@/hooks/useScrollProgress";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
+/**
+ * TrustBadge — Chapter 06 · Fiducia
+ * Editorial credentials line. No card, no logo box — only typography,
+ * matching the language of LiquidHomepageStory.
+ */
 export const TrustBadge = () => {
-  const { t } = useTranslation();
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const hasBeenSeen = useHasBeenSeen(sectionRef, 0.3);
-  const prefersReducedMotion = useReducedMotion();
-  
-  return (
-    <section 
-      ref={sectionRef}
-      className="py-6 md:py-10 bg-muted/30 relative overflow-hidden border-b border-border/20"
-    >
-      
-      <div className="container px-4 md:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="hidden md:block text-xs uppercase tracking-[0.15em] text-muted-foreground mb-6 font-medium">
-            {t('trustBadge.sectionLabel')}
-          </p>
-          
-          <a 
-            href="https://2i3t.it"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex flex-row items-center gap-4 md:gap-5 bg-card border border-border/20 rounded-xl px-4 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6 mb-4 hover:border-primary/30 transition-colors duration-[var(--duration-fast)] cursor-pointer ${
-              hasBeenSeen && !prefersReducedMotion 
-                ? 'animate-fade-up' 
-                : prefersReducedMotion 
-                  ? '' 
-                  : 'opacity-0'
-            }`}
-            style={{
-              opacity: prefersReducedMotion ? 1 : undefined
-            }}
-          >
-            <div className="w-16 h-16 sm:w-32 sm:h-32 md:w-48 md:h-48 flex items-center justify-center flex-shrink-0">
-              <img 
-                src={logo2i3t} 
-                alt="2i3T Logo" 
-                className="w-full h-full object-contain rounded-lg"
-                width={192}
-                height={192}
-                loading="eager"
-                decoding="async"
-              />
-            </div>
-            <div className="text-left max-w-sm">
-              <p className="text-sm sm:text-lg md:text-xl font-display font-bold text-foreground mb-0.5 md:mb-1 leading-tight">
-                {t('trustBadge.supportedBy')}
-              </p>
-              <p className="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
-                {t('trustBadge.incubator')}
-              </p>
-            </div>
-          </a>
-          
-          <a 
-            href="https://2i3t.it"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`hidden sm:inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors duration-[var(--duration-fast)] font-medium group ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-1' : prefersReducedMotion ? '' : 'opacity-0'
-            }`}
-          >
-            <span>{t('trustBadge.learnMore')}</span>
-            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-          </a>
-          
-          <p className={`hidden md:block text-xs text-muted-foreground/60 mt-4 font-light max-w-2xl mx-auto leading-relaxed ${
-            hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-2' : prefersReducedMotion ? '' : 'opacity-0'
-          }`}>
-            {t('trustBadge.guarantee')}
-          </p>
+  const { i18n } = useTranslation();
+  const isItalian = i18n.language.startsWith("it");
 
-          {/* Inline CTA */}
-          <a 
-            href="#hero"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('investor-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className={`inline-flex items-center gap-1.5 mt-4 text-sm text-primary hover:text-primary/80 font-medium transition-colors ${
-              hasBeenSeen && !prefersReducedMotion ? 'animate-fade-up stagger-2' : prefersReducedMotion ? '' : 'opacity-0'
-            }`}
-          >
-            <span>{t('trustBadge.inlineCta', 'Want to learn more?')}</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
+  const credentials = isItalian
+    ? [
+        "Start-up Innovativa",
+        "Incubata in 2i3T",
+        "Università di Torino",
+        "Registro Imprese di Torino",
+      ]
+    : [
+        "Certified Innovative Startup",
+        "Incubated at 2i3T",
+        "University of Turin",
+        "Turin Business Register",
+      ];
+
+  return (
+    <section
+      aria-label={isItalian ? "Capitolo 06 — Fiducia" : "Chapter 06 — Trust"}
+      className="relative bg-background py-24 md:py-32 border-t border-border/30"
+    >
+      <div className="container mx-auto px-6 md:px-10 max-w-6xl">
+        <SceneReveal>
+          <div className="flex items-center gap-4 text-foreground/45">
+            <span className="metric-mono text-xs text-primary">06</span>
+            <span className="h-px w-12 bg-primary/25" aria-hidden="true" />
+            <span className="eyebrow-mono text-foreground/60 text-xs">
+              {isItalian ? "Fiducia" : "Trust"}
+            </span>
+            <span className="metric-mono text-xs text-foreground/40">/ 08</span>
+          </div>
+        </SceneReveal>
+
+        <SceneReveal delay={100}>
+          <h2 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
+            {isItalian ? (
+              <>
+                Una società <span className="italic font-normal text-primary">vera</span>,<br />
+                con un percorso vero.
+              </>
+            ) : (
+              <>
+                A <span className="italic font-normal text-primary">real</span> company,<br />
+                with a real track record.
+              </>
+            )}
+          </h2>
+        </SceneReveal>
+
+        <SceneReveal delay={180}>
+          <p className="mt-10 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
+            {isItalian
+              ? "Jungle Rent S.r.l. è una start-up innovativa incubata nell'acceleratore dell'Università di Torino. Non un'idea su una slide — una società registrata, operativa, con un fondatore che risponde di persona."
+              : "Jungle Rent S.r.l. is a certified innovative startup incubated at the University of Turin's accelerator. Not an idea on a slide — a registered, operating company with a founder who answers in person."}
+          </p>
+        </SceneReveal>
+
+        <SceneReveal delay={260}>
+          <ul className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs uppercase tracking-[0.18em] text-muted-foreground/80 font-medium">
+            {credentials.map((c, i) => (
+              <li key={c} className="flex items-center gap-6">
+                <span>{c}</span>
+                {i < credentials.length - 1 && (
+                  <span className="text-foreground/20" aria-hidden="true">·</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </SceneReveal>
       </div>
     </section>
   );
 };
+
+export default TrustBadge;
