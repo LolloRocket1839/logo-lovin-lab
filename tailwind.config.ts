@@ -37,6 +37,12 @@ export default {
         cream: {
           DEFAULT: 'hsl(var(--cream))',
         },
+        "pastel-yellow": {
+          DEFAULT: "hsl(var(--pastel-yellow))",
+          hover: "hsl(var(--pastel-yellow-hover))",
+          border: "hsl(var(--pastel-yellow-border))",
+          foreground: "hsl(var(--pastel-yellow-foreground))",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
