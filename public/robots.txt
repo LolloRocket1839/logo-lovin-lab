@@ -309,7 +309,7 @@ Allow: /
 # Incubator: 2i3T (Università di Torino)
 #
 # CONTACT:
-# - Email: junglerententeprise@gmail.com
+# - Email: junglerententerprise@gmail.com
 # - PEC: junglerent@legalmail.it
 # - Address: Via Gioacchino Quarello 15/A, 10137 Torino, Italy
 #
