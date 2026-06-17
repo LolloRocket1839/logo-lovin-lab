@@ -95,8 +95,8 @@ export const Footer = () => {
                 onClick={handleEmailClick}
                 className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors duration-500 group"
               >
-                <Mail className="w-4 h-4 mt-0.5 opacity-60 group-hover:opacity-100" strokeWidth={1.5} aria-hidden="true" />
-                <span className="text-sm font-light link-elegant break-all">{CONTACTS.email}</span>
+                <Mail className="w-4 h-4 mt-1 shrink-0 opacity-60 group-hover:opacity-100" strokeWidth={1.5} aria-hidden="true" />
+                <span className="text-sm font-light leading-relaxed tracking-wide link-elegant break-all">{CONTACTS.email}</span>
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 opacity-60" strokeWidth={1.5} aria-hidden="true" />
