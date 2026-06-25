@@ -94,7 +94,10 @@ const isValidEventType = (eventType: string): boolean => {
     'seller_exit_intent_shown', 'seller_exit_intent_submit', 'seller_exit_intent_closed',
     // Investor landing — quick contact + email-first form + blog CTA
     'investor_quick_contact_click', 'investor_form_email_only_submit',
-    'investor_form_full_submit', 'investor_blog_cta_click'
+    'investor_form_full_submit', 'investor_blog_cta_click',
+    // Investor full form steps + page view
+    'investor_page_view', 'investor_full_form_step_view',
+    'investor_full_form_step_submit', 'investor_full_form_submit'
   ];
   return allowedTypes.includes(eventType);
 };
