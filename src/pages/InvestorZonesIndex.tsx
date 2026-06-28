@@ -355,8 +355,8 @@ const InvestorZonesIndex = () => {
                     )}
                   </Button>
                 </DrawerTrigger>
-                <DrawerContent className="max-h-[85vh]">
-                  <DrawerHeader className="flex items-center justify-between">
+                <DrawerContent className="max-h-[85vh] flex flex-col">
+                  <DrawerHeader className="flex items-center justify-between flex-shrink-0">
                     <DrawerTitle className="flex items-center gap-2">
                       <GitCompare className="w-5 h-5 text-primary" />
                       {t2.compareZones}
@@ -367,7 +367,7 @@ const InvestorZonesIndex = () => {
                       </Button>
                     </DrawerClose>
                   </DrawerHeader>
-                  <div className="overflow-y-auto px-4 pb-6">
+                  <div className="flex-1 min-h-0 overflow-y-auto px-4 pb-6">
                     <ZoneComparisonTool 
                       lang={lang} 
                       embedded 
