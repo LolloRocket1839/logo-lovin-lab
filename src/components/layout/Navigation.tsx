@@ -82,13 +82,13 @@ export const Navigation = () => {
     }
   }, [prefersReducedMotion]);
 
-  // Simplified to 4 items: Invest | Sell | For Students | Founders
+  // 5 items: Invest | Sell | For Students | Contracts | Founders
   const menuItems = [
-    { label: t("nav.investors"), id: undefined as string | undefined, path: "/investitori" as string | undefined },
+    { label: t("nav.investors"), id: undefined as string | undefined, path: investorPath as string | undefined },
     { label: t("nav.sell"), id: undefined, path: "/vendi" },
     { label: t("nav.students"), id: undefined, path: "/studenti" },
     { label: t("nav.contracts"), id: undefined, path: "/contratti-locazione" },
-    { label: t("founders.title"), id: undefined, path: undefined, isFounders: true },
+    { label: t("founders.title"), id: undefined, path: "/chi-siamo", isFounders: true },
   ];
 
   return (
