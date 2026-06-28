@@ -78,7 +78,7 @@
     "qualityDesc": "Contratos regulares, gestión profesional y transparencia total.",
     "qualityHighlight": "100% Seguro",
     "qualityHow1": "Soporte legal incluido",
-    "qualityHow2": "Partnership con 2i3T",
+    "qualityHow2": "Alianza con 2i3T",
     "qualityTooltip": "Contratos legales verificados",
     "savings": "Ahorros certificados",
     "savingsDesc": "Ahorra aproximadamente el 30% en alquileres con contratos transparentes.",
@@ -928,9 +928,9 @@
             "OTHER": "Fuera de la UE"
           },
           "ticket": {
-            "5-10": "€5.000–€10.000",
-            "10-20": "€10.000–€20.000",
-            "20-50": "€20.000–€50.000",
+            "5-10": "5.000–10.000 €",
+            "10-20": "10.000–20.000 €",
+            "20-50": "20.000–50.000 €",
             "50+": "Más de 50 000 €",
             "TBD": "Prefiero definirlo después de ver los materiales"
           },
@@ -969,7 +969,7 @@
         "p2": "El instrumento financiero descrito no está disponible para suscripción online. La posible suscripción se realiza exclusivamente mediante colocación privada, reservada a un número restringido de inversores cualificados individualmente, previa entrega del memorando informativo completo y de la documentación contractual, respetando las exenciones previstas por el art. 100 TUF.",
         "p3": "Los rendimientos ilustrados en los materiales informativos son proyecciones basadas en hipótesis del modelo. El rendimiento real depende de la evolución de la cartera y no está garantizado de ninguna manera. La inversión conlleva riesgos, incluyendo el riesgo de iliquidez, riesgo de mercado inmobiliario, riesgo de ejecución operativa, riesgo de dilución y la posibilidad de pérdida total del capital invertido.",
         "p4": "El tratamiento fiscal descrito está sujeto a condiciones individuales, límites normativos y posibles modificaciones legislativas. Antes de cualquier decisión de inversión, el inversor debe consultar a su propio asesor fiscal y financiero independiente.",
-        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
+        "company": "Jungle Rent S.r.l. · NIF 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turín, Italia · junglerententeprise@gmail.com"
       }
     }
   },
@@ -1363,7 +1363,7 @@
     "q2": {
       "high": "🏰 Más de €150.000",
       "low": "🏠 Hasta €50.000",
-      "medium": "🏘️ €50.000 – €150.000",
+      "medium": "🏘️ 50.000 € – 150.000 €",
       "question": "¿Cuánto te gustaría invertir?"
     },
     "q3": {
@@ -1452,7 +1452,7 @@
       "days": "días",
       "jungleRent": "Jungle Rent",
       "months": "meses",
-      "roleAgency": "Intermediario",
+      "roleAgency": "Intermediario inmobiliario",
       "roleJR": "Comprador",
       "roleLabel": "Rol",
       "timeLabel": "Tiempo",
@@ -2124,7 +2124,7 @@
       "iusto": "IUSTO",
       "other": "Otra",
       "polito": "Politecnico di Torino",
-      "unito": "Università di Torino"
+      "unito": "Universidad de Turín"
     },
     "universityLabel": "Universidad",
     "universityPlaceholder": "Ej: Politecnico di Torino"
