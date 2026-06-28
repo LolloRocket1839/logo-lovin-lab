@@ -85,7 +85,7 @@ export const BottomNav = () => {
             className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
           >
             <Info className="w-6 h-6" aria-hidden="true" />
-            <span className="text-xs font-medium">Info</span>
+            <span className="text-xs font-medium">{t("nav.info")}</span>
           </button>
 
         </div>
