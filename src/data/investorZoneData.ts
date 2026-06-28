@@ -672,8 +672,10 @@ const urbanProjectSchema = z
     name: z.string().min(1),
     investment: z.string().min(1).optional().default(''),
     impact: i18nString,
+    coordinates: z.object({ lat: z.number(), lng: z.number() }).optional(),
   })
   .passthrough();
+
 
 /** Accepts number, numeric string ("+4%", "4"), or null/undefined for legacy. */
 const variationSchema = z.preprocess((v) => {
