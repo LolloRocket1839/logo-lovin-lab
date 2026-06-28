@@ -928,9 +928,9 @@
             "OTHER": "Utanför EU"
           },
           "ticket": {
-            "5-10": "€5.000–€10.000",
-            "10-20": "€10.000–€20.000",
-            "20-50": "€20.000–€50.000",
+            "5-10": "5 000–10 000 €",
+            "10-20": "10 000–20 000 €",
+            "20-50": "20 000–50 000 €",
             "50+": "Över 50 000 €",
             "TBD": "Jag föredrar att bestämma det efter att ha sett materialet"
           },
@@ -969,7 +969,7 @@
         "p2": "Det finansiella instrument som beskrivs är inte tillgängligt för teckning online. Eventuell teckning sker uteslutande genom en privat placering, reserverad för ett begränsat antal individuellt kvalificerade investerare, efter leverans av det fullständiga informationsmemorandumet och avtalsdokumentationen, i enlighet med de undantag som föreskrivs i art. 100 TUF.",
         "p3": "Avkastningen som illustreras i informationsmaterialet är prognoser baserade på modellantaganden. Den faktiska utvecklingen beror på portföljens resultat och garanteras inte på något sätt. Investeringen medför risker, inklusive illikviditetsrisk, fastighetsmarknadsrisk, operativ risk, utspädningsrisk och möjligheten till total förlust av det investerade kapitalet.",
         "p4": "Den beskrivna skattebehandlingen är föremål för individuella villkor, regulatoriska gränser och möjliga lagändringar. Innan något investeringsbeslut fattas är investeraren skyldig att konsultera sin egen oberoende skatte- och finansrådgivare.",
-        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
+        "company": "Jungle Rent S.r.l. · Momsnr 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin, Italien · junglerententeprise@gmail.com"
       }
     }
   },
@@ -1670,17 +1670,17 @@
     "calculator": {
       "agency": "Traditionell mäklare",
       "condition": {
-        "buonoStato": "Buono stato",
-        "buonoStatoShort": "Buono",
-        "daRistrutturare": "Da ristrutturare",
-        "daRistrutturareShort": "Da rist.",
-        "label": "Stato immobile",
-        "ristrutturatShort": "Nuovo",
-        "ristrutturato": "Ristrutturato",
-        "tooltip": "Seleziona lo stato attuale del tuo immobile per una stima più accurata"
+        "buonoStato": "Bra skick",
+        "buonoStatoShort": "Bra",
+        "daRistrutturare": "Behöver renoveras",
+        "daRistrutturareShort": "Renov.",
+        "label": "Bostadens skick",
+        "ristrutturatShort": "Ny",
+        "ristrutturato": "Renoverad",
+        "tooltip": "Välj bostadens nuvarande skick för en mer exakt värdering"
       },
       "cta": "Begär gratis värdering",
-      "dataSource": "Prezzi indicativi zone semicentrali Torino. Dati: OMI, Immobiliare.it, nov 2025",
+      "dataSource": "Vägledande priser för halvcentrala områden i Turin. Källor: OMI, Immobiliare.it, nov 2025",
       "directBuyer": "Direktköpare",
       "minimumFee": "Minimum förmedlingsavgift",
       "minimumFeeExplanation": "Min. €5 000 (4% vore lägre)",
@@ -1689,7 +1689,7 @@
         "quadrilocale": "4 Rum",
         "trilocale": "3 Rum"
       },
-      "propertyType": "Tipologia",
+      "propertyType": "Bostadstyp",
       "propertyValue": "Fastighetsvärde",
       "savingsNote": "Besparing jämfört med mäklararvode (4% + moms)",
       "subtitle": "Se hur mycket du sparar genom att sälja direkt",
@@ -2124,7 +2124,7 @@
       "iusto": "IUSTO",
       "other": "Annat",
       "polito": "Politecnico di Torino",
-      "unito": "Università di Torino"
+      "unito": "Universitetet i Turin"
     },
     "universityLabel": "Universitet (valfritt)",
     "universityPlaceholder": "T.ex. Politecnico di Torino"
