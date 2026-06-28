@@ -245,20 +245,24 @@ export const ZoneComparisonTool = ({
       {/* Comparison Table */}
       {selectedZones.length === 0 ? (
         <p className="text-muted-foreground text-center py-12">{t.noZonesSelected}</p>
-      ) : (
-        <div className="overflow-x-auto -mx-4 md:mx-0">
-          <div className="min-w-[600px] md:min-w-0 px-4 md:px-0">
+      ) : (() => {
+        const mobileLabelCol = selectedZones.length === 3 ? 80 : 96;
+        const desktopLabelCol = 160;
+        const gridTemplate = `${isMobile ? mobileLabelCol : desktopLabelCol}px repeat(${selectedZones.length}, minmax(0, 1fr))`;
+        // Only force horizontal scroll on mobile when 3 zones are selected
+        const needsHScroll = isMobile && selectedZones.length === 3;
+        return (
+        <div className={needsHScroll ? "overflow-x-auto -mx-4" : ""}>
+          <div className={needsHScroll ? "min-w-[520px] px-4" : ""}>
             {/* Table header */}
             <div
-              className="grid gap-4 mb-4 sticky top-0 bg-background z-10 pb-2 border-b border-border"
-              style={{
-                gridTemplateColumns: `160px repeat(${selectedZones.length}, 1fr)`,
-              }}
+              className="grid gap-2 md:gap-4 mb-4 sticky top-0 bg-background z-10 pb-2 border-b border-border"
+              style={{ gridTemplateColumns: gridTemplate }}
             >
               <div className="text-sm font-medium text-muted-foreground"></div>
               {selectedZones.map((zone) => (
-                <div key={zone.id} className="text-center">
-                  <p className="font-semibold text-foreground">{zone.name}</p>
+                <div key={zone.id} className="text-center min-w-0">
+                  <p className="font-semibold text-foreground text-sm md:text-base truncate">{zone.name}</p>
                   <Badge variant="outline" className="mt-1 text-xs">
                     {zone.zone}
                   </Badge>
@@ -276,24 +280,23 @@ export const ZoneComparisonTool = ({
                   getValue={metric.getValue}
                   bestZoneId={bestValues[metric.key as keyof typeof bestValues]}
                   bestLabel={t.bestValue}
+                  gridTemplate={gridTemplate}
                 />
               ))}
             </div>
 
             {/* View zone links */}
             <div
-              className="grid gap-4 mt-6 pt-4 border-t border-border"
-              style={{
-                gridTemplateColumns: `160px repeat(${selectedZones.length}, 1fr)`,
-              }}
+              className="grid gap-2 md:gap-4 mt-6 pt-4 border-t border-border"
+              style={{ gridTemplateColumns: gridTemplate }}
             >
               <div></div>
               {selectedZones.map((zone) => (
-                <div key={zone.id} className="text-center">
-                  <Button asChild variant="outline" size="sm" className="gap-1">
+                <div key={zone.id} className="text-center min-w-0">
+                  <Button asChild variant="outline" size="sm" className="gap-1 w-full">
                     <Link to={`${zonesPath}/${zone.slug}`}>
-                      {t.viewZone}
-                      <ArrowRight className="w-3 h-3" />
+                      <span className="truncate">{t.viewZone}</span>
+                      <ArrowRight className="w-3 h-3 flex-shrink-0" />
                     </Link>
                   </Button>
                 </div>
@@ -301,7 +304,8 @@ export const ZoneComparisonTool = ({
             </div>
           </div>
         </div>
-      )}
+        );
+      })()}
     </div>
   );
 };
