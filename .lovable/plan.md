@@ -1,44 +1,36 @@
 ## Goal
-Fix the English (`en`) translation bundle so every user-visible string is in proper English. The audit flags 84 `untranslated≈` keys in `src/i18n/locales/en.json` plus 3 in `src/i18n/locales/investor/en.json`.
+Make the Chinese (zh) bundles fully correct, matching the IT reference.
 
-## Approach
-Classify the 87 EN keys into two buckets and act on each:
+## Audit results for zh
 
-### A. Translate to English (real Italian leftovers)
-Update the value in `src/i18n/locales/en.json` and `src/i18n/locales/investor/en.json`. Examples:
-- `breadcrumbs.home` → "Home" (already English, just confirm — actually the IT value is also "Home"; allow-list).
-- `common.menu` → "Menu" (allow-list, identical word).
-- `nav.home` → "Home" (allow-list).
-- `seller.comparison.visitsJR` → translate IT phrase to EN.
-- `seller.comparison.roleAgency` (flagged in ES not EN — skip).
-- `sellersPage.calculator.condition.daRistrutturare` → "To renovate", `buonoStato` → "Good condition", `ristrutturato` → "Renovated", `label` → "Condition", `tooltip` → translate, `dataSource` → translate, `propertyType` → "Property type".
-- `investor.flowStep3` → translate IT step text.
-- `investor.landing.founder.signature` → translate.
-- `investor.landing.form.fields.email` → "Email" (identical, allow-list).
-- `investor.landing.trust.items.rea.value` / `incubator.label` / `vat.label` → check; mostly proper nouns/codes (REA, P.IVA) — keep as is; allow-list.
-- `investor.landing.quickBar.whatsapp` → "WhatsApp" (brand, allow-list).
-- Budget/ticket ranges (`50k-100k`, `5-10`, `100k-200k`, `over-600`) → pure numeric strings, allow-list.
-- Referral source labels (`google`, `linkedin`, `facebook`, `instagram`) → brand names, allow-list.
-- Zone/area names (`crocetta`, `lingotto`, `san-paolo`, `san-salvario`, `vanchiglia`, `santa-rita`, `aurora`, `centro`) → Turin neighborhood proper nouns, allow-list.
-- University codes (`polito`, `unito`, `escp`, `iaad`, `ied`, `iusto`) → proper nouns, allow-list.
-- `hero.politecnico` → "Politecnico" / `hero.unito` → "UniTo" → proper nouns, allow-list.
-- `contacts.email` / `contacts.formEmail` → the literal email address `junglerententerprise@gmail.com`, allow-list.
-- `footer.partnershipTitle` → translate the IT phrase to English.
-- `resourceLibrary.guide3Badge`, `guide4Badge` → translate if Italian; keep if "New".
-- All `*.emailLabel` keys → likely "Email" (allow-list).
-- `investor/en.json`: `investorTypes.familyOffice` → "Family office" (identical, allow-list), `sources.linkedin` / `sources.referral` → brand/identical, allow-list.
+**Main bundle (`src/i18n/locales/zh.json`)**
+- 1 empty key: `problem.stat2Sub` — needs a translation copied/adapted from IT.
+- 15 keys still equal to the IT source:
+  - Seller calculator (these are real Italian leftovers from the recent EN fix that were never propagated to zh):
+    - `sellersPage.calculator.condition.label`, `.tooltip`, `.daRistrutturare`, `.daRistrutturareShort`, `.buonoStato`, `.buonoStatoShort`, `.ristrutturato`, `.ristrutturatShort`
+    - `sellersPage.calculator.dataSource`, `sellersPage.calculator.propertyType`
+  - Investor landing tickets (currency ranges — Chinese should localize the labels around them):
+    - `investor.landing.form.options.ticket.5-10`, `.10-20`, `.20-50`, `.50+`
+  - `investor.landing.disclaimer.company` — currently the IT legal sentence; needs a zh version (keep "Jungle Rent S.r.l." as proper noun).
 
-### B. Extend allow-list
-For genuine proper nouns / brand names / numeric ranges / single-word labels that are correctly the same in IT and EN (`Crocetta`, `Lingotto`, `Polito`, `Google`, `LinkedIn`, `Facebook`, `Instagram`, `WhatsApp`, `Politecnico`, `Email`, `Menu`, `Home`, `Family office`, `5-10`, `50k-100k`, `over-600`, email addresses), add the tokens or value patterns to `BRAND_TOKENS` / value heuristics in `scripts/validate-translations.mjs` so the audit stops flagging them.
+**Investor bundle (`src/i18n/locales/investor/zh.json`)**
+- 1 extra key: `countries.china` — not in the IT reference. Remove (the IT reference list dictates what's exposed).
 
-## Files to edit
-- `src/i18n/locales/en.json` — fix real Italian strings (calculator conditions, investor flow text, footer partnership title, seller comparison visits, founder signature, guide badges if Italian).
-- `src/i18n/locales/investor/en.json` — confirm `familyOffice`, `linkedin`, `referral` values, keep as English equivalents.
-- `scripts/validate-translations.mjs` — expand `BRAND_TOKENS` with Turin zones + university acronyms + referral brand names + "Politecnico" + "Family office" so the false positives clear.
+## Changes
+1. Edit `src/i18n/locales/zh.json`:
+   - Fill `problem.stat2Sub` with a Simplified Chinese translation of the IT value.
+   - Translate the 10 seller-calculator strings into Simplified Chinese (short variants stay short).
+   - Localize the 4 investor ticket option labels (currency ranges kept numeric; surrounding wording in zh).
+   - Translate `investor.landing.disclaimer.company` into Simplified Chinese, preserving "Jungle Rent S.r.l." and any legal/proper-noun tokens.
+2. Edit `src/i18n/locales/investor/zh.json`:
+   - Remove the extra `countries.china` key so the bundle matches the IT key set.
+3. Re-run `node scripts/validate-translations.mjs` and confirm both zh rows report `missing=0 extra=0 empty=0 untranslated≈0`.
 
 ## Out of scope
-- Other locales (`es`, `fr`, `de`, `sv`, `zh`, `pt`) — the user asked specifically for English.
-- Adding new translation keys, restructuring i18n, or changing components.
+Other locales (es, fr, de, sv) still have residual `untranslated≈` issues. Not touching them in this pass — user asked specifically about Chinese.
 
-## Verification
-Run `node scripts/validate-translations.mjs` and confirm the `en` row in both bundles reports `untranslated≈0` (or only allow-listed tokens, with exit code 0 once the allow-list update lands).
+## Technical notes
+- Style: strict sentence case (zh isn't case-sensitive but follow project convention — no ALL CAPS).
+- Preserve brand tokens verbatim: `Jungle Rent`, `JungleRent`, `Lorenzo`, `WhatsApp`, `Torino`, `S.r.l.`, university names where they appear.
+- Currency/percent figures stay numeric; only the surrounding words get translated.
+- No code or component changes — pure JSON edits.

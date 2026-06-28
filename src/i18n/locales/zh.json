@@ -928,10 +928,10 @@
             "OTHER": "非欧盟国家"
           },
           "ticket": {
-            "5-10": "€5.000–€10.000",
-            "10-20": "€10.000–€20.000",
-            "20-50": "€20.000–€50.000",
-            "50+": "Oltre €50.000",
+            "5-10": "€5.000–€10.000（5千–1万欧元）",
+            "10-20": "€10.000–€20.000（1万–2万欧元）",
+            "20-50": "€20.000–€50.000（2万–5万欧元）",
+            "50+": "€50.000以上（5万欧元以上）",
             "TBD": "我倾向于在看过材料后再确定"
           },
           "horizon": {
@@ -969,7 +969,7 @@
         "p2": "所述金融工具不提供在线认购。任何认购均只能通过私募配售进行，仅限于少数经单独资格认定的投资者，并在提供完整的信息备忘录和合同文件后，遵守 art. 100 TUF 规定的豁免条款。",
         "p3": "信息材料中所示回报均为基于模型假设的预测。实际表现取决于投资组合的走势，且无任何保证。投资涉及风险，包括流动性不足风险、房地产市场风险、运营执行风险、稀释风险以及投资本金完全损失的可能性。",
         "p4": "所述税务处理受个人条件、法规限制和可能的立法变更影响。在做出任何投资决定之前，投资者有责任咨询其独立的税务和财务顾问。",
-        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
+        "company": "Jungle Rent S.r.l. · 增值税号 13333450016 · REA TO-1355899 · 地址：Via Quarello 15/A, 10137 都灵 · junglerententeprise@gmail.com"
       }
     }
   },
@@ -1212,7 +1212,7 @@
     "stat1Label": "外地学生",
     "stat1Sub": "在意大利",
     "stat2Label": "在私人市场寻找住房",
-    "stat2Sub": "",
+    "stat2Sub": "私下交易",
     "stat3Label": "需求覆盖率",
     "stat3Sub": "由专用住房",
     "stat4Label": "市场潜力",
@@ -1670,17 +1670,17 @@
     "calculator": {
       "agency": "传统中介",
       "condition": {
-        "buonoStato": "Buono stato",
-        "buonoStatoShort": "Buono",
-        "daRistrutturare": "Da ristrutturare",
-        "daRistrutturareShort": "Da rist.",
-        "label": "Stato immobile",
-        "ristrutturatShort": "Nuovo",
-        "ristrutturato": "Ristrutturato",
-        "tooltip": "Seleziona lo stato attuale del tuo immobile per una stima più accurata"
+        "buonoStato": "状况良好",
+        "buonoStatoShort": "良好",
+        "daRistrutturare": "待翻新",
+        "daRistrutturareShort": "待翻新",
+        "label": "房屋状况",
+        "ristrutturatShort": "全新",
+        "ristrutturato": "已翻新",
+        "tooltip": "请选择您房屋的当前状况，以获得更准确的估价"
       },
       "cta": "申请免费估价",
-      "dataSource": "Prezzi indicativi zone semicentrali Torino. Dati: OMI, Immobiliare.it, nov 2025",
+      "dataSource": "都灵半中心区域参考价格。数据来源：OMI、Immobiliare.it，2025年11月",
       "directBuyer": "直接买家",
       "minimumFee": "中介最低费用",
       "minimumFeeExplanation": "最低 €5,000（4%会更低）",
@@ -1689,7 +1689,7 @@
         "quadrilocale": "四室",
         "trilocale": "三室"
       },
-      "propertyType": "Tipologia",
+      "propertyType": "房屋类型",
       "propertyValue": "房产价值",
       "savingsNote": "与中介佣金相比的节省（4% + 增值税）",
       "subtitle": "看看直接出售能节省多少",
