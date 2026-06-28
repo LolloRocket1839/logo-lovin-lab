@@ -146,7 +146,7 @@ const Index = () => {
         <Suspense fallback={null}>
           <WhatsAppFAB />
           <ExitIntentPopup source="homepage" />
-          <ScrollQualifier />
+          
         </Suspense>
       </div>
     </main>
