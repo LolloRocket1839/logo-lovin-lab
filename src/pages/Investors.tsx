@@ -96,14 +96,6 @@ const Investors = () => {
       <ScrollToTop />
 
       <InvestorStickyCTA formRef={formRef} />
-
-      <Suspense fallback={null}>
-        <QuickInvestorLeadDialog
-          open={quickDialogOpen}
-          onOpenChange={setQuickDialogOpen}
-          source="investitori-scroll-60"
-        />
-      </Suspense>
     </div>
   );
 };
