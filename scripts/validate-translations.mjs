@@ -56,6 +56,8 @@ const BRAND_TOKENS = [
   'IAAD', 'IED Torino', 'IUSTO', '2i3T',
   // Codes / IDs that are identical across languages
   'P.IVA', 'REA TO-1355899', 'Report 2025', 'Savills 2025', '1-2 max',
+  // IT/ES cognates that are identical in both languages
+  'Fase {{number}}', '{{count}} persona', 'Importante', 'Zona', 'Francia',
 ];
 const isLikelyUntranslated = (refVal, val) => {
   if (typeof refVal !== 'string' || typeof val !== 'string') return false;
