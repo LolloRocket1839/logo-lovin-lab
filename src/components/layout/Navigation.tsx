@@ -230,11 +230,6 @@ export const Navigation = () => {
         )}
       </div>
 
-      <QuickInvestorLeadDialog 
-        open={investDialogOpen} 
-        onOpenChange={setInvestDialogOpen}
-        source="navigation"
-      />
     </nav>
   );
 };
