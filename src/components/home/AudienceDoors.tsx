@@ -62,7 +62,7 @@ export const AudienceDoors = () => {
             <span className="eyebrow-mono text-foreground/60 text-xs">
               {isItalian ? "Per chi" : "For whom"}
             </span>
-            <span className="metric-mono text-xs text-foreground/40">/ 08</span>
+            <span className="metric-mono text-xs text-foreground/40">/ 07</span>
           </div>
         </SceneReveal>
 
