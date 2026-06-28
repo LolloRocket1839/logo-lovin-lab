@@ -122,10 +122,6 @@ const Index = () => {
           <AudienceDoors />
         </Suspense>
 
-        <Suspense fallback={<div className="min-h-[300px] bg-background" aria-hidden="true" />}>
-          <ClosingManifesto />
-        </Suspense>
-
         <Suspense fallback={null}>
           <div className="hidden md:block">
             <Footer />
