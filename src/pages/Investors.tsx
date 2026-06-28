@@ -47,8 +47,6 @@ const Investors = () => {
     ? "https://junglerent.it/investors"
     : "https://junglerent.it/investitori";
 
-  const [quickDialogOpen, setQuickDialogOpen] = useState(false);
-
   const scrollToForm = useCallback(() => {
     trackEvent("investor_hero_cta_click", { target: "request_info_form" });
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -58,21 +56,6 @@ const Investors = () => {
   useEffect(() => {
     trackEvent("investor_page_view", { path: "/investitori" });
   }, [trackEvent]);
-
-  // Scroll 60% → open quick lead dialog, once per session
-  useScrollDepthTrigger(
-    useCallback(() => {
-      // Don't auto-open if the user already reached the qualification form
-      const el = formRef.current;
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) return;
-      }
-      trackEvent("investor_quickdialog_auto_open", { trigger: "scroll_60" });
-      setQuickDialogOpen(true);
-    }, [trackEvent]),
-    { threshold: 0.6, storageKey: "investor_scroll_dialog_shown_v1", delayMs: 400 }
-  );
 
   return (
     <div className="min-h-screen bg-background">
