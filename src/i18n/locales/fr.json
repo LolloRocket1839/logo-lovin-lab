@@ -231,9 +231,9 @@
       "datePlaceholder": "Sélectionner date...",
       "difficulty": "Difficulté perçue",
       "difficultyOptions": {
-        "1": "😊 Facile",
+        "1": "😊 Facile à réviser",
         "2": "😐 Moyen",
-        "3": "😰 Difficile",
+        "3": "😰 Difficile à réviser",
         "4": "💀 Boss final"
       },
       "editButton": "Modifier examen",
@@ -969,7 +969,7 @@
         "p2": "L'instrument financier décrit n'est pas disponible à la souscription en ligne. L'éventuelle souscription se fait exclusivement par placement privé, réservé à un nombre restreint d'investisseurs qualifiés individuellement, après remise du mémorandum d'information complet et de la documentation contractuelle, dans le respect des exemptions prévues par l'art. 100 TUF.",
         "p3": "Les rendements présentés dans les documents d'information sont des projections basées sur des hypothèses de modèle. La performance réelle dépend de l'évolution du portefeuille et n'est en aucun cas garantie. L'investissement comporte des risques, y compris le risque d'illiquidité, le risque du marché immobilier, le risque d'exécution opérationnelle, le risque de dilution et la possibilité d'une perte totale du capital investi.",
         "p4": "Le traitement fiscal décrit est soumis à des conditions individuelles, des limites réglementaires et de possibles modifications législatives. Avant toute décision d'investissement, l'investisseur est tenu de consulter son propre conseiller fiscal et financier indépendant.",
-        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
+        "company": "Jungle Rent S.r.l. · N° TVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin, Italie · junglerententeprise@gmail.com"
       }
     }
   },

@@ -928,9 +928,9 @@
             "OTHER": "Außerhalb der EU"
           },
           "ticket": {
-            "5-10": "€5.000–€10.000",
-            "10-20": "€10.000–€20.000",
-            "20-50": "€20.000–€50.000",
+            "5-10": "5.000–10.000 €",
+            "10-20": "10.000–20.000 €",
+            "20-50": "20.000–50.000 €",
             "50+": "Über 50.000 €",
             "TBD": "Ich möchte dies nach Sichtung der Unterlagen festlegen"
           },
@@ -969,7 +969,7 @@
         "p2": "Das beschriebene Finanzinstrument ist nicht zur Online-Zeichnung verfügbar. Eine eventuelle Zeichnung erfolgt ausschließlich im Rahmen einer Privatplatzierung, die einer begrenzten Anzahl individuell qualifizierter Anleger vorbehalten ist, nach Übergabe des vollständigen Informationsmemorandums und der Vertragsunterlagen, unter Einhaltung der in art. 100 TUF vorgesehenen Ausnahmen.",
         "p3": "Die in den Informationsmaterialien dargestellten Renditen sind Prognosen, die auf Modellannahmen basieren. Die tatsächliche Performance hängt von der Entwicklung des Portfolios ab und wird in keiner Weise garantiert. Die Anlage birgt Risiken, einschließlich Illiquiditätsrisiko, Immobilienmarktrisiko, operatives Ausführungsrisiko, Verwässerungsrisiko und der Möglichkeit eines Totalverlusts des investierten Kapitals.",
         "p4": "Die beschriebene steuerliche Behandlung unterliegt individuellen Bedingungen, regulatorischen Grenzen und möglichen Gesetzesänderungen. Vor jeder Anlageentscheidung ist der Anleger verpflichtet, einen eigenen unabhängigen Steuer- und Finanzberater zu konsultieren.",
-        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com"
+        "company": "Jungle Rent S.r.l. · USt-IdNr. 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin, Italien · junglerententeprise@gmail.com"
       }
     }
   },
@@ -2124,7 +2124,7 @@
       "iusto": "IUSTO",
       "other": "Andere",
       "polito": "Politecnico di Torino",
-      "unito": "Università di Torino"
+      "unito": "Universität Turin"
     },
     "universityLabel": "Universität",
     "universityPlaceholder": "z.B. Politecnico di Torino"
