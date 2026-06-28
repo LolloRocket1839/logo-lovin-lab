@@ -10,14 +10,13 @@ import { CONTACTS } from "@/constants";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const { trackClick } = useAnalytics();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const { i18n } = useTranslation();
   const investorPath = i18n.language.startsWith("en") ? "/investors" : "/investitori";
   const prefersReducedMotion = useReducedMotion();
 
