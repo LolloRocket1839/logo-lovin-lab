@@ -21,7 +21,7 @@ export const AnnouncementBanner = () => {
         className="block py-2 pl-4 pr-10 hover:bg-primary/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
       >
         <span className="inline-flex items-center gap-2.5 eyebrow-mono text-foreground/80">
-          <span className="w-1.5 h-1.5 rounded-full bg-destructive animate-pulse" aria-hidden="true" />
+          <span className="w-1.5 h-1.5 rounded-full bg-destructive motion-safe:animate-pulse" aria-hidden="true" />
           <span>{t('announcement.firstDeal')}</span>
           <span className="text-foreground/40" aria-hidden="true">→</span>
         </span>

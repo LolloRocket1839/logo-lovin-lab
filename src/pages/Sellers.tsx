@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { 
   Building2, Clock, Check, X, MapPin, FileText, 
-  Handshake, Shield, ArrowRight, Phone, CalendarCheck,
+  Handshake, Shield, ArrowRight, CalendarCheck,
   Star, MessageCircle,
   UserCheck, Zap, KeyRound
 } from "lucide-react";
@@ -256,21 +256,12 @@ const Sellers = () => {
                       const msg = t('sellerScenarios.whatsappMessage');
                       openWhatsApp(CONTACTS.lorenzo.phone, msg);
                     }}
-                    className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
+                    className="border-primary/40 text-foreground hover:bg-primary/5"
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
                     {t('sellersPage.hero.whatsappCta', 'Scrivi su WhatsApp')}
                   </Button>
                 </div>
-                <p className="text-xs text-muted-foreground mt-3">
-                  {t('sellersPage.hero.orCall', 'Preferisci parlare?')}{' '}
-                  <button
-                    onClick={() => window.open('https://calendly.com/junglerent/vendere', '_blank')}
-                    className="underline hover:text-foreground transition-colors"
-                  >
-                    {t('seller.scheduleCall')}
-                  </button>
-                </p>
               </motion.div>
 
               {/* Right: Offer Simulator */}
@@ -445,7 +436,7 @@ const Sellers = () => {
                   const msg = t('sellerScenarios.whatsappMessage');
                   openWhatsApp(CONTACTS.lorenzo.phone, msg);
                 }}
-                className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
+                className="border-primary/40 text-foreground hover:bg-primary/5"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 {t('sellerScenarios.whatsappCta')}
@@ -509,7 +500,7 @@ const Sellers = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-colors cursor-default"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border transition-colors cursor-default"
                 >
                   <MapPin className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium">{zone}</span>
@@ -585,7 +576,7 @@ const Sellers = () => {
                       const msg = t('sellerScenarios.whatsappMessage');
                       openWhatsApp(CONTACTS.lorenzo.phone, msg);
                     }}
-                    className="border-green-500/50 text-green-700 dark:text-green-400 hover:bg-green-500/10"
+                    className="border-primary/40 text-foreground hover:bg-primary/5"
                   >
                     <MessageCircle className="w-4 h-4 mr-2" />
                     {t('sellersPage.hero.whatsappCta', 'Scrivi su WhatsApp')}
