@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect, useState, lazy, Suspense } from "react";
+import { useRef, useCallback, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Navigation, Footer } from "@/components/layout";
@@ -9,7 +9,6 @@ import { SocialProofMini } from "@/components/investitori/SocialProofMini";
 import { TrustStripe } from "@/components/investitori/TrustStripe";
 import { InvestorStickyCTA } from "@/components/investitori/InvestorStickyCTA";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { useScrollDepthTrigger } from "@/hooks/useScrollDepthTrigger";
 
 // Lazy-load below-the-fold sections to reduce initial bundle of /investitori
 const EmailFirstForm = lazy(() =>
