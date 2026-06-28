@@ -1,5 +1,7 @@
+import { lazy, Suspense } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+
 import { useTranslation } from "react-i18next";
 import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
