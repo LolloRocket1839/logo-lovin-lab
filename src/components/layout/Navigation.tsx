@@ -17,7 +17,8 @@ export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [investDialogOpen, setInvestDialogOpen] = useState(false);
+  const { i18n } = useTranslation();
+  const investorPath = i18n.language.startsWith("en") ? "/investors" : "/investitori";
   const prefersReducedMotion = useReducedMotion();
 
   const isHomePage = location.pathname === '/';
