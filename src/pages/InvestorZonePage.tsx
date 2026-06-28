@@ -1,5 +1,7 @@
+import { lazy, Suspense } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+
 import { useTranslation } from "react-i18next";
 import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -34,6 +36,9 @@ import {
 import { ZoneMetricCard } from "@/components/investor/ZoneMetricCard";
 import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
+
+const ZoneMap = lazy(() => import("@/components/investor/ZoneMap"));
+
 
 const InvestorZonePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -295,6 +300,23 @@ const InvestorZonePage = () => {
                 </div>
               </div>
             </Card>
+
+            {/* Neighborhood map */}
+            <Card className="p-6 md:p-8 rounded-xl border-border/20">
+              <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-primary" />
+                {lang === 'it' ? 'Mappa del quartiere' : 'Neighborhood map'}
+              </h2>
+              <Suspense
+                fallback={
+                  <div className="w-full h-[320px] md:h-[400px] rounded-xl bg-muted/40 animate-pulse" />
+                }
+              >
+                <ZoneMap zone={zone} lang={lang} />
+              </Suspense>
+            </Card>
+
+
 
             {/* Urban Renewal (if active) */}
             {zone.urbanRenewal.active && zone.urbanRenewal.projects.length > 0 && (
