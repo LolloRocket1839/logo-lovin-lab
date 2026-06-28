@@ -1679,7 +1679,7 @@
       },
 
       "cta": "Request free valuation",
-      "dataSource": "Prezzi indicativi zone semicentrali Torino. Dati: OMI, Immobiliare.it, nov 2025",
+      "dataSource": "Indicative prices for Turin semi-central areas. Source: OMI, Immobiliare.it, Nov 2025",
       "directBuyer": "Direct buyer",
       "minimumFee": "Agency minimum fee",
       "minimumFeeExplanation": "Min. €5,000 (4% would be lower)",
@@ -1688,7 +1688,8 @@
         "quadrilocale": "4-Room",
         "trilocale": "3-Room"
       },
-      "propertyType": "Tipologia",
+      "propertyType": "Property type",
+
       "propertyValue": "Property value",
       "savingsNote": "Savings compared to agency commission (4% + VAT)",
       "subtitle": "See how much you save by selling directly to us instead of through an agency",
