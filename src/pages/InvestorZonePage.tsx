@@ -301,6 +301,23 @@ const InvestorZonePage = () => {
               </div>
             </Card>
 
+            {/* Neighborhood map */}
+            <Card className="p-6 md:p-8 rounded-xl border-border/20">
+              <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-primary" />
+                {lang === 'it' ? 'Mappa del quartiere' : 'Neighborhood map'}
+              </h2>
+              <Suspense
+                fallback={
+                  <div className="w-full h-[320px] md:h-[400px] rounded-xl bg-muted/40 animate-pulse" />
+                }
+              >
+                <ZoneMap zone={zone} lang={lang} />
+              </Suspense>
+            </Card>
+
+
+
             {/* Urban Renewal (if active) */}
             {zone.urbanRenewal.active && zone.urbanRenewal.projects.length > 0 && (
               <Card className="p-6 md:p-8 rounded-xl border-amber-500/30 bg-amber-500/5">
