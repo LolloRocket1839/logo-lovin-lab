@@ -53,14 +53,12 @@ export const Navigation = () => {
   const handleMenuClick = (e: React.MouseEvent, item: typeof menuItems[0]) => {
     trackClick(`nav_menu_${item.id || item.path || 'founders'}`, { label: item.label });
     
-    // Handle founders click - open WhatsApp with preset message
+    // Handle founders click - navigate to about page
     if ('isFounders' in item && item.isFounders) {
-      e.preventDefault();
-      const lang = (document.documentElement.lang || 'it') as SupportedLanguage;
-      openQuickContact(lang);
       setIsMobileMenuOpen(false);
       return;
     }
+    
     
     if (item.id) {
       if (window.location.pathname === '/') {
