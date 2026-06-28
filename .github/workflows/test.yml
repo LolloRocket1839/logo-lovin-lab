@@ -32,3 +32,8 @@ jobs:
 
       - name: Lint
         run: npm run lint
+
+      - name: Validate translations (i18n)
+        # Fails the pipeline on missing, extra, empty, or untranslated keys
+        # across all locale bundles (main + investor). Reference: it.json.
+        run: npm run validate:translations
