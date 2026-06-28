@@ -171,15 +171,17 @@ export const Navigation = () => {
               );
             })}
             <Button
+              asChild
               size="sm"
               variant="default"
               className="ml-2"
-              onClick={() => {
-                trackClick('nav_desktop_invest_cta');
-                setInvestDialogOpen(true);
-              }}
             >
-              {t("nav.investors")} →
+              <Link
+                to={investorPath}
+                onClick={() => trackClick('nav_desktop_invest_cta')}
+              >
+                {t("nav.investors")} →
+              </Link>
             </Button>
           </div>
 
