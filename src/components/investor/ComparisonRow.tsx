@@ -8,6 +8,7 @@ interface ComparisonRowProps {
   getValue: (zone: InvestorZone) => string;
   bestZoneId?: string;
   bestLabel: string;
+  gridTemplate?: string;
 }
 
 export const ComparisonRow = ({
@@ -16,12 +17,13 @@ export const ComparisonRow = ({
   getValue,
   bestZoneId,
   bestLabel,
+  gridTemplate,
 }: ComparisonRowProps) => {
   return (
     <div
-      className="grid gap-4 py-3 border-b border-border/50 hover:bg-muted/30 transition-colors"
+      className="grid gap-2 md:gap-4 py-3 border-b border-border/50 hover:bg-muted/30 transition-colors"
       style={{
-        gridTemplateColumns: `160px repeat(${zones.length}, 1fr)`,
+        gridTemplateColumns: gridTemplate ?? `160px repeat(${zones.length}, minmax(0, 1fr))`,
       }}
     >
       <div className="text-sm font-medium text-muted-foreground flex items-center">
