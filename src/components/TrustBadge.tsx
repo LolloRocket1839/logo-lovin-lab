@@ -37,7 +37,7 @@ export const TrustBadge = () => {
             <span className="eyebrow-mono text-foreground/60 text-xs">
               {isItalian ? "Fiducia" : "Trust"}
             </span>
-            <span className="metric-mono text-xs text-foreground/40">/ 08</span>
+            <span className="metric-mono text-xs text-foreground/40">/ 07</span>
           </div>
         </SceneReveal>
 

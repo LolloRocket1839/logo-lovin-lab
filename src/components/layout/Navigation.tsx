@@ -6,19 +6,18 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useGlobalScroll } from "@/hooks/useGlobalScroll";
-import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
-import { CONTACTS, openQuickContact, type SupportedLanguage } from "@/constants";
+import { CONTACTS } from "@/constants";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const { trackClick } = useAnalytics();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [investDialogOpen, setInvestDialogOpen] = useState(false);
+  const investorPath = i18n.language.startsWith("en") ? "/investors" : "/investitori";
   const prefersReducedMotion = useReducedMotion();
 
   const isHomePage = location.pathname === '/';
@@ -54,14 +53,12 @@ export const Navigation = () => {
   const handleMenuClick = (e: React.MouseEvent, item: typeof menuItems[0]) => {
     trackClick(`nav_menu_${item.id || item.path || 'founders'}`, { label: item.label });
     
-    // Handle founders click - open WhatsApp with preset message
+    // Handle founders click - navigate to about page
     if ('isFounders' in item && item.isFounders) {
-      e.preventDefault();
-      const lang = (document.documentElement.lang || 'it') as SupportedLanguage;
-      openQuickContact(lang);
       setIsMobileMenuOpen(false);
       return;
     }
+    
     
     if (item.id) {
       if (window.location.pathname === '/') {
@@ -85,13 +82,13 @@ export const Navigation = () => {
     }
   }, [prefersReducedMotion]);
 
-  // Simplified to 4 items: Invest | Sell | For Students | Founders
+  // 5 items: Invest | Sell | For Students | Contracts | Founders
   const menuItems = [
-    { label: t("nav.investors"), id: undefined as string | undefined, path: "/investitori" as string | undefined },
+    { label: t("nav.investors"), id: undefined as string | undefined, path: investorPath as string | undefined },
     { label: t("nav.sell"), id: undefined, path: "/vendi" },
     { label: t("nav.students"), id: undefined, path: "/studenti" },
     { label: t("nav.contracts"), id: undefined, path: "/contratti-locazione" },
-    { label: t("founders.title"), id: undefined, path: undefined, isFounders: true },
+    { label: t("founders.title"), id: undefined, path: "/chi-siamo", isFounders: true },
   ];
 
   return (
@@ -174,15 +171,17 @@ export const Navigation = () => {
               );
             })}
             <Button
+              asChild
               size="sm"
               variant="default"
               className="ml-2"
-              onClick={() => {
-                trackClick('nav_desktop_invest_cta');
-                setInvestDialogOpen(true);
-              }}
             >
-              {t("nav.investors")} →
+              <Link
+                to={investorPath}
+                onClick={() => trackClick('nav_desktop_invest_cta')}
+              >
+                {t("nav.investors")} →
+              </Link>
             </Button>
           </div>
 
@@ -231,11 +230,6 @@ export const Navigation = () => {
         )}
       </div>
 
-      <QuickInvestorLeadDialog 
-        open={investDialogOpen} 
-        onOpenChange={setInvestDialogOpen}
-        source="navigation"
-      />
     </nav>
   );
 };

@@ -74,7 +74,7 @@ export const LiquidHomepageStory = () => {
               <HeroLogo />
             </div>
             <div className="mt-6 md:mt-10">
-              <SceneIndex index="01" total="05" label={isItalian ? "Inizio" : "Start"} />
+              <SceneIndex index="01" total="07" label={isItalian ? "Inizio" : "Start"} />
             </div>
             <h1 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
               {isItalian ? (
@@ -98,7 +98,7 @@ export const LiquidHomepageStory = () => {
         {/* SCENE 2 — How */}
         <Scene p={p} range={[scenes[1].in, scenes[1].out]} reduced={reduced}>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
-            <SceneIndex index="02" total="05" label={isItalian ? "Come funziona" : "How it works"} />
+            <SceneIndex index="02" total="07" label={isItalian ? "Come funziona" : "How it works"} />
             <h2 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
               {isItalian ? (
                 <>
@@ -123,7 +123,7 @@ export const LiquidHomepageStory = () => {
         {/* SCENE 3 — Investor */}
         <Scene p={p} range={[scenes[2].in, scenes[2].out]} reduced={reduced}>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
-            <SceneIndex index="03" total="05" label={isItalian ? "Investitori" : "Investors"} />
+            <SceneIndex index="03" total="07" label={isItalian ? "Investitori" : "Investors"} />
             <h2 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
               {isItalian ? (
                 <>
@@ -150,7 +150,7 @@ export const LiquidHomepageStory = () => {
         {/* SCENE 4 — Sell */}
         <Scene p={p} range={[scenes[3].in, scenes[3].out]} reduced={reduced}>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
-            <SceneIndex index="04" total="05" label={isItalian ? "Vendi casa" : "Sell"} />
+            <SceneIndex index="04" total="07" label={isItalian ? "Vendi casa" : "Sell"} />
             <h2 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
               {isItalian ? (
                 <>
@@ -174,7 +174,7 @@ export const LiquidHomepageStory = () => {
         {/* SCENE 5 — Talk */}
         <Scene p={p} range={[scenes[4].in, scenes[4].out]} reduced={reduced} isLast>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
-            <SceneIndex index="05" total="05" label={isItalian ? "Contatti" : "Contact"} />
+            <SceneIndex index="05" total="07" label={isItalian ? "Contatti" : "Contact"} />
             <h2 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-4xl">
               {isItalian ? (
                 <>
