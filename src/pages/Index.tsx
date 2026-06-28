@@ -19,7 +19,7 @@ import { LiquidHomepageStory } from "@/components/immersive/LiquidHomepageStory"
 
 // Lazy load below-the-fold components
 const AudienceDoors = lazy(() => import("@/components/home/AudienceDoors").then(m => ({ default: m.AudienceDoors })));
-const ClosingManifesto = lazy(() => import("@/components/home/ClosingManifesto").then(m => ({ default: m.ClosingManifesto })));
+
 
 const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ default: m.Footer })));
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
@@ -120,10 +120,6 @@ const Index = () => {
 
         <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
           <AudienceDoors />
-        </Suspense>
-
-        <Suspense fallback={<div className="min-h-[300px] bg-background" aria-hidden="true" />}>
-          <ClosingManifesto />
         </Suspense>
 
         <Suspense fallback={null}>
