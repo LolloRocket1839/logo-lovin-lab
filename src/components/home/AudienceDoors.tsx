@@ -33,7 +33,7 @@ export const AudienceDoors = () => {
         ? "Valutazione, offerta scritta e rogito in 60-90 giorni."
         : "Valuation, written offer and deed within 60-90 days.",
       cta: isItalian ? "Valutazione gratuita" : "Free valuation",
-      to: "/vendi-casa-torino",
+      to: "/vendi",
       onClickTrack: () => trackClick("audience_door_sell"),
     },
     {
@@ -44,7 +44,7 @@ export const AudienceDoors = () => {
         ? "Camere arredate vicino alle università di Torino, contratti a norma."
         : "Furnished rooms near Turin universities, fully compliant contracts.",
       cta: isItalian ? "Esplora" : "Explore",
-      to: "/students",
+      to: "/studenti",
       onClickTrack: () => trackClick("audience_door_study"),
     },
   ];

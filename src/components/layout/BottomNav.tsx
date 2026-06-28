@@ -85,17 +85,17 @@ export const BottomNav = () => {
             className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
           >
             <Info className="w-6 h-6" aria-hidden="true" />
-            <span className="text-xs font-medium">Info</span>
+            <span className="text-xs font-medium">{t("nav.info")}</span>
           </button>
 
         </div>
       </nav>
 
-      {/* Info Drawer - infoinfoinfo(: */}
+      {/* Info Drawer */}
       <Drawer open={infoDrawerOpen} onOpenChange={setInfoDrawerOpen}>
         <DrawerContent className="max-h-[85vh]">
           <DrawerHeader className="pb-2">
-            <DrawerTitle className="text-center">info(:</DrawerTitle>
+            <DrawerTitle className="text-center">{t("nav.info")}</DrawerTitle>
           </DrawerHeader>
           <div className="px-4 pb-8">
             <Suspense fallback={<div className="h-32 flex items-center justify-center text-muted-foreground">Loading...</div>}>
