@@ -49,7 +49,9 @@
   "accessibility": {
     "closeMenu": "Fermer le menu",
     "languageSelector": "Sélectionner la langue",
+    "openLogoModal": "Ouvrir le logo en plein écran",
     "openMenu": "Ouvrir le menu",
+    "opensNewWindow": "(s’ouvre dans une nouvelle fenêtre)",
     "skipToContent": "Passer au contenu principal"
   },
   "announcement": {
