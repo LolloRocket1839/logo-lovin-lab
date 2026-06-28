@@ -312,7 +312,7 @@ const filterTexts = {
         <div ref={mapContainerRef} className="absolute inset-0" />
         
         {/* Yield mode toggle */}
-       <div className="absolute top-4 right-4 z-[1000] flex items-center gap-2">
+       <div className="absolute top-4 right-4 z-[400] flex items-center gap-2">
          {/* Filters dropdown */}
          <DropdownMenu>
            <DropdownMenuTrigger asChild>
@@ -380,7 +380,7 @@ const filterTexts = {
         {!legendOpen && (
           <button
             onClick={() => setLegendOpen(true)}
-            className="absolute bottom-4 left-4 z-[1000] md:hidden bg-background/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-lg flex items-center gap-2 text-xs font-medium text-foreground active:scale-[0.97] transition-transform"
+            className="absolute bottom-4 left-4 z-[400] md:hidden bg-background/95 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-lg flex items-center gap-2 text-xs font-medium text-foreground active:scale-[0.97] transition-transform"
           >
             <div className="flex items-center gap-0.5">
               <div className="w-2 h-2 rounded-full border border-white/40" style={{ backgroundColor: '#16a34a' }} />
@@ -393,7 +393,7 @@ const filterTexts = {
         )}
         
         {/* Desktop legend — always visible */}
-        <div className="hidden md:block absolute bottom-4 left-4 z-[1000]">
+        <div className="hidden md:block absolute bottom-4 left-4 z-[400]">
           <div className="bg-background/95 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-[180px]">
             <h4 className="text-xs font-semibold mb-2 text-foreground">
               {t.legend}
@@ -430,7 +430,7 @@ const filterTexts = {
 
         {/* Mobile legend — expanded */}
         {legendOpen && (
-          <div className="md:hidden absolute bottom-4 left-4 z-[1000]">
+          <div className="md:hidden absolute bottom-4 left-4 z-[400]">
             <div className="bg-background/95 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-[180px]">
               <div className="flex items-center justify-between mb-2">
                 <h4 className="text-xs font-semibold text-foreground">
