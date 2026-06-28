@@ -43,19 +43,38 @@ const MAX = (() => {
 })();
 
 // Allow-list: values that may legitimately match IT verbatim.
-const BRAND_TOKENS = ['Jungle Rent', 'JungleRent', 'Lorenzo', 'WhatsApp', 'Torino', 'Italia', 'S.r.l.'];
+const BRAND_TOKENS = [
+  'Jungle Rent', 'JungleRent', 'Lorenzo', 'Lorenzo Oni-Joseph', 'WhatsApp', 'WhatsApp Lorenzo',
+  'Torino', 'Italia', 'S.r.l.', 'Home', 'Menu', 'Email', 'Email *', 'Portfolio', 'Partnership',
+  // Brand / referral source names
+  'Google', 'LinkedIn', 'Facebook', 'Instagram', 'Family Office', 'Referral',
+  // Turin neighbourhood proper nouns
+  'Crocetta', 'Lingotto', 'San Paolo', 'San Salvario', 'Vanchiglia', 'Vanchiglietta',
+  'Aurora', 'Centro', 'Santa Rita', 'San Paolo/Santa Rita', 'Aurora/Vanchiglia',
+  // Universities / institutions / proper nouns
+  'Politecnico', 'UniTo', 'Politecnico di Torino', 'ESCP Business School',
+  'IAAD', 'IED Torino', 'IUSTO', '2i3T',
+  // Codes / IDs that are identical across languages
+  'P.IVA', 'REA TO-1355899', 'Report 2025', 'Savills 2025', '1-2 max',
+];
 const isLikelyUntranslated = (refVal, val) => {
   if (typeof refVal !== 'string' || typeof val !== 'string') return false;
   if (!refVal.trim() || !val.trim()) return false;
   if (refVal !== val) return false;
+  const trimmed = refVal.trim();
   // very short strings (≤3 chars), pure numbers, urls, emails, brand tokens → skip
-  if (refVal.trim().length <= 3) return false;
-  if (/^[\d\s.,€%+\-/]+$/.test(refVal)) return false;
+  if (trimmed.length <= 3) return false;
+  if (/^[\d\s.,€%+\-/<>]+k?$/i.test(trimmed)) return false;
+  // currency ranges like "€100k - €200k", ">€600", "€50k - €100k"
+  if (/^[<>]?€?\s*\d+\s*k?(\s*[-–]\s*[<>]?€?\s*\d+\s*k?)?$/i.test(trimmed)) return false;
   if (/^https?:\/\//.test(refVal)) return false;
   if (/^\S+@\S+\.\S+$/.test(refVal)) return false;
-  if (BRAND_TOKENS.some((t) => refVal.trim() === t)) return false;
+  if (BRAND_TOKENS.some((t) => trimmed === t)) return false;
+  // Long lists of Turin proper nouns separated by commas
+  if (/^([A-ZÀ-Ý][\w'’\- ]+)(,\s*[A-ZÀ-Ý][\w'’\- ]+)+$/.test(trimmed) && trimmed.split(',').every((p) => BRAND_TOKENS.includes(p.trim()))) return false;
   return true;
 };
+
 
 function flatten(obj, prefix = '', out = {}) {
   for (const [k, v] of Object.entries(obj)) {
