@@ -704,7 +704,8 @@
           "payoutValue": "Bimestrale",
           "ticketLabel": "Ticket minimo",
           "ticketValue": "€5k"
-        }
+        },
+        "h1Accent": "singola operazione immobiliare"
       },
       "quickBar": {
         "label": "Vuoi parlarne direttamente?",

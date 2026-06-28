@@ -704,7 +704,8 @@
           "payoutValue": "双月",
           "ticketLabel": "最低投资额",
           "ticketValue": "€5k"
-        }
+        },
+        "h1Accent": "单个房地产项目"
       },
       "quickBar": {
         "label": "想直接谈谈吗？",

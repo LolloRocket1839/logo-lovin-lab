@@ -704,7 +704,8 @@
           "payoutValue": "Every 2 months",
           "ticketLabel": "Minimum ticket",
           "ticketValue": "€5k"
-        }
+        },
+        "h1Accent": "single property operation"
       },
       "quickBar": {
         "label": "Want to talk directly?",

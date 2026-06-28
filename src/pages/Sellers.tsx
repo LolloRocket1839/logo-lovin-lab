@@ -20,6 +20,7 @@ import { QuickOfferSimulator } from "@/components/tools/QuickOfferSimulator";
 import { StyledText } from "@/components/StyledText";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { motion } from "framer-motion";
+import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import {
   Accordion,
   AccordionContent,
@@ -457,25 +458,15 @@ const Sellers = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {howItWorksSteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.3 }}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mb-4 shadow-sm">
-                    <step.icon className="w-5 h-5" />
-                  </div>
-                  <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary mb-2">
-                    {step.time}
-                  </span>
-                  <h3 className="font-display font-semibold text-base text-foreground">{step.title}</h3>
-                </motion.div>
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <ProcessSteps
+                layout="grid"
+                steps={howItWorksSteps.map((s) => ({
+                  title: s.title,
+                  time: s.time,
+                  icon: s.icon,
+                }))}
+              />
             </div>
           </div>
         </section>

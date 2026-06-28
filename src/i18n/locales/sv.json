@@ -704,7 +704,8 @@
           "payoutValue": "Varannan månad",
           "ticketLabel": "Minsta investering",
           "ticketValue": "€5k"
-        }
+        },
+        "h1Accent": "enskilda fastighetsprojekt"
       },
       "quickBar": {
         "label": "Vill du prata direkt?",

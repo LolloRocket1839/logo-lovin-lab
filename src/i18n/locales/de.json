@@ -704,7 +704,8 @@
           "payoutValue": "Zweimonatlich",
           "ticketLabel": "Mindestticket",
           "ticketValue": "€5k"
-        }
+        },
+        "h1Accent": "einzelnen Immobiliengeschäft"
       },
       "quickBar": {
         "label": "Möchten Sie direkt darüber sprechen?",

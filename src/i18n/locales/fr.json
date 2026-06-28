@@ -704,7 +704,8 @@
           "payoutValue": "Bimestriel",
           "ticketLabel": "Ticket minimum",
           "ticketValue": "€5k"
-        }
+        },
+        "h1Accent": "l'opération immobilière individuelle"
       },
       "quickBar": {
         "label": "Vous voulez en parler directement ?",
