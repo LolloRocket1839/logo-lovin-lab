@@ -12,7 +12,9 @@ export interface UrbanProject {
   name: string;
   investment: string;
   impact: { it: string; en: string };
+  coordinates?: { lat: number; lng: number };
 }
+
 
 export interface InvestorZone {
   id: string;
