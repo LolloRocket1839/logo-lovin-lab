@@ -49,7 +49,9 @@
   "accessibility": {
     "closeMenu": "关闭菜单",
     "languageSelector": "选择语言",
+    "openLogoModal": "全屏打开徽标",
     "openMenu": "打开菜单",
+    "opensNewWindow": "(在新窗口中打开)",
     "skipToContent": "跳至主要内容"
   },
   "announcement": {

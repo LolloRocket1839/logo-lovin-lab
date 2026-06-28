@@ -56,19 +56,28 @@ i18n
       },
     },
   })
-  .then(() => {
-    // Load detected language if it's not Italian
+  .then(async () => {
+    // Load detected language if it's not Italian, then force a re-render by
+    // re-applying changeLanguage so react-i18next picks up the new bundle.
     const current = i18n.language?.split('-')[0]?.toLowerCase();
     if (current && current !== 'it') {
-      ensureLanguageLoaded(current);
+      await ensureLanguageLoaded(current);
+      await i18n.changeLanguage(current);
     }
   });
 
-// Load on demand whenever the user switches language
+
+// Load on demand whenever the user switches language. After the bundle is
+// added, re-issue changeLanguage so react-i18next re-renders with the new
+// resources. The loadedLanguages guard prevents an infinite loop.
 i18n.on('languageChanged', (lng) => {
   document.documentElement.lang = lng;
-  ensureLanguageLoaded(lng);
+  const base = lng?.split('-')[0]?.toLowerCase();
+  if (base && !loadedLanguages.has(base)) {
+    ensureLanguageLoaded(base).then(() => i18n.changeLanguage(base));
+  }
 });
+
 
 if (typeof document !== 'undefined') {
   document.documentElement.lang = i18n.language?.split('-')[0] || 'it';

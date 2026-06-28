@@ -49,7 +49,9 @@
   "accessibility": {
     "closeMenu": "Close menu",
     "languageSelector": "Select language",
+    "openLogoModal": "Open logo in full screen",
     "openMenu": "Open menu",
+    "opensNewWindow": "(opens in a new window)",
     "skipToContent": "Skip to main content"
   },
   "announcement": {
@@ -1677,7 +1679,6 @@
         "ristrutturato": "Renovated",
         "tooltip": "Select the current condition of your property for a more accurate estimate"
       },
-
       "cta": "Request free valuation",
       "dataSource": "Indicative prices for Turin semi-central areas. Source: OMI, Immobiliare.it, Nov 2025",
       "directBuyer": "Direct buyer",
@@ -1689,7 +1690,6 @@
         "trilocale": "3-Room"
       },
       "propertyType": "Property type",
-
       "propertyValue": "Property value",
       "savingsNote": "Savings compared to agency commission (4% + VAT)",
       "subtitle": "See how much you save by selling directly to us instead of through an agency",

@@ -49,7 +49,9 @@
   "accessibility": {
     "closeMenu": "Stäng meny",
     "languageSelector": "Välj språk",
+    "openLogoModal": "Öppna logotypen i helskärm",
     "openMenu": "Öppna meny",
+    "opensNewWindow": "(öppnas i ett nytt fönster)",
     "skipToContent": "Hoppa till huvudinnehåll"
   },
   "announcement": {
