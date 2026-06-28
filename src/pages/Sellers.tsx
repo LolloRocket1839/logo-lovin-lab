@@ -20,6 +20,7 @@ import { QuickOfferSimulator } from "@/components/tools/QuickOfferSimulator";
 import { StyledText } from "@/components/StyledText";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { motion } from "framer-motion";
+import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import {
   Accordion,
   AccordionContent,
