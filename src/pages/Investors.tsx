@@ -35,9 +35,6 @@ const RequestInfoForm = lazy(() =>
 const LegalDisclaimerFooter = lazy(() =>
   import("@/components/investitori/LegalDisclaimerFooter").then((m) => ({ default: m.LegalDisclaimerFooter }))
 );
-const QuickInvestorLeadDialog = lazy(() =>
-  import("@/components/dialogs/QuickInvestorLeadDialog").then((m) => ({ default: m.QuickInvestorLeadDialog }))
-);
 
 const SectionFallback = () => <div className="min-h-[200px]" aria-hidden="true" />;
 
