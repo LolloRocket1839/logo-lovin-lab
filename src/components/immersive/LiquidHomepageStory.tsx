@@ -48,10 +48,6 @@ export const LiquidHomepageStory = () => {
     { id: "talk", in: 0.78, out: 1.0, isFirst: false, isLast: true },
   ];
 
-  // Ambient background drift — a single big word slides across.
-  const wordX = useTransform(p, [0, 1], reduced ? ["0%", "0%"] : ["3%", "-9%"]);
-  const wordOpacity = useTransform(p, [0, 0.1, 0.9, 1], [0, 0.06, 0.06, 0]);
-
   return (
     <div
       ref={ref}
@@ -60,16 +56,6 @@ export const LiquidHomepageStory = () => {
       aria-label="homepage scroll story"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-background">
-        {/* Ambient drifting wordmark */}
-        <motion.div
-          aria-hidden="true"
-          style={{ x: wordX, opacity: wordOpacity }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-center"
-        >
-          <span className="font-display font-black tracking-tighter text-foreground select-none whitespace-nowrap text-[28vw] leading-none">
-            TORINO
-          </span>
-        </motion.div>
 
         {/* Subtle vignette */}
         <div
