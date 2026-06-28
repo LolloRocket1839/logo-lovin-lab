@@ -54,7 +54,7 @@ const HeroSectionComponent = ({ onCtaClick }: Props) => {
               {t("investor.landing.hero.eyebrow")}
             </span>
             <span className="hidden sm:inline-flex items-center gap-2 eyebrow-mono text-muted-foreground">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary motion-safe:animate-pulse" aria-hidden="true" />
               Q3 attivo
             </span>
           </div>
