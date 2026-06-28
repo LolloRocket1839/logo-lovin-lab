@@ -1668,15 +1668,16 @@
     "calculator": {
       "agency": "Traditional agency",
       "condition": {
-        "buonoStato": "Buono stato",
-        "buonoStatoShort": "Buono",
-        "daRistrutturare": "Da ristrutturare",
-        "daRistrutturareShort": "Da rist.",
-        "label": "Stato immobile",
-        "ristrutturatShort": "Nuovo",
-        "ristrutturato": "Ristrutturato",
-        "tooltip": "Seleziona lo stato attuale del tuo immobile per una stima più accurata"
+        "buonoStato": "Good condition",
+        "buonoStatoShort": "Good",
+        "daRistrutturare": "To renovate",
+        "daRistrutturareShort": "To reno.",
+        "label": "Property condition",
+        "ristrutturatShort": "New",
+        "ristrutturato": "Renovated",
+        "tooltip": "Select the current condition of your property for a more accurate estimate"
       },
+
       "cta": "Request free valuation",
       "dataSource": "Prezzi indicativi zone semicentrali Torino. Dati: OMI, Immobiliare.it, nov 2025",
       "directBuyer": "Direct buyer",
