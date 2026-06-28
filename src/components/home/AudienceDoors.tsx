@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { SceneReveal } from "./SceneReveal";
-import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 /**
@@ -14,15 +13,6 @@ export const AudienceDoors = () => {
   const isItalian = i18n.language.startsWith("it");
   const { trackClick } = useAnalytics();
 
-  const handleInvest = () => {
-    trackClick("audience_door_invest");
-    const lang = isItalian ? "it" : "en";
-    openWhatsApp(
-      CONTACTS.investor.phone,
-      MESSAGES.investor.whatsapp[lang](CONTACTS.investor.name)
-    );
-  };
-
   const rows: RowProps[] = [
     {
       index: "I",
@@ -32,7 +22,8 @@ export const AudienceDoors = () => {
         ? "Esposizione alla singola operazione immobiliare. Payout ogni 2 mesi."
         : "Exposure to a single real estate operation. Payouts every 2 months.",
       cta: isItalian ? "Parla con Lorenzo" : "Talk to Lorenzo",
-      onClick: handleInvest,
+      to: isItalian ? "/investitori" : "/investors",
+      onClickTrack: () => trackClick("audience_door_invest"),
     },
     {
       index: "II",
