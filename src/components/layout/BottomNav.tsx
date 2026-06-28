@@ -3,7 +3,6 @@ import { TrendingUp, Building2, GraduationCap, Heart, Info } from "lucide-react"
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
 import { QuickSellerLeadDialog } from "@/components/dialogs/QuickSellerLeadDialog";
 
 import {
@@ -17,15 +16,14 @@ import {
 const InfoDrawerContent = lazy(() => import("@/components/InfoDrawerContent").then(m => ({ default: m.InfoDrawerContent })));
 
 export const BottomNav = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { trackClick } = useAnalytics();
-  const [investDialogOpen, setInvestDialogOpen] = useState(false);
   const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
   const [infoDrawerOpen, setInfoDrawerOpen] = useState(false);
+  const investorPath = i18n.language.startsWith("en") ? "/investors" : "/investitori";
 
   const handleInvestClick = () => {
     trackClick('bottom_nav_invest');
-    setInvestDialogOpen(true);
   };
 
   const handleSellerClick = () => {
@@ -50,7 +48,8 @@ export const BottomNav = () => {
       >
         <div className="flex items-center justify-around h-[4.5rem] px-1">
           {/* Investi - Primary CTA with heart */}
-          <button
+          <Link
+            to={investorPath}
             onClick={handleInvestClick}
             className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-primary/5 rounded-lg text-primary relative"
           >
@@ -59,7 +58,7 @@ export const BottomNav = () => {
               <Heart className="w-3 h-3 fill-primary text-primary" aria-hidden="true" />
             </div>
             <span className="text-xs font-semibold">{t("nav.investors")}</span>
-          </button>
+          </Link>
 
           {/* Vendi - Seller CTA */}
           <button
@@ -105,12 +104,6 @@ export const BottomNav = () => {
           </div>
         </DrawerContent>
       </Drawer>
-
-      <QuickInvestorLeadDialog
-        open={investDialogOpen} 
-        onOpenChange={setInvestDialogOpen}
-        source="bottom_nav"
-      />
 
       <QuickSellerLeadDialog 
         open={sellerDialogOpen} 

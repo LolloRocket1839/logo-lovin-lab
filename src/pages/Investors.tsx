@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect, useState, lazy, Suspense } from "react";
+import { useRef, useCallback, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Navigation, Footer } from "@/components/layout";
@@ -9,7 +9,6 @@ import { SocialProofMini } from "@/components/investitori/SocialProofMini";
 import { TrustStripe } from "@/components/investitori/TrustStripe";
 import { InvestorStickyCTA } from "@/components/investitori/InvestorStickyCTA";
 import { useAnalytics } from "@/hooks/useAnalytics";
-import { useScrollDepthTrigger } from "@/hooks/useScrollDepthTrigger";
 
 // Lazy-load below-the-fold sections to reduce initial bundle of /investitori
 const EmailFirstForm = lazy(() =>
@@ -36,9 +35,6 @@ const RequestInfoForm = lazy(() =>
 const LegalDisclaimerFooter = lazy(() =>
   import("@/components/investitori/LegalDisclaimerFooter").then((m) => ({ default: m.LegalDisclaimerFooter }))
 );
-const QuickInvestorLeadDialog = lazy(() =>
-  import("@/components/dialogs/QuickInvestorLeadDialog").then((m) => ({ default: m.QuickInvestorLeadDialog }))
-);
 
 const SectionFallback = () => <div className="min-h-[200px]" aria-hidden="true" />;
 
@@ -51,8 +47,6 @@ const Investors = () => {
     ? "https://junglerent.it/investors"
     : "https://junglerent.it/investitori";
 
-  const [quickDialogOpen, setQuickDialogOpen] = useState(false);
-
   const scrollToForm = useCallback(() => {
     trackEvent("investor_hero_cta_click", { target: "request_info_form" });
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -62,21 +56,6 @@ const Investors = () => {
   useEffect(() => {
     trackEvent("investor_page_view", { path: "/investitori" });
   }, [trackEvent]);
-
-  // Scroll 60% → open quick lead dialog, once per session
-  useScrollDepthTrigger(
-    useCallback(() => {
-      // Don't auto-open if the user already reached the qualification form
-      const el = formRef.current;
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight) return;
-      }
-      trackEvent("investor_quickdialog_auto_open", { trigger: "scroll_60" });
-      setQuickDialogOpen(true);
-    }, [trackEvent]),
-    { threshold: 0.6, storageKey: "investor_scroll_dialog_shown_v1", delayMs: 400 }
-  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -117,14 +96,6 @@ const Investors = () => {
       <ScrollToTop />
 
       <InvestorStickyCTA formRef={formRef} />
-
-      <Suspense fallback={null}>
-        <QuickInvestorLeadDialog
-          open={quickDialogOpen}
-          onOpenChange={setQuickDialogOpen}
-          source="investitori-scroll-60"
-        />
-      </Suspense>
     </div>
   );
 };
