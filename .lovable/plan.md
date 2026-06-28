@@ -1,62 +1,44 @@
-# Piano: rendere l'intera homepage elegante come la prima parte
+## Goal
+Fix the English (`en`) translation bundle so every user-visible string is in proper English. The audit flags 84 `untranslated≈` keys in `src/i18n/locales/en.json` plus 3 in `src/i18n/locales/investor/en.json`.
 
-## Problema
-La prima parte della homepage (`LiquidHomepageStory`) è raffinata: scroll "liquido" con scene pinnate, tipografia display enorme, una sola parola ambientale ("TORINO"), accenti italici primari, ritmo costante. Tutto ciò che viene dopo (`TrustBadge`, `AudienceDoors`, `ClosingManifesto`, footer) è disomogeneo: card classiche, spaziature diverse, scale tipografiche diverse, accenti grafici diversi. Il risultato è che la pagina "si rompe" dopo la prima sezione.
+## Approach
+Classify the 87 EN keys into two buckets and act on each:
 
-## Obiettivo
-Far sì che TUTTA la homepage si legga come un unico oggetto editoriale, con lo stesso DNA della storia liquida: stessa griglia, stessa tipografia, stessa palette di accenti, stesso ritmo di entrata.
+### A. Translate to English (real Italian leftovers)
+Update the value in `src/i18n/locales/en.json` and `src/i18n/locales/investor/en.json`. Examples:
+- `breadcrumbs.home` → "Home" (already English, just confirm — actually the IT value is also "Home"; allow-list).
+- `common.menu` → "Menu" (allow-list, identical word).
+- `nav.home` → "Home" (allow-list).
+- `seller.comparison.visitsJR` → translate IT phrase to EN.
+- `seller.comparison.roleAgency` (flagged in ES not EN — skip).
+- `sellersPage.calculator.condition.daRistrutturare` → "To renovate", `buonoStato` → "Good condition", `ristrutturato` → "Renovated", `label` → "Condition", `tooltip` → translate, `dataSource` → translate, `propertyType` → "Property type".
+- `investor.flowStep3` → translate IT step text.
+- `investor.landing.founder.signature` → translate.
+- `investor.landing.form.fields.email` → "Email" (identical, allow-list).
+- `investor.landing.trust.items.rea.value` / `incubator.label` / `vat.label` → check; mostly proper nouns/codes (REA, P.IVA) — keep as is; allow-list.
+- `investor.landing.quickBar.whatsapp` → "WhatsApp" (brand, allow-list).
+- Budget/ticket ranges (`50k-100k`, `5-10`, `100k-200k`, `over-600`) → pure numeric strings, allow-list.
+- Referral source labels (`google`, `linkedin`, `facebook`, `instagram`) → brand names, allow-list.
+- Zone/area names (`crocetta`, `lingotto`, `san-paolo`, `san-salvario`, `vanchiglia`, `santa-rita`, `aurora`, `centro`) → Turin neighborhood proper nouns, allow-list.
+- University codes (`polito`, `unito`, `escp`, `iaad`, `ied`, `iusto`) → proper nouns, allow-list.
+- `hero.politecnico` → "Politecnico" / `hero.unito` → "UniTo" → proper nouns, allow-list.
+- `contacts.email` / `contacts.formEmail` → the literal email address `junglerententerprise@gmail.com`, allow-list.
+- `footer.partnershipTitle` → translate the IT phrase to English.
+- `resourceLibrary.guide3Badge`, `guide4Badge` → translate if Italian; keep if "New".
+- All `*.emailLabel` keys → likely "Email" (allow-list).
+- `investor/en.json`: `investorTypes.familyOffice` → "Family office" (identical, allow-list), `sources.linkedin` / `sources.referral` → brand/identical, allow-list.
 
-## Approccio — "Editorial chapters" dopo la storia liquida
+### B. Extend allow-list
+For genuine proper nouns / brand names / numeric ranges / single-word labels that are correctly the same in IT and EN (`Crocetta`, `Lingotto`, `Polito`, `Google`, `LinkedIn`, `Facebook`, `Instagram`, `WhatsApp`, `Politecnico`, `Email`, `Menu`, `Home`, `Family office`, `5-10`, `50k-100k`, `over-600`, email addresses), add the tokens or value patterns to `BRAND_TOKENS` / value heuristics in `scripts/validate-translations.mjs` so the audit stops flagging them.
 
-Trasformare le tre sezioni post-hero in **tre capitoli editoriali numerati** (06 · 07 · 08), continuando la numerazione delle scene (01–05) della storia liquida. Stessa griglia `container max-w-6xl`, stesso `font-display tracking-tighter`, stessi accenti `italic text-primary`, stesso `SceneIndex` come marcatore.
+## Files to edit
+- `src/i18n/locales/en.json` — fix real Italian strings (calculator conditions, investor flow text, footer partnership title, seller comparison visits, founder signature, guide badges if Italian).
+- `src/i18n/locales/investor/en.json` — confirm `familyOffice`, `linkedin`, `referral` values, keep as English equivalents.
+- `scripts/validate-translations.mjs` — expand `BRAND_TOKENS` with Turin zones + university acronyms + referral brand names + "Politecnico" + "Family office" so the false positives clear.
 
-```text
-[01–05]  Liquid pinned story         (esistente, invariato)
-   ↓
-[06]     Capitolo: Fiducia           (ex TrustBadge)
-[07]     Capitolo: Per chi sei       (ex AudienceDoors)
-[08]     Capitolo: Manifesto         (ex ClosingManifesto)
-   ↓
-         Footer
-```
+## Out of scope
+- Other locales (`es`, `fr`, `de`, `sv`, `zh`, `pt`) — the user asked specifically for English.
+- Adding new translation keys, restructuring i18n, or changing components.
 
-Ogni capitolo:
-- Apre con un `ChapterIndex` ("06 · Fiducia") allineato a sinistra, mono, uppercase, muted.
-- Headline in `font-display`, scala 4xl→6xl, con una parola in `italic text-primary`.
-- Sotto-contenuto (badge, doors, manifesto) ridisegnato come elementi sobri su sfondo `bg-background`, separatori `border-border/40`, niente card colorate, niente ombre pesanti.
-- Spaziatura verticale unificata: `py-32 md:py-40`.
-- Fade-up unico all'ingresso (300ms, easing standard), niente animazioni in competizione con la storia liquida.
-
-### Capitolo 06 — Fiducia (TrustBadge)
-Da griglia di loghi/card a **una riga editoriale**: numero capitolo + headline ("Start-up Innovativa, incubata in 2i3T") + sotto una riga di credenziali separate da `·` in `text-muted-foreground` (anno costituzione, registro imprese, 2i3T, CCIAA). Niente box, solo testo allineato.
-
-### Capitolo 07 — Per chi sei (AudienceDoors)
-Da tre card a **tre righe orizzontali** (Investitori / Venditori / Studenti). Per ogni riga: numero piccolo (`I · II · III`), titolo display, una frase, freccia link `→`. Border-top sottile, hover che sposta il titolo di 4px a destra. Niente sfondi colorati, niente icone — solo tipografia.
-
-### Capitolo 08 — Manifesto (ClosingManifesto)
-Headline editoriale full-bleed in stile scena 05, una frase per riga, accenti `italic text-primary`, CTA `Parla con Lorenzo` identico per stile al bottone della scena 05 (stesso componente di fatto). Chiude la pagina come un epilogo.
-
-## Componenti nuovi / modificati
-- `src/components/home/ChapterIndex.tsx` *(nuovo)* — gemello di `SceneIndex` della liquid story, riutilizzabile fuori dal pinned scroll. Mostra `"06 · Fiducia"` in mono uppercase muted.
-- `src/components/home/ChapterShell.tsx` *(nuovo)* — wrapper `<section>` standard: `container max-w-6xl`, padding verticale unificato, fade-up unico via `framer-motion` con `useReducedMotion`.
-- `src/components/TrustBadge.tsx` *(riscritto)* — versione editoriale descritta sopra. Si mantiene il nome del file per non rompere import.
-- `src/components/home/AudienceDoors.tsx` *(riscritto)* — tre righe tipografiche al posto delle card; stessi link/destinazioni di oggi.
-- `src/components/home/ClosingManifesto.tsx` *(riscritto)* — manifesto editoriale + CTA WhatsApp identico alla scena 05.
-- `src/pages/Index.tsx` — nessun cambio strutturale; le tre sezioni restano nello stesso ordine, ma ora condividono shell e linguaggio.
-
-## Vincoli rispettati
-- **Quiet luxury**: solo sfondi solidi `bg-background`, niente gradient, niente shadow pesanti, fade-up 300ms.
-- **Copy**: sentence case, mai cifre/percentuali di rendimento, "Parla con Lorenzo" come CTA primaria.
-- **Founder**: nessun nome oltre Lorenzo.
-- **Sole H1**: rimane nella scena 01 della liquid story; i capitoli usano `h2`.
-- **Mobile**: stessa griglia, padding ridotto (`py-24`), tipografia che scala come nella liquid story.
-
-## Cosa NON cambia
-- Logica di routing, link, traduzioni esistenti, analytics.
-- `LiquidHomepageStory`, `Navigation`, `MobileHeader`, `Footer`, `BottomNav`, `WhatsAppFAB`, `ExitIntentPopup`, `ScrollQualifier`.
-- SEO/meta/JSON-LD della pagina.
-
-## Verifica
-- `browser--view_preview /` a desktop e mobile per controllare ritmo unico dalla scena 01 fino al footer.
-- `rg "Andrea|Niccolaini"` per confermare zero menzioni nei file toccati.
-- Controllo che esista un solo `<h1>` nella pagina.
+## Verification
+Run `node scripts/validate-translations.mjs` and confirm the `en` row in both bundles reports `untranslated≈0` (or only allow-listed tokens, with exit code 0 once the allow-list update lands).
