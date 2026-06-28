@@ -37,6 +37,9 @@ import { ZoneMetricCard } from "@/components/investor/ZoneMetricCard";
 import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
+const ZoneMap = lazy(() => import("@/components/investor/ZoneMap"));
+
+
 const InvestorZonePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const { i18n } = useTranslation();
