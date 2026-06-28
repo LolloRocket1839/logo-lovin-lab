@@ -6,8 +6,7 @@ import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useGlobalScroll } from "@/hooks/useGlobalScroll";
-import { QuickInvestorLeadDialog } from "@/components/dialogs/QuickInvestorLeadDialog";
-import { CONTACTS, openQuickContact, type SupportedLanguage } from "@/constants";
+import { CONTACTS } from "@/constants";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
