@@ -26,9 +26,9 @@ export const LiquidHomepageStory = () => {
 
   // Smooth the scroll progress with a spring -> liquid feel.
   const p = useSpring(scrollYProgress, {
-    stiffness: 90,
-    damping: 22,
-    mass: 0.35,
+    stiffness: 60,
+    damping: 28,
+    mass: 0.5,
   });
 
   const handleTalk = () => {
@@ -49,7 +49,7 @@ export const LiquidHomepageStory = () => {
   ];
 
   // Ambient background drift — a single big word slides across.
-  const wordX = useTransform(p, [0, 1], reduced ? ["0%", "0%"] : ["8%", "-22%"]);
+  const wordX = useTransform(p, [0, 1], reduced ? ["0%", "0%"] : ["3%", "-9%"]);
   const wordOpacity = useTransform(p, [0, 0.1, 0.9, 1], [0, 0.06, 0.06, 0]);
 
   return (
@@ -245,7 +245,7 @@ interface SceneProps {
 const Scene = ({ p, range, reduced, children, isFirst, isLast }: SceneProps) => {
   const [a, b] = range;
   const mid = (a + b) / 2;
-  const fade = (b - a) * 0.18;
+  const fade = (b - a) * 0.4;
 
   // First scene must be fully visible at progress 0 (page load).
   // Last scene must stay fully visible after its end.
@@ -261,13 +261,11 @@ const Scene = ({ p, range, reduced, children, isFirst, isLast }: SceneProps) => 
     [a, mid, b],
     reduced
       ? ["0%", "0%", "0%"]
-      : [isFirst ? "0%" : "8%", "0%", isLast ? "0%" : "-8%"]
+      : [isFirst ? "0%" : "4%", "0%", isLast ? "0%" : "-4%"]
   );
 
-  const scale = useTransform(
-    p,
-    [a, mid, b],
-    reduced ? [1, 1, 1] : [isFirst ? 1 : 1.02, 1, isLast ? 1 : 0.985]
+  const willChange = useTransform(opacity, (v) =>
+    v > 0.05 ? "transform, opacity" : "auto"
   );
 
   // Disable pointer-events when not visible enough.
@@ -278,9 +276,8 @@ const Scene = ({ p, range, reduced, children, isFirst, isLast }: SceneProps) => 
       style={{
         opacity,
         y,
-        scale,
         pointerEvents: pe as unknown as "auto" | "none",
-        willChange: "transform, opacity",
+        willChange: willChange as unknown as string,
       }}
       className="absolute inset-0"
     >
