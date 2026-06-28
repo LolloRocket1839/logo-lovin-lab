@@ -26,10 +26,11 @@ const HeroSectionComponent = ({ onCtaClick }: Props) => {
     [t]
   );
 
-  // Split H1 to italicize a key phrase
+  // Split H1 to italicize a key phrase driven by i18n.
   const h1Text = t("investor.landing.hero.h1");
   const renderHeading = () => {
-    const accent = lang === "en" ? "student housing" : "student housing";
+    const accent = t("investor.landing.hero.h1Accent", { defaultValue: "" });
+    if (!accent) return h1Text;
     const idx = h1Text.toLowerCase().indexOf(accent.toLowerCase());
     if (idx === -1) return h1Text;
     const before = h1Text.slice(0, idx);
