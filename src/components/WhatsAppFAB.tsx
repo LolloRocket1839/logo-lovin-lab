@@ -37,9 +37,9 @@ export const WhatsAppFAB = () => {
     openQuickContact(lang);
   };
 
-  // WhatsApp brand green #25D366 (HSL: 142 70% 49%)
+  // Darker jungle-green WhatsApp FAB
   const whatsappBrand =
-    "bg-[hsl(142_70%_49%)] text-white hover:bg-[hsl(142_70%_44%)]";
+    "bg-[hsl(142_70%_42%)] text-white hover:bg-[hsl(142_70%_36%)]";
 
   // Variation A: Brand-green floating circle
   if (variation === 'A') {
