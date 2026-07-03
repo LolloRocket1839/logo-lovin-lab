@@ -174,7 +174,7 @@ function buildHreflangPair(it: string, en?: string): { hreflang: string; href: s
 // Generators
 // ---------------------------------------------------------------------------
 
-function generateMainSitemap(zoneSlugs: string[]): string {
+function generateMainSitemap(zoneSlugs: string[], neighborhoodSlugs: string[]): string {
   const blocks: string[] = [];
   const allRoutes = [...STATIC_ROUTES];
 
@@ -183,6 +183,16 @@ function generateMainSitemap(zoneSlugs: string[]): string {
     allRoutes.push({
       it: `/investitori/zone/${slug}`,
       en: `/investors/zones/${slug}`,
+      changefreq: "monthly",
+      priority: "0.75",
+    });
+  }
+
+  // Add student neighborhood dynamic routes
+  for (const slug of neighborhoodSlugs) {
+    allRoutes.push({
+      it: `/affitto-stanza-torino/${slug}`,
+      en: `/rooms-rent-turin/${slug}`,
       changefreq: "monthly",
       priority: "0.75",
     });
