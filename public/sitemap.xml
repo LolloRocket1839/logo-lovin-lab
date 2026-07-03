@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://junglerent.it/</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/" />
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/chi-siamo</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/about</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/chi-siamo" />
@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori" />
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone" />
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone" />
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/vendi</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendi" />
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/sell</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendi" />
@@ -83,7 +83,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/valutazione-immobile</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/valutazione-immobile" />
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/property-valuation</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/valutazione-immobile" />
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/contratti-locazione</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/contratti-locazione" />
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/rental-contracts</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/contratti-locazione" />
@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/studenti</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti" />
@@ -128,7 +128,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/students</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/studenti" />
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/affitto-stanza-torino</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/rooms-rent-turin</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitto-stanza-torino" />
@@ -155,7 +155,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/blog</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
@@ -163,7 +163,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/faq</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/faq" />
@@ -171,7 +171,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/scioperi-italia</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/scioperi-italia" />
@@ -180,7 +180,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/italy-strikes</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/scioperi-italia" />
@@ -189,7 +189,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/sell-home/lingotto-nizza-millefonti</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/sell-home/lingotto-nizza-millefonti" />
@@ -197,7 +197,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/vendi-casa/lingotto-nizza-millefonti</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendi-casa/lingotto-nizza-millefonti" />
@@ -205,7 +205,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/zone/nizza-millefonti-ospedali</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/zone/nizza-millefonti-ospedali" />
@@ -214,7 +214,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/zones/nizza-millefonti-hospitals</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/zone/nizza-millefonti-ospedali" />
@@ -223,7 +223,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/vendere-casa-senza-agenzia-torino</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendere-casa-senza-agenzia-torino" />
@@ -231,7 +231,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/vendere-casa-velocemente-torino</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendere-casa-velocemente-torino" />
@@ -239,7 +239,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/comprare-casa-affittata-torino</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/comprare-casa-affittata-torino" />
@@ -247,7 +247,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investire-immobiliare-torino</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investire-immobiliare-torino" />
@@ -255,7 +255,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/affitti-lingotto-ospedali-torino</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitti-lingotto-ospedali-torino" />
@@ -264,7 +264,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/rent-lingotto-hospitals-turin</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/affitti-lingotto-ospedali-torino" />
@@ -273,7 +273,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/termini-e-condizioni</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
@@ -282,7 +282,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/terms</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/termini-e-condizioni" />
@@ -291,7 +291,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/privacy</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/privacy" />
@@ -299,7 +299,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/cenisia</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cenisia" />
@@ -308,7 +308,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/cenisia</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cenisia" />
@@ -317,7 +317,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/aurora</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/aurora" />
@@ -326,7 +326,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/aurora</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/aurora" />
@@ -335,7 +335,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/san-salvario</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
@@ -344,7 +344,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/san-salvario</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-salvario" />
@@ -353,7 +353,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/vanchiglia</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/vanchiglia" />
@@ -362,7 +362,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/vanchiglia</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/vanchiglia" />
@@ -371,7 +371,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/lingotto</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/lingotto" />
@@ -380,7 +380,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/lingotto</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/lingotto" />
@@ -389,7 +389,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/barriera-di-milano</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
@@ -398,7 +398,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/barriera-di-milano</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/barriera-di-milano" />
@@ -407,7 +407,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/crocetta</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/crocetta" />
@@ -416,7 +416,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/crocetta</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/crocetta" />
@@ -425,7 +425,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/borgo-vittoria</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
@@ -434,7 +434,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/borgo-vittoria</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/borgo-vittoria" />
@@ -443,7 +443,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/san-donato</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-donato" />
@@ -452,7 +452,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/san-donato</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/san-donato" />
@@ -461,7 +461,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/parella</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/parella" />
@@ -470,7 +470,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/parella</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/parella" />
@@ -479,7 +479,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/santa-rita</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/santa-rita" />
@@ -488,7 +488,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/santa-rita</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/santa-rita" />
@@ -497,7 +497,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/cit-turin</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cit-turin" />
@@ -506,7 +506,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/cit-turin</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/cit-turin" />
@@ -515,7 +515,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investitori/zone/campidoglio</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/campidoglio" />
@@ -524,7 +524,7 @@
   </url>
   <url>
     <loc>https://junglerent.it/investors/zones/campidoglio</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investitori/zone/campidoglio" />
