@@ -108,6 +108,19 @@ async function loadInvestorZoneSlugs(): Promise<string[]> {
   }
 }
 
+async function loadNeighborhoodSlugs(): Promise<string[]> {
+  try {
+    const mod = await import(
+      pathToFileURL(resolve(__dirname, "../src/data/neighborhoods.ts")).href
+    );
+    const neighborhoods = (mod.neighborhoods ?? []) as Array<{ slug: string }>;
+    return neighborhoods.map((n) => n.slug);
+  } catch (err) {
+    console.warn("[sitemap] could not load neighborhoods:", (err as Error).message);
+    return [];
+  }
+}
+
 // ---------------------------------------------------------------------------
 // XML builders
 // ---------------------------------------------------------------------------
@@ -161,7 +174,7 @@ function buildHreflangPair(it: string, en?: string): { hreflang: string; href: s
 // Generators
 // ---------------------------------------------------------------------------
 
-function generateMainSitemap(zoneSlugs: string[]): string {
+function generateMainSitemap(zoneSlugs: string[], neighborhoodSlugs: string[]): string {
   const blocks: string[] = [];
   const allRoutes = [...STATIC_ROUTES];
 
@@ -170,6 +183,16 @@ function generateMainSitemap(zoneSlugs: string[]): string {
     allRoutes.push({
       it: `/investitori/zone/${slug}`,
       en: `/investors/zones/${slug}`,
+      changefreq: "monthly",
+      priority: "0.75",
+    });
+  }
+
+  // Add student neighborhood dynamic routes
+  for (const slug of neighborhoodSlugs) {
+    allRoutes.push({
+      it: `/affitto-stanza-torino/${slug}`,
+      en: `/rooms-rent-turin/${slug}`,
       changefreq: "monthly",
       priority: "0.75",
     });
@@ -264,19 +287,21 @@ async function main() {
     throw new Error(`public/ not found at ${publicDir}`);
   }
 
-  const [blogPosts, zoneSlugs] = await Promise.all([
+  const [blogPosts, zoneSlugs, neighborhoodSlugs] = await Promise.all([
     loadBlogSlugs(),
     loadInvestorZoneSlugs(),
+    loadNeighborhoodSlugs(),
   ]);
 
-  writeFileSync(resolve(publicDir, "sitemap.xml"), generateMainSitemap(zoneSlugs));
+  writeFileSync(resolve(publicDir, "sitemap.xml"), generateMainSitemap(zoneSlugs, neighborhoodSlugs));
   writeFileSync(resolve(publicDir, "sitemap-blog.xml"), generateBlogSitemap(blogPosts));
   writeFileSync(resolve(publicDir, "sitemap-tools.xml"), generateToolsSitemap());
   writeFileSync(resolve(publicDir, "sitemap-index.xml"), generateSitemapIndex());
 
   const staticCount =
     STATIC_ROUTES.reduce((n, r) => n + (r.en && r.en !== r.it ? 2 : 1), 0) +
-    zoneSlugs.length * 2;
+    zoneSlugs.length * 2 +
+    neighborhoodSlugs.length * 2;
   const toolsCount = TOOLS_ROUTES.reduce(
     (n, r) => n + (r.en && r.en !== r.it ? 2 : 1),
     0,
