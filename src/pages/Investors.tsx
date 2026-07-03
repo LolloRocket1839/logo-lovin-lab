@@ -1,6 +1,7 @@
 import { useRef, useCallback, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HeroSection } from "@/components/investitori/HeroSection";
