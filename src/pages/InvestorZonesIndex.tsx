@@ -186,7 +186,7 @@ const InvestorZonesIndex = () => {
       <Helmet>
         <title>{t2.title}</title>
         <meta name="description" content={t2.description} />
-        <link rel="canonical" href={`https://junglerent.it/${lang === 'en' ? 'investors/zones' : 'investitori/zone'}`} />
+        <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/investitori/zone" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/investors/zones" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/investitori/zone" />
