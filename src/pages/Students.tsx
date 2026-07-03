@@ -17,6 +17,12 @@ const Students = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
+  const location = useLocation();
+  // Canonical must reflect the actual URL path, not the i18n UI language.
+  const isEnPath = location.pathname.startsWith('/students');
+  const canonicalUrl = isEnPath
+    ? 'https://junglerent.it/students'
+    : 'https://junglerent.it/studenti';
 
   // Filter student-category blog posts (expanded to include more)
   const studentPosts = blogPosts
