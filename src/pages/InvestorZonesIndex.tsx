@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
