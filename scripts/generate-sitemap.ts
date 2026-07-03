@@ -108,6 +108,19 @@ async function loadInvestorZoneSlugs(): Promise<string[]> {
   }
 }
 
+async function loadNeighborhoodSlugs(): Promise<string[]> {
+  try {
+    const mod = await import(
+      pathToFileURL(resolve(__dirname, "../src/data/neighborhoods.ts")).href
+    );
+    const neighborhoods = (mod.neighborhoods ?? []) as Array<{ slug: string }>;
+    return neighborhoods.map((n) => n.slug);
+  } catch (err) {
+    console.warn("[sitemap] could not load neighborhoods:", (err as Error).message);
+    return [];
+  }
+}
+
 // ---------------------------------------------------------------------------
 // XML builders
 // ---------------------------------------------------------------------------
