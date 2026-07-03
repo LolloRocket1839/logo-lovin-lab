@@ -287,19 +287,21 @@ async function main() {
     throw new Error(`public/ not found at ${publicDir}`);
   }
 
-  const [blogPosts, zoneSlugs] = await Promise.all([
+  const [blogPosts, zoneSlugs, neighborhoodSlugs] = await Promise.all([
     loadBlogSlugs(),
     loadInvestorZoneSlugs(),
+    loadNeighborhoodSlugs(),
   ]);
 
-  writeFileSync(resolve(publicDir, "sitemap.xml"), generateMainSitemap(zoneSlugs));
+  writeFileSync(resolve(publicDir, "sitemap.xml"), generateMainSitemap(zoneSlugs, neighborhoodSlugs));
   writeFileSync(resolve(publicDir, "sitemap-blog.xml"), generateBlogSitemap(blogPosts));
   writeFileSync(resolve(publicDir, "sitemap-tools.xml"), generateToolsSitemap());
   writeFileSync(resolve(publicDir, "sitemap-index.xml"), generateSitemapIndex());
 
   const staticCount =
     STATIC_ROUTES.reduce((n, r) => n + (r.en && r.en !== r.it ? 2 : 1), 0) +
-    zoneSlugs.length * 2;
+    zoneSlugs.length * 2 +
+    neighborhoodSlugs.length * 2;
   const toolsCount = TOOLS_ROUTES.reduce(
     (n, r) => n + (r.en && r.en !== r.it ? 2 : 1),
     0,
