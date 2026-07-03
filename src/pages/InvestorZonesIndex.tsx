@@ -46,6 +46,12 @@ type FilterOption = 'all' | 'Centro' | 'Semicentro' | 'Periferia' | 'renewal';
 const InvestorZonesIndex = () => {
   const { t, i18n } = useTranslation();
   const lang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
+  const location = useLocation();
+  // Canonical from actual URL path, not i18n language.
+  const isEnPath = location.pathname.startsWith('/investors');
+  const canonicalUrl = isEnPath
+    ? 'https://junglerent.it/investors/zones'
+    : 'https://junglerent.it/investitori/zone';
   
   const [sortBy, setSortBy] = useState<SortOption>('growth');
   const [filterBy, setFilterBy] = useState<FilterOption>('all');
