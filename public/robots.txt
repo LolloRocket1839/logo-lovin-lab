@@ -5,6 +5,14 @@
 
 # Allow all crawlers
 User-agent: *
+Disallow: /admin/
+Disallow: /ai-testing
+Disallow: /ab-test-results
+Disallow: /analytics-dashboard
+Disallow: /sitemap-debug
+Disallow: /content-audit
+Disallow: /accedi
+Disallow: /auth
 Allow: /
 
 # ============================================
