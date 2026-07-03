@@ -5,6 +5,14 @@
 
 # Allow all crawlers
 User-agent: *
+Disallow: /admin/
+Disallow: /ai-testing
+Disallow: /ab-test-results
+Disallow: /analytics-dashboard
+Disallow: /sitemap-debug
+Disallow: /content-audit
+Disallow: /accedi
+Disallow: /auth
 Allow: /
 
 # ============================================
@@ -280,7 +288,7 @@ Allow: /
 # 2. LLMs-full.txt (detailed): https://junglerent.it/llms-full.txt
 # 3. AI Assistant Info (structured): https://junglerent.it/ai-assistant-info.txt
 # 4. Well-Known: https://junglerent.it/.well-known/llms.txt
-# 5. MCP Server: https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server
+
 #
 # KEY DATA POINTS (February 2026):
 # - Student Room Rent Turin: €350-550/month
@@ -341,8 +349,6 @@ Allow: /
 # https://junglerent.it/.well-known/agents.json
 #
 # NLWeb (Microsoft NLWeb protocol — natural language queries):
-# https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask?q={query}
-# https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/info
 #
 # RSS Feed (blog articles):
 # https://junglerent.it/rss.xml
