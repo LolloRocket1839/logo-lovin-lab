@@ -106,7 +106,8 @@ const Students = () => {
         <title>{t("students.seo.title")}</title>
         <meta name="description" content={t("students.seo.description")} />
         <meta name="keywords" content="affitti studenti torino, casa studenti politecnico, appartamenti universitari torino, student housing turin" />
-        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'students' : 'studenti'}`} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/studenti" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/students" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti" />
