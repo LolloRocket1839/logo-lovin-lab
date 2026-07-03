@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
@@ -45,6 +46,12 @@ type FilterOption = 'all' | 'Centro' | 'Semicentro' | 'Periferia' | 'renewal';
 const InvestorZonesIndex = () => {
   const { t, i18n } = useTranslation();
   const lang = (i18n.language.startsWith('en') ? 'en' : 'it') as 'it' | 'en';
+  const location = useLocation();
+  // Canonical from actual URL path, not i18n language.
+  const isEnPath = location.pathname.startsWith('/investors');
+  const canonicalUrl = isEnPath
+    ? 'https://junglerent.it/investors/zones'
+    : 'https://junglerent.it/investitori/zone';
   
   const [sortBy, setSortBy] = useState<SortOption>('growth');
   const [filterBy, setFilterBy] = useState<FilterOption>('all');
@@ -179,7 +186,7 @@ const InvestorZonesIndex = () => {
       <Helmet>
         <title>{t2.title}</title>
         <meta name="description" content={t2.description} />
-        <link rel="canonical" href={`https://junglerent.it/${lang === 'en' ? 'investors/zones' : 'investitori/zone'}`} />
+        <link rel="canonical" href={canonicalUrl} />
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/investitori/zone" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/investors/zones" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/investitori/zone" />

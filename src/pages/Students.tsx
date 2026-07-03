@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GraduationCap, MapPin, Building2, Users, Mail, ArrowRight, BookOpen, Home, Bus, Utensils, Train, Calculator, Zap, Sparkles, Calendar, Sun, BadgeCheck, Check, X, MessageCircle, Dumbbell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +17,12 @@ const Students = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const currentLang = i18n.language?.startsWith('it') ? 'it' : 'en';
+  const location = useLocation();
+  // Canonical must reflect the actual URL path, not the i18n UI language.
+  const isEnPath = location.pathname.startsWith('/students');
+  const canonicalUrl = isEnPath
+    ? 'https://junglerent.it/students'
+    : 'https://junglerent.it/studenti';
 
   // Filter student-category blog posts (expanded to include more)
   const studentPosts = blogPosts
@@ -100,7 +106,8 @@ const Students = () => {
         <title>{t("students.seo.title")}</title>
         <meta name="description" content={t("students.seo.description")} />
         <meta name="keywords" content="affitti studenti torino, casa studenti politecnico, appartamenti universitari torino, student housing turin" />
-        <link rel="canonical" href={`https://junglerent.it/${currentLang === 'en' ? 'students' : 'studenti'}`} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
         <link rel="alternate" hrefLang="it" href="https://junglerent.it/studenti" />
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/students" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti" />

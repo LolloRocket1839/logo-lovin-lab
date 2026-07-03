@@ -1,6 +1,7 @@
 import { useRef, useCallback, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HeroSection } from "@/components/investitori/HeroSection";
@@ -39,11 +40,14 @@ const LegalDisclaimerFooter = lazy(() =>
 const SectionFallback = () => <div className="min-h-[200px]" aria-hidden="true" />;
 
 const Investors = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { trackEvent } = useAnalytics();
+  const location = useLocation();
   const formRef = useRef<HTMLElement>(null);
-  const isEn = i18n.language.startsWith("en");
-  const canonical = isEn
+  // Derive canonical from the actual URL path (not i18n language) so crawlers
+  // always see a self-referential canonical for the URL they fetched.
+  const isEnPath = location.pathname.startsWith("/investors");
+  const canonical = isEnPath
     ? "https://junglerent.it/investors"
     : "https://junglerent.it/investitori";
 
