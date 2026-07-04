@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp } from "lucide-react";
+import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp, Bot } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import euFundingBanner from "@/assets/eu-funding-banner.png";
