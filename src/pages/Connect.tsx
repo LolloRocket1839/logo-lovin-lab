@@ -6,14 +6,13 @@ import { Seo } from "@/components/Seo";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 
-const projectRef = import.meta.env.VITE_SUPABASE_PROJECT_ID;
-const MCP_URL = `https://${projectRef}.supabase.co/functions/v1/mcp`;
+const SHORT_MCP_URL = `${window.location.origin}/mcp`;
 
 export default function Connect() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(MCP_URL);
+    await navigator.clipboard.writeText(SHORT_MCP_URL);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -45,7 +44,7 @@ export default function Connect() {
             <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3">MCP server URL</p>
             <div className="flex items-center gap-3 bg-muted/50 rounded-lg px-4 py-3 border border-border">
               <code className="flex-1 text-sm md:text-base break-all font-mono text-foreground">
-                {MCP_URL}
+                {SHORT_MCP_URL}
               </code>
               <Button
                 size="sm"
