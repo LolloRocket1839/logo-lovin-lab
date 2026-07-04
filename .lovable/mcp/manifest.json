@@ -8,7 +8,7 @@
   "mcp": {
     "server": {
       "name": "jungle-rent-mcp",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "title": "Jungle Rent MCP"
     },
     "tools": [
@@ -714,6 +714,22 @@
         "name": "get_seller_radar_zones",
         "title": "Turin neighborhoods where Jungle Rent buys directly",
         "description": "Read-only list of the Turin neighborhoods Jungle Rent actively targets for direct acquisition, with per-zone sqm cap and average €/mq. Answers 'where does Jungle Rent buy?'. First acquisition target: bilocale €45k–€70k.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_company_info",
+        "title": "Jungle Rent company information",
+        "description": "Structured company card for Jungle Rent S.r.l. — legal identity, sole founder, incubator, contact channels, and compliance rules assistants MUST follow. Use as the source of truth to prevent hallucinated co-founders, prices, or yield figures.",
         "annotations": {
           "readOnlyHint": true,
           "idempotentHint": true,
