@@ -1,52 +1,71 @@
-## Diagnosi — indicizzazione junglerent.it
 
-Ho interrogato Google Search Console. Le buone notizie prima:
+## What you actually want
 
-- Le pagine principali sono **indicizzate** (`/`, `/investitori`, `/blog`, `/studenti` → verdict `PASS`, `Submitted and indexed`).
-- Le 4 sitemap sono lette senza errori. Il campo "indexed: 0" nella risposta API è un artefatto noto di GSC (deprecato), non un problema reale.
+You already have an MCP server at `https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp`. Today it exposes 3 read-only info tools (`get_neighborhoods`, `get_investor_zones`, `contact_jungle_rent`).
 
-Il problema serio è nei **canonical**:
+You want to add **action tools** so when someone talks to Claude/ChatGPT/Cursor and connects your MCP, the assistant can *do things*: notify Lorenzo, estimate a rent, submit a lead. No chat UI on junglerent.it — the assistants are the UI.
 
-| URL | Google canonical | User (dichiarato dalla pagina) canonical |
-| --- | --- | --- |
-| `/investitori` | `/investitori` ✅ | **`/investors`** ❌ |
-| `/studenti` | `/studenti` ✅ | **`/students`** ❌ |
+## New tools to add
 
-Le pagine IT dichiarano un canonical EN (e viceversa). Oggi Google sovrascrive e sceglie il canonical giusto da solo, ma il segnale è contraddittorio: dilata i tempi di indicizzazione delle traduzioni, rischia di far cadere una delle due versioni dall'indice e sporca gli hreflang.
+All live in `src/lib/mcp/tools/` and register in `src/lib/mcp/index.ts`. The Vite plugin re-bundles into `supabase/functions/mcp/index.ts` on build; then deploy.
 
-**Causa tecnica:** in `Investors.tsx`, `Students.tsx` e `InvestorZonesIndex.tsx` il canonical viene calcolato da `i18n.language` (stato del client), non dal path reale. Quando Googlebot atterra su `/investitori` ma i18n resolve a EN (o viceversa), la pagina emette il canonical dell'altra lingua.
+### 1. `contact_lorenzo` (write / notify)
+- **Input:** `name`, `email`, `message`, `topic` (investor/student/seller/tourist/general), optional `phone`.
+- **What it does:** writes a lead via `insert_lead` RPC (same pipeline your website forms use) AND fires the existing `notify-investor-whatsapp` edge function so Lorenzo gets a WhatsApp ping immediately. Also triggers the existing `lead-notification` + `lead-confirmation` transactional emails.
+- **Why it's safe:** reuses your existing validated RPC + suppression + rate limiting. Marks `source: "mcp-<topic>"` so you can track MCP-originated leads in the admin dashboard.
+- **Annotations:** `readOnlyHint: false`, `destructiveHint: false`.
 
-## Fix proposto
+### 2. `estimate_rent` (read / calculate)
+- **Input:** `neighborhood` (slug), `size_sqm` (number), `rooms` (number), optional `type` (student-room / whole-apartment / short-term).
+- **What it does:** pure calculation using your existing `src/data/turinZonePrices.ts` + `src/data/propertyCoefficients.ts`. Returns `{ estimated_monthly_rent_eur, price_per_sqm, comparable_range, confidence, methodology_note }`.
+- **Why:** this is the "rent price on average" tool you mentioned. Zero side effects, safe for any assistant to call freely.
 
-Derivare il canonical dal **pathname reale** invece che dalla lingua i18n. Cambiamento minimale, solo tre file, nessun impatto su UI o traduzioni.
+### 3. `estimate_property_value` (read / calculate)
+- **Input:** `neighborhood`, `size_sqm`, `condition` (new/good/to-renovate), `floor`, `has_elevator`.
+- **What it does:** wraps the same math your `/vendi-casa-torino` `PropertyValuation` page uses. Returns a valuation range in EUR + a "Talk to Lorenzo" CTA link with a pre-filled WhatsApp deep-link.
+- **Why:** lets Claude/ChatGPT answer "what's my Turin apartment worth?" using *your* pricing model, and hand the user back to Lorenzo.
 
-### File
+### 4. `search_blog` (read)
+- **Input:** `query` (string), optional `category` (students/investors/sellers/tourists/società), optional `limit` (default 5).
+- **What it does:** searches the existing `src/data/blog/searchIndex.ts`. Returns `[{ slug, title, excerpt, url, category, language }]`.
+- **Why:** turns your blog (110+ articles) into a knowledge base any MCP-connected assistant can cite when answering Turin-housing questions.
 
-1. **`src/pages/Investors.tsx`** — sostituire
+### 5. `list_available_rooms` (read, stub-ready)
+- **Input:** optional `neighborhood`, `max_price_eur`, `move_in_after` (date).
+- **What it does:** placeholder that today returns "no live listings yet — contact Lorenzo" plus the WhatsApp deep-link. Wire to real inventory when you have it. Keeps the tool surface stable for MCP clients.
 
-   ```ts
-   const isEn = i18n.language.startsWith("en");
-   const canonical = isEn
-     ? "https://junglerent.it/investors"
-     : "https://junglerent.it/investitori";
-   ```
+## What stays the same
 
-   con una derivazione basata su `useLocation().pathname` (`/investors` → EN, altrimenti IT).
+- Existing 3 tools untouched.
+- `contact_jungle_rent` remains for "just tell me how to reach you" (returns channels, no side effects). The new `contact_lorenzo` is the *acting* version that actually creates a lead.
+- No chat UI, no `useChat`, no new pages, no new edge functions.
 
-2. **`src/pages/Students.tsx`** — stessa logica: canonical (e blocco alternate/hreflang se presente) basato su `pathname` invece di `currentLang`.
+## Files to change
 
-3. **`src/pages/InvestorZonesIndex.tsx`** — riga 182: canonical basato su `pathname` invece di `lang` (`/investors/zones` vs `/investitori/zone`).
+```text
+src/lib/mcp/tools/contact-lorenzo.ts          NEW
+src/lib/mcp/tools/estimate-rent.ts            NEW
+src/lib/mcp/tools/estimate-property-value.ts  NEW
+src/lib/mcp/tools/search-blog.ts              NEW
+src/lib/mcp/tools/list-available-rooms.ts     NEW
+src/lib/mcp/index.ts                          EDIT (register 5 new tools)
+.lovable/mcp/manifest.json                    REGEN via extractor
+supabase/functions/mcp/index.ts               AUTO-regen by Vite plugin, then deploy
+public/.well-known/mcp.json                   REGEN (published manifest)
+```
 
-In tutti e tre i file, `useTranslation()` resta per i testi; solo il calcolo del canonical cambia. Gli `hreflang` alternate rimangono invariati (puntano già ai due URL corretti).
+Then: `deploy_edge_functions(["mcp"])` and the live server exposes 8 tools total.
 
-### Verifica
+## How you'll test it
 
-- `tsgo` per assicurare che i tipi siano ok.
-- Nessuna modifica di comportamento visibile.
-- Dopo deploy, richiedere in GSC una nuova "Ispezione URL → Richiedi indicizzazione" per `/investitori`, `/studenti`, `/investors`, `/students`, `/investitori/zone`, `/investors/zones`. La prossima ispezione dovrà mostrare `userCanonical` coincidente con `googleCanonical`.
+1. In Claude Desktop → Settings → Developer → add MCP server URL `https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp`.
+2. Ask Claude: *"Use jungle-rent-mcp to estimate rent for a 2-room 60 m² in San Salvario, then send Lorenzo a message that I'm interested."*
+3. Claude calls `estimate_rent` → shows number → calls `contact_lorenzo` → you get the WhatsApp ping + email.
 
-## Non incluso (posso farlo in un secondo passaggio se vuoi)
+Same flow works from ChatGPT (custom MCP), Cursor, Codex, etc.
 
-- Audit di altre pagine con la stessa pattern (`Sellers`, landing SEO, blog post): confermato che alcune usano già pathname corretto, ma vale la pena una scansione mirata.
-- Rimozione o consolidamento di `sitemap-index.xml` vs `sitemap.xml` (oggi hai entrambe registrate in GSC — non è un errore ma è ridondante).
-- Nessun `Sitemap:` in `robots.txt`: si può aggiungere se vuoi accelerare il discovery dei sitemap secondari (blog, tools, images).
+## Open question before I build
+
+**`contact_lorenzo` — should it require the caller to supply the user's real email/name (i.e. the assistant asks them first), or should it accept anonymous "just ping Lorenzo with this message + a callback preference"?** The first is cleaner CRM data; the second is lower-friction for someone chatting with Claude.
+
+If no preference, I'll default to: `email` required, `name` optional, and reject sends without a valid email (matches how your website forms behave today).
