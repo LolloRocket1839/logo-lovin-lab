@@ -6,7 +6,7 @@ import { Seo } from "@/components/Seo";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 
-const SHORT_MCP_URL = `${window.location.origin}/mcp`;
+const SHORT_MCP_URL = "https://junglerent.it/mcp";
 
 export default function Connect() {
   const [copied, setCopied] = useState(false);
