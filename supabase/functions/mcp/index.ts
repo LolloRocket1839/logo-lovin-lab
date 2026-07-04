@@ -1124,13 +1124,400 @@ var contact_jungle_rent_default = defineTool3({
   }
 });
 
+// src/lib/mcp/tools/contact-lorenzo.ts
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { z as z5 } from "npm:zod@^3.23.8";
+function env() {
+  const url = process.env.SUPABASE_URL;
+  const anonKey = process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !anonKey || !serviceKey) {
+    throw new Error("Supabase env not configured (SUPABASE_URL / SUPABASE_PUBLISHABLE_KEY / SUPABASE_SERVICE_ROLE_KEY).");
+  }
+  return { url, anonKey, serviceKey };
+}
+var contact_lorenzo_default = defineTool4({
+  name: "contact_lorenzo",
+  title: "Contact Lorenzo (Jungle Rent founder)",
+  description: "Send a real inquiry to Lorenzo, the sole founder of Jungle Rent. Creates a lead in the CRM and triggers an instant WhatsApp ping + confirmation email. Use ONLY when the user has explicitly given their email and consents to being contacted. For 'how do I reach you' answers use contact_jungle_rent instead.",
+  inputSchema: {
+    email: z5.string().trim().email().max(255).describe("The user's email address. Required."),
+    name: z5.string().trim().min(1).max(120).optional().describe("The user's name."),
+    phone: z5.string().trim().max(40).optional().describe("Optional phone number (E.164 preferred)."),
+    topic: z5.enum(["investor", "student", "seller", "tourist", "general"]).describe("What the inquiry is about."),
+    message: z5.string().trim().min(5).max(2e3).describe("The user's message to Lorenzo, in their own words."),
+    neighborhood: z5.string().max(80).optional().describe("Optional neighborhood of interest."),
+    budget_range: z5.string().max(80).optional().describe("Optional budget (e.g. '400-500\u20AC/mo' or '\u20AC60k-90k')."),
+    move_in_month: z5.string().max(40).optional().describe("Optional target move-in month (e.g. 'Settembre 2026').")
+  },
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: false,
+    idempotentHint: false,
+    openWorldHint: true
+  },
+  handler: async ({ email, name, phone, topic, message, neighborhood, budget_range, move_in_month }) => {
+    let cfg;
+    try {
+      cfg = env();
+    } catch (e) {
+      return {
+        content: [{ type: "text", text: e.message }],
+        isError: true
+      };
+    }
+    const leadType = topic === "tourist" ? "general" : topic;
+    const source = `mcp-${topic}`;
+    const metadata = {
+      channel: "mcp",
+      topic,
+      message,
+      ...neighborhood ? { neighborhood } : {},
+      ...budget_range ? { budget_range } : {},
+      ...move_in_month ? { move_in_month } : {}
+    };
+    const rpcRes = await fetch(`${cfg.url}/rest/v1/rpc/insert_lead`, {
+      method: "POST",
+      headers: {
+        apikey: cfg.anonKey,
+        Authorization: `Bearer ${cfg.anonKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        _email: email,
+        _name: name ?? null,
+        _phone: phone ?? null,
+        _source: source,
+        _lead_type: leadType,
+        _metadata: metadata
+      })
+    });
+    if (!rpcRes.ok) {
+      const errText = await rpcRes.text();
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Failed to create lead: ${rpcRes.status} ${errText.slice(0, 200)}`
+          }
+        ],
+        isError: true
+      };
+    }
+    const leadId = await rpcRes.json();
+    const notifyBody = {
+      email,
+      name: name ?? null,
+      phone: phone ?? null,
+      source,
+      leadType,
+      metadata
+    };
+    const invoke = (fn, body) => fetch(`${cfg.url}/functions/v1/${fn}`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${cfg.serviceKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    }).catch(() => null);
+    await Promise.allSettled([
+      invoke("notify-investor-whatsapp", notifyBody),
+      invoke("send-transactional-email", {
+        templateName: "lead-notification",
+        idempotencyKey: `mcp-notify-${leadId}`,
+        templateData: notifyBody
+      }),
+      invoke("send-transactional-email", {
+        templateName: "lead-confirmation",
+        recipientEmail: email,
+        idempotencyKey: `mcp-confirm-${leadId}`,
+        templateData: { leadType }
+      })
+    ]);
+    const result = {
+      status: "sent",
+      lead_id: leadId,
+      topic,
+      message_to_user: topic === "student" ? "Grazie! Lorenzo ti risponder\xE0 a breve su WhatsApp o via email con le opzioni disponibili." : "Grazie! Lorenzo ti ricontatter\xE0 entro 24h. Per una risposta immediata, scrivi su WhatsApp: https://wa.me/393319053037",
+      whatsapp_deep_link: `https://wa.me/393319053037?text=${encodeURIComponent(
+        `Ciao Lorenzo, sono ${name ?? "un nuovo contatto"} (${email}). ${message}`
+      )}`
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: result
+    };
+  }
+});
+
+// src/lib/mcp/tools/estimate-rent.ts
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { z as z6 } from "npm:zod@^3.23.8";
+
+// src/data/turinZonePrices.ts
+var turinZonePrices = [
+  // Zone Centrali
+  { id: "centro_storico", name: "Centro Storico", minPrice: 3500, avgPrice: 4065, maxPrice: 4600, variation2024: 1.5, category: "central", note: "Area pi\xF9 cara della citt\xE0" },
+  { id: "piazza_san_carlo", name: "Piazza San Carlo", minPrice: 4200, avgPrice: 4560, maxPrice: 4900, variation2024: 2, category: "central", note: "Prezzo pi\xF9 alto" },
+  { id: "piazza_vittorio", name: "Piazza Vittorio", minPrice: 3300, avgPrice: 3620, maxPrice: 3900, variation2024: 1.2, category: "central" },
+  { id: "piazza_statuto", name: "Piazza Statuto", minPrice: 2700, avgPrice: 3e3, maxPrice: 3300, variation2024: 1.5, category: "central", note: "Vicino Porta Susa" },
+  { id: "crocetta", name: "Crocetta", minPrice: 2700, avgPrice: 2995, maxPrice: 3300, variation2024: 3.5, category: "central" },
+  { id: "san_secondo", name: "San Secondo", minPrice: 2700, avgPrice: 2995, maxPrice: 3300, variation2024: 3.5, category: "central" },
+  { id: "san_salvario", name: "San Salvario", minPrice: 2400, avgPrice: 2731, maxPrice: 3100, variation2024: 8.46, category: "central", note: "Forte crescita +8,46% (Immobiliare.it nov 2025)" },
+  { id: "vanchiglia", name: "Vanchiglia", minPrice: 2400, avgPrice: 2680, maxPrice: 2950, variation2024: 3, category: "central", note: "Palazzi storici" },
+  { id: "vanchiglietta", name: "Vanchiglietta", minPrice: 2e3, avgPrice: 2250, maxPrice: 2500, variation2024: 2.3, category: "central" },
+  // Zone Semicentrali
+  { id: "cit_turin", name: "Cit Turin", minPrice: 2200, avgPrice: 2501, maxPrice: 2800, variation2024: 4.3, category: "semicentral", note: "Dati Immobiliare.it nov 2025" },
+  { id: "san_donato", name: "San Donato", minPrice: 2200, avgPrice: 2501, maxPrice: 2800, variation2024: 4.3, category: "semicentral", note: "Dati Immobiliare.it nov 2025" },
+  { id: "campidoglio", name: "Campidoglio", minPrice: 2200, avgPrice: 2501, maxPrice: 2800, variation2024: 4, category: "semicentral", note: "Dati Immobiliare.it nov 2025" },
+  { id: "cenisia", name: "Cenisia", minPrice: 1700, avgPrice: 1950, maxPrice: 2200, variation2024: 3.5, category: "semicentral" },
+  { id: "san_paolo", name: "San Paolo", minPrice: 1700, avgPrice: 1950, maxPrice: 2200, variation2024: 3, category: "semicentral" },
+  { id: "pozzo_strada", name: "Pozzo Strada", minPrice: 1650, avgPrice: 1900, maxPrice: 2150, variation2024: 5, category: "semicentral" },
+  { id: "parella", name: "Parella", minPrice: 1600, avgPrice: 1825, maxPrice: 2050, variation2024: 5.5, category: "semicentral", note: "Metro disponibile" },
+  { id: "aeronautica", name: "Aeronautica", minPrice: 1600, avgPrice: 1825, maxPrice: 2050, variation2024: 5.5, category: "semicentral" },
+  { id: "santa_rita", name: "Santa Rita", minPrice: 1500, avgPrice: 1700, maxPrice: 1900, variation2024: 7.8, category: "semicentral", note: "Forte crescita" },
+  { id: "mirafiori_nord", name: "Mirafiori Nord", minPrice: 1500, avgPrice: 1700, maxPrice: 1900, variation2024: 7.8, category: "semicentral" },
+  { id: "lingotto", name: "Lingotto", minPrice: 1450, avgPrice: 1650, maxPrice: 1850, variation2024: 7.8, category: "semicentral", note: "Metro M4, forte crescita" },
+  { id: "nizza_millefonti", name: "Nizza Millefonti", minPrice: 1450, avgPrice: 1650, maxPrice: 1850, variation2024: 7.8, category: "semicentral" },
+  // Zone Periferiche Nord
+  { id: "aurora", name: "Aurora", minPrice: 1300, avgPrice: 1520, maxPrice: 1750, variation2024: 7, category: "peripheral_north", note: "Riqualificazione Porta Palazzo" },
+  { id: "borgo_valdocco", name: "Borgo Valdocco", minPrice: 1300, avgPrice: 1520, maxPrice: 1750, variation2024: 7, category: "peripheral_north" },
+  { id: "madonna_campagna", name: "Madonna di Campagna", minPrice: 1200, avgPrice: 1350, maxPrice: 1500, variation2024: 3, category: "peripheral_north" },
+  { id: "borgo_vittoria", name: "Borgo Vittoria", minPrice: 1150, avgPrice: 1300, maxPrice: 1450, variation2024: 4, category: "peripheral_north" },
+  { id: "lucento", name: "Lucento", minPrice: 1150, avgPrice: 1300, maxPrice: 1450, variation2024: 4, category: "peripheral_north" },
+  { id: "rebaudengo", name: "Rebaudengo", minPrice: 1100, avgPrice: 1250, maxPrice: 1400, variation2024: 2, category: "peripheral_north" },
+  { id: "falchera", name: "Falchera", minPrice: 1e3, avgPrice: 1150, maxPrice: 1300, variation2024: 3.5, category: "peripheral_north" },
+  { id: "villaretto", name: "Villaretto", minPrice: 1e3, avgPrice: 1150, maxPrice: 1300, variation2024: 3.5, category: "peripheral_north" },
+  { id: "barriera_milano", name: "Barriera di Milano", minPrice: 900, avgPrice: 1080, maxPrice: 1250, variation2024: 5.4, category: "peripheral_north" },
+  // Zone Periferiche Sud
+  { id: "mirafiori_sud", name: "Mirafiori Sud", minPrice: 1200, avgPrice: 1350, maxPrice: 1500, variation2024: 3.5, category: "peripheral_south" },
+  { id: "barca", name: "Barca", minPrice: 1100, avgPrice: 1232, maxPrice: 1350, variation2024: 2, category: "peripheral_south" },
+  { id: "bertolla", name: "Bertolla", minPrice: 1100, avgPrice: 1232, maxPrice: 1350, variation2024: 2, category: "peripheral_south" },
+  { id: "vallette", name: "Vallette", minPrice: 1050, avgPrice: 1200, maxPrice: 1350, variation2024: 3.5, category: "peripheral_south" },
+  // Zone Collinari
+  { id: "crimea", name: "Crimea", minPrice: 2650, avgPrice: 2950, maxPrice: 3300, variation2024: 2.4, category: "hill", note: "Area esclusiva" },
+  { id: "gran_madre", name: "Gran Madre", minPrice: 2650, avgPrice: 2950, maxPrice: 3300, variation2024: 2.4, category: "hill" },
+  { id: "borgo_po", name: "Borgo Po", minPrice: 2650, avgPrice: 2950, maxPrice: 3300, variation2024: 2.4, category: "hill" },
+  { id: "cavoretto", name: "Cavoretto", minPrice: 2100, avgPrice: 2310, maxPrice: 2500, variation2024: 2.7, category: "hill", note: "Collina prestigiosa" },
+  // Zona Ospedali
+  { id: "zona_ospedali", name: "Zona ospedali (Molinette/Carducci)", minPrice: 1900, avgPrice: 1975, maxPrice: 2050, variation2024: 3, category: "semicentral", note: "Cluster Molinette/Nizza Millefonti" }
+];
+var findZoneByName = (name) => {
+  const normalizedName = name.toLowerCase().trim();
+  return turinZonePrices.find(
+    (z9) => z9.name.toLowerCase().includes(normalizedName) || normalizedName.includes(z9.name.toLowerCase()) || z9.id.replace(/_/g, " ").includes(normalizedName)
+  );
+};
+
+// src/lib/mcp/tools/estimate-rent.ts
+function rentPerSqmFromSalePrice(salePricePerSqm) {
+  return salePricePerSqm * 0.052 / 12;
+}
+var estimate_rent_default = defineTool5({
+  name: "estimate_rent",
+  title: "Estimate monthly rent in Turin",
+  description: "Estimate indicative monthly rent for an apartment or student room in a Turin neighborhood using OMI/Immobiliare.it Nov-2025 pricing. Read-only, no side effects.",
+  inputSchema: {
+    neighborhood: z6.string().min(2).describe("Neighborhood name or slug, e.g. 'San Salvario', 'lingotto', 'aurora'."),
+    size_sqm: z6.number().int().min(10).max(400).describe("Apartment size in square meters. For a single student room use 15-25."),
+    type: z6.enum(["student-room", "whole-apartment", "short-term"]).optional().describe("Rental type. Default 'whole-apartment'.")
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: ({ neighborhood, size_sqm, type }) => {
+    const rentalType = type ?? "whole-apartment";
+    const zone = turinZonePrices.find((z9) => z9.id === neighborhood.toLowerCase().replace(/[\s-]+/g, "_")) ?? findZoneByName(neighborhood);
+    if (!zone) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Neighborhood "${neighborhood}" not found. Try: san_salvario, vanchiglia, lingotto, aurora, crocetta, cenisia, cit_turin, santa_rita, san_donato, campidoglio, parella.`
+          }
+        ],
+        isError: true
+      };
+    }
+    const basePerSqm = rentPerSqmFromSalePrice(zone.avgPrice);
+    const minPerSqm = rentPerSqmFromSalePrice(zone.minPrice);
+    const maxPerSqm = rentPerSqmFromSalePrice(zone.maxPrice);
+    let baseRent = basePerSqm * size_sqm;
+    let minRent = minPerSqm * size_sqm;
+    let maxRent = maxPerSqm * size_sqm;
+    if (rentalType === "student-room") {
+      const single = { min: 300, max: 550 };
+      baseRent = (single.min + single.max) / 2;
+      minRent = single.min;
+      maxRent = single.max;
+    } else if (rentalType === "short-term") {
+      baseRent *= 2.5;
+      minRent *= 2.2;
+      maxRent *= 2.8;
+    }
+    const round = (n) => Math.round(n / 10) * 10;
+    const result = {
+      neighborhood: zone.name,
+      neighborhood_id: zone.id,
+      rental_type: rentalType,
+      size_sqm,
+      estimated_monthly_rent_eur: round(baseRent),
+      range_eur: { min: round(minRent), max: round(maxRent) },
+      sale_price_per_sqm_eur: zone.avgPrice,
+      annual_variation_pct_2024: zone.variation2024,
+      confidence: "\xB110-15% \u2014 market average, actual rent depends on floor, condition, furnishings, energy class",
+      methodology: "Derived from OMI/Immobiliare.it Nov-2025 sale prices using ~5.2% gross yield. Student single rooms use market range 300-550 \u20AC/mo. Short-term uses 2.5\xD7 long-term.",
+      next_step: {
+        cta: "For a real quote and available rooms/apartments, contact Lorenzo \u2014 use the contact_lorenzo tool or WhatsApp https://wa.me/393319053037"
+      }
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: result
+    };
+  }
+});
+
+// src/lib/mcp/tools/estimate-property-value.ts
+import { defineTool as defineTool6 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { z as z7 } from "npm:zod@^3.23.8";
+
+// src/data/propertyCoefficients.ts
+var floorWithElevator = [
+  { id: "basement", label: "Seminterrato", value: -0.25, description: "-25%" },
+  { id: "ground", label: "Piano terra / Rialzato", value: -0.1, description: "-10%" },
+  { id: "first", label: "1\xB0 Piano", value: -0.1, description: "-10%" },
+  { id: "second", label: "2\xB0 Piano", value: -0.03, description: "-3%" },
+  { id: "third", label: "3\xB0 Piano", value: 0, description: "0% (Riferimento)" },
+  { id: "fourth", label: "4\xB0 Piano", value: 0.03, description: "+3%" },
+  { id: "fifth_plus", label: "5\xB0 Piano e oltre", value: 0.05, description: "+5%" },
+  { id: "penthouse", label: "Attico con terrazzo", value: 0.2, description: "+20%" }
+];
+var floorWithoutElevator = [
+  { id: "ground", label: "Piano terra / Rialzato", value: -0.1, description: "-10%" },
+  { id: "first", label: "1\xB0 Piano", value: -0.1, description: "-10%" },
+  { id: "second", label: "2\xB0 Piano", value: -0.15, description: "-15%" },
+  { id: "third_plus", label: "3\xB0 Piano e oltre", value: -0.25, description: "-25%" },
+  { id: "penthouse", label: "Attico", value: -0.3, description: "-30%" }
+];
+var conservationState = [
+  { id: "to_renovate", label: "Da ristrutturare", value: -0.1, description: "-10%" },
+  { id: "good", label: "Buono stato", value: 0, description: "0% (Riferimento)" },
+  { id: "renovated", label: "Ristrutturato", value: 0.05, description: "+5%" },
+  { id: "finely_renovated", label: "Finemente ristrutturato", value: 0.1, description: "+10%" },
+  { id: "new_construction", label: "Nuova costruzione", value: 0.15, description: "+15%" }
+];
+
+// src/lib/mcp/tools/estimate-property-value.ts
+var estimate_property_value_default = defineTool6({
+  name: "estimate_property_value",
+  title: "Estimate Turin property value",
+  description: "Estimate the sale value of an apartment in Turin using FIAIP 2024-2025 coefficients + OMI/Immobiliare.it pricing. Read-only. Same math as the /vendi-casa-torino valuation on junglerent.it.",
+  inputSchema: {
+    neighborhood: z7.string().min(2).describe("Neighborhood name or slug."),
+    size_sqm: z7.number().int().min(15).max(400).describe("Commercial size in m\xB2."),
+    condition: z7.enum(["to_renovate", "good", "renovated", "finely_renovated", "new_construction"]).describe("Conservation state."),
+    floor: z7.enum(["ground", "first", "second", "third", "fourth", "fifth_plus", "penthouse"]).describe("Floor level."),
+    has_elevator: z7.boolean().describe("Whether the building has an elevator.")
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: ({ neighborhood, size_sqm, condition, floor, has_elevator }) => {
+    const zone = turinZonePrices.find((z9) => z9.id === neighborhood.toLowerCase().replace(/[\s-]+/g, "_")) ?? findZoneByName(neighborhood);
+    if (!zone) {
+      return {
+        content: [{ type: "text", text: `Neighborhood "${neighborhood}" not found.` }],
+        isError: true
+      };
+    }
+    const conservationCoef = conservationState.find((c) => c.id === condition)?.value ?? 0;
+    const floorTable = has_elevator ? floorWithElevator : floorWithoutElevator;
+    const floorCoef = floorTable.find((f) => f.id === floor)?.value ?? floorTable.find((f) => f.id === (floor === "fifth_plus" ? "third_plus" : floor))?.value ?? 0;
+    const baseValue = zone.avgPrice * size_sqm;
+    const adjustedAvg = baseValue * (1 + conservationCoef + floorCoef);
+    const adjustedMin = zone.minPrice * size_sqm * (1 + conservationCoef + floorCoef);
+    const adjustedMax = zone.maxPrice * size_sqm * (1 + conservationCoef + floorCoef);
+    const round = (n) => Math.round(n / 500) * 500;
+    const result = {
+      neighborhood: zone.name,
+      size_sqm,
+      condition,
+      floor,
+      has_elevator,
+      estimated_value_eur: round(adjustedAvg),
+      range_eur: { min: round(adjustedMin), max: round(adjustedMax) },
+      base_price_per_sqm_eur: zone.avgPrice,
+      adjustments: {
+        conservation_pct: Math.round(conservationCoef * 100),
+        floor_pct: Math.round(floorCoef * 100)
+      },
+      confidence: "\xB15-12% \u2014 indicative valuation. Additional factors (energy class, exposure, balconies, garage, condition of common areas) can move the price further.",
+      sources: ["OMI Agenzia Entrate", "Immobiliare.it", "FIAIP Torino", "Nov 2025"],
+      next_step: {
+        cta: "For a real offer (Jungle Rent buys direct, no agency, 60-90 day timeline), contact Lorenzo via the contact_lorenzo tool.",
+        whatsapp: `https://wa.me/393319053037?text=${encodeURIComponent(
+          `Ciao Lorenzo, ho una propriet\xE0 in ${zone.name} di ${size_sqm} m\xB2 e vorrei parlarne.`
+        )}`
+      }
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: result
+    };
+  }
+});
+
+// src/lib/mcp/tools/list-available-rooms.ts
+import { defineTool as defineTool7 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { z as z8 } from "npm:zod@^3.23.8";
+var list_available_rooms_default = defineTool7({
+  name: "list_available_rooms",
+  title: "List available Jungle Rent rooms",
+  description: "List currently available student rooms and apartments in Turin. Today no live public inventory is exposed \u2014 returns a pointer to contact Lorenzo, who manages allocations manually.",
+  inputSchema: {
+    neighborhood: z8.string().optional().describe("Optional neighborhood filter."),
+    max_price_eur: z8.number().int().min(200).max(5e3).optional().describe("Optional max monthly rent."),
+    move_in_after: z8.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional().describe("Optional earliest move-in date (YYYY-MM-DD).")
+  },
+  annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+  handler: ({ neighborhood, max_price_eur, move_in_after }) => {
+    const filters = [
+      neighborhood ? `neighborhood=${neighborhood}` : null,
+      max_price_eur ? `max=${max_price_eur}\u20AC` : null,
+      move_in_after ? `after=${move_in_after}` : null
+    ].filter(Boolean).join(" ");
+    const message = `Jungle Rent doesn't publish a real-time room feed. Allocation is manual: Lorenzo matches students to rooms directly on WhatsApp based on university, budget, move-in date and profile. Ask the user for those details, then use the contact_lorenzo tool.`;
+    const result = {
+      available_rooms: [],
+      status: "manual-allocation",
+      message,
+      filters_received: filters || "none",
+      next_step: {
+        cta: "Collect user's name, email, target university/neighborhood, budget, move-in month \u2014 then call contact_lorenzo.",
+        whatsapp: "https://wa.me/393319053037",
+        website: "https://junglerent.it"
+      }
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: result
+    };
+  }
+});
+
 // src/lib/mcp/index.ts
 var mcp_default = defineMcp({
   name: "jungle-rent-mcp",
   title: "Jungle Rent MCP",
-  version: "0.1.0",
-  instructions: "Tools for Jungle Rent \u2014 Turin student housing and real-estate investment. Use `get_neighborhoods` for student rental zones, `get_investor_zones` for investor market data (no yield projections \u2014 those are confidential), and `contact_jungle_rent` to share contact channels.",
-  tools: [get_neighborhoods_default, get_investor_zones_default, contact_jungle_rent_default]
+  version: "0.2.0",
+  instructions: "Tools for Jungle Rent \u2014 Turin student housing and real-estate investment, founded by Lorenzo Oni-Joseph (sole founder). Read-only info: `get_neighborhoods`, `get_investor_zones`, `contact_jungle_rent` (channels only). Calculators: `estimate_rent` (monthly rent for an apartment or student room), `estimate_property_value` (sale value using FIAIP coefficients). Actions: `contact_lorenzo` creates a real lead and pings Lorenzo on WhatsApp \u2014 use ONLY after the user gives their email and consents. `list_available_rooms` today returns a pointer to contact Lorenzo (no public inventory feed). Never invent yield/return figures for investors \u2014 those are only in the private memorandum.",
+  tools: [
+    get_neighborhoods_default,
+    get_investor_zones_default,
+    contact_jungle_rent_default,
+    contact_lorenzo_default,
+    estimate_rent_default,
+    estimate_property_value_default,
+    list_available_rooms_default
+  ]
 });
 
 // lovable-mcp-supabase-entry.ts
