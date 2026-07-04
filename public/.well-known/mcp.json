@@ -8,7 +8,7 @@
   "mcp": {
     "server": {
       "name": "jungle-rent-mcp",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "title": "Jungle Rent MCP"
     },
     "tools": [
@@ -86,6 +86,218 @@
                 "general"
               ],
               "description": "Inquiry topic. Defaults to 'general'."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "contact_lorenzo",
+        "title": "Contact Lorenzo (Jungle Rent founder)",
+        "description": "Send a real inquiry to Lorenzo, the sole founder of Jungle Rent. Creates a lead in the CRM and triggers an instant WhatsApp ping + confirmation email. Use ONLY when the user has explicitly given their email and consents to being contacted. For 'how do I reach you' answers use contact_jungle_rent instead.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email",
+              "maxLength": 255,
+              "description": "The user's email address. Required."
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120,
+              "description": "The user's name."
+            },
+            "phone": {
+              "type": "string",
+              "maxLength": 40,
+              "description": "Optional phone number (E.164 preferred)."
+            },
+            "topic": {
+              "type": "string",
+              "enum": [
+                "investor",
+                "student",
+                "seller",
+                "tourist",
+                "general"
+              ],
+              "description": "What the inquiry is about."
+            },
+            "message": {
+              "type": "string",
+              "minLength": 5,
+              "maxLength": 2000,
+              "description": "The user's message to Lorenzo, in their own words."
+            },
+            "neighborhood": {
+              "type": "string",
+              "maxLength": 80,
+              "description": "Optional neighborhood of interest."
+            },
+            "budget_range": {
+              "type": "string",
+              "maxLength": 80,
+              "description": "Optional budget (e.g. '400-500€/mo' or '€60k-90k')."
+            },
+            "move_in_month": {
+              "type": "string",
+              "maxLength": 40,
+              "description": "Optional target move-in month (e.g. 'Settembre 2026')."
+            }
+          },
+          "required": [
+            "email",
+            "topic",
+            "message"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "estimate_rent",
+        "title": "Estimate monthly rent in Turin",
+        "description": "Estimate indicative monthly rent for an apartment or student room in a Turin neighborhood using OMI/Immobiliare.it Nov-2025 pricing. Read-only, no side effects.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "neighborhood": {
+              "type": "string",
+              "minLength": 2,
+              "description": "Neighborhood name or slug, e.g. 'San Salvario', 'lingotto', 'aurora'."
+            },
+            "size_sqm": {
+              "type": "integer",
+              "minimum": 10,
+              "maximum": 400,
+              "description": "Apartment size in square meters. For a single student room use 15-25."
+            },
+            "type": {
+              "type": "string",
+              "enum": [
+                "student-room",
+                "whole-apartment",
+                "short-term"
+              ],
+              "description": "Rental type. Default 'whole-apartment'."
+            }
+          },
+          "required": [
+            "neighborhood",
+            "size_sqm"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "estimate_property_value",
+        "title": "Estimate Turin property value",
+        "description": "Estimate the sale value of an apartment in Turin using FIAIP 2024-2025 coefficients + OMI/Immobiliare.it pricing. Read-only. Same math as the /vendi-casa-torino valuation on junglerent.it.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "neighborhood": {
+              "type": "string",
+              "minLength": 2,
+              "description": "Neighborhood name or slug."
+            },
+            "size_sqm": {
+              "type": "integer",
+              "minimum": 15,
+              "maximum": 400,
+              "description": "Commercial size in m²."
+            },
+            "condition": {
+              "type": "string",
+              "enum": [
+                "to_renovate",
+                "good",
+                "renovated",
+                "finely_renovated",
+                "new_construction"
+              ],
+              "description": "Conservation state."
+            },
+            "floor": {
+              "type": "string",
+              "enum": [
+                "ground",
+                "first",
+                "second",
+                "third",
+                "fourth",
+                "fifth_plus",
+                "penthouse"
+              ],
+              "description": "Floor level."
+            },
+            "has_elevator": {
+              "type": "boolean",
+              "description": "Whether the building has an elevator."
+            }
+          },
+          "required": [
+            "neighborhood",
+            "size_sqm",
+            "condition",
+            "floor",
+            "has_elevator"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_available_rooms",
+        "title": "List available Jungle Rent rooms",
+        "description": "List currently available student rooms and apartments in Turin. Today no live public inventory is exposed — returns a pointer to contact Lorenzo, who manages allocations manually.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "neighborhood": {
+              "type": "string",
+              "description": "Optional neighborhood filter."
+            },
+            "max_price_eur": {
+              "type": "integer",
+              "minimum": 200,
+              "maximum": 5000,
+              "description": "Optional max monthly rent."
+            },
+            "move_in_after": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "description": "Optional earliest move-in date (YYYY-MM-DD)."
             }
           },
           "additionalProperties": false,
