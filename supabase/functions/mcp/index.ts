@@ -1306,7 +1306,7 @@ var turinZonePrices = [
 var findZoneByName = (name) => {
   const normalizedName = name.toLowerCase().trim();
   return turinZonePrices.find(
-    (z9) => z9.name.toLowerCase().includes(normalizedName) || normalizedName.includes(z9.name.toLowerCase()) || z9.id.replace(/_/g, " ").includes(normalizedName)
+    (z11) => z11.name.toLowerCase().includes(normalizedName) || normalizedName.includes(z11.name.toLowerCase()) || z11.id.replace(/_/g, " ").includes(normalizedName)
   );
 };
 
@@ -1326,7 +1326,7 @@ var estimate_rent_default = defineTool5({
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ neighborhood, size_sqm, type }) => {
     const rentalType = type ?? "whole-apartment";
-    const zone = turinZonePrices.find((z9) => z9.id === neighborhood.toLowerCase().replace(/[\s-]+/g, "_")) ?? findZoneByName(neighborhood);
+    const zone = turinZonePrices.find((z11) => z11.id === neighborhood.toLowerCase().replace(/[\s-]+/g, "_")) ?? findZoneByName(neighborhood);
     if (!zone) {
       return {
         content: [
@@ -1421,7 +1421,7 @@ var estimate_property_value_default = defineTool6({
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ neighborhood, size_sqm, condition, floor, has_elevator }) => {
-    const zone = turinZonePrices.find((z9) => z9.id === neighborhood.toLowerCase().replace(/[\s-]+/g, "_")) ?? findZoneByName(neighborhood);
+    const zone = turinZonePrices.find((z11) => z11.id === neighborhood.toLowerCase().replace(/[\s-]+/g, "_")) ?? findZoneByName(neighborhood);
     if (!zone) {
       return {
         content: [{ type: "text", text: `Neighborhood "${neighborhood}" not found.` }],
@@ -1503,12 +1503,213 @@ var list_available_rooms_default = defineTool7({
   }
 });
 
+// src/lib/mcp/tools/submit-investor-lead.ts
+import { defineTool as defineTool8 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { z as z10 } from "npm:zod@^3.23.8";
+
+// src/lib/validation/investorLead.ts
+import { z as z9 } from "npm:zod@^3.23.8";
+var investorLeadSchema = z9.object({
+  fullName: z9.string().trim().min(2, "Inserisci nome e cognome").max(100, "Massimo 100 caratteri"),
+  email: z9.string().trim().email("Email non valida").max(255),
+  phone: z9.string().trim().max(40).optional().or(z9.literal("")),
+  taxResidence: z9.enum(["IT", "CH", "EU", "OTHER"], {
+    errorMap: () => ({ message: "Seleziona la tua residenza fiscale" })
+  }),
+  ticketRange: z9.enum(["5-10", "10-20", "20-50", "50+", "TBD"], {
+    errorMap: () => ({ message: "Seleziona un range" })
+  }),
+  horizon: z9.enum(["WEEKS", "1-3M", "3-6M", "6M+"], {
+    errorMap: () => ({ message: "Seleziona un orizzonte" })
+  }),
+  prevExperience: z9.enum(["YES", "NO", "PARTIAL"], {
+    errorMap: () => ({ message: "Seleziona un'opzione" })
+  }),
+  source: z9.string().trim().max(500).optional().or(z9.literal("")),
+  notes: z9.string().trim().max(2e3).optional().or(z9.literal("")),
+  privacyConsent: z9.literal(true, {
+    errorMap: () => ({ message: "Devi accettare l'informativa privacy" })
+  }),
+  ownInitiativeDeclaration: z9.literal(true, {
+    errorMap: () => ({
+      message: "Devi confermare di aver richiesto le informazioni di tua iniziativa"
+    })
+  }),
+  // Honeypot — must remain empty
+  website: z9.string().max(0).optional().or(z9.literal(""))
+});
+
+// src/lib/mcp/tools/submit-investor-lead.ts
+function env2() {
+  const url = process.env.SUPABASE_URL;
+  const anonKey = process.env.SUPABASE_PUBLISHABLE_KEY ?? process.env.SUPABASE_ANON_KEY;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !anonKey || !serviceKey) {
+    throw new Error(
+      "Supabase env not configured (SUPABASE_URL / SUPABASE_PUBLISHABLE_KEY / SUPABASE_SERVICE_ROLE_KEY)."
+    );
+  }
+  return { url, anonKey, serviceKey };
+}
+var submit_investor_lead_default = defineTool8({
+  name: "submit_investor_lead",
+  title: "Submit investor contact request",
+  description: "Submit a qualified investor contact request for Jungle Rent (Turin real-estate). Validated with the same schema the website uses. Creates a lead, pings Lorenzo on WhatsApp, and sends the investor confirmation + admin notification emails. IMPORTANT: only call after the user has explicitly (a) given consent to be contacted and receive the privacy notice, and (b) declared they requested this information on their own initiative \u2014 both are legally required (CONSOB/AGCM). Do NOT invent yield or return figures; those live only in the private memorandum.",
+  inputSchema: {
+    full_name: z10.string().trim().min(2).max(100).describe("Investor's full name (first + last)."),
+    email: z10.string().trim().email().max(255).describe("Investor's email."),
+    phone: z10.string().trim().max(40).optional().describe("Phone in E.164 preferred (optional)."),
+    tax_residence: z10.enum(["IT", "CH", "EU", "OTHER"]).describe("Tax residence \u2014 IT, CH, EU, or OTHER."),
+    ticket_range: z10.enum(["5-10", "10-20", "20-50", "50+", "TBD"]).describe("Indicative ticket size in \u20ACk: 5-10, 10-20, 20-50, 50+, or TBD if unclear."),
+    horizon: z10.enum(["WEEKS", "1-3M", "3-6M", "6M+"]).describe("Decision horizon: WEEKS, 1-3M, 3-6M, or 6M+."),
+    prev_experience: z10.enum(["YES", "NO", "PARTIAL"]).describe("Prior real-estate investment experience: YES, NO, PARTIAL."),
+    notes: z10.string().trim().max(2e3).optional().describe("Optional free-form notes from the investor."),
+    source: z10.string().trim().max(500).optional().describe("Where the lead came from (assistant/model name, referrer, etc.)."),
+    privacy_consent: z10.literal(true).describe(
+      "MUST be true. Confirm the user has explicitly consented to the privacy notice (https://junglerent.it/privacy) before setting this."
+    ),
+    own_initiative_declaration: z10.literal(true).describe(
+      "MUST be true. Confirm the user has explicitly declared they are requesting these Jungle Rent investor materials on their own initiative (CONSOB/AGCM requirement)."
+    )
+  },
+  annotations: {
+    readOnlyHint: false,
+    destructiveHint: false,
+    idempotentHint: false,
+    openWorldHint: true
+  },
+  handler: async (input) => {
+    const parsed = investorLeadSchema.safeParse({
+      fullName: input.full_name,
+      email: input.email,
+      phone: input.phone ?? "",
+      taxResidence: input.tax_residence,
+      ticketRange: input.ticket_range,
+      horizon: input.horizon,
+      prevExperience: input.prev_experience,
+      source: input.source ?? "",
+      notes: input.notes ?? "",
+      privacyConsent: input.privacy_consent,
+      ownInitiativeDeclaration: input.own_initiative_declaration,
+      website: ""
+    });
+    if (!parsed.success) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Validation failed: ${JSON.stringify(parsed.error.flatten().fieldErrors)}`
+          }
+        ],
+        isError: true
+      };
+    }
+    const data = parsed.data;
+    let cfg;
+    try {
+      cfg = env2();
+    } catch (e) {
+      return {
+        content: [{ type: "text", text: e.message }],
+        isError: true
+      };
+    }
+    const metadata = {
+      channel: "mcp",
+      tax_residence: data.taxResidence,
+      ticket: data.ticketRange,
+      ticket_range: data.ticketRange,
+      horizon: data.horizon,
+      prev_experience: data.prevExperience,
+      privacy_consent: true,
+      own_initiative_declaration: true,
+      ...data.notes ? { notes: data.notes } : {}
+    };
+    const source = `mcp-investor${data.source ? `:${data.source.slice(0, 60)}` : ""}`;
+    const rpcRes = await fetch(`${cfg.url}/rest/v1/rpc/insert_lead`, {
+      method: "POST",
+      headers: {
+        apikey: cfg.anonKey,
+        Authorization: `Bearer ${cfg.anonKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        _email: data.email,
+        _name: data.fullName,
+        _phone: data.phone || null,
+        _source: source,
+        _lead_type: "investor",
+        _metadata: metadata
+      })
+    });
+    if (!rpcRes.ok) {
+      const errText = await rpcRes.text();
+      return {
+        content: [
+          {
+            type: "text",
+            text: `Failed to create investor lead: ${rpcRes.status} ${errText.slice(0, 200)}`
+          }
+        ],
+        isError: true
+      };
+    }
+    const leadId = await rpcRes.json();
+    const notifyPayload = {
+      email: data.email,
+      name: data.fullName,
+      phone: data.phone || null,
+      source,
+      leadType: "investor",
+      metadata
+    };
+    const invoke = (fn, body) => fetch(`${cfg.url}/functions/v1/${fn}`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${cfg.serviceKey}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    }).catch(() => null);
+    await Promise.allSettled([
+      invoke("notify-investor-whatsapp", notifyPayload),
+      invoke("send-transactional-email", {
+        templateName: "lead-notification",
+        idempotencyKey: `mcp-investor-notify-${leadId}`,
+        templateData: notifyPayload
+      }),
+      invoke("send-transactional-email", {
+        templateName: "lead-confirmation",
+        recipientEmail: data.email,
+        idempotencyKey: `mcp-investor-confirm-${leadId}`,
+        templateData: { leadType: "investor" }
+      })
+    ]);
+    const result = {
+      status: "sent",
+      lead_id: leadId,
+      lead_type: "investor",
+      ticket_range: data.ticketRange,
+      horizon: data.horizon,
+      message_to_user: "Richiesta ricevuta. Lorenzo (unico founder di Jungle Rent) ti ricontatter\xE0 entro 24h con il memorandum informativo. Per una risposta immediata, WhatsApp: https://wa.me/393319053037",
+      whatsapp_deep_link: `https://wa.me/393319053037?text=${encodeURIComponent(
+        `Ciao Lorenzo, sono ${data.fullName} (${data.email}). Ho appena inviato una richiesta informazioni investitore (${data.ticketRange}, ${data.horizon}).`
+      )}`,
+      compliance_note: "This request was submitted with explicit privacy consent and own-initiative declaration, as required by CONSOB/AGCM. No yield/return figures were communicated on public surfaces."
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: result
+    };
+  }
+});
+
 // src/lib/mcp/index.ts
 var mcp_default = defineMcp({
   name: "jungle-rent-mcp",
   title: "Jungle Rent MCP",
-  version: "0.2.0",
-  instructions: "Tools for Jungle Rent \u2014 Turin student housing and real-estate investment, founded by Lorenzo Oni-Joseph (sole founder). Read-only info: `get_neighborhoods`, `get_investor_zones`, `contact_jungle_rent` (channels only). Calculators: `estimate_rent` (monthly rent for an apartment or student room), `estimate_property_value` (sale value using FIAIP coefficients). Actions: `contact_lorenzo` creates a real lead and pings Lorenzo on WhatsApp \u2014 use ONLY after the user gives their email and consents. `list_available_rooms` today returns a pointer to contact Lorenzo (no public inventory feed). Never invent yield/return figures for investors \u2014 those are only in the private memorandum.",
+  version: "0.3.0",
+  instructions: "Tools for Jungle Rent \u2014 Turin student housing and real-estate investment, founded by Lorenzo Oni-Joseph (sole founder). Read-only info: `get_neighborhoods`, `get_investor_zones`, `contact_jungle_rent` (channels only). Calculators: `estimate_rent`, `estimate_property_value` (FIAIP coefficients). Actions: `contact_lorenzo` for general inquiries, `submit_investor_lead` for qualified investor requests (validates against the same schema as the website; REQUIRES explicit privacy consent + own-initiative declaration per CONSOB/AGCM). `list_available_rooms` today points to Lorenzo. NEVER invent yield/return figures for investors \u2014 those are only in the private memorandum.",
   tools: [
     get_neighborhoods_default,
     get_investor_zones_default,
@@ -1516,7 +1717,8 @@ var mcp_default = defineMcp({
     contact_lorenzo_default,
     estimate_rent_default,
     estimate_property_value_default,
-    list_available_rooms_default
+    list_available_rooms_default,
+    submit_investor_lead_default
   ]
 });
 
