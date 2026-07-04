@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp } from "lucide-react";
+import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp, Bot } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import euFundingBanner from "@/assets/eu-funding-banner.png";
@@ -177,6 +177,14 @@ export const MobileFooter = () => {
               className="text-muted-foreground active:text-primary transition-colors"
             >
               {isIt ? 'Termini' : 'Terms'}
+            </Link>
+            <span className="text-muted-foreground/40">|</span>
+            <Link
+              to="/connect"
+              className="text-muted-foreground active:text-primary transition-colors flex items-center gap-1"
+            >
+              <Bot className="w-3 h-3" />
+              {isIt ? 'AI' : 'AI'}
             </Link>
           </div>
 
