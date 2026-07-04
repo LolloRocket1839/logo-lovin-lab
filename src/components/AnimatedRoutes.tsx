@@ -136,6 +136,7 @@ export const AnimatedRoutes = () => {
             <Route path="/admin/seller-radar" element={<SellerRadarAdmin />} />
             <Route path="/admin/inbox" element={<InboxAdmin />} />
             <Route path="/connect" element={<Connect />} />
+            <Route path="/mcp" element={<McpRedirect />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -12,7 +12,7 @@ export default function Connect() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(MCP_URL);
+    await navigator.clipboard.writeText(SHORT_MCP_URL);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
