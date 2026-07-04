@@ -178,6 +178,14 @@ export const MobileFooter = () => {
             >
               {isIt ? 'Termini' : 'Terms'}
             </Link>
+            <span className="text-muted-foreground/40">|</span>
+            <Link
+              to="/connect"
+              className="text-muted-foreground active:text-primary transition-colors flex items-center gap-1"
+            >
+              <Bot className="w-3 h-3" />
+              {isIt ? 'AI' : 'AI'}
+            </Link>
           </div>
 
           {/* WhatsApp Contact */}
