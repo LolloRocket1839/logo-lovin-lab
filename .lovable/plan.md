@@ -1,71 +1,36 @@
+# More MCP tools that fit Jungle Rent's MVP
 
-## What you actually want
+Current server exposes 8 tools (contact_jungle_rent, get_neighborhoods, get_investor_zones, estimate_rent, estimate_property_value, contact_lorenzo, list_available_rooms, submit_investor_lead). Below are the ones that would actually pay off given what already lives in the codebase — no new pages, no new edge functions unless noted.
 
-You already have an MCP server at `https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp`. Today it exposes 3 read-only info tools (`get_neighborhoods`, `get_investor_zones`, `contact_jungle_rent`).
+## Proposed new tools
 
-You want to add **action tools** so when someone talks to Claude/ChatGPT/Cursor and connects your MCP, the assistant can *do things*: notify Lorenzo, estimate a rent, submit a lead. No chat UI on junglerent.it — the assistants are the UI.
+1. **`submit_seller_lead`** — sale-side counterpart to `submit_investor_lead`. Validates against the existing seller form schema (address, rooms, sqm, condition, asking price, timeline, privacy_consent). Calls `insert_lead` RPC with `lead_type: "seller"`, source `mcp-seller:<origin>`, fires WhatsApp + `lead-notification` / `lead-confirmation` emails. Closes the loop for the "sell my Turin apartment" flow currently on `/vendi-casa-torino`.
 
-## New tools to add
+2. **`submit_student_waitlist`** — waitlist counterpart for `/students`. Fields: name, email, target_month, budget_eur, preferred_zones[], room_type (single/double), privacy_consent. `insert_lead` with `lead_type: "student"`. No yield/price promises returned.
 
-All live in `src/lib/mcp/tools/` and register in `src/lib/mcp/index.ts`. The Vite plugin re-bundles into `supabase/functions/mcp/index.ts` on build; then deploy.
+3. **`quick_offer_simulator`** — wraps the `/quick-offer` logic (30% discount, €130k budget cap, memory rule). Input: address/zone, sqm, rooms, condition, asking_price. Output: indicative Jungle Rent offer range + explicit disclaimer + WhatsApp deep-link. Pure calculation, no side effects.
 
-### 1. `contact_lorenzo` (write / notify)
-- **Input:** `name`, `email`, `message`, `topic` (investor/student/seller/tourist/general), optional `phone`.
-- **What it does:** writes a lead via `insert_lead` RPC (same pipeline your website forms use) AND fires the existing `notify-investor-whatsapp` edge function so Lorenzo gets a WhatsApp ping immediately. Also triggers the existing `lead-notification` + `lead-confirmation` transactional emails.
-- **Why it's safe:** reuses your existing validated RPC + suppression + rate limiting. Marks `source: "mcp-<topic>"` so you can track MCP-originated leads in the admin dashboard.
-- **Annotations:** `readOnlyHint: false`, `destructiveHint: false`.
+4. **`search_blog`** — reads `src/data/blog/searchIndex.ts` (already built). Input: query, optional category (`students|investors|sellers|tourists|societa`), optional language. Returns `[{ slug, title, excerpt, url, category, language }]`. Lets Claude/ChatGPT cite Jungle Rent articles by URL instead of hallucinating.
 
-### 2. `estimate_rent` (read / calculate)
-- **Input:** `neighborhood` (slug), `size_sqm` (number), `rooms` (number), optional `type` (student-room / whole-apartment / short-term).
-- **What it does:** pure calculation using your existing `src/data/turinZonePrices.ts` + `src/data/propertyCoefficients.ts`. Returns `{ estimated_monthly_rent_eur, price_per_sqm, comparable_range, confidence, methodology_note }`.
-- **Why:** this is the "rent price on average" tool you mentioned. Zero side effects, safe for any assistant to call freely.
+5. **`get_contract_info`** — read-only reference tool describing the free contract-drafting service (48–72h, 2024 rules, ministerial templates). Returns service description + link to `/contratto-affitto-torino` + WhatsApp CTA. Prevents the LLM from inventing prices (memory: contract price is zero).
 
-### 3. `estimate_property_value` (read / calculate)
-- **Input:** `neighborhood`, `size_sqm`, `condition` (new/good/to-renovate), `floor`, `has_elevator`.
-- **What it does:** wraps the same math your `/vendi-casa-torino` `PropertyValuation` page uses. Returns a valuation range in EUR + a "Talk to Lorenzo" CTA link with a pre-filled WhatsApp deep-link.
-- **Why:** lets Claude/ChatGPT answer "what's my Turin apartment worth?" using *your* pricing model, and hand the user back to Lorenzo.
+6. **`get_seller_radar_zones`** — exposes the 9 prioritized Turin neighborhoods + first-acquisition target (bilocale €45k–70k) as structured data so an assistant can answer "where does Jungle Rent buy?" accurately. Reads from existing seller-radar data files. Read-only.
 
-### 4. `search_blog` (read)
-- **Input:** `query` (string), optional `category` (students/investors/sellers/tourists/società), optional `limit` (default 5).
-- **What it does:** searches the existing `src/data/blog/searchIndex.ts`. Returns `[{ slug, title, excerpt, url, category, language }]`.
-- **Why:** turns your blog (110+ articles) into a knowledge base any MCP-connected assistant can cite when answering Turin-housing questions.
+## Deliberately NOT proposed
 
-### 5. `list_available_rooms` (read, stub-ready)
-- **Input:** optional `neighborhood`, `max_price_eur`, `move_in_after` (date).
-- **What it does:** placeholder that today returns "no live listings yet — contact Lorenzo" plus the WhatsApp deep-link. Wire to real inventory when you have it. Keeps the tool surface stable for MCP clients.
+- **Live listings / inventory search** — no live inventory table yet; `list_available_rooms` already returns the manual-allocation message.
+- **Public yield/return figures** — blocked by memory rule (`no-public-yield-figures`). Any tool returning Jungle Rent ROI numbers is off-limits.
+- **Admin/seller-radar mutations** — `/admin/seller-radar` is internal; exposing scraper controls via MCP would leak ops surface.
+- **Auth'd per-user tools** (my leads, my drafts) — would require the Supabase OAuth 2.1 path (issuer + consent route). Worth doing later, but a much bigger change than the current anonymous action tools. Flag only, not in this batch.
 
-## What stays the same
+## Files to touch
 
-- Existing 3 tools untouched.
-- `contact_jungle_rent` remains for "just tell me how to reach you" (returns channels, no side effects). The new `contact_lorenzo` is the *acting* version that actually creates a lead.
-- No chat UI, no `useChat`, no new pages, no new edge functions.
+- New: `src/lib/mcp/tools/submit-seller-lead.ts`, `submit-student-waitlist.ts`, `quick-offer-simulator.ts`, `search-blog.ts`, `get-contract-info.ts`, `get-seller-radar-zones.ts`
+- Edit: `src/lib/mcp/index.ts` (register 6 tools, bump to 0.4.0, extend `instructions`)
+- Regenerate: `.lovable/mcp/manifest.json` + `public/.well-known/mcp.json` via `app_mcp_server--extract_mcp_manifest`
+- Redeploy: `supabase/functions/mcp` edge function
 
-## Files to change
+## Open questions before I build
 
-```text
-src/lib/mcp/tools/contact-lorenzo.ts          NEW
-src/lib/mcp/tools/estimate-rent.ts            NEW
-src/lib/mcp/tools/estimate-property-value.ts  NEW
-src/lib/mcp/tools/search-blog.ts              NEW
-src/lib/mcp/tools/list-available-rooms.ts     NEW
-src/lib/mcp/index.ts                          EDIT (register 5 new tools)
-.lovable/mcp/manifest.json                    REGEN via extractor
-supabase/functions/mcp/index.ts               AUTO-regen by Vite plugin, then deploy
-public/.well-known/mcp.json                   REGEN (published manifest)
-```
-
-Then: `deploy_edge_functions(["mcp"])` and the live server exposes 8 tools total.
-
-## How you'll test it
-
-1. In Claude Desktop → Settings → Developer → add MCP server URL `https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp`.
-2. Ask Claude: *"Use jungle-rent-mcp to estimate rent for a 2-room 60 m² in San Salvario, then send Lorenzo a message that I'm interested."*
-3. Claude calls `estimate_rent` → shows number → calls `contact_lorenzo` → you get the WhatsApp ping + email.
-
-Same flow works from ChatGPT (custom MCP), Cursor, Codex, etc.
-
-## Open question before I build
-
-**`contact_lorenzo` — should it require the caller to supply the user's real email/name (i.e. the assistant asks them first), or should it accept anonymous "just ping Lorenzo with this message + a callback preference"?** The first is cleaner CRM data; the second is lower-friction for someone chatting with Claude.
-
-If no preference, I'll default to: `email` required, `name` optional, and reject sends without a valid email (matches how your website forms behave today).
+- Want all 6, or a subset? My pick if you want to trim: **1, 3, 4, 5** (highest signal: closes seller loop, gives Claude the offer calculator, real blog citations, correct contract copy).
+- For `submit_student_waitlist`: keep it, or skip since the student page is more content-hub than lead-gen today?
