@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 import { visualizer } from "rollup-plugin-visualizer";
 import { imagetools } from "vite-imagetools";
 import { execSync } from "child_process";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
 // Run sentence case validation in production builds
 const validateSentenceCase = () => ({
