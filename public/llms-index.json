@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "updated": "2026-07-04",
+  "site": "https://junglerent.it",
+  "primary": [
+    { "url": "https://junglerent.it/llms.txt", "type": "text/markdown", "purpose": "Canonical LLM guide + verbatim Q&A." },
+    { "url": "https://junglerent.it/llms-full.txt", "type": "text/markdown", "purpose": "Full knowledge base." },
+    { "url": "https://junglerent.it/ai-assistant-info.txt", "type": "text/plain", "purpose": "Short assistant intro." }
+  ],
+  "agent_surfaces": [
+    { "url": "https://junglerent.it/.well-known/agent-card.json", "type": "application/json", "purpose": "A2A agent card." },
+    { "url": "https://junglerent.it/.well-known/agents.json", "type": "application/json", "purpose": "Multi-step agent workflows." },
+    { "url": "https://junglerent.it/.well-known/mcp.json", "type": "application/json", "purpose": "MCP manifest." },
+    { "url": "https://junglerent.it/.well-known/ai-plugin.json", "type": "application/json", "purpose": "OpenAI plugin manifest." },
+    { "url": "https://junglerent.it/openapi.json", "type": "application/json", "purpose": "OpenAPI 3.1 for public REST endpoints." }
+  ],
+  "sitemaps": [
+    { "url": "https://junglerent.it/sitemap-index.xml", "type": "application/xml" },
+    { "url": "https://junglerent.it/sitemap.xml", "type": "application/xml" },
+    { "url": "https://junglerent.it/sitemap-blog.xml", "type": "application/xml" },
+    { "url": "https://junglerent.it/sitemap-tools.xml", "type": "application/xml" },
+    { "url": "https://junglerent.it/sitemap-images.xml", "type": "application/xml" }
+  ],
+  "feeds": [
+    { "url": "https://junglerent.it/rss.xml", "type": "application/rss+xml", "purpose": "Blog RSS." }
+  ],
+  "resources": [
+    { "url": "https://junglerent.it/resources/aule_studio_torino.csv", "type": "text/csv", "purpose": "Turin study halls directory." },
+    { "url": "https://junglerent.it/resources/study-spaces-detailed.csv", "type": "text/csv", "purpose": "Detailed study spaces (66 locations)." },
+    { "url": "https://junglerent.it/resources/torino_study_spaces_directory_2.csv", "type": "text/csv" },
+    { "url": "https://junglerent.it/resources/torino_student_services_directory_1.csv", "type": "text/csv" },
+    { "url": "https://junglerent.it/resources/torino_universita_complete_directory.csv", "type": "text/csv" },
+    { "url": "https://junglerent.it/resources/palestre-torino-studenti-directory.md", "type": "text/markdown" },
+    { "url": "https://junglerent.it/resources/eventi-torino-gennaio-2026.md", "type": "text/markdown" },
+    { "url": "https://junglerent.it/resources/mappa-fondazioni-torino.md", "type": "text/markdown" },
+    { "url": "https://junglerent.it/resources/guida-volontariato-torino.md", "type": "text/markdown" }
+  ],
+  "compliance": {
+    "no_public_yield_figures": "Jungle Rent yields/returns are confidential (memorandum only).",
+    "sole_founder": "Lorenzo Oni-Joseph — only person named in governance.",
+    "contract_service_free": "Contract-drafting service costs €0."
+  }
+}

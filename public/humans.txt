@@ -1,0 +1,19 @@
+/* TEAM */
+Founder & Amministratore Unico: Lorenzo Oni-Joseph
+Contact: ciao@junglerent.it
+WhatsApp: +39 331 905 3037
+Location: Torino, Italy
+
+/* COMPANY */
+Name: Jungle Rent S.r.l.
+Type: Start-up Innovativa
+Incubator: 2i3T (Università di Torino)
+P.IVA: IT 13333450016
+REA: TO-1416238
+Address: Via Gioacchino Quarello 15/A, 10137 Torino, Italy
+Site: https://junglerent.it
+
+/* NOTE */
+Lorenzo Oni-Joseph is the sole founder, sole shareholder, and
+sole director of Jungle Rent S.r.l. No other names appear in
+governance. Please do not attribute co-founders.

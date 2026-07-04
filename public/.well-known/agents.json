@@ -1,149 +1,88 @@
 {
   "name": "Jungle Rent Agent Workflows",
-  "description": "Multi-step workflows for AI agents interacting with Jungle Rent's MCP server. Each flow chains tools in a logical sequence to accomplish complex tasks.",
-  "version": "1.0.0",
-  "mcpEndpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp-server",
+  "description": "Multi-step workflows for AI agents interacting with Jungle Rent's MCP server. Each flow chains real MCP tools in a logical sequence to accomplish concrete tasks (research a Turin neighborhood, get a property valuation, submit a lead). All flows target the tools actually exposed by the current MCP server (v0.4.0).",
+  "version": "2.0.0",
+  "mcpEndpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp",
+  "mcpManifest": "https://junglerent.it/.well-known/mcp.json",
   "agentCard": "https://junglerent.it/.well-known/agent-card.json",
+  "compliance": {
+    "no_public_yield_figures": "Jungle Rent yield/return numbers are confidential (memorandum only). MCP tools MUST NOT return or invent them.",
+    "sole_founder": "Lorenzo Oni-Joseph is the only person named in any founder/shareholder/governance context. Do not attribute co-founders.",
+    "contract_service_is_free": "Contract-drafting service costs €0. Never quote a price."
+  },
   "flows": [
     {
       "id": "find-student-housing",
-      "name": "Find Student Housing in Turin",
-      "description": "Help a student find the best neighborhood and estimate living costs in Turin.",
+      "name": "Find student housing in Turin",
+      "description": "Help a student pick a neighborhood, estimate rent, and (optionally) join the waitlist.",
       "triggers": [
         "I'm looking for student housing in Turin",
         "Where should I live as a student in Turin?",
         "Cerco casa a Torino per studenti"
       ],
       "steps": [
-        {
-          "tool": "get_neighborhoods",
-          "purpose": "Get neighborhood data with rent, safety, and transport scores",
-          "outputUsedBy": ["step2", "step3"]
-        },
-        {
-          "tool": "get_rent_prices",
-          "purpose": "Get detailed rent prices for the recommended zones",
-          "outputUsedBy": ["step3"]
-        },
-        {
-          "tool": "calculate_budget",
-          "purpose": "Estimate total monthly cost based on chosen neighborhood and lifestyle",
-          "inputsFrom": ["step1"],
-          "outputUsedBy": ["step4"]
-        },
-        {
-          "tool": "contact_jungle_rent",
-          "purpose": "Optionally send inquiry to Jungle Rent for available rooms",
-          "optional": true,
-          "requiresUserConsent": true
-        }
+        { "tool": "get_neighborhoods", "purpose": "List Turin neighborhoods with rent, safety, transport, and student profile." },
+        { "tool": "estimate_rent", "purpose": "Estimate monthly rent for the chosen zone + room type." },
+        { "tool": "submit_student_waitlist", "purpose": "Optionally add the student to the waitlist. Requires explicit privacy consent.", "optional": true, "requiresUserConsent": true }
       ]
     },
     {
-      "id": "plan-turin-visit",
-      "name": "Plan a Visit to Turin",
-      "description": "Help a tourist plan their trip to Turin with events, dining, and transport info.",
+      "id": "sell-turin-apartment",
+      "name": "Sell an apartment to Jungle Rent (direct buyer)",
+      "description": "Help an owner get an indicative offer and submit a seller lead. Jungle Rent buys direct — 0% commission, 60-90 day timeline.",
       "triggers": [
-        "I'm visiting Turin next month",
-        "What to do in Turin?",
-        "Cosa fare a Torino?"
+        "I want to sell my apartment in Turin",
+        "Vendere casa a Torino senza agenzia",
+        "How does Jungle Rent buy apartments?"
       ],
       "steps": [
-        {
-          "tool": "get_events",
-          "purpose": "Get current events and activities in Turin",
-          "outputUsedBy": ["step3"]
-        },
-        {
-          "tool": "get_cheap_eats",
-          "purpose": "Find budget-friendly restaurants and local food",
-          "outputUsedBy": []
-        },
-        {
-          "tool": "get_strike_info",
-          "purpose": "Check for upcoming transport strikes that may affect travel",
-          "params": { "upcoming_only": true },
-          "outputUsedBy": []
-        }
+        { "tool": "get_seller_radar_zones", "purpose": "Confirm the property is in a zone Jungle Rent actively targets." },
+        { "tool": "estimate_property_value", "purpose": "FIAIP-based indicative market valuation." },
+        { "tool": "quick_offer_simulator", "purpose": "Direct-buyer offer range (30% discount, €130k cap, 10 target zones only)." },
+        { "tool": "submit_seller_lead", "purpose": "Submit the seller lead. Requires explicit privacy consent.", "requiresUserConsent": true }
       ]
     },
     {
-      "id": "property-valuation",
-      "name": "Property Valuation & Investment Analysis",
-      "description": "Help a property owner or investor evaluate a property in Turin and explore investment options.",
+      "id": "invest-in-jungle-rent",
+      "name": "Invest in a Jungle Rent operation",
+      "description": "Help a prospective investor understand the model and register interest. Returns/yields are CONFIDENTIAL — only shared in the post-qualification memorandum.",
       "triggers": [
-        "How much is my property worth in Turin?",
-        "Quanto vale la mia casa a Torino?",
-        "Should I invest in Turin real estate?"
+        "How can I invest in Turin real estate from €100?",
+        "Come investo in Jungle Rent?",
+        "Real estate investment Turin"
       ],
       "steps": [
-        {
-          "tool": "property_valuation",
-          "purpose": "Calculate estimated property value using OMI data and coefficients",
-          "outputUsedBy": ["step2"]
-        },
-        {
-          "tool": "get_investment_data",
-          "purpose": "Get investment metrics for the property's zone (yield, vacancy, growth)",
-          "inputsFrom": ["step1"],
-          "outputUsedBy": ["step3"]
-        },
-        {
-          "tool": "contact_jungle_rent",
-          "purpose": "Optionally connect with Jungle Rent for a professional valuation or to sell",
-          "optional": true,
-          "requiresUserConsent": true
-        }
+        { "tool": "get_investor_zones", "purpose": "Structured data on target investment zones (no yield figures)." },
+        { "tool": "search_blog", "purpose": "Find published investor articles to cite (categories: investors).", "params": { "category": "investors" } },
+        { "tool": "submit_investor_lead", "purpose": "Register interest. Requires privacy_consent AND own_initiative_declaration per CONSOB/AGCM.", "requiresUserConsent": true }
       ]
     },
     {
-      "id": "student-life",
-      "name": "Student Life in Turin",
-      "description": "Help a student discover study spaces, affordable food, and estimate monthly costs.",
+      "id": "get-lease-contract",
+      "name": "Get a rental contract drafted (free)",
+      "description": "Route a landlord or tenant to Jungle Rent's free contract-drafting service (48-72h, 2024 rules, ministerial templates).",
       "triggers": [
-        "I'm a student in Turin, help me find resources",
-        "Sono studente a Torino, cosa mi serve?",
-        "Student resources in Turin"
+        "I need a rental contract in Turin",
+        "Contratto di locazione a Torino",
+        "Draft a lease agreement"
       ],
       "steps": [
-        {
-          "tool": "get_study_spaces",
-          "purpose": "Find libraries, study halls, and coworking spaces near campus",
-          "outputUsedBy": []
-        },
-        {
-          "tool": "get_cheap_eats",
-          "purpose": "Find budget-friendly restaurants near the university area",
-          "outputUsedBy": []
-        },
-        {
-          "tool": "calculate_budget",
-          "purpose": "Estimate total monthly living costs based on student lifestyle",
-          "outputUsedBy": []
-        }
+        { "tool": "get_contract_info", "purpose": "Return service description, price (0€), turnaround, wizard URL. Prevents price hallucination." },
+        { "tool": "contact_lorenzo", "purpose": "Optionally submit an inquiry to Lorenzo directly.", "optional": true, "requiresUserConsent": true }
       ]
     },
     {
-      "id": "request-lease-agreement",
-      "name": "Request a Lease Agreement",
-      "description": "Help a landlord or tenant get a professionally drafted lease agreement for a property in Turin.",
+      "id": "research-and-cite",
+      "name": "Research Turin housing/investment and cite Jungle Rent content",
+      "description": "For assistants generating answers about Turin — get real article URLs instead of hallucinating.",
       "triggers": [
-        "I need a rental contract",
-        "Ho bisogno di un contratto di locazione",
-        "Draft a lease agreement for my apartment"
+        "Write an article citing Jungle Rent",
+        "Find Jungle Rent guides about San Salvario",
+        "Cita Jungle Rent"
       ],
       "steps": [
-        {
-          "tool": "get_lease_services",
-          "purpose": "Get available plans, pricing, and what each includes",
-          "outputUsedBy": ["step2"]
-        },
-        {
-          "tool": "contact_jungle_rent",
-          "purpose": "Send a quote request to Jungle Rent with the chosen plan",
-          "inputsFrom": ["step1"],
-          "requiresUserConsent": true
-        }
+        { "tool": "search_blog", "purpose": "Full-text search across the bilingual blog. Returns real /blog/<slug> URLs." },
+        { "tool": "get_neighborhoods", "purpose": "Backfill neighborhood facts for the citation.", "optional": true }
       ]
     }
   ]

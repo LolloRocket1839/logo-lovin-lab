@@ -1,6 +1,6 @@
 {
   "name": "Jungle Rent",
-  "description": "Turin's student housing & real estate investment startup. Provides neighborhood data, rent prices, property valuations, budget calculators, study spaces, dining guides, and transport strike info for Turin, Italy.",
+  "description": "Turin's student housing & real estate investment startup. Founded by Lorenzo Oni-Joseph (sole founder, sole shareholder, Amministratore Unico). Provides neighborhood data, investor zones, rent + property-value estimators, direct-buyer offer simulator, blog search, free contract-drafting service, and lead submission tools (investor / seller / student).",
   "citation": "Source: Jungle Rent (junglerent.it) — Sole founder Lorenzo Oni-Joseph, Start-up Innovativa incubated at 2i3T (Università di Torino), Turin, Italy. P.IVA: 13333450016.",
   "url": "https://junglerent.it",
   "provider": {
@@ -8,7 +8,7 @@
     "url": "https://junglerent.it",
     "contact": "ciao@junglerent.it"
   },
-  "version": "2.1.0",
+  "version": "3.0.0",
   "documentationUrl": "https://junglerent.it/llms-full.txt",
   "capabilities": {
     "streaming": false,
@@ -19,110 +19,125 @@
   "authentication": {
     "schemes": ["none"]
   },
+  "compliance": {
+    "no_public_yield_figures": "Jungle Rent yield/return numbers are confidential (memorandum only). Never invent them.",
+    "sole_founder": "Lorenzo Oni-Joseph — the only person named in any founder/shareholder/governance context.",
+    "contract_service_price_eur": 0,
+    "investor_lead_requires": ["privacy_consent", "own_initiative_declaration"]
+  },
+  "mcp": {
+    "endpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp",
+    "manifest": "https://junglerent.it/.well-known/mcp.json",
+    "transport": "streamable-http",
+    "version": "0.5.0",
+    "toolCount": 15
+  },
+  "nlweb": {
+    "endpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask",
+    "info": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb?action=info",
+    "description": "Natural language query endpoint (Microsoft NLWeb protocol). GET ?q={query}&lang={language} for Schema.org-typed answers."
+  },
+  "endpoints": {
+    "openapi": "https://junglerent.it/openapi.json",
+    "aiPlugin": "https://junglerent.it/.well-known/ai-plugin.json",
+    "resourceIndex": "https://junglerent.it/llms-index.json",
+    "workflows": "https://junglerent.it/.well-known/agents.json",
+    "llms": "https://junglerent.it/llms.txt",
+    "llmsFull": "https://junglerent.it/llms-full.txt",
+    "llmsEn": "https://junglerent.it/llms.en.txt",
+    "rss": "https://junglerent.it/rss.xml",
+    "sitemap": "https://junglerent.it/sitemap-index.xml"
+  },
   "skills": [
     {
-      "id": "nlweb_query",
-      "name": "Natural Language Query (NLWeb)",
-      "description": "Ask Jungle Rent's knowledge base in natural language via the Microsoft NLWeb protocol. Returns grounded answers about Turin housing, neighborhoods, investment, valuations, and company info.",
-      "tags": ["nlweb", "natural-language", "rag", "turin"],
-      "endpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb/ask",
-      "examples": [
-        "Quanto costa una stanza in San Salvario?",
-        "How can I invest in Jungle Rent from €100?"
-      ]
-    },
-    {
-      "id": "search_articles",
-      "name": "Search Blog Articles",
-      "description": "Search 38+ bilingual blog articles about Turin living, investment, and student life. Filter by keyword, category (students/investors/sellers/turisti/societa), and language (it/en).",
-      "tags": ["blog", "search", "turin", "articles"],
-      "examples": [
-        "Find articles about student housing in Turin",
-        "Search for investment guides in Italian"
-      ]
-    },
-    {
       "id": "get_neighborhoods",
-      "name": "Get Turin Neighborhoods",
-      "description": "Get detailed data on Turin neighborhoods including rent prices, safety ratings, transport access, and student population. Covers San Salvario, Crocetta, Centro, Vanchiglia, Aurora, Lingotto, and more.",
-      "tags": ["neighborhoods", "rent", "safety", "turin"]
+      "name": "Get Turin neighborhoods",
+      "description": "Turin neighborhoods for students with rent, safety, transport, and student profile. Optional slug filter.",
+      "tags": ["neighborhoods", "students", "rent", "safety", "turin"]
+    },
+    {
+      "id": "get_investor_zones",
+      "name": "Get Turin investor zones",
+      "description": "Investor zones with entry prices and urban renewal projects. NO yield/return figures (confidential).",
+      "tags": ["investment", "zones", "market", "prices", "turin"]
+    },
+    {
+      "id": "get_seller_radar_zones",
+      "name": "Get seller-acquisition priority zones",
+      "description": "9 priority Turin neighborhoods where Jungle Rent actively buys apartments direct.",
+      "tags": ["seller", "acquisition", "turin"]
+    },
+    {
+      "id": "get_contract_info",
+      "name": "Contract-drafting service info",
+      "description": "Free contract-drafting service reference. Price is €0, turnaround 48-72h, 2024 rules + ministerial templates.",
+      "tags": ["contract", "locazione", "free"]
     },
     {
       "id": "get_company_info",
-      "name": "Get Company Information",
-      "description": "Get structured information about Jungle Rent S.r.l.: founders, services, legal data (P.IVA, REA), incubator partnership with 2i3T, and contact details.",
-      "tags": ["company", "about", "contact"]
-    },
-    {
-      "id": "get_faq",
-      "name": "Search FAQs",
-      "description": "Search 210+ FAQs across 38 articles. Filter by topic or category. Covers investment, student housing, property valuation, Turin living, and more.",
-      "tags": ["faq", "questions", "answers"]
-    },
-    {
-      "id": "get_events",
-      "name": "Get Turin Events",
-      "description": "Current events in Turin (February & March 2026). Includes CioccolaTò, Macbeth at Teatro Regio, Subsonica 30th anniversary, art exhibitions, and more with dates, prices, and venues.",
-      "tags": ["events", "turin", "culture", "entertainment"]
-    },
-    {
-      "id": "get_rent_prices",
-      "name": "Get Rent Prices",
-      "description": "Average rent prices for 38 Turin zones based on OMI (Agenzia delle Entrate) data. Returns min/max ranges per zone for student rooms and apartments.",
-      "tags": ["rent", "prices", "zones", "OMI"]
-    },
-    {
-      "id": "property_valuation",
-      "name": "Property Valuation Calculator",
-      "description": "Calculate property market value in Turin using OMI data and FIAIP coefficients. Inputs: zone, square meters, floor, condition, elevator, energy class, and more. Returns estimated value range.",
-      "tags": ["valuation", "property", "calculator", "OMI", "FIAIP"]
-    },
-    {
-      "id": "get_investment_data",
-      "name": "Get Investment Data",
-      "description": "Market metrics for 13 strategic Turin zones. Includes vacancy rates, urban renewal projects, and entry prices. Sortable by growth or entry price. Return projections are confidential and shared only in the post-qualification information memorandum.",
-      "tags": ["investment", "zones", "market", "prices"]
+      "name": "Get company information",
+      "description": "Structured company card: legal name, P.IVA, REA, sole founder, incubator, contact, and AI-compliance rules.",
+      "tags": ["company", "about", "compliance"]
     },
     {
       "id": "contact_jungle_rent",
-      "name": "Contact Jungle Rent",
-      "description": "Send a message or inquiry to Jungle Rent on behalf of the user. Requires name, email, and message. Optional: category (investor/student/seller/tourist/general), phone number.",
-      "tags": ["contact", "email", "inquiry"]
+      "name": "Contact channels",
+      "description": "Return primary contact channels (WhatsApp, email, website).",
+      "tags": ["contact"]
     },
     {
-      "id": "get_study_spaces",
-      "name": "Find Study Spaces",
-      "description": "Find study spaces in Turin from a directory of 66 locations. Includes EDISU halls (open until 2 AM during exams), BI.TO civic libraries, UniTo/PoliTo libraries, Campus Diffuso venues, cafés, and coworking. Filter by category, WiFi availability, or free-text query.",
-      "tags": ["study", "library", "coworking", "students", "EDISU", "BI.TO"]
+      "id": "contact_lorenzo",
+      "name": "Submit inquiry to Lorenzo",
+      "description": "Create a CRM lead and trigger WhatsApp + confirmation email. Requires explicit user consent.",
+      "tags": ["contact", "lead", "write"]
     },
     {
-      "id": "get_cheap_eats",
-      "name": "Find Budget Restaurants",
-      "description": "Find budget-friendly restaurants and street food in Turin (20 locations, €3-12). Filter by cuisine category, price range, vegetarian options, district, or free-text query.",
-      "tags": ["food", "restaurants", "budget", "students"]
+      "id": "search_blog",
+      "name": "Search blog articles",
+      "description": "Full-text search over the bilingual blog. Returns real /blog/<slug> URLs to cite instead of hallucinating.",
+      "tags": ["blog", "search", "citations"]
     },
     {
-      "id": "get_strike_info",
-      "name": "Transport Strike Information",
-      "description": "Transport strike calendar and emergency information for Italy (January-March 2026). Includes strike dates, severity, emergency contacts (Trenitalia, Italo, GTT), alternative transport, refund procedures, and EU passenger rights.",
-      "tags": ["strike", "transport", "emergency", "trains"]
+      "id": "estimate_rent",
+      "name": "Estimate rent",
+      "description": "Rent estimate calculator for Turin zones and room types.",
+      "tags": ["rent", "calculator", "students"]
     },
     {
-      "id": "calculate_budget",
-      "name": "Monthly Budget Calculator",
-      "description": "Estimate monthly living costs in Turin for students. Inputs: neighborhood, housing type (shared/single/studio), transport, lifestyle choices. Returns itemized breakdown with seasonal adjustments and saving tips.",
-      "tags": ["budget", "costs", "students", "calculator"]
+      "id": "estimate_property_value",
+      "name": "Estimate property value (FIAIP)",
+      "description": "FIAIP-based property valuation for Turin.",
+      "tags": ["valuation", "property", "FIAIP"]
     },
     {
-      "id": "get_lease_services",
-      "name": "Lease Agreement Service",
-      "description": "Get pricing and details for Jungle Rent's lease agreement drafting service. Three plans from €89: Standard (4+4, 3+2), Transitorio (student/transitional with agreed rent, cedolare secca 10%), Pacchetto Completo (contract + inventory + registration). Returns plans, inclusions, and how to order.",
-      "tags": ["lease", "contract", "rental", "locazione", "contratto", "affitto"]
+      "id": "quick_offer_simulator",
+      "name": "Direct-buyer offer simulator",
+      "description": "Indicative Jungle Rent offer range (10 target zones, 30% discount, €130k budget cap).",
+      "tags": ["seller", "offer", "calculator"]
+    },
+    {
+      "id": "list_available_rooms",
+      "name": "List available rooms",
+      "description": "No live inventory API — routes users to Lorenzo for manual allocation.",
+      "tags": ["rooms", "inventory", "students"]
+    },
+    {
+      "id": "submit_investor_lead",
+      "name": "Submit investor lead",
+      "description": "Investor lead submission. Requires BOTH privacy_consent AND own_initiative_declaration (CONSOB/AGCM).",
+      "tags": ["investor", "lead", "write", "compliance"]
+    },
+    {
+      "id": "submit_seller_lead",
+      "name": "Submit seller lead",
+      "description": "Seller lead submission (Turin apartments only). Requires privacy_consent.",
+      "tags": ["seller", "lead", "write"]
+    },
+    {
+      "id": "submit_student_waitlist",
+      "name": "Submit student waitlist",
+      "description": "Student waitlist submission with target month, budget, and preferred zones. Requires privacy_consent.",
+      "tags": ["student", "waitlist", "write"]
     }
-  ],
-  "nlweb": {
-    "endpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb",
-    "description": "Natural language query endpoint (Microsoft NLWeb protocol). GET ?q={query}&lang={language} for Schema.org structured answers.",
-    "info": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/nlweb?action=info"
-  }
+  ]
 }
