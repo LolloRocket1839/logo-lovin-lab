@@ -344,6 +344,13 @@ export const Footer = () => {
               >
                 {i18n.language === 'it' || i18n.language.startsWith('it') ? 'Termini e Condizioni' : 'Terms & Conditions'}
               </Link>
+              <span className="text-muted-foreground">|</span>
+              <Link
+                to="/connect"
+                className="text-muted-foreground text-xs font-light hover:text-primary transition-colors underline underline-offset-4"
+              >
+                {i18n.language.startsWith('it') ? 'Connetti ad AI' : 'Connect to AI'}
+              </Link>
             </div>
           </div>
         </div>

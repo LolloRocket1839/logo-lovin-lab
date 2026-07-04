@@ -51,6 +51,7 @@ const SellerRadarAdmin = lazy(() => import("@/pages/admin/SellerRadar"));
 const InboxAdmin = lazy(() => import("@/pages/admin/Inbox"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
+const Connect = lazy(() => import("@/pages/Connect"));
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -133,7 +134,8 @@ export const AnimatedRoutes = () => {
             <Route path="/admin/seo" element={<SeoAdmin />} />
             <Route path="/admin/seller-radar" element={<SellerRadarAdmin />} />
             <Route path="/admin/inbox" element={<InboxAdmin />} />
-            
+            <Route path="/connect" element={<Connect />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
