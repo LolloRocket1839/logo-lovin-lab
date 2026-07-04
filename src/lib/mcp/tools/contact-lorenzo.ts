@@ -1,6 +1,9 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
 
+declare const process: { env: Record<string, string | undefined> };
+
+
 // Read Supabase env lazily inside the handler — never at module top level.
 function env() {
   const url = process.env.SUPABASE_URL;
