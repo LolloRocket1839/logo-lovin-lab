@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "jungle-rent-mcp",
+      "version": "0.1.0",
+      "title": "Jungle Rent MCP"
+    },
+    "tools": [
+      {
+        "name": "get_neighborhoods",
+        "title": "Get Turin neighborhoods",
+        "description": "List Turin neighborhoods for students with average rent, safety, transport and student profile. Optional slug filter returns a single neighborhood.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Optional neighborhood slug (e.g. 'san-salvario'). If omitted, returns all."
+            },
+            "lang": {
+              "type": "string",
+              "enum": [
+                "it",
+                "en"
+              ],
+              "description": "Language for text fields. Default 'it'."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_investor_zones",
+        "title": "Get Turin investor zones",
+        "description": "List Turin real-estate investor zones with entry prices, urban renewal projects and market metrics. Return figures projections are NOT included (confidential, memorandum only). Optional slug filter returns one zone.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Optional zone slug. If omitted, returns all zones."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "contact_jungle_rent",
+        "title": "Contact Jungle Rent",
+        "description": "Return the primary contact channels for Jungle Rent (WhatsApp with founder Lorenzo, email, website). Use when a user asks how to get in touch, book a call, or send an inquiry.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "topic": {
+              "type": "string",
+              "enum": [
+                "investor",
+                "student",
+                "seller",
+                "tourist",
+                "general"
+              ],
+              "description": "Inquiry topic. Defaults to 'general'."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
