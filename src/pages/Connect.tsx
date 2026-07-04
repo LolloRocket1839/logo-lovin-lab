@@ -6,8 +6,7 @@ import { Seo } from "@/components/Seo";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 
-const projectRef = import.meta.env.VITE_SUPABASE_PROJECT_ID;
-const MCP_URL = `https://${projectRef}.supabase.co/functions/v1/mcp`;
+const SHORT_MCP_URL = `${window.location.origin}/mcp`;
 
 export default function Connect() {
   const [copied, setCopied] = useState(false);

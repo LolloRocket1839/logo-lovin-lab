@@ -52,6 +52,7 @@ const InboxAdmin = lazy(() => import("@/pages/admin/Inbox"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const Connect = lazy(() => import("@/pages/Connect"));
+const McpRedirect = lazy(() => import("@/pages/McpRedirect"));
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
