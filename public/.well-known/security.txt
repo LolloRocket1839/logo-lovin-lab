@@ -1,0 +1,6 @@
+Contact: mailto:ciao@junglerent.it
+Contact: https://wa.me/393319053037
+Preferred-Languages: it, en
+Canonical: https://junglerent.it/.well-known/security.txt
+Policy: https://junglerent.it/privacy
+Expires: 2027-07-04T00:00:00.000Z

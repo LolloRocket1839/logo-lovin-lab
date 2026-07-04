@@ -1,0 +1,64 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Jungle Rent public API",
+    "version": "1.0.0",
+    "description": "Public read-only endpoints for AI agents that cannot speak MCP. For full tool access prefer the MCP server at https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp (manifest: https://junglerent.it/.well-known/mcp.json).",
+    "contact": {
+      "name": "Lorenzo Oni-Joseph",
+      "email": "ciao@junglerent.it",
+      "url": "https://junglerent.it"
+    },
+    "license": { "name": "Proprietary", "url": "https://junglerent.it/termini-condizioni" }
+  },
+  "servers": [
+    { "url": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1", "description": "Edge Functions" }
+  ],
+  "paths": {
+    "/nlweb/ask": {
+      "get": {
+        "operationId": "nlwebAsk",
+        "summary": "Natural-language query over Jungle Rent's knowledge base (Microsoft NLWeb protocol).",
+        "parameters": [
+          { "name": "q", "in": "query", "required": true, "schema": { "type": "string" }, "description": "Natural-language question." },
+          { "name": "lang", "in": "query", "required": false, "schema": { "type": "string", "enum": ["it", "en"] }, "description": "Response language (default it)." }
+        ],
+        "responses": {
+          "200": {
+            "description": "Schema.org-typed answer.",
+            "content": { "application/json": { "schema": { "type": "object" } } }
+          }
+        }
+      }
+    },
+    "/get-investor-interest-count": {
+      "get": {
+        "operationId": "getInvestorInterestCount",
+        "summary": "Total count of investors who have registered interest (used for social-proof counters).",
+        "responses": {
+          "200": {
+            "description": "Investor interest counter.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": { "count": { "type": "integer", "minimum": 0 } }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-mcp": {
+    "endpoint": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1/mcp",
+    "manifest": "https://junglerent.it/.well-known/mcp.json",
+    "note": "Prefer MCP for the full 14-tool surface (neighborhoods, investor zones, seller radar, estimators, quick-offer simulator, blog search, contract info, lead submission)."
+  },
+  "x-compliance": {
+    "no_public_yield_figures": true,
+    "sole_founder": "Lorenzo Oni-Joseph",
+    "contract_service_price_eur": 0
+  }
+}
