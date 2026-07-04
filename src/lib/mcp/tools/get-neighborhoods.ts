@@ -1,6 +1,6 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
-import { neighborhoods } from "@/data/neighborhoods";
+import { neighborhoods } from "../../../data/neighborhoods";
 
 export default defineTool({
   name: "get_neighborhoods",

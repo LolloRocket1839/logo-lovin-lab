@@ -1,6 +1,6 @@
 import { defineTool } from "@lovable.dev/mcp-js";
 import { z } from "zod";
-import { investorZones, getZoneBySlug } from "@/data/investorZoneData";
+import { investorZones, getZoneBySlug } from "../../../data/investorZoneData";
 
 export default defineTool({
   name: "get_investor_zones",

@@ -8,7 +8,392 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
 // src/lib/mcp/tools/get-neighborhoods.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
 import { z } from "npm:zod@^3.23.8";
-import { neighborhoods } from "npm:@/data/neighborhoods";
+
+// src/data/neighborhoods.ts
+var neighborhoods = [
+  {
+    slug: "san-salvario",
+    name: "San Salvario",
+    zone: "Centro",
+    description: {
+      it: "Il quartiere pi\xF9 multiculturale e vivace di Torino, amato dagli studenti per la vita notturna, i locali etnici e l'atmosfera boh\xE9mien. A pochi passi dal Valentino e dalla stazione Porta Nuova.",
+      en: "Turin's most multicultural and vibrant neighborhood, loved by students for nightlife, ethnic restaurants and bohemian atmosphere. Steps from Valentino Park and Porta Nuova station."
+    },
+    highlights: {
+      it: ["Vita notturna attiva", "Ristoranti etnici", "Vicino al Valentino", "Atmosfera giovane"],
+      en: ["Active nightlife", "Ethnic restaurants", "Near Valentino Park", "Young atmosphere"]
+    },
+    universities: ["Universit\xE0 di Torino", "Campus Luigi Einaudi"],
+    avgRent: { single: { min: 350, max: 500 }, double: { min: 250, max: 350 } },
+    transport: ["Metro Nizza", "Tram 9, 16", "Bus 67"],
+    studentProfile: {
+      it: "Ideale per studenti sociali che amano uscire, conoscere culture diverse e vivere in un ambiente dinamico.",
+      en: "Ideal for social students who love going out, meeting diverse cultures and living in a dynamic environment."
+    },
+    nightlife: 5,
+    safety: 3,
+    greenSpaces: 4,
+    studentDensity: 5,
+    coordinates: { lat: 45.0523, lng: 7.6784 },
+    image: "/images/san-salvario-night.jpeg",
+    seo: {
+      it: {
+        title: "Affitto stanza San Salvario Torino | Prezzi 2026 da \u20AC250",
+        description: "Cerchi una stanza in affitto a San Salvario? Prezzi medi \u20AC350-500 singola, \u20AC250-350 doppia. Guida completa: trasporti, vita notturna, universit\xE0 vicine.",
+        keywords: ["affitto stanza san salvario", "stanza studenti san salvario torino", "affitto san salvario studenti", "camera san salvario torino"]
+      },
+      en: {
+        title: "Room for Rent San Salvario Turin | 2026 Prices from \u20AC250",
+        description: "Looking for a room in San Salvario? Average prices \u20AC350-500 single, \u20AC250-350 shared. Complete guide: transport, nightlife, nearby universities.",
+        keywords: ["room rent san salvario", "student room san salvario turin", "san salvario student housing", "room san salvario torino"]
+      }
+    }
+  },
+  {
+    slug: "vanchiglia",
+    name: "Vanchiglia",
+    zone: "Centro",
+    description: {
+      it: "Quartiere artistico e alternativo, con botteghe artigiane, gallerie d'arte e caff\xE8 letterari. Vicino al Po e al centro storico, perfetto per chi cerca autenticit\xE0.",
+      en: "Artistic and alternative neighborhood with artisan shops, art galleries and literary caf\xE9s. Close to the Po River and historic center, perfect for those seeking authenticity."
+    },
+    highlights: {
+      it: ["Atmosfera artistica", "Botteghe artigiane", "Vicino al Po", "Caff\xE8 letterari"],
+      en: ["Artistic atmosphere", "Artisan shops", "Near Po River", "Literary caf\xE9s"]
+    },
+    universities: ["Palazzo Nuovo", "Accademia Albertina"],
+    avgRent: { single: { min: 380, max: 520 }, double: { min: 280, max: 380 } },
+    transport: ["Tram 3, 16", "Bus 61, 68"],
+    studentProfile: {
+      it: "Perfetto per studenti di lettere, arte e filosofia che cercano ispirazione e un ambiente creativo.",
+      en: "Perfect for humanities, art and philosophy students seeking inspiration and a creative environment."
+    },
+    nightlife: 4,
+    safety: 4,
+    greenSpaces: 3,
+    studentDensity: 4,
+    coordinates: { lat: 45.0712, lng: 7.6956 },
+    image: "/images/tramonto-po-torino.jpeg",
+    seo: {
+      it: {
+        title: "Affitto stanza Vanchiglia Torino | Prezzi 2026 da \u20AC280",
+        description: "Stanze in affitto a Vanchiglia Torino. Prezzi \u20AC380-520 singola. Quartiere artistico vicino a Palazzo Nuovo e centro storico. Guida completa.",
+        keywords: ["affitto stanza vanchiglia", "stanza studenti vanchiglia torino", "camera vanchiglia torino", "affitto vanchiglia studenti"]
+      },
+      en: {
+        title: "Room for Rent Vanchiglia Turin | 2026 Prices from \u20AC280",
+        description: "Rooms for rent in Vanchiglia Turin. Prices \u20AC380-520 single. Artistic neighborhood near Palazzo Nuovo and historic center. Complete guide.",
+        keywords: ["room rent vanchiglia", "student room vanchiglia turin", "vanchiglia student housing", "room vanchiglia torino"]
+      }
+    }
+  },
+  {
+    slug: "crocetta",
+    name: "Crocetta",
+    zone: "Semicentro",
+    description: {
+      it: "Il quartiere universitario per eccellenza, sede del Politecnico. Elegante, ben servito e sicuro. Ideale per chi cerca tranquillit\xE0 senza rinunciare ai servizi.",
+      en: "The quintessential university neighborhood, home to Politecnico. Elegant, well-connected and safe. Ideal for those seeking tranquility without sacrificing amenities."
+    },
+    highlights: {
+      it: ["Sede del Politecnico", "Quartiere elegante", "Molto sicuro", "Ben servito"],
+      en: ["Politecnico campus", "Elegant neighborhood", "Very safe", "Well-connected"]
+    },
+    universities: ["Politecnico di Torino", "Valentino Campus"],
+    avgRent: { single: { min: 400, max: 550 }, double: { min: 300, max: 400 } },
+    transport: ["Metro Porta Nuova", "Tram 9, 16, 18", "Bus 33, 58"],
+    studentProfile: {
+      it: "Ideale per studenti di ingegneria e architettura che vogliono vivere vicino al Politecnico in un ambiente tranquillo.",
+      en: "Ideal for engineering and architecture students who want to live near Politecnico in a quiet environment."
+    },
+    nightlife: 2,
+    safety: 5,
+    greenSpaces: 4,
+    studentDensity: 5,
+    coordinates: { lat: 45.0567, lng: 7.6612 },
+    image: "/images/politecnico-torino.avif",
+    seo: {
+      it: {
+        title: "Affitto stanza Crocetta Torino | Vicino Politecnico da \u20AC300",
+        description: "Stanze in affitto alla Crocetta, vicino al Politecnico di Torino. Prezzi \u20AC400-550 singola. Quartiere sicuro e tranquillo per studenti.",
+        keywords: ["affitto stanza crocetta torino", "stanza politecnico torino", "camera crocetta studenti", "affitto crocetta politecnico"]
+      },
+      en: {
+        title: "Room for Rent Crocetta Turin | Near Politecnico from \u20AC300",
+        description: "Rooms for rent in Crocetta, near Politecnico di Torino. Prices \u20AC400-550 single. Safe and quiet neighborhood for students.",
+        keywords: ["room rent crocetta turin", "room near politecnico", "crocetta student housing", "politecnico turin room"]
+      }
+    }
+  },
+  {
+    slug: "santa-rita",
+    name: "Santa Rita",
+    zone: "Semicentro",
+    description: {
+      it: "Quartiere residenziale con ottimi servizi, mercati rionali e buoni collegamenti. Pi\xF9 economico del centro, mantiene qualit\xE0 della vita elevata.",
+      en: "Residential neighborhood with excellent services, local markets and good connections. More affordable than center while maintaining high quality of life."
+    },
+    highlights: {
+      it: ["Prezzi accessibili", "Mercati rionali", "Buoni collegamenti", "Quartiere tranquillo"],
+      en: ["Affordable prices", "Local markets", "Good connections", "Quiet neighborhood"]
+    },
+    universities: ["Politecnico (15 min)", "Campus Einaudi (20 min)"],
+    avgRent: { single: { min: 320, max: 450 }, double: { min: 220, max: 320 } },
+    transport: ["Metro Lingotto", "Tram 4", "Bus 14, 63"],
+    studentProfile: {
+      it: "Perfetto per studenti che cercano un buon rapporto qualit\xE0-prezzo e un ambiente familiare.",
+      en: "Perfect for students seeking good value for money and a family-friendly environment."
+    },
+    nightlife: 2,
+    safety: 5,
+    greenSpaces: 3,
+    studentDensity: 3,
+    coordinates: { lat: 45.0389, lng: 7.6534 },
+    image: "/images/mercato-nitti-torino.jpg",
+    seo: {
+      it: {
+        title: "Affitto stanza Santa Rita Torino | Prezzi economici da \u20AC220",
+        description: "Stanze economiche a Santa Rita Torino. Prezzi da \u20AC320 singola, \u20AC220 doppia. Quartiere tranquillo con buoni collegamenti metro.",
+        keywords: ["affitto stanza santa rita torino", "stanza economica torino", "camera santa rita studenti", "affitto economico torino"]
+      },
+      en: {
+        title: "Room for Rent Santa Rita Turin | Affordable from \u20AC220",
+        description: "Affordable rooms in Santa Rita Turin. Prices from \u20AC320 single, \u20AC220 shared. Quiet neighborhood with good metro connections.",
+        keywords: ["room rent santa rita turin", "affordable room turin", "santa rita student housing", "cheap room turin"]
+      }
+    }
+  },
+  {
+    slug: "cenisia",
+    name: "Cenisia",
+    zone: "Semicentro",
+    description: {
+      it: "Quartiere in trasformazione vicino al Politecnico, con prezzi ancora accessibili e buona connessione metro. Mix di residenti storici e nuovi studenti.",
+      en: "Transforming neighborhood near Politecnico with still-accessible prices and good metro connection. Mix of longtime residents and new students."
+    },
+    highlights: {
+      it: ["Vicino al Politecnico", "Prezzi accessibili", "Metro Rivoli", "In trasformazione"],
+      en: ["Near Politecnico", "Accessible prices", "Metro Rivoli", "Transforming area"]
+    },
+    universities: ["Politecnico di Torino (10 min)", "Campus Valentino"],
+    avgRent: { single: { min: 330, max: 470 }, double: { min: 230, max: 330 } },
+    transport: ["Metro Rivoli", "Tram 3, 10", "Bus 36, 56"],
+    studentProfile: {
+      it: "Ideale per studenti del Politecnico che cercano prezzi pi\xF9 bassi rispetto alla Crocetta.",
+      en: "Ideal for Politecnico students seeking lower prices compared to Crocetta."
+    },
+    nightlife: 2,
+    safety: 4,
+    greenSpaces: 2,
+    studentDensity: 4,
+    coordinates: { lat: 45.0634, lng: 7.6489 },
+    image: "/images/viale-alberato-torino.jpeg",
+    seo: {
+      it: {
+        title: "Affitto stanza Cenisia Torino | Vicino Politecnico da \u20AC230",
+        description: "Stanze in affitto a Cenisia, vicino al Politecnico. Prezzi \u20AC330-470 singola. Quartiere con metro e buoni collegamenti. Guida completa.",
+        keywords: ["affitto stanza cenisia torino", "stanza cenisia politecnico", "camera cenisia studenti", "affitto cenisia torino"]
+      },
+      en: {
+        title: "Room for Rent Cenisia Turin | Near Politecnico from \u20AC230",
+        description: "Rooms for rent in Cenisia, near Politecnico. Prices \u20AC330-470 single. Neighborhood with metro and good connections. Complete guide.",
+        keywords: ["room rent cenisia turin", "cenisia politecnico room", "cenisia student housing", "room cenisia torino"]
+      }
+    }
+  },
+  {
+    slug: "cit-turin",
+    name: "Cit Turin",
+    zone: "Semicentro",
+    description: {
+      it: "Quartiere elegante con architettura liberty, vicino al centro e ben collegato. Atmosfera residenziale tranquilla con negozi e ristoranti di qualit\xE0.",
+      en: "Elegant neighborhood with Art Nouveau architecture, close to center and well-connected. Quiet residential atmosphere with quality shops and restaurants."
+    },
+    highlights: {
+      it: ["Architettura liberty", "Vicino al centro", "Atmosfera elegante", "Tranquillo"],
+      en: ["Art Nouveau architecture", "Near center", "Elegant atmosphere", "Quiet"]
+    },
+    universities: ["Universit\xE0 di Torino (15 min)", "Politecnico (20 min)"],
+    avgRent: { single: { min: 350, max: 480 }, double: { min: 250, max: 350 } },
+    transport: ["Metro Principi d'Acaja", "Tram 10, 13", "Bus 59, 60"],
+    studentProfile: {
+      it: "Adatto a studenti che cercano tranquillit\xE0 e un ambiente residenziale senza rinunciare alla vicinanza al centro.",
+      en: "Suitable for students seeking tranquility and a residential environment while staying close to the center."
+    },
+    nightlife: 2,
+    safety: 5,
+    greenSpaces: 3,
+    studentDensity: 3,
+    coordinates: { lat: 45.0756, lng: 7.6612 },
+    image: "/images/portici-torino.jpg",
+    seo: {
+      it: {
+        title: "Affitto stanza Cit Turin Torino | Quartiere elegante da \u20AC250",
+        description: "Stanze in affitto a Cit Turin. Prezzi \u20AC350-480 singola. Quartiere liberty elegante e tranquillo vicino al centro di Torino.",
+        keywords: ["affitto stanza cit turin", "stanza cit turin torino", "camera cit turin studenti", "affitto cit turin elegante"]
+      },
+      en: {
+        title: "Room for Rent Cit Turin | Elegant neighborhood from \u20AC250",
+        description: "Rooms for rent in Cit Turin. Prices \u20AC350-480 single. Elegant Art Nouveau neighborhood, quiet and close to Turin center.",
+        keywords: ["room rent cit turin", "cit turin room torino", "cit turin student housing", "elegant room turin"]
+      }
+    }
+  },
+  {
+    slug: "campidoglio",
+    name: "Campidoglio",
+    zone: "Semicentro",
+    description: {
+      it: "Quartiere popolare in rapida gentrificazione, con botteghe storiche, mercato del Balon e atmosfera autentica. Prezzi ancora accessibili.",
+      en: "Working-class neighborhood undergoing rapid gentrification, with historic shops, Balon flea market and authentic atmosphere. Still-accessible prices."
+    },
+    highlights: {
+      it: ["Mercato del Balon", "Atmosfera autentica", "Prezzi accessibili", "In gentrificazione"],
+      en: ["Balon flea market", "Authentic atmosphere", "Accessible prices", "Gentrifying"]
+    },
+    universities: ["Universit\xE0 di Torino (15 min)", "Campus Einaudi (20 min)"],
+    avgRent: { single: { min: 300, max: 420 }, double: { min: 200, max: 300 } },
+    transport: ["Metro Rivoli", "Tram 3, 9", "Bus 11, 52"],
+    studentProfile: {
+      it: "Perfetto per studenti creativi e alternativi che amano l'autenticit\xE0 e i mercatini vintage.",
+      en: "Perfect for creative and alternative students who love authenticity and vintage markets."
+    },
+    nightlife: 3,
+    safety: 3,
+    greenSpaces: 2,
+    studentDensity: 3,
+    coordinates: { lat: 45.0789, lng: 7.6534 },
+    image: "/images/mercati-rionali-torino.jpg",
+    seo: {
+      it: {
+        title: "Affitto stanza Campidoglio Torino | Prezzi bassi da \u20AC200",
+        description: "Stanze economiche al Campidoglio Torino. Prezzi da \u20AC300 singola, \u20AC200 doppia. Quartiere autentico con mercato Balon. Guida completa.",
+        keywords: ["affitto stanza campidoglio torino", "stanza economica campidoglio", "camera campidoglio studenti", "affitto campidoglio balon"]
+      },
+      en: {
+        title: "Room for Rent Campidoglio Turin | Low prices from \u20AC200",
+        description: "Affordable rooms in Campidoglio Turin. Prices from \u20AC300 single, \u20AC200 shared. Authentic neighborhood with Balon market. Complete guide.",
+        keywords: ["room rent campidoglio turin", "cheap room campidoglio", "campidoglio student housing", "balon market room"]
+      }
+    }
+  },
+  {
+    slug: "aurora",
+    name: "Aurora",
+    zone: "Nord",
+    description: {
+      it: "Quartiere multietnico e popolare, il pi\xF9 economico del semicentro. In forte trasformazione con progetti di riqualificazione urbana.",
+      en: "Multi-ethnic working-class neighborhood, the most affordable in the semi-center. Undergoing major transformation with urban renewal projects."
+    },
+    highlights: {
+      it: ["Prezzi pi\xF9 bassi", "Multietnico", "In riqualificazione", "Mercato di Porta Palazzo"],
+      en: ["Lowest prices", "Multi-ethnic", "Being renewed", "Porta Palazzo market"]
+    },
+    universities: ["Campus Einaudi (10 min)", "Palazzo Nuovo (15 min)"],
+    avgRent: { single: { min: 280, max: 380 }, double: { min: 180, max: 280 } },
+    transport: ["Tram 3, 4", "Bus 11, 51, 57"],
+    studentProfile: {
+      it: "Per studenti con budget limitato che cercano un ambiente multiculturale e non convenzionale.",
+      en: "For students with limited budget seeking a multicultural and unconventional environment."
+    },
+    nightlife: 3,
+    safety: 2,
+    greenSpaces: 1,
+    studentDensity: 3,
+    coordinates: { lat: 45.0823, lng: 7.6823 },
+    image: "/images/mercato-piazza-crispi.jpg",
+    seo: {
+      it: {
+        title: "Affitto stanza Aurora Torino | I prezzi pi\xF9 bassi da \u20AC180",
+        description: "Stanze super economiche ad Aurora Torino. Prezzi da \u20AC280 singola, \u20AC180 doppia. Quartiere multietnico vicino a Porta Palazzo.",
+        keywords: ["affitto stanza aurora torino", "stanza economica aurora", "camera aurora studenti", "affitto aurora porta palazzo"]
+      },
+      en: {
+        title: "Room for Rent Aurora Turin | Lowest prices from \u20AC180",
+        description: "Super affordable rooms in Aurora Turin. Prices from \u20AC280 single, \u20AC180 shared. Multi-ethnic neighborhood near Porta Palazzo.",
+        keywords: ["room rent aurora turin", "cheapest room turin", "aurora student housing", "porta palazzo room"]
+      }
+    }
+  },
+  {
+    slug: "lingotto",
+    name: "Lingotto",
+    zone: "Sud",
+    description: {
+      it: "Ex quartiere industriale FIAT trasformato in polo culturale moderno. Centro commerciale, Eataly, eventi e buoni collegamenti metro.",
+      en: "Former FIAT industrial district transformed into modern cultural hub. Shopping center, Eataly, events and good metro connections."
+    },
+    highlights: {
+      it: ["Ex stabilimento FIAT", "Eataly e Lingotto Fiere", "Metro Lingotto", "Architettura moderna"],
+      en: ["Former FIAT factory", "Eataly and Lingotto Fairs", "Metro Lingotto", "Modern architecture"]
+    },
+    universities: ["Politecnico (15 min metro)", "Universit\xE0 (20 min)"],
+    avgRent: { single: { min: 340, max: 460 }, double: { min: 240, max: 340 } },
+    transport: ["Metro Lingotto", "Tram 4, 18", "Bus 1, 35"],
+    studentProfile: {
+      it: "Ideale per studenti che amano l'architettura moderna e vogliono vivere in un'area ben servita.",
+      en: "Ideal for students who love modern architecture and want to live in a well-serviced area."
+    },
+    nightlife: 2,
+    safety: 4,
+    greenSpaces: 3,
+    studentDensity: 2,
+    coordinates: { lat: 45.0267, lng: 7.6656 },
+    image: "/images/torino-transport.jpg",
+    seo: {
+      it: {
+        title: "Affitto stanza Lingotto Torino | Con metro da \u20AC240",
+        description: "Stanze in affitto al Lingotto Torino. Prezzi \u20AC340-460 singola. Quartiere moderno con metro, Eataly e centro commerciale.",
+        keywords: ["affitto stanza lingotto torino", "stanza lingotto metro", "camera lingotto studenti", "affitto lingotto eataly"]
+      },
+      en: {
+        title: "Room for Rent Lingotto Turin | With metro from \u20AC240",
+        description: "Rooms for rent in Lingotto Turin. Prices \u20AC340-460 single. Modern neighborhood with metro, Eataly and shopping center.",
+        keywords: ["room rent lingotto turin", "lingotto metro room", "lingotto student housing", "lingotto eataly room"]
+      }
+    }
+  },
+  {
+    slug: "san-paolo",
+    name: "San Paolo",
+    zone: "Ovest",
+    description: {
+      it: "Quartiere residenziale tranquillo con buoni servizi e collegamenti. Popolare tra famiglie, offre un ambiente sicuro e prezzi ragionevoli.",
+      en: "Quiet residential neighborhood with good services and connections. Popular with families, offers a safe environment and reasonable prices."
+    },
+    highlights: {
+      it: ["Quartiere familiare", "Prezzi ragionevoli", "Molto tranquillo", "Ben collegato"],
+      en: ["Family neighborhood", "Reasonable prices", "Very quiet", "Well-connected"]
+    },
+    universities: ["Politecnico (20 min)", "Universit\xE0 (25 min)"],
+    avgRent: { single: { min: 310, max: 430 }, double: { min: 210, max: 310 } },
+    transport: ["Metro Racconigi", "Tram 3, 10", "Bus 33, 36"],
+    studentProfile: {
+      it: "Per studenti che preferiscono la tranquillit\xE0 e un ambiente residenziale a un prezzo accessibile.",
+      en: "For students who prefer tranquility and a residential environment at an accessible price."
+    },
+    nightlife: 1,
+    safety: 5,
+    greenSpaces: 3,
+    studentDensity: 2,
+    coordinates: { lat: 45.0634, lng: 7.6378 },
+    image: "/images/parco-valentino-inverno.jpg",
+    seo: {
+      it: {
+        title: "Affitto stanza San Paolo Torino | Tranquillo da \u20AC210",
+        description: "Stanze in affitto a San Paolo Torino. Prezzi \u20AC310-430 singola. Quartiere residenziale tranquillo e sicuro con metro.",
+        keywords: ["affitto stanza san paolo torino", "stanza san paolo studenti", "camera san paolo torino", "affitto tranquillo torino"]
+      },
+      en: {
+        title: "Room for Rent San Paolo Turin | Quiet from \u20AC210",
+        description: "Rooms for rent in San Paolo Turin. Prices \u20AC310-430 single. Quiet and safe residential neighborhood with metro.",
+        keywords: ["room rent san paolo turin", "san paolo student room", "san paolo housing", "quiet room turin"]
+      }
+    }
+  }
+];
+
+// src/lib/mcp/tools/get-neighborhoods.ts
 var get_neighborhoods_default = defineTool({
   name: "get_neighborhoods",
   title: "Get Turin neighborhoods",
@@ -43,14 +428,664 @@ var get_neighborhoods_default = defineTool({
 
 // src/lib/mcp/tools/get-investor-zones.ts
 import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { z as z3 } from "npm:zod@^3.23.8";
+
+// src/data/investorZoneData.ts
 import { z as z2 } from "npm:zod@^3.23.8";
-import { investorZones, getZoneBySlug } from "npm:@/data/investorZoneData";
+var investorZones = [
+  {
+    id: "cenisia",
+    name: "Cenisia",
+    slug: "cenisia",
+    zone: "Semicentro",
+    pricePerSqm: { min: 1940, avg: 2200, max: 2285 },
+    variation2024: 4,
+    trend202526: "growth",
+    demand: "high",
+    vacancyRate: { min: 3, max: 5 },
+    rentingTime: { it: "2-4 settimane", en: "2-4 weeks" },
+    targetTenant: {
+      it: ["Studenti Politecnico", "Giovani professionisti"],
+      en: ["Politecnico students", "Young professionals"]
+    },
+    urbanRenewal: {
+      active: true,
+      projects: [
+        {
+          name: "Metro 2",
+          investment: "\u20AC2+ mld (linea completa)",
+          impact: { it: "Forte rivalutazione prevista", en: "Strong revaluation expected" }
+        }
+      ]
+    },
+    rankings: { netYieldRank: 1, growthPotentialRank: 4, entryPriceRank: 6 },
+    investorNote: {
+      it: "Miglior rapporto rendimento/rischio. Vicinanza Politecnico garantisce domanda costante. Prezzi ancora accessibili rispetto a Crocetta.",
+      en: "Best risk-adjusted profile. Proximity to Politecnico ensures constant demand. Prices still accessible compared to Crocetta."
+    },
+    image: "/images/viale-alberato-torino.jpeg",
+    coordinates: { lat: 45.0634, lng: 7.6489 },
+    seo: {
+      it: {
+        title: "Investire a Cenisia Torino",
+        description: "Guida investimento immobiliare Cenisia Torino. Prezzi \u20AC2.200/mq. Vicinanza Politecnico, domanda studentesca alta.",
+        keywords: ["investimento cenisia torino", "comprare casa cenisia", "affitto studenti cenisia"]
+      },
+      en: {
+        title: "Invest in Cenisia Turin",
+        description: "Cenisia Turin real estate investment guide. Prices \u20AC2,200/sqm. Near Politecnico, high student demand.",
+        keywords: ["cenisia turin investment", "buy property cenisia", "student rental cenisia"]
+      }
+    }
+  },
+  {
+    id: "aurora",
+    name: "Aurora",
+    slug: "aurora",
+    zone: "Periferia",
+    pricePerSqm: { min: 1e3, avg: 1520, max: 1800 },
+    variation2024: 7,
+    trend202526: "strong_growth",
+    demand: "high",
+    vacancyRate: { min: 5, max: 8 },
+    rentingTime: { it: "2-4 settimane", en: "2-4 weeks" },
+    targetTenant: {
+      it: ["Studenti Campus Einaudi", "Investitori value-add"],
+      en: ["Campus Einaudi students", "Value-add investors"]
+    },
+    urbanRenewal: {
+      active: true,
+      projects: [
+        {
+          name: "Masterplan Carlo Ratti",
+          investment: "\u20AC25,8 mln",
+          impact: { it: "Forte rivalutazione attesa a medio termine", en: "Strong revaluation expected mid-term" }
+        },
+        {
+          name: "Riqualificazione Porta Palazzo",
+          investment: "Multi-milioni",
+          impact: { it: "Miglioramento generale area", en: "General area improvement" }
+        }
+      ]
+    },
+    rankings: { netYieldRank: 2, growthPotentialRank: 2, entryPriceRank: 2 },
+    investorNote: {
+      it: "Alto potenziale di rivalutazione grazie a Masterplan Carlo Ratti. Rischio medio-alto compensato da prezzi entry-level. Perfetto per investitori value-add.",
+      en: "High appreciation potential thanks to Carlo Ratti Masterplan. Medium-high risk offset by entry-level prices. Perfect for value-add investors."
+    },
+    image: "/images/mercato-piazza-crispi.jpg",
+    coordinates: { lat: 45.0823, lng: 7.6823 },
+    seo: {
+      it: {
+        title: "Investire ad Aurora Torino | Massimo potenziale di rivalutazione",
+        description: "Aurora Torino: prezzi entry-level \u20AC1.520/mq. Masterplan Carlo Ratti e riqualificazione Porta Palazzo guidano una rivalutazione strutturale.",
+        keywords: ["investimento aurora torino", "aurora riqualificazione", "comprare casa aurora"]
+      },
+      en: {
+        title: "Invest in Aurora Turin | Maximum revaluation potential",
+        description: "Aurora Turin: entry-level prices \u20AC1,520/sqm. Carlo Ratti Masterplan and Porta Palazzo urban renewal drive structural revaluation.",
+        keywords: ["aurora turin investment", "aurora urban renewal", "buy property aurora"]
+      }
+    }
+  },
+  {
+    id: "san_salvario",
+    name: "San Salvario",
+    slug: "san-salvario",
+    zone: "Centro",
+    pricePerSqm: { min: 2050, avg: 2650, max: 2710 },
+    variation2024: 5.5,
+    trend202526: "stable",
+    demand: "very_high",
+    vacancyRate: { min: 2, max: 4 },
+    rentingTime: { it: "2-3 settimane", en: "2-3 weeks" },
+    targetTenant: {
+      it: ["Studenti Medicina", "Giovani professionisti", "Expat"],
+      en: ["Medical students", "Young professionals", "Expats"]
+    },
+    urbanRenewal: {
+      active: true,
+      projects: [
+        {
+          name: "Scalo Nizza",
+          investment: "\u20AC105 mln",
+          impact: { it: "Consolidamento e rivalutazione progressiva", en: "Consolidation and progressive revaluation" }
+        }
+      ]
+    },
+    rankings: {},
+    investorNote: {
+      it: "Il quartiere studentesco pi\xF9 consolidato di Torino. Domanda altissima, sfitto quasi nullo. Rendimenti stabili, ideale per investitori conservativi che cercano cash flow sicuro.",
+      en: "Turin's most established student neighborhood. Very high demand, near-zero vacancy. Stable returns, ideal for conservative investors seeking secure cash flow."
+    },
+    image: "/images/san-salvario-night.jpeg",
+    coordinates: { lat: 45.0523, lng: 7.6784 },
+    seo: {
+      it: {
+        title: "Investire a San Salvario Torino",
+        description: "San Salvario Torino: il quartiere studentesco pi\xF9 richiesto. Sfitto 2-4%. Investimento sicuro con cash flow stabile.",
+        keywords: ["investimento san salvario", "comprare casa san salvario", "affitto studenti san salvario"]
+      },
+      en: {
+        title: "Invest in San Salvario Turin",
+        description: "San Salvario Turin: the most sought-after student neighborhood. Vacancy 2-4%. Safe investment with stable cash flow.",
+        keywords: ["san salvario investment", "buy property san salvario", "student rental san salvario"]
+      }
+    }
+  },
+  {
+    id: "vanchiglia",
+    name: "Vanchiglia",
+    slug: "vanchiglia",
+    zone: "Centro",
+    pricePerSqm: { min: 2070, avg: 2600, max: 2680 },
+    variation2024: 2.5,
+    trend202526: "moderate",
+    demand: "high",
+    vacancyRate: { min: 3, max: 5 },
+    rentingTime: { it: "2-4 settimane", en: "2-4 weeks" },
+    targetTenant: {
+      it: ["Studenti umanistiche", "Artisti e creativi"],
+      en: ["Humanities students", "Artists and creatives"]
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: {},
+    investorNote: {
+      it: "Quartiere artistico con identit\xE0 forte. Target nicchia ma fedele. Crescita moderata, ottimo per diversificare portafoglio studentesco.",
+      en: "Artistic neighborhood with strong identity. Niche but loyal target. Moderate growth, great for diversifying student portfolio."
+    },
+    image: "/images/tramonto-po-torino.jpeg",
+    coordinates: { lat: 45.0712, lng: 7.6956 },
+    seo: {
+      it: {
+        title: "Investire a Vanchiglia Torino | Quartiere artistico",
+        description: "Vanchiglia Torino: quartiere artistico vicino Palazzo Nuovo. Target studenti umanistiche e creativi.",
+        keywords: ["investimento vanchiglia torino", "comprare casa vanchiglia", "affitto studenti vanchiglia"]
+      },
+      en: {
+        title: "Invest in Vanchiglia Turin | Artistic neighborhood",
+        description: "Vanchiglia Turin: artistic neighborhood near Palazzo Nuovo. Target humanities students and creatives.",
+        keywords: ["vanchiglia investment", "buy property vanchiglia", "student rental vanchiglia"]
+      }
+    }
+  },
+  {
+    id: "lingotto",
+    name: "Lingotto",
+    slug: "lingotto",
+    zone: "Periferia",
+    pricePerSqm: { min: 1200, avg: 1650, max: 3e3 },
+    variation2024: 7.8,
+    trend202526: "strong_growth",
+    demand: "high",
+    vacancyRate: { min: 4, max: 6 },
+    rentingTime: { it: "3-4 settimane", en: "3-4 weeks" },
+    targetTenant: {
+      it: ["Professionisti", "Studenti metro-dipendenti"],
+      en: ["Professionals", "Metro-dependent students"]
+    },
+    urbanRenewal: {
+      active: true,
+      projects: [
+        {
+          name: "Parco della Salute",
+          investment: "Multi-miliardi",
+          impact: { it: "Consolidamento trend positivo", en: "Consolidation of positive trend" }
+        },
+        {
+          name: "Nuova Citt\xE0 della Salute",
+          investment: "\u20AC450 mln",
+          impact: { it: "Hub sanitario regionale", en: "Regional healthcare hub" }
+        }
+      ]
+    },
+    rankings: {},
+    investorNote: {
+      it: "Ex polo industriale FIAT in forte trasformazione. Parco della Salute creer\xE0 migliaia di posti di lavoro. Ottimo per investimento a medio-lungo termine.",
+      en: "Former FIAT industrial hub undergoing major transformation. Parco della Salute will create thousands of jobs. Great for medium-long term investment."
+    },
+    image: "/images/strada-alpi-torino.jpeg",
+    coordinates: { lat: 45.0312, lng: 7.6689 },
+    seo: {
+      it: {
+        title: "Investire al Lingotto Torino | Parco della Salute",
+        description: "Lingotto Torino: trasformazione urbana profonda guidata da Parco della Salute ed ex FIAT. Quartiere in forte crescita strutturale.",
+        keywords: ["investimento lingotto torino", "lingotto parco salute", "comprare casa lingotto"]
+      },
+      en: {
+        title: "Invest in Lingotto Turin | Parco della Salute",
+        description: "Lingotto Turin: deep urban transformation led by Parco della Salute and former FIAT site. Neighborhood in strong structural growth.",
+        keywords: ["lingotto investment", "lingotto parco salute", "buy property lingotto"]
+      }
+    }
+  },
+  {
+    id: "barriera_di_milano",
+    name: "Barriera di Milano",
+    slug: "barriera-di-milano",
+    zone: "Periferia",
+    pricePerSqm: { min: 860, avg: 1150, max: 1600 },
+    variation2024: 3,
+    trend202526: "max_growth",
+    demand: "medium",
+    vacancyRate: { min: 8, max: 12 },
+    rentingTime: { it: "4-6 settimane", en: "4-6 weeks" },
+    targetTenant: {
+      it: ["Studenti budget-conscious", "Lavoratori"],
+      en: ["Budget-conscious students", "Workers"]
+    },
+    urbanRenewal: {
+      active: true,
+      projects: [
+        {
+          name: "Metro 2 - Fermata Rebaudengo",
+          investment: "\u20AC2+ mld (linea completa)",
+          impact: { it: "Massima rivalutazione attesa", en: "Maximum revaluation expected" }
+        },
+        {
+          name: "Ex Manifattura Tabacchi",
+          investment: "\u20AC200+ mln",
+          impact: { it: "Nuovo polo culturale", en: "New cultural hub" }
+        },
+        {
+          name: "Masterplan Carlo Ratti",
+          investment: "\u20AC25,8 mln",
+          impact: { it: "Forte rivalutazione attesa a medio termine", en: "Strong revaluation expected mid-term" }
+        }
+      ]
+    },
+    rankings: { growthPotentialRank: 1, entryPriceRank: 1 },
+    investorNote: {
+      it: "MASSIMO POTENZIALE. Prezzi pi\xF9 bassi di Torino (\u20AC1.150/mq) con Metro 2 in arrivo. Rischio alto compensato da upside strutturale. Solo per investitori con orizzonte 5+ anni.",
+      en: "MAXIMUM POTENTIAL. Lowest prices in Turin (\u20AC1,150/sqm) with Metro 2 coming. High risk offset by structural upside. Only for investors with 5+ year horizon."
+    },
+    image: "/images/mercati-rionali-torino.jpg",
+    coordinates: { lat: 45.0956, lng: 7.6912 },
+    seo: {
+      it: {
+        title: "Investire a Barriera di Milano | Metro 2 e riqualificazione",
+        description: "Barriera di Milano: prezzi pi\xF9 bassi di Torino \u20AC1.150/mq. Metro 2 e Masterplan Carlo Ratti trainano la rivalutazione strutturale.",
+        keywords: ["investimento barriera milano torino", "barriera milano metro 2", "comprare casa barriera"]
+      },
+      en: {
+        title: "Invest in Barriera di Milano | Metro 2 and urban renewal",
+        description: "Barriera di Milano: lowest prices in Turin \u20AC1,150/sqm. Metro 2 and Carlo Ratti Masterplan drive structural revaluation.",
+        keywords: ["barriera milano investment", "barriera milano metro 2", "buy property barriera"]
+      }
+    }
+  },
+  {
+    id: "crocetta",
+    name: "Crocetta",
+    slug: "crocetta",
+    zone: "Semicentro",
+    pricePerSqm: { min: 2750, avg: 3e3, max: 3500 },
+    variation2024: 10,
+    trend202526: "strong_growth",
+    demand: "high",
+    vacancyRate: { min: 4, max: 6 },
+    rentingTime: { it: "3-4 settimane", en: "3-4 weeks" },
+    targetTenant: {
+      it: ["Studenti Politecnico", "Famiglie", "Professionisti"],
+      en: ["Politecnico students", "Families", "Professionals"]
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: { growthPotentialRank: 5 },
+    investorNote: {
+      it: "Quartiere premium sede del Politecnico. Prezzi alti ma domanda garantita. Trend di crescita consolidato. Ideale per investitori che cercano asset prime.",
+      en: "Premium neighborhood home to Politecnico. High prices but guaranteed demand. Consolidated growth trend. Ideal for investors seeking prime assets."
+    },
+    image: "/images/politecnico-torino.avif",
+    coordinates: { lat: 45.0567, lng: 7.6612 },
+    seo: {
+      it: {
+        title: "Investire alla Crocetta Torino | Politecnico premium",
+        description: "Crocetta Torino: quartiere premium Politecnico. Prezzi \u20AC3.000/mq, trend di crescita consolidato. Domanda garantita, asset sicuro.",
+        keywords: ["investimento crocetta torino", "crocetta politecnico", "comprare casa crocetta"]
+      },
+      en: {
+        title: "Invest in Crocetta Turin | Politecnico premium",
+        description: "Crocetta Turin: premium Politecnico neighborhood. Prices \u20AC3,000/sqm, consolidated growth trend. Guaranteed demand, safe asset.",
+        keywords: ["crocetta investment", "crocetta politecnico", "buy property crocetta"]
+      }
+    }
+  },
+  {
+    id: "borgo_vittoria",
+    name: "Borgo Vittoria",
+    slug: "borgo-vittoria",
+    zone: "Periferia",
+    pricePerSqm: { min: 1200, avg: 1370, max: 1755 },
+    variation2024: 8,
+    trend202526: "growth",
+    demand: "medium",
+    vacancyRate: { min: 6, max: 10 },
+    rentingTime: { it: "3-5 settimane", en: "3-5 weeks" },
+    targetTenant: {
+      it: ["Studenti", "Giovani lavoratori"],
+      en: ["Students", "Young workers"]
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: { entryPriceRank: 3 },
+    investorNote: {
+      it: "Entry price basso con domanda stabile. Quartiere residenziale solido. Buon rapporto qualit\xE0/prezzo per primi investimenti.",
+      en: "Low entry price with stable demand. Solid residential neighborhood. Good value for first investments."
+    },
+    image: "/images/quartieri-studenti-torino.jpg",
+    coordinates: { lat: 45.0923, lng: 7.6634 },
+    seo: {
+      it: {
+        title: "Investire a Borgo Vittoria Torino | Entry price basso",
+        description: "Borgo Vittoria Torino: prezzi \u20AC1.370/mq, Quartiere residenziale ideale per primi investimenti.",
+        keywords: ["investimento borgo vittoria", "borgo vittoria torino", "comprare casa borgo vittoria"]
+      },
+      en: {
+        title: "Invest in Borgo Vittoria Turin | Low entry price",
+        description: "Borgo Vittoria Turin: prices \u20AC1,370/sqm. Residential neighborhood ideal for first investments.",
+        keywords: ["borgo vittoria investment", "borgo vittoria turin", "buy property borgo vittoria"]
+      }
+    }
+  },
+  {
+    id: "san_donato",
+    name: "San Donato",
+    slug: "san-donato",
+    zone: "Periferia",
+    pricePerSqm: { min: 1500, avg: 1700, max: 2e3 },
+    variation2024: 4.3,
+    trend202526: "moderate",
+    demand: "medium",
+    vacancyRate: { min: 5, max: 8 },
+    rentingTime: { it: "3-5 settimane", en: "3-5 weeks" },
+    targetTenant: {
+      it: ["Studenti", "Famiglie", "Lavoratori"],
+      en: ["Students", "Families", "Workers"]
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: { entryPriceRank: 4 },
+    investorNote: {
+      it: "Quartiere popolare con buoni collegamenti. Prezzi accessibili e domanda stabile. Ottimo per investimenti a basso rischio.",
+      en: "Working-class neighborhood with good connections. Accessible prices and stable demand. Great for low-risk investments."
+    },
+    image: "/images/torino-transport.jpg",
+    coordinates: { lat: 45.0845, lng: 7.6445 },
+    seo: {
+      it: {
+        title: "Investire a San Donato Torino | Prezzi accessibili",
+        description: "San Donato Torino: prezzi \u20AC1.700/mq, Quartiere ben collegato con domanda stabile.",
+        keywords: ["investimento san donato torino", "san donato torino", "comprare casa san donato"]
+      },
+      en: {
+        title: "Invest in San Donato Turin | Accessible prices",
+        description: "San Donato Turin: prices \u20AC1,700/sqm. Well-connected neighborhood with stable demand.",
+        keywords: ["san donato investment", "san donato turin", "buy property san donato"]
+      }
+    }
+  },
+  {
+    id: "parella",
+    name: "Parella",
+    slug: "parella",
+    zone: "Periferia",
+    pricePerSqm: { min: 1575, avg: 1960, max: 2605 },
+    variation2024: 5.5,
+    trend202526: "growth",
+    demand: "medium",
+    vacancyRate: { min: 5, max: 7 },
+    rentingTime: { it: "3-4 settimane", en: "3-4 weeks" },
+    targetTenant: {
+      it: ["Famiglie", "Lavoratori", "Studenti"],
+      en: ["Families", "Workers", "Students"]
+    },
+    urbanRenewal: {
+      active: true,
+      projects: [
+        {
+          name: "Metro 2 - Fermata Parella",
+          investment: "\u20AC2+ mld (linea completa)",
+          impact: { it: "Rivalutazione con arrivo metro", en: "Revaluation with metro arrival" }
+        }
+      ]
+    },
+    rankings: { entryPriceRank: 5 },
+    investorNote: {
+      it: "Quartiere residenziale con Metro 2 in arrivo. Prezzi ancora contenuti, ottimo momento per entrare prima della rivalutazione.",
+      en: "Residential neighborhood with Metro 2 coming. Prices still contained, great time to enter before revaluation."
+    },
+    image: "/images/parco-valentino-inverno.jpg",
+    coordinates: { lat: 45.0734, lng: 7.6234 },
+    seo: {
+      it: {
+        title: "Investire a Parella Torino | Metro 2 in arrivo",
+        description: "Parella Torino: prezzi \u20AC1.960/mq, Metro 2 in costruzione. Quartiere residenziale con potenziale di rivalutazione.",
+        keywords: ["investimento parella torino", "parella metro 2", "comprare casa parella"]
+      },
+      en: {
+        title: "Invest in Parella Turin | Metro 2 coming",
+        description: "Parella Turin: prices \u20AC1,960/sqm, Metro 2 under construction. Residential neighborhood with revaluation potential.",
+        keywords: ["parella investment", "parella metro 2", "buy property parella"]
+      }
+    }
+  },
+  {
+    id: "santa_rita",
+    name: "Santa Rita",
+    slug: "santa-rita",
+    zone: "Semicentro",
+    pricePerSqm: { min: 1200, avg: 1910, max: 2e3 },
+    variation2024: 4.5,
+    trend202526: "stable",
+    demand: "medium",
+    vacancyRate: { min: 4, max: 6 },
+    rentingTime: { it: "3-4 settimane", en: "3-4 weeks" },
+    targetTenant: {
+      it: ["Famiglie", "Lavoratori", "Studenti"],
+      en: ["Families", "Workers", "Students"]
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: {},
+    investorNote: {
+      it: "Quartiere residenziale stabile con buoni servizi. Rischio basso. Ideale per investitori conservativi.",
+      en: "Stable residential neighborhood with good services. Low risk. Ideal for conservative investors."
+    },
+    image: "/images/mercato-nitti-torino.jpg",
+    coordinates: { lat: 45.0389, lng: 7.6534 },
+    seo: {
+      it: {
+        title: "Investire a Santa Rita Torino | Quartiere stabile",
+        description: "Santa Rita Torino: prezzi \u20AC1.910/mq, Quartiere residenziale sicuro per investimenti conservativi.",
+        keywords: ["investimento santa rita torino", "santa rita torino", "comprare casa santa rita"]
+      },
+      en: {
+        title: "Invest in Santa Rita Turin | Stable neighborhood",
+        description: "Santa Rita Turin: prices \u20AC1,910/sqm. Safe residential neighborhood for conservative investments.",
+        keywords: ["santa rita investment", "santa rita turin", "buy property santa rita"]
+      }
+    }
+  },
+  {
+    id: "cit_turin",
+    name: "Cit Turin",
+    slug: "cit-turin",
+    zone: "Semicentro",
+    pricePerSqm: { min: 2400, avg: 2680, max: 4e3 },
+    variation2024: 3,
+    trend202526: "moderate",
+    demand: "high",
+    vacancyRate: { min: 3, max: 5 },
+    rentingTime: { it: "2-4 settimane", en: "2-4 weeks" },
+    targetTenant: {
+      it: ["Professionisti", "Studenti", "Famiglie"],
+      en: ["Professionals", "Students", "Families"]
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: {},
+    investorNote: {
+      it: "Quartiere liberty elegante. Prezzi premium ma alta qualit\xE0 degli inquilini. Asset di prestigio per portafogli diversificati.",
+      en: "Elegant Art Nouveau neighborhood. Premium prices but high tenant quality. Prestige asset for diversified portfolios."
+    },
+    image: "/images/portici-torino.jpg",
+    coordinates: { lat: 45.0756, lng: 7.6612 },
+    seo: {
+      it: {
+        title: "Investire a Cit Turin Torino | Quartiere liberty premium",
+        description: "Cit Turin Torino: prezzi \u20AC2.680/mq, quartiere liberty elegante con inquilini di qualit\xE0.",
+        keywords: ["investimento cit turin", "cit turin torino", "comprare casa cit turin"]
+      },
+      en: {
+        title: "Invest in Cit Turin | Premium Art Nouveau",
+        description: "Cit Turin: prices \u20AC2,680/sqm, elegant Art Nouveau neighborhood with quality tenants.",
+        keywords: ["cit turin investment", "cit turin torino", "buy property cit turin"]
+      }
+    }
+  },
+  {
+    id: "campidoglio",
+    name: "Campidoglio",
+    slug: "campidoglio",
+    zone: "Semicentro",
+    pricePerSqm: { min: 1850, avg: 2325, max: 2600 },
+    variation2024: 4.75,
+    trend202526: "stable",
+    demand: "medium",
+    vacancyRate: { min: 4, max: 7 },
+    rentingTime: { it: "3-4 settimane", en: "3-4 weeks" },
+    targetTenant: {
+      it: ["Studenti creativi", "Giovani professionisti"],
+      en: ["Creative students", "Young professionals"]
+    },
+    urbanRenewal: { active: false, projects: [] },
+    rankings: {},
+    investorNote: {
+      it: "Quartiere in gentrificazione con mercato Balon. Atmosfera autentica, prezzi ancora accessibili. Potenziale di crescita medio-alto.",
+      en: "Gentrifying neighborhood with Balon market. Authentic atmosphere, still accessible prices. Medium-high growth potential."
+    },
+    image: "/images/mercati-rionali-torino.jpg",
+    coordinates: { lat: 45.0789, lng: 7.6534 },
+    seo: {
+      it: {
+        title: "Investire al Campidoglio Torino | Gentrificazione in corso",
+        description: "Campidoglio Torino: prezzi \u20AC2.325/mq, quartiere in gentrificazione. Mercato Balon, atmosfera autentica e potenziale crescita.",
+        keywords: ["investimento campidoglio torino", "campidoglio torino", "comprare casa campidoglio"]
+      },
+      en: {
+        title: "Invest in Campidoglio Turin | Gentrification ongoing",
+        description: "Campidoglio Turin: prices \u20AC2,325/sqm, gentrifying neighborhood. Balon market, authentic atmosphere and growth potential.",
+        keywords: ["campidoglio investment", "campidoglio turin", "buy property campidoglio"]
+      }
+    }
+  }
+];
+var getZoneBySlug = (slug) => {
+  return investorZones.find((zone) => zone.slug === slug);
+};
+var i18nString = z2.object({
+  it: z2.string().min(1, "IT copy is required"),
+  en: z2.string().optional().default("")
+}).passthrough();
+var urbanProjectSchema = z2.object({
+  name: z2.string().min(1),
+  investment: z2.string().min(1).optional().default(""),
+  impact: i18nString,
+  coordinates: z2.object({ lat: z2.number(), lng: z2.number() }).optional()
+}).passthrough();
+var variationSchema = z2.preprocess((v) => {
+  if (v === null || v === void 0 || v === "") return 0;
+  if (typeof v === "number") return v;
+  if (typeof v === "string") {
+    const cleaned = v.replace(/[%+\s]/g, "").replace(",", ".");
+    const n = Number(cleaned);
+    return Number.isFinite(n) ? n : v;
+  }
+  return v;
+}, z2.number());
+var vacancyRateSchema = z2.union([
+  z2.object({ min: z2.number().min(0), max: z2.number().min(0) }),
+  z2.number().min(0).transform((n) => ({ min: n, max: n }))
+]).optional();
+var seoLocaleSchema = z2.object({
+  title: z2.string().min(1, "SEO title required"),
+  description: z2.string().min(1, "SEO description required"),
+  keywords: z2.array(z2.string().min(1)).optional().default([])
+}).passthrough();
+var investorZoneSchema = z2.object({
+  // ---- Critical identity & taxonomy (strict) ----
+  id: z2.string().min(1),
+  name: z2.string().min(1),
+  slug: z2.string().regex(/^[a-z0-9-]+$/, "slug must be kebab-case"),
+  zone: z2.enum(["Centro", "Semicentro", "Periferia"]),
+  // ---- Critical pricing (strict) ----
+  pricePerSqm: z2.object({
+    min: z2.number().positive(),
+    avg: z2.number().positive(),
+    max: z2.number().positive()
+  }),
+  // ---- Critical enums (catch trend202526demand-style merges) ----
+  trend202526: z2.enum(["stable", "moderate", "growth", "strong_growth", "max_growth"]),
+  demand: z2.enum(["low", "medium", "high", "very_high"]),
+  // ---- Critical narrative (strict on IT, tolerant on EN) ----
+  investorNote: i18nString,
+  seo: z2.object({ it: seoLocaleSchema, en: seoLocaleSchema.partial().optional() }).passthrough(),
+  // ---- Tolerant / legacy-friendly ----
+  variation2024: variationSchema.optional(),
+  vacancyRate: vacancyRateSchema,
+  rentingTime: i18nString.optional(),
+  targetTenant: z2.object({
+    it: z2.array(z2.string().min(1)).min(1),
+    en: z2.array(z2.string()).optional().default([])
+  }).passthrough().optional(),
+  urbanRenewal: z2.object({
+    active: z2.boolean(),
+    projects: z2.array(urbanProjectSchema)
+    // impact still required inside
+  }).passthrough().optional(),
+  rankings: z2.object({
+    netYieldRank: z2.number().int().positive().optional(),
+    growthPotentialRank: z2.number().int().positive().optional(),
+    entryPriceRank: z2.number().int().positive().optional()
+  }).passthrough().optional(),
+  image: z2.string().optional().default(""),
+  coordinates: z2.object({ lat: z2.number(), lng: z2.number() }).optional()
+}).passthrough();
+var investorZonesSchema = z2.array(investorZoneSchema);
+if (false) {
+  const issues = collectInvestorZoneIssues();
+  if (issues.length > 0) {
+    console.group(
+      `%c[investorZoneData] ${issues.length} schema issue${issues.length === 1 ? "" : "s"}`,
+      "color:#fff;background:#b91c1c;padding:2px 6px;border-radius:3px;font-weight:bold;"
+    );
+    console.table(
+      issues.map((i) => ({
+        slug: i.slug ?? `#${i.index ?? "?"}`,
+        path: i.path,
+        code: i.code,
+        received: i.received,
+        message: i.message
+      }))
+    );
+    console.error(formatInvestorZoneReport(issues));
+    console.groupEnd();
+    void null.then(({ toast }) => {
+      const preview = issues.slice(0, 3).map((i) => `${i.slug ?? i.zoneId ?? `#${i.index ?? "?"}`} \u2192 ${i.path}`).join("\n");
+      const more = issues.length > 3 ? `
+\u2026and ${issues.length - 3} more (see console)` : "";
+      toast.error(`Investor zones: ${issues.length} schema issue${issues.length === 1 ? "" : "s"}`, {
+        description: preview + more,
+        duration: 12e3
+      });
+    }).catch(() => {
+    });
+  }
+}
+
+// src/lib/mcp/tools/get-investor-zones.ts
 var get_investor_zones_default = defineTool2({
   name: "get_investor_zones",
   title: "Get Turin investor zones",
   description: "List Turin real-estate investor zones with entry prices, urban renewal projects and market metrics. Return figures projections are NOT included (confidential, memorandum only). Optional slug filter returns one zone.",
   inputSchema: {
-    slug: z2.string().optional().describe("Optional zone slug. If omitted, returns all zones.")
+    slug: z3.string().optional().describe("Optional zone slug. If omitted, returns all zones.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ slug }) => {
@@ -64,13 +1099,13 @@ var get_investor_zones_default = defineTool2({
 
 // src/lib/mcp/tools/contact-jungle-rent.ts
 import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
-import { z as z3 } from "npm:zod@^3.23.8";
+import { z as z4 } from "npm:zod@^3.23.8";
 var contact_jungle_rent_default = defineTool3({
   name: "contact_jungle_rent",
   title: "Contact Jungle Rent",
   description: "Return the primary contact channels for Jungle Rent (WhatsApp with founder Lorenzo, email, website). Use when a user asks how to get in touch, book a call, or send an inquiry.",
   inputSchema: {
-    topic: z3.enum(["investor", "student", "seller", "tourist", "general"]).optional().describe("Inquiry topic. Defaults to 'general'.")
+    topic: z4.enum(["investor", "student", "seller", "tourist", "general"]).optional().describe("Inquiry topic. Defaults to 'general'.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: ({ topic }) => {
