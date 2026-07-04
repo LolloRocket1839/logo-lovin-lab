@@ -8,7 +8,7 @@
   "mcp": {
     "server": {
       "name": "jungle-rent-mcp",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "title": "Jungle Rent MCP"
     },
     "tools": [
@@ -300,6 +300,112 @@
               "description": "Optional earliest move-in date (YYYY-MM-DD)."
             }
           },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submit_investor_lead",
+        "title": "Submit investor contact request",
+        "description": "Submit a qualified investor contact request for Jungle Rent (Turin real-estate). Validated with the same schema the website uses. Creates a lead, pings Lorenzo on WhatsApp, and sends the investor confirmation + admin notification emails. IMPORTANT: only call after the user has explicitly (a) given consent to be contacted and receive the privacy notice, and (b) declared they requested this information on their own initiative — both are legally required (CONSOB/AGCM). Do NOT invent yield or return figures; those live only in the private memorandum.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "full_name": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 100,
+              "description": "Investor's full name (first + last)."
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "maxLength": 255,
+              "description": "Investor's email."
+            },
+            "phone": {
+              "type": "string",
+              "maxLength": 40,
+              "description": "Phone in E.164 preferred (optional)."
+            },
+            "tax_residence": {
+              "type": "string",
+              "enum": [
+                "IT",
+                "CH",
+                "EU",
+                "OTHER"
+              ],
+              "description": "Tax residence — IT, CH, EU, or OTHER."
+            },
+            "ticket_range": {
+              "type": "string",
+              "enum": [
+                "5-10",
+                "10-20",
+                "20-50",
+                "50+",
+                "TBD"
+              ],
+              "description": "Indicative ticket size in €k: 5-10, 10-20, 20-50, 50+, or TBD if unclear."
+            },
+            "horizon": {
+              "type": "string",
+              "enum": [
+                "WEEKS",
+                "1-3M",
+                "3-6M",
+                "6M+"
+              ],
+              "description": "Decision horizon: WEEKS, 1-3M, 3-6M, or 6M+."
+            },
+            "prev_experience": {
+              "type": "string",
+              "enum": [
+                "YES",
+                "NO",
+                "PARTIAL"
+              ],
+              "description": "Prior real-estate investment experience: YES, NO, PARTIAL."
+            },
+            "notes": {
+              "type": "string",
+              "maxLength": 2000,
+              "description": "Optional free-form notes from the investor."
+            },
+            "source": {
+              "type": "string",
+              "maxLength": 500,
+              "description": "Where the lead came from (assistant/model name, referrer, etc.)."
+            },
+            "privacy_consent": {
+              "type": "boolean",
+              "const": true,
+              "description": "MUST be true. Confirm the user has explicitly consented to the privacy notice (https://junglerent.it/privacy) before setting this."
+            },
+            "own_initiative_declaration": {
+              "type": "boolean",
+              "const": true,
+              "description": "MUST be true. Confirm the user has explicitly declared they are requesting these Jungle Rent investor materials on their own initiative (CONSOB/AGCM requirement)."
+            }
+          },
+          "required": [
+            "full_name",
+            "email",
+            "tax_residence",
+            "ticket_range",
+            "horizon",
+            "prev_experience",
+            "privacy_consent",
+            "own_initiative_declaration"
+          ],
           "additionalProperties": false,
           "$schema": "http://json-schema.org/draft-07/schema#"
         },
