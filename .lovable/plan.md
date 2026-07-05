@@ -1,19 +1,19 @@
-Replace the long Supabase MCP URL with a short branded `junglerent.it/mcp` redirect on the Connect page and across the app, while keeping the actual endpoint in technical discovery files so agents still reach the function.
+## Plan: keep the MCP surface as it is
 
-### Changes
+You chose to keep `/connect` public, so nothing needs to change.
 
-1. **Add `/mcp` redirect route**
-   - Create `src/pages/McpRedirect.tsx` — a minimal component that does `window.location.replace(fullMcpUrl)` immediately on mount.
-   - Register the route at `/mcp` in `src/components/AnimatedRoutes.tsx`.
+### Current state (already working)
+- **Public page** `/connect` — explains agent integrations, shows the branded `https://junglerent.it/mcp` URL with copy button, and ChatGPT/Claude setup instructions.
+- **Short redirect** `/mcp` — instantly redirects visitors to the real Supabase MCP endpoint.
+- **Live MCP server** at the Supabase function URL — external AI assistants (ChatGPT, Claude, Cursor, etc.) connect here and get Jungle Rent's tools.
+- **Footer links** on desktop and mobile point to `/connect` for discoverability.
 
-2. **Update the Connect page to show the short URL**
-   - In `src/pages/Connect.tsx`, change the displayed and copied URL from the raw `https://<ref>.supabase.co/functions/v1/mcp` to `${window.location.origin}/mcp`.
-   - Keep the URL card label, copy button, and surrounding copy exactly the same.
+### Why this is a good choice
+- Signals to investors and journalists that Jungle Rent is "agent-ready" — a differentiator few Italian proptech sites have.
+- Zero maintenance cost: the page is static; the endpoint runs itself.
+- The branded `junglerent.it/mcp` URL is memorable and reinforces the domain.
 
-3. **Keep technical discovery files on the real endpoint**
-   - `public/.well-known/mcp.json`, `public/.well-known/agent-card.json`, and any other machine-readable files continue to point to the actual Supabase function URL. Agents read these directly; they do not follow user-facing redirects.
+### No files will be changed
+Nothing to implement — the current setup already matches this decision.
 
-### Result
-- Humans visiting `/connect` copy `junglerent.it/mcp` (or `junglerent.it/mcp` on the custom domain) instead of the long Supabase string.
-- Visiting `/mcp` in a browser instantly redirects to the live MCP endpoint.
-- All agent-facing metadata stays on the canonical endpoint so integrations remain stable.
+If later you want to remove the public surface but keep the endpoint working for people who know the URL, just say so and I'll delete the page, redirect, and footer links in one pass.
