@@ -1,0 +1,2 @@
+CREATE POLICY "Block anon access to email_send_state" ON public.email_send_state FOR SELECT TO anon USING (false);
+CREATE POLICY "Block authenticated access to email_send_state" ON public.email_send_state FOR SELECT TO authenticated USING (false);
