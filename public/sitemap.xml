@@ -298,6 +298,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/privacy" />
   </url>
   <url>
+    <loc>https://junglerent.it/fair-rent-pledge</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/fair-rent-pledge" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/fair-rent-pledge" />
+  </url>
+  <url>
     <loc>https://junglerent.it/investitori/zone/cenisia</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
