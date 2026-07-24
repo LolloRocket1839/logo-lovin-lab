@@ -106,7 +106,7 @@ const FairRentPledge = () => {
         {
           icon: ShieldCheck,
           title: "No speculation on the housing crisis",
-          body: "We target €45k–€70k two-room apartments across nine Turin neighborhoods, not luxury flips. We buy homes no owner wants to manage anymore and put them back on the market at rents students and local families can actually afford.",
+          body: "We focus on accessible homes across nine Turin neighborhoods, not luxury flips. We buy properties no owner wants to manage anymore and put them back on the market at rents students and local families can actually afford.",
           proofLabel: "Priority neighborhoods",
           proofHref: "/investors/zones",
         },
