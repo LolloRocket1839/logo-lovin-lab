@@ -77,7 +77,7 @@ const FairRentPledge = () => {
           title: "Accountability pubblica",
           body: "Questa pagina è versionata e pubblica. Lorenzo Oni-Joseph — unico amministratore e socio — risponde direttamente su WhatsApp per ogni impegno che leggi qui. Se un impegno non è rispettato, scrivici e correggiamo.",
           proofLabel: "Parla con Lorenzo",
-          proofHref: `https://wa.me/${CONTACTS.whatsapp.number}`,
+          proofHref: `https://wa.me/${CONTACTS.lorenzo.phone.replace(/[^0-9]/g, "")}`,
           external: true,
         },
       ]
@@ -122,7 +122,7 @@ const FairRentPledge = () => {
           title: "Public accountability",
           body: "This page is versioned and public. Lorenzo Oni-Joseph — sole director and sole shareholder — answers on WhatsApp for every commitment on this page. If one of them isn't respected, message us and we fix it.",
           proofLabel: "Talk to Lorenzo",
-          proofHref: `https://wa.me/${CONTACTS.whatsapp.number}`,
+          proofHref: `https://wa.me/${CONTACTS.lorenzo.phone.replace(/[^0-9]/g, "")}`,
           external: true,
         },
       ];
@@ -283,7 +283,7 @@ const FairRentPledge = () => {
 
             <div className="flex flex-wrap gap-3 mb-8">
               <a
-                href={`https://wa.me/${CONTACTS.whatsapp.number}`}
+                href={`https://wa.me/${CONTACTS.lorenzo.phone.replace(/[^0-9]/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
