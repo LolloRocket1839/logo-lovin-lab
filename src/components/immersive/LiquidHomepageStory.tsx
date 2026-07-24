@@ -92,6 +92,15 @@ export const LiquidHomepageStory = () => {
             <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
               {t("hero.missionStatement")}
             </p>
+            <a
+              href="/fair-rent-pledge"
+              className="mt-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-medium text-primary hover:bg-primary/20 transition-colors w-fit"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              {isItalian
+                ? "Fair Rent Pledge — il nostro impegno pubblico"
+                : "Fair Rent Pledge — our public commitment"}
+            </a>
           </div>
         </Scene>
 
