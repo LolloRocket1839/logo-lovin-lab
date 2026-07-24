@@ -7,6 +7,7 @@ import euFundingBanner from "@/assets/eu-funding-banner.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/constants";
 import { LogoModal } from "@/components/LogoModal";
+import { FairRentPledgeBadge } from "@/components/FairRentPledgeBadge";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Footer = () => {
@@ -320,6 +321,11 @@ export const Footer = () => {
                 Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
               </p>
             </a>
+          </div>
+
+          {/* Fair Rent Pledge Badge */}
+          <div className="mt-8 flex justify-center">
+            <FairRentPledgeBadge />
           </div>
 
           {/* Legal Information */}

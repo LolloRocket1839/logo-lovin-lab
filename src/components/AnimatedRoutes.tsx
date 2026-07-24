@@ -53,6 +53,7 @@ const InboxAdmin = lazy(() => import("@/pages/admin/Inbox"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const Connect = lazy(() => import("@/pages/Connect"));
 const McpRedirect = lazy(() => import("@/pages/McpRedirect"));
+const FairRentPledge = lazy(() => import("@/pages/FairRentPledge"));
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -69,6 +70,7 @@ export const AnimatedRoutes = () => {
             <Route path="/investors" element={<Investors />} />
             <Route path="/invest" element={<Navigate to="/investitori" replace />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/fair-rent-pledge" element={<FairRentPledge />} />
             <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
             <Route path="/terms" element={<TerminiCondizioni />} />
             <Route path="/blog" element={<Blog />} />
