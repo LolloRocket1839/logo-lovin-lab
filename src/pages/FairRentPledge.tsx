@@ -61,7 +61,7 @@ const FairRentPledge = () => {
         {
           icon: ShieldCheck,
           title: "Zero speculazione sul disagio abitativo",
-          body: "Il nostro target sono bilocali €45k–€70k in nove quartieri di Torino, non luxury flip. Compriamo case che nessuno vuole più gestire e le rimettiamo a reddito accessibile per studenti e famiglie della zona.",
+          body: "Ci concentriamo su immobili accessibili in nove quartieri di Torino, non su luxury flip. Compriamo case che nessuno vuole più gestire e le rimettiamo a reddito accessibile per studenti e famiglie della zona.",
           proofLabel: "Quartieri prioritari",
           proofHref: "/investitori/zone",
         },
@@ -106,7 +106,7 @@ const FairRentPledge = () => {
         {
           icon: ShieldCheck,
           title: "No speculation on the housing crisis",
-          body: "We target €45k–€70k two-room apartments across nine Turin neighborhoods, not luxury flips. We buy homes no owner wants to manage anymore and put them back on the market at rents students and local families can actually afford.",
+          body: "We focus on accessible homes across nine Turin neighborhoods, not luxury flips. We buy properties no owner wants to manage anymore and put them back on the market at rents students and local families can actually afford.",
           proofLabel: "Priority neighborhoods",
           proofHref: "/investors/zones",
         },
