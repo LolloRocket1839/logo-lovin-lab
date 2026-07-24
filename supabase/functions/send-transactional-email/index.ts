@@ -161,6 +161,39 @@ Deno.serve(async (req) => {
   // Create Supabase client with service role (bypasses RLS)
   const supabase = createClient(supabaseUrl, supabaseServiceKey)
 
+  // Non-service-role callers (browser using anon key, signed-in users) must not
+  // be able to send arbitrary email to arbitrary recipients. Allow only:
+  //  - templates with a fixed `to` (owner notification), OR
+  //  - recipients that match a lead-like row created in the last 10 minutes.
+  // Service-role callers (other edge functions, cron) bypass this check.
+  if (!isServiceRole && !template.to) {
+    const recipient = recipientEmail?.toLowerCase().trim()
+    if (!recipient) {
+      return new Response(
+        JSON.stringify({ error: 'recipientEmail is required' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+    const sinceIso = new Date(Date.now() - 10 * 60 * 1000).toISOString()
+    const [leadsRes, investorRes, sellerRes] = await Promise.all([
+      supabase.from('leads').select('id').eq('email', recipient).gte('created_at', sinceIso).limit(1),
+      supabase.from('investor_interest').select('id').eq('email', recipient).gte('created_at', sinceIso).limit(1),
+      supabase.from('seller_leads').select('id').eq('email', recipient).gte('created_at', sinceIso).limit(1),
+    ])
+    const recentlyOptedIn =
+      (leadsRes.data && leadsRes.data.length > 0) ||
+      (investorRes.data && investorRes.data.length > 0) ||
+      (sellerRes.data && sellerRes.data.length > 0)
+    if (!recentlyOptedIn) {
+      console.warn('Rejected send: recipient not a recent lead', { recipient, callerRole, templateName })
+      return new Response(
+        JSON.stringify({ error: 'Recipient not permitted for this caller' }),
+        { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+  }
+
+
   // 2. Check suppression list (fail-closed: if we can't verify, don't send)
   const { data: suppressed, error: suppressionError } = await supabase
     .from('suppressed_emails')
