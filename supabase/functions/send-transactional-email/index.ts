@@ -30,10 +30,11 @@ function generateToken(): string {
     .join('')
 }
 
-// Auth note: this function uses verify_jwt = true in config.toml, so Supabase's
-// gateway validates the caller's JWT (anon or service_role) before the request
-// reaches this code. No in-function auth check is needed.
-
+// Auth: verify_jwt is false at the gateway (Lovable default), so this function
+// MUST authenticate callers itself. We require a valid Supabase JWT (any signed-in
+// user, anon, or the service role). Anonymous / user callers are additionally
+// constrained to sending to recipients that appear in a recently created lead
+// row — this prevents the anon key from being used as an open spam relay.
 Deno.serve(async (req) => {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
@@ -41,9 +42,10 @@ Deno.serve(async (req) => {
   }
 
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
+  const supabaseAnonKey = Deno.env.get('SUPABASE_ANON_KEY')
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
-  if (!supabaseUrl || !supabaseServiceKey) {
+  if (!supabaseUrl || !supabaseServiceKey || !supabaseAnonKey) {
     console.error('Missing required environment variables')
     return new Response(
       JSON.stringify({ error: 'Server configuration error' }),
@@ -53,6 +55,40 @@ Deno.serve(async (req) => {
       }
     )
   }
+
+  // Require a Bearer JWT and verify it. Reject callers with no token so the
+  // endpoint cannot be hit by fully unauthenticated HTTP requests.
+  const authHeader = req.headers.get('Authorization') ?? ''
+  if (!authHeader.toLowerCase().startsWith('bearer ')) {
+    return new Response(
+      JSON.stringify({ error: 'Unauthorized' }),
+      {
+        status: 401,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    )
+  }
+  const token = authHeader.slice(7).trim()
+  const isServiceRole = token === supabaseServiceKey
+  let callerRole: string = 'service_role'
+  if (!isServiceRole) {
+    const authClient = createClient(supabaseUrl, supabaseAnonKey, {
+      global: { headers: { Authorization: `Bearer ${token}` } },
+    })
+    const { data: claimsData, error: claimsError } =
+      await authClient.auth.getClaims(token)
+    if (claimsError || !claimsData?.claims) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized' }),
+        {
+          status: 401,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      )
+    }
+    callerRole = String(claimsData.claims.role ?? 'anon')
+  }
+
 
   // Parse request body
   let templateName: string
@@ -124,6 +160,39 @@ Deno.serve(async (req) => {
 
   // Create Supabase client with service role (bypasses RLS)
   const supabase = createClient(supabaseUrl, supabaseServiceKey)
+
+  // Non-service-role callers (browser using anon key, signed-in users) must not
+  // be able to send arbitrary email to arbitrary recipients. Allow only:
+  //  - templates with a fixed `to` (owner notification), OR
+  //  - recipients that match a lead-like row created in the last 10 minutes.
+  // Service-role callers (other edge functions, cron) bypass this check.
+  if (!isServiceRole && !template.to) {
+    const recipient = recipientEmail?.toLowerCase().trim()
+    if (!recipient) {
+      return new Response(
+        JSON.stringify({ error: 'recipientEmail is required' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+    const sinceIso = new Date(Date.now() - 10 * 60 * 1000).toISOString()
+    const [leadsRes, investorRes, sellerRes] = await Promise.all([
+      supabase.from('leads').select('id').eq('email', recipient).gte('created_at', sinceIso).limit(1),
+      supabase.from('investor_interest').select('id').eq('email', recipient).gte('created_at', sinceIso).limit(1),
+      supabase.from('seller_leads').select('id').eq('email', recipient).gte('created_at', sinceIso).limit(1),
+    ])
+    const recentlyOptedIn =
+      (leadsRes.data && leadsRes.data.length > 0) ||
+      (investorRes.data && investorRes.data.length > 0) ||
+      (sellerRes.data && sellerRes.data.length > 0)
+    if (!recentlyOptedIn) {
+      console.warn('Rejected send: recipient not a recent lead', { recipient, callerRole, templateName })
+      return new Response(
+        JSON.stringify({ error: 'Recipient not permitted for this caller' }),
+        { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+  }
+
 
   // 2. Check suppression list (fail-closed: if we can't verify, don't send)
   const { data: suppressed, error: suppressionError } = await supabase
