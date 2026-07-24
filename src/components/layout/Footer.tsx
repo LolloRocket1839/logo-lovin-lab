@@ -7,6 +7,7 @@ import euFundingBanner from "@/assets/eu-funding-banner.png";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/constants";
 import { LogoModal } from "@/components/LogoModal";
+import { FairRentPledgeBadge } from "@/components/FairRentPledgeBadge";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Footer = () => {
