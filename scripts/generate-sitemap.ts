@@ -58,6 +58,7 @@ const STATIC_ROUTES: RouteEntry[] = [
   { it: "/affitti-lingotto-ospedali-torino", en: "/rent-lingotto-hospitals-turin", changefreq: "weekly", priority: "0.85" },
   { it: "/termini-e-condizioni", en: "/terms", changefreq: "yearly", priority: "0.2" },
   { it: "/privacy", changefreq: "yearly", priority: "0.2" },
+  { it: "/fair-rent-pledge", changefreq: "monthly", priority: "0.6" },
 ];
 
 const TOOLS_ROUTES: RouteEntry[] = [
