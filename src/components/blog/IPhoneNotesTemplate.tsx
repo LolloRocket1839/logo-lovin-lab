@@ -133,7 +133,7 @@ export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplat
                   ),
                 }}
               >
-                {content}
+                {safeContent}
               </ReactMarkdown>
             </div>
           </div>
