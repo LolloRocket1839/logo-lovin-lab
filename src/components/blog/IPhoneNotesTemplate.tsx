@@ -13,6 +13,12 @@ interface IPhoneNotesTemplateProps {
 }
 
 export const IPhoneNotesTemplate = ({ content, title, date }: IPhoneNotesTemplateProps) => {
+  // Sanitize any raw HTML embedded in markdown — rehype-raw would otherwise render
+  // <script>/on*= handlers straight to the DOM.
+  const safeContent = useMemo(
+    () => DOMPurify.sanitize(content, { USE_PROFILES: { html: true } }),
+    [content]
+  );
   // Format date in elegant style
   const formatDate = (dateStr: string) => {
     const d = new Date(dateStr);
