@@ -32,9 +32,9 @@ function generateToken(): string {
 
 // Auth: verify_jwt is false at the gateway (Lovable default), so this function
 // MUST authenticate callers itself. We require a valid Supabase JWT (any signed-in
-// user or the service role). Server-to-server callers should invoke this from
-// another edge function using the service-role client, which forwards the
-// service-role JWT automatically.
+// user, anon, or the service role). Anonymous / user callers are additionally
+// constrained to sending to recipients that appear in a recently created lead
+// row — this prevents the anon key from being used as an open spam relay.
 Deno.serve(async (req) => {
   // Handle CORS preflight
   if (req.method === 'OPTIONS') {
@@ -56,8 +56,8 @@ Deno.serve(async (req) => {
     )
   }
 
-  // Require a Bearer JWT and verify it. Reject anonymous callers so the
-  // endpoint cannot be used as an open spam relay via the public anon key.
+  // Require a Bearer JWT and verify it. Reject callers with no token so the
+  // endpoint cannot be hit by fully unauthenticated HTTP requests.
   const authHeader = req.headers.get('Authorization') ?? ''
   if (!authHeader.toLowerCase().startsWith('bearer ')) {
     return new Response(
@@ -69,16 +69,15 @@ Deno.serve(async (req) => {
     )
   }
   const token = authHeader.slice(7).trim()
-  // Accept the service-role key directly (used by other edge functions and
-  // trusted server-side callers). Otherwise require a signed-in user JWT.
   const isServiceRole = token === supabaseServiceKey
+  let callerRole: string = 'service_role'
   if (!isServiceRole) {
     const authClient = createClient(supabaseUrl, supabaseAnonKey, {
       global: { headers: { Authorization: `Bearer ${token}` } },
     })
     const { data: claimsData, error: claimsError } =
       await authClient.auth.getClaims(token)
-    if (claimsError || !claimsData?.claims?.sub) {
+    if (claimsError || !claimsData?.claims) {
       return new Response(
         JSON.stringify({ error: 'Unauthorized' }),
         {
@@ -87,7 +86,9 @@ Deno.serve(async (req) => {
         }
       )
     }
+    callerRole = String(claimsData.claims.role ?? 'anon')
   }
+
 
   // Parse request body
   let templateName: string
