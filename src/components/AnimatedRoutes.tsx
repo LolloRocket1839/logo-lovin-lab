@@ -70,6 +70,7 @@ export const AnimatedRoutes = () => {
             <Route path="/investors" element={<Investors />} />
             <Route path="/invest" element={<Navigate to="/investitori" replace />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/fair-rent-pledge" element={<FairRentPledge />} />
             <Route path="/termini-e-condizioni" element={<TerminiCondizioni />} />
             <Route path="/terms" element={<TerminiCondizioni />} />
             <Route path="/blog" element={<Blog />} />
