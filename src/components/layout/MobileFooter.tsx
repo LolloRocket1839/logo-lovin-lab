@@ -129,6 +129,11 @@ export const MobileFooter = () => {
           </div>
         </div>
 
+        {/* ── FAIR RENT PLEDGE BADGE ── */}
+        <div className="w-full flex justify-center pt-2">
+          <FairRentPledgeBadge />
+        </div>
+
         {/* ── EU FUNDING BANNER (UNCHANGED) ── */}
         <div className="w-full pt-2">
           <a
