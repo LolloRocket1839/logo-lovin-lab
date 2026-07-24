@@ -323,6 +323,11 @@ export const Footer = () => {
             </a>
           </div>
 
+          {/* Fair Rent Pledge Badge */}
+          <div className="mt-8 flex justify-center">
+            <FairRentPledgeBadge />
+          </div>
+
           {/* Legal Information */}
           <div className="mt-8 pt-8 border-t border-border/10">
             <p className="text-muted-foreground text-xs font-light">
