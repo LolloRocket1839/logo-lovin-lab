@@ -4,6 +4,7 @@ import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp, Bot } fr
 import { CONTACTS } from "@/constants";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import euFundingBanner from "@/assets/eu-funding-banner.png";
+import { FairRentPledgeBadge } from "@/components/FairRentPledgeBadge";
 
 export const MobileFooter = () => {
   const { t, i18n } = useTranslation();
