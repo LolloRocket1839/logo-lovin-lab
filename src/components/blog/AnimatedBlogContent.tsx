@@ -26,9 +26,11 @@ export const AnimatedBlogContent = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
   
-  // Preprocess content with auto-links
+  // Preprocess content with auto-links, then sanitize any raw HTML (rehype-raw would otherwise
+  // execute embedded <script>/on*= handlers from stored/AI-generated content).
   const processedContent = useMemo(() => {
-    return preprocessMarkdownWithAutoLinks(content, slug, lang);
+    const linked = preprocessMarkdownWithAutoLinks(content, slug, lang);
+    return DOMPurify.sanitize(linked, { USE_PROFILES: { html: true } });
   }, [content, slug, lang]);
   
   // Get contextual tool suggestions for callout boxes
