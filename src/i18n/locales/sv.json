@@ -220,8 +220,8 @@
     "contact": "Kontakta oss",
     "getStarted": "Kom igång",
     "learnMore": "Läs mer",
-    "talkToLorenzo": "Prata med Lorenzo",
-    "requestInfo": "Begär info"
+    "requestInfo": "Begär info",
+    "talkToLorenzo": "Prata med Lorenzo"
   },
   "examSessionPlanner": {
     "addExam": {
@@ -452,6 +452,7 @@
     "badgeExplanation": "Du investerar i en specifik lägenhet som förvärvas av Jungle Rent. Ingen förvaltning, varannan månad avkastning.",
     "benefits": "fördelar",
     "contactLorenzo": "Kontakta Lorenzo",
+    "ctaSocialProofB": "127 investerare redan på väntelistan",
     "days": "dagar",
     "discover": "Upptäck",
     "discoverOpportunity": "Upptäck möjligheten",
@@ -505,7 +506,6 @@
     "socialProof": "2-rumslägenhet i Turin · €45-70K · Anmäl ditt intresse",
     "startInvesting": "Börja investera",
     "startInvestingB": "Se hur investeringen fungerar",
-    "ctaSocialProofB": "127 investerare redan på väntelistan",
     "studentSubtitle": "Spara på hyran!",
     "studentTitle": "Är du student?",
     "students": "studenter",
@@ -654,6 +654,295 @@
     "flowStep3": "Portfölj",
     "flowStep3Sub": "Strategisk",
     "incubatorTooltip": "Inkuberade hos 2i3T - Företagsinkubator Turin Universitet",
+    "landing": {
+      "disclaimer": {
+        "company": "Jungle Rent S.r.l. · Momsnr 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin, Italien · junglerententeprise@gmail.com",
+        "p1": "Informationen på denna sida är endast avsedd för informationsändamål och utgör inte ett offentligt erbjudande av finansiella produkter enligt art. 94 i D.Lgs. 58/1998 (TUF), inte heller en uppmaning till investering eller finansiell, skattemässig eller juridisk rådgivning.",
+        "p2": "Det finansiella instrument som beskrivs är inte tillgängligt för teckning online. Eventuell teckning sker uteslutande genom en privat placering, reserverad för ett begränsat antal individuellt kvalificerade investerare, efter leverans av det fullständiga informationsmemorandumet och avtalsdokumentationen, i enlighet med de undantag som föreskrivs i art. 100 TUF.",
+        "p3": "Avkastningen som illustreras i informationsmaterialet är prognoser baserade på modellantaganden. Den faktiska utvecklingen beror på portföljens resultat och garanteras inte på något sätt. Investeringen medför risker, inklusive illikviditetsrisk, fastighetsmarknadsrisk, operativ risk, utspädningsrisk och möjligheten till total förlust av det investerade kapitalet.",
+        "p4": "Den beskrivna skattebehandlingen är föremål för individuella villkor, regulatoriska gränser och möjliga lagändringar. Innan något investeringsbeslut fattas är investeraren skyldig att konsultera sin egen oberoende skatte- och finansrådgivare."
+      },
+      "emailFirst": {
+        "alsoQualify": "Vill du också ha memorandumet? Fyll i kvalificeringsformuläret",
+        "error": "Något gick fel. Försök igen om några minuter eller skriv till oss via WhatsApp.",
+        "fields": {
+          "email": "Din e-postadress",
+          "name": "Namn (valfritt)"
+        },
+        "preferFull": "Jag föredrar att fylla i det fullständiga formuläret för att få memorandumet",
+        "privacy": "Vi behandlar dina uppgifter endast för att kontakta dig om denna möjlighet (GDPR). Du kan avregistrera dig när som helst.",
+        "saveName": "Spara",
+        "skipName": "Hoppa över",
+        "submit": "Håll mig uppdaterad",
+        "submitting": "Skickar ...",
+        "subtitle": "Endast e-post. Vi skriver till dig när vi öppnar. Inga nyhetsbrev, ingen spam.",
+        "success": "Tack. Vi meddelar dig personligen vid nästa öppning.",
+        "successNamePrompt": "Vad heter du? Det hjälper oss att kontakta dig på ett bättre sätt.",
+        "title": "Vill du bli informerad om nästa projekt?",
+        "trustLine": "Ingen spam · Svar inom 24 timmar · Lorenzo svarar personligen"
+      },
+      "faq": {
+        "items": [
+          {
+            "a": "Avtalet är med Jungle Rent S.r.l. Den ekonomiska exponeringen är mot ett enskilt projekt: varje serie av instrumentet är kopplad till ett specifikt projekt, och din avkastning beror på det projektets resultat. Juridisk form och utdelningsmekanism: i memorandumet.",
+            "q": "Investerar jag i företaget eller i en enskild fastighet?"
+          },
+          {
+            "a": "Ett dedikerat instrument för ekonomiskt deltagande, reserverat för kvalificerade investerare via en privat placering. Den exakta juridiska formen, de ekonomiska rättigheterna, utdelningsmekanismen och reglerna beskrivs i sin helhet i informationsmemorandumet, som levereras efter kvalificeringssamtalet.",
+            "q": "Vilket finansiellt instrument används?"
+          },
+          {
+            "a": "Det vägledande intervallet är 5 000–20 000 € per investerare. Lägre eller högre belopp utvärderas från fall till fall beroende på kapitalrundan och investerarens profil.",
+            "q": "Vad är en typisk investeringsstorlek?"
+          },
+          {
+            "a": "Inlåsningsperioden på 3 år är ett krav i skattelagstiftningen (för att behålla IRPEF-avdraget). Tekniskt sett kan du överföra instrumentet till en annan investerare, men du skulle förlora skatteförmånen och behöva hitta en köpare på egen hand.",
+            "q": "Kan jag få tillbaka mitt kapital före 3 år?"
+          },
+          {
+            "a": "Avtalsdokumentationen föreskriver en ekonomisk fördelning som definieras från fall till fall, vanligtvis 90 % till investerare / 10 % till Jungle Rent efter serviceavgiften, enligt en detaljerad vattenfallsmodell i memorandumet. Utdelningen sker varannan månad.",
+            "q": "Hur fördelas vinsten?"
+          },
+          {
+            "a": "Registreringen i den särskilda sektionen av företagsregistret skedde den 04/12/2025 och kan verifieras oberoende på portalen startup.registroimprese.it med P.IVA 13333450016.",
+            "q": "Är Jungle Rent verkligen ett innovativt startup-företag eller är det en självdeklaration?"
+          },
+          {
+            "a": "Ja, efter kvalificeringssamtalet. Det är kompletta dokument (skriftlig affärsplan 2025, Excel-modell med flera blad och känslighetsanalys, 5-årsprognoser).",
+            "q": "Kan jag få se affärsplanen och den finansiella modellen?"
+          },
+          {
+            "a": "Skatterådgivning från byrån Starola Cantino Bono i Torino. Årsredovisningen är offentlig i registerutdraget.",
+            "q": "Vem sköter bokföringen och granskar räkenskaperna?"
+          },
+          {
+            "a": "Det insamlade kapitalet behålls på företagskontot i väntan på nästa marknadsfönster, eller återbetalas till investerarna om de begär det, efter avdrag för dokumenterade kostnader. Denna klausul finns i avtalsdokumentationen.",
+            "q": "Vad händer om Jungle Rent inte lyckas slutföra det första förvärvet före september 2026?"
+          }
+        ],
+        "title": "Vanliga frågor"
+      },
+      "form": {
+        "error": "Kunde inte skicka. Försök igen eller skriv till junglerententeprise@gmail.com.",
+        "fields": {
+          "email": "E-post",
+          "fullName": "För- och efternamn",
+          "horizon": "Tidshorisont för beslut",
+          "notes": "Anteckningar eller specifika frågor (valfritt)",
+          "ownInitiative": "Jag förklarar att jag har begärt denna information på eget initiativ och inte som ett resultat av offentlig marknadsföring eller individuell uppmaning. Jag förstår att investeringar i finansiella instrument från innovativa startup-företag medför risker, inklusive risken för total förlust av kapitalet.",
+          "phone": "Telefon (valfritt)",
+          "phoneHint": "Används endast om du uttryckligen begär att bli uppringd",
+          "prevExperience": "Har du tidigare investerat i innovativa startup-företag eller onoterade fastigheter?",
+          "privacyConsent": "Jag har läst och godkänner integritetspolicyn (GDPR).",
+          "source": "Hur hörde du talas om oss? (valfritt)",
+          "taxResidence": "Skattehemvist",
+          "ticketRange": "Vägledande investeringsintervall"
+        },
+        "options": {
+          "experience": {
+            "NO": "Nej",
+            "PARTIAL": "Delvis",
+            "YES": "Ja"
+          },
+          "horizon": {
+            "1-3M": "1–3 månader",
+            "3-6M": "3–6 månader",
+            "6M+": "Mer än 6 månader",
+            "WEEKS": "Under de närmaste veckorna"
+          },
+          "residence": {
+            "CH": "Schweiz",
+            "EU": "Annat EU-land",
+            "IT": "Italien",
+            "OTHER": "Utanför EU"
+          },
+          "ticket": {
+            "10-20": "10 000–20 000 €",
+            "20-50": "20 000–50 000 €",
+            "5-10": "5 000–10 000 €",
+            "50+": "Över 50 000 €",
+            "TBD": "Jag föredrar att bestämma det efter att ha sett materialet"
+          }
+        },
+        "selectPlaceholder": "Välj...",
+        "steps": {
+          "autoSaved": "Utkast sparat automatiskt",
+          "back": "Tillbaka",
+          "next": "Fortsätt",
+          "progress": "Steg {{current}} av {{total}}",
+          "step1Subtitle": "Bara 30 sekunder. Dina kontaktuppgifter förblir privata.",
+          "step1Title": "Låt oss börja lära känna varandra",
+          "step2Subtitle": "Så att Lorenzo kan förbereda relevant material för dig.",
+          "step2Title": "Hjälp oss att anpassa förslaget",
+          "step3Subtitle": "Juridiska bekräftelser och samtycken som krävs enligt lag.",
+          "step3Title": "Sista steget"
+        },
+        "submit": "Skicka förfrågan",
+        "submitting": "Skickar...",
+        "subtitle": "Jag svarar personligen inom 48 timmar. Inga nyhetsbrev, ingen automatisk uppföljning.",
+        "success": "Tack. Lorenzo svarar inom 48 timmar till den e-postadress du angav. Under tiden kan du utforska artiklarna om marknaden i Torino.",
+        "title": "Ta emot informationsmemorandumet"
+      },
+      "founder": {
+        "paragraphs": [
+          "Hej,",
+          "Jag heter Lorenzo och är grundare av Jungle Rent. Jag byggde det här företaget på en enkel idé: i Torino finns det 90 000 universitetsstudenter och en fortfarande överkomlig fastighetsmarknad. Genom att köpa smart, renovera smart och förvalta smart kan man bygga solida kassaflöden i en historiskt defensiv tillgångsklass.",
+          "Jag öppnar för deltagande från en liten grupp privata investerare av en praktisk anledning: att påskynda uppbyggnaden av portföljen utan att späda ut aktiekapitalet alltför mycket. Vi gör det med ett dedikerat instrument som skapar gemensamma incitament: strukturen belönar de som går in tidigt i ett enskilt projekt, och jag tar 10% av vinsten efter serviceavgifter. De juridiska detaljerna finns i memorandumet.",
+          "Den här sidan ger dig ramarna. De verkliga siffrorna, strukturen, modellerna, kontrakten - allt detta finns i memorandumet. Jag skickar det först efter ett kort inledande samtal, eftersom jag vill vara säker på att möjligheten och dina förväntningar stämmer överens.",
+          "Om du är intresserad, fyll i formuläret längst ner på sidan. Jag svarar personligen inom 48 timmar."
+        ],
+        "role": "Grundare & VD, Jungle Rent S.r.l.",
+        "signature": "Lorenzo Oni-Joseph",
+        "title": "Ett brev från grundaren"
+      },
+      "hero": {
+        "cta": "Begär informationsmemorandumet",
+        "ctaNote": "Teckning sker inte online. Första steget är en informationsförfrågan: du får memorandumet, utvärderar det i lugn och ro och bestämmer dig sedan.",
+        "ctaPrimary": "Prata med Lorenzo",
+        "ctaSecondary": "Ta emot memorandumet",
+        "eyebrow": "Reserverad möjlighet · Privat placering",
+        "h1": "Investera i Jungle Rent. Med exponering mot enskilda fastighetsprojekt.",
+        "h1Accent": "enskilda fastighetsprojekt",
+        "metrics": {
+          "payoutLabel": "Utbetalningsfrekvens",
+          "payoutValue": "Varannan månad",
+          "ticketLabel": "Minsta investering",
+          "ticketValue": "€5k",
+          "yieldLabel": "Utbetalningsmodell",
+          "yieldValue": "Varannan månad"
+        },
+        "subhead": "Jungle Rent är ett innovativt startup-företag från Torino. Vi köper, renoverar och förvaltar lägenheter för universitetsstudenter. Vi öppnar för ett begränsat antal privata investerare att ekonomiskt delta i portföljen via ett dedikerat instrument. De tekniska detaljerna för instrumentet beskrivs i informationsmemorandumet."
+      },
+      "innovativa": {
+        "items": {
+          "fg": {
+            "body": "Vi har tillgång till garantifonden för små och medelstora företag med 80 % gratis täckning för innovativa startup-företag. Detta gör att vi kan få lån utan säkerhet utan att pantsätta fastigheten, vilket håller den fri för framtida rekapitaliseringar eller avyttringar.",
+            "title": "Förmånlig bankfinansiering"
+          },
+          "tax": {
+            "body": "Investeringar i innovativa startup-företag kan dra nytta av ett IRPEF-avdrag på upp till 65 % av det investerade beloppet (de minimis-ordning, Reg. UE 2831/2023). Den faktiska tillämpningen beror på det använda instrumentet och investerarens profil. Detaljer finns i memorandumet.",
+            "title": "Skatteförmåner för investerare"
+          },
+          "transparency": {
+            "body": "Som ett innovativt startup-företag är vi skyldiga att var sjätte månad publicera uppdaterade företagsdata i den särskilda sektionen i företagsregistret, och vi upprätthåller ett offentligt tillgängligt registerutdrag. Varje investerare kan självständigt verifiera företagets status.",
+            "title": "Obligatorisk transparens"
+          }
+        },
+        "title": "Vad som är annorlunda eftersom vi är ett innovativt startup-företag"
+      },
+      "meta": {
+        "description": "Jungle Rent öppnar för ett begränsat antal privata investerare att ekonomiskt delta i portföljen av studentbostäder i Torino via ett dedikerat instrument. Begär informationsmemorandumet.",
+        "title": "Investera i Jungle Rent · studentbostäder i Torino"
+      },
+      "process": {
+        "callout": "Inget steg är automatiserat. Varje investerare som går in i Jungle Rent gör det efter att ha pratat direkt med Lorenzo.",
+        "steps": [
+          {
+            "body": "Du fyller i formuläret längst ner på sidan.",
+            "title": "Begär memorandumet"
+          },
+          {
+            "body": "Jag ringer dig personligen inom 48 timmar för att förstå din tidshorisont, din erfarenhet och dina frågor.",
+            "title": "Inledande samtal (30 minuter)"
+          },
+          {
+            "body": "Informationsmemorandum, komplett avtalsdokumentation, affärsplan, finansiell modell i Excel, protokoll från bolagsorgan.",
+            "title": "Ta emot materialet"
+          },
+          {
+            "body": "Ingen press. Du kan involvera din revisor, en advokat, en betrodd rådgivare.",
+            "title": "Tid för utvärdering"
+          },
+          {
+            "body": "Om du bestämmer dig för att gå vidare undertecknas teckningshandlingen personligen hos den utsedda notarien, i samband med betalningen. Du erhåller en serie av instrumentet som är dedikerad till det projekt du har valt.",
+            "title": "Signering"
+          }
+        ],
+        "title": "Från första kontakt till teckning"
+      },
+      "quickBar": {
+        "email": "Skriv till oss",
+        "label": "Vill du prata direkt?",
+        "whatsapp": "WhatsApp Lorenzo"
+      },
+      "risks": {
+        "items": [
+          {
+            "body": "Den skattemässiga inlåsningsperioden är 3 år. Det finns ingen organiserad andrahandsmarknad. Instrumentet kan överlåtas privat, men att hitta en köpare är ditt ansvar.",
+            "title": "Illikviditet"
+          },
+          {
+            "body": "Den serie av instrumentet du tecknar är exponerad mot resultatet av en enda fastighet (förvärv, renovering, beläggning, eventuell avyttring). Det finns ingen automatisk diversifiering över den samlade portföljen. Dessutom, vid publiceringen av denna sida äger Jungle Rent ännu inga fastigheter: affärsplanen bygger på förmågan att slutföra det första förvärvet i tid för läsåret 2026/2027 och att upprepa det effektivt.",
+            "title": "Koncentration på ett enskilt projekt"
+          },
+          {
+            "body": "Betydande förändringar på marknaden i Torino (priser, efterfrågan från studenter, regler för korttidsuthyrning) kan påverka portföljens avkastning.",
+            "title": "Fastighetsmarknadsrisk"
+          },
+          {
+            "body": "Framtida kapitalrundor kan späda ut din relativa andel, även om instrumentet inkluderar skyddade proportionella ekonomiska rättigheter.",
+            "title": "Utspädningsrisk"
+          },
+          {
+            "body": "Den förväntade avkastningen som presenteras i affärsplanen är prognoser. Den faktiska utvecklingen beror på det operativa genomförandet och marknadsförhållandena. En partiell eller total förlust av det investerade kapitalet är en rimlig möjlighet.",
+            "title": "Ingen garanti för avkastning"
+          }
+        ],
+        "title": "Vad som kan gå fel"
+      },
+      "socialProof": {
+        "countPrefix": "{{count}} personer",
+        "countPrefix_one": "{{count}} person",
+        "countPrefix_other": "{{count}} personer",
+        "countSuffix": "har begärt information de senaste 4 veckorna",
+        "startupLabel": "Innovativt startup-företag",
+        "startupSuffix": "registrerat hos CCIAA Torino · REA TO-1355899"
+      },
+      "tax": {
+        "caveat": "Den faktiska tillämpbarheten och storleken på avdraget beror på individuella gränser för investeraren, den återstående tillgängligheten av företagets de minimis-tak och efterlevnaden av en rad villkor som anges i lagstiftningen. Ingen information på denna sida utgör skatterådgivning. Innan du fattar något beslut, rådfråga din betrodda revisor eller be vårt team att sätta dig i kontakt med den skattebyrå som hjälper Jungle Rent.",
+        "caveatTitle": "Viktigt",
+        "content": "Investeringar i innovativa startup-företag kan dra nytta av ett IRPEF-avdrag på 65 % enligt art. 29-bis DL 179/2012, inom de minimis-ordningen som infördes genom Reg. UE 2831/2023. Den faktiska tillämpningen beror på det använda instrumentet och investerarens profil. Lagstiftningen är i kraft till 2028-12-04, med förbehåll för förlängningar.",
+        "title": "Skattebehandling av investeringen"
+      },
+      "thesis": {
+        "items": {
+          "asset": {
+            "body": "Tvårumslägenheter i målområdena (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) kan köpas idag för mellan 45 000 € och 130 000 €. Studentuthyrning genererar intäkter som stabiliseras av en oelastisk efterfrågan. Specifika ekonomiska prognoser finns i informationsmemorandumet.",
+            "title": "Defensiv tillgångsklass till ett överkomligt pris"
+          },
+          "market": {
+            "body": "90 000 universitetsstudenter, 7 institutioner (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Kroniskt större efterfrågan på bostäder än det reguljära utbudet. Hyror från 350 € till 700 € för ett enkelrum beroende på område.",
+            "title": "Underservad marknad"
+          },
+          "model": {
+            "body": "10 månader studenter (september–juni) + sommarsäsong för turister (juli–augusti) på Airbnb och Booking. Mixen optimerar beläggningen och de totala intäkterna jämfört med enbart studentuthyrning.",
+            "title": "Hybridmodell"
+          }
+        },
+        "title": "Varför Torino, varför nu, varför vi"
+      },
+      "trust": {
+        "items": {
+          "incubator": {
+            "label": "2i3T",
+            "value": "Företagsinkubator vid Università di Torino"
+          },
+          "mise": {
+            "label": "Innovativt startup-företag",
+            "value": "Registrerat 04/12/2025"
+          },
+          "rea": {
+            "label": "Handelskammaren i Torino",
+            "value": "REA TO-1355899"
+          },
+          "vat": {
+            "label": "P.IVA",
+            "value": "13333450016"
+          }
+        },
+        "title": "Offentligt verifierbart"
+      }
+    },
     "marketStats": {
       "disclaimer": "Uppskattningar 2025 - Källa: Savills Research",
       "marketPotential": "marknadspotential",
@@ -683,296 +972,7 @@
     "waitlistCta": "Gå med på väntelistan",
     "waitlistSubtitle": "Få exklusiva uppdateringar om fastighetsinvesteringsmöjligheter i Turin",
     "waitlistTitle": "Gå med på investerarväntelistan",
-    "whyInvestTitle": "Varför investera med oss",
-    "landing": {
-      "meta": {
-        "title": "Investera i Jungle Rent · studentbostäder i Torino",
-        "description": "Jungle Rent öppnar för ett begränsat antal privata investerare att ekonomiskt delta i portföljen av studentbostäder i Torino via ett dedikerat instrument. Begär informationsmemorandumet."
-      },
-      "hero": {
-        "eyebrow": "Reserverad möjlighet · Privat placering",
-        "h1": "Investera i Jungle Rent. Med exponering mot enskilda fastighetsprojekt.",
-        "subhead": "Jungle Rent är ett innovativt startup-företag från Torino. Vi köper, renoverar och förvaltar lägenheter för universitetsstudenter. Vi öppnar för ett begränsat antal privata investerare att ekonomiskt delta i portföljen via ett dedikerat instrument. De tekniska detaljerna för instrumentet beskrivs i informationsmemorandumet.",
-        "cta": "Begär informationsmemorandumet",
-        "ctaPrimary": "Prata med Lorenzo",
-        "ctaSecondary": "Ta emot memorandumet",
-        "ctaNote": "Teckning sker inte online. Första steget är en informationsförfrågan: du får memorandumet, utvärderar det i lugn och ro och bestämmer dig sedan.",
-        "metrics": {
-          "yieldLabel": "Utbetalningsmodell",
-          "yieldValue": "Varannan månad",
-          "payoutLabel": "Utbetalningsfrekvens",
-          "payoutValue": "Varannan månad",
-          "ticketLabel": "Minsta investering",
-          "ticketValue": "€5k"
-        },
-        "h1Accent": "enskilda fastighetsprojekt"
-      },
-      "quickBar": {
-        "label": "Vill du prata direkt?",
-        "whatsapp": "WhatsApp Lorenzo",
-        "email": "Skriv till oss"
-      },
-      "socialProof": {
-        "countPrefix_one": "{{count}} person",
-        "countPrefix_other": "{{count}} personer",
-        "countPrefix": "{{count}} personer",
-        "countSuffix": "har begärt information de senaste 4 veckorna",
-        "startupLabel": "Innovativt startup-företag",
-        "startupSuffix": "registrerat hos CCIAA Torino · REA TO-1355899"
-      },
-      "emailFirst": {
-        "title": "Vill du bli informerad om nästa projekt?",
-        "subtitle": "Endast e-post. Vi skriver till dig när vi öppnar. Inga nyhetsbrev, ingen spam.",
-        "fields": {
-          "name": "Namn (valfritt)",
-          "email": "Din e-postadress"
-        },
-        "submit": "Håll mig uppdaterad",
-        "submitting": "Skickar ...",
-        "preferFull": "Jag föredrar att fylla i det fullständiga formuläret för att få memorandumet",
-        "alsoQualify": "Vill du också ha memorandumet? Fyll i kvalificeringsformuläret",
-        "privacy": "Vi behandlar dina uppgifter endast för att kontakta dig om denna möjlighet (GDPR). Du kan avregistrera dig när som helst.",
-        "trustLine": "Ingen spam · Svar inom 24 timmar · Lorenzo svarar personligen",
-        "success": "Tack. Vi meddelar dig personligen vid nästa öppning.",
-        "successNamePrompt": "Vad heter du? Det hjälper oss att kontakta dig på ett bättre sätt.",
-        "saveName": "Spara",
-        "skipName": "Hoppa över",
-        "error": "Något gick fel. Försök igen om några minuter eller skriv till oss via WhatsApp."
-      },
-      "trust": {
-        "title": "Offentligt verifierbart",
-        "items": {
-          "rea": {
-            "label": "Handelskammaren i Torino",
-            "value": "REA TO-1355899"
-          },
-          "mise": {
-            "label": "Innovativt startup-företag",
-            "value": "Registrerat 04/12/2025"
-          },
-          "incubator": {
-            "label": "2i3T",
-            "value": "Företagsinkubator vid Università di Torino"
-          },
-          "vat": {
-            "label": "P.IVA",
-            "value": "13333450016"
-          }
-        }
-      },
-      "founder": {
-        "title": "Ett brev från grundaren",
-        "paragraphs": [
-          "Hej,",
-          "Jag heter Lorenzo och är grundare av Jungle Rent. Jag byggde det här företaget på en enkel idé: i Torino finns det 90 000 universitetsstudenter och en fortfarande överkomlig fastighetsmarknad. Genom att köpa smart, renovera smart och förvalta smart kan man bygga solida kassaflöden i en historiskt defensiv tillgångsklass.",
-          "Jag öppnar för deltagande från en liten grupp privata investerare av en praktisk anledning: att påskynda uppbyggnaden av portföljen utan att späda ut aktiekapitalet alltför mycket. Vi gör det med ett dedikerat instrument som skapar gemensamma incitament: strukturen belönar de som går in tidigt i ett enskilt projekt, och jag tar 10% av vinsten efter serviceavgifter. De juridiska detaljerna finns i memorandumet.",
-          "Den här sidan ger dig ramarna. De verkliga siffrorna, strukturen, modellerna, kontrakten - allt detta finns i memorandumet. Jag skickar det först efter ett kort inledande samtal, eftersom jag vill vara säker på att möjligheten och dina förväntningar stämmer överens.",
-          "Om du är intresserad, fyll i formuläret längst ner på sidan. Jag svarar personligen inom 48 timmar."
-        ],
-        "signature": "Lorenzo Oni-Joseph",
-        "role": "Grundare & VD, Jungle Rent S.r.l."
-      },
-      "thesis": {
-        "title": "Varför Torino, varför nu, varför vi",
-        "items": {
-          "market": {
-            "title": "Underservad marknad",
-            "body": "90 000 universitetsstudenter, 7 institutioner (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Kroniskt större efterfrågan på bostäder än det reguljära utbudet. Hyror från 350 € till 700 € för ett enkelrum beroende på område."
-          },
-          "asset": {
-            "title": "Defensiv tillgångsklass till ett överkomligt pris",
-            "body": "Tvårumslägenheter i målområdena (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) kan köpas idag för mellan 45 000 € och 130 000 €. Studentuthyrning genererar intäkter som stabiliseras av en oelastisk efterfrågan. Specifika ekonomiska prognoser finns i informationsmemorandumet."
-          },
-          "model": {
-            "title": "Hybridmodell",
-            "body": "10 månader studenter (september–juni) + sommarsäsong för turister (juli–augusti) på Airbnb och Booking. Mixen optimerar beläggningen och de totala intäkterna jämfört med enbart studentuthyrning."
-          }
-        }
-      },
-      "innovativa": {
-        "title": "Vad som är annorlunda eftersom vi är ett innovativt startup-företag",
-        "items": {
-          "fg": {
-            "title": "Förmånlig bankfinansiering",
-            "body": "Vi har tillgång till garantifonden för små och medelstora företag med 80 % gratis täckning för innovativa startup-företag. Detta gör att vi kan få lån utan säkerhet utan att pantsätta fastigheten, vilket håller den fri för framtida rekapitaliseringar eller avyttringar."
-          },
-          "tax": {
-            "title": "Skatteförmåner för investerare",
-            "body": "Investeringar i innovativa startup-företag kan dra nytta av ett IRPEF-avdrag på upp till 65 % av det investerade beloppet (de minimis-ordning, Reg. UE 2831/2023). Den faktiska tillämpningen beror på det använda instrumentet och investerarens profil. Detaljer finns i memorandumet."
-          },
-          "transparency": {
-            "title": "Obligatorisk transparens",
-            "body": "Som ett innovativt startup-företag är vi skyldiga att var sjätte månad publicera uppdaterade företagsdata i den särskilda sektionen i företagsregistret, och vi upprätthåller ett offentligt tillgängligt registerutdrag. Varje investerare kan självständigt verifiera företagets status."
-          }
-        }
-      },
-      "process": {
-        "title": "Från första kontakt till teckning",
-        "steps": [
-          {
-            "title": "Begär memorandumet",
-            "body": "Du fyller i formuläret längst ner på sidan."
-          },
-          {
-            "title": "Inledande samtal (30 minuter)",
-            "body": "Jag ringer dig personligen inom 48 timmar för att förstå din tidshorisont, din erfarenhet och dina frågor."
-          },
-          {
-            "title": "Ta emot materialet",
-            "body": "Informationsmemorandum, komplett avtalsdokumentation, affärsplan, finansiell modell i Excel, protokoll från bolagsorgan."
-          },
-          {
-            "title": "Tid för utvärdering",
-            "body": "Ingen press. Du kan involvera din revisor, en advokat, en betrodd rådgivare."
-          },
-          {
-            "title": "Signering",
-            "body": "Om du bestämmer dig för att gå vidare undertecknas teckningshandlingen personligen hos den utsedda notarien, i samband med betalningen. Du erhåller en serie av instrumentet som är dedikerad till det projekt du har valt."
-          }
-        ],
-        "callout": "Inget steg är automatiserat. Varje investerare som går in i Jungle Rent gör det efter att ha pratat direkt med Lorenzo."
-      },
-      "tax": {
-        "title": "Skattebehandling av investeringen",
-        "content": "Investeringar i innovativa startup-företag kan dra nytta av ett IRPEF-avdrag på 65 % enligt art. 29-bis DL 179/2012, inom de minimis-ordningen som infördes genom Reg. UE 2831/2023. Den faktiska tillämpningen beror på det använda instrumentet och investerarens profil. Lagstiftningen är i kraft till 2028-12-04, med förbehåll för förlängningar.",
-        "caveatTitle": "Viktigt",
-        "caveat": "Den faktiska tillämpbarheten och storleken på avdraget beror på individuella gränser för investeraren, den återstående tillgängligheten av företagets de minimis-tak och efterlevnaden av en rad villkor som anges i lagstiftningen. Ingen information på denna sida utgör skatterådgivning. Innan du fattar något beslut, rådfråga din betrodda revisor eller be vårt team att sätta dig i kontakt med den skattebyrå som hjälper Jungle Rent."
-      },
-      "risks": {
-        "title": "Vad som kan gå fel",
-        "items": [
-          {
-            "title": "Illikviditet",
-            "body": "Den skattemässiga inlåsningsperioden är 3 år. Det finns ingen organiserad andrahandsmarknad. Instrumentet kan överlåtas privat, men att hitta en köpare är ditt ansvar."
-          },
-          {
-            "title": "Koncentration på ett enskilt projekt",
-            "body": "Den serie av instrumentet du tecknar är exponerad mot resultatet av en enda fastighet (förvärv, renovering, beläggning, eventuell avyttring). Det finns ingen automatisk diversifiering över den samlade portföljen. Dessutom, vid publiceringen av denna sida äger Jungle Rent ännu inga fastigheter: affärsplanen bygger på förmågan att slutföra det första förvärvet i tid för läsåret 2026/2027 och att upprepa det effektivt."
-          },
-          {
-            "title": "Fastighetsmarknadsrisk",
-            "body": "Betydande förändringar på marknaden i Torino (priser, efterfrågan från studenter, regler för korttidsuthyrning) kan påverka portföljens avkastning."
-          },
-          {
-            "title": "Utspädningsrisk",
-            "body": "Framtida kapitalrundor kan späda ut din relativa andel, även om instrumentet inkluderar skyddade proportionella ekonomiska rättigheter."
-          },
-          {
-            "title": "Ingen garanti för avkastning",
-            "body": "Den förväntade avkastningen som presenteras i affärsplanen är prognoser. Den faktiska utvecklingen beror på det operativa genomförandet och marknadsförhållandena. En partiell eller total förlust av det investerade kapitalet är en rimlig möjlighet."
-          }
-        ]
-      },
-      "faq": {
-        "title": "Vanliga frågor",
-        "items": [
-          {
-            "q": "Investerar jag i företaget eller i en enskild fastighet?",
-            "a": "Avtalet är med Jungle Rent S.r.l. Den ekonomiska exponeringen är mot ett enskilt projekt: varje serie av instrumentet är kopplad till ett specifikt projekt, och din avkastning beror på det projektets resultat. Juridisk form och utdelningsmekanism: i memorandumet."
-          },
-          {
-            "q": "Vilket finansiellt instrument används?",
-            "a": "Ett dedikerat instrument för ekonomiskt deltagande, reserverat för kvalificerade investerare via en privat placering. Den exakta juridiska formen, de ekonomiska rättigheterna, utdelningsmekanismen och reglerna beskrivs i sin helhet i informationsmemorandumet, som levereras efter kvalificeringssamtalet."
-          },
-          {
-            "q": "Vad är en typisk investeringsstorlek?",
-            "a": "Det vägledande intervallet är 5 000–20 000 € per investerare. Lägre eller högre belopp utvärderas från fall till fall beroende på kapitalrundan och investerarens profil."
-          },
-          {
-            "q": "Kan jag få tillbaka mitt kapital före 3 år?",
-            "a": "Inlåsningsperioden på 3 år är ett krav i skattelagstiftningen (för att behålla IRPEF-avdraget). Tekniskt sett kan du överföra instrumentet till en annan investerare, men du skulle förlora skatteförmånen och behöva hitta en köpare på egen hand."
-          },
-          {
-            "q": "Hur fördelas vinsten?",
-            "a": "Avtalsdokumentationen föreskriver en ekonomisk fördelning som definieras från fall till fall, vanligtvis 90 % till investerare / 10 % till Jungle Rent efter serviceavgiften, enligt en detaljerad vattenfallsmodell i memorandumet. Utdelningen sker varannan månad."
-          },
-          {
-            "q": "Är Jungle Rent verkligen ett innovativt startup-företag eller är det en självdeklaration?",
-            "a": "Registreringen i den särskilda sektionen av företagsregistret skedde den 04/12/2025 och kan verifieras oberoende på portalen startup.registroimprese.it med P.IVA 13333450016."
-          },
-          {
-            "q": "Kan jag få se affärsplanen och den finansiella modellen?",
-            "a": "Ja, efter kvalificeringssamtalet. Det är kompletta dokument (skriftlig affärsplan 2025, Excel-modell med flera blad och känslighetsanalys, 5-årsprognoser)."
-          },
-          {
-            "q": "Vem sköter bokföringen och granskar räkenskaperna?",
-            "a": "Skatterådgivning från byrån Starola Cantino Bono i Torino. Årsredovisningen är offentlig i registerutdraget."
-          },
-          {
-            "q": "Vad händer om Jungle Rent inte lyckas slutföra det första förvärvet före september 2026?",
-            "a": "Det insamlade kapitalet behålls på företagskontot i väntan på nästa marknadsfönster, eller återbetalas till investerarna om de begär det, efter avdrag för dokumenterade kostnader. Denna klausul finns i avtalsdokumentationen."
-          }
-        ]
-      },
-      "form": {
-        "title": "Ta emot informationsmemorandumet",
-        "subtitle": "Jag svarar personligen inom 48 timmar. Inga nyhetsbrev, ingen automatisk uppföljning.",
-        "fields": {
-          "fullName": "För- och efternamn",
-          "email": "E-post",
-          "phone": "Telefon (valfritt)",
-          "phoneHint": "Används endast om du uttryckligen begär att bli uppringd",
-          "taxResidence": "Skattehemvist",
-          "ticketRange": "Vägledande investeringsintervall",
-          "horizon": "Tidshorisont för beslut",
-          "prevExperience": "Har du tidigare investerat i innovativa startup-företag eller onoterade fastigheter?",
-          "source": "Hur hörde du talas om oss? (valfritt)",
-          "notes": "Anteckningar eller specifika frågor (valfritt)",
-          "privacyConsent": "Jag har läst och godkänner integritetspolicyn (GDPR).",
-          "ownInitiative": "Jag förklarar att jag har begärt denna information på eget initiativ och inte som ett resultat av offentlig marknadsföring eller individuell uppmaning. Jag förstår att investeringar i finansiella instrument från innovativa startup-företag medför risker, inklusive risken för total förlust av kapitalet."
-        },
-        "options": {
-          "residence": {
-            "IT": "Italien",
-            "CH": "Schweiz",
-            "EU": "Annat EU-land",
-            "OTHER": "Utanför EU"
-          },
-          "ticket": {
-            "5-10": "5 000–10 000 €",
-            "10-20": "10 000–20 000 €",
-            "20-50": "20 000–50 000 €",
-            "50+": "Över 50 000 €",
-            "TBD": "Jag föredrar att bestämma det efter att ha sett materialet"
-          },
-          "horizon": {
-            "WEEKS": "Under de närmaste veckorna",
-            "1-3M": "1–3 månader",
-            "3-6M": "3–6 månader",
-            "6M+": "Mer än 6 månader"
-          },
-          "experience": {
-            "YES": "Ja",
-            "NO": "Nej",
-            "PARTIAL": "Delvis"
-          }
-        },
-        "submit": "Skicka förfrågan",
-        "submitting": "Skickar...",
-        "success": "Tack. Lorenzo svarar inom 48 timmar till den e-postadress du angav. Under tiden kan du utforska artiklarna om marknaden i Torino.",
-        "error": "Kunde inte skicka. Försök igen eller skriv till junglerententeprise@gmail.com.",
-        "selectPlaceholder": "Välj...",
-        "steps": {
-          "progress": "Steg {{current}} av {{total}}",
-          "step1Title": "Låt oss börja lära känna varandra",
-          "step1Subtitle": "Bara 30 sekunder. Dina kontaktuppgifter förblir privata.",
-          "step2Title": "Hjälp oss att anpassa förslaget",
-          "step2Subtitle": "Så att Lorenzo kan förbereda relevant material för dig.",
-          "step3Title": "Sista steget",
-          "step3Subtitle": "Juridiska bekräftelser och samtycken som krävs enligt lag.",
-          "next": "Fortsätt",
-          "back": "Tillbaka",
-          "autoSaved": "Utkast sparat automatiskt"
-        }
-      },
-      "disclaimer": {
-        "p1": "Informationen på denna sida är endast avsedd för informationsändamål och utgör inte ett offentligt erbjudande av finansiella produkter enligt art. 94 i D.Lgs. 58/1998 (TUF), inte heller en uppmaning till investering eller finansiell, skattemässig eller juridisk rådgivning.",
-        "p2": "Det finansiella instrument som beskrivs är inte tillgängligt för teckning online. Eventuell teckning sker uteslutande genom en privat placering, reserverad för ett begränsat antal individuellt kvalificerade investerare, efter leverans av det fullständiga informationsmemorandumet och avtalsdokumentationen, i enlighet med de undantag som föreskrivs i art. 100 TUF.",
-        "p3": "Avkastningen som illustreras i informationsmaterialet är prognoser baserade på modellantaganden. Den faktiska utvecklingen beror på portföljens resultat och garanteras inte på något sätt. Investeringen medför risker, inklusive illikviditetsrisk, fastighetsmarknadsrisk, operativ risk, utspädningsrisk och möjligheten till total förlust av det investerade kapitalet.",
-        "p4": "Den beskrivna skattebehandlingen är föremål för individuella villkor, regulatoriska gränser och möjliga lagändringar. Innan något investeringsbeslut fattas är investeraren skyldig att konsultera sin egen oberoende skatte- och finansrådgivare.",
-        "company": "Jungle Rent S.r.l. · Momsnr 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin, Italien · junglerententeprise@gmail.com"
-      }
-    }
+    "whyInvestTitle": "Varför investera med oss"
   },
   "investorExitIntent": {
     "badge": "Innan du går...",
@@ -2054,16 +2054,15 @@
     "sectionTitle": "Upptäck Turin som en lokalbo"
   },
   "trustBadge": {
-    "guarantee": "Inkuberade i Turin universitets ekosystem, vilket garanterar professionalism och tillförlitlighet i varje transaktion",
-    "incubator": "Företagsinkubator vid Turin Universitet",
-    "inlineCta": "Vill du veta mer?",
-    "learnMore": "Läs mer om 2i3T",
-    "sectionLabel": "Institutionellt partnerskap",
-    "support": "Support 24/7",
-    "supportedBy": "Med stöd av 2i3T",
-    "title": "Din säkerhet är vår prioritet",
-    "transparent": "Total transparens",
-    "verified": "Certifierade kontrakt"
+    "aria": "Kapitel 06 — Förtroende",
+    "chapter": "Förtroende",
+    "headlineEmphasis": "verkligt",
+    "headlinePost": " företag, med en verklig meritlista.",
+    "headlinePre": "Ett",
+    "incubatedAria": "Inkuberat vid 2i3T — besök webbplatsen",
+    "incubatedLabel": "Inkuberat vid",
+    "quote": "Jungle Rent föddes ur mitt eget behov av att spara pengar som student. Att optimera användning och respons för att göra uthyrning hållbar är det som gör investeringen attraktiv.",
+    "role": "Grundare, Jungle Rent"
   },
   "video": {
     "badge": "2 minuter",
