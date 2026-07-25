@@ -1,9 +1,16 @@
-## Cambio nel capitolo "Fiducia" (homepage)
+## Sostituzione testo nel capitolo "Fiducia" (TrustBadge)
 
-In `src/components/TrustBadge.tsx`:
+Nel file `src/components/TrustBadge.tsx`, capitolo 06 "Una società vera, con un percorso vero", sostituire il paragrafo descrittivo attuale ("Jungle Rent S.r.l. è una start-up innovativa incubata nell'acceleratore dell'Università di Torino…") con il nuovo testo firmato:
 
-1. Rimuovere la lista testuale di credenziali in fondo alla sezione ("START-UP INNOVATIVA · INCUBATA IN 2i3T · UNIVERSITÀ DI TORINO · REGISTRO IMPRESE DI TORINO" — e la versione EN equivalente), inclusa la costante `credentials` e il blocco `<ul>`.
-2. Al suo posto inserire il logo 2i3T (`src/assets/2i3t-logo-green.png`, già usato in ThankYou) come link cliccabile a **https://www.2i3t.it/** (`target="_blank"`, `rel="noopener noreferrer"`).
-3. Styling minimale coerente con la scena: altezza ~40–48px, opacità leggera, con micro-etichetta accessibile ("Incubata in 2i3T" / "Incubated at 2i3T") come `aria-label` e piccola label testuale opzionale sopra/sotto (es. "Incubata in" · logo) per mantenere il contesto senza reintrodurre la lista.
+> Jungle Rent nasce da un mio bisogno di risparmiare come studente. Ottimizzare l'uso e la risposta per rendere l'affitto sostenibile e l'investimento appetibile.
+>
+> — Lorenzo Oni-Joseph
 
-Nessun altro file toccato.
+Dettagli:
+
+- Testo IT nuovo come sopra.
+- Versione EN equivalente: "Jungle Rent was born from my own need to save money as a student. Optimising use and response to make renting sustainable is what makes the investment attractive. — Lorenzo Oni-Joseph"
+- La firma "— Lorenzo Oni-Joseph" resa come blocco tipografico coerente con lo stile editoriale della scena (piccola linea decorativa + nome in `font-semibold`, ruolo "Founder, Jungle Rent" sotto, stessa impostazione già usata in `ClosingManifesto`).
+- Il logo 2i3T cliccabile aggiunto poco fa resta invariato sotto.
+
+Nessun altro file/sezione toccato.

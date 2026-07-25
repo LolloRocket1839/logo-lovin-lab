@@ -45,12 +45,25 @@ export const TrustBadge = () => {
         </SceneReveal>
 
         <SceneReveal delay={180}>
-          <p className="mt-10 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
+          <blockquote className="mt-10 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed italic">
             {isItalian
-              ? "Jungle Rent S.r.l. è una start-up innovativa incubata nell'acceleratore dell'Università di Torino. Non un'idea su una slide — una società registrata, operativa, con un fondatore che risponde di persona."
-              : "Jungle Rent S.r.l. is a certified innovative startup incubated at the University of Turin's accelerator. Not an idea on a slide — a registered, operating company with a founder who answers in person."}
-          </p>
+              ? "Jungle Rent nasce da un mio bisogno di risparmiare come studente. Ottimizzare l'uso e la risposta per rendere l'affitto sostenibile è l'investimento appetibile."
+              : "Jungle Rent was born from my own need to save money as a student. Optimising use and response to make renting sustainable is what makes the investment attractive."}
+          </blockquote>
         </SceneReveal>
+
+        <SceneReveal delay={220}>
+          <div className="mt-8 flex items-center gap-4">
+            <div aria-hidden="true" className="w-12 h-px bg-primary/40" />
+            <div>
+              <p className="text-sm font-semibold text-foreground not-italic">Lorenzo Oni-Joseph</p>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                {isItalian ? "Founder, Jungle Rent" : "Founder, Jungle Rent"}
+              </p>
+            </div>
+          </div>
+        </SceneReveal>
+
 
         <SceneReveal delay={260}>
           <div className="mt-12 flex flex-col items-start gap-3">
