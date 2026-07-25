@@ -56,7 +56,7 @@ const FairRentPledge = () => {
           title: "Trasparenza totale sui costi",
           body: "Zero commissioni occulte a inquilino o venditore. Il servizio di stesura contratti è gratuito. Tutto quello che paghi è scritto prima di firmare, in una sola pagina.",
           proofLabel: "Come vendi con noi",
-          proofHref: "/vendere-senza-agenzia",
+          proofHref: "/vendere-casa-senza-agenzia-torino",
         },
         {
           icon: ShieldCheck,
@@ -101,7 +101,7 @@ const FairRentPledge = () => {
           title: "Full cost transparency",
           body: "Zero hidden fees for tenants or sellers. Our contract drafting service is free. Every euro you pay is written down before you sign, on a single page.",
           proofLabel: "How you sell with us",
-          proofHref: "/vendere-senza-agenzia",
+          proofHref: "/vendere-casa-senza-agenzia-torino",
         },
         {
           icon: ShieldCheck,
