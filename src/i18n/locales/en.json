@@ -220,8 +220,8 @@
     "contact": "Contact us",
     "getStarted": "Get started",
     "learnMore": "Learn more",
-    "talkToLorenzo": "Talk to Lorenzo",
-    "requestInfo": "Request info"
+    "requestInfo": "Request info",
+    "talkToLorenzo": "Talk to Lorenzo"
   },
   "examSessionPlanner": {
     "addExam": {
@@ -452,6 +452,7 @@
     "badgeExplanation": "You invest in a specific apartment acquired by Jungle Rent. Zero management, bi-monthly returns.",
     "benefits": "benefits",
     "contactLorenzo": "Contact Lorenzo",
+    "ctaSocialProofB": "127 investors already on the waitlist",
     "days": "days",
     "discover": "Discover",
     "discoverOpportunity": "Discover the opportunity",
@@ -505,7 +506,6 @@
     "socialProof": "2-room apt in Turin · €45-70K · Register your interest",
     "startInvesting": "Join our first deal",
     "startInvestingB": "See how the investment works",
-    "ctaSocialProofB": "127 investors already on the waitlist",
     "studentSubtitle": "Save on rent!",
     "studentTitle": "Are you a student?",
     "students": "students",
@@ -654,6 +654,295 @@
     "flowStep3": "Portfolio",
     "flowStep3Sub": "Strategic",
     "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator",
+    "landing": {
+      "disclaimer": {
+        "company": "Jungle Rent S.r.l. · VAT 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin · junglerententeprise@gmail.com",
+        "p1": "The information on this page is for informational purposes only and does not constitute a public offering of financial products under art. 94 of Italian Legislative Decree 58/1998 (TUF — Italian Consolidated Financial Act), nor an investment solicitation, nor financial, tax or legal advice.",
+        "p2": "The financial instrument described is not available for online subscription. Any subscription occurs exclusively via private placement, reserved to a restricted number of individually qualified investors, after delivery of the complete information memorandum and contractual documentation, in compliance with the exemptions provided by art. 100 TUF.",
+        "p3": "Returns illustrated in informational materials are projections based on model assumptions. Actual performance depends on portfolio performance and is in no way guaranteed. Investment carries risks, including illiquidity risk, real estate market risk, operational execution risk, dilution risk, and the possibility of total loss of invested capital.",
+        "p4": "The tax treatment described is subject to individual conditions, regulatory limits and possible legislative changes. Before any investment decision, the investor must consult their own independent tax and financial advisor."
+      },
+      "emailFirst": {
+        "alsoQualify": "Also want the memorandum? Fill out the qualification form",
+        "error": "Something went wrong. Try again in a few minutes or message us on WhatsApp.",
+        "fields": {
+          "email": "Your email",
+          "name": "Name (optional)"
+        },
+        "preferFull": "I'd rather fill out the full form to receive the memorandum",
+        "privacy": "We process your data only to contact you about this opportunity (GDPR). You can unsubscribe at any time.",
+        "saveName": "Save",
+        "skipName": "Skip",
+        "submit": "Keep me updated",
+        "submitting": "Sending…",
+        "subtitle": "Just your email. We write when we open. No newsletter, no spam.",
+        "success": "Thank you. We'll personally notify you at the next opening.",
+        "successNamePrompt": "What's your name? It helps us follow up better.",
+        "title": "Want to be notified about the next operation?",
+        "trustLine": "No spam · Reply within 24h · Lorenzo replies personally"
+      },
+      "faq": {
+        "items": [
+          {
+            "a": "The contract is with Jungle Rent S.r.l. The economic exposure is to the single operation: each series of the instrument is linked to one specific deal, and your return depends on the performance of that deal. Legal form and distribution mechanics: in the memorandum.",
+            "q": "Am I investing in the company or in a single property?"
+          },
+          {
+            "a": "A dedicated economic-participation instrument, reserved to qualified investors via private placement. The exact legal form, economic rights, distribution mechanism and regulation are described in full in the information memorandum, delivered after the qualification call.",
+            "q": "Which financial instrument is used?"
+          },
+          {
+            "a": "The indicative range is €5,000–€20,000 per investor. Smaller or larger tickets are evaluated case by case based on round and investor profile.",
+            "q": "What is the typical ticket?"
+          },
+          {
+            "a": "The 3-year lock-up is a tax requirement (to keep the IRPEF deduction). Technically you can transfer the instrument to another investor, but you would lose the tax incentive and would need to find a buyer independently.",
+            "q": "Can I recover capital before 3 years?"
+          },
+          {
+            "a": "The contractual documentation provides for an economic split defined case by case, typically 90% investors / 10% Jungle Rent after the servicing fee, according to a waterfall detailed in the memorandum. Distribution is bi-monthly.",
+            "q": "How are profits distributed?"
+          },
+          {
+            "a": "Registration in the special section of the Business Register took place on 04/12/2025 and is independently verifiable on startup.registroimprese.it with VAT 13333450016.",
+            "q": "Is Jungle Rent really an innovative startup or is it self-declared?"
+          },
+          {
+            "a": "Yes, after the qualification call. They are complete documents (2025 business plan, multi-sheet Excel model with sensitivity analysis, 5-year projections).",
+            "q": "Can I see the business plan and financial model?"
+          },
+          {
+            "a": "Tax assistance from the Starola Cantino Bono firm in Turin. Annual financial statements are public on the chamber registration.",
+            "q": "Who handles accounting and audits?"
+          },
+          {
+            "a": "Capital raised is held in the corporate account awaiting the next market window, or returned to investors upon their request, net of documented costs. This clause is provided for in the contractual documentation.",
+            "q": "What happens if Jungle Rent fails to close the first acquisition by September 2026?"
+          }
+        ],
+        "title": "Frequently asked questions"
+      },
+      "form": {
+        "error": "Submission failed. Please retry or write to junglerententeprise@gmail.com.",
+        "fields": {
+          "email": "Email",
+          "fullName": "Full name",
+          "horizon": "Time horizon to decide",
+          "notes": "Notes or specific questions (optional)",
+          "ownInitiative": "I declare I requested this information on my own initiative and not following public promotion or individual solicitation. I understand investment in financial instruments of an innovative startup involves risks including the possible total loss of capital.",
+          "phone": "Phone (optional)",
+          "phoneHint": "Used only if you explicitly request a callback",
+          "prevExperience": "Have you already invested in innovative startups or unlisted real estate?",
+          "privacyConsent": "I have read and accept the privacy notice (GDPR).",
+          "source": "How did you hear about us? (optional)",
+          "taxResidence": "Tax residence",
+          "ticketRange": "Indicative ticket range"
+        },
+        "options": {
+          "experience": {
+            "NO": "No",
+            "PARTIAL": "Partially",
+            "YES": "Yes"
+          },
+          "horizon": {
+            "1-3M": "1–3 months",
+            "3-6M": "3–6 months",
+            "6M+": "More than 6 months",
+            "WEEKS": "In the next few weeks"
+          },
+          "residence": {
+            "CH": "Switzerland",
+            "EU": "Other EU",
+            "IT": "Italy",
+            "OTHER": "Non-EU"
+          },
+          "ticket": {
+            "10-20": "€10,000–€20,000",
+            "20-50": "€20,000–€50,000",
+            "5-10": "€5,000–€10,000",
+            "50+": "Over €50,000",
+            "TBD": "I prefer to define it after seeing the materials"
+          }
+        },
+        "selectPlaceholder": "Select…",
+        "steps": {
+          "autoSaved": "Draft saved automatically",
+          "back": "Back",
+          "next": "Continue",
+          "progress": "Step {{current}} of {{total}}",
+          "step1Subtitle": "30 seconds. Your details stay private.",
+          "step1Title": "Let's start",
+          "step2Subtitle": "So Lorenzo can prepare materials relevant to you.",
+          "step2Title": "Help us tailor the proposal",
+          "step3Subtitle": "Legal confirmations required by regulation.",
+          "step3Title": "Last step"
+        },
+        "submit": "Send request",
+        "submitting": "Sending…",
+        "subtitle": "I respond personally within 48 hours. No newsletter, no automated follow-up.",
+        "success": "Thank you. Lorenzo will reply within 48 hours at the email you provided. In the meantime, feel free to explore our articles on the Turin market.",
+        "title": "Receive the information memorandum"
+      },
+      "founder": {
+        "paragraphs": [
+          "Hi,",
+          "I'm Lorenzo, founder of Jungle Rent. I built this company with a simple idea: Turin has 90,000 university students and a real estate market that is still accessible. Buying well, renovating well, and managing well, you can build solid cash flows in a historically defensive asset class.",
+          "I open participation to a small group of private investors for a practical reason: accelerate portfolio construction without diluting share capital excessively. We do this with a dedicated instrument that aligns incentives: the structure rewards those who join early on the single operation, and I take 10% of profits after servicing. Legal details are in the memorandum.",
+          "This page gives you the perimeter. The real numbers, the structure, the models, the contracts — all that is in the memorandum. I send it only after a brief introductory call, because I want to make sure the opportunity and your expectations are compatible.",
+          "If you are interested, fill out the form at the bottom of the page. I'll respond personally within 48 hours."
+        ],
+        "role": "Founder & CEO, Jungle Rent S.r.l.",
+        "signature": "Lorenzo Oni-Joseph",
+        "title": "A letter from the founder"
+      },
+      "hero": {
+        "cta": "Request the information memorandum",
+        "ctaNote": "Subscription does not happen online. The first step is an information request: receive the memorandum, evaluate it calmly, decide afterwards.",
+        "ctaPrimary": "Talk to Lorenzo",
+        "ctaSecondary": "Get the memorandum",
+        "eyebrow": "Reserved opportunity · Private placement",
+        "h1": "Invest in Jungle Rent. With exposure to the single property operation.",
+        "h1Accent": "single property operation",
+        "metrics": {
+          "payoutLabel": "Payout frequency",
+          "payoutValue": "Every 2 months",
+          "ticketLabel": "Minimum ticket",
+          "ticketValue": "€5k",
+          "yieldLabel": "Payout model",
+          "yieldValue": "Bi-monthly"
+        },
+        "subhead": "Jungle Rent is a Turin-based innovative startup. We buy, renovate and manage apartments for university students. We open economic participation in the portfolio to a limited number of private investors through a dedicated financial instrument. Technical details of the instrument are described in the information memorandum."
+      },
+      "innovativa": {
+        "items": {
+          "fg": {
+            "body": "We access the SME Guarantee Fund with free 80% coverage for innovative startups. This lets us obtain unsecured loans without mortgaging the property, keeping it free for future recapitalizations or disposals.",
+            "title": "Privileged bank financing"
+          },
+          "tax": {
+            "body": "Investments in innovative startups may benefit from an IRPEF deduction up to 65% of the invested amount (de minimis regime, EU Reg. 2831/2023). Actual applicability depends on the instrument used and on the investor's profile. Details in the memorandum. Non-Italian tax residents may not benefit from the 65% IRPEF deduction. Tax treatment applicable to foreign investors depends on individual residence and should be assessed with a local tax advisor.",
+            "title": "Tax incentive for investors"
+          },
+          "transparency": {
+            "body": "As an innovative startup we are required to publish updated company data every six months on the special section of the Business Register, and we keep a publicly consultable chamber registration. Every investor can independently verify the company's status.",
+            "title": "Mandatory transparency"
+          }
+        },
+        "title": "What changes because we are an innovative startup"
+      },
+      "meta": {
+        "description": "Jungle Rent opens portfolio participation to a limited number of private investors via a dedicated financial instrument. Request the information memorandum.",
+        "title": "Invest in Jungle Rent · Turin student housing"
+      },
+      "process": {
+        "callout": "No step is automated. Every investor who joins Jungle Rent does so after speaking with Lorenzo directly.",
+        "steps": [
+          {
+            "body": "Fill out the form at the bottom of the page.",
+            "title": "Request the memorandum"
+          },
+          {
+            "body": "I personally call you back within 48 hours to understand your horizon, your experience, your questions.",
+            "title": "Introductory call (30 minutes)"
+          },
+          {
+            "body": "Information memorandum, full contractual documentation, business plan, Excel financial model, corporate body minutes.",
+            "title": "Receive the materials"
+          },
+          {
+            "body": "No pressure. You can involve your accountant, lawyer, or trusted advisor.",
+            "title": "Time to evaluate"
+          },
+          {
+            "body": "If you decide to proceed, the subscription deed is signed in person before the appointed notary, simultaneously with the payment. You receive a series of the instrument dedicated to the operation you have chosen.",
+            "title": "Signature"
+          }
+        ],
+        "title": "From first contact to subscription"
+      },
+      "quickBar": {
+        "email": "Write to us",
+        "label": "Want to talk directly?",
+        "whatsapp": "WhatsApp Lorenzo"
+      },
+      "risks": {
+        "items": [
+          {
+            "body": "The tax lock-up is 3 years. There is no organized secondary market. The instrument is privately transferable, but finding a buyer is your responsibility.",
+            "title": "Illiquidity"
+          },
+          {
+            "body": "The series of the instrument you subscribe to is exposed to the result of a single property (purchase, renovation, occupancy, eventual disposal). There is no automatic diversification across the aggregate portfolio. Furthermore, at the time of publication of this page, Jungle Rent does not yet own properties: the business plan relies on the ability to close the first acquisition in time for academic year 2026/2027 and to repeat it efficiently.",
+            "title": "Single-operation concentration"
+          },
+          {
+            "body": "Significant changes in the Turin market (prices, student demand, short-term rental regulation) may impact portfolio returns.",
+            "title": "Real estate market risk"
+          },
+          {
+            "body": "Future capital rounds could dilute your relative share, although the instrument provides proportionally protected economic rights.",
+            "title": "Dilution risk"
+          },
+          {
+            "body": "Expected returns presented in the business plan are projections. Actual performance will depend on operational execution and market conditions. A partial or total loss of invested capital is reasonably possible.",
+            "title": "No guaranteed returns"
+          }
+        ],
+        "title": "What can go wrong"
+      },
+      "socialProof": {
+        "countPrefix": "{{count}} people",
+        "countPrefix_one": "{{count}} person",
+        "countPrefix_other": "{{count}} people",
+        "countSuffix": "have requested info in the last 4 weeks",
+        "startupLabel": "Innovative Startup",
+        "startupSuffix": "registered with CCIAA Turin · REA TO-1355899"
+      },
+      "tax": {
+        "caveat": "The actual applicability and measure of the deduction depends on individual investor limits, on the residual de minimis allowance of the company, and on compliance with a series of conditions provided by the regulations. No information on this page constitutes tax advice. Before any decision, consult your trusted accountant or ask our team to put you in touch with the tax firm assisting Jungle Rent. Non-Italian tax residents may not benefit from the 65% IRPEF deduction.",
+        "caveatTitle": "Important",
+        "content": "Investments in innovative startups may benefit from the 65% IRPEF deduction pursuant to art. 29-bis DL 179/2012, in the de minimis regime introduced by EU Reg. 2831/2023. Actual applicability depends on the instrument used and on the investor's profile. The legislation is in force until 04/12/2028, subject to extensions.",
+        "title": "Tax treatment of the investment"
+      },
+      "thesis": {
+        "items": {
+          "asset": {
+            "body": "Two-room apartments in target areas (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) trade today between €45,000 and €130,000. Student-rental income is stabilized by inelastic demand. Exact economic projections are shared in the information memorandum.",
+            "title": "Defensive asset class at accessible prices"
+          },
+          "market": {
+            "body": "90,000 university students, 7 institutions (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Housing demand chronically exceeds regular supply. Rents range from €350 to €700 per single room depending on the area.",
+            "title": "Underserved market"
+          },
+          "model": {
+            "body": "10 student months (September–June) + summer tourist season (July–August) on Airbnb and Booking. The mix optimizes occupancy and overall income versus a student-only strategy.",
+            "title": "Hybrid model"
+          }
+        },
+        "title": "Why Turin, why now, why us"
+      },
+      "trust": {
+        "items": {
+          "incubator": {
+            "label": "2i3T",
+            "value": "University of Turin incubator"
+          },
+          "mise": {
+            "label": "Innovative startup",
+            "value": "Registered 04/12/2025"
+          },
+          "rea": {
+            "label": "Turin Chamber of Commerce",
+            "value": "REA TO-1355899"
+          },
+          "vat": {
+            "label": "VAT",
+            "value": "13333450016"
+          }
+        },
+        "title": "Publicly verifiable"
+      }
+    },
     "marketStats": {
       "disclaimer": "2025 estimates - Source: Savills Research",
       "marketPotential": "market potential",
@@ -683,296 +972,7 @@
     "waitlistCta": "Join waitlist",
     "waitlistSubtitle": "Receive exclusive updates on real estate investment opportunities in Turin",
     "waitlistTitle": "Join investor waitlist",
-    "whyInvestTitle": "Why invest with us",
-    "landing": {
-      "meta": {
-        "title": "Invest in Jungle Rent · Turin student housing",
-        "description": "Jungle Rent opens portfolio participation to a limited number of private investors via a dedicated financial instrument. Request the information memorandum."
-      },
-      "hero": {
-        "eyebrow": "Reserved opportunity · Private placement",
-        "h1": "Invest in Jungle Rent. With exposure to the single property operation.",
-        "subhead": "Jungle Rent is a Turin-based innovative startup. We buy, renovate and manage apartments for university students. We open economic participation in the portfolio to a limited number of private investors through a dedicated financial instrument. Technical details of the instrument are described in the information memorandum.",
-        "cta": "Request the information memorandum",
-        "ctaPrimary": "Talk to Lorenzo",
-        "ctaSecondary": "Get the memorandum",
-        "ctaNote": "Subscription does not happen online. The first step is an information request: receive the memorandum, evaluate it calmly, decide afterwards.",
-        "metrics": {
-          "yieldLabel": "Payout model",
-          "yieldValue": "Bi-monthly",
-          "payoutLabel": "Payout frequency",
-          "payoutValue": "Every 2 months",
-          "ticketLabel": "Minimum ticket",
-          "ticketValue": "€5k"
-        },
-        "h1Accent": "single property operation"
-      },
-      "quickBar": {
-        "label": "Want to talk directly?",
-        "whatsapp": "WhatsApp Lorenzo",
-        "email": "Write to us"
-      },
-      "socialProof": {
-        "countPrefix_one": "{{count}} person",
-        "countPrefix_other": "{{count}} people",
-        "countPrefix": "{{count}} people",
-        "countSuffix": "have requested info in the last 4 weeks",
-        "startupLabel": "Innovative Startup",
-        "startupSuffix": "registered with CCIAA Turin · REA TO-1355899"
-      },
-      "emailFirst": {
-        "title": "Want to be notified about the next operation?",
-        "subtitle": "Just your email. We write when we open. No newsletter, no spam.",
-        "fields": {
-          "name": "Name (optional)",
-          "email": "Your email"
-        },
-        "submit": "Keep me updated",
-        "submitting": "Sending…",
-        "preferFull": "I'd rather fill out the full form to receive the memorandum",
-        "alsoQualify": "Also want the memorandum? Fill out the qualification form",
-        "privacy": "We process your data only to contact you about this opportunity (GDPR). You can unsubscribe at any time.",
-        "trustLine": "No spam · Reply within 24h · Lorenzo replies personally",
-        "success": "Thank you. We'll personally notify you at the next opening.",
-        "successNamePrompt": "What's your name? It helps us follow up better.",
-        "saveName": "Save",
-        "skipName": "Skip",
-        "error": "Something went wrong. Try again in a few minutes or message us on WhatsApp."
-      },
-      "trust": {
-        "title": "Publicly verifiable",
-        "items": {
-          "rea": {
-            "label": "Turin Chamber of Commerce",
-            "value": "REA TO-1355899"
-          },
-          "mise": {
-            "label": "Innovative startup",
-            "value": "Registered 04/12/2025"
-          },
-          "incubator": {
-            "label": "2i3T",
-            "value": "University of Turin incubator"
-          },
-          "vat": {
-            "label": "VAT",
-            "value": "13333450016"
-          }
-        }
-      },
-      "founder": {
-        "title": "A letter from the founder",
-        "paragraphs": [
-          "Hi,",
-          "I'm Lorenzo, founder of Jungle Rent. I built this company with a simple idea: Turin has 90,000 university students and a real estate market that is still accessible. Buying well, renovating well, and managing well, you can build solid cash flows in a historically defensive asset class.",
-          "I open participation to a small group of private investors for a practical reason: accelerate portfolio construction without diluting share capital excessively. We do this with a dedicated instrument that aligns incentives: the structure rewards those who join early on the single operation, and I take 10% of profits after servicing. Legal details are in the memorandum.",
-          "This page gives you the perimeter. The real numbers, the structure, the models, the contracts — all that is in the memorandum. I send it only after a brief introductory call, because I want to make sure the opportunity and your expectations are compatible.",
-          "If you are interested, fill out the form at the bottom of the page. I'll respond personally within 48 hours."
-        ],
-        "signature": "Lorenzo Oni-Joseph",
-        "role": "Founder & CEO, Jungle Rent S.r.l."
-      },
-      "thesis": {
-        "title": "Why Turin, why now, why us",
-        "items": {
-          "market": {
-            "title": "Underserved market",
-            "body": "90,000 university students, 7 institutions (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Housing demand chronically exceeds regular supply. Rents range from €350 to €700 per single room depending on the area."
-          },
-          "asset": {
-            "title": "Defensive asset class at accessible prices",
-            "body": "Two-room apartments in target areas (Lingotto, Aurora, Cenisia, San Salvario, Vanchiglia) trade today between €45,000 and €130,000. Student-rental income is stabilized by inelastic demand. Exact economic projections are shared in the information memorandum."
-          },
-          "model": {
-            "title": "Hybrid model",
-            "body": "10 student months (September–June) + summer tourist season (July–August) on Airbnb and Booking. The mix optimizes occupancy and overall income versus a student-only strategy."
-          }
-        }
-      },
-      "innovativa": {
-        "title": "What changes because we are an innovative startup",
-        "items": {
-          "fg": {
-            "title": "Privileged bank financing",
-            "body": "We access the SME Guarantee Fund with free 80% coverage for innovative startups. This lets us obtain unsecured loans without mortgaging the property, keeping it free for future recapitalizations or disposals."
-          },
-          "tax": {
-            "title": "Tax incentive for investors",
-            "body": "Investments in innovative startups may benefit from an IRPEF deduction up to 65% of the invested amount (de minimis regime, EU Reg. 2831/2023). Actual applicability depends on the instrument used and on the investor's profile. Details in the memorandum. Non-Italian tax residents may not benefit from the 65% IRPEF deduction. Tax treatment applicable to foreign investors depends on individual residence and should be assessed with a local tax advisor."
-          },
-          "transparency": {
-            "title": "Mandatory transparency",
-            "body": "As an innovative startup we are required to publish updated company data every six months on the special section of the Business Register, and we keep a publicly consultable chamber registration. Every investor can independently verify the company's status."
-          }
-        }
-      },
-      "process": {
-        "title": "From first contact to subscription",
-        "steps": [
-          {
-            "title": "Request the memorandum",
-            "body": "Fill out the form at the bottom of the page."
-          },
-          {
-            "title": "Introductory call (30 minutes)",
-            "body": "I personally call you back within 48 hours to understand your horizon, your experience, your questions."
-          },
-          {
-            "title": "Receive the materials",
-            "body": "Information memorandum, full contractual documentation, business plan, Excel financial model, corporate body minutes."
-          },
-          {
-            "title": "Time to evaluate",
-            "body": "No pressure. You can involve your accountant, lawyer, or trusted advisor."
-          },
-          {
-            "title": "Signature",
-            "body": "If you decide to proceed, the subscription deed is signed in person before the appointed notary, simultaneously with the payment. You receive a series of the instrument dedicated to the operation you have chosen."
-          }
-        ],
-        "callout": "No step is automated. Every investor who joins Jungle Rent does so after speaking with Lorenzo directly."
-      },
-      "tax": {
-        "title": "Tax treatment of the investment",
-        "content": "Investments in innovative startups may benefit from the 65% IRPEF deduction pursuant to art. 29-bis DL 179/2012, in the de minimis regime introduced by EU Reg. 2831/2023. Actual applicability depends on the instrument used and on the investor's profile. The legislation is in force until 04/12/2028, subject to extensions.",
-        "caveatTitle": "Important",
-        "caveat": "The actual applicability and measure of the deduction depends on individual investor limits, on the residual de minimis allowance of the company, and on compliance with a series of conditions provided by the regulations. No information on this page constitutes tax advice. Before any decision, consult your trusted accountant or ask our team to put you in touch with the tax firm assisting Jungle Rent. Non-Italian tax residents may not benefit from the 65% IRPEF deduction."
-      },
-      "risks": {
-        "title": "What can go wrong",
-        "items": [
-          {
-            "title": "Illiquidity",
-            "body": "The tax lock-up is 3 years. There is no organized secondary market. The instrument is privately transferable, but finding a buyer is your responsibility."
-          },
-          {
-            "title": "Single-operation concentration",
-            "body": "The series of the instrument you subscribe to is exposed to the result of a single property (purchase, renovation, occupancy, eventual disposal). There is no automatic diversification across the aggregate portfolio. Furthermore, at the time of publication of this page, Jungle Rent does not yet own properties: the business plan relies on the ability to close the first acquisition in time for academic year 2026/2027 and to repeat it efficiently."
-          },
-          {
-            "title": "Real estate market risk",
-            "body": "Significant changes in the Turin market (prices, student demand, short-term rental regulation) may impact portfolio returns."
-          },
-          {
-            "title": "Dilution risk",
-            "body": "Future capital rounds could dilute your relative share, although the instrument provides proportionally protected economic rights."
-          },
-          {
-            "title": "No guaranteed returns",
-            "body": "Expected returns presented in the business plan are projections. Actual performance will depend on operational execution and market conditions. A partial or total loss of invested capital is reasonably possible."
-          }
-        ]
-      },
-      "faq": {
-        "title": "Frequently asked questions",
-        "items": [
-          {
-            "q": "Am I investing in the company or in a single property?",
-            "a": "The contract is with Jungle Rent S.r.l. The economic exposure is to the single operation: each series of the instrument is linked to one specific deal, and your return depends on the performance of that deal. Legal form and distribution mechanics: in the memorandum."
-          },
-          {
-            "q": "Which financial instrument is used?",
-            "a": "A dedicated economic-participation instrument, reserved to qualified investors via private placement. The exact legal form, economic rights, distribution mechanism and regulation are described in full in the information memorandum, delivered after the qualification call."
-          },
-          {
-            "q": "What is the typical ticket?",
-            "a": "The indicative range is €5,000–€20,000 per investor. Smaller or larger tickets are evaluated case by case based on round and investor profile."
-          },
-          {
-            "q": "Can I recover capital before 3 years?",
-            "a": "The 3-year lock-up is a tax requirement (to keep the IRPEF deduction). Technically you can transfer the instrument to another investor, but you would lose the tax incentive and would need to find a buyer independently."
-          },
-          {
-            "q": "How are profits distributed?",
-            "a": "The contractual documentation provides for an economic split defined case by case, typically 90% investors / 10% Jungle Rent after the servicing fee, according to a waterfall detailed in the memorandum. Distribution is bi-monthly."
-          },
-          {
-            "q": "Is Jungle Rent really an innovative startup or is it self-declared?",
-            "a": "Registration in the special section of the Business Register took place on 04/12/2025 and is independently verifiable on startup.registroimprese.it with VAT 13333450016."
-          },
-          {
-            "q": "Can I see the business plan and financial model?",
-            "a": "Yes, after the qualification call. They are complete documents (2025 business plan, multi-sheet Excel model with sensitivity analysis, 5-year projections)."
-          },
-          {
-            "q": "Who handles accounting and audits?",
-            "a": "Tax assistance from the Starola Cantino Bono firm in Turin. Annual financial statements are public on the chamber registration."
-          },
-          {
-            "q": "What happens if Jungle Rent fails to close the first acquisition by September 2026?",
-            "a": "Capital raised is held in the corporate account awaiting the next market window, or returned to investors upon their request, net of documented costs. This clause is provided for in the contractual documentation."
-          }
-        ]
-      },
-      "form": {
-        "title": "Receive the information memorandum",
-        "subtitle": "I respond personally within 48 hours. No newsletter, no automated follow-up.",
-        "fields": {
-          "fullName": "Full name",
-          "email": "Email",
-          "phone": "Phone (optional)",
-          "phoneHint": "Used only if you explicitly request a callback",
-          "taxResidence": "Tax residence",
-          "ticketRange": "Indicative ticket range",
-          "horizon": "Time horizon to decide",
-          "prevExperience": "Have you already invested in innovative startups or unlisted real estate?",
-          "source": "How did you hear about us? (optional)",
-          "notes": "Notes or specific questions (optional)",
-          "privacyConsent": "I have read and accept the privacy notice (GDPR).",
-          "ownInitiative": "I declare I requested this information on my own initiative and not following public promotion or individual solicitation. I understand investment in financial instruments of an innovative startup involves risks including the possible total loss of capital."
-        },
-        "options": {
-          "residence": {
-            "IT": "Italy",
-            "CH": "Switzerland",
-            "EU": "Other EU",
-            "OTHER": "Non-EU"
-          },
-          "ticket": {
-            "5-10": "€5,000–€10,000",
-            "10-20": "€10,000–€20,000",
-            "20-50": "€20,000–€50,000",
-            "50+": "Over €50,000",
-            "TBD": "I prefer to define it after seeing the materials"
-          },
-          "horizon": {
-            "WEEKS": "In the next few weeks",
-            "1-3M": "1–3 months",
-            "3-6M": "3–6 months",
-            "6M+": "More than 6 months"
-          },
-          "experience": {
-            "YES": "Yes",
-            "NO": "No",
-            "PARTIAL": "Partially"
-          }
-        },
-        "submit": "Send request",
-        "submitting": "Sending…",
-        "success": "Thank you. Lorenzo will reply within 48 hours at the email you provided. In the meantime, feel free to explore our articles on the Turin market.",
-        "error": "Submission failed. Please retry or write to junglerententeprise@gmail.com.",
-        "selectPlaceholder": "Select…",
-        "steps": {
-          "progress": "Step {{current}} of {{total}}",
-          "step1Title": "Let's start",
-          "step1Subtitle": "30 seconds. Your details stay private.",
-          "step2Title": "Help us tailor the proposal",
-          "step2Subtitle": "So Lorenzo can prepare materials relevant to you.",
-          "step3Title": "Last step",
-          "step3Subtitle": "Legal confirmations required by regulation.",
-          "next": "Continue",
-          "back": "Back",
-          "autoSaved": "Draft saved automatically"
-        }
-      },
-      "disclaimer": {
-        "p1": "The information on this page is for informational purposes only and does not constitute a public offering of financial products under art. 94 of Italian Legislative Decree 58/1998 (TUF — Italian Consolidated Financial Act), nor an investment solicitation, nor financial, tax or legal advice.",
-        "p2": "The financial instrument described is not available for online subscription. Any subscription occurs exclusively via private placement, reserved to a restricted number of individually qualified investors, after delivery of the complete information memorandum and contractual documentation, in compliance with the exemptions provided by art. 100 TUF.",
-        "p3": "Returns illustrated in informational materials are projections based on model assumptions. Actual performance depends on portfolio performance and is in no way guaranteed. Investment carries risks, including illiquidity risk, real estate market risk, operational execution risk, dilution risk, and the possibility of total loss of invested capital.",
-        "p4": "The tax treatment described is subject to individual conditions, regulatory limits and possible legislative changes. Before any investment decision, the investor must consult their own independent tax and financial advisor.",
-        "company": "Jungle Rent S.r.l. · VAT 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin · junglerententeprise@gmail.com"
-      }
-    }
+    "whyInvestTitle": "Why invest with us"
   },
   "investorExitIntent": {
     "badge": "Before you go...",
@@ -2054,16 +2054,15 @@
     "sectionTitle": "Discover Turin Like a Local"
   },
   "trustBadge": {
-    "guarantee": "Incubated within the Turin university ecosystem, ensuring professionalism and reliability in every transaction",
-    "incubator": "Business Incubator of the University of Turin",
-    "inlineCta": "Want to learn more?",
-    "learnMore": "Learn more about 2i3T",
-    "sectionLabel": "Institutional partnership",
-    "support": "24/7 support",
-    "supportedBy": "Supported by 2i3T",
-    "title": "Your safety is our priority",
-    "transparent": "Total transparency",
-    "verified": "Certified contracts"
+    "aria": "Chapter 06 — Trust",
+    "chapter": "Trust",
+    "headlineEmphasis": "real",
+    "headlinePost": " company, with a real track record.",
+    "headlinePre": "A",
+    "incubatedAria": "Incubated at 2i3T — visit website",
+    "incubatedLabel": "Incubated at",
+    "quote": "Jungle Rent was born from my own need to save money as a student. Optimising use and response to make renting sustainable is what makes the investment attractive.",
+    "role": "Founder, Jungle Rent"
   },
   "video": {
     "badge": "2 minutes",
