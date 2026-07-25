@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SceneReveal } from "@/components/home/SceneReveal";
+import logo2i3t from "@/assets/2i3t-logo-green.png";
 
 /**
  * TrustBadge — Chapter 06 · Fiducia
@@ -9,20 +10,6 @@ import { SceneReveal } from "@/components/home/SceneReveal";
 export const TrustBadge = () => {
   const { i18n } = useTranslation();
   const isItalian = i18n.language.startsWith("it");
-
-  const credentials = isItalian
-    ? [
-        "Start-up Innovativa",
-        "Incubata in 2i3T",
-        "Università di Torino",
-        "Registro Imprese di Torino",
-      ]
-    : [
-        "Certified Innovative Startup",
-        "Incubated at 2i3T",
-        "University of Turin",
-        "Turin Business Register",
-      ];
 
   return (
     <section
@@ -66,16 +53,20 @@ export const TrustBadge = () => {
         </SceneReveal>
 
         <SceneReveal delay={260}>
-          <ul className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs uppercase tracking-[0.18em] text-muted-foreground/80 font-medium">
-            {credentials.map((c, i) => (
-              <li key={c} className="flex items-center gap-6">
-                <span>{c}</span>
-                {i < credentials.length - 1 && (
-                  <span className="text-foreground/20" aria-hidden="true">·</span>
-                )}
-              </li>
-            ))}
-          </ul>
+          <div className="mt-12 flex flex-col items-start gap-3">
+            <span className="eyebrow-mono text-xs text-muted-foreground/70">
+              {isItalian ? "Incubata in" : "Incubated at"}
+            </span>
+            <a
+              href="https://www.2i3t.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={isItalian ? "Incubata in 2i3T — visita il sito" : "Incubated at 2i3T — visit website"}
+              className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity"
+            >
+              <img src={logo2i3t} alt="2i3T" className="h-12 w-auto" />
+            </a>
+          </div>
         </SceneReveal>
       </div>
     </section>
@@ -83,3 +74,4 @@ export const TrustBadge = () => {
 };
 
 export default TrustBadge;
+
