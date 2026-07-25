@@ -77,7 +77,7 @@ export const TrustBadge = () => {
               aria-label={isItalian ? "Incubata in 2i3T — visita il sito" : "Incubated at 2i3T — visit website"}
               className="inline-flex items-center opacity-80 hover:opacity-100 transition-opacity"
             >
-              <img src={logo2i3t} alt="2i3T" className="h-12 w-auto" />
+              <img src={logo2i3t} alt="2i3T" className="h-24 md:h-28 w-auto" />
             </a>
           </div>
         </SceneReveal>
