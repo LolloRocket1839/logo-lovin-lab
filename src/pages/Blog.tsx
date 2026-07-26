@@ -1,4 +1,4 @@
-import { useState, useMemo, useDeferredValue } from "react";
+import { useState, useMemo, useDeferredValue, useEffect } from "react";
 import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFilters } from "@/components/blog/BlogFilters";
@@ -12,6 +12,17 @@ import { useAutoBlogPosts } from "@/hooks/useAutoBlogPosts";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { createBlogCollectionSchema } from "@/lib/schema";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
+const POSTS_PER_PAGE = 12;
+
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
@@ -30,6 +41,28 @@ const Blog = () => {
   }, [activeCategory, deferredSearch, selectedTags, i18n.language, autoPosts]);
 
   const isFiltering = deferredSearch.trim().length > 0 || selectedTags.length > 0 || activeCategory !== 'all';
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCategory, deferredSearch, selectedTags, i18n.language]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
+
+  const paginatedPosts = useMemo(
+    () => posts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE),
+    [posts, currentPage]
+  );
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
 
   const title = isItalian 
     ? "Blog Jungle Rent - Guide Torino per Studenti, Investitori e Turisti"
@@ -134,7 +167,49 @@ const Blog = () => {
                 </p>
               </div>
             )}
-            <BlogGrid posts={posts} />
+            <BlogGrid posts={paginatedPosts} />
+
+            {totalPages > 1 && (
+              <Pagination className="mt-10">
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious
+                      href="#"
+                      aria-disabled={currentPage === 1}
+                      className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                      onClick={(e) => { e.preventDefault(); if (currentPage > 1) goToPage(currentPage - 1); }}
+                    />
+                  </PaginationItem>
+
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter((page) => page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1)
+                    .map((page, idx, arr) => (
+                      <PaginationItem key={page}>
+                        {idx > 0 && page - arr[idx - 1] > 1 && (
+                          <span className="px-2 text-muted-foreground">…</span>
+                        )}
+                        <PaginationLink
+                          href="#"
+                          isActive={page === currentPage}
+                          onClick={(e) => { e.preventDefault(); goToPage(page); }}
+                        >
+                          {page}
+                        </PaginationLink>
+                      </PaginationItem>
+                    ))}
+
+                  <PaginationItem>
+                    <PaginationNext
+                      href="#"
+                      aria-disabled={currentPage === totalPages}
+                      className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                      onClick={(e) => { e.preventDefault(); if (currentPage < totalPages) goToPage(currentPage + 1); }}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            )}
+
           </div>
         </section>
       </div>
