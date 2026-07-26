@@ -1,4 +1,4 @@
-import { useState, useMemo, useDeferredValue } from "react";
+import { useState, useMemo, useDeferredValue, useEffect } from "react";
 import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFilters } from "@/components/blog/BlogFilters";
@@ -12,6 +12,17 @@ import { useAutoBlogPosts } from "@/hooks/useAutoBlogPosts";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { createBlogCollectionSchema } from "@/lib/schema";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
+const POSTS_PER_PAGE = 12;
+
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
