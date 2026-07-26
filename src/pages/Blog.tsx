@@ -42,6 +42,28 @@ const Blog = () => {
 
   const isFiltering = deferredSearch.trim().length > 0 || selectedTags.length > 0 || activeCategory !== 'all';
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCategory, deferredSearch, selectedTags, i18n.language]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
+
+  const paginatedPosts = useMemo(
+    () => posts.slice((currentPage - 1) * POSTS_PER_PAGE, currentPage * POSTS_PER_PAGE),
+    [posts, currentPage]
+  );
+
+  const goToPage = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+
   const title = isItalian 
     ? "Blog Jungle Rent - Guide Torino per Studenti, Investitori e Turisti"
     : "Jungle Rent Blog - Turin Guides for Students, Investors and Tourists";
