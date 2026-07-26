@@ -2,6 +2,51 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "detrazione-affitto-studenti-fuori-sede-2026",
+    category: "students",
+    date: "2026-07-26",
+    author: "Jungle Rent Team",
+    image: "/images/quartieri-studenti-torino.jpg",
+    readTime: 11,
+    content: "detrazione-affitto-studenti-fuori-sede-2026",
+    translations: {
+      it: {
+        title: "Detrazione affitto studenti fuori sede 2026: come funziona davvero",
+        excerpt: "19% di detrazione IRPEF su massimo 2.633 euro di canone, fino a 500 euro di risparmio. Quali contratti valgono, requisiti dei 100 km, tracciabilità e documenti da conservare.",
+        seo: {
+          title: "Detrazione affitto studenti fuori sede 2026: guida completa",
+          description: "Detrazione IRPEF 19% affitto studenti fuori sede: fino a 500,27 euro l'anno. Contratti ammessi, requisito 100 km, pagamenti tracciabili, documenti. Guida 2026.",
+          keywords: ["detrazione affitto studenti fuori sede", "detrazione IRPEF 19% affitto", "2.633 euro detrazione affitto", "requisito 100 km università", "730 rigo E8 codice 18", "detrazione posto letto studente"],
+        },
+        tags: ["Studenti", "Fisco", "Detrazioni", "Contratti", "730"],
+        faqs: [
+          { question: "Quanto si detrae dall'affitto da studente fuori sede?", answer: "Il 19% del canone pagato, su una spesa massima di 2.633 euro l'anno: la detrazione massima è 500,27 euro. Il tetto vale per contribuente, non per figlio o per contratto." },
+          { question: "Serve un contratto specifico per studenti?", answer: "No. Va bene qualsiasi locazione abitativa registrata ai sensi della Legge 431/1998: 4+4 libero, 3+2 concordato, transitorio e transitorio studenti. Anche il contratto per una singola stanza o un posto letto è detraibile." },
+          { question: "La sublocazione dà diritto alla detrazione?", answer: "No. L'Agenzia delle Entrate ha escluso il subaffitto perché non rientra tra gli schemi contrattuali previsti dalla norma (Circolare 21/E/2010, risposta 4.3, ribadita nella Circolare 14/E/2023)." },
+          { question: "Quali sono i requisiti di distanza?", answer: "L'università deve trovarsi in un Comune diverso da quello di residenza, distante almeno 100 km e in una provincia diversa. Le due condizioni valgono insieme. La deroga a 50 km per zone montane non è più in vigore." },
+          { question: "Posso pagare l'affitto in contanti e detrarlo?", answer: "No. Dal 2020 la detrazione del 19% richiede pagamenti tracciabili: bonifico, carta, assegno, bollettino, MAV o PagoPA. Il contante fa perdere il beneficio." },
+        ],
+      },
+      en: {
+        title: "Tax relief for out-of-town students in Italy: 2026 guide",
+        excerpt: "19% IRPEF deduction on up to 2,633 euro of rent, worth around 500 euro a year. Which contracts qualify, the 100 km rule, traceable payments and the paperwork to keep.",
+        seo: {
+          title: "Student rent tax relief Italy 2026: full guide",
+          description: "19% IRPEF deduction on rent for out-of-town students in Italy: up to 500.27 euro a year. Eligible contracts, 100 km rule, traceable payments, documents. 2026 guide.",
+          keywords: ["student rent tax deduction Italy", "IRPEF 19% rent deduction", "out-of-town student tax relief", "100 km university rule Italy", "form 730 line E8 code 18", "single bed contract deduction"],
+        },
+        tags: ["Students", "Tax", "Deductions", "Contracts", "Form 730"],
+        faqs: [
+          { question: "How much rent can an out-of-town student deduct in Italy?", answer: "19% of the rent paid, on a maximum of 2,633 euro per year, so up to 500.27 euro. The cap is per taxpayer, not per child or per contract." },
+          { question: "Do I need a student-specific contract?", answer: "No. Any registered residential lease under Law 431/1998 qualifies: free 4+4, 3+2 controlled rent, transitional and transitional student leases. Contracts for a single room or a single bed also qualify." },
+          { question: "Does subletting qualify?", answer: "No. The Revenue Agency excluded sublets because they are not among the contract types listed by the rule (Circular 21/E/2010, answer 4.3, confirmed by Circular 14/E/2023)." },
+          { question: "What is the distance requirement?", answer: "The university must be in a different municipality from your residence, at least 100 km away and in a different province. Both apply together. The 50 km waiver for mountain areas no longer exists." },
+          { question: "Can I pay rent in cash and still deduct it?", answer: "No. Since 2020 the 19% deduction requires traceable payments: bank transfer, card, cheque, postal slip, MAV or PagoPA. Cash forfeits the benefit." },
+        ],
+      },
+    },
+  },
+  {
     slug: "vendere-casa-lingotto-nizza-millefonti-2026",
     category: "sellers",
     date: "2026-05-22",
