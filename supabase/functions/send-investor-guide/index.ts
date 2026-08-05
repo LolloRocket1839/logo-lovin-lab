@@ -175,7 +175,23 @@ Deno.serve(async (req: Request): Promise<Response> => {
     const safeName = escapeHtml(name.trim());
     const safeEmail = email.toLowerCase().trim();
 
-    console.log(`Sending ${guideType} guide to ${safeEmail} (${safeName})`);
+    // Only send to addresses that just submitted a lead (anti spam-relay)
+    if (!(await isRecentLead(safeEmail))) {
+      console.warn("Recipient is not a recent lead; refusing to send.");
+      return new Response(
+        JSON.stringify({ success: false, error: "Request could not be processed." }),
+        { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    if (isRecipientThrottled(safeEmail)) {
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please try again later." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log(`Sending ${guideType} guide to a verified lead`);
 
     // Determine guide content based on type
     const isGeneral = guideType === 'general';
