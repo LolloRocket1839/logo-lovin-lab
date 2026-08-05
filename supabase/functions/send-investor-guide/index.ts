@@ -1,6 +1,39 @@
 import { Resend } from "https://esm.sh/resend@2.0.0";
+import { createClient } from "npm:@supabase/supabase-js@2";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+
+// Per-recipient throttle: one guide email per address per hour
+const recipientMap = new Map<string, number>();
+const RECIPIENT_WINDOW_MS = 60 * 60 * 1000;
+
+function isRecipientThrottled(email: string): boolean {
+  const now = Date.now();
+  const last = recipientMap.get(email);
+  if (last && now - last < RECIPIENT_WINDOW_MS) return true;
+  recipientMap.set(email, now);
+  return false;
+}
+
+// The recipient must be a real lead created in the last 15 minutes.
+async function isRecentLead(email: string): Promise<boolean> {
+  const supabaseUrl = Deno.env.get("SUPABASE_URL");
+  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+  if (!supabaseUrl || !serviceKey) return false;
+
+  const supabase = createClient(supabaseUrl, serviceKey);
+  const sinceIso = new Date(Date.now() - 15 * 60 * 1000).toISOString();
+
+  const [leadsRes, investorRes] = await Promise.all([
+    supabase.from("leads").select("id").eq("email", email).gte("created_at", sinceIso).limit(1),
+    supabase.from("investor_interest").select("id").eq("email", email).gte("created_at", sinceIso).limit(1),
+  ]);
+
+  return (
+    (leadsRes.data?.length ?? 0) > 0 ||
+    (investorRes.data?.length ?? 0) > 0
+  );
+}
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
