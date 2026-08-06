@@ -83,6 +83,24 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
 
       if (!response.ok) throw new Error("Submission failed");
 
+      // Register the lead in the CRM (also authorizes the guide email send)
+      try {
+        const { error: leadError } = await supabase.rpc("insert_lead", {
+          _email: data.email,
+          _name: data.name,
+          _source: guideType === 'torino' ? 'investor_guide_torino' : 'investor_guide_general',
+          _lead_type: 'investor',
+          _metadata: {
+            investment_budget: data.investment_budget,
+            guide_requested: guideLabel,
+            language: i18n.language,
+          },
+        });
+        if (leadError) console.error("Error saving lead:", leadError);
+      } catch (leadErr) {
+        console.error("Error saving lead:", leadErr);
+      }
+
       // Send PDF guide via email using edge function
       try {
         const guideResponse = await supabase.functions.invoke('send-investor-guide', {
