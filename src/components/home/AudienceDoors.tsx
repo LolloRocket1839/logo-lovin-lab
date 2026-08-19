@@ -17,7 +17,7 @@ export const AudienceDoors = () => {
     {
       index: "I",
       eyebrow: isItalian ? "Investitori" : "Investors",
-      title: isItalian ? "Reddito da Torino, da €100." : "Income from Turin, from €100.",
+      title: isItalian ? "Reddito a Torino da 100€" : "Income in Turin from €100",
       blurb: isItalian
         ? "Esposizione alla singola operazione immobiliare. Payout ogni 2 mesi."
         : "Exposure to a single real estate operation. Payouts every 2 months.",
