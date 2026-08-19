@@ -25,9 +25,9 @@ export const HeroLogo = () => {
         <img
           src={jungleRentLogo}
           alt="Jungle Rent"
-          width={160}
-          height={160}
-          className="w-20 h-20 md:w-40 md:h-40 mx-auto block"
+          width={240}
+          height={240}
+          className="w-32 h-32 md:w-60 md:h-60 mx-auto block"
           fetchPriority="high"
           decoding="async"
         />
@@ -43,9 +43,9 @@ export const HeroLogo = () => {
       <motion.img
         src={jungleRentLogo}
         alt="Jungle Rent"
-        width={160}
-        height={160}
-        className="w-20 h-20 md:w-40 md:h-40 mx-auto block"
+        width={240}
+        height={240}
+        className="w-32 h-32 md:w-60 md:h-60 mx-auto block"
         fetchPriority="high"
         decoding="async"
         initial={{ scale: 0.95, opacity: 0 }}
