@@ -1183,7 +1183,7 @@
     "conditionToRenovate": "Behöver renovering",
     "disclaimer": "Indikativ bedömning baserad på marknadsdata. Bindande erbjudande efter fastighetsbesiktning.",
     "emailGatePlaceholder": "din@email.se",
-    "emailGateTitle": "Ange din e-post för att ta reda på om din fastighet uppfyller våra kriterier",
+    "emailGateTitle": "Få erbjudandet via e-post",
     "noFees": "Noll provision",
     "notQualifiedCta": "Kontakta oss ändå",
     "notQualifiedDescription": "Din fastighet uppfyller inte våra standardparametrar just nu, men varje fall är unikt. Kontakta oss för en personlig bedömning.",
@@ -1199,7 +1199,15 @@
     "zoneContext": "{{zone}}: snitt €{{price}}/kvm (källa OMI/Immobiliare.it 2025)",
     "zoneLabel": "Fastighetsområde",
     "zonePlaceholder": "Välj område...",
-    "zoneTooltip": "Vi köper i universitets- och sjukhusområden i Turin. Genomsnittspriset per kvm varierar beroende på zon och påverkar vår bedömning."
+    "zoneTooltip": "Vi köper i universitets- och sjukhusområden i Turin. Genomsnittspriset per kvm varierar beroende på zon och påverkar vår bedömning.",
+    "emailGateHint": "Få erbjudandet via e-post inom 24h. Ingen spam.",
+    "emailSavedDescription": "Kolla din e-post. Vi svarar inom 24 timmar.",
+    "emailSavedTitle": "Erbjudande skickat!",
+    "estimatedRangeLabel": "Uppskattat intervall för erbjudande",
+    "minSqmWarning": "Minst 35 kvm krävs",
+    "recoveryText": "Du har redan påbörjat en värdering. Fyll i din e-post för att få erbjudandet.",
+    "reset": "Ny värdering",
+    "whatsappMessage": "Hej Lorenzo, jag gjorde en uppskattning på er webbplats för en fastighet i {{zone}} på {{sqm}} kvm. Kan vi prata?"
   },
   "postValuation": {
     "cta": "Begär gratis erbjudande",
@@ -2183,5 +2191,36 @@
     "universityPlaceholder": "Select university",
     "universityPolito": "Polytechnic of Turin",
     "universityUnito": "University of Turin"
+  },
+  "sellerSocialProof": {
+    "badge": "Varför säljare väljer oss",
+    "stat1Label": "dagar till tillträde",
+    "stat1Value": "60-90",
+    "stat2Label": "mäklararvode",
+    "stat2Value": "0%",
+    "stat3Label": "målområden i Turin",
+    "stat3Value": "10",
+    "stat4Label": "första svar",
+    "stat4Value": "24h",
+    "title": "Sälj utan mellanhänder, inom säkra tidsramar"
+  },
+  "sellerStickyCta": {
+    "cta": "Få ditt erbjudande",
+    "ctaMobile": "Erbjudande",
+    "subtitle": "Gratis värdering inom 24 timmar, noll provision.",
+    "title": "Sälj din bostad i Turin utan mäklare",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "Hej Lorenzo, jag skulle vilja ha en gratis värdering för att sälja min bostad i Turin."
+  },
+  "sellerHomeEntry": {
+    "eyebrow": "För fastighetsägare",
+    "title": "Sälj utan mäklare.",
+    "description": "Jungle Rent köper direkt i ditt universitetsområde. Gratis värdering, skriftligt bud och tillträde inom 60-90 dagar.",
+    "cta": "Gratis värdering",
+    "compareTitle": "Traditionell mäklare vs Jungle Rent",
+    "commission": "Arvoden",
+    "timeline": "Tidsram",
+    "buyer": "Köpare",
+    "trust": "Certifierat innovativt startup-företag registrerat hos CCIAA Turin"
   }
 }

@@ -1183,7 +1183,7 @@
     "conditionToRenovate": "需要翻新",
     "disclaimer": "基于市场数据的指示性评估。具有约束力的报价需在房产检查后提供。",
     "emailGatePlaceholder": "你的邮箱@email.com",
-    "emailGateTitle": "输入您的电子邮件，了解您的房产是否符合我们的标准",
+    "emailGateTitle": "通过邮件接收报价",
     "noFees": "零佣金",
     "notQualifiedCta": "仍然联系我们",
     "notQualifiedDescription": "您的房产目前不符合我们的标准参数，但每个情况都不同。请联系我们获取个性化评估。",
@@ -1199,7 +1199,15 @@
     "zoneContext": "{{zone}}：均价 €{{price}}/平方米（来源 OMI/Immobiliare.it 2025）",
     "zoneLabel": "房产区域",
     "zonePlaceholder": "选择区域...",
-    "zoneTooltip": "我们在都灵的大学和医院区域购买房产。每平方米的平均价格因区域而异，会影响我们的评估。"
+    "zoneTooltip": "我们在都灵的大学和医院区域购买房产。每平方米的平均价格因区域而异，会影响我们的评估。",
+    "emailGateHint": "24小时内通过邮件接收报价。零垃圾邮件。",
+    "emailSavedDescription": "请检查您的电子邮件。我们会在24小时内回复。",
+    "emailSavedTitle": "报价已发送！",
+    "estimatedRangeLabel": "预估报价范围",
+    "minSqmWarning": "至少需要35平方米",
+    "recoveryText": "您已经开始估价。填写邮箱以接收报价。",
+    "reset": "新的估价",
+    "whatsappMessage": "你好Lorenzo，我在你们的网站上估算了一套位于{{zone}}、{{sqm}}平方米的房产。我们能聊聊吗？"
   },
   "postValuation": {
     "cta": "请求免费报价",
@@ -2183,5 +2191,36 @@
     "universityPlaceholder": "Select university",
     "universityPolito": "Polytechnic of Turin",
     "universityUnito": "University of Turin"
+  },
+  "sellerSocialProof": {
+    "badge": "卖家为何选择我们",
+    "stat1Label": "天完成过户",
+    "stat1Value": "60-90",
+    "stat2Label": "中介佣金",
+    "stat2Value": "0%",
+    "stat3Label": "都灵目标区域",
+    "stat3Value": "10",
+    "stat4Label": "首次回复",
+    "stat4Value": "24h",
+    "title": "无中介销售，时间有保障"
+  },
+  "sellerStickyCta": {
+    "cta": "获取您的报价",
+    "ctaMobile": "报价",
+    "subtitle": "24小时内免费估价，零佣金。",
+    "title": "在都灵无需中介出售房屋",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "你好Lorenzo，我想免费估价我在都灵的房子。"
+  },
+  "sellerHomeEntry": {
+    "eyebrow": "业主专区",
+    "title": "免中介卖房。",
+    "description": "Jungle Rent 直接收购您所在大学区域的房产。免费估价、书面报价，60-90天完成过户。",
+    "cta": "免费估价",
+    "compareTitle": "传统中介 vs Jungle Rent",
+    "commission": "佣金",
+    "timeline": "周期",
+    "buyer": "买家",
+    "trust": "经都灵商会注册的认证创新初创企业"
   }
 }
