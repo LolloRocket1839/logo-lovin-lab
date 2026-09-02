@@ -19,6 +19,9 @@ import { LiquidHomepageStory } from "@/components/immersive/LiquidHomepageStory"
 
 // Lazy load below-the-fold components
 const AudienceDoors = lazy(() => import("@/components/home/AudienceDoors").then(m => ({ default: m.AudienceDoors })));
+const SellerHomeEntry = lazy(() => import("@/components/home/SellerHomeEntry").then(m => ({ default: m.SellerHomeEntry })));
+
+
 
 
 const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ default: m.Footer })));
@@ -116,6 +119,10 @@ const Index = () => {
         {/* Full sections below — for SEO, conversion paths and deep-link anchors */}
         <Suspense fallback={null}>
           <TrustBadge />
+        </Suspense>
+
+        <Suspense fallback={<div className="min-h-[300px] bg-background" aria-hidden="true" />}>
+          <SellerHomeEntry />
         </Suspense>
 
         <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>

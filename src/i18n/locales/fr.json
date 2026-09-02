@@ -1183,7 +1183,7 @@
     "conditionToRenovate": "À rénover",
     "disclaimer": "Évaluation indicative basée sur les données du marché. Offre contraignante après visite du bien.",
     "emailGatePlaceholder": "votre@email.fr",
-    "emailGateTitle": "Entrez votre email pour savoir si votre bien correspond à nos critères",
+    "emailGateTitle": "Recevez l'offre par email",
     "noFees": "Zéro commission",
     "notQualifiedCta": "Contactez-nous quand même",
     "notQualifiedDescription": "Votre bien ne correspond pas actuellement à nos paramètres standards, mais chaque cas est différent. Contactez-nous pour une évaluation personnalisée.",
@@ -1199,7 +1199,15 @@
     "zoneContext": "{{zone}} : moy. {{price}} €/m² (source OMI/Immobiliare.it 2025)",
     "zoneLabel": "Zone du bien",
     "zonePlaceholder": "Sélectionner la zone...",
-    "zoneTooltip": "Nous achetons dans les zones universitaires et hospitalières de Turin. Le prix moyen au m² varie selon la zone et influence notre évaluation."
+    "zoneTooltip": "Nous achetons dans les zones universitaires et hospitalières de Turin. Le prix moyen au m² varie selon la zone et influence notre évaluation.",
+    "emailGateHint": "Recevez l'offre par email en 24h. Zéro spam.",
+    "emailSavedDescription": "Vérifiez vos emails. Nous répondons sous 24 heures.",
+    "emailSavedTitle": "Offre envoyée !",
+    "estimatedRangeLabel": "Fourchette estimée de l'offre",
+    "minSqmWarning": "Minimum 35 m² requis",
+    "recoveryText": "Vous avez déjà commencé une estimation. Renseignez votre email pour recevoir l'offre.",
+    "reset": "Nouvelle estimation",
+    "whatsappMessage": "Bonjour Lorenzo, j'ai fait une estimation sur votre site pour un bien à {{zone}} de {{sqm}} m². Pouvons-nous en parler ?"
   },
   "postValuation": {
     "cta": "Demander une offre gratuite",
@@ -2183,5 +2191,36 @@
     "universityPlaceholder": "Select university",
     "universityPolito": "Polytechnic of Turin",
     "universityUnito": "University of Turin"
+  },
+  "sellerSocialProof": {
+    "badge": "Pourquoi les vendeurs nous choisissent",
+    "stat1Label": "jours jusqu'à l'acte",
+    "stat1Value": "60-90",
+    "stat2Label": "commission d'agence",
+    "stat2Value": "0%",
+    "stat3Label": "zones cibles de Turin",
+    "stat3Value": "10",
+    "stat4Label": "première réponse",
+    "stat4Value": "24h",
+    "title": "Vendez sans intermédiaires, en temps certains"
+  },
+  "sellerStickyCta": {
+    "cta": "Recevez votre offre",
+    "ctaMobile": "Offre",
+    "subtitle": "Évaluation gratuite en 24 heures, zéro commission.",
+    "title": "Vendez votre maison à Turin sans agence",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "Bonjour Lorenzo, j'aimerais une évaluation gratuite pour vendre ma maison à Turin."
+  },
+  "sellerHomeEntry": {
+    "eyebrow": "Pour les propriétaires",
+    "title": "Vendez sans agence.",
+    "description": "Jungle Rent achète directement dans votre quartier universitaire. Évaluation gratuite, offre écrite et acte final en 60-90 jours.",
+    "cta": "Évaluation gratuite",
+    "compareTitle": "Agence traditionnelle vs Jungle Rent",
+    "commission": "Commissions",
+    "timeline": "Délai",
+    "buyer": "Acheteur",
+    "trust": "Start-up Innovante certifiée auprès du CCIAA de Turin"
   }
 }

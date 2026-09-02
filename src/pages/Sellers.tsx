@@ -17,6 +17,8 @@ import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/lay
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuickSellerLeadDialog } from "@/components/dialogs";
 import { QuickOfferSimulator } from "@/components/tools/QuickOfferSimulator";
+import { SellerSocialProof } from "@/components/sellers/SellerSocialProof";
+import { SellerStickyCta } from "@/components/sellers/SellerStickyCta";
 import { StyledText } from "@/components/StyledText";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { motion } from "framer-motion";
@@ -201,7 +203,7 @@ const Sellers = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-10 md:py-16 relative overflow-hidden">
+        <section id="seller-hero" className="py-10 md:py-16 relative overflow-hidden">
           <div className="container px-4 md:px-8 mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 items-start">
               {/* Left: Content */}
@@ -278,33 +280,7 @@ const Sellers = () => {
           </div>
         </section>
 
-        {/* Social Proof Strip */}
-        <section className="py-10 md:py-12 border-y border-border/50 bg-muted/20">
-          <div className="container px-4 md:px-8 mx-auto">
-            <p className="text-center text-xs uppercase tracking-widest text-muted-foreground mb-8 font-medium">
-              {t('sellersPage.stats.label', 'Numeri che parlano')}
-            </p>
-            <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto text-center">
-              {[
-                { value: '50.000+', label: t('sellersPage.stats.stat1', 'immobili sfitti a Torino'), sub: t('sellersPage.stats.stat1sub', 'fonte: Comune di Torino, 2024') },
-                { value: '60–90 gg', label: t('sellersPage.stats.stat2', 'dalla valutazione al rogito'), sub: t('sellersPage.stats.stat2sub', 'il nostro impegno') },
-                { value: '0%', label: t('sellersPage.stats.stat3', 'commissioni per il venditore'), sub: t('sellersPage.stats.stat3sub', 'nessun costo nascosto') },
-              ].map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <div className="text-3xl md:text-4xl font-display font-extrabold text-primary mb-1">{stat.value}</div>
-                  <div className="text-sm font-medium text-foreground leading-snug">{stat.label}</div>
-                  <div className="text-xs text-muted-foreground mt-0.5">{stat.sub}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <SellerSocialProof />
 
         {/* Comparison Table */}
         <section className="py-12 md:py-16 bg-muted/30">
@@ -604,10 +580,12 @@ const Sellers = () => {
       <MobileFooter />
       <WhatsAppFAB />
 
-      <QuickSellerLeadDialog 
-        open={isDialogOpen} 
-        onOpenChange={setIsDialogOpen} 
-        source="sellers_page" 
+      <SellerStickyCta onOpenDialog={handleOpenDialog} />
+
+      <QuickSellerLeadDialog
+        open={isDialogOpen}
+        onOpenChange={setIsDialogOpen}
+        source="sellers_page"
       />
     </>
   );

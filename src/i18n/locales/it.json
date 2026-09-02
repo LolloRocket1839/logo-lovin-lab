@@ -1182,8 +1182,13 @@
     "conditionRenovated": "Ristrutturato",
     "conditionToRenovate": "Da ristrutturare",
     "disclaimer": "Valutazione indicativa basata su dati di mercato. L'offerta vincolante verrà formulata dopo sopralluogo.",
+    "emailGateHint": "Ricevi l'offerta per email in 24h. Zero spam.",
     "emailGatePlaceholder": "tuo@email.com",
-    "emailGateTitle": "Inserisci la tua email per scoprire se il tuo immobile ci interessa",
+    "emailGateTitle": "Ricevi l'offerta per email",
+    "emailSavedDescription": "Controlla la tua email. Ti rispondiamo entro 24 ore.",
+    "emailSavedTitle": "Offerta inviata!",
+    "estimatedRangeLabel": "Stima intervallo offerta",
+    "minSqmWarning": "Minimo 35 mq richiesti",
     "noFees": "Zero commissioni",
     "notQualifiedCta": "Contattaci comunque",
     "notQualifiedDescription": "Al momento il tuo immobile non rientra nei parametri standard, ma ogni caso è diverso. Contattaci per una valutazione personalizzata.",
@@ -1191,11 +1196,14 @@
     "qualifiedCta": "Richiedi offerta",
     "qualifiedDescription": "Il tuo immobile rientra nei nostri criteri di acquisto. Ti contattiamo entro 48 ore con un'offerta concreta.",
     "qualifiedTitle": "Ottima notizia!",
+    "recoveryText": "Hai già iniziato una valutazione. Completa l'email per ricevere l'offerta.",
+    "reset": "Nuova valutazione",
     "speed": "Chiusura in 60-90 giorni",
     "sqmLabel": "Superficie (mq)",
     "subtitle": "Scoprilo in 30 secondi",
     "title": "Il tuo immobile ci interessa?",
     "whatsappCta": "Scrivici su WhatsApp",
+    "whatsappMessage": "Ciao Lorenzo, ho fatto una stima sul vostro sito per un immobile in {{zone}} di {{sqm}} mq. Possiamo parlarne?",
     "zoneContext": "{{zone}}: media €{{price}}/mq (fonte OMI/Immobiliare.it 2025)",
     "zoneLabel": "Zona dell'immobile",
     "zonePlaceholder": "Seleziona zona...",
@@ -1666,6 +1674,26 @@
     },
     "whatsappCta": "Scrivici su WhatsApp",
     "whatsappMessage": "Ciao, ho un immobile a Torino che vorrei vendere. Potete farmi un'offerta?"
+  },
+  "sellerSocialProof": {
+    "badge": "Perché venditori ci scelgono",
+    "stat1Label": "giorni per il rogito",
+    "stat1Value": "60-90",
+    "stat2Label": "commissioni agenzia",
+    "stat2Value": "0%",
+    "stat3Label": "zone target di Torino",
+    "stat3Value": "10",
+    "stat4Label": "prima risposta",
+    "stat4Value": "24h",
+    "title": "Vendi senza intermediari, in tempi certi"
+  },
+  "sellerStickyCta": {
+    "cta": "Ricevi la tua offerta",
+    "ctaMobile": "Offerta",
+    "subtitle": "Valutazione gratuita in 24 ore, zero commissioni.",
+    "title": "Vendi casa a Torino senza agenzia",
+    "whatsappLabel": "WhatsApp",
+    "whatsappMessage": "Ciao Lorenzo, vorrei una valutazione gratuita per vendere casa a Torino."
   },
   "sellersPage": {
     "breadcrumb": "Vendi casa",
@@ -2183,5 +2211,16 @@
     "universityPlaceholder": "Seleziona università",
     "universityPolito": "Politecnico di Torino",
     "universityUnito": "Università di Torino"
+  },
+  "sellerHomeEntry": {
+    "eyebrow": "Per proprietari",
+    "title": "Vendi casa senza agenzia.",
+    "description": "Jungle Rent compra direttamente nella tua zona universitaria. Valutazione gratuita, offerta scritta e rogito in 60-90 giorni.",
+    "cta": "Valutazione gratuita",
+    "compareTitle": "Agenzia tradizionale vs Jungle Rent",
+    "commission": "Commissioni",
+    "timeline": "Tempi",
+    "buyer": "Acquirente",
+    "trust": "Start-up Innovativa registrata CCIAA Torino"
   }
 }
