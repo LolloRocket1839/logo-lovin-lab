@@ -52,7 +52,7 @@ export const SellerStickyCta = ({ onOpenDialog }: SellerStickyCtaProps) => {
       role="region"
       aria-label={t("sellerStickyCta.title")}
       data-testid="seller-sticky-cta"
-      className="fixed bottom-32 left-0 right-0 z-40 md:bottom-4 md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-2xl"
+      className="fixed bottom-[4.5rem] left-0 right-0 z-40 md:bottom-4 md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-2xl"
     >
       <div className="bg-background/95 backdrop-blur-lg border-t md:border border-primary/20 md:rounded-2xl shadow-2xl p-3 md:p-4">
         <div className="flex items-center gap-3">
