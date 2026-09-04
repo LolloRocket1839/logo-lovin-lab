@@ -17,6 +17,13 @@ export const MobileFooter = () => {
         {/* ── TIER 1: PRIMARY ACTIONS ── */}
         <div className="w-full flex flex-wrap justify-center gap-3">
           <Link
+            to={isIt ? '/vendi' : '/sell'}
+            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-primary/10 border border-primary/40 text-primary font-medium text-xs active:bg-primary/20 transition-colors"
+          >
+            <Home className="w-3.5 h-3.5" />
+            <span>{isIt ? 'Vendi casa a Torino' : 'Sell your home in Turin'}</span>
+          </Link>
+          <Link
             to={isIt ? '/chi-siamo' : '/about'}
             className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-background border border-border/40 text-foreground font-medium text-xs active:text-primary active:border-primary/40 active:bg-primary/5 transition-colors"
           >
