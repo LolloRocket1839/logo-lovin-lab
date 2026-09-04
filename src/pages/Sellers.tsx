@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 import { ContractBanner } from "@/components/blog/ContractBanner";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { Helmet } from "react-helmet";
@@ -13,7 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
+import { Navigation, Footer, MobileHeader, MobileFooter, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { QuickSellerLeadDialog } from "@/components/dialogs";
 import { QuickOfferSimulator } from "@/components/tools/QuickOfferSimulator";
@@ -578,7 +577,7 @@ const Sellers = () => {
 
       <Footer />
       <MobileFooter />
-      <WhatsAppFAB />
+      <BottomNav />
 
       <SellerStickyCta onOpenDialog={handleOpenDialog} />
 
