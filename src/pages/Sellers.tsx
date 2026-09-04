@@ -579,6 +579,7 @@ const Sellers = () => {
       <Footer />
       <MobileFooter />
       <WhatsAppFAB />
+      <BottomNav />
 
       <SellerStickyCta onOpenDialog={handleOpenDialog} />
 
