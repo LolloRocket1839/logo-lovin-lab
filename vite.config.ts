@@ -80,23 +80,18 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-ui': [
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-tooltip',
-            '@radix-ui/react-popover',
-          ],
-          'vendor-motion': ['framer-motion'],
-          'vendor-i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
-          'vendor-charts': ['recharts'],
-          'vendor-markdown': ['react-markdown', 'remark-gfm', 'rehype-raw'],
-          'vendor-maps': ['leaflet', 'react-leaflet'],
-          'vendor-pdf': ['jspdf'],
-          'vendor-icons': ['lucide-react'],
+        // Function form: only split vendors that are needed on the first paint.
+        // Heavy, page-specific libs (recharts, jspdf, leaflet, markdown) are left
+        // to Rollup so they land in the lazy route chunks that actually use them
+        // instead of being hoisted into the entry chunk.
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return undefined;
+          if (/[\\/]node_modules[\\/](react|react-dom|react-router-dom|scheduler)[\\/]/.test(id)) return 'vendor-react';
+          if (id.includes('/@radix-ui/')) return 'vendor-ui';
+          if (id.includes('/framer-motion/')) return 'vendor-motion';
+          if (/[\\/](i18next|react-i18next|i18next-browser-languagedetector)[\\/]/.test(id)) return 'vendor-i18n';
+          if (id.includes('/lucide-react/')) return 'vendor-icons';
+          return undefined;
         },
       },
     },
