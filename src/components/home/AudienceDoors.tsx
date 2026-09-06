@@ -84,7 +84,7 @@ export const AudienceDoors = () => {
 
         <ul className="mt-16 md:mt-20 divide-y divide-border/40 border-y border-border/40">
           {rows.map((row, i) => (
-            <SceneReveal key={row.index} delay={140 + i * 80} as="div">
+            <SceneReveal key={row.index} delay={140 + i * 80} as="li">
               <Row {...row} />
             </SceneReveal>
           ))}

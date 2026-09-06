@@ -35,7 +35,7 @@ export const AnnouncementBanner = () => {
         }}
         onMouseDown={(e) => e.stopPropagation()}
         onTouchStart={(e) => e.stopPropagation()}
-        className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded opacity-50 hover:opacity-100 hover:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 transition-colors"
+        className="absolute right-1 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded opacity-70 hover:opacity-100 hover:bg-primary/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 transition-colors"
         aria-label={t('accessibility.closeMenu')}
       >
         <X className="w-3.5 h-3.5" />

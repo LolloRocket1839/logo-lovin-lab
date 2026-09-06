@@ -41,7 +41,7 @@ const Index = () => {
 
   const description = isItalian
     ? "Jungle Rent — affitti per studenti, investimenti immobiliari accessibili e gestione professionale a Torino. Start-up Innovativa incubata in 2i3T."
-    : "Jungle Rent — student rentals, accessible real estate investment and professional management in Turin. Certified Innovative Startup incubated at 2i3T.";
+    : "Jungle Rent — student rentals, accessible real estate investment and professional management in Turin. Innovative startup incubated at 2i3T.";
 
   return (
     <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
