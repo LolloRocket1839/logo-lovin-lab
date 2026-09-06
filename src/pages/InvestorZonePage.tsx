@@ -191,7 +191,7 @@ const InvestorZonePage = () => {
           {/* Back link */}
           <Link 
             to={zonesIndexPath}
-            className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white mt-4 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-on-image/80 hover:text-on-image mt-4 transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
             {t.backToZones}
@@ -200,7 +200,7 @@ const InvestorZonePage = () => {
           {/* Title section */}
           <div className="pt-8 pb-32 md:pb-40">
             <div className="flex flex-wrap items-center gap-2 mb-4">
-              <Badge variant="secondary" className="bg-white/20 text-white border-0">
+              <Badge variant="secondary" className="bg-on-image/20 text-on-image border-0">
                 {zone.zone}
               </Badge>
               {isHighGrowth && (
@@ -209,18 +209,18 @@ const InvestorZonePage = () => {
                 </Badge>
               )}
               {zone.urbanRenewal.active && (
-                <Badge className="bg-amber-500 text-white border-0">
+                <Badge className="bg-amber-500 text-on-image border-0">
                   <Hammer className="w-3 h-3 mr-1" />
                   {lang === 'it' ? 'Riqualificazione' : 'Renewal'}
                 </Badge>
               )}
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-on-image mb-4">
               {zone.name}
             </h1>
 
-            <div className="flex items-center gap-2 text-white/80">
+            <div className="flex items-center gap-2 text-on-image/80">
               <MapPin className="w-4 h-4" />
               <span>Torino, Italia</span>
             </div>

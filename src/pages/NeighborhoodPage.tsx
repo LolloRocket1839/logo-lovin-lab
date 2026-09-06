@@ -178,18 +178,18 @@ const NeighborhoodPage = () => {
             alt={`${neighborhood.name} - ${isItalian ? 'Quartiere di Torino' : 'Turin neighborhood'}`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-overlay/80 via-overlay/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
             <div className="container mx-auto max-w-6xl">
               <Badge variant="secondary" className="mb-3">
                 {neighborhood.zone}
               </Badge>
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
+              <h1 className="text-3xl md:text-5xl font-bold text-on-image mb-3">
                 {isItalian 
                   ? `Affitto stanza ${neighborhood.name} Torino`
                   : `Room for rent ${neighborhood.name} Turin`}
               </h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-2xl">
+              <p className="text-lg md:text-xl text-on-image/90 max-w-2xl">
                 {neighborhood.description[lang]}
               </p>
             </div>

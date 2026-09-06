@@ -47,8 +47,8 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
               />
               
               {/* Series badge overlay */}
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 z-10">
-                <span className="text-white text-xs font-medium tracking-wider uppercase">
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-overlay/60 backdrop-blur-md px-4 py-2 rounded-full border border-on-image/10 z-10">
+                <span className="text-on-image text-xs font-medium tracking-wider uppercase">
                   🚀 Jungle Control
                 </span>
               </div>

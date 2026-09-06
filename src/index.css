@@ -121,6 +121,10 @@ All colors MUST be HSL.
     /* Blog-specific shadows */
     --shadow-soft: 0 1px 0 hsla(37, 20%, 15%, 0.05);
     --shadow-focus: 0 0 0 2px hsl(28 24% 100%), 0 0 0 4px hsl(131 30% 36%);
+
+    /* Overlay/on-image tokens for dark scrims and text over photos */
+    --overlay: 0 0% 0%;
+    --on-image: 0 0% 100%;
   }
   
 /* ============================================

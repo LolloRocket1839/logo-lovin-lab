@@ -44,7 +44,7 @@ const GymCard: React.FC<GymCardProps> = ({ gym, lang, onClick }) => {
               <Badge variant="outline" className="text-xs">
                 {chainLabel}
               </Badge>
-              <Badge className={`${tierInfo.color} text-white text-xs`}>
+              <Badge className={`${tierInfo.color} text-on-image text-xs`}>
                 {tierInfo[lang]}
               </Badge>
               {gym.featured && (

@@ -878,7 +878,7 @@ export const PropertyValuator = ({ onValueCalculated }: PropertyValuatorProps) =
                           </div>
                           <Button 
                             variant="default" 
-                            className="w-full bg-amber-600 hover:bg-amber-700 text-white"
+                            className="w-full bg-amber-600 hover:bg-amber-700 text-on-image"
                             onClick={handleOpenLeadForm}
                           >
                             📋 {t('propertyValuator.requestFreeEvaluation', 'Richiedi valutazione gratuita')}

@@ -162,7 +162,7 @@ const StrikeEmergencyDirectory = () => {
             </div>
 
             {/* Emergency 112 Banner */}
-            <div className="bg-red-600 text-white rounded-lg p-4 flex items-center justify-between mb-6">
+            <div className="bg-destructive text-destructive-foreground rounded-lg p-4 flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
                 <Phone className="h-6 w-6" />
                 <div>
@@ -170,7 +170,7 @@ const StrikeEmergencyDirectory = () => {
                   <p className="text-sm opacity-90">Numero unico europeo - Gratuito 24/7</p>
                 </div>
               </div>
-              <a href="tel:112" className="bg-white text-red-600 px-4 py-2 rounded-lg font-bold hover:bg-red-100 transition-colors">
+              <a href="tel:112" className="bg-background text-destructive px-4 py-2 rounded-lg font-bold hover:bg-destructive/10 transition-colors">
                 Chiama
               </a>
             </div>
@@ -510,7 +510,7 @@ const StrikeEmergencyDirectory = () => {
                       >
                         <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${
                           checkedItems.includes(item.id)
-                            ? 'bg-green-500 border-green-500 text-white'
+                            ? 'bg-green-500 border-green-500 text-on-image'
                             : 'border-muted-foreground'
                         }`}>
                           {checkedItems.includes(item.id) && (

@@ -39,7 +39,7 @@ export const WhatsAppFAB = () => {
 
   // Darker jungle-green WhatsApp FAB
   const whatsappBrand =
-    "bg-[hsl(142_70%_42%)] text-white hover:bg-[hsl(142_70%_36%)]";
+    "bg-[hsl(142_70%_42%)] text-on-image hover:bg-[hsl(142_70%_36%)]";
 
   // Variation A: Brand-green floating circle
   if (variation === 'A') {
