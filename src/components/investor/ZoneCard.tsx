@@ -59,7 +59,7 @@ export const ZoneCard = ({ zone, lang, className }: ZoneCardProps) => {
               </Badge>
             )}
             {hasRenewal && (
-              <Badge variant="secondary" className="bg-amber-500/90 text-white text-xs">
+              <Badge variant="secondary" className="bg-amber-500/90 text-on-image text-xs">
                 <Hammer className="w-3 h-3 mr-1" />
                 {lang === 'it' ? 'Riqualificazione' : 'Renewal'}
               </Badge>
@@ -68,7 +68,7 @@ export const ZoneCard = ({ zone, lang, className }: ZoneCardProps) => {
 
           {/* Zone category */}
           <div className="absolute bottom-3 left-3">
-            <span className="text-xs font-medium text-white/80 uppercase tracking-wider">
+            <span className="text-xs font-medium text-on-image/80 uppercase tracking-wider">
               {zone.zone}
             </span>
           </div>

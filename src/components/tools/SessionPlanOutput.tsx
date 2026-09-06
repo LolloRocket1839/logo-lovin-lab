@@ -306,7 +306,7 @@ export const SessionPlanOutput = ({ exams, cfuMax, onCfuMaxChange, lang }: Sessi
       {exams.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {isPro && (
-            <Badge className="bg-gradient-to-r from-amber-400 to-yellow-500 text-white gap-1">
+            <Badge className="bg-gradient-to-r from-amber-400 to-yellow-500 text-on-image gap-1">
               <Trophy className="w-3 h-3" />
               {c.warnings.proBadge}
             </Badge>

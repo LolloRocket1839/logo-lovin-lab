@@ -18,7 +18,7 @@ export const PillarBadge = ({ slug, lang, className }: PillarBadgeProps) => {
     <Badge 
       variant="outline"
       className={cn(
-        "bg-white/95 backdrop-blur-sm",
+        "bg-card/95 backdrop-blur-sm",
         "border-primary/20 text-primary",
         "font-bold uppercase tracking-wider text-[10px]",
         "flex items-center gap-1.5 shadow-sm",

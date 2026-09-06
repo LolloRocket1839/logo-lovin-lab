@@ -465,7 +465,7 @@ const SitemapDebug = () => {
                         <CardTitle className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
                             <div className={`w-8 h-8 rounded-lg ${config.color} flex items-center justify-center`}>
-                              <Icon className="w-4 h-4 text-white" />
+                              <Icon className="w-4 h-4 text-on-image" />
                             </div>
                             <span>{config.label}</span>
                             <Badge variant="secondary">{urls.length}</Badge>

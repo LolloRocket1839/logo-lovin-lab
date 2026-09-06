@@ -10,6 +10,19 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 export const BrandWordmark = ({ word = "TORINO" }: { word?: string }) => {
   const prefersReducedMotion = useReducedMotion();
   const [y, setY] = useState(0);
+  // Mount the decorative wordmark only after the first paint so it is never
+  // picked as the Largest Contentful Paint element (it's a huge 4%-opacity span).
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const w = window as Window & { requestIdleCallback?: (cb: () => void) => number; cancelIdleCallback?: (id: number) => void };
+    if (w.requestIdleCallback) {
+      const id = w.requestIdleCallback(() => setReady(true));
+      return () => w.cancelIdleCallback?.(id);
+    }
+    const id = window.setTimeout(() => setReady(true), 1200);
+    return () => window.clearTimeout(id);
+  }, []);
 
   useEffect(() => {
     if (prefersReducedMotion) return;
@@ -27,6 +40,8 @@ export const BrandWordmark = ({ word = "TORINO" }: { word?: string }) => {
       cancelAnimationFrame(raf);
     };
   }, [prefersReducedMotion]);
+
+  if (!ready) return null;
 
   return (
     <div

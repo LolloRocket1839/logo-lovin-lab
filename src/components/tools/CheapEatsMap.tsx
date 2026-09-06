@@ -149,7 +149,7 @@ const CheapEatsMap: React.FC<CheapEatsMapProps> = ({
       <div ref={mapContainerRef} className="absolute inset-0 z-0" />
       
       {/* Legend */}
-      <div className="absolute bottom-4 left-4 bg-white/95 dark:bg-gray-900/95 rounded-lg p-3 shadow-lg z-[1000] max-w-[200px]">
+      <div className="absolute bottom-4 left-4 bg-card/95 rounded-lg p-3 shadow-lg z-[1000] max-w-[200px]">
         <h4 className="text-xs font-semibold mb-2 text-foreground">
           {lang === 'it' ? 'Legenda' : 'Legend'}
         </h4>
@@ -174,7 +174,7 @@ const CheapEatsMap: React.FC<CheapEatsMapProps> = ({
       </div>
 
       {/* Results count */}
-      <div className="absolute top-4 right-4 bg-white/95 dark:bg-gray-900/95 rounded-lg px-3 py-2 shadow-lg z-[1000]">
+      <div className="absolute top-4 right-4 bg-card/95 rounded-lg px-3 py-2 shadow-lg z-[1000]">
         <span className="text-sm font-medium">
           {locations.length} {lang === 'it' ? 'locali' : 'venues'}
         </span>

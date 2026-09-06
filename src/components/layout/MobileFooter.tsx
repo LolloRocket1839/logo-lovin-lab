@@ -51,37 +51,37 @@ export const MobileFooter = () => {
 
           {/* Popular Neighborhoods */}
           <div className="w-full">
-            <p className="text-[11px] font-medium text-muted-foreground/50 text-center mb-2">
+            <p className="text-[11px] font-medium text-muted-foreground text-center mb-2">
               {isIt ? 'Quartieri popolari' : 'Popular neighborhoods'}
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               <Link
                 to="/affitto-stanza-torino/san-salvario"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 San Salvario
               </Link>
               <Link
                 to="/affitto-stanza-torino/crocetta"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 Crocetta
               </Link>
               <Link
                 to="/affitto-stanza-torino/cenisia"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 Cenisia
               </Link>
               <Link
                 to="/affitto-stanza-torino/vanchiglia"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 Vanchiglia
               </Link>
               <Link
                 to={isIt ? '/affitti-lingotto-ospedali-torino' : '/rent-lingotto-hospitals-turin'}
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 Lingotto / Ospedali
               </Link>
@@ -97,31 +97,31 @@ export const MobileFooter = () => {
 
           {/* Investment Zones */}
           <div className="w-full">
-            <p className="text-[11px] font-medium text-muted-foreground/50 text-center mb-2">
+            <p className="text-[11px] font-medium text-muted-foreground text-center mb-2">
               {isIt ? 'Zone investimento' : 'Investment zones'}
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               <Link
                 to="/investitori/zone/aurora"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 Aurora
               </Link>
               <Link
                 to="/investitori/zone/barriera-di-milano"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 Barriera
               </Link>
               <Link
                 to="/investitori/zone/cenisia"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 Cenisia
               </Link>
               <Link
                 to="/investitori/zone/san-salvario"
-                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground/60 active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
+                className="px-2 py-1 rounded-full bg-background border border-border/20 text-[11px] text-muted-foreground active:text-primary active:border-primary/30 active:bg-primary/5 transition-colors"
               >
                 San Salvario
               </Link>
@@ -156,7 +156,7 @@ export const MobileFooter = () => {
               style={{ imageRendering: 'auto' }}
               loading="lazy"
             />
-            <p className="text-[9px] tracking-wide text-white/60 text-center leading-relaxed max-w-xs">
+            <p className="text-[9px] tracking-wide text-white/85 text-center leading-relaxed max-w-xs">
               Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
             </p>
           </a>

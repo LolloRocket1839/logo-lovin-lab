@@ -317,7 +317,7 @@ export const Footer = () => {
                 style={{ imageRendering: 'auto' }}
                 loading="lazy"
               />
-              <p className="text-white/60 text-[9px] tracking-wide font-light max-w-lg leading-relaxed text-center">
+              <p className="text-white/85 text-[9px] tracking-wide font-light max-w-lg leading-relaxed text-center">
                 Realizzato con il finanziamento del Fondo Sociale Europeo Plus — PR FSE+ 2021-2027, Misura 8 e Misura 9
               </p>
             </a>

@@ -37,6 +37,8 @@ export default {
         cream: {
           DEFAULT: 'hsl(var(--cream))',
         },
+        overlay: "hsl(var(--overlay))",
+        "on-image": "hsl(var(--on-image))",
         "pastel-yellow": {
           DEFAULT: "hsl(var(--pastel-yellow))",
           hover: "hsl(var(--pastel-yellow-hover))",

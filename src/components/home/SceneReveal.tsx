@@ -5,7 +5,7 @@ interface SceneRevealProps {
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: "div" | "section" | "article";
+  as?: "div" | "section" | "article" | "li";
 }
 
 /**
