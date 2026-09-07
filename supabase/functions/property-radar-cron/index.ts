@@ -195,35 +195,18 @@ function enrichFromMarkdown(portal: Portal, md: string, base: ExtractedListing):
 
 function sleep(ms: number) { return new Promise((r) => setTimeout(r, ms)); }
 
-serve(async (req) => {
-  if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
+const TIME_BUDGET_MS = 90_000; // stop this invocation well before the edge gateway timeout
+const MAX_FETCHES = 40; // per invocation
 
+async function runChunk(offset: number, firecrawlKey: string, supabaseUrl: string, serviceKey: string) {
   const startedAt = Date.now();
-  const enabled = (Deno.env.get("RADAR_ENABLED") ?? "true").toLowerCase() !== "false";
-  if (!enabled) {
-    return new Response(JSON.stringify({ ok: true, skipped: "RADAR_ENABLED=false" }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
-  }
-
-  const firecrawlKey = Deno.env.get("FIRECRAWL_API_KEY");
-  if (!firecrawlKey) {
-    return new Response(JSON.stringify({ error: "FIRECRAWL_API_KEY not configured" }), {
-      status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
-  }
-
-  const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
   const admin = createClient(supabaseUrl, serviceKey);
-
-  const summary: Record<string, unknown>[] = [];
   let totalFetches = 0;
-  const MAX_FETCHES = 180; // safety cap per run (15 targets × ~12 listings)
+  let i = offset;
 
-  for (const target of TARGETS) {
-    if (totalFetches >= MAX_FETCHES) break;
+  for (; i < TARGETS.length; i++) {
+    if (totalFetches >= MAX_FETCHES || Date.now() - startedAt > TIME_BUDGET_MS) break;
+    const target = TARGETS[i];
     const tStart = Date.now();
     const errors: string[] = [];
     let listings: ExtractedListing[] = [];
@@ -240,9 +223,8 @@ serve(async (req) => {
     let updatedCount = 0;
 
     for (const listing of listings) {
-      if (totalFetches >= MAX_FETCHES) break;
+      if (totalFetches >= MAX_FETCHES || Date.now() - startedAt > TIME_BUDGET_MS) break;
 
-      // Check existing
       const { data: existing } = await admin
         .from("property_listings")
         .select("id, price_eur, price_history, first_seen_at")
@@ -254,7 +236,7 @@ serve(async (req) => {
       // Only enrich (additional fetch) for NEW listings to save credits
       if (!existing) {
         try {
-          await sleep(1500); // throttle
+          await sleep(500); // throttle
           const detail = await firecrawlScrape(listing.url, firecrawlKey);
           totalFetches++;
           enriched = enrichFromMarkdown(target.portal, detail.markdown, listing);
@@ -301,25 +283,13 @@ serve(async (req) => {
       };
 
       if (existing) {
-        await admin.from("property_listings")
-          .update(row)
-          .eq("id", existing.id);
+        await admin.from("property_listings").update(row).eq("id", existing.id);
         updatedCount++;
       } else {
-        await admin.from("property_listings")
-          .insert({ ...row, first_seen_at: firstSeen });
+        await admin.from("property_listings").insert({ ...row, first_seen_at: firstSeen });
         newCount++;
       }
     }
-
-    summary.push({
-      portal: target.portal,
-      zone: target.zone,
-      found: listings.length,
-      new: newCount,
-      updated: updatedCount,
-      errors,
-    });
 
     await admin.from("radar_fetch_log").insert({
       portal: target.portal,
@@ -333,21 +303,63 @@ serve(async (req) => {
     });
   }
 
-  // Mark stale listings as expired (not seen in 14 days)
+  const nextOffset = i;
+  if (nextOffset < TARGETS.length) {
+    // Chain the next chunk in a fresh invocation
+    try {
+      await fetch(`${supabaseUrl}/functions/v1/property-radar-cron`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${serviceKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ offset: nextOffset }),
+      });
+    } catch (_) { /* next cron run resumes from 0 */ }
+    return;
+  }
+
+  // Final chunk: mark stale listings as expired (not seen in 14 days)
   const fourteenDaysAgo = new Date(Date.now() - 14 * 86400000).toISOString();
   await admin
     .from("property_listings")
     .update({ status: "expired" })
     .lt("last_seen_at", fourteenDaysAgo)
     .eq("status", "active");
+}
+
+serve(async (req) => {
+  if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
+
+  const enabled = (Deno.env.get("RADAR_ENABLED") ?? "true").toLowerCase() !== "false";
+  if (!enabled) {
+    return new Response(JSON.stringify({ ok: true, skipped: "RADAR_ENABLED=false" }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
+  const firecrawlKey = Deno.env.get("FIRECRAWL_API_KEY");
+  if (!firecrawlKey) {
+    return new Response(JSON.stringify({ error: "FIRECRAWL_API_KEY not configured" }), {
+      status: 500,
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    });
+  }
+
+  const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
+  const body = await req.json().catch(() => ({} as Record<string, unknown>));
+  const rawOffset = Number((body as { offset?: unknown })?.offset ?? 0);
+  const offset = Number.isFinite(rawOffset) ? Math.min(Math.max(Math.trunc(rawOffset), 0), TARGETS.length) : 0;
+
+  // Run in the background so the request returns immediately (no gateway 504)
+  const task = runChunk(offset, firecrawlKey, supabaseUrl, serviceKey).catch((e) => {
+    console.error("radar chunk failed", (e as Error).message);
+  });
+  // @ts-ignore EdgeRuntime is available in Supabase Edge Functions
+  if (typeof EdgeRuntime !== "undefined" && EdgeRuntime?.waitUntil) EdgeRuntime.waitUntil(task);
+  else await task;
 
   return new Response(
-    JSON.stringify({
-      ok: true,
-      duration_ms: Date.now() - startedAt,
-      total_fetches: totalFetches,
-      summary,
-    }),
-    { headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    JSON.stringify({ ok: true, accepted: true, offset, total_targets: TARGETS.length }),
+    { status: 202, headers: { ...corsHeaders, "Content-Type": "application/json" } },
   );
 });
