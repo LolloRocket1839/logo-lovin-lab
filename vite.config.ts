@@ -80,25 +80,22 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        // Function form: only split vendors that are needed on the first paint.
-        // Heavy, page-specific libs (recharts, jspdf, leaflet, markdown) are left
-        // to Rollup so they land in the lazy route chunks that actually use them
-        // instead of being hoisted into the entry chunk.
+        // Keep React and everything that imports React at module-init time in a
+        // single chunk. Splitting i18next out created a circular chunk import
+        // (vendor-react <-> vendor-i18n) which left React undefined at runtime
+        // and produced a blank published page.
         manualChunks(id) {
           if (!id.includes('node_modules')) return undefined;
           if (/[\\/]node_modules[\\/](react|react-dom|react-router-dom|scheduler)[\\/]/.test(id)) return 'vendor-react';
+          if (/[\\/]node_modules[\\/](i18next|react-i18next|i18next-browser-languagedetector)[\\/]/.test(id)) return 'vendor-react';
           if (id.includes('/@radix-ui/')) return 'vendor-ui';
           if (id.includes('/framer-motion/')) return 'vendor-motion';
-          if (/[\\/](i18next|react-i18next|i18next-browser-languagedetector)[\\/]/.test(id)) return 'vendor-i18n';
           if (id.includes('/lucide-react/')) return 'vendor-icons';
           return undefined;
         },
       },
     },
     chunkSizeWarningLimit: 500,
-    // Tree shaking optimization
-    treeshake: {
-      moduleSideEffects: false,
-    },
   },
+
 }));
