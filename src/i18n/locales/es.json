@@ -437,7 +437,7 @@
     "universitiesLabel": "Universidades cubiertas",
     "usefulResources": "Recursos útiles",
     "valuateProperty": "Valora tu propiedad",
-    "sellerCommunity": "Comunidad de vendedores"
+    "sellerCommunity": "VENDI CASA - Torino Jungle"
   },
   "founders": {
     "callDirect": "Llamar directamente",
@@ -1723,8 +1723,8 @@
       "orCall": "¿Prefieres hablar?",
       "subtitle": "No somos una agencia. Compramos directamente tu propiedad.",
       "whatsappCta": "Mensaje en WhatsApp",
-      "communityCta": "O únete a la comunidad de propietarios en Turín",
-      "communityLinkText": "Facebook"
+      "communityCta": "O únete al grupo",
+      "communityLinkText": "VENDI CASA - Torino Jungle"
     },
     "meta": {
       "description": "Vende tu propiedad directamente a Jungle Rent. Cero comisiones, 60-90 días.",
@@ -1752,7 +1752,12 @@
       "gdpr": "Datos protegidos por RGPD",
       "startup": "Startup Innovadora Certificada"
     },
-    "valuatorLink": "Calcula el valor de tu inmueble"
+    "valuatorLink": "Calcula el valor de tu inmueble",
+    "community": {
+      "title": "Únete a VENDI CASA - Torino Jungle",
+      "description": "Un grupo para propietarios que venden o alquilan en Turín: intercambio de preguntas, anuncios y consejos prácticos. Sin spam, sin promesas de precio, solo un punto de encuentro real entre quien tiene un inmueble y quien busca soluciones.",
+      "cta": "Entra al grupo"
+    }
   },
   "slideOverlays": {
     "acquire": {
@@ -2225,6 +2230,6 @@
     "timeline": "Plazo",
     "buyer": "Comprador",
     "trust": "Startup Innovadora registrada ante el CCIAA de Turín",
-    "communityCta": "Únete a la comunidad de propietarios"
+    "communityCta": "Únete a VENDI CASA - Torino Jungle"
   }
 }

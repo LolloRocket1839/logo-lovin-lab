@@ -45,7 +45,7 @@ const MAX = (() => {
 // Allow-list: values that may legitimately match IT verbatim.
 const BRAND_TOKENS = [
   'Jungle Rent', 'JungleRent', 'Lorenzo', 'Lorenzo Oni-Joseph', 'WhatsApp', 'WhatsApp Lorenzo',
-  'Founder', 'Founder, Jungle Rent',
+  'Founder', 'Founder, Jungle Rent', 'VENDI CASA - Torino Jungle',
   'Torino', 'Italia', 'S.r.l.', 'Home', 'Menu', 'Email', 'Email *', 'Portfolio', 'Partnership',
   // Brand / referral source names
   'Google', 'LinkedIn', 'Facebook', 'Instagram', 'Family Office', 'Referral',

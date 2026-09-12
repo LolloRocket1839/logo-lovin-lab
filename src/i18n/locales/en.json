@@ -437,7 +437,7 @@
     "universitiesLabel": "Covered universities",
     "usefulResources": "Useful resources",
     "valuateProperty": "Valuate your property",
-    "sellerCommunity": "Seller community"
+    "sellerCommunity": "VENDI CASA - Torino Jungle"
   },
   "founders": {
     "callDirect": "Call directly",
@@ -1723,8 +1723,8 @@
       "orCall": "Prefer to talk?",
       "subtitle": "We're not an agency. We buy your property directly for our student housing portfolio. No intermediaries, no commissions, fast process.",
       "whatsappCta": "Message on WhatsApp",
-      "communityCta": "Or join the property owners community in Turin",
-      "communityLinkText": "Facebook"
+      "communityCta": "Or join the group",
+      "communityLinkText": "VENDI CASA - Torino Jungle"
     },
     "meta": {
       "description": "Sell your property in Turin directly to Jungle Rent. Zero commissions, 60-90 days, guaranteed buyer. Free valuation.",
@@ -1752,7 +1752,12 @@
       "gdpr": "GDPR protected data",
       "startup": "Certified Innovative Startup"
     },
-    "valuatorLink": "Calculate your property value"
+    "valuatorLink": "Calculate your property value",
+    "community": {
+      "title": "Join VENDI CASA - Torino Jungle",
+      "description": "A group for property owners selling or renting in Turin: ask questions, share listings and get practical advice. No spam, no price promises, just a real meeting point between owners and people looking for solutions.",
+      "cta": "Join the group"
+    }
   },
   "slideOverlays": {
     "acquire": {
@@ -2225,6 +2230,6 @@
     "timeline": "Timeline",
     "buyer": "Buyer",
     "trust": "Innovative startup registered with CCIAA Turin",
-    "communityCta": "Join the property owners community"
+    "communityCta": "Join VENDI CASA - Torino Jungle"
   }
 }

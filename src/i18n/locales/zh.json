@@ -437,7 +437,7 @@
     "universitiesLabel": "覆盖大学",
     "usefulResources": "实用资源",
     "valuateProperty": "评估你的房产",
-    "sellerCommunity": "卖家社区"
+    "sellerCommunity": "VENDI CASA - Torino Jungle"
   },
   "founders": {
     "callDirect": "直接拨打",
@@ -1723,8 +1723,8 @@
       "orCall": "更想通话？",
       "subtitle": "我们不是中介。我们直接购买您的房产。",
       "whatsappCta": "通过WhatsApp发消息",
-      "communityCta": "或加入都灵业主社区",
-      "communityLinkText": "Facebook"
+      "communityCta": "或加入群组",
+      "communityLinkText": "VENDI CASA - Torino Jungle"
     },
     "meta": {
       "description": "直接将您的房产出售给Jungle Rent。零佣金，60-90天。",
@@ -1752,7 +1752,12 @@
       "gdpr": "GDPR保护数据",
       "startup": "认证创新型初创企业"
     },
-    "valuatorLink": "计算你的房产价值"
+    "valuatorLink": "计算你的房产价值",
+    "community": {
+      "title": "加入 VENDI CASA - Torino Jungle",
+      "description": "一个面向在都灵出售或出租房产的业主群组：交流问题、房源和实用建议。无垃圾信息，无价格承诺，仅为业主与寻求解决方案者之间的真实交流空间。",
+      "cta": "加入群组"
+    }
   },
   "slideOverlays": {
     "acquire": {
@@ -2225,6 +2230,6 @@
     "timeline": "周期",
     "buyer": "买家",
     "trust": "经都灵商会注册的创新初创企业",
-    "communityCta": "加入业主社区"
+    "communityCta": "加入 VENDI CASA - Torino Jungle"
   }
 }

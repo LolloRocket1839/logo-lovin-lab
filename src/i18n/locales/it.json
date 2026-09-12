@@ -437,7 +437,7 @@
     "universitiesLabel": "Università coperte",
     "usefulResources": "Risorse utili",
     "valuateProperty": "Valuta il tuo immobile",
-    "sellerCommunity": "Community venditori"
+    "sellerCommunity": "VENDI CASA - Torino Jungle"
   },
   "founders": {
     "callDirect": "Chiama direttamente",
@@ -1743,8 +1743,8 @@
       "orCall": "Preferisci parlare?",
       "subtitle": "Non siamo un'agenzia. Acquistiamo direttamente il tuo immobile per il nostro portafoglio di student housing. Zero intermediari, zero commissioni, processo rapido.",
       "whatsappCta": "Scrivi su WhatsApp",
-      "communityCta": "Oppure entra nella community di proprietari a Torino",
-      "communityLinkText": "Facebook"
+      "communityCta": "Oppure unisciti al gruppo",
+      "communityLinkText": "VENDI CASA - Torino Jungle"
     },
     "meta": {
       "description": "Vendi il tuo immobile a Torino direttamente a Jungle Rent. Zero commissioni, 60-90 giorni, acquirente garantito. Valutazione gratuita.",
@@ -1772,7 +1772,12 @@
       "gdpr": "Dati protetti GDPR",
       "startup": "Startup Innovativa certificata"
     },
-    "valuatorLink": "Calcola il valore del tuo immobile"
+    "valuatorLink": "Calcola il valore del tuo immobile",
+    "community": {
+      "title": "Unisciti a VENDI CASA - Torino Jungle",
+      "description": "Un gruppo per proprietari che vendono o affittano a Torino: scambio di domande, annunci e consigli pratici. Nessuno spam, nessuna promessa di prezzo, solo un punto di incontro reale tra chi ha un immobile e chi cerca soluzioni.",
+      "cta": "Entra nel gruppo"
+    }
   },
   "slideOverlays": {
     "acquire": {
@@ -2225,6 +2230,6 @@
     "timeline": "Tempi",
     "buyer": "Acquirente",
     "trust": "Start-up Innovativa registrata CCIAA Torino",
-    "communityCta": "Unisciti alla community di proprietari"
+    "communityCta": "Entra in VENDI CASA - Torino Jungle"
   }
 }

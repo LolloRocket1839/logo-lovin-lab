@@ -270,7 +270,7 @@ const Sellers = () => {
 
                 <div className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
                   <Facebook className="w-4 h-4 text-primary" aria-hidden="true" />
-                  <span>{t('sellersPage.hero.communityCta', 'Oppure entra nella community di proprietari a Torino')}:</span>
+                  <span>{t('sellersPage.hero.communityCta', 'Oppure unisciti al gruppo')}:</span>
                   <a
                     href={FACEBOOK_SELLER_GROUP_URL}
                     target="_blank"
@@ -278,7 +278,7 @@ const Sellers = () => {
                     className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
                     onClick={() => trackClick('seller_community_click')}
                   >
-                    {t('sellersPage.hero.communityLinkText', 'Facebook')}
+                    {t('sellersPage.hero.communityLinkText', 'VENDI CASA - Torino Jungle')}
                     <span className="sr-only"> {t('accessibility.opensNewWindow')}</span>
                   </a>
                 </div>
@@ -527,6 +527,31 @@ const Sellers = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </div>
+        </section>
+
+        {/* Community Section */}
+        <section className="py-12 md:py-16">
+          <div className="container px-4 md:px-8 mx-auto">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+                {t('sellersPage.community.title', 'Unisciti a VENDI CASA - Torino Jungle')}
+              </h2>
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                {t('sellersPage.community.description', 'Un gruppo per proprietari che vendono o affittano a Torino: scambio di domande, annunci e consigli pratici. Nessuno spam, nessuna promessa di prezzo, solo un punto di incontro reale tra chi ha un immobile e chi cerca soluzioni.')}
+              </p>
+              <a
+                href={FACEBOOK_SELLER_GROUP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackClick('seller_community_click')}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
+              >
+                <Facebook className="w-5 h-5" aria-hidden="true" />
+                {t('sellersPage.community.cta', 'Entra nel gruppo')}
+                <span className="sr-only"> {t('accessibility.opensNewWindow')}</span>
+              </a>
             </div>
           </div>
         </section>

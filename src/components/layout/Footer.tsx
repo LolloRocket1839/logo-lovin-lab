@@ -132,7 +132,7 @@ export const Footer = () => {
                   className="flex items-center gap-2 text-sm font-light hover:text-primary transition-colors duration-500 link-elegant"
                 >
                   <Facebook className="w-3.5 h-3.5" aria-hidden="true" />
-                  {t('footer.sellerCommunity', 'Community venditori')}
+                  {t('footer.sellerCommunity', 'VENDI CASA - Torino Jungle')}
                   <span className="sr-only"> {t('accessibility.opensNewWindow')}</span>
                 </a>
               </li>

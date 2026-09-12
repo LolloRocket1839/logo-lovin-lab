@@ -437,7 +437,7 @@
     "universitiesLabel": "Universitet vi täcker",
     "usefulResources": "Användbara resurser",
     "valuateProperty": "Värdera din fastighet",
-    "sellerCommunity": "Säljargemenskap"
+    "sellerCommunity": "VENDI CASA - Torino Jungle"
   },
   "founders": {
     "callDirect": "Ring direkt",
@@ -1723,8 +1723,8 @@
       "orCall": "Föredrar du att prata?",
       "subtitle": "Vi är ingen mäklare. Vi köper din fastighet direkt.",
       "whatsappCta": "Meddelande på WhatsApp",
-      "communityCta": "Eller gå med i fastighetsägargemenskapen i Turin",
-      "communityLinkText": "Facebook"
+      "communityCta": "Eller gå med i gruppen",
+      "communityLinkText": "VENDI CASA - Torino Jungle"
     },
     "meta": {
       "description": "Sälj din fastighet direkt till Jungle Rent. Noll provision, 60-90 dagar.",
@@ -1752,7 +1752,12 @@
       "gdpr": "GDPR-skyddade data",
       "startup": "Certifierat Innovativt Startup"
     },
-    "valuatorLink": "Beräkna din fastighets värde"
+    "valuatorLink": "Beräkna din fastighets värde",
+    "community": {
+      "title": "Gå med i VENDI CASA - Torino Jungle",
+      "description": "En grupp för fastighetsägare som säljer eller hyr ut i Turin: utbyte av frågor, annonser och praktiska tips. Ingen spam, inga prislöften, bara en verklig mötesplats mellan dem som har en fastighet och dem som söker lösningar.",
+      "cta": "Gå med i gruppen"
+    }
   },
   "slideOverlays": {
     "acquire": {
@@ -2225,6 +2230,6 @@
     "timeline": "Tidsram",
     "buyer": "Köpare",
     "trust": "Registrerat innovativt startup-företag hos CCIAA Turin",
-    "communityCta": "Gå med i fastighetsägargemenskapen"
+    "communityCta": "Gå med i VENDI CASA - Torino Jungle"
   }
 }

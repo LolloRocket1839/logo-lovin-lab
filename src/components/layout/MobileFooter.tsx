@@ -34,7 +34,7 @@ export const MobileFooter = () => {
             className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-background border border-border/40 text-foreground font-medium text-xs active:text-primary active:border-primary/40 active:bg-primary/5 transition-colors"
           >
             <Facebook className="w-3.5 h-3.5" />
-            <span>{isIt ? 'Community venditori' : 'Seller community'}</span>
+            <span>{t('footer.sellerCommunity', 'VENDI CASA - Torino Jungle')}</span>
           </a>
           <Link
             to={isIt ? '/chi-siamo' : '/about'}
