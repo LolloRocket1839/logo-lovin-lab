@@ -267,6 +267,21 @@ const Sellers = () => {
                     {t('sellersPage.hero.whatsappCta', 'Scrivi su WhatsApp')}
                   </Button>
                 </div>
+
+                <div className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Facebook className="w-4 h-4 text-primary" aria-hidden="true" />
+                  <span>{t('sellersPage.hero.communityCta', 'Oppure entra nella community di proprietari a Torino')}:</span>
+                  <a
+                    href={FACEBOOK_SELLER_GROUP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+                    onClick={() => trackClick('seller_community_click')}
+                  >
+                    {t('sellersPage.hero.communityLinkText', 'Facebook')}
+                    <span className="sr-only"> {t('accessibility.opensNewWindow')}</span>
+                  </a>
+                </div>
               </motion.div>
 
               {/* Right: Offer Simulator */}
