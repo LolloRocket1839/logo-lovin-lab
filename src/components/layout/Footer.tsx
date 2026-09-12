@@ -14,6 +14,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Footer = () => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [logoModalOpen, setLogoModalOpen] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
   const logoRef = useRef<HTMLImageElement>(null);
