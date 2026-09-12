@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Building2, ArrowRight, Clock, Shield, Check } from "lucide-react";
+import { Building2, ArrowRight, Clock, Shield, Check, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 /**
