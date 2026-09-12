@@ -14,7 +14,7 @@ Qui puoi:
 - Confrontarti con altri proprietari su tempistiche, documenti e pratiche
 - Scoprire come funziona l'acquisto diretto senza agenzia
 
-Jungle Rent è un'azienda registrata e certificata che acquista direttamente immobili destinati allo student housing. Nessuna commissione, nessuna promessa generica: solo un processo chiaro e trasparente.
+Jungle Rent è un'azienda registrata che acquista direttamente immobili destinati allo student housing. Nessuna commissione, nessuna promessa generica: solo un processo chiaro e trasparente.
 
 Il gruppo è moderato. Zero spam, zero offerte poco chiare, zero promesse di prezzo.
 
