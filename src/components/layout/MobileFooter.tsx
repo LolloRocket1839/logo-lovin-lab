@@ -26,6 +26,16 @@ export const MobileFooter = () => {
             <Home className="w-3.5 h-3.5" />
             <span>{isIt ? 'Vendi casa a Torino' : 'Sell your home in Turin'}</span>
           </Link>
+          <a
+            href={FACEBOOK_SELLER_GROUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackClick('seller_community_click')}
+            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-background border border-border/40 text-foreground font-medium text-xs active:text-primary active:border-primary/40 active:bg-primary/5 transition-colors"
+          >
+            <Facebook className="w-3.5 h-3.5" />
+            <span>{isIt ? 'Community venditori' : 'Seller community'}</span>
+          </a>
           <Link
             to={isIt ? '/chi-siamo' : '/about'}
             className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-background border border-border/40 text-foreground font-medium text-xs active:text-primary active:border-primary/40 active:bg-primary/5 transition-colors"
