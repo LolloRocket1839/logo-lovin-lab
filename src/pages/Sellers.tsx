@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { 
   Building2, Clock, Check, X, MapPin, FileText, 
   Handshake, Shield, ArrowRight, CalendarCheck,
-  Star, MessageCircle,
+  Star, MessageCircle, Facebook,
   UserCheck, Zap, KeyRound
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,8 @@ import { SellerSocialProof } from "@/components/sellers/SellerSocialProof";
 import { SellerStickyCta } from "@/components/sellers/SellerStickyCta";
 import { StyledText } from "@/components/StyledText";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
+import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import { motion } from "framer-motion";
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import {
