@@ -124,6 +124,19 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <a
+                  href={FACEBOOK_SELLER_GROUP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackClick('seller_community_click')}
+                  className="flex items-center gap-2 text-sm font-light hover:text-primary transition-colors duration-500 link-elegant"
+                >
+                  <Facebook className="w-3.5 h-3.5" aria-hidden="true" />
+                  {t('footer.sellerCommunity', 'Community venditori')}
+                  <span className="sr-only"> {t('accessibility.opensNewWindow')}</span>
+                </a>
+              </li>
+              <li>
                 <Link to="/chi-siamo" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
                   {t('footer.howItWorksLink')}
                 </Link>
