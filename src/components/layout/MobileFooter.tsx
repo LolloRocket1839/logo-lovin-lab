@@ -10,6 +10,7 @@ import { FairRentPledgeBadge } from "@/components/FairRentPledgeBadge";
 
 export const MobileFooter = () => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const isIt = i18n.language?.startsWith('it');
 
   return (
