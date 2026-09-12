@@ -61,7 +61,7 @@ export const SellerHomeEntry = () => {
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mt-4"
             >
               <Facebook className="w-4 h-4" aria-hidden="true" />
-              {t("sellerHomeEntry.communityCta", isItalian ? "Unisciti alla community di proprietari" : "Join the property owners community")}
+              {t("sellerHomeEntry.communityCta", isItalian ? "Entra in VENDI CASA - Torino Jungle" : "Join VENDI CASA - Torino Jungle")}
               <span className="sr-only"> {isItalian ? "Apre in una nuova finestra" : "Opens in a new window"}</span>
             </a>
           </div>
