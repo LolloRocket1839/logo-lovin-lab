@@ -33,6 +33,7 @@ import {
 
 const Sellers = () => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const lang = i18n.language;
 
