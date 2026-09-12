@@ -32,7 +32,7 @@ Here you can:
 - Compare notes with other owners on timelines, paperwork and practical steps
 - Learn how direct purchase without an agency works
 
-Jungle Rent is a registered, certified company that buys properties directly for student housing. No commissions, no vague promises: just a clear and transparent process.
+Jungle Rent is a registered company that buys properties directly for student housing. No commissions, no vague promises: just a clear and transparent process.
 
 This group is moderated. No spam, no unclear offers, no price promises.
 
