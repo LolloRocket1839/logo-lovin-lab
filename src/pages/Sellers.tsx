@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { 
   Building2, Clock, Check, X, MapPin, FileText, 
   Handshake, Shield, ArrowRight, CalendarCheck,
-  Star, MessageCircle,
+  Star, MessageCircle, Facebook,
   UserCheck, Zap, KeyRound
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,8 @@ import { SellerSocialProof } from "@/components/sellers/SellerSocialProof";
 import { SellerStickyCta } from "@/components/sellers/SellerStickyCta";
 import { StyledText } from "@/components/StyledText";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
+import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import { motion } from "framer-motion";
 import { ProcessSteps } from "@/components/shared/ProcessSteps";
 import {
@@ -31,6 +33,7 @@ import {
 
 const Sellers = () => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const lang = i18n.language;
 
@@ -263,6 +266,21 @@ const Sellers = () => {
                     <MessageCircle className="w-4 h-4 mr-2" />
                     {t('sellersPage.hero.whatsappCta', 'Scrivi su WhatsApp')}
                   </Button>
+                </div>
+
+                <div className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
+                  <Facebook className="w-4 h-4 text-primary" aria-hidden="true" />
+                  <span>{t('sellersPage.hero.communityCta', 'Oppure entra nella community di proprietari a Torino')}:</span>
+                  <a
+                    href={FACEBOOK_SELLER_GROUP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline underline-offset-4 transition-colors"
+                    onClick={() => trackClick('seller_community_click')}
+                  >
+                    {t('sellersPage.hero.communityLinkText', 'Facebook')}
+                    <span className="sr-only"> {t('accessibility.opensNewWindow')}</span>
+                  </a>
                 </div>
               </motion.div>
 

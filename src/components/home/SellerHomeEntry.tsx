@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Building2, ArrowRight, Clock, Shield, Check } from "lucide-react";
+import { Building2, ArrowRight, Clock, Shield, Check, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 /**
@@ -51,6 +52,18 @@ export const SellerHomeEntry = () => {
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
+
+            <a
+              href={FACEBOOK_SELLER_GROUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackClick('seller_community_click')}
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mt-4"
+            >
+              <Facebook className="w-4 h-4" aria-hidden="true" />
+              {t("sellerHomeEntry.communityCta", isItalian ? "Unisciti alla community di proprietari" : "Join the property owners community")}
+              <span className="sr-only"> {isItalian ? "Apre in una nuova finestra" : "Opens in a new window"}</span>
+            </a>
           </div>
 
           <div className="bg-card/50 backdrop-blur-sm border border-border/20 rounded-2xl p-6 md:p-8">

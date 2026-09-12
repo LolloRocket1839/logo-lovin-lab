@@ -4,14 +4,17 @@ import { Link } from "react-router-dom";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 import euFundingBanner from "@/assets/eu-funding-banner.png";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { MessageCircle, Mail, MapPin, Facebook } from "lucide-react";
 import { CONTACTS, openGeneralEmail } from "@/constants";
+import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import { LogoModal } from "@/components/LogoModal";
 import { FairRentPledgeBadge } from "@/components/FairRentPledgeBadge";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export const Footer = () => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const [logoModalOpen, setLogoModalOpen] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
   const logoRef = useRef<HTMLImageElement>(null);
@@ -119,6 +122,19 @@ export const Footer = () => {
                 <Link to={i18n.language.startsWith('it') ? '/vendi' : '/sell'} className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">
                   {t('footer.sellProperty')}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href={FACEBOOK_SELLER_GROUP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackClick('seller_community_click')}
+                  className="flex items-center gap-2 text-sm font-light hover:text-primary transition-colors duration-500 link-elegant"
+                >
+                  <Facebook className="w-3.5 h-3.5" aria-hidden="true" />
+                  {t('footer.sellerCommunity', 'Community venditori')}
+                  <span className="sr-only"> {t('accessibility.opensNewWindow')}</span>
+                </a>
               </li>
               <li>
                 <Link to="/chi-siamo" className="text-sm font-light hover:text-primary transition-colors duration-500 link-elegant">

@@ -1,13 +1,16 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp, Bot, Home } from "lucide-react";
+import { MessageCircle, Calculator, Info, Utensils, MapPin, TrendingUp, Bot, Home, Facebook } from "lucide-react";
 import { CONTACTS } from "@/constants";
+import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
+import { useAnalytics } from "@/hooks/useAnalytics";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import euFundingBanner from "@/assets/eu-funding-banner.png";
 import { FairRentPledgeBadge } from "@/components/FairRentPledgeBadge";
 
 export const MobileFooter = () => {
   const { t, i18n } = useTranslation();
+  const { trackClick } = useAnalytics();
   const isIt = i18n.language?.startsWith('it');
 
   return (
@@ -23,6 +26,16 @@ export const MobileFooter = () => {
             <Home className="w-3.5 h-3.5" />
             <span>{isIt ? 'Vendi casa a Torino' : 'Sell your home in Turin'}</span>
           </Link>
+          <a
+            href={FACEBOOK_SELLER_GROUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackClick('seller_community_click')}
+            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-background border border-border/40 text-foreground font-medium text-xs active:text-primary active:border-primary/40 active:bg-primary/5 transition-colors"
+          >
+            <Facebook className="w-3.5 h-3.5" />
+            <span>{isIt ? 'Community venditori' : 'Seller community'}</span>
+          </a>
           <Link
             to={isIt ? '/chi-siamo' : '/about'}
             className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-background border border-border/40 text-foreground font-medium text-xs active:text-primary active:border-primary/40 active:bg-primary/5 transition-colors"
