@@ -2036,6 +2036,51 @@ import { z as z14 } from "npm:zod@^3.23.8";
 // src/data/blog/posts.ts
 var blogPosts = [
   {
+    slug: "invest-to-rent-torino-come-funziona-2026",
+    category: "investors",
+    date: "2026-09-15",
+    author: "Jungle Rent Team",
+    image: "/images/mortgage-investment.jpg",
+    readTime: 9,
+    content: "invest-to-rent-torino-come-funziona-2026",
+    translations: {
+      it: {
+        title: "Invest-to-rent a Torino: investire nel mattone senza comprare un intero immobile",
+        excerpt: "Come funziona l'esposizione a una singola operazione immobiliare a Torino: dual-season studenti e turisti, alternative sul mercato italiano, domande da fare e rischi reali.",
+        seo: {
+          title: "Invest-to-rent Torino: come funziona il modello nel 2026",
+          description: "Invest-to-rent a Torino: partecipare a una singola operazione immobiliare invece di comprare un bilocale. Modello dual-season, alternative, domande da fare e rischi.",
+          keywords: ["invest to rent torino", "investire immobiliare torino", "investire nel mattone senza comprare casa", "student housing torino investimento", "operazione immobiliare torino", "modello dual-season"]
+        },
+        tags: ["Investitori", "Torino", "Student housing", "Modello", "Rischi"],
+        faqs: [
+          { question: "Che cosa significa invest-to-rent?", answer: "Significa esporsi economicamente a un immobile destinato all'affitto senza acquistarlo e gestirlo in prima persona: l'immobile \xE8 reale e identificabile, la gestione \xE8 affidata all'operatore che cura l'operazione." },
+          { question: "In cosa \xE8 diverso dal crowdfunding immobiliare?", answer: "Nel crowdfunding si finanzia tipicamente un progetto di sviluppo tramite una piattaforma. Nell'invest-to-rent l'esposizione \xE8 legata a un immobile gi\xE0 destinato alla locazione e gestito in modo continuativo dall'operatore." },
+          { question: "Che cos'\xE8 il modello dual-season?", answer: "L'immobile \xE8 affittato a studenti universitari da settembre a giugno e a turisti nei mesi estivi, cos\xEC la domanda copre l'intero anno invece di fermarsi alla chiusura delle universit\xE0." },
+          { question: "Quali rendimenti posso aspettarmi da Jungle Rent?", answer: "Le cifre puntuali e le proiezioni economiche sono contenute solo nel memorandum informativo condiviso dopo la qualifica del profilo. Non vengono pubblicate su pagine pubbliche per ragioni di compliance." },
+          { question: "Quali sono i rischi principali?", answer: "Discesa dei prezzi immobiliari, periodi di sfitto, ristrutturazioni pi\xF9 lunghe o costose del previsto, bassa liquidit\xE0 rispetto a un titolo quotato e cambiamenti normativi o fiscali su locazioni brevi e tassazione." }
+        ]
+      },
+      en: {
+        title: "Invest-to-rent in Turin: property exposure without buying a whole flat",
+        excerpt: "How exposure to a single property operation in Turin works: the dual-season student and tourist model, the alternatives in Italy, the questions to ask and the real risks.",
+        seo: {
+          title: "Invest-to-rent Turin: how the model works in 2026",
+          description: "Invest-to-rent in Turin: taking part in a single property operation instead of buying a flat. Dual-season model, alternatives, questions to ask and risks explained.",
+          keywords: ["invest to rent turin", "property investment turin", "invest in property without buying", "student housing turin investment", "turin real estate operation", "dual-season model"]
+        },
+        tags: ["Investors", "Turin", "Student housing", "Model", "Risks"],
+        faqs: [
+          { question: "What does invest-to-rent mean?", answer: "It means getting economic exposure to a property meant for renting without buying and running it yourself: the property is real and identifiable, and management sits with the operator running the operation." },
+          { question: "How is it different from property crowdfunding?", answer: "Crowdfunding usually funds a development project through a platform. With invest-to-rent, exposure is tied to a property already destined for renting and managed on an ongoing basis by the operator." },
+          { question: "What is the dual-season model?", answer: "The flat is rented to university students from September to June and to tourists during the summer, so demand covers the whole year instead of stopping when universities close." },
+          { question: "What returns can I expect from Jungle Rent?", answer: "Specific figures and economic projections appear only in the information memorandum shared after profile qualification. They are not published on public pages for compliance reasons." },
+          { question: "What are the main risks?", answer: "Falling property prices, vacancy periods, renovations taking longer or costing more than planned, low liquidity compared with a listed security, and regulatory or tax changes on short lets and taxation." }
+        ]
+      }
+    }
+  },
+  {
     slug: "detrazione-affitto-studenti-fuori-sede-2026",
     category: "students",
     date: "2026-07-26",
