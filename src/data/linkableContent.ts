@@ -105,8 +105,16 @@ const staticLinkableContent: LinkableContent[] = [
     titleIt: 'Investimenti immobiliari Torino',
     titleEn: 'Real estate investments Turin',
     type: 'page',
-    triggerKeywords: ['investimento immobiliare', 'rendimento affitto', 'real estate investment', 'rental yield'],
+    triggerKeywords: ['investimento immobiliare', 'rendimento affitto', 'real estate investment', 'rental yield', 'invest-to-rent', 'invest to rent', 'singola operazione immobiliare', 'serie dedicata'],
     priority: 9
+  },
+  {
+    url: '/investire-immobiliare-torino',
+    titleIt: 'Investire nell\'immobiliare a Torino',
+    titleEn: 'Investing in property in Turin',
+    type: 'page',
+    triggerKeywords: ['investire nell\'immobiliare a torino', 'investire a torino', 'modello dual-season', 'dual-season model', 'investing in property in turin'],
+    priority: 8
   },
   {
     url: '/venditori',
