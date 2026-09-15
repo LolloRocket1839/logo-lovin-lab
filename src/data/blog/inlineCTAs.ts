@@ -96,6 +96,51 @@ export const INLINE_CTAS: Record<string, InlineCTAConfig> = {
       button: 'Message us on WhatsApp',
     },
   },
+  'invest-to-rent-torino-come-funziona-2026': {
+    variant: 'investor',
+    it: {
+      eyebrow: 'Vuoi capire se fa per te?',
+      title: 'Una call, non un modulo lungo',
+      description: 'Lorenzo ti spiega come lavoriamo, quali zone seguiamo e cosa comporta entrare in una singola operazione. Le cifre puntuali sono nel memorandum informativo.',
+      button: 'Parla con Lorenzo',
+    },
+    en: {
+      eyebrow: 'Want to see if it fits you?',
+      title: 'A call, not a long form',
+      description: 'Lorenzo explains how we work, which areas we follow and what joining a single operation involves. Specific figures are in the information memorandum.',
+      button: 'Talk to Lorenzo',
+    },
+  },
+  'rendimento-student-housing-torino-2026': {
+    variant: 'investor',
+    it: {
+      eyebrow: 'Investitore?',
+      title: 'Dai numeri di mercato alle operazioni reali',
+      description: 'Acquistiamo e gestiamo bilocali a Torino nel modello dual-season studenti + turisti. Scopri come funziona l\'esposizione a una singola operazione.',
+      button: 'Parla con Lorenzo',
+    },
+    en: {
+      eyebrow: 'Investor?',
+      title: 'From market figures to real operations',
+      description: 'We buy and run 2-room flats in Turin on the dual-season student + tourist model. See how exposure to a single operation works.',
+      button: 'Talk to Lorenzo',
+    },
+  },
+  'investire-real-assets-torino-2025': {
+    variant: 'investor',
+    it: {
+      eyebrow: 'Dalla tesi alla pratica',
+      title: 'Come si partecipa a una singola operazione',
+      description: 'Immobili reali a Torino, gestione interna, payout bimestrali. Il percorso parte da una call con Lorenzo, senza impegno.',
+      button: 'Parla con Lorenzo',
+    },
+    en: {
+      eyebrow: 'From thesis to practice',
+      title: 'How joining a single operation works',
+      description: 'Real properties in Turin, in-house management, payouts every 2 months. It starts with a no-commitment call with Lorenzo.',
+      button: 'Talk to Lorenzo',
+    },
+  },
 };
 
 export const hasInlineCTA = (slug: string): boolean => slug in INLINE_CTAS;

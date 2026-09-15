@@ -65,6 +65,7 @@ export const contentClusters: ContentCluster[] = [
     pillarTitleIt: 'Investire in real assets a Torino nel 2025',
     pillarTitleEn: 'Investing in real assets in Turin 2025',
     satellites: [
+      'invest-to-rent-torino-come-funziona-2026',
       'cedolare-secca-2026-investitori',
       'irpef-vs-cedolare-secca-2026-investitori',
       'imu-2026-immobili-affitto-torino-investitori',
