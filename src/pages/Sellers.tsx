@@ -18,7 +18,7 @@ import {
 
 const PAGE_TITLE = "Vendi il tuo appartamento a Torino direttamente a Jungle Rent";
 const PAGE_DESCRIPTION =
-  "Hai un appartamento a Torino ereditato, con inquilino o da ristrutturare? Jungle Rent S.r.l. lo compra direttamente: valutazione gratuita in 48 ore, nessuna commissione di agenzia, nessuna visita infinita.";
+  "Vendi il tuo appartamento a Torino ereditato, con inquilino o da ristrutturare: Jungle Rent S.r.l. compra direttamente, valutazione gratuita entro 48 ore, nessuna commissione.";
 const PAGE_URL = "https://junglerent.it/vendi";
 
 const scenarios = [
@@ -53,6 +53,7 @@ const weAreNot = [
   { no: "Non siamo un'agenzia immobiliare", yes: "Compriamo per noi, non cerchiamo un acquirente per te. Non c'è provvigione perché non c'è intermediazione." },
   { no: "Non facciamo aste né incanto", yes: "Facciamo una proposta e la scriviamo. Se non ti va bene, finisce lì senza penali." },
   { no: "Non promettiamo il prezzo più alto del mercato", yes: "Se il tuo obiettivo è spuntare il massimo e hai tempo davanti, un'agenzia tradizionale è probabilmente la scelta giusta." },
+  { no: "Non siamo un iBuyer che paga in contanti in 48 ore", yes: "Compriamo con capitale proprio e mutuo bancario. La proposta è vincolata alla delibera della banca e questo lo scriviamo nero su bianco nella proposta stessa, con i tempi. Preferiamo dirtelo prima che scoprirlo al compromesso." },
 ];
 
 const faqs = [
@@ -79,6 +80,18 @@ const faqs = [
   {
     q: "In quali zone di Torino comprate?",
     a: "Guardiamo soprattutto le zone vicine alle università e ben collegate: San Salvario, Vanchiglia, Crocetta, Aurora, Santa Rita, San Paolo, Cenisia, Lingotto, Campidoglio. Se sei fuori da questi quartieri scrivici lo stesso.",
+  },
+  {
+    q: "Siamo più eredi e uno non vuole vendere. Si può fare?",
+    a: "Per vendere serve l'accordo di tutti i comproprietari. Possiamo però darvi un range di prezzo scritto da mettere sul tavolo: spesso è quello che sblocca la discussione, perché trasforma un'idea vaga in una cifra concreta. Se l'accordo non arriva, l'unica strada resta la divisione giudiziale, che è lunga e costosa: ve lo diciamo chiaramente.",
+  },
+  {
+    q: "Ho ancora un mutuo sull'appartamento.",
+    a: "Non è un problema. Al rogito il notaio usa parte del prezzo per estinguere il mutuo residuo e cancellare l'ipoteca; tu incassi la differenza. Ci serve solo il conteggio di estinzione della tua banca.",
+  },
+  {
+    q: "E se rifiuto la proposta?",
+    a: "Non succede nulla. La proposta è scritta e ha una scadenza; se non la firmi, decade senza penali, senza vincoli e senza che tu ci debba niente. Manteniamo i tuoi dati solo per il tempo indicato nella privacy policy.",
   },
 ];
 
@@ -157,9 +170,9 @@ const Sellers = () => {
                 Vendi il tuo appartamento direttamente a Jungle Rent
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Compriamo appartamenti a Torino con i nostri soldi, anche ereditati, con inquilino
-                dentro o da ristrutturare. Valutazione gratuita entro 48 ore, nessuna commissione di
-                agenzia, una sola visita.
+                Compriamo appartamenti a Torino per affittarli a studenti: anche ereditati, con
+                inquilino dentro o da ristrutturare. Valutazione gratuita entro 48 ore, nessuna
+                commissione di agenzia, una sola visita, proposta scritta.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button size="lg" variant="premium" onClick={scrollToForm} className="text-base">
@@ -264,6 +277,13 @@ const Sellers = () => {
                 interlocutore unico, una sola visita, nessuna commissione e nessun lavoro da fare.
               </p>
               <p>
+                Per dare un ordine di grandezza: su un immobile da ristrutturare o occupato la nostra
+                proposta si colloca in genere tra il 10 e il 15% sotto il prezzo che chiederesti in un
+                annuncio. Da quel prezzo però tu risparmi la provvigione (2–3% più IVA), le visite, e
+                il rischio che il compratore non ottenga il mutuo. Spesso il netto che ti resta è
+                vicino, e chiudi in tre mesi invece che in dodici.
+              </p>
+              <p>
                 Se dopo la valutazione pensi che ti convenga la strada dell'agenzia, te lo diciamo
                 anche noi. Non insistiamo.
               </p>
@@ -310,8 +330,9 @@ const Sellers = () => {
               Unisciti a VENDI CASA - Torino Jungle
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Un gruppo per proprietari che vendono o affittano a Torino: domande, annunci e consigli
-              pratici, senza spam.
+              Un gruppo per chi ha una casa a Torino difficile da vendere: ereditata, con inquilino,
+              da ristrutturare o ferma da mesi. Successioni, sfratti, imposte, Salva Casa e prezzi
+              reali. Niente annunci di agenzia.
             </p>
             <a
               href={FACEBOOK_SELLER_GROUP_URL}
@@ -334,10 +355,12 @@ const Sellers = () => {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Jungle Rent S.r.l. è una startup innovativa con sede a Torino, incubata da 2I3T,
               l'incubatore dell'Università di Torino. Compriamo appartamenti, li sistemiamo e li
-              affittiamo a studenti universitari.
+              affittiamo a studenti universitari. Siamo all'inizio: stiamo chiudendo le prime
+              acquisizioni e non abbiamo ancora un portafoglio da mostrarti — per questo su questa
+              pagina non trovi testimonianze inventate.
             </p>
             <p className="text-sm text-muted-foreground">
-              Jungle Rent S.r.l. — P.IVA 13333450016 — Torino — Amministratore unico Lorenzo Oni-Joseph.
+              Jungle Rent S.r.l. — P.IVA 13333450016 — Torino — Presidente del CdA Lorenzo Oni-Joseph.
             </p>
           </div>
         </section>
