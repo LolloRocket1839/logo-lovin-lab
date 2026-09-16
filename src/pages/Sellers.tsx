@@ -18,7 +18,7 @@ import {
 
 const PAGE_TITLE = "Vendi il tuo appartamento a Torino direttamente a Jungle Rent";
 const PAGE_DESCRIPTION =
-  "Hai un appartamento a Torino ereditato, con inquilino o da ristrutturare? Jungle Rent S.r.l. lo compra direttamente: valutazione gratuita in 48 ore, nessuna commissione di agenzia, nessuna visita infinita.";
+  "Vendi il tuo appartamento a Torino ereditato, con inquilino o da ristrutturare: Jungle Rent S.r.l. compra direttamente, valutazione gratuita entro 48 ore, nessuna commissione.";
 const PAGE_URL = "https://junglerent.it/vendi";
 
 const scenarios = [
@@ -53,6 +53,7 @@ const weAreNot = [
   { no: "Non siamo un'agenzia immobiliare", yes: "Compriamo per noi, non cerchiamo un acquirente per te. Non c'è provvigione perché non c'è intermediazione." },
   { no: "Non facciamo aste né incanto", yes: "Facciamo una proposta e la scriviamo. Se non ti va bene, finisce lì senza penali." },
   { no: "Non promettiamo il prezzo più alto del mercato", yes: "Se il tuo obiettivo è spuntare il massimo e hai tempo davanti, un'agenzia tradizionale è probabilmente la scelta giusta." },
+  { no: "Non siamo un iBuyer che paga in contanti in 48 ore", yes: "Compriamo con capitale proprio e mutuo bancario. La proposta è vincolata alla delibera della banca e questo lo scriviamo nero su bianco nella proposta stessa, con i tempi. Preferiamo dirtelo prima che scoprirlo al compromesso." },
 ];
 
 const faqs = [
@@ -79,6 +80,18 @@ const faqs = [
   {
     q: "In quali zone di Torino comprate?",
     a: "Guardiamo soprattutto le zone vicine alle università e ben collegate: San Salvario, Vanchiglia, Crocetta, Aurora, Santa Rita, San Paolo, Cenisia, Lingotto, Campidoglio. Se sei fuori da questi quartieri scrivici lo stesso.",
+  },
+  {
+    q: "Siamo più eredi e uno non vuole vendere. Si può fare?",
+    a: "Per vendere serve l'accordo di tutti i comproprietari. Possiamo però darvi un range di prezzo scritto da mettere sul tavolo: spesso è quello che sblocca la discussione, perché trasforma un'idea vaga in una cifra concreta. Se l'accordo non arriva, l'unica strada resta la divisione giudiziale, che è lunga e costosa: ve lo diciamo chiaramente.",
+  },
+  {
+    q: "Ho ancora un mutuo sull'appartamento.",
+    a: "Non è un problema. Al rogito il notaio usa parte del prezzo per estinguere il mutuo residuo e cancellare l'ipoteca; tu incassi la differenza. Ci serve solo il conteggio di estinzione della tua banca.",
+  },
+  {
+    q: "E se rifiuto la proposta?",
+    a: "Non succede nulla. La proposta è scritta e ha una scadenza; se non la firmi, decade senza penali, senza vincoli e senza che tu ci debba niente. Manteniamo i tuoi dati solo per il tempo indicato nella privacy policy.",
   },
 ];
 
