@@ -53,7 +53,7 @@ const weAreNot = [
   { no: "Non siamo un'agenzia immobiliare", yes: "Compriamo per noi, non cerchiamo un acquirente per te. Non c'è provvigione perché non c'è intermediazione." },
   { no: "Non facciamo aste né incanto", yes: "Facciamo una proposta e la scriviamo. Se non ti va bene, finisce lì senza penali." },
   { no: "Non promettiamo il prezzo più alto del mercato", yes: "Se il tuo obiettivo è spuntare il massimo e hai tempo davanti, un'agenzia tradizionale è probabilmente la scelta giusta." },
-  { no: "Non siamo un iBuyer che paga in contanti in 48 ore", yes: "Compriamo con capitale proprio e mutuo bancario. La proposta è vincolata alla delibera della banca e questo lo scriviamo nero su bianco nella proposta stessa, con i tempi. Preferiamo dirtelo prima che scoprirlo al compromesso." },
+  { no: "Non siamo un iBuyer che paga in contanti in 48 ore", yes: "Compriamo con capitale proprio e/o mutuo bancario. La proposta è vincolata alla delibera della banca e questo lo scriviamo nero su bianco nella proposta stessa, con i tempi. Preferiamo dirtelo prima che scoprirlo al compromesso." },
 ];
 
 const faqs = [
