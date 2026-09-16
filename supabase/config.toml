@@ -16,6 +16,9 @@ verify_jwt = false
 [functions.notify-new-lead]
 verify_jwt = false
 
+[functions.notify-vendi-lead]
+verify_jwt = false
+
 [functions.mcp-server]
 verify_jwt = false
 
