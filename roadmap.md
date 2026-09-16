@@ -1,15 +1,7 @@
 # Roadmap
 
-## In corso — Pagina /vendi (priorità alta)
-- [ ] Migration: nuove colonne su `seller_leads` + policy insert con consenso
-- [ ] Ristrutturare `/vendi` (italiano, hero, per chi è, come funziona, cosa non siamo, prezzo, FAQ, form)
-- [ ] Form lead `source = 'vendi'` + utm/fbclid + foto (max 5)
-- [ ] Email notifica a Lorenzo + conferma al proprietario (template transazionali esistenti)
-- [ ] Meta, sitemap, linkableContent, footer
-- [ ] Articolo blog `vendere-casa-ereditata-torino` + inlineCTA seller
-- [ ] Verifica: typecheck, traduzioni, sitemap, lead di prova (poi cancellato)
-
 ## Fatto
+- Pagina /vendi in italiano: nuovi campi su `seller_leads`, modulo con foto, email a Lorenzo + conferma, articolo sulla casa ereditata, meta e collegamenti interni
 - Articolo invest-to-rent (it/en), collegamenti interni investitori, meta investitori 7 lingue
 - Ricerca concorrenti annunci immobiliari (Concrete, Walliance, Recrowd)
 
