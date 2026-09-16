@@ -153,7 +153,7 @@ export const VendiLeadForm = () => {
       const tenantStatus = mapTenantStatus(situation);
       const priceValue = askingPrice ? parseInt(askingPrice.replace(/\D/g, ""), 10) : null;
 
-      const { error } = await supabase.from("seller_leads").insert([
+      const { data: inserted, error } = await supabase.from("seller_leads").insert([
         {
           name: name.trim(),
           email: email.trim(),
@@ -174,53 +174,16 @@ export const VendiLeadForm = () => {
           source: "vendi",
           utm_data: Object.keys(utmData).length > 0 ? (utmData as unknown as null) : null,
         },
-      ]);
+      ]).select("id").single();
 
       if (error) throw error;
 
-      const conditionLabel = CONDITIONS.find((c) => c.value === condition)?.label;
-      const situationLabel = SITUATIONS.find((s) => s.value === situation)?.label;
-
-      // Notifica a Lorenzo
-      supabase.functions
-        .invoke("send-transactional-email", {
-          body: {
-            templateName: "vendi-notification",
-            idempotencyKey: `vendi-notify-${email.trim()}-${Date.now()}`,
-            templateData: {
-              name: name.trim(),
-              email: email.trim(),
-              phone: phone.trim() || undefined,
-              address: address.trim(),
-              sqm: sqm,
-              floor: floor.trim() || undefined,
-              hasElevator: hasElevator === "" ? undefined : hasElevator === "si" ? "Sì" : "No",
-              condition: conditionLabel,
-              situation: situationLabel,
-              tenantLeaseEnd: leaseEnd || undefined,
-              askingPrice: priceValue ? `${priceValue.toLocaleString("it-IT")} €` : undefined,
-              message: message.trim() || undefined,
-              photoCount: uploadedPhotos.length ? String(uploadedPhotos.length) : undefined,
-              utmSource: utm.utm_source,
-              utmMedium: utm.utm_medium,
-              utmCampaign: utm.utm_campaign,
-              fbclid: fbclid || undefined,
-            },
-          },
-        })
-        .catch((err) => console.error("Notifica admin fallita:", err));
-
-      // Conferma al proprietario
-      supabase.functions
-        .invoke("send-transactional-email", {
-          body: {
-            templateName: "vendi-confirmation",
-            recipientEmail: email.trim(),
-            idempotencyKey: `vendi-confirm-${email.trim()}-${Date.now()}`,
-            templateData: { address: address.trim() },
-          },
-        })
-        .catch((err) => console.error("Email di conferma fallita:", err));
+      // Notifica a Lorenzo + conferma al proprietario (server-side, lead verificato)
+      if (inserted?.id) {
+        supabase.functions
+          .invoke("notify-vendi-lead", { body: { leadId: inserted.id } })
+          .catch((err) => console.error("Invio email fallito:", err));
+      }
 
       trackEvent("seller_lead_submitted", { source: "vendi", situation: dbSituation });
 
