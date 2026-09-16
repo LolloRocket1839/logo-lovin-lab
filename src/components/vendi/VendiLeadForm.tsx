@@ -153,8 +153,10 @@ export const VendiLeadForm = () => {
       const tenantStatus = mapTenantStatus(situation);
       const priceValue = askingPrice ? parseInt(askingPrice.replace(/\D/g, ""), 10) : null;
 
-      const { data: inserted, error } = await supabase.from("seller_leads").insert([
+      const leadId = crypto.randomUUID();
+      const { error } = await supabase.from("seller_leads").insert([
         {
+          id: leadId,
           name: name.trim(),
           email: email.trim(),
           phone: phone.trim() || null,
@@ -174,16 +176,14 @@ export const VendiLeadForm = () => {
           source: "vendi",
           utm_data: Object.keys(utmData).length > 0 ? (utmData as unknown as null) : null,
         },
-      ]).select("id").single();
+      ]);
 
       if (error) throw error;
 
       // Notifica a Lorenzo + conferma al proprietario (server-side, lead verificato)
-      if (inserted?.id) {
-        supabase.functions
-          .invoke("notify-vendi-lead", { body: { leadId: inserted.id } })
-          .catch((err) => console.error("Invio email fallito:", err));
-      }
+      supabase.functions
+        .invoke("notify-vendi-lead", { body: { leadId } })
+        .catch((err) => console.error("Invio email fallito:", err));
 
       trackEvent("seller_lead_submitted", { source: "vendi", situation: dbSituation });
 
