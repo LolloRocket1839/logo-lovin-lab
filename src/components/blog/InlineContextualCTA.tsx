@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Bell, TrendingUp, ArrowRight } from "lucide-react";
+import { MessageCircle, Bell, TrendingUp, ArrowRight, Home } from "lucide-react";
 import { CONTACTS } from "@/constants";
 import { useABTest } from "@/hooks/useABTest";
 import { INLINE_CTAS, type InlineCTAVariant } from "@/data/blog/inlineCTAs";
@@ -16,6 +16,7 @@ const ICONS: Record<InlineCTAVariant, typeof Bell> = {
   whatsapp: MessageCircle,
   waitlist: Bell,
   investor: TrendingUp,
+  seller: Home,
 };
 
 export const InlineContextualCTA = ({ slug, lang }: InlineContextualCTAProps) => {
@@ -36,6 +37,10 @@ export const InlineContextualCTA = ({ slug, lang }: InlineContextualCTAProps) =>
     trackClick();
     if (config.variant === "waitlist") {
       setShowWaitlist(true);
+      return;
+    }
+    if (config.variant === "seller") {
+      window.location.href = "/vendi#valutazione";
       return;
     }
     const message = encodeURIComponent(copy.title);

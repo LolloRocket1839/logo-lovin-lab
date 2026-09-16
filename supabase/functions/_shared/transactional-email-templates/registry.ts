@@ -18,6 +18,8 @@ import { template as studentNurtureDay2 } from './student-nurture-day2.tsx'
 import { template as studentNurtureDay10 } from './student-nurture-day10.tsx'
 import { template as sellerNurtureLingottoDay2 } from './seller-nurture-lingotto-day2.tsx'
 import { template as sellerNurtureLingottoDay7 } from './seller-nurture-lingotto-day7.tsx'
+import { template as vendiNotification } from './vendi-notification.tsx'
+import { template as vendiConfirmation } from './vendi-confirmation.tsx'
 
 export const TEMPLATES: Record<string, TemplateEntry> = {
   'lead-confirmation': leadConfirmation,
@@ -29,4 +31,6 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'student-nurture-day10': studentNurtureDay10,
   'seller-nurture-lingotto-day2': sellerNurtureLingottoDay2,
   'seller-nurture-lingotto-day7': sellerNurtureLingottoDay7,
+  'vendi-notification': vendiNotification,
+  'vendi-confirmation': vendiConfirmation,
 }

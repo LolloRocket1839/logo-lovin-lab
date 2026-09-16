@@ -2,6 +2,44 @@ import { BlogPost, BlogCategory } from "@/types/blog";
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vendere-casa-ereditata-torino",
+    category: "sellers",
+    date: "2026-09-16",
+    author: "Jungle Rent Team",
+    image: "/images/portici-torino.jpg",
+    readTime: 8,
+    content: "vendere-casa-ereditata-torino",
+    translations: {
+      it: {
+        title: "Vendere una casa ereditata a Torino: guida pratica a tasse, tempi e opzioni",
+        excerpt: "Successione, imposte, plusvalenza, costi di mantenimento e le tre strade per vendere un appartamento ereditato a Torino, anche quando gli eredi non sono d'accordo.",
+        seo: {
+          title: "Vendere casa ereditata a Torino: tasse, tempi e opzioni",
+          description: "Come vendere un appartamento ereditato a Torino: dichiarazione di successione, imposte e franchigie, plusvalenza, costi del tenerlo vuoto e le tre strade possibili.",
+          keywords: ["vendere casa ereditata torino", "successione immobile torino", "imposta di successione casa", "plusvalenza immobile ereditato", "vendere casa tra eredi", "vendere appartamento torino"],
+        },
+        tags: ["Venditori", "Torino", "Successione", "Fisco"],
+        faqs: [
+          { question: "Posso vendere un immobile prima di chiudere la successione?", answer: "No. Serve la dichiarazione di successione registrata e la voltura catastale: senza queste il notaio non può procedere al rogito." },
+          { question: "Quanto si paga di imposta di successione su una casa?", answer: "Il 4% per coniuge e parenti in linea retta con franchigia di 1.000.000 di euro a erede, il 6% per fratelli e sorelle con franchigia di 100.000 euro, il 6% per altri parenti fino al quarto grado e l'8% per tutti gli altri. Si aggiungono imposta ipotecaria 2% e catastale 1% sul valore catastale, ridotte a 200 euro ciascuna con i requisiti prima casa." },
+          { question: "Devo pagare la plusvalenza se rivendo subito una casa ereditata?", answer: "No. L'articolo 67 del TUIR esclude dalla tassazione le plusvalenze sugli immobili acquisiti per successione, anche se la vendita avviene entro cinque anni." },
+          { question: "Cosa succede se un erede non vuole vendere?", answer: "Per vendere l'intero immobile servono tutti i comproprietari. Le alternative sono la divisione ereditaria, con un erede che liquida gli altri, oppure la divisione giudiziale davanti al giudice, che però richiede anni." },
+          { question: "Quanto costa tenere vuoto un appartamento ereditato a Torino?", answer: "Tra IMU, spese condominiali ordinarie, utenze minime e assicurazione si arriva facilmente a 1.500-2.500 euro l'anno per un bilocale semicentrale." },
+        ],
+      },
+      en: {
+        title: "Selling an inherited flat in Turin: taxes, timing and options",
+        excerpt: "Succession, taxes, capital gains, holding costs and the three ways to sell an inherited flat in Turin, including when the heirs disagree.",
+        seo: {
+          title: "Selling an inherited flat in Turin: taxes, timing, options",
+          description: "How to sell an inherited flat in Turin: succession declaration, inheritance tax and allowances, capital gains, the cost of leaving it empty and the three routes to sell.",
+          keywords: ["sell inherited property turin", "italian inheritance tax property", "succession declaration italy", "sell flat turin", "heirs disagree selling property"],
+        },
+        tags: ["Sellers", "Turin", "Succession", "Tax"],
+      },
+    },
+  },
+  {
     slug: "invest-to-rent-torino-come-funziona-2026",
     category: "investors",
     date: "2026-09-15",
