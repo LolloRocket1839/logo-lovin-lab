@@ -921,62 +921,92 @@ export type Database = {
       }
       seller_leads: {
         Row: {
+          asking_price: number | null
+          consent_at: string | null
           created_at: string | null
           email: string
           estimated_value: number | null
+          floor: string | null
           has_cellar: boolean | null
+          has_elevator: boolean | null
           has_terrace: boolean | null
           id: string
+          message: string | null
+          name: string | null
           num_bathrooms: number | null
           num_rooms: number | null
           phone: string | null
           photos: Json | null
+          privacy_consent: boolean
           property_address: string | null
           property_condition: string | null
           property_sqm: number | null
           property_zone: string | null
+          situation: string | null
           source: string | null
           status: string | null
+          tenant_lease_end: string | null
+          tenant_status: string | null
           utm_data: Json | null
           video_url: string | null
         }
         Insert: {
+          asking_price?: number | null
+          consent_at?: string | null
           created_at?: string | null
           email: string
           estimated_value?: number | null
+          floor?: string | null
           has_cellar?: boolean | null
+          has_elevator?: boolean | null
           has_terrace?: boolean | null
           id?: string
+          message?: string | null
+          name?: string | null
           num_bathrooms?: number | null
           num_rooms?: number | null
           phone?: string | null
           photos?: Json | null
+          privacy_consent?: boolean
           property_address?: string | null
           property_condition?: string | null
           property_sqm?: number | null
           property_zone?: string | null
+          situation?: string | null
           source?: string | null
           status?: string | null
+          tenant_lease_end?: string | null
+          tenant_status?: string | null
           utm_data?: Json | null
           video_url?: string | null
         }
         Update: {
+          asking_price?: number | null
+          consent_at?: string | null
           created_at?: string | null
           email?: string
           estimated_value?: number | null
+          floor?: string | null
           has_cellar?: boolean | null
+          has_elevator?: boolean | null
           has_terrace?: boolean | null
           id?: string
+          message?: string | null
+          name?: string | null
           num_bathrooms?: number | null
           num_rooms?: number | null
           phone?: string | null
           photos?: Json | null
+          privacy_consent?: boolean
           property_address?: string | null
           property_condition?: string | null
           property_sqm?: number | null
           property_zone?: string | null
+          situation?: string | null
           source?: string | null
           status?: string | null
+          tenant_lease_end?: string | null
+          tenant_status?: string | null
           utm_data?: Json | null
           video_url?: string | null
         }

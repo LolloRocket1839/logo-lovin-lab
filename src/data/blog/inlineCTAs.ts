@@ -1,7 +1,7 @@
 // Inline mid-article CTAs for top 5 most-viewed blog posts
 // Each CTA is tailored to the article's topic and audience intent
 
-export type InlineCTAVariant = 'whatsapp' | 'waitlist' | 'investor';
+export type InlineCTAVariant = 'whatsapp' | 'waitlist' | 'investor' | 'seller';
 
 export interface InlineCTAConfig {
   variant: InlineCTAVariant;
@@ -21,6 +21,21 @@ export interface InlineCTAConfig {
 
 // Map of slug → tailored CTA. Top 5 articles by 90-day pageviews.
 export const INLINE_CTAS: Record<string, InlineCTAConfig> = {
+  'vendere-casa-ereditata-torino': {
+    variant: 'seller',
+    it: {
+      eyebrow: 'Hai un immobile ereditato a Torino?',
+      title: 'Ti diamo un range di prezzo entro 48 ore',
+      description: 'Jungle Rent S.r.l. compra direttamente appartamenti a Torino, anche ereditati, con inquilino o da ristrutturare. Valutazione gratuita, nessuna commissione.',
+      button: 'Chiedi una valutazione gratuita',
+    },
+    en: {
+      eyebrow: 'Inherited a flat in Turin?',
+      title: 'We give you a price range within 48 hours',
+      description: 'Jungle Rent S.r.l. buys flats in Turin directly, including inherited, tenanted or run-down ones. Free valuation, no agency fee.',
+      button: 'Request a free valuation',
+    },
+  },
   'quartieri-sicuri-donne-torino': {
     variant: 'waitlist',
     it: {

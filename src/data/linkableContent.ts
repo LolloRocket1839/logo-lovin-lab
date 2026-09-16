@@ -117,11 +117,11 @@ const staticLinkableContent: LinkableContent[] = [
     priority: 8
   },
   {
-    url: '/venditori',
+    url: '/vendi',
     titleIt: 'Vendi casa a Torino',
     titleEn: 'Sell your home Turin',
     type: 'page',
-    triggerKeywords: ['vendere casa', 'sell home', 'sell property'],
+    triggerKeywords: ['vendere casa', 'sell home', 'sell property', 'vendere casa ereditata', 'vendere con inquilino', 'vendere appartamento da ristrutturare'],
     priority: 9
   },
   {
