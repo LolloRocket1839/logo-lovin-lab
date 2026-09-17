@@ -123,8 +123,9 @@ export const VendiLeadForm = () => {
   const uploadPhotos = async (folder: string) => {
     const uploaded: Array<{ url: string; fileName: string }> = [];
     for (const photo of photos) {
-      const ext = photo.file.name.split(".").pop();
-      const path = `${folder}/${Date.now()}-${Math.random().toString(36).substring(7)}.${ext}`;
+      const rawExt = (photo.file.name.split(".").pop() ?? "").toLowerCase();
+      const ext = ["jpg", "jpeg", "png", "webp", "heic", "heif"].includes(rawExt) ? rawExt : "jpg";
+      const path = `${folder}/foto/${Date.now()}-${Math.random().toString(36).substring(7)}.${ext}`;
       const { data, error } = await supabase.storage.from("property-photos").upload(path, photo.file);
       if (error || !data) {
         console.error("Upload foto fallito:", error);
