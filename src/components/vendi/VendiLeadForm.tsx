@@ -123,8 +123,9 @@ export const VendiLeadForm = () => {
   const uploadPhotos = async (folder: string) => {
     const uploaded: Array<{ url: string; fileName: string }> = [];
     for (const photo of photos) {
-      const ext = photo.file.name.split(".").pop();
-      const path = `${folder}/${Date.now()}-${Math.random().toString(36).substring(7)}.${ext}`;
+      const rawExt = (photo.file.name.split(".").pop() ?? "").toLowerCase();
+      const ext = ["jpg", "jpeg", "png", "webp", "heic", "heif"].includes(rawExt) ? rawExt : "jpg";
+      const path = `${folder}/foto/${Date.now()}-${Math.random().toString(36).substring(7)}.${ext}`;
       const { data, error } = await supabase.storage.from("property-photos").upload(path, photo.file);
       if (error || !data) {
         console.error("Upload foto fallito:", error);
@@ -146,8 +147,14 @@ export const VendiLeadForm = () => {
       const fbclid = new URLSearchParams(window.location.search).get("fbclid");
       const utmData = { ...utm, ...(fbclid ? { fbclid } : {}) };
 
-      const folder = `vendi-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+      const folder = `lead-${Date.now()}-${Math.random().toString(36).substring(7)}`;
       const uploadedPhotos = photos.length > 0 ? await uploadPhotos(folder) : [];
+      if (photos.length > 0 && uploadedPhotos.length < photos.length) {
+        toast({
+          title: "Alcune foto non sono state caricate",
+          description: "Ti ricontattiamo comunque: se vuoi, inviacele su WhatsApp.",
+        });
+      }
 
       const dbSituation = mapSituation(situation, condition);
       const tenantStatus = mapTenantStatus(situation);
