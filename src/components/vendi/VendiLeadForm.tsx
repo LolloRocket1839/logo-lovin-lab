@@ -147,8 +147,14 @@ export const VendiLeadForm = () => {
       const fbclid = new URLSearchParams(window.location.search).get("fbclid");
       const utmData = { ...utm, ...(fbclid ? { fbclid } : {}) };
 
-      const folder = `vendi-${Date.now()}-${Math.random().toString(36).substring(7)}`;
+      const folder = `lead-${Date.now()}-${Math.random().toString(36).substring(7)}`;
       const uploadedPhotos = photos.length > 0 ? await uploadPhotos(folder) : [];
+      if (photos.length > 0 && uploadedPhotos.length < photos.length) {
+        toast({
+          title: "Alcune foto non sono state caricate",
+          description: "Ti ricontattiamo comunque: se vuoi, inviacele su WhatsApp.",
+        });
+      }
 
       const dbSituation = mapSituation(situation, condition);
       const tenantStatus = mapTenantStatus(situation);
