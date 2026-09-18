@@ -51,7 +51,7 @@ const ARTICLES = [
 const FAQS: Record<string, string> = {
   "cost|quanto costa|rent|affitto|stanza|room": "Student rooms in Turin cost €350-550/month in popular areas (San Salvario, Cenisia, Vanchiglia). Crocetta is premium at €500-700/month. Budget areas like Aurora start from €350/month.",
   "invest|investire|investment|rendimento": "Jungle Rent offers economic exposure to individual real-estate operations near Turin universities.",
-  "sell|vendere|valutazione|valuation": "Jungle Rent buys properties directly — zero commission, free valuation in 24h, offer in 48h, closing in 60-90 days. Use our free calculator: junglerent.it/valutazione-immobile",
+  "sell|vendere|valutazione|valuation": "Jungle Rent buys properties directly — zero commission, an indicative price range within 48 hours of contact, one visit, a written offer, and closing in 60-90 days. Use our free calculator: junglerent.it/valutazione-immobile",
   "polito|politecnico": "Best neighborhoods near Politecnico di Torino: Cenisia (10 min, €380-480), Vanchiglia (10 min, €450-550), San Salvario (15 min, €450-550), Crocetta (20 min, €500-650).",
   "unito|università di torino": "Best neighborhoods near UniTo: Centro (5 min, €550-700), San Salvario (10 min, €450-550), Vanchiglia (15 min, €450-550).",
   "safe|sicur|women|donne": "Safest neighborhoods in Turin: Crocetta, Centro, San Paolo (all rated 'High'). San Salvario and Vanchiglia are rated 'Medium-high'. Read our guide: junglerent.it/blog/quartieri-sicuri-donne-torino",
@@ -61,7 +61,7 @@ const FAQS: Record<string, string> = {
   "eat|mangiare|cheap|economico|food": "Budget eating in Turin: €3-5 for street food, €5-8 for piole (traditional restaurants), €8-12 for full meals. Guide: junglerent.it/strumenti/dove-mangiare-torino",
   "event|evento|cosa fare|what to do": "March 2026: Shiota at GAM (immersive art), Futurismo at Mole, Subsonica 30th anniversary concert. Guide: junglerent.it/blog/eventi-torino-marzo-2026",
   "walkab|camminab|7 minut": "Turin is the 3rd most walkable city globally (7 min average to essential services), ahead of Paris and Vienna. 18 km of porticos, compact grid layout.",
-  "who|chi è|about|jungle rent": "Jungle Rent S.r.l. is a certified innovative startup (P.IVA 13333450016) founded Oct 2025, incubated at 2i3T (University of Turin). Dual mission: student housing + democratizing real estate investment.",
+  "who|chi è|about|jungle rent": "Jungle Rent S.r.l. is registered in the special section for innovative startups (P.IVA 13333450016), founded Oct 2025 and incubated at 2i3T (University of Turin). Dual mission: student housing + democratizing real estate investment.",
 };
 
 // ============================================

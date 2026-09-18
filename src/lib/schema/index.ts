@@ -79,8 +79,8 @@ export const createSellerServiceSchema = (language: 'it' | 'en' = 'it') => ({
     ? "Vendita Immobili a Torino" 
     : "Property Sales in Turin",
   "description": language === 'it'
-    ? "Vendi il tuo immobile a Torino senza commissioni. Valutazione gratuita in 24 ore, offerta vincolante in 48 ore."
-    : "Sell your property in Turin with zero commissions. Free valuation in 24 hours, binding offer in 48 hours.",
+    ? "Vendi il tuo immobile a Torino senza commissioni. Range di prezzo indicativo entro 48 ore dal contatto, una visita e proposta scritta."
+    : "Sell your property in Turin with zero commissions. Indicative price range within 48 hours of contact, one visit and a written offer.",
   "url": "https://junglerent.it/venditori",
   "provider": ORGANIZATION_BASE,
   "serviceType": "Real Estate Acquisition",

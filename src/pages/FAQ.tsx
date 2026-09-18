@@ -36,8 +36,8 @@ const FAQ = () => {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": isItalian
-            ? "Jungle Rent acquista direttamente il tuo immobile senza commissioni. Valutazione gratuita in 24 ore, offerta in 48 ore, chiusura in 60-90 giorni."
-            : "Jungle Rent directly purchases your property with no fees. Free valuation in 24 hours, offer in 48 hours, closing in 60-90 days."
+            ? "Jungle Rent acquista direttamente il tuo immobile senza commissioni. Range di prezzo indicativo entro 48 ore dal contatto, una visita, proposta scritta e rogito in 60-90 giorni."
+            : "Jungle Rent directly purchases your property with no fees. Indicative price range within 48 hours of contact, one visit, a written offer and closing in 60-90 days."
         }
       },
       {

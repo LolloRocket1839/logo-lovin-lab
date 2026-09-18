@@ -529,7 +529,6 @@
     "ctaRent": "寻找住房",
     "ctaTalkToUs": "联系Lorenzo",
     "investors": {
-      "point1": "双月收益发放",
       "point2": "高于市场的回报",
       "point3": "零管理负担",
       "point4": "特定且透明的公寓",
@@ -803,11 +802,11 @@
         "h1Accent": "单个房地产项目",
         "metrics": {
           "payoutLabel": "支付频率",
-          "payoutValue": "双月",
+          "payoutValue": "项目的定期更新。",
           "ticketLabel": "最低投资额",
           "ticketValue": "€5k",
           "yieldLabel": "支付模式",
-          "yieldValue": "双月"
+          "yieldValue": "项目的定期更新。"
         },
         "subhead": "Jungle Rent 是一家位于 Torino 的创新型初创公司。我们购买、翻新和管理大学生公寓。我们通过专用工具向有限数量的私人投资者开放我们投资组合的经济参与权。该工具的技术细节在信息备忘录中有详细说明。"
       },

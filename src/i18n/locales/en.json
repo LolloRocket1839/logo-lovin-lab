@@ -529,7 +529,6 @@
     "ctaRent": "Find housing",
     "ctaTalkToUs": "Talk to Lorenzo",
     "investors": {
-      "point1": "Bi-monthly payouts",
       "point2": "Above-market returns",
       "point3": "Zero management",
       "point4": "Specific and transparent apartment",
@@ -592,8 +591,7 @@
         "detail": "We select and acquire properties in high-demand areas near Politecnico, UniTo and Turin universities.",
         "keyPoints": [
           "Complete due diligence",
-          "Strategic high-demand locations",
-          "7 universities served"
+          "Strategic high-demand locations"
         ],
         "title": "We acquire"
       },
@@ -601,7 +599,6 @@
         "description": "In portfolio results",
         "detail": "You participate in managed property results. Transparent reports and personal dashboard to monitor your investment.",
         "keyPoints": [
-          "Transparent bi-monthly reports",
           "Personal dashboard",
           "Dividends distributed"
         ],
@@ -807,7 +804,7 @@
           "ticketLabel": "Minimum ticket",
           "ticketValue": "€5k",
           "yieldLabel": "Payout model",
-          "yieldValue": "Bi-monthly"
+          "yieldValue": "Periodic updates on the operation."
         },
         "subhead": "Jungle Rent is a Turin-based innovative startup. We buy, renovate and manage apartments for university students. We open economic participation in the portfolio to a limited number of private investors through a dedicated financial instrument. Technical details of the instrument are described in the information memorandum."
       },
@@ -1327,7 +1324,7 @@
     "estimatedValueContext": "Estimated value: {{value}}",
     "invalidEmail": "Please enter a valid email",
     "namePlaceholder": "What's your name?",
-    "newTitle": "Free valuation in 24 hours",
+    "newTitle": "Free valuation",
     "notAgency": "We're not an agency. If your property is in our target areas, we make you a direct offer.",
     "optional": "optional",
     "privacy": "Your data is safe. We'll never share it with third parties.",
@@ -2212,7 +2209,7 @@
   "sellerStickyCta": {
     "cta": "Get your offer",
     "ctaMobile": "Offer",
-    "subtitle": "Free valuation in 24 hours, zero commissions.",
+    "subtitle": "Free valuation, zero commissions.",
     "title": "Sell your home in Turin without an agency",
     "whatsappLabel": "WhatsApp",
     "whatsappMessage": "Hi Lorenzo, I'd like a free valuation to sell my home in Turin."
