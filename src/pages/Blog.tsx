@@ -1,10 +1,6 @@
 import { useState, useMemo, useDeferredValue, useEffect } from "react";
-import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFilters } from "@/components/blog/BlogFilters";
 import { BlogGrid } from "@/components/blog/BlogGrid";
-import { PillarArticlesSection } from "@/components/blog/PillarArticlesSection";
-import { ScrollToTop } from "@/components/ScrollToTop";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BlogCategory } from "@/types/blog";
 import { getPostsByCategory, searchPosts, filterPostsByTags, blogPosts } from "@/data/blog/posts";
 import { useAutoBlogPosts } from "@/hooks/useAutoBlogPosts";
