@@ -1167,7 +1167,9 @@
     "investors": "投资者专区",
     "search": "搜索",
     "sell": "出售房产",
-    "students": "学生专区"
+    "students": "学生专区",
+    "investShort": "投资",
+    "sellShort": "出售"
   },
   "offerSimulator": {
     "conditionGood": "可居住",
