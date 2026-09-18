@@ -19,7 +19,7 @@ export const AudienceDoors = () => {
       eyebrow: isItalian ? "Investitori" : "Investors",
       title: isItalian ? "Reddito immobiliare a Torino" : "Real estate income in Turin",
       blurb: isItalian
-        ? "Esposizione alla singola operazione immobiliare. Payout ogni 2 mesi."
+        ? "Esposizione alla singola operazione immobiliare."
         : "Exposure to a single real estate operation.",
       cta: isItalian ? "Parla con Lorenzo" : "Talk to Lorenzo",
       to: isItalian ? "/investitori" : "/investors",

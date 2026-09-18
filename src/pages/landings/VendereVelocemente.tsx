@@ -39,8 +39,8 @@ export default function VendereVelocemente() {
           body: "WhatsApp a Lorenzo con indirizzo e foto. Tempi reali, niente moduli infiniti.",
         },
         {
-          title: "Sopralluogo entro 7 giorni",
-          body: "Veniamo a vedere l'immobile, di solito nella stessa settimana del primo contatto.",
+          title: "Una visita",
+          body: "Veniamo a vedere l'immobile prima della proposta scritta.",
         },
         {
           title: "Offerta scritta",
