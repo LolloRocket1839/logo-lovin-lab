@@ -3,7 +3,6 @@ import { BlogPost } from "@/types/blog";
 import { Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useBlogLanguage } from "@/hooks/useBlogLanguage";
 import { isNewPost, formatDate } from "@/lib/blog";
@@ -16,7 +15,6 @@ interface BlogCardProps {
 
 const BlogCardComponent = ({ post }: BlogCardProps) => {
   const { t } = useTranslation();
-  const { trackClick } = useAnalytics();
   const currentLang = useBlogLanguage();
   const prefersReducedMotion = useReducedMotion();
   const translatedData = post.translations[currentLang];
@@ -33,7 +31,7 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
       <Link 
         to={`/blog/${post.slug}`} 
         className="block overflow-hidden"
-        onClick={() => trackClick('blog_card_image', { slug: post.slug, category: post.category })}
+        onClick={undefined}
       >
         <div className="aspect-video relative overflow-hidden">
           {isJungleControlSeries ? (
@@ -92,7 +90,7 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
         <Link
           to={`/blog/${post.slug}`}
           className="inline-flex items-center text-primary font-medium hover:underline"
-          onClick={() => trackClick('blog_card_read_more', { slug: post.slug, category: post.category })}
+          onClick={undefined}
         >
           {t('blog.readMore')}
           <span className="ml-1">→</span>

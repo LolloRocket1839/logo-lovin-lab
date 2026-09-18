@@ -19,7 +19,6 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { openCalendly } from "@/lib/calendly";
 import { getUTMParams, formatUTMForEmail } from "@/hooks/useUTMTracking";
 import { supabase } from "@/integrations/supabase/client";
@@ -81,8 +80,6 @@ export const SellerLeadFormWithPhotos = ({
 }: SellerLeadFormWithPhotosProps) => {
   const { t } = useTranslation();
   const { toast } = useToast();
-  const { trackClick } = useAnalytics();
-  
   // Form state
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -376,8 +373,6 @@ export const SellerLeadFormWithPhotos = ({
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    trackClick('seller_lead_with_photos_submit', { source, hasPhotos: photos.length > 0, hasVideo: !!video });
-
     try {
       const utmParams = getUTMParams();
       
@@ -520,7 +515,6 @@ export const SellerLeadFormWithPhotos = ({
   };
 
   const handleCalendlyClick = () => {
-    trackClick('seller_lead_calendly', { source });
     openCalendly();
     onOpenChange(false);
   };

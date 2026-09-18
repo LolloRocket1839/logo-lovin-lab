@@ -13,7 +13,6 @@ import { toast } from "@/hooks/use-toast";
 import { Loader2, InfoIcon } from "lucide-react";
 import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { supabase } from "@/integrations/supabase/client";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 import {
   Form,
@@ -41,7 +40,6 @@ interface InvestorWaitlistDialogProps {
 export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'general' }: InvestorWaitlistDialogProps) => {
   const { t, i18n } = useTranslation();
   const { incrementCount } = useWaitlistCounter();
-  const { trackFormSubmit } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const investorWaitlistSchema = getInvestorWaitlistSchema(t);
@@ -120,11 +118,6 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
       }
 
       incrementCount();
-      trackFormSubmit('investor_waitlist', {
-        investment_budget: data.investment_budget,
-        guide_type: guideType,
-      });
-
       toast({
         title: t("investorWaitlist.successTitle"),
         description: t("investorWaitlist.successDescription"),

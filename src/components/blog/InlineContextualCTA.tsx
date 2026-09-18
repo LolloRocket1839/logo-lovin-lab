@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Bell, TrendingUp, ArrowRight, Home } from "lucide-react";
 import { CONTACTS } from "@/constants";
-import { useABTest } from "@/hooks/useABTest";
 import { INLINE_CTAS, type InlineCTAVariant } from "@/data/blog/inlineCTAs";
 import { WaitlistDialog } from "@/components/dialogs";
 import { useState } from "react";
@@ -21,7 +20,6 @@ const ICONS: Record<InlineCTAVariant, typeof Bell> = {
 
 export const InlineContextualCTA = ({ slug, lang }: InlineContextualCTAProps) => {
   const config = INLINE_CTAS[slug];
-  const { variation, trackImpression, trackClick } = useABTest("blog_inline_cta");
   const [showWaitlist, setShowWaitlist] = useState(false);
 
   useEffect(() => {
@@ -34,7 +32,6 @@ export const InlineContextualCTA = ({ slug, lang }: InlineContextualCTAProps) =>
   const Icon = ICONS[config.variant];
 
   const handleClick = () => {
-    trackClick();
     if (config.variant === "waitlist") {
       setShowWaitlist(true);
       return;

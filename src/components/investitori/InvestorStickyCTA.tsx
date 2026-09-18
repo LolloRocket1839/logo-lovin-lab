@@ -2,7 +2,6 @@ import { useEffect, useState, type RefObject } from "react";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, Mail } from "lucide-react";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
-import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface Props {
   formRef: RefObject<HTMLElement>;
@@ -16,7 +15,6 @@ interface Props {
  */
 export const InvestorStickyCTA = ({ formRef, emailAnchorId = "email-first" }: Props) => {
   const { t, i18n } = useTranslation();
-  const { trackEvent } = useAnalytics();
   const [visible, setVisible] = useState(false);
   const [hiddenByForm, setHiddenByForm] = useState(false);
   const lang = i18n.language.startsWith("en") ? "en" : "it";
@@ -46,13 +44,11 @@ export const InvestorStickyCTA = ({ formRef, emailAnchorId = "email-first" }: Pr
   }, [formRef]);
 
   const handleWhatsApp = () => {
-    trackEvent("investor_sticky_cta_click", { action: "whatsapp" });
     const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
   const handleEmail = () => {
-    trackEvent("investor_sticky_cta_click", { action: "email_scroll" });
     const target = document.getElementById(emailAnchorId);
     target?.scrollIntoView({ behavior: "smooth", block: "start" });
     // Focus the email field after scroll completes

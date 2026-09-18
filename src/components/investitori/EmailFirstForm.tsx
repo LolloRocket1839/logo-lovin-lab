@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { getUTMParams } from "@/hooks/useUTMTracking";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -22,7 +21,6 @@ interface Props {
 
 export const EmailFirstForm = forwardRef<HTMLElement, Props>(({ onRequestFullForm }, ref) => {
   const { t } = useTranslation();
-  const { trackEvent } = useAnalytics();
   const sectionRef = useRef<HTMLElement | null>(null);
   const viewTrackedRef = useRef(false);
   const focusTrackedRef = useRef(false);
@@ -48,7 +46,6 @@ export const EmailFirstForm = forwardRef<HTMLElement, Props>(({ onRequestFullFor
         entries.forEach((entry) => {
           if (entry.isIntersecting && !viewTrackedRef.current) {
             viewTrackedRef.current = true;
-            trackEvent("investor_email_form_view", { source: "investitori-email-first" });
             observer.disconnect();
           }
         });
@@ -68,7 +65,6 @@ export const EmailFirstForm = forwardRef<HTMLElement, Props>(({ onRequestFullFor
   const handleFieldFocus = () => {
     if (focusTrackedRef.current) return;
     focusTrackedRef.current = true;
-    trackEvent("investor_email_form_field_focus", { field: "email" });
   };
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
@@ -114,7 +110,6 @@ export const EmailFirstForm = forwardRef<HTMLElement, Props>(({ onRequestFullFor
       }
 
       if (typeof data === "string") setLeadId(data);
-      trackEvent("investor_form_email_only_submit", { source: "investitori-email-first" });
       setEmailSubmitted(true);
     } catch (err) {
       console.error(err);
@@ -155,7 +150,6 @@ export const EmailFirstForm = forwardRef<HTMLElement, Props>(({ onRequestFullFor
           submitted_at: new Date().toISOString(),
         } as never,
       });
-      trackEvent("investor_form_name_progressive_submit", { source: "investitori-email-first" });
     } catch (err) {
       console.error("Name upgrade failed:", err);
     } finally {
@@ -165,7 +159,6 @@ export const EmailFirstForm = forwardRef<HTMLElement, Props>(({ onRequestFullFor
   };
 
   const handleSkipName = () => {
-    trackEvent("investor_form_name_skip", { source: "investitori-email-first" });
     setNameStepDone(true);
   };
 

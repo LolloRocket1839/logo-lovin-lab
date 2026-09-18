@@ -2,7 +2,6 @@ import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { MessageCircle, Mail } from "lucide-react";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
-import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface Props {
   onEmailClick: () => void;
@@ -10,18 +9,15 @@ interface Props {
 
 const QuickContactBarComponent = ({ onEmailClick }: Props) => {
   const { t, i18n } = useTranslation();
-  const { trackEvent } = useAnalytics();
   const isEn = i18n.language.startsWith("en");
   const lang = isEn ? "en" : "it";
 
   const handleWhatsApp = () => {
-    trackEvent("investor_quick_contact_click", { channel: "whatsapp" });
     const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
 
   const handleEmail = () => {
-    trackEvent("investor_quick_contact_click", { channel: "email" });
     onEmailClick();
   };
 

@@ -9,7 +9,6 @@ import {
   type InvestorLeadInput,
 } from "@/lib/validation/investorLead";
 import { getUTMParams } from "@/hooks/useUTMTracking";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -44,7 +43,6 @@ const STEP2_FIELDS: (keyof InvestorLeadInput)[] = [
 
 export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
   const { t } = useTranslation();
-  const { trackEvent } = useAnalytics();
   const [step, setStep] = useState<Step>(1);
   const [submitted, setSubmitted] = useState(false);
   const [serverError, setServerError] = useState<string | null>(null);
@@ -83,7 +81,6 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
     } catch {
       /* ignore */
     }
-    trackEvent("investor_full_form_view");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -108,7 +105,6 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
   useEffect(() => {
     const onLeave = () => {
       if (!submitted && step > 1) {
-        trackEvent("investor_full_form_abandon", { step });
       }
     };
     window.addEventListener("beforeunload", onLeave);
@@ -116,7 +112,6 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
   }, [submitted, step, trackEvent]);
 
   useEffect(() => {
-    trackEvent("investor_full_form_step_view", { step });
   }, [step, trackEvent]);
 
   const sendPartialLead = async () => {
@@ -139,7 +134,6 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
         } as never,
       });
       setPartialSent(true);
-      trackEvent("investor_full_form_partial_lead");
     } catch (e) {
       console.error("Partial lead failed:", e);
     }
@@ -149,7 +143,6 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
     const fields = step === 1 ? STEP1_FIELDS : STEP2_FIELDS;
     const ok = await trigger(fields);
     if (!ok) return;
-    trackEvent("investor_full_form_step_complete", { step });
     if (step === 1) await sendPartialLead();
     setStep((s) => (s + 1) as Step);
   };
@@ -231,8 +224,6 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
           },
         })
         .catch((err) => console.error("Investor admin notification failed:", err));
-
-      trackEvent("investor_full_form_submit_success");
       localStorage.removeItem(DRAFT_KEY);
       setSubmitted(true);
     } catch (err) {

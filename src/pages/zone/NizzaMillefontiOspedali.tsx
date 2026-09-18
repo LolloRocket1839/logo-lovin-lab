@@ -30,7 +30,6 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import {
   MapPin,
@@ -113,7 +112,6 @@ const NizzaMillefontiOspedali = () => {
   const { i18n } = useTranslation();
   const isItalian = i18n.language.startsWith("it");
   const { submitLead } = useLeadCapture();
-  const { trackFormSubmit } = useAnalytics();
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -189,7 +187,6 @@ const NizzaMillefontiOspedali = () => {
       );
 
       if (result.success) {
-        trackFormSubmit("nizza-millefonti-waitlist", { zone: "nizza-millefonti-ospedali" });
         setSubmitted(true);
         toast({
           title: isItalian ? "Grazie!" : "Thanks!",

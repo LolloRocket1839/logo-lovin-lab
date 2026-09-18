@@ -5,29 +5,23 @@ import { motion } from "framer-motion";
 import { CheckCircle, Calendar, ArrowRight, BookOpen, Instagram, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { openCalendly } from "@/lib/calendly";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 
 const ThankYou = () => {
   const { t, i18n } = useTranslation();
   const [searchParams] = useSearchParams();
-  const { trackClick } = useAnalytics();
-  
   const leadType = searchParams.get('type') || 'investor';
   const isInvestor = leadType === 'investor';
   const lang = i18n.language;
 
   useEffect(() => {
-    trackClick('thank_you_page_view', { type: leadType });
   }, [leadType, trackClick]);
 
   const handleCalendlyClick = () => {
-    trackClick('thank_you_calendly', { type: leadType });
     openCalendly();
   };
 
   const handleSocialClick = (platform: string) => {
-    trackClick('thank_you_social', { platform, type: leadType });
   };
 
   return (

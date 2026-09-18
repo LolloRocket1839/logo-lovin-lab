@@ -8,7 +8,6 @@ import { QuickContactBar } from "@/components/investitori/QuickContactBar";
 import { SocialProofMini } from "@/components/investitori/SocialProofMini";
 import { TrustStripe } from "@/components/investitori/TrustStripe";
 import { InvestorStickyCTA } from "@/components/investitori/InvestorStickyCTA";
-import { useAnalytics } from "@/hooks/useAnalytics";
 
 // Lazy-load below-the-fold sections to reduce initial bundle of /investitori
 const EmailFirstForm = lazy(() =>
@@ -40,7 +39,6 @@ const SectionFallback = () => <div className="min-h-[200px]" aria-hidden="true" 
 
 const Investors = () => {
   const { t } = useTranslation();
-  const { trackEvent } = useAnalytics();
   const location = useLocation();
   const formRef = useRef<HTMLElement>(null);
   // Derive canonical from the actual URL path (not i18n language) so crawlers
@@ -51,13 +49,11 @@ const Investors = () => {
     : "https://junglerent.it/investitori";
 
   const scrollToForm = useCallback(() => {
-    trackEvent("investor_hero_cta_click", { target: "request_info_form" });
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [trackEvent]);
 
   // Page view (one-shot)
   useEffect(() => {
-    trackEvent("investor_page_view", { path: "/investitori" });
   }, [trackEvent]);
 
   return (

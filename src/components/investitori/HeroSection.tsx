@@ -1,7 +1,6 @@
 import { memo, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
-import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface Props {
   onCtaClick: () => void;
@@ -9,11 +8,9 @@ interface Props {
 
 const HeroSectionComponent = ({ onCtaClick }: Props) => {
   const { t, i18n } = useTranslation();
-  const { trackEvent } = useAnalytics();
   const lang = i18n.language.startsWith("en") ? "en" : "it";
 
   const handleWhatsApp = () => {
-    trackEvent("investor_quick_contact_click", { channel: "whatsapp", source: "hero" });
     const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };

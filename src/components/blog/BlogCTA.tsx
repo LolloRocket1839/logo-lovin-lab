@@ -5,7 +5,6 @@ import { MessageCircle, Bell, TrendingUp, Download, FileText } from "lucide-reac
 import { WaitlistDialog } from "@/components/dialogs";
 import { useState, useEffect } from "react";
 import { CONTACTS } from "@/constants";
-import { useABTest } from "@/hooks/useABTest";
 
 interface BlogCTAProps {
   type: 'students' | 'investors' | 'sellers' | 'turisti' | 'societa';
@@ -14,14 +13,10 @@ interface BlogCTAProps {
 export const BlogCTA = ({ type }: BlogCTAProps) => {
   const { t } = useTranslation();
   const [showWaitlist, setShowWaitlist] = useState(false);
-  const { variation, trackImpression, trackClick } = useABTest(type);
-
   useEffect(() => {
-    trackImpression();
   }, [trackImpression]);
 
   const handleWhatsApp = () => {
-    trackClick();
     const message = encodeURIComponent(
       type === 'sellers' 
         ? t('seller.contactMessage')
@@ -32,7 +27,6 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
   };
 
   const handleWaitlistOpen = () => {
-    trackClick();
     setShowWaitlist(true);
   };
 

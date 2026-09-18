@@ -11,7 +11,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 import {
@@ -43,7 +42,6 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const { submitLead } = useLeadCapture();
-  const { trackFormSubmit } = useAnalytics();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const waitlistSchema = getWaitlistSchema(t);
@@ -105,14 +103,6 @@ export const WaitlistDialog = ({ open, onOpenChange }: WaitlistDialogProps) => {
           subject: "New Jungle Rent Waitlist 🚀",
         }
       ).catch(() => {}); // Non-blocking DB write
-
-      trackFormSubmit('student_waitlist', {
-        university: data.university,
-        budget: data.budget,
-        move_date: data.move_date,
-        referral_source: data.referral_source,
-      });
-
       form.reset();
       onOpenChange(false);
       

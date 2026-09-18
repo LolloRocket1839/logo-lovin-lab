@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { X, Building2, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 
 interface SellerStickyCtaProps {
@@ -11,7 +10,6 @@ interface SellerStickyCtaProps {
 
 export const SellerStickyCta = ({ onOpenDialog }: SellerStickyCtaProps) => {
   const { t } = useTranslation();
-  const { trackClick } = useAnalytics();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -37,12 +35,10 @@ export const SellerStickyCta = ({ onOpenDialog }: SellerStickyCtaProps) => {
   if (!isVisible || isDismissed) return null;
 
   const handleCta = () => {
-    trackClick("seller_sticky_cta_primary");
     onOpenDialog?.();
   };
 
   const handleWhatsApp = () => {
-    trackClick("seller_sticky_cta_whatsapp");
     const message = t("sellerStickyCta.whatsappMessage", "Ciao Lorenzo, vorrei una valutazione gratuita per vendere casa a Torino.");
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };
