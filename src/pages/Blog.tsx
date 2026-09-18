@@ -125,22 +125,14 @@ const Blog = () => {
         </script>
       </Helmet>
       
-      <div className="pt-16">
-        <Breadcrumbs
-          items={[
-            { label: isItalian ? 'Risorse' : 'Resources' }
-          ]}
-        />
-        
-        <BlogHero />
-        
-        {/* Pillar Articles Section - Guide Complete */}
-        <section className="px-4 md:px-8">
-          <div className="container mx-auto max-w-7xl">
-            <PillarArticlesSection />
-          </div>
+      <div>
+        <section className="container mx-auto px-4 pt-16 md:px-8">
+          <h1 className="font-display text-3xl font-bold text-foreground md:text-4xl">Blog</h1>
+          <p className="mt-2 text-muted-foreground">
+            {isItalian ? "Guide su casa, affitti e immobili a Torino." : "Guides on homes, rentals and property in Turin."}
+          </p>
         </section>
-        
+
         <section className="py-8 md:py-12 px-4 md:px-8">
           <div className="container mx-auto max-w-7xl">
             <BlogFilters 
