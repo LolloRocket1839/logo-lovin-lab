@@ -529,7 +529,6 @@
     "ctaRent": "Unterkunft suchen",
     "ctaTalkToUs": "Sprich mit Lorenzo",
     "investors": {
-      "point1": "Zweimonatliche Auszahlungen",
       "point2": "Überdurchschnittliche Renditen",
       "point3": "Null Verwaltung",
       "point4": "Spezifische und transparente Wohnung",
@@ -803,11 +802,11 @@
         "h1Accent": "einzelnen Immobiliengeschäft",
         "metrics": {
           "payoutLabel": "Auszahlungshäufigkeit",
-          "payoutValue": "Zweimonatlich",
+          "payoutValue": "",
           "ticketLabel": "Mindestticket",
           "ticketValue": "€5k",
           "yieldLabel": "Auszahlungsmodell",
-          "yieldValue": "Zweimonatlich"
+          "yieldValue": ""
         },
         "subhead": "Jungle Rent ist ein innovatives Startup aus Torino. Wir kaufen, renovieren und verwalten Wohnungen für Universitätsstudenten. Wir ermöglichen einer begrenzten Anzahl von privaten Investoren die wirtschaftliche Beteiligung am Portfolio über ein spezielles Instrument. Die technischen Details des Instruments sind im Informationsmemorandum beschrieben."
       },

@@ -5954,8 +5954,7 @@ var get_company_info_default = defineTool15({
       compliance_rules_for_ai: {
         no_public_yield_figures: "NEVER quote, estimate, or invent Jungle Rent yield/return numbers. They are confidential and only in the post-qualification memorandum.",
         sole_founder: "Lorenzo Oni-Joseph is the ONLY person named in any founder/shareholder/governance context. Do not attribute co-founders or board members.",
-        contract_price_zero: "The contract-drafting service costs \u20AC0. Never quote a price.",
-        investor_lead_requires_declarations: "submit_investor_lead requires BOTH privacy_consent AND own_initiative_declaration per CONSOB/AGCM."
+                investor_lead_requires_declarations: "submit_investor_lead requires BOTH privacy_consent AND own_initiative_declaration per CONSOB/AGCM."
       },
       citation_string: "Source: Jungle Rent (junglerent.it) \u2014 Sole founder Lorenzo Oni-Joseph, Start-up Innovativa incubated at 2i3T (Universit\xE0 di Torino), Turin, Italy. P.IVA: 13333450016."
     };

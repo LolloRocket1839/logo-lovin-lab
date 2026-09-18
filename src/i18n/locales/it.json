@@ -384,7 +384,7 @@
     "voiceA2": "Jungle Rent è iscritta nella sezione speciale delle start-up innovative del Registro Imprese.",
     "voiceA3": "Aggiornamenti periodici sull’operazione.",
     "voiceA4": "Aggiornamenti periodici sull’operazione.",
-    "voiceA5": "Jungle Rent acquista direttamente la tua casa senza intermediari. Compili il form, ricevi valutazione gratuita in 48 ore, sopralluogo entro 7 giorni, offerta scritta entro 48 ore dal sopralluogo, e rogito in 60-90 giorni. Zero commissioni.",
+    "voiceA5": "Jungle Rent acquista direttamente la tua casa senza intermediari. Ricevi un range di prezzo indicativo entro 48 ore dal contatto, facciamo una visita, inviamo una proposta scritta e arriviamo al rogito in 60-90 giorni. Zero commissioni.",
     "voiceA6": "Jungle Rent acquista appartamenti nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Aurora, Lingotto, vicinissime a Politecnico e UniTo. Compriamo trilocali, quadrilocali e appartamenti più grandi, anche da ristrutturare.",
     "voiceA7": "Il valore dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta circa €180.000-220.000. Richiedi una valutazione gratuita a Jungle Rent per un prezzo preciso.",
     "voiceA8": "Gli studenti universitari a Torino preferiscono i quartieri vicini alle università: San Salvario e Crocetta per il Politecnico, Centro e Vanchiglia per UniTo, Aurora per i prezzi accessibili. Queste zone offrono servizi, vita notturna e trasporti.",
@@ -529,7 +529,6 @@
     "ctaRent": "Cerca alloggio",
     "ctaTalkToUs": "Parla con Lorenzo",
     "investors": {
-      "point1": "Aggiornamenti periodici sull’operazione.",
       "point2": "Rendimenti sopra mercato",
       "point3": "Zero gestione",
       "point4": "Appartamento specifico e trasparente",
@@ -1327,7 +1326,7 @@
     "estimatedValueContext": "Valore stimato: {{value}}",
     "invalidEmail": "Inserisci un'email valida",
     "namePlaceholder": "Come ti chiami?",
-    "newTitle": "Valutazione gratuita in 24 ore",
+    "newTitle": "Valutazione gratuita",
     "notAgency": "Non siamo un'agenzia. Se il tuo immobile è nelle nostre zone, ti facciamo un'offerta diretta.",
     "optional": "opzionale",
     "privacy": "I tuoi dati sono al sicuro. Non li condivideremo mai con terzi.",
@@ -1688,7 +1687,7 @@
   "sellerStickyCta": {
     "cta": "Ricevi la tua offerta",
     "ctaMobile": "Offerta",
-    "subtitle": "Valutazione gratuita in 24 ore, zero commissioni.",
+    "subtitle": "Valutazione gratuita, zero commissioni.",
     "title": "Vendi casa a Torino senza agenzia",
     "whatsappLabel": "WhatsApp",
     "whatsappMessage": "Ciao Lorenzo, vorrei una valutazione gratuita per vendere casa a Torino."
