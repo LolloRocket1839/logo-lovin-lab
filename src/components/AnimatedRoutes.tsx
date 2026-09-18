@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { hasEnPrefix, stripEnPrefix } from "@/constants/routeAliases";
 import { AnimatePresence } from "framer-motion";
 import { PageTransition } from "./PageTransition";
 import { LoadingSpinner } from "./LoadingSpinner";
@@ -57,12 +58,16 @@ const FairRentPledge = lazy(() => import("@/pages/FairRentPledge"));
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
+  // /en/<qualsiasi-pagina> serve la stessa rotta italiana, in inglese
+  const routedLocation = hasEnPrefix(location.pathname)
+    ? { ...location, pathname: stripEnPrefix(location.pathname) }
+    : location;
 
   return (
     <AnimatePresence mode="wait">
       <PageTransition key={location.pathname}>
         <Suspense fallback={<LoadingSpinner />}>
-          <Routes location={location}>
+          <Routes location={routedLocation}>
             <Route path="/" element={<Index />} />
             <Route path="/chi-siamo" element={<About />} />
             <Route path="/about" element={<About />} />
@@ -125,9 +130,13 @@ export const AnimatedRoutes = () => {
             <Route path="/vendi-casa/lingotto-nizza-millefonti" element={<LingottoNizzaMillefontiSeller />} />
             <Route path="/sell-home/lingotto-nizza-millefonti" element={<LingottoNizzaMillefontiSeller />} />
             <Route path="/vendere-casa-senza-agenzia-torino" element={<VendereSenzaAgenzia />} />
+            <Route path="/sell-without-agency-turin" element={<VendereSenzaAgenzia />} />
             <Route path="/vendere-casa-velocemente-torino" element={<VendereVelocemente />} />
+            <Route path="/sell-house-fast-turin" element={<VendereVelocemente />} />
             <Route path="/comprare-casa-affittata-torino" element={<ComprareCasaAffittata />} />
+            <Route path="/buy-rented-property-turin" element={<ComprareCasaAffittata />} />
             <Route path="/investire-immobiliare-torino" element={<InvestireImmobiliareTorino />} />
+            <Route path="/property-investment-turin" element={<InvestireImmobiliareTorino />} />
             <Route path="/affitti-lingotto-ospedali-torino" element={<AffittiLingottoOspedali />} />
             <Route path="/rent-lingotto-hospitals-turin" element={<AffittiLingottoOspedali />} />
             <Route path="/accedi" element={<Auth />} />

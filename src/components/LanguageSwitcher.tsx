@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
+import { toEnglishPath, toItalianPath } from "@/constants/routeAliases";
 import { Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +12,8 @@ import {
 
 export const LanguageSwitcher = () => {
   const { i18n, t } = useTranslation();
+  const navigate = useNavigate();
+  const { pathname, search, hash } = useLocation();
 
   const languages = [
     { code: "it", name: "Italiano", flag: "🇮🇹" },
@@ -25,6 +29,11 @@ export const LanguageSwitcher = () => {
 
   const changeLanguage = (langCode: string) => {
     i18n.changeLanguage(langCode);
+    // Keep the URL in sync so a shared link opens in the same language
+    const target = langCode === "en" ? toEnglishPath(pathname) : toItalianPath(pathname);
+    if (target !== pathname) {
+      navigate(`${target}${search}${hash}`, { replace: true });
+    }
   };
 
   return (
