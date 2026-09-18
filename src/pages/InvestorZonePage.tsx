@@ -32,11 +32,11 @@ import {
   formatPrice,
   InvestorZone
 } from "@/data/investorZoneData";
-import { ZoneMetricCard } from "@/components/investor/ZoneMetricCard";
-import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
+import { ZoneMetricCard } from "@/components/zones/ZoneMetricCard";
+import { ZoneComparisonTool } from "@/components/zones/ZoneComparisonTool";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
-const ZoneMap = lazy(() => import("@/components/investor/ZoneMap"));
+const ZoneMap = lazy(() => import("@/components/zones/ZoneMap"));
 
 
 const InvestorZonePage = () => {

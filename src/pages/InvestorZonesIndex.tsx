@@ -34,9 +34,9 @@ import {
   getZonesWithUrbanRenewal,
   InvestorZone
 } from "@/data/investorZoneData";
-import { ZoneCard } from "@/components/investor/ZoneCard";
-import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
-import InvestorZonesMap from "@/components/investor/InvestorZonesMap";
+import { ZoneCard } from "@/components/zones/ZoneCard";
+import { ZoneComparisonTool } from "@/components/zones/ZoneComparisonTool";
+import InvestorZonesMap from "@/components/zones/InvestorZonesMap";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
 type SortOption = 'growth' | 'price_asc' | 'price_desc';
