@@ -15,3 +15,9 @@
 
 ## In attesa
 - Parte 2 campagna a pagamento: budget e approvazione dell'utente
+
+## Fasi C–E completate (2026-09-18)
+- C: rimossi analytics/AB/cookie banner/service worker/push, pagine tecniche.
+- D: eliminate 12 edge function e 10 tabelle inutilizzate; analytics_events/ab_test_events deprecate (drop dopo 2026-12-31).
+- E: homepage a tre porte, investitori a 5 blocchi (FAQ max 5), blog statico, contratti statici, /vendi senza sticky/breadcrumb, PageTransition fade CSS 300ms, 8 dipendenze rimosse.
+- Da fare: publish del sito; 11 warning linter backend (funzioni SECURITY DEFINER) da valutare.
