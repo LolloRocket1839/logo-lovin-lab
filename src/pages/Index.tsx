@@ -1,144 +1,100 @@
-import { Suspense, lazy } from "react";
-
-const TrustBadge = lazy(() => import("@/components/TrustBadge").then(m => ({ default: m.TrustBadge })));
-const WhatsAppFAB = lazy(() => import("@/components/WhatsAppFAB").then(m => ({ default: m.WhatsAppFAB })));
-
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-
-// Innovative components - loaded immediately for impact
-
-import { BrandWordmark } from "@/components/immersive/BrandWordmark";
-import { ScrollProgressRail } from "@/components/immersive/ScrollProgressRail";
-import { ImmersiveAct } from "@/components/immersive/ImmersiveAct";
-import { LiquidHomepageStory } from "@/components/immersive/LiquidHomepageStory";
-
-// Lazy load below-the-fold components
-const AudienceDoors = lazy(() => import("@/components/home/AudienceDoors").then(m => ({ default: m.AudienceDoors })));
-const SellerHomeEntry = lazy(() => import("@/components/home/SellerHomeEntry").then(m => ({ default: m.SellerHomeEntry })));
-
-
-
-
-const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
-const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
-const ExitIntentPopup = lazy(() => import("@/components/ExitIntentPopup").then(m => ({ default: m.ExitIntentPopup })));
-
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 
 const Index = () => {
-  const { t, i18n } = useTranslation();
-  const isItalian = i18n.language.startsWith('it');
+  const { i18n } = useTranslation();
+  const isItalian = !i18n.language.startsWith("en");
 
   const title = isItalian
-    ? "Jungle Rent — Affitti per studenti e investimenti immobiliari a Torino"
-    : "Jungle Rent — Student rentals and real estate investment in Turin";
+    ? "Jungle Rent — Compriamo e affittiamo case a Torino"
+    : "Jungle Rent — We buy and rent apartments in Turin";
 
   const description = isItalian
-    ? "Jungle Rent — affitti per studenti, investimenti immobiliari accessibili e gestione professionale a Torino. Start-up Innovativa incubata in 2i3T."
-    : "Jungle Rent — student rentals, accessible real estate investment and professional management in Turin. Innovative startup incubated at 2i3T.";
+    ? "Jungle Rent S.r.l., start-up innovativa di Torino: compriamo appartamenti da ristrutturare o con inquilino e li affittiamo a studenti."
+    : "Jungle Rent S.r.l., innovative start-up in Turin: we buy apartments to renovate or with tenants and rent them to students.";
+
+  const doors = [
+    {
+      to: isItalian ? "/vendi" : "/sell",
+      title: isItalian ? "Vendi casa a Torino" : "Sell your home in Turin",
+      text: isItalian
+        ? "Compriamo direttamente appartamenti difficili: ereditati, con inquilino o da ristrutturare."
+        : "We buy difficult apartments directly: inherited, tenanted or in need of renovation.",
+      primary: true,
+    },
+    {
+      to: isItalian ? "/investitori" : "/investors",
+      title: isItalian ? "Investitori" : "Investors",
+      text: isItalian
+        ? "Come funziona investire con noi su singole operazioni immobiliari a Torino."
+        : "How investing with us in single Turin real-estate operations works.",
+      primary: false,
+    },
+    {
+      to: isItalian ? "/studenti" : "/students",
+      title: isItalian ? "Studenti" : "Students",
+      text: isItalian
+        ? "Guide, quartieri e strumenti per cercare casa a Torino."
+        : "Guides, neighborhoods and tools to find a home in Turin.",
+      primary: false,
+    },
+  ];
 
   return (
-    <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
+    <main id="main-content" role="main" className="bg-background">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content="affitti torino, affitti studenti torino, investimenti immobiliari piemonte, property management italia, student housing italia nord, politecnico torino alloggi, università torino stanze, affitti san salvario, affitti crocetta torino, case studenti piemonte, immobilien investment italien, investissement immobilier italie, student housing turin switzerland investors, real estate torino svizzera, immobilieninvestition schweiz italien" />
         <link rel="canonical" href="https://junglerent.it/" />
-        
-        {/* Geo Targeting */}
-        <meta name="geo.region" content="IT-21" />
-        <meta name="geo.placename" content="Torino" />
-        <meta name="geo.position" content="45.0703;7.6869" />
-        <meta name="ICBM" content="45.0703, 7.6869" />
-        
-        {/* Content Language */}
-        <meta httpEquiv="content-language" content="it-IT, en-US" />
-        
-        {/* Hreflang for multilingual SEO */}
-        <link rel="alternate" hrefLang="it" href="https://junglerent.it/" />
-        <link rel="alternate" hrefLang="en" href="https://junglerent.it/" />
-        <link rel="alternate" hrefLang="de-CH" href="https://junglerent.it/" />
-        <link rel="alternate" hrefLang="fr-CH" href="https://junglerent.it/" />
-        <link rel="alternate" hrefLang="it-CH" href="https://junglerent.it/" />
-        <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/" />
-
-        {/* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://junglerent.it/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://junglerent.it/og-image-homepage.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Jungle Rent" />
-        <meta property="og:locale" content={isItalian ? "it_IT" : "en_US"} />
-        <meta property="og:locale:alternate" content={isItalian ? "en_US" : "it_IT"} />
-
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://junglerent.it/og-image-homepage.jpg" />
-
-        {/* AI Crawlers - Citation & Attribution */}
-        <meta name="citation_title" content={title} />
-        <meta name="citation_author" content="Jungle Rent S.r.l." />
-        <meta name="citation_publication_date" content="2026-01-09" />
-        <meta name="citation_online_date" content="2026-01-09" />
-        <meta name="citation_publisher" content="Jungle Rent S.r.l." />
-        <meta name="citation_language" content={isItalian ? "it" : "en"} />
-        <meta name="citation_url" content="https://junglerent.it/" />
-        
-        {/* AI content origin & Overview eligibility */}
-        <meta name="ai.contentOrigin" content="human-authored" />
-        <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        
-        {/* AI Knowledge Base Links */}
-        <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />
-        <link rel="author" href="https://junglerent.it/ai-assistant-info.txt" title="Company Information" />
       </Helmet>
 
-      {/* Immersive background canvas */}
-      <BrandWordmark word={isItalian ? "TORINO" : "TORINO"} />
-      <ScrollProgressRail />
+      <section className="container mx-auto px-4 py-16 text-center md:py-24">
+        <img src={jungleRentLogo} alt="Jungle Rent" className="mx-auto h-20 w-20 md:h-28 md:w-28" />
+        <h1 className="mx-auto mt-8 max-w-3xl font-display text-3xl font-bold leading-tight text-foreground md:text-5xl">
+          {isItalian ? "Compriamo case a Torino e le affittiamo a studenti" : "We buy homes in Turin and rent them to students"}
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">
+          {isItalian
+            ? "Una società di Torino, non un'agenzia."
+            : "A Turin company, not an agency."}
+        </p>
+      </section>
 
-      <div className="relative z-10">
-        {/* Liquid pinned story — the homepage narrative in a single frame */}
-        <LiquidHomepageStory />
+      <section className="container mx-auto px-4 pb-16 md:pb-24">
+        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
+          {doors.map((door) => (
+            <Link
+              key={door.to}
+              to={door.to}
+              className={`flex flex-col rounded-lg border p-8 transition-colors ${
+                door.primary
+                  ? "border-primary bg-primary/5 md:row-span-1"
+                  : "border-border hover:border-primary/40"
+              }`}
+            >
+              <h2 className="font-display text-xl font-bold text-foreground">{door.title}</h2>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{door.text}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                {isItalian ? "Apri" : "Open"}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </span>
+            </Link>
+          ))}
+        </div>
 
-        {/* Full sections below — for SEO, conversion paths and deep-link anchors */}
-        <Suspense fallback={null}>
-          <TrustBadge />
-        </Suspense>
-
-        <Suspense fallback={<div className="min-h-[300px] bg-background" aria-hidden="true" />}>
-          <SellerHomeEntry />
-        </Suspense>
-
-        <Suspense fallback={<div className="min-h-[400px] bg-background" aria-hidden="true" />}>
-          <AudienceDoors />
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <div className="hidden md:block">
-          </div>
-          <div className="md:hidden">
-          </div>
-        </Suspense>
-
-
-
-        <Suspense fallback={null}>
-          <ScrollToTop />
-          <StickyCTA />
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <WhatsAppFAB />
-          <ExitIntentPopup source="homepage" />
-          
-        </Suspense>
-      </div>
+        <p className="mx-auto mt-12 max-w-5xl text-center text-xs text-muted-foreground">
+          Start-up innovativa · incubata 2I3T · P.IVA 13333450016
+        </p>
+      </section>
     </main>
   );
 };
