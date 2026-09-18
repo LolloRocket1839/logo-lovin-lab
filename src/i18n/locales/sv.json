@@ -1167,7 +1167,9 @@
     "investors": "För investerare",
     "search": "Sök",
     "sell": "Sälj bostad",
-    "students": "För studenter"
+    "students": "För studenter",
+    "investShort": "Investera",
+    "sellShort": "Sälj"
   },
   "offerSimulator": {
     "conditionGood": "Beboeligt",

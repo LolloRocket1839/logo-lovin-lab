@@ -8,15 +8,20 @@ export const BottomNav = () => {
   const isEnglish = i18n.language.startsWith("en");
 
   const items = [
-    { label: t("nav.home", isEnglish ? "Home" : "Home"), to: "/", icon: Home },
-    { label: t("nav.sell"), to: isEnglish ? "/sell" : "/vendi", icon: Building2 },
-    { label: t("nav.investors"), to: isEnglish ? "/investors" : "/investitori", icon: TrendingUp },
+    { label: t("nav.home", "Home"), to: "/", icon: Home },
+    { label: t("nav.sellShort", isEnglish ? "Sell" : "Vendi"), to: isEnglish ? "/sell" : "/vendi", icon: Building2 },
+    {
+      label: t("nav.investShort", isEnglish ? "Invest" : "Investi"),
+      to: isEnglish ? "/investors" : "/investitori",
+      icon: TrendingUp,
+    },
     { label: "Blog", to: "/blog", icon: BookOpen },
   ];
 
   return (
     <nav
       className="fixed bottom-0 left-0 right-0 z-40 border-t border-border bg-background md:hidden"
+      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       aria-label="Navigazione principale mobile"
     >
       <div className="flex h-16 items-center justify-around">

@@ -1167,7 +1167,9 @@
     "investors": "Para inversores",
     "search": "Buscar",
     "sell": "Vender casa",
-    "students": "Para estudiantes"
+    "students": "Para estudiantes",
+    "investShort": "Invertir",
+    "sellShort": "Vender"
   },
   "offerSimulator": {
     "conditionGood": "Habitable",

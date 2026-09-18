@@ -326,7 +326,6 @@ const Sellers = () => {
               href={FACEBOOK_SELLER_GROUP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={undefined}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
             >
               <Facebook className="w-5 h-5" aria-hidden="true" />
