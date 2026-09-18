@@ -5,7 +5,6 @@ import {
   CalendarCheck, MessageCircle, Facebook, Users, Hammer, ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { VendiLeadForm } from "@/components/vendi/VendiLeadForm";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
@@ -144,7 +143,6 @@ const Sellers = () => {
 
       <main className="min-h-screen bg-background pb-24 md:pb-0">
         <div className="container px-4 md:px-8 mx-auto pt-20 md:pt-28">
-          <Breadcrumbs items={[{ label: "Vendi casa a Torino" }]} />
         </div>
 
         {/* Hero */}
