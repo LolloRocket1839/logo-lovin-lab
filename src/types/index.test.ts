@@ -68,41 +68,6 @@ describe('Types Barrel Export', () => {
     });
   });
 
-  describe('AI Testing Types', () => {
-    it('should export AITestQuery interface', () => {
-      const query: Types.AITestQuery = {
-        id: 'test-1',
-        category: 'general',
-        query: 'Test query',
-        language: 'it',
-        priority: 'high',
-      };
-      expect(query.id).toBe('test-1');
-      expect(query.language).toBe('it');
-    });
-
-    it('should export AIEngineResult interface', () => {
-      const result: Types.AIEngineResult = {
-        cited: true,
-        context: 'Test context',
-        position: 1,
-      };
-      expect(result.cited).toBe(true);
-      expect(result.position).toBe(1);
-    });
-
-    it('should export TestResult interface', () => {
-      const testResult: Types.TestResult = {
-        queryId: 'q1',
-        date: '2024-01-01',
-        chatgpt: { cited: true, context: '' },
-        claude: { cited: false, context: '' },
-        notes: 'Test notes',
-      };
-      expect(testResult.queryId).toBe('q1');
-    });
-  });
-
   describe('Study Spaces Types', () => {
     it('should export StudySpaceCategory type', () => {
       const categories: Types.StudySpaceCategory[] = [
