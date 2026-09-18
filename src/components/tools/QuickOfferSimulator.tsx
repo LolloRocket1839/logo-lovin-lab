@@ -142,7 +142,7 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
     if (zone && !hasStarted) {
       setHasStarted(true);
     }
-  }, [zone, hasStarted, trackEvent]);
+  }, [zone, hasStarted]);
 
   // Track completed when result becomes visible (once per complete state change)
   useEffect(() => {

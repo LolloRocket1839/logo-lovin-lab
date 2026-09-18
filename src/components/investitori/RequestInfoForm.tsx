@@ -109,10 +109,10 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
     };
     window.addEventListener("beforeunload", onLeave);
     return () => window.removeEventListener("beforeunload", onLeave);
-  }, [submitted, step, trackEvent]);
+  }, [submitted, step]);
 
   useEffect(() => {
-  }, [step, trackEvent]);
+  }, [step]);
 
   const sendPartialLead = async () => {
     if (partialSent) return;

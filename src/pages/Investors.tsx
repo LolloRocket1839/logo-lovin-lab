@@ -50,11 +50,11 @@ const Investors = () => {
 
   const scrollToForm = useCallback(() => {
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [trackEvent]);
+  }, []);
 
   // Page view (one-shot)
   useEffect(() => {
-  }, [trackEvent]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

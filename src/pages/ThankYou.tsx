@@ -15,7 +15,7 @@ const ThankYou = () => {
   const lang = i18n.language;
 
   useEffect(() => {
-  }, [leadType, trackClick]);
+  }, [leadType]);
 
   const handleCalendlyClick = () => {
     openCalendly();

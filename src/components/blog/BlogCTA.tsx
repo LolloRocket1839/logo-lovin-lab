@@ -14,7 +14,7 @@ export const BlogCTA = ({ type }: BlogCTAProps) => {
   const { t } = useTranslation();
   const [showWaitlist, setShowWaitlist] = useState(false);
   useEffect(() => {
-  }, [trackImpression]);
+  }, []);
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(

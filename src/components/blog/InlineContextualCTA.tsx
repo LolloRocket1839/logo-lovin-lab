@@ -23,8 +23,8 @@ export const InlineContextualCTA = ({ slug, lang }: InlineContextualCTAProps) =>
   const [showWaitlist, setShowWaitlist] = useState(false);
 
   useEffect(() => {
-    if (config) trackImpression();
-  }, [config, trackImpression]);
+
+  }, [config]);
 
   if (!config) return null;
 

@@ -54,7 +54,7 @@ export const EmailFirstForm = forwardRef<HTMLElement, Props>(({ onRequestFullFor
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [trackEvent]);
+  }, []);
 
   const setSectionRef = (node: HTMLElement | null) => {
     sectionRef.current = node;
