@@ -4,6 +4,7 @@ import { hasEnPrefix, stripEnPrefix } from "@/constants/routeAliases";
 import { AnimatePresence } from "framer-motion";
 import { PageTransition } from "./PageTransition";
 import { LoadingSpinner } from "./LoadingSpinner";
+import { RootLayout } from "@/components/layout/RootLayout";
 import Index from "@/pages/Index";
 
 // Lazy load - secondary pages
@@ -68,6 +69,7 @@ export const AnimatedRoutes = () => {
       <PageTransition key={location.pathname}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes location={routedLocation}>
+            <Route element={<RootLayout />}>
             <Route path="/" element={<Index />} />
             <Route path="/chi-siamo" element={<About />} />
             <Route path="/about" element={<About />} />
@@ -150,6 +152,7 @@ export const AnimatedRoutes = () => {
             <Route path="/mcp" element={<McpRedirect />} />
 
             <Route path="*" element={<NotFound />} />
+            </Route>
           </Routes>
         </Suspense>
       </PageTransition>
