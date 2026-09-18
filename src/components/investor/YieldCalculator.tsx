@@ -70,7 +70,7 @@ export const YieldCalculator = () => {
             />
             <div className="flex justify-between text-xs text-muted-foreground mt-1">
               <span />
-            <span>€100.000</span>
+            <span>€ 100.000</span>
             </div>
           </div>
 

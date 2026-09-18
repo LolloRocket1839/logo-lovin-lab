@@ -6,5 +6,5 @@
 - Ricerca concorrenti annunci immobiliari (Concrete, Walliance, Recrowd)
 
 ## In attesa
-- [ ] Pulizia compliance completa: rimozioni/correzioni, verifiche e riepilogo file per file
+- [x] Pulizia compliance completa: rimozioni/correzioni, verifiche e riepilogo file per file
 - Parte 2 campagna a pagamento: budget e approvazione dell'utente
