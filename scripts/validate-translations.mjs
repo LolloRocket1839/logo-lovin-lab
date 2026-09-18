@@ -68,7 +68,7 @@ const isLikelyUntranslated = (refVal, val) => {
   // very short strings (≤3 chars), pure numbers, urls, emails, brand tokens → skip
   if (trimmed.length <= 3) return false;
   if (/^[\d\s.,€%+\-/<>]+k?$/i.test(trimmed)) return false;
-  // currency ranges like "€ 100k - €200k", ">€600", "€50k - € 100k"
+  // currency ranges like "€100k - €200k", ">€600", "€50k - €100k"
   if (/^[<>]?€?\s*\d+\s*k?\s*€?(\s*[-–]\s*[<>]?€?\s*\d+\s*k?\s*€?)?$/i.test(trimmed)) return false;
   if (/^https?:\/\//.test(refVal)) return false;
   if (/^\S+@\S+\.\S+$/.test(refVal)) return false;

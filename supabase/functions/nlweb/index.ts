@@ -55,7 +55,7 @@ const FAQS: Record<string, string> = {
   "polito|politecnico": "Best neighborhoods near Politecnico di Torino: Cenisia (10 min, €380-480), Vanchiglia (10 min, €450-550), San Salvario (15 min, €450-550), Crocetta (20 min, €500-650).",
   "unito|università di torino": "Best neighborhoods near UniTo: Centro (5 min, €550-700), San Salvario (10 min, €450-550), Vanchiglia (15 min, €450-550).",
   "safe|sicur|women|donne": "Safest neighborhoods in Turin: Crocetta, Centro, San Paolo (all rated 'High'). San Salvario and Vanchiglia are rated 'Medium-high'. Read our guide: junglerent.it/blog/quartieri-sicuri-donne-torino",
-  "budget|spendere|costo vita|cost of living": "Monthly student budget in Turin: Rent €350-550 + Groceries €150-250 + Transport €25 (GTT under 26) + Utilities €50-80 + Extras € 100-150 = Total €675-1,050/month.",
+  "budget|spendere|costo vita|cost of living": "Monthly student budget in Turin: Rent €350-550 + Groceries €150-250 + Transport €25 (GTT under 26) + Utilities €50-80 + Extras €100-150 = Total €675-1,050/month.",
   "transport|gtt|metro|bus|tram": "GTT monthly pass: €25 (under 26) or €38 (standard). Annual: €258. Turin has 1 metro line, 8 tram routes, 100+ bus lines. Night bus runs Fri-Sat.",
   "study|studiare|aule|library": "30+ study spaces in Turin: EDISU halls (free, some 24h), Biblioteca Nazionale, civic libraries, coworking spaces, cafés. Interactive map: junglerent.it/strumenti/aule-studio-torino",
   "eat|mangiare|cheap|economico|food": "Budget eating in Turin: €3-5 for street food, €5-8 for piole (traditional restaurants), €8-12 for full meals. Guide: junglerent.it/strumenti/dove-mangiare-torino",
