@@ -159,6 +159,16 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/en/blog</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/blog" />
   </url>
   <url>
@@ -167,6 +177,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/faq" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/en/faq</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/faq" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/faq" />
   </url>
   <url>
@@ -227,6 +247,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendere-casa-senza-agenzia-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/sell-without-agency-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendere-casa-senza-agenzia-torino" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/sell-without-agency-turin</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendere-casa-senza-agenzia-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/sell-without-agency-turin" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendere-casa-senza-agenzia-torino" />
   </url>
   <url>
@@ -235,6 +265,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendere-casa-velocemente-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/sell-house-fast-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendere-casa-velocemente-torino" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/sell-house-fast-turin</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/vendere-casa-velocemente-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/sell-house-fast-turin" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/vendere-casa-velocemente-torino" />
   </url>
   <url>
@@ -243,6 +283,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/comprare-casa-affittata-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/buy-rented-property-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/comprare-casa-affittata-torino" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/buy-rented-property-turin</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/comprare-casa-affittata-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/buy-rented-property-turin" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/comprare-casa-affittata-torino" />
   </url>
   <url>
@@ -251,6 +301,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investire-immobiliare-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/property-investment-turin" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investire-immobiliare-torino" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/property-investment-turin</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/investire-immobiliare-torino" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/property-investment-turin" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/investire-immobiliare-torino" />
   </url>
   <url>
@@ -295,6 +355,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/privacy" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/en/privacy</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/privacy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/privacy" />
   </url>
   <url>
@@ -303,6 +373,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/fair-rent-pledge" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/fair-rent-pledge" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/fair-rent-pledge" />
+  </url>
+  <url>
+    <loc>https://junglerent.it/en/fair-rent-pledge</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://junglerent.it/fair-rent-pledge" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://junglerent.it/en/fair-rent-pledge" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://junglerent.it/fair-rent-pledge" />
   </url>
   <url>
