@@ -96,7 +96,7 @@ The southern extension to Politecnico (and eventually Mirafiori-Orbassano) requi
 
 ## Real estate impact: the opportunity map
 
-This convergence of investments has measurable effects on Turin's property market. To understand your property's current value, use our [free valuation calculator](/valutazione-immobile).
+This convergence of investments has measurable effects on Turin's property market. To understand your property's current value, use our [free valuation calculator](/vendi).
 
 ### Market numbers 2025-2026
 
@@ -163,6 +163,6 @@ Turin is no longer just the city of Fiat. It's an urban laboratory where academi
 
 ---
 
-**Want to know how much your property is worth in one of these zones?** Use our [free valuation calculator](/valutazione-immobile) or [contact us directly](/venditori) for personalized advice.
+**Want to know how much your property is worth in one of these zones?** Use our [free valuation calculator](/vendi) or [contact us directly](/venditori) for personalized advice.
 
 > **Sources**: Immobiliare.it, January 2026; CasaService Real Estate, April 2025; Torino FutureWeek, November 2025.

@@ -7,15 +7,10 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // (≈ several hundred KB gzipped) off the initial bundle.
 import translationIT from './locales/it.json';
 
-const supportedLanguages = ['it', 'en', 'es', 'fr', 'de', 'zh', 'sv'];
+const supportedLanguages = ['it', 'en'];
 
 const lazyLoaders: Record<string, () => Promise<{ default: any }>> = {
   en: () => import('./locales/en.json'),
-  es: () => import('./locales/es.json'),
-  fr: () => import('./locales/fr.json'),
-  de: () => import('./locales/de.json'),
-  zh: () => import('./locales/zh.json'),
-  sv: () => import('./locales/sv.json'),
 };
 
 const loadedLanguages = new Set<string>(['it']);

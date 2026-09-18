@@ -29,9 +29,7 @@ const KEY_PAGES = [
   "/students",
   "/contratti-locazione",
   "/blog",
-  "/property-valuation",
   "/about",
-  "/faq",
   "/neighborhoods",
 ];
 

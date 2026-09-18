@@ -10,14 +10,14 @@ export const Navigation = () => {
   const navigate = useNavigate();
   const isEnglish = i18n.language.startsWith("en");
 
-  const sellPath = isEnglish ? "/sell" : "/vendi";
-  const investorPath = isEnglish ? "/investors" : "/investitori";
-  const aboutPath = isEnglish ? "/about" : "/chi-siamo";
+  const sellPath = isEnglish ? "/en/vendi" : "/vendi";
+  const investorPath = isEnglish ? "/en/investitori" : "/investitori";
+  const aboutPath = isEnglish ? "/en/chi-siamo" : "/chi-siamo";
 
   const menuItems = [
     { label: t("nav.sell"), path: sellPath },
     { label: t("nav.investors"), path: investorPath },
-    { label: "Blog", path: "/blog" },
+    { label: "Blog", path: isEnglish ? "/en/blog" : "/blog" },
     { label: t("nav.about", isEnglish ? "About" : "Chi siamo"), path: aboutPath },
   ];
 

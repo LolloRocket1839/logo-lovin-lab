@@ -96,7 +96,7 @@ L'estensione verso sud fino al Politecnico (e in futuro Mirafiori-Orbassano) ric
 
 ## L'impatto sul mercato immobiliare: la mappa delle opportunità
 
-Questa convergenza di investimenti ha effetti misurabili sul mercato immobiliare torinese. Chi vuole capire quanto vale il proprio immobile oggi può usare il nostro [calcolatore di valutazione gratuito](/valutazione-immobile).
+Questa convergenza di investimenti ha effetti misurabili sul mercato immobiliare torinese. Chi vuole capire quanto vale il proprio immobile oggi può usare il nostro [calcolatore di valutazione gratuito](/vendi).
 
 ### I numeri del mercato 2025-2026
 
@@ -163,6 +163,6 @@ Torino non è più soltanto la città della Fiat. È un laboratorio urbano dove 
 
 ---
 
-**Vuoi sapere quanto vale il tuo immobile in una di queste zone?** Usa il nostro [calcolatore di valutazione gratuito](/valutazione-immobile) oppure [contattaci direttamente](/venditori) per una consulenza personalizzata.
+**Vuoi sapere quanto vale il tuo immobile in una di queste zone?** Usa il nostro [calcolatore di valutazione gratuito](/vendi) oppure [contattaci direttamente](/venditori) per una consulenza personalizzata.
 
 > **Fonte**: Immobiliare.it, gennaio 2026; CasaService Real Estate, aprile 2025; Torino FutureWeek, novembre 2025.

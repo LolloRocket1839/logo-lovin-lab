@@ -119,7 +119,7 @@ export const createSellerServiceSchema = (language: 'it' | 'en' = 'it') => ({
     "@type": "BuyAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://junglerent.it/valutazione-immobile",
+      "urlTemplate": "https://junglerent.it/vendi",
       "actionPlatform": [
         "http://schema.org/DesktopWebPlatform",
         "http://schema.org/MobileWebPlatform"

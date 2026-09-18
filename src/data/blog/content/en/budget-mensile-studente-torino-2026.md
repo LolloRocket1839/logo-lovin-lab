@@ -161,7 +161,7 @@ IRPEF deduction up to €991.60/year (or 20% of rent, max €2,000) for the firs
 - [Bank account for international students in Italy](/blog/conto-corrente-studenti-stranieri-italia-2026)
 - [Cheap eats in Turin for students](/blog/dove-mangiare-torino-studenti)
 - [Where to live in Turin: Politecnico student guide](/blog/dove-vivere-torino-studenti-politecnico)
-- [Student budget calculator](/studenti/strumenti/budget)
+- [Student budget calculator](/studenti)
 
 ## Sources {#sources}
 

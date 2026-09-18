@@ -52,10 +52,6 @@ describe('Hooks Barrel Export', () => {
     expect(typeof Hooks.getUTMParams).toBe('function');
   });
 
-  it('should export useValuationCount hook', () => {
-    expect(Hooks.useValuationCount).toBeDefined();
-    expect(typeof Hooks.useValuationCount).toBe('function');
-  });
 
   it('should export useWaitlistCounter hook', () => {
     expect(Hooks.useWaitlistCounter).toBeDefined();

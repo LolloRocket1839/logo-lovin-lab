@@ -1,2 +1,51 @@
-# Server-side 301 redirect for sitemap (Netlify/Vercel)
+# Server-side 301 redirects (Netlify/Vercel)
 /sitemap  /sitemap.xml  301
+
+# F1 — landing SEO dismesse
+/vendere-casa-senza-agenzia-torino   /vendi         301
+/sell-without-agency-turin           /en/vendi      301
+/vendere-casa-velocemente-torino     /vendi         301
+/sell-house-fast-turin               /en/vendi      301
+/vendi-casa/lingotto-nizza-millefonti  /vendi       301
+/sell-home/lingotto-nizza-millefonti   /en/vendi    301
+/comprare-casa-affittata-torino      /investitori   301
+/buy-rented-property-turin           /en/investitori 301
+/investire-immobiliare-torino        /investitori   301
+/property-investment-turin           /en/investitori 301
+/zone/nizza-millefonti-ospedali      /investitori   301
+/zones/nizza-millefonti-hospitals    /en/investitori 301
+/affitti-lingotto-ospedali-torino    /investitori   301
+/rent-lingotto-hospitals-turin       /en/investitori 301
+/faq  /  301
+
+# F6/F8 — alias inglesi storici → /en/<slug italiana>
+/about                          /en/chi-siamo                       301
+/investors                      /en/investitori                     301
+/investors/zones                /en/investitori/zone                301
+/investors/zones/*              /en/investitori/zone                301
+/terms                          /en/termini-e-condizioni            301
+/students                       /en/studenti                        301
+/thank-you                      /en/grazie                          301
+/sell                           /en/vendi                           301
+/rental-contracts               /en/contratti-locazione             301
+/rooms-rent-turin               /en/affitto-stanza-torino           301
+/rooms-rent-turin/*             /en/affitto-stanza-torino           301
+/auth                           /en/accedi                          301
+/tools/study-spaces-turin       /en/strumenti/aule-studio-torino    301
+/tools/cheap-eats-turin         /en/strumenti/dove-mangiare-torino  301
+/tools/student-services-turin   /en/strumenti/sportelli-studenti-torino 301
+/tools/gyms-turin-students      /en/strumenti/palestre-torino-studenti  301
+
+# F3/F6 — strumenti e pagine dismesse
+/valutazione-immobile           /vendi                              301
+/property-valuation             /vendi                              301
+/proprietari                    /vendi                              301
+/invest                         /investitori                        301
+/studenti/strumenti             /studenti                           301
+/studenti/strumenti/*           /studenti                           301
+/students/tools                 /en/studenti                        301
+/students/tools/*               /en/studenti                        301
+/tools                          /studenti                           301
+/scioperi-italia                /studenti                           301
+/italy-strikes                  /en/studenti                        301
+/strumenti/servizi-studenti-torino /strumenti/sportelli-studenti-torino 301

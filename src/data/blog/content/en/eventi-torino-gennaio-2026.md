@@ -138,7 +138,7 @@ On **January 14** the **Russian-Orthodox New Year** is celebrated, one of the mo
 
 The **national taxi strike** on January 13 affects **all of Italy except Umbria**. Duration: 24 hours (00:00-24:00). **Uri and itTaxi are NOT participating**. Alternatives: Uber, FreeNow, car sharing (Enjoy, SHARE NOW).
 
-> 📱 **[Strike Emergency Directory →](/italy-strikes)**
+> 📱 **[Strike Emergency Directory →](/en/studenti)**
 > Contacts, alternatives and refund procedures
 
 ### Other January 2026 Strikes
@@ -154,7 +154,7 @@ January 2026 presents itself as an exceptional month to experience Turin in all 
 
 The arrival of the Olympic Flame, winter sales, sporting events and numerous initiatives in theaters and museums make this month an ideal period to visit Turin or rediscover it as residents. With winter temperatures that invite you to take refuge in heated theaters, exhibition halls and historic cafes, January offers the perfect balance between high culture and popular entertainment, between tradition and contemporaneity, confirming Turin as one of Italy's most vibrant and culturally stimulating cities.
 
-**Note**: Always check the [strike calendar](/italy-strikes) before traveling.
+**Note**: Always check the [strike calendar](/en/studenti) before traveling.
 
 ---
 

@@ -173,7 +173,7 @@ Scenario: foreign non-resident buying a resale apartment as *seconda casa* from 
 
 If qualifying for *prima casa*: transfer taxes drop by approximately €2,572.
 
-For a [free property valuation](/valutazione-immobile), use our online tool.
+For a [free property valuation](/vendi), use our online tool.
 
 ### Annual holding costs (if not rented)
 
