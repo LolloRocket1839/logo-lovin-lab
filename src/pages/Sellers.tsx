@@ -6,7 +6,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SellerStickyCta } from "@/components/sellers/SellerStickyCta";
 import { VendiLeadForm } from "@/components/vendi/VendiLeadForm";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
@@ -356,7 +355,6 @@ const Sellers = () => {
           </div>
         </section>
       </main>
-      <SellerStickyCta onOpenDialog={scrollToForm} />
     </>
   );
 };
