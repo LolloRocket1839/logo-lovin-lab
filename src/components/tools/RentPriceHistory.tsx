@@ -43,13 +43,6 @@ import {
   ResponsiveContainer,
   Legend
 } from "recharts";
-import { 
-  requestPushPermission, 
-  subscribeToPush, 
-  unsubscribeFromPush,
-  isPushSupported,
-  isSubscribed as checkIsSubscribed
-} from "@/lib/pushNotifications";
 
 interface RentPriceData {
   area_name: string;
@@ -77,8 +70,6 @@ const RentPriceHistoryComponent = ({ selectedArea, onAreaChange }: RentPriceHist
   const [data, setData] = useState<RentPriceData[]>([]);
   const [loading, setLoading] = useState(true);
   const [area, setArea] = useState(selectedArea || 'San Salvario');
-  const [pushEnabled, setPushEnabled] = useState(false);
-  const [pushLoading, setPushLoading] = useState(false);
 
   // Fetch historical data
   useEffect(() => {
@@ -100,17 +91,6 @@ const RentPriceHistoryComponent = ({ selectedArea, onAreaChange }: RentPriceHist
     
     fetchData();
   }, [currentLang]);
-
-  // Check push subscription status
-  useEffect(() => {
-    const checkPush = async () => {
-      if (isPushSupported()) {
-        const subscribed = await checkIsSubscribed();
-        setPushEnabled(subscribed);
-      }
-    };
-    checkPush();
-  }, []);
 
   // Handle area change
   const handleAreaChange = (newArea: string) => {
@@ -178,39 +158,6 @@ const RentPriceHistoryComponent = ({ selectedArea, onAreaChange }: RentPriceHist
     return comparisonData[0];
   }, [comparisonData]);
 
-  // Toggle push notifications
-  const togglePushNotifications = async () => {
-    setPushLoading(true);
-    
-    try {
-      if (pushEnabled) {
-        await unsubscribeFromPush();
-        setPushEnabled(false);
-        toast.success(currentLang === 'it' ? 'Notifiche disattivate' : 'Notifications disabled');
-      } else {
-        const permission = await requestPushPermission();
-        if (permission) {
-          await subscribeToPush([area]);
-          setPushEnabled(true);
-          toast.success(currentLang === 'it' 
-            ? 'Riceverai notifiche quando i prezzi cambiano' 
-            : 'You will receive notifications when prices change'
-          );
-        } else {
-          toast.error(currentLang === 'it' 
-            ? 'Permesso notifiche negato' 
-            : 'Notification permission denied'
-          );
-        }
-      }
-    } catch (error) {
-      console.error('Push notification error:', error);
-      toast.error(currentLang === 'it' ? 'Errore gestione notifiche' : 'Notification error');
-    }
-    
-    setPushLoading(false);
-  };
-
   if (loading) {
     return (
       <Card>
@@ -245,32 +192,6 @@ const RentPriceHistoryComponent = ({ selectedArea, onAreaChange }: RentPriceHist
               </SelectContent>
             </Select>
             
-            {isPushSupported() && (
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button
-                    variant={pushEnabled ? "default" : "outline"}
-                    size="icon"
-                    onClick={togglePushNotifications}
-                    disabled={pushLoading}
-                  >
-                    {pushLoading ? (
-                      <RefreshCw className="w-4 h-4 animate-spin" />
-                    ) : pushEnabled ? (
-                      <Bell className="w-4 h-4" />
-                    ) : (
-                      <BellOff className="w-4 h-4" />
-                    )}
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  {currentLang === 'it' 
-                    ? (pushEnabled ? 'Disattiva notifiche' : 'Attiva notifiche prezzi')
-                    : (pushEnabled ? 'Disable notifications' : 'Enable price alerts')
-                  }
-                </TooltipContent>
-              </Tooltip>
-            )}
           </div>
         </div>
       </CardHeader>
