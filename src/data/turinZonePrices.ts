@@ -122,5 +122,5 @@ export const getZonesGroupedByCategory = (): Record<ZonePrice['category'], ZoneP
 export const dataSourceInfo = {
   lastUpdate: 'Novembre 2025',
   sources: ['OMI Agenzia Entrate', 'Immobiliare.it', 'Idealista.it', 'Tecnocasa', 'FIAIP Torino'],
-  disclaimer: 'I prezzi sono indicativi e possono variare in base alle caratteristiche specifiche dell\'immobile. Margine di errore: ±5-12%.'
+  disclaimer: 'I prezzi sono indicativi e possono variare in base alle caratteristiche specifiche dell\'immobile.'
 };

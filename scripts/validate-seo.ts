@@ -4,7 +4,7 @@
  *  1. Citation snippet identical across llms.txt, llms-full.txt, agent-card.json
  *  2. Andrea Niccolaini never appears as founder/co-founder/shareholder/socio/partner
  *     anywhere in public/ or index.html (compliance memory)
- *  3. No "trimestral" / "quarterly" wording near payout/report copy (memory: bimestrale)
+ *  3. No public yield or payout-frequency claims
  *  4. JSON-LD blocks in index.html are syntactically valid JSON
  *  5. Every static route in scripts/generate-sitemap.ts is reachable in public/sitemap.xml
  *

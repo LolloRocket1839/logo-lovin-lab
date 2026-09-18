@@ -1785,60 +1785,7 @@ export const blogPosts: BlogPost[] = [
       }
     }
   },
-  {
-    slug: "props-gestione-immobiliare-semplificata",
-    category: "investors",
-    date: "2025-12-31",
-    author: "Jungle Rent Team",
-    image: "/images/digital-nomad-torino.jpg",
-    readTime: 12,
-    content: "props-gestione-immobiliare-semplificata",
-    translations: {
-      it: {
-        title: "Props: gestione immobiliare semplificata per investitori",
-        excerpt: "Come utilizzare Props per una gestione immobiliare efficiente e semplificata, ottimizzando tempi e costi.",
-        seo: {
-          title: "Props gestione immobiliare | Soluzioni per investitori",
-          description: "Scopri come Props può aiutarti nella gestione immobiliare semplificata, con strumenti digitali e supporto dedicato.",
-          keywords: [
-            "props gestione immobiliare",
-            "gestione affitti semplificata",
-            "investimenti immobiliari digitali",
-            "props app immobiliare",
-            "ottimizzazione gestione immobili"
-          ]
-        },
-        tags: ["Investitori", "Gestione", "Immobiliare", "Props", "Tecnologia"],
-        faqs: [
-          { question: "Cos'è Props?", answer: "Props è una piattaforma digitale per la gestione immobiliare semplificata." },
-          { question: "Come può aiutare gli investitori?", answer: "Automatizza processi, riduce errori e migliora la comunicazione con gli inquilini." },
-          { question: "Quali servizi offre?", answer: "Gestione contratti, pagamenti, manutenzioni e reportistica." }
-        ]
-      },
-      en: {
-        title: "Props: simplified real estate management for investors",
-        excerpt: "How to use Props for efficient and simplified real estate management, optimizing time and costs.",
-        seo: {
-          title: "Props real estate management | Solutions for investors",
-          description: "Discover how Props can help you in simplified real estate management, with digital tools and dedicated support.",
-          keywords: [
-            "props real estate management",
-            "simplified rent management",
-            "digital real estate investments",
-            "props real estate app",
-            "real estate management optimization"
-          ]
-        },
-        tags: ["Investors", "Management", "Real Estate", "Props", "Technology"],
-        faqs: [
-          { question: "What is Props?", answer: "Props is a digital platform for simplified real estate management." },
-          { question: "How can it help investors?", answer: "Automates processes, reduces errors and improves communication with tenants." },
-          { question: "What services does it offer?", answer: "Contract management, payments, maintenance and reporting." }
-        ]
-      }
-    }
-  },
-  {
+    {
     slug: "palestre-torino-studenti-guida-completa",
     category: "students",
     date: "2026-01-01",

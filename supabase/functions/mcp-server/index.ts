@@ -23,7 +23,7 @@ const COMPANY_INFO = {
   piva: "13333450016",
   rea: "TO-1355899",
   founded: "2025-10-24",
-  address: "Via Gioacchino Quarello 15/A, 10137 Torino (TO), Italy",
+  address: "Via Gioacchino Quarello 15/A, 10135 Torino (TO), Italy",
   incubator: "2i3T - Incubatore Imprese Innovative Università di Torino",
   website: "https://junglerent.it",
   email: "junglerententeprise@gmail.com",
@@ -35,16 +35,10 @@ const COMPANY_INFO = {
     { name: "Andrea Niccolaini", role: "Board Member / Consigliere (non-shareholder, non-operational)" },
   ],
   services: [
-    "Student Housing Management (90,000+ students, 7 universities)",
-    "Real Estate Investment (from €100)",
+    "Student Housing Management",
+    "Real Estate Investment",
     "Property Acquisition in university districts",
-    "Short-Term Rental Optimization (Airbnb, Booking.com)",
-    "Props: Property management app for landlords (Q1 2026)",
   ],
-  minimumInvestment: 100,
-  targetReturn: "7-9% annually",
-  studentsServed: "90,000+",
-  universitiesCount: 7,
 };
 
 const ARTICLES = [
@@ -54,8 +48,7 @@ const ARTICLES = [
   { slug: "torino-citta-7-minuti-walkability", category: "societa", date: "2026-02-02", readTime: 12, title_it: "Torino è la 3ª città più camminabile al mondo: tutto a 7 minuti", title_en: "Turin: the 3rd most walkable city in the world", keywords: ["torino walkability", "15 minute city", "camminabilità"] },
   { slug: "cedolare-secca-2026-investitori", category: "investors", date: "2026-01-17", readTime: 15, title_it: "Cedolare secca 2026: dal 21% al 26%, cosa fare ora", title_en: "Cedolare secca 2026: from 21% to 26%, what to do now", keywords: ["cedolare secca", "tasse affitto", "flat tax rental"] },
   { slug: "sciopero-trasporti-italia-gennaio-2026", category: "societa", date: "2026-01-09", readTime: 25, title_it: "Sciopero trasporti 13-15 gennaio 2026: orari e alternative", title_en: "Italy transport strike Jan 13-15, 2026: schedules & tips", keywords: ["sciopero trasporti", "transport strike", "treni"] },
-  { slug: "props-gestione-immobiliare-semplificata", category: "investors", date: "2025-12-31", readTime: 12, title_it: "Props: gestione immobiliare semplificata per investitori", title_en: "Props: simplified real estate management for investors", keywords: ["props", "gestione immobiliare", "property management"] },
-  { slug: "palestre-torino-studenti-guida-completa", category: "students", date: "2026-01-01", readTime: 14, title_it: "Palestre Torino studenti: 24 strutture da €10/mese", title_en: "Turin gyms for students: 24 facilities from €10/month", keywords: ["palestre torino", "gym students", "fitness"] },
+    { slug: "palestre-torino-studenti-guida-completa", category: "students", date: "2026-01-01", readTime: 14, title_it: "Palestre Torino studenti: 24 strutture da €10/mese", title_en: "Turin gyms for students: 24 facilities from €10/month", keywords: ["palestre torino", "gym students", "fitness"] },
   { slug: "eventi-torino-marzo-2026", category: "turisti", date: "2026-02-10", readTime: 18, title_it: "Eventi Torino marzo 2026: cosa fare", title_en: "Turin events March 2026: what to do", keywords: ["eventi torino", "turin events", "marzo 2026"] },
   { slug: "eventi-torino-febbraio-2026", category: "turisti", date: "2026-01-15", readTime: 20, title_it: "Eventi Torino febbraio 2026: CioccolaTò, Macbeth e Carnevale", title_en: "Turin events February 2026: CioccolaTò, Macbeth & Carnival", keywords: ["eventi torino", "cioccolato", "carnevale ivrea"] },
   { slug: "eventi-torino-gennaio-2026", category: "turisti", date: "2025-12-28", readTime: 22, title_it: "Eventi Torino gennaio 2026: Luci d'Artista e concerti", title_en: "Turin events January 2026: Festival of Lights and concerts", keywords: ["eventi torino", "luci artista", "january events"] },
@@ -149,11 +142,10 @@ const RENT_PRICES = [
 ];
 
 const FAQS = [
-  { category: "investors", q_it: "Quanto posso investire con Jungle Rent?", q_en: "How much can I invest with Jungle Rent?", a_it: "L'investimento minimo è di €100. Non c'è un massimo, consigliamo di diversificare su più immobili.", a_en: "The minimum investment is €100. There's no maximum, but we recommend diversifying across multiple properties." },
   { category: "investors", q_it: "Quali sono i rendimenti attesi?", q_en: "What are the expected returns?", a_it: "Il rendimento target è del 7-9% annuo, derivante da affitti studenteschi a Torino con occupancy rate del 95%.", a_en: "The target return is 7-9% annually, from student rentals in Turin with a 95% occupancy rate." },
   { category: "investors", q_it: "Jungle Rent è un investimento sicuro?", q_en: "Is Jungle Rent a safe investment?", a_it: "Jungle Rent è una startup innovativa certificata, incubata presso 2i3T. I rendimenti dipendono dal mercato e non sono garantiti.", a_en: "Jungle Rent is a certified innovative startup incubated at 2i3T. Returns depend on market performance and are not guaranteed." },
   { category: "sellers", q_it: "Come posso vendere casa a Torino senza agenzia?", q_en: "How can I sell my house in Turin without an agency?", a_it: "Jungle Rent acquista direttamente il tuo immobile senza commissioni. Valutazione gratuita in 24 ore, offerta in 48 ore, chiusura in 60-90 giorni.", a_en: "Jungle Rent directly purchases your property with no fees. Free valuation in 24 hours, offer in 48 hours, closing in 60-90 days." },
-  { category: "sellers", q_it: "Quanto vale la mia casa a Torino?", q_en: "How much is my property worth in Turin?", a_it: "Usa il nostro calcolatore gratuito basato su dati OMI 2025: junglerent.it/valutazione-immobile. Precisione ±5%.", a_en: "Use our free calculator based on OMI 2025 data: junglerent.it/valutazione-immobile. Accuracy ±5%." },
+  { category: "sellers", q_it: "Quanto vale la mia casa a Torino?", q_en: "How much is my property worth in Turin?", a_it: "Usa il nostro calcolatore gratuito basato su dati OMI 2025: junglerent.it/valutazione-immobile. Valutazione indicativa.", a_en: "Use our free calculator based on OMI 2025 data: junglerent.it/valutazione-immobile. Indicative valuation." },
   { category: "students", q_it: "Quanto costa affittare una stanza a Torino?", q_en: "How much does it cost to rent a room in Turin?", a_it: "€350-550/mese nelle zone studentesche (San Salvario, Cenisia, Vanchiglia). Crocetta è più cara: €500-700/mese.", a_en: "€350-550/month in student areas (San Salvario, Cenisia, Vanchiglia). Crocetta is more expensive: €500-700/month." },
   { category: "students", q_it: "Qual è il quartiere migliore per studenti a Torino?", q_en: "What is the best neighborhood for students in Turin?", a_it: "Dipende dall'università: Crocetta e Cenisia per il Politecnico, San Salvario e Vanchiglia per UniTo. Aurora per chi ha budget ridotto.", a_en: "Depends on the university: Crocetta and Cenisia for Politecnico, San Salvario and Vanchiglia for UniTo. Aurora for tight budgets." },
   { category: "about", q_it: "Chi è Jungle Rent?", q_en: "Who is Jungle Rent?", a_it: "Startup innovativa torinese fondata nel 2025, incubata presso 2i3T. Investimenti immobiliari frazionati e acquisizione immobili per affitti studenteschi.", a_en: "Turin innovative startup founded in 2025, incubated at 2i3T. Fractional real estate investments and property acquisition for student rentals." },
@@ -462,7 +454,7 @@ mcpServer.tool("property_valuation", {
             expectedClosingPrice: fmt(marketPrice),
             minimumPrice: fmt(marketPrice * 0.95),
           },
-          methodology: "FIAIP 2024-2025 coefficients applied to OMI/Immobiliare.it zone averages (Nov 2025). Margin of error: ±5-12%.",
+          methodology: "FIAIP 2024-2025 coefficients applied to OMI/Immobiliare.it zone averages (Nov 2025). Indicative valuation; individual property characteristics may affect the result.",
           disclaimer: "This is an indicative estimate. For a precise valuation, contact Jungle Rent for a free professional assessment: junglerent.it/valutazione-immobile",
         }, null, 2),
       }],

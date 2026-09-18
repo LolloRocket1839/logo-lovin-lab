@@ -90,7 +90,6 @@ export const contentClusters: ContentCluster[] = [
     pillarTitleEn: 'Selling property in Turin: complete guide 2025',
     satellites: [
       'valutazione-immobiliare-torino-guida-completa',
-      'props-gestione-immobiliare-semplificata',
       'torino-citta-campus-atenei-immobiliare-2026',
       'vendere-immobile-investitori-torino'
     ],

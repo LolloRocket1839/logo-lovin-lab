@@ -46,12 +46,11 @@ const ARTICLES = [
   { slug: "universita-torino-guida-completa", title: "University of Turin: complete guide", category: "students", keywords: ["unito", "university"] },
   { slug: "torino-citta-7-minuti-walkability", title: "Turin: 3rd most walkable city in the world", category: "societa", keywords: ["walkability", "camminabilità", "7 minuti"] },
   { slug: "mutui-investitori-immobiliari-guida-completa", title: "Mortgages for real estate investors", category: "investors", keywords: ["mutui", "mortgage", "financing"] },
-  { slug: "props-gestione-immobiliare-semplificata", title: "Props: property management app", category: "investors", keywords: ["props", "property management", "app"] },
-];
+  ];
 
 const FAQS: Record<string, string> = {
   "cost|quanto costa|rent|affitto|stanza|room": "Student rooms in Turin cost €350-550/month in popular areas (San Salvario, Cenisia, Vanchiglia). Crocetta is premium at €500-700/month. Budget areas like Aurora start from €350/month.",
-  "invest|investire|investment|rendimento": "Jungle Rent offers real estate investment from €100 with target returns of 7-9% annually. We acquire properties near Turin universities and manage them for student/tourist rentals.",
+  "invest|investire|investment|rendimento": "Jungle Rent offers economic exposure to individual real-estate operations near Turin universities.",
   "sell|vendere|valutazione|valuation": "Jungle Rent buys properties directly — zero commission, free valuation in 24h, offer in 48h, closing in 60-90 days. Use our free calculator: junglerent.it/valutazione-immobile",
   "polito|politecnico": "Best neighborhoods near Politecnico di Torino: Cenisia (10 min, €380-480), Vanchiglia (10 min, €450-550), San Salvario (15 min, €450-550), Crocetta (20 min, €500-650).",
   "unito|università di torino": "Best neighborhoods near UniTo: Centro (5 min, €550-700), San Salvario (10 min, €450-550), Vanchiglia (15 min, €450-550).",
@@ -236,7 +235,7 @@ Deno.serve(async (req) => {
         topics: [
           "Student housing in Turin",
           "Rent prices by neighborhood",
-          "Real estate investment from €100",
+          "Real estate investment",
           "Property valuation",
           "Turin events and culture",
           "Study spaces and student services",
@@ -279,7 +278,7 @@ Deno.serve(async (req) => {
             "Best neighborhoods near Politecnico di Torino",
             "What events are happening in Turin in March 2026?",
             "Is Turin safe for women students?",
-            "How to invest in real estate in Turin from €100",
+            "How to invest in real estate in Turin",
           ],
         }), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },

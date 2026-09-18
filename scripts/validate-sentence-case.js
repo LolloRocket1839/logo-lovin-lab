@@ -43,7 +43,7 @@ const PROPER_NOUNS = [
   'GDPR', 'FADP', 'RLS', 'SEO',
   
   // Brands
-  'Jungle Rent', 'Jungle Control', 'Props', 'JungleRent',
+  'Jungle Rent', 'Jungle Control', 'JungleRent',
   'Caffarel', 'Venchi', 'Baratti', 'Peyrano', 'Gobino', 'Stratta', 'Pfatisch',
   'McFIT', 'FitActive', 'Virgin Active', 'GO Fit', 'Anytime Fitness',
   'Trenitalia', 'Frecciarossa', 'Dott', 'Lime', 'Moovit',
