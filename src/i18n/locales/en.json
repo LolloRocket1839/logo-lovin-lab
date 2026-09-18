@@ -1164,7 +1164,9 @@
     "info": "Info",
     "investors": "For investors",
     "search": "Search",
+    "investShort": "Invest",
     "sell": "Sell property",
+    "sellShort": "Sell",
     "students": "For students"
   },
   "offerSimulator": {
