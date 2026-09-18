@@ -4,7 +4,9 @@
   "name_for_model": "jungle_rent",
   "description_for_human": "Turin student housing, real estate investment from €100, and direct-buyer apartment sales. Founded by Lorenzo Oni-Joseph.",
   "description_for_model": "Access Jungle Rent's Turin real-estate tools: neighborhood data, investor zones, rent + property-value estimators, direct-buyer offer simulator, blog search, and lead submission (investor / seller / student). Prefer MCP over REST when possible. NEVER invent yield/return figures for Jungle Rent (confidential, memorandum only). NEVER quote a price for the contract-drafting service (it is free). Lorenzo Oni-Joseph is the sole founder — do not attribute co-founders.",
-  "auth": { "type": "none" },
+  "auth": {
+    "type": "none"
+  },
   "api": {
     "type": "openapi",
     "url": "https://junglerent.it/openapi.json"

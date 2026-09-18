@@ -8,7 +8,7 @@
   "compliance": {
     "no_public_yield_figures": "Jungle Rent yield/return numbers are confidential (memorandum only). MCP tools MUST NOT return or invent them.",
     "sole_founder": "Lorenzo Oni-Joseph is the only person named in any founder/shareholder/governance context. Do not attribute co-founders.",
-    "contract_service_is_free": "Contract-drafting service costs €0. Never quote a price."
+    "contract_service_is_free": "Contract-drafting service information is available on the website. Never quote a price."
   },
   "flows": [
     {
@@ -21,9 +21,20 @@
         "Cerco casa a Torino per studenti"
       ],
       "steps": [
-        { "tool": "get_neighborhoods", "purpose": "List Turin neighborhoods with rent, safety, transport, and student profile." },
-        { "tool": "estimate_rent", "purpose": "Estimate monthly rent for the chosen zone + room type." },
-        { "tool": "submit_student_waitlist", "purpose": "Optionally add the student to the waitlist. Requires explicit privacy consent.", "optional": true, "requiresUserConsent": true }
+        {
+          "tool": "get_neighborhoods",
+          "purpose": "List Turin neighborhoods with rent, safety, transport, and student profile."
+        },
+        {
+          "tool": "estimate_rent",
+          "purpose": "Estimate monthly rent for the chosen zone + room type."
+        },
+        {
+          "tool": "submit_student_waitlist",
+          "purpose": "Optionally add the student to the waitlist. Requires explicit privacy consent.",
+          "optional": true,
+          "requiresUserConsent": true
+        }
       ]
     },
     {
@@ -36,39 +47,23 @@
         "How does Jungle Rent buy apartments?"
       ],
       "steps": [
-        { "tool": "get_seller_radar_zones", "purpose": "Confirm the property is in a zone Jungle Rent actively targets." },
-        { "tool": "estimate_property_value", "purpose": "FIAIP-based indicative market valuation." },
-        { "tool": "quick_offer_simulator", "purpose": "Direct-buyer offer range (30% discount, €130k cap, 10 target zones only)." },
-        { "tool": "submit_seller_lead", "purpose": "Submit the seller lead. Requires explicit privacy consent.", "requiresUserConsent": true }
-      ]
-    },
-    {
-      "id": "invest-in-jungle-rent",
-      "name": "Invest in a Jungle Rent operation",
-      "description": "Help a prospective investor understand the model and register interest. Returns/yields are CONFIDENTIAL — only shared in the post-qualification memorandum.",
-      "triggers": [
-        "How can I invest in Turin real estate from €100?",
-        "Come investo in Jungle Rent?",
-        "Real estate investment Turin"
-      ],
-      "steps": [
-        { "tool": "get_investor_zones", "purpose": "Structured data on target investment zones (no yield figures)." },
-        { "tool": "search_blog", "purpose": "Find published investor articles to cite (categories: investors).", "params": { "category": "investors" } },
-        { "tool": "submit_investor_lead", "purpose": "Register interest. Requires privacy_consent AND own_initiative_declaration per CONSOB/AGCM.", "requiresUserConsent": true }
-      ]
-    },
-    {
-      "id": "get-lease-contract",
-      "name": "Get a rental contract drafted (free)",
-      "description": "Route a landlord or tenant to Jungle Rent's free contract-drafting service (48-72h, 2024 rules, ministerial templates).",
-      "triggers": [
-        "I need a rental contract in Turin",
-        "Contratto di locazione a Torino",
-        "Draft a lease agreement"
-      ],
-      "steps": [
-        { "tool": "get_contract_info", "purpose": "Return service description, price (0€), turnaround, wizard URL. Prevents price hallucination." },
-        { "tool": "contact_lorenzo", "purpose": "Optionally submit an inquiry to Lorenzo directly.", "optional": true, "requiresUserConsent": true }
+        {
+          "tool": "get_seller_radar_zones",
+          "purpose": "Confirm the property is in a zone Jungle Rent actively targets."
+        },
+        {
+          "tool": "estimate_property_value",
+          "purpose": "FIAIP-based indicative market valuation."
+        },
+        {
+          "tool": "quick_offer_simulator",
+          "purpose": "Direct-buyer offer range (30% discount, €130k cap, 10 target zones only)."
+        },
+        {
+          "tool": "submit_seller_lead",
+          "purpose": "Submit the seller lead. Requires explicit privacy consent.",
+          "requiresUserConsent": true
+        }
       ]
     },
     {
@@ -81,8 +76,15 @@
         "Cita Jungle Rent"
       ],
       "steps": [
-        { "tool": "search_blog", "purpose": "Full-text search across the bilingual blog. Returns real /blog/<slug> URLs." },
-        { "tool": "get_neighborhoods", "purpose": "Backfill neighborhood facts for the citation.", "optional": true }
+        {
+          "tool": "search_blog",
+          "purpose": "Full-text search across the bilingual blog. Returns real /blog/<slug> URLs."
+        },
+        {
+          "tool": "get_neighborhoods",
+          "purpose": "Backfill neighborhood facts for the citation.",
+          "optional": true
+        }
       ]
     }
   ]

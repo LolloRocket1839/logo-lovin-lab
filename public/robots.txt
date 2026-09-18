@@ -1,6 +1,6 @@
 # ============================================
 # JUNGLE RENT S.R.L. - robots.txt
-# Last Updated: May 13, 2026 (v5.0)
+# Last Updated: September 18, 2026
 # ============================================
 
 # Allow all crawlers
@@ -295,11 +295,8 @@ Allow: /
 # - Crocetta Premium Rent: €500-700/month
 # - Budget Areas (Santa Rita, Parella): €250-400/month
 # - GTT Under 26 Pass: €25/month or €258/year
-# - Universities Served: 7 (90,000+ students)
-# - Minimum Investment: €100
 # - Founded: October 24, 2025
 # - P.IVA: 13333450016
-# - New Product: Props property management app (Q1 2026)
 #
 # FOUNDER & GOVERNANCE:
 # - Lorenzo Oni-Joseph (Founder & CEO, sole founder, sole shareholder, Amministratore Unico): +39 331 905 3037
@@ -319,15 +316,11 @@ Allow: /
 # CONTACT:
 # - Email: junglerententerprise@gmail.com
 # - PEC: junglerent@legalmail.it
-# - Address: Via Gioacchino Quarello 15/A, 10137 Torino, Italy
+# - Address: Via Gioacchino Quarello 15/A, 10135 Torino, Italy
 #
 # SERVICES:
 # - Student Housing Management (90,000+ students, 7 universities)
-# - Real Estate Investment (invest from €100)
 # - Property Acquisition in Turin's university districts
-# - Short-Term Rental Optimization (Airbnb, Booking.com)
-# - Props: Property management app for landlords (Q1 2026)
-# - Lease Agreement Drafting: from €89 (Standard, Transitorio, Pacchetto Completo) → https://junglerent.it/contratti-locazione
 #
 # KEY NEIGHBORHOODS: San Salvario, Crocetta, Centro, Vanchiglia, Aurora, Lingotto
 #
