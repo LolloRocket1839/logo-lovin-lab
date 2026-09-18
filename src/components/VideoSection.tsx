@@ -14,7 +14,7 @@ const MobileSteps = () => {
       icon: Euro,
       number: "1",
       title: t('infographic.steps.invest.title', 'Investi'),
-      description: t('video.mobileStep1', 'Da €100'),
+      description: t('video.mobileStep1', 'Singola operazione'),
     },
     {
       icon: Key,
@@ -32,7 +32,7 @@ const MobileSteps = () => {
       icon: TrendingUp,
       number: "4",
       title: t('infographic.steps.earn.title', 'Guadagni'),
-      description: t('video.mobileStep4', 'Rendite bimestrali'),
+      description: t('video.mobileStep4', 'Aggiornamenti periodici'),
     },
   ];
 

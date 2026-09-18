@@ -89,9 +89,8 @@ const TerminiCondizioni = () => {
                   {isEnglish ? "JUNGLE RENT S.R.L. provides the following services:" : "JUNGLE RENT S.R.L. offre i seguenti servizi:"}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>{isEnglish ? "Short-term and medium-term rental management in Turin" : "Gestione affitti brevi e medi a Torino"}</li>
                   <li>{isEnglish ? "Student housing solutions near universities" : "Soluzioni abitative per studenti vicino alle università"}</li>
-                  <li>{isEnglish ? "Real estate investment opportunities starting from €100" : "Opportunità di investimento immobiliare a partire da €100"}</li>
+                  <li>{isEnglish ? "Real estate investment opportunities" : "Opportunità di investimento immobiliare"}</li>
                   <li>{isEnglish ? "Property acquisition in university areas" : "Acquisizione immobili nelle zone universitarie"}</li>
                   <li>{isEnglish ? "Complete property management services" : "Servizi completi di gestione immobiliare"}</li>
                 </ul>

@@ -11,7 +11,6 @@ import { MobileFooter } from "@/components/layout/MobileFooter";
 
 // Innovative components - loaded immediately for impact
 
-import { AnnouncementBanner } from "@/components/AnnouncementBanner";
 import { BrandWordmark } from "@/components/immersive/BrandWordmark";
 import { ScrollProgressRail } from "@/components/immersive/ScrollProgressRail";
 import { ImmersiveAct } from "@/components/immersive/ImmersiveAct";
@@ -45,12 +44,11 @@ const Index = () => {
 
   return (
     <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
-      <AnnouncementBanner />
       <MobileHeader />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content="affitti torino, affitti studenti torino, investimenti immobiliari piemonte, property management italia, gestione affitti brevi italia, student housing italia nord, politecnico torino alloggi, università torino stanze, affitti san salvario, affitti crocetta torino, case studenti piemonte, immobilien investment italien, investissement immobilier italie, student housing turin switzerland investors, real estate torino svizzera, immobilieninvestition schweiz italien" />
+        <meta name="keywords" content="affitti torino, affitti studenti torino, investimenti immobiliari piemonte, property management italia, student housing italia nord, politecnico torino alloggi, università torino stanze, affitti san salvario, affitti crocetta torino, case studenti piemonte, immobilien investment italien, investissement immobilier italie, student housing turin switzerland investors, real estate torino svizzera, immobilieninvestition schweiz italien" />
         <link rel="canonical" href="https://junglerent.it/" />
         
         {/* Geo Targeting */}

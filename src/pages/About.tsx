@@ -43,7 +43,7 @@ const About = () => {
         "streetAddress": "Via Gioacchino Quarello 15/A",
         "addressLocality": "Torino",
         "addressRegion": "Piemonte",
-        "postalCode": "10137",
+        "postalCode": "10135",
         "addressCountry": "IT"
       },
       "founder": {
@@ -75,19 +75,19 @@ const About = () => {
       <Helmet>
         <title>{t("about.metaTitle")}</title>
         <meta name="description" content={t("about.metaDescription")} />
-        <meta name="keywords" content="JungleRent, Jungle Rent, property management Torino, affitti brevi Torino, student housing Turin, Lorenzo Bianchi, 2i3T incubator" />
+        <meta name="keywords" content="JungleRent, Jungle Rent, property management Torino, student housing Turin, 2i3T incubator" />
         
         {/* Structured Data Meta Tags for LLM */}
         <meta name="company" content="JUNGLE RENT S.R.L." />
         <meta name="company.legalName" content="JUNGLE RENT SOCIETA' A RESPONSABILITA' LIMITATA" />
         <meta name="company.founded" content="2025-10-24" />
         <meta name="company.founders" content="Lorenzo Oni-Joseph" />
-        <meta name="company.location" content="Via Gioacchino Quarello 15/A, 10137 Torino, Italy" />
+        <meta name="company.location" content="Via Gioacchino Quarello 15/A, 10135 Torino, Italy" />
         <meta name="company.vatId" content="IT13333450016" />
         <meta name="company.rea" content="TO-1355899" />
         <meta name="company.legalForm" content="Start-up Innovativa S.r.l." />
         <meta name="company.incubator" content="2i3T - Incubatore Imprese Innovative Università di Torino" />
-        <meta name="company.services" content="short-term rentals, property management, student housing, real estate investment" />
+        <meta name="company.services" content="property management, student housing, real estate investment" />
         <meta name="service.area" content="Turin, Torino, Crocetta, San Salvario, Vanchiglia, Centro" />
         
         {/* Open Graph */}
@@ -175,7 +175,7 @@ const About = () => {
               <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <p className="font-medium" itemProp="streetAddress">Via G. Quarello 15/A</p>
                 <p className="text-sm text-muted-foreground">
-                  <span itemProp="postalCode">10137</span> <span itemProp="addressLocality">Torino</span>, <span itemProp="addressCountry">Italia</span>
+                  <span itemProp="postalCode">10135</span> <span itemProp="addressLocality">Torino</span>, <span itemProp="addressCountry">Italia</span>
                 </p>
               </div>
             </CardContent>

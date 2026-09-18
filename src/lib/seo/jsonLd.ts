@@ -51,7 +51,7 @@ export function buildOrganization(): JsonLd {
       '@type': 'PostalAddress',
       streetAddress: 'Via Gioacchino Quarello 15/A',
       addressLocality: 'Torino',
-      postalCode: '10137',
+      postalCode: '10135',
       addressRegion: 'TO',
       addressCountry: 'IT',
     },

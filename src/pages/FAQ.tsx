@@ -22,16 +22,6 @@ const FAQ = () => {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": isItalian ? "Quanto posso investire con Jungle Rent?" : "How much can I invest with Jungle Rent?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": isItalian 
-            ? "L'investimento minimo è di €100. Non c'è un massimo, ma consigliamo di diversificare su più immobili."
-            : "The minimum investment is €100. There's no maximum, but we recommend diversifying across multiple properties."
-        }
-      },
-      {
-        "@type": "Question",
         "name": isItalian ? "Come funzionano i rendimenti?" : "How do returns work?",
         "acceptedAnswer": {
           "@type": "Answer",
