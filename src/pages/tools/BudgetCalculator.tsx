@@ -942,8 +942,8 @@ const BudgetCalculator = () => {
                         </p>
                         <p className="text-xs text-muted-foreground mt-2">
                           💡 {currentLang === 'it' 
-                            ? 'Borsa EDISU + lavoro 10h/sett ≈ €1000-1200/mese' 
-                            : 'EDISU scholarship + 10h/week job ≈ €1000-1200/month'}
+                            ? 'Borsa EDISU + lavoro 10h/sett ≈ € 1.000-1200/mese' 
+                            : 'EDISU scholarship + 10h/week job ≈ € 1.000-1200/month'}
                         </p>
                       </div>
                     )}

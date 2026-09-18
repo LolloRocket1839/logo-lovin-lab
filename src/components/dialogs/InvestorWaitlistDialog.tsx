@@ -242,8 +242,8 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
                           <SelectItem value="500-2k">€500 - €2.000</SelectItem>
                           <SelectItem value="2k-10k">€2.000 - €10.000</SelectItem>
                           <SelectItem value="10k-50k">€10.000 - €50.000</SelectItem>
-                          <SelectItem value="50k-100k">€50k - €100k</SelectItem>
-                          <SelectItem value="100k-200k">€100k - €200k</SelectItem>
+                          <SelectItem value="50k-100k">€50k - € 100k</SelectItem>
+                          <SelectItem value="100k-200k">€ 100k - €200k</SelectItem>
                           <SelectItem value="200k-300k">€200k - €300k</SelectItem>
                           <SelectItem value="over-300k">&gt; €300k</SelectItem>
                         </SelectContent>

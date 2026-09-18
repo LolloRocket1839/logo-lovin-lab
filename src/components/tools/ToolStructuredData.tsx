@@ -477,7 +477,7 @@ export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) =
   const faqsEN: FAQItem[] = [
     {
       question: "How much is my apartment worth in Turin?",
-      answer: "The value depends on location, size, floor, condition, and features. Use our free calculator with OMI 2025 data for an accurate ±5% estimate. Areas like Crocetta and Centro have average prices of €2,800-3,500/sqm, while Aurora and Barriera di Milano are €1,200-1,800/sqm."
+      answer: "The value depends on location, size, floor, condition, and features. Use our free calculator with OMI 2025 data for an accurate circa 5% estimate. Areas like Crocetta and Centro have average prices of €2,800-3,500/sqm, while Aurora and Barriera di Milano are €1,200-1,800/sqm."
     },
     {
       question: "What is OMI data?",
