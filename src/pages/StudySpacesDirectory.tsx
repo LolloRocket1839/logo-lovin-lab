@@ -26,7 +26,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent } from '@/components/ui/card';
-import { Navigation, Footer, BottomNav } from '@/components/layout';
 import { StudySpaceCard } from '@/components/tools/StudySpaceCard';
 import { StudySpaceFilters, StudySpaceFiltersState } from '@/components/tools/StudySpaceFilters';
 import { StudySpacesMap } from '@/components/tools/StudySpacesMap';
@@ -645,8 +644,6 @@ const StudySpacesDirectory = () => {
         </script>
       </Helmet>
 
-      <Navigation />
-
       <main className="min-h-screen bg-background pt-20 pb-24 md:pb-12">
         {/* Hero Section */}
         <section className="py-8 md:py-12 bg-gradient-to-b from-primary/5 to-background">
@@ -959,9 +956,6 @@ const StudySpacesDirectory = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <BottomNav />
     </>
   );
 };

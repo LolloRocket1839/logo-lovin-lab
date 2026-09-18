@@ -4,7 +4,6 @@ import { useSearchParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CheckCircle, Calendar, ArrowRight, BookOpen, Instagram, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Navigation, Footer } from "@/components/layout";
 import { openCalendly } from "@/lib/calendly";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
@@ -33,7 +32,6 @@ const ThankYou = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       
       <main className="container mx-auto px-4 pt-24 pb-16 md:pt-32 md:pb-24">
         <motion.div 
@@ -158,8 +156,6 @@ const ThankYou = () => {
           </div>
         </motion.div>
       </main>
-      
-      <Footer />
     </div>
   );
 };

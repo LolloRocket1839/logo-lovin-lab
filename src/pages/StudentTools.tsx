@@ -17,7 +17,6 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 
 interface Tool {
   id: string;
@@ -212,8 +211,6 @@ const StudentTools = () => {
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/studenti/strumenti" />
       </Helmet>
 
-      <Navigation />
-
       <main className="min-h-screen bg-background pt-20">
         {/* Header */}
         <section className="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-background">
@@ -308,9 +305,6 @@ const StudentTools = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <BottomNav />
     </>
   );
 };

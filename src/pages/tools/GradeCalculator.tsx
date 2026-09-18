@@ -37,7 +37,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { ExamForm } from "@/components/tools/ExamForm";
 import { GradeSimulator } from "@/components/tools/GradeSimulator";
 import { GraduationScoreCalculator } from "@/components/tools/GraduationScoreCalculator";
@@ -397,8 +396,6 @@ const GradeCalculator = () => {
       <GradeCalculatorSchema />
       <GradeCalculatorHowTo />
 
-      <Navigation />
-
       <main className="min-h-screen bg-background pt-20 pb-24">
         {/* Header */}
         <section className="py-4 md:py-10 bg-gradient-to-b from-primary/5 to-background">
@@ -678,9 +675,6 @@ const GradeCalculator = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <BottomNav />
 
       <PDFPreviewModal
         open={previewOpen}

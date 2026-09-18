@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Navigation, Footer } from "@/components/layout";
 import { aiTestingQueries, TestResult } from "@/data/aiTestingQueries";
 import { AITestDbRow } from "@/types/aiTesting";
 import { Button } from "@/components/ui/button";
@@ -23,7 +22,6 @@ export default function AITesting() {
   if (!isLocalDevelopment) {
     return (
       <div className="min-h-screen bg-background">
-        <Navigation />
         <main className="container mx-auto px-4 py-24">
           <Alert variant="destructive" className="max-w-2xl mx-auto">
             <AlertTriangle className="h-4 w-4" />
@@ -34,7 +32,6 @@ export default function AITesting() {
             </AlertDescription>
           </Alert>
         </main>
-        <Footer />
       </div>
     );
   }
@@ -179,7 +176,6 @@ export default function AITesting() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       
       <main className="container mx-auto px-4 py-8 mt-20">
         <div className="max-w-7xl mx-auto">
@@ -513,8 +509,6 @@ export default function AITesting() {
           </Tabs>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

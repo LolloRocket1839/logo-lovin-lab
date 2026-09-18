@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { Navigation, MobileHeader, Footer, BottomNav } from "@/components/layout";
 import { FAQSection } from "@/components/FAQSection";
 
 const FAQ = () => {
@@ -55,7 +54,6 @@ const FAQ = () => {
 
   return (
     <main role="main" className="min-h-screen bg-background">
-      <MobileHeader />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -70,8 +68,6 @@ const FAQ = () => {
         </script>
       </Helmet>
       
-      <Navigation />
-      
       <div className="pt-20 pb-8">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
@@ -80,9 +76,6 @@ const FAQ = () => {
         </div>
         <FAQSection />
       </div>
-      
-      <Footer />
-      <BottomNav />
     </main>
   );
 };

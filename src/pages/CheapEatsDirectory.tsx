@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Navigation, Footer, BottomNav } from '@/components/layout';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -207,8 +206,6 @@ const CheapEatsDirectory = () => {
       <CheapEatsDirectoryBreadcrumb lang={lang} />
       <CheapEatsDirectoryFAQ lang={lang} />
 
-      <Navigation />
-
       <main id="main-content" className="min-h-screen bg-background pt-20 pb-24 md:pb-12">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Hero */}
@@ -395,9 +392,6 @@ const CheapEatsDirectory = () => {
           </section>
         </div>
       </main>
-
-      <Footer />
-      <BottomNav />
     </>
   );
 };

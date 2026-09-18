@@ -27,7 +27,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { Navigation, Footer } from '@/components/layout';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -311,8 +310,6 @@ const SitemapDebug = () => {
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
-      <Navigation />
-
       <main className="min-h-screen bg-background pt-20 pb-24">
         <div className="container mx-auto px-4 py-8">
           {/* Header */}
@@ -595,8 +592,6 @@ const SitemapDebug = () => {
           </Card>
         </div>
       </main>
-
-      <Footer />
     </>
   );
 };

@@ -1,9 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { Navigation } from '@/components/layout/Navigation';
-import { Footer } from '@/components/layout/Footer';
-import { BottomNav } from '@/components/layout/BottomNav';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -118,8 +115,6 @@ const GymsDirectory: React.FC = () => {
       <GymsDirectorySchema lang={lang} gymsCount={gymsData.length} />
       <GymsItemListSchema lang={lang} gyms={gymsData} />
       <GymsDirectoryFAQ lang={lang} />
-
-      <Navigation />
 
       <main id="main-content" className="flex-grow container mx-auto px-4 py-6 pb-24 md:pb-8">
         <Breadcrumbs />
@@ -296,9 +291,6 @@ const GymsDirectory: React.FC = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <BottomNav />
     </div>
   );
 };

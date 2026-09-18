@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Navigation, Footer } from "@/components/layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -202,8 +201,6 @@ const ABTestResults = () => {
         <title>A/B Test Results - Jungle Rent</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      
-      <Navigation />
       
       <div className="container mx-auto px-3 sm:px-4 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-6xl mx-auto">
@@ -444,8 +441,6 @@ const ABTestResults = () => {
           )}
         </div>
       </div>
-      
-      <Footer />
     </main>
   );
 };

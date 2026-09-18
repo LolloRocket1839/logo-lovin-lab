@@ -60,7 +60,6 @@ import {
 } from "@/components/ui/tooltip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { motion, AnimatePresence } from "framer-motion";
 import { turinAreas } from "@/constants";
 import { MobileStickyBudget } from "@/components/tools/MobileStickyBudget";
@@ -415,8 +414,6 @@ const BudgetCalculator = () => {
       </Helmet>
       <BudgetCalculatorSchema />
       <BudgetCalculatorHowTo />
-
-      <Navigation />
 
       <main className="min-h-screen bg-background pt-20 pb-24 md:pb-8">
         {/* Header - Compact on mobile */}
@@ -1207,9 +1204,6 @@ const BudgetCalculator = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <BottomNav />
 
       {/* Mobile Share Dialog */}
       <Dialog open={shareDialogOpen} onOpenChange={setShareDialogOpen}>

@@ -1,5 +1,4 @@
 import { useState, useMemo, useDeferredValue, useEffect } from "react";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFilters } from "@/components/blog/BlogFilters";
 import { BlogGrid } from "@/components/blog/BlogGrid";
@@ -130,8 +129,6 @@ const Blog = () => {
         </script>
       </Helmet>
       
-      <Navigation />
-      
       <div className="pt-16">
         <Breadcrumbs
           items={[
@@ -215,10 +212,8 @@ const Blog = () => {
       </div>
       
       <div className="pb-16 lg:pb-0">
-        <Footer />
       </div>
       <ScrollToTop />
-      <BottomNav />
     </main>
   );
 };

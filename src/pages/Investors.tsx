@@ -2,7 +2,6 @@ import { useRef, useCallback, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
-import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HeroSection } from "@/components/investitori/HeroSection";
 import { QuickContactBar } from "@/components/investitori/QuickContactBar";
@@ -76,8 +75,6 @@ const Investors = () => {
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
       </Helmet>
-
-      <Navigation />
       <QuickContactBar onEmailClick={scrollToForm} />
 
       <main className="pb-20 md:pb-0">
@@ -95,8 +92,6 @@ const Investors = () => {
           <LegalDisclaimerFooter />
         </Suspense>
       </main>
-
-      <Footer />
       <ScrollToTop />
 
       <InvestorStickyCTA formRef={formRef} />

@@ -1,5 +1,4 @@
 import { useParams, Navigate } from "react-router-dom";
-import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import ArticleStructuredData from "@/components/blog/ArticleStructuredData";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -154,8 +153,6 @@ const BlogPostInner = () => {
         language={currentLang} 
         url={canonicalUrl} 
       />
-      
-      <Navigation />
       <ReadingProgressBar />
       <StickyArticleHeader
         title={translatedData.title}
@@ -175,8 +172,6 @@ const BlogPostInner = () => {
         relatedPosts={relatedPosts}
         currentTags={currentTags}
       />
-      
-      <Footer />
       <ScrollToTop />
     </main>
   );

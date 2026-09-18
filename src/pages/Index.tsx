@@ -1,13 +1,10 @@
 import { Suspense, lazy } from "react";
-import { Navigation } from "@/components/layout/Navigation";
-import { MobileHeader } from "@/components/layout/MobileHeader";
 
 const TrustBadge = lazy(() => import("@/components/TrustBadge").then(m => ({ default: m.TrustBadge })));
 const WhatsAppFAB = lazy(() => import("@/components/WhatsAppFAB").then(m => ({ default: m.WhatsAppFAB })));
 
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { MobileFooter } from "@/components/layout/MobileFooter";
 
 // Innovative components - loaded immediately for impact
 
@@ -23,10 +20,8 @@ const SellerHomeEntry = lazy(() => import("@/components/home/SellerHomeEntry").t
 
 
 
-const Footer = lazy(() => import("@/components/layout/Footer").then(m => ({ default: m.Footer })));
 const ScrollToTop = lazy(() => import("@/components/ScrollToTop").then(m => ({ default: m.ScrollToTop })));
 const StickyCTA = lazy(() => import("@/components/StickyCTA").then(m => ({ default: m.StickyCTA })));
-const BottomNav = lazy(() => import("@/components/layout/BottomNav").then(m => ({ default: m.BottomNav })));
 const ExitIntentPopup = lazy(() => import("@/components/ExitIntentPopup").then(m => ({ default: m.ExitIntentPopup })));
 
 
@@ -44,7 +39,6 @@ const Index = () => {
 
   return (
     <main role="main" className="min-h-screen bg-background relative" id="main-content" tabIndex={-1}>
-      <MobileHeader />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -103,8 +97,6 @@ const Index = () => {
         <link rel="help" href="https://junglerent.it/llms.txt" title="AI Knowledge Base" />
         <link rel="author" href="https://junglerent.it/ai-assistant-info.txt" title="Company Information" />
       </Helmet>
-      
-      <Navigation />
 
       {/* Immersive background canvas */}
       <BrandWordmark word={isItalian ? "TORINO" : "TORINO"} />
@@ -129,10 +121,8 @@ const Index = () => {
 
         <Suspense fallback={null}>
           <div className="hidden md:block">
-            <Footer />
           </div>
           <div className="md:hidden">
-            <MobileFooter />
           </div>
         </Suspense>
 
@@ -141,7 +131,6 @@ const Index = () => {
         <Suspense fallback={null}>
           <ScrollToTop />
           <StickyCTA />
-          <BottomNav />
         </Suspense>
 
         <Suspense fallback={null}>

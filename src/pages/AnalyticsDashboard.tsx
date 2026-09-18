@@ -9,7 +9,6 @@ import { ConversionByScrollChart } from "@/components/analytics/ConversionByScro
 import { EngagementComparisonChart } from "@/components/analytics/EngagementComparisonChart";
 import { TopPagesTable } from "@/components/analytics/TopPagesTable";
 import { RecentEventsTable } from "@/components/analytics/RecentEventsTable";
-import { Navigation, Footer } from "@/components/layout";
 import { BarChart3, Users, MousePointer, ScrollText } from "lucide-react";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 
@@ -109,7 +108,6 @@ export default function AnalyticsDashboard() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       
       <main className="container mx-auto px-4 py-8 mt-20">
         <div className="mb-8">
@@ -252,8 +250,6 @@ export default function AnalyticsDashboard() {
           </Card>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
@@ -242,8 +241,6 @@ const NizzaMillefontiOspedali = () => {
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(placeSchema)}</script>
       </Helmet>
-
-      <Navigation />
       <ScrollToTop />
 
       <main className="pt-20 pb-24 md:pb-12">
@@ -711,9 +708,6 @@ const NizzaMillefontiOspedali = () => {
           </section>
         </div>
       </main>
-
-      <Footer />
-      <BottomNav />
     </div>
   );
 };

@@ -16,7 +16,6 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
@@ -319,7 +318,6 @@ const AffittiLingottoOspedali = () => {
       </Helmet>
 
       <ScrollToTop />
-      <Navigation />
 
       <main className="pt-20 pb-24 md:pb-12">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -758,9 +756,6 @@ const AffittiLingottoOspedali = () => {
           </section>
         </div>
       </main>
-
-      <Footer />
-      <BottomNav />
     </div>
   );
 };

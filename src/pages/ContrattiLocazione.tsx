@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -213,9 +212,6 @@ const ContrattiLocazione = () => {
           })}
         </script>
       </Helmet>
-
-      <Navigation />
-      <MobileHeader />
 
       <main id="main-content" className="min-h-screen bg-background">
         <div className="container max-w-6xl mx-auto px-4 pt-24 pb-16 md:pt-32 md:pb-24">
@@ -475,9 +471,6 @@ const ContrattiLocazione = () => {
           </p>
         </div>
       </main>
-
-      <Footer />
-      <MobileFooter />
 
       <ContractRequestDialog
         open={dialogOpen}

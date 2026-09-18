@@ -1,7 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
@@ -157,8 +156,6 @@ const NeighborhoodPage = () => {
         <script type="application/ld+json">{JSON.stringify(rentalListingSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
-      
-      <Navigation />
       
       <div className="pt-16">
         <Breadcrumbs
@@ -451,10 +448,8 @@ const NeighborhoodPage = () => {
       </div>
       
       <div className="pb-16 lg:pb-0">
-        <Footer />
       </div>
       <ScrollToTop />
-      <BottomNav />
     </main>
   );
 };

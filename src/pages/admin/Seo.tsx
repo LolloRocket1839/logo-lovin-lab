@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
-import { Navigation } from "@/components/layout/Navigation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -98,7 +97,6 @@ const SeoAdmin = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <main className="max-w-3xl mx-auto px-4 py-12 space-y-6">
         <h1 className="text-3xl font-serif mb-2">SEO admin</h1>
 

@@ -3,8 +3,6 @@ import { Copy, Check, Bot, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Seo } from "@/components/Seo";
-import { Navigation } from "@/components/layout/Navigation";
-import { Footer } from "@/components/layout/Footer";
 
 const MCP_SERVER_URL = `https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/mcp`;
 
@@ -24,7 +22,6 @@ export default function Connect() {
         description="Connect Jungle Rent's real-estate tools (Turin neighborhoods, investor zones, rent estimators, lead submission) to ChatGPT or Claude via MCP in under a minute."
         canonical="https://junglerent.it/connect"
       />
-      <Navigation />
       <main className="min-h-screen bg-background pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-8 max-w-3xl">
           <div className="mb-10 text-center">
@@ -126,7 +123,6 @@ export default function Connect() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

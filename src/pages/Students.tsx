@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { toast } from "sonner";
 import { blogPosts } from "@/data/blog/posts";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
@@ -115,8 +114,6 @@ const Students = () => {
         <meta property="og:description" content={t("students.seo.description")} />
         <meta property="og:type" content="website" />
       </Helmet>
-
-      <Navigation />
         {/* Hero Section */}
         <section className="relative py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-background" />
@@ -557,9 +554,6 @@ const Students = () => {
             </Link>
           </div>
         </section>
-
-        <Footer />
-        <BottomNav />
       </main>
   );
 };

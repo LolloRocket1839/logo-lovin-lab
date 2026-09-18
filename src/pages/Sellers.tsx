@@ -5,7 +5,6 @@ import {
   CalendarCheck, MessageCircle, Facebook, Users, Hammer, ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Navigation, Footer, MobileHeader, MobileFooter, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SellerStickyCta } from "@/components/sellers/SellerStickyCta";
 import { VendiLeadForm } from "@/components/vendi/VendiLeadForm";
@@ -147,9 +146,6 @@ const Sellers = () => {
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-
-      <MobileHeader />
-      <Navigation />
 
       <main className="min-h-screen bg-background pb-24 md:pb-0">
         <div className="container px-4 md:px-8 mx-auto pt-20 md:pt-28">
@@ -365,10 +361,6 @@ const Sellers = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <MobileFooter />
-      <BottomNav />
       <SellerStickyCta onOpenDialog={scrollToForm} />
     </>
   );

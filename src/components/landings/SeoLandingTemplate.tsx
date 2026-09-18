@@ -2,7 +2,6 @@ import { ReactNode, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { CheckCircle2, MessageCircle, ArrowRight } from "lucide-react";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
@@ -110,7 +109,6 @@ export const SeoLandingTemplate = (props: SeoLandingProps) => {
       </Helmet>
 
       <ScrollToTop />
-      <Navigation />
 
       <main className="pt-20 pb-24 md:pb-12">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -262,9 +260,6 @@ export const SeoLandingTemplate = (props: SeoLandingProps) => {
           )}
         </div>
       </main>
-
-      <Footer />
-      <BottomNav />
 
       {props.leadVariant === "seller" ? (
         <QuickSellerLeadDialog open={leadOpen} onOpenChange={setLeadOpen} />

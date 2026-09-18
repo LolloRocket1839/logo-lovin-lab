@@ -2,7 +2,6 @@ import { useState, useEffect, useMemo } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/contexts/AuthContext";
 import { Navigate } from "react-router-dom";
-import { Navigation } from "@/components/layout/Navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, AlarmClock, TrendingUp, Trophy } from "lucide-react";
 import { format } from "date-fns";
@@ -117,7 +116,6 @@ const LeadsAdmin = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       <div className="container mx-auto px-4 pt-24 pb-12 max-w-7xl">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold text-foreground">CRM lead</h1>
