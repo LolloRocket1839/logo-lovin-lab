@@ -12,7 +12,7 @@
       "step2Title": "出租给学生",
       "step3Desc": "维护、合同、24/7客服全部内部处理，不外包。",
       "step3Title": "内部管理",
-      "step4Desc": "租金收入每两个月透明分配给投资者。",
+      "step4Desc": "定期提供项目进展。",
       "step4Title": "投资者收益",
       "stepLabel": "第{{number}}阶段",
       "subtitle": "为学生和投资者创造价值的良性循环",
@@ -34,7 +34,7 @@
     "service2Title": "出租给学生",
     "service3Desc": "维护、合同、24/7客服、清洁：所有方面都由我们直接管理。",
     "service3Title": "全面内部管理",
-    "service4Desc": "最低€100起即可投资Jungle Rent的特定公寓，让房地产投资平民化。",
+    "service4Desc": "参与单项房地产项目。",
     "service4Title": "便捷投资",
     "servicesTitle": "我们的业务",
     "subtitle": "收购房产并出租，解决学生住房危机",
@@ -42,7 +42,7 @@
     "whyChooseTitle": "为什么选择JungleRent",
     "whyPoint1": "直接业主：不是中介，是长期投资者",
     "whyPoint2": "专注大学生市场",
-    "whyPoint3": "€100起即可进入房地产市场",
+    "whyPoint3": "参与单项房地产项目。",
     "whyPoint4": "24/7客服，保证响应",
     "whyPoint5": "法规合规，与2i3T合作"
   },
@@ -55,7 +55,7 @@
     "skipToContent": "跳至主要内容"
   },
   "announcement": {
-    "firstDeal": "首次收购进行中 — 名额有限 →"
+    "firstDeal": ""
   },
   "areaSuggestion": {
     "addToForm": "添加信息到表格"
@@ -64,7 +64,7 @@
     "investment": "投资机会",
     "investmentDesc": "投资者：持续的大学需求下的专业物业管理",
     "investmentHighlight": "投资者",
-    "investmentHow1": "€100起即可进入",
+    "investmentHow1": "参与单项房地产项目。",
     "investmentHow2": "包含全面管理",
     "investmentTooltip": "参与房地产市场",
     "investorCta": "我是投资者",
@@ -325,7 +325,7 @@
     "aboutQ1": "你们是谁，运营多久了？",
     "aboutQ2": "如何联系你们？",
     "aboutQ3": "你们是房产中介吗？",
-    "investorA1": "Jungle Rent最低投资额为€100，让您即使资金有限也能进入都灵房地产市场。对于想要投资更多的人，机会取决于我们拥有和想要收购的房产。",
+    "investorA1": "参与单项房地产项目。",
     "investorA10": "收益基于我们的混合模式计算：学年期间出租给大学生，夏季月份短期旅游出租。这种模式相比传统固定租金出租优化了入住率。收益扣除管理费用但不扣除个人税。注意：收益取决于市场表现，不保证。投资有风险，包括可能部分或全部损失资本。",
     "investorA11": "我们的混合模式结合：(1) 与学年对齐的临时合同出租给大学生，保证稳定性和可靠租户；(2) 学生放假时的夏季短期旅游出租，最大化季节性收入。学生相比传统合同节省大量费用，只需支付实际居住月份。此外，我们提供夏季免费住宿日，让学生可以无额外费用返回都灵参加考试。",
     "investorA2": "投资Jungle Rent的特定公寓，由我们精选和收购。您清楚知道资金投入了哪套房产。我们全面管理：租户、合同、维护。该公寓的收益即为您的回报。",
@@ -335,7 +335,7 @@
     "investorA6": "投资后，我们处理一切：租户筛选、合同、维护和租金收取。您将收到详细的双月报告，包含所有组合数据。",
     "investorA7": "您将收到详细的双月报告，包括：房产状态、入住率、组合收益、发生的费用和下一期预测。您还可以访问在线仪表盘实时监控您的投资。",
     "investorA8": "可以，我们为感兴趣的投资者安排预约参观房产。您可以亲自查看房产，评估装修质量，并直接与我们的管理团队交谈。",
-    "investorA9": "您可以从€100起投资Jungle Rent的特定公寓。不是匿名基金：您清楚知道在为哪套房产融资。Jungle Rent收购、管理并分配收益。",
+    "investorA9": "参与单项房地产项目。",
     "investorCategory": "投资者",
     "investorQ1": "最低投资额是多少？",
     "investorQ10": "收益如何计算？",
@@ -457,7 +457,7 @@
     "days": "天",
     "discover": "探索",
     "discoverOpportunity": "发现机会",
-    "earlyBirdPerk": "早鸟优惠：前100名学生获得€100积分",
+    "earlyBirdPerk": "填写问卷",
     "flowStep1": "投资",
     "flowStep2": "份额",
     "flowStep3": "租金",
@@ -468,7 +468,7 @@
     "iAmStudent": "我是学生",
     "invest": "投资Jungle Rent",
     "investmentOpportunities": "投资机会",
-    "investorSubtitle": "最低€100起投资Jungle Rent房地产！",
+    "investorSubtitle": "参与单项房地产项目。",
     "investorTitle": "您是房地产投资者吗？",
     "investors": "投资者",
     "launchCountdown": "启动倒计时",
@@ -477,26 +477,26 @@
     "logoAlt": "Jungle Rent - 官方标志 - 都灵学生和投资者优化租赁",
     "mainHeadline": "投资都灵学生公寓",
     "mainHeadlineB": "从都灵学生公寓赚取被动收入",
-    "mainSubheadline": "最低€100起投资Jungle Rent。我们收购管理，您获取收益。",
-    "mainSubheadlineB": "最低€100起，拥有托管学生公寓的份额——我们负责一切，您每两个月收取回报。",
+    "mainSubheadline": "参与单项房地产项目。",
+    "mainSubheadlineB": "参与单项房地产项目。",
     "miniFaq": {
       "howEarn": "如何获得收益？",
-      "howEarnAnswer": "每两个月按投资比例获得租金收入份额。透明报告和个人仪表盘。",
-      "whatBuy": "€100能买到什么？",
+      "howEarnAnswer": "定期提供项目进展。",
+      "whatBuy": "参与单项房地产项目。",
       "whatBuyAnswer": "投资Jungle Rent的特定公寓，由我们收购和管理。您清楚知道资金的去向。",
       "whoManages": "谁管理房产？",
       "whoManagesAnswer": "Jungle Rent全面管理：收购、合同、租户、维护和税务。您无需操心。"
     },
     "miniSteps": {
-      "step1": "€100起",
+      "step1": "参与单项房地产项目。",
       "step2": "我们管理"
     },
     "minutes": "分钟",
     "missionStatement": "Jungle Rent在都灵购买房产并出租给大学生。您投资，我们负责一切管理。",
     "politecnico": "都灵理工",
-    "questionnaire": "赢取€100 - 填写问卷！",
-    "quizCta": "参与问答赢取€100",
-    "quizSubtitle": "帮助我们了解您的需求，有机会赢取€100",
+    "questionnaire": "填写问卷",
+    "quizCta": "填写问卷",
+    "quizSubtitle": "填写问卷",
     "seconds": "秒",
     "sellerLink": {
       "cta": "了解如何出售",
@@ -528,7 +528,7 @@
   },
   "howItWorks": {
     "badge": "我们的模式",
-    "ctaInvest": "€100起投资",
+    "ctaInvest": "参与单项房地产项目。",
     "ctaRent": "寻找住房",
     "ctaTalkToUs": "联系Lorenzo",
     "investors": {
@@ -545,7 +545,7 @@
         "title": "收购"
       },
       "invest": {
-        "desc": "最低€100起，投资Jungle Rent的特定公寓",
+        "desc": "参与单项房地产项目。",
         "title": "投资"
       },
       "rent": {
@@ -584,7 +584,7 @@
         "label": "大学"
       },
       "yield": {
-        "description": "€100起",
+        "description": "参与单项房地产项目。",
         "label": "最低投资"
       }
     },
@@ -611,10 +611,10 @@
         "title": "参与"
       },
       "invest": {
-        "description": "€100起参与",
+        "description": "参与单项房地产项目。",
         "detail": "无需购买整套房产即可进入房地产市场。零繁琐手续，零直接管理。",
         "keyPoints": [
-          "仅€100起投资",
+          "参与单项房地产项目。",
           "无需管理房产",
           "零繁琐手续和隐藏费用"
         ],
@@ -645,11 +645,11 @@
     "compactDesc": "投资都灵大学房产。全面管理，学生/游客混合模式。",
     "cta": "发现机会",
     "ctaButton": "Contact an Advisor",
-    "feature1": "€100起",
+    "feature1": "参与单项房地产项目。",
     "feature2": "全面管理",
     "feature3": "零繁琐手续",
     "flowStep1": "可及性",
-    "flowStep1Sub": "€100起",
+    "flowStep1Sub": "参与单项房地产项目。",
     "flowStep2": "管理",
     "flowStep2Sub": "专业化",
     "flowStep3": "组合",
@@ -657,7 +657,7 @@
     "incubatorTooltip": "由2i3T孵化 - 都灵大学企业孵化器",
     "landing": {
       "disclaimer": {
-        "company": "Jungle Rent S.r.l. · 增值税号 13333450016 · REA TO-1355899 · 地址：Via Quarello 15/A, 10137 都灵 · junglerententeprise@gmail.com",
+        "company": "Jungle Rent S.r.l. · 增值税号 13333450016 · REA TO-1355899 · 地址：Via Quarello 15/A, 10135 都灵 · junglerententeprise@gmail.com",
         "p1": "本页面所含信息仅供参考，不构成根据 art. 94 del D.Lgs. 58/1998 (TUF) 定义的向公众提供金融产品的要约，也不构成投资邀约，或财务、税务或法律建议。",
         "p2": "所述金融工具不提供在线认购。任何认购均只能通过私募配售进行，仅限于少数经单独资格认定的投资者，并在提供完整的信息备忘录和合同文件后，遵守 art. 100 TUF 规定的豁免条款。",
         "p3": "信息材料中所示回报均为基于模型假设的预测。实际表现取决于投资组合的走势，且无任何保证。投资涉及风险，包括流动性不足风险、房地产市场风险、运营执行风险、稀释风险以及投资本金完全损失的可能性。",
@@ -916,7 +916,7 @@
             "title": "服务不足的市场"
           },
           "model": {
-            "body": "10个月学生租期（9月至6月）+ 夏季旅游旺季（7月至8月）在 Airbnb 和 Booking 上出租。与纯学生租赁相比，这种混合模式优化了入住率和总收入。",
+            "body": "学年期间面向大学生出租。",
             "title": "混合模式"
           }
         },
@@ -951,12 +951,12 @@
       "studentSavings": "学生节省",
       "studentsOffsite": "意大利外地学生"
     },
-    "minInvestmentBadge": "€100起投资",
+    "minInvestmentBadge": "参与单项房地产项目。",
     "priorityResponse": "保证优先回复",
     "scheduleCall": "预约通话",
     "sectionLabel": "投资者专区",
     "sectionSubtitle": "双重使命：解决学生住房危机和房地产民主化",
-    "sectionTitle": "€100起进入房地产市场",
+    "sectionTitle": "参与单项房地产项目。",
     "socialProofLine": "首个项目筛选中 · 注册获取更新",
     "startupInnovativaBadge": "认证创新型初创企业",
     "subtitle": "让房地产投资平民化",
@@ -1006,9 +1006,9 @@
     },
     "budgetError": "选择可用预算",
     "budgetRanges": {
-      "100k-200k": "€100k - €200k",
+      "100k-200k": "100k € - €200k",
       "200k-300k": "€200k - €300k",
-      "50k-100k": "€50k - €100k",
+      "50k-100k": "€50k - 100k €",
       "over-300k": "超过€300k"
     },
     "consentError": "您必须接受才能继续",
@@ -1080,8 +1080,8 @@
     "title": "加入投资者等待名单"
   },
   "investorWaitlistDialog": {
-    "budget1": "€50k - €100k",
-    "budget2": "€100k - €200k",
+    "budget1": "€50k - 100k €",
+    "budget2": "100k € - €200k",
     "budget3": "€200k - €300k",
     "budget4": ">€300k",
     "budgetLabel": "投资预算",
@@ -1238,7 +1238,7 @@
     "feature2": "OMI数据 2025年11月",
     "feature3": "9个系数类别",
     "meta": {
-      "description": "免费计算您在都灵的房产价值。OMI 2025数据，FIAIP系数，35+区域。准确估算±5%。",
+      "description": "免费计算您在都灵的房产价值。OMI 2025数据，FIAIP系数，35+区域。",
       "title": "Property Valuation Turin | Calculate Your Home's Value"
     },
     "sources": {
@@ -1249,7 +1249,7 @@
       "description": "基于OMI数据和FIAIP系数2024-2025的免费都灵房产市场价值计算工具。",
       "name": "Turin Property Valuation Calculator"
     },
-    "subtitle": "使用OMI 2025数据和FIAIP系数计算房产价值。35+都灵区域，±5%精确估算。",
+    "subtitle": "使用OMI 2025数据和FIAIP系数计算房产价值。35+都灵区域，精确估算。",
     "title": "Property Valuation"
   },
   "propertyValuator": {
@@ -1261,7 +1261,7 @@
     "condition": "保存状态",
     "ctaProfessional": "Request professional valuation",
     "ctaSavings": "使用Jungle Rent能节省多少？",
-    "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers. Error margin: ±5-12%.",
+    "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers.",
     "emptyState": "Select zone and enter surface area to calculate estimate",
     "energyClass": "能源等级（EPC）",
     "energySection": "能源与系统",
@@ -1771,7 +1771,7 @@
     },
     "invest": {
       "caption": "您投资，我们处理其余。零繁琐手续。",
-      "minInvestment": "€100起"
+      "minInvestment": "参与单项房地产项目。"
     },
     "manage": {
       "caption": "365天入住。合同、维护、税务全包。",

@@ -59,12 +59,12 @@
     "other": "Annat"
   },
   "investmentRanges": {
-    "100-5000": "€100 - €5 000",
+    "100-5000": "Upp till 5 000 €",
     "5000-10000": "€5 000 - €10 000",
     "10000-25000": "€10 000 - €25 000",
     "25000-50000": "€25 000 - €50 000",
-    "50000-100000": "€50 000 - €100 000",
-    "100000+": "€100 000+"
+    "50000-100000": "Deltagande i en enskild fastighetsaffär.",
+    "100000+": "Deltagande i en enskild fastighetsaffär."
   },
   "timelines": {
     "immediate": "Omedelbart",

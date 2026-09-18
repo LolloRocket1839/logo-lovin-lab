@@ -12,7 +12,7 @@
       "step2Title": "Uthyrning till studenter",
       "step3Desc": "Vi hanterar allt internt: underhåll, kontrakt, support 24/7, utan att delegera till tredje part.",
       "step3Title": "Intern förvaltning",
-      "step4Desc": "Hyrorna genererar avkastning som distribueras varannan månad till investerare, på ett transparent sätt.",
+      "step4Desc": "Regelbundna uppdateringar om projektet.",
       "step4Title": "Avkastning till investerare",
       "stepLabel": "Fas {{number}}",
       "subtitle": "En positiv cykel som skapar värde för studenter och investerare",
@@ -34,7 +34,7 @@
     "service2Title": "Vi hyr ut till studenter",
     "service3Desc": "Underhåll, kontrakt, support 24/7, städning: vi hanterar varje aspekt av våra fastigheter direkt.",
     "service3Title": "Vi hanterar allt internt",
-    "service4Desc": "Från €100 kan du investera i Jungle Rent för en specifik lägenhet och demokratisera tillgången till fastighetsmarknaden.",
+    "service4Desc": "Deltagande i en enskild fastighetsaffär.",
     "service4Title": "Tillgängliga investeringar",
     "servicesTitle": "Vad vi gör",
     "subtitle": "Vi köper fastigheter och hyr ut för att lösa studentbostadskrisen",
@@ -42,7 +42,7 @@
     "whyChooseTitle": "Varför välja JungleRent",
     "whyPoint1": "Direkta ägare: inte mellanhänder, utan långsiktiga investerare",
     "whyPoint2": "Exklusivt fokus på universitetsstudenter",
-    "whyPoint3": "Tillgång till fastighetsmarknaden från €100",
+    "whyPoint3": "Deltagande i en enskild fastighetsaffär.",
     "whyPoint4": "Support 24/7 med garanterat svar",
     "whyPoint5": "Regelefterlevnad. Partnerskap med 2i3T"
   },
@@ -55,7 +55,7 @@
     "skipToContent": "Hoppa till huvudinnehåll"
   },
   "announcement": {
-    "firstDeal": "Första förvärvet pågår — Begränsade platser →"
+    "firstDeal": ""
   },
   "areaSuggestion": {
     "addToForm": "Lägg till info i formuläret"
@@ -64,7 +64,7 @@
     "investment": "Investeringsmöjligheter",
     "investmentDesc": "För investerare: professionell fastighetsförvaltning med konstant universitetsefterfrågan",
     "investmentHighlight": "Investerare",
-    "investmentHow1": "Tillgång från €100",
+    "investmentHow1": "Deltagande i en enskild fastighetsaffär.",
     "investmentHow2": "Komplett förvaltning ingår",
     "investmentTooltip": "Delta i fastighetsmarknaden",
     "investorCta": "Jag är investerare",
@@ -325,7 +325,7 @@
     "aboutQ1": "Vilka är ni och hur länge har ni varit verksamma?",
     "aboutQ2": "Hur kan jag kontakta er?",
     "aboutQ3": "Är ni en fastighetsmäklare?",
-    "investorA1": "Minsta investering i Jungle Rent börjar från €100, vilket ger tillgång till Turins fastighetsmarknad även med begränsat kapital. För den som vill investera mer beror möjligheterna på fastigheterna vi har tillgängliga och vill förvärva.",
+    "investorA1": "Deltagande i en enskild fastighetsaffär.",
     "investorA10": "Resultaten beräknas baserat på vår hybridmodell: hyror till universitetsstudenter under läsåret och korttidsuthyrning till turister under sommarmånaderna. Denna modell optimerar beläggningen jämfört med traditionella hyror med fast avgift. Resultaten är netto efter förvaltningskostnader men före personliga skatter. OBS: resultaten beror på marknadsutvecklingen och är inte garanterade. Investeringar innebär risker, inklusive möjlig partiell eller total kapitalförlust.",
     "investorA11": "Vår hybridmodell kombinerar: (1) Hyror till universitetsstudenter med tillfälliga kontrakt anpassade till läsåret, vilket garanterar stabilitet och pålitliga hyresgäster; (2) Korttidsuthyrning till turister under sommarmånaderna när studenterna är på semester, vilket maximerar säsongsintäkterna. Studenterna sparar betydligt jämfört med traditionella kontrakt genom att bara betala för de månader de faktiskt bor där. Dessutom erbjuder vi gratis gästdagar under sommaren för att låta studenter komma tillbaka till Turin för tentor utan extra kostnad.",
     "investorA2": "Du investerar i Jungle Rent för en specifik lägenhet som vi väljer ut och förvärvar. Du vet exakt vilken fastighet ditt kapital går till. Vi hanterar allt: hyresgäster, kontrakt, underhåll. Resultaten från den lägenheten genererar din avkastning.",
@@ -335,7 +335,7 @@
     "investorA6": "När investeringen är gjord tar vi hand om allt: hyresgästurval, kontrakt, underhåll och hyresindrivning. Du får detaljerade tvåmånadersrapporter med all portföljdata.",
     "investorA7": "Du får en detaljerad tvåmånadersrapport som inkluderar: fastighetsstatus, beläggningsgrad, portföljresultat, kostnader och prognoser för nästa period. Du har också tillgång till en online-dashboard för att övervaka din investering i realtid.",
     "investorA8": "Ja, vi organiserar besök på fastigheterna på bokning för intresserade investerare. Du kan se fastigheterna personligen, bedöma renoveringskvaliteten och prata direkt med vårt förvaltningsteam.",
-    "investorA9": "Du kan investera i Jungle Rent från €100 för en specifik lägenhet. Inte en anonym fond: du vet vilken fastighet du finansierar. Jungle Rent förvärvar, förvaltar och fördelar avkastningen.",
+    "investorA9": "Deltagande i en enskild fastighetsaffär.",
     "investorCategory": "För investerare",
     "investorQ1": "Vad är den minsta investeringen?",
     "investorQ10": "Hur beräknas resultaten?",
@@ -378,13 +378,13 @@
     "subtitle": "Snabba svar på dina frågor",
     "title": "Vanliga frågor",
     "voiceA1": "Du investerar i Jungle Rent för en specifik lägenhet som vi väljer ut i Turins universitetsområden. Du vet vart ditt kapital går, vi hanterar resten.",
-    "voiceA10": "Turin har över 90 000 universitetsstudenter och stark efterfrågan på bostäder. Kontrakt är typiskt anpassade till läsåret, priserna varierar från €300-600 för enkelrum beroende på område. Jungle Rent erbjuder flexibla kontrakt med betydande besparingar.",
+    "voiceA10": "Turin har över 90 000 universitetsstudenter.",
     "voiceA11": "Ett enkelrum för studenter i Turin kostar i genomsnitt €350-500 per månad i områden som San Salvario, €400-550 i Crocetta, €300-400 i Aurora. Priserna inkluderar avgifter till bostadsrättsförening men inte el och gas.",
-    "voiceA12": "Jungle Rent är ett aktiebolag registrerat i Italien (org.nr 13333450016, REA TO-1355899), certifierat som innovativt startup. Vi är inkuberade av 2i3T, partner till Politecnico di Torino. Vi erbjuder transparenta kontrakt och tvåmånadersrapporter.",
+    "voiceA12": "Jungle Rent är registrerat i företagsregistrets särskilda sektion för innovativa startupföretag.",
     "voiceA13": "Utträdesvillkoren definieras i kontraktet. Vi rekommenderar att du kontaktar oss för att diskutera tillgängliga alternativ. Investeringen är utformad för medellång till lång sikt (3-5 år) för att maximera resultaten.",
     "voiceA14": "Ja, Jungle Rent köper även lägenheter som behöver renoveras i Turins universitetsområden, men vi utvärderar fall för fall baserat på komplexiteten i det arbete som krävs och platsen. För fastigheter i gott skick eller som behöver delvis arbete köper vi direkt. Priset tar alltid hänsyn till fastighetens skick.",
     "voiceA15": "Du kan kontakta Jungle Rent på WhatsApp +39 331 905 3037 (svar inom 2 timmar), e-post junglerententeprise@gmail.com, eller genom att fylla i formuläret på junglerent.it. Lorenzo Oni-Joseph, grundaren, svarar personligen.",
-    "voiceA2": "Jungle Rent är ett certifierat innovativt startup, registrerat vid Handelskammaren i Turin med organisationsnummer 13333450016. Vi är inkuberade av 2i3T, Turin universitets inkubator. Dock innebär det, som alla investeringar, risker inklusive möjlig kapitalförlust.",
+    "voiceA2": "Jungle Rent är registrerat i företagsregistrets särskilda sektion för innovativa startupföretag.",
     "voiceA3": "Resultaten beror på marknadsutvecklingen och är inte garanterade. Vår hybridmodell studenter/turister optimerar beläggningen: studentuthyrning under läsåret och turistuthyrning under sommarmånaderna. Du får detaljerade tvåmånadersrapporter.",
     "voiceA4": "Du har tillgång till en personlig online-dashboard där du kan övervaka din investering i realtid. Dessutom får du en detaljerad tvåmånadersrapport via e-post med fastighetsstatus, beläggningsgrad, resultat och prognoser.",
     "voiceA5": "Jungle Rent köper direkt ditt hus utan mellanhänder. Fyll i formuläret, få gratis värdering inom 48 timmar, besiktning inom 7 dagar, skriftligt bud inom 48 timmar efter besiktning, och avslut inom 60-90 dagar. Inga avgifter.",
@@ -450,14 +450,14 @@
   },
   "hero": {
     "availableRooms": "30 rum i fyrarumslägenheter tillgängliga från september 2026",
-    "badgeExplanation": "Du investerar i en specifik lägenhet som förvärvas av Jungle Rent. Ingen förvaltning, varannan månad avkastning.",
+    "badgeExplanation": "Regelbundna uppdateringar om projektet.",
     "benefits": "fördelar",
     "contactLorenzo": "Kontakta Lorenzo",
     "ctaSocialProofB": "127 investerare redan på väntelistan",
     "days": "dagar",
     "discover": "Upptäck",
     "discoverOpportunity": "Upptäck möjligheten",
-    "earlyBirdPerk": "Early bird-förmåner: de första 100 studenterna får €100 kredit",
+    "earlyBirdPerk": "Fyll i enkäten",
     "flowStep1": "Investera",
     "flowStep2": "Andelar",
     "flowStep3": "Hyror",
@@ -468,7 +468,7 @@
     "iAmStudent": "Jag är student",
     "invest": "Investera i Jungle Rent",
     "investmentOpportunities": "Investeringsmöjligheter",
-    "investorSubtitle": "Investera i Jungle Rents fastigheter från €100.",
+    "investorSubtitle": "Deltagande i en enskild fastighetsaffär.",
     "investorTitle": "Är du fastighetsinvesterare?",
     "investors": "investerare",
     "launchCountdown": "Lansering om",
@@ -477,26 +477,26 @@
     "logoAlt": "Jungle Rent - Officiell logotyp - Optimerade hyror för studenter och investerare i Turin",
     "mainHeadline": "Investera i studentbostäder i Turin",
     "mainHeadlineB": "Tjäna passiv inkomst från studentlägenheter i Turin",
-    "mainSubheadline": "Investera från €100 i Jungle Rent. Vi köper och förvaltar, du tjänar.",
-    "mainSubheadlineB": "Från €100, äg en andel i förvaltade studentbostäder — vi sköter allt, du får varannan månad avkastning.",
+    "mainSubheadline": "Deltagande i en enskild fastighetsaffär.",
+    "mainSubheadlineB": "Deltagande i en enskild fastighetsaffär.",
     "miniFaq": {
       "howEarn": "Hur får jag avkastning?",
       "howEarnAnswer": "Varje kvartal får du din andel av inkasserade hyror, proportionellt till din investering. Transparenta rapporter och personlig dashboard.",
-      "whatBuy": "Vad köper jag för €100?",
+      "whatBuy": "Deltagande i en enskild fastighetsaffär.",
       "whatBuyAnswer": "Du investerar i Jungle Rent för en specifik lägenhet som vi förvärvar och förvaltar. Du vet exakt vart ditt kapital går.",
       "whoManages": "Vem förvaltar fastigheterna?",
       "whoManagesAnswer": "Jungle Rent hanterar allt: förvärv, kontrakt, hyresgäster, underhåll och skatter. Du behöver inte göra något."
     },
     "miniSteps": {
-      "step1": "Från €100",
+      "step1": "Deltagande i en enskild fastighetsaffär.",
       "step2": "Vi förvaltar"
     },
     "minutes": "minuter",
     "missionStatement": "Jungle Rent köper fastigheter i Turin och hyr ut dem till universitetsstudenter. Du investerar, vi sköter allt.",
     "politecnico": "Politecnico",
-    "questionnaire": "Vinn €100 - fyll i enkäten.",
-    "quizCta": "Ta quizet och vinn €100",
-    "quizSubtitle": "Hjälp oss förstå dina behov och du kan vinna €100",
+    "questionnaire": "Fyll i enkäten",
+    "quizCta": "Fyll i enkäten",
+    "quizSubtitle": "Fyll i enkäten",
     "seconds": "sekunder",
     "sellerLink": {
       "cta": "Upptäck hur du säljer",
@@ -528,11 +528,11 @@
   },
   "howItWorks": {
     "badge": "Vår modell",
-    "ctaInvest": "Investera från €100",
+    "ctaInvest": "Deltagande i en enskild fastighetsaffär.",
     "ctaRent": "Sök boende",
     "ctaTalkToUs": "Prata med Lorenzo",
     "investors": {
-      "point1": "Utbetalning varannan månad",
+      "point1": "Regelbundna uppdateringar om projektet.",
       "point2": "Avkastning över marknadssnittet",
       "point3": "Ingen förvaltning",
       "point4": "Specifik och transparent lägenhet",
@@ -545,7 +545,7 @@
         "title": "Vi förvärvar"
       },
       "invest": {
-        "desc": "Från €100, investera i Jungle Rent för en specifik lägenhet",
+        "desc": "Deltagande i en enskild fastighetsaffär.",
         "title": "Investera"
       },
       "rent": {
@@ -553,7 +553,7 @@
         "title": "Vi hyr ut"
       },
       "win": {
-        "desc": "Investerare: utbetalning varannan månad • Studenter: -25% hyra",
+        "desc": "Regelbundna uppdateringar om projektet.",
         "title": "Alla vinner"
       }
     },
@@ -584,7 +584,7 @@
         "label": "Universitet"
       },
       "yield": {
-        "description": "Från €100",
+        "description": "Deltagande i en enskild fastighetsaffär.",
         "label": "Minsta investering"
       }
     },
@@ -611,10 +611,10 @@
         "title": "Du deltar"
       },
       "invest": {
-        "description": "Delta från €100",
+        "description": "Deltagande i en enskild fastighetsaffär.",
         "detail": "Få tillgång till fastighetsmarknaden utan att köpa en hel fastighet. Ingen byråkrati, ingen direkt förvaltning.",
         "keyPoints": [
-          "Investera från endast €100",
+          "Deltagande i en enskild fastighetsaffär.",
           "Ingen fastighet att förvalta",
           "Ingen byråkrati eller dolda kostnader"
         ],
@@ -645,11 +645,11 @@
     "compactDesc": "Investera i universitetsfastigheter i Turin. Komplett förvaltning, hybridmodell studenter/turister.",
     "cta": "Upptäck möjligheten",
     "ctaButton": "Contact an Advisor",
-    "feature1": "Tillgång från €100",
+    "feature1": "Deltagande i en enskild fastighetsaffär.",
     "feature2": "Komplett förvaltning",
     "feature3": "Ingen byråkrati",
     "flowStep1": "Tillgänglighet",
-    "flowStep1Sub": "Från €100",
+    "flowStep1Sub": "Deltagande i en enskild fastighetsaffär.",
     "flowStep2": "Förvaltning",
     "flowStep2Sub": "Professionell",
     "flowStep3": "Portfölj",
@@ -657,7 +657,7 @@
     "incubatorTooltip": "Inkuberade hos 2i3T - Företagsinkubator Turin Universitet",
     "landing": {
       "disclaimer": {
-        "company": "Jungle Rent S.r.l. · Momsnr 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin, Italien · junglerententeprise@gmail.com",
+        "company": "Jungle Rent S.r.l. · Momsnr 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10135 Turin, Italien · junglerententeprise@gmail.com",
         "p1": "Informationen på denna sida är endast avsedd för informationsändamål och utgör inte ett offentligt erbjudande av finansiella produkter enligt art. 94 i D.Lgs. 58/1998 (TUF), inte heller en uppmaning till investering eller finansiell, skattemässig eller juridisk rådgivning.",
         "p2": "Det finansiella instrument som beskrivs är inte tillgängligt för teckning online. Eventuell teckning sker uteslutande genom en privat placering, reserverad för ett begränsat antal individuellt kvalificerade investerare, efter leverans av det fullständiga informationsmemorandumet och avtalsdokumentationen, i enlighet med de undantag som föreskrivs i art. 100 TUF.",
         "p3": "Avkastningen som illustreras i informationsmaterialet är prognoser baserade på modellantaganden. Den faktiska utvecklingen beror på portföljens resultat och garanteras inte på något sätt. Investeringen medför risker, inklusive illikviditetsrisk, fastighetsmarknadsrisk, operativ risk, utspädningsrisk och möjligheten till total förlust av det investerade kapitalet.",
@@ -701,7 +701,7 @@
             "q": "Kan jag få tillbaka mitt kapital före 3 år?"
           },
           {
-            "a": "Avtalsdokumentationen föreskriver en ekonomisk fördelning som definieras från fall till fall, vanligtvis 90 % till investerare / 10 % till Jungle Rent efter serviceavgiften, enligt en detaljerad vattenfallsmodell i memorandumet. Utdelningen sker varannan månad.",
+            "a": "Regelbundna uppdateringar om projektet.",
             "q": "Hur fördelas vinsten?"
           },
           {
@@ -787,7 +787,7 @@
       "founder": {
         "paragraphs": [
           "Hej,",
-          "Jag heter Lorenzo och är grundare av Jungle Rent. Jag byggde det här företaget på en enkel idé: i Torino finns det 90 000 universitetsstudenter och en fortfarande överkomlig fastighetsmarknad. Genom att köpa smart, renovera smart och förvalta smart kan man bygga solida kassaflöden i en historiskt defensiv tillgångsklass.",
+          "Turin har över 90 000 universitetsstudenter.",
           "Jag öppnar för deltagande från en liten grupp privata investerare av en praktisk anledning: att påskynda uppbyggnaden av portföljen utan att späda ut aktiekapitalet alltför mycket. Vi gör det med ett dedikerat instrument som skapar gemensamma incitament: strukturen belönar de som går in tidigt i ett enskilt projekt, och jag tar 10% av vinsten efter serviceavgifter. De juridiska detaljerna finns i memorandumet.",
           "Den här sidan ger dig ramarna. De verkliga siffrorna, strukturen, modellerna, kontrakten - allt detta finns i memorandumet. Jag skickar det först efter ett kort inledande samtal, eftersom jag vill vara säker på att möjligheten och dina förväntningar stämmer överens.",
           "Om du är intresserad, fyll i formuläret längst ner på sidan. Jag svarar personligen inom 48 timmar."
@@ -806,11 +806,11 @@
         "h1Accent": "enskilda fastighetsprojekt",
         "metrics": {
           "payoutLabel": "Utbetalningsfrekvens",
-          "payoutValue": "Varannan månad",
+          "payoutValue": "Regelbundna uppdateringar om projektet.",
           "ticketLabel": "Minsta investering",
           "ticketValue": "€5k",
           "yieldLabel": "Utbetalningsmodell",
-          "yieldValue": "Varannan månad"
+          "yieldValue": "Regelbundna uppdateringar om projektet."
         },
         "subhead": "Jungle Rent är ett innovativt startup-företag från Torino. Vi köper, renoverar och förvaltar lägenheter för universitetsstudenter. Vi öppnar för ett begränsat antal privata investerare att ekonomiskt delta i portföljen via ett dedikerat instrument. De tekniska detaljerna för instrumentet beskrivs i informationsmemorandumet."
       },
@@ -912,11 +912,11 @@
             "title": "Defensiv tillgångsklass till ett överkomligt pris"
           },
           "market": {
-            "body": "90 000 universitetsstudenter, 7 institutioner (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Kroniskt större efterfrågan på bostäder än det reguljära utbudet. Hyror från 350 € till 700 € för ett enkelrum beroende på område.",
+            "body": "Turin har över 90 000 universitetsstudenter.",
             "title": "Underservad marknad"
           },
           "model": {
-            "body": "10 månader studenter (september–juni) + sommarsäsong för turister (juli–augusti) på Airbnb och Booking. Mixen optimerar beläggningen och de totala intäkterna jämfört med enbart studentuthyrning.",
+            "body": "Uthyrning till universitetsstudenter under läsåret.",
             "title": "Hybridmodell"
           }
         },
@@ -951,14 +951,14 @@
       "studentSavings": "studentbesparingar",
       "studentsOffsite": "studenter från andra städer i Italien"
     },
-    "minInvestmentBadge": "Investera från €100",
+    "minInvestmentBadge": "Deltagande i en enskild fastighetsaffär.",
     "priorityResponse": "Garanterat prioriterat svar",
     "scheduleCall": "Boka samtal",
     "sectionLabel": "För investerare",
     "sectionSubtitle": "Dubbelt uppdrag: studentbostadskris och demokratisk tillgång till fastighetsmarknaden",
-    "sectionTitle": "Tillgång till fastighetsmarknaden från €100",
+    "sectionTitle": "Deltagande i en enskild fastighetsaffär.",
     "socialProofLine": "Första projektet under urval · Registrera dig för uppdateringar",
-    "startupInnovativaBadge": "Certifierat innovativt startup",
+    "startupInnovativaBadge": "Jungle Rent är registrerat i företagsregistrets särskilda sektion för innovativa startupföretag.",
     "subtitle": "Vi demokratiserar tillgången till fastighetsmarknaden",
     "talkToAdvisor": "Prata med Lorenzo",
     "talkToLorenzo": "Prata med Lorenzo",
@@ -1006,9 +1006,9 @@
     },
     "budgetError": "Välj tillgänglig budget",
     "budgetRanges": {
-      "100k-200k": "€100k - €200k",
+      "100k-200k": "100k € - €200k",
       "200k-300k": "€200k - €300k",
-      "50k-100k": "€50k - €100k",
+      "50k-100k": "€50k - 100k €",
       "over-300k": "Över €300k"
     },
     "consentError": "Du måste acceptera för att fortsätta",
@@ -1080,8 +1080,8 @@
     "title": "Gå med på investerarväntelistan"
   },
   "investorWaitlistDialog": {
-    "budget1": "€50k - €100k",
-    "budget2": "€100k - €200k",
+    "budget1": "€50k - 100k €",
+    "budget2": "100k € - €200k",
     "budget3": "€200k - €300k",
     "budget4": ">€300k",
     "budgetLabel": "Investeringsbudget",
@@ -1238,7 +1238,7 @@
     "feature2": "OMI-data Nov 2025",
     "feature3": "9 koefficient-kategorier",
     "meta": {
-      "description": "Beräkna värdet på din fastighet i Turin gratis. OMI 2025-data, FIAIP-koefficienter, 35+ zoner. Noggrann uppskattning ±5%.",
+      "description": "Beräkna värdet på din fastighet i Turin gratis. OMI 2025-data, FIAIP-koefficienter, 35+ zoner. Noggrann",
       "title": "Property Valuation Turin | Calculate Your Home's Value"
     },
     "sources": {
@@ -1249,7 +1249,7 @@
       "description": "Gratis verktyg för att beräkna marknadsvärdet på en fastighet i Turin baserat på OMI-data och FIAIP-koefficienter 2024-2025.",
       "name": "Turin Property Valuation Calculator"
     },
-    "subtitle": "Beräkna din fastighets värde med OMI 2025-data och FIAIP-koefficienter. 35+ zoner i Turin, noggrann uppskattning med ±5% marginal.",
+    "subtitle": "Beräkna din fastighets värde med OMI 2025-data och FIAIP-koefficienter. 35+ zoner i Turin, noggrann",
     "title": "Property Valuation"
   },
   "propertyValuator": {
@@ -1261,7 +1261,7 @@
     "condition": "Bevarandetillstånd",
     "ctaProfessional": "Request professional valuation",
     "ctaSavings": "Hur mycket sparar du med Jungle Rent?",
-    "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers. Error margin: ±5-12%.",
+    "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers.",
     "emptyState": "Select zone and enter surface area to calculate estimate",
     "energyClass": "Energiklass (EPC)",
     "energySection": "Energi och system",
@@ -1486,10 +1486,10 @@
     "heroSubheadline": "Direkt köpare, inga avgifter, 60-90 dagar",
     "idealProperty": "Idealiskt: treor, fyror eller större lägenheter nära Politecnico di Torino, Università di Torino (UniTo), ESCP Business School, SAA, IED.",
     "intro": "Äger du en fastighet i Turin och vill sälja snabbt? Jungle Rent är den direkta köparen du letade efter. Vi köper lägenheter i Turins universitetsområden (Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto) för att omvandla dem till optimerade boendelösningar för studenter och unga yrkesverksamma.",
-    "missionStatement": "Vi köper fastigheter i Turins universitetsområden för att erbjuda boende till 90 000+ studenter. Din fastighet blir en del av lösningen på bostadskrisen.",
+    "missionStatement": "Turin har över 90 000 universitetsstudenter.",
     "newSubtitle": "Vi letar inte efter köpare åt dig. Jungle Rent köper direkt fastigheter i universitetsområden.",
     "newTitle": "Vi köper din fastighet. Vi är ingen mäklare.",
-    "para1": "Jungle Rent föddes ur visionen att optimera studentuthyrningsmarknaden i Turin, en universitetsstad i ständig tillväxt med över 90 000 studenter vid Politecnico di Torino, Università degli Studi (UniTo), ESCP Business School och IED. Efterfrågan på kvalitetsbostäder i universitetsområden är mycket hög, men utbudet är ofta fragmenterat och oprofessionellt.",
+    "para1": "Turin har över 90 000 universitetsstudenter.",
     "para2": "Vårt uppdrag är att förvärva strategiskt placerade lägenheter i universitetsområden och omvandla dem till modernt, optimerat boende: bekväma gemensamma utrymmen, välmöblerade enkelrum, inkluderade tjänster och professionell förvaltning. Därför söker vi treor, fyror och större lägenheter i områden som",
     "para3": "idealiskt 10-20 minuters promenad eller kollektivtrafik från Turins huvuduniversitet.",
     "para4": "Vi arbetar med specialiserade notarier och advokater för att garantera säkra och snabba transaktioner. Vår värdering baseras på veckovis uppdaterade marknadsanalyser, med hänsyn till läge, yta, fastighetsskick och optimeringspotential för hyresmarknaden.",
@@ -1750,7 +1750,7 @@
     "trust": {
       "cciaa": "Registrerad CCIAA Turin",
       "gdpr": "GDPR-skyddade data",
-      "startup": "Certifierat Innovativt Startup"
+      "startup": "Jungle Rent är registrerat i företagsregistrets särskilda sektion för innovativa startupföretag."
     },
     "valuatorLink": "Beräkna din fastighets värde",
     "community": {
@@ -1771,7 +1771,7 @@
     },
     "invest": {
       "caption": "Du investerar, vi gör resten. Ingen byråkrati.",
-      "minInvestment": "Från €100"
+      "minInvestment": "Deltagande i en enskild fastighetsaffär."
     },
     "manage": {
       "caption": "Beläggning 365 dagar. Kontrakt, underhåll, skatter ingår.",
@@ -1804,7 +1804,7 @@
     "feature3": "Allt ingår",
     "marketProofDesc": "7 universitet, konstant efterfrågan hela året. Det är därför vi investerar här.",
     "marketProofLabel": "Vår marknad",
-    "marketProofTitle": "90 000+ universitetsstudenter i Turin",
+    "marketProofTitle": "Turin har över 90 000 universitetsstudenter.",
     "responseTime": "Svar inom 40 minuter",
     "sectionLabel": "För studenter",
     "sectionSubtitle": "En del av vårt dubbla uppdrag: göra boende tillgängligt för alla studenter",
