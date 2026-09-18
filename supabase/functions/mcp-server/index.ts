@@ -1023,7 +1023,7 @@ mcpServer.tool("calculate_budget", {
     const total = rent + groceries + transport + gym + electricity + gas + phone + extras;
 
     const tips: string[] = [];
-    if (rent > 400) tips.push("💡 Consider a shared room to save € 100-200/month");
+    if (rent > 400) tips.push("💡 Consider a shared room to save €100-200/month");
     if (groceries > 250) tips.push("💡 Porta Palazzo market saves up to 40% on groceries");
     if (!hasGTT) tips.push("💡 GTT Under 26 pass: only €25/month for unlimited metro+bus");
     if (hasGym) tips.push("💡 CUS Torino gym is free for university students");

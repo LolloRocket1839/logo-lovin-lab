@@ -25,9 +25,7 @@ export const FAQSection = () => {
   ];
 
   const studentFAQs = [
-    { q: t("faq.studentQ1"), a: t("faq.studentA1") },
     { q: t("faq.studentQ2"), a: t("faq.studentA2") },
-    { q: t("faq.studentQ3"), a: t("faq.studentA3") },
     { q: t("faq.studentQ4"), a: t("faq.studentA4") },
     { q: t("faq.studentQ5"), a: t("faq.studentA5") },
   ];
