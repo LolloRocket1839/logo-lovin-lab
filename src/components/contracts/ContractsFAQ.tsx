@@ -48,16 +48,6 @@ const FAQ_ITEMS = [
   },
   {
     q: {
-      it: "Quando devo pagare?",
-      en: "When do I pay?",
-    },
-    a: {
-      it: "Il pagamento avviene solo dopo la consegna del contratto. Riceverai il documento per la revisione e, una volta approvato, procediamo con la fatturazione. Nessun anticipo richiesto.",
-      en: "Payment is due only after contract delivery. You'll receive the document for review and, once approved, we proceed with invoicing. No advance payment required.",
-    },
-  },
-  {
-    q: {
       it: "Che differenza c'è tra contratto 4+4 e 3+2?",
       en: "What's the difference between a 4+4 and 3+2 contract?",
     },

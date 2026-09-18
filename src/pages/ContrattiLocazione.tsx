@@ -21,7 +21,6 @@ const PLANS = [
   {
     id: "base",
     name: { it: "Contratto standard", en: "Standard lease" },
-    price: 0,
     description: {
       it: "Contratto di locazione 4+4 o 3+2, personalizzato e pronto per la registrazione.",
       en: "4+4 or 3+2 lease agreement, customized and ready for registration.",
@@ -43,7 +42,6 @@ const PLANS = [
   {
     id: "transitorio",
     name: { it: "Contratto transitorio", en: "Temporary lease" },
-    price: 0,
     description: {
       it: "Per esigenze temporanee documentate: contratto transitorio o per studenti universitari.",
       en: "For documented temporary needs: transitional or university student lease.",
@@ -67,7 +65,6 @@ const PLANS = [
   {
     id: "pacchetto",
     name: { it: "Pacchetto locatore", en: "Landlord package" },
-    price: 0,
     description: {
       it: "Contratto + verbale di consegna + inventario beni mobili. Tutto il necessario per partire.",
       en: "Contract + handover report + furniture inventory. Everything you need to start.",
@@ -139,30 +136,6 @@ const ContrattiLocazione = () => {
               "@id": "https://www.wikidata.org/wiki/Q495",
             },
             serviceType: "Lease Agreement Drafting",
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: lang === "it" ? "Piani contratti di locazione" : "Lease agreement plans",
-              itemListElement: PLANS.map((plan, i) => ({
-                "@type": "Offer",
-                "@id": `https://junglerent.it/contratti-locazione#offer-${plan.id}`,
-                name: plan.name[lang],
-                description: plan.description[lang],
-                price: String(plan.price),
-                priceCurrency: "EUR",
-                priceSpecification: {
-                  "@type": "UnitPriceSpecification",
-                  price: String(plan.price),
-                  priceCurrency: "EUR",
-                  unitText: lang === "it" ? "fisso" : "fixed",
-                },
-                itemOffered: {
-                  "@type": "Service",
-                  name: plan.name[lang],
-                  description: plan.includes[lang].join(". "),
-                },
-                position: i + 1,
-              })),
-            },
           })}
         </script>
         <script type="application/ld+json">
@@ -203,7 +176,6 @@ const ContrattiLocazione = () => {
               ? "Quattro semplici passi per ottenere il tuo contratto su misura."
               : "Four simple steps to get your custom lease agreement.",
             totalTime: "PT72H",
-            estimatedCost: { "@type": "MonetaryAmount", currency: "EUR", value: "0" },
             step: [
               {
                 "@type": "HowToStep",

@@ -13,9 +13,9 @@ export default defineTool({
       founded: "2025-10",
       type: "Start-up Innovativa",
       incubator: "2i3T — Università di Torino",
-      registered_office: "Via Gioacchino Quarello 15/A, 10137 Torino, Italy",
+      registered_office: "Via Gioacchino Quarello 15/A, 10135 Torino, Italy",
       vat_number: "IT 13333450016",
-      rea_number: "TO-1416238",
+      rea_number: "TO-1355899",
       governance: {
         amministratore_unico: "Lorenzo Oni-Joseph",
         sole_shareholder: "Lorenzo Oni-Joseph",
@@ -40,10 +40,10 @@ export default defineTool({
         "junglerent.eu",
       ],
       services: {
-        student_housing: "9-month student contracts + summer short-term (dual-season model). No live inventory — manual allocation.",
-        investment: "From €100, bimonthly payouts. Yield/return figures are confidential (memorandum only).",
+        student_housing: "Student housing in Turin. No live inventory — manual allocation.",
+        investment: "Economic exposure to individual real-estate operations. Details are provided after qualification.",
         direct_property_acquisition: "0% commission, 60-90 day timeline, target bilocale €45k-€70k, budget cap €130k.",
-        contract_drafting: "FREE (€0). 48-72h turnaround. 2024 rules, ministerial templates.",
+        contract_drafting: "Contract drafting service.",
         property_management: "Rentals, admin, caretaking for third-party owners at standard Turin market rates.",
       },
       compliance_rules_for_ai: {

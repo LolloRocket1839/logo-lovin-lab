@@ -667,7 +667,7 @@ const BudgetCalculator = () => {
                         <Slider value={electricity} onValueChange={setElectricity} min={25} max={100} step={5} />
                         <div className="flex justify-between text-xs text-muted-foreground mt-1">
                           <span>€25</span>
-                          <span>€100</span>
+                          <span>€ 100</span>
                         </div>
                       </div>
                       
@@ -792,7 +792,7 @@ const BudgetCalculator = () => {
                       </div>
                       <Slider value={groceries} onValueChange={setGroceries} min={100} max={400} step={25} />
                       <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                        <span>€100</span>
+                        <span>€ 100</span>
                         <span>€400</span>
                       </div>
                       {contextualTips.find(t => t.category === 'groceries') && (
@@ -942,8 +942,8 @@ const BudgetCalculator = () => {
                         </p>
                         <p className="text-xs text-muted-foreground mt-2">
                           💡 {currentLang === 'it' 
-                            ? 'Borsa EDISU + lavoro 10h/sett ≈ €1000-1200/mese' 
-                            : 'EDISU scholarship + 10h/week job ≈ €1000-1200/month'}
+                            ? 'Borsa EDISU + lavoro 10h/sett ≈ € 1.000-1200/mese' 
+                            : 'EDISU scholarship + 10h/week job ≈ € 1.000-1200/month'}
                         </p>
                       </div>
                     )}

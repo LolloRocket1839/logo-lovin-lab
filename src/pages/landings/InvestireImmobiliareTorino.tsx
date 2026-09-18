@@ -14,7 +14,7 @@ export default function InvestireImmobiliareTorino() {
         "Startup innovativa",
         "Operazioni a Torino",
         "Modello dual-season",
-        "Payout bimestrali",
+        "Aggiornamenti periodici",
       ]}
       pillars={[
         {
@@ -47,8 +47,8 @@ export default function InvestireImmobiliareTorino() {
           body: "Ricevi documentazione completa con numeri, struttura giuridica, rischi e tempistiche. È lì che troverai cifre puntuali.",
         },
         {
-          title: "Sottoscrizione e payout",
-          body: "Se la valutazione torna, formalizziamo. Da lì payout bimestrali e reportistica periodica sull'operazione.",
+          title: "Sottoscrizione e aggiornamenti",
+          body: "Se la valutazione torna, formalizziamo. Da lì ricevi aggiornamenti periodici sull'operazione.",
         },
       ]}
       faqs={[
@@ -67,10 +67,6 @@ export default function InvestireImmobiliareTorino() {
         {
           q: "Chi gestisce gli immobili?",
           a: "Il team di Jungle Rent gestisce direttamente acquisto, ristrutturazione, locazione studenti, locazioni brevi estive, fiscalità e rapporti con inquilini.",
-        },
-        {
-          q: "Come e quando ricevo i payout?",
-          a: "I payout sono bimestrali (ogni 2 mesi), accompagnati da reportistica sull'andamento dell'operazione.",
         },
         {
           q: "Posso visitare gli immobili?",

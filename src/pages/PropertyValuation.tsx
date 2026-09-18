@@ -30,7 +30,7 @@ const PropertyValuation = () => {
         <title>{t('propertyValuation.meta.title', 'Valutazione Immobiliare Torino | Calcola il Valore della Tua Casa Gratis')}</title>
         <meta 
           name="description" 
-          content={t('propertyValuation.meta.description', 'Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI novembre 2025, coefficienti FIAIP, 35+ zone. Stima accurata ±5%. Nessuna registrazione richiesta.')} 
+          content={t('propertyValuation.meta.description', 'Calcola gratuitamente il valore indicativo del tuo immobile a Torino con dati OMI e coefficienti FIAIP. Nessuna registrazione richiesta.')} 
         />
         <link rel="canonical" href={`https://junglerent.it/${lang === 'it' ? 'valutazione-immobile' : 'property-valuation'}`} />
         <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -82,7 +82,7 @@ const PropertyValuation = () => {
               </h1>
               
               <p className="text-lg text-muted-foreground mb-6">
-                {t('propertyValuation.subtitle', 'Calcola il valore del tuo immobile con dati OMI 2025 e coefficienti FIAIP. 35+ zone di Torino, stima accurata con margine ±5%.')}
+                {t('propertyValuation.subtitle', 'Calcola il valore indicativo del tuo immobile con dati OMI e coefficienti FIAIP.')}
               </p>
 
               {/* Key features */}

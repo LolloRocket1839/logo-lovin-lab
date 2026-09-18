@@ -84,7 +84,6 @@ const siteUrls: SiteUrl[] = [
   { path: '/blog/eventi-torino-febbraio-2026', title: 'Eventi Torino Febbraio 2026', category: 'blog', priority: 0.8, hasHreflang: true },
   { path: '/blog/eventi-torino-marzo-2026', title: 'Eventi Torino Marzo 2026', category: 'blog', priority: 0.8, hasHreflang: true },
   { path: '/blog/jungle-control-dicembre-2025', title: 'Jungle Control Dicembre 2025', category: 'blog', priority: 0.9, hasHreflang: true },
-  { path: '/blog/props-gestione-immobiliare-semplificata', title: 'Props Gestione Immobiliare', category: 'blog', priority: 0.9, hasHreflang: true },
   { path: '/blog/aule-studio-torino-guida-completa', title: 'Aule Studio Torino Guida', category: 'blog', priority: 0.8, hasHreflang: true },
   { path: '/blog/san-salvario-guida-studenti', title: 'San Salvario Guida Studenti', category: 'blog', priority: 0.8, hasHreflang: true },
   { path: '/blog/dove-vivere-torino-studenti-politecnico', title: 'Dove Vivere Torino Studenti', category: 'blog', priority: 0.8, hasHreflang: true },

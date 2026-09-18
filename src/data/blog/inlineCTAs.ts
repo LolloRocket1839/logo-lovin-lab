@@ -146,13 +146,13 @@ export const INLINE_CTAS: Record<string, InlineCTAConfig> = {
     it: {
       eyebrow: 'Dalla tesi alla pratica',
       title: 'Come si partecipa a una singola operazione',
-      description: 'Immobili reali a Torino, gestione interna, payout bimestrali. Il percorso parte da una call con Lorenzo, senza impegno.',
+      description: 'Immobili reali a Torino, gestione interna. Il percorso parte da una call con Lorenzo, senza impegno.',
       button: 'Parla con Lorenzo',
     },
     en: {
       eyebrow: 'From thesis to practice',
       title: 'How joining a single operation works',
-      description: 'Real properties in Turin, in-house management, payouts every 2 months. It starts with a no-commitment call with Lorenzo.',
+      description: 'Real properties in Turin, in-house management. It starts with a no-commitment call with Lorenzo.',
       button: 'Talk to Lorenzo',
     },
   },

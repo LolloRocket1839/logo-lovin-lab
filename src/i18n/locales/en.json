@@ -12,7 +12,7 @@
       "step2Title": "Rent to Students",
       "step3Desc": "We manage everything internally: maintenance, contracts, 24/7 support, without outsourcing.",
       "step3Title": "In-House Management",
-      "step4Desc": "Rental income generates returns distributed every 2 months to investors, with full transparency.",
+      "step4Desc": "Periodic updates on the operation.",
       "step4Title": "Returns to Investors",
       "stepLabel": "Phase {{number}}",
       "subtitle": "A virtuous cycle that creates value for students and investors",
@@ -34,7 +34,7 @@
     "service2Title": "We Rent to Students",
     "service3Desc": "Maintenance, contracts, 24/7 support, cleaning: we manage every aspect of our properties directly, without outsourcing.",
     "service3Title": "We Manage Everything In-House",
-    "service4Desc": "We offer the opportunity to invest in Jungle Rent for a specific apartment starting from €100, democratizing access to the property market.",
+    "service4Desc": "Participation in an individual real-estate operation.",
     "service4Title": "Accessible Investments",
     "servicesTitle": "What We Do",
     "subtitle": "We buy properties and rent them to solve the student housing crisis",
@@ -42,9 +42,9 @@
     "whyChooseTitle": "Why Choose JungleRent",
     "whyPoint1": "Direct owners: not intermediaries, but long-term investors",
     "whyPoint2": "Exclusive focus on university students",
-    "whyPoint3": "Access the real estate market from €100",
+    "whyPoint3": "Participation in an individual real-estate operation.",
     "whyPoint4": "24/7 assistance with guaranteed response",
-    "whyPoint5": "Full compliance with local and national regulations. Partnership with 2i3T - University Incubator"
+    "whyPoint5": "Full compliance with local and national regulations. Incubated at 2i3T - University Incubator"
   },
   "accessibility": {
     "closeMenu": "Close menu",
@@ -54,9 +54,6 @@
     "opensNewWindow": "(opens in a new window)",
     "skipToContent": "Skip to main content"
   },
-  "announcement": {
-    "firstDeal": "First acquisition underway — Limited spots →"
-  },
   "areaSuggestion": {
     "addToForm": "Add info to form"
   },
@@ -64,7 +61,7 @@
     "investment": "Investment opportunities",
     "investmentDesc": "For investors: professional property management with constant university demand",
     "investmentHighlight": "Investors",
-    "investmentHow1": "Access from €100",
+    "investmentHow1": "Participation in an individual real-estate operation.",
     "investmentHow2": "Full management included",
     "investmentTooltip": "Participate in the real estate market",
     "investorCta": "I'm an investor",
@@ -78,7 +75,7 @@
     "qualityDesc": "Regular contracts, professional management and total transparency. Supported by 2i3T - University Incubator.",
     "qualityHighlight": "100% safe",
     "qualityHow1": "Legal support included",
-    "qualityHow2": "Partnership with 2i3T",
+    "qualityHow2": "Incubated at 2i3T",
     "qualityTooltip": "Verified legal contracts",
     "savings": "Certified savings",
     "savingsDesc": "Save about 30% on rent. Affordable rents with transparent contracts.",
@@ -112,7 +109,7 @@
         "A": {
           "button": "Get Investment Guide",
           "description": "Access Turin's university housing market with full property management included",
-          "title": "Invest from €100 in Real Estate"
+          "title": "Participation in an individual real-estate operation."
         },
         "B": {
           "button": "Book Free Consultation",
@@ -325,7 +322,7 @@
     "aboutQ1": "Who are you and how long have you been operating?",
     "aboutQ2": "How can I contact you?",
     "aboutQ3": "Are you a real estate agency?",
-    "investorA1": "The minimum investment in Jungle Rent starts from €100, allowing access to the Turin real estate market even with limited capital. For those wanting to invest more, opportunities depend on the properties we have available and that we want to acquire.",
+    "investorA1": "Participation in an individual real-estate operation.",
     "investorA10": "Results are calculated based on our hybrid model: renting to university students during the academic year and short-term tourist rentals in summer months. This model optimizes occupancy compared to traditional fixed-rent contracts. Results are net of management costs but gross of personal taxes. WARNING: results depend on market performance and are not guaranteed. Investments involve risks, including possible partial or total loss of capital.",
     "investorA11": "Our hybrid model combines: (1) Rentals to university students with transitional contracts aligned with the academic year, ensuring stability and reliable tenants; (2) Short-term tourist rentals in summer months when students are on vacation, maximizing seasonal revenue. Students save significantly compared to traditional contracts, paying only for the months they actually stay. Additionally, we offer free guest days during summer so students can return to Turin for exams at no extra cost.",
     "investorA2": "You invest in Jungle Rent for a specific apartment that we select and acquire. You know exactly which property your capital goes into. We handle everything: tenants, contracts, maintenance. That apartment's results generate your returns. WARNING: investments involve risks, including possible partial or total loss of invested capital.",
@@ -335,7 +332,7 @@
     "investorA6": "Once you've made your investment, we take care of everything: tenant selection, contracts, maintenance and rent collection. You receive detailed bi-monthly reports with all portfolio data.",
     "investorA7": "You receive a detailed bi-monthly report that includes: property status, occupancy rate, portfolio results, expenses incurred and forecasts for the next period. You also have access to an online dashboard to monitor your investment in real-time.",
     "investorA8": "Yes, we organize property visits by appointment for interested investors. You can see the properties in person, evaluate the quality of the renovations and speak directly with our management team.",
-    "investorA9": "You can invest in Jungle Rent from €100 for a specific apartment. Not an anonymous fund: you know which property you are financing. Jungle Rent acquires, manages and distributes the returns.",
+    "investorA9": "Participation in an individual real-estate operation.",
     "investorCategory": "For Investors",
     "investorQ1": "What is the minimum investment required?",
     "investorQ10": "How are results calculated?",
@@ -377,14 +374,14 @@
     "studentQ5": "What's included in the rent?",
     "subtitle": "Quick answers to your questions",
     "title": "Frequently Asked Questions",
-    "voiceA1": "With Jungle Rent you invest in a specific apartment that we select in Turin's university areas. From just €100, you know exactly where your capital goes — we handle the rest.",
-    "voiceA10": "Turin has over 90,000 university students and high demand for housing. Contracts are typically aligned with the academic year, prices range from €300-600 for a single room depending on the area. Jungle Rent offers flexible contracts with significant savings.",
+    "voiceA1": "Participation in an individual real-estate operation.",
+    "voiceA10": "Turin hosts over 90,000 university students.",
     "voiceA11": "A single room for students in Turin costs on average €350-500 per month in areas like San Salvario, €400-550 in Crocetta, €300-400 in Aurora. Prices include condo fees but not utilities.",
-    "voiceA12": "Jungle Rent is a limited liability company registered in Italy (VAT 13333450016, REA TO-1355899), certified as an innovative startup. We are incubated by 2i3T, partner of Politecnico di Torino. We offer transparent contracts and bi-monthly reports.",
+    "voiceA12": "Jungle Rent is registered in the special section of the Companies Register for innovative startups.",
     "voiceA13": "Exit conditions are defined in the contract. We recommend contacting us to discuss available options. The investment is designed for medium to long-term horizons (3-5 years) to maximize results.",
     "voiceA14": "Yes, Jungle Rent also buys apartments that need renovation in Turin's university areas, but we evaluate case by case based on the complexity of the required work and the location. For properties in good condition or needing partial work, we buy directly. The price always reflects the property's condition.",
     "voiceA15": "You can contact Jungle Rent on WhatsApp at +39 331 905 3037 (response within 2 hours), email junglerententeprise@gmail.com, or by filling out the form on junglerent.it. Lorenzo Oni-Joseph, the founder, will personally respond to you.",
-    "voiceA2": "Jungle Rent is a certified innovative startup, registered with the Turin Chamber of Commerce with VAT number 13333450016. We are incubated by 2i3T, the University of Turin incubator. However, like any investment, it carries risks including possible loss of capital.",
+    "voiceA2": "Jungle Rent is registered in the special section of the Companies Register for innovative startups.",
     "voiceA3": "Results depend on market performance and are not guaranteed. Our hybrid student/tourist model optimizes occupancy: student rentals during the academic year and tourist rentals in summer months. You receive detailed bi-monthly reports.",
     "voiceA4": "You have access to a personal online dashboard where you can monitor your investment in real-time. Additionally, you receive a detailed bi-monthly report via email with property status, occupancy rate, results and forecasts.",
     "voiceA5": "Jungle Rent buys your house directly without intermediaries. Fill out the form, receive a free valuation within 48 hours, inspection within 7 days, written offer within 48 hours of inspection, and closing in 60-90 days. Zero commissions.",
@@ -457,7 +454,7 @@
     "days": "days",
     "discover": "Discover",
     "discoverOpportunity": "Discover the opportunity",
-    "earlyBirdPerk": "Early bird perks: first 100 students get €100 credit",
+    "earlyBirdPerk": "Complete the survey",
     "flowStep1": "Invest",
     "flowStep2": "Shares",
     "flowStep3": "Rent",
@@ -468,35 +465,35 @@
     "iAmStudent": "I'm a Student",
     "invest": "Invest in Jungle Rent",
     "investmentOpportunities": "Investment opportunities",
-    "investorSubtitle": "Invest in Jungle Rent's real estate starting from €100.",
+    "investorSubtitle": "Participation in an individual real-estate operation.",
     "investorTitle": "Are you a real estate investor?",
     "investors": "investors",
     "launchCountdown": "Launch in",
     "location": "Near Politecnico, UniTo and all major universities in Turin",
-    "logo2i3tAlt": "2i3T Business Incubator University of Turin - Official partner",
+    "logo2i3tAlt": "2i3T Business Incubator University of Turin - Incubator",
     "logoAlt": "Jungle Rent - Official logo - Optimized rentals for students and investors in Turin",
     "mainHeadline": "Invest in student housing in Turin",
     "mainHeadlineB": "Earn passive income from Turin student apartments",
-    "mainSubheadline": "Invest from €100 in Jungle Rent. We acquire and manage, you earn.",
-    "mainSubheadlineB": "From €100, own a share of managed student housing — we handle everything, you collect bi-monthly returns.",
+    "mainSubheadline": "Participation in an individual real-estate operation.",
+    "mainSubheadlineB": "Participation in an individual real-estate operation.",
     "miniFaq": {
       "howEarn": "How do I receive returns?",
-      "howEarnAnswer": "Every 2 months you receive your share of collected rents, proportional to your investment. Transparent reports and personal dashboard.",
-      "whatBuy": "What do I buy with €100?",
+      "howEarnAnswer": "Periodic updates on the operation.",
+      "whatBuy": "Participation in an individual real-estate operation.",
       "whatBuyAnswer": "You invest in Jungle Rent for a specific apartment that we acquire and manage. You know exactly where your capital goes.",
       "whoManages": "Who manages the properties?",
       "whoManagesAnswer": "Jungle Rent manages everything: acquisition, contracts, tenants, maintenance and taxes. You don't have to do anything."
     },
     "miniSteps": {
-      "step1": "From €100",
+      "step1": "Participation in an individual real-estate operation.",
       "step2": "We manage"
     },
     "minutes": "minutes",
     "missionStatement": "Jungle Rent buys properties in Turin and rents them to university students. You invest, we manage everything.",
     "politecnico": "Politecnico",
-    "questionnaire": "Win €100 - fill out the questionnaire.",
-    "quizCta": "Take Quiz and Win €100",
-    "quizSubtitle": "Help us understand your needs and you could win €100",
+    "questionnaire": "Complete the survey",
+    "quizCta": "Complete the survey",
+    "quizSubtitle": "Complete the survey",
     "seconds": "seconds",
     "sellerLink": {
       "cta": "Discover how to sell",
@@ -528,7 +525,7 @@
   },
   "howItWorks": {
     "badge": "Our model",
-    "ctaInvest": "Invest from €100",
+    "ctaInvest": "Participation in an individual real-estate operation.",
     "ctaRent": "Find housing",
     "ctaTalkToUs": "Talk to Lorenzo",
     "investors": {
@@ -545,7 +542,7 @@
         "title": "We Acquire"
       },
       "invest": {
-        "desc": "From €100, invest in Jungle Rent for a specific apartment",
+        "desc": "Participation in an individual real-estate operation.",
         "title": "Invest"
       },
       "rent": {
@@ -584,7 +581,7 @@
         "label": "Universities"
       },
       "yield": {
-        "description": "From €100",
+        "description": "Participation in an individual real-estate operation.",
         "label": "Minimum investment"
       }
     },
@@ -611,10 +608,10 @@
         "title": "You participate"
       },
       "invest": {
-        "description": "Join from €100",
+        "description": "Participation in an individual real-estate operation.",
         "detail": "Access real estate without buying an entire property. Zero paperwork, zero direct management.",
         "keyPoints": [
-          "Invest from just €100",
+          "Participation in an individual real-estate operation.",
           "No property to manage",
           "Zero paperwork and hidden costs"
         ],
@@ -645,11 +642,11 @@
     "compactDesc": "Invest in Turin university properties. Full management, hybrid student/tourist model.",
     "cta": "Discover opportunity",
     "ctaButton": "Contact an Advisor",
-    "feature1": "Access from €100",
+    "feature1": "Participation in an individual real-estate operation.",
     "feature2": "Complete management",
     "feature3": "Zero paperwork",
     "flowStep1": "Accessibility",
-    "flowStep1Sub": "From €100",
+    "flowStep1Sub": "Participation in an individual real-estate operation.",
     "flowStep2": "Management",
     "flowStep2Sub": "Professional",
     "flowStep3": "Portfolio",
@@ -657,7 +654,7 @@
     "incubatorTooltip": "Incubated at 2i3T - University of Turin Business Incubator",
     "landing": {
       "disclaimer": {
-        "company": "Jungle Rent S.r.l. · VAT 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Turin · junglerententeprise@gmail.com",
+        "company": "Jungle Rent S.r.l. · VAT 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10135 Turin · junglerententeprise@gmail.com",
         "p1": "The information on this page is for informational purposes only and does not constitute a public offering of financial products under art. 94 of Italian Legislative Decree 58/1998 (TUF — Italian Consolidated Financial Act), nor an investment solicitation, nor financial, tax or legal advice.",
         "p2": "The financial instrument described is not available for online subscription. Any subscription occurs exclusively via private placement, reserved to a restricted number of individually qualified investors, after delivery of the complete information memorandum and contractual documentation, in compliance with the exemptions provided by art. 100 TUF.",
         "p3": "Returns illustrated in informational materials are projections based on model assumptions. Actual performance depends on portfolio performance and is in no way guaranteed. Investment carries risks, including illiquidity risk, real estate market risk, operational execution risk, dilution risk, and the possibility of total loss of invested capital.",
@@ -787,7 +784,7 @@
       "founder": {
         "paragraphs": [
           "Hi,",
-          "I'm Lorenzo, founder of Jungle Rent. I built this company with a simple idea: Turin has 90,000 university students and a real estate market that is still accessible. Buying well, renovating well, and managing well, you can build solid cash flows in a historically defensive asset class.",
+          "Turin hosts over 90,000 university students.",
           "I open participation to a small group of private investors for a practical reason: accelerate portfolio construction without diluting share capital excessively. We do this with a dedicated instrument that aligns incentives: the structure rewards those who join early on the single operation, and I take 10% of profits after servicing. Legal details are in the memorandum.",
           "This page gives you the perimeter. The real numbers, the structure, the models, the contracts — all that is in the memorandum. I send it only after a brief introductory call, because I want to make sure the opportunity and your expectations are compatible.",
           "If you are interested, fill out the form at the bottom of the page. I'll respond personally within 48 hours."
@@ -806,7 +803,7 @@
         "h1Accent": "single property operation",
         "metrics": {
           "payoutLabel": "Payout frequency",
-          "payoutValue": "Every 2 months",
+          "payoutValue": "Periodic updates on the operation.",
           "ticketLabel": "Minimum ticket",
           "ticketValue": "€5k",
           "yieldLabel": "Payout model",
@@ -877,7 +874,7 @@
             "title": "Single-operation concentration"
           },
           {
-            "body": "Significant changes in the Turin market (prices, student demand, short-term rental regulation) may impact portfolio returns.",
+            "body": "University student rentals during the academic year.",
             "title": "Real estate market risk"
           },
           {
@@ -912,11 +909,11 @@
             "title": "Defensive asset class at accessible prices"
           },
           "market": {
-            "body": "90,000 university students, 7 institutions (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Housing demand chronically exceeds regular supply. Rents range from €350 to €700 per single room depending on the area.",
+            "body": "Turin hosts over 90,000 university students.",
             "title": "Underserved market"
           },
           "model": {
-            "body": "10 student months (September–June) + summer tourist season (July–August) on Airbnb and Booking. The mix optimizes occupancy and overall income versus a student-only strategy.",
+            "body": "University student rentals during the academic year.",
             "title": "Hybrid model"
           }
         },
@@ -951,14 +948,14 @@
       "studentSavings": "student savings",
       "studentsOffsite": "off-campus students in Italy"
     },
-    "minInvestmentBadge": "Invest from €100",
+    "minInvestmentBadge": "Participation in an individual real-estate operation.",
     "priorityResponse": "Priority response guaranteed",
     "scheduleCall": "Schedule a Call",
     "sectionLabel": "For Investors",
     "sectionSubtitle": "Dual mission: student housing crisis and democratizing real estate access",
-    "sectionTitle": "Access real estate from €100",
+    "sectionTitle": "Participation in an individual real-estate operation.",
     "socialProofLine": "First project in selection · Register for updates",
-    "startupInnovativaBadge": "Certified Innovative Startup",
+    "startupInnovativaBadge": "Jungle Rent is registered in the special section of the Companies Register for innovative startups.",
     "subtitle": "Democratizing access to real estate",
     "talkToAdvisor": "Talk to Lorenzo",
     "talkToLorenzo": "Talk to Lorenzo",
@@ -1006,9 +1003,9 @@
     },
     "budgetError": "Select available budget",
     "budgetRanges": {
-      "100k-200k": "€100k - €200k",
+      "100k-200k": "100k € - €200k",
       "200k-300k": "€200k - €300k",
-      "50k-100k": "€50k - €100k",
+      "50k-100k": "€50k - 100k €",
       "over-300k": "Over €300k"
     },
     "consentError": "You must accept to continue",
@@ -1080,8 +1077,8 @@
     "title": "Join Investor Waitlist"
   },
   "investorWaitlistDialog": {
-    "budget1": "€50k - €100k",
-    "budget2": "€100k - €200k",
+    "budget1": "€50k - 100k €",
+    "budget2": "100k € - €200k",
     "budget3": "€200k - €300k",
     "budget4": ">€300k",
     "budgetLabel": "Investment budget",
@@ -1238,7 +1235,7 @@
     "feature2": "OMI Data Nov 2025",
     "feature3": "9 coefficient categories",
     "meta": {
-      "description": "Calculate your property value in Turin for free. OMI 2025 data, FIAIP coefficients, 35+ zones. Accurate estimate ±5%.",
+      "description": "Calculate your property value in Turin for free. OMI 2025 data, FIAIP coefficients, 35+ zones. Accurate",
       "title": "Property Valuation Turin | Calculate Your Home's Value"
     },
     "sources": {
@@ -1249,7 +1246,7 @@
       "description": "Free tool to calculate the market value of a property in Turin based on OMI data and FIAIP coefficients 2024-2025.",
       "name": "Turin Property Valuation Calculator"
     },
-    "subtitle": "Calculate your property value with OMI 2025 data and FIAIP coefficients. 35+ Turin zones, accurate estimate with ±5% margin.",
+    "subtitle": "Calculate your property value with OMI 2025 data and FIAIP coefficients. 35+ Turin zones, accurate",
     "title": "Property Valuation"
   },
   "propertyValuator": {
@@ -1261,7 +1258,7 @@
     "condition": "Conservation state",
     "ctaProfessional": "Request professional valuation",
     "ctaSavings": "How much do you save with Jungle Rent?",
-    "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers. Error margin: ±5-12%.",
+    "disclaimer": "This calculator provides an indicative estimate based on OMI 2024-2025 data and FIAIP coefficients. It does not replace professional valuations by certified appraisers.",
     "emptyState": "Select zone and enter surface area to calculate estimate",
     "energyClass": "Energy class (EPC)",
     "energySection": "Energy & Systems",
@@ -1486,10 +1483,10 @@
     "heroSubheadline": "Direct buyer, zero commissions, 60-90 days",
     "idealProperty": "Ideal: three-room, four-room or larger apartments near Politecnico di Torino, University of Turin (UniTo), ESCP Business School, SAA, IED.",
     "intro": "Are you a property owner in Turin and want to sell it quickly? Jungle Rent is the direct buyer you were looking for. We purchase apartments in Turin's university areas (Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto) to transform them into optimized housing solutions for students and young professionals.",
-    "missionStatement": "We acquire properties in Turin's university areas to provide housing for 90,000+ students. Your property becomes part of the solution to the housing crisis.",
+    "missionStatement": "Turin hosts over 90,000 university students.",
     "newSubtitle": "We don't find buyers for you. Jungle Rent directly purchases properties in university areas.",
     "newTitle": "We buy your property. We're not an agency.",
-    "para1": "Jungle Rent was born from the vision of optimizing the student rental market in Turin, a continuously growing university city with over 90,000 students between Politecnico di Torino, University of Turin (UniTo), ESCP Business School and IED. The demand for quality accommodation in university areas is very high, but the supply is often fragmented and unprofessional.",
+    "para1": "Turin hosts over 90,000 university students.",
     "para2": "Our mission is to acquire strategically positioned apartments in university areas and transform them into modern and optimized housing: comfortable shared spaces, well-furnished single rooms, included services and professional management. For this reason we are looking for three-room, four-room and larger apartments in areas such as",
     "para3": "ideally 10-20 minutes walk or public transport from Turin's main universities.",
     "para4": "We work with specialized notaries and lawyers to guarantee safe and fast transactions. Our valuation is based on weekly updated market analysis, considering location, size, property condition and optimization potential for the rental market.",
@@ -1750,7 +1747,7 @@
     "trust": {
       "cciaa": "Registered CCIAA Turin",
       "gdpr": "GDPR protected data",
-      "startup": "Certified Innovative Startup"
+      "startup": "Jungle Rent is registered in the special section of the Companies Register for innovative startups."
     },
     "valuatorLink": "Calculate your property value",
     "community": {
@@ -1771,7 +1768,7 @@
     },
     "invest": {
       "caption": "You invest, we do the rest. Zero paperwork.",
-      "minInvestment": "From €100"
+      "minInvestment": "Participation in an individual real-estate operation."
     },
     "manage": {
       "caption": "365-day occupancy. Contracts, maintenance, taxes included.",
@@ -1793,7 +1790,7 @@
     "benefit1Tooltip": "Affordable quality rooms",
     "benefit2Desc": "Flexible academic year contracts with free guest days for summer exams: save 25%",
     "benefit2Title": "Flexible contracts",
-    "benefit2Tooltip": "Flexible booking options",
+    "benefit2Tooltip": "University student rentals during the academic year.",
     "compactDesc": "Accessible rentals in university areas. Transparent contracts, zero commissions and dedicated support for your academic journey.",
     "contactCta": "Contact us on WhatsApp",
     "contactLorenzo": "Talk to Lorenzo",
@@ -1804,7 +1801,7 @@
     "feature3": "All-inclusive",
     "marketProofDesc": "7 universities, constant demand year-round. This is why we invest here.",
     "marketProofLabel": "Our Market",
-    "marketProofTitle": "90,000+ university students in Turin",
+    "marketProofTitle": "Turin hosts over 90,000 university students.",
     "responseTime": "Response within 40 minutes",
     "sectionLabel": "For Students",
     "sectionSubtitle": "Part of our dual mission: making housing accessible to all students",

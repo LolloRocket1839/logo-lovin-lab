@@ -9,10 +9,16 @@
       "email": "ciao@junglerent.it",
       "url": "https://junglerent.it"
     },
-    "license": { "name": "Proprietary", "url": "https://junglerent.it/termini-condizioni" }
+    "license": {
+      "name": "Proprietary",
+      "url": "https://junglerent.it/termini-condizioni"
+    }
   },
   "servers": [
-    { "url": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1", "description": "Edge Functions" }
+    {
+      "url": "https://ekrrrlrwdshhlqnuxjbz.supabase.co/functions/v1",
+      "description": "Edge Functions"
+    }
   ],
   "paths": {
     "/nlweb/ask": {
@@ -20,13 +26,39 @@
         "operationId": "nlwebAsk",
         "summary": "Natural-language query over Jungle Rent's knowledge base (Microsoft NLWeb protocol).",
         "parameters": [
-          { "name": "q", "in": "query", "required": true, "schema": { "type": "string" }, "description": "Natural-language question." },
-          { "name": "lang", "in": "query", "required": false, "schema": { "type": "string", "enum": ["it", "en"] }, "description": "Response language (default it)." }
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Natural-language question."
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "it",
+                "en"
+              ]
+            },
+            "description": "Response language (default it)."
+          }
         ],
         "responses": {
           "200": {
             "description": "Schema.org-typed answer.",
-            "content": { "application/json": { "schema": { "type": "object" } } }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
           }
         }
       }
@@ -42,7 +74,12 @@
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": { "count": { "type": "integer", "minimum": 0 } }
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
                 }
               }
             }
@@ -58,7 +95,6 @@
   },
   "x-compliance": {
     "no_public_yield_figures": true,
-    "sole_founder": "Lorenzo Oni-Joseph",
-    "contract_service_price_eur": 0
+    "sole_founder": "Lorenzo Oni-Joseph"
   }
 }

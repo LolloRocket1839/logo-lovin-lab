@@ -62,7 +62,7 @@ export default defineTool({
         conservation_pct: Math.round(conservationCoef * 100),
         floor_pct: Math.round(floorCoef * 100),
       },
-      confidence: "±5-12% — indicative valuation. Additional factors (energy class, exposure, balconies, garage, condition of common areas) can move the price further.",
+      confidence: "Indicative valuation. Energy class, exposure, balconies, garage and common-area condition can affect the result.",
       sources: ["OMI Agenzia Entrate", "Immobiliare.it", "FIAIP Torino", "Nov 2025"],
       next_step: {
         cta: "For a real offer (Jungle Rent buys direct, no agency, 60-90 day timeline), contact Lorenzo via the contact_lorenzo tool.",

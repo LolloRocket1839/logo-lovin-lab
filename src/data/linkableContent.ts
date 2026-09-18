@@ -432,7 +432,7 @@ const enhancedBlogKeywords: Record<string, string[]> = {
     'room by room rental yield', 'gross to net yield turin'
   ],
   'assicurazione-sanitaria-studenti-internazionali-italia-2026': [
-    'assicurazione sanitaria studenti', 'SSN studenti stranieri', 'health insurance students italy',
+    'copertura sanitaria studenti', 'SSN studenti stranieri', 'health coverage students italy',
     'tessera TEAM studenti', 'EHIC card italy', 'ASL torino iscrizione',
     'SSN 700 euro', 'medico base studenti', 'ISEE parificato'
   ],

@@ -374,7 +374,7 @@ export const ExamSessionPlannerHowTo = () => (
 export const PropertyValuatorSchema = () => (
   <ToolStructuredData
     name="Calcolatore Valutazione Immobiliare Torino"
-    description="Calcola gratuitamente il valore di mercato del tuo immobile a Torino. Dati OMI Agenzia Entrate novembre 2025, coefficienti FIAIP, 35+ zone, stima accurata ±5%."
+    description="Calcola gratuitamente il valore di mercato del tuo immobile a Torino. Dati OMI Agenzia Entrate novembre 2025, coefficienti FIAIP, 35+ zone."
     url="/valutazione-immobile"
     applicationCategory="FinanceApplication"
     dateModified="2026-03-31"
@@ -385,7 +385,7 @@ export const PropertyValuatorSchema = () => (
       "Confronto commissioni agenzia vs Jungle Rent",
       "Upload foto e video proprietà",
       "Richiesta valutazione professionale gratuita",
-      "Stima range valore ±5%",
+      "Stima del range di valore",
       "Calcolo prezzo al metro quadro"
     ]}
     aggregateRating={{
@@ -425,7 +425,7 @@ export const PropertyValuatorHowTo = () => (
       },
       {
         name: "Visualizza la stima",
-        text: "Ottieni il range di valore (min-max) con accuratezza ±5%, il prezzo al metro quadro e il confronto commissioni tra agenzia tradizionale e Jungle Rent."
+        text: "Ottieni il range di valore (min-max), il prezzo al metro quadro e il confronto commissioni tra agenzia tradizionale e Jungle Rent."
       },
       {
         name: "Richiedi valutazione professionale",
@@ -450,7 +450,7 @@ export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) =
   const faqsIT: FAQItem[] = [
     {
       question: "Quanto vale il mio appartamento a Torino?",
-      answer: "Il valore dipende da zona, metratura, piano, stato e caratteristiche. Usa il nostro calcolatore gratuito con dati OMI 2025 per una stima accurata ±5%. Zone come Crocetta e Centro hanno prezzi medi di €2.800-3.500/mq, mentre Aurora e Barriera di Milano €1.200-1.800/mq."
+      answer: "Il valore dipende da zona, metratura, piano, stato e caratteristiche. Usa il nostro calcolatore gratuito con dati OMI 2025 per una stima indicativa. Zone come Crocetta e Centro hanno prezzi medi di €2.800-3.500/mq, mentre Aurora e Barriera di Milano €1.200-1.800/mq."
     },
     {
       question: "Cosa sono i dati OMI?",
@@ -462,7 +462,7 @@ export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) =
     },
     {
       question: "Quanto sono accurate le stime?",
-      answer: "Le stime hanno un margine di accuratezza del ±5% rispetto al valore di mercato. Utilizziamo dati OMI novembre 2025 e coefficienti FIAIP per calcolare il valore in base a 9 parametri: zona, piano, stato, ascensore, terrazzo, vista, riscaldamento, cantina e posto auto."
+      answer: "Le stime sono indicative e possono variare rispetto al valore di mercato. Utilizziamo dati OMI novembre 2025 e coefficienti FIAIP per calcolare il valore in base a 9 parametri: zona, piano, stato, ascensore, terrazzo, vista, riscaldamento, cantina e posto auto."
     },
     {
       question: "Jungle Rent addebita commissioni per la valutazione?",
@@ -477,7 +477,7 @@ export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) =
   const faqsEN: FAQItem[] = [
     {
       question: "How much is my apartment worth in Turin?",
-      answer: "The value depends on location, size, floor, condition, and features. Use our free calculator with OMI 2025 data for an accurate ±5% estimate. Areas like Crocetta and Centro have average prices of €2,800-3,500/sqm, while Aurora and Barriera di Milano are €1,200-1,800/sqm."
+      answer: "The value depends on location, size, floor, condition, and features. Use our free calculator with OMI 2025 data for an accurate circa 5% estimate. Areas like Crocetta and Centro have average prices of €2,800-3,500/sqm, while Aurora and Barriera di Milano are €1,200-1,800/sqm."
     },
     {
       question: "What is OMI data?",
@@ -489,7 +489,7 @@ export const PropertyValuatorFAQ = ({ lang = 'it' }: PropertyValuatorFAQProps) =
     },
     {
       question: "How accurate are the estimates?",
-      answer: "Estimates have an accuracy margin of ±5% compared to market value. We use November 2025 OMI data and FIAIP coefficients to calculate value based on 9 parameters: zone, floor, condition, elevator, terrace, view, heating, cellar, and parking."
+      answer: "Estimates are indicative and may vary from market value. We use November 2025 OMI data and FIAIP coefficients to calculate value based on 9 parameters: zone, floor, condition, elevator, terrace, view, heating, cellar, and parking."
     },
     {
       question: "Does Jungle Rent charge fees for valuation?",

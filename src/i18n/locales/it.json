@@ -12,7 +12,7 @@
       "step2Title": "Affitto a studenti",
       "step3Desc": "Gestiamo tutto internamente: manutenzione, contratti, assistenza 24/7, senza delegare a terzi.",
       "step3Title": "Gestione interna",
-      "step4Desc": "Gli affitti generano rendite distribuite bimestralmente agli investitori, in modo trasparente.",
+      "step4Desc": "Aggiornamenti periodici sull’operazione.",
       "step4Title": "Rendite agli investitori",
       "stepLabel": "Fase {{number}}",
       "subtitle": "Un ciclo virtuoso che crea valore per studenti e investitori",
@@ -34,7 +34,7 @@
     "service2Title": "Affittiamo a studenti",
     "service3Desc": "Manutenzione, contratti, assistenza 24/7, pulizie: gestiamo ogni aspetto delle nostre proprietà direttamente, senza delegare a terzi.",
     "service3Title": "Gestiamo tutto internamente",
-    "service4Desc": "Offriamo la possibilità di investire in Jungle Rent per un appartamento specifico a partire da €100, democratizzando l'accesso al mercato immobiliare.",
+    "service4Desc": "Partecipazione alla singola operazione immobiliare.",
     "service4Title": "Investimenti accessibili",
     "servicesTitle": "Cosa facciamo",
     "subtitle": "Compriamo immobili e li affittiamo per risolvere la crisi abitativa studentesca",
@@ -42,7 +42,7 @@
     "whyChooseTitle": "Perché scegliere JungleRent",
     "whyPoint1": "Proprietari diretti: non intermediari, ma investitori a lungo termine",
     "whyPoint2": "Focus esclusivo sugli studenti universitari",
-    "whyPoint3": "Accesso al mercato immobiliare da €100",
+    "whyPoint3": "Partecipazione alla singola operazione immobiliare.",
     "whyPoint4": "Assistenza 24/7 con risposta garantita",
     "whyPoint5": "Conformità normativa e partnership con 2i3T"
   },
@@ -54,9 +54,6 @@
     "opensNewWindow": "(si apre in una nuova finestra)",
     "skipToContent": "Salta al contenuto principale"
   },
-  "announcement": {
-    "firstDeal": "Prima acquisizione in corso — Posti limitati →"
-  },
   "areaSuggestion": {
     "addToForm": "Aggiungi info al form"
   },
@@ -64,7 +61,7 @@
     "investment": "Opportunità di investimento",
     "investmentDesc": "Per investitori: gestione professionale delle proprietà con domanda universitaria costante",
     "investmentHighlight": "Investitori",
-    "investmentHow1": "Accesso da €100",
+    "investmentHow1": "Partecipazione alla singola operazione immobiliare.",
     "investmentHow2": "Gestione completa inclusa",
     "investmentTooltip": "Partecipa al mercato immobiliare",
     "investorCta": "Sono un investitore",
@@ -78,7 +75,7 @@
     "qualityDesc": "Contratti regolari, gestione professionale e trasparenza totale. Supportati da 2i3T - Incubatore Universitario.",
     "qualityHighlight": "100% Safe",
     "qualityHow1": "Supporto legale incluso",
-    "qualityHow2": "Partnership con 2i3T",
+    "qualityHow2": "Relazione con 2i3T",
     "qualityTooltip": "Contratti legali verificati",
     "savings": "Risparmi certificati",
     "savingsDesc": "Risparmia circa il 30% sugli affitti. Affitti convenienti con contratti trasparenti.",
@@ -325,17 +322,17 @@
     "aboutQ1": "Chi siete e da quanto operate?",
     "aboutQ2": "Come posso contattarvi?",
     "aboutQ3": "Siete un'agenzia immobiliare?",
-    "investorA1": "L'investimento minimo in Jungle Rent parte da €100, permettendo di accedere al mercato immobiliare torinese anche con capitali limitati. Per chi vuole investire di più, le opportunità dipendono dagli immobili che abbiamo a disposizione e che vogliamo acquisire.",
-    "investorA10": "I risultati sono calcolati sulla base del nostro modello ibrido: affitti a studenti universitari durante l'anno accademico e affitti brevi turistici nei mesi estivi. Questo modello ottimizza l'occupazione rispetto agli affitti tradizionali a canone fisso. I risultati sono al netto delle spese di gestione ma al lordo delle imposte personali. ATTENZIONE: i risultati dipendono dall'andamento del mercato e non sono garantiti. Gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale.",
-    "investorA11": "Il nostro modello ibrido combina: (1) Affitti a studenti universitari con contratti transitori allineati all'anno accademico, garantendo stabilità e inquilini affidabili; (2) Affitti brevi turistici nei mesi estivi quando gli studenti sono in vacanza, massimizzando i ricavi stagionali. Gli studenti risparmiano significativamente rispetto ai contratti tradizionali, pagando solo i mesi di effettiva permanenza. Inoltre, offriamo giorni ospite gratuiti durante l'estate per permettere agli studenti di tornare a Torino per gli esami senza costi aggiuntivi.",
+    "investorA1": "Partecipazione alla singola operazione immobiliare.",
+    "investorA10": "Locazioni a studenti universitari durante l’anno accademico.",
+    "investorA11": "Locazioni a studenti universitari durante l’anno accademico.",
     "investorA2": "Investi in Jungle Rent per un appartamento specifico che selezioniamo e acquistiamo noi. Sai esattamente in quale immobile entra il tuo capitale. Poi gestiamo tutto: inquilini, contratti, manutenzione. I risultati di quell'appartamento generano le tue rendite. ATTENZIONE: gli investimenti comportano rischi, inclusa la possibile perdita parziale o totale del capitale investito.",
-    "investorA3": "Sì, offriamo un servizio di gestione full-service che include: ricerca e selezione inquilini, gestione contratti e registrazioni, manutenzione ordinaria e straordinaria, riscossione affitti, gestione morosità, assistenza legale e reportistica bimestrale dettagliata. L'investitore partecipa ai risultati senza doversi preoccupare di nulla.",
-    "investorA4": "I primi risultati vengono comunicati dopo circa 2 mesi dall'investimento, una volta completata la fase di setup (acquisto/ristrutturazione, ricerca inquilini, registrazione contratti). Successivamente, ricevi report bimestrali dettagliati.",
+    "investorA3": "Aggiornamenti periodici sull’operazione.",
+    "investorA4": "Aggiornamenti periodici sull’operazione.",
     "investorA5": "Utilizziamo contratti transitori con motivazione studio (art. 5 L. 431/98) allineati all'anno accademico, rinnovabili annualmente. Questa tipologia garantisce maggiore rotazione (quindi adeguamento degli affitti ai prezzi di mercato) e tutela legale sia per il proprietario che per l'inquilino.",
-    "investorA6": "Una volta effettuato l'investimento, ci occupiamo di tutto: selezione inquilini, contratti, manutenzione e riscossione affitti. Ricevi report bimestrali dettagliati con tutti i dati del portafoglio.",
-    "investorA7": "Ricevi un report bimestrale dettagliato che include: stato dell'immobile, tasso di occupazione, risultati del portafoglio, spese sostenute e previsioni per il bimestre successivo. Hai anche accesso a un dashboard online per monitorare il tuo investimento in tempo reale.",
+    "investorA6": "Aggiornamenti periodici sull’operazione.",
+    "investorA7": "Aggiornamenti periodici sull’operazione.",
     "investorA8": "Sì, organizziamo visite agli immobili su appuntamento per gli investitori interessati. Puoi vedere di persona le proprietà, valutare la qualità delle ristrutturazioni e parlare direttamente con il nostro team di gestione.",
-    "investorA9": "Puoi investire in Jungle Rent a partire da €100 per un appartamento specifico. Non un fondo anonimo: sai quale immobile stai finanziando. Jungle Rent acquisisce, gestisce e distribuisce le rendite.",
+    "investorA9": "Partecipazione alla singola operazione immobiliare.",
     "investorCategory": "Per investitori",
     "investorQ1": "Qual è l'investimento minimo richiesto?",
     "investorQ10": "Come vengono calcolati i risultati?",
@@ -377,16 +374,16 @@
     "studentQ5": "Cosa è incluso nell'affitto?",
     "subtitle": "Risposte rapide alle tue domande",
     "title": "Domande frequenti",
-    "voiceA1": "Investi in Jungle Rent per un appartamento specifico che selezioniamo nelle zone universitarie di Torino. A partire da soli €100, sai dove va il tuo capitale, noi gestiamo il resto.",
-    "voiceA10": "Torino ha oltre 90.000 studenti universitari e forte domanda di alloggi. I contratti sono tipicamente allineati all'anno accademico, i prezzi variano da €300-600 per stanza singola a seconda della zona. Jungle Rent offre contratti flessibili con risparmio significativo.",
+    "voiceA1": "Partecipazione alla singola operazione immobiliare.",
+    "voiceA10": "Torino ospita oltre 90.000 studenti universitari.",
     "voiceA11": "Una stanza singola per studenti a Torino costa mediamente €350-500 al mese in zone come San Salvario, €400-550 in Crocetta, €300-400 in Aurora. I prezzi includono spese condominiali ma non utenze.",
-    "voiceA12": "Jungle Rent è una società a responsabilità limitata registrata in Italia (P.IVA 13333450016, REA TO-1355899), certificata come startup innovativa. Siamo incubati da 2i3T, partner del Politecnico di Torino. Offriamo contratti trasparenti e report bimestrali.",
+    "voiceA12": "Aggiornamenti periodici sull’operazione.",
     "voiceA13": "Le condizioni di uscita dall'investimento sono definite nel contratto. Ti consigliamo di contattarci per discutere le opzioni disponibili. L'investimento è pensato per orizzonti di medio-lungo termine (3-5 anni) per massimizzare i risultati.",
     "voiceA14": "Sì, Jungle Rent acquista anche appartamenti da ristrutturare nelle zone universitarie di Torino, ma valutiamo caso per caso in base alla complessità dei lavori necessari e alla zona. Per immobili in buone condizioni o parzialmente da sistemare acquistiamo direttamente. Il prezzo tiene sempre conto dello stato dell'immobile.",
     "voiceA15": "Puoi contattare Jungle Rent su WhatsApp al +39 331 905 3037 (risposta entro 2 ore), email junglerententeprise@gmail.com, oppure compilando il form sul sito junglerent.it. Lorenzo Oni-Joseph, il fondatore, ti risponderà personalmente.",
-    "voiceA2": "Jungle Rent è una startup innovativa certificata, registrata alla Camera di Commercio di Torino con P.IVA 13333450016. Siamo incubati da 2i3T, l'incubatore dell'Università di Torino. Tuttavia, come ogni investimento, comporta rischi inclusa la possibile perdita del capitale.",
-    "voiceA3": "I risultati dipendono dall'andamento del mercato e non sono garantiti. Il nostro modello ibrido studenti/turisti ottimizza l'occupazione: affitti studenteschi durante l'anno accademico e affitti turistici nei mesi estivi. Ricevi report bimestrali dettagliati.",
-    "voiceA4": "Hai accesso a una dashboard personale online dove puoi monitorare il tuo investimento in tempo reale. Inoltre, ricevi un report bimestrale dettagliato via email con stato dell'immobile, tasso di occupazione, risultati e previsioni.",
+    "voiceA2": "Jungle Rent è iscritta nella sezione speciale delle start-up innovative del Registro Imprese.",
+    "voiceA3": "Aggiornamenti periodici sull’operazione.",
+    "voiceA4": "Aggiornamenti periodici sull’operazione.",
     "voiceA5": "Jungle Rent acquista direttamente la tua casa senza intermediari. Compili il form, ricevi valutazione gratuita in 48 ore, sopralluogo entro 7 giorni, offerta scritta entro 48 ore dal sopralluogo, e rogito in 60-90 giorni. Zero commissioni.",
     "voiceA6": "Jungle Rent acquista appartamenti nelle zone universitarie di Torino: Crocetta, San Salvario, Centro, Vanchiglia, Aurora, Lingotto, vicinissime a Politecnico e UniTo. Compriamo trilocali, quadrilocali e appartamenti più grandi, anche da ristrutturare.",
     "voiceA7": "Il valore dipende da metratura, piano, stato e posizione esatta in San Salvario. Un trilocale medio (80-90 mq) in buone condizioni si valuta circa €180.000-220.000. Richiedi una valutazione gratuita a Jungle Rent per un prezzo preciso.",
@@ -450,14 +447,14 @@
   },
   "hero": {
     "availableRooms": "30 stanze in quadrilocali disponibili da settembre 2026",
-    "badgeExplanation": "Partecipi a un appartamento specifico acquisito da Jungle Rent. Zero gestione, rendite bimestrali.",
+    "badgeExplanation": "Aggiornamenti periodici sull’operazione.",
     "benefits": "benefici",
     "contactLorenzo": "Contatta Lorenzo",
     "ctaSocialProofB": "127 investitori già in lista d'attesa",
     "days": "giorni",
     "discover": "Scopri",
     "discoverOpportunity": "Scopri l'opportunità",
-    "earlyBirdPerk": "Vantaggi early bird: i primi 100 studenti ottengono un credito di €100",
+    "earlyBirdPerk": "Compila il questionario",
     "flowStep1": "Investi",
     "flowStep2": "Quote",
     "flowStep3": "Affitti",
@@ -468,35 +465,35 @@
     "iAmStudent": "Sono uno Studente",
     "invest": "Investi in Jungle Rent",
     "investmentOpportunities": "Opportunità di investimento",
-    "investorSubtitle": "Investi nel real estate di Jungle Rent a partire da 100€.",
+    "investorSubtitle": "Partecipazione alla singola operazione immobiliare.",
     "investorTitle": "Sei un investitore immobiliare?",
     "investors": "investitori",
     "launchCountdown": "Lancio tra",
     "location": "Vicino a Politecnico, UniTo e tutti i principali atenei torinesi",
-    "logo2i3tAlt": "2i3T Incubatore Imprese Università di Torino - Partner ufficiale",
+    "logo2i3tAlt": "2i3T Incubatore Imprese Università di Torino - Incubatore",
     "logoAlt": "Jungle Rent - Logo ufficiale - Affitti ottimizzati per studenti e investitori a Torino",
     "mainHeadline": "Investi in student housing a Torino",
     "mainHeadlineB": "Guadagna reddito passivo dagli appartamenti studenteschi a Torino",
-    "mainSubheadline": "Investi da €100 in Jungle Rent. Noi acquistiamo e gestiamo, tu guadagni.",
-    "mainSubheadlineB": "Da €100, possiedi una quota di alloggi studenteschi gestiti — noi ci occupiamo di tutto, tu incassi rendite bimestrali.",
+    "mainSubheadline": "Partecipazione alla singola operazione immobiliare.",
+    "mainSubheadlineB": "Partecipazione alla singola operazione immobiliare.",
     "miniFaq": {
       "howEarn": "Come ricevo i rendimenti?",
-      "howEarnAnswer": "Ogni 2 mesi ricevi la tua quota degli affitti incassati, proporzionale al tuo investimento. Report trasparenti e dashboard personale.",
-      "whatBuy": "Cosa compro con €100?",
+      "howEarnAnswer": "Aggiornamenti periodici sull’operazione.",
+      "whatBuy": "Partecipazione alla singola operazione immobiliare.",
       "whatBuyAnswer": "Investi in Jungle Rent per un appartamento specifico che acquistiamo e gestiamo noi. Sai esattamente dove va il tuo capitale.",
       "whoManages": "Chi gestisce gli immobili?",
       "whoManagesAnswer": "Jungle Rent gestisce tutto: acquisizione, contratti, inquilini, manutenzione e fiscalità. Tu non devi fare nulla."
     },
     "miniSteps": {
-      "step1": "Da €100",
+      "step1": "Partecipazione alla singola operazione immobiliare.",
       "step2": "Gestiamo noi"
     },
     "minutes": "minuti",
     "missionStatement": "Jungle Rent acquista immobili a Torino e li affitta a studenti universitari. Tu investi, noi gestiamo tutto.",
     "politecnico": "Politecnico",
-    "questionnaire": "Vinci 100€ - Compila il questionario.",
-    "quizCta": "Fai il Quiz e Vinci €100",
-    "quizSubtitle": "Aiutaci a capire le tue esigenze e potresti vincere €100",
+    "questionnaire": "Compila il questionario",
+    "quizCta": "Compila il questionario",
+    "quizSubtitle": "Compila il questionario",
     "seconds": "secondi",
     "sellerLink": {
       "cta": "Scopri come vendere casa",
@@ -528,11 +525,11 @@
   },
   "howItWorks": {
     "badge": "Il nostro modello",
-    "ctaInvest": "Investi da €100",
+    "ctaInvest": "Partecipazione alla singola operazione immobiliare.",
     "ctaRent": "Cerca alloggio",
     "ctaTalkToUs": "Parla con Lorenzo",
     "investors": {
-      "point1": "Payout bimestrali",
+      "point1": "Aggiornamenti periodici sull’operazione.",
       "point2": "Rendimenti sopra mercato",
       "point3": "Zero gestione",
       "point4": "Appartamento specifico e trasparente",
@@ -545,7 +542,7 @@
         "title": "Acquistiamo"
       },
       "invest": {
-        "desc": "A partire da €100, investi in Jungle Rent per un appartamento specifico",
+        "desc": "Partecipazione alla singola operazione immobiliare.",
         "title": "Investi"
       },
       "rent": {
@@ -553,7 +550,7 @@
         "title": "Affittiamo"
       },
       "win": {
-        "desc": "Investitori: payout bimestrali • Studenti: -25% affitto",
+        "desc": "Aggiornamenti periodici sull’operazione.",
         "title": "Tutti guadagnano"
       }
     },
@@ -584,7 +581,7 @@
         "label": "Università"
       },
       "yield": {
-        "description": "Da €100",
+        "description": "Partecipazione alla singola operazione immobiliare.",
         "label": "Investimento minimo"
       }
     },
@@ -604,17 +601,17 @@
         "description": "Ai risultati del portafoglio",
         "detail": "Partecipi ai risultati degli immobili gestiti. Report trasparenti e dashboard personale per monitorare il tuo investimento.",
         "keyPoints": [
-          "Report bimestrali trasparenti",
+          "Aggiornamenti periodici sull’operazione.",
           "Dashboard personale",
           "Rendimenti distribuiti"
         ],
         "title": "Partecipi"
       },
       "invest": {
-        "description": "Partecipa da €100",
+        "description": "Partecipazione alla singola operazione immobiliare.",
         "detail": "Accedi al mercato immobiliare senza comprare un intero immobile. Zero burocrazia, zero gestione diretta.",
         "keyPoints": [
-          "Investi da soli €100",
+          "Partecipazione alla singola operazione immobiliare.",
           "Nessun immobile da gestire",
           "Zero burocrazia e costi nascosti"
         ],
@@ -645,11 +642,11 @@
     "compactDesc": "Investi in immobili universitari a Torino. Gestione completa, modello ibrido studenti/turisti.",
     "cta": "Scopri l'opportunità",
     "ctaButton": "Contatta un consulente",
-    "feature1": "Accesso da €100",
+    "feature1": "Partecipazione alla singola operazione immobiliare.",
     "feature2": "Gestione completa",
     "feature3": "Zero burocrazia",
     "flowStep1": "Accessibilità",
-    "flowStep1Sub": "Da €100",
+    "flowStep1Sub": "Partecipazione alla singola operazione immobiliare.",
     "flowStep2": "Gestione",
     "flowStep2Sub": "Professionale",
     "flowStep3": "Portfolio",
@@ -657,7 +654,7 @@
     "incubatorTooltip": "Incubato presso 2i3T - Incubatore Imprese Università di Torino",
     "landing": {
       "disclaimer": {
-        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10137 Torino · junglerententeprise@gmail.com",
+        "company": "Jungle Rent S.r.l. · P.IVA 13333450016 · REA TO-1355899 · Via Quarello 15/A, 10135 Torino · junglerententeprise@gmail.com",
         "p1": "Le informazioni contenute in questa pagina hanno finalità esclusivamente informative e non costituiscono offerta al pubblico di prodotti finanziari ai sensi dell'art. 94 del D.Lgs. 58/1998 (TUF), né sollecitazione all'investimento, né consulenza finanziaria, fiscale o legale.",
         "p2": "Lo strumento finanziario descritto non è disponibile per sottoscrizione online. L'eventuale sottoscrizione avviene esclusivamente tramite collocamento privato, riservato a un numero ristretto di investitori individualmente qualificati, previa consegna del memorandum informativo completo e della documentazione contrattuale, nel rispetto delle esenzioni previste dall'art. 100 TUF.",
         "p3": "I rendimenti illustrati nei materiali informativi sono proiezioni basate su ipotesi di modello. La performance effettiva dipende dall'andamento del portfolio e non è in alcun modo garantita. L'investimento comporta rischi, inclusi rischio di illiquidità, rischio di mercato immobiliare, rischio di esecuzione operativa, rischio di dilution, e possibilità di perdita totale del capitale investito.",
@@ -701,7 +698,7 @@
             "q": "Posso recuperare il capitale prima dei 3 anni?"
           },
           {
-            "a": "La documentazione contrattuale prevede uno split economico definito caso per caso, tipicamente 90% investitori / 10% Jungle Rent dopo il servicing fee, secondo una waterfall dettagliata nel memorandum. La distribuzione è bimestrale.",
+            "a": "Aggiornamenti periodici sull’operazione.",
             "q": "Come vengono distribuiti i profitti?"
           },
           {
@@ -787,7 +784,7 @@
       "founder": {
         "paragraphs": [
           "Ciao,",
-          "sono Lorenzo, founder di Jungle Rent. Ho costruito questa società con un'idea semplice: a Torino ci sono 90.000 studenti universitari e un mercato immobiliare ancora accessibile. Comprando bene, ristrutturando bene, e gestendo bene, si possono costruire flussi di cassa solidi in un asset class storicamente difensiva.",
+          "Torino ospita oltre 90.000 studenti universitari.",
           "Apro la partecipazione a un piccolo gruppo di investitori privati per un motivo pratico: accelerare la costruzione del portfolio senza diluire eccessivamente il capitale sociale. Lo facciamo con uno strumento dedicato che allinea gli incentivi: la struttura premia chi entra presto sulla singola operazione, e io prendo il 10% dei profitti dopo il servicing. I dettagli giuridici sono nel memorandum.",
           "Questa pagina ti dà il perimetro. I numeri veri, la struttura, i modelli, i contratti — tutto questo sta nel memorandum. Te lo mando solo dopo una breve call di conoscenza, perché voglio essere sicuro che l'opportunità e le tue aspettative siano compatibili.",
           "Se ti interessa, compila il form in fondo alla pagina. Ti rispondo personalmente entro 48 ore."
@@ -806,11 +803,11 @@
         "h1Accent": "singola operazione immobiliare",
         "metrics": {
           "payoutLabel": "Frequenza payout",
-          "payoutValue": "Bimestrale",
+          "payoutValue": "Aggiornamenti periodici sull’operazione.",
           "ticketLabel": "Ticket minimo",
           "ticketValue": "€5k",
           "yieldLabel": "Modello di payout",
-          "yieldValue": "Bimestrale"
+          "yieldValue": "Aggiornamenti periodici sull’operazione."
         },
         "subhead": "Jungle Rent è una startup innovativa torinese. Acquistiamo, ristrutturiamo e gestiamo appartamenti per studenti universitari. Apriamo a un numero limitato di investitori privati la partecipazione economica al portfolio tramite uno strumento dedicato. I dettagli tecnici dello strumento sono descritti nel memorandum informativo."
       },
@@ -877,7 +874,7 @@
             "title": "Concentrazione su singola operazione"
           },
           {
-            "body": "Variazioni significative del mercato torinese (prezzi, domanda studentesca, normativa sugli affitti brevi) possono impattare il rendimento del portfolio.",
+            "body": "Locazioni a studenti universitari durante l’anno accademico.",
             "title": "Rischio di mercato immobiliare"
           },
           {
@@ -912,11 +909,11 @@
             "title": "Asset class difensiva a prezzo accessibile"
           },
           "market": {
-            "body": "90.000 studenti universitari, 7 istituzioni (Politecnico, UniTo, ESCP, IED, IAAD, SAA, IUSTO). Domanda abitativa cronicamente in eccesso rispetto all'offerta regolare. Affitti da €350 a €700 per stanza singola a seconda della zona.",
+            "body": "Torino ospita oltre 90.000 studenti universitari.",
             "title": "Mercato sotto-servito"
           },
           "model": {
-            "body": "10 mesi studenti (settembre–giugno) + stagione turistica estiva (luglio–agosto) su Airbnb e Booking. Il mix ottimizza l'occupancy e il ricavo complessivo rispetto al solo studentesco.",
+            "body": "Locazioni a studenti universitari durante l’anno accademico.",
             "title": "Modello ibrido"
           }
         },
@@ -951,21 +948,21 @@
       "studentSavings": "risparmio studenti",
       "studentsOffsite": "studenti fuori sede in Italia"
     },
-    "minInvestmentBadge": "Investi da €100",
+    "minInvestmentBadge": "Partecipazione alla singola operazione immobiliare.",
     "priorityResponse": "Risposta prioritaria garantita",
     "scheduleCall": "Prenota una call",
     "sectionLabel": "Per investitori",
     "sectionSubtitle": "Duplice missione: crisi abitativa studentesca e accesso democratico al mercato immobiliare",
-    "sectionTitle": "Accedi al mercato immobiliare da €100",
+    "sectionTitle": "Partecipazione alla singola operazione immobiliare.",
     "socialProofLine": "Primo progetto in fase di selezione · Registrati per aggiornamenti",
-    "startupInnovativaBadge": "Start-up innovativa certificata",
+    "startupInnovativaBadge": "Jungle Rent è iscritta nella sezione speciale delle start-up innovative del Registro Imprese.",
     "subtitle": "Democratizziamo l'accesso al mercato immobiliare",
     "talkToAdvisor": "Parla con Lorenzo",
     "talkToLorenzo": "Parla con Lorenzo",
     "testimonials": {
       "author1": "Marco, 32 anni",
       "author2": "Giulia, 28 anni",
-      "quote1": "Ho investito €500 e ricevo report bimestrali trasparenti. Finalmente posso accedere al mercato immobiliare.",
+      "quote1": "Aggiornamenti periodici sull’operazione.",
       "quote2": "Zero gestione, tutto è curato dal team. Posso concentrarmi sul mio lavoro mentre l'investimento lavora per me.",
       "title": "Cosa dicono gli investitori"
     },
@@ -1006,9 +1003,9 @@
     },
     "budgetError": "Seleziona il budget disponibile",
     "budgetRanges": {
-      "100k-200k": "€100k - €200k",
+      "100k-200k": "100k € - €200k",
       "200k-300k": "€200k - €300k",
-      "50k-100k": "€50k - €100k",
+      "50k-100k": "€50k - 100k €",
       "over-300k": "Oltre €300k"
     },
     "consentError": "Devi accettare per continuare",
@@ -1080,8 +1077,8 @@
     "title": "Unisciti alla waitlist investitori"
   },
   "investorWaitlistDialog": {
-    "budget1": "€50k - €100k",
-    "budget2": "€100k - €200k",
+    "budget1": "€50k - 100k €",
+    "budget2": "100k € - €200k",
     "budget3": "€200k - €300k",
     "budget4": ">€300k",
     "budgetLabel": "Budget di investimento",
@@ -1154,7 +1151,7 @@
     "step2Title": "Analisi opportunità",
     "step3Desc": "Finalizzi la partecipazione con contratti trasparenti e supporto legale incluso",
     "step3Title": "Conferma",
-    "step4Desc": "Partecipi ai risultati del portafoglio con report bimestrali. Noi gestiamo tutto",
+    "step4Desc": "Aggiornamenti periodici sull’operazione.",
     "step4Title": "Partecipazione ai risultati"
   },
   "logoModal": {
@@ -1238,7 +1235,7 @@
     "feature2": "Dati OMI Nov 2025",
     "feature3": "9 categorie coefficienti",
     "meta": {
-      "description": "Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI 2025, coefficienti FIAIP, 35+ zone. Stima accurata ±5%.",
+      "description": "Calcola gratuitamente il valore del tuo immobile a Torino. Dati OMI 2025, coefficienti FIAIP, 35+ zone",
       "title": "Valutazione immobiliare Torino | Calcola il valore della tua casa"
     },
     "sources": {
@@ -1249,7 +1246,7 @@
       "description": "Strumento gratuito per calcolare il valore di mercato di un immobile a Torino basato su dati OMI e coefficienti FIAIP 2024-2025.",
       "name": "Calcolatore valutazione immobiliare Torino"
     },
-    "subtitle": "Calcola il valore del tuo immobile con dati OMI 2025 e coefficienti FIAIP. 35+ zone di Torino, stima accurata con margine ±5%.",
+    "subtitle": "Calcola il valore del tuo immobile con dati OMI 2025 e coefficienti FIAIP. 35+ zone di Torino",
     "title": "Valutazione immobiliare"
   },
   "propertyValuator": {
@@ -1261,7 +1258,7 @@
     "condition": "Stato conservazione",
     "ctaProfessional": "Richiedi valutazione professionale",
     "ctaSavings": "Quanto risparmi con Jungle Rent?",
-    "disclaimer": "Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati. Margine di errore: ±5-12%.",
+    "disclaimer": "Questo calcolatore fornisce una stima indicativa basata su dati OMI 2024-2025 e coefficienti FIAIP. Non sostituisce valutazioni professionali di periti certificati.",
     "emptyState": "Seleziona zona e inserisci superficie per calcolare la stima",
     "energyClass": "Classe energetica (APE)",
     "energySection": "Energia e Impianti",
@@ -1486,10 +1483,10 @@
     "heroSubheadline": "Acquirente diretto, zero commissioni, 60-90 giorni",
     "idealProperty": "Ideali: trilocali, quadrilocali o appartamenti più grandi vicini a Politecnico di Torino, Università di Torino (UniTo), ESCP Business School, SAA, IED.",
     "intro": "Sei proprietario di un immobile a Torino e vuoi venderlo velocemente? Jungle Rent è l'acquirente diretto che stavi cercando. Acquistiamo appartamenti nelle zone universitarie di Torino (Crocetta, San Salvario, Centro, Vanchiglia, Vanchiglietta, Aurora, Lingotto) per trasformarli in soluzioni abitative ottimizzate per studenti e giovani professionisti.",
-    "missionStatement": "Acquistiamo immobili nelle zone universitarie di Torino per offrire alloggi a 90.000+ studenti. Il tuo immobile diventa parte della soluzione alla crisi abitativa.",
+    "missionStatement": "Torino ospita oltre 90.000 studenti universitari.",
     "newSubtitle": "Non cerchiamo acquirenti per te. Jungle Rent acquista direttamente immobili in zone universitarie.",
     "newTitle": "Compriamo il tuo immobile. Non siamo un'agenzia.",
-    "para1": "Jungle Rent nasce dalla visione di ottimizzare il mercato degli affitti studenteschi a Torino, una città universitaria in continua crescita con oltre 90.000 studenti tra Politecnico di Torino, Università degli Studi (UniTo), ESCP Business School e IED. La domanda di alloggi di qualità nelle zone universitarie è altissima, ma l'offerta è spesso frammentata e poco professionale.",
+    "para1": "Torino ospita oltre 90.000 studenti universitari.",
     "para2": "La nostra missione è acquisire appartamenti strategicamente posizionati nelle zone universitarie e trasformarli in housing moderno e ottimizzato: spazi condivisi confortevoli, camere singole ben arredate, servizi inclusi e gestione professionale. Per questo cerchiamo trilocali, quadrilocali e appartamenti più grandi in zone come",
     "para3": "idealmente a 10-20 minuti a piedi o in mezzi pubblici dai principali atenei torinesi.",
     "para4": "Lavoriamo con notai e avvocati specializzati per garantire transazioni sicure e veloci. La nostra valutazione si basa su analisi di mercato aggiornate settimanalmente, considerando posizione, metratura, stato dell'immobile e potenziale di ottimizzazione per il mercato degli affitti.",
@@ -1770,7 +1767,7 @@
     "trust": {
       "cciaa": "Iscritti CCIAA Torino",
       "gdpr": "Dati protetti GDPR",
-      "startup": "Startup Innovativa certificata"
+      "startup": "Jungle Rent è iscritta nella sezione speciale delle start-up innovative del Registro Imprese."
     },
     "valuatorLink": "Calcola il valore del tuo immobile",
     "community": {
@@ -1787,11 +1784,11 @@
     "earn": {
       "caption": "Partecipi ai risultati con trasparenza totale.",
       "dashboard": "Dashboard personale",
-      "quarterly": "Report bimestrali"
+      "quarterly": "Aggiornamenti periodici sull’operazione."
     },
     "invest": {
       "caption": "Tu investi, noi facciamo il resto. Zero burocrazia.",
-      "minInvestment": "Da €100"
+      "minInvestment": "Partecipazione alla singola operazione immobiliare."
     },
     "manage": {
       "caption": "Occupazione 365 giorni. Contratti, manutenzione, fiscalità inclusi.",
@@ -1824,7 +1821,7 @@
     "feature3": "Tutto incluso",
     "marketProofDesc": "7 università, domanda costante tutto l'anno. Ecco perché investiamo qui.",
     "marketProofLabel": "Il nostro mercato",
-    "marketProofTitle": "90.000+ studenti universitari a Torino",
+    "marketProofTitle": "Torino ospita oltre 90.000 studenti universitari.",
     "responseTime": "Risposta entro 40 minuti",
     "sectionLabel": "Per studenti",
     "sectionSubtitle": "Parte della nostra duplice missione: rendere l'alloggio accessibile a tutti gli studenti",

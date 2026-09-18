@@ -1452,7 +1452,7 @@ var estimate_property_value_default = defineTool6({
         conservation_pct: Math.round(conservationCoef * 100),
         floor_pct: Math.round(floorCoef * 100)
       },
-      confidence: "\xB15-12% \u2014 indicative valuation. Additional factors (energy class, exposure, balconies, garage, condition of common areas) can move the price further.",
+      confidence: "Indicative valuation. Energy class, exposure, balconies, garage and common-area condition can affect the result.",
       sources: ["OMI Agenzia Entrate", "Immobiliare.it", "FIAIP Torino", "Nov 2025"],
       next_step: {
         cta: "For a real offer (Jungle Rent buys direct, no agency, 60-90 day timeline), contact Lorenzo via the contact_lorenzo tool.",
@@ -2465,12 +2465,12 @@ var blogPosts = [
         ]
       },
       en: {
-        title: "Health insurance for international students in Italy 2026",
-        excerpt: "NHS at \u20AC700/year vs private insurance: full coverage, ASL offices in Turin, EHIC card for EU students, hospitals and university health services.",
+        title: "Health coverage for international students in Italy 2026",
+        excerpt: "NHS at \u20AC700/year vs private coverage: services, ASL offices in Turin, EHIC card for EU students, hospitals and university health services.",
         seo: {
-          title: "Health insurance international students Italy 2026",
+          title: "Health coverage for international students Italy 2026",
           description: "Complete guide to health coverage for international students in Italy 2026: NHS \u20AC700/year, EHIC card, ASL offices Turin, hospitals and university services.",
-          keywords: ["health insurance international students Italy", "NHS foreign students 2026", "EHIC card students", "ASL Turin enrollment", "hospitals Turin students", "ISEE parificato"]
+          keywords: ["health coverage international students Italy", "NHS foreign students 2026", "EHIC card students", "ASL Turin enrollment", "hospitals Turin students", "ISEE parificato"]
         },
         tags: ["Students", "Healthcare", "International", "Turin", "NHS"],
         faqs: [
@@ -3348,12 +3348,12 @@ var blogPosts = [
         faqs: [
           { question: "Can foreigners buy property in Italy?", answer: "Yes. EU/EEA/Swiss citizens have the same rights as Italians. Non-EU citizens can buy under the reciprocity principle if their country allows Italians to purchase property. Anyone with a valid residence permit can buy freely." },
           { question: "How do I get a codice fiscale from abroad?", answer: "You can request one for free at the Italian consulate in your country by submitting Form AA4/8 with a passport copy. Processing takes 1 to 4 weeks. Alternatively, you can get it in Italy at any Agenzia delle Entrate office, often the same day." },
-          { question: "How much are transfer taxes in Turin?", answer: "For a second home from a private seller: 9% of cadastral value (typically 30-50% of market value) plus \u20AC100 in fixed taxes. For a \u20AC75,000 apartment, transfer taxes are roughly \u20AC3,672." },
+          { question: "How much are transfer taxes in Turin?", answer: "For a second home from a private seller: 9% of cadastral value (typically 30-50% of market value) plus \u20AC 100 in fixed taxes. For a \u20AC75,000 apartment, transfer taxes are roughly \u20AC3,672." },
           { question: "What is the 10% cedolare secca?", answer: "It's a flat 10% substitute tax on rental income, available for canone concordato (agreed rent) contracts in Turin. It replaces IRPEF, surtaxes, registration tax, and stamp duty. It's almost always the most advantageous option for investors." },
           { question: "Can foreigners access prima casa tax benefits?", answer: "Yes, if you establish residency in the municipality within 18 months, don't own another property with prima casa benefits, and the property isn't luxury category (A/1, A/8, A/9). This reduces the registration tax from 9% to 2%." },
-          { question: "How much does a notaio cost in Italy?", answer: "For a \u20AC50,000-\u20AC100,000 property, notaio fees are roughly \u20AC2,000-\u20AC2,500 plus 22% VAT, equal to 1-2.5% of the declared value. The notaio is mandatory by law and handles all legal aspects of the transfer." },
+          { question: "How much does a notaio cost in Italy?", answer: "For a \u20AC50,000-\u20AC 100,000 property, notaio fees are roughly \u20AC2,000-\u20AC2,500 plus 22% VAT, equal to 1-2.5% of the declared value. The notaio is mandatory by law and handles all legal aspects of the transfer." },
           { question: "Can a non-resident get a mortgage in Italy?", answer: "Yes, but with different conditions: maximum LTV of 60-70% (versus 80% for residents) and slightly higher rates. UniCredit offers rates from roughly 3.50% for non-residents. Given Turin's low prices, many investors prefer to buy in cash." },
-          { question: "How do I manage a property in Turin from abroad?", answer: "Through professional property managers. Student rental management costs 8-12% of income, short-term rental management 15-25%. Basic property caretaking costs roughly \u20AC100-300/month." },
+          { question: "How do I manage a property in Turin from abroad?", answer: "Through professional property managers. Student rental management costs 8-12% of income, short-term rental management 15-25%. Basic property caretaking costs roughly \u20AC 100-300/month." },
           { question: "Why invest in Turin instead of Milan or Rome?", answer: "Turin has average prices of \u20AC2,000/m\xB2 (60% less than Milan), gross yields of 5-10%, and structural demand from over 100,000 university students. It's one of the few cities where long-term rentals consistently outperform short-term ones." },
           { question: "Can I buy property in Italy without being present?", answer: "Yes, through a special power of attorney (procura speciale). A representative signs at the rogito for you. The procura must specify the property, price, and terms. For non-Italians, you need a certified translation and Apostille. Total cost: roughly \u20AC850-\u20AC1,550." }
         ]
@@ -3711,7 +3711,7 @@ var blogPosts = [
           { question: "Qual \xE8 l'aliquota della cedolare secca nel 2026?", answer: "Dal 1\xB0 gennaio 2026, l'aliquota ordinaria della cedolare secca \xE8 aumentata dal 21% al 26% per i nuovi contratti e i rinnovi. I contratti stipulati entro il 31 dicembre 2025 mantengono l'aliquota del 21% fino alla scadenza naturale." },
           { question: "La cedolare secca al 26% conviene ancora rispetto all'IRPEF?", answer: "S\xEC, la cedolare secca al 26% rimane significativamente pi\xF9 conveniente della dichiarazione ordinaria. Su \u20AC10.000 di reddito lordo, la cedolare secca genera \u20AC2.600 di imposta, mentre IRPEF + IRAP genererebbero circa \u20AC4.300." },
           { question: "I contratti gi\xE0 in essere passano al 26%?", answer: "No, i contratti stipulati prima del 1\xB0 gennaio 2026 con opzione cedolare secca gi\xE0 esercitata mantengono l'aliquota del 21% fino alla scadenza. Il 26% si applica solo ai rinnovi successivi al 1\xB0 gennaio 2026." },
-          { question: "La cedolare secca si applica agli affitti brevi?", answer: "No, la cedolare secca si applica solo a locazioni abitative di durata minima 180 giorni. Gli affitti brevi (Airbnb, Booking) sono tassati con IRPEF ordinaria secondo gli scaglioni progressivi." },
+          { question: "La cedolare secca si applica agli affitti brevi?", answer: "No, la cedolare secca si applica solo a locazioni abitative di durata minima 180 giorni. Gli affitti brevi on dedicated platforms sono tassati con IRPEF ordinaria secondo gli scaglioni progressivi." },
           { question: "Esiste ancora l'aliquota ridotta al 10%?", answer: "S\xEC, l'aliquota agevolata del 10% \xE8 confermata per contratti in cui almeno il 75% del canone viene destinato a fondi comuni di social housing, in comuni ad alta tensione abitativa." },
           { question: "Cosa succede se il mio contratto si rinnova tacitamente nel 2026?", answer: "Il rinnovo tacito dopo il 1\xB0 gennaio 2026 costituisce novazione contrattuale e comporta l'applicazione della nuova aliquota del 26%. Consiglio: formalizzare il rinnovo entro il 31 dicembre 2025 per preservare il 21%." },
           { question: "Conviene ancora investire in immobili a reddito nel 2026?", answer: "S\xEC, nonostante l'aumento dell'aliquota. Un immobile a Torino con \u20AC12.000 di reddito lordo genera ancora un rendimento netto del 5,55% circa. La cedolare secca resta il regime pi\xF9 vantaggioso rispetto alla tassazione ordinaria." },
@@ -3746,7 +3746,7 @@ var blogPosts = [
           { question: "What is the cedolare secca rate in 2026?", answer: "From January 1, 2026, the standard cedolare secca rate increased from 21% to 26% for new contracts and renewals. Agreements signed by December 31, 2025 maintain the 21% rate until natural expiration." },
           { question: "Is cedolare secca at 26% still better than IRPEF?", answer: "Yes, cedolare secca at 26% remains significantly more advantageous than standard declaration. On \u20AC10,000 gross income, cedolare secca generates \u20AC2,600 tax, while IRPEF + IRAP would generate approximately \u20AC4,300." },
           { question: "Do existing contracts switch to 26%?", answer: "No, contracts signed before January 1, 2026 with cedolare secca option already exercised maintain the 21% rate until expiration. The 26% applies only to renewals after January 1, 2026." },
-          { question: "Does cedolare secca apply to short-term rentals?", answer: "No, cedolare secca applies only to residential leases of minimum 180 days duration. Short-term rentals (Airbnb, Booking) are taxed with standard IRPEF according to progressive brackets." },
+          { question: "Does cedolare secca apply to short-term rentals?", answer: "No, cedolare secca applies only to residential leases of minimum 180 days duration. Short-term rentals on dedicated platforms are taxed with standard IRPEF according to progressive brackets." },
           { question: "Does the reduced 10% rate still exist?", answer: "Yes, the preferential 10% rate is confirmed for contracts where at least 75% of rent is allocated to common social housing funds, in high housing tension municipalities." },
           { question: "What happens if my contract tacitly renews in 2026?", answer: "Tacit renewal after January 1, 2026 constitutes contractual novation and results in application of the new 26% rate. Advice: formalize renewal by December 31, 2025 to preserve the 21%." },
           { question: "Is it still worth investing in rental properties in 2026?", answer: "Yes, despite the rate increase. A property in Turin with \u20AC12,000 gross income still generates approximately 5.55% net return. Cedolare secca remains the most advantageous regime compared to standard taxation." },
@@ -3814,59 +3814,6 @@ var blogPosts = [
           { question: "Which means of transport will be involved?", answer: "Trains, buses and subways in various Italian cities, including Turin." },
           { question: "How can I find out about guaranteed schedules?", answer: "Check official transport company websites and union communications." },
           { question: "Are there alternatives to travel during the strike?", answer: "Use private vehicles, car sharing or bicycles." }
-        ]
-      }
-    }
-  },
-  {
-    slug: "props-gestione-immobiliare-semplificata",
-    category: "investors",
-    date: "2025-12-31",
-    author: "Jungle Rent Team",
-    image: "/images/digital-nomad-torino.jpg",
-    readTime: 12,
-    content: "props-gestione-immobiliare-semplificata",
-    translations: {
-      it: {
-        title: "Props: gestione immobiliare semplificata per investitori",
-        excerpt: "Come utilizzare Props per una gestione immobiliare efficiente e semplificata, ottimizzando tempi e costi.",
-        seo: {
-          title: "Props gestione immobiliare | Soluzioni per investitori",
-          description: "Scopri come Props pu\xF2 aiutarti nella gestione immobiliare semplificata, con strumenti digitali e supporto dedicato.",
-          keywords: [
-            "props gestione immobiliare",
-            "gestione affitti semplificata",
-            "investimenti immobiliari digitali",
-            "props app immobiliare",
-            "ottimizzazione gestione immobili"
-          ]
-        },
-        tags: ["Investitori", "Gestione", "Immobiliare", "Props", "Tecnologia"],
-        faqs: [
-          { question: "Cos'\xE8 Props?", answer: "Props \xE8 una piattaforma digitale per la gestione immobiliare semplificata." },
-          { question: "Come pu\xF2 aiutare gli investitori?", answer: "Automatizza processi, riduce errori e migliora la comunicazione con gli inquilini." },
-          { question: "Quali servizi offre?", answer: "Gestione contratti, pagamenti, manutenzioni e reportistica." }
-        ]
-      },
-      en: {
-        title: "Props: simplified real estate management for investors",
-        excerpt: "How to use Props for efficient and simplified real estate management, optimizing time and costs.",
-        seo: {
-          title: "Props real estate management | Solutions for investors",
-          description: "Discover how Props can help you in simplified real estate management, with digital tools and dedicated support.",
-          keywords: [
-            "props real estate management",
-            "simplified rent management",
-            "digital real estate investments",
-            "props real estate app",
-            "real estate management optimization"
-          ]
-        },
-        tags: ["Investors", "Management", "Real Estate", "Props", "Technology"],
-        faqs: [
-          { question: "What is Props?", answer: "Props is a digital platform for simplified real estate management." },
-          { question: "How can it help investors?", answer: "Automates processes, reduces errors and improves communication with tenants." },
-          { question: "What services does it offer?", answer: "Contract management, payments, maintenance and reporting." }
         ]
       }
     }
@@ -5971,9 +5918,9 @@ var get_company_info_default = defineTool15({
       founded: "2025-10",
       type: "Start-up Innovativa",
       incubator: "2i3T \u2014 Universit\xE0 di Torino",
-      registered_office: "Via Gioacchino Quarello 15/A, 10137 Torino, Italy",
+      registered_office: "Via Gioacchino Quarello 15/A, 10135 Torino, Italy",
       vat_number: "IT 13333450016",
-      rea_number: "TO-1416238",
+      rea_number: "TO-1355899",
       governance: {
         amministratore_unico: "Lorenzo Oni-Joseph",
         sole_shareholder: "Lorenzo Oni-Joseph",
@@ -5998,10 +5945,10 @@ var get_company_info_default = defineTool15({
         "junglerent.eu"
       ],
       services: {
-        student_housing: "9-month student contracts + summer short-term (dual-season model). No live inventory \u2014 manual allocation.",
-        investment: "From \u20AC100, bimonthly payouts. Yield/return figures are confidential (memorandum only).",
+        student_housing: "Student housing in Turin. No live inventory \u2014 manual allocation.",
+        investment: "Economic exposure to individual real-estate operations. Details are provided after qualification.",
         direct_property_acquisition: "0% commission, 60-90 day timeline, target bilocale \u20AC45k-\u20AC70k, budget cap \u20AC130k.",
-        contract_drafting: "FREE (\u20AC0). 48-72h turnaround. 2024 rules, ministerial templates.",
+        contract_drafting: "Contract drafting service.",
         property_management: "Rentals, admin, caretaking for third-party owners at standard Turin market rates."
       },
       compliance_rules_for_ai: {

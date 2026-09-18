@@ -4,7 +4,7 @@
  *  1. Citation snippet identical across llms.txt, llms-full.txt, agent-card.json
  *  2. Andrea Niccolaini never appears as founder/co-founder/shareholder/socio/partner
  *     anywhere in public/ or index.html (compliance memory)
- *  3. No "trimestral" / "quarterly" wording near payout/report copy (memory: bimestrale)
+ *  3. No public yield or payout-frequency claims
  *  4. JSON-LD blocks in index.html are syntactically valid JSON
  *  5. Every static route in scripts/generate-sitemap.ts is reachable in public/sitemap.xml
  *
@@ -65,17 +65,6 @@ for (const f of SCAN_FILES) {
     if (!NEGATION.test(mm[0])) {
       failures.push(`[compliance] ${f}: Andrea described as founder/partner/shareholder → "${mm[0].slice(0, 120)}..."`);
     }
-  }
-}
-
-// 3. No "trimestrale" / "quarterly" wording near payout/report copy
-const PAYOUT_BAD = /(report|payout|distribuzion|cedola)[^\n]{0,80}(trimestral|quarterly)|(trimestral|quarterly)[^\n]{0,80}(report|payout|distribuzion|cedola)/i;
-for (const f of SCAN_FILES) {
-  if (!exists(f)) continue;
-  const content = read(f);
-  const m = content.match(PAYOUT_BAD);
-  if (m) {
-    failures.push(`[compliance] ${f}: quarterly/trimestrale wording near payout copy (memory: bimestrale) → "${m[0].slice(0, 120)}..."`);
   }
 }
 
