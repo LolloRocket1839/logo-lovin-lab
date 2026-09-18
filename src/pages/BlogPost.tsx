@@ -8,7 +8,6 @@ import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { ShareButton } from "@/components/blog/ShareButton";
 import { BlogContent } from "@/components/blog/BlogContent";
 import { BlogEndCTA } from "@/components/blog/BlogEndCTA";
-import { BlogLanguageToggle } from "@/components/blog/BlogLanguageToggle";
 import { Badge } from "@/components/ui/badge";
 import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { useAutoBlogPost, autoBlogPostToBlogPost } from "@/hooks/useAutoBlogPosts";
@@ -110,7 +109,6 @@ const BlogPost = () => {
             excerpt={translatedData.excerpt}
             url={typeof window !== "undefined" ? window.location.href : canonicalUrl}
           />
-          <BlogLanguageToggle currentLang={currentLang} onToggle={setLangOverride} />
         </div>
 
         <img

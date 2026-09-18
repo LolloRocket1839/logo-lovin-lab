@@ -123,7 +123,7 @@ Il **14 gennaio** si festeggia il Capodanno russo-ortodosso.
 
 Lo **sciopero nazionale dei taxi** del 13 gennaio coinvolge **tutta Italia eccetto l'Umbria**. Durata: 24 ore (00:00-24:00). **Uri e itTaxi NON aderiscono**. Alternative: Uber, FreeNow, car sharing (Enjoy, SHARE NOW).
 
-> 📱 **[Directory Emergenza Scioperi →](/scioperi-italia)**
+> 📱 **[Directory Emergenza Scioperi →](/studenti)**
 > Contatti, alternative e procedure rimborso
 
 ### Altri scioperi gennaio 2026
@@ -137,7 +137,7 @@ Lo **sciopero nazionale dei taxi** del 13 gennaio coinvolge **tutta Italia eccet
 
 Gennaio 2026 offre Luci d'Artista, grandi mostre internazionali, concerti sold-out e spettacoli teatrali. L'arrivo della Fiamma Olimpica, i saldi e gli eventi sportivi rendono questo mese ideale per visitare Torino. Temperature invernali che invitano a rifugiarsi nei teatri, nelle sale espositive e nei caffè storici.
 
-**Attenzione**: verificare sempre il [calendario scioperi](/scioperi-italia) prima di spostarsi.
+**Attenzione**: verificare sempre il [calendario scioperi](/studenti) prima di spostarsi.
 
 ---
 

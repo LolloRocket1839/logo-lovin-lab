@@ -139,7 +139,7 @@ Per chi investe, valutare il **raggio di camminabilità** di un immobile dovrebb
 
 Un appartamento che rientra genuinamente nel raggio di 7 minuti dai servizi essenziali tende a performare meglio di uno simile in una zona dipendente dall'auto, anche all'interno dello stesso comune.
 
-> 💰 **Strumento utile:** [Valutatore immobiliare Torino](/valutazione-immobile) — Calcola il valore del tuo immobile in base a zona e caratteristiche
+> 💰 **Strumento utile:** [Valutatore immobiliare Torino](/vendi) — Calcola il valore del tuo immobile in base a zona e caratteristiche
 
 ### Differenziazione tra quartieri
 
@@ -206,6 +206,6 @@ La sfida ora è **riconoscere, comunicare e migliorare con cura** questo vantagg
 | Risorsa | Descrizione |
 |---------|-------------|
 | [Investitori Jungle Rent](/investitori) | Investimenti immobiliari a Torino da €100 |
-| [Valutatore immobiliare](/valutazione-immobile) | Calcola il valore del tuo immobile gratis |
+| [Valutatore immobiliare](/vendi) | Calcola il valore del tuo immobile gratis |
 | [Directory aule studio](/strumenti/aule-studio-torino) | 30+ spazi studio con mappa interattiva |
 | [Dove mangiare cheap](/strumenti/dove-mangiare-torino) | Ristoranti economici per studenti €3-15 |

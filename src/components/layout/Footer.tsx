@@ -63,12 +63,12 @@ export const Footer = () => {
             </h2>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link to={isEnglish ? "/sell" : "/vendi"} className="hover:text-primary">
+                <Link to={isEnglish ? "/en/vendi" : "/vendi"} className="hover:text-primary">
                   {t("footer.sellProperty")}
                 </Link>
               </li>
               <li>
-                <Link to={isEnglish ? "/investors" : "/investitori"} className="hover:text-primary">
+                <Link to={isEnglish ? "/en/investitori" : "/investitori"} className="hover:text-primary">
                   {t("nav.investors")}
                 </Link>
               </li>
@@ -78,7 +78,7 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={isEnglish ? "/about" : "/chi-siamo"} className="hover:text-primary">
+                <Link to={isEnglish ? "/en/chi-siamo" : "/chi-siamo"} className="hover:text-primary">
                   {isEnglish ? "About" : "Chi siamo"}
                 </Link>
               </li>

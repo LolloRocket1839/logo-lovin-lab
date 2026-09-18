@@ -314,12 +314,6 @@ const About = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
-                to={currentLang === 'it' ? '/valutazione-immobile' : '/property-valuation'}
-                className="text-sm text-primary hover:underline"
-              >
-                {currentLang === 'it' ? 'Valutazione immobiliare gratuita →' : 'Free property valuation →'}
-              </Link>
-              <Link 
                 to={currentLang === 'it' ? '/strumenti/dove-mangiare-torino' : '/tools/cheap-eats-turin'}
                 className="text-sm text-primary hover:underline"
               >

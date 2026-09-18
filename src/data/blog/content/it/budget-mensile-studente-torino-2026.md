@@ -161,7 +161,7 @@ Detrazione IRPEF fino a €991,60/anno (o 20% del canone, max €2.000) per i pr
 - [Conto corrente per studenti stranieri in Italia](/blog/conto-corrente-studenti-stranieri-italia-2026)
 - [Dove mangiare economico a Torino](/blog/dove-mangiare-torino-studenti)
 - [Dove vivere a Torino: guida studenti Politecnico](/blog/dove-vivere-torino-studenti-politecnico)
-- [Calcolatore budget studenti](/studenti/strumenti/budget)
+- [Calcolatore budget studenti](/studenti)
 
 ## Fonti {#fonti}
 

@@ -32,7 +32,7 @@
 > 
 > Tutti i contatti, app e alternative in un'unica pagina interattiva con calendario scioperi aggiornato, procedure rimborso step-by-step e checklist viaggio.
 > 
-> **[→ Apri Directory Emergenza Scioperi](/scioperi-italia)**
+> **[→ Apri Directory Emergenza Scioperi](/studenti)**
 
 ---
 

@@ -28,30 +28,6 @@ export const autoLinkConfig = {
 const staticLinkableContent: LinkableContent[] = [
   // Student Tools
   {
-    url: '/studenti/strumenti/budget',
-    titleIt: 'Calcolatore budget studenti',
-    titleEn: 'Student budget calculator',
-    type: 'tool',
-    triggerKeywords: ['budget', 'spese mensili', 'costo vita', 'monthly expenses', 'cost of living', 'quanto costa vivere'],
-    priority: 10
-  },
-  {
-    url: '/studenti/strumenti/voti',
-    titleIt: 'Calcolatore media voti',
-    titleEn: 'Grade calculator',
-    type: 'tool',
-    triggerKeywords: ['media voti', 'calcolo media', 'grade average', 'gpa', 'voto laurea'],
-    priority: 10
-  },
-  {
-    url: '/studenti/strumenti/sessione',
-    titleIt: 'Pianificatore sessione esami',
-    titleEn: 'Exam session planner',
-    type: 'tool',
-    triggerKeywords: ['sessione esami', 'pianificare esami', 'exam session', 'study plan'],
-    priority: 10
-  },
-  {
     url: '/strumenti/aule-studio-torino',
     titleIt: 'Aule studio Torino',
     titleEn: 'Study spaces Turin',
@@ -60,7 +36,7 @@ const staticLinkableContent: LinkableContent[] = [
     priority: 10
   },
   {
-    url: '/strumenti/palestre-torino',
+    url: '/strumenti/palestre-torino-studenti',
     titleIt: 'Palestre Torino studenti',
     titleEn: 'Gyms Turin students',
     type: 'tool',
@@ -76,30 +52,14 @@ const staticLinkableContent: LinkableContent[] = [
     priority: 8
   },
   {
-    url: '/strumenti/servizi-studenti-torino',
+    url: '/strumenti/sportelli-studenti-torino',
     titleIt: 'Servizi studenti Torino',
     titleEn: 'Student services Turin',
     type: 'tool',
     triggerKeywords: ['servizi studenti', 'student services', 'edisu', 'borsa di studio'],
     priority: 8
   },
-  {
-    url: '/strumenti/scioperi-trasporti',
-    titleIt: 'Scioperi trasporti Italia',
-    titleEn: 'Transport strikes Italy',
-    type: 'tool',
-    triggerKeywords: ['sciopero', 'scioperi', 'strike', 'trasporti pubblici'],
-    priority: 7
-  },
   // Key Pages
-  {
-    url: '/valutazione-immobile',
-    titleIt: 'Valutazione immobiliare gratuita',
-    titleEn: 'Free property valuation',
-    type: 'page',
-    triggerKeywords: ['valutazione immobiliare', 'stima casa', 'property valuation', 'quanto vale casa'],
-    priority: 9
-  },
   {
     url: '/investitori',
     titleIt: 'Investimenti immobiliari Torino',
@@ -107,14 +67,6 @@ const staticLinkableContent: LinkableContent[] = [
     type: 'page',
     triggerKeywords: ['investimento immobiliare', 'rendimento affitto', 'real estate investment', 'rental yield', 'invest-to-rent', 'invest to rent', 'singola operazione immobiliare', 'serie dedicata'],
     priority: 9
-  },
-  {
-    url: '/investire-immobiliare-torino',
-    titleIt: 'Investire nell\'immobiliare a Torino',
-    titleEn: 'Investing in property in Turin',
-    type: 'page',
-    triggerKeywords: ['investire nell\'immobiliare a torino', 'investire a torino', 'modello dual-season', 'dual-season model', 'investing in property in turin'],
-    priority: 8
   },
   {
     url: '/vendi',
@@ -140,154 +92,8 @@ const staticLinkableContent: LinkableContent[] = [
     triggerKeywords: ['jungle rent', 'chi siamo', 'about us'],
     priority: 5
   },
-  // Zone investitori — Nizza Millefonti / Ospedali (high priority for area-specific anchors)
-  {
-    url: '/zone/nizza-millefonti-ospedali',
-    titleIt: 'Investire a Nizza Millefonti e zona Ospedali',
-    titleEn: 'Invest in Nizza Millefonti and Hospitals area',
-    type: 'page',
-    triggerKeywords: [
-      'nizza millefonti',
-      'zona ospedali torino',
-      'molinette',
-      'ospedale molinette',
-      'cto torino',
-      'sant\'anna torino',
-      'regina margherita torino',
-      'investire nizza millefonti',
-      'investire zona ospedali',
-      'nizza millefonti hospitals',
-      'molinette area',
-      'turin hospitals area'
-    ],
-    priority: 11
-  },
-  // Vendi casa — Lingotto / Nizza Millefonti (area-specific seller landing)
-  {
-    url: '/vendi-casa/lingotto-nizza-millefonti',
-    titleIt: 'Vendi casa a Lingotto e Nizza Millefonti',
-    titleEn: 'Sell your home in Lingotto and Nizza Millefonti',
-    type: 'page',
-    triggerKeywords: [
-      'vendere casa lingotto',
-      'vendere casa nizza millefonti',
-      'vendere appartamento lingotto',
-      'vendere appartamento nizza millefonti',
-      'vendita immobile lingotto',
-      'vendere a lingotto',
-      'sell home lingotto',
-      'sell apartment nizza millefonti',
-      'lingotto seller',
-      'quanto vale casa lingotto',
-      'stima casa lingotto'
-    ],
-    priority: 11
-  },
-  // Landing SEO — vendere senza agenzia
-  {
-    url: '/vendere-casa-senza-agenzia-torino',
-    titleIt: 'Vendere casa senza agenzia a Torino',
-    titleEn: 'Sell home without agency in Turin',
-    type: 'page',
-    triggerKeywords: [
-      'vendere casa senza agenzia',
-      'vendere senza agenzia',
-      'senza agenzia torino',
-      'zero commissioni agenzia',
-      'vendere casa privatamente torino',
-      'sell home without agency',
-      'no agency fees turin'
-    ],
-    priority: 11
-  },
-  // Landing SEO — vendere velocemente
-  {
-    url: '/vendere-casa-velocemente-torino',
-    titleIt: 'Vendere casa velocemente a Torino',
-    titleEn: 'Sell home fast in Turin',
-    type: 'page',
-    triggerKeywords: [
-      'vendere casa velocemente',
-      'vendere casa rapidamente',
-      'vendere casa in fretta',
-      'vendita rapida torino',
-      'sell home fast',
-      'quick home sale turin'
-    ],
-    priority: 11
-  },
-  // Landing SEO — comprare casa già affittata
-  {
-    url: '/comprare-casa-affittata-torino',
-    titleIt: 'Comprare casa già affittata a Torino',
-    titleEn: 'Buy a tenanted property in Turin',
-    type: 'page',
-    triggerKeywords: [
-      'comprare casa affittata',
-      'casa già affittata',
-      'immobile a reddito',
-      'income property torino',
-      'comprare immobile con inquilino',
-      'appartamento affittato in vendita',
-      'tenanted property turin',
-      'buy to let turin'
-    ],
-    priority: 11
-  },
-  // Landing SEO — investire nell'immobiliare a Torino
-  {
-    url: '/investire-immobiliare-torino',
-    titleIt: 'Investire nell\'immobiliare a Torino',
-    titleEn: 'Real estate investment in Turin',
-    type: 'page',
-    triggerKeywords: [
-      'investire nell\'immobiliare torino',
-      'investire immobiliare torino',
-      'investimenti immobiliari torino',
-      'real estate investment turin',
-      'investire a torino',
-      'operazioni immobiliari torino'
-    ],
-    priority: 11
-  },
-  // Landing tenant — affitti Lingotto / Nizza Millefonti / Ospedali
-  {
-    url: '/affitti-lingotto-ospedali-torino',
-    titleIt: 'Cerca casa in zona Lingotto e Ospedali',
-    titleEn: 'Find housing near Lingotto & Hospitals',
-    type: 'page',
-    triggerKeywords: [
-      'affitti lingotto',
-      'affitto lingotto torino',
-      'casa lingotto torino',
-      'stanza nizza millefonti',
-      'affitto nizza millefonti',
-      'casa vicino molinette',
-      'affitto vicino molinette',
-      'affitto vicino ospedale',
-      'casa vicino ospedale torino',
-      'stanza vicino molinette',
-      'cerco casa lingotto',
-      'cerco stanza lingotto',
-      'affitto cto torino',
-      'casa cto torino',
-      'alloggio specializzandi',
-      'casa specializzandi torino',
-      'affitto specializzandi torino',
-      'vivere vicino molinette',
-      'affitto politecnico lingotto',
-      'stanza politecnico lingotto',
-      'affitto sant\'anna torino',
-      'affitto regina margherita torino',
-      'rent near molinette',
-      'rooms near hospitals turin',
-      'rent lingotto turin',
-      'housing medical residents turin',
-      'housing molinette'
-    ],
-    priority: 11
-  }
 ];
+
 
 // Enhanced keywords for high-value blog posts
 const enhancedBlogKeywords: Record<string, string[]> = {

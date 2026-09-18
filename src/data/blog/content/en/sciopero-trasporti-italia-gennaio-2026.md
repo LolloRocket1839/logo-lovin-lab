@@ -32,7 +32,7 @@
 > 
 > All contacts, apps for all alternatives on a single interactive page with updated strike calendar, step-by-step refund procedures and travel checklist.
 > 
-> **[→ Open Strike Emergency Directory](/italy-strikes)**
+> **[→ Open Strike Emergency Directory](/en/studenti)**
 
 ---
 

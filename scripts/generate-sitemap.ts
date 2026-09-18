@@ -33,45 +33,29 @@ type RouteEntry = {
   priority?: string;
 };
 
+const enPath = (it: string) => (it === "/" ? "/en" : `/en${it}`);
+
 const STATIC_ROUTES: RouteEntry[] = [
   { it: "/", changefreq: "weekly", priority: "1.0" },
-  { it: "/chi-siamo", en: "/about", changefreq: "monthly", priority: "0.7" },
-  { it: "/investitori", en: "/investors", changefreq: "weekly", priority: "0.9" },
-  { it: "/investitori/zone", en: "/investors/zones", changefreq: "weekly", priority: "0.85" },
-  { it: "/vendi", en: "/sell", changefreq: "weekly", priority: "0.9" },
-  // /proprietari → redirects to /vendi (excluded from sitemap)
-  { it: "/valutazione-immobile", en: "/property-valuation", changefreq: "monthly", priority: "0.85" },
-  { it: "/contratti-locazione", en: "/rental-contracts", changefreq: "monthly", priority: "0.8" },
-  { it: "/studenti", en: "/students", changefreq: "weekly", priority: "0.8" },
-  { it: "/affitto-stanza-torino", en: "/rooms-rent-turin", changefreq: "weekly", priority: "0.8" },
-  { it: "/blog", en: "/en/blog", changefreq: "daily", priority: "0.8" },
-  { it: "/faq", en: "/en/faq", changefreq: "monthly", priority: "0.6" },
-  { it: "/scioperi-italia", en: "/italy-strikes", changefreq: "daily", priority: "0.5" },
-  // /invest → redirects to /investitori (excluded from sitemap)
-  { it: "/sell-home/lingotto-nizza-millefonti", changefreq: "monthly", priority: "0.7" },
-  { it: "/vendi-casa/lingotto-nizza-millefonti", changefreq: "monthly", priority: "0.7" },
-  { it: "/zone/nizza-millefonti-ospedali", en: "/zones/nizza-millefonti-hospitals", changefreq: "monthly", priority: "0.7" },
-  { it: "/vendere-casa-senza-agenzia-torino", en: "/sell-without-agency-turin", changefreq: "monthly", priority: "0.85" },
-  { it: "/vendere-casa-velocemente-torino", en: "/sell-house-fast-turin", changefreq: "monthly", priority: "0.8" },
-  { it: "/comprare-casa-affittata-torino", en: "/buy-rented-property-turin", changefreq: "monthly", priority: "0.8" },
-  { it: "/investire-immobiliare-torino", en: "/property-investment-turin", changefreq: "monthly", priority: "0.85" },
-  { it: "/affitti-lingotto-ospedali-torino", en: "/rent-lingotto-hospitals-turin", changefreq: "weekly", priority: "0.85" },
-  { it: "/termini-e-condizioni", en: "/terms", changefreq: "yearly", priority: "0.2" },
-  { it: "/privacy", en: "/en/privacy", changefreq: "yearly", priority: "0.2" },
-  { it: "/fair-rent-pledge", en: "/en/fair-rent-pledge", changefreq: "monthly", priority: "0.6" },
-];
+  { it: "/chi-siamo", changefreq: "monthly", priority: "0.7" },
+  { it: "/investitori", changefreq: "weekly", priority: "0.9" },
+  { it: "/investitori/zone", changefreq: "weekly", priority: "0.85" },
+  { it: "/vendi", changefreq: "weekly", priority: "0.9" },
+  { it: "/contratti-locazione", changefreq: "monthly", priority: "0.8" },
+  { it: "/studenti", changefreq: "weekly", priority: "0.8" },
+  { it: "/affitto-stanza-torino", changefreq: "weekly", priority: "0.8" },
+  { it: "/blog", changefreq: "daily", priority: "0.8" },
+  { it: "/termini-e-condizioni", changefreq: "yearly", priority: "0.2" },
+  { it: "/privacy", changefreq: "yearly", priority: "0.2" },
+  { it: "/fair-rent-pledge", changefreq: "monthly", priority: "0.6" },
+].map((r) => ({ ...r, en: enPath(r.it) })) as RouteEntry[];
 
 const TOOLS_ROUTES: RouteEntry[] = [
-  { it: "/studenti/strumenti", en: "/students/tools", changefreq: "monthly", priority: "0.7" },
-  { it: "/studenti/strumenti/budget", en: "/students/tools/budget", changefreq: "monthly", priority: "0.65" },
-  { it: "/studenti/strumenti/media", en: "/students/tools/gpa", changefreq: "monthly", priority: "0.65" },
-  { it: "/studenti/strumenti/sessione", en: "/students/tools/session", changefreq: "monthly", priority: "0.65" },
-  { it: "/strumenti/aule-studio-torino", en: "/tools/study-spaces-turin", changefreq: "monthly", priority: "0.7" },
-  { it: "/strumenti/dove-mangiare-torino", en: "/tools/cheap-eats-turin", changefreq: "monthly", priority: "0.7" },
-  { it: "/strumenti/palestre-torino-studenti", en: "/tools/gyms-turin-students", changefreq: "monthly", priority: "0.65" },
-  // /strumenti/servizi-studenti-torino → redirects to /strumenti/sportelli-studenti-torino (excluded)
-  { it: "/strumenti/sportelli-studenti-torino", en: "/tools/student-services-turin", changefreq: "monthly", priority: "0.65" },
-];
+  { it: "/strumenti/aule-studio-torino", changefreq: "monthly", priority: "0.7" },
+  { it: "/strumenti/dove-mangiare-torino", changefreq: "monthly", priority: "0.7" },
+  { it: "/strumenti/palestre-torino-studenti", changefreq: "monthly", priority: "0.65" },
+  { it: "/strumenti/sportelli-studenti-torino", changefreq: "monthly", priority: "0.65" },
+].map((r) => ({ ...r, en: enPath(r.it) })) as RouteEntry[];
 
 // Routes intentionally excluded from sitemap (admin, auth, debug, conversion-only):
 //   /admin/*, /auth, /accedi, /grazie, /thank-you, /unsubscribe,
@@ -183,7 +167,7 @@ function generateMainSitemap(zoneSlugs: string[], neighborhoodSlugs: string[]): 
   for (const slug of zoneSlugs) {
     allRoutes.push({
       it: `/investitori/zone/${slug}`,
-      en: `/investors/zones/${slug}`,
+      en: `/en/investitori/zone/${slug}`,
       changefreq: "monthly",
       priority: "0.75",
     });
@@ -193,7 +177,7 @@ function generateMainSitemap(zoneSlugs: string[], neighborhoodSlugs: string[]): 
   for (const slug of neighborhoodSlugs) {
     allRoutes.push({
       it: `/affitto-stanza-torino/${slug}`,
-      en: `/rooms-rent-turin/${slug}`,
+      en: `/en/affitto-stanza-torino/${slug}`,
       changefreq: "monthly",
       priority: "0.75",
     });

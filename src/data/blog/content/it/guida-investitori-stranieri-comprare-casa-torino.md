@@ -173,7 +173,7 @@ Scenario: investitore straniero non residente che compra un appartamento in rive
 
 Se hai diritto alla *prima casa*: le imposte di trasferimento scendono di circa 2.572 €.
 
-Per una [valutazione immobiliare gratuita](/valutazione-immobile), usa il nostro strumento online.
+Per una [valutazione immobiliare gratuita](/vendi), usa il nostro strumento online.
 
 ### Costi annuali di mantenimento (senza affitto)
 

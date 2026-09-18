@@ -3,22 +3,10 @@ import { initReactI18next } from 'react-i18next';
 
 import investorEN from './locales/investor/en.json';
 import investorIT from './locales/investor/it.json';
-import investorDE from './locales/investor/de.json';
-import investorES from './locales/investor/es.json';
-import investorFR from './locales/investor/fr.json';
-import investorPT from './locales/investor/pt.json';
-import investorZH from './locales/investor/zh.json';
-import investorSV from './locales/investor/sv.json';
 
 const resources = {
   en: { translation: investorEN },
   it: { translation: investorIT },
-  de: { translation: investorDE },
-  es: { translation: investorES },
-  fr: { translation: investorFR },
-  pt: { translation: investorPT },
-  zh: { translation: investorZH },
-  sv: { translation: investorSV },
 };
 
 // Create a separate i18n instance for the investor form

@@ -134,7 +134,7 @@ Moltiplica il prezzo base OMI per i coefficienti di:
 
 ### Passo 4: Usa strumenti di stima online
 
-Per una stima rapida e gratuita, puoi usare il nostro **[Calcolatore di Valutazione Immobiliare](/valutazione-immobile)** che:
+Per una stima rapida e gratuita, puoi usare il nostro **[Calcolatore di Valutazione Immobiliare](/vendi)** che:
 
 - Include dati OMI aggiornati a novembre 2025
 - Copre 35+ zone di Torino
@@ -188,7 +188,7 @@ Questo rende Torino particolarmente interessante per:
 
 Una valutazione immobiliare accurata è il primo passo per vendere bene o investire consapevolmente a Torino. Usa i dati OMI come punto di partenza, applica i coefficienti correttivi, e per situazioni importanti affidati a un professionista.
 
-Se stai pensando di vendere il tuo immobile a Torino, [prova il nostro calcolatore gratuito](/valutazione-immobile) per ottenere una stima immediata, oppure [contattaci](/vendi) per una valutazione personalizzata senza impegno.
+Se stai pensando di vendere il tuo immobile a Torino, [prova il nostro calcolatore gratuito](/vendi) per ottenere una stima immediata, oppure [contattaci](/vendi) per una valutazione personalizzata senza impegno.
 
 ---
 

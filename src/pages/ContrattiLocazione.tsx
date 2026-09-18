@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { ContractRequestDialog } from "@/components/dialogs";
-import { ContractsFAQ } from "@/components/contracts/ContractsFAQ";
 
 const ContrattiLocazione = () => {
   const { i18n } = useTranslation();
@@ -12,11 +11,11 @@ const ContrattiLocazione = () => {
   const isItalian = lang === "it";
 
   const pageTitle = isItalian
-    ? "Contratti di locazione su misura | Jungle Rent"
-    : "Custom lease agreements | Jungle Rent";
+    ? "Contratti di locazione | Jungle Rent"
+    : "Lease agreements | Jungle Rent";
   const pageDesc = isItalian
-    ? "Contratti di locazione redatti su misura e conformi alla normativa italiana, pronti per la registrazione."
-    : "Tailor-made lease agreements compliant with Italian law, ready for registration.";
+    ? "Contratti di locazione conformi alla normativa italiana, pronti per la registrazione."
+    : "Lease agreements compliant with Italian law, ready for registration.";
 
   return (
     <main role="main">
@@ -35,7 +34,7 @@ const ContrattiLocazione = () => {
 
       <section className="container mx-auto max-w-[720px] px-4 py-16 md:py-24">
         <h1 className="font-display text-3xl font-bold leading-tight text-foreground md:text-4xl">
-          {isItalian ? "Contratti di locazione su misura" : "Tailor-made lease agreements"}
+          {isItalian ? "Contratti di locazione" : "Lease agreements"}
         </h1>
 
         <p className="mt-6 text-base leading-relaxed text-muted-foreground">
@@ -53,15 +52,6 @@ const ContrattiLocazione = () => {
         <Button className="mt-8" onClick={() => setDialogOpen(true)}>
           {isItalian ? "Scrivi a Lorenzo" : "Write to Lorenzo"}
         </Button>
-      </section>
-
-      <section className="container mx-auto max-w-[720px] px-4 pb-16 md:pb-24">
-        <h2 className="font-display text-2xl font-bold text-foreground">
-          {isItalian ? "Domande frequenti" : "Frequently asked questions"}
-        </h2>
-        <div className="mt-6">
-          <ContractsFAQ lang={lang} />
-        </div>
       </section>
 
       <ContractRequestDialog open={dialogOpen} onOpenChange={setDialogOpen} selectedPlan="" />
