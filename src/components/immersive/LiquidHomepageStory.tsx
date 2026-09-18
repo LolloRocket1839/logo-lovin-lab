@@ -111,13 +111,12 @@ export const LiquidHomepageStory = () => {
             <h2 className="mt-8 font-display font-bold tracking-tighter text-foreground leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
               {isItalian ? (
                 <>
-                  Investi da <span className="italic text-primary">€100</span>.<br />
+                  Investi in una singola operazione immobiliare.<br />
                   Payout ogni 2 mesi.
                 </>
               ) : (
                 <>
-                  Invest from <span className="italic text-primary">€100</span>.<br />
-                  Payouts every 2 months.
+                  Invest in a single real estate operation.
                 </>
               )}
             </h2>

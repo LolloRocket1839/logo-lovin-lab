@@ -238,7 +238,7 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="100-500">€100 - €500</SelectItem>
+                          <SelectItem value="100-500">&lt; €500</SelectItem>
                           <SelectItem value="500-2k">€500 - €2.000</SelectItem>
                           <SelectItem value="2k-10k">€2.000 - €10.000</SelectItem>
                           <SelectItem value="10k-50k">€10.000 - €50.000</SelectItem>

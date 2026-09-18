@@ -210,7 +210,7 @@ export const ImmersiveHero = () => {
                           Ticket minimo
                         </p>
                         <p className="metric-mono text-5xl md:text-6xl text-primary-foreground font-light">
-                          €100
+                          Operazione immobiliare
                         </p>
                       </div>
                       <div className="border-b border-primary-foreground/15 pb-6">

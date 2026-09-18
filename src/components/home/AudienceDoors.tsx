@@ -17,10 +17,10 @@ export const AudienceDoors = () => {
     {
       index: "I",
       eyebrow: isItalian ? "Investitori" : "Investors",
-      title: isItalian ? "Reddito a Torino da 100€" : "Income in Turin from €100",
+      title: isItalian ? "Reddito immobiliare a Torino" : "Real estate income in Turin",
       blurb: isItalian
         ? "Esposizione alla singola operazione immobiliare. Payout ogni 2 mesi."
-        : "Exposure to a single real estate operation. Payouts every 2 months.",
+        : "Exposure to a single real estate operation.",
       cta: isItalian ? "Parla con Lorenzo" : "Talk to Lorenzo",
       to: isItalian ? "/investitori" : "/investors",
       onClickTrack: () => trackClick("audience_door_invest"),
