@@ -1,7 +1,6 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { hasEnPrefix, stripEnPrefix } from "@/constants/routeAliases";
-import { AnimatePresence } from "framer-motion";
 import { PageTransition } from "./PageTransition";
 import { LoadingSpinner } from "./LoadingSpinner";
 import { RootLayout } from "@/components/layout/RootLayout";
@@ -56,7 +55,6 @@ export const AnimatedRoutes = () => {
     : location;
 
   return (
-    <AnimatePresence mode="wait">
       <PageTransition key={location.pathname}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes location={routedLocation}>
@@ -138,6 +136,5 @@ export const AnimatedRoutes = () => {
           </Routes>
         </Suspense>
       </PageTransition>
-    </AnimatePresence>
   );
 };

@@ -62,7 +62,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { motion, AnimatePresence } from "framer-motion";
 import { turinAreas } from "@/constants";
-import { MobileStickyBudget } from "@/components/tools/MobileStickyBudget";
 import { 
   PieChart, 
   Pie, 
@@ -515,7 +514,6 @@ const BudgetCalculator = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
               {/* Mobile: Sticky Total Card first */}
-              <MobileStickyBudget 
                 selectedArea={selectedArea}
                 totalBudget={totalBudget}
                 totalWithSaving={totalWithSaving}
