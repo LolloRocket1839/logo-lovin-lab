@@ -513,16 +513,6 @@ const BudgetCalculator = () => {
         <section className="py-4 md:py-10">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
-              {/* Mobile: Sticky Total Card first */}
-                selectedArea={selectedArea}
-                totalBudget={totalBudget}
-                totalWithSaving={totalWithSaving}
-                savingTarget={savingTarget[0]}
-                mode={mode}
-                budgetBreakdown={budgetBreakdown}
-                currentLang={currentLang}
-                onShareClick={() => setShareDialogOpen(true)}
-              />
 
               {/* Left: Inputs */}
               <div className="space-y-4 md:space-y-6">
