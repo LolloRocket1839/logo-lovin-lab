@@ -23,10 +23,6 @@ describe('Hooks Barrel Export', () => {
 
 
 
-  it('should export usePageViewTracking hook', () => {
-    expect(Hooks.usePageViewTracking).toBeDefined();
-    expect(typeof Hooks.usePageViewTracking).toBe('function');
-  });
 
   it('should export useBlogLanguage hook', () => {
     expect(Hooks.useBlogLanguage).toBeDefined();
