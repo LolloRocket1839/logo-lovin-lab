@@ -1283,3 +1283,20 @@ img[fetchpriority="high"] {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+@layer utilities {
+  .page-fade-in {
+    animation: page-fade-in 300ms ease-out both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .page-fade-in {
+      animation: none;
+    }
+  }
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}

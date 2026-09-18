@@ -16,7 +16,6 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
@@ -41,7 +40,6 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { FORMSPREE_ENDPOINTS } from "@/constants/formspree";
 
@@ -153,7 +151,6 @@ const CANONICAL = "https://junglerent.it/affitti-lingotto-ospedali-torino";
 
 const AffittiLingottoOspedali = () => {
   const { submitLead } = useLeadCapture();
-  const { trackFormSubmit } = useAnalytics();
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -271,9 +268,6 @@ const AffittiLingottoOspedali = () => {
       );
 
       if (result.success) {
-        trackFormSubmit("affitti-lingotto-ospedali", {
-          zone: "lingotto-nizza-millefonti-ospedali",
-        });
         setSubmitted(true);
         toast({
           title: "Grazie!",
@@ -319,7 +313,6 @@ const AffittiLingottoOspedali = () => {
       </Helmet>
 
       <ScrollToTop />
-      <Navigation />
 
       <main className="pt-20 pb-24 md:pb-12">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -758,9 +751,6 @@ const AffittiLingottoOspedali = () => {
           </section>
         </div>
       </main>
-
-      <Footer />
-      <BottomNav />
     </div>
   );
 };

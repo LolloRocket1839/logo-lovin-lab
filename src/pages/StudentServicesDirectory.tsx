@@ -16,7 +16,6 @@ import {
 } from 'lucide-react';
 
 const StudentServicesMap = lazy(() => import('@/components/tools/StudentServicesMap'));
-import { Navigation, Footer, BottomNav } from '@/components/layout';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -292,8 +291,6 @@ const StudentServicesDirectory = () => {
       <StudentServicesDirectorySchema lang={currentLang} totalServices={studentServicesData.length} />
       <StudentServicesDirectoryBreadcrumb lang={currentLang} />
       <StudentServicesDirectoryFAQ lang={currentLang} />
-
-      <Navigation />
 
       <main id="main-content" className="min-h-screen bg-background pt-20">
         {/* Breadcrumbs */}
@@ -593,9 +590,6 @@ const StudentServicesDirectory = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <BottomNav />
     </>
   );
 };

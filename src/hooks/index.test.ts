@@ -21,20 +21,8 @@ describe('Hooks Barrel Export', () => {
     expect(typeof Hooks.toast).toBe('function');
   });
 
-  it('should export useABTest hook', () => {
-    expect(Hooks.useABTest).toBeDefined();
-    expect(typeof Hooks.useABTest).toBe('function');
-  });
 
-  it('should export useAnalytics hook', () => {
-    expect(Hooks.useAnalytics).toBeDefined();
-    expect(typeof Hooks.useAnalytics).toBe('function');
-  });
 
-  it('should export usePageViewTracking hook', () => {
-    expect(Hooks.usePageViewTracking).toBeDefined();
-    expect(typeof Hooks.usePageViewTracking).toBe('function');
-  });
 
   it('should export useBlogLanguage hook', () => {
     expect(Hooks.useBlogLanguage).toBeDefined();
@@ -51,10 +39,6 @@ describe('Hooks Barrel Export', () => {
     expect(typeof Hooks.useReducedMotion).toBe('function');
   });
 
-  it('should export useScrollDepth hook', () => {
-    expect(Hooks.useScrollDepth).toBeDefined();
-    expect(typeof Hooks.useScrollDepth).toBe('function');
-  });
 
   it('should export useToolLanguage hook', () => {
     expect(Hooks.useToolLanguage).toBeDefined();

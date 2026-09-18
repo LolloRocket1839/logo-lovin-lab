@@ -11,7 +11,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { Loader2, TrendingUp, CheckCircle2, MessageCircle } from "lucide-react";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
@@ -31,7 +30,6 @@ export const QuickInvestorLeadDialog = ({
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { trackClick } = useAnalytics();
   const { submitLead, isSubmitting } = useLeadCapture();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -67,9 +65,6 @@ export const QuickInvestorLeadDialog = ({
       });
       return;
     }
-
-    trackClick("quick_investor_lead_submit", { source, email: email.trim() });
-
     const result = await submitLead(
       { email: email.trim(), source, leadType: "investor" },
       {
@@ -90,7 +85,6 @@ export const QuickInvestorLeadDialog = ({
   };
 
   const handleWhatsAppClick = () => {
-    trackClick("quick_investor_lead_whatsapp_handoff", { source });
   };
 
   const handleClose = (next: boolean) => {

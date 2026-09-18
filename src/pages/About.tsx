@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Navigation, Footer } from "@/components/layout";
 import { useTranslation } from "react-i18next";
 import { Building2, User, TrendingUp, Award, MapPin, Mail, Phone } from "lucide-react";
 import BusinessCycleInfographic from "@/components/BusinessCycleInfographic";
@@ -126,8 +125,6 @@ const About = () => {
       <meta itemProp="foundingDate" content="2025-10-24" />
       <meta itemProp="taxID" content="13333450016" />
       <meta itemProp="url" content="https://junglerent.it" />
-      
-      <Navigation />
 
       <div className="container mx-auto px-4 py-20 md:py-28">
         {/* Hero Section */}
@@ -332,8 +329,6 @@ const About = () => {
           </div>
         </section>
       </div>
-
-      <Footer />
     </main>
   );
 };

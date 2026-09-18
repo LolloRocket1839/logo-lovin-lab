@@ -60,10 +60,8 @@ import {
 } from "@/components/ui/tooltip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { motion, AnimatePresence } from "framer-motion";
 import { turinAreas } from "@/constants";
-import { MobileStickyBudget } from "@/components/tools/MobileStickyBudget";
 import { 
   PieChart, 
   Pie, 
@@ -416,8 +414,6 @@ const BudgetCalculator = () => {
       <BudgetCalculatorSchema />
       <BudgetCalculatorHowTo />
 
-      <Navigation />
-
       <main className="min-h-screen bg-background pt-20 pb-24 md:pb-8">
         {/* Header - Compact on mobile */}
         <section className="py-4 md:py-8 bg-gradient-to-b from-primary/5 to-background">
@@ -517,17 +513,6 @@ const BudgetCalculator = () => {
         <section className="py-4 md:py-10">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-4 md:gap-8">
-              {/* Mobile: Sticky Total Card first */}
-              <MobileStickyBudget 
-                selectedArea={selectedArea}
-                totalBudget={totalBudget}
-                totalWithSaving={totalWithSaving}
-                savingTarget={savingTarget[0]}
-                mode={mode}
-                budgetBreakdown={budgetBreakdown}
-                currentLang={currentLang}
-                onShareClick={() => setShareDialogOpen(true)}
-              />
 
               {/* Left: Inputs */}
               <div className="space-y-4 md:space-y-6">
@@ -1207,9 +1192,6 @@ const BudgetCalculator = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <BottomNav />
 
       {/* Mobile Share Dialog */}
       <Dialog open={shareDialogOpen} onOpenChange={setShareDialogOpen}>

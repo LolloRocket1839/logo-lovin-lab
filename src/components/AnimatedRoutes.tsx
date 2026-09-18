@@ -1,9 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { hasEnPrefix, stripEnPrefix } from "@/constants/routeAliases";
-import { AnimatePresence } from "framer-motion";
 import { PageTransition } from "./PageTransition";
 import { LoadingSpinner } from "./LoadingSpinner";
+import { RootLayout } from "@/components/layout/RootLayout";
 import Index from "@/pages/Index";
 
 // Lazy load - secondary pages
@@ -12,9 +12,6 @@ const Investors = lazy(() => import("@/pages/Investors"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
-const AITesting = lazy(() => import("@/pages/AITesting"));
-const ABTestResults = lazy(() => import("@/pages/ABTestResults"));
-const AnalyticsDashboard = lazy(() => import("@/pages/AnalyticsDashboard"));
 const Privacy = lazy(() => import("@/pages/Privacy"));
 const TerminiCondizioni = lazy(() => import("@/pages/TerminiCondizioni"));
 const Students = lazy(() => import("@/pages/Students"));
@@ -30,8 +27,6 @@ const ThankYou = lazy(() => import("@/pages/ThankYou"));
 const Sellers = lazy(() => import("@/pages/Sellers"));
 const PropertyValuation = lazy(() => import("@/pages/PropertyValuation"));
 const StrikeEmergencyDirectory = lazy(() => import("@/pages/StrikeEmergencyDirectory"));
-const SitemapDebug = lazy(() => import("@/pages/SitemapDebug"));
-const ContentAudit = lazy(() => import("@/pages/ContentAudit"));
 const ContrattiLocazione = lazy(() => import("@/pages/ContrattiLocazione"));
 const NeighborhoodsIndex = lazy(() => import("@/pages/NeighborhoodsIndex"));
 const NeighborhoodPage = lazy(() => import("@/pages/NeighborhoodPage"));
@@ -47,13 +42,9 @@ const AffittiLingottoOspedali = lazy(() => import("@/pages/landings/AffittiLingo
 const Auth = lazy(() => import("@/pages/Auth"));
 const Unsubscribe = lazy(() => import("@/pages/Unsubscribe"));
 const LeadsAdmin = lazy(() => import("@/pages/admin/Leads"));
-const SeoAdmin = lazy(() => import("@/pages/admin/Seo"));
 const SellerRadarAdmin = lazy(() => import("@/pages/admin/SellerRadar"));
-const InboxAdmin = lazy(() => import("@/pages/admin/Inbox"));
 
 const NotFound = lazy(() => import("@/pages/NotFound"));
-const Connect = lazy(() => import("@/pages/Connect"));
-const McpRedirect = lazy(() => import("@/pages/McpRedirect"));
 const FairRentPledge = lazy(() => import("@/pages/FairRentPledge"));
 
 export const AnimatedRoutes = () => {
@@ -64,10 +55,10 @@ export const AnimatedRoutes = () => {
     : location;
 
   return (
-    <AnimatePresence mode="wait">
       <PageTransition key={location.pathname}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes location={routedLocation}>
+            <Route element={<RootLayout />}>
             <Route path="/" element={<Index />} />
             <Route path="/chi-siamo" element={<About />} />
             <Route path="/about" element={<About />} />
@@ -101,9 +92,6 @@ export const AnimatedRoutes = () => {
             <Route path="/strumenti/servizi-studenti-torino" element={<Navigate to="/strumenti/sportelli-studenti-torino" replace />} />
             <Route path="/strumenti/palestre-torino-studenti" element={<GymsDirectory />} />
             <Route path="/tools/gyms-turin-students" element={<GymsDirectory />} />
-            <Route path="/ai-testing" element={<AITesting />} />
-            <Route path="/ab-test-results" element={<ABTestResults />} />
-            <Route path="/analytics-dashboard" element={<AnalyticsDashboard />} />
             <Route path="/grazie" element={<ThankYou />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/vendi" element={<Sellers />} />
@@ -113,8 +101,6 @@ export const AnimatedRoutes = () => {
             <Route path="/property-valuation" element={<PropertyValuation />} />
             <Route path="/scioperi-italia" element={<StrikeEmergencyDirectory />} />
             <Route path="/italy-strikes" element={<StrikeEmergencyDirectory />} />
-            <Route path="/sitemap-debug" element={<SitemapDebug />} />
-            <Route path="/content-audit" element={<ContentAudit />} />
             <Route path="/contratti-locazione" element={<ContrattiLocazione />} />
             <Route path="/rental-contracts" element={<ContrattiLocazione />} />
             <Route path="/investitori/zone" element={<InvestorZonesIndex />} />
@@ -143,16 +129,12 @@ export const AnimatedRoutes = () => {
             <Route path="/auth" element={<Auth />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="/admin/leads" element={<LeadsAdmin />} />
-            <Route path="/admin/seo" element={<SeoAdmin />} />
             <Route path="/admin/seller-radar" element={<SellerRadarAdmin />} />
-            <Route path="/admin/inbox" element={<InboxAdmin />} />
-            <Route path="/connect" element={<Connect />} />
-            <Route path="/mcp" element={<McpRedirect />} />
 
             <Route path="*" element={<NotFound />} />
+            </Route>
           </Routes>
         </Suspense>
       </PageTransition>
-    </AnimatePresence>
   );
 };

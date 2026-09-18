@@ -5,13 +5,9 @@ import {
   CalendarCheck, MessageCircle, Facebook, Users, Hammer, ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Navigation, Footer, MobileHeader, MobileFooter, BottomNav } from "@/components/layout";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SellerStickyCta } from "@/components/sellers/SellerStickyCta";
 import { VendiLeadForm } from "@/components/vendi/VendiLeadForm";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
@@ -96,10 +92,7 @@ const faqs = [
 ];
 
 const Sellers = () => {
-  const { trackClick } = useAnalytics();
-
   const scrollToForm = () => {
-    trackClick("vendi_cta_form");
     document.getElementById("valutazione")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -148,12 +141,8 @@ const Sellers = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <MobileHeader />
-      <Navigation />
-
       <main className="min-h-screen bg-background pb-24 md:pb-0">
         <div className="container px-4 md:px-8 mx-auto pt-20 md:pt-28">
-          <Breadcrumbs items={[{ label: "Vendi casa a Torino" }]} />
         </div>
 
         {/* Hero */}
@@ -184,7 +173,6 @@ const Sellers = () => {
                   variant="outline"
                   className="border-primary/40"
                   onClick={() => {
-                    trackClick("vendi_whatsapp_click");
                     openWhatsApp(
                       CONTACTS.lorenzo.phone,
                       "Ciao Lorenzo, ho un appartamento a Torino da vendere e vorrei una valutazione."
@@ -338,7 +326,7 @@ const Sellers = () => {
               href={FACEBOOK_SELLER_GROUP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackClick("seller_community_click")}
+              onClick={undefined}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
             >
               <Facebook className="w-5 h-5" aria-hidden="true" />
@@ -365,11 +353,6 @@ const Sellers = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <MobileFooter />
-      <BottomNav />
-      <SellerStickyCta onOpenDialog={scrollToForm} />
     </>
   );
 };

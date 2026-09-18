@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
@@ -31,7 +30,6 @@ import {
 } from "@/components/ui/form";
 import { toast } from "@/hooks/use-toast";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
 import {
   MapPin,
@@ -114,7 +112,6 @@ const NizzaMillefontiOspedali = () => {
   const { i18n } = useTranslation();
   const isItalian = i18n.language.startsWith("it");
   const { submitLead } = useLeadCapture();
-  const { trackFormSubmit } = useAnalytics();
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -190,7 +187,6 @@ const NizzaMillefontiOspedali = () => {
       );
 
       if (result.success) {
-        trackFormSubmit("nizza-millefonti-waitlist", { zone: "nizza-millefonti-ospedali" });
         setSubmitted(true);
         toast({
           title: isItalian ? "Grazie!" : "Thanks!",
@@ -242,8 +238,6 @@ const NizzaMillefontiOspedali = () => {
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(placeSchema)}</script>
       </Helmet>
-
-      <Navigation />
       <ScrollToTop />
 
       <main className="pt-20 pb-24 md:pb-12">
@@ -711,9 +705,6 @@ const NizzaMillefontiOspedali = () => {
           </section>
         </div>
       </main>
-
-      <Footer />
-      <BottomNav />
     </div>
   );
 };

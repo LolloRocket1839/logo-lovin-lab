@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
 import { useAuth } from "@/contexts/AuthContext";
 import { useEffect } from "react";
 
@@ -79,8 +78,6 @@ export default function Auth() {
 
   return (
     <>
-      <Navigation />
-      <MobileHeader />
       <main className="min-h-screen bg-background flex items-center justify-center px-4 pt-24 pb-32">
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
@@ -128,8 +125,6 @@ export default function Auth() {
           </CardContent>
         </Card>
       </main>
-      <Footer />
-      <MobileFooter />
     </>
   );
 }

@@ -18,6 +18,7 @@ const FAQSectionComponent = () => {
     () => t("investor.landing.faq.items", { returnObjects: true }) as FAQ[],
     [t]
   );
+  const visibleItems = (items || []).slice(0, 5);
 
   return (
     <section className="py-20 md:py-28 bg-background">
@@ -26,7 +27,7 @@ const FAQSectionComponent = () => {
           {t("investor.landing.faq.title")}
         </h2>
         <Accordion type="single" collapsible className="w-full">
-          {items.map((item, i) => (
+          {visibleItems.map((item, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
               <AccordionTrigger className="text-left text-base font-medium hover:no-underline">
                 {item.q}

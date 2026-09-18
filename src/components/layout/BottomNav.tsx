@@ -1,115 +1,42 @@
-import { useState, Suspense, lazy } from "react";
-import { TrendingUp, Building2, GraduationCap, Heart, Info } from "lucide-react";
+import { Home, Building2, TrendingUp, BookOpen } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { useAnalytics } from "@/hooks/useAnalytics";
-import { QuickSellerLeadDialog } from "@/components/dialogs/QuickSellerLeadDialog";
-
-import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-} from "@/components/ui/drawer";
-
-// Lazy load components since they're only shown on demand
-const InfoDrawerContent = lazy(() => import("@/components/InfoDrawerContent").then(m => ({ default: m.InfoDrawerContent })));
+import { Link, useLocation } from "react-router-dom";
 
 export const BottomNav = () => {
   const { t, i18n } = useTranslation();
-  const { trackClick } = useAnalytics();
-  const [sellerDialogOpen, setSellerDialogOpen] = useState(false);
-  const [infoDrawerOpen, setInfoDrawerOpen] = useState(false);
-  const investorPath = i18n.language.startsWith("en") ? "/investors" : "/investitori";
+  const { pathname } = useLocation();
+  const isEnglish = i18n.language.startsWith("en");
 
-  const handleInvestClick = () => {
-    trackClick('bottom_nav_invest');
-  };
-
-  const handleSellerClick = () => {
-    trackClick('bottom_nav_seller');
-    setSellerDialogOpen(true);
-  };
-
-  const handleStudentsClick = () => {
-    trackClick('bottom_nav_students');
-  };
-
-  const handleInfoClick = () => {
-    trackClick('bottom_nav_info');
-    setInfoDrawerOpen(true);
-  };
+  const items = [
+    { label: t("nav.home", isEnglish ? "Home" : "Home"), to: "/", icon: Home },
+    { label: t("nav.sell"), to: isEnglish ? "/sell" : "/vendi", icon: Building2 },
+    { label: t("nav.investors"), to: isEnglish ? "/investors" : "/investitori", icon: TrendingUp },
+    { label: "Blog", to: "/blog", icon: BookOpen },
+  ];
 
   return (
-    <>
-      <nav 
-        className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-background border-t border-border/20 shadow-lg safe-area-bottom"
-        aria-label={t('nav.home')}
-      >
-        <div className="flex items-center justify-around h-[4.5rem] px-1">
-          {/* Investi - Primary CTA with heart */}
-          <Link
-            to={investorPath}
-            onClick={handleInvestClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-primary/5 rounded-lg text-primary relative"
-          >
-            <div className="flex items-center gap-0.5">
-              <TrendingUp className="w-6 h-6" aria-hidden="true" />
-              <Heart className="w-3 h-3 fill-primary text-primary" aria-hidden="true" />
-            </div>
-            <span className="text-xs font-semibold">{t("nav.investors")}</span>
-          </Link>
-
-          {/* Vendi - Seller CTA */}
-          <button
-            onClick={handleSellerClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
-          >
-            <Building2 className="w-6 h-6" aria-hidden="true" />
-            <span className="text-xs font-medium">{t("nav.sell")}</span>
-          </button>
-
-          {/* Studenti - Direct navigation */}
-          <Link
-            to="/studenti"
-            onClick={handleStudentsClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
-          >
-            <GraduationCap className="w-6 h-6" aria-hidden="true" />
-            <span className="text-xs font-medium">{t("nav.students")}</span>
-          </Link>
-
-          {/* Info */}
-          <button
-            onClick={handleInfoClick}
-            className="flex flex-col items-center justify-center w-full h-full gap-1.5 transition-colors active:bg-muted/50 rounded-lg text-muted-foreground"
-          >
-            <Info className="w-6 h-6" aria-hidden="true" />
-            <span className="text-xs font-medium">{t("nav.info")}</span>
-          </button>
-
-        </div>
-      </nav>
-
-      {/* Info Drawer */}
-      <Drawer open={infoDrawerOpen} onOpenChange={setInfoDrawerOpen}>
-        <DrawerContent className="max-h-[85vh]">
-          <DrawerHeader className="pb-2">
-            <DrawerTitle className="text-center">{t("nav.info")}</DrawerTitle>
-          </DrawerHeader>
-          <div className="px-4 pb-8">
-            <Suspense fallback={<div className="h-32 flex items-center justify-center text-muted-foreground">Loading...</div>}>
-              <InfoDrawerContent onClose={() => setInfoDrawerOpen(false)} />
-            </Suspense>
-          </div>
-        </DrawerContent>
-      </Drawer>
-
-      <QuickSellerLeadDialog 
-        open={sellerDialogOpen} 
-        onOpenChange={setSellerDialogOpen}
-        source="bottom_nav"
-      />
-    </>
+    <nav
+      className="fixed bottom-0 left-0 right-0 z-40 border-t border-border bg-background md:hidden"
+      aria-label="Navigazione principale mobile"
+    >
+      <div className="flex h-16 items-center justify-around">
+        {items.map(({ label, to, icon: Icon }) => {
+          const isActive = to === "/" ? pathname === "/" : pathname.startsWith(to);
+          return (
+            <Link
+              key={to}
+              to={to}
+              aria-current={isActive ? "page" : undefined}
+              className={`flex h-full w-full flex-col items-center justify-center gap-1 text-xs ${
+                isActive ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              <Icon className="h-5 w-5" aria-hidden="true" />
+              <span>{label}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
   );
 };

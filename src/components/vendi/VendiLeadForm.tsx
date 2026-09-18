@@ -8,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { getUTMParams } from "@/hooks/useUTMTracking";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -58,8 +57,6 @@ const selectClass =
 
 export const VendiLeadForm = () => {
   const { toast } = useToast();
-  const { trackEvent } = useAnalytics();
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -191,9 +188,6 @@ export const VendiLeadForm = () => {
       supabase.functions
         .invoke("notify-vendi-lead", { body: { leadId } })
         .catch((err) => console.error("Invio email fallito:", err));
-
-      trackEvent("seller_lead_submitted", { source: "vendi", situation: dbSituation });
-
       photos.forEach((p) => URL.revokeObjectURL(p.preview));
       setPhotos([]);
       setIsSubmitted(true);

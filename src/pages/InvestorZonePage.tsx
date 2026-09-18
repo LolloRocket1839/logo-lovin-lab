@@ -3,7 +3,6 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import { useTranslation } from "react-i18next";
-import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
@@ -33,11 +32,11 @@ import {
   formatPrice,
   InvestorZone
 } from "@/data/investorZoneData";
-import { ZoneMetricCard } from "@/components/investor/ZoneMetricCard";
-import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
+import { ZoneMetricCard } from "@/components/zones/ZoneMetricCard";
+import { ZoneComparisonTool } from "@/components/zones/ZoneComparisonTool";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
-const ZoneMap = lazy(() => import("@/components/investor/ZoneMap"));
+const ZoneMap = lazy(() => import("@/components/zones/ZoneMap"));
 
 
 const InvestorZonePage = () => {
@@ -167,8 +166,6 @@ const InvestorZonePage = () => {
         <link rel="alternate" hrefLang="x-default" href={`https://junglerent.it/investitori/zone/${zone.slug}`} />
         <script type="application/ld+json">{JSON.stringify(investmentSchema)}</script>
       </Helmet>
-
-      <Navigation />
 
       {/* Hero with image */}
       <section className="relative pt-20 md:pt-24">
@@ -413,8 +410,6 @@ const InvestorZonePage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
       <ScrollToTop />
     </main>
   );

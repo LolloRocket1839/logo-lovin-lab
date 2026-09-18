@@ -30,7 +30,6 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { Navigation, Footer, BottomNav } from "@/components/layout";
 import { type SessionExam } from "@/components/tools/SessionExamInput";
 import { ExamModal } from "@/components/tools/ExamModal";
 import { ExamList } from "@/components/tools/ExamList";
@@ -296,8 +295,6 @@ const ExamSessionPlanner = () => {
       <ExamSessionPlannerSchema />
       <ExamSessionPlannerHowTo />
       
-      <Navigation />
-      
       <main className="min-h-screen bg-background pt-20 pb-24 md:pb-8">
         {/* Header */}
         <section className="py-4 md:py-12 bg-gradient-to-b from-primary/5 to-background">
@@ -497,9 +494,6 @@ const ExamSessionPlanner = () => {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-      
-      <Footer />
-      <BottomNav />
     </>
   );
 };

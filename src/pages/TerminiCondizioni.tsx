@@ -1,4 +1,3 @@
-import { Navigation, Footer } from "@/components/layout";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -21,8 +20,6 @@ const TerminiCondizioni = () => {
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/terms" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/termini-e-condizioni" />
       </Helmet>
-
-      <Navigation />
 
       <div className="container mx-auto px-4 py-20 md:py-28">
         <div className="max-w-4xl mx-auto">
@@ -220,8 +217,6 @@ const TerminiCondizioni = () => {
           </ScrollArea>
         </div>
       </div>
-
-      <Footer />
     </main>
   );
 };

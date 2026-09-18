@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Building2, Calculator, TrendingUp, BookOpen, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Navigation, Footer, MobileHeader, MobileFooter } from "@/components/layout";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PropertyValuator } from "@/components/tools/PropertyValuator";
 import { Card, CardContent } from "@/components/ui/card";
@@ -50,9 +49,6 @@ const PropertyValuation = () => {
       <PropertyValuatorSchema />
       <PropertyValuatorHowTo />
       <PropertyValuatorFAQ lang={lang as 'it' | 'en'} />
-
-      <Navigation />
-      <MobileHeader />
 
       <main id="main-content" className="min-h-screen bg-background pt-20 md:pt-24">
         <div className="container px-4 md:px-8 mx-auto">
@@ -191,9 +187,6 @@ const PropertyValuation = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
-      <MobileFooter />
     </>
   );
 };

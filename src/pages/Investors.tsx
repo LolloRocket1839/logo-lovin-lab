@@ -1,32 +1,9 @@
-import { useRef, useCallback, useEffect, lazy, Suspense } from "react";
+import { useRef, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
-import { Navigation, Footer } from "@/components/layout";
-import { ScrollToTop } from "@/components/ScrollToTop";
-import { HeroSection } from "@/components/investitori/HeroSection";
-import { QuickContactBar } from "@/components/investitori/QuickContactBar";
-import { SocialProofMini } from "@/components/investitori/SocialProofMini";
-import { TrustStripe } from "@/components/investitori/TrustStripe";
-import { InvestorStickyCTA } from "@/components/investitori/InvestorStickyCTA";
-import { useAnalytics } from "@/hooks/useAnalytics";
+import { Button } from "@/components/ui/button";
 
-// Lazy-load below-the-fold sections to reduce initial bundle of /investitori
-const EmailFirstForm = lazy(() =>
-  import("@/components/investitori/EmailFirstForm").then((m) => ({ default: m.EmailFirstForm }))
-);
-const FounderLetterSection = lazy(() =>
-  import("@/components/investitori/FounderLetterSection").then((m) => ({ default: m.FounderLetterSection }))
-);
-const ThesisSection = lazy(() =>
-  import("@/components/investitori/ThesisSection").then((m) => ({ default: m.ThesisSection }))
-);
-const StartupInnovativaSection = lazy(() =>
-  import("@/components/investitori/StartupInnovativaSection").then((m) => ({ default: m.StartupInnovativaSection }))
-);
-const HowItWorksSection = lazy(() =>
-  import("@/components/investitori/HowItWorksSection").then((m) => ({ default: m.HowItWorksSection }))
-);
 const FAQSection = lazy(() =>
   import("@/components/investitori/FAQSection").then((m) => ({ default: m.FAQSection }))
 );
@@ -40,29 +17,48 @@ const LegalDisclaimerFooter = lazy(() =>
 const SectionFallback = () => <div className="min-h-[200px]" aria-hidden="true" />;
 
 const Investors = () => {
-  const { t } = useTranslation();
-  const { trackEvent } = useAnalytics();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const formRef = useRef<HTMLElement>(null);
-  // Derive canonical from the actual URL path (not i18n language) so crawlers
-  // always see a self-referential canonical for the URL they fetched.
-  const isEnPath = location.pathname.startsWith("/investors");
-  const canonical = isEnPath
+  const isEnPath = location.pathname.startsWith("/investors") || i18n.language.startsWith("en");
+  const canonical = location.pathname.startsWith("/investors")
     ? "https://junglerent.it/investors"
     : "https://junglerent.it/investitori";
 
-  const scrollToForm = useCallback(() => {
-    trackEvent("investor_hero_cta_click", { target: "request_info_form" });
-    formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [trackEvent]);
+  const scrollToForm = () => formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  // Page view (one-shot)
-  useEffect(() => {
-    trackEvent("investor_page_view", { path: "/investitori" });
-  }, [trackEvent]);
+  const points = isEnPath
+    ? [
+        {
+          title: "One operation at a time",
+          text: "Each investment is tied to a single Turin property, not to a generic fund.",
+        },
+        {
+          title: "Student rentals",
+          text: "We buy, renovate and rent apartments to university students in Turin.",
+        },
+        {
+          title: "Written information first",
+          text: "No online subscription: you request the memorandum, read it, then decide.",
+        },
+      ]
+    : [
+        {
+          title: "Una operazione alla volta",
+          text: "Ogni investimento è legato a un singolo immobile torinese, non a un fondo generico.",
+        },
+        {
+          title: "Affitti a studenti",
+          text: "Compriamo, ristrutturiamo e affittiamo appartamenti a studenti universitari a Torino.",
+        },
+        {
+          title: "Prima le informazioni scritte",
+          text: "Nessuna sottoscrizione online: richiedi il memorandum, leggilo con calma, poi decidi.",
+        },
+      ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <main role="main" className="bg-background">
       <Helmet>
         <title>{t("investor.landing.meta.title")}</title>
         <meta name="description" content={t("investor.landing.meta.description")} />
@@ -74,33 +70,39 @@ const Investors = () => {
         <meta property="og:description" content={t("investor.landing.meta.description")} />
         <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
       </Helmet>
 
-      <Navigation />
-      <QuickContactBar onEmailClick={scrollToForm} />
+      <section className="container mx-auto max-w-3xl px-4 py-16 md:py-24">
+        <h1 className="font-display text-3xl font-bold leading-tight text-foreground md:text-4xl">
+          {t("investor.landing.hero.h1")}
+        </h1>
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+          {isEnPath
+            ? "Jungle Rent is an innovative start-up in Turin. We buy apartments, renovate them and rent them to students."
+            : "Jungle Rent è una start-up innovativa torinese. Compriamo appartamenti, li ristrutturiamo e li affittiamo a studenti."}
+        </p>
+        <Button className="mt-8" onClick={scrollToForm}>
+          {t("investor.landing.hero.ctaSecondary")}
+        </Button>
+      </section>
 
-      <main className="pb-20 md:pb-0">
-        <HeroSection onCtaClick={scrollToForm} />
-        <SocialProofMini />
-        <TrustStripe />
-        <Suspense fallback={<SectionFallback />}>
-          <EmailFirstForm onRequestFullForm={scrollToForm} />
-          <FounderLetterSection />
-          <ThesisSection />
-          <StartupInnovativaSection />
-          <HowItWorksSection />
-          <FAQSection />
-          <RequestInfoForm ref={formRef} />
-          <LegalDisclaimerFooter />
-        </Suspense>
-      </main>
+      <section className="container mx-auto max-w-5xl px-4 pb-16 md:pb-24">
+        <div className="grid gap-8 md:grid-cols-3">
+          {points.map((p) => (
+            <div key={p.title}>
+              <h2 className="font-display text-lg font-bold text-foreground">{p.title}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <Footer />
-      <ScrollToTop />
-
-      <InvestorStickyCTA formRef={formRef} />
-    </div>
+      <Suspense fallback={<SectionFallback />}>
+        <RequestInfoForm ref={formRef} />
+        <FAQSection />
+        <LegalDisclaimerFooter />
+      </Suspense>
+    </main>
   );
 };
 

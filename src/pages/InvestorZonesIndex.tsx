@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { Navigation, Footer } from "@/components/layout";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -35,9 +34,9 @@ import {
   getZonesWithUrbanRenewal,
   InvestorZone
 } from "@/data/investorZoneData";
-import { ZoneCard } from "@/components/investor/ZoneCard";
-import { ZoneComparisonTool } from "@/components/investor/ZoneComparisonTool";
-import InvestorZonesMap from "@/components/investor/InvestorZonesMap";
+import { ZoneCard } from "@/components/zones/ZoneCard";
+import { ZoneComparisonTool } from "@/components/zones/ZoneComparisonTool";
+import InvestorZonesMap from "@/components/zones/InvestorZonesMap";
 import { openWhatsApp, CONTACTS, MESSAGES } from "@/constants";
 
 type SortOption = 'growth' | 'price_asc' | 'price_desc';
@@ -192,8 +191,6 @@ const InvestorZonesIndex = () => {
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/investitori/zone" />
         <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       </Helmet>
-
-      <Navigation />
 
       {/* Hero */}
       <section className="pt-32 pb-12 md:pt-40 md:pb-16 relative overflow-hidden">
@@ -429,8 +426,6 @@ const InvestorZonesIndex = () => {
           </Card>
         </div>
       </section>
-
-      <Footer />
       <ScrollToTop />
     </main>
   );

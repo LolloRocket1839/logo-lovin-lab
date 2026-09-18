@@ -16,7 +16,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 import { CONTACTS, openWhatsApp } from "@/constants/contacts";
@@ -70,7 +69,6 @@ interface QuickOfferSimulatorProps {
 export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps) => {
   const { t } = useTranslation();
   const { toast } = useToast();
-  const { trackClick, trackEvent } = useAnalytics();
   const { submitLead, isSubmitting: isLeadSubmitting } = useLeadCapture();
 
   const [zone, setZone] = useState("");
@@ -143,19 +141,12 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
   useEffect(() => {
     if (zone && !hasStarted) {
       setHasStarted(true);
-      trackEvent("simulator_started", { zone });
     }
-  }, [zone, hasStarted, trackEvent]);
+  }, [zone, hasStarted]);
 
   // Track completed when result becomes visible (once per complete state change)
   useEffect(() => {
     if (isFormComplete && calculation) {
-      trackEvent("simulator_completed", {
-        zone,
-        sqm: effectiveSqm,
-        condition,
-        qualified: calculation.isQualified,
-      });
     }
   }, [isFormComplete]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -181,15 +172,6 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
       toast({ title: t("quickSellerLead.errorTitle"), description: t("quickSellerLead.invalidEmail"), variant: "destructive" });
       return;
     }
-
-    trackClick("simulator_email_saved", {
-      zone,
-      sqm: effectiveSqm,
-      condition,
-      email: email.trim(),
-      qualified: calculation?.isQualified,
-    });
-
     const metadata: Record<string, unknown> = {
       zone,
       sqm: effectiveSqm,
@@ -235,7 +217,6 @@ export const QuickOfferSimulator = ({ onContactClick }: QuickOfferSimulatorProps
   };
 
   const handleWhatsAppClick = () => {
-    trackClick("simulator_whatsapp_click", { zone, sqm: effectiveSqm, condition });
     const message = t("offerSimulator.whatsappMessage", "Ciao Lorenzo, ho fatto una stima sul vostro sito per un immobile in {{zone}} di {{sqm}}mq. Possiamo parlarne?", { zone: calculation?.zoneData?.name ?? zone, sqm: effectiveSqm });
     openWhatsApp(CONTACTS.lorenzo.phone, message);
   };

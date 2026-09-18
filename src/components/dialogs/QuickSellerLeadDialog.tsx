@@ -19,7 +19,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { useAnalytics } from "@/hooks/useAnalytics";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
 import { openCalendly } from "@/lib/calendly";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
@@ -39,7 +38,6 @@ export const QuickSellerLeadDialog = ({
 }: QuickSellerLeadDialogProps) => {
   const { t } = useTranslation();
   const { toast } = useToast();
-  const { trackClick } = useAnalytics();
   const { submitLead } = useLeadCapture();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [step, setStep] = useState<1 | 2 | 3>(1);
@@ -66,8 +64,6 @@ export const QuickSellerLeadDialog = ({
     }
 
     setIsSubmitting(true);
-    trackClick('quick_seller_lead_submit', { source, email: email.trim() });
-
     const result = await submitLead(
       {
         email: email.trim(),
@@ -99,8 +95,6 @@ export const QuickSellerLeadDialog = ({
       handleCalendlyClick();
       return;
     }
-    trackClick('quick_seller_lead_step2', { source, address, reason });
-
     try {
       await fetch(FORMSPREE_ENDPOINTS.quickSeller, {
         method: "POST",
@@ -131,7 +125,6 @@ export const QuickSellerLeadDialog = ({
   };
 
   const handleCalendlyClick = () => {
-    trackClick('quick_seller_calendly', { source });
     openCalendly();
     onOpenChange(false);
   };

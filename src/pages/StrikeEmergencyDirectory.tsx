@@ -2,9 +2,6 @@ import { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { AlertTriangle, Phone, Train, Bus, Car, Download, CheckCircle, Calendar, ExternalLink, Apple, Plane, CreditCard, Shield } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Navigation } from '@/components/layout/Navigation';
-import { Footer } from '@/components/layout/Footer';
-import { BottomNav } from '@/components/layout/BottomNav';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -126,8 +123,6 @@ const StrikeEmergencyDirectory = () => {
         <link rel="canonical" href="https://junglerent.it/scioperi-italia" />
         <meta name="robots" content="index, follow" />
       </Helmet>
-
-      <Navigation />
 
       <main id="main-content" className="min-h-screen bg-background pt-20 pb-24 md:pb-8">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -539,9 +534,6 @@ const StrikeEmergencyDirectory = () => {
 
         </div>
       </main>
-
-      <Footer />
-      <BottomNav />
     </>
   );
 };

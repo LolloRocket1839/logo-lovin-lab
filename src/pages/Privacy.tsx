@@ -1,4 +1,3 @@
-import { Navigation, Footer } from "@/components/layout";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { Shield, Mail, MapPin, Phone, FileText, Lock, Eye, Clock, Users, Globe, Trash2 } from "lucide-react";
@@ -22,8 +21,6 @@ const Privacy = () => {
         <link rel="alternate" hrefLang="en" href="https://junglerent.it/privacy" />
         <link rel="alternate" hrefLang="x-default" href="https://junglerent.it/privacy" />
       </Helmet>
-
-      <Navigation />
 
       <div className="container mx-auto px-4 py-20 md:py-28 max-w-4xl">
         {/* Header */}
@@ -452,8 +449,6 @@ const Privacy = () => {
           </CardContent>
         </Card>
       </div>
-
-      <Footer />
     </main>
   );
 };

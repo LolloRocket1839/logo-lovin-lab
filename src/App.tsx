@@ -5,11 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
 import { SkipToContent } from "./components/SkipToContent";
 import { ScrollToTopOnNavigation } from "./components/ScrollToTopOnNavigation";
-import { usePageViewTracking, useScrollDepth, useUTMTracking } from "./hooks";
+import { useUTMTracking } from "./hooks";
 import { AnimatedRoutes } from "./components/AnimatedRoutes";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ErrorBoundary } from "./components/ErrorBoundary";
-import { CookieBanner } from "./components/CookieBanner";
 import { HreflangTags } from "./components/HreflangTags";
 import { useUrlLanguage } from "./hooks/useUrlLanguage";
 
@@ -23,8 +22,6 @@ const queryClient = new QueryClient({
 });
 
 const AppContent = () => {
-  usePageViewTracking();
-  useScrollDepth();
   useUTMTracking();
   useUrlLanguage();
 
@@ -46,7 +43,6 @@ const App = () => (
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <ScrollToTopOnNavigation />
           <AppContent />
-          <CookieBanner />
         </BrowserRouter>
       </TooltipProvider>
     </AuthProvider>
