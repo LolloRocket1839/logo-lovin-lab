@@ -20,7 +20,7 @@ export const BottomNav = () => {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 border-t border-border bg-background md:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-border/60 bg-background/95 backdrop-blur md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       aria-label="Navigazione principale mobile"
     >
@@ -32,11 +32,11 @@ export const BottomNav = () => {
               key={to}
               to={to}
               aria-current={isActive ? "page" : undefined}
-              className={`flex h-full w-full flex-col items-center justify-center gap-1 text-xs ${
+              className={`flex h-full w-full flex-col items-center justify-center gap-0.5 text-[11px] transition-colors duration-150 ${
                 isActive ? "text-primary" : "text-muted-foreground"
               }`}
             >
-              <Icon className="h-5 w-5" aria-hidden="true" />
+              <Icon className="h-6 w-6" strokeWidth={isActive ? 2.5 : 1.75} aria-hidden="true" />
               <span>{label}</span>
             </Link>
           );

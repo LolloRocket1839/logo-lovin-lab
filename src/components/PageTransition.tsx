@@ -5,5 +5,5 @@ interface PageTransitionProps {
 }
 
 export const PageTransition = ({ children }: PageTransitionProps) => (
-  <div className="page-fade-in">{children}</div>
+  <div className="page-fade">{children}</div>
 );

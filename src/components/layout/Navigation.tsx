@@ -32,16 +32,16 @@ export const Navigation = () => {
 
   return (
     <header
-      className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/95 backdrop-blur"
+      className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/95 backdrop-blur"
       role="banner"
     >
       <nav
-        className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8"
+        className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-5"
         aria-label="Navigazione principale"
       >
-        <Link to="/" className="flex items-center gap-2" aria-label="Jungle Rent">
-          <img src={jungleRentLogo} alt="" className="h-8 w-8" width={32} height={32} />
-          <span className="font-display text-lg font-bold text-foreground">Jungle Rent</span>
+        <Link to={isEnglish ? "/en" : "/"} className="flex items-center gap-2" aria-label="Jungle Rent">
+          <img src={jungleRentLogo} alt="" className="h-7 w-7" width={28} height={28} />
+          <span className="text-sm font-semibold text-foreground">Jungle Rent</span>
         </Link>
 
         <div className="hidden items-center gap-1 md:flex">
@@ -51,7 +51,7 @@ export const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`rounded-md px-3 py-2 text-sm transition-colors ${
+                className={`px-3 py-2 text-sm transition-colors duration-150 ${
                   isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -59,7 +59,7 @@ export const Navigation = () => {
               </Link>
             );
           })}
-          <Button asChild size="sm" className="ml-2">
+          <Button asChild className="ml-2 h-10 px-5">
             <Link to={sellPath}>{t("nav.sell")}</Link>
           </Button>
         </div>

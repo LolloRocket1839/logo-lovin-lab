@@ -1,7 +1,6 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { hasEnPrefix, stripEnPrefix } from "@/constants/routeAliases";
-import { PageTransition } from "./PageTransition";
 import { LoadingSpinner } from "./LoadingSpinner";
 import { RootLayout } from "@/components/layout/RootLayout";
 import Index from "@/pages/Index";
@@ -42,7 +41,6 @@ export const AnimatedRoutes = () => {
     : location;
 
   return (
-      <PageTransition key={location.pathname}>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes location={routedLocation}>
             <Route element={<RootLayout />}>
@@ -121,6 +119,5 @@ export const AnimatedRoutes = () => {
             </Route>
           </Routes>
         </Suspense>
-      </PageTransition>
   );
 };
