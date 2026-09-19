@@ -93,7 +93,7 @@ const faqs = [
 
 const Sellers = () => {
   const scrollToForm = () => {
-    document.getElementById("valutazione")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("valutazione")?.scrollIntoView();
   };
 
   const faqSchema = {
