@@ -132,12 +132,18 @@ export const LiquidHomepageStory = () => {
 };
 
 const Scene = ({ progress, index, children }: { progress: MotionValue<number>; index: number; children: ReactNode }) => {
-  const slice = 1 / SCENE_COUNT;
-  const start = index * slice;
-  const end = (index + 1) * slice;
-  const fade = slice * 0.18;
-  const opacity = useTransform(progress, [Math.max(0, start - fade), start + fade, end - fade, Math.min(1, end + fade)], [index === 0 ? 1 : 0, 1, 1, index === SCENE_COUNT - 1 ? 1 : 0]);
-  return <motion.div className="absolute inset-0" style={{ opacity }}>{children}</motion.div>;
+  const segment = 1 / (SCENE_COUNT - 1);
+  const center = index * segment;
+  const opacity = useTransform(progress, (value) => {
+    const distance = Math.abs(value - center);
+    const hold = segment * 0.28;
+    const edge = segment * 0.48;
+    if (distance <= hold) return 1;
+    if (distance >= edge) return 0;
+    return 1 - (distance - hold) / (edge - hold);
+  });
+  const pointerEvents = useTransform(opacity, (value) => (value > 0.5 ? "auto" : "none"));
+  return <motion.div className="absolute inset-0" style={{ opacity, pointerEvents }}>{children}</motion.div>;
 };
 
 const SceneIndex = ({ index, label }: { index: string; label: string }) => (
