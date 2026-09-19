@@ -4,6 +4,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 interface SceneRevealProps {
   children: ReactNode;
   className?: string;
+  id?: string;
   as?: "div" | "section" | "article" | "li";
 }
 
@@ -11,7 +12,7 @@ interface SceneRevealProps {
  * Lightweight fade-up reveal triggered by IntersectionObserver.
  * 400ms, translateY 12px. Runs once and respects reduced motion.
  */
-export const SceneReveal = ({ children, className = "", as = "div" }: SceneRevealProps) => {
+export const SceneReveal = ({ children, className = "", id, as = "div" }: SceneRevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const reduced = useReducedMotion();
@@ -42,6 +43,7 @@ export const SceneReveal = ({ children, className = "", as = "div" }: SceneRevea
   return (
     <Tag
       ref={ref as never}
+      id={id}
       style={{
         transition: reduced ? "none" : "opacity 400ms ease-out, transform 400ms ease-out",
         opacity: visible ? 1 : 0,

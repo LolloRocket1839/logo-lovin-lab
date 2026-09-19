@@ -3,7 +3,6 @@ import { BlogPost } from "@/types/blog";
 import { Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useBlogLanguage } from "@/hooks/useBlogLanguage";
 import { isNewPost, formatDate } from "@/lib/blog";
 import { OptimizedImage } from "@/components/OptimizedImage";
@@ -16,7 +15,6 @@ interface BlogCardProps {
 const BlogCardComponent = ({ post }: BlogCardProps) => {
   const { t } = useTranslation();
   const currentLang = useBlogLanguage();
-  const prefersReducedMotion = useReducedMotion();
   const translatedData = post.translations[currentLang];
 
   // Check if this is a Jungle Control series post
@@ -25,7 +23,7 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
   );
 
   return (
-    <article className="blog-card-marvis feel-good-click group h-full flex flex-col rounded-xl overflow-hidden relative border border-border/20 hover:border-primary/30 transition-all">
+    <article className="blog-card-marvis group h-full flex flex-col rounded-xl overflow-hidden relative border border-border/20 hover:border-primary/30">
       {isNewPost(post.date) && <div className="new-badge">Nuovo</div>}
       
       <Link 
@@ -40,7 +38,7 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
               <OptimizedImage
                 src={astronautCover}
                 alt="Astronaut floating in space with Earth - Jungle Control Series"
-                className={`w-full h-full ${prefersReducedMotion ? '' : 'transition-transform duration-500 group-hover:scale-105'}`}
+                className="h-full w-full"
                 blurPlaceholder
               />
               
@@ -55,7 +53,7 @@ const BlogCardComponent = ({ post }: BlogCardProps) => {
             <OptimizedImage
               src={post.image}
               alt={translatedData.title}
-              className={`w-full h-full ${prefersReducedMotion ? '' : 'transition-transform duration-300 group-hover:scale-105'}`}
+              className="h-full w-full"
               blurPlaceholder
             />
           )}

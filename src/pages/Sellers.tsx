@@ -10,6 +10,7 @@ import { FACEBOOK_SELLER_GROUP_URL } from "@/constants/social";
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
 const PAGE_TITLE = "Vendi il tuo appartamento a Torino direttamente a Jungle Rent";
 const PAGE_DESCRIPTION =
@@ -143,7 +144,7 @@ const Sellers = () => {
       <main className="min-h-screen bg-background">
 
         {/* Hero */}
-        <section id="seller-hero" className="py-16 md:py-24">
+        <SceneReveal as="section" id="seller-hero" className="py-16 md:py-24">
           <div className="mx-auto w-full max-w-6xl px-5">
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">Torino</p>
@@ -177,10 +178,10 @@ const Sellers = () => {
               </div>
             </div>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Scenari */}
-        <section className="bg-primary/10 py-16 md:py-24">
+        <SceneReveal as="section" className="bg-primary/10 py-16 md:py-24">
           <div className="mx-auto w-full max-w-6xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-10 max-w-2xl">
               Se il tuo appartamento è in una di queste situazioni, siamo il tipo di acquirente giusto
@@ -195,10 +196,10 @@ const Sellers = () => {
               ))}
             </div>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Come funziona */}
-        <section className="py-16 md:py-24">
+        <SceneReveal as="section" className="py-16 md:py-24">
           <div className="mx-auto w-full max-w-6xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-10">Come funziona</h2>
             <ol className="grid md:grid-cols-4 gap-6">
@@ -218,10 +219,10 @@ const Sellers = () => {
               ))}
             </ol>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Cosa non siamo */}
-        <section className="bg-primary/10 py-16 md:py-24">
+        <SceneReveal as="section" className="bg-primary/10 py-16 md:py-24">
           <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8">Cosa non siamo</h2>
             <ul className="space-y-6">
@@ -239,10 +240,10 @@ const Sellers = () => {
               ))}
             </ul>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Il prezzo */}
-        <section className="py-16 md:py-24">
+        <SceneReveal as="section" className="py-16 md:py-24">
           <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">Come ragioniamo sul prezzo</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -269,10 +270,10 @@ const Sellers = () => {
               </p>
             </div>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Form */}
-        <section id="valutazione" className="scroll-mt-24 bg-primary/10 py-16 md:py-24">
+        <SceneReveal as="section" id="valutazione" className="scroll-mt-24 bg-primary/10 py-16 md:py-24">
           <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">Chiedi una valutazione gratuita</h2>
             <p className="text-muted-foreground mb-8">
@@ -282,10 +283,10 @@ const Sellers = () => {
               <VendiLeadForm />
             </div>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* FAQ */}
-        <section className="py-16 md:py-24">
+        <SceneReveal as="section" className="py-16 md:py-24">
           <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8">Domande frequenti</h2>
             <Accordion type="single" collapsible className="space-y-2">
@@ -301,10 +302,10 @@ const Sellers = () => {
               ))}
             </Accordion>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Community */}
-        <section className="bg-primary/10 py-16 md:py-24">
+        <SceneReveal as="section" className="bg-primary/10 py-16 md:py-24">
           <div className="mx-auto w-full max-w-3xl px-5 text-center">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
               Unisciti a VENDI CASA - Torino Jungle
@@ -325,10 +326,10 @@ const Sellers = () => {
               <span className="sr-only"> (si apre in una nuova finestra)</span>
             </a>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Chi siamo */}
-        <section className="py-16 md:py-24">
+        <SceneReveal as="section" className="py-16 md:py-24">
           <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">Chi compra</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -342,7 +343,7 @@ const Sellers = () => {
               Jungle Rent S.r.l. — P.IVA 13333450016 — Torino — Presidente del CdA Lorenzo Oni-Joseph.
             </p>
           </div>
-        </section>
+        </SceneReveal>
       </main>
     </>
   );

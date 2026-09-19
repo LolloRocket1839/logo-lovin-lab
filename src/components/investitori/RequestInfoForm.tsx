@@ -2,7 +2,6 @@ import { useState, useEffect, forwardRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import {
   investorLeadSchema,
@@ -23,6 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, AlertCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
 const RESIDENCE = ["IT", "CH", "EU", "OTHER"] as const;
 const TICKET = ["5-10", "10-20", "20-50", "50+", "TBD"] as const;
@@ -296,15 +296,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
             </label>
           </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={step}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
-              className="space-y-6"
-            >
+          <div key={step} className="space-y-6">
               {step === 1 && (
                 <>
                   <div>
@@ -498,8 +490,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
                   </div>
                 </>
               )}
-            </motion.div>
-          </AnimatePresence>
+          </div>
 
           {serverError && (
             <div className="flex gap-2 items-start p-4 border border-destructive/30 bg-destructive/5 rounded-md">

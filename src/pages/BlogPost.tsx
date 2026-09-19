@@ -13,6 +13,7 @@ import { getPostBySlug, getRelatedPosts } from "@/data/blog/posts";
 import { useAutoBlogPost, autoBlogPostToBlogPost } from "@/hooks/useAutoBlogPosts";
 import { useBlogLanguage, type BlogLanguage } from "@/hooks/useBlogLanguage";
 import { getCategoryColor, getAbsoluteImageUrl, formatDate } from "@/lib/blog";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -82,7 +83,7 @@ const BlogPost = () => {
 
       <ArticleStructuredData post={post} language={currentLang} url={canonicalUrl} />
 
-      <article className="container mx-auto max-w-[720px] px-4 py-16 md:py-24">
+      <SceneReveal as="article" className="container mx-auto max-w-[720px] px-4 py-16 md:py-24">
         <Badge className={`mb-4 ${getCategoryColor(post.category)}`}>
           {t(`blog.categories.${post.category}`)}
         </Badge>
@@ -131,9 +132,9 @@ const BlogPost = () => {
             </Badge>
           ))}
         </div>
-      </article>
+      </SceneReveal>
 
-      <RelatedPosts posts={relatedPosts} currentTags={currentTags} />
+      <SceneReveal><RelatedPosts posts={relatedPosts} currentTags={currentTags} /></SceneReveal>
     </main>
   );
 };
