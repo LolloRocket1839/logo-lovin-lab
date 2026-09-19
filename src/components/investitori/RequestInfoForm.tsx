@@ -2,7 +2,6 @@ import { useState, useEffect, forwardRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import {
   investorLeadSchema,
@@ -23,6 +22,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, AlertCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
 const RESIDENCE = ["IT", "CH", "EU", "OTHER"] as const;
 const TICKET = ["5-10", "10-20", "20-50", "50+", "TBD"] as const;
@@ -235,14 +235,14 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
   if (submitted) {
     return (
       <section ref={ref} id="request-info" className="py-20 md:py-28 bg-background">
-        <div className="container max-w-2xl mx-auto px-4 sm:px-6">
+        <SceneReveal className="container max-w-2xl mx-auto px-4 sm:px-6">
           <div className="border border-primary/20 bg-cream rounded-lg p-8 md:p-10 flex gap-4 items-start">
             <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
             <p className="text-base text-foreground leading-relaxed">
               {t("investor.landing.form.success")}
             </p>
           </div>
-        </div>
+        </SceneReveal>
       </section>
     );
   }
@@ -258,7 +258,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
 
   return (
     <section ref={ref} id="request-info" className="py-20 md:py-28 bg-background">
-      <div className="container max-w-2xl mx-auto px-4 sm:px-6">
+      <SceneReveal className="container max-w-2xl mx-auto px-4 sm:px-6">
         <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-3 tracking-tight">
           {t("investor.landing.form.title")}
         </h2>
@@ -296,15 +296,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
             </label>
           </div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={step}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
-              className="space-y-6"
-            >
+          <div key={step} className="space-y-6">
               {step === 1 && (
                 <>
                   <div>
@@ -498,8 +490,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
                   </div>
                 </>
               )}
-            </motion.div>
-          </AnimatePresence>
+          </div>
 
           {serverError && (
             <div className="flex gap-2 items-start p-4 border border-destructive/30 bg-destructive/5 rounded-md">
@@ -547,7 +538,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
             )}
           </div>
         </form>
-      </div>
+      </SceneReveal>
     </section>
   );
 });

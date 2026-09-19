@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
 interface FAQ {
   q: string;
@@ -21,7 +22,7 @@ const FAQSectionComponent = () => {
   const visibleItems = (items || []).slice(0, 5);
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <SceneReveal as="section" className="py-20 md:py-28 bg-background">
       <div className="container max-w-3xl mx-auto px-4 sm:px-6">
         <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-10 tracking-tight">
           {t("investor.landing.faq.title")}
@@ -39,7 +40,7 @@ const FAQSectionComponent = () => {
           ))}
         </Accordion>
       </div>
-    </section>
+    </SceneReveal>
   );
 };
 

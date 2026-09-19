@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
 const FAQSection = lazy(() =>
   import("@/components/investitori/FAQSection").then((m) => ({ default: m.FAQSection }))
@@ -25,7 +26,7 @@ const Investors = () => {
     ? "https://junglerent.it/investors"
     : "https://junglerent.it/investitori";
 
-  const scrollToForm = () => formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToForm = () => formRef.current?.scrollIntoView({ block: "start" });
 
   const points = isEnPath
     ? [
@@ -72,7 +73,7 @@ const Investors = () => {
         <meta property="og:type" content="website" />
       </Helmet>
 
-      <section className="container mx-auto max-w-3xl px-4 py-16 md:py-24">
+      <SceneReveal as="section" className="container mx-auto max-w-3xl px-4 py-16 md:py-24">
         <h1 className="font-display text-3xl font-bold leading-tight text-foreground md:text-4xl">
           {t("investor.landing.hero.h1")}
         </h1>
@@ -84,9 +85,9 @@ const Investors = () => {
         <Button className="mt-8" onClick={scrollToForm}>
           {t("investor.landing.hero.ctaSecondary")}
         </Button>
-      </section>
+      </SceneReveal>
 
-      <section className="container mx-auto max-w-5xl px-4 pb-16 md:pb-24">
+      <SceneReveal as="section" className="container mx-auto max-w-5xl px-4 pb-16 md:pb-24">
         <div className="grid gap-8 md:grid-cols-3">
           {points.map((p) => (
             <div key={p.title}>
@@ -95,7 +96,7 @@ const Investors = () => {
             </div>
           ))}
         </div>
-      </section>
+      </SceneReveal>
 
       <Suspense fallback={<SectionFallback />}>
         <RequestInfoForm ref={formRef} />

@@ -6,6 +6,7 @@ import BusinessCycleInfographic from "@/components/BusinessCycleInfographic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CONTACTS, openWhatsApp, openEmail, MESSAGES } from "@/constants";
+import { SceneReveal } from "@/components/home/SceneReveal";
 
 const About = () => {
   const { t, i18n } = useTranslation();
@@ -128,17 +129,17 @@ const About = () => {
 
       <div className="container mx-auto px-4 py-20 md:py-28">
         {/* Hero Section */}
-        <section className="text-center mb-16 animate-fade-in">
+        <SceneReveal as="section" className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             {t("about.title")}
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto" itemProp="description">
             {t("about.subtitle")}
           </p>
-        </section>
+        </SceneReveal>
 
         {/* Key Information Cards */}
-        <section className="grid md:grid-cols-3 gap-6 mb-16">
+        <SceneReveal as="section" className="grid md:grid-cols-3 gap-6 mb-16">
           <Card className="border-primary/20 hover:border-primary/40 transition-colors">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3 mb-3">
@@ -177,10 +178,10 @@ const About = () => {
               </div>
             </CardContent>
           </Card>
-        </section>
+        </SceneReveal>
 
         {/* Legal Registry Section */}
-        <section className="mb-16 bg-card border border-border/20 rounded-2xl p-6 md:p-8">
+        <SceneReveal as="section" className="mb-16 bg-card border border-border/20 rounded-2xl p-6 md:p-8">
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
               <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">P.IVA / C.F.</p>
@@ -195,13 +196,13 @@ const About = () => {
               <p className="font-mono font-semibold text-sm">junglerent@legalmail.it</p>
             </div>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Business Model Cycle Section */}
-        <BusinessCycleInfographic />
+        <SceneReveal><BusinessCycleInfographic /></SceneReveal>
 
         {/* Services Section */}
-        <section className="mb-16">
+        <SceneReveal as="section" className="mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center">
             {t("about.servicesTitle")}
           </h2>
@@ -238,10 +239,10 @@ const About = () => {
               </CardContent>
             </Card>
           </div>
-        </section>
+        </SceneReveal>
 
         {/* Why Choose Section */}
-        <section className="mb-16 bg-card border border-border/20 rounded-2xl p-8 md:p-12">
+        <SceneReveal as="section" className="mb-16 bg-card border border-border/20 rounded-2xl p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-center">
             {t("about.whyChooseTitle")}
           </h2>
@@ -277,10 +278,10 @@ const About = () => {
               <p className="text-lg">{t("about.whyPoint5")}</p>
             </li>
           </ul>
-        </section>
+        </SceneReveal>
 
         {/* Contact Section */}
-        <section className="text-center">
+        <SceneReveal as="section" className="text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
             {t("about.contactTitle")}
           </h2>
@@ -321,7 +322,7 @@ const About = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </SceneReveal>
       </div>
     </main>
   );
