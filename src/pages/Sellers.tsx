@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet";
-import { motion } from "framer-motion";
 import {
   Building2, Clock, Check, X, FileText, Handshake,
   CalendarCheck, MessageCircle, Facebook, Users, Hammer, ArrowRight,
@@ -141,21 +140,14 @@ const Sellers = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <main className="min-h-screen bg-background pb-24 md:pb-0">
-        <div className="container px-4 md:px-8 mx-auto pt-20 md:pt-28">
-        </div>
+      <main className="min-h-screen bg-background">
 
         {/* Hero */}
-        <section id="seller-hero" className="pt-6 pb-14 md:pt-10 md:pb-20">
-          <div className="container px-4 md:px-8 mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="max-w-3xl"
-            >
+        <section id="seller-hero" className="py-16 md:py-24">
+          <div className="mx-auto w-full max-w-6xl px-5">
+            <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">Torino</p>
-              <h1 className="text-3xl md:text-5xl font-display font-bold leading-tight mb-6">
+              <h1 className="mb-6 font-display text-[38px] font-normal leading-[1.05] tracking-[-0.01em] md:text-[56px]">
                 Vendi il tuo appartamento direttamente a Jungle Rent
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -163,15 +155,15 @@ const Sellers = () => {
                 inquilino dentro o da ristrutturare. Valutazione gratuita entro 48 ore, nessuna
                 commissione di agenzia, una sola visita, proposta scritta.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button size="lg" variant="premium" onClick={scrollToForm} className="text-base">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button size="lg" variant="premium" onClick={scrollToForm} className="w-full sm:w-auto">
                   Chiedi una valutazione gratuita
                   <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-primary/40"
+                  className="w-full sm:w-auto"
                   onClick={() => {
                     openWhatsApp(
                       CONTACTS.lorenzo.phone,
@@ -183,19 +175,19 @@ const Sellers = () => {
                   Scrivi su WhatsApp
                 </Button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Scenari */}
-        <section className="py-14 md:py-20 bg-muted/30">
-          <div className="container px-4 md:px-8 mx-auto">
+        <section className="bg-primary/10 py-16 md:py-24">
+          <div className="mx-auto w-full max-w-6xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-10 max-w-2xl">
               Se il tuo appartamento è in una di queste situazioni, siamo il tipo di acquirente giusto
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {scenarios.map((s) => (
-                <div key={s.title} className="rounded-2xl bg-background border border-border p-6">
+                <div key={s.title} className="rounded-2xl border border-border/60 bg-background p-6 shadow-[var(--shadow-card)]">
                   <s.icon className="w-6 h-6 text-primary mb-4" strokeWidth={1.5} aria-hidden="true" />
                   <h3 className="text-lg font-semibold mb-3">{s.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{s.body}</p>
@@ -206,12 +198,12 @@ const Sellers = () => {
         </section>
 
         {/* Come funziona */}
-        <section className="py-14 md:py-20">
-          <div className="container px-4 md:px-8 mx-auto">
+        <section className="py-16 md:py-24">
+          <div className="mx-auto w-full max-w-6xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-10">Come funziona</h2>
             <ol className="grid md:grid-cols-4 gap-6">
               {steps.map((s) => (
-                <li key={s.n} className="rounded-2xl border border-border p-6">
+                <li key={s.n} className="rounded-2xl border border-border/60 p-6 shadow-[var(--shadow-card)]">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-xs font-mono text-muted-foreground">{s.n}</span>
                     <s.icon className="w-5 h-5 text-primary" strokeWidth={1.5} aria-hidden="true" />
@@ -229,12 +221,12 @@ const Sellers = () => {
         </section>
 
         {/* Cosa non siamo */}
-        <section className="py-14 md:py-20 bg-muted/30">
-          <div className="container px-4 md:px-8 mx-auto max-w-3xl">
+        <section className="bg-primary/10 py-16 md:py-24">
+          <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8">Cosa non siamo</h2>
             <ul className="space-y-6">
               {weAreNot.map((item) => (
-                <li key={item.no} className="rounded-2xl bg-background border border-border p-6">
+                <li key={item.no} className="rounded-2xl border border-border/60 bg-background p-6 shadow-[var(--shadow-card)]">
                   <p className="font-semibold flex items-start gap-2 mb-2">
                     <X className="w-4 h-4 text-muted-foreground mt-1 shrink-0" aria-hidden="true" />
                     {item.no}
@@ -250,8 +242,8 @@ const Sellers = () => {
         </section>
 
         {/* Il prezzo */}
-        <section className="py-14 md:py-20">
-          <div className="container px-4 md:px-8 mx-auto max-w-3xl">
+        <section className="py-16 md:py-24">
+          <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">Come ragioniamo sul prezzo</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
@@ -280,25 +272,25 @@ const Sellers = () => {
         </section>
 
         {/* Form */}
-        <section id="valutazione" className="py-14 md:py-20 bg-muted/30 scroll-mt-24">
-          <div className="container px-4 md:px-8 mx-auto max-w-3xl">
+        <section id="valutazione" className="scroll-mt-24 bg-primary/10 py-16 md:py-24">
+          <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">Chiedi una valutazione gratuita</h2>
             <p className="text-muted-foreground mb-8">
               Ti rispondiamo entro 48 ore con un range di prezzo indicativo. Nessun impegno.
             </p>
-            <div className="rounded-2xl bg-background border border-border p-6 md:p-8">
+            <div className="rounded-2xl border border-border/60 bg-background p-6 shadow-[var(--shadow-card)] md:p-8">
               <VendiLeadForm />
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section className="py-14 md:py-20">
-          <div className="container px-4 md:px-8 mx-auto max-w-3xl">
+        <section className="py-16 md:py-24">
+          <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8">Domande frequenti</h2>
             <Accordion type="single" collapsible className="space-y-2">
               {faqs.map((faq, i) => (
-                <AccordionItem key={faq.q} value={`vendi-faq-${i}`} className="bg-background border rounded-lg px-4 md:px-6">
+                <AccordionItem key={faq.q} value={`vendi-faq-${i}`} className="rounded-2xl border border-border/60 bg-background px-4 shadow-[var(--shadow-card)] md:px-6">
                   <AccordionTrigger className="text-left text-sm sm:text-base hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>
@@ -312,8 +304,8 @@ const Sellers = () => {
         </section>
 
         {/* Community */}
-        <section className="py-14 md:py-20 bg-muted/30">
-          <div className="container px-4 md:px-8 mx-auto max-w-3xl text-center">
+        <section className="bg-primary/10 py-16 md:py-24">
+          <div className="mx-auto w-full max-w-3xl px-5 text-center">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
               Unisciti a VENDI CASA - Torino Jungle
             </h2>
@@ -326,7 +318,7 @@ const Sellers = () => {
               href={FACEBOOK_SELLER_GROUP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary font-medium hover:bg-primary/20 transition-colors"
+              className="inline-flex h-12 items-center gap-2 rounded-xl border border-primary px-6 text-base font-medium text-primary transition-colors duration-150 hover:bg-primary/10"
             >
               <Facebook className="w-5 h-5" aria-hidden="true" />
               Entra nel gruppo
@@ -336,8 +328,8 @@ const Sellers = () => {
         </section>
 
         {/* Chi siamo */}
-        <section className="py-14 md:py-20">
-          <div className="container px-4 md:px-8 mx-auto max-w-3xl">
+        <section className="py-16 md:py-24">
+          <div className="mx-auto w-full max-w-3xl px-5">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6">Chi compra</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Jungle Rent S.r.l. è una startup innovativa con sede a Torino, incubata da 2I3T,

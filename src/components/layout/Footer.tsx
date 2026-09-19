@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { MessageCircle, Mail, MapPin, Facebook } from "lucide-react";
 import logo2i3t from "@/assets/2i3t-logo-green.png";
 import euFundingBanner from "@/assets/eu-funding-banner.png";
 import { CONTACTS, openGeneralEmail } from "@/constants";
@@ -17,48 +16,44 @@ export const Footer = () => {
   };
 
   return (
-    <footer id="footer" className="border-t border-border/40 bg-background">
-      <div className="container mx-auto px-4 py-16 md:px-8 md:py-24">
-        <div className="mx-auto grid max-w-5xl gap-10 sm:grid-cols-2 md:grid-cols-3">
+    <footer id="footer" className="border-t border-border/60 bg-background">
+      <div className="mx-auto w-full max-w-6xl px-5 py-16 md:py-24">
+        <div className="grid gap-10 text-sm md:grid-cols-3">
           <div>
-            <p className="font-display text-lg font-bold text-foreground">Jungle Rent</p>
+            <p className="font-display text-2xl font-normal text-foreground">Jungle Rent</p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("footer.taglineAlt")}</p>
           </div>
 
           <div>
-            <h2 className="mb-4 font-display text-base font-bold text-foreground">{t("footer.contactTitle")}</h2>
+            <h2 className="mb-4 font-display text-xl font-normal text-foreground">{t("footer.contactTitle")}</h2>
             <div className="space-y-3 text-sm text-muted-foreground">
               <a
                 href={`https://wa.me/${CONTACTS.lorenzo.phone.replace("+", "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-2 hover:text-primary"
+                className="block hover:text-primary"
               >
-                <MessageCircle className="mt-0.5 h-4 w-4" aria-hidden="true" />
                 <span>Lorenzo: {CONTACTS.lorenzo.phone}</span>
               </a>
-              <a href="#" onClick={handleEmailClick} className="flex items-start gap-2 hover:text-primary">
-                <Mail className="mt-0.5 h-4 w-4" aria-hidden="true" />
+              <a href="#" onClick={handleEmailClick} className="block hover:text-primary">
                 <span className="break-all">{CONTACTS.email}</span>
               </a>
-              <p className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4" aria-hidden="true" />
+              <p>
                 <span>{t("footer.location")}</span>
               </p>
               <a
                 href={FACEBOOK_SELLER_GROUP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-primary"
+                className="block hover:text-primary"
               >
-                <Facebook className="h-4 w-4" aria-hidden="true" />
                 {t("footer.sellerCommunity", "VENDI CASA - Torino Jungle")}
               </a>
             </div>
           </div>
 
           <div>
-            <h2 className="mb-4 font-display text-base font-bold text-foreground">
+            <h2 className="mb-4 font-display text-xl font-normal text-foreground">
               {isEnglish ? "Pages" : "Pagine"}
             </h2>
             <ul className="space-y-2 text-sm text-muted-foreground">
@@ -86,7 +81,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-5xl border-t border-border/40 pt-10 text-center">
+        <div className="mt-14 border-t border-border/60 pt-10 text-center">
           <a href="https://www.2i3t.it" target="_blank" rel="noopener noreferrer" className="inline-block">
             <img
               src={logo2i3t}

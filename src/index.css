@@ -65,7 +65,7 @@ All colors MUST be HSL.
     --glass-border: 40 50% 83% / 0.25;
     --glass-shadow: 0 4px 24px hsl(0 0% 0% / 0.08);
 
-    --card: 42 60% 92%;
+    --card: 44 65% 90%;
     --card-foreground: 0 0% 9%;
 
     --popover: 42 60% 92%;
@@ -85,7 +85,7 @@ All colors MUST be HSL.
     --muted: 90 9% 90%;
     --muted-foreground: 0 0% 25%; /* WCAG AA 4.5:1 contrast */
 
-    --accent: 90 9% 86%;
+    --accent: 131 30% 90%;
     --accent-foreground: 131 30% 18%;
 
     --destructive: 0 84.2% 60.2%;
@@ -102,7 +102,7 @@ All colors MUST be HSL.
     --pastel-yellow-border: 45 55% 72%;
     --pastel-yellow-foreground: 131 30% 18%; /* logo dark green for AA contrast */
 
-    --radius: 0.375rem;
+    --radius: 0.75rem;
     
     
     /* Clean gradients */
@@ -110,7 +110,7 @@ All colors MUST be HSL.
     
     /* Editorial hairline shadows — quiet luxury */
     --shadow-minimal: 0 1px 0 hsla(0, 0%, 0%, 0.04);
-    --shadow-card: 0 1px 0 hsla(0, 0%, 0%, 0.04);
+    --shadow-card: 0 1px 2px hsla(0, 0%, 0%, 0.04);
     --shadow-card-hover: 0 1px 2px hsla(0, 0%, 0%, 0.06);
     --shadow-button: none;
     --shadow-button-hover: 0 1px 2px hsla(131, 30%, 36%, 0.18);
@@ -453,14 +453,28 @@ img[fetchpriority="high"] {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: 'cv11', 'ss01';
     font-weight: 400;
-    letter-spacing: -0.011em;
+    font-family: "Inter", "Inter Fallback", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: 0;
   }
   
   h1, h2 {
     @apply font-display;
     font-weight: 400;
-    letter-spacing: -0.02em;
+    font-style: normal;
+    letter-spacing: -0.01em;
     line-height: 1.05;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 56px;
+    }
   }
 
   h3, h4, h5, h6 {
@@ -1285,18 +1299,18 @@ img[fetchpriority="high"] {
 }
 
 @layer utilities {
-  .page-fade-in {
-    animation: page-fade-in 300ms ease-out both;
+  .page-fade {
+    animation: page-fade 200ms ease-out both;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .page-fade-in {
+    .page-fade {
       animation: none;
     }
   }
 }
 
-@keyframes page-fade-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: none; }
+@keyframes page-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
