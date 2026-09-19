@@ -235,14 +235,14 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
   if (submitted) {
     return (
       <section ref={ref} id="request-info" className="py-20 md:py-28 bg-background">
-        <div className="container max-w-2xl mx-auto px-4 sm:px-6">
+        <SceneReveal className="container max-w-2xl mx-auto px-4 sm:px-6">
           <div className="border border-primary/20 bg-cream rounded-lg p-8 md:p-10 flex gap-4 items-start">
             <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" strokeWidth={1.5} />
             <p className="text-base text-foreground leading-relaxed">
               {t("investor.landing.form.success")}
             </p>
           </div>
-        </div>
+        </SceneReveal>
       </section>
     );
   }
@@ -258,7 +258,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
 
   return (
     <section ref={ref} id="request-info" className="py-20 md:py-28 bg-background">
-      <div className="container max-w-2xl mx-auto px-4 sm:px-6">
+      <SceneReveal className="container max-w-2xl mx-auto px-4 sm:px-6">
         <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-3 tracking-tight">
           {t("investor.landing.form.title")}
         </h2>
@@ -538,7 +538,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
             )}
           </div>
         </form>
-      </div>
+      </SceneReveal>
     </section>
   );
 });

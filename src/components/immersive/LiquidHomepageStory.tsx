@@ -97,11 +97,26 @@ export const LiquidHomepageStory = () => {
     },
   ];
 
+  if (reduced) {
+    return (
+      <div aria-label={isItalian ? "Storia di Jungle Rent" : "Jungle Rent story"}>
+        {scenes.map((scene, index) => (
+          <section key={scene.id} className="flex min-h-[calc(100svh-3.5rem)] items-center pb-16 md:pb-0">
+            <div className="mx-auto w-full max-w-6xl px-6 md:px-10">
+              <SceneIndex index={String(index + 1).padStart(2, "0")} label={scene.label} />
+              <div className="mt-8">{scene.content}</div>
+            </div>
+          </section>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div ref={ref} className="relative h-[560vh]" aria-label={isItalian ? "Storia di Jungle Rent" : "Jungle Rent story"}>
       <div className="sticky top-14 h-[calc(100svh-3.5rem)] overflow-hidden bg-background pb-16 md:h-[calc(100vh-3.5rem)] md:pb-0">
         {scenes.map((scene, index) => (
-          <Scene key={scene.id} progress={scrollYProgress} index={index} reduced={reduced}>
+          <Scene key={scene.id} progress={scrollYProgress} index={index}>
             <div className="mx-auto flex h-full w-full max-w-6xl flex-col justify-center px-6 md:px-10">
               <SceneIndex index={String(index + 1).padStart(2, "0")} label={scene.label} />
               <div className="mt-8">{scene.content}</div>
@@ -116,13 +131,13 @@ export const LiquidHomepageStory = () => {
   );
 };
 
-const Scene = ({ progress, index, reduced, children }: { progress: MotionValue<number>; index: number; reduced: boolean; children: ReactNode }) => {
+const Scene = ({ progress, index, children }: { progress: MotionValue<number>; index: number; children: ReactNode }) => {
   const slice = 1 / SCENE_COUNT;
   const start = index * slice;
   const end = (index + 1) * slice;
   const fade = slice * 0.18;
   const opacity = useTransform(progress, [Math.max(0, start - fade), start + fade, end - fade, Math.min(1, end + fade)], [index === 0 ? 1 : 0, 1, 1, index === SCENE_COUNT - 1 ? 1 : 0]);
-  return <motion.div className="absolute inset-0" style={{ opacity: reduced ? 1 : opacity }}>{children}</motion.div>;
+  return <motion.div className="absolute inset-0" style={{ opacity }}>{children}</motion.div>;
 };
 
 const SceneIndex = ({ index, label }: { index: string; label: string }) => (
