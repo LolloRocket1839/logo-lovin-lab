@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Loader2, Upload, X, CheckCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
