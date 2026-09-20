@@ -3,7 +3,8 @@ import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { HeroLogo } from "@/components/innovative/HeroLogo";
+import { useViewportSize } from "@/hooks/useViewportSize";
+import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { Button } from "@/components/ui/button";
 
