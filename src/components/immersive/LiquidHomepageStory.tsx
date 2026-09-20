@@ -1,6 +1,7 @@
 import { useEffect, useRef, ReactNode } from "react";
 import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { ChevronDown } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { HeroLogo } from "@/components/innovative/HeroLogo";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
@@ -39,6 +40,17 @@ export const LiquidHomepageStory = () => {
     const lang = isItalian ? "it" : "en";
     const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
     openWhatsApp(CONTACTS.lorenzo.phone, message);
+  };
+
+  const handleAdvance = () => {
+    const stage = ref.current;
+    if (!stage) return;
+
+    const travel = stage.offsetHeight - window.innerHeight;
+    window.scrollTo({
+      top: stage.offsetTop + travel * 0.22,
+      behavior: reduced ? "auto" : "smooth",
+    });
   };
 
   // Scene boundaries on the unified progress timeline.
@@ -104,6 +116,12 @@ export const LiquidHomepageStory = () => {
                 ? "Fair Rent Pledge — il nostro impegno pubblico"
                 : "Fair Rent Pledge — our public commitment"}
             </a>
+            <ScrollCue
+              p={p}
+              reduced={reduced}
+              label={isItalian ? "Scorri" : "Scroll"}
+              onClick={handleAdvance}
+            />
           </div>
         </Scene>
 
@@ -292,6 +310,46 @@ const Metric = ({ value, label }: { value: string; label: string }) => (
     <p className="eyebrow-mono text-muted-foreground mt-2 text-xs">{label}</p>
   </div>
 );
+
+const ScrollCue = ({
+  p,
+  reduced,
+  label,
+  onClick,
+}: {
+  p: MotionValue<number>;
+  reduced: boolean;
+  label: string;
+  onClick: () => void;
+}) => {
+  const opacity = useTransform(p, [0, 0.015, 0.06], [1, 1, 0]);
+  const pointerEvents = useTransform(opacity, (value) => (value > 0.2 ? "auto" : "none"));
+
+  return (
+    <motion.div
+      style={{ opacity, pointerEvents: pointerEvents as unknown as "auto" | "none" }}
+      className="absolute bottom-14 left-1/2 -translate-x-1/2"
+    >
+      <Button
+        type="button"
+        variant="ghost"
+        size="sm"
+        onClick={onClick}
+        aria-label={label}
+        className="h-auto flex-col gap-1 px-4 py-2 text-muted-foreground hover:text-foreground"
+      >
+        <span className="eyebrow-mono text-[0.65rem]">{label}</span>
+        <motion.span
+          aria-hidden="true"
+          animate={reduced ? undefined : { y: [0, 4, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ChevronDown className="h-4 w-4" strokeWidth={1.5} />
+        </motion.span>
+      </Button>
+    </motion.div>
+  );
+};
 
 const Dot = ({ p, index, total }: { p: MotionValue<number>; index: number; total: number }) => {
   const center = (index + 0.5) / total;
