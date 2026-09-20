@@ -55,7 +55,7 @@ export const LiquidHomepageStory = () => {
         <div className="grid max-w-2xl grid-cols-3 gap-4 md:gap-10">
           <Metric value="01" label={isItalian ? "Acquisiamo" : "We buy"} />
           <Metric value="02" label={isItalian ? "Gestiamo" : "We manage"} />
-          <Metric value="03" label={isItalian ? "Distribuiamo" : "We distribute"} />
+          <Metric value="03" label={isItalian ? "Distribuiamo" : "THE PROPERTY PERFORMS AND PAYS BACK"} />
         </div>
       ),
     },
