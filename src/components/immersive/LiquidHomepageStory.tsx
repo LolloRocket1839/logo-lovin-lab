@@ -37,6 +37,21 @@ export const LiquidHomepageStory = () => {
     mass: 0.5,
   });
 
+  const { width, height } = useViewportSize();
+  const heroSize = width >= 1024 ? 384 : width >= 768 ? 288 : 160;
+  const headerIconSize = 28;
+  const headerHeight = 56;
+  const startTop = height / 2 - heroSize / 2;
+  const startLeft = width / 2 - heroSize / 2;
+  const endTop = (headerHeight - headerIconSize) / 2;
+  const endLeft = 20;
+
+  const logoProgress = useTransform(p, [0, 0.22], [0, 1]);
+  const logoTop = useTransform(logoProgress, [0, 1], [startTop, endTop]);
+  const logoLeft = useTransform(logoProgress, [0, 1], [startLeft, endLeft]);
+  const logoSize = useTransform(logoProgress, [0, 1], [heroSize, headerIconSize]);
+  const logoOpacity = useTransform(logoProgress, [0, 1], [1, 0.95]);
+
   const handleTalk = () => {
     const lang = isItalian ? "it" : "en";
     const message = MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name);
