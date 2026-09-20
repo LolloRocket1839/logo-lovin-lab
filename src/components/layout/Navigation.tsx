@@ -41,7 +41,14 @@ export const Navigation = () => {
         aria-label="Navigazione principale"
       >
         <Link to={isEnglish ? "/en" : "/"} className="flex items-center gap-2" aria-label="Jungle Rent">
-          <img src={jungleRentLogo} alt="" className="h-7 w-7" width={28} height={28} />
+          <img
+            src={jungleRentLogo}
+            alt=""
+            className={`h-7 w-7 ${isHomepage ? "opacity-0" : ""}`}
+            width={28}
+            height={28}
+            aria-hidden={isHomepage}
+          />
           <span className="text-sm font-semibold text-foreground">Jungle Rent</span>
         </Link>
 
