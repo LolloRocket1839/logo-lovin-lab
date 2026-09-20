@@ -58,11 +58,8 @@ export const LiquidHomepageStory = () => {
   const endTop = (headerHeight - headerIconSize) / 2;
   const endLeft = 20;
 
-  const logoProgress = useTransform(p, [0, 0.22], [0, 1]);
-  const logoTop = useTransform(logoProgress, [0, 1], [startTop, endTop]);
-  const logoLeft = useTransform(logoProgress, [0, 1], [startLeft, endLeft]);
-  const logoSize = useTransform(logoProgress, [0, 1], [heroSize, headerIconSize]);
-  const logoOpacity = useTransform(logoProgress, [0, 1], [1, 0.95]);
+  const heroMarkOpacity = useTransform(p, [0, 0.12], [1, 0]);
+  const headerMarkOpacity = useTransform(p, [0.12, 0.22], [0, 1]);
 
   const handleTalk = () => {
     const lang = isItalian ? "it" : "en";
