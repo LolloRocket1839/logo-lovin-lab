@@ -271,6 +271,28 @@ export const LiquidHomepageStory = () => {
         </div>
       </div>
     </div>
+    {logoContainer &&
+      createPortal(
+        <motion.img
+          src={jungleRentLogo}
+          alt="Jungle Rent"
+          width={384}
+          height={384}
+          fetchPriority="high"
+          decoding="async"
+          style={{
+            position: "fixed",
+            top: logoTop,
+            left: logoLeft,
+            width: logoSize,
+            height: logoSize,
+            opacity: logoOpacity,
+          }}
+          className="z-50 pointer-events-none"
+        />,
+        logoContainer
+      )}
+  </>
   );
 };
 
