@@ -9,6 +9,7 @@ export const Navigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isEnglish = i18n.language.startsWith("en");
+  const isHomepage = location.pathname === "/" || location.pathname === "/en";
 
   const sellPath = isEnglish ? "/en/vendi" : "/vendi";
   const investorPath = isEnglish ? "/en/investitori" : "/investitori";
