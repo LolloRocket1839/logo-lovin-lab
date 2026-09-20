@@ -270,23 +270,44 @@ export const LiquidHomepageStory = () => {
     </div>
     {logoContainer &&
       createPortal(
-        <motion.img
-          src={jungleRentLogo}
-          alt="Jungle Rent"
-          width={384}
-          height={384}
-          fetchPriority="high"
-          decoding="async"
-          style={{
-            position: "fixed",
-            top: logoTop,
-            left: logoLeft,
-            width: logoSize,
-            height: logoSize,
-            opacity: logoOpacity,
-          }}
-          className="z-50 pointer-events-none"
-        />,
+        <>
+          {/* Hero logo: large centered, fades out while the scene changes */}
+          <motion.img
+            src={jungleRentLogo}
+            alt="Jungle Rent"
+            width={384}
+            height={384}
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              position: "fixed",
+              top: startTop,
+              left: startLeft,
+              width: heroSize,
+              height: heroSize,
+              opacity: heroMarkOpacity,
+            }}
+            className="z-50 pointer-events-none"
+          />
+          {/* Header watermark: small top-left, fades in after the hero logo disappears */}
+          <motion.img
+            src={jungleRentLogo}
+            alt="Jungle Rent"
+            width={28}
+            height={28}
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              position: "fixed",
+              top: endTop,
+              left: endLeft,
+              width: headerIconSize,
+              height: headerIconSize,
+              opacity: headerMarkOpacity,
+            }}
+            className="z-50 pointer-events-none"
+          />
+        </>,
         logoContainer
       )}
   </>
