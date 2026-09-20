@@ -22,23 +22,36 @@ export default defineTool({
     full_name: z.string().trim().min(2).max(100),
     email: z.string().trim().email().max(255),
     phone: z.string().trim().max(40).optional(),
-    target_move_in: z
+    move_in: z
       .string()
       .trim()
       .max(20)
-      .describe("Approximate move-in month, e.g. '2026-09' or 'flexible'."),
-    budget_eur_per_month: z.number().int().min(200).max(2000).optional(),
-    preferred_zones: z
-      .array(z.string().trim().max(60))
-      .max(5)
+      .describe("Target move-in month in YYYY-MM format, e.g. '2026-09'."),
+    budget: z
+      .enum(["fino-350", "350-450", "450-550", "oltre-550"])
+      .describe("Maximum monthly budget bracket in EUR."),
+    zones: z
+      .array(
+        z.enum([
+          "lingotto-nizza-millefonti",
+          "san-salvario",
+          "vanchiglia",
+          "crocetta",
+          "aurora",
+          "cenisia-san-paolo",
+          "santa-rita",
+          "centro",
+          "indifferente",
+        ]),
+      )
+      .max(9)
       .optional()
-      .describe("Turin neighborhoods, e.g. ['san_salvario','vanchiglia']."),
+      .describe("Preferred Turin areas."),
     room_type: z
-      .enum(["single", "double", "studio", "any"])
-      .describe("single | double | studio | any"),
-    university_or_program: z.string().trim().max(200).optional(),
-    notes: z.string().trim().max(2000).optional(),
-    source: z.string().trim().max(500).optional(),
+      .enum(["singola", "doppia", "posto-letto"])
+      .describe("singola | doppia | posto-letto"),
+    university: z.string().trim().max(120).optional(),
+    lang: z.enum(["it", "en"]).optional(),
     privacy_consent: z.literal(true),
   },
   annotations: {
@@ -56,16 +69,16 @@ export default defineTool({
     }
 
     const metadata: Record<string, unknown> = {
-      channel: "mcp",
-      target_move_in: input.target_move_in,
+      zones: input.zones ?? [],
       room_type: input.room_type,
+      budget: input.budget,
+      move_in: input.move_in,
+      university: input.university ?? null,
+      lang: input.lang ?? "it",
+      channel: "mcp",
       privacy_consent: true,
-      ...(input.budget_eur_per_month ? { budget_eur_per_month: input.budget_eur_per_month } : {}),
-      ...(input.preferred_zones?.length ? { preferred_zones: input.preferred_zones } : {}),
-      ...(input.university_or_program ? { university_or_program: input.university_or_program } : {}),
-      ...(input.notes ? { notes: input.notes } : {}),
     };
-    const source = `mcp-student${input.source ? `:${input.source.slice(0, 60)}` : ""}`;
+    const source = "mcp-student";
 
     const rpcRes = await fetch(`${cfg.url}/rest/v1/rpc/insert_lead`, {
       method: "POST",
