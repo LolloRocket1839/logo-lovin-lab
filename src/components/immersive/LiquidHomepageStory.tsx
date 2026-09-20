@@ -20,10 +20,21 @@ export const LiquidHomepageStory = () => {
   const isItalian = i18n.language.startsWith("it");
   const reduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
+  const [logoContainer, setLogoContainer] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
     document.documentElement.classList.add("homepage-scrollbar-hidden");
     return () => document.documentElement.classList.remove("homepage-scrollbar-hidden");
+  }, []);
+
+  useEffect(() => {
+    const el = document.createElement("div");
+    el.className = "fixed inset-0 z-[60] pointer-events-none";
+    document.body.appendChild(el);
+    setLogoContainer(el);
+    return () => {
+      document.body.removeChild(el);
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({
