@@ -6,9 +6,9 @@ export const HeroLogo = () => {
       <img
         src={jungleRentLogo}
         alt="Jungle Rent"
-        width={240}
-        height={240}
-        className="w-32 h-32 md:w-60 md:h-60 mx-auto block"
+        width={384}
+        height={384}
+        className="w-40 h-40 md:w-72 md:h-72 lg:w-96 lg:h-96 mx-auto block"
         fetchPriority="high"
         decoding="async"
       />
