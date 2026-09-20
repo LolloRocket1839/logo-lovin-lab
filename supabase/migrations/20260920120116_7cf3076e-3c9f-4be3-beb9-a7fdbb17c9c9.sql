@@ -1,0 +1,1 @@
+CREATE POLICY "tmp cleanup delete test photos" ON storage.objects FOR DELETE TO anon USING (bucket_id = 'property-photos' AND (name LIKE 'lead-1789905580886-e812sr/%' OR name LIKE 'lead-1789905585133-qb5e4/%'));
