@@ -98,6 +98,25 @@ export const LiquidHomepageStory = () => {
           }}
         />
 
+        {/* Brand logo overlay: hero center -> header watermark */}
+        <motion.img
+          src={jungleRentLogo}
+          alt="Jungle Rent"
+          width={384}
+          height={384}
+          fetchPriority="high"
+          decoding="async"
+          style={{
+            position: "fixed",
+            top: logoTop,
+            left: logoLeft,
+            width: logoSize,
+            height: logoSize,
+            opacity: logoOpacity,
+          }}
+          className="z-50 pointer-events-none"
+        />
+
         {/* SCENE 1 — Hero */}
         <Scene p={p} range={[scenes[0].in, scenes[0].out]} reduced={reduced} isFirst>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
