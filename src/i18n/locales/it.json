@@ -191,6 +191,11 @@
   },
   "common": {
     "close": "Chiudi",
+    "consent": {
+      "error": "Devi accettare l'informativa privacy per continuare",
+      "label": "Acconsento al trattamento dei miei dati personali da parte di Jungle Rent S.r.l. per essere ricontattato.",
+      "link": "Informativa privacy"
+    },
     "error": "Si è verificato un errore",
     "loading": "Caricamento...",
     "menu": "Menu",
