@@ -157,7 +157,7 @@ export const VendiLeadForm = () => {
     const hasEmail = email.trim().length > 0;
     if (!hasPhone && !hasEmail) next.contact = "Lascia almeno un telefono o un'email";
     if (hasEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) next.email = "Controlla l'indirizzo email";
-    if (!consent) next.consent = "Serve il consenso per poterti ricontattare";
+    if (!consent) next.consent = t("common.consent.error");
     setErrors(next);
     const order = ["address", "sqm", "leaseEnd", "name", "contact", "email", "consent"];
     const first = order.find((k) => next[k]);
