@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 /**
  * ScrollProgressRail
@@ -8,6 +9,7 @@ import { useEffect, useState } from "react";
  */
 export const ScrollProgressRail = () => {
   const [progress, setProgress] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
     const onScroll = () => {
@@ -37,6 +39,7 @@ export const ScrollProgressRail = () => {
           className="absolute top-0 left-0 w-px bg-primary"
           style={{
             height: `${progress * 100}%`,
+            transition: prefersReducedMotion ? "none" : "height 150ms linear",
           }}
         />
       </div>
