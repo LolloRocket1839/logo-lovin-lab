@@ -91,7 +91,7 @@ export const LiquidHomepageStory = () => {
       className="relative"
       aria-label="homepage scroll story"
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-background">
+      <div className="sticky top-14 h-[calc(100vh-3.5rem)] w-full overflow-hidden bg-background">
 
         {/* Subtle vignette */}
         <div
