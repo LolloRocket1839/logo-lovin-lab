@@ -80,7 +80,7 @@ const Students = () => {
     if (name.trim().length < 2) next.name = isItalian ? "Inserisci il tuo nome" : "Enter your name";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
       next.email = isItalian ? "Inserisci un'email valida" : "Enter a valid email";
-    if (!consent) next.consent = isItalian ? "Serve il consenso per ricontattarti" : "Consent is required";
+    if (!consent) next.consent = t("common.consent.error");
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
