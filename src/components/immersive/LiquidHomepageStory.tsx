@@ -1,4 +1,4 @@
-import { useRef, ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -17,6 +17,11 @@ export const LiquidHomepageStory = () => {
   const isItalian = i18n.language.startsWith("it");
   const reduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    document.documentElement.classList.add("homepage-scrollbar-hidden");
+    return () => document.documentElement.classList.remove("homepage-scrollbar-hidden");
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
