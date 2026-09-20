@@ -79,6 +79,9 @@ export function LeadsTable({ leads, onSelect }: Props) {
                 <td className="p-3 hidden lg:table-cell text-muted-foreground text-xs">
                   {lead.source}
                 </td>
+                <td className="p-3 hidden lg:table-cell text-muted-foreground text-xs">
+                  {lead.lead_type === "student" ? studentDetails(lead) : "—"}
+                </td>
                 <td className="p-3 hidden lg:table-cell text-xs text-muted-foreground">
                   {lead.last_contact_at
                     ? formatDistanceToNow(new Date(lead.last_contact_at), { addSuffix: true, locale: it })
