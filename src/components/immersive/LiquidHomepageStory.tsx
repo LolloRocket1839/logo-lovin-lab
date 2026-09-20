@@ -101,8 +101,12 @@ export const LiquidHomepageStory = () => {
         {/* SCENE 1 — Hero */}
         <Scene p={p} range={[scenes[0].in, scenes[0].out]} reduced={reduced} isFirst>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
-            <div>
-              <HeroLogo />
+            <div className="flex w-full items-center justify-center">
+              <div
+                style={{ width: heroSize, height: heroSize }}
+                className="mx-auto"
+                aria-hidden="true"
+              />
             </div>
             <div className="mt-6 md:mt-10">
               <SceneIndex index="01" total="05" label={isItalian ? "Inizio" : "Start"} />
