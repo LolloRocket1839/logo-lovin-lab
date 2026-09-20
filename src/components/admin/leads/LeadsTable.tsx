@@ -9,6 +9,13 @@ interface Props {
   onSelect: (lead: Lead) => void;
 }
 
+function studentDetails(lead: Lead): string {
+  const m = (lead.metadata ?? {}) as Record<string, unknown>;
+  const zones = Array.isArray(m.zones) ? (m.zones as string[]).join(", ") : "";
+  const parts = [zones, m.room_type as string, m.budget as string, m.move_in as string].filter(Boolean);
+  return parts.length > 0 ? parts.join(" · ") : "—";
+}
+
 export function LeadsTable({ leads, onSelect }: Props) {
   if (leads.length === 0) {
     return <p className="text-center text-muted-foreground py-12">Nessun lead trovato</p>;
