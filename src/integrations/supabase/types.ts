@@ -523,7 +523,7 @@ export type Database = {
           asking_price: number | null
           consent_at: string | null
           created_at: string | null
-          email: string
+          email: string | null
           estimated_value: number | null
           floor: string | null
           has_cellar: boolean | null
@@ -553,7 +553,7 @@ export type Database = {
           asking_price?: number | null
           consent_at?: string | null
           created_at?: string | null
-          email: string
+          email?: string | null
           estimated_value?: number | null
           floor?: string | null
           has_cellar?: boolean | null
@@ -583,7 +583,7 @@ export type Database = {
           asking_price?: number | null
           consent_at?: string | null
           created_at?: string | null
-          email?: string
+          email?: string | null
           estimated_value?: number | null
           floor?: string | null
           has_cellar?: boolean | null
