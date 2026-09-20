@@ -1223,16 +1223,9 @@ var contact_lorenzo_default = defineTool4({
     }).catch(() => null);
     await Promise.allSettled([
       invoke("notify-investor-whatsapp", notifyBody),
-      invoke("send-transactional-email", {
-        templateName: "lead-notification",
-        idempotencyKey: `mcp-notify-${leadId}`,
-        templateData: notifyBody
-      }),
-      invoke("send-transactional-email", {
-        templateName: "lead-confirmation",
-        recipientEmail: email,
-        idempotencyKey: `mcp-confirm-${leadId}`,
-        templateData: { leadType }
+      invoke("send-lead-emails", {
+        ...notifyBody,
+        idempotencyBase: `mcp-${leadId}`
       })
     ]);
     const result = {
@@ -1676,16 +1669,9 @@ var submit_investor_lead_default = defineTool8({
     }).catch(() => null);
     await Promise.allSettled([
       invoke("notify-investor-whatsapp", notifyPayload),
-      invoke("send-transactional-email", {
-        templateName: "lead-notification",
-        idempotencyKey: `mcp-investor-notify-${leadId}`,
-        templateData: notifyPayload
-      }),
-      invoke("send-transactional-email", {
-        templateName: "lead-confirmation",
-        recipientEmail: data.email,
-        idempotencyKey: `mcp-investor-confirm-${leadId}`,
-        templateData: { leadType: "investor" }
+      invoke("send-lead-emails", {
+        ...notifyPayload,
+        idempotencyBase: `mcp-${leadId}`
       })
     ]);
     const result = {
@@ -1807,16 +1793,9 @@ var submit_seller_lead_default = defineTool9({
     };
     await Promise.allSettled([
       invoke("notify-investor-whatsapp", notifyPayload),
-      invoke("send-transactional-email", {
-        templateName: "lead-notification",
-        idempotencyKey: `mcp-seller-notify-${leadId}`,
-        templateData: notifyPayload
-      }),
-      invoke("send-transactional-email", {
-        templateName: "lead-confirmation",
-        recipientEmail: input.email,
-        idempotencyKey: `mcp-seller-confirm-${leadId}`,
-        templateData: { leadType: "seller" }
+      invoke("send-lead-emails", {
+        ...notifyPayload,
+        idempotencyBase: `mcp-${leadId}`
       })
     ]);
     const result = {
@@ -1940,16 +1919,9 @@ var submit_student_waitlist_default = defineTool10({
     };
     await Promise.allSettled([
       invoke("notify-investor-whatsapp", notifyPayload),
-      invoke("send-transactional-email", {
-        templateName: "lead-notification",
-        idempotencyKey: `mcp-student-notify-${leadId}`,
-        templateData: notifyPayload
-      }),
-      invoke("send-transactional-email", {
-        templateName: "lead-confirmation",
-        recipientEmail: input.email,
-        idempotencyKey: `mcp-student-confirm-${leadId}`,
-        templateData: { leadType: "student" }
+      invoke("send-lead-emails", {
+        ...notifyPayload,
+        idempotencyBase: `mcp-${leadId}`
       })
     ]);
     const result = {

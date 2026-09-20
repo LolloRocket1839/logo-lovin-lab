@@ -205,25 +205,14 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
       };
 
       supabase.functions
-        .invoke("send-transactional-email", {
+        .invoke("send-investor-info-emails", {
           body: {
-            templateName: "investor-info-request-confirmation",
-            recipientEmail: data.email.trim(),
-            idempotencyKey: `${idempotencyBase}-confirm`,
+            email: data.email.trim(),
+            idempotencyBase,
             templateData,
           },
         })
-        .catch((err) => console.error("Investor confirmation email failed:", err));
-
-      supabase.functions
-        .invoke("send-transactional-email", {
-          body: {
-            templateName: "investor-info-request-notification",
-            idempotencyKey: `${idempotencyBase}-notify`,
-            templateData,
-          },
-        })
-        .catch((err) => console.error("Investor admin notification failed:", err));
+        .catch((err) => console.error("Investor info emails failed:", err));
       localStorage.removeItem(DRAFT_KEY);
       setSubmitted(true);
     } catch (err) {

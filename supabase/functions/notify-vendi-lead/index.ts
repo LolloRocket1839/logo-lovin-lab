@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.57.4";
+import { sendAndLogTemplateEmail } from "../_shared/transactional-email-templates/send-and-log.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -73,24 +74,23 @@ serve(async (req: Request): Promise<Response> => {
   const utm = (lead.utm_data ?? {}) as Record<string, string>;
   const photoCount = Array.isArray(lead.photos) ? lead.photos.length : 0;
 
-  const send = async (templateName: string, recipientEmail: string | undefined, templateData: Record<string, unknown>) => {
-    const res = await fetch(`${supabaseUrl}/functions/v1/send-transactional-email`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${serviceKey}`,
-      },
-      body: JSON.stringify({
-        templateName,
-        recipientEmail,
-        idempotencyKey: `${templateName}-${leadId}`,
+  const send = async (
+    templateName: string,
+    recipientEmail: string | undefined,
+    templateData: Record<string, unknown>,
+  ) => {
+    try {
+      const result = await sendAndLogTemplateEmail(templateName, recipientEmail ?? "", {
         templateData,
-      }),
-    });
-    if (!res.ok) {
-      console.error(`Send failed for ${templateName}: ${res.status}`);
+        idempotencyKey: `${templateName}-${leadId}`,
+      });
+      return result.sent;
+    } catch (err) {
+      console.error(`Send failed for ${templateName}`, {
+        message: err instanceof Error ? err.message : "unknown",
+      });
+      return false;
     }
-    return res.ok;
   };
 
   const notified = await send("vendi-notification", undefined, {

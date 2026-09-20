@@ -120,16 +120,9 @@ export default defineTool({
 
     await Promise.allSettled([
       invoke("notify-investor-whatsapp", notifyPayload),
-      invoke("send-transactional-email", {
-        templateName: "lead-notification",
-        idempotencyKey: `mcp-seller-notify-${leadId}`,
-        templateData: notifyPayload,
-      }),
-      invoke("send-transactional-email", {
-        templateName: "lead-confirmation",
-        recipientEmail: input.email,
-        idempotencyKey: `mcp-seller-confirm-${leadId}`,
-        templateData: { leadType: "seller" },
+      invoke("send-lead-emails", {
+        ...notifyPayload,
+        idempotencyBase: `mcp-${leadId}`,
       }),
     ]);
 
