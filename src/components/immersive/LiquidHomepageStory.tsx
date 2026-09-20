@@ -1,9 +1,11 @@
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useRef, useState, ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { HeroLogo } from "@/components/innovative/HeroLogo";
+import { useViewportSize } from "@/hooks/useViewportSize";
+import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { Button } from "@/components/ui/button";
 
@@ -18,10 +20,21 @@ export const LiquidHomepageStory = () => {
   const isItalian = i18n.language.startsWith("it");
   const reduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
+  const [logoContainer, setLogoContainer] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
     document.documentElement.classList.add("homepage-scrollbar-hidden");
     return () => document.documentElement.classList.remove("homepage-scrollbar-hidden");
+  }, []);
+
+  useEffect(() => {
+    const el = document.createElement("div");
+    el.className = "fixed inset-0 z-[60] pointer-events-none";
+    document.body.appendChild(el);
+    setLogoContainer(el);
+    return () => {
+      document.body.removeChild(el);
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -35,6 +48,21 @@ export const LiquidHomepageStory = () => {
     damping: 28,
     mass: 0.5,
   });
+
+  const { width, height } = useViewportSize();
+  const heroSize = width >= 1024 ? 384 : width >= 768 ? 288 : 160;
+  const headerIconSize = 28;
+  const headerHeight = 56;
+  const startTop = height / 2 - heroSize / 2;
+  const startLeft = width / 2 - heroSize / 2;
+  const endTop = (headerHeight - headerIconSize) / 2;
+  const endLeft = 20;
+
+  const logoProgress = useTransform(p, [0, 0.22], [0, 1]);
+  const logoTop = useTransform(logoProgress, [0, 1], [startTop, endTop]);
+  const logoLeft = useTransform(logoProgress, [0, 1], [startLeft, endLeft]);
+  const logoSize = useTransform(logoProgress, [0, 1], [heroSize, headerIconSize]);
+  const logoOpacity = useTransform(logoProgress, [0, 1], [1, 0.95]);
 
   const handleTalk = () => {
     const lang = isItalian ? "it" : "en";
@@ -64,7 +92,8 @@ export const LiquidHomepageStory = () => {
   ];
 
   return (
-    <div
+    <>
+      <div
       ref={ref}
       style={{ height: "320vh" }}
       className="relative"
@@ -82,11 +111,16 @@ export const LiquidHomepageStory = () => {
           }}
         />
 
+
         {/* SCENE 1 — Hero */}
         <Scene p={p} range={[scenes[0].in, scenes[0].out]} reduced={reduced} isFirst>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
-            <div>
-              <HeroLogo />
+            <div className="flex w-full items-center justify-center">
+              <div
+                style={{ width: heroSize, height: heroSize }}
+                className="mx-auto"
+                aria-hidden="true"
+              />
             </div>
             <div className="mt-6 md:mt-10">
               <SceneIndex index="01" total="05" label={isItalian ? "Inizio" : "Start"} />
@@ -237,6 +271,28 @@ export const LiquidHomepageStory = () => {
         </div>
       </div>
     </div>
+    {logoContainer &&
+      createPortal(
+        <motion.img
+          src={jungleRentLogo}
+          alt="Jungle Rent"
+          width={384}
+          height={384}
+          fetchPriority="high"
+          decoding="async"
+          style={{
+            position: "fixed",
+            top: logoTop,
+            left: logoLeft,
+            width: logoSize,
+            height: logoSize,
+            opacity: logoOpacity,
+          }}
+          className="z-50 pointer-events-none"
+        />,
+        logoContainer
+      )}
+  </>
   );
 };
 
