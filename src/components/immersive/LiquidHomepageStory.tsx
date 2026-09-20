@@ -4,7 +4,6 @@ import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { useViewportSize } from "@/hooks/useViewportSize";
 import jungleRentLogo from "@/assets/jungle-rent-logo-new.svg";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 import { Button } from "@/components/ui/button";
@@ -49,18 +48,13 @@ export const LiquidHomepageStory = () => {
     mass: 0.5,
   });
 
-  const { width, height } = useViewportSize();
-  const heroSize = width >= 1024 ? 384 : width >= 768 ? 288 : 160;
   const headerIconSize = 28;
   const headerHeight = 56;
-  // Position the hero mark in the upper third so it sits above the headline.
-  const startTop = height * 0.33 - heroSize / 2;
-  const startLeft = width / 2 - heroSize / 2;
   const endTop = (headerHeight - headerIconSize) / 2;
   const endLeft = 20;
 
-  const heroMarkOpacity = useTransform(p, [0, 0.12], [1, 0]);
-  const headerMarkOpacity = useTransform(p, [0.12, 0.22], [0, 1]);
+  const heroMarkOpacity = useTransform(p, [0, 0.08], [1, 0]);
+  const headerMarkOpacity = useTransform(p, [0.13, 0.18], [0, 1]);
 
   const handleTalk = () => {
     const lang = isItalian ? "it" : "en";
@@ -97,7 +91,7 @@ export const LiquidHomepageStory = () => {
       className="relative"
       aria-label="homepage scroll story"
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden bg-background">
+      <div className="sticky top-14 h-[calc(100vh-3.5rem)] w-full overflow-hidden bg-background">
 
         {/* Subtle vignette */}
         <div
@@ -114,10 +108,15 @@ export const LiquidHomepageStory = () => {
         <Scene p={p} range={[scenes[0].in, scenes[0].out]} reduced={reduced} isFirst>
           <div className="container mx-auto h-full px-6 md:px-10 flex flex-col justify-center max-w-6xl">
             <div className="flex w-full items-center justify-center">
-              <div
-                style={{ width: heroSize, height: heroSize }}
-                className="mx-auto"
-                aria-hidden="true"
+              <motion.img
+                src={jungleRentLogo}
+                alt="Jungle Rent"
+                width={384}
+                height={384}
+                fetchPriority="high"
+                decoding="async"
+                style={{ opacity: heroMarkOpacity }}
+                className="mx-auto block h-40 w-40 md:h-72 md:w-72 lg:h-96 lg:w-96"
               />
             </div>
             <div className="mt-6 md:mt-10">
@@ -272,25 +271,7 @@ export const LiquidHomepageStory = () => {
     {logoContainer &&
       createPortal(
         <>
-          {/* Hero logo: large centered, fades out while the scene changes */}
-          <motion.img
-            src={jungleRentLogo}
-            alt="Jungle Rent"
-            width={384}
-            height={384}
-            fetchPriority="high"
-            decoding="async"
-            style={{
-              position: "fixed",
-              top: startTop,
-              left: startLeft,
-              width: heroSize,
-              height: heroSize,
-              opacity: heroMarkOpacity,
-            }}
-            className="z-50 pointer-events-none"
-          />
-          {/* Header watermark: small top-left, fades in after the hero logo disappears */}
+          {/* Header watermark: appears only after the in-flow hero logo is gone. */}
           <motion.img
             src={jungleRentLogo}
             alt="Jungle Rent"
@@ -343,9 +324,9 @@ const Scene = ({ p, range, reduced, children, isFirst, isLast }: SceneProps) => 
   const y = useTransform(
     p,
     [a, mid, b],
-    reduced
+    reduced || isFirst
       ? ["0%", "0%", "0%"]
-      : [isFirst ? "0%" : "4%", "0%", isLast ? "0%" : "-4%"]
+      : ["4%", "0%", isLast ? "0%" : "-4%"]
   );
 
   const willChange = useTransform(opacity, (v) =>
