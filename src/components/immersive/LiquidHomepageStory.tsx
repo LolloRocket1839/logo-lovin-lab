@@ -1,5 +1,5 @@
 import { ReactNode, useRef } from "react";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, MotionValue, useScroll, useSpring, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -7,31 +7,36 @@ import { HeroLogo } from "@/components/innovative/HeroLogo";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { CONTACTS, MESSAGES, openWhatsApp } from "@/constants/contacts";
 
-const SCENE_COUNT = 7;
-
 export const LiquidHomepageStory = () => {
   const { t, i18n } = useTranslation();
   const isItalian = i18n.language.startsWith("it");
   const reduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 60,
+    damping: 28,
+    mass: 0.5,
+  });
 
   const handleTalk = () => {
     const lang = isItalian ? "it" : "en";
     openWhatsApp(CONTACTS.lorenzo.phone, MESSAGES.investor.whatsapp[lang](CONTACTS.lorenzo.name));
   };
 
-  const scenes: Array<{ id: string; label: string; content: ReactNode }> = [
+  const scenes: Array<{
+    id: string;
+    label: string;
+    range: [number, number];
+    content: ReactNode;
+  }> = [
     {
-      id: "start",
+      id: "hero",
       label: isItalian ? "Inizio" : "Start",
-      content: <HeroLogo />,
-    },
-    {
-      id: "mission",
-      label: isItalian ? "Missione" : "Mission",
+      range: [0, 0.22],
       content: (
         <>
+          <HeroLogo />
           <h1 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
             {isItalian ? <>Reddito <span className="text-primary">passivo</span><br />da immobili a Torino.</> : <>Passive <span className="text-primary">income</span><br />from Turin real estate.</>}
           </h1>
@@ -44,24 +49,24 @@ export const LiquidHomepageStory = () => {
       ),
     },
     {
-      id: "operation",
+      id: "how",
       label: isItalian ? "Come funziona" : "How it works",
-      content: <h2 className="max-w-4xl font-display text-4xl font-bold leading-[0.95] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">{isItalian ? "Investi in una singola operazione immobiliare." : "Invest in a single real estate operation."}</h2>,
-    },
-    {
-      id: "cycle",
-      label: isItalian ? "Il ciclo" : "The cycle",
+      range: [0.18, 0.42],
       content: (
-        <div className="grid max-w-2xl grid-cols-3 gap-4 md:gap-10">
-          <Metric value="01" label={isItalian ? "Acquisiamo" : "We buy"} />
-          <Metric value="02" label={isItalian ? "Gestiamo" : "We manage"} />
-          <Metric value="03" label={isItalian ? "Distribuiamo" : "THE PROPERTY PERFORMS AND PAYS BACK"} />
-        </div>
+        <>
+          <h2 className="max-w-4xl font-display text-4xl font-bold leading-[0.95] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">{isItalian ? "Investi in una singola operazione immobiliare." : "Invest in a single real estate operation."}</h2>
+          <div className="mt-10 grid max-w-2xl grid-cols-3 gap-4 md:gap-10">
+            <Metric value="01" label={isItalian ? "Acquisiamo" : "We buy"} />
+            <Metric value="02" label={isItalian ? "Gestiamo" : "We manage"} />
+            <Metric value="03" label={isItalian ? "Distribuiamo" : "THE PROPERTY PERFORMS AND PAYS BACK"} />
+          </div>
+        </>
       ),
     },
     {
-      id: "market",
+      id: "invest",
       label: isItalian ? "Investitori" : "Investors",
+      range: [0.38, 0.62],
       content: (
         <>
           <h2 className="max-w-4xl font-display text-4xl font-bold leading-[0.95] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
@@ -74,6 +79,7 @@ export const LiquidHomepageStory = () => {
     {
       id: "sell",
       label: isItalian ? "Vendi casa" : "Sell",
+      range: [0.58, 0.82],
       content: (
         <>
           <h2 className="max-w-4xl font-display text-4xl font-bold leading-[0.95] text-foreground sm:text-5xl md:text-6xl lg:text-7xl">{isItalian ? <>Compriamo <span className="text-primary">noi</span>.<br />Zero commissioni.</> : <><span className="text-primary">We</span> buy.<br />Zero commission.</>}</h2>
@@ -85,8 +91,9 @@ export const LiquidHomepageStory = () => {
       ),
     },
     {
-      id: "contact",
+      id: "talk",
       label: isItalian ? "Contatti" : "Contact",
+      range: [0.78, 1],
       content: (
         <>
           <h2 className="max-w-4xl font-display text-5xl font-bold leading-[0.92] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">{isItalian ? <>Parla con<br /><span className="text-primary">Lorenzo</span>.</> : <>Talk to<br /><span className="text-primary">Lorenzo</span>.</>}</h2>
@@ -113,37 +120,51 @@ export const LiquidHomepageStory = () => {
   }
 
   return (
-    <div ref={ref} className="relative h-[560vh]" aria-label={isItalian ? "Storia di Jungle Rent" : "Jungle Rent story"}>
-      <div className="sticky top-14 h-[calc(100svh-3.5rem)] overflow-hidden bg-background pb-16 md:h-[calc(100vh-3.5rem)] md:pb-0">
+    <div ref={ref} className="relative h-[320vh]" aria-label={isItalian ? "Storia di Jungle Rent" : "Jungle Rent story"}>
+      <div className="sticky top-0 h-screen w-full overflow-hidden bg-background">
         {scenes.map((scene, index) => (
-          <Scene key={scene.id} progress={scrollYProgress} index={index}>
-            <div className="mx-auto flex h-full w-full max-w-6xl flex-col justify-center px-6 md:px-10">
+          <Scene key={scene.id} progress={progress} range={scene.range} reduced={reduced} isFirst={index === 0} isLast={index === scenes.length - 1}>
+            <div className="mx-auto flex h-full w-full max-w-6xl flex-col justify-center px-6 pb-16 md:px-10 md:pb-0">
               <SceneIndex index={String(index + 1).padStart(2, "0")} label={scene.label} />
               <div className="mt-8">{scene.content}</div>
             </div>
           </Scene>
         ))}
         <div className="pointer-events-none absolute bottom-[calc(4rem+env(safe-area-inset-bottom)+0.75rem)] left-1/2 z-10 flex -translate-x-1/2 gap-2 md:bottom-6">
-          {scenes.map((scene, index) => <Dot key={scene.id} progress={scrollYProgress} index={index} />)}
+          {scenes.map((scene, index) => <Dot key={scene.id} progress={progress} index={index} total={scenes.length} />)}
         </div>
       </div>
     </div>
   );
 };
 
-const Scene = ({ progress, index, children }: { progress: MotionValue<number>; index: number; children: ReactNode }) => {
-  const segment = 1 / (SCENE_COUNT - 1);
-  const center = index * segment;
-  const opacity = useTransform(progress, (value) => {
-    const distance = Math.abs(value - center);
-    const hold = segment * 0.28;
-    const edge = segment * 0.48;
-    if (distance <= hold) return 1;
-    if (distance >= edge) return 0;
-    return 1 - (distance - hold) / (edge - hold);
-  });
-  const pointerEvents = useTransform(opacity, (value) => (value > 0.5 ? "auto" : "none"));
-  return <motion.div className="absolute inset-0" style={{ opacity, pointerEvents }}>{children}</motion.div>;
+interface SceneProps {
+  progress: MotionValue<number>;
+  range: [number, number];
+  reduced: boolean;
+  children: ReactNode;
+  isFirst?: boolean;
+  isLast?: boolean;
+}
+
+const Scene = ({ progress, range, reduced, children, isFirst, isLast }: SceneProps) => {
+  const [start, end] = range;
+  const middle = (start + end) / 2;
+  const fade = (end - start) * 0.4;
+  const opacity = useTransform(
+    progress,
+    [start - 0.001, start + fade, end - fade, end + 0.001],
+    [isFirst ? 1 : 0, 1, 1, isLast ? 1 : 0],
+  );
+  const y = useTransform(
+    progress,
+    [start, middle, end],
+    reduced ? ["0%", "0%", "0%"] : [isFirst ? "0%" : "4%", "0%", isLast ? "0%" : "-4%"],
+  );
+  const willChange = useTransform(opacity, (value) => value > 0.05 ? "transform, opacity" : "auto");
+  const pointerEvents = useTransform(opacity, (value) => value > 0.5 ? "auto" : "none");
+
+  return <motion.div className="absolute inset-0" style={{ opacity, y, pointerEvents, willChange }}>{children}</motion.div>;
 };
 
 const SceneIndex = ({ index, label }: { index: string; label: string }) => (
@@ -151,7 +172,7 @@ const SceneIndex = ({ index, label }: { index: string; label: string }) => (
     <span className="metric-mono text-xs text-primary">{index}</span>
     <span className="h-px w-12 bg-primary/25" aria-hidden="true" />
     <span className="eyebrow-mono text-xs text-foreground/60">{label}</span>
-    <span className="metric-mono text-xs text-foreground/40">/ 07</span>
+    <span className="metric-mono text-xs text-foreground/40">/ 05</span>
   </div>
 );
 
@@ -159,9 +180,11 @@ const Metric = ({ value, label }: { value: string; label: string }) => (
   <div><p className="metric-mono text-3xl font-light leading-none text-foreground md:text-5xl">{value}</p><p className="eyebrow-mono mt-2 text-xs text-muted-foreground">{label}</p></div>
 );
 
-const Dot = ({ progress, index }: { progress: MotionValue<number>; index: number }) => {
-  const opacity = useTransform(progress, (value) => Math.max(0.25, 1 - Math.abs(value - (index + 0.5) / SCENE_COUNT) * SCENE_COUNT * 1.5));
-  return <motion.span style={{ opacity }} className="block h-1.5 w-1.5 rounded-full bg-primary" />;
+const Dot = ({ progress, index, total }: { progress: MotionValue<number>; index: number; total: number }) => {
+  const center = (index + 0.5) / total;
+  const opacity = useTransform(progress, (value) => Math.max(0.25, 1 - Math.abs(value - center) * total * 1.5));
+  const scale = useTransform(progress, (value) => Math.abs(value - center) < 0.5 / total ? 1.4 : 1);
+  return <motion.span style={{ opacity, scale }} className="block h-1.5 w-1.5 rounded-full bg-primary" />;
 };
 
 export default LiquidHomepageStory;
