@@ -6,4 +6,3 @@ export { useLocalStorage } from './useLocalStorage';
 export { useReducedMotion } from './useReducedMotion';
 export { useToolLanguage } from './useToolLanguage';
 export { useUTMTracking, getUTMParams } from './useUTMTracking';
-export { useWaitlistCounter } from './useWaitlistCounter';
