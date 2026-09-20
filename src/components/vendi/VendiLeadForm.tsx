@@ -447,8 +447,8 @@ export const VendiLeadForm = () => {
         <div className="flex items-start gap-3">
           <Checkbox id="vendi-consenso" checked={consent} onCheckedChange={(v) => setConsent(v === true)} className="mt-1" />
           <Label htmlFor="vendi-consenso" className="text-sm font-normal leading-relaxed text-muted-foreground">
-            Acconsento al trattamento dei dati da parte di Jungle Rent S.r.l. per ricontattarmi in merito alla valutazione.{" "}
-            <Link to="/privacy" className="text-primary underline underline-offset-4">Informativa privacy</Link>
+            {t("common.consent.label")}{" "}
+            <Link to="/privacy" className="text-primary underline underline-offset-4">{t("common.consent.link")}</Link>
           </Label>
         </div>
         {errors.consent && <p className="text-sm text-destructive">{errors.consent}</p>}
