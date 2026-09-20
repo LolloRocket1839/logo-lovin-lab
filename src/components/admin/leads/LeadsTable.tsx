@@ -25,6 +25,7 @@ export function LeadsTable({ leads, onSelect }: Props) {
             <th className="text-left p-3 font-medium">Contatto</th>
             <th className="text-left p-3 font-medium hidden md:table-cell">Tipo</th>
             <th className="text-left p-3 font-medium hidden lg:table-cell">Source</th>
+            <th className="text-left p-3 font-medium hidden lg:table-cell">Dettagli</th>
             <th className="text-left p-3 font-medium hidden lg:table-cell">Ultimo contatto</th>
             <th className="text-left p-3 font-medium">Follow-up</th>
             <th className="text-left p-3 font-medium hidden md:table-cell">Creato</th>

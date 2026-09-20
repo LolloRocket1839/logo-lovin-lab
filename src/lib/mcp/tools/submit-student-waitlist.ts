@@ -146,7 +146,7 @@ export default defineTool({
       message_to_user:
         "Sei in lista. Lorenzo ti scrive appena si libera qualcosa che matcha (zona, budget, tipo camera). Per parlargli direttamente: https://wa.me/393319053037",
       whatsapp_deep_link: `https://wa.me/393319053037?text=${encodeURIComponent(
-        `Ciao Lorenzo, sono ${input.full_name} (${input.email}). Cerco ${input.room_type} a Torino da ${input.target_move_in}.`,
+        `Ciao Lorenzo, sono ${input.full_name} (${input.email}). Cerco ${input.room_type} a Torino da ${input.move_in}.`,
       )}`,
     };
 
