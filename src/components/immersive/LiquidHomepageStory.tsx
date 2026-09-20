@@ -58,11 +58,8 @@ export const LiquidHomepageStory = () => {
   const endTop = (headerHeight - headerIconSize) / 2;
   const endLeft = 20;
 
-  const logoProgress = useTransform(p, [0, 0.22], [0, 1]);
-  const logoTop = useTransform(logoProgress, [0, 1], [startTop, endTop]);
-  const logoLeft = useTransform(logoProgress, [0, 1], [startLeft, endLeft]);
-  const logoSize = useTransform(logoProgress, [0, 1], [heroSize, headerIconSize]);
-  const logoOpacity = useTransform(logoProgress, [0, 1], [1, 0.95]);
+  const heroMarkOpacity = useTransform(p, [0, 0.12], [1, 0]);
+  const headerMarkOpacity = useTransform(p, [0.12, 0.22], [0, 1]);
 
   const handleTalk = () => {
     const lang = isItalian ? "it" : "en";
@@ -273,23 +270,44 @@ export const LiquidHomepageStory = () => {
     </div>
     {logoContainer &&
       createPortal(
-        <motion.img
-          src={jungleRentLogo}
-          alt="Jungle Rent"
-          width={384}
-          height={384}
-          fetchPriority="high"
-          decoding="async"
-          style={{
-            position: "fixed",
-            top: logoTop,
-            left: logoLeft,
-            width: logoSize,
-            height: logoSize,
-            opacity: logoOpacity,
-          }}
-          className="z-50 pointer-events-none"
-        />,
+        <>
+          {/* Hero logo: large centered, fades out while the scene changes */}
+          <motion.img
+            src={jungleRentLogo}
+            alt="Jungle Rent"
+            width={384}
+            height={384}
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              position: "fixed",
+              top: startTop,
+              left: startLeft,
+              width: heroSize,
+              height: heroSize,
+              opacity: heroMarkOpacity,
+            }}
+            className="z-50 pointer-events-none"
+          />
+          {/* Header watermark: small top-left, fades in after the hero logo disappears */}
+          <motion.img
+            src={jungleRentLogo}
+            alt="Jungle Rent"
+            width={28}
+            height={28}
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              position: "fixed",
+              top: endTop,
+              left: endLeft,
+              width: headerIconSize,
+              height: headerIconSize,
+              opacity: headerMarkOpacity,
+            }}
+            className="z-50 pointer-events-none"
+          />
+        </>,
         logoContainer
       )}
   </>
