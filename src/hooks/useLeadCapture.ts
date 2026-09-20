@@ -99,42 +99,24 @@ export function useLeadCapture() {
       metadata: lead.metadata,
     };
 
-    // 1. Confirmation email to the lead
-    const confirmTemplate =
-      lead.leadType === "seller" ? "seller-confirmation" : "lead-confirmation";
-
+    // 1 + 2. Confirmation to the lead and notification to Lorenzo
     supabase.functions
-      .invoke("send-transactional-email", {
+      .invoke("send-lead-emails", {
         body: {
-          templateName: confirmTemplate,
-          recipientEmail: lead.email.trim(),
-          idempotencyKey: `lead-confirm-${lead.email.trim()}-${Date.now()}`,
-          templateData: {
-            leadType: lead.leadType,
-            ...(lead.metadata?.estimated_value
-              ? {
-                  estimatedValue: new Intl.NumberFormat("it-IT", {
-                    style: "currency",
-                    currency: "EUR",
-                    maximumFractionDigits: 0,
-                  }).format(lead.metadata.estimated_value as number),
-                }
-              : {}),
-          },
+          ...emailPayload,
+          idempotencyBase: `${lead.email.trim()}-${Date.now()}`,
+          ...(lead.metadata?.estimated_value
+            ? {
+                estimatedValue: new Intl.NumberFormat("it-IT", {
+                  style: "currency",
+                  currency: "EUR",
+                  maximumFractionDigits: 0,
+                }).format(lead.metadata.estimated_value as number),
+              }
+            : {}),
         },
       })
-      .catch((err) => console.error("Confirmation email failed:", err));
-
-    // 2. Admin notification email
-    supabase.functions
-      .invoke("send-transactional-email", {
-        body: {
-          templateName: "lead-notification",
-          idempotencyKey: `lead-notify-${lead.email.trim()}-${Date.now()}`,
-          templateData: emailPayload,
-        },
-      })
-      .catch((err) => console.error("Admin notification email failed:", err));
+      .catch((err) => console.error("Lead emails failed:", err));
 
     // 3. Instant WhatsApp ping to Lorenzo for priority leads
     //    - all investor leads
