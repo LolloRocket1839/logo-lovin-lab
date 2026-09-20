@@ -19,7 +19,7 @@ interface PinnedSceneStageProps {
 /**
  * PinnedSceneStage
  * Pinned single-viewport canvas. A tall spacer drives scroll, scenes
- * cross-fade in place using opacity only.
+ * cross-fade in place via GPU-composited opacity + transform.
  */
 export const PinnedSceneStage = ({
   scenes,
@@ -90,10 +90,25 @@ const SceneLayer = ({ scene, i, n, totalLabel, progress, reduced }: SceneLayerPr
     [isFirst ? 1 : 0, 1, 1, isLast ? 1 : 0]
   );
 
+  const y = useTransform(
+    progress,
+    [inA, inB, outA, outB],
+    reduced ? [0, 0, 0, 0] : [16, 0, 0, -16]
+  );
+
+  const scale = useTransform(
+    progress,
+    [inA, inB, outA, outB],
+    reduced ? [1, 1, 1, 1] : [1.015, 1, 1, 0.985]
+  );
+
   return (
     <motion.div
       style={{
-        opacity: reduced ? 1 : opacity,
+        opacity,
+        y,
+        scale,
+        willChange: "transform, opacity",
       }}
       className="absolute inset-0 h-screen w-full pointer-events-auto"
     >

@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { SceneReveal } from "@/components/home/SceneReveal";
+import { ReactNode, useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface ImmersiveActProps {
   children: ReactNode;
@@ -29,11 +29,44 @@ export const ImmersiveAct = ({
   id,
   className = "",
 }: ImmersiveActProps) => {
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setVisible(true);
+      return;
+    }
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.08 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [prefersReducedMotion]);
+
   return (
-    <SceneReveal
-      as="section"
+    <section
+      ref={ref}
       id={id}
       className={`relative ${className}`}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(24px)",
+        transition: prefersReducedMotion
+          ? "none"
+          : "opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1)",
+      }}
     >
       {(index || label) && (
         <div className="container px-4 md:px-8 pt-10 md:pt-14">
@@ -52,6 +85,6 @@ export const ImmersiveAct = ({
         </div>
       )}
       {children}
-    </SceneReveal>
+    </section>
   );
 };
