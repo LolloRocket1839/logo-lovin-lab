@@ -53,7 +53,8 @@ export const LiquidHomepageStory = () => {
   const heroSize = width >= 1024 ? 384 : width >= 768 ? 288 : 160;
   const headerIconSize = 28;
   const headerHeight = 56;
-  const startTop = height / 2 - heroSize / 2;
+  // Position the hero mark in the upper third so it sits above the headline.
+  const startTop = height * 0.33 - heroSize / 2;
   const startLeft = width / 2 - heroSize / 2;
   const endTop = (headerHeight - headerIconSize) / 2;
   const endLeft = 20;
