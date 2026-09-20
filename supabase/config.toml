@@ -25,3 +25,12 @@ project_id = "ekrrrlrwdshhlqnuxjbz"
     verify_jwt = false
   [functions.send-transactional-email]
     verify_jwt = false
+
+[functions.preview-transactional-email]
+verify_jwt = false
+
+[functions.send-lead-emails]
+verify_jwt = false
+
+[functions.send-investor-info-emails]
+verify_jwt = false
