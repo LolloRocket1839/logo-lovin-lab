@@ -4,6 +4,7 @@ import {
   type SendTemplateEmailOptions,
   type SendTemplateEmailResult,
 } from './send-email.ts'
+import { TEMPLATES } from './registry.ts'
 
 // Server-only helper: sends a registered template through Lovable's managed
 // email API and appends the project's own delivery row to `email_send_log`.
@@ -45,7 +46,7 @@ export async function sendAndLogTemplateEmail(
   to: string,
   options: SendTemplateEmailOptions = {},
 ): Promise<SendTemplateEmailResult> {
-  const recipient = to
+  const recipient = TEMPLATES[templateName]?.to || to || 'unknown'
   try {
     const result = await sendTemplateEmail(templateName, to, options)
     await appendLog({
