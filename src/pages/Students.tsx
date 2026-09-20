@@ -240,15 +240,14 @@ const Students = () => {
               <div>
                 <label className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Checkbox checked={consent} onCheckedChange={(v) => setConsent(v === true)} className="mt-0.5" />
-                  <span>
-                    {isItalian ? "Acconsento al trattamento dei miei dati secondo la " : "I consent to the processing of my data under the "}
-                    <Link to="/privacy" className="underline underline-offset-4">
-                      {isItalian ? "privacy policy" : "privacy policy"}
+                  <span className="leading-relaxed">
+                    {t("common.consent.label")}{" "}
+                    <Link to="/privacy" className="text-primary underline underline-offset-4">
+                      {t("common.consent.link")}
                     </Link>
-                    .
                   </span>
                 </label>
-                {errors.consent && <p className="mt-1 text-xs text-destructive">{errors.consent}</p>}
+                {errors.consent && <p className="mt-1 text-sm text-destructive">{errors.consent}</p>}
               </div>
 
               {errors.form && <p className="text-sm text-destructive">{errors.form}</p>}
