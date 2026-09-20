@@ -11,7 +11,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
 import { Loader2, InfoIcon } from "lucide-react";
-import { useWaitlistCounter } from "@/hooks/useWaitlistCounter";
 import { supabase } from "@/integrations/supabase/client";
 import { FORMSPREE_ENDPOINTS } from "@/constants";
 import {
@@ -39,7 +38,6 @@ interface InvestorWaitlistDialogProps {
 
 export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'general' }: InvestorWaitlistDialogProps) => {
   const { t, i18n } = useTranslation();
-  const { incrementCount } = useWaitlistCounter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const investorWaitlistSchema = getInvestorWaitlistSchema(t);
@@ -117,7 +115,6 @@ export const InvestorWaitlistDialog = ({ open, onOpenChange, guideType = 'genera
         console.error("Error sending guide email:", emailError);
       }
 
-      incrementCount();
       toast({
         title: t("investorWaitlist.successTitle"),
         description: t("investorWaitlist.successDescription"),

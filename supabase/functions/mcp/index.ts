@@ -1855,13 +1855,24 @@ var submit_student_waitlist_default = defineTool10({
     full_name: z12.string().trim().min(2).max(100),
     email: z12.string().trim().email().max(255),
     phone: z12.string().trim().max(40).optional(),
-    target_move_in: z12.string().trim().max(20).describe("Approximate move-in month, e.g. '2026-09' or 'flexible'."),
-    budget_eur_per_month: z12.number().int().min(200).max(2e3).optional(),
-    preferred_zones: z12.array(z12.string().trim().max(60)).max(5).optional().describe("Turin neighborhoods, e.g. ['san_salvario','vanchiglia']."),
-    room_type: z12.enum(["single", "double", "studio", "any"]).describe("single | double | studio | any"),
-    university_or_program: z12.string().trim().max(200).optional(),
-    notes: z12.string().trim().max(2e3).optional(),
-    source: z12.string().trim().max(500).optional(),
+    move_in: z12.string().trim().max(20).describe("Target move-in month in YYYY-MM format, e.g. '2026-09'."),
+    budget: z12.enum(["fino-350", "350-450", "450-550", "oltre-550"]).describe("Maximum monthly budget bracket in EUR."),
+    zones: z12.array(
+      z12.enum([
+        "lingotto-nizza-millefonti",
+        "san-salvario",
+        "vanchiglia",
+        "crocetta",
+        "aurora",
+        "cenisia-san-paolo",
+        "santa-rita",
+        "centro",
+        "indifferente"
+      ])
+    ).max(9).optional().describe("Preferred Turin areas."),
+    room_type: z12.enum(["singola", "doppia", "posto-letto"]).describe("singola | doppia | posto-letto"),
+    university: z12.string().trim().max(120).optional(),
+    lang: z12.enum(["it", "en"]).optional(),
     privacy_consent: z12.literal(true)
   },
   annotations: {
@@ -1878,16 +1889,16 @@ var submit_student_waitlist_default = defineTool10({
       return { content: [{ type: "text", text: e.message }], isError: true };
     }
     const metadata = {
-      channel: "mcp",
-      target_move_in: input.target_move_in,
+      zones: input.zones ?? [],
       room_type: input.room_type,
-      privacy_consent: true,
-      ...input.budget_eur_per_month ? { budget_eur_per_month: input.budget_eur_per_month } : {},
-      ...input.preferred_zones?.length ? { preferred_zones: input.preferred_zones } : {},
-      ...input.university_or_program ? { university_or_program: input.university_or_program } : {},
-      ...input.notes ? { notes: input.notes } : {}
+      budget: input.budget,
+      move_in: input.move_in,
+      university: input.university ?? null,
+      lang: input.lang ?? "it",
+      channel: "mcp",
+      privacy_consent: true
     };
-    const source = `mcp-student${input.source ? `:${input.source.slice(0, 60)}` : ""}`;
+    const source = "mcp-student";
     const rpcRes = await fetch(`${cfg.url}/rest/v1/rpc/insert_lead`, {
       method: "POST",
       headers: {
@@ -1947,7 +1958,7 @@ var submit_student_waitlist_default = defineTool10({
       lead_type: "student",
       message_to_user: "Sei in lista. Lorenzo ti scrive appena si libera qualcosa che matcha (zona, budget, tipo camera). Per parlargli direttamente: https://wa.me/393319053037",
       whatsapp_deep_link: `https://wa.me/393319053037?text=${encodeURIComponent(
-        `Ciao Lorenzo, sono ${input.full_name} (${input.email}). Cerco ${input.room_type} a Torino da ${input.target_move_in}.`
+        `Ciao Lorenzo, sono ${input.full_name} (${input.email}). Cerco ${input.room_type} a Torino da ${input.move_in}.`
       )}`
     };
     return {

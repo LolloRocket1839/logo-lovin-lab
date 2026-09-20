@@ -534,46 +534,59 @@
               "type": "string",
               "maxLength": 40
             },
-            "target_move_in": {
+            "move_in": {
               "type": "string",
               "maxLength": 20,
-              "description": "Approximate move-in month, e.g. '2026-09' or 'flexible'."
+              "description": "Target move-in month in YYYY-MM format, e.g. '2026-09'."
             },
-            "budget_eur_per_month": {
-              "type": "integer",
-              "minimum": 200,
-              "maximum": 2000
+            "budget": {
+              "type": "string",
+              "enum": [
+                "fino-350",
+                "350-450",
+                "450-550",
+                "oltre-550"
+              ],
+              "description": "Maximum monthly budget bracket in EUR."
             },
-            "preferred_zones": {
+            "zones": {
               "type": "array",
               "items": {
                 "type": "string",
-                "maxLength": 60
+                "enum": [
+                  "lingotto-nizza-millefonti",
+                  "san-salvario",
+                  "vanchiglia",
+                  "crocetta",
+                  "aurora",
+                  "cenisia-san-paolo",
+                  "santa-rita",
+                  "centro",
+                  "indifferente"
+                ]
               },
-              "maxItems": 5,
-              "description": "Turin neighborhoods, e.g. ['san_salvario','vanchiglia']."
+              "maxItems": 9,
+              "description": "Preferred Turin areas."
             },
             "room_type": {
               "type": "string",
               "enum": [
-                "single",
-                "double",
-                "studio",
-                "any"
+                "singola",
+                "doppia",
+                "posto-letto"
               ],
-              "description": "single | double | studio | any"
+              "description": "singola | doppia | posto-letto"
             },
-            "university_or_program": {
+            "university": {
               "type": "string",
-              "maxLength": 200
+              "maxLength": 120
             },
-            "notes": {
+            "lang": {
               "type": "string",
-              "maxLength": 2000
-            },
-            "source": {
-              "type": "string",
-              "maxLength": 500
+              "enum": [
+                "it",
+                "en"
+              ]
             },
             "privacy_consent": {
               "type": "boolean",
@@ -583,7 +596,8 @@
           "required": [
             "full_name",
             "email",
-            "target_move_in",
+            "move_in",
+            "budget",
             "room_type",
             "privacy_consent"
           ],

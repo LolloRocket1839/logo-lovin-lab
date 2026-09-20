@@ -13,7 +13,7 @@ const Index = () => {
   const doors = [
     { to: isItalian ? "/vendi" : "/en/vendi", title: isItalian ? "Vendi casa a Torino" : "Sell your home in Turin", text: isItalian ? "Compriamo direttamente appartamenti difficili: ereditati, con inquilino o da ristrutturare." : "We buy difficult apartments directly: inherited, tenanted or in need of renovation.", primary: true, icon: Building2 },
     { to: isItalian ? "/investitori" : "/en/investitori", title: isItalian ? "Investitori" : "Investors", text: isItalian ? "Come funziona investire con noi su singole operazioni immobiliari a Torino." : "How investing with us in single Turin real-estate operations works.", primary: false, icon: TrendingUp },
-    { to: isItalian ? "/studenti" : "/en/studenti", title: isItalian ? "Studenti" : "Students", text: isItalian ? "Guide, quartieri e strumenti per cercare casa a Torino." : "Guides, neighborhoods and tools to find a home in Turin.", primary: false, icon: GraduationCap },
+    { to: isItalian ? "/studenti" : "/en/studenti", title: isItalian ? "Cerchi una stanza?" : "Looking for a room?", text: isItalian ? "Lascia i tuoi criteri: ti avvisiamo prima di pubblicare l'annuncio." : "Leave your criteria: we notify you before we publish the listing.", primary: false, icon: GraduationCap },
   ];
 
   return (

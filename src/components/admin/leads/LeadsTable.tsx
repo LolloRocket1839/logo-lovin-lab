@@ -9,6 +9,13 @@ interface Props {
   onSelect: (lead: Lead) => void;
 }
 
+function studentDetails(lead: Lead): string {
+  const m = (lead.metadata ?? {}) as Record<string, unknown>;
+  const zones = Array.isArray(m.zones) ? (m.zones as string[]).join(", ") : "";
+  const parts = [zones, m.room_type as string, m.budget as string, m.move_in as string].filter(Boolean);
+  return parts.length > 0 ? parts.join(" · ") : "—";
+}
+
 export function LeadsTable({ leads, onSelect }: Props) {
   if (leads.length === 0) {
     return <p className="text-center text-muted-foreground py-12">Nessun lead trovato</p>;
@@ -25,6 +32,7 @@ export function LeadsTable({ leads, onSelect }: Props) {
             <th className="text-left p-3 font-medium">Contatto</th>
             <th className="text-left p-3 font-medium hidden md:table-cell">Tipo</th>
             <th className="text-left p-3 font-medium hidden lg:table-cell">Source</th>
+            <th className="text-left p-3 font-medium hidden lg:table-cell">Dettagli</th>
             <th className="text-left p-3 font-medium hidden lg:table-cell">Ultimo contatto</th>
             <th className="text-left p-3 font-medium">Follow-up</th>
             <th className="text-left p-3 font-medium hidden md:table-cell">Creato</th>
@@ -77,6 +85,9 @@ export function LeadsTable({ leads, onSelect }: Props) {
                 </td>
                 <td className="p-3 hidden lg:table-cell text-muted-foreground text-xs">
                   {lead.source}
+                </td>
+                <td className="p-3 hidden lg:table-cell text-muted-foreground text-xs">
+                  {lead.lead_type === "student" ? studentDetails(lead) : "—"}
                 </td>
                 <td className="p-3 hidden lg:table-cell text-xs text-muted-foreground">
                   {lead.last_contact_at

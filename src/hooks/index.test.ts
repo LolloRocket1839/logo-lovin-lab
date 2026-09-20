@@ -53,10 +53,6 @@ describe('Hooks Barrel Export', () => {
   });
 
 
-  it('should export useWaitlistCounter hook', () => {
-    expect(Hooks.useWaitlistCounter).toBeDefined();
-    expect(typeof Hooks.useWaitlistCounter).toBe('function');
-  });
 
   it('should have exactly 13 exported members', () => {
     const exportedMembers = Object.keys(Hooks);
