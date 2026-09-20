@@ -95,8 +95,8 @@ serve(async (req: Request): Promise<Response> => {
 
   const notified = await send("vendi-notification", undefined, {
     name: lead.name ?? undefined,
-    email: lead.email,
-    phone: lead.phone ?? undefined,
+    email: lead.email ?? undefined,
+    phone: lead.phone ? `${lead.phone} (contatto primario)` : undefined,
     address: lead.property_address ?? undefined,
     sqm: lead.property_sqm ? String(lead.property_sqm) : undefined,
     floor: lead.floor ?? undefined,
@@ -114,9 +114,12 @@ serve(async (req: Request): Promise<Response> => {
     fbclid: utm.fbclid,
   });
 
-  const confirmed = await send("vendi-confirmation", lead.email, {
-    address: lead.property_address ?? undefined,
-  });
+  // Se il venditore ha lasciato solo il telefono, non c'e' conferma da inviare.
+  const confirmed = lead.email
+    ? await send("vendi-confirmation", lead.email, {
+        address: lead.property_address ?? undefined,
+      })
+    : false;
 
   return json({ notified, confirmed });
 });
