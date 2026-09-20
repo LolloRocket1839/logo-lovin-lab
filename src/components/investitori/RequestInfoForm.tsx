@@ -434,6 +434,7 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
                     <div className="flex gap-3 items-start">
                       <Checkbox
                         id="privacy"
+                        className="mt-0.5"
                         onCheckedChange={(v) =>
                           setValue(
                             "privacyConsent",
@@ -444,13 +445,16 @@ export const RequestInfoForm = forwardRef<HTMLElement>((_props, ref) => {
                       />
                       <label
                         htmlFor="privacy"
-                        className="text-sm text-foreground/90 leading-relaxed cursor-pointer"
+                        className="text-sm text-muted-foreground leading-relaxed cursor-pointer"
                       >
-                        {t("investor.landing.form.fields.privacyConsent")}
+                        {t("common.consent.label")}{" "}
+                        <Link to="/privacy" className="text-primary underline underline-offset-4">
+                          {t("common.consent.link")}
+                        </Link>
                       </label>
                     </div>
                     {errors.privacyConsent && (
-                      <p className="text-sm text-destructive">{errors.privacyConsent.message}</p>
+                      <p className="text-sm text-destructive">{t("common.consent.error")}</p>
                     )}
 
                     <div className="flex gap-3 items-start">
