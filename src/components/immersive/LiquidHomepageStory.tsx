@@ -92,7 +92,8 @@ export const LiquidHomepageStory = () => {
   ];
 
   return (
-    <div
+    <>
+      <div
       ref={ref}
       style={{ height: "320vh" }}
       className="relative"
