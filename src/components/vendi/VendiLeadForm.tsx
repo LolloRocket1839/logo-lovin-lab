@@ -1,5 +1,6 @@
 import { useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Loader2, Upload, X, CheckCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -75,6 +76,7 @@ const selectClass =
   "flex h-12 w-full rounded-xl border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
 
 export const VendiLeadForm = () => {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const [name, setName] = useState("");
@@ -155,7 +157,7 @@ export const VendiLeadForm = () => {
     const hasEmail = email.trim().length > 0;
     if (!hasPhone && !hasEmail) next.contact = "Lascia almeno un telefono o un'email";
     if (hasEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) next.email = "Controlla l'indirizzo email";
-    if (!consent) next.consent = "Serve il consenso per poterti ricontattare";
+    if (!consent) next.consent = t("common.consent.error");
     setErrors(next);
     const order = ["address", "sqm", "leaseEnd", "name", "contact", "email", "consent"];
     const first = order.find((k) => next[k]);
@@ -447,8 +449,8 @@ export const VendiLeadForm = () => {
         <div className="flex items-start gap-3">
           <Checkbox id="vendi-consenso" checked={consent} onCheckedChange={(v) => setConsent(v === true)} className="mt-1" />
           <Label htmlFor="vendi-consenso" className="text-sm font-normal leading-relaxed text-muted-foreground">
-            Acconsento al trattamento dei dati da parte di Jungle Rent S.r.l. per ricontattarmi in merito alla valutazione.{" "}
-            <Link to="/privacy" className="text-primary underline underline-offset-4">Informativa privacy</Link>
+            {t("common.consent.label")}{" "}
+            <Link to="/privacy" className="text-primary underline underline-offset-4">{t("common.consent.link")}</Link>
           </Label>
         </div>
         {errors.consent && <p className="text-sm text-destructive">{errors.consent}</p>}

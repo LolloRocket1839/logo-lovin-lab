@@ -40,7 +40,7 @@ const selectClass =
   "flex h-11 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50";
 
 const Students = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isItalian = !i18n.language.startsWith("en");
   const { submitLead, isSubmitting } = useLeadCapture();
 
@@ -80,7 +80,7 @@ const Students = () => {
     if (name.trim().length < 2) next.name = isItalian ? "Inserisci il tuo nome" : "Enter your name";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
       next.email = isItalian ? "Inserisci un'email valida" : "Enter a valid email";
-    if (!consent) next.consent = isItalian ? "Serve il consenso per ricontattarti" : "Consent is required";
+    if (!consent) next.consent = t("common.consent.error");
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
@@ -240,15 +240,14 @@ const Students = () => {
               <div>
                 <label className="flex items-start gap-3 text-sm text-muted-foreground">
                   <Checkbox checked={consent} onCheckedChange={(v) => setConsent(v === true)} className="mt-0.5" />
-                  <span>
-                    {isItalian ? "Acconsento al trattamento dei miei dati secondo la " : "I consent to the processing of my data under the "}
-                    <Link to="/privacy" className="underline underline-offset-4">
-                      {isItalian ? "privacy policy" : "privacy policy"}
+                  <span className="leading-relaxed">
+                    {t("common.consent.label")}{" "}
+                    <Link to="/privacy" className="text-primary underline underline-offset-4">
+                      {t("common.consent.link")}
                     </Link>
-                    .
                   </span>
                 </label>
-                {errors.consent && <p className="mt-1 text-xs text-destructive">{errors.consent}</p>}
+                {errors.consent && <p className="mt-1 text-sm text-destructive">{errors.consent}</p>}
               </div>
 
               {errors.form && <p className="text-sm text-destructive">{errors.form}</p>}
