@@ -91,7 +91,7 @@ export const LiquidHomepageStory = () => {
       className="relative"
       aria-label="homepage scroll story"
     >
-      <div className="sticky top-14 h-[calc(100vh-3.5rem)] w-full overflow-hidden bg-background">
+      <div className="sticky top-14 h-[calc(100svh-3.5rem)] w-full overflow-hidden bg-background pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
 
         {/* Subtle vignette */}
         <div
@@ -261,7 +261,7 @@ export const LiquidHomepageStory = () => {
         </Scene>
 
         {/* Scene progress rail */}
-        <div className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
+        <div className="pointer-events-none absolute bottom-[calc(4rem+env(safe-area-inset-bottom)+0.75rem)] md:bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
           {scenes.map((_, i) => (
             <Dot key={i} p={p} index={i} total={scenes.length} />
           ))}
