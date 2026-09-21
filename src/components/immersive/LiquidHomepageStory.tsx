@@ -261,7 +261,7 @@ export const LiquidHomepageStory = () => {
         </Scene>
 
         {/* Scene progress rail */}
-        <div className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
+        <div className="pointer-events-none absolute bottom-[calc(4rem+env(safe-area-inset-bottom)+0.75rem)] md:bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
           {scenes.map((_, i) => (
             <Dot key={i} p={p} index={i} total={scenes.length} />
           ))}
